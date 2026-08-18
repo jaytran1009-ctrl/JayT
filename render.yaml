@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jayt-apex-staging
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python jayt_production_server.py"
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: PYTHONIOENCODING
+        value: utf-8
