@@ -125,20 +125,30 @@ class JayTProductionHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps(truth_status, ensure_ascii=False, indent=2).encode("utf-8"))
             return
             
-        # 5. API DEALS ENDPOINT
+                # 5. API DEALS ENDPOINT (DIRECTIVE #001 COMPLIANT)
         elif parsed.path == "/api/deals":
-            feed_path = "data/live_deal_intelligence_feed.json"
-            if os.path.exists(feed_path):
+            candidate_paths = [
+                "live_deal_intelligence_feed.json",
+                "data/live_deal_intelligence_feed.json"
+            ]
+            feed_file = None
+            for p in candidate_paths:
+                if os.path.exists(p):
+                    feed_file = p
+                    break
+                    
+            if feed_file:
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                with open(feed_path, "rb") as f:
+                with open(feed_file, "rb") as f:
                     self.wfile.write(f.read())
             else:
-                self.send_response(200)
+                self.send_response(404)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                self.wfile.write(json.dumps({"deals": [], "status": "NO_FEED"}).encode("utf-8"))
+                err_payload = {"error": "CANONICAL_FEED_NOT_FOUND", "status": "ERROR"}
+                self.wfile.write(json.dumps(err_payload, ensure_ascii=False).encode("utf-8"))
             return
             
         return super().do_GET()
