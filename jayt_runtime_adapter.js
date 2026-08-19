@@ -1,26 +1,25 @@
 /**
- * JAYT APEX v4.7 — COMMUNITY-FIRST AFFILIATE RUNTIME
+ * JAYT APEX v4.8 — COMMUNITY LUXURY EDITION RUNTIME
  * =============================================================================
  * TÔN CHỈ: PHỤC VỤ CỘNG ĐỒNG ĐÀ NẴNG 43 LÀ SỐ 1 — DOANH THU AFFILIATE LÀ SỐ 2
- * 1. Single State-to-Render Immutable Snapshot Contract.
- * 2. Hero Discovery Intent & Clean Instant Search Bar (Chuẩn 1 icon duy nhất).
- * 3. 5 Chip Gợi Ý Nhu Cầu Nhanh Thường Nhật (Ăn gì, Trà sữa, Xe 0Đ, Rạp phim, Mua sắm).
- * 4. High-Conversion Deal Cards: Tiết kiệm nổi bật, nút Săn Ngay & Chép Mã 1-chạm.
- * 5. Dynamic Discovery Engine: 5 phân khu tự co giãn, không render section rỗng.
- * 6. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
- * 7. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
- * 8. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
+ * 1. Brand Avatars & Icon nhận diện từng quán ăn / rạp phim / hãng xe.
+ * 2. Bộ Lọc Quận Huyện 43 Thực Tế (Hải Châu, Sơn Trà, Thanh Khê, Toàn TP).
+ * 3. Thông báo Toast nổi (Floating Toast Notification) khi sao chép mã.
+ * 4. Sửa hoàn toàn lỗi tràn viền Badge Top 1, 2, 3 mạ vàng.
+ * 5. Single State Snapshot, AbortController, Double Sequence Guard, 20s Polling.
+ * 6. Trung Tâm Minh Bạch 3 Tầng & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Community-First Portal Runtime v4.7 Active");
+    console.log("⚡ JAYT Community Luxury Edition v4.8 Active");
 
     const State = {
         deals: [],
         categories: ['ALL'],
         activeFilter: 'ALL',
+        activeDistrict: 'ALL', // 'ALL' | 'Hải Châu' | 'Sơn Trà' | 'Thanh Khê'
         sortBy: 'SAVING_DESC', // 'SAVING_DESC' | 'PCT_DESC' | 'EXPIRY_ASC'
         searchQuery: '',
         lastUpdatedTime: '',
@@ -58,7 +57,41 @@
         return new Intl.NumberFormat('vi-VN').format(num) + '₫';
     }
 
-    // 2. Mật mã học SHA-256 Web Crypto API
+    // 2. Nhận diện Thương hiệu & Avatar Màu Sắc (Brand Styling)
+    function getMerchantMeta(merchantName, category) {
+        const m = (merchantName || '').toLowerCase();
+        if (m.includes('cgv')) {
+            return { icon: '🎬', bg: 'linear-gradient(135deg, #E11D48, #BE123C)', color: '#FFF', short: 'CGV' };
+        }
+        if (m.includes('metiz')) {
+            return { icon: '🍿', bg: 'linear-gradient(135deg, #7C3AED, #6D28D9)', color: '#FFF', short: 'METIZ' };
+        }
+        if (m.includes('grab')) {
+            return { icon: '🚗', bg: 'linear-gradient(135deg, #059669, #047857)', color: '#FFF', short: 'GRAB' };
+        }
+        if (m.includes('xanh sm') || m.includes('xanh_sm')) {
+            return { icon: '⚡', bg: 'linear-gradient(135deg, #0284C7, #0369A1)', color: '#FFF', short: 'XANH' };
+        }
+        if (m.includes('phê la') || m.includes('phe la')) {
+            return { icon: '☕', bg: 'linear-gradient(135deg, #92400E, #78350F)', color: '#FFF', short: 'PHÊ LA' };
+        }
+        if (m.includes('katinat')) {
+            return { icon: '🧋', bg: 'linear-gradient(135deg, #D97706, #B45309)', color: '#FFF', short: 'KATINAT' };
+        }
+        if (m.includes('cơm gà') || m.includes('a hải')) {
+            return { icon: '🍗', bg: 'linear-gradient(135deg, #EA580C, #C2410C)', color: '#FFF', short: 'A HẢI' };
+        }
+        if (m.includes('mì quảng') || m.includes('bà mua')) {
+            return { icon: '🍜', bg: 'linear-gradient(135deg, #D97706, #B45309)', color: '#FFF', short: 'BÀ MUA' };
+        }
+        if (category === 'FOOD') return { icon: '🍽️', bg: '#F1F5F9', color: '#0F172A', short: 'ẨM THỰC' };
+        if (category === 'DRINK') return { icon: '☕', bg: '#F1F5F9', color: '#0F172A', short: 'TRÀ SỮA' };
+        if (category === 'RIDE') return { icon: '🛵', bg: '#F1F5F9', color: '#0F172A', short: 'XE ĐIỆN' };
+        if (category === 'CINEMA') return { icon: '🎬', bg: '#F1F5F9', color: '#0F172A', short: 'RẠP PHIM' };
+        return { icon: '🎁', bg: '#F1F5F9', color: '#0F172A', short: 'ĐỐI TÁC' };
+    }
+
+    // 3. Mật mã học SHA-256 Web Crypto API
     async function calculateSHA256(message) {
         try {
             if (!window.crypto || !window.crypto.subtle) return null;
@@ -72,7 +105,7 @@
         }
     }
 
-    // 3. Expiry Engine Thời Gian Thực
+    // 4. Expiry Engine Thời Gian Thực
     function evaluateExpiry(rawValidUntil) {
         if (!rawValidUntil || typeof rawValidUntil !== 'string') {
             return { status: 'UNVERIFIED', label: '⚠️ Chưa xác định hạn', isUsable: false, formatted: 'Đang cập nhật', diffHours: 9999 };
@@ -97,7 +130,7 @@
         return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate, diffHours: diffHours };
     }
 
-    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal
+    // 5. Chuẩn hóa Deal & Nhận diện Quận Huyện
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -125,6 +158,13 @@
         const address = safeStr(raw.branch_address, 'Đà Nẵng');
         const rawEvidenceSha = safeStr(raw.evidence_sha256);
 
+        // Nhận diện Quận Huyện từ địa chỉ
+        let district = 'Toàn TP';
+        if (address.includes('Hải Châu')) district = 'Hải Châu';
+        else if (address.includes('Sơn Trà')) district = 'Sơn Trà';
+        else if (address.includes('Thanh Khê')) district = 'Thanh Khê';
+        else if (address.includes('Ngũ Hành Sơn')) district = 'Ngũ Hành Sơn';
+
         // Chuỗi Canonical Payload của từng Deal
         const canonicalPayload = `${dealId}|${merchant}|${item}|${original}|${discount}|${voucher}|${rawValidUntil}`;
         const computedSha = await calculateSHA256(canonicalPayload);
@@ -147,7 +187,7 @@
             deal_id: dealId,
             merchant_name: merchant,
             branch_address: address,
-            district: safeStr(raw.district, 'All_Districts'),
+            district: district,
             item_name: item,
             source_channel: source,
             voucher_code: voucher,
@@ -167,7 +207,7 @@
         };
     }
 
-    // 5. Tính Mã Băm SHA-256 Toàn Bộ Dataset (Deterministic Sort deal_id ➔ 64-hex SHA-256)
+    // 6. Tính Mã Băm SHA-256 Toàn Bộ Dataset
     async function computeDatasetSHA256(deals) {
         const sorted = deals.slice().sort((a, b) => a.deal_id.localeCompare(b.deal_id));
         const canonicalString = sorted.map(d => 
@@ -176,7 +216,30 @@
         return await calculateSHA256(canonicalString);
     }
 
-    // 6. Render Giao Diện Đại Đô Thị Portal v4.7
+    // 7. Thông báo Toast Nổi Cao Cấp (Floating Toast)
+    function showToast(message) {
+        let toast = document.getElementById('jaytFloatingToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'jaytFloatingToast';
+            toast.style.cssText = `
+                position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+                z-index: 100000; background: #0F172A; color: #FFFFFF;
+                padding: 0.75rem 1.4rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 700;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.25); border: 1.5px solid #10B981;
+                display: flex; align-items: center; gap: 0.5rem; animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            `;
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = `<span>✅</span> <span>${escapeHTML(message)}</span>`;
+        toast.style.display = 'flex';
+        clearTimeout(window.__jaytToastTimer);
+        window.__jaytToastTimer = setTimeout(() => {
+            if (toast) toast.style.display = 'none';
+        }, 2200);
+    }
+
+    // 8. Render Giao Diện Đại Đô Thị Portal v4.8
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -202,12 +265,15 @@
 
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
-        // Lọc theo Category & Search
+        // Lọc theo Category, District & Search
         let filteredDeals = usableDeals.filter(d => {
             if (State.activeFilter === 'HOT_DEAL') {
                 if (d.saving_percentage < 40) return false;
             } else if (State.activeFilter !== 'ALL') {
                 if (d.category !== State.activeFilter) return false;
+            }
+            if (State.activeDistrict !== 'ALL') {
+                if (d.district !== State.activeDistrict && d.district !== 'Toàn TP') return false;
             }
             if (State.searchQuery) {
                 const q = State.searchQuery.toLowerCase();
@@ -217,7 +283,7 @@
             return true;
         });
 
-        // Sắp xếp danh sách với Tie-Breaker Tất Định (Deterministic Sort)
+        // Sắp xếp danh sách với Tie-Breaker Tất Định
         filteredDeals.sort((a, b) => {
             if (State.sortBy === 'SAVING_DESC') {
                 return (b.saving_amount_vnd - a.saving_amount_vnd) || 
@@ -235,14 +301,14 @@
             return a.deal_id.localeCompare(b.deal_id);
         });
 
-        // 5 Phân khu dữ liệu chuyên sâu (Tự co giãn theo dataset)
+        // 5 Phân khu dữ liệu chuyên sâu
         const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || (a.expiry_info.diffHours - b.expiry_info.diffHours) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
         const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
         const rideDeals = usableDeals.filter(d => d.category === 'RIDE');
         const cinemaAndShopDeals = usableDeals.filter(d => d.category === 'CINEMA' || d.category === 'SHOPPING');
 
-        // Connection Badge Đầy Đủ 4 Trạng Thái Độc Lập
+        // Connection Badge Đầy Đủ 4 Trạng Thái
         let connectionBadge = '';
         if (State.connectionStatus === 'LIVE') {
             connectionBadge = `
@@ -286,7 +352,7 @@
             return `${cat} (${count})`;
         };
 
-        const isHomeOverview = !State.searchQuery && State.activeFilter === 'ALL';
+        const isHomeOverview = !State.searchQuery && State.activeFilter === 'ALL' && State.activeDistrict === 'ALL';
 
         root.innerHTML = `
             <div style="min-height: 100vh; background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
@@ -298,11 +364,11 @@
                             
                             <!-- Logo & Badge Tỉnh Thành -->
                             <div style="display: flex; align-items: center; gap: 0.65rem;">
-                                <div style="background: linear-gradient(135deg, #059669, #10B981); color: #FFF; font-weight: 900; font-size: 1.25rem; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(5,150,105,0.3);">J</div>
+                                <div style="background: linear-gradient(135deg, #059669, #10B981); color: #FFF; font-weight: 900; font-size: 1.25rem; width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(5,150,105,0.35);">J</div>
                                 <div>
                                     <div style="display: flex; align-items: center; gap: 0.35rem;">
                                         <span style="font-size: 1.25rem; font-weight: 900; color: #0F172A; letter-spacing: -0.02em;">JayT</span>
-                                        <span style="font-size: 0.7rem; background: #FEF3C7; color: #92400E; border: 1px solid #F59E0B; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">ĐÀ NẴNG 43</span>
+                                        <span style="font-size: 0.7rem; background: #FEF3C7; color: #92400E; border: 1px solid #F59E0B; padding: 0.1rem 0.45rem; border-radius: 4px; font-weight: 800;">ĐÀ NẴNG 43</span>
                                     </div>
                                     <div style="font-size: 0.72rem; color: #64748B;">Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng</div>
                                 </div>
@@ -312,13 +378,18 @@
                         </div>
                     </header>
 
+                    <!-- Banner Đặc Quyền Học Sinh - Sinh Viên & Lao Động 43 -->
+                    <div style="background: linear-gradient(90deg, #065F46 0%, #047857 100%); color: #FFFFFF; padding: 0.5rem 1rem; font-size: 0.78rem; text-align: center; font-weight: 700;">
+                        🎓 <strong>Đặc quyền Cộng đồng 43:</strong> Ưu tiên mã ăn uống, xe điện & xem phim cho Sinh viên các trường ĐH Đà Nẵng & Người lao động.
+                    </div>
+
                     <!-- 2. Main Portal Content -->
                     <main style="max-width: 1140px; margin: 0 auto; padding: 1.5rem 1rem; width: 100%; box-sizing: border-box;">
                         
                         <!-- Hero Section: Intent & Khám Phá -->
                         <div style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid #E2E8F0; border-radius: 24px; padding: 2.2rem 1.4rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
                             <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FEF3C7; border: 1px solid #F59E0B; padding: 0.25rem 0.8rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; color: #92400E; margin-bottom: 0.7rem;">
-                                📍 ĐẶC QUYỀN TIẾT KIỆM CỘNG ĐỒNG ĐÀ NẴNG (MÃ VÙNG 43)
+                                📍 THỦ PHỦ TIẾT KIỆM MÃ VÙNG 43
                             </div>
                             
                             <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.5rem); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 0.5rem;">
@@ -337,12 +408,21 @@
                             </div>
 
                             <!-- 5 Chip Gợi Ý Nhu Cầu Nhanh (1-Chạm) -->
-                            <div style="display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.4rem;">
+                            <div style="display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem;">
                                 <button data-action="filter" data-category="FOOD" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🍜 Ăn gì hôm nay</button>
                                 <button data-action="filter" data-category="DRINK" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">☕ Cà phê & Trà sữa</button>
                                 <button data-action="filter" data-category="RIDE" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🚗 Di chuyển 0Đ</button>
                                 <button data-action="filter" data-category="CINEMA" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🎬 Giải trí rạp phim</button>
                                 <button data-action="filter" data-category="SHOPPING" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🛍️ Mua sắm tiện lợi</button>
+                            </div>
+
+                            <!-- Bộ Lọc Quận Huyện 43 Thực Tế -->
+                            <div style="display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem; padding: 0.4rem; background: #F1F5F9; border-radius: 12px; max-width: 480px; margin-left: auto; margin-right: auto;">
+                                <span style="font-size: 0.72rem; color: #64748B; font-weight: 700; display: flex; align-items: center; margin-right: 0.3rem;">Quận:</span>
+                                <button data-action="district" data-district="ALL" style="background: ${State.activeDistrict === 'ALL' ? '#0F172A' : 'transparent'}; color: ${State.activeDistrict === 'ALL' ? '#FFF' : '#475569'}; border: none; padding: 0.25rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">Toàn TP</button>
+                                <button data-action="district" data-district="Hải Châu" style="background: ${State.activeDistrict === 'Hải Châu' ? '#0F172A' : 'transparent'}; color: ${State.activeDistrict === 'Hải Châu' ? '#FFF' : '#475569'}; border: none; padding: 0.25rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">Hải Châu</button>
+                                <button data-action="district" data-district="Sơn Trà" style="background: ${State.activeDistrict === 'Sơn Trà' ? '#0F172A' : 'transparent'}; color: ${State.activeDistrict === 'Sơn Trà' ? '#FFF' : '#475569'}; border: none; padding: 0.25rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">Sơn Trà</button>
+                                <button data-action="district" data-district="Thanh Khê" style="background: ${State.activeDistrict === 'Thanh Khê' ? '#0F172A' : 'transparent'}; color: ${State.activeDistrict === 'Thanh Khê' ? '#FFF' : '#475569'}; border: none; padding: 0.25rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">Thanh Khê</button>
                             </div>
 
                             <!-- Thanh Bộ Lọc Ngang Trượt Mobile-First -->
@@ -442,8 +522,8 @@
                                         <option value="PCT_DESC" ${State.sortBy === 'PCT_DESC' ? 'selected' : ''}>🔥 Mức giảm % cao nhất</option>
                                         <option value="EXPIRY_ASC" ${State.sortBy === 'EXPIRY_ASC' ? 'selected' : ''}>⏳ Sắp hết hạn</option>
                                     </select>
-                                    ${State.searchQuery || State.activeFilter !== 'ALL' ? `
-                                        <button data-action="filter" data-category="ALL" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.78rem; cursor: pointer; text-decoration: underline; margin-left: 0.5rem;">Xem tất cả</button>
+                                    ${State.searchQuery || State.activeFilter !== 'ALL' || State.activeDistrict !== 'ALL' ? `
+                                        <button data-action="clear-all-filters" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.78rem; cursor: pointer; text-decoration: underline; margin-left: 0.5rem;">Xóa bộ lọc</button>
                                     ` : ''}
                                 </div>
                             </div>
@@ -456,8 +536,8 @@
                                 <div style="text-align: center; padding: 3.5rem 1rem; background: #FFF; border-radius: 20px; border: 1px solid #E2E8F0;">
                                     <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
                                     <h3 style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 0.3rem;">Không tìm thấy ưu đãi phù hợp</h3>
-                                    <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 1rem;">Thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</p>
-                                    <button data-action="filter" data-category="ALL" style="background: #059669; color: #FFF; border: none; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; cursor: pointer;">
+                                    <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 1rem;">Thử chọn quận huyện khác hoặc xóa từ khóa tìm kiếm.</p>
+                                    <button data-action="clear-all-filters" style="background: #059669; color: #FFF; border: none; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; cursor: pointer;">
                                         Xem tất cả ${totalCount} ưu đãi
                                     </button>
                                 </div>
@@ -605,7 +685,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.7 Community Standard</span>
+                            <span>Phiên bản: Production Runtime v4.8 Luxury Community Standard</span>
                         </div>
                     </div>
                 </footer>
@@ -637,39 +717,59 @@
         }
     }
 
-    // 7. Render Card Thẻ Ưu Đãi (High-Conversion UX & XSS-Safe)
+    // 9. Render Card Thẻ Ưu Đãi (Luxury Community UI - Brand Avatars & Fix Badge)
     function renderCard(deal, isFeatured = false, rank = null) {
+        const brand = getMerchantMeta(deal.merchant_name, deal.category);
+
         return `
-            <div class="deal-card" style="background: #FFFFFF; border: ${isFeatured ? '2px solid #10B981' : '1.5px solid #E2E8F0'}; border-radius: 18px; padding: 1.3rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.9rem; box-shadow: ${isFeatured ? '0 6px 22px rgba(16,185,129,0.1)' : '0 4px 15px rgba(0,0,0,0.03)'}; position: relative;">
+            <div class="deal-card" style="background: #FFFFFF; border: ${isFeatured ? '2px solid #10B981' : '1px solid #E2E8F0'}; border-radius: 20px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.9rem; box-shadow: ${isFeatured ? '0 8px 24px rgba(16,185,129,0.12)' : '0 2px 10px rgba(0,0,0,0.03)'}; position: relative; overflow: hidden;">
+                
+                <!-- Dải viền mạ vàng trên cùng cho Top Ranking -->
                 ${isFeatured ? `
-                    <span style="position: absolute; top: -10px; right: 15px; background: #059669; color: #FFF; font-size: 0.65rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px; box-shadow: 0 2px 6px rgba(5,150,105,0.3);">
-                        ★ TOP ${rank || 1} TIẾT KIỆM
-                    </span>
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #F59E0B, #10B981);"></div>
                 ` : ''}
 
                 <div>
-                    <!-- Header Đối tác & Trạng thái Hạn -->
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                        <span style="font-size: 0.85rem; font-weight: 800; color: #D97706; letter-spacing: 0.02em;">[${escapeHTML(deal.merchant_name)}]</span>
-                        <span style="font-size: 0.68rem; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; padding: 0.15rem 0.45rem; border-radius: 6px; font-weight: 800;">${escapeHTML(deal.expiry_info.label)}</span>
+                    <!-- Header: Brand Avatar + Tên Quán + Badge Hạn Dùng -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; margin-top: ${isFeatured ? '0.2rem' : '0'};">
+                        <div style="display: flex; align-items: center; gap: 0.55rem;">
+                            <div style="background: ${brand.bg}; color: ${brand.color}; width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 900; box-shadow: 0 2px 6px rgba(0,0,0,0.08); flex-shrink: 0;">
+                                ${brand.icon}
+                            </div>
+                            <div>
+                                <div style="font-size: 0.86rem; font-weight: 800; color: #0F172A; line-height: 1.2;">${escapeHTML(deal.merchant_name)}</div>
+                                <div style="font-size: 0.68rem; color: #64748B;">📍 ${escapeHTML(deal.district)}</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 0.35rem;">
+                            ${isFeatured ? `
+                                <span style="background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #92400E; border: 1px solid #F59E0B; font-size: 0.65rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 6px;">
+                                    👑 TOP ${rank || 1}
+                                </span>
+                            ` : ''}
+                            <span style="font-size: 0.65rem; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; padding: 0.2rem 0.45rem; border-radius: 6px; font-weight: 800;">
+                                ${escapeHTML(deal.expiry_info.label)}
+                            </span>
+                        </div>
                     </div>
 
-                    <!-- Khối TIẾT KIỆM Nổi Bật Nhất -->
-                    <div style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 1.5px solid #10B981; border-radius: 14px; padding: 0.8rem 0.9rem; margin-bottom: 0.8rem; text-align: center;">
+                    <!-- Khối TIẾT KIỆM Nổi Bật Nhất (Luxury Gradient Box) -->
+                    <div style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 1.5px solid #10B981; border-radius: 14px; padding: 0.85rem 0.9rem; margin-bottom: 0.85rem; text-align: center; box-shadow: inset 0 1px 2px rgba(255,255,255,0.6);">
                         <div style="font-size: 1.35rem; font-weight: 900; color: #047857; letter-spacing: -0.01em; line-height: 1.15;">
                             💰 TIẾT KIỆM ${formatVND(deal.saving_amount_vnd)}
                         </div>
-                        <div style="font-size: 0.78rem; font-weight: 700; color: #065F46; margin-top: 0.2rem;">
+                        <div style="font-size: 0.78rem; font-weight: 700; color: #065F46; margin-top: 0.25rem;">
                             Giảm ${deal.saving_percentage}% · Chỉ còn ${formatVND(deal.discount_price_vnd)} <span style="color: #64748B; text-decoration: line-through; font-weight: normal; margin-left: 0.3rem;">${formatVND(deal.original_price_vnd)}</span>
                         </div>
                     </div>
 
                     <!-- Tên món & Địa điểm -->
-                    <h4 style="font-size: 1.05rem; font-weight: 800; color: #0F172A; line-height: 1.3; margin: 0 0 0.35rem;">${escapeHTML(deal.item_name)}</h4>
-                    <p style="font-size: 0.78rem; color: #64748B; margin: 0 0 0.75rem;">📍 ${escapeHTML(deal.branch_address)} · ${escapeHTML(deal.source_channel)}</p>
+                    <h4 style="font-size: 1.02rem; font-weight: 800; color: #0F172A; line-height: 1.35; margin: 0 0 0.4rem;">${escapeHTML(deal.item_name)}</h4>
+                    <p style="font-size: 0.76rem; color: #64748B; margin: 0 0 0.75rem; line-height: 1.4;">📍 ${escapeHTML(deal.branch_address)}</p>
 
                     <!-- Nguồn & Hạn -->
-                    <div style="font-size: 0.74rem; color: #64748B; display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                    <div style="font-size: 0.72rem; color: #64748B; display: flex; justify-content: space-between; margin-bottom: 0.25rem; border-top: 1px dashed #E2E8F0; padding-top: 0.5rem;">
                         <span>Nguồn: <strong style="color: #334155;">${escapeHTML(deal.source_channel)}</strong></span>
                         <span>Hạn: <strong style="color: #0F172A;">${escapeHTML(deal.expiry_info.formatted)}</strong></span>
                     </div>
@@ -678,10 +778,10 @@
                 <div>
                     <!-- 2 Nút Hành Động 1-Chạm -->
                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.55rem;">
-                        <button data-action="copy" data-code="${escapeHTML(deal.voucher_code)}" style="flex: 1; background: #F8FAFC; border: 1px solid #CBD5E1; color: #0F172A; padding: 0.65rem 0.4rem; border-radius: 10px; font-weight: 800; font-size: 0.78rem; cursor: pointer; transition: background 0.2s;">
+                        <button data-action="copy" data-code="${escapeHTML(deal.voucher_code)}" style="flex: 1; background: #F8FAFC; border: 1.5px solid #CBD5E1; color: #0F172A; padding: 0.68rem 0.4rem; border-radius: 12px; font-weight: 800; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
                             📋 ${escapeHTML(deal.voucher_code)}
                         </button>
-                        <a href="${escapeHTML(deal.deep_link)}" target="_blank" rel="noopener noreferrer" style="flex: 1.3; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #FFFFFF; padding: 0.65rem 0.4rem; border-radius: 10px; font-weight: 800; font-size: 0.82rem; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(5,150,105,0.25);">
+                        <a href="${escapeHTML(deal.deep_link)}" target="_blank" rel="noopener noreferrer" style="flex: 1.3; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #FFFFFF; padding: 0.68rem 0.4rem; border-radius: 12px; font-weight: 800; font-size: 0.82rem; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(5,150,105,0.3); transition: transform 0.15s;">
                             SĂN NGAY ➔
                         </a>
                     </div>
@@ -697,7 +797,7 @@
         `;
     }
 
-    // 8. Modal Bảng Kê Đối Soát Mật Mã Học (SHA-256 Match)
+    // 10. Modal Bảng Kê Đối Soát Mật Mã Học
     function showStructuredTrustModal(dealId) {
         const deal = State.deals.find(d => d.deal_id === dealId);
         if (!deal) return;
@@ -763,7 +863,7 @@
         modal.style.display = 'flex';
     }
 
-    // 9. Skeleton & Error Boundary
+    // 11. Skeleton & Error Boundary
     function renderSkeleton() {
         return `
             <div style="min-height: 100vh; background: #F8FAFC; padding: 4rem 1rem; text-align: center; font-family: sans-serif;">
@@ -788,7 +888,7 @@
         `;
     }
 
-    // 10. Event Delegation
+    // 12. Event Delegation
     function setupEventDelegation() {
         document.body.addEventListener('click', function(e) {
             const btn = e.target.closest('[data-action]');
@@ -799,13 +899,19 @@
             if (action === 'filter') {
                 State.activeFilter = btn.getAttribute('data-category');
                 renderApp();
-            } else if (action === 'clear-search') {
+            } else if (action === 'district') {
+                State.activeDistrict = btn.getAttribute('data-district');
+                renderApp();
+            } else if (action === 'clear-all-filters') {
+                State.activeFilter = 'ALL';
+                State.activeDistrict = 'ALL';
                 State.searchQuery = '';
                 renderApp();
             } else if (action === 'copy') {
                 const code = btn.getAttribute('data-code') || '';
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     navigator.clipboard.writeText(code).then(() => {
+                        showToast(`Đã sao chép mã [${code}]! Mở app để sử dụng.`);
                         const originalText = btn.innerHTML;
                         btn.innerHTML = `✓ ĐÃ CHÉP`;
                         btn.style.background = '#ECFDF5';
@@ -827,6 +933,7 @@
                 const sha = btn.getAttribute('data-sha') || '';
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     navigator.clipboard.writeText(sha).then(() => {
+                        showToast('Đã sao chép mã băm Dataset SHA-256!');
                         const originalText = btn.innerHTML;
                         btn.innerHTML = `✓ ĐÃ SAO CHÉP`;
                         btn.style.color = '#10B981';
@@ -850,7 +957,7 @@
         });
     }
 
-    // 11. Fetch & Polling Engine Tuần Tự
+    // 13. Fetch & Polling Engine Tuần Tự
     async function fetchDeals() {
         if (activeAbortController) {
             activeAbortController.abort();
@@ -922,7 +1029,7 @@
         }
     }
 
-    // 12. Khởi chạy
+    // 14. Khởi chạy
     function init() {
         setupEventDelegation();
         fetchDeals();
