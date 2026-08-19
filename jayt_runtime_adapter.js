@@ -4,17 +4,18 @@
  * =============================================================================
  * NORTH STAR: "MỞ JAYT → 10S THẤY CƠ HỘI ĐỈNH NHẤT → 20S SĂN XONG → HIỂU VÌ SAO TIN ĐƯỢC"
  * 
- * [BẢO TOÀN INVARIANTS]:
+ * [BẢO TOÀN INVARIANTS V1 + V2 CONVERSION ENGINE]:
  * - Provenance Core: 11 Canonical Fields · SHA-256 Web Crypto · XSS/URL Sanitizer
  * - P0 Intelligence: Ground Truth 77đ · Universal ISO Calendar · 8 Evidence Badges
- * - Tầng 1 WOW + Tầng 2 ACTION (Radar) + Tầng 3 DISCOVERY (4 Quận Đà Nẵng)
+ * - 3 Tầng UX: Tầng 1 WOW + Tầng 2 Hidden Radar + Tầng 3 Kho Deal Đà Nẵng 43
  * - Savings Calculator + Personal Wallet + Mobile 5-Tab Nav + Confetti & Audio
+ * - V2 P1 Conversion: Rủ bạn cùng săn (Zalo/Telegram Deep Link) + Share Tracking
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.1 Hunting Operating System Active");
+  console.log("🚀 JayT Apex v5.1 Hunting Operating System Active [V1+V2 Converged]");
 
   // ==========================================================================
   // 🔒 1. PROVENANCE CORE & SECURITY SANITIZER
@@ -421,7 +422,45 @@
   }
 
   // ==========================================================================
-  // 🏛️ 5. STATE MANAGEMENT (SSOT)
+  // 🚀 5. [V2 ENGINE] P1 CONVERSION & SHARE REFERRAL SYSTEM
+  // ==========================================================================
+
+  function getPersonalReferralCode() {
+    let ref = localStorage.getItem('jayt_personal_ref_code');
+    if (!ref) {
+      const randStr = Math.random().toString(36).substring(2, 7).toUpperCase();
+      ref = `JAYT-DNG-${randStr}`;
+      localStorage.setItem('jayt_personal_ref_code', ref);
+    }
+    return ref;
+  }
+
+  function generateShareDeepLink(deal, platform) {
+    const currentUrl = window.location.href.split('?')[0];
+    const refCode = getPersonalReferralCode();
+    const shareText = `🔥 Kèo thơm Đà Nẵng: ${deal.merchant} đang giảm ${formatVND(deal.saving)} cho "${deal.title}". Nhập mã [${refCode}] để nhận thêm ưu đãi:`;
+    const targetUrl = `${currentUrl}?deal=${deal.deal_id}&ref=${refCode}`;
+    const encodedUrl = encodeURIComponent(targetUrl);
+    const encodedText = encodeURIComponent(shareText);
+
+    if (platform === 'zalo') {
+      return `https://zalo.me/share?url=${encodedUrl}&title=${encodedText}`;
+    } else if (platform === 'telegram') {
+      return `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
+    }
+    return targetUrl;
+  }
+
+  function trackShareAction(dealId, platform) {
+    State.shareCount++;
+    State.referralBonus += 5000; // Thưởng 5K vào Ví khi chia sẻ
+    localStorage.setItem('jayt_share_count', State.shareCount.toString());
+    localStorage.setItem('jayt_referral_bonus', State.referralBonus.toString());
+    showToast(`🎉 Đã chia sẻ qua ${platform.toUpperCase()}! Bạn được cộng +5.000₫ vào Ví Ưu Đãi.`);
+  }
+
+  // ==========================================================================
+  // 🏛️ 6. STATE MANAGEMENT (SSOT)
   // ==========================================================================
 
   const State = {
@@ -437,9 +476,13 @@
     savedIds: JSON.parse(localStorage.getItem('jayt_favs') || '[]'),
     huntedCount: parseInt(localStorage.getItem('jayt_hunted_count') || '0', 10),
     actualSavedAmount: parseInt(localStorage.getItem('jayt_actual_savings') || '0', 10),
+    shareCount: parseInt(localStorage.getItem('jayt_share_count') || '0', 10),
+    referralBonus: parseInt(localStorage.getItem('jayt_referral_bonus') || '0', 10),
     isWhyModalOpen: false,
     isAuditOpen: false,
     auditDeal: null,
+    isShareModalOpen: false,
+    shareDeal: null,
     dismissedMissedBanner: sessionStorage.getItem('jayt_missed_dismissed') === 'true',
     calcDrink: 5,
     calcMeal: 6,
@@ -466,7 +509,7 @@
   }
 
   // ==========================================================================
-  // 🖥️ 6. COMPLETE UI RENDER ENGINE (BƠM VÀO #jaytAppRoot)
+  // 🖥️ 7. COMPLETE UI RENDER ENGINE (BƠM VÀO #jaytAppRoot)
   // ==========================================================================
 
   function renderApp() {
@@ -514,6 +557,7 @@
 
     const totalSavings = State.deals.reduce((s, d) => s + d.saving, 0);
     const savedCount = State.savedIds.length;
+    const totalWalletSavings = State.actualSavedAmount + State.referralBonus;
     const monthlyCalc = ((State.calcDrink * 22000) + (State.calcMeal * 26000) + (State.calcRide * 25000)) * 4;
 
     root.innerHTML = `
@@ -634,12 +678,15 @@
                     Giá sau giảm: ${formatVND(priorityDeal.discount_price)} <span style="text-decoration: line-through; color: ${C.textMuted}; font-weight: 400;">${formatVND(priorityDeal.original_price)}</span>
                   </div>
                 </div>
-                <div style="display: flex; gap: 0.6rem;">
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
                   <button data-action="hunt-voucher" data-id="${priorityDeal.deal_id}" data-code="${priorityDeal.code}" data-link="${priorityDeal.link}" data-saving="${priorityDeal.saving}" style="flex: 1.5; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35);">
                     🔥 SĂN VOUCHER NGAY
                   </button>
-                  <button data-action="bookmark" data-id="${priorityDeal.deal_id}" style="min-height: 48px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 1.2rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
-                    ${State.savedIds.includes(priorityDeal.deal_id) ? '❤️ Đã lưu' : '♡ Lưu'}
+                  <button data-action="open-share-modal" data-id="${priorityDeal.deal_id}" style="min-height: 48px; background: #0284C7; color: #FFF; border: none; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;">
+                    <span>↗</span> <span>Rủ Bạn (+5K)</span>
+                  </button>
+                  <button data-action="bookmark" data-id="${priorityDeal.deal_id}" style="min-height: 48px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
+                    ${State.savedIds.includes(priorityDeal.deal_id) ? '❤️' : '♡'}
                   </button>
                 </div>
               </div>
@@ -677,9 +724,14 @@
                         Tiết kiệm ${formatVND(deal.saving)}
                       </div>
                     </div>
-                    <button data-action="hunt-voucher" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="min-height: 42px; background: #D97706; color: #FFF; border: none; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer;">
-                      🔥 SĂN VOUCHER ẨN
-                    </button>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button data-action="hunt-voucher" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="flex: 1; min-height: 42px; background: #D97706; color: #FFF; border: none; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer;">
+                        🔥 SĂN VOUCHER ẨN
+                      </button>
+                      <button data-action="open-share-modal" data-id="${deal.deal_id}" style="min-height: 42px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: #0284C7; border-radius: 10px; padding: 0 0.6rem; font-weight: 700; cursor: pointer;">
+                        ↗
+                      </button>
+                    </div>
                   </div>
                 `).join('')}
               </div>
@@ -757,6 +809,37 @@
           </section>
         </div>
 
+        <!-- [V2] MODAL: RỦ BẠN CÙNG SĂN (CONVERSION DEEP LINK) -->
+        ${State.isShareModalOpen && State.shareDeal ? `
+          <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
+            <div style="background: ${C.cardBg}; border: 2px solid #0284C7; border-radius: 24px; max-width: 480px; width: 100%; padding: 2rem; box-shadow: 0 25px 70px rgba(0,0,0,0.3);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #0284C7;">↗ Rủ Bạn Cùng Săn (+5.000₫ Vào Ví)</h3>
+                <button data-action="close-share-modal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: ${C.textMuted};">&times;</button>
+              </div>
+              <div style="background: ${isLight ? '#F0F9FF' : 'rgba(2, 132, 199, 0.1)'}; border: 1px solid #0284C7; border-radius: 14px; padding: 1rem; margin-bottom: 1.2rem;">
+                <div style="font-size: 0.95rem; font-weight: 700; color: ${C.textMain}; margin-bottom: 0.3rem;">${escapeHTML(State.shareDeal.merchant)} — ${escapeHTML(State.shareDeal.title)}</div>
+                <div style="font-size: 0.8rem; color: #059669; font-weight: 700;">Tiết kiệm ${formatVND(State.shareDeal.saving)} khi săn chung!</div>
+              </div>
+              <div style="font-size: 0.8rem; color: ${C.textSub}; margin-bottom: 0.6rem;">MÃ GIỚI THIỆU CỦA BẠN:</div>
+              <div style="background: ${C.pillBg}; border: 1.5px dashed #0284C7; padding: 0.75rem; border-radius: 10px; font-family: monospace; font-size: 1rem; font-weight: 800; color: #0284C7; text-align: center; margin-bottom: 1.2rem;">
+                ${getPersonalReferralCode()}
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.2rem;">
+                <a href="${generateShareDeepLink(State.shareDeal, 'zalo')}" target="_blank" rel="noopener noreferrer" data-action="track-zalo-share" data-id="${State.shareDeal.deal_id}" style="min-height: 44px; background: #0068FF; color: #FFF; border-radius: 12px; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                  💬 Chia Sẻ Qua Zalo Ngay
+                </a>
+                <a href="${generateShareDeepLink(State.shareDeal, 'telegram')}" target="_blank" rel="noopener noreferrer" data-action="track-tele-share" data-id="${State.shareDeal.deal_id}" style="min-height: 44px; background: #229ED9; color: #FFF; border-radius: 12px; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                  ✈ Chia Sẻ Qua Telegram
+                </a>
+              </div>
+              <button data-action="close-share-modal" style="width: 100%; min-height: 40px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textSub}; border-radius: 10px; font-weight: 600; cursor: pointer;">
+                Đóng
+              </button>
+            </div>
+          </div>
+        ` : ''}
+
         <!-- MODAL: VÌ SAO JAYT ƯU TIÊN DEAL NÀY -->
         ${State.isWhyModalOpen ? `
           <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
@@ -787,12 +870,12 @@
                 <button data-action="close-wallet-modal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: ${C.textMuted};">&times;</button>
               </div>
               <div style="background: ${isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.1)'}; border: 1.5px solid #10B981; border-radius: 16px; padding: 1.2rem; text-align: center; margin-bottom: 1.5rem;">
-                <div style="font-size: 0.8rem; font-weight: 700; color: #059669; text-transform: uppercase;">BẠN ĐÃ TIẾT KIỆM THỰC TẾ:</div>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #059669; text-transform: uppercase;">TỔNG TIẾT KIỆM & THƯỞNG:</div>
                 <div style="font-size: 2rem; font-weight: 900; color: #059669; margin: 0.2rem 0;">
-                  ${formatVND(State.actualSavedAmount)}
+                  ${formatVND(totalWalletSavings)}
                 </div>
                 <div style="font-size: 0.78rem; color: ${C.textSub};">
-                  Từ <strong>${State.huntedCount} lượt săn mã</strong> thành công trên JayT Đà Nẵng.
+                  Từ <strong>${State.huntedCount} lượt săn mã</strong> và <strong>${State.shareCount} lượt chia sẻ</strong> (+${formatVND(State.referralBonus)} thưởng).
                 </div>
               </div>
               <div style="font-size: 0.85rem; font-weight: 700; color: ${C.textMain}; margin-bottom: 0.6rem;">Mã Đã Lưu (${savedCount}):</div>
@@ -896,7 +979,7 @@
 
             <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; font-size: 0.78rem; color: #64748B;">
               <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: Production Apex v5.1 (Personal Deal & Voucher Hunting OS)</span>
+              <span>Phiên bản: Production Apex v5.1 (Personal Deal & Voucher Hunting OS + Conversion Engine)</span>
             </div>
           </div>
         </footer>
@@ -968,9 +1051,9 @@
               <button data-action="open-audit" data-id="${escapeHTML(deal.deal_id)}" style="background: none; border: none; color: #059669; font-weight: 700; cursor: pointer; text-decoration: underline;">
                 🛡️ Tin cậy: ${deal.trust_score}/100
               </button>
-              <a href="https://zalo.me/share?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(deal.merchant + ' - ' + deal.title)}" target="_blank" rel="noopener noreferrer" style="color: #0284C7; font-weight: 600; text-decoration: underline;">
-                ↗ Rủ bạn
-              </a>
+              <button data-action="open-share-modal" data-id="${escapeHTML(deal.deal_id)}" style="background: none; border: none; color: #0284C7; font-weight: 700; cursor: pointer; text-decoration: underline;">
+                ↗ Rủ bạn (+5K)
+              </button>
             </div>
           </div>
         </div>
@@ -979,7 +1062,7 @@
   }
 
   // ==========================================================================
-  // ⚡ 7. EVENT DELEGATION & LIFECYCLE INITIALIZER
+  // ⚡ 8. EVENT DELEGATION & LIFECYCLE INITIALIZER
   // ==========================================================================
 
   document.body.addEventListener('click', function (e) {
@@ -1044,6 +1127,20 @@
     } else if (act === 'close-audit') {
       State.isAuditOpen = false;
       renderApp();
+    } else if (act === 'open-share-modal') {
+      const id = btn.getAttribute('data-id');
+      State.shareDeal = State.deals.find(d => d.deal_id === id);
+      State.isShareModalOpen = true;
+      renderApp();
+    } else if (act === 'close-share-modal') {
+      State.isShareModalOpen = false;
+      renderApp();
+    } else if (act === 'track-zalo-share') {
+      const id = btn.getAttribute('data-id');
+      trackShareAction(id, 'zalo');
+    } else if (act === 'track-tele-share') {
+      const id = btn.getAttribute('data-id');
+      trackShareAction(id, 'telegram');
     } else if (act === 'bookmark') {
       const id = btn.getAttribute('data-id');
       const idx = State.savedIds.indexOf(id);
