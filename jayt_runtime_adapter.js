@@ -224,7 +224,7 @@
 
                             <!-- Actions -->
                             <div style="display: flex; align-items: center; gap: 0.6rem;">
-                                <button data-action="open-mystery" class="shimmer-btn" style="background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(217,119,6,0.35)); border: 1.5px solid rgba(245,158,11,0.4); color: #FDE047; font-size: 0.8rem; font-weight: 800; padding: 0.48rem 1rem; border-radius: 9999px; cursor: pointer;">
+                                <button data-action="open-mystery" style="background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(217,119,6,0.35)); border: 1.5px solid rgba(245,158,11,0.4); color: #FDE047; font-size: 0.8rem; font-weight: 800; padding: 0.48rem 1rem; border-radius: 9999px; cursor: pointer;">
                                     🎁 Quà 0Đ
                                 </button>
                                 <button data-action="toggle-saved" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: #FFFFFF; font-size: 0.8rem; font-weight: 800; padding: 0.48rem 1rem; border-radius: 9999px; cursor: pointer;">
