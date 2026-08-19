@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JayT — Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43</title>
+    
+    <!-- SEO & Metadata Chính Thức Chuẩn Quốc Gia -->
+    <meta name="description" content="Cổng thông tin tự động tìm kiếm, đối soát và xếp hạng các cơ hội tiết kiệm chi tiêu ăn uống, di chuyển và giải trí hàng đầu tại Đà Nẵng (Mã Vùng 43). Đối soát mật mã học SHA-256 minh bạch.">
+    <meta name="keywords" content="JayT Đà Nẵng, ưu đãi Đà Nẵng, mã giảm giá Đà Nẵng, quán ăn ngon Đà Nẵng, săn deal Đà Nẵng, Xanh SM Đà Nẵng, CGV Đà Nẵng, trà sữa Đà Nẵng">
+    <meta property="og:title" content="JayT — Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43">
+    <meta property="og:description" content="Phục vụ cộng đồng Đà Nẵng: Khám phá kho ưu đãi còn hạn, đối soát tính toàn vẹn thời gian thực mỗi 20s.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#059669">
+
+    <!-- Google Fonts Chuẩn Quốc Tế Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes toastIn { from { transform: translate(-50%, -20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        
+        .deal-card {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .deal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(15,23,42,0.08);
+        }
+        .marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-track:hover { animation-play-state: paused; }
+        input::placeholder { color: #94A3B8; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME (APP SHELL MOUNT POINT) -->
+    <div id="jaytAppRoot"></div>
+
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v5.0 -->
+    <script src="/jayt_runtime_adapter.js?v=5.0.0"></script>
+</body>
+</html>
