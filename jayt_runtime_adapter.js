@@ -1,25 +1,22 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P5.9 MASTER: CONSUMER DECISION OPERATING SYSTEM (CDOS)
+ * JAYT APEX v5.5 — P5.10 FINAL SEALED EDITION: CONSUMER MISSION ENGINE
  * =============================================================================
- * STRATEGIC KPI: "Tối đa hóa xác suất tìm đúng nhu cầu và ra quyết định tức thì"
+ * MASTER AXIOM: "Không tối ưu số lượng voucher — Tối ưu xác suất giải quyết
+ *                nhu cầu thực tế của người dùng với ma sát thấp nhất."
  * =============================================================================
- * P5.9 ARCHITECTURAL LEAPS:
- * 1. Mission Persona (Nhu cầu thực > Demographic đơn thuần)
- * 2. Local Micro-Zone Grid (Điện Biên Phủ, Bạch Đằng, Thái Phiên, Vincom Sơn Trà)
- * 3. Merchant Fit Score (Hợp Sinh Viên / Hợp Văn Phòng — Không xưng 'tốt nhất')
- * 4. Context Vector = Persona × Mission × Time × Micro-Zone × Budget
- * 5. Two-Way Transparency: "💡 Why This Deal" + "⚠️ Why Not (Điểm cần lưu ý)"
- * 6. Tri-Score UX: 🔥 Độ Hời / 🎯 Độ Khớp (Fit) / 🛡️ Kiểm Chứng (Risk Signal)
- * 7. Anti-Feedback-Loop Bias Telemetry (Exploration & Ignore Tracking)
+ * THREE TIERS OF TRUTH:
+ * - 🟣 Model: Suy luận dự báo theo Mission & Micro-Zone
+ * - 🔵 Observed: Telemetry tương tác thực tế từ người dùng
+ * - 🛡️ Evidence: Sổ cái kiểm chứng độc lập ngoại vi (Living Ledger)
  * =============================================================================
- * RELEASE INTEGRITY: RC-1 / PARTIAL RUNTIME EVIDENCE (Khóa Chặt Bất Biến)
+ * RELEASE INTEGRITY TRACK: RC-1 / PARTIAL RUNTIME EVIDENCE (Khóa Tuyệt Đối)
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P5.9: Consumer Decision Operating System Initializing...]");
+  console.log("🚀 JayT Apex v5.5 [P5.10: Consumer Mission Engine — Sealed Master Edition]");
 
   // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
@@ -134,7 +131,7 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43 — P5.9 MICRO-ZONE & TWO-WAY EXPLAINABILITY
+  // 3. DATABASE ĐÀ NẴNG 43 — P5.10 MISSION SCHEMA
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
@@ -159,14 +156,13 @@
       deal_value_score: 95,
       trust_risk_score: 60,
       price_psychology: '24K — Dễ xuống tiền',
-      // P5.9 TWO-WAY EXPLAINABILITY
       why_reasons: [
-        'Mức giá 24K cực dễ xuống tiền (Tiết kiệm 24K)',
+        'Mức giá 24K cực dễ xuống tiền cho học sinh / sinh viên (Tiết kiệm 24K)',
         'Vị trí 436 Điện Biên Phủ ngay trục sinh viên ĐH Bách Khoa / Sư Phạm',
-        'Đúng khung giờ giải lao / xả stress ca chiều'
+        'Đúng khung giờ giải lao / xả stress ca chiều (14:00 - 17:30)'
       ],
       why_not_reasons: [
-        '🟡 Chưa kiểm chứng độc lập: Cần thử mã trên app trước',
+        '🟡 Chưa kiểm chứng độc lập: Hãy thử mã trên ShopeeFood trước khi thanh toán',
         'Giới hạn khung giờ áp dụng 14:00 - 17:30 (12 suất/ngày)'
       ],
       terms: 'Áp dụng đặt qua ShopeeFood khung 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
@@ -207,8 +203,8 @@
       trust_risk_score: 65,
       price_psychology: '39K — Ăn no dưới 40K',
       why_reasons: [
-        'Bữa trưa đặc sản nổi tiếng 39K no căng bụng',
-        'Gần các tòa nhà văn phòng Hải Châu & trung tâm',
+        'Bữa trưa đặc sản nổi tiếng 39K ăn no căng bụng',
+        'Gần các tòa nhà văn phòng trung tâm Hải Châu & Cầu Rồng',
         'Đúng khung giờ vàng ăn trưa (10:30 - 13:30)'
       ],
       why_not_reasons: [
@@ -253,7 +249,7 @@
       trust_risk_score: 55,
       price_psychology: '55K — Kèm bánh 1Đ',
       why_reasons: [
-        'View trực diện sông Hàn thoáng đãng thích hợp gặp gỡ đối tác',
+        'View trực diện sông Hàn thoáng đãng thích hợp gặp đối tác / học bài',
         'Tặng bánh nướng 1Đ khi dùng tại quầy buổi tối'
       ],
       why_not_reasons: [
@@ -298,7 +294,7 @@
       trust_risk_score: 58,
       price_psychology: '39K — Tiết kiệm 33K',
       why_reasons: [
-        'Combo 2 món (Gà + Mì Ý) ăn no nê chỉ 39K',
+        'Combo 2 món (Gà Giòn + Mì Ý) ăn no bụng chỉ 39K',
         'Khoảng cách siêu gần 0.6 km khu KTX / Co.opmart Thanh Khê'
       ],
       why_not_reasons: [
@@ -507,7 +503,7 @@
     theme: localStorage.getItem('jayt_theme') || 'dark',
     dealNowMode: false,
     activeTab: 'home',
-    // P5.9 DECISION CONTEXT
+    // P5.10 MISSION STATE
     activeMission: 'ALL',
     activeBudget: 'ALL',
     activeMicroZone: 'ALL',
@@ -528,7 +524,7 @@
     lastWonDeal: null
   };
 
-  // P5.9 DYNAMIC FIT SCORE CALCULATION
+  // DYNAMIC FIT SCORE (NO RIGID THRESHOLD BIAS)
   function calculateFitScore(deal, mission, budget, microZone, currentSlot) {
     let fit = 75;
     if (mission !== 'ALL' && deal.missions && deal.missions.includes(mission)) fit += 20;
@@ -586,7 +582,7 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX V5.5 P5.9 CDOS
+  // 6. RENDER GIAO DIỆN APEX V5.5 P5.10 MISSION ENGINE
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -608,7 +604,6 @@
       cardShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.05)' : '0 10px 30px rgba(0,0,0,0.5)'
     };
 
-    // ELIGIBILITY GATE & CONTEXT CALCULATION
     let processedDeals = State.deals.map(d => {
       const fitScore = calculateFitScore(d, State.activeMission, State.activeBudget, State.activeMicroZone, timeInfo.slot);
       return {
@@ -617,7 +612,6 @@
       };
     });
 
-    // Lọc theo Micro-Zone & Mission & Budget
     if (State.activeMicroZone !== 'ALL') {
       processedDeals = processedDeals.filter(d => d.micro_zone === State.activeMicroZone || d.micro_zone === 'ALL_DANANG');
     }
@@ -636,7 +630,6 @@
       processedDeals = processedDeals.filter(d => d.percent >= 40);
     }
 
-    // TÌM TOP 3 QUYẾT ĐỊNH (DECISION LADDER)
     const bestForYouDeal = [...processedDeals].sort((a, b) => b.calculated_fit_score - a.calculated_fit_score)[0] || processedDeals[0];
     const bestValueDeal = [...processedDeals].sort((a, b) => b.saving - a.saving)[0] || processedDeals[0];
     const nearestDeal = [...processedDeals].sort((a, b) => a.distance_km - b.distance_km)[0] || processedDeals[0];
@@ -657,7 +650,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: #059669; font-weight: 700;">
               <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
-              <span>CDOS ENGINE LIVE</span>
+              <span>MISSION ENGINE LIVE</span>
             </div>
           </div>
 
@@ -668,7 +661,7 @@
                 <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800;">J</div>
                 <div>
                   <div style="font-size: 1.25rem; font-weight: 800; color: ${C.textMain};">JayT Đà Nẵng</div>
-                  <div style="font-size: 0.72rem; color: #059669; font-weight: 600;">🤝 Consumer Decision Operating System</div>
+                  <div style="font-size: 0.72rem; color: #059669; font-weight: 600;">🤝 Consumer Mission Engine 43</div>
                 </div>
               </div>
 
@@ -686,7 +679,7 @@
             </div>
           </header>
 
-          <!-- 3. P5.9 CONSUMER DECISION CONTEXT (MISSION & MICRO-ZONE DISPATCHER) -->
+          <!-- 3. P5.10 CONSUMER MISSION FIRST DISPATCHER -->
           <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="background: ${C.cardBg}; border: 1.5px solid ${C.border}; border-radius: 24px; padding: 1.5rem 1.8rem; box-shadow: ${C.cardShadow};">
               
@@ -696,11 +689,11 @@
                     🎯 Ngay Lúc Này Bạn Đang Muốn Giải Quyết Việc Gì?
                   </h3>
                   <p style="font-size: 0.78rem; color: ${C.textMuted}; margin: 0.2rem 0 0;">
-                    Chọn nhiệm vụ tiêu dùng để APEX trả về đúng 3 quyết định tối ưu kèm lý do nên và điểm cần lưu ý.
+                    Chọn đúng nhiệm vụ tiêu dùng để APEX tìm ra 3 phương án tối ưu nhất.
                   </p>
                 </div>
                 <span style="font-size: 0.72rem; background: rgba(16,185,129,0.12); color: #059669; padding: 0.2rem 0.6rem; border-radius: 9999px; font-weight: 700;">
-                  MISSION DISPATCHER
+                  MISSION FIRST
                 </span>
               </div>
 
@@ -769,12 +762,12 @@
             </div>
           </div>
 
-          <!-- 4. P5.9 DECISION LADDER: TOP 3 DECISIONS WITH TWO-WAY TRANSPARENCY (WHY & WHY NOT) -->
+          <!-- 4. P5.10 TOP 3 DECISIONS WITH TWO-WAY TRANSPARENCY (WHY & WHY NOT) -->
           <div style="max-width: 1300px; margin: 2rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
               <div>
                 <h2 style="font-size: 1.45rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                  🧭 Ba Quyết Định Tối Ưu Nhất Cho Bạn Lúc Này
+                  🧭 Ba Phương Án Giải Quyết Nhiệm Vụ Lúc Này
                 </h2>
                 <p style="font-size: 0.82rem; color: ${C.textSub}; margin: 0.2rem 0 0;">
                   Minh bạch 2 chiều: Lý do đề xuất (Why) và Điểm cần lưu ý/Đánh đổi (Why Not).
@@ -786,13 +779,13 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
               
               <!-- 1. BEST FOR YOU -->
-              ${renderDecisionCard(bestForYouDeal, '🎯 ① BEST FOR YOU', 'Khớp nhiệm vụ nhất', '#10B981', C, isLight)}
+              ${renderDecisionCard(bestForYouDeal, '🎯 ① BEST FOR YOU', 'Khớp nhất với tiêu chí bạn vừa chọn', '#10B981', C, isLight)}
 
               <!-- 2. BEST VALUE -->
-              ${renderDecisionCard(bestValueDeal, '💰 ② BEST VALUE', 'Tiết kiệm nhiều nhất', '#D97706', C, isLight)}
+              ${renderDecisionCard(bestValueDeal, '💰 ② BEST VALUE', 'Mức giảm tiền mặt sâu nhất', '#D97706', C, isLight)}
 
               <!-- 3. NEAREST -->
-              ${renderDecisionCard(nearestDeal, '📍 ③ NEAREST', 'Gần vị trí nhất', '#0284C7', C, isLight)}
+              ${renderDecisionCard(nearestDeal, '📍 ③ NEAREST', 'Vị trí gần bạn nhất (dưới 1 km)', '#0284C7', C, isLight)}
 
             </div>
           </div>
@@ -856,7 +849,7 @@
               </div>
             </div>
 
-            <!-- GRID 8 DEALS ENRICHED P5.9 -->
+            <!-- GRID 8 DEALS ENRICHED P5.10 -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 1.6rem;">
               ${processedDeals.map(deal => renderDealCard(deal, C, isLight)).join('')}
             </div>
@@ -1120,7 +1113,7 @@
           <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 10px; padding: 0.75rem; margin-bottom: 0.8rem;">
             <!-- WHY -->
             <div style="font-size: 0.74rem; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 0.25rem;">
-              💡 Vì Sao Nên Chọn?
+              💡 Vì Sao Đề Xuất Theo Tiêu Chí Bạn Chọn?
             </div>
             <ul style="margin: 0 0 0.5rem 0; padding-left: 0.8rem; font-size: 0.72rem; color: ${C.textSub}; line-height: 1.45; list-style: square;">
               ${deal.why_reasons.map(r => `<li>${escapeHTML(r)}</li>`).join('')}
@@ -1256,7 +1249,7 @@
     `;
   }
 
-  // 9. EVENT DELEGATION & ANTI-FEEDBACK-LOOP TELEMETRY
+  // 9. EVENT DELEGATION & MISSION-TO-OUTCOME TELEMETRY
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1272,7 +1265,7 @@
       const link = btn.getAttribute('data-link') || '#';
       const deal = State.deals.find(d => d.deal_id === id);
 
-      console.log(`[P5.9-CDOS-Telemetry] CTA_CLICK: deal_id=${id}, mission=${State.activeMission}, micro_zone=${State.activeMicroZone}, budget=${State.activeBudget}`);
+      console.log(`[P5.10-Mission-Telemetry] MISSION_RESOLUTION_START: deal_id=${id}, mission=${State.activeMission}, micro_zone=${State.activeMicroZone}, budget=${State.activeBudget}`);
 
       if (navigator.clipboard) {
         navigator.clipboard.writeText(code).then(() => {
@@ -1286,18 +1279,19 @@
       }
     } else if (act === 'set-mission') {
       State.activeMission = btn.getAttribute('data-mission');
-      console.log(`[P5.9-Telemetry] MISSION_CHANGE: ${State.activeMission}`);
+      console.log(`[P5.10-Telemetry] MISSION_DISPATCH: ${State.activeMission}`);
       renderApp();
     } else if (act === 'set-budget') {
       State.activeBudget = btn.getAttribute('data-budget');
-      console.log(`[P5.9-Telemetry] BUDGET_CHANGE: ${State.activeBudget}`);
+      console.log(`[P5.10-Telemetry] BUDGET_DISPATCH: ${State.activeBudget}`);
       renderApp();
     } else if (act === 'set-micro-zone') {
       State.activeMicroZone = btn.getAttribute('data-zone');
-      console.log(`[P5.9-Telemetry] MICRO_ZONE_CHANGE: ${State.activeMicroZone}`);
+      console.log(`[P5.10-Telemetry] MICRO_ZONE_DISPATCH: ${State.activeMicroZone}`);
       renderApp();
     } else if (act === 'confirm-outcome-success') {
       if (State.pendingOutcomeDeal) {
+        console.log(`[P5.10-Mission-Telemetry] MISSION_RESOLUTION_SUCCESS: deal_id=${State.pendingOutcomeDeal.deal_id}, saving=${State.pendingOutcomeDeal.saving}`);
         State.huntedCount++;
         State.actualSavedAmount += State.pendingOutcomeDeal.saving;
         localStorage.setItem('jayt_hunted_count', State.huntedCount.toString());
@@ -1310,6 +1304,7 @@
         renderApp();
       }
     } else if (act === 'confirm-outcome-failed') {
+      console.log(`[P5.10-Mission-Telemetry] MISSION_RESOLUTION_FAILED: deal_id=${State.pendingOutcomeDeal ? State.pendingOutcomeDeal.deal_id : 'unknown'}`);
       State.pendingOutcomeDeal = null;
       renderApp();
     } else if (act === 'close-victory-modal') {
