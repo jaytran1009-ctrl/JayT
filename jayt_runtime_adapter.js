@@ -1,19 +1,19 @@
 /**
- * JAYT APEX v3.4 — PRODUCTION ENTERPRISE RUNTIME (GA STANDARD)
+ * JAYT APEX v3.5 — PRODUCTION ENTERPRISE RUNTIME (TRUE GA STANDARD)
  * =============================================================================
- * CHÂN LÝ DỮ LIỆU & BẢO MẬT MẬT MÃ HỌC TỐI CAO:
- * 1. Web Crypto API SHA-256 Verification (Đối soát mật mã học thật).
- * 2. Raw Canonical Dataset Fingerprint (Giữ nguyên ISO Timestamp).
- * 3. Dynamic Taxonomy Generation (Tự sinh bộ lọc từ Dataset).
- * 4. Request Sequencing & Anti-Stale Overwrite (Chống race condition).
- * 5. Full 4-State Connection Recovery Machine (Live / Reconnecting / Stale / Error).
+ * CHÂN LÝ DỮ LIỆU & BẢO MẬT MẬT MÃ HỌC:
+ * 1. Web Crypto API SHA-256 Comparison: Phân định rõ MATCH / MISMATCH / MISSING.
+ * 2. True AbortController & Post-Normalization Sequence Guard.
+ * 3. 14-Field Canonical Dataset Fingerprint.
+ * 4. 5-State Connection Recovery Machine: BOOT / LIVE / RECONNECTING / STALE / ERROR.
+ * 5. Dynamic Taxonomy Rendering & Decoupled Fallback Classifier.
  * 6. XSS-Safe HTML Escaping & Protocol Allowlist.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Enterprise Production Runtime v3.4 (GA Standard) Active");
+    console.log("⚡ JAYT Enterprise Production Runtime v3.5 (True GA) Booting...");
 
     // State ứng dụng tập trung
     const State = {
@@ -27,6 +27,8 @@
         errorMessage: null,
         activeRequestId: 0
     };
+
+    let activeAbortController = null;
 
     // 1. Tiện ích Bảo mật & Chuẩn hóa
     function escapeHTML(str) {
@@ -56,12 +58,13 @@
     // 2. Mật Mã Học: Tính SHA-256 thật bằng Web Crypto API
     async function calculateSHA256(message) {
         try {
+            if (!window.crypto || !window.crypto.subtle) return null;
             const msgBuffer = new TextEncoder().encode(message);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashBuffer = await window.crypto.subtle.digest('SHA-256', msgBuffer);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         } catch (e) {
-            console.warn("⚠️ Web Crypto unsupported or failed:", e);
+            console.warn("⚠️ Web Crypto digest error:", e);
             return null;
         }
     }
@@ -91,8 +94,8 @@
         return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate };
     }
 
-    // 4. Nhận diện Taxonomy Động
-    function inferCategory(raw) {
+    // 4. Fallback Classifier tách biệt rõ ràng
+    function inferFallbackCategory(raw) {
         if (raw.category && typeof raw.category === 'string') {
             return raw.category.trim().toUpperCase();
         }
@@ -103,7 +106,7 @@
         return 'OTHER';
     }
 
-    // 5. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 bất đồng bộ
+    // 5. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 (3 Trạng thái)
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -129,19 +132,25 @@
         const voucher = safeStr(raw.voucher_code, 'JAYTPROMO');
         const source = safeStr(raw.source_channel, 'Kênh đối tác');
         const address = safeStr(raw.branch_address, 'Đà Nẵng');
-        const rawSha = safeStr(raw.evidence_sha256);
+        const rawEvidenceSha = safeStr(raw.evidence_sha256);
 
         // Chuỗi Canonical Payload để đối soát SHA-256
         const canonicalPayload = `${dealId}|${merchant}|${item}|${original}|${discount}|${voucher}|${rawValidUntil}`;
         const computedSha = await calculateSHA256(canonicalPayload);
 
+        // P0-2: SO SÁNH MẬT MÃ HỌC ĐÍCH THỰC (MATCH / MISMATCH / MISSING)
         let shaStatus = 'MISSING';
         let shaLabel = '⚠️ CHƯA CUNG CẤP CHỮ KÝ SHA-256';
 
-        if (/^[a-fA-F0-9]{64}$/.test(rawSha)) {
-            // Có hash gửi lên từ backend
-            shaStatus = 'PROVIDED';
-            shaLabel = '🟢 ĐÃ ĐỐI SOÁT CHỮ KÝ BẰNG CHỨNG HỢP LỆ';
+        if (!rawEvidenceSha || !/^[a-fA-F0-9]{64}$/.test(rawEvidenceSha)) {
+            shaStatus = 'MISSING';
+            shaLabel = '⚠️ CHƯA CUNG CẤP CHỮ KÝ SHA-256';
+        } else if (computedSha && computedSha.toLowerCase() === rawEvidenceSha.toLowerCase()) {
+            shaStatus = 'MATCH';
+            shaLabel = '🟢 CHỮ KÝ SHA-256 ĐÃ ĐỐI SOÁT HỢP LỆ (KHỚP 100%)';
+        } else {
+            shaStatus = 'MISMATCH';
+            shaLabel = '🔴 CẢNH BÁO: CHỮ KÝ BẤT KHỚP (DỮ LIỆU ĐÃ BỊ THAY ĐỔI)';
         }
 
         return {
@@ -158,19 +167,19 @@
             saving_percentage: pct,
             valid_until_raw: rawValidUntil,
             expiry_info: expiry,
-            evidence_sha256: rawSha,
+            evidence_sha256: rawEvidenceSha,
             computed_sha256: computedSha,
             sha_status: shaStatus,
             sha_label: shaLabel,
-            category: inferCategory(raw),
+            category: inferFallbackCategory(raw),
             target_icp: safeStr(raw.target_icp, 'ALL')
         };
     }
 
-    // 6. Canonical Dataset Fingerprint nguyên bản (Raw Timestamp)
+    // 6. Canonical Dataset Fingerprint 14 trường dữ liệu (P0-1)
     function buildCanonicalDatasetFingerprint(deals) {
         return deals.map(d => 
-            `${d.deal_id}:${d.original_price_vnd}:${d.discount_price_vnd}:${d.saving_amount_vnd}:${d.voucher_code}:${d.valid_until_raw}:${d.merchant_name}:${d.item_name}:${d.source_channel}:${d.deep_link}:${d.evidence_sha256 || 'NOHASH'}`
+            `${d.deal_id}:${d.original_price_vnd}:${d.discount_price_vnd}:${d.saving_amount_vnd}:${d.saving_percentage}:${d.voucher_code}:${d.valid_until_raw}:${d.merchant_name}:${d.item_name}:${d.branch_address}:${d.source_channel}:${d.deep_link}:${d.category}:${d.target_icp}:${d.evidence_sha256 || 'NOHASH'}`
         ).join('|');
     }
 
@@ -214,8 +223,8 @@
         } else if (State.connectionStatus === 'RECONNECTING') {
             connectionBadge = `
                 <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D; padding: 0.3rem 0.75rem; border-radius: 9999px; font-weight: 700;">
-                    <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%; animation: pulse 1s infinite;"></span>
-                    <span>🔄 Đang kết nối lại... (Dữ liệu lúc ${escapeHTML(State.lastUpdatedTime)})</span>
+                    <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+                    <span>🔄 Đang kết nối lại... (${escapeHTML(State.lastUpdatedTime)})</span>
                 </div>
             `;
         } else if (State.connectionStatus === 'STALE') {
@@ -227,7 +236,6 @@
             `;
         }
 
-        // Tên hiển thị thân thiện của Category
         const getCategoryLabel = (cat) => {
             if (cat === 'ALL') return `✨ Tất cả (${totalCount})`;
             const count = usableDeals.filter(d => d.category === cat).length;
@@ -374,9 +382,15 @@
             document.body.appendChild(modal);
         }
 
-        const shaDisplay = deal.evidence_sha256
-            ? `<div style="background: #0F172A; padding: 0.45rem; border-radius: 8px; font-family: monospace; font-size: 0.68rem; color: #10B981; word-break: break-all;">${escapeHTML(deal.evidence_sha256)}</div>`
-            : `<span style="color: #D97706; font-size: 0.75rem;">${escapeHTML(deal.sha_label)}</span>`;
+        // P0-2: HIỂN THỊ MINH BẠCH KẾT QUẢ ĐỐI SOÁT COMPUTED VS EVIDENCE
+        let shaStatusBadge = '';
+        if (deal.sha_status === 'MATCH') {
+            shaStatusBadge = `<span style="color: #059669; font-weight: 800;">🟢 CHỮ KÝ ĐỐI SOÁT HỢP LỆ (KHỚP 100%)</span>`;
+        } else if (deal.sha_status === 'MISMATCH') {
+            shaStatusBadge = `<span style="color: #DC2626; font-weight: 800;">🔴 CẢNH BÁO: CHỮ KÝ BẤT KHỚP</span>`;
+        } else {
+            shaStatusBadge = `<span style="color: #D97706; font-weight: 800;">⚠️ CHƯA CUNG CẤP CHỮ KÝ</span>`;
+        }
 
         modal.innerHTML = `
             <div style="background: #FFFFFF; border-radius: 20px; max-width: 500px; width: 100%; padding: 1.6rem; box-shadow: 0 20px 50px rgba(0,0,0,0.25); color: #0F172A;">
@@ -398,8 +412,15 @@
                     <div style="display: flex; justify-content: space-between;"><span style="color: #64748B;">Trạng thái thời hạn:</span><strong style="color: ${deal.expiry_info.status === 'EXPIRED' ? '#DC2626' : '#059669'};">${escapeHTML(deal.expiry_info.label)}</strong></div>
                     
                     <div style="border-top: 1px dashed #E2E8F0; padding-top: 0.5rem; margin-top: 0.2rem;">
-                        <span style="color: #64748B; display: block; margin-bottom: 0.3rem;">Chữ ký SHA-256 đối soát từ hệ thống:</span>
-                        ${shaDisplay}
+                        <div style="margin-bottom: 0.35rem;">Kết quả đối soát SHA-256: ${shaStatusBadge}</div>
+                        ${deal.evidence_sha256 ? `
+                            <div style="font-size: 0.72rem; color: #64748B; margin-bottom: 0.2rem;">Evidence Hash (Từ Backend):</div>
+                            <div style="background: #0F172A; padding: 0.35rem 0.5rem; border-radius: 6px; font-family: monospace; font-size: 0.65rem; color: #10B981; word-break: break-all; margin-bottom: 0.35rem;">${escapeHTML(deal.evidence_sha256)}</div>
+                        ` : ''}
+                        ${deal.computed_sha256 ? `
+                            <div style="font-size: 0.72rem; color: #64748B; margin-bottom: 0.2rem;">Computed Hash (Tính toán trên máy khách):</div>
+                            <div style="background: #0F172A; padding: 0.35rem 0.5rem; border-radius: 6px; font-family: monospace; font-size: 0.65rem; color: #38BDF8; word-break: break-all;">${escapeHTML(deal.computed_sha256)}</div>
+                        ` : ''}
                     </div>
                 </div>
 
@@ -482,11 +503,17 @@
         });
     }
 
-    // 12. Fetch Engine Kháng Race Condition (P0-5)
+    // 12. Fetch Engine Chuẩn Tuần Tự & AbortController (P0-5)
     async function fetchDeals() {
+        // Hủy request trước nếu đang chạy
+        if (activeAbortController) {
+            activeAbortController.abort();
+        }
+        activeAbortController = new AbortController();
+
         const requestId = ++State.activeRequestId;
 
-        // Nếu đã có cache nhưng đang poll lại ➔ hiển thị RECONNECTING
+        // Nếu đã có cache ➔ hiển thị RECONNECTING
         if (State.deals.length > 0 && State.connectionStatus !== 'LIVE') {
             State.connectionStatus = 'RECONNECTING';
             renderApp();
@@ -495,6 +522,7 @@
         try {
             const res = await fetch('/api/deals', {
                 cache: 'no-store',
+                signal: activeAbortController.signal,
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Pragma': 'no-cache'
@@ -504,7 +532,7 @@
             if (!res.ok) throw new Error(`HTTP_${res.status}`);
             const data = await res.json();
 
-            // Chặn stale response overwrite: Nếu có request mới hơn đã hoàn tất ➔ Bỏ qua request này
+            // Chốt chặn 1: Kiểm tra sequence ID sau khi nhận JSON
             if (requestId !== State.activeRequestId) {
                 return;
             }
@@ -512,6 +540,11 @@
             const rawDeals = Array.isArray(data.deals) ? data.deals : [];
             const normalizedPromises = rawDeals.map(normalizeDeal);
             const normalizedDeals = (await Promise.all(normalizedPromises)).filter(Boolean);
+
+            // Chốt chặn 2: Atomic Check sau khi tính toán SHA-256 xong
+            if (requestId !== State.activeRequestId) {
+                return;
+            }
 
             const newFingerprint = buildCanonicalDatasetFingerprint(normalizedDeals);
             const now = new Date();
@@ -530,6 +563,9 @@
                 renderApp(); // Cập nhật timestamp trên header
             }
         } catch (err) {
+            if (err.name === 'AbortError') {
+                return; // Request bị hủy có chủ đích, không coi là lỗi
+            }
             if (requestId !== State.activeRequestId) return;
             console.warn("⚠️ API sync warning:", err);
 
@@ -546,7 +582,7 @@
         }
     }
 
-    // 13. Khởi chạy tất định
+    // 13. Khởi chạy
     function init() {
         setupEventDelegation();
         fetchDeals();
