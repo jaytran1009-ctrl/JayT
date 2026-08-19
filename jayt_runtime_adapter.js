@@ -4,7 +4,7 @@
  * =============================================================================
  * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * 
- * BẢO TỒN 100% CẤU TRÚC GIAO DIỆN GOLDEN MASTER:
+ * BẢO TỒN NGUYÊN BẢN 100% GIAO DIỆN APEX v5.1 GOLDEN MASTER:
  * - Top Running Ticker
  * - Master Sticky Header + Nút Săn Nhanh 10s + Đổi Theme + Ví + Zalo CSKH
  * - 5-Question Executive Summary Banner
