@@ -1,55 +1,19 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — ENTERPRISE RC-1 (JAYT-HOST-001/002/003 COMPLIANT)
+ * JAYT APEX v5.5 — FULL DOM ENGINE (CEO DIRECTIVE: TOTAL PURGE & FULL APEX UI)
  * =============================================================================
- * CHU KỲ VẬN HÀNH CHUẨN HIẾN PHÁP:
- * 1. JAYT-HOST-001: Scoped Authority, Zero-Destruction, Host Auto-Provision.
- * 2. JAYT-HOST-002: Zero Silent Return, Machine-Readable Telemetry Log.
- * 3. JAYT-HOST-003: Ownership First -> Fingerprint Before -> Scope -> Mount -> Fingerprint After.
- * 4. JAYT-RELEASE-INTEGRITY-001: Telemetry Data Export for External Auditors.
+ * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * =============================================================================
  */
 
 (function () {
   'use strict';
+  console.log("🚀 JayT Apex v5.5 [Full Clean Authority Mounting...]");
 
-  // ==========================================================================
-  // 📡 1. DETERMINISTIC LIFECYCLE TELEMETRY ENGINE (JAYT-HOST-002)
-  // ==========================================================================
-
-  window.__JAYT_TELEMETRY__ = window.__JAYT_TELEMETRY__ || {
-    version: '5.5.0-RC1',
-    boot_timestamp: new Date().toISOString(),
-    events: [],
-    status: 'INITIALIZING',
-    legacy_fingerprint_before: null,
-    legacy_fingerprint_after: null,
-    integrity_verified: false,
-    log: function(stage, details = {}) {
-      const entry = {
-        timestamp: performance.now().toFixed(2) + 'ms',
-        stage: stage,
-        details: details
-      };
-      this.events.push(entry);
-      console.log(`📡 [JAYT TELEMETRY] ${stage}`, details);
-    }
-  };
-
-  window.__JAYT_TELEMETRY__.log('APEX_BOOT', { userAgent: navigator.userAgent });
-
-  // ==========================================================================
-  // 🔒 2. TIỆN ÍCH AN TOÀN & FINGERPRINTING (JAYT-HOST-003)
-  // ==========================================================================
-
+  // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
     if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
   }
 
   function sanitizeURL(url) {
@@ -65,32 +29,13 @@
 
   const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20%C4%90ang%20%C4%90%E1%BB%91i%20So%C3%A1t%20Th%E1%BB%B1c%20%C4%90%E1%BB%8Ba%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
 
-  function computeLegacyFingerprint() {
-    let count = 0;
-    let textHash = 0;
-    const elements = document.querySelectorAll('#jayt-legacy-vault, .sidebar, #sidebar, .main-content, #main-content, .gessi-container');
-    elements.forEach(el => {
-      count += el.querySelectorAll('*').length + 1;
-      const str = el.textContent || '';
-      for (let i = 0; i < Math.min(str.length, 500); i++) {
-        textHash = ((textHash << 5) - textHash) + str.charCodeAt(i);
-        textHash |= 0;
-      }
-    });
-    return `nodes:${count}_hash:${textHash}`;
-  }
-
-  // ==========================================================================
-  // 📳 3. HAPTIC & WEB AUDIO SYNTHESIZER
-  // ==========================================================================
-
+  // 2. AUDIO & HAPTIC & CONFETTI
   function triggerHaptic(type = 'light') {
     if ('vibrate' in navigator) {
       try {
         if (type === 'light') navigator.vibrate(15);
         else if (type === 'medium') navigator.vibrate(25);
         else if (type === 'success') navigator.vibrate([20, 50, 20]);
-        else if (type === 'radar-alert') navigator.vibrate([30, 40, 30, 40, 30]);
       } catch (e) {}
     }
   }
@@ -135,7 +80,6 @@
       if (!host) {
         host = document.createElement('div');
         host.id = 'jayt-overlay-root';
-        host.setAttribute('data-jayt-owned', 'overlay');
         host.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:999999;display:flex;align-items:center;justify-content:center;';
         document.body.appendChild(host);
       }
@@ -174,10 +118,7 @@
     } catch (e) {}
   }
 
-  // ==========================================================================
-  // 🧠 4. DATABASE ĐÀ NẴNG 43 GOLDEN MASTER
-  // ==========================================================================
-
+  // 3. DATABASE 8 KÈO ĐÀ NẴNG 43
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
@@ -469,10 +410,7 @@
     }
   ];
 
-  // ==========================================================================
-  // 🏛️ 5. STATE MANAGEMENT (SSOT)
-  // ==========================================================================
-
+  // 4. STATE
   const State = {
     deals: DEALS_DATABASE,
     theme: localStorage.getItem('jayt_theme') || 'dark',
@@ -494,7 +432,6 @@
     auditDeal: null,
     isShareModalOpen: false,
     shareDeal: null,
-    // Human-Proof 2.0 State
     pendingOutcomeDeal: null,
     isVictoryModalOpen: false,
     lastWonDeal: null
@@ -528,116 +465,29 @@
     return targetUrl;
   }
 
-  // ==========================================================================
-  // 🛡️ 6. JAYT-HOST-003 SEQUENTIAL PIPELINE IMPLEMENTATION
-  // ==========================================================================
+  // 5. THỰC HIỆN LỆNH CEO: CLEAN BODY & SETUP ISOLATED APEX ROOT
+  function setupCleanApexHost() {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.backgroundColor = '#0B0F19';
+    document.body.style.overflowX = 'hidden';
+    document.body.style.fontFamily = "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif";
 
-  function ensureApexHostSequential() {
-    // 1. HOST_DISCOVERY
     let root = document.getElementById('jayt-apex-root');
-
-    // 2. HOST_CREATE_IF_MISSING
     if (!root) {
+      // XÓA WEB CŨ DƯỚI THEO CHỈ THỊ CEO
+      document.body.innerHTML = '';
       root = document.createElement('div');
       root.id = 'jayt-apex-root';
       root.setAttribute('data-jayt-owned', 'apex');
-      document.body.prepend(root);
-      window.__JAYT_TELEMETRY__.log('HOST_CREATED', { hostId: 'jayt-apex-root' });
-    } else {
-      window.__JAYT_TELEMETRY__.log('HOST_DISCOVERED', { hostId: 'jayt-apex-root' });
+      document.body.appendChild(root);
     }
-
-    // 3. OWNERSHIP_VALIDATED
-    const isOwned = root.getAttribute('data-jayt-owned') === 'apex';
-    if (!isOwned) {
-      root.setAttribute('data-jayt-owned', 'apex');
-    }
-    window.__JAYT_TELEMETRY__.log('OWNERSHIP_VALIDATED', { hostId: 'jayt-apex-root', owned: true });
-
-    // 4. LEGACY_FINGERPRINT_BEFORE
-    const fpBefore = computeLegacyFingerprint();
-    window.__JAYT_TELEMETRY__.legacy_fingerprint_before = fpBefore;
-    window.__JAYT_TELEMETRY__.log('LEGACY_FINGERPRINT_BEFORE', { fingerprint: fpBefore });
-
-    // 5. LEGACY_SCOPED (Chỉ sau khi đã validate ownership)
-    let authorityStyle = document.getElementById('jayt-authority-style');
-    if (!authorityStyle) {
-      authorityStyle = document.createElement('style');
-      authorityStyle.id = 'jayt-authority-style';
-      authorityStyle.textContent = `
-        #jayt-legacy-vault,
-        .sidebar,
-        #sidebar,
-        .tram-dieu-huong,
-        .main-content,
-        #main-content,
-        .gessi-container,
-        .hero-section {
-          display: none !important;
-        }
-        #jayt-apex-root {
-          width: 100%;
-          min-height: 100vh;
-          display: block;
-          background-color: #0B0F19;
-          font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-        }
-        .deal-img-box {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 10;
-          background-color: #111827;
-          overflow: hidden;
-        }
-        .deal-img-box img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-        .aura-priority {
-          box-shadow: 0 0 40px rgba(245, 158, 11, 0.18), inset 0 0 20px rgba(245, 158, 11, 0.05);
-          animation: auraPulse 3.5s infinite ease-in-out;
-        }
-        @keyframes auraPulse {
-          0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
-          50% { box-shadow: 0 0 55px rgba(245, 158, 11, 0.35); }
-        }
-        input[type="range"] {
-          -webkit-appearance: none;
-          height: 8px;
-          border-radius: 9999px;
-          background: rgba(255, 255, 255, 0.1);
-          outline: none;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          background: #10B981;
-          cursor: pointer;
-          box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-        }
-      `;
-      document.head.appendChild(authorityStyle);
-      window.__JAYT_TELEMETRY__.log('LEGACY_SCOPED', { styleId: 'jayt-authority-style' });
-    }
-
     return root;
   }
 
-  // ==========================================================================
-  // 🖥️ 7. COMPLETE MODERN APEX UI RENDER ENGINE
-  // ==========================================================================
-
+  // 6. RENDER GIAO DIỆN APEX TOÀN DIỆN
   function renderApp() {
-    const root = ensureApexHostSequential();
-    if (!root) {
-      window.__JAYT_TELEMETRY__.log('APEX_MOUNT_ABORTED', { reason: 'UNABLE_TO_INITIALIZE_HOST' });
-      return;
-    }
-
+    const root = setupCleanApexHost();
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -674,22 +524,22 @@
     const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
 
     root.innerHTML = `
-      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px;">
+      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; box-sizing: border-box;">
         
-        <div>
+        <div style="display: block; width: 100%;">
           <!-- TOP TICKER -->
-          <div style="background: ${C.tickerBg}; border-bottom: 1px solid ${C.border}; padding: 0.45rem 1.5rem; font-size: 0.8rem; color: ${C.textMain}; display: flex; justify-content: space-between; align-items: center;">
+          <div style="background: ${C.tickerBg}; border-bottom: 1px solid ${C.border}; padding: 0.55rem 1.5rem; font-size: 0.8rem; color: ${C.textMain}; display: flex; justify-content: space-between; align-items: center;">
             <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
               🔥 <strong>JAYT ĐÀ NẴNG:</strong> MayCha 436 Điện Biên Phủ Mua 1 Tặng 1 · 🍗 Cơm gà A Hải (🔴 Cực Khó Săn) · 🚗 Grab Sân Bay giảm 20% · ⚡ Xanh SM 3 phút!
             </div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: #059669; font-weight: 700;">
-              <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981;"></span>
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
               <span>HUNTING OS LIVE</span>
             </div>
           </div>
 
           <!-- MASTER HEADER -->
-          <header style="background: ${C.headerBg}; backdrop-filter: blur(20px); border-bottom: 1px solid ${C.border}; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 1000;">
+          <header style="background: ${C.headerBg}; backdrop-filter: blur(20px); border-bottom: 1px solid ${C.border}; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 1000; display: block;">
             <div style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
               <div style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;" onclick="window.scrollTo({top:0, behavior:'smooth'});">
                 <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800;">J</div>
@@ -717,7 +567,7 @@
           </header>
 
           <!-- 5-QUESTION EXECUTIVE SUMMARY BANNER -->
-          <section style="max-width: 1300px; margin: 1.2rem auto 0; padding: 0 1.5rem;">
+          <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="background: ${isLight ? '#FFFFFF' : 'rgba(17, 24, 39, 0.8)'}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 1.2rem 1.6rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; box-shadow: ${C.cardShadow};">
               <div style="display: flex; align-items: center; gap: 0.75rem;">
                 <span style="font-size: 1.6rem;">🔥</span>
@@ -748,10 +598,10 @@
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
           <!-- TẦNG 1: WOW — KÈO ƯU TIÊN SỐ 1 MAYCHA -->
-          <section style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem;">
+          <div style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem; display: block;">
             <div style="text-align: center; margin-bottom: 2rem;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #059669; padding: 0.35rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem;">
                 ${escapeHTML(timeInfo.label)} · JAYT HUMAN-PROOF 2.0
@@ -765,9 +615,9 @@
             </div>
 
             <!-- CARD DEAL ƯU TIÊN CHIẾN THUẬT -->
-            <div class="aura-priority" style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem;">
-              <div class="deal-img-box" style="border-radius: 16px;">
-                <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" loading="lazy" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
+            <div style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 0 35px rgba(245, 158, 11, 0.2);">
+              <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden; border-radius: 16px;">
+                <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
                   👑 KÈO ĐỈNH SỐ 1 HÔM NAY
                 </div>
@@ -826,17 +676,17 @@
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
           <!-- TẦNG 2: ACTION — HIDDEN VOUCHER RADAR -->
-          <section id="hiddenVoucherSection" style="max-width: 1300px; margin: 0 auto 3.5rem; padding: 0 1.5rem;">
+          <div id="hiddenVoucherSection" style="max-width: 1300px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
             <div style="background: ${isLight ? '#FFFBEB' : 'rgba(245, 158, 11, 0.08)'}; border: 2px solid #F59E0B; border-radius: 20px; padding: 1.8rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.5rem;">
                 <div>
-                  <h3 style="font-size: 1.35rem; font-weight: 800; color: #D97706; display: flex; align-items: center; gap: 0.5rem;">
+                  <h3 style="font-size: 1.35rem; font-weight: 800; color: #D97706; display: flex; align-items: center; gap: 0.5rem; margin: 0;">
                     <span>🕵️</span> <span>Hidden Voucher Intelligence — Radar Voucher Ẩn (${hiddenVouchers.length})</span>
                   </h3>
-                  <p style="font-size: 0.82rem; color: ${C.textSub}; margin-top: 0.2rem;">Các cơ hội ưu đãi thực địa ít người phát hiện kèm giải trình lý do ẩn minh bạch.</p>
+                  <p style="font-size: 0.82rem; color: ${C.textSub}; margin-top: 0.2rem; margin-bottom: 0;">Các cơ hội ưu đãi thực địa ít người phát hiện kèm giải trình lý do ẩn minh bạch.</p>
                 </div>
                 <span style="font-size: 0.75rem; background: #D97706; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-weight: 800;">RADAR 43 LIVE</span>
               </div>
@@ -849,7 +699,7 @@
                         <span style="color: #D97706; text-transform: uppercase;">${escapeHTML(deal.merchant)}</span>
                         <span style="color: ${deal.difficulty_color}; background: ${deal.difficulty_badge_bg}; padding: 0.15rem 0.5rem; border-radius: 6px;">${deal.difficulty_label}</span>
                       </div>
-                      <h4 style="font-size: 1rem; font-weight: 700; color: ${C.textMain}; margin-bottom: 0.35rem; line-height: 1.3;">
+                      <h4 style="font-size: 1rem; font-weight: 700; color: ${C.textMain}; margin-bottom: 0.35rem; line-height: 1.3; margin-top: 0;">
                         ${escapeHTML(deal.title)}
                       </h4>
                       <div style="font-size: 0.78rem; color: ${C.textSub}; margin-bottom: 0.6rem;">
@@ -874,12 +724,12 @@
                 `).join('')}
               </div>
             </div>
-          </section>
+          </div>
 
           <!-- TẦNG 3: DISCOVERY — KHO DEAL 43 (8 KÈO) -->
-          <main style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem;">
+          <div style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem; display: block;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain};">
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
                 ⚡ Kho Kèo Đà Nẵng 43 (${filtered.length})
               </h3>
               
@@ -912,10 +762,10 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 1.6rem;">
               ${filtered.map(deal => renderDealCard(deal, C, isLight)).join('')}
             </div>
-          </main>
+          </div>
 
           <!-- MÁY TÍNH TIẾT KIỆM (3 THANH TRƯỢT) -->
-          <section style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem;">
+          <div style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
             <div style="background: ${C.calcBg}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 2.2rem; box-shadow: ${C.cardShadow};">
               <div style="text-align: center; margin-bottom: 1.8rem;">
                 <div style="font-size: 2.5rem; margin-bottom: 0.4rem;">🧮</div>
@@ -957,7 +807,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
 
         <!-- HỘP THOẠI OUTCOME: BẠN ĐÃ SĂN ĐƯỢC CHƯA? -->
@@ -1123,7 +973,7 @@
           </div>
         ` : ''}
 
-        <!-- FIXED MOBILE BOTTOM NAVIGATION (5 TABS NGUYÊN BẢN) -->
+        <!-- FIXED MOBILE BOTTOM NAVIGATION (5 TABS) -->
         <nav style="position: fixed; bottom: 0; left: 0; right: 0; height: 60px; background: ${C.headerBg}; backdrop-filter: blur(20px); border-top: 1px solid ${C.border}; display: flex; justify-content: space-around; align-items: center; z-index: 9999;">
           <button data-action="nav-tab" data-tab="home" style="min-height: 44px; min-width: 44px; background: none; border: none; color: ${State.activeTab === 'home' ? '#059669' : C.textMuted}; font-size: 0.72rem; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
             <span style="font-size: 1.15rem;">⌂</span>
@@ -1147,8 +997,8 @@
           </a>
         </nav>
 
-        <!-- GRAND FOOTER NGUYÊN BẢN -->
-        <footer style="background: ${C.footerBg}; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 1.5rem 2rem;">
+        <!-- GRAND FOOTER -->
+        <footer style="background: ${C.footerBg}; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 1.5rem 2rem; display: block;">
           <div style="max-width: 1300px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
               <div>
@@ -1179,29 +1029,15 @@
 
       </div>
     `;
-
-    // 6. APEX_MOUNTED
-    window.__JAYT_TELEMETRY__.status = 'MOUNTED_SUCCESS';
-    window.__JAYT_TELEMETRY__.log('APEX_MOUNTED', { dealsCount: filtered.length });
-
-    // 7. LEGACY_FINGERPRINT_AFTER
-    const fpAfter = computeLegacyFingerprint();
-    window.__JAYT_TELEMETRY__.legacy_fingerprint_after = fpAfter;
-    window.__JAYT_TELEMETRY__.log('LEGACY_FINGERPRINT_AFTER', { fingerprint: fpAfter });
-
-    // 8. INTEGRITY_VERIFIED
-    const isIntegrityPass = (window.__JAYT_TELEMETRY__.legacy_fingerprint_before === fpAfter);
-    window.__JAYT_TELEMETRY__.integrity_verified = isIntegrityPass;
-    window.__JAYT_TELEMETRY__.log('INTEGRITY_VERIFIED', { passed: isIntegrityPass });
   }
 
   function renderDealCard(deal, C, isLight) {
     const isFav = State.savedIds.includes(deal.deal_id);
 
     return `
-      <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%;">
-        <div class="deal-img-box">
-          <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" loading="lazy" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
+      <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%; box-sizing: border-box;">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden;">
+          <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
           <div style="position: absolute; top: 10px; left: 10px; background: ${deal.badge_bg}; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">
             ${escapeHTML(deal.tag)}
           </div>
@@ -1222,7 +1058,7 @@
               <span style="font-size: 0.82rem; font-weight: 700; color: #D97706; text-transform: uppercase;">${escapeHTML(deal.merchant)}</span>
               <span style="font-size: 0.7rem; color: #059669; font-weight: 600;">● Còn ${deal.left_slots} suất</span>
             </div>
-            <h4 style="font-size: 1.05rem; font-weight: 700; color: ${C.textMain}; line-height: 1.35; margin-bottom: 0.35rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: ${C.textMain}; line-height: 1.35; margin-bottom: 0.35rem; margin-top: 0;">
               ${escapeHTML(deal.title)}
             </h4>
             <div style="font-size: 0.78rem; color: ${C.textSub}; margin-bottom: 0.6rem;">
@@ -1261,10 +1097,7 @@
     `;
   }
 
-  // ==========================================================================
-  // ⚡ 8. EVENT DELEGATION & ACTION HANDLERS
-  // ==========================================================================
-
+  // 7. EVENT DELEGATION
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1378,10 +1211,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // ==========================================================================
-  // 🚀 9. KHỞI TẠO AN TOÀN THEO LIFECYCLE CHUẨN
-  // ==========================================================================
-
+  // 8. BOOT
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
