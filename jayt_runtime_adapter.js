@@ -1,27 +1,28 @@
 /**
- * JAYT APEX v6.0 — THE DEFINITIVE COMMUNITY DEAL HUB
+ * JAYT APEX v7.0 — THE DEFINITIVE COMMUNITY DEAL HUB & CITY GUIDE
  * =============================================================================
  * TÔN CHỈ: PHỤC VỤ CỘNG ĐỒNG ĐÀ NẴNG 43 LÀ SỐ 1 — DOANH THU AFFILIATE LÀ SỐ 2
- * HỢP NHẤT TOÀN BỘ 24 TÍNH NĂNG TƯƠNG TÁC CAO CẤP VÀO RUNTIME REALTIME:
- * 1. Marquee Live Ticker & Widget Thời tiết / Gợi ý đi chơi Đà Nẵng.
- * 2. Bảng tính tiết kiệm nhóm (Savings Calculator Modal).
- * 3. Bộ lọc 4 chiều: Địa danh Landmark, Mức giá, Danh mục, Đối tượng ICP.
- * 4. Giỏ Lưu Mã Cá Nhân (Saved Deals Drawer với LocalStorage).
- * 5. Brand Avatars, Đánh giá sao, Chia sẻ Zalo/FB, Báo lỗi deal cộng đồng.
- * 6. Top 3 Tiết Kiệm viền vàng kim, Thẻ Deal tối ưu chuyển đổi, Toast nổi.
- * 7. Single State Snapshot, 20s Polling, Web Crypto SHA-256, Zero Race Condition.
+ * HỢP NHẤT TOÀN DIỆN 10 KHỐI NỘI DUNG & TIỆN ÍCH ĐẠI ĐÔ THỊ ĐÀ NẴNG:
+ * 1. Marquee Live Ticker & Khung Gợi Ý Đi Chơi / Thời Tiết Đà Nẵng.
+ * 2. Bảng Tính Tiết Kiệm Nhóm Trực Tiếp Trên Giao Diện (Live Savings Calculator).
+ * 3. Bản Đồ 5 Địa Danh Huyền Thoại Đà Nẵng (Cầu Rồng, Mỹ Khê, Làng ĐH, Chợ Cồn, Sân Bay).
+ * 4. Bộ Lọc Đa Chiều (Địa danh, Phân khúc giá, Danh mục, Đối tượng sinh viên/lao động).
+ * 5. Cẩm Nang Bản Địa: Bí kíp đi xe 0Đ, Xem phim 55K, Quán ăn ngon rẻ 43.
+ * 6. Hotline Cứu Trợ & Tiện Ích TP: Hỗ trợ du khách 0236 3550 111, Danabus.
+ * 7. Giỏ Lưu Mã Cá Nhân (Drawer LocalStorage) + Nút Chia Sẻ Zalo/FB 1-chạm.
+ * 8. Trung Tâm Minh Bạch 3 Tầng & Modal Bảng Kê Đối Soát SHA-256 Web Crypto API.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Definitive Community Deal Hub v6.0 Active");
+    console.log("⚡ JAYT City Guide & Deal Hub v7.0 Active");
 
     const State = {
         deals: [],
         categories: ['ALL'],
         activeFilter: 'ALL',
-        activeLandmark: 'ALL', // 'ALL' | 'CAURONG' | 'MYKHE' | 'LANGDH' | 'SANBAY'
+        activeLandmark: 'ALL', // 'ALL' | 'CAURONG' | 'MYKHE' | 'LANGDH' | 'SANBAY' | 'CHOCON'
         activePriceRange: 'ALL', // 'ALL' | 'UNDER_50K' | '50K_100K' | 'ABOVE_100K'
         activeICP: 'ALL', // 'ALL' | 'STUDENT' | 'WORKER' | 'TOURIST'
         sortBy: 'SAVING_DESC',
@@ -34,8 +35,8 @@
         activeRequestId: 0,
         savedDealIds: JSON.parse(localStorage.getItem('jayt_saved_deals') || '[]'),
         isSavedDrawerOpen: false,
-        isCalcModalOpen: false,
-        calcPeopleCount: 2
+        calcPeopleCount: 2,
+        calcNeed: 'COMBO' // 'COMBO' | 'FOOD' | 'DRINK' | 'CINEMA' | 'RIDE'
     };
 
     let activeAbortController = null;
@@ -173,6 +174,7 @@
         else if (addrLower.includes('sơn trà') || addrLower.includes('mỹ khê') || addrLower.includes('ngô quyền') || addrLower.includes('ngũ hành sơn')) landmark = 'MYKHE';
         else if (addrLower.includes('làng đại học') || addrLower.includes('thanh khê') || addrLower.includes('hssv') || addrLower.includes('sinh viên') || addrLower.includes('u22')) landmark = 'LANGDH';
         else if (addrLower.includes('sân bay') || addrLower.includes('grabcar') || addrLower.includes('ga đà nẵng')) landmark = 'SANBAY';
+        else if (addrLower.includes('chợ cồn') || addrLower.includes('hùng vương') || addrLower.includes('ông ích khiêm')) landmark = 'CHOCON';
 
         // Chuỗi Canonical Payload của từng Deal
         const canonicalPayload = `${dealId}|${merchant}|${item}|${original}|${discount}|${voucher}|${rawValidUntil}`;
@@ -251,7 +253,7 @@
         }, 2200);
     }
 
-    // 8. Render Giao Diện Đại Đô Thị Portal v6.0
+    // 8. Render Giao Diện Đại Đô Thị Portal v7.0
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -359,6 +361,14 @@
 
         const isHomeOverview = !State.searchQuery && State.activeFilter === 'ALL' && State.activeLandmark === 'ALL' && State.activePriceRange === 'ALL' && State.activeICP === 'ALL';
 
+        // Tính toán tiết kiệm nhóm
+        let perPersonSaving = 65000;
+        if (State.calcNeed === 'FOOD') perPersonSaving = 45000;
+        if (State.calcNeed === 'DRINK') perPersonSaving = 25000;
+        if (State.calcNeed === 'CINEMA') perPersonSaving = 50000;
+        if (State.calcNeed === 'RIDE') perPersonSaving = 35000;
+        const totalCalcSaving = State.calcPeopleCount * perPersonSaving;
+
         root.innerHTML = `
             <div style="min-height: 100vh; background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
                 
@@ -366,7 +376,7 @@
                     <!-- 1. LIVE NEWS TICKER MARQUEE -->
                     <div style="background: #0F172A; color: #F8FAFC; padding: 0.45rem 1rem; font-size: 0.75rem; overflow: hidden; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.1);">
                         <div class="marquee-track" style="display: inline-block;">
-                            🔥 <strong>ĐÀ NẴNG HÔM NAY:</strong> CGV Vincom đồng giá vé 55K · 🚗 GrabCar Sân Bay giảm ngay 50.000₫ · ☕ Phê La & Katinat ưu đãi mã chill Bạch Đằng · 🍜 Cơm Gà A Hải & Bánh Xèo Năm Hiền giảm đến 40% · ⚡ Hệ thống đối soát SHA-256 tự động cập nhật mỗi 20 giây!
+                            🔥 <strong>ĐÀ NẴNG HÔM NAY (28°C Nắng Đẹp):</strong> CGV Vincom Ngô Quyền vé 55K · 🚗 GrabCar Sân Bay giảm 50.000₫ · ☕ Phê La & Katinat ưu đãi mã chill Bạch Đằng · 🍜 Cơm Gà A Hải & Mì Quảng Bà Mua giảm đến 40% · 🛡️ Đối soát mật mã học SHA-256 cập nhật mỗi 20 giây!
                         </div>
                     </div>
 
@@ -387,9 +397,6 @@
                             </div>
 
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                                <button data-action="open-calc-modal" style="background: #ECFDF5; border: 1px solid #A7F3D0; color: #065F46; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
-                                    🧮 Tính tiền nhóm
-                                </button>
                                 <button data-action="toggle-saved-drawer" style="background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
                                     ❤️ Đã lưu (${savedCount})
                                 </button>
@@ -436,16 +443,6 @@
                                 <button data-action="filter" data-category="SHOPPING" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🛍️ Mua sắm tiện lợi</button>
                             </div>
 
-                            <!-- BỘ LỌC ĐỊA DANH ĐÀ NẴNG 43 -->
-                            <div style="display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; padding: 0.5rem; background: #F1F5F9; border-radius: 14px; max-width: 620px; margin-left: auto; margin-right: auto;">
-                                <span style="font-size: 0.74rem; color: #64748B; font-weight: 800; display: flex; align-items: center; margin-right: 0.3rem;">📍 Địa danh:</span>
-                                <button data-action="landmark" data-landmark="ALL" style="background: ${State.activeLandmark === 'ALL' ? '#0F172A' : '#FFFFFF'}; color: ${State.activeLandmark === 'ALL' ? '#FFF' : '#334155'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.74rem; font-weight: 700; cursor: pointer;">Toàn TP</button>
-                                <button data-action="landmark" data-landmark="CAURONG" style="background: ${State.activeLandmark === 'CAURONG' ? '#0F172A' : '#FFFFFF'}; color: ${State.activeLandmark === 'CAURONG' ? '#FFF' : '#334155'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.74rem; font-weight: 700; cursor: pointer;">🌉 Cầu Rồng / Bạch Đằng</button>
-                                <button data-action="landmark" data-landmark="MYKHE" style="background: ${State.activeLandmark === 'MYKHE' ? '#0F172A' : '#FFFFFF'}; color: ${State.activeLandmark === 'MYKHE' ? '#FFF' : '#334155'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.74rem; font-weight: 700; cursor: pointer;">🏖️ Biển Mỹ Khê / Sơn Trà</button>
-                                <button data-action="landmark" data-landmark="LANGDH" style="background: ${State.activeLandmark === 'LANGDH' ? '#0F172A' : '#FFFFFF'}; color: ${State.activeLandmark === 'LANGDH' ? '#FFF' : '#334155'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.74rem; font-weight: 700; cursor: pointer;">🎓 Làng ĐH / Thanh Khê</button>
-                                <button data-action="landmark" data-landmark="SANBAY" style="background: ${State.activeLandmark === 'SANBAY' ? '#0F172A' : '#FFFFFF'}; color: ${State.activeLandmark === 'SANBAY' ? '#FFF' : '#334155'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.74rem; font-weight: 700; cursor: pointer;">✈️ Sân Bay / GrabCar</button>
-                            </div>
-
                             <!-- BỘ LỌC MỨC GIÁ & ĐỐI TƯỢNG -->
                             <div style="display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem;">
                                 <button data-action="price" data-price="ALL" style="background: ${State.activePriceRange === 'ALL' ? '#059669' : '#FFFFFF'}; color: ${State.activePriceRange === 'ALL' ? '#FFF' : '#475569'}; border: 1px solid #CBD5E1; padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">Tất cả mức giá</button>
@@ -461,6 +458,75 @@
                                         ${escapeHTML(getCategoryLabel(cat))}
                                     </button>
                                 `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- KHỐI 1: BẢN ĐỒ 5 ĐỊA DANH HUYỀN THOẠI ĐÀ NẴNG 43 -->
+                        <div style="margin-bottom: 2.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 1.3rem;">🗺️</span>
+                                    <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Khám phá theo Địa danh Đà Nẵng</h3>
+                                </div>
+                                <span style="font-size: 0.75rem; color: #64748B;">Bấm để lọc nhanh</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
+                                <div class="landmark-card" data-action="landmark" data-landmark="CAURONG" style="background: #FFFFFF; border: 1.5px solid ${State.activeLandmark === 'CAURONG' ? '#059669' : '#E2E8F0'}; border-radius: 16px; padding: 1rem; text-align: left;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">🌉</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #0F172A;">Cầu Rồng & Bạch Đằng</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Cafe chill ngắm sông Hàn</div>
+                                </div>
+                                <div class="landmark-card" data-action="landmark" data-landmark="MYKHE" style="background: #FFFFFF; border: 1.5px solid ${State.activeLandmark === 'MYKHE' ? '#059669' : '#E2E8F0'}; border-radius: 16px; padding: 1rem; text-align: left;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">🏖️</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #0F172A;">Biển Mỹ Khê & Sơn Trà</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Hải sản & cafe view biển</div>
+                                </div>
+                                <div class="landmark-card" data-action="landmark" data-landmark="LANGDH" style="background: #FFFFFF; border: 1.5px solid ${State.activeLandmark === 'LANGDH' ? '#059669' : '#E2E8F0'}; border-radius: 16px; padding: 1rem; text-align: left;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">🎓</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #0F172A;">Làng ĐH & Thanh Khê</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Ăn uống sinh viên 15k-35k</div>
+                                </div>
+                                <div class="landmark-card" data-action="landmark" data-landmark="SANBAY" style="background: #FFFFFF; border: 1.5px solid ${State.activeLandmark === 'SANBAY' ? '#059669' : '#E2E8F0'}; border-radius: 16px; padding: 1rem; text-align: left;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">✈️</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #0F172A;">Sân Bay & Bến Xe</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Mã xe điện & GrabCar 50K</div>
+                                </div>
+                                <div class="landmark-card" data-action="landmark" data-landmark="CHOCON" style="background: #FFFFFF; border: 1.5px solid ${State.activeLandmark === 'CHOCON' ? '#059669' : '#E2E8F0'}; border-radius: 16px; padding: 1rem; text-align: left;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">🍜</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #0F172A;">Chợ Cồn & Chợ Hàn</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Đặc sản bánh xèo, mì Quảng</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KHỐI 2: CÔNG CỤ TÍNH TIẾT KIỆM TRỰC TIẾP TRÊN TRANG (INTERACTIVE CALCULATOR) -->
+                        <div style="background: linear-gradient(135deg, #065F46 0%, #047857 100%); color: #FFFFFF; border-radius: 20px; padding: 1.6rem; margin-bottom: 2.5rem; box-shadow: 0 10px 25px rgba(6,95,70,0.2);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;">
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                        <span style="font-size: 1.25rem;">🧮</span>
+                                        <h3 style="font-size: 1.15rem; font-weight: 900; margin: 0;">Bảng Tính Ngân Sách Đi Chơi / Ăn Uống Nhóm</h3>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #A7F3D0; margin: 0.2rem 0 0;">Chọn số người và nhu cầu để ước tính số tiền tiết kiệm hôm nay</p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 0.6rem 1rem; text-align: right;">
+                                    <div style="font-size: 0.72rem; color: #D1FAE5;">Tiết kiệm ước tính:</div>
+                                    <div style="font-size: 1.4rem; font-weight: 900; color: #FEF08A;">${formatVND(totalCalcSaving)}</div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+                                <span style="font-size: 0.78rem; font-weight: 700; color: #D1FAE5;">Số người:</span>
+                                ${[1, 2, 4, 6, 8].map(num => `
+                                    <button data-action="set-calc-people" data-count="${num}" style="background: ${State.calcPeopleCount === num ? '#FEF08A' : 'rgba(255,255,255,0.1)'}; color: ${State.calcPeopleCount === num ? '#0F172A' : '#FFF'}; border: 1px solid rgba(255,255,255,0.2); padding: 0.35rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">
+                                        ${num} người
+                                    </button>
+                                `).join('')}
+
+                                <span style="font-size: 0.78rem; font-weight: 700; color: #D1FAE5; margin-left: 0.5rem;">Nhu cầu:</span>
+                                <button data-action="set-calc-need" data-need="COMBO" style="background: ${State.calcNeed === 'COMBO' ? '#FEF08A' : 'rgba(255,255,255,0.1)'}; color: ${State.calcNeed === 'COMBO' ? '#0F172A' : '#FFF'}; border: 1px solid rgba(255,255,255,0.2); padding: 0.35rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">Trọn gói Combo</button>
+                                <button data-action="set-calc-need" data-need="FOOD" style="background: ${State.calcNeed === 'FOOD' ? '#FEF08A' : 'rgba(255,255,255,0.1)'}; color: ${State.calcNeed === 'FOOD' ? '#0F172A' : '#FFF'}; border: 1px solid rgba(255,255,255,0.2); padding: 0.35rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">Ăn uống</button>
+                                <button data-action="set-calc-need" data-need="CINEMA" style="background: ${State.calcNeed === 'CINEMA' ? '#FEF08A' : 'rgba(255,255,255,0.1)'}; color: ${State.calcNeed === 'CINEMA' ? '#0F172A' : '#FFF'}; border: 1px solid rgba(255,255,255,0.2); padding: 0.35rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">Rạp phim</button>
                             </div>
                         </div>
 
@@ -573,7 +639,29 @@
                             `}
                         </div>
 
-                        <!-- 5. TRUNG TÂM MINH BẠCH DỮ LIỆU (TRUST CENTER - USP CỦA JAYT) -->
+                        <!-- KHỐI 6: CẨM NANG BẢN ĐỊA & TIỆN ÍCH CỨU TRỢ ĐÀ NẴNG 43 -->
+                        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 2rem 1.5rem; margin-bottom: 2.5rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.2rem;">
+                                <span style="font-size: 1.3rem;">📖</span>
+                                <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Cẩm Nang Tiết Kiệm & Hotline Đà Nẵng</h3>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+                                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">🛵 Bí kíp đi xe công nghệ 0Đ</div>
+                                    <p style="font-size: 0.78rem; color: #64748B; margin: 0; line-height: 1.45;">Áp dụng mã xe điện Xanh SM hoặc GrabCar vào các khung giờ 08:00 - 10:00 và 14:00 - 16:00 để nhận mức giảm tới 50.000₫.</p>
+                                </div>
+                                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">🎬 Xem phim CGV & Metiz 55K</div>
+                                    <p style="font-size: 0.78rem; color: #64748B; margin: 0; line-height: 1.45;">Sinh viên mang theo thẻ HSSV hoặc CCCD dưới 22 tuổi nhận ngay vé xem phim 2D đồng giá 55K - 65K kèm bắp nước.</p>
+                                </div>
+                                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">🚑 Hotline Hỗ Trợ Du Khách 43</div>
+                                    <p style="font-size: 0.78rem; color: #64748B; margin: 0; line-height: 1.45;">Trung tâm Hỗ trợ Du khách TP Đà Nẵng: <strong style="color: #0F172A;">0236 3550 111</strong> · Hỗ trợ thông tin, bảo đảm quyền lợi người tiêu dùng 24/7.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. TRUNG TÂM MINH BẠCH DỮ LIỆU (TRUST CENTER - USP CỦA JAYT) -->
                         <div style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); border-radius: 22px; padding: 2rem 1.5rem; color: #F8FAFC; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(15,23,42,0.15);">
                             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.6rem;">
@@ -619,7 +707,7 @@
                             </div>
                         </div>
 
-                        <!-- 6. Phân khu FAQ Hỏi Đáp Mở Rộng 6 Câu Hỏi -->
+                        <!-- 8. Phân khu FAQ Hỏi Đáp Mở Rộng 6 Câu Hỏi -->
                         <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 2rem 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
                             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.4rem;">
                                 <span style="font-size: 1.3rem;">❓</span>
@@ -656,7 +744,7 @@
                     </main>
                 </div>
 
-                <!-- 7. DRAWER GIỎ LƯU MÃ CÁ NHÂN (SAVED DEALS DRAWER) -->
+                <!-- 9. DRAWER GIỎ LƯU MÃ CÁ NHÂN (SAVED DEALS DRAWER) -->
                 ${State.isSavedDrawerOpen ? `
                     <div style="position: fixed; inset: 0; z-index: 99999; background: rgba(15,23,42,0.6); backdrop-filter: blur(4px); display: flex; justify-content: flex-end;">
                         <div style="background: #FFFFFF; width: 100%; max-width: 420px; height: 100%; box-shadow: -10px 0 30px rgba(0,0,0,0.15); display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; box-sizing: border-box;">
@@ -697,45 +785,7 @@
                     </div>
                 ` : ''}
 
-                <!-- 8. MODAL BẢNG TÍNH TIẾT KIỆM NHÓM (SAVINGS CALCULATOR) -->
-                ${State.isCalcModalOpen ? `
-                    <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(15,23,42,0.75); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                        <div style="background: #FFFFFF; border-radius: 20px; max-width: 460px; width: 100%; padding: 1.6rem; box-shadow: 0 20px 50px rgba(0,0,0,0.25); color: #0F172A;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 0.75rem;">
-                                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <span style="font-size: 1.3rem;">🧮</span>
-                                    <h3 style="font-size: 1.15rem; font-weight: 800; margin: 0;">Bảng Tính Tiết Kiệm Nhóm</h3>
-                                </div>
-                                <button data-action="close-calc-modal" style="background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #64748B;">&times;</button>
-                            </div>
-                            
-                            <div style="margin-bottom: 1.2rem;">
-                                <label style="font-size: 0.8rem; font-weight: 700; color: #64748B; display: block; margin-bottom: 0.4rem;">Số người trong nhóm đi chơi / ăn uống:</label>
-                                <div style="display: flex; gap: 0.5rem;">
-                                    ${[2, 4, 6, 8].map(num => `
-                                        <button data-action="set-calc-people" data-count="${num}" style="flex: 1; padding: 0.5rem; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer; background: ${State.calcPeopleCount === num ? '#059669' : '#F1F5F9'}; color: ${State.calcPeopleCount === num ? '#FFF' : '#334155'}; border: 1px solid ${State.calcPeopleCount === num ? '#059669' : '#CBD5E1'};">
-                                            ${num} người
-                                        </button>
-                                    `).join('')}
-                                </div>
-                            </div>
-
-                            <div style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 1.5px solid #10B981; border-radius: 14px; padding: 1.2rem; text-align: center; margin-bottom: 1.2rem;">
-                                <div style="font-size: 0.8rem; font-weight: 700; color: #065F46; margin-bottom: 0.3rem;">Ước tính cả nhóm tiết kiệm được hôm nay:</div>
-                                <div style="font-size: 1.8rem; font-weight: 900; color: #047857;">
-                                    ${formatVND(State.calcPeopleCount * 65000)}
-                                </div>
-                                <div style="font-size: 0.72rem; color: #065F46; margin-top: 0.2rem;">(Dựa trên combo 1 bữa ăn + 1 ly trà sữa + 1 chuyến xe 0Đ cho mỗi người)</div>
-                            </div>
-
-                            <button data-action="close-calc-modal" style="width: 100%; background: #0F172A; color: #FFF; border: none; padding: 0.75rem; border-radius: 12px; font-weight: 800; cursor: pointer;">
-                                Khám Phá Deal Cho Nhóm Ngay ➔
-                            </button>
-                        </div>
-                    </div>
-                ` : ''}
-
-                <!-- 9. Footer Doanh Nghiệp 4 Cột Hoàn Thiện -->
+                <!-- 10. Footer Doanh Nghiệp 4 Cột Hoàn Thiện -->
                 <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.8rem 1.5rem 1.5rem; margin-top: 2rem;">
                     <div style="max-width: 1140px; margin: 0 auto;">
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2.2rem;">
@@ -793,7 +843,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v6.0 Ultimate Platform</span>
+                            <span>Phiên bản: Production Runtime v7.0 City Guide Edition</span>
                         </div>
                     </div>
                 </footer>
@@ -825,7 +875,7 @@
         }
     }
 
-    // 10. Render Card Thẻ Ưu Đãi Siêu Cấp
+    // 11. Render Card Thẻ Ưu Đãi Siêu Cấp
     function renderCard(deal, isFeatured = false, rank = null) {
         const brand = getMerchantMeta(deal.merchant_name, deal.category);
         const isSaved = State.savedDealIds.includes(deal.deal_id);
@@ -909,7 +959,7 @@
         `;
     }
 
-    // 11. Modal Bảng Kê Đối Soát Mật Mã Học
+    // 12. Modal Bảng Kê Đối Soát Mật Mã Học
     function showStructuredTrustModal(dealId) {
         const deal = State.deals.find(d => d.deal_id === dealId);
         if (!deal) return;
@@ -975,7 +1025,7 @@
         modal.style.display = 'flex';
     }
 
-    // 12. Skeleton & Error Boundary
+    // 13. Skeleton & Error Boundary
     function renderSkeleton() {
         return `
             <div style="min-height: 100vh; background: #F8FAFC; padding: 4rem 1rem; text-align: center; font-family: sans-serif;">
@@ -1000,7 +1050,7 @@
         `;
     }
 
-    // 13. Event Delegation Toàn Cục
+    // 14. Event Delegation Toàn Cục
     function setupEventDelegation() {
         document.body.addEventListener('click', function(e) {
             const btn = e.target.closest('[data-action]');
@@ -1030,14 +1080,11 @@
             } else if (action === 'toggle-saved-drawer') {
                 State.isSavedDrawerOpen = !State.isSavedDrawerOpen;
                 renderApp();
-            } else if (action === 'open-calc-modal') {
-                State.isCalcModalOpen = true;
-                renderApp();
-            } else if (action === 'close-calc-modal') {
-                State.isCalcModalOpen = false;
-                renderApp();
             } else if (action === 'set-calc-people') {
                 State.calcPeopleCount = parseInt(btn.getAttribute('data-count'), 10) || 2;
+                renderApp();
+            } else if (action === 'set-calc-need') {
+                State.calcNeed = btn.getAttribute('data-need') || 'COMBO';
                 renderApp();
             } else if (action === 'toggle-bookmark') {
                 const dealId = btn.getAttribute('data-deal-id');
@@ -1105,7 +1152,7 @@
         });
     }
 
-    // 14. Fetch & Polling Engine Tuần Tự
+    // 15. Fetch & Polling Engine Tuần Tự
     async function fetchDeals() {
         if (activeAbortController) {
             activeAbortController.abort();
@@ -1177,7 +1224,7 @@
         }
     }
 
-    // 15. Khởi chạy
+    // 16. Khởi chạy
     function init() {
         setupEventDelegation();
         fetchDeals();
