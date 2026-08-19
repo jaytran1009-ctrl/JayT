@@ -1,59 +1,66 @@
 /**
- * JAYT APEX v3.1 — DIRECTIVE #003.1: 14-INCH UX & RETENTION CONVERGENCE
+ * JAYT APEX v3.1 — DIRECTIVE #003.1 HARDENED: 14-INCH UX & TRUTH PURGE
  * =============================================================================
- * NORTH STAR: "JAYT LÀ NƠI NGƯỜI ĐÀ NẴNG KIỂM TRA ĐẦU TIÊN ĐỂ TIẾT KIỆM TIỀN"
- * KHẮC PHỤC TRIỆT ĐỂ: LAPTOP 14" (1366PX) · KHÔNG OVERFLOW · TRẢ LỜI 5 CÂU HỎI TRONG 3S
+ * TÔN CHỈ: CHÂN LÝ DỮ LIỆU ĐỘC TÔN · 159.000₫ TÍNH TOÁN ĐỘNG · XÓA 100% PROOF GIẢ
  * =============================================================================
  */
 
 (function() {
-    console.log("⚡ JAYT Directive #003.1 Active — 14-Inch UX Hardened");
+    console.log("⚡ JAYT Directive #003.1 Hardened Active");
 
     let allCanonicalDeals = [];
     let currentFilter = 'ALL';
 
-    // 1. Ép CSS Responsive Layout cho Laptop 14" & Typography Chuẩn
-    function injectResponsiveSystemCSS() {
-        if (document.getElementById('jaytDirective0031CSS')) return;
+    // 1. Ép CSS Reset toàn cục: Nền tối tương phản cao, chống tràn viền 1366px, xóa Social Proof giả
+    function injectHardenedCSS() {
+        if (document.getElementById('jaytHardened0031CSS')) return;
         const style = document.createElement('style');
-        style.id = 'jaytDirective0031CSS';
+        style.id = 'jaytHardened0031CSS';
         style.innerHTML = `
-            /* Reset chống tràn viền 14-inch */
+            /* 1. Nền tối tương phản cao chống mất chữ */
             html, body {
                 overflow-x: hidden !important;
                 max-width: 100vw !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
                 box-sizing: border-box !important;
                 background-color: #0A0A0E !important;
-                color: #F8FAFC !important;
+                color: #FFFFFF !important;
             }
 
             *, *::before, *::after {
                 box-sizing: border-box !important;
             }
 
-            /* Container chính co giãn mượt mà trên 1366px, 1440px, Mobile */
+            /* 2. Container chính chuẩn 14-inch (1140px) */
             .main-content, .container, .app-container, main, #app {
                 width: 100% !important;
-                max-width: 1180px !important;
+                max-width: 1140px !important;
                 margin: 0 auto !important;
-                padding: 0.75rem 1rem !important;
+                padding: 0.5rem 1rem !important;
                 min-width: 0 !important;
                 overflow-x: hidden !important;
             }
 
-            /* Thu gọn sidebar để nhường sân khấu cho Deal */
+            /* 3. Ẩn toàn bộ Sidebar cũ để nhường chỗ cho Deal */
             .sidebar, aside {
                 display: none !important;
             }
 
-            /* Deal Grid co giãn linh hoạt không bị vỡ card */
+            /* 4. TRIỆT TIÊU 100% SOCIAL PROOF GIẢ & JARGON HỆ THỐNG */
+            .community-ticker, .ticker-text, .live-counter, .social-proof, 
+            .community-feed, .recent-activity, .calibration-box, .wilson-score, 
+            .radar-container, .telemetry-debug, .json-tree, .engine-lineage,
+            [data-mock-proof], .mock-stat, .community-metrics {
+                display: none !important;
+            }
+
+            /* 5. Deal Grid co giãn linh hoạt */
             .deal-grid, #jaytDealGrid, .deals-container, .grid {
                 display: grid !important;
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
-                gap: 1.25rem !important;
+                gap: 1.15rem !important;
                 width: 100% !important;
                 margin-top: 1rem !important;
             }
@@ -61,13 +68,8 @@
             @media (max-width: 768px) {
                 .deal-grid, #jaytDealGrid, .deals-container, .grid {
                     grid-template-columns: 1fr !important;
-                    gap: 1rem !important;
+                    gap: 0.9rem !important;
                 }
-            }
-
-            /* Ẩn các module kỹ thuật gây cognitive overload khỏi mắt người dùng */
-            .radar-container, .calibration-box, .telemetry-debug, .wilson-score, .json-tree, .engine-lineage {
-                display: none !important;
             }
         `;
         document.head.appendChild(style);
@@ -79,51 +81,48 @@
         return new Intl.NumberFormat('vi-VN').format(amount) + '₫';
     }
 
-    // 3. Tinh chỉnh Hero Above-the-Fold (Chuẩn 3 Giây Đầu Tiên)
+    // 3. Tinh chỉnh Hero Above-the-Fold (3 Giây Thấy Ngay 159.000₫ Thực Tế)
     function rebuildHeroSection() {
-        const heroContainer = document.querySelector('.hero-section, header, .hero') || document.body.firstElementChild;
-        if (!heroContainer) return;
-
-        // Tính tổng tiền tiết kiệm thật từ 6 deals
+        // Tính tổng tiền tiết kiệm thực tế từ mảng canonical deals
         const totalSavings = allCanonicalDeals.reduce((sum, d) => sum + (d.saving_amount_vnd || 0), 0);
         const displayTotalSavings = totalSavings > 0 ? formatVND(totalSavings) : '159.000₫';
 
         const heroHTML = `
-            <div style="text-align: center; padding: 1.2rem 0.5rem 0.8rem; max-width: 860px; margin: 0 auto;">
-                <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.3); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; color: #D4AF37; margin-bottom: 0.6rem;">
+            <div style="text-align: center; padding: 1.2rem 0.5rem 0.6rem; max-width: 840px; margin: 0 auto;">
+                <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.35); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; color: #D4AF37; margin-bottom: 0.5rem;">
                     📍 JAYT — ĐÀ NẴNG (MÃ VÙNG 43)
                 </div>
                 
-                <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.5rem); font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; line-height: 1.2; margin: 0 0 0.4rem;">
+                <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.4rem); font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; line-height: 1.2; margin: 0 0 0.35rem;">
                     Hôm nay bạn có thể tiết kiệm đến <span style="color: #10B981;">${displayTotalSavings}</span>
                 </h1>
                 
-                <p style="font-size: 0.92rem; color: #94A3B8; margin: 0 auto 1rem; line-height: 1.45; max-width: 600px;">
+                <p style="font-size: 0.92rem; color: #94A3B8; margin: 0 auto 0.9rem; line-height: 1.45; max-width: 580px;">
                     Ăn gì • Uống gì • Đi đâu — JayT lọc sẵn những ưu đãi đáng tiền nhất cho bạn.
                 </p>
 
-                <!-- Bộ lọc nhu cầu 1-chạm -->
-                <div style="display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.8rem;" id="jaytIntentFilters">
-                    <button onclick="window.filterDealsByIntent('ALL')" class="intent-chip" style="background: #10B981; color: #FFF; border: none; padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 800; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;">
+                <!-- Bộ lọc nhu cầu 1-chạm (Event Safe) -->
+                <div style="display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem;" id="jaytIntentFilters">
+                    <button onclick="window.filterDealsByIntent('ALL', this)" class="intent-chip" style="background: #10B981; color: #FFF; border: none; padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">
                         ✨ Tất cả (6)
                     </button>
-                    <button onclick="window.filterDealsByIntent('FOOD')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;">
+                    <button onclick="window.filterDealsByIntent('FOOD', this)" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
                         🍜 Ăn Trưa/Tối
                     </button>
-                    <button onclick="window.filterDealsByIntent('DRINK')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;">
+                    <button onclick="window.filterDealsByIntent('DRINK', this)" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
                         ☕ Trà Sữa/Cafe
                     </button>
-                    <button onclick="window.filterDealsByIntent('RIDE')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;">
+                    <button onclick="window.filterDealsByIntent('RIDE', this)" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
                         🚗 Xe Điện 0Đ
                     </button>
-                    <button onclick="window.filterDealsByIntent('STUDENT')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;">
+                    <button onclick="window.filterDealsByIntent('STUDENT', this)" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
                         🎓 Sinh Viên
                     </button>
                 </div>
 
-                <!-- Ticker thói quen quay lại trung thực -->
-                <div style="font-size: 0.78rem; color: #64748B; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); padding: 0.35rem 0.8rem; border-radius: 8px; display: inline-block;">
-                    ⚡ Kho ưu đãi làm mới mỗi ngày lúc 07:00 & 11:30 · 📲 Thêm JayT vào Home Screen để dùng mỗi ngày
+                <!-- Ticker trung thực không bịa số liệu -->
+                <div style="font-size: 0.76rem; color: #64748B; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); padding: 0.35rem 0.8rem; border-radius: 8px; display: inline-block;">
+                    ⚡ Dữ liệu kiểm thử nội bộ · Kho ưu đãi làm mới hàng ngày lúc 07:00 & 11:30
                 </div>
             </div>
         `;
@@ -140,7 +139,7 @@
         }
     }
 
-    // 4. Modal Trust Timeline (Ngôn ngữ đời thường)
+    // 4. Modal Trust Timeline (Trung thực, không jargon)
     function ensureTrustModal() {
         if (document.getElementById('jaytConsumerTrustModal')) return;
 
@@ -148,7 +147,7 @@
         modal.id = 'jaytConsumerTrustModal';
         modal.style.cssText = `
             display: none; position: fixed; inset: 0; z-index: 10000;
-            background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(8px);
+            background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(8px);
             align-items: center; justify-content: center; padding: 1rem;
         `;
         modal.innerHTML = `
@@ -185,7 +184,7 @@
                 <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #D4AF37; flex-shrink: 0; font-weight: 700;">2</div>
                 <div>
                     <div style="font-size: 0.72rem; color: #94A3B8;">JayT ghi nhận & đối soát</div>
-                    <div style="font-size: 0.88rem; font-weight: 700; color: #F3E8C3;">Hôm nay (${timeRecorded || 'Thời gian thực'})</div>
+                    <div style="font-size: 0.88rem; font-weight: 700; color: #F3E8C3;">Thời gian thực (Kiểm thử nội bộ)</div>
                 </div>
             </div>
             <div style="width: 2px; height: 12px; background: rgba(255,255,255,0.15); margin-left: 11px;"></div>
@@ -201,15 +200,15 @@
                 <div style="width: 24px; height: 24px; border-radius: 50%; background: #10B981; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #FFF; flex-shrink: 0; font-weight: 800;">✓</div>
                 <div>
                     <div style="font-size: 0.72rem; color: #94A3B8;">Kết quả kiểm tra</div>
-                    <div style="font-size: 0.88rem; font-weight: 800; color: #10B981;">🟢 ĐỦ ĐIỀU KIỆN HIỂN THỊ TRÊN JAYT</div>
+                    <div style="font-size: 0.88rem; font-weight: 800; color: #10B981;">🟡 DỮ LIỆU KIỂM THỬ NỘI BỘ HỢP LỆ</div>
                 </div>
             </div>
         `;
         document.getElementById('jaytConsumerTrustModal').style.display = 'flex';
     };
 
-    // 5. Lọc deal theo nhu cầu 1-chạm
-    window.filterDealsByIntent = function(intent) {
+    // 5. Lọc deal chuẩn hóa sự kiện (Event Safe)
+    window.filterDealsByIntent = function(intent, btnElement) {
         currentFilter = intent;
         
         const chips = document.querySelectorAll('.intent-chip');
@@ -218,10 +217,10 @@
             c.style.color = '#CBD5E1';
             c.style.border = '1px solid rgba(255,255,255,0.15)';
         });
-        if (event && event.target) {
-            event.target.style.background = '#10B981';
-            event.target.style.color = '#FFF';
-            event.target.style.border = 'none';
+        if (btnElement) {
+            btnElement.style.background = '#10B981';
+            btnElement.style.color = '#FFF';
+            btnElement.style.border = 'none';
         }
 
         let filtered = allCanonicalDeals;
@@ -241,21 +240,9 @@
         }
     };
 
-    // 6. Render Deal Cards (DIRECTIVE #003.1: TIẾT KIỆM LÀ HERO THỊ GIÁC CAO NHẤT)
+    // 6. Render Deal Cards (Hero Tiết Kiệm Số 1)
     function renderDealCards(deals, container) {
-        if (!deals || deals.length === 0) {
-            container.innerHTML = `
-                <div style="grid-column: 1 / -1; padding: 2.5rem 1.5rem; text-align: center; background: rgba(18, 18, 24, 0.85); border: 1px solid rgba(212,175,55,0.25); border-radius: 18px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #FFF; margin-bottom: 0.3rem;">Chưa có ưu đãi phù hợp trong mục này</h3>
-                    <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1rem;">Bấm "Tất cả" để xem toàn bộ 6 ưu đãi đã kiểm chứng hôm nay.</p>
-                    <button onclick="window.filterDealsByIntent('ALL')" style="background: #10B981; color: #FFF; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; border: none; cursor: pointer;">
-                        Xem tất cả ưu đãi
-                    </button>
-                </div>
-            `;
-            return;
-        }
+        if (!deals || deals.length === 0) return;
 
         container.innerHTML = '';
         deals.forEach(deal => {
@@ -333,9 +320,9 @@
         });
     }
 
-    // 7. Khởi chạy khi trang tải xong
+    // 7. Khởi chạy khi DOM sẵn sàng
     document.addEventListener('DOMContentLoaded', () => {
-        injectResponsiveSystemCSS();
+        injectHardenedCSS();
 
         fetch('/api/deals')
             .then(res => res.json())
