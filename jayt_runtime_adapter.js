@@ -371,7 +371,7 @@
                             <!-- PHÂN KHU 2: Ẩm Thực Đà Nẵng (Food & Dining) -->
                             <div style="margin-bottom: 2.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="display: align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">🍜</span>
                                         <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ăn gì tiết kiệm tại Đà Nẵng?</h3>
                                     </div>
