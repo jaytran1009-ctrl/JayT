@@ -197,7 +197,6 @@
 
         const matchCount = usableDeals.filter(d => d.sha_status === 'MATCH').length;
         const missingCount = usableDeals.filter(d => d.sha_status === 'MISSING').length;
-        const mismatchCount = usableDeals.filter(d => d.sha_status === 'MISMATCH').length;
 
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
@@ -780,6 +779,9 @@
 
             if (action === 'filter') {
                 State.activeFilter = btn.getAttribute('data-category');
+                renderApp();
+            } else if (action === 'clear-search') {
+                State.searchQuery = '';
                 renderApp();
             } else if (action === 'copy') {
                 const code = btn.getAttribute('data-code') || '';
