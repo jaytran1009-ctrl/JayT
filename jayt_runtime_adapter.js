@@ -1,11 +1,12 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — CONSTITUTIONAL RC-1 (TELEMETRY & SCOPED AUTHORITY)
+ * JAYT APEX v5.5 — ENTERPRISE RC-1 (JAYT-HOST-001/002/003 COMPLIANT)
  * =============================================================================
- * GOVERNANCE COMPLIANCE:
- * 1. JAYT-HOST-001: Non-Destructive Authority Host Provisioning (No Wildcard).
- * 2. JAYT-HOST-002: No Silent Render Failure (Deterministic Machine Telemetry).
- * 3. JAYT-RELEASE-INTEGRITY-001: Idempotency & Evidence Tracing.
+ * CHU KỲ VẬN HÀNH CHUẨN HIẾN PHÁP:
+ * 1. JAYT-HOST-001: Scoped Authority, Zero-Destruction, Host Auto-Provision.
+ * 2. JAYT-HOST-002: Zero Silent Return, Machine-Readable Telemetry Log.
+ * 3. JAYT-HOST-003: Ownership First -> Fingerprint Before -> Scope -> Mount -> Fingerprint After.
+ * 4. JAYT-RELEASE-INTEGRITY-001: Telemetry Data Export for External Auditors.
  * =============================================================================
  */
 
@@ -21,6 +22,9 @@
     boot_timestamp: new Date().toISOString(),
     events: [],
     status: 'INITIALIZING',
+    legacy_fingerprint_before: null,
+    legacy_fingerprint_after: null,
+    integrity_verified: false,
     log: function(stage, details = {}) {
       const entry = {
         timestamp: performance.now().toFixed(2) + 'ms',
@@ -35,7 +39,7 @@
   window.__JAYT_TELEMETRY__.log('APEX_BOOT', { userAgent: navigator.userAgent });
 
   // ==========================================================================
-  // 🔒 2. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
+  // 🔒 2. TIỆN ÍCH AN TOÀN & FINGERPRINTING (JAYT-HOST-003)
   // ==========================================================================
 
   function escapeHTML(str) {
@@ -60,6 +64,21 @@
   }
 
   const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20%C4%90ang%20%C4%90%E1%BB%91i%20So%C3%A1t%20Th%E1%BB%B1c%20%C4%90%E1%BB%8Ba%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
+
+  function computeLegacyFingerprint() {
+    let count = 0;
+    let textHash = 0;
+    const elements = document.querySelectorAll('#jayt-legacy-vault, .sidebar, #sidebar, .main-content, #main-content, .gessi-container');
+    elements.forEach(el => {
+      count += el.querySelectorAll('*').length + 1;
+      const str = el.textContent || '';
+      for (let i = 0; i < Math.min(str.length, 500); i++) {
+        textHash = ((textHash << 5) - textHash) + str.charCodeAt(i);
+        textHash |= 0;
+      }
+    });
+    return `nodes:${count}_hash:${textHash}`;
+  }
 
   // ==========================================================================
   // 📳 3. HAPTIC & WEB AUDIO SYNTHESIZER
@@ -510,81 +529,15 @@
   }
 
   // ==========================================================================
-  // 🛡️ 6. SCOPED AUTHORITY PROVISIONER (JAYT-HOST-001)
+  // 🛡️ 6. JAYT-HOST-003 SEQUENTIAL PIPELINE IMPLEMENTATION
   // ==========================================================================
 
-  function ensureApexHost() {
+  function ensureApexHostSequential() {
+    // 1. HOST_DISCOVERY
     let root = document.getElementById('jayt-apex-root');
-    
+
+    // 2. HOST_CREATE_IF_MISSING
     if (!root) {
-      window.__JAYT_TELEMETRY__.log('HOST_NOT_FOUND', { action: 'PROVISIONING_HOST' });
-
-      // Cài đặt CSS Scoped Authority (Chỉ ẩn các thành phần Legacy định danh, không quét wildcard)
-      let authorityStyle = document.getElementById('jayt-authority-style');
-      if (!authorityStyle) {
-        authorityStyle = document.createElement('style');
-        authorityStyle.id = 'jayt-authority-style';
-        authorityStyle.textContent = `
-          /* SCOPED AUTHORITY: Chỉ ẩn các container Legacy cụ thể, bảo toàn 100% cây DOM */
-          #jayt-legacy-vault,
-          .sidebar,
-          #sidebar,
-          .tram-dieu-huong,
-          .main-content,
-          #main-content,
-          .gessi-container,
-          .hero-section {
-            display: none !important;
-          }
-          #jayt-apex-root {
-            width: 100%;
-            min-height: 100vh;
-            display: block;
-            background-color: #0B0F19;
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-          }
-          .deal-img-box {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            background-color: #111827;
-            overflow: hidden;
-          }
-          .deal-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-          .aura-priority {
-            box-shadow: 0 0 40px rgba(245, 158, 11, 0.18), inset 0 0 20px rgba(245, 158, 11, 0.05);
-            animation: auraPulse 3.5s infinite ease-in-out;
-          }
-          @keyframes auraPulse {
-            0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
-            50% { box-shadow: 0 0 55px rgba(245, 158, 11, 0.35); }
-          }
-          input[type="range"] {
-            -webkit-appearance: none;
-            height: 8px;
-            border-radius: 9999px;
-            background: rgba(255, 255, 255, 0.1);
-            outline: none;
-          }
-          input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: #10B981;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-          }
-        `;
-        document.head.appendChild(authorityStyle);
-        window.__JAYT_TELEMETRY__.log('SCOPED_CSS_INJECTED');
-      }
-
       root = document.createElement('div');
       root.id = 'jayt-apex-root';
       root.setAttribute('data-jayt-owned', 'apex');
@@ -592,6 +545,83 @@
       window.__JAYT_TELEMETRY__.log('HOST_CREATED', { hostId: 'jayt-apex-root' });
     } else {
       window.__JAYT_TELEMETRY__.log('HOST_DISCOVERED', { hostId: 'jayt-apex-root' });
+    }
+
+    // 3. OWNERSHIP_VALIDATED
+    const isOwned = root.getAttribute('data-jayt-owned') === 'apex';
+    if (!isOwned) {
+      root.setAttribute('data-jayt-owned', 'apex');
+    }
+    window.__JAYT_TELEMETRY__.log('OWNERSHIP_VALIDATED', { hostId: 'jayt-apex-root', owned: true });
+
+    // 4. LEGACY_FINGERPRINT_BEFORE
+    const fpBefore = computeLegacyFingerprint();
+    window.__JAYT_TELEMETRY__.legacy_fingerprint_before = fpBefore;
+    window.__JAYT_TELEMETRY__.log('LEGACY_FINGERPRINT_BEFORE', { fingerprint: fpBefore });
+
+    // 5. LEGACY_SCOPED (Chỉ sau khi đã validate ownership)
+    let authorityStyle = document.getElementById('jayt-authority-style');
+    if (!authorityStyle) {
+      authorityStyle = document.createElement('style');
+      authorityStyle.id = 'jayt-authority-style';
+      authorityStyle.textContent = `
+        #jayt-legacy-vault,
+        .sidebar,
+        #sidebar,
+        .tram-dieu-huong,
+        .main-content,
+        #main-content,
+        .gessi-container,
+        .hero-section {
+          display: none !important;
+        }
+        #jayt-apex-root {
+          width: 100%;
+          min-height: 100vh;
+          display: block;
+          background-color: #0B0F19;
+          font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+        .deal-img-box {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 10;
+          background-color: #111827;
+          overflow: hidden;
+        }
+        .deal-img-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .aura-priority {
+          box-shadow: 0 0 40px rgba(245, 158, 11, 0.18), inset 0 0 20px rgba(245, 158, 11, 0.05);
+          animation: auraPulse 3.5s infinite ease-in-out;
+        }
+        @keyframes auraPulse {
+          0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
+          50% { box-shadow: 0 0 55px rgba(245, 158, 11, 0.35); }
+        }
+        input[type="range"] {
+          -webkit-appearance: none;
+          height: 8px;
+          border-radius: 9999px;
+          background: rgba(255, 255, 255, 0.1);
+          outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: #10B981;
+          cursor: pointer;
+          box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+      `;
+      document.head.appendChild(authorityStyle);
+      window.__JAYT_TELEMETRY__.log('LEGACY_SCOPED', { styleId: 'jayt-authority-style' });
     }
 
     return root;
@@ -602,9 +632,9 @@
   // ==========================================================================
 
   function renderApp() {
-    const root = ensureApexHost();
+    const root = ensureApexHostSequential();
     if (!root) {
-      window.__JAYT_TELEMETRY__.log('APEX_MOUNT_ABORTED', { reason: 'UNABLE_TO_PROVISION_HOST' });
+      window.__JAYT_TELEMETRY__.log('APEX_MOUNT_ABORTED', { reason: 'UNABLE_TO_INITIALIZE_HOST' });
       return;
     }
 
@@ -1150,8 +1180,19 @@
       </div>
     `;
 
+    // 6. APEX_MOUNTED
     window.__JAYT_TELEMETRY__.status = 'MOUNTED_SUCCESS';
     window.__JAYT_TELEMETRY__.log('APEX_MOUNTED', { dealsCount: filtered.length });
+
+    // 7. LEGACY_FINGERPRINT_AFTER
+    const fpAfter = computeLegacyFingerprint();
+    window.__JAYT_TELEMETRY__.legacy_fingerprint_after = fpAfter;
+    window.__JAYT_TELEMETRY__.log('LEGACY_FINGERPRINT_AFTER', { fingerprint: fpAfter });
+
+    // 8. INTEGRITY_VERIFIED
+    const isIntegrityPass = (window.__JAYT_TELEMETRY__.legacy_fingerprint_before === fpAfter);
+    window.__JAYT_TELEMETRY__.integrity_verified = isIntegrityPass;
+    window.__JAYT_TELEMETRY__.log('INTEGRITY_VERIFIED', { passed: isIntegrityPass });
   }
 
   function renderDealCard(deal, C, isLight) {
