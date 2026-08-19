@@ -7,14 +7,14 @@
     
     <!-- SEO & Metadata Chính Thức Chuẩn Quốc Gia -->
     <meta name="description" content="JayT Hub — Cẩm nang tiết kiệm & đặc quyền voucher 0Đ cho sinh viên, người lao động Đà Nẵng. Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí, anh em local kiểm định.">
-    <meta name="keywords" content="JayT, deal Đà Nẵng, voucher 0 đồng, mã giảm giá Grab, ShopeeFood Đà Nẵng, Katinat, Maycha, sinh viên Đà Nẵng, tiết kiệm, CGV Đà Nẵng">
+    <meta name="keywords" content="JayT, deal Đà Nẵng, voucher 0 đồng, mã giảm giá Grab, ShopeeFood Đà Nẵng, Katinat, Maycha, sinh viên Đà Nẵng, tiết kiệm, CGV Đà Nẵng, Xanh SM">
     <meta name="author" content="JayT — Đà Nẵng 43">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:title" content="JayT — Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43">
     <meta property="og:description" content="Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí cho sinh viên & người lao động Đà Nẵng.">
     <meta property="og:locale" content="vi_VN">
-    <meta name="theme-color" content="#059669">
+    <meta name="theme-color" content="#10B981">
 
     <!-- Google Fonts: Inter, Newsreader, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,52 +27,48 @@
             --font-serif: 'Newsreader', Georgia, serif;
             --font-mono: 'JetBrains Mono', monospace;
             --radius-pill: 9999px;
-            --radius-card: 16px;
-            --radius-sm: 8px;
-            --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-card: 20px;
+            --radius-sm: 10px;
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
-            /* Dark Theme Default */
-            --bg-page: #09090B;
-            --bg-surface: #121215;
-            --bg-card: #18181B;
-            --bg-card-hover: #222226;
-            --bg-tag: #27272A;
-            --border: #27272A;
-            --border-hover: #3F3F46;
-            --text-heading: #FAFAFA;
-            --text-body: #A1A1AA;
-            --text-muted: #71717A;
-            --btn-primary-bg: #FAFAFA;
-            --btn-primary-text: #09090B;
-            --btn-primary-hover: #E4E4E7;
+            /* Dark Theme Default (Obsidian Luxury) */
+            --bg-page: #09090D;
+            --bg-surface: #121318;
+            --bg-card: #171821;
+            --bg-card-hover: #1F212E;
+            --bg-tag: #232533;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(16, 185, 129, 0.45);
+            --border-gold: rgba(245, 158, 11, 0.4);
+            --text-heading: #FFFFFF;
+            --text-body: #A1A7B8;
+            --text-muted: #6B7280;
             --badge-green-bg: rgba(16, 185, 129, 0.15);
             --badge-green-text: #34D399;
             --accent-gold: #FBBF24;
-            --accent-red: #EF4444;
-            --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-            --header-bg: rgba(9, 9, 11, 0.92);
+            --accent-emerald: #10B981;
+            --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+            --header-bg: rgba(9, 9, 13, 0.88);
         }
 
         [data-theme="light"] {
-            --bg-page: #F8F9FA;
+            --bg-page: #F8FAFC;
             --bg-surface: #FFFFFF;
             --bg-card: #FFFFFF;
-            --bg-card-hover: #F4F4F5;
-            --bg-tag: #F4F4F5;
-            --border: #E4E4E7;
-            --border-hover: #D4D4D8;
-            --text-heading: #09090B;
-            --text-body: #52525B;
-            --text-muted: #A1A1AA;
-            --btn-primary-bg: #09090B;
-            --btn-primary-text: #FAFAFA;
-            --btn-primary-hover: #27272A;
+            --bg-card-hover: #F1F5F9;
+            --bg-tag: #F1F5F9;
+            --border: #E2E8F0;
+            --border-hover: #10B981;
+            --border-gold: rgba(217, 119, 6, 0.4);
+            --text-heading: #0F172A;
+            --text-body: #475569;
+            --text-muted: #94A3B8;
             --badge-green-bg: #ECFDF5;
             --badge-green-text: #059669;
             --accent-gold: #D97706;
-            --accent-red: #DC2626;
-            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            --header-bg: rgba(248, 249, 250, 0.92);
+            --accent-emerald: #059669;
+            --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --header-bg: rgba(255, 255, 255, 0.92);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -92,7 +88,8 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes toastIn { from { transform: translate(-50%, -20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
         @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+        @keyframes shimmerSweep { 0% { transform: translateX(-100%) rotate(25deg); } 100% { transform: translateX(200%) rotate(25deg); } }
+        @keyframes pulseGlow { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.05); opacity: 1; } }
 
         .marquee-track {
             display: inline-block;
@@ -101,14 +98,31 @@
         }
         .marquee-track:hover { animation-play-state: paused; }
 
-        .deal-card-luxury {
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        .deal-card-visual {
+            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
         }
-        .deal-card-luxury:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+        .deal-card-visual:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-hover) !important;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 20px rgba(16,185,129,0.15) !important;
         }
-        input::placeholder { color: #94A3B8; font-size: 0.9rem; }
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(25deg);
+            animation: shimmerSweep 3s infinite;
+        }
+
+        input::placeholder { color: #64748B; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -116,7 +130,7 @@
     <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME APEX (APP MOUNT POINT) -->
     <div id="jaytAppRoot"></div>
 
-    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v8.0 -->
-    <script src="/jayt_runtime_adapter.js?v=8.0.0"></script>
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v9.0 -->
+    <script src="/jayt_runtime_adapter.js?v=9.0.0"></script>
 </body>
 </html>
