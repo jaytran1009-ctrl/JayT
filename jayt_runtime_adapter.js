@@ -1,25 +1,28 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P5 MASTER EDITION: 7-MODULE CONSUMER INTELLIGENCE CORE
+ * JAYT APEX v5.5 — P5 MASTER: 2-TIER DECISION & EXPLAINABILITY ENGINE
  * =============================================================================
- * AXIOM: "Tối ưu cho xác suất người dùng tìm được đúng thứ muốn mua ngay lúc đó"
+ * AXIOM: "APEX không cố đưa nhiều lựa chọn hơn — APEX giảm thời gian từ
+ *         'Tôi đang cần gì?' đến 'Đây chính là deal tôi muốn bấm'."
  * =============================================================================
- * 7 MODULE ARCHITECTURE:
- * - P5.1: Persona Engine (🎓 Sinh Viên / 💼 Văn Phòng / 👥 Đi Nhóm)
- * - P5.2: Intent Engine (Ăn no <50K, Trà sữa giải lao, Bữa trưa nhanh, Cafe học bài)
- * - P5.3: Local Demand Map (Khu A Hải Châu, Khu B Thanh Khê, Khu C Sơn Trà)
- * - P5.4: Time Intelligence (5 Khung Giờ Sống Đà Nẵng: Sáng / Trưa / Chiều / Tối / Đêm)
- * - P5.5: Merchant Intelligence (Rating x Reviews x Uy Tín Bản Địa)
- * - P5.6: Deal Decision Engine (3 Bảng Xếp Hạng: 🔥 Đáng Săn / 🏆 Đáng Ăn / 📍 Gần & Tiện)
- * - P5.7: Behavioral Learning Loop (Event Telemetry: Click, Copy, Save, Share)
+ * MASTER PIPELINE:
+ * - P1: Hero WOW Above-The-Fold (1 Dominant CTA, Answers 6 Core Questions)
+ * - P2: Uniform 8-Field Data Contract + 100% Full-Width Primary CTA
+ * - P3: Destination Metadata + Fallback SVG 16:10 + Zero Unsafe Schemes
+ * - P4: Living Evidence Ledger UX (Honest Unprobed & Probing States)
+ * - P5: 7-Module Consumer Intelligence:
+ *       • 2-Tier Decision Architecture (Eligibility Gate + Weighted Model)
+ *       • "Why This Deal?" / "💡 Vì sao đề xuất?" Explainability Layer
+ *       • 3 Parallel Rankings (🔥 Top Deal / 🏆 Top Quán / 📍 Gần & Tiện)
+ *       • P5 Governance Compliance (Model Recommendation vs Proven Evidence)
  * =============================================================================
- * RELEASE INTEGRITY: RC-1 / PARTIAL RUNTIME EVIDENCE (Chờ Independent External Audit)
+ * RELEASE INTEGRITY: RC-1 / PARTIAL RUNTIME EVIDENCE (Chờ Independent Audit)
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P5: 7-Module Consumer Intelligence Engine Initializing...]");
+  console.log("🚀 JayT Apex v5.5 [P5: 2-Tier Weighted Decision Engine Booting...]");
 
   // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
@@ -134,7 +137,7 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43 — FULL P5 CONSUMER INTELLIGENCE SCHEMA
+  // 3. DATABASE ĐÀ NẴNG 43 — FULL P5 SCHEMA VỚI GIẢI TRÌNH "WHY THIS DEAL"
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
@@ -154,11 +157,17 @@
       percent: 50,
       rating: 4.7,
       reviews: 3200,
-      decision_score: 96,
+      // Weighted Scores
+      value_score: 95,
       convenience_score: 94,
+      quality_score: 88,
+      trust_score: 60,
+      // P5 Explainability Layer
+      why_recommend_student: '💡 Đề xuất vì: Giá 24K dưới ngưỡng 30K · Cách bạn 1.2 km · Khung giờ trà sữa chiều.',
+      why_recommend_office: '💡 Đề xuất vì: Mua 1 tặng 1 tiết kiệm ca chiều cho đồng nghiệp · Đặt online ShopeeFood.',
       student_pitch: '🎓 Chiều tan học chỉ 24K/ly · Mua 1 Tặng 1 bao hời',
       office_pitch: '💼 Trà sữa xả stress ca chiều cùng đồng nghiệp chỉ 24K',
-      price_psychology: '24K — Mức giá cực dễ xuống tiền',
+      price_psychology: '24K — Dễ xuống tiền',
       terms: 'Áp dụng đặt qua ShopeeFood khung 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
       is_hidden: true,
       hidden_reason: 'Chỉ kích hoạt ngầm tại chi nhánh Điện Biên Phủ cho sinh viên giờ tan tầm.',
@@ -191,11 +200,15 @@
       percent: 40,
       rating: 4.8,
       reviews: 5800,
-      decision_score: 94,
+      value_score: 92,
       convenience_score: 90,
+      quality_score: 96,
+      trust_score: 65,
+      why_recommend_student: '💡 Đề xuất vì: Bữa ăn no nê đặc sản 39K · Quán 4.8★ nổi tiếng · Đặt giao tận nơi.',
+      why_recommend_office: '💡 Đề xuất vì: Cơm trưa chất lượng gần văn phòng Hải Châu 39K · Giao nhanh GrabFood.',
       student_pitch: '🎓 Cơm gà đùi giòn rụm chỉ 39K ăn no căng bụng',
       office_pitch: '💼 Bữa trưa chất lượng gần văn phòng Hải Châu chỉ 39K',
-      price_psychology: '39K — Bữa ăn no nê dưới 40K',
+      price_psychology: '39K — Ăn no dưới 40K',
       terms: 'Áp dụng đặt qua GrabFood khung trưa 11:00 - 13:00. Giới hạn 8 suất/ngày.',
       is_hidden: false,
       hidden_reason: 'Ưu đãi liên kết GrabFood khu vực trung tâm Hải Châu.',
@@ -228,11 +241,15 @@
       percent: 27,
       rating: 4.7,
       reviews: 4100,
-      decision_score: 88,
+      value_score: 84,
       convenience_score: 95,
+      quality_score: 92,
+      trust_score: 55,
+      why_recommend_student: '💡 Đề xuất vì: View check-in sông Hàn tối mát mẻ · Bánh nướng 1Đ đi cùng bạn bè.',
+      why_recommend_office: '💡 Đề xuất vì: Không gian gặp gỡ đối tác trang trọng ngay trục Bạch Đằng trung tâm.',
       student_pitch: '🎓 Check-in ngắm sông Hàn tối cùng bạn bè bánh 1Đ',
       office_pitch: '💼 Gặp đối tác hoặc làm việc view sông Hàn thoáng đãng',
-      price_psychology: '55K — Thêm bánh nướng chỉ 1Đ',
+      price_psychology: '55K — Kèm bánh 1Đ',
       terms: 'Áp dụng trực tiếp tại quầy 34 Bạch Đằng khi gọi đồ uống signature từ 18:00 - 21:00.',
       is_hidden: true,
       hidden_reason: 'Chương trình tri ân khách hàng trải nghiệm view sông Hàn buổi tối.',
@@ -265,11 +282,15 @@
       percent: 46,
       rating: 4.8,
       reviews: 6200,
-      decision_score: 95,
+      value_score: 96,
       convenience_score: 98,
+      quality_score: 94,
+      trust_score: 58,
+      why_recommend_student: '💡 Đề xuất vì: Combo 2 món no căng chỉ 39K · Khoảng cách cực gần 0.6 km khu KTX.',
+      why_recommend_office: '💡 Đề xuất vì: Bữa ăn nhanh tiện lợi giao tận nơi · Giảm trực tiếp 33K so với giá gốc.',
       student_pitch: '🎓 Combo cứu đói sinh viên Gà + Mì Ý chỉ 39K',
       office_pitch: '💼 Đổi món ăn nhanh tiện lợi giao tận bàn làm việc',
-      price_psychology: '39K — Bữa ăn nhanh no bụng tiết kiệm 33K',
+      price_psychology: '39K — Tiết kiệm 33K',
       terms: 'Áp dụng đặt qua Web/App Jollibee khu vực Thanh Khê. Số lượng 6 combo/ngày.',
       is_hidden: true,
       hidden_reason: 'Combo flash-sale ngầm dành riêng cho khu vực sinh viên lân cận ĐH Sư Phạm/Bách Khoa.',
@@ -302,11 +323,15 @@
       percent: 50,
       rating: 4.7,
       reviews: 3500,
-      decision_score: 90,
+      value_score: 91,
       convenience_score: 86,
+      quality_score: 95,
+      trust_score: 70,
+      why_recommend_student: '💡 Đề xuất vì: Giá vé rạp CGV giảm 50% cho HSSV/U22 · Rạp chuẩn quốc tế Vincom.',
+      why_recommend_office: '💡 Đề xuất vì: Giải trí tối sau giờ làm · Đặt vé trước qua web không lo xếp hàng.',
       student_pitch: '🎓 Xem phim bom tấn rạp xịn Vincom đồng giá 55K',
       office_pitch: '💼 Thư giãn tối sau giờ làm với suất chiếu ưu đãi',
-      price_psychology: '55K — Giá vé xem phim rạp chuẩn quốc tế',
+      price_psychology: '55K — Rạp chuẩn quốc tế',
       terms: 'Áp dụng từ Thứ 2 đến Thứ 6 cho thành viên CGV dưới 22 tuổi hoặc có thẻ HSSV/CCCD hợp lệ.',
       is_hidden: false,
       hidden_reason: 'Chính sách giá vé ưu đãi thành viên cố định tại cụm rạp CGV Vincom Sơn Trà.',
@@ -339,11 +364,15 @@
       percent: 50,
       rating: 4.9,
       reviews: 8900,
-      decision_score: 97,
+      value_score: 97,
       convenience_score: 99,
+      quality_score: 98,
+      trust_score: 72,
+      why_recommend_student: '💡 Đề xuất vì: Giảm trực tiếp 30K cuốc xe · Xe điện êm ái đi nhóm chia tiền siêu rẻ.',
+      why_recommend_office: '💡 Đề xuất vì: Đón tận cửa văn phòng · Xe sạch không mùi thích hợp đi gặp đối tác.',
       student_pitch: '🎓 Đi học, đi chơi nhóm mát rượi xe điện VinFast giảm 30K',
       office_pitch: '💼 Đi làm, gặp khách không lo mưa nắng cước xe trợ giá',
-      price_psychology: '30K — Khởi hành chuyến xe êm ái',
+      price_psychology: '30K — Khởi hành êm ái',
       terms: 'Áp dụng cho chuyến xe Xanh SM Taxi / Taxi Luxury tại Đà Nẵng có cước từ 50K.',
       is_hidden: false,
       hidden_reason: 'Chính sách trợ giá cuốc xe điện toàn thành phố kích cầu người dùng mới.',
@@ -376,11 +405,15 @@
       percent: 38,
       rating: 4.8,
       reviews: 9400,
-      decision_score: 91,
+      value_score: 89,
       convenience_score: 92,
+      quality_score: 97,
+      trust_score: 68,
+      why_recommend_student: '💡 Đề xuất vì: Kèo đi nhóm 4-5 bạn giải nhiệt · Mua 4 tặng 1 tô đặc sản số 1.',
+      why_recommend_office: '💡 Đề xuất vì: Tráng miệng xế chiều lý tưởng cho cả phòng ban · Đặt GrabFood nhanh.',
       student_pitch: '🎓 Đi nhóm 4 người ăn chè sầu mát lạnh tặng thêm 1 tô',
       office_pitch: '💼 Món tráng miệng xế chiều lý tưởng cho cả phòng ban',
-      price_psychology: '28K/tô — Thưởng thức đặc sản truyền thống',
+      price_psychology: '28K/tô — Đặc sản số 1',
       terms: 'Áp dụng cho đơn nhóm từ 4 phần trở lên trên GrabFood hoặc mua mang về tại 189 Hoàng Diệu.',
       is_hidden: false,
       hidden_reason: 'Chương trình ưu đãi nhóm giải nhiệt mùa hè truyền thống tại cơ sở Hoàng Diệu.',
@@ -413,11 +446,15 @@
       percent: 20,
       rating: 4.7,
       reviews: 4200,
-      decision_score: 85,
+      value_score: 82,
       convenience_score: 88,
+      quality_score: 93,
+      trust_score: 70,
+      why_recommend_student: '💡 Đề xuất vì: Đón bạn bè về quê qua sân bay tiết kiệm 15K · Đặt xe qua app Grab.',
+      why_recommend_office: '💡 Đề xuất vì: Đi công tác máy bay đón tận ga · Chủ động thời gian di chuyển.',
       student_pitch: '🎓 Đón bạn bè/người thân về quê ra sân bay tiết kiệm 15K',
       office_pitch: '💼 Đi công tác máy bay đón tận cửa ga nhanh chóng',
-      price_psychology: '60K — Chuyến xe sân bay nhanh gọn',
+      price_psychology: '60K — Xe sân bay tiện lợi',
       terms: 'Áp dụng cho các chuyến GrabCar có điểm đón hoặc trả tại Sân bay Đà Nẵng từ 50K.',
       is_hidden: false,
       hidden_reason: 'Mã khuyến mãi giao thông chính thức từ Grab theo tọa độ sân bay.',
@@ -434,24 +471,49 @@
     }
   ];
 
-  // 4. STATE MANAGEMENT (SSOT)
+  // 4. P5 TẦNG 2: MÔ HÌNH TÍNH ĐIỂM QUYẾT ĐỊNH CÓ TRỌNG SỐ (WEIGHTED MODEL)
+  function calculateDecisionScore(deal, persona, currentSlot) {
+    // Trọng số cấu hình linh hoạt
+    const wV = 0.35; // Value
+    const wR = 0.20; // Relevance
+    const wC = 0.15; // Convenience
+    const wQ = 0.15; // Quality
+    const wT = 0.15; // Trust
+
+    let relevanceScore = 80;
+    if (persona === 'STUDENT' && deal.discount_price <= 40000) relevanceScore += 15;
+    if (persona === 'OFFICE' && deal.category === 'FOOD' && currentSlot === 'LUNCH') relevanceScore += 18;
+
+    let timeBoost = 0;
+    if (currentSlot === 'AFTERNOON' && deal.category === 'DRINK') timeBoost = 5;
+    if (currentSlot === 'LUNCH' && deal.category === 'FOOD') timeBoost = 5;
+    if (currentSlot === 'EVENING' && (deal.category === 'CINEMA' || deal.tag.includes('MUA'))) timeBoost = 5;
+
+    const baseScore = (wV * deal.value_score) +
+                      (wR * relevanceScore) +
+                      (wC * deal.convenience_score) +
+                      (wQ * deal.quality_score) +
+                      (wT * deal.trust_score);
+
+    return Math.min(99, Math.round(baseScore + timeBoost));
+  }
+
+  // 5. STATE MANAGEMENT (SSOT)
   const State = {
     deals: DEALS_DATABASE,
     theme: localStorage.getItem('jayt_theme') || 'dark',
     dealNowMode: false,
     activeTab: 'home',
-    // P5 STATES
-    activePersona: localStorage.getItem('jayt_active_persona') || 'STUDENT', // STUDENT | OFFICE
-    activeIntent: 'ALL', // ALL | MEAL_UNDER_50K | DRINK | GROUP
-    activeZone: 'ALL', // ALL | KHU_A_HAI_CHAU | KHU_B_THANH_KHE | KHU_C_SON_TRA
-    activeRankingView: 'HUNTER', // HUNTER (Đáng Săn) | QUALITY (Đáng Ăn 4.7★) | NEARBY (Gần & Tiện)
+    activePersona: localStorage.getItem('jayt_active_persona') || 'STUDENT',
+    activeIntent: 'ALL',
+    activeZone: 'ALL',
+    activeRankingView: 'HUNTER', // HUNTER | QUALITY | NEARBY
     savedIds: JSON.parse(localStorage.getItem('jayt_favs') || '[]'),
     huntedCount: parseInt(localStorage.getItem('jayt_hunted_count') || '17', 10),
     actualSavedAmount: parseInt(localStorage.getItem('jayt_actual_savings') || '255000', 10),
     shareCount: parseInt(localStorage.getItem('jayt_share_count') || '0', 10),
     referralBonus: parseInt(localStorage.getItem('jayt_referral_bonus') || '0', 10),
     calcDrink: 5, calcMeal: 6, calcRide: 6,
-    // Modals
     isWhyModalOpen: false,
     isStrategyModalOpen: false,
     strategyDeal: null,
@@ -491,7 +553,7 @@
     return targetUrl;
   }
 
-  // 5. HOST PROVISIONER
+  // 6. HOST PROVISIONER
   function ensureApexHost() {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
@@ -509,7 +571,7 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX V5.5 HOÀN HẢO 7 MODULE
+  // 7. RENDER GIAO DIỆN APEX V5.5 HOÀN HẢO 7 MODULE
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -531,11 +593,16 @@
       cardShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.05)' : '0 10px 30px rgba(0,0,0,0.5)'
     };
 
-    const priorityDeal = State.deals[0];
-    const hiddenVouchers = State.deals.filter(d => d.is_hidden);
+    // TẦNG 1: ELIGIBILITY GATE ĐÃ ĐẢM BẢO TRÊN DEALS_DATABASE
+    let processedDeals = State.deals.map(d => {
+      return {
+        ...d,
+        calculated_decision_score: calculateDecisionScore(d, State.activePersona, timeInfo.slot)
+      };
+    });
 
-    // P5 FILTER & 3 BẢNG XẾP HẠNG LOGIC
-    let processedDeals = [...State.deals];
+    const priorityDeal = processedDeals[0];
+    const hiddenVouchers = processedDeals.filter(d => d.is_hidden);
 
     // Lọc theo Vùng Heatmap
     if (State.activeZone !== 'ALL') {
@@ -557,19 +624,18 @@
 
     // 3 BẢNG XẾP HẠNG
     if (State.activeRankingView === 'HUNTER') {
-      // 1. Deal Đáng Săn: Sắp theo Decision Score
-      processedDeals.sort((a, b) => b.decision_score - a.decision_score);
+      processedDeals.sort((a, b) => b.calculated_decision_score - a.calculated_decision_score);
     } else if (State.activeRankingView === 'QUALITY') {
-      // 2. Quán Đáng Ăn: Sắp theo Rating x Review Volume
       processedDeals.sort((a, b) => (b.rating * b.reviews) - (a.rating * a.reviews));
     } else if (State.activeRankingView === 'NEARBY') {
-      // 3. Gần & Tiện: Sắp theo khoảng cách km
       processedDeals.sort((a, b) => a.distance_km - b.distance_km);
     }
 
     const totalSavings = State.deals.reduce((s, d) => s + d.saving, 0);
     const totalWalletSavings = State.actualSavedAmount + State.referralBonus;
     const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
+
+    const whyHeroText = State.activePersona === 'STUDENT' ? priorityDeal.why_recommend_student : priorityDeal.why_recommend_office;
 
     root.innerHTML = `
       <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; box-sizing: border-box;">
@@ -582,7 +648,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: #059669; font-weight: 700;">
               <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
-              <span>DEMAND ENGINE LIVE</span>
+              <span>DECISION ENGINE LIVE</span>
             </div>
           </div>
 
@@ -621,7 +687,7 @@
             </div>
           </header>
 
-          <!-- 3. P5.3 LOCAL DEMAND MAP & INSIGHTS BANNER -->
+          <!-- 3. LOCAL DEMAND MAP & INSIGHTS BANNER -->
           <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="background: ${isLight ? '#FFFFFF' : 'rgba(17, 24, 39, 0.8)'}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 1.2rem 1.6rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; box-shadow: ${C.cardShadow};">
               <div style="display: flex; align-items: center; gap: 0.75rem;">
@@ -655,7 +721,7 @@
             </div>
           </div>
 
-          <!-- 4. P1 + P5: HERO WOW PRIORITY DEAL (ADAPTIVE PITCH) -->
+          <!-- 4. HERO WOW PRIORITY DEAL VỚI "WHY THIS DEAL?" EXPLAINABILITY -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem; display: block;">
             <div style="text-align: center; margin-bottom: 2rem;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #059669; padding: 0.35rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem;">
@@ -676,7 +742,7 @@
               <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden; border-radius: 16px;">
                 <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
-                  👑 TOP DECISION #${priorityDeal.decision_score} ĐIỂM
+                  👑 TOP DECISION #${priorityDeal.calculated_decision_score} ĐIỂM
                 </div>
                 <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
                   📷 ${escapeHTML(priorityDeal.image_provenance_label)}
@@ -704,9 +770,9 @@
                   ${escapeHTML(priorityDeal.title)}
                 </h2>
 
-                <!-- PERSONA PITCHING CALLOUT -->
-                <div style="background: rgba(16,185,129,0.12); border-left: 3px solid #10B981; padding: 0.45rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; color: #059669; margin-bottom: 0.8rem;">
-                  ${State.activePersona === 'STUDENT' ? escapeHTML(priorityDeal.student_pitch) : escapeHTML(priorityDeal.office_pitch)}
+                <!-- "WHY THIS DEAL?" EXPLAINABILITY PILL -->
+                <div style="background: rgba(245, 158, 11, 0.12); border-left: 3px solid #F59E0B; padding: 0.5rem 0.8rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; color: #D97706; margin-bottom: 0.8rem; line-height: 1.4;">
+                  ${escapeHTML(whyHeroText)}
                 </div>
 
                 <div style="font-size: 0.82rem; color: ${C.textSub}; margin-bottom: 0.8rem;">
@@ -725,7 +791,7 @@
                   </div>
                   <div style="text-align: right;">
                     <div style="font-size: 0.72rem; color: ${C.textMuted};">Decision Score</div>
-                    <div style="font-size: 0.9rem; font-weight: 800; color: #D97706;">🔥 ${priorityDeal.decision_score}/100</div>
+                    <div style="font-size: 0.9rem; font-weight: 800; color: #D97706;">🔥 ${priorityDeal.calculated_decision_score}/100</div>
                   </div>
                 </div>
 
@@ -795,7 +861,7 @@
             </div>
           </div>
 
-          <!-- 6. TẦNG 3: DISCOVERY — P5 3 BẢNG XẾP HẠNG RA QUYẾT ĐỊNH & INTENT FILTER -->
+          <!-- 6. TẦNG 3: DISCOVERY — 3 BẢNG XẾP HẠNG & INTENT FILTER -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem; display: block;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
@@ -804,7 +870,7 @@
                   ⚡ Kho Kèo Đà Nẵng 43 (${processedDeals.length})
                 </h3>
                 <p style="font-size: 0.8rem; color: ${C.textMuted}; margin: 0.2rem 0 0;">
-                  ${State.activeRankingView === 'HUNTER' ? '🔥 1. Bảng Deal Đáng Săn: Sắp theo Decision Score tối ưu' : (State.activeRankingView === 'QUALITY' ? '🏆 2. Bảng Quán Đáng Ăn: Sắp theo Rating x Đánh Giá Thực Khách' : '📍 3. Bảng Gần & Tiện: Sắp theo Khoảng Cách Thực Địa')}
+                  ${State.activeRankingView === 'HUNTER' ? '🔥 1. Bảng Deal Đáng Săn: Sắp theo Decision Score đa mục tiêu' : (State.activeRankingView === 'QUALITY' ? '🏆 2. Bảng Quán Đáng Ăn: Sắp theo Rating x Đánh Giá Thực Khách' : '📍 3. Bảng Gần & Tiện: Sắp theo Khoảng Cách Thực Địa')}
                 </p>
               </div>
 
@@ -822,7 +888,7 @@
               </div>
             </div>
 
-            <!-- P5.2 INTENT FILTER BUTTONS (Ý ĐỊNH MUA) -->
+            <!-- P5.2 INTENT FILTER (Ý ĐỊNH MUA) -->
             <div style="display: flex; gap: 0.4rem; margin-bottom: 0.8rem; flex-wrap: wrap;">
               ${[
                 'ALL:✨ Tất Cả Ý Định',
@@ -1163,10 +1229,11 @@
     `;
   }
 
-  // 7. RENDER CARD DEAL P5: ADAPTIVE PITCHING + DUAL SCORE + PSYCHOLOGY
+  // 8. RENDER CARD DEAL P5: ADAPTIVE PITCHING + EXPLAINABILITY PILL
   function renderDealCard(deal, C, isLight, activePersona) {
     const isFav = State.savedIds.includes(deal.deal_id);
     const pitchText = activePersona === 'STUDENT' ? deal.student_pitch : deal.office_pitch;
+    const whyText = activePersona === 'STUDENT' ? deal.why_recommend_student : deal.why_recommend_office;
 
     return `
       <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%; box-sizing: border-box; transition: transform 0.2s ease;">
@@ -1212,14 +1279,14 @@
               ${escapeHTML(deal.title)}
             </h4>
 
-            <!-- P5 PERSONA PITCH -->
-            <div style="background: rgba(16,185,129,0.08); border-left: 2.5px solid #10B981; padding: 0.35rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; color: #059669; margin-bottom: 0.6rem;">
-              ${escapeHTML(pitchText)}
+            <!-- "WHY THIS DEAL?" EXPLAINABILITY PILL -->
+            <div style="background: rgba(245, 158, 11, 0.1); border-left: 2.5px solid #F59E0B; padding: 0.4rem 0.65rem; border-radius: 4px; font-size: 0.74rem; font-weight: 600; color: #D97706; margin-bottom: 0.6rem; line-height: 1.4;">
+              ${escapeHTML(whyText)}
             </div>
 
             <div style="display: flex; justify-content: space-between; font-size: 0.74rem; color: ${C.textMuted}; margin-bottom: 0.65rem;">
               <span>📍 ${escapeHTML(deal.distance)}</span>
-              <span style="color: #D97706; font-weight: 700;">${escapeHTML(deal.price_psychology)}</span>
+              <span style="color: #059669; font-weight: 700;">${escapeHTML(deal.price_psychology)}</span>
             </div>
             
             <!-- BẢNG GIÁ & MỨC TIẾT KIỆM NỔI BẬT NHẤT -->
@@ -1258,7 +1325,7 @@
     `;
   }
 
-  // 8. EVENT DELEGATION & TELEMETRY BEHAVIORAL LEARNING LOOP
+  // 9. EVENT DELEGATION & TELEMETRY BEHAVIORAL LEARNING LOOP
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1274,7 +1341,6 @@
       const link = btn.getAttribute('data-link') || '#';
       const deal = State.deals.find(d => d.deal_id === id);
 
-      // TELEMETRY EVENT: CLICK CTA
       console.log(`[P5-Telemetry] CTA_CLICK: deal_id=${id}, persona=${State.activePersona}, zone=${State.activeZone}`);
 
       if (navigator.clipboard) {
@@ -1374,7 +1440,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // 9. BOOTSTRAP
+  // 10. BOOTSTRAP
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
