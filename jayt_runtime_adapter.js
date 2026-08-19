@@ -2,12 +2,12 @@
  * JAYT APEX v4.4 — DISCOVERY, CONVERSION & TRUST PORTAL RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Hero Intent & Quick Search Chips (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
- * 2. Multi-Criteria Sorting (Tiết kiệm nhiều nhất, % giảm, Sắp hết hạn).
- * 3. Integrated Trust Center: Hiển thị trạng thái, tỷ lệ MATCH và Dataset SHA-256.
+ * 1. Deterministic Multi-Level Sorting (Tie-breaker theo deal_id & expiry).
+ * 2. Integrated Trust Center: Phân định rõ Dataset SHA-256 và Deal Evidence SHA-256.
+ * 3. Hero Intent & Quick Search Chips (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
  * 4. High-Conversion Deal Cards với Badge trực quan & Nút hành động 1-chạm.
  * 5. Comprehensive 6-Question FAQ & Corporate Trust Footer 4 Cột.
- * 6. Deterministic 15-Field Dataset SHA-256 Hash qua Web Crypto API.
+ * 6. Web Crypto API SHA-256 Hash đối soát chân thực (MATCH / MISSING / MISMATCH).
  * 7. AbortController & Post-Normalization Double Sequence Guard chống race condition.
  * =============================================================================
  */
@@ -197,6 +197,7 @@
 
         const matchCount = usableDeals.filter(d => d.sha_status === 'MATCH').length;
         const missingCount = usableDeals.filter(d => d.sha_status === 'MISSING').length;
+        const mismatchCount = usableDeals.filter(d => d.sha_status === 'MISMATCH').length;
 
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
@@ -215,17 +216,26 @@
             return true;
         });
 
-        // Sắp xếp danh sách
-        if (State.sortBy === 'SAVING_DESC') {
-            filteredDeals.sort((a, b) => b.saving_amount_vnd - a.saving_amount_vnd);
-        } else if (State.sortBy === 'PCT_DESC') {
-            filteredDeals.sort((a, b) => b.saving_percentage - a.saving_percentage);
-        } else if (State.sortBy === 'EXPIRY_ASC') {
-            filteredDeals.sort((a, b) => a.expiry_info.diffHours - b.expiry_info.diffHours);
-        }
+        // Sắp xếp danh sách với Tie-Breaker Tất Định (Deterministic Sort)
+        filteredDeals.sort((a, b) => {
+            if (State.sortBy === 'SAVING_DESC') {
+                return (b.saving_amount_vnd - a.saving_amount_vnd) || 
+                       (a.expiry_info.diffHours - b.expiry_info.diffHours) || 
+                       a.deal_id.localeCompare(b.deal_id);
+            } else if (State.sortBy === 'PCT_DESC') {
+                return (b.saving_percentage - a.saving_percentage) || 
+                       (b.saving_amount_vnd - a.saving_amount_vnd) || 
+                       a.deal_id.localeCompare(b.deal_id);
+            } else if (State.sortBy === 'EXPIRY_ASC') {
+                return (a.expiry_info.diffHours - b.expiry_info.diffHours) || 
+                       (b.saving_amount_vnd - a.saving_amount_vnd) || 
+                       a.deal_id.localeCompare(b.deal_id);
+            }
+            return a.deal_id.localeCompare(b.deal_id);
+        });
 
         // 5 Phân khu dữ liệu chuyên sâu
-        const topFeaturedDeals = [...usableDeals].sort((a, b) => b.saving_amount_vnd - a.saving_amount_vnd).slice(0, 3);
+        const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
         const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
         const rideDeals = usableDeals.filter(d => d.category === 'RIDE');
@@ -467,20 +477,20 @@
                                     <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Thời điểm snapshot: ${escapeHTML(State.lastUpdatedTime)}</div>
                                 </div>
                                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
-                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Đối soát mật mã học SHA-256</div>
-                                    <div style="font-size: 1.1rem; font-weight: 900; color: #34D399;">🟢 ${matchCount} MATCH ${missingCount > 0 ? `· ⚠️ ${missingCount} PENDING` : ''}</div>
-                                    <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Web Crypto API tính toán trực tiếp</div>
+                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Đối soát từng ưu đãi (Per-Deal Evidence)</div>
+                                    <div style="font-size: 1.1rem; font-weight: 900; color: #34D399;">🟢 ${matchCount} MATCH ${missingCount > 0 ? `· ⚠️ ${missingCount} PENDING` : ''} ${mismatchCount > 0 ? `· 🔴 ${mismatchCount} MISMATCH` : ''}</div>
+                                    <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Băm Canonical Payload qua Web Crypto API</div>
                                 </div>
                                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
-                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Nguyên tắc vận hành</div>
-                                    <div style="font-size: 0.82rem; font-weight: 700; color: #F1F5F9; line-height: 1.4;">Không tự tạo số liệu ảo · Đối soát đúng kênh ghi nhận</div>
+                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Quy tắc chuẩn hóa</div>
+                                    <div style="font-size: 0.82rem; font-weight: 700; color: #F1F5F9; line-height: 1.4;">15 trường dữ liệu chuẩn · Sắp xếp theo deal_id</div>
                                 </div>
                             </div>
 
                             <!-- Hiển thị Dataset SHA-256 Hash công khai có nút Copy -->
                             <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 0.85rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-                                    <span style="font-size: 0.72rem; color: #94A3B8; font-weight: 700;">Mã Băm Dataset SHA-256 (15 trường chuẩn hóa, sắp xếp theo deal_id):</span>
+                                    <span style="font-size: 0.72rem; color: #94A3B8; font-weight: 700;">Mã Băm Dataset SHA-256 (Toàn bộ 15 trường kho dữ liệu):</span>
                                     <button data-action="copy-dataset-sha" data-sha="${escapeHTML(State.datasetSHA256)}" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #38BDF8; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 6px; cursor: pointer;">
                                         📋 Sao chép SHA-256
                                     </button>
