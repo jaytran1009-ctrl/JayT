@@ -2,12 +2,13 @@
  * JAYT APEX v4.5 — CONVERSION & EVIDENCE UX RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Hero Intent & 5 Quick Chips Khám Phá Nhanh (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
- * 2. Deterministic Multi-Level Sorting (Không nhảy vị trí giữa các chu kỳ polling 20s).
- * 3. Thẻ Ưu Đãi Tối Ưu Chuyển Đổi: Nổi bật mức tiết kiệm, hạn dùng Việt hóa, 2 CTA 1-chạm.
- * 4. Trung Tâm Minh Bạch Dữ Liệu 3 Tầng: Phân định rõ Deal Evidence vs Dataset SHA-256.
- * 5. Cẩm Nang 6 Câu Hỏi FAQ Mở Rộng & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
- * 6. Khóa Bất Biến: AbortController, Double Sequence Guard, Web Crypto API SHA-256.
+ * 1. Single State-to-Render Immutable Snapshot Contract.
+ * 2. Hero Intent & 5 Quick Chips Khám Phá Nhanh (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
+ * 3. Deterministic Multi-Level Sorting (Tie-breaker theo deal_id & expiry).
+ * 4. Thẻ Ưu Đãi Tối Ưu Chuyển Đổi: Tiết kiệm nổi bật, hạn dùng Việt hóa, 2 CTA 1-chạm.
+ * 5. Trung Tâm Minh Bạch Dữ Liệu 3 Tầng: Phân định rõ Deal Evidence vs Dataset SHA-256.
+ * 6. Cẩm Nang 6 Câu Hỏi FAQ Mở Rộng & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
+ * 7. Khóa Bất Biến: AbortController, Double Sequence Guard, Web Crypto API SHA-256.
  * =============================================================================
  */
 
@@ -233,7 +234,7 @@
             return a.deal_id.localeCompare(b.deal_id);
         });
 
-        // 5 Phân khu dữ liệu chuyên sâu
+        // 5 Phân khu dữ liệu chuyên sâu (Tất cả rút trích từ State Snapshot duy nhất)
         const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
         const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
@@ -328,9 +329,9 @@
                                 Đang phục vụ <strong>${totalCount} ưu đãi còn hạn</strong> từ <strong>${brandCount} thương hiệu</strong> hàng đầu tại Đà Nẵng.
                             </p>
 
-                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm -->
+                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm (Đã bỏ kính lúp thừa) -->
                             <div style="max-width: 580px; margin: 0 auto 1.2rem; position: relative;">
-                                <input type="text" id="jaytLiveSearchInput" placeholder="🔍 Tìm quán ăn, trà sữa, rạp phim, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 9999px; padding: 0.8rem 1.2rem 0.8rem 2.6rem; font-size: 0.95rem; color: #0F172A; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.2s;" />
+                                <input type="text" id="jaytLiveSearchInput" placeholder="Tìm quán ăn, trà sữa, rạp phim, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 9999px; padding: 0.8rem 1.2rem 0.8rem 2.6rem; font-size: 0.95rem; color: #0F172A; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.2s;" />
                                 <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94A3B8;">🔍</span>
                             </div>
 
@@ -357,7 +358,7 @@
                             <!-- PHÂN KHU 1: Top 3 Ưu Đãi Tiết Kiệm Nhiều Nhất -->
                             <div style="margin-bottom: 2.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="display: align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">🔥</span>
                                         <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi tiết kiệm nhiều nhất hôm nay</h3>
                                     </div>
