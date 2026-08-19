@@ -2,12 +2,13 @@
  * JAYT APEX v4.6 — DISCOVERY ENGINE & MOBILE UX RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Hero Discovery Intent & Clean Search Bar (Không trùng lặp icon).
- * 2. High-Conversion Deal Cards: Tiết kiệm to, CTA Săn Ngay & Chép Mã 1-chạm.
- * 3. Dynamic Discovery Engine: 5 phân khu tự co giãn theo dataset thực tế.
- * 4. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
- * 5. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột.
- * 6. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
+ * 1. Single State-to-Render Immutable Snapshot Contract.
+ * 2. Hero Discovery Intent & Clean Instant Search Bar (Chuẩn 1 icon duy nhất).
+ * 3. High-Conversion Deal Cards: Tiết kiệm nổi bật, nút Săn Ngay & Chép Mã 1-chạm.
+ * 4. Dynamic Discovery Engine: 5 phân khu tự co giãn, không render section rỗng.
+ * 5. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
+ * 6. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
+ * 7. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
  * =============================================================================
  */
 
@@ -95,7 +96,7 @@
         return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate, diffHours: diffHours };
     }
 
-    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal (3 Trạng thái)
+    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal (3 Trạng thái rõ ràng)
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -127,18 +128,18 @@
         const canonicalPayload = `${dealId}|${merchant}|${item}|${original}|${discount}|${voucher}|${rawValidUntil}`;
         const computedSha = await calculateSHA256(canonicalPayload);
 
-        let shaStatus = 'MISSING';
-        let shaLabel = '⚠️ CHƯA CUNG CẤP MÃ BĂM SHA-256';
+        let shaStatus = 'PENDING';
+        let shaLabel = '⚠️ CHƯA CUNG CẤP MÃ BĂM (PENDING)';
 
         if (!rawEvidenceSha || !/^[a-fA-F0-9]{64}$/.test(rawEvidenceSha)) {
-            shaStatus = 'MISSING';
-            shaLabel = '⚠️ CHƯA CUNG CẤP MÃ BĂM SHA-256';
+            shaStatus = 'PENDING';
+            shaLabel = '⚠️ CHƯA CUNG CẤP MÃ BĂM (PENDING)';
         } else if (computedSha && computedSha.toLowerCase() === rawEvidenceSha.toLowerCase()) {
             shaStatus = 'MATCH';
-            shaLabel = '🟢 MÃ BĂM SHA-256 ĐÃ ĐỐI SOÁT HỢP LỆ (MATCH 100%)';
+            shaLabel = '🟢 MÃ BĂM ĐÃ ĐỐI SOÁT HỢP LỆ (MATCH 100%)';
         } else {
             shaStatus = 'MISMATCH';
-            shaLabel = '🔴 CẢNH BÁO: MÃ BĂM BẤT KHỚP (DỮ LIỆU ĐÃ BỊ BIẾN ĐỔI)';
+            shaLabel = '🔴 CẢNH BÁO: MÃ BĂM BẤT KHỚP (MISMATCH)';
         }
 
         return {
@@ -195,7 +196,7 @@
         const brandCount = new Set(usableDeals.map(d => d.merchant_name)).size;
 
         const matchCount = usableDeals.filter(d => d.sha_status === 'MATCH').length;
-        const missingCount = usableDeals.filter(d => d.sha_status === 'MISSING').length;
+        const pendingCount = usableDeals.filter(d => d.sha_status === 'PENDING').length;
         const mismatchCount = usableDeals.filter(d => d.sha_status === 'MISMATCH').length;
 
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
@@ -233,8 +234,8 @@
             return a.deal_id.localeCompare(b.deal_id);
         });
 
-        // 5 Phân khu dữ liệu tự động co giãn theo dataset
-        const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
+        // 5 Phân khu dữ liệu chuyên sâu (Tự co giãn theo dataset)
+        const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || (a.expiry_info.diffHours - b.expiry_info.diffHours) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
         const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
         const rideDeals = usableDeals.filter(d => d.category === 'RIDE');
@@ -328,7 +329,7 @@
                                 Đang phục vụ <strong>${totalCount} ưu đãi còn hạn</strong> từ <strong>${brandCount} thương hiệu</strong> hàng đầu tại Đà Nẵng.
                             </p>
 
-                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm (Chuẩn 1 Icon) -->
+                            <!-- Ô Tìm Kiếm Tức Thì (Chuẩn 1 Icon Kính Lúp) -->
                             <div style="max-width: 580px; margin: 0 auto 1.2rem; position: relative;">
                                 <input type="text" id="jaytLiveSearchInput" placeholder="Tìm quán ăn, trà sữa, rạp phim, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 9999px; padding: 0.8rem 1.2rem 0.8rem 2.6rem; font-size: 0.95rem; color: #0F172A; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.2s;" />
                                 <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94A3B8;">🔍</span>
@@ -354,7 +355,7 @@
                         </div>
 
                         ${isHomeOverview ? `
-                            <!-- PHÂN KHU 1: Top 3 Ưu Đãi Tiết Kiệm Nhiều Nhất -->
+                            <!-- PHÂN KHU 1: Top 3 Ưu Đãi Tiết Kiệm Nhiều Nhất (Tự Co Giãn) -->
                             ${topFeaturedDeals.length > 0 ? `
                                 <div style="margin-bottom: 2.5rem;">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -485,7 +486,7 @@
                                 </div>
                                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
                                     <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Đối soát từng ưu đãi (Per-Deal Evidence)</div>
-                                    <div style="font-size: 1.1rem; font-weight: 900; color: #34D399;">🟢 ${matchCount} MATCH ${missingCount > 0 ? `· ⚠️ ${missingCount} PENDING` : ''} ${mismatchCount > 0 ? `· 🔴 ${mismatchCount} MISMATCH` : ''}</div>
+                                    <div style="font-size: 1.1rem; font-weight: 900; color: #34D399;">🟢 ${matchCount} MATCH ${pendingCount > 0 ? `· ⚠️ ${pendingCount} PENDING` : ''} ${mismatchCount > 0 ? `· 🔴 ${mismatchCount} MISMATCH` : ''}</div>
                                     <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Băm Canonical Payload qua Web Crypto API</div>
                                 </div>
                                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
@@ -521,7 +522,7 @@
                                 </div>
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
                                     <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">2. JayT có bán trực tiếp mã giảm giá không?</div>
-                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Không. JayT là cổng thông tin khám phá và đối soát ưu đãi hoàn toàn miễn phí cho người dùng, không bán mã hay thu phí giao dịch.</p>
+                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Không. JayT là cổng thông tin khám phá và đối soát ưu đãi hoàn toàn miễn phí, JayT không thu phí truy cập Portal hay phí giao dịch.</p>
                                 </div>
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
                                     <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">3. Làm sao biết mã giảm giá còn hiệu lực?</div>
@@ -718,7 +719,7 @@
         } else if (deal.sha_status === 'MISMATCH') {
             shaStatusBadge = `<span style="color: #DC2626; font-weight: 800;">🔴 CẢNH BÁO: MÃ BĂM BẤT KHỚP (MISMATCH)</span>`;
         } else {
-            shaStatusBadge = `<span style="color: #D97706; font-weight: 800;">⚠️ CHƯA CUNG CẤP MÃ BĂM</span>`;
+            shaStatusBadge = `<span style="color: #D97706; font-weight: 800;">⚠️ CHƯA CUNG CẤP MÃ BĂM (PENDING)</span>`;
         }
 
         modal.innerHTML = `
