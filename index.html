@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JayT — Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43</title>
     
-    <!-- SEO & Metadata Chính Thức Chuẩn Quốc Gia -->
-    <meta name="description" content="JayT Hub — Cẩm nang tiết kiệm & đặc quyền voucher 0Đ cho sinh viên, người lao động Đà Nẵng. Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí, anh em local kiểm định.">
-    <meta name="keywords" content="JayT, deal Đà Nẵng, voucher 0 đồng, mã giảm giá Grab, ShopeeFood Đà Nẵng, Katinat, Maycha, sinh viên Đà Nẵng, tiết kiệm, CGV Đà Nẵng, Xanh SM">
+    <!-- SEO & Metadata Chuẩn Quốc Gia -->
+    <meta name="description" content="JayT — Cổng thông tin & đặc quyền tiết kiệm chi tiêu ẩm thực, di chuyển và giải trí phong cách Quiet Luxury dành riêng cho cộng đồng Đà Nẵng (Mã Vùng 43). Minh bạch mật mã học SHA-256.">
+    <meta name="keywords" content="JayT Đà Nẵng, deal Đà Nẵng, voucher 0 đồng, Grab Đà Nẵng, ShopeeFood Đà Nẵng, Katinat, Maycha, Xanh SM, sinh viên Đà Nẵng">
     <meta name="author" content="JayT — Đà Nẵng 43">
-    <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:title" content="JayT — Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43">
-    <meta property="og:description" content="Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí cho sinh viên & người lao động Đà Nẵng.">
-    <meta property="og:locale" content="vi_VN">
-    <meta name="theme-color" content="#10B981">
+    <meta property="og:description" content="Khám phá đặc quyền ăn uống, đi lại và giải trí đẳng cấp bậc nhất Đà Nẵng. 100% miễn phí cho người dùng cuối.">
+    <meta name="theme-color" content="#07080A">
 
-    <!-- Google Fonts: Inter, Newsreader, JetBrains Mono -->
+    <!-- Google Fonts Hoàng Gia: Newsreader (Serif Luxury), Inter (Modern Sans), JetBrains Mono (Cryptographic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600;1,6..72,700&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -27,102 +25,87 @@
             --font-serif: 'Newsreader', Georgia, serif;
             --font-mono: 'JetBrains Mono', monospace;
             --radius-pill: 9999px;
-            --radius-card: 20px;
-            --radius-sm: 10px;
-            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-card: 24px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
-            /* Dark Theme Default (Obsidian Luxury) */
-            --bg-page: #09090D;
-            --bg-surface: #121318;
-            --bg-card: #171821;
-            --bg-card-hover: #1F212E;
-            --bg-tag: #232533;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(16, 185, 129, 0.45);
-            --border-gold: rgba(245, 158, 11, 0.4);
+            /* Aristocratic Obsidian & Gold Theme */
+            --bg-base: #07080A;
+            --bg-surface: #0E1015;
+            --bg-card: rgba(18, 20, 29, 0.75);
+            --bg-card-hover: rgba(26, 29, 42, 0.95);
+            --bg-tag: rgba(255, 255, 255, 0.04);
+            
+            --border-subtle: rgba(255, 255, 255, 0.07);
+            --border-gold: rgba(212, 175, 55, 0.35);
+            --border-gold-glow: rgba(212, 175, 55, 0.75);
+            
             --text-heading: #FFFFFF;
-            --text-body: #A1A7B8;
-            --text-muted: #6B7280;
-            --badge-green-bg: rgba(16, 185, 129, 0.15);
-            --badge-green-text: #34D399;
-            --accent-gold: #FBBF24;
-            --accent-emerald: #10B981;
-            --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-            --header-bg: rgba(9, 9, 13, 0.88);
-        }
-
-        [data-theme="light"] {
-            --bg-page: #F8FAFC;
-            --bg-surface: #FFFFFF;
-            --bg-card: #FFFFFF;
-            --bg-card-hover: #F1F5F9;
-            --bg-tag: #F1F5F9;
-            --border: #E2E8F0;
-            --border-hover: #10B981;
-            --border-gold: rgba(217, 119, 6, 0.4);
-            --text-heading: #0F172A;
-            --text-body: #475569;
-            --text-muted: #94A3B8;
-            --badge-green-bg: #ECFDF5;
-            --badge-green-text: #059669;
-            --accent-gold: #D97706;
-            --accent-emerald: #059669;
-            --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            --header-bg: rgba(255, 255, 255, 0.92);
+            --text-body: #9CA3AF;
+            --text-muted: #64748B;
+            --text-gold: #F3CA65;
+            
+            --brand-emerald: #10B981;
+            --brand-gold: #D4AF37;
+            --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            --ambient-glow: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(16, 185, 129, 0.04) 40%, transparent 70%);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
-            background-color: var(--bg-page);
+            background-color: var(--bg-base);
+            background-image: var(--ambient-glow);
+            background-attachment: fixed;
             color: var(--text-body);
             font-family: var(--font-sans);
             font-size: 0.95rem;
-            line-height: 1.55;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
-            padding-bottom: 5rem;
-            transition: var(--transition);
+            padding-bottom: 6rem;
         }
 
         @keyframes spin { to { transform: rotate(360deg); } }
-        @keyframes toastIn { from { transform: translate(-50%, -20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+        @keyframes toastIn { from { transform: translate(-50%, -25px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
         @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        @keyframes shimmerSweep { 0% { transform: translateX(-100%) rotate(25deg); } 100% { transform: translateX(200%) rotate(25deg); } }
-        @keyframes pulseGlow { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.05); opacity: 1; } }
+        @keyframes goldShimmer { 0% { transform: translateX(-100%) rotate(30deg); } 100% { transform: translateX(200%) rotate(30deg); } }
+        @keyframes subtlePulse { 0%, 100% { opacity: 0.9; } 50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(212,175,55,0.4)); } }
 
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
-            animation: marqueeScroll 35s linear infinite;
+            animation: marqueeScroll 40s linear infinite;
         }
         .marquee-track:hover { animation-play-state: paused; }
 
-        .deal-card-visual {
-            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
+        .noble-card {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
-        .deal-card-visual:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-hover) !important;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 20px rgba(16,185,129,0.15) !important;
+        .noble-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-gold-glow) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.15) !important;
+            background: var(--bg-card-hover) !important;
         }
 
-        .shimmer-btn {
+        .gold-shimmer-btn {
             position: relative;
             overflow: hidden;
         }
-        .shimmer-btn::after {
+        .gold-shimmer-btn::after {
             content: '';
             position: absolute;
             top: -50%; left: -50%; width: 200%; height: 200%;
-            background: linear-gradient(60deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: rotate(25deg);
-            animation: shimmerSweep 3s infinite;
+            background: linear-gradient(60deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%);
+            transform: rotate(30deg);
+            animation: goldShimmer 3.5s infinite;
         }
 
-        input::placeholder { color: #64748B; font-size: 0.9rem; }
+        input::placeholder { color: #4B5563; font-size: 0.9rem; font-family: var(--font-sans); }
     </style>
 </head>
 <body>
@@ -130,7 +113,7 @@
     <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME APEX (APP MOUNT POINT) -->
     <div id="jaytAppRoot"></div>
 
-    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v9.0 -->
-    <script src="/jayt_runtime_adapter.js?v=9.0.0"></script>
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v10.0 -->
+    <script src="/jayt_runtime_adapter.js?v=10.0.0"></script>
 </body>
 </html>
