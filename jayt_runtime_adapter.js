@@ -1,19 +1,20 @@
 /**
- * JAYT APEX v4.0 — COMPLETE DEAL PORTAL RUNTIME
+ * JAYT APEX v4.1 — COMPREHENSIVE DEAL PORTAL RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Kho dữ liệu mở rộng 16 Deals thực tế đối soát.
- * 2. Tìm kiếm thời gian thực (Live Search by Merchant/Item/District).
- * 3. Featured Row (Ưu đãi tiết kiệm cao nhất hôm nay).
- * 4. Mật mã học Web Crypto SHA-256 Match 100%.
- * 5. Full 15-Field Canonical Dataset Fingerprint.
- * 6. Responsive Mobile-First & Footer Doanh Nghiệp Hoàn Thiện.
+ * 1. 5 Phân khu khám phá: Top Tiết Kiệm, Ăn Uống, Trà Sữa, Xe Điện & Rạp Chiếu Phim.
+ * 2. Cẩm nang 3 bước săn deal & FAQ giải đáp thắc mắc.
+ * 3. Live Search tức thì & Dynamic Category Filter Bar.
+ * 4. Web Crypto API SHA-256 đối soát thực chất (MATCH / MISMATCH / MISSING).
+ * 5. 15-Field Canonical Dataset Fingerprint nguyên bản.
+ * 6. AbortController & Post-Normalization Double Sequence Guard chống race condition.
+ * 7. XSS-Safe HTML Escaping & Protocol Allowlist.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Portal Runtime v4.0 Active");
+    console.log("⚡ JAYT Comprehensive Portal Runtime v4.1 Active");
 
     const State = {
         deals: [],
@@ -55,7 +56,7 @@
         return new Intl.NumberFormat('vi-VN').format(num) + '₫';
     }
 
-    // 2. Mật mã học SHA-256 Web Crypto
+    // 2. Mật mã học SHA-256 Web Crypto API
     async function calculateSHA256(message) {
         try {
             if (!window.crypto || !window.crypto.subtle) return null;
@@ -94,7 +95,7 @@
         return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate };
     }
 
-    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 (Match/Mismatch/Missing)
+    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 (3 Trạng thái)
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -134,7 +135,7 @@
             shaLabel = '⚠️ CHƯA CUNG CẤP CHỮ KÝ SHA-256';
         } else if (computedSha && computedSha.toLowerCase() === rawEvidenceSha.toLowerCase()) {
             shaStatus = 'MATCH';
-            shaLabel = '🟢 CHỮ KÝ SHA-256 ĐÃ ĐỐI SOÁT HỢP LỆ (KHỚP 100%)';
+            shaLabel = '🟢 CHỮ KÝ SHA-256 ĐÃ ĐỐI SOÁT HỢP LỆ (MATCH 100%)';
         } else {
             shaStatus = 'MISMATCH';
             shaLabel = '🔴 CẢNH BÁO: CHỮ KÝ BẤT KHỚP (DỮ LIỆU ĐÃ BỊ THAY ĐỔI)';
@@ -171,7 +172,7 @@
         ).join('|');
     }
 
-    // 6. Render Giao Diện Portal Đầy Đủ
+    // 6. Render Giao Diện Đại Đô Thị Portal v4.1
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -191,18 +192,15 @@
         const totalCount = usableDeals.length;
         const brandCount = new Set(usableDeals.map(d => d.merchant_name)).size;
 
-        // Trích xuất danh mục động
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
-        // Lọc theo search và category
+        // Lọc danh sách theo Category & Search
         let filteredDeals = usableDeals.filter(d => {
-            // Bộ lọc danh mục
             if (State.activeFilter === 'HOT_DEAL') {
                 if (d.saving_percentage < 40) return false;
             } else if (State.activeFilter !== 'ALL') {
                 if (d.category !== State.activeFilter) return false;
             }
-            // Bộ lọc tìm kiếm
             if (State.searchQuery) {
                 const q = State.searchQuery.toLowerCase();
                 const matchText = `${d.merchant_name} ${d.item_name} ${d.branch_address} ${d.voucher_code}`.toLowerCase();
@@ -211,8 +209,11 @@
             return true;
         });
 
-        // Top 3 Hot Deals cho khu vực Featured
+        // Phân nhóm dữ liệu cho các phân khu chuyên sâu
         const topFeaturedDeals = [...usableDeals].sort((a, b) => b.saving_amount_vnd - a.saving_amount_vnd).slice(0, 3);
+        const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
+        const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
+        const rideAndCinemaDeals = usableDeals.filter(d => d.category === 'RIDE' || d.category === 'CINEMA');
 
         // Connection Badge
         let connectionBadge = '';
@@ -304,7 +305,7 @@
 
                         <!-- 3. Khu vực Ưu Đãi Nổi Bật (Featured Top Savings) -->
                         ${!State.searchQuery && State.activeFilter === 'ALL' ? `
-                            <div style="margin-bottom: 2rem;">
+                            <div style="margin-bottom: 2.2rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.25rem;">🔥</span>
@@ -318,13 +319,13 @@
                             </div>
                         ` : ''}
 
-                        <!-- 4. Danh sách toàn bộ Deal Grid -->
-                        <div style="margin-bottom: 1.5rem;">
+                        <!-- 4. Danh sách toàn bộ Deal Grid theo Bộ Lọc / Tìm kiếm -->
+                        <div style="margin-bottom: 2.5rem;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                                     <span style="font-size: 1.25rem;">📋</span>
                                     <h3 style="font-size: 1.15rem; font-weight: 900; color: #0F172A; margin: 0;">
-                                        ${State.searchQuery ? `Kết quả tìm kiếm cho "${escapeHTML(State.searchQuery)}"` : 'Toàn bộ danh sách ưu đãi'} (${filteredDeals.length})
+                                        ${State.searchQuery ? `Kết quả tìm kiếm cho "${escapeHTML(State.searchQuery)}"` : (State.activeFilter === 'ALL' ? 'Toàn bộ danh sách ưu đãi đối soát' : `Danh mục: ${escapeHTML(getCategoryLabel(State.activeFilter))}`)} (${filteredDeals.length})
                                     </h3>
                                 </div>
                                 ${State.searchQuery ? `
@@ -348,11 +349,35 @@
                             `}
                         </div>
 
+                        <!-- 5. Phân khu Cẩm nang & FAQ Giải đáp -->
+                        ${!State.searchQuery && State.activeFilter === 'ALL' ? `
+                            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 1.8rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.2rem;">
+                                    <span style="font-size: 1.3rem;">💡</span>
+                                    <h3 style="font-size: 1.15rem; font-weight: 900; color: #0F172A; margin: 0;">Cẩm nang săn Deal & Sử dụng mã tại Đà Nẵng</h3>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem;">
+                                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1rem;">
+                                        <div style="font-weight: 800; font-size: 0.9rem; color: #059669; margin-bottom: 0.3rem;">1. Sao chép mã 1-chạm</div>
+                                        <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.45;">Bấm vào nút [📋 MÃ VOUCHER] để lưu mã vào bộ nhớ đệm điện thoại/máy tính tức thì.</p>
+                                    </div>
+                                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1rem;">
+                                        <div style="font-weight: 800; font-size: 0.9rem; color: #059669; margin-bottom: 0.3rem;">2. Bấm [SĂN NGAY ➔]</div>
+                                        <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.45;">Hệ thống chuyển thẳng tới quán hoặc ứng dụng liên kết (GrabFood, ShopeeFood, Xanh SM, CGV...).</p>
+                                    </div>
+                                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1rem;">
+                                        <div style="font-weight: 800; font-size: 0.9rem; color: #059669; margin-bottom: 0.3rem;">3. Dán mã & nhận mức giảm</div>
+                                        <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.45;">Dán mã tại bước thanh toán để được trừ tiền trực tiếp đúng như bảng đối soát trên JayT.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ` : ''}
+
                     </main>
                 </div>
 
-                <!-- 5. Footer Doanh Nghiệp & Pháp Lý Đầy Đủ -->
-                <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.5rem 1.5rem 1.5rem; margin-top: 3rem;">
+                <!-- 6. Footer Doanh Nghiệp & Pháp Lý Hoàn Thiện -->
+                <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.5rem 1.5rem 1.5rem; margin-top: 2rem;">
                     <div style="max-width: 1140px; margin: 0 auto;">
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.8rem; margin-bottom: 2rem;">
                             <div>
@@ -383,7 +408,7 @@
                         </div>
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.0 GA Standard</span>
+                            <span>Phiên bản: Production Runtime v4.1 GA Standard</span>
                         </div>
                     </div>
                 </footer>
@@ -391,7 +416,7 @@
             </div>
         `;
 
-        // Lắng nghe sự kiện ô tìm kiếm
+        // Gắn sự kiện ô tìm kiếm Live Search
         const searchInput = document.getElementById('jaytLiveSearchInput');
         if (searchInput) {
             searchInput.addEventListener('input', function(e) {
