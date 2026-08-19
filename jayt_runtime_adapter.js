@@ -17,7 +17,7 @@
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.1 Hunting Operating System Active [V1+V2+V3+V4 Converged]");
+  console.log("🚀 JayT Apex v5.1 Hunting Operating System Active [Candidate Build V1-V4]");
 
   // ==========================================================================
   // 🔒 1. PROVENANCE CORE & SECURITY SANITIZER
@@ -1100,7 +1100,7 @@
 
             <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; font-size: 0.78rem; color: #64748B;">
               <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: Production Apex v5.1 (V1+V2+V3+V4 Converged Engine)</span>
+              <span>Phiên bản: Production Apex v5.1 (Candidate Build V1-V4)</span>
             </div>
           </div>
         </footer>
