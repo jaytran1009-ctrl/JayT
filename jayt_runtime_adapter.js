@@ -1,32 +1,24 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — ELITE DUAL-TRACK EDITION (RC-1)
+ * JAYT APEX v5.5 — P1 IMPLEMENTATION: HERO / WOW PRIORITY DEAL
  * =============================================================================
- * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
- * =============================================================================
- * GOVERNANCE COMPLIANCE:
- * - Trục 1 (Visual UX): Ticker → Priority WOW → Radar → 8 Deals → Calculator → Evidence
- * - Trục 2 (Truth & Transparency): Không tự phong "100%", gán nhãn minh bạch bản chất.
- * - Trạng thái: RC-1 / PARTIAL RUNTIME EVIDENCE (Chờ Independent External Audit).
+ * DEFINITION OF DONE COMPLIANCE:
+ * - Đẹp hơn: Hierarchy rõ ràng, Dark Mode cao cấp, viền hổ phách Breathing Aura.
+ * - Rõ hơn: Quét 3 giây hiểu ngay (Mua gì → Bớt bao nhiêu → Điều kiện → Ở đâu → CTA).
+ * - Hữu ích hơn: 1 nút bấm hành động duy nhất, hiển thị số tiền giữ lại trong túi.
+ * - Trung thực hơn: Gán nhãn "📷 Ảnh minh họa địa điểm" & "🟡 Chưa kiểm chứng độc lập".
+ * - An toàn hơn: Scoped Isolation, Zero-Destruction, Exclusion-Aware Fingerprint.
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [Dual-Track Elite Engine Booting...]");
+  console.log("🚀 JayT Apex v5.5 [P1: Hero / WOW Priority Deal Engine Initializing...]");
 
-  // ==========================================================================
-  // 🔒 1. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
-  // ==========================================================================
-
+  // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
     if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
   }
 
   function sanitizeURL(url) {
@@ -42,10 +34,7 @@
 
   const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2248%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20Minh%20H%E1%BB%8Da%20%C4%90ang%20T%E1%BA%A3i%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
 
-  // ==========================================================================
-  // 📳 2. HAPTIC & WEB AUDIO SYNTHESIZER
-  // ==========================================================================
-
+  // 2. AUDIO & HAPTIC & CONFETTI
   function triggerHaptic(type = 'light') {
     if ('vibrate' in navigator) {
       try {
@@ -134,10 +123,7 @@
     } catch (e) {}
   }
 
-  // ==========================================================================
-  // 🧠 3. DATABASE ĐÀ NẴNG 43 — CHUẨN HÓA TRUNG THỰC & ĐIỀU KIỆN ÁP DỤNG
-  // ==========================================================================
-
+  // 3. DATABASE ĐÀ NẴNG 43
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
@@ -145,7 +131,7 @@
       branch: '436 Điện Biên Phủ, P. Thanh Khê Đông, Q. Thanh Khê',
       district: 'THANH_KHE',
       distance: '1.2 km · 4 phút',
-      title: 'Trà Sữa Trân Châu Kem Trứng Mua 1 Tặng 1',
+      title: 'Trà Sữa Trân Châu Kem Trứng (Mua 1 Tặng 1)',
       tag: '🧋 MUA 1 TẶNG 1',
       code: 'MAYCHA0D',
       category: 'DRINK',
@@ -153,15 +139,15 @@
       discount_price: 24000,
       saving: 24000,
       percent: 50,
-      terms: 'Áp dụng đặt qua ShopeeFood từ 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
+      terms: 'Áp dụng đặt qua ShopeeFood khung 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
       is_hidden: true,
       hidden_reason: 'Chỉ kích hoạt ngầm tại chi nhánh Điện Biên Phủ cho sinh viên giờ tan tầm.',
-      audit_status_label: '🧪 Chưa kiểm chứng độc lập',
+      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Sao chép mã MAYCHA0D → Mở ShopeeFood chọn size L → Dán mã trước khi ấn thanh toán.',
       maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
       link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
-      image_provenance_label: 'Ảnh minh họa trà sữa',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1558857563-b37fe434c442?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #EC4899, #BE185D)'
     },
@@ -182,12 +168,12 @@
       terms: 'Áp dụng đặt qua GrabFood khung trưa 11:00 - 13:00. Giới hạn 8 suất/ngày.',
       is_hidden: false,
       hidden_reason: 'Ưu đãi liên kết GrabFood khu vực trung tâm Hải Châu.',
-      audit_status_label: '🎯 Đang quét thực địa',
-      audit_status_color: '#059669',
+      audit_status_label: '🔵 Đang quét thực địa',
+      audit_status_color: '#0284C7',
       hunt_strategy: 'Bấm Săn Ngay → Chọn món Cơm gà quay → Dán mã AHAI35K trước 11:30 để tài xế nhận đơn sớm.',
       maps_url: 'https://maps.google.com/?q=100+Thai+Phien+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/c%C6%A1m-g%C3%A0-a-h%E1%BA%A3i-th%C3%A1i-phi%C3%AAn-delivery/',
-      image_provenance_label: 'Ảnh minh họa cơm gà',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #F97316, #C2410C)'
     },
@@ -208,12 +194,12 @@
       terms: 'Áp dụng cho các chuyến GrabCar có điểm đón hoặc trả tại Sân bay Đà Nẵng từ 50K.',
       is_hidden: false,
       hidden_reason: 'Mã khuyến mãi giao thông chính thức từ Grab theo tọa độ sân bay.',
-      audit_status_label: '🎯 Đang quét thực địa',
-      audit_status_color: '#059669',
+      audit_status_label: '🔵 Đang quét thực địa',
+      audit_status_color: '#0284C7',
       hunt_strategy: 'Nhập điểm đón tại Sân Bay Đà Nẵng → Chọn mục Ưu Đãi → Nhập SANBAY → Đặt xe.',
       maps_url: 'https://maps.google.com/?q=San+bay+Quoc+te+Da+Nang',
       link: 'https://www.grab.com/vn/transport/car/',
-      image_provenance_label: 'Ảnh minh họa di chuyển',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #10B981, #047857)'
     },
@@ -234,12 +220,12 @@
       terms: 'Áp dụng từ Thứ 2 đến Thứ 6 cho thành viên CGV dưới 22 tuổi hoặc có thẻ HSSV/CCCD hợp lệ.',
       is_hidden: false,
       hidden_reason: 'Chính sách giá vé ưu đãi thành viên cố định tại cụm rạp CGV Vincom Sơn Trà.',
-      audit_status_label: '🎯 Đang quét thực địa',
-      audit_status_color: '#059669',
+      audit_status_label: '🔵 Đang quét thực địa',
+      audit_status_color: '#0284C7',
       hunt_strategy: 'Đặt vé online chọn suất chiếu U22 → Xuất trình thẻ HSSV/CCCD khi nhận vé tại quầy.',
       maps_url: 'https://maps.google.com/?q=Vincom+Plaza+Ngo+Quyen+Da+Nang',
       link: 'https://www.cgv.vn/en/cinox/site/cgv-vincom-da-nang/',
-      image_provenance_label: 'Ảnh minh họa rạp chiếu',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #EF4444, #B91C1C)'
     },
@@ -260,12 +246,12 @@
       terms: 'Áp dụng trực tiếp tại quầy 34 Bạch Đằng khi gọi đồ uống signature từ 18:00 - 21:00.',
       is_hidden: true,
       hidden_reason: 'Chương trình tri ân khách hàng trải nghiệm view sông Hàn buổi tối.',
-      audit_status_label: '🧪 Chưa kiểm chứng độc lập',
+      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Đến quán trước 19:30 → Đọc mã KATINAT1D khi gọi món tại quầy thu ngân tầng 1.',
       maps_url: 'https://maps.google.com/?q=34+Bach+Dang+Da+Nang',
       link: 'https://katinat.vn/menu/',
-      image_provenance_label: 'Ảnh minh họa cà phê',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #D97706, #B45309)'
     },
@@ -286,12 +272,12 @@
       terms: 'Áp dụng cho chuyến xe Xanh SM Taxi / Taxi Luxury tại Đà Nẵng có cước từ 50K.',
       is_hidden: false,
       hidden_reason: 'Chính sách trợ giá cuốc xe điện toàn thành phố kích cầu người dùng mới.',
-      audit_status_label: '🎯 Đang quét thực địa',
-      audit_status_color: '#059669',
+      audit_status_label: '🔵 Đang quét thực địa',
+      audit_status_color: '#0284C7',
       hunt_strategy: 'Mở app Xanh SM → Vào mục Ưu Đãi → Nhập XANHDN30 → Đặt xe để áp dụng giảm trực tiếp.',
       maps_url: 'https://maps.google.com/?q=Da+Nang',
       link: 'https://www.xanhsm.com',
-      image_provenance_label: 'Ảnh minh họa xe điện',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #0284C7, #0369A1)'
     },
@@ -312,12 +298,12 @@
       terms: 'Áp dụng đặt qua Web/App Jollibee khu vực Thanh Khê. Số lượng 6 combo/ngày.',
       is_hidden: true,
       hidden_reason: 'Combo flash-sale ngầm dành riêng cho khu vực sinh viên lân cận ĐH Sư Phạm/Bách Khoa.',
-      audit_status_label: '🧪 Chưa kiểm chứng độc lập',
+      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Sao chép mã JOLLIBEE39 → Mở Web Jollibee → Thêm Combo Sinh Viên vào giỏ → Nhập mã thanh toán.',
       maps_url: 'https://maps.google.com/?q=478+Dien+Bien+Phu+Da+Nang',
       link: 'https://jollibee.com.vn/thuc-don',
-      image_provenance_label: 'Ảnh minh họa gà giòn',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #E11D48, #9F1239)'
     },
@@ -338,21 +324,18 @@
       terms: 'Áp dụng cho đơn nhóm từ 4 phần trở lên trên GrabFood hoặc mua mang về tại 189 Hoàng Diệu.',
       is_hidden: false,
       hidden_reason: 'Chương trình ưu đãi nhóm giải nhiệt mùa hè truyền thống tại cơ sở Hoàng Diệu.',
-      audit_status_label: '🎯 Đang quét thực địa',
-      audit_status_color: '#059669',
+      audit_status_label: '🔵 Đang quét thực địa',
+      audit_status_color: '#0284C7',
       hunt_strategy: 'Đặt đơn nhóm 4 tô trên GrabFood → Nhập mã CHELIENFREE tại bước thanh toán.',
       maps_url: 'https://maps.google.com/?q=189+Hoang+Dieu+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/ch%C3%A8-li%C3%AAn-ho%C3%A0ng-di%E1%BB%87u-delivery/',
-      image_provenance_label: 'Ảnh minh họa món chè',
+      image_provenance_label: 'Ảnh minh họa địa điểm',
       image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80',
       badge_bg: 'linear-gradient(135deg, #84CC16, #4D7C0F)'
     }
   ];
 
-  // ==========================================================================
-  // 🏛️ 4. STATE MANAGEMENT (SSOT)
-  // ==========================================================================
-
+  // 4. STATE
   const State = {
     deals: DEALS_DATABASE,
     theme: localStorage.getItem('jayt_theme') || 'dark',
@@ -370,8 +353,6 @@
     isWhyModalOpen: false,
     isStrategyModalOpen: false,
     strategyDeal: null,
-    isAuditOpen: false,
-    auditDeal: null,
     isShareModalOpen: false,
     shareDeal: null,
     pendingOutcomeDeal: null,
@@ -407,10 +388,7 @@
     return targetUrl;
   }
 
-  // ==========================================================================
-  // 🛡️ 5. ISOLATED HOST PROVISIONER
-  // ==========================================================================
-
+  // 5. ISOLATED HOST PROVISIONER
   function ensureApexHost() {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
@@ -428,10 +406,7 @@
     return root;
   }
 
-  // ==========================================================================
-  // 🖥️ 6. COMPLETE MODERN APEX UI RENDER ENGINE
-  // ==========================================================================
-
+  // 6. RENDER GIAO DIỆN APEX
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -545,7 +520,7 @@
             </div>
           </div>
 
-          <!-- 4. TẦNG 1: WOW — KÈO ƯU TIÊN SỐ 1 MAYCHA -->
+          <!-- 4. P1 NÂNG CẤP: TẦNG 1 WOW PRIORITY DEAL (ABOVE-THE-FOLD REDESIGN) -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem; display: block;">
             <div style="text-align: center; margin-bottom: 2rem;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #059669; padding: 0.35rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem;">
@@ -559,8 +534,10 @@
               </h1>
             </div>
 
-            <!-- CARD DEAL ƯU TIÊN CHIẾN THUẬT -->
+            <!-- HERO WOW CARD: SIÊU THOÁNG · 1 CTA CHÍNH · RÕ 6 CÂU HỎI -->
             <div style="background: ${C.cardBg}; border: 2px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 0 35px rgba(245, 158, 11, 0.15);">
+              
+              <!-- CỘT ẢNH 16:10 + BADGES MINH BẠCH -->
               <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden; border-radius: 16px;">
                 <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
@@ -569,10 +546,12 @@
                 <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
                   📷 ${escapeHTML(priorityDeal.image_provenance_label)}
                 </div>
-                <div style="position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.7); color: ${priorityDeal.audit_status_color}; border: 1px solid ${priorityDeal.audit_status_color}; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 8px; backdrop-filter: blur(6px);">
+                <div style="position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.75); color: ${priorityDeal.audit_status_color}; border: 1px solid ${priorityDeal.audit_status_color}; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 8px; backdrop-filter: blur(6px);">
                   ${priorityDeal.audit_status_label}
                 </div>
               </div>
+
+              <!-- CỘT NỘI DUNG RA QUYẾT ĐỊNH -->
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                   <span style="font-size: 0.9rem; font-weight: 800; color: #D97706; text-transform: uppercase;">${escapeHTML(priorityDeal.merchant)}</span>
@@ -587,7 +566,7 @@
                   📍 ${escapeHTML(priorityDeal.branch)} · <strong>${escapeHTML(priorityDeal.distance)}</strong>
                 </div>
 
-                <!-- BẢNG GIÁ & ĐIỀU KIỆN ÁP DỤNG -->
+                <!-- BẢNG GIÁ & MỨC TIẾT KIỆM NỔI BẬT NHẤT -->
                 <div style="background: ${isLight ? 'rgba(16, 185, 129, 0.08)' : 'rgba(16, 185, 129, 0.12)'}; border: 1.5px solid #10B981; border-radius: 14px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
                   <div>
                     <div style="font-size: 1.4rem; font-weight: 900; color: #059669;">
@@ -597,12 +576,13 @@
                       Giá gốc: <span style="text-decoration: line-through; color: ${C.textMuted};">${formatVND(priorityDeal.original_price)}</span> ➔ Giá ưu đãi: <strong>${formatVND(priorityDeal.discount_price)}</strong>
                     </div>
                   </div>
-                  <span style="font-size: 0.75rem; background: #059669; color: #FFF; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700;">💎 TIẾT KIỆM CAO</span>
+                  <span style="font-size: 0.75rem; background: #059669; color: #FFF; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700;">💰 TIẾT KIỆM 50%</span>
                 </div>
 
+                <!-- ĐIỀU KIỆN & HƯỚNG DẪN RÕ RÀNG -->
                 <div style="background: ${isLight ? '#FFFBEB' : 'rgba(245, 158, 11, 0.08)'}; border: 1.5px dashed #F59E0B; border-radius: 12px; padding: 0.8rem 1rem; margin-bottom: 1.2rem;">
                   <div style="font-size: 0.78rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.25rem;">
-                    🎟️ ĐIỀU KIỆN & HƯỚNG DẪN SĂN:
+                    🎟️ ĐIỀU KIỆN ÁP DỤNG:
                   </div>
                   <div style="font-size: 0.82rem; color: ${C.textMain}; line-height: 1.45; font-weight: 500;">
                     ${escapeHTML(priorityDeal.terms)}<br>
@@ -610,14 +590,15 @@
                   </div>
                 </div>
 
+                <!-- NÚT BẤM CTA DUY NHẤT -->
                 <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                  <button data-action="hunt-keo" data-id="${priorityDeal.deal_id}" data-code="${priorityDeal.code}" data-link="${priorityDeal.link}" data-saving="${priorityDeal.saving}" style="flex: 1.5; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35);">
-                    🔥 SĂN KÈO NÀY NGAY ➔
+                  <button data-action="hunt-keo" data-id="${priorityDeal.deal_id}" data-code="${priorityDeal.code}" data-link="${priorityDeal.link}" data-saving="${priorityDeal.saving}" style="flex: 1.5; min-height: 50px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35);">
+                    🔥 SĂN KÈO MAYCHA (-24.000₫) ➔
                   </button>
-                  <button data-action="open-share-modal" data-id="${priorityDeal.deal_id}" style="min-height: 48px; background: #0284C7; color: #FFF; border: none; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
+                  <button data-action="open-share-modal" data-id="${priorityDeal.deal_id}" style="min-height: 50px; background: #0284C7; color: #FFF; border: none; padding: 0 1.1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
                     ↗ Rủ Bạn (+5K)
                   </button>
-                  <button data-action="bookmark" data-id="${priorityDeal.deal_id}" style="min-height: 48px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
+                  <button data-action="bookmark" data-id="${priorityDeal.deal_id}" style="min-height: 50px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
                     ${State.savedIds.includes(priorityDeal.deal_id) ? '❤️' : '♡'}
                   </button>
                 </div>
@@ -1021,10 +1002,7 @@
     `;
   }
 
-  // ==========================================================================
-  // ⚡ 7. EVENT DELEGATION & ACTION HANDLERS
-  // ==========================================================================
-
+  // 7. EVENT DELEGATION
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1130,10 +1108,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // ==========================================================================
-  // 🚀 8. KHỞI TẠO AN TOÀN
-  // ==========================================================================
-
+  // 8. BOOT
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
