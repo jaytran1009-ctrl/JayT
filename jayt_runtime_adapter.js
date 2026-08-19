@@ -1,28 +1,27 @@
 /**
- * JAYT APEX v3.1 — CLEAN MODERN RUNTIME ADAPTER (ZERO-OVERFLOW HARDENED)
+ * JAYT APEX v3.1 — INSTANT CLEAN RUNTIME ADAPTER (DIRECTIVE #003.1 HARDENED)
  * =============================================================================
- * TÔN CHỈ: TRIỆT TIÊU 100% KHUNG LỖI CŨ · BỐ CỤC CHUẨN 1100PX · RÕ NÉT 100%
+ * TÔN CHỈ: THỰC THI NGAY LẬP TỨC · CHỮ ĐEN ĐẬM #0F172A · 159.000₫ XANH NGỌC
  * =============================================================================
  */
 
 (function() {
-    console.log("⚡ JAYT Clean Modern Adapter Active");
+    console.log("⚡ JAYT Instant Clean Adapter Fired");
 
     let allCanonicalDeals = [];
-    let currentFilter = 'ALL';
 
     function formatVND(amount) {
         if (typeof amount !== 'number' || isNaN(amount)) return '0₫';
         return new Intl.NumberFormat('vi-VN').format(amount) + '₫';
     }
 
-    // 1. Dựng giao diện Web App Sạch, Sang Trọng, Chuẩn Responsive
-    function buildCleanApp() {
+    // 1. Dựng Toàn Bộ Giao Diện Sạch Chuẩn 100% Không Lỗi Tràn Viền
+    function renderCompleteCleanApp() {
         const totalSavings = allCanonicalDeals.reduce((sum, d) => sum + (d.saving_amount_vnd || 0), 0);
         const displaySavings = totalSavings > 0 ? formatVND(totalSavings) : '159.000₫';
 
         document.body.innerHTML = `
-            <div style="min-height: 100vh; background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; padding-bottom: 3rem;">
+            <div style="min-height: 100vh; background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; padding-bottom: 3rem; margin: 0;">
                 
                 <!-- 1. Header Thanh Lịch -->
                 <header style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
@@ -94,7 +93,7 @@
         renderCards(allCanonicalDeals);
     }
 
-    // 2. Render Deal Cards Chuẩn 5 Câu Hỏi
+    // 2. Render Deal Cards Chuẩn
     function renderCards(deals) {
         const grid = document.getElementById('cleanDealGrid');
         if (!grid) return;
@@ -112,7 +111,6 @@
                 justify-content: space-between;
                 gap: 0.9rem;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-                transition: transform 0.2s, box-shadow 0.2s;
             `;
 
             const validDate = deal.valid_until ? deal.valid_until.split('T')[0] : '31/08/2026';
@@ -156,22 +154,14 @@
                             SĂN NGAY ➔
                         </a>
                     </div>
-
-                    <!-- Trust Modal Trigger -->
-                    <div style="text-align: center;">
-                        <button onclick="window.openTrustModal('${deal.merchant_name.replace(/'/g, "\\'")}', '${deal.source_channel}', '${validDate}')" style="background: none; border: none; color: #B45309; font-size: 0.72rem; font-weight: 700; cursor: pointer; text-decoration: underline; padding: 0.2rem;">
-                            ▾ Vì sao JayT tin ưu đãi này?
-                        </button>
-                    </div>
                 </div>
             `;
             grid.appendChild(card);
         });
     }
 
-    // 3. Bộ lọc 1-chạm
+    // 3. Bộ Lọc
     window.filterDeals = function(intent, btn) {
-        currentFilter = intent;
         document.querySelectorAll('.filter-btn').forEach(b => {
             b.style.background = '#F1F5F9';
             b.style.color = '#1E293B';
@@ -199,82 +189,22 @@
         renderCards(filtered);
     };
 
-    // 4. Modal Trust Timeline
-    window.openTrustModal = function(merchant, source, validUntil) {
-        let modal = document.getElementById('cleanTrustModal');
-        if (!modal) {
-            modal = document.createElement('div');
-            modal.id = 'cleanTrustModal';
-            modal.style.cssText = `
-                position: fixed; inset: 0; z-index: 10000;
-                background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(6px);
-                display: flex; align-items: center; justify-content: center; padding: 1rem;
-            `;
-            document.body.appendChild(modal);
-        }
-
-        modal.innerHTML = `
-            <div style="background: #FFFFFF; border-radius: 20px; max-width: 440px; width: 100%; padding: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.25); color: #0F172A;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 0.7rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="font-size: 1.2rem;">🛡️</span>
-                        <h3 style="font-size: 1.05rem; font-weight: 800; color: #0F172A; margin: 0;">Vì Sao Ưu Đãi Này Đáng Tin?</h3>
-                    </div>
-                    <button onclick="document.getElementById('cleanTrustModal').style.display='none'" style="background: none; border: none; color: #64748B; font-size: 1.4rem; cursor: pointer;">&times;</button>
-                </div>
-                
-                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.3rem;">
-                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #475569; flex-shrink: 0; font-weight: 700;">1</div>
-                        <div>
-                            <div style="font-size: 0.72rem; color: #64748B;">Nguồn ưu đãi gốc</div>
-                            <div style="font-size: 0.88rem; font-weight: 800; color: #0F172A;">${source} · Quán ${merchant}</div>
-                        </div>
-                    </div>
-                    <div style="width: 2px; height: 12px; background: #E2E8F0; margin-left: 11px;"></div>
-                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #FEF3C7; border: 1px solid #F59E0B; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #92400E; flex-shrink: 0; font-weight: 700;">2</div>
-                        <div>
-                            <div style="font-size: 0.72rem; color: #64748B;">JayT ghi nhận & đối soát</div>
-                            <div style="font-size: 0.88rem; font-weight: 700; color: #92400E;">Thời gian thực (Kiểm thử nội bộ)</div>
-                        </div>
-                    </div>
-                    <div style="width: 2px; height: 12px; background: #E2E8F0; margin-left: 11px;"></div>
-                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #D1FAE5; border: 1px solid #10B981; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #047857; flex-shrink: 0; font-weight: 700;">3</div>
-                        <div>
-                            <div style="font-size: 0.72rem; color: #64748B;">Kiểm tra thời hạn sử dụng</div>
-                            <div style="font-size: 0.88rem; font-weight: 700; color: #047857;">Còn hiệu lực đến ${validUntil || 'Đang cập nhật'}</div>
-                        </div>
-                    </div>
-                    <div style="width: 2px; height: 12px; background: #E2E8F0; margin-left: 11px;"></div>
-                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #059669; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #FFF; flex-shrink: 0; font-weight: 800;">✓</div>
-                        <div>
-                            <div style="font-size: 0.72rem; color: #64748B;">Kết quả kiểm tra</div>
-                            <div style="font-size: 0.88rem; font-weight: 800; color: #059669;">🟡 DỮ LIỆU KIỂM THỬ NỘI BỘ HỢP LỆ</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 12px; padding: 0.75rem; font-size: 0.78rem; color: #065F46; line-height: 1.45;">
-                    💡 <strong>Cam kết từ JayT:</strong> Chúng tôi không tự tạo ưu đãi ảo. Mọi ưu đãi đều có nguồn gốc và hạn dùng kiểm chứng rõ ràng.
-                </div>
-            </div>
-        `;
-        modal.style.display = 'flex';
-    };
-
-    // 5. Khởi chạy
-    document.addEventListener('DOMContentLoaded', () => {
+    // 4. Khởi chạy ngay lập tức
+    function init() {
         fetch('/api/deals')
             .then(res => res.json())
             .then(data => {
                 allCanonicalDeals = data.deals || [];
-                buildCleanApp();
+                renderCompleteCleanApp();
             })
             .catch(err => {
                 console.warn("⚠️ API error:", err);
             });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 })();
