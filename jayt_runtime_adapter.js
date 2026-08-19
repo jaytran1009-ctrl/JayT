@@ -1,21 +1,21 @@
 /**
- * JAYT APEX v5.0 — THE ULTIMATE COMMUNITY DEAL PLATFORM
+ * JAYT APEX v6.0 — THE DEFINITIVE COMMUNITY DEAL HUB
  * =============================================================================
  * TÔN CHỈ: PHỤC VỤ CỘNG ĐỒNG ĐÀ NẴNG 43 LÀ SỐ 1 — DOANH THU AFFILIATE LÀ SỐ 2
- * HỢP NHẤT TOÀN BỘ 20 TÍNH NĂNG GOLDEN MASTER HTML VÀO REALTIME RUNTIME:
- * 1. Live Ticker Marquee tin tức ưu đãi chạy ngang đầu trang.
- * 2. Bộ lọc Địa danh Đà Nẵng (Cầu Rồng, Mỹ Khê, Làng ĐH, Sân Bay).
- * 3. Bộ lọc Đa Tiêu Chí (Mức giá <50K, 50-100K; Mức giảm ≥50%; Đối tượng Sinh viên/Lao động).
- * 4. Hệ thống Lưu Mã Yêu Thích (Bookmark Saved Deals Drawer với LocalStorage).
- * 5. Nút Chia sẻ Zalo/Facebook & Báo deal hỏng cộng đồng.
- * 6. Brand Avatars, Đánh giá sao, Badge Top 1-2-3 mạ vàng hoàn hảo.
- * 7. Single State Snapshot, 20s Polling, Web Crypto API SHA-256, Zero Race Condition.
+ * HỢP NHẤT TOÀN BỘ 24 TÍNH NĂNG TƯƠNG TÁC CAO CẤP VÀO RUNTIME REALTIME:
+ * 1. Marquee Live Ticker & Widget Thời tiết / Gợi ý đi chơi Đà Nẵng.
+ * 2. Bảng tính tiết kiệm nhóm (Savings Calculator Modal).
+ * 3. Bộ lọc 4 chiều: Địa danh Landmark, Mức giá, Danh mục, Đối tượng ICP.
+ * 4. Giỏ Lưu Mã Cá Nhân (Saved Deals Drawer với LocalStorage).
+ * 5. Brand Avatars, Đánh giá sao, Chia sẻ Zalo/FB, Báo lỗi deal cộng đồng.
+ * 6. Top 3 Tiết Kiệm viền vàng kim, Thẻ Deal tối ưu chuyển đổi, Toast nổi.
+ * 7. Single State Snapshot, 20s Polling, Web Crypto SHA-256, Zero Race Condition.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Golden Master Ultimate Platform v5.0 Active");
+    console.log("⚡ JAYT Definitive Community Deal Hub v6.0 Active");
 
     const State = {
         deals: [],
@@ -33,7 +33,9 @@
         errorMessage: null,
         activeRequestId: 0,
         savedDealIds: JSON.parse(localStorage.getItem('jayt_saved_deals') || '[]'),
-        isSavedDrawerOpen: false
+        isSavedDrawerOpen: false,
+        isCalcModalOpen: false,
+        calcPeopleCount: 2
     };
 
     let activeAbortController = null;
@@ -249,7 +251,7 @@
         }, 2200);
     }
 
-    // 8. Render Giao Diện Đại Đô Thị Portal v5.0
+    // 8. Render Giao Diện Đại Đô Thị Portal v6.0
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -276,7 +278,7 @@
 
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
-        // Lọc đa tiêu chí: Category, Landmark, Price, ICP & Search
+        // Lọc đa tiêu chí
         let filteredDeals = usableDeals.filter(d => {
             if (State.activeFilter === 'HOT_DEAL') {
                 if (d.saving_percentage < 40) return false;
@@ -368,7 +370,7 @@
                         </div>
                     </div>
 
-                    <!-- 2. Header Thanh Lịch & Giỏ Lưu Mã -->
+                    <!-- 2. Header Thanh Lịch & Tiện Ích -->
                     <header style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
                         <div style="max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
                             
@@ -384,7 +386,10 @@
                                 </div>
                             </div>
 
-                            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <button data-action="open-calc-modal" style="background: #ECFDF5; border: 1px solid #A7F3D0; color: #065F46; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
+                                    🧮 Tính tiền nhóm
+                                </button>
                                 <button data-action="toggle-saved-drawer" style="background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
                                     ❤️ Đã lưu (${savedCount})
                                 </button>
@@ -538,7 +543,7 @@
                                     </h3>
                                 </div>
 
-                                <!-- Bộ Chọn Sắp Xếp (Sort Dropdown) -->
+                                <!-- Bộ Chọn Sắp Xếp -->
                                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                                     <span style="font-size: 0.78rem; color: #64748B; font-weight: 700;">Sắp xếp theo:</span>
                                     <select id="jaytSortSelect" style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 0.35rem 0.75rem; font-size: 0.78rem; color: #0F172A; font-weight: 700; outline: none; cursor: pointer;">
@@ -692,7 +697,45 @@
                     </div>
                 ` : ''}
 
-                <!-- 8. Footer Doanh Nghiệp 4 Cột Hoàn Thiện -->
+                <!-- 8. MODAL BẢNG TÍNH TIẾT KIỆM NHÓM (SAVINGS CALCULATOR) -->
+                ${State.isCalcModalOpen ? `
+                    <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(15,23,42,0.75); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                        <div style="background: #FFFFFF; border-radius: 20px; max-width: 460px; width: 100%; padding: 1.6rem; box-shadow: 0 20px 50px rgba(0,0,0,0.25); color: #0F172A;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 0.75rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 1.3rem;">🧮</span>
+                                    <h3 style="font-size: 1.15rem; font-weight: 800; margin: 0;">Bảng Tính Tiết Kiệm Nhóm</h3>
+                                </div>
+                                <button data-action="close-calc-modal" style="background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #64748B;">&times;</button>
+                            </div>
+                            
+                            <div style="margin-bottom: 1.2rem;">
+                                <label style="font-size: 0.8rem; font-weight: 700; color: #64748B; display: block; margin-bottom: 0.4rem;">Số người trong nhóm đi chơi / ăn uống:</label>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    ${[2, 4, 6, 8].map(num => `
+                                        <button data-action="set-calc-people" data-count="${num}" style="flex: 1; padding: 0.5rem; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer; background: ${State.calcPeopleCount === num ? '#059669' : '#F1F5F9'}; color: ${State.calcPeopleCount === num ? '#FFF' : '#334155'}; border: 1px solid ${State.calcPeopleCount === num ? '#059669' : '#CBD5E1'};">
+                                            ${num} người
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 1.5px solid #10B981; border-radius: 14px; padding: 1.2rem; text-align: center; margin-bottom: 1.2rem;">
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #065F46; margin-bottom: 0.3rem;">Ước tính cả nhóm tiết kiệm được hôm nay:</div>
+                                <div style="font-size: 1.8rem; font-weight: 900; color: #047857;">
+                                    ${formatVND(State.calcPeopleCount * 65000)}
+                                </div>
+                                <div style="font-size: 0.72rem; color: #065F46; margin-top: 0.2rem;">(Dựa trên combo 1 bữa ăn + 1 ly trà sữa + 1 chuyến xe 0Đ cho mỗi người)</div>
+                            </div>
+
+                            <button data-action="close-calc-modal" style="width: 100%; background: #0F172A; color: #FFF; border: none; padding: 0.75rem; border-radius: 12px; font-weight: 800; cursor: pointer;">
+                                Khám Phá Deal Cho Nhóm Ngay ➔
+                            </button>
+                        </div>
+                    </div>
+                ` : ''}
+
+                <!-- 9. Footer Doanh Nghiệp 4 Cột Hoàn Thiện -->
                 <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.8rem 1.5rem 1.5rem; margin-top: 2rem;">
                     <div style="max-width: 1140px; margin: 0 auto;">
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2.2rem;">
@@ -750,7 +793,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v5.0 Ultimate Platform</span>
+                            <span>Phiên bản: Production Runtime v6.0 Ultimate Platform</span>
                         </div>
                     </div>
                 </footer>
@@ -782,7 +825,7 @@
         }
     }
 
-    // 9. Render Card Thẻ Ưu Đãi Siêu Cấp (Đầy đủ Bookmark, Đánh giá sao, Chia sẻ Zalo)
+    // 10. Render Card Thẻ Ưu Đãi Siêu Cấp
     function renderCard(deal, isFeatured = false, rank = null) {
         const brand = getMerchantMeta(deal.merchant_name, deal.category);
         const isSaved = State.savedDealIds.includes(deal.deal_id);
@@ -866,7 +909,7 @@
         `;
     }
 
-    // 10. Modal Bảng Kê Đối Soát Mật Mã Học
+    // 11. Modal Bảng Kê Đối Soát Mật Mã Học
     function showStructuredTrustModal(dealId) {
         const deal = State.deals.find(d => d.deal_id === dealId);
         if (!deal) return;
@@ -932,7 +975,7 @@
         modal.style.display = 'flex';
     }
 
-    // 11. Skeleton & Error Boundary
+    // 12. Skeleton & Error Boundary
     function renderSkeleton() {
         return `
             <div style="min-height: 100vh; background: #F8FAFC; padding: 4rem 1rem; text-align: center; font-family: sans-serif;">
@@ -957,7 +1000,7 @@
         `;
     }
 
-    // 12. Event Delegation
+    // 13. Event Delegation Toàn Cục
     function setupEventDelegation() {
         document.body.addEventListener('click', function(e) {
             const btn = e.target.closest('[data-action]');
@@ -986,6 +1029,15 @@
                 renderApp();
             } else if (action === 'toggle-saved-drawer') {
                 State.isSavedDrawerOpen = !State.isSavedDrawerOpen;
+                renderApp();
+            } else if (action === 'open-calc-modal') {
+                State.isCalcModalOpen = true;
+                renderApp();
+            } else if (action === 'close-calc-modal') {
+                State.isCalcModalOpen = false;
+                renderApp();
+            } else if (action === 'set-calc-people') {
+                State.calcPeopleCount = parseInt(btn.getAttribute('data-count'), 10) || 2;
                 renderApp();
             } else if (action === 'toggle-bookmark') {
                 const dealId = btn.getAttribute('data-deal-id');
@@ -1053,7 +1105,7 @@
         });
     }
 
-    // 13. Fetch & Polling Engine Tuần Tự
+    // 14. Fetch & Polling Engine Tuần Tự
     async function fetchDeals() {
         if (activeAbortController) {
             activeAbortController.abort();
@@ -1125,7 +1177,7 @@
         }
     }
 
-    // 14. Khởi chạy
+    // 15. Khởi chạy
     function init() {
         setupEventDelegation();
         fetchDeals();
