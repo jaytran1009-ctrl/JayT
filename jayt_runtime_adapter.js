@@ -1,23 +1,27 @@
 /**
- * JAYT APEX v3.1 — DIRECTIVE #002 CONSUMER RUNTIME ADAPTER
+ * JAYT APEX v3.1 — DIRECTIVE #003: CUSTOMER PSYCHOLOGY & RETENTION CONVERGENCE
  * =============================================================================
- * TÔN CHỈ: "TIẾT KIỆM LÀ TRỌNG TÂM THỊ GIÁC SỐ 1 TRÊN DEAL CARD"
+ * NORTH STAR: "JAYT LÀ NƠI NGƯỜI ĐÀ NẴNG KIỂM TRA ĐẦU TIÊN ĐỂ TIẾT KIỆM TIỀN"
+ * VÒNG LẶP TÂM LÝ: VALUE SEEN ➔ VALUE TAKEN ➔ VALUE REMEMBERED ➔ RETURN INTENT
  * =============================================================================
  */
 
 (function() {
-    console.log("⚡ JAYT Directive #002 Adapter Active");
+    console.log("⚡ JAYT Directive #003 Retention Adapter Active");
 
-    // 1. Tinh chỉnh Hero Above-the-Fold
+    let allCanonicalDeals = [];
+    let currentFilter = 'ALL';
+
+    // 1. Tinh chỉnh Hero: Gọn gàng, loại bỏ khoảng trắng thừa, tập trung vào Lợi Ích
     function refineHero() {
         const heroTitle = document.querySelector('.hero-title, h1');
         if (heroTitle) {
             heroTitle.innerHTML = `
-                <div style="font-size: clamp(1.8rem, 4.5vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; line-height: 1.15; margin-bottom: 0.35rem;">
-                    Ưu đãi ăn uống & di chuyển Đà Nẵng
+                <div style="font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; line-height: 1.2; margin-bottom: 0.35rem;">
+                    Hôm nay JayT giúp bạn tiết kiệm đến <span style="color: #10B981;">40.000₫</span>
                 </div>
-                <div style="font-size: clamp(1rem, 2.5vw, 1.35rem); font-weight: 700; color: #D4AF37;">
-                    Kiểm chứng nguồn & hạn dùng trước khi bấm
+                <div style="font-size: clamp(0.95rem, 2vw, 1.15rem); font-weight: 600; color: #D4AF37;">
+                    Ăn uống & di chuyển Đà Nẵng · Kiểm chứng nguồn & hạn dùng trước khi bấm
                 </div>
             `;
         }
@@ -25,15 +29,31 @@
         const heroSubtitle = document.querySelector('.hero-subtitle, .hero-lead');
         if (heroSubtitle) {
             heroSubtitle.innerHTML = `
-                <p style="font-size: 0.95rem; color: #94A3B8; max-width: 580px; margin: 0.5rem auto 1rem; line-height: 1.5;">
-                    Mở JayT · Thấy ngay mức tiết kiệm thật · Bấm nhận mã ngay
-                </p>
+                <!-- Bộ lọc nhu cầu thực dụng 1-chạm -->
+                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 0.85rem 0 0.5rem;" id="jaytIntentFilters">
+                    <button onclick="window.filterDealsByIntent('ALL')" class="intent-chip active-chip" style="background: #10B981; color: #FFF; border: none; padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 800; font-size: 0.78rem; cursor: pointer;">
+                        ✨ Tất cả (6)
+                    </button>
+                    <button onclick="window.filterDealsByIntent('FOOD')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
+                        🍜 Ăn Trưa/Tối
+                    </button>
+                    <button onclick="window.filterDealsByIntent('DRINK')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
+                        ☕ Trà Sữa & Cafe
+                    </button>
+                    <button onclick="window.filterDealsByIntent('RIDE')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
+                        🚗 Xe Điện 0Đ
+                    </button>
+                    <button onclick="window.filterDealsByIntent('STUDENT')" class="intent-chip" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem; cursor: pointer;">
+                        🎓 Sinh Viên
+                    </button>
+                </div>
             `;
         }
 
+        // Ticker trung thực & nhắc nhở thói quen quay lại
         const tickers = document.querySelectorAll('.community-ticker, .ticker-text, .live-counter');
         tickers.forEach(el => {
-            el.innerHTML = `<span>📍 <strong>JayT:</strong> Đang xây dựng kho ưu đãi đã đối soát dành riêng cho Đà Nẵng.</span>`;
+            el.innerHTML = `<span>⚡ <strong>Mẹo tiết kiệm:</strong> Thêm JayT vào màn hình chính điện thoại để kiểm tra ưu đãi trước mỗi bữa ăn.</span>`;
         });
     }
 
@@ -64,9 +84,7 @@
                     <button onclick="document.getElementById('jaytConsumerTrustModal').style.display='none'" style="background: none; border: none; color: #94A3B8; font-size: 1.4rem; cursor: pointer; padding: 0.2rem;">&times;</button>
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.35rem;" id="trustTimelineContent">
-                    <!-- Dynamic timeline injected here -->
-                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.35rem;" id="trustTimelineContent"></div>
 
                 <div style="background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: #A7F3D0; line-height: 1.45;">
                     💡 <strong>Cam kết từ JayT:</strong> Chúng tôi không tự tạo ưu đãi ảo. Mọi ưu đãi đều có nguồn gốc đối tác và hạn dùng kiểm chứng rõ ràng.
@@ -115,9 +133,55 @@
         document.getElementById('jaytConsumerTrustModal').style.display = 'flex';
     };
 
-    // 4. Render Deal Cards (DIRECTIVE #002: TIẾT KIỆM LÀ HERO THỊ GIÁC CAO NHẤT)
+    // 4. Lọc deal theo nhu cầu thực dụng (Intent-Based Dynamic Filtering)
+    window.filterDealsByIntent = function(intent) {
+        currentFilter = intent;
+        
+        // Cập nhật giao diện nút bấm
+        const chips = document.querySelectorAll('.intent-chip');
+        chips.forEach(c => {
+            c.style.background = 'rgba(255,255,255,0.08)';
+            c.style.color = '#CBD5E1';
+            c.style.border = '1px solid rgba(255,255,255,0.15)';
+        });
+        if (event && event.target) {
+            event.target.style.background = '#10B981';
+            event.target.style.color = '#FFF';
+            event.target.style.border = 'none';
+        }
+
+        let filtered = allCanonicalDeals;
+        if (intent === 'FOOD') {
+            filtered = allCanonicalDeals.filter(d => d.deal_id === 'DNG-01' || d.deal_id === 'DNG-02' || d.deal_id === 'DNG-05');
+        } else if (intent === 'DRINK') {
+            filtered = allCanonicalDeals.filter(d => d.deal_id === 'DNG-03' || d.deal_id === 'DNG-04');
+        } else if (intent === 'RIDE') {
+            filtered = allCanonicalDeals.filter(d => d.deal_id === 'DNG-06');
+        } else if (intent === 'STUDENT') {
+            filtered = allCanonicalDeals.filter(d => d.target_icp === 'STUDENT' || d.target_icp === 'STUDENT_OFFICE');
+        }
+
+        const gridContainer = document.querySelector('.deal-grid, #jaytDealGrid, .deals-container') || document.querySelector('.grid');
+        if (gridContainer) {
+            renderDealCards(filtered, gridContainer);
+        }
+    };
+
+    // 5. Render Deal Cards (DIRECTIVE #003: TIẾT KIỆM LÀ HERO THỊ GIÁC SỐ 1)
     function renderDealCards(deals, container) {
-        if (!deals || deals.length === 0) return;
+        if (!deals || deals.length === 0) {
+            container.innerHTML = `
+                <div style="grid-column: 1 / -1; padding: 2.5rem 1.5rem; text-align: center; background: rgba(18, 18, 24, 0.85); border: 1px solid rgba(212,175,55,0.25); border-radius: 18px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #FFF; margin-bottom: 0.3rem;">Chưa có ưu đãi phù hợp trong mục này</h3>
+                    <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1rem;">Bấm "Tất cả" để xem toàn bộ 6 ưu đãi đã kiểm chứng hôm nay.</p>
+                    <button onclick="window.filterDealsByIntent('ALL')" style="background: #10B981; color: #FFF; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; border: none; cursor: pointer;">
+                        Xem tất cả ưu đãi
+                    </button>
+                </div>
+            `;
+            return;
+        }
 
         container.innerHTML = '';
         deals.forEach(deal => {
@@ -131,7 +195,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                gap: 1rem;
+                gap: 0.9rem;
                 transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
                 box-shadow: 0 6px 24px rgba(0,0,0,0.3);
                 position: relative;
@@ -148,7 +212,7 @@
                         ${badgeTag}
                     </div>
 
-                    <!-- 2. DIRECTIVE #002: Khối TIẾT KIỆM Nổi Bật Nhất (Hero Thị Giác) -->
+                    <!-- 2. DIRECTIVE #003: Khối TIẾT KIỆM Nổi Bật Nhất (Hero Thị Giác) -->
                     <div style="background: linear-gradient(135deg, rgba(16,185,129,0.18) 0%, rgba(5,150,105,0.08) 100%); border: 1.5px solid rgba(16,185,129,0.4); border-radius: 14px; padding: 0.85rem 1rem; margin-bottom: 0.85rem; text-align: center; box-shadow: 0 4px 15px rgba(16,185,129,0.15);">
                         <div style="font-size: 1.35rem; font-weight: 900; color: #10B981; letter-spacing: -0.01em; line-height: 1.2;">
                             💰 TIẾT KIỆM ${formatVND(deal.saving_amount_vnd)}
@@ -193,17 +257,17 @@
         });
     }
 
-    // 5. Khởi chạy khi trang tải xong
+    // 6. Khởi chạy khi trang tải xong
     document.addEventListener('DOMContentLoaded', () => {
         refineHero();
 
         fetch('/api/deals')
             .then(res => res.json())
             .then(data => {
-                const deals = data.deals || [];
+                allCanonicalDeals = data.deals || [];
                 const gridContainer = document.querySelector('.deal-grid, #jaytDealGrid, .deals-container') || document.querySelector('.grid');
                 if (gridContainer) {
-                    renderDealCards(deals, gridContainer);
+                    renderDealCards(allCanonicalDeals, gridContainer);
                 }
             })
             .catch(err => {
