@@ -386,7 +386,7 @@
                             <!-- PHÂN KHU 3: Trà Sữa & Cà Phê Chill (Drink & Cafe) -->
                             <div style="margin-bottom: 2.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="display: align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">☕</span>
                                         <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi trà sữa & Cà phê Đà Nẵng</h3>
                                     </div>
@@ -401,7 +401,7 @@
                             <!-- PHÂN KHU 4: Di Chuyển 0Đ & Rạp Chiếu Phim (Ride & Cinema) -->
                             <div style="margin-bottom: 2.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="display: align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">🎬</span>
                                         <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Mã giảm giá di chuyển & Giải trí cuối tuần</h3>
                                     </div>
