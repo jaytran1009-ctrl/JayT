@@ -4,7 +4,7 @@
  * =============================================================================
  * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * 
- * BẢO TỒN NGUYÊN BẢN 100% GIAO DIỆN APEX v5.1 GOLDEN MASTER:
+ * BẢO TỒN NGUYÊN BẢN 100% CẤU TRÚC GIAO DIỆN GOLDEN MASTER:
  * - Top Running Ticker
  * - Master Sticky Header + Nút Săn Nhanh 10s + Đổi Theme + Ví + Zalo CSKH
  * - 5-Question Executive Summary Banner
@@ -522,15 +522,6 @@
     const monthlyCalc = ((State.calcDrink * 22000) + (State.calcMeal * 26000) + (State.calcRide * 25000)) * 4;
 
     root.innerHTML = `
-      <style>
-        * { transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease; }
-        @keyframes breathingAura {
-          0%, 100% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.3), 0 10px 30px rgba(0,0,0,0.06); }
-          50% { box-shadow: 0 0 45px rgba(245, 158, 11, 0.6), 0 14px 40px rgba(245, 158, 11, 0.25); transform: translateY(-3px); }
-        }
-        .aura-priority { animation: breathingAura 3s ease-in-out infinite; }
-      </style>
-
       <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px;">
         
         <div>
@@ -652,7 +643,7 @@
                     <div style="font-size: 1.4rem; font-weight: 900; color: #059669;">
                       TIẾT KIỆM ${formatVND(priorityDeal.saving)} (-${priorityDeal.percent}%)
                     </div>
-                    <div style="font-size: 0.8rem; color: ${C.textMain}; font-weight: 600; margin-top: 0.15rem;">
+                    <div style="font-size: 0.8rem; color: ${C.textMain}; font-weight: 600; margin-top: 0.2rem;">
                       🎯 Khả năng săn: <span style="color:#D97706; font-weight:700;">${priorityDeal.huntability_label}</span>
                     </div>
                   </div>
