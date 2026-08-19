@@ -1,29 +1,30 @@
 /**
- * JAYT APEX v4.2 — COMPREHENSIVE DEAL PORTAL RUNTIME
+ * JAYT APEX v4.4 — DISCOVERY, CONVERSION & TRUST PORTAL RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. 5 Phân khu khám phá render thực tế: Top 3, Ẩm Thực, Trà Sữa, Xe/Phim & Grid tổng hợp.
- * 2. FAQ hoàn chỉnh 4 câu hỏi thực tế về đối soát & sử dụng mã.
- * 3. Chuẩn hóa thuật ngữ: "Mã băm SHA-256 đối soát toàn vẹn" (Data Integrity Hash).
- * 4. Deterministic 15-Field Fingerprint (Sort deal_id trước khi tính toán).
- * 5. State Machine 5 trạng thái có hiển thị badge STALE riêng biệt.
- * 6. Live Search tức thì & Bộ lọc danh mục động.
+ * 1. Hero Intent & Quick Search Chips (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
+ * 2. Multi-Criteria Sorting (Tiết kiệm nhiều nhất, % giảm, Sắp hết hạn).
+ * 3. Integrated Trust Center: Hiển thị trạng thái, tỷ lệ MATCH và Dataset SHA-256.
+ * 4. High-Conversion Deal Cards với Badge trực quan & Nút hành động 1-chạm.
+ * 5. Comprehensive 6-Question FAQ & Corporate Trust Footer 4 Cột.
+ * 6. Deterministic 15-Field Dataset SHA-256 Hash qua Web Crypto API.
  * 7. AbortController & Post-Normalization Double Sequence Guard chống race condition.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Comprehensive Portal Runtime v4.2 Active");
+    console.log("⚡ JAYT Comprehensive Portal Runtime v4.4 Active");
 
     const State = {
         deals: [],
         categories: ['ALL'],
         activeFilter: 'ALL',
+        sortBy: 'SAVING_DESC', // 'SAVING_DESC' | 'PCT_DESC' | 'EXPIRY_ASC'
         searchQuery: '',
         lastUpdatedTime: '',
         lastSuccessTimestamp: 0,
-        datasetFingerprint: '',
+        datasetSHA256: '',
         connectionStatus: 'BOOT', // 'BOOT' | 'LIVE' | 'RECONNECTING' | 'STALE' | 'ERROR'
         errorMessage: null,
         activeRequestId: 0
@@ -73,12 +74,12 @@
     // 3. Expiry Engine Thời Gian Thực
     function evaluateExpiry(rawValidUntil) {
         if (!rawValidUntil || typeof rawValidUntil !== 'string') {
-            return { status: 'UNVERIFIED', label: '⚠️ Chưa xác định hạn', isUsable: false, formatted: 'Đang cập nhật' };
+            return { status: 'UNVERIFIED', label: '⚠️ Chưa xác định hạn', isUsable: false, formatted: 'Đang cập nhật', diffHours: 9999 };
         }
 
         const validDate = new Date(rawValidUntil);
         if (isNaN(validDate.getTime())) {
-            return { status: 'UNVERIFIED', label: '⚠️ Hạn không hợp lệ', isUsable: false, formatted: 'Đang cập nhật' };
+            return { status: 'UNVERIFIED', label: '⚠️ Hạn không hợp lệ', isUsable: false, formatted: 'Đang cập nhật', diffHours: 9999 };
         }
 
         const now = new Date();
@@ -87,15 +88,15 @@
         const formattedDate = validDate.toISOString().split('T')[0];
 
         if (diffMs < 0) {
-            return { status: 'EXPIRED', label: '✕ Đã hết hạn', isUsable: false, formatted: formattedDate };
+            return { status: 'EXPIRED', label: '✕ Đã hết hạn', isUsable: false, formatted: formattedDate, diffHours: -1 };
         }
         if (diffHours <= 48) {
-            return { status: 'EXPIRING_SOON', label: `⏳ Còn ${diffHours}h`, isUsable: true, formatted: formattedDate };
+            return { status: 'EXPIRING_SOON', label: `⏳ Còn ${diffHours}h`, isUsable: true, formatted: formattedDate, diffHours: diffHours };
         }
-        return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate };
+        return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate, diffHours: diffHours };
     }
 
-    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 (3 Trạng thái)
+    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal (3 Trạng thái)
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -123,7 +124,7 @@
         const address = safeStr(raw.branch_address, 'Đà Nẵng');
         const rawEvidenceSha = safeStr(raw.evidence_sha256);
 
-        // Chuỗi Canonical Payload
+        // Chuỗi Canonical Payload của từng Deal
         const canonicalPayload = `${dealId}|${merchant}|${item}|${original}|${discount}|${voucher}|${rawValidUntil}`;
         const computedSha = await calculateSHA256(canonicalPayload);
 
@@ -165,15 +166,16 @@
         };
     }
 
-    // 5. Canonical Dataset Fingerprint 15 trường dữ liệu (Deterministic Sắp Xếp theo deal_id)
-    function buildCanonicalDatasetFingerprint(deals) {
+    // 5. Tính Mã Băm SHA-256 Toàn Bộ Dataset (Deterministic Sort deal_id ➔ 64-hex SHA-256)
+    async function computeDatasetSHA256(deals) {
         const sorted = deals.slice().sort((a, b) => a.deal_id.localeCompare(b.deal_id));
-        return sorted.map(d => 
+        const canonicalString = sorted.map(d => 
             `${d.deal_id}:${d.original_price_vnd}:${d.discount_price_vnd}:${d.saving_amount_vnd}:${d.saving_percentage}:${d.voucher_code}:${d.valid_until_raw}:${d.merchant_name}:${d.item_name}:${d.branch_address}:${d.source_channel}:${d.deep_link}:${d.category}:${d.target_icp}:${d.evidence_sha256 || 'NOHASH'}`
         ).join('|');
+        return await calculateSHA256(canonicalString);
     }
 
-    // 6. Render Giao Diện Đại Đô Thị Portal v4.2
+    // 6. Render Giao Diện Đại Đô Thị Portal v4.4
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -193,9 +195,13 @@
         const totalCount = usableDeals.length;
         const brandCount = new Set(usableDeals.map(d => d.merchant_name)).size;
 
+        const matchCount = usableDeals.filter(d => d.sha_status === 'MATCH').length;
+        const missingCount = usableDeals.filter(d => d.sha_status === 'MISSING').length;
+        const mismatchCount = usableDeals.filter(d => d.sha_status === 'MISMATCH').length;
+
         const dynamicCategories = ['ALL', ...new Set(usableDeals.map(d => d.category)), 'HOT_DEAL'];
 
-        // Lọc danh sách theo Category & Search
+        // Lọc theo Category & Search
         let filteredDeals = usableDeals.filter(d => {
             if (State.activeFilter === 'HOT_DEAL') {
                 if (d.saving_percentage < 40) return false;
@@ -210,6 +216,15 @@
             return true;
         });
 
+        // Sắp xếp danh sách
+        if (State.sortBy === 'SAVING_DESC') {
+            filteredDeals.sort((a, b) => b.saving_amount_vnd - a.saving_amount_vnd);
+        } else if (State.sortBy === 'PCT_DESC') {
+            filteredDeals.sort((a, b) => b.saving_percentage - a.saving_percentage);
+        } else if (State.sortBy === 'EXPIRY_ASC') {
+            filteredDeals.sort((a, b) => a.expiry_info.diffHours - b.expiry_info.diffHours);
+        }
+
         // 5 Phân khu dữ liệu chuyên sâu
         const topFeaturedDeals = [...usableDeals].sort((a, b) => b.saving_amount_vnd - a.saving_amount_vnd).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
@@ -217,7 +232,7 @@
         const rideDeals = usableDeals.filter(d => d.category === 'RIDE');
         const cinemaAndShopDeals = usableDeals.filter(d => d.category === 'CINEMA' || d.category === 'SHOPPING');
 
-        // Connection Badge Đầy Đủ 4 Trạng Thái
+        // Connection Badge Đầy Đủ 4 Trạng Thái Độc Lập
         let connectionBadge = '';
         if (State.connectionStatus === 'LIVE') {
             connectionBadge = `
@@ -235,9 +250,16 @@
             `;
         } else if (State.connectionStatus === 'STALE') {
             connectionBadge = `
+                <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; background: #FFF7ED; color: #C2410C; border: 1px solid #FFEDD5; padding: 0.35rem 0.8rem; border-radius: 9999px; font-weight: 700;">
+                    <span style="display: inline-block; width: 7px; height: 7px; background: #F97316; border-radius: 50%;"></span>
+                    <span>Dữ liệu tạm (${escapeHTML(State.lastUpdatedTime)})</span>
+                </div>
+            `;
+        } else if (State.connectionStatus === 'ERROR') {
+            connectionBadge = `
                 <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; padding: 0.35rem 0.8rem; border-radius: 9999px; font-weight: 700;">
                     <span style="display: inline-block; width: 7px; height: 7px; background: #EF4444; border-radius: 50%;"></span>
-                    <span>Dữ liệu cũ (${escapeHTML(State.lastUpdatedTime)})</span>
+                    <span>Mất kết nối máy chủ</span>
                 </div>
             `;
         }
@@ -260,7 +282,7 @@
             <div style="min-height: 100vh; background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
                 
                 <div>
-                    <!-- 1. Header Thanh Lịch & Tìm Kiếm Nhanh -->
+                    <!-- 1. Header Thanh Lịch -->
                     <header style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
                         <div style="max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
                             
@@ -272,14 +294,8 @@
                                         <span style="font-size: 1.25rem; font-weight: 900; color: #0F172A; letter-spacing: -0.02em;">JayT</span>
                                         <span style="font-size: 0.7rem; background: #FEF3C7; color: #92400E; border: 1px solid #F59E0B; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">ĐÀ NẴNG 43</span>
                                     </div>
-                                    <div style="font-size: 0.72rem; color: #64748B;">Cổng thông tin ưu đãi đối soát</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Cổng khám phá & đối soát ưu đãi</div>
                                 </div>
-                            </div>
-
-                            <!-- Ô Tìm Kiếm Nhanh Live Search -->
-                            <div style="flex: 1; max-width: 380px; min-width: 240px; position: relative;">
-                                <input type="text" id="jaytLiveSearchInput" placeholder="🔍 Tìm quán, món ăn, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; background: #F1F5F9; border: 1.5px solid #E2E8F0; border-radius: 9999px; padding: 0.5rem 1rem 0.5rem 2.2rem; font-size: 0.82rem; color: #0F172A; outline: none; transition: border-color 0.2s;" />
-                                <span style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; color: #94A3B8;">🔍</span>
                             </div>
 
                             ${connectionBadge}
@@ -289,23 +305,38 @@
                     <!-- 2. Main Portal Content -->
                     <main style="max-width: 1140px; margin: 0 auto; padding: 1.5rem 1rem; width: 100%; box-sizing: border-box;">
                         
-                        <!-- Hero Section: Tổng Mức Tiết Kiệm Đang Hiệu Lực -->
-                        <div style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid #E2E8F0; border-radius: 22px; padding: 2rem 1.2rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
-                            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FEF3C7; border: 1px solid #F59E0B; padding: 0.25rem 0.8rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; color: #92400E; margin-bottom: 0.6rem;">
+                        <!-- Hero Section: Intent & Khám Phá -->
+                        <div style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid #E2E8F0; border-radius: 24px; padding: 2.2rem 1.4rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FEF3C7; border: 1px solid #F59E0B; padding: 0.25rem 0.8rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; color: #92400E; margin-bottom: 0.7rem;">
                                 📍 THỦ PHỦ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43)
                             </div>
                             
-                            <h1 style="font-size: clamp(1.6rem, 3.6vw, 2.5rem); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 0.4rem;">
-                                Tổng mức tiết kiệm các ưu đãi đang hiệu lực <br>
-                                <span style="color: #059669; font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900;">${displaySavings}</span>
+                            <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.5rem); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 0.5rem;">
+                                Hôm nay bạn muốn tiết kiệm gì tại Đà Nẵng? <br>
+                                <span style="color: #059669; font-size: clamp(2.1rem, 4.8vw, 3rem); font-weight: 900;">${displaySavings} đang sẵn sàng</span>
                             </h1>
                             
                             <p style="font-size: 0.95rem; color: #64748B; margin: 0 auto 1.4rem; max-width: 600px; line-height: 1.45;">
                                 Đang phục vụ <strong>${totalCount} ưu đãi còn hạn</strong> từ <strong>${brandCount} thương hiệu</strong> hàng đầu tại Đà Nẵng.
                             </p>
 
+                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm -->
+                            <div style="max-width: 580px; margin: 0 auto 1.2rem; position: relative;">
+                                <input type="text" id="jaytLiveSearchInput" placeholder="🔍 Tìm quán ăn, trà sữa, rạp phim, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 9999px; padding: 0.8rem 1.2rem 0.8rem 2.6rem; font-size: 0.95rem; color: #0F172A; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.2s;" />
+                                <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94A3B8;">🔍</span>
+                            </div>
+
+                            <!-- 5 Chip Gợi Ý Nhu Cầu Nhanh (1-Chạm) -->
+                            <div style="display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.4rem;">
+                                <button data-action="filter" data-category="FOOD" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🍜 Ăn gì hôm nay</button>
+                                <button data-action="filter" data-category="DRINK" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">☕ Cà phê & Trà sữa</button>
+                                <button data-action="filter" data-category="RIDE" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🚗 Di chuyển 0Đ</button>
+                                <button data-action="filter" data-category="CINEMA" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🎬 Giải trí rạp phim</button>
+                                <button data-action="filter" data-category="SHOPPING" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; cursor: pointer;">🛍️ Mua sắm tiện lợi</button>
+                            </div>
+
                             <!-- Thanh Bộ Lọc Ngang Trượt Mobile-First -->
-                            <div style="display: flex; gap: 0.5rem; justify-content: flex-start; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; margin-bottom: 0.2rem; max-width: 860px; margin-left: auto; margin-right: auto;">
+                            <div style="display: flex; gap: 0.5rem; justify-content: flex-start; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; max-width: 860px; margin-left: auto; margin-right: auto;">
                                 ${dynamicCategories.map(cat => `
                                     <button data-action="filter" data-category="${escapeHTML(cat)}" style="flex-shrink: 0; background: ${State.activeFilter === cat ? '#059669' : '#FFFFFF'}; color: ${State.activeFilter === cat ? '#FFF' : '#1E293B'}; border: ${State.activeFilter === cat ? 'none' : '1.5px solid #CBD5E1'}; padding: 0.5rem 1.15rem; border-radius: 9999px; font-weight: 800; font-size: 0.82rem; cursor: pointer; box-shadow: ${State.activeFilter === cat ? '0 3px 10px rgba(5,150,105,0.3)' : '0 1px 3px rgba(0,0,0,0.02)'}; transition: all 0.2s;">
                                         ${escapeHTML(getCategoryLabel(cat))}
@@ -315,8 +346,6 @@
                         </div>
 
                         ${isHomeOverview ? `
-                            <!-- 5 PHÂN KHU KHÁM PHÁ ĐƯỢC RENDER RIÊNG BIỆT -->
-
                             <!-- PHÂN KHU 1: Top 3 Ưu Đãi Tiết Kiệm Nhiều Nhất -->
                             <div style="margin-bottom: 2.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -333,13 +362,14 @@
 
                             <!-- PHÂN KHU 2: Ẩm Thực Đà Nẵng (Food & Dining) -->
                             <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">🍜</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ẩm thực & Bữa ăn Đà Nẵng</h3>
+                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ăn gì tiết kiệm tại Đà Nẵng?</h3>
                                     </div>
                                     <button data-action="filter" data-category="FOOD" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                 </div>
+                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Tuyển tập các món ăn trưa, ăn tối từ Cơm Gà A Hải, Mì Quảng Bà Mua, Bánh Xèo Năm Hiền, Jollibee...</p>
                                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
                                     ${foodDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
                                 </div>
@@ -347,13 +377,14 @@
 
                             <!-- PHÂN KHU 3: Trà Sữa & Cà Phê Chill (Drink & Cafe) -->
                             <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">☕</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Trà sữa & Cà phê chill góc phố</h3>
+                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi trà sữa & Cà phê Đà Nẵng</h3>
                                     </div>
                                     <button data-action="filter" data-category="DRINK" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                 </div>
+                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Nạp năng lượng chill góc phố Bạch Đằng, Nguyễn Văn Linh với Katinat, Phê La, Maycha, Phúc Long...</p>
                                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
                                     ${drinkDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
                                 </div>
@@ -361,84 +392,136 @@
 
                             <!-- PHÂN KHU 4: Di Chuyển 0Đ & Rạp Chiếu Phim (Ride & Cinema) -->
                             <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                                         <span style="font-size: 1.3rem;">🎬</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Di chuyển tiết kiệm & Giải trí cuối tuần</h3>
+                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Mã giảm giá di chuyển & Giải trí cuối tuần</h3>
                                     </div>
                                     <button data-action="filter" data-category="RIDE" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                 </div>
+                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Đi lại thông minh với Xanh SM 0Đ, GrabCar sân bay, beBike sinh viên và vé rạp CGV, Metiz Cinema...</p>
                                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
                                     ${[...rideDeals, ...cinemaAndShopDeals].slice(0, 3).map(deal => renderCard(deal, false)).join('')}
                                 </div>
                             </div>
+                        ` : ''}
 
-                            <!-- PHÂN KHU 5: Toàn Bộ Danh Sách Ưu Đãi Đối Soát -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.3rem;">📋</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Kho ưu đãi tổng hợp (${totalCount})</h3>
-                                    </div>
+                        <!-- PHÂN KHU 5: Kho Tổng Hợp & Công Cụ Sắp Xếp Nâng Cao -->
+                        <div style="margin-bottom: 2.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 1.3rem;">📋</span>
+                                    <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">
+                                        ${State.searchQuery ? `Kết quả tìm kiếm cho "${escapeHTML(State.searchQuery)}"` : (State.activeFilter === 'ALL' ? 'Toàn bộ kho ưu đãi đối soát' : `Danh mục: ${escapeHTML(getCategoryLabel(State.activeFilter))}`)} (${filteredDeals.length})
+                                    </h3>
                                 </div>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
-                                    ${usableDeals.map(deal => renderCard(deal, false)).join('')}
-                                </div>
-                            </div>
-                        ` : `
-                            <!-- Giao diện lọc hoặc tìm kiếm chuyên biệt -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.25rem;">🔍</span>
-                                        <h3 style="font-size: 1.15rem; font-weight: 900; color: #0F172A; margin: 0;">
-                                            ${State.searchQuery ? `Kết quả tìm kiếm cho "${escapeHTML(State.searchQuery)}"` : `Danh mục: ${escapeHTML(getCategoryLabel(State.activeFilter))}`} (${filteredDeals.length})
-                                        </h3>
-                                    </div>
+
+                                <!-- Bộ Chọn Sắp Xếp (Sort Dropdown) -->
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 0.78rem; color: #64748B; font-weight: 700;">Sắp xếp theo:</span>
+                                    <select id="jaytSortSelect" style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 0.35rem 0.75rem; font-size: 0.78rem; color: #0F172A; font-weight: 700; outline: none; cursor: pointer;">
+                                        <option value="SAVING_DESC" ${State.sortBy === 'SAVING_DESC' ? 'selected' : ''}>💰 Tiết kiệm nhiều nhất</option>
+                                        <option value="PCT_DESC" ${State.sortBy === 'PCT_DESC' ? 'selected' : ''}>🔥 Mức giảm % cao nhất</option>
+                                        <option value="EXPIRY_ASC" ${State.sortBy === 'EXPIRY_ASC' ? 'selected' : ''}>⏳ Sắp hết hạn</option>
+                                    </select>
                                     ${State.searchQuery || State.activeFilter !== 'ALL' ? `
-                                        <button data-action="filter" data-category="ALL" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.78rem; cursor: pointer; text-decoration: underline;">Quay lại xem tất cả</button>
+                                        <button data-action="filter" data-category="ALL" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.78rem; cursor: pointer; text-decoration: underline; margin-left: 0.5rem;">Xem tất cả</button>
                                     ` : ''}
                                 </div>
-
-                                ${filteredDeals.length > 0 ? `
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem; width: 100%;">
-                                        ${filteredDeals.map(deal => renderCard(deal, false)).join('')}
-                                    </div>
-                                ` : `
-                                    <div style="text-align: center; padding: 3.5rem 1rem; background: #FFF; border-radius: 20px; border: 1px solid #E2E8F0;">
-                                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
-                                        <h3 style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 0.3rem;">Không tìm thấy ưu đãi phù hợp</h3>
-                                        <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 1rem;">Thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</p>
-                                        <button data-action="filter" data-category="ALL" style="background: #059669; color: #FFF; border: none; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; cursor: pointer;">
-                                            Xem tất cả ${totalCount} ưu đãi
-                                        </button>
-                                    </div>
-                                `}
                             </div>
-                        `}
 
-                        <!-- 6. Phân khu FAQ Hỏi Đáp Thực Tế -->
+                            ${filteredDeals.length > 0 ? `
+                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem; width: 100%;">
+                                    ${filteredDeals.map(deal => renderCard(deal, false)).join('')}
+                                </div>
+                            ` : `
+                                <div style="text-align: center; padding: 3.5rem 1rem; background: #FFF; border-radius: 20px; border: 1px solid #E2E8F0;">
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
+                                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 0.3rem;">Không tìm thấy ưu đãi phù hợp</h3>
+                                    <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 1rem;">Thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</p>
+                                    <button data-action="filter" data-category="ALL" style="background: #059669; color: #FFF; border: none; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 800; cursor: pointer;">
+                                        Xem tất cả ${totalCount} ưu đãi
+                                    </button>
+                                </div>
+                            `}
+                        </div>
+
+                        <!-- 5. TRUNG TÂM MINH BẠCH DỮ LIỆU (TRUST CENTER - USP CỦA JAYT) -->
+                        <div style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); border-radius: 22px; padding: 2rem 1.5rem; color: #F8FAFC; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(15,23,42,0.15);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                    <span style="font-size: 1.4rem;">🛡️</span>
+                                    <div>
+                                        <h3 style="font-size: 1.15rem; font-weight: 900; margin: 0; color: #FFFFFF;">Trung Tâm Minh Bạch Dữ Liệu JayT</h3>
+                                        <p style="font-size: 0.75rem; color: #94A3B8; margin: 0.1rem 0 0;">Giám sát tính toàn vẹn & đối soát mật mã học thời gian thực</p>
+                                    </div>
+                                </div>
+                                <div style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #34D399; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.7rem; border-radius: 9999px;">
+                                    ● TRẠNG THÁI HỆ THỐNG: ${escapeHTML(State.connectionStatus)}
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
+                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Bản ghi khả dụng / Đang xử lý</div>
+                                    <div style="font-size: 1.3rem; font-weight: 900; color: #38BDF8;">${totalCount} Ưu đãi</div>
+                                    <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Thời điểm snapshot: ${escapeHTML(State.lastUpdatedTime)}</div>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
+                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Đối soát mật mã học SHA-256</div>
+                                    <div style="font-size: 1.1rem; font-weight: 900; color: #34D399;">🟢 ${matchCount} MATCH ${missingCount > 0 ? `· ⚠️ ${missingCount} PENDING` : ''}</div>
+                                    <div style="font-size: 0.7rem; color: #64748B; margin-top: 0.2rem;">Web Crypto API tính toán trực tiếp</div>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem;">
+                                    <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.3rem;">Nguyên tắc vận hành</div>
+                                    <div style="font-size: 0.82rem; font-weight: 700; color: #F1F5F9; line-height: 1.4;">Không tự tạo số liệu ảo · Đối soát đúng kênh ghi nhận</div>
+                                </div>
+                            </div>
+
+                            <!-- Hiển thị Dataset SHA-256 Hash công khai có nút Copy -->
+                            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 0.85rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                    <span style="font-size: 0.72rem; color: #94A3B8; font-weight: 700;">Mã Băm Dataset SHA-256 (15 trường chuẩn hóa, sắp xếp theo deal_id):</span>
+                                    <button data-action="copy-dataset-sha" data-sha="${escapeHTML(State.datasetSHA256)}" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #38BDF8; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 6px; cursor: pointer;">
+                                        📋 Sao chép SHA-256
+                                    </button>
+                                </div>
+                                <div style="font-family: monospace; font-size: 0.7rem; color: #34D399; word-break: break-all;">
+                                    ${escapeHTML(State.datasetSHA256 || 'Đang băm dữ liệu qua Web Crypto API...')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Phân khu FAQ Hỏi Đáp Mở Rộng 6 Câu Hỏi -->
                         <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 2rem 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
                             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.4rem;">
                                 <span style="font-size: 1.3rem;">❓</span>
                                 <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Câu hỏi thường gặp về ưu đãi trên JayT</h3>
                             </div>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem;">
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
                                     <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">1. Ưu đãi trên JayT được thu thập từ đâu?</div>
-                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Được đối soát từ các chương trình liên kết chính thức của GrabFood, ShopeeFood, Xanh SM, CGV, Metiz và các thương hiệu hàng đầu tại Đà Nẵng.</p>
+                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Được đối soát từ kênh ghi nhận của đối tác liên kết chính thức tại Đà Nẵng (GrabFood, ShopeeFood, Xanh SM, CGV, Metiz...).</p>
                                 </div>
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
-                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">2. Làm sao biết mã giảm giá còn hiệu lực?</div>
-                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Hệ thống tự động so khớp thời gian thực trên từng giây. Mọi mã hết hạn sử dụng sẽ tự động bị ẩn khỏi danh sách khả dụng.</p>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">2. JayT có bán trực tiếp mã giảm giá không?</div>
+                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Không. JayT là cổng thông tin khám phá và đối soát ưu đãi hoàn toàn miễn phí cho người dùng, không bán mã hay thu phí giao dịch.</p>
                                 </div>
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
-                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">3. Đối soát SHA-256 MATCH 100% nghĩa là gì?</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">3. Làm sao biết mã giảm giá còn hiệu lực?</div>
+                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Hệ thống tự động so khớp và làm mới dữ liệu định kỳ mỗi 20 giây. Mọi mã hết hạn sử dụng sẽ tự động bị ẩn khỏi danh sách khả dụng.</p>
+                                </div>
+                                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">4. Đối soát SHA-256 MATCH 100% nghĩa là gì?</div>
                                     <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Mã băm dữ liệu gốc từ máy chủ khớp hoàn toàn với phép tính mật mã học trên trình duyệt của bạn, đảm bảo giá và mã không bị làm sai lệch.</p>
                                 </div>
                                 <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
-                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">4. Nếu app đối tác báo hết lượt mã thì sao?</div>
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">5. Nếu app đối tác báo hết lượt mã thì sao?</div>
                                     <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Một số mã có hạn mức số lượt theo ngày của đối tác. JayT liên tục làm mới dữ liệu mỗi 20 giây để cập nhật các mã mới thay thế.</p>
+                                </div>
+                                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.1rem;">
+                                    <div style="font-weight: 800; font-size: 0.88rem; color: #059669; margin-bottom: 0.35rem;">6. Vì sao một ưu đãi có thể biến mất khỏi trang?</div>
+                                    <p style="font-size: 0.8rem; color: #64748B; margin: 0; line-height: 1.5;">Khi ưu đãi vượt quá thời hạn hoặc đối tác thông báo tạm dừng chương trình, hệ thống sẽ tự động loại bỏ để bảo vệ trải nghiệm của bạn.</p>
                                 </div>
                             </div>
                         </div>
@@ -446,39 +529,65 @@
                     </main>
                 </div>
 
-                <!-- 7. Footer Doanh Nghiệp & Minh Bạch Thông Tin -->
-                <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.5rem 1.5rem 1.5rem; margin-top: 2rem;">
+                <!-- 7. Footer Doanh Nghiệp 4 Cột Hoàn Thiện (Corporate Trust Footer) -->
+                <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 2.8rem 1.5rem 1.5rem; margin-top: 2rem;">
                     <div style="max-width: 1140px; margin: 0 auto;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.8rem; margin-bottom: 2rem;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2.2rem;">
+                            
+                            <!-- Cột 1: Về JayT -->
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
                                     <div style="background: #059669; color: #FFF; font-weight: 900; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;">J</div>
                                     <span style="font-weight: 900; font-size: 1.1rem; color: #0F172A;">JayT Đà Nẵng</span>
                                 </div>
-                                <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5; margin: 0;">
-                                    Cổng thông tin tự động tìm kiếm, đối soát và xếp hạng các cơ hội tiết kiệm chi tiêu ăn uống, di chuyển và giải trí hàng đầu tại Đà Nẵng.
+                                <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5; margin: 0 0 0.6rem;">
+                                    Cổng thông tin tự động tìm kiếm, đối soát và xếp hạng các cơ hội tiết kiệm chi tiêu ăn uống, di chuyển và giải trí hàng đầu tại Đà Nẵng (Mã Vùng 43).
                                 </p>
+                                <span style="font-size: 0.72rem; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 800;">
+                                    Mã Vùng 43: Hải Châu · Sơn Trà · Thanh Khê
+                                </span>
                             </div>
+
+                            <!-- Cột 2: Khám Phá Ưu Đãi -->
                             <div>
-                                <h4 style="font-size: 0.88rem; font-weight: 800; color: #0F172A; margin: 0 0 0.8rem;">Cam Kết Minh Bạch</h4>
+                                <h4 style="font-size: 0.88rem; font-weight: 800; color: #0F172A; margin: 0 0 0.8rem;">Danh Mục Khám Phá</h4>
                                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #64748B; display: flex; flex-direction: column; gap: 0.45rem;">
-                                    <li>🛡️ 100% Ưu đãi có đối soát nguồn gốc</li>
-                                    <li>⚡ Tự động kiểm tra thời hạn hiệu lực</li>
-                                    <li>🔒 Mã băm SHA-256 đối soát toàn vẹn</li>
-                                    <li>🚫 Tuyệt đối không tạo số liệu ảo</li>
+                                    <li><a href="javascript:void(0)" data-action="filter" data-category="FOOD" style="color: #64748B; text-decoration: none;">🍜 Ẩm thực & Bữa ăn</a></li>
+                                    <li><a href="javascript:void(0)" data-action="filter" data-category="DRINK" style="color: #64748B; text-decoration: none;">☕ Trà sữa & Cà phê chill</a></li>
+                                    <li><a href="javascript:void(0)" data-action="filter" data-category="RIDE" style="color: #64748B; text-decoration: none;">🚗 Xe điện 0Đ & Đi lại</a></li>
+                                    <li><a href="javascript:void(0)" data-action="filter" data-category="CINEMA" style="color: #64748B; text-decoration: none;">🎬 Vé rạp CGV & Metiz</a></li>
+                                    <li><a href="javascript:void(0)" data-action="filter" data-category="SHOPPING" style="color: #64748B; text-decoration: none;">🛍️ Mua sắm tiện lợi</a></li>
                                 </ul>
                             </div>
+
+                            <!-- Cột 3: Minh Bạch & Đối Soát -->
                             <div>
-                                <h4 style="font-size: 0.88rem; font-weight: 800; color: #0F172A; margin: 0 0 0.8rem;">Địa Bàn Hoạt Động</h4>
-                                <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5; margin: 0 0 0.5rem;">
-                                    📍 Hải Châu · Thanh Khê · Sơn Trà · Liên Chiểu · Ngũ Hành Sơn · Cẩm Lệ (Mã Vùng 43)
-                                </p>
-                                <span style="font-size: 0.75rem; background: #F1F5F9; color: #475569; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700;">Hỗ trợ: CSKH Zalo 24/7</span>
+                                <h4 style="font-size: 0.88rem; font-weight: 800; color: #0F172A; margin: 0 0 0.8rem;">Minh Bạch & Đối Soát</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #64748B; display: flex; flex-direction: column; gap: 0.45rem;">
+                                    <li>🛡️ Đối soát nguồn gốc kênh liên kết</li>
+                                    <li>⚡ Kiểm tra hiệu lực tự động mỗi 20s</li>
+                                    <li>🔒 Mã băm SHA-256 Web Crypto API</li>
+                                    <li>🚫 Tuyệt đối không tạo số liệu ảo</li>
+                                    <li>📊 Bảng kê đối soát công khai từng deal</li>
+                                </ul>
                             </div>
+
+                            <!-- Cột 4: Pháp Lý & Miễn Trừ -->
+                            <div>
+                                <h4 style="font-size: 0.88rem; font-weight: 800; color: #0F172A; margin: 0 0 0.8rem;">Pháp Lý & Hỗ Trợ</h4>
+                                <p style="font-size: 0.78rem; color: #64748B; line-height: 1.45; margin: 0 0 0.5rem;">
+                                    Mọi mã giảm giá và chương trình khuyến mãi phụ thuộc vào điều khoản của đối tác cung cấp.
+                                </p>
+                                <div style="font-size: 0.75rem; color: #334155; font-weight: 700; margin-bottom: 0.3rem;">Hỗ trợ cộng đồng 43:</div>
+                                <span style="font-size: 0.75rem; background: #F1F5F9; color: #475569; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700;">Zalo CSKH: 24/7 Miễn phí</span>
+                            </div>
+
                         </div>
+
+                        <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.2 Standard</span>
+                            <span>Phiên bản: Production Runtime v4.4 GA Standard</span>
                         </div>
                     </div>
                 </footer>
@@ -499,9 +608,18 @@
                 }
             });
         }
+
+        // Gắn sự kiện Sort Select
+        const sortSelect = document.getElementById('jaytSortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function(e) {
+                State.sortBy = e.target.value;
+                renderApp();
+            });
+        }
     }
 
-    // 7. Render Card Thẻ Ưu Đãi (XSS-Safe)
+    // 7. Render Card Thẻ Ưu Đãi (High-Conversion UX & XSS-Safe)
     function renderCard(deal, isFeatured = false) {
         return `
             <div class="deal-card" style="background: #FFFFFF; border: ${isFeatured ? '2px solid #10B981' : '1.5px solid #E2E8F0'}; border-radius: 18px; padding: 1.3rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.9rem; box-shadow: ${isFeatured ? '0 6px 22px rgba(16,185,129,0.1)' : '0 4px 15px rgba(0,0,0,0.03)'}; position: relative;">
@@ -663,9 +781,6 @@
             if (action === 'filter') {
                 State.activeFilter = btn.getAttribute('data-category');
                 renderApp();
-            } else if (action === 'clear-search') {
-                State.searchQuery = '';
-                renderApp();
             } else if (action === 'copy') {
                 const code = btn.getAttribute('data-code') || '';
                 if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -686,6 +801,19 @@
                     });
                 } else {
                     prompt('Mã ưu đãi của bạn:', code);
+                }
+            } else if (action === 'copy-dataset-sha') {
+                const sha = btn.getAttribute('data-sha') || '';
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(sha).then(() => {
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = `✓ ĐÃ SAO CHÉP`;
+                        btn.style.color = '#10B981';
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.style.color = '#38BDF8';
+                        }, 1500);
+                    });
                 }
             } else if (action === 'trust') {
                 const dealId = btn.getAttribute('data-deal-id');
@@ -738,7 +866,8 @@
             // Chốt 2: Check atomic sau normalize
             if (requestId !== State.activeRequestId) return;
 
-            const newFingerprint = buildCanonicalDatasetFingerprint(normalizedDeals);
+            // Tính toán mã băm SHA-256 toàn bộ dataset
+            const newDatasetSHA = await computeDatasetSHA256(normalizedDeals);
             const now = new Date();
             const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
 
@@ -747,9 +876,9 @@
             State.connectionStatus = 'LIVE';
             State.errorMessage = null;
 
-            if (newFingerprint !== State.datasetFingerprint || State.deals.length === 0) {
+            if (newDatasetSHA !== State.datasetSHA256 || State.deals.length === 0) {
                 State.deals = normalizedDeals;
-                State.datasetFingerprint = newFingerprint;
+                State.datasetSHA256 = newDatasetSHA;
                 renderApp();
             } else {
                 renderApp();
@@ -776,7 +905,7 @@
     function init() {
         setupEventDelegation();
         fetchDeals();
-        setInterval(fetchDeals, 20000);
+        setInterval(fetchDeals, 20000); // Polling 20s
     }
 
     if (document.readyState === 'loading') {
