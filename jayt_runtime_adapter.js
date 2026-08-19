@@ -1,20 +1,21 @@
 /**
- * JAYT APEX v4.6 — DISCOVERY ENGINE & MOBILE UX RUNTIME
+ * JAYT APEX v4.7 — COMMUNITY-FIRST AFFILIATE RUNTIME
  * =============================================================================
- * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
+ * TÔN CHỈ: PHỤC VỤ CỘNG ĐỒNG ĐÀ NẴNG 43 LÀ SỐ 1 — DOANH THU AFFILIATE LÀ SỐ 2
  * 1. Single State-to-Render Immutable Snapshot Contract.
  * 2. Hero Discovery Intent & Clean Instant Search Bar (Chuẩn 1 icon duy nhất).
- * 3. High-Conversion Deal Cards: Tiết kiệm nổi bật, nút Săn Ngay & Chép Mã 1-chạm.
- * 4. Dynamic Discovery Engine: 5 phân khu tự co giãn, không render section rỗng.
- * 5. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
- * 6. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
- * 7. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
+ * 3. 5 Chip Gợi Ý Nhu Cầu Nhanh Thường Nhật (Ăn gì, Trà sữa, Xe 0Đ, Rạp phim, Mua sắm).
+ * 4. High-Conversion Deal Cards: Tiết kiệm nổi bật, nút Săn Ngay & Chép Mã 1-chạm.
+ * 5. Dynamic Discovery Engine: 5 phân khu tự co giãn, không render section rỗng.
+ * 6. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
+ * 7. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
+ * 8. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Discovery Engine & Portal Runtime v4.6 Active");
+    console.log("⚡ JAYT Community-First Portal Runtime v4.7 Active");
 
     const State = {
         deals: [],
@@ -96,7 +97,7 @@
         return { status: 'ACTIVE', label: '● Đang hiệu lực', isUsable: true, formatted: formattedDate, diffHours: diffHours };
     }
 
-    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal (3 Trạng thái rõ ràng)
+    // 4. Chuẩn hóa Deal & Đối soát Mật mã học SHA-256 từng deal
     async function normalizeDeal(raw) {
         if (!raw || typeof raw !== 'object') return null;
 
@@ -175,7 +176,7 @@
         return await calculateSHA256(canonicalString);
     }
 
-    // 6. Render Giao Diện Đại Đô Thị Portal v4.6
+    // 6. Render Giao Diện Đại Đô Thị Portal v4.7
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -303,7 +304,7 @@
                                         <span style="font-size: 1.25rem; font-weight: 900; color: #0F172A; letter-spacing: -0.02em;">JayT</span>
                                         <span style="font-size: 0.7rem; background: #FEF3C7; color: #92400E; border: 1px solid #F59E0B; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">ĐÀ NẴNG 43</span>
                                     </div>
-                                    <div style="font-size: 0.72rem; color: #64748B;">Cổng khám phá & đối soát ưu đãi</div>
+                                    <div style="font-size: 0.72rem; color: #64748B;">Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng</div>
                                 </div>
                             </div>
 
@@ -317,11 +318,11 @@
                         <!-- Hero Section: Intent & Khám Phá -->
                         <div style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid #E2E8F0; border-radius: 24px; padding: 2.2rem 1.4rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
                             <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FEF3C7; border: 1px solid #F59E0B; padding: 0.25rem 0.8rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; color: #92400E; margin-bottom: 0.7rem;">
-                                📍 THỦ PHỦ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43)
+                                📍 ĐẶC QUYỀN TIẾT KIỆM CỘNG ĐỒNG ĐÀ NẴNG (MÃ VÙNG 43)
                             </div>
                             
                             <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.5rem); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 0.5rem;">
-                                Hôm nay Đà Nẵng có gì đáng săn? <br>
+                                Hôm nay bạn muốn tiết kiệm gì tại Đà Nẵng? <br>
                                 <span style="color: #059669; font-size: clamp(2.1rem, 4.8vw, 3rem); font-weight: 900;">${displaySavings} đang sẵn sàng</span>
                             </h1>
                             
@@ -359,7 +360,7 @@
                             ${topFeaturedDeals.length > 0 ? `
                                 <div style="margin-bottom: 2.5rem;">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div style="display: align-items: center; gap: 0.5rem;">
                                             <span style="font-size: 1.3rem;">🔥</span>
                                             <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Top 3 ưu đãi tiết kiệm nhiều nhất</h3>
                                         </div>
@@ -604,7 +605,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.6 GA Standard</span>
+                            <span>Phiên bản: Production Runtime v4.7 Community Standard</span>
                         </div>
                     </div>
                 </footer>
@@ -755,7 +756,7 @@
                 </div>
 
                 <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 12px; padding: 0.8rem; font-size: 0.78rem; color: #065F46; line-height: 1.45;">
-                    💡 <strong>Cam kết minh bạch:</strong> Mọi ưu đãi trên JayT được kiểm tra và đối soát mã băm tự động nhằm bảo vệ quyền lợi người tiêu dùng.
+                    💡 <strong>Cam kết vì cộng đồng:</strong> Mọi ưu đãi trên JayT được kiểm tra và đối soát mã băm tự động nhằm bảo vệ tối đa quyền lợi chi tiêu của người dân & du khách Đà Nẵng.
                 </div>
             </div>
         `;
@@ -767,7 +768,7 @@
         return `
             <div style="min-height: 100vh; background: #F8FAFC; padding: 4rem 1rem; text-align: center; font-family: sans-serif;">
                 <div style="display: inline-block; width: 40px; height: 40px; border: 3px solid #E2E8F0; border-top-color: #059669; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 1rem;"></div>
-                <h3 style="color: #0F172A; font-weight: 800; font-size: 1.15rem; margin-bottom: 0.3rem;">Đang tải kho ưu đãi Đà Nẵng...</h3>
+                <h3 style="color: #0F172A; font-weight: 800; font-size: 1.15rem; margin-bottom: 0.3rem;">Đang tải kho đặc quyền ưu đãi Đà Nẵng...</h3>
                 <p style="color: #64748B; font-size: 0.85rem;">Đối soát mã băm SHA-256 & thời hạn sử dụng thời gian thực.</p>
                 <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
             </div>
