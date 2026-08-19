@@ -1,20 +1,19 @@
 /**
- * JAYT APEX v4.4 — DISCOVERY, CONVERSION & TRUST PORTAL RUNTIME
+ * JAYT APEX v4.5 — CONVERSION & EVIDENCE UX RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Deterministic Multi-Level Sorting (Tie-breaker theo deal_id & expiry).
- * 2. Integrated Trust Center: Phân định rõ Dataset SHA-256 và Deal Evidence SHA-256.
- * 3. Hero Intent & Quick Search Chips (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
- * 4. High-Conversion Deal Cards với Badge trực quan & Nút hành động 1-chạm.
- * 5. Comprehensive 6-Question FAQ & Corporate Trust Footer 4 Cột.
- * 6. Web Crypto API SHA-256 Hash đối soát chân thực (MATCH / MISSING / MISMATCH).
- * 7. AbortController & Post-Normalization Double Sequence Guard chống race condition.
+ * 1. Hero Intent & 5 Quick Chips Khám Phá Nhanh (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
+ * 2. Deterministic Multi-Level Sorting (Không nhảy vị trí giữa các chu kỳ polling 20s).
+ * 3. Thẻ Ưu Đãi Tối Ưu Chuyển Đổi: Nổi bật mức tiết kiệm, hạn dùng Việt hóa, 2 CTA 1-chạm.
+ * 4. Trung Tâm Minh Bạch Dữ Liệu 3 Tầng: Phân định rõ Deal Evidence vs Dataset SHA-256.
+ * 5. Cẩm Nang 6 Câu Hỏi FAQ Mở Rộng & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
+ * 6. Khóa Bất Biến: AbortController, Double Sequence Guard, Web Crypto API SHA-256.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Comprehensive Portal Runtime v4.4 Active");
+    console.log("⚡ JAYT Comprehensive Portal Runtime v4.5 Active");
 
     const State = {
         deals: [],
@@ -175,7 +174,7 @@
         return await calculateSHA256(canonicalString);
     }
 
-    // 6. Render Giao Diện Đại Đô Thị Portal v4.4
+    // 6. Render Giao Diện Đại Đô Thị Portal v4.5
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -596,7 +595,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.4 GA Standard</span>
+                            <span>Phiên bản: Production Runtime v4.5 GA Standard</span>
                         </div>
                     </div>
                 </footer>
