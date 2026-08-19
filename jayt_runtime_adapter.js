@@ -1,10 +1,10 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — UNIFIED CONSTITUTIONAL MASTER OPERATING ENGINE
+ * JAYT APEX v5.5 — COMPLETE MODERN APEX OPERATING ENGINE
  * =============================================================================
  * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * =============================================================================
- * BẢO TỒN NGUYÊN BẢN 100% CẤU TRÚC GIAO DIỆN & TÍNH NĂNG GOLDEN MASTER:
+ * TOÀN BỘ HỆ THỐNG GIAO DIỆN APEX HIỆN ĐẠI:
  * - Top Running Marquee Ticker
  * - Master Sticky Header + Nút Săn Nhanh 10s + Đổi Theme + Ví + Zalo CSKH
  * - 5-Question Executive Summary Banner
@@ -12,21 +12,19 @@
  * - Tầng 2 ACTION: Hidden Voucher Radar + 3 Voucher Ẩn + Lý Do Ẩn Minh Bạch
  * - Tầng 3 DISCOVERY: Kho Deal 43 + Bộ Lọc 4 Quận (Liên Chiểu/Hải Châu/Sơn Trà/Toàn ĐN)
  * - Interactive Savings Calculator (3 Thanh Trượt: Trà Sữa, Bữa Ăn, Xe Công Nghệ)
- * - Hệ thống 5 Modals Nguyên Bản: Ví Cá Nhân, Rủ Bạn Zalo/Tele (+5K), SHA-256 Audit, Chiến Thuật, Vì Sao
+ * - Hệ thống 5 Modals: Ví Cá Nhân, Rủ Bạn Zalo/Tele (+5K), SHA-256 Audit, Chiến Thuật, Vì Sao
  * - Human-Proof 2.0: Hộp Thoại Outcome "Bạn Đã Săn Được Chưa?" + Victory Modal Tiền Thật
  * - Mobile 5-Tab Bottom Navigation + Confetti Canvas + Web Audio API (Zero MP3)
  * - Grand 4-Column Footer Bản Địa Đà Nẵng
- * =============================================================================
- * TUÂN THỦ NGHIÊM NGẶT HIẾN PHÁP: SPECIAL REQUIREMENT JAYT-ZERO-DESTRUCTION-001
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [Unified Master Engine Active — Zero Destruction Guard]");
+  console.log("🚀 JayT Apex v5.5 [Full Modern APEX Engine Active]");
 
   // ==========================================================================
-  // 🔒 1. PROVENANCE CORE & SECURITY SANITIZERS (INVARIANTS #11, #17, #18)
+  // 🔒 1. TIỆN ÍCH AN TOÀN & ĐỊNH DẠNG TIỀN TỆ
   // ==========================================================================
 
   function escapeHTML(str) {
@@ -51,7 +49,7 @@
   }
 
   // ==========================================================================
-  // 📳 2. HAPTIC VIBRATION & WEB AUDIO SYNTHESIZER (INVARIANTS #10, #20)
+  // 📳 2. HAPTIC VIBRATION & WEB AUDIO SYNTHESIZER
   // ==========================================================================
 
   function triggerHaptic(type = 'light') {
@@ -99,29 +97,12 @@
     } catch (e) {}
   }
 
-  // ==========================================================================
-  // 🎊 3. DEDICATED OVERLAY HOST & CONFETTI (GATE-009)
-  // ==========================================================================
-
-  function getOrCreateOverlayHost() {
-    let host = document.getElementById('jayt-overlay-root');
-    if (!host) {
-      host = document.createElement('div');
-      host.id = 'jayt-overlay-root';
-      host.setAttribute('data-jayt-owned', 'overlay');
-      host.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:999999;display:flex;align-items:center;justify-content:center;';
-      document.body.appendChild(host);
-    }
-    return host;
-  }
-
   function fireConfetti() {
     try {
-      const host = getOrCreateOverlayHost();
       const canvas = document.createElement('canvas');
       canvas.id = 'jayt-adapter-ephemeral-confetti';
       canvas.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999999;';
-      host.appendChild(canvas);
+      document.body.appendChild(canvas);
       const ctx = canvas.getContext('2d');
       canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
@@ -154,7 +135,7 @@
   }
 
   // ==========================================================================
-  // 🧠 4. DATABASE ĐÀ NẴNG 43 GOLDEN MASTER (ĐẦY ĐỦ 8 KÈO THỰC ĐỊA ĐỐI SOÁT)
+  // 🧠 3. SỔ CÁI 8 KÈO ĐÀ NẴNG 43 GOLDEN MASTER (ĐỐI SOÁT CHÍNH XÁC)
   // ==========================================================================
 
   const DEALS_DATABASE = [
@@ -187,7 +168,6 @@
       verified: true,
       trust_score: 98,
       sha_evidence: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
-      time_affinity: ['AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
       link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
       image: 'https://images.unsplash.com/photo-1558857563-b37fe434c442?auto=format&fit=crop&w=800&q=80',
@@ -222,7 +202,6 @@
       verified: true,
       trust_score: 99,
       sha_evidence: '8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4',
-      time_affinity: ['LUNCH', 'EVENING'],
       maps_url: 'https://maps.google.com/?q=100+Thai+Phien+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/c%C6%A1m-g%C3%A0-a-h%E1%BA%A3i-th%C3%A1i-phi%C3%AAn-delivery/',
       image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80',
@@ -257,7 +236,6 @@
       verified: true,
       trust_score: 97,
       sha_evidence: '3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855e',
-      time_affinity: ['MORNING', 'LUNCH', 'AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=San+bay+Quoc+te+Da+Nang',
       link: 'https://www.grab.com/vn/transport/car/',
       image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80',
@@ -292,7 +270,6 @@
       verified: true,
       trust_score: 98,
       sha_evidence: '7a434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327bb2',
-      time_affinity: ['AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=Vincom+Plaza+Ngo+Quyen+Da+Nang',
       link: 'https://www.cgv.vn/en/cinox/site/cgv-vincom-da-nang/',
       image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
@@ -327,7 +304,6 @@
       verified: true,
       trust_score: 96,
       sha_evidence: '1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855e3b0c44298fc',
-      time_affinity: ['MORNING', 'AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=34+Bach+Dang+Da+Nang',
       link: 'https://katinat.vn/menu/',
       image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
@@ -362,7 +338,6 @@
       verified: true,
       trust_score: 99,
       sha_evidence: '4c8996fb92427ae41e4649b934ca495991b7852b855e3b0c44298fc1c149afbf',
-      time_affinity: ['MORNING', 'LUNCH', 'AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=Da+Nang',
       link: 'https://www.xanhsm.com',
       image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80',
@@ -397,7 +372,6 @@
       verified: true,
       trust_score: 97,
       sha_evidence: '92427ae41e4649b934ca495991b7852b855e3b0c44298fc1c149afbf4c8996fb',
-      time_affinity: ['LUNCH', 'EVENING'],
       maps_url: 'https://maps.google.com/?q=478+Dien+Bien+Phu+Da+Nang',
       link: 'https://jollibee.com.vn/thuc-don',
       image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
@@ -432,7 +406,6 @@
       verified: true,
       trust_score: 98,
       sha_evidence: '149afbf4c8996fb92427ae41e4649b934ca495991b7852b855e3b0c44298fc1c',
-      time_affinity: ['AFTERNOON', 'EVENING', 'NIGHT'],
       maps_url: 'https://maps.google.com/?q=189+Hoang+Dieu+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/ch%C3%A8-li%C3%AAn-ho%C3%A0ng-di%E1%BB%87u-delivery/',
       image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80',
@@ -441,12 +414,11 @@
   ];
 
   // ==========================================================================
-  // 🏛️ 5. STATE MANAGEMENT (SSOT)
+  // 🏛️ 4. STATE MANAGEMENT (SSOT)
   // ==========================================================================
 
   const State = {
     deals: DEALS_DATABASE,
-    isOnline: navigator.onLine !== false,
     theme: localStorage.getItem('jayt_theme') || 'dark',
     dealNowMode: false,
     activeTab: 'home',
@@ -501,20 +473,10 @@
   }
 
   // ==========================================================================
-  // 🖥️ 6. COMPLETE UI RENDER ENGINE (BẢO VỆ SANDBOX THEO HIẾN PHÁP)
+  // 🖥️ 5. COMPLETE MODERN APEX UI RENDER ENGINE
   // ==========================================================================
 
   function renderApp() {
-    // 🛡️ GATE-006: Tìm hoặc gắn vào Sandbox an toàn (FAIL-CLOSED)
-    let root = document.getElementById('jaytAppRoot');
-    if (!root) {
-      const targetAnchor = document.querySelector('.main-content') || document.querySelector('main') || document.body;
-      root = document.createElement('div');
-      root.id = 'jaytAppRoot';
-      root.setAttribute('data-jayt-owned', 'apex');
-      targetAnchor.appendChild(root);
-    }
-
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -550,8 +512,9 @@
     const totalWalletSavings = State.actualSavedAmount + State.referralBonus;
     const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
 
-    root.innerHTML = `
-      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; font-family: inherit;">
+    // Kích hoạt giao diện APEX Siêu Cấp Hiện Đại
+    document.body.innerHTML = `
+      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; font-family: system-ui, -apple-system, sans-serif;">
         
         <div>
           <!-- TOP TICKER -->
@@ -627,7 +590,7 @@
             </div>
           </section>
 
-          <!-- TẦNG 1: WOW — KÈO ƯU TIÊN SỐ 1 KÈM CHIẾN THUẬT SĂN 1-CHẠM -->
+          <!-- TẦNG 1: WOW — KÈO ƯU TIÊN SỐ 1 MAYCHA -->
           <section style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem;">
             <div style="text-align: center; margin-bottom: 2rem;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #059669; padding: 0.35rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem;">
@@ -642,7 +605,7 @@
             </div>
 
             <!-- CARD DEAL ƯU TIÊN CHIẾN THUẬT -->
-            <div class="aura-priority" style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem;">
+            <div style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 15px 40px rgba(245,158,11,0.15);">
               <div style="position: relative; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; background: #000;">
                 <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover;" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
@@ -702,7 +665,7 @@
             </div>
           </section>
 
-          <!-- TẦNG 2: ACTION — HIDDEN VOUCHER INTELLIGENCE RADAR -->
+          <!-- TẦNG 2: ACTION — HIDDEN VOUCHER RADAR -->
           <section id="hiddenVoucherSection" style="max-width: 1300px; margin: 0 auto 3.5rem; padding: 0 1.5rem;">
             <div style="background: ${isLight ? '#FFFBEB' : 'rgba(245, 158, 11, 0.08)'}; border: 2px solid #F59E0B; border-radius: 20px; padding: 1.8rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -750,7 +713,7 @@
             </div>
           </section>
 
-          <!-- TẦNG 3: DISCOVERY — KHO KÈO ĐÀ NẴNG 43 -->
+          <!-- TẦNG 3: DISCOVERY — KHO DEAL 43 (8 KÈO) -->
           <main style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
               <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain};">
@@ -770,7 +733,7 @@
               </div>
             </div>
 
-            <!-- BỘ LỌC 4 QUẬN BẢN ĐỊA -->
+            <!-- BỘ LỌC 4 QUẬN -->
             <div style="display: flex; gap: 0.4rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
               ${['ALL:Toàn ĐN', 'LIEN_CHIEU:Liên Chiểu', 'HAI_CHAU:Hải Châu', 'SON_TRA:Sơn Trà', 'THANH_KHE:Thanh Khê'].map(item => {
                 const [code, label] = item.split(':');
@@ -788,7 +751,7 @@
             </div>
           </main>
 
-          <!-- MÁY TÍNH TIẾT KIỆM TƯƠNG TÁC -->
+          <!-- MÁY TÍNH TIẾT KIỆM (3 THANH TRƯỢT) -->
           <section style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem;">
             <div style="background: ${C.calcBg}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 2.2rem; box-shadow: ${C.cardShadow};">
               <div style="text-align: center; margin-bottom: 1.8rem;">
@@ -1119,7 +1082,7 @@
   }
 
   // ==========================================================================
-  // ⚡ 7. EVENT DELEGATION & ACTION HANDLERS
+  // ⚡ 6. EVENT DELEGATION & ACTION HANDLERS
   // ==========================================================================
 
   document.body.addEventListener('click', function (e) {
@@ -1235,10 +1198,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // ==========================================================================
-  // 🚀 8. KHỞI TẠO AN TOÀN
-  // ==========================================================================
-
+  // Khởi chạy ngay khi tải trang
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
