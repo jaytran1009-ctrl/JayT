@@ -14,7 +14,7 @@
     <meta property="og:description" content="Khám phá đặc quyền ăn uống, đi lại và giải trí đẳng cấp bậc nhất Đà Nẵng. 100% miễn phí cho người dùng cuối.">
     <meta name="theme-color" content="#07080A">
 
-    <!-- Google Fonts Hoàng Gia: Newsreader (Serif Luxury), Inter (Modern Sans), JetBrains Mono (Cryptographic) -->
+    <!-- Google Fonts Hoàng Gia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600;1,6..72,700&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -25,20 +25,20 @@
             --font-serif: 'Newsreader', Georgia, serif;
             --font-mono: 'JetBrains Mono', monospace;
             --radius-pill: 9999px;
-            --radius-card: 24px;
+            --radius-card: 22px;
             --radius-sm: 12px;
             --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
             /* Aristocratic Obsidian & Gold Theme */
             --bg-base: #07080A;
             --bg-surface: #0E1015;
-            --bg-card: rgba(18, 20, 29, 0.75);
-            --bg-card-hover: rgba(26, 29, 42, 0.95);
+            --bg-card: rgba(18, 20, 29, 0.85);
+            --bg-card-hover: rgba(26, 29, 42, 0.98);
             --bg-tag: rgba(255, 255, 255, 0.04);
             
-            --border-subtle: rgba(255, 255, 255, 0.07);
+            --border-subtle: rgba(255, 255, 255, 0.08);
             --border-gold: rgba(212, 175, 55, 0.35);
-            --border-gold-glow: rgba(212, 175, 55, 0.75);
+            --border-gold-glow: rgba(212, 175, 55, 0.8);
             
             --text-heading: #FFFFFF;
             --text-body: #9CA3AF;
@@ -48,7 +48,7 @@
             --brand-emerald: #10B981;
             --brand-gold: #D4AF37;
             --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-            --ambient-glow: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(16, 185, 129, 0.04) 40%, transparent 70%);
+            --ambient-glow: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.09) 0%, rgba(16, 185, 129, 0.05) 45%, transparent 70%);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,7 +71,7 @@
         @keyframes toastIn { from { transform: translate(-50%, -25px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
         @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         @keyframes goldShimmer { 0% { transform: translateX(-100%) rotate(30deg); } 100% { transform: translateX(200%) rotate(30deg); } }
-        @keyframes subtlePulse { 0%, 100% { opacity: 0.9; } 50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(212,175,55,0.4)); } }
+        @keyframes radarPulse { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.4); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
 
         .marquee-track {
             display: inline-block;
@@ -113,7 +113,7 @@
     <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME APEX (APP MOUNT POINT) -->
     <div id="jaytAppRoot"></div>
 
-    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v10.0 -->
-    <script src="/jayt_runtime_adapter.js?v=10.0.0"></script>
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v11.0 -->
+    <script src="/jayt_runtime_adapter.js?v=11.0.0"></script>
 </body>
 </html>
