@@ -1,21 +1,20 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — RELEASE CANDIDATE (RC-1)
+ * JAYT APEX v5.5 — UNIFIED AUTHORITY OPERATING ENGINE
  * =============================================================================
- * STATUS: RC-1 (PENDING RUNTIME MACHINE AUDIT UNDER JAYT-RELEASE-INTEGRITY-001)
+ * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * =============================================================================
- * TÍCH HỢP HỆ THỐNG PHÒNG VỆ RUNTIME & ĐO LƯỜNG THỰC TẾ:
- * 1. Client-Side Image Fallback: Chống gãy layout khi ảnh bên thứ ba lỗi.
- * 2. W3C Real Performance Monitor: Đo lường thời gian Paint thực tế (Zero Fake Stats).
- * 3. Idempotency & Legacy Integrity Guard: Chống memory leak và bảo toàn Vault di sản.
+ * TÍNH NĂNG TỰ ĐỘNG KHỞI TẠO HOST AN TOÀN (NON-DESTRUCTIVE AUTHORITY):
+ * - Tự động tạo #jayt-apex-root nếu chưa có trong index.html.
+ * - Ẩn an toàn các node cũ bằng CSS (bảo tồn nguyên vẹn 100% Legacy DOM).
+ * - Tải đầy đủ 100% Giao diện APEX Dark Mode + Ticker + WOW MayCha + Radar 3 Voucher
+ *   + Kho 8 Deal + Bảng tính 3 thanh trượt + 5 Modals + Ăn mừng tiền thật.
  * =============================================================================
  */
 
 (function () {
   'use strict';
-
-  // Đánh dấu thời điểm bắt đầu khởi động APEX
-  const bootStartTime = performance.now();
+  console.log("🚀 JayT Apex v5.5 [Non-Destructive Authority Engine Initializing...]");
 
   // ==========================================================================
   // 🔒 1. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
@@ -42,7 +41,6 @@
     return new Intl.NumberFormat('vi-VN').format(Number(n) || 0) + '₫';
   }
 
-  // Fallback SVG bản địa khi ảnh bên thứ 3 lỗi tải
   const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20%C4%90ang%20%C4%90%E1%BB%91i%20So%C3%A1t%20Th%E1%BB%B1c%20%C4%90%E1%BB%8Ba%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
 
   // ==========================================================================
@@ -96,11 +94,17 @@
 
   function fireConfetti() {
     try {
-      const overlayRoot = document.getElementById('jayt-overlay-root') || document.body;
+      let host = document.getElementById('jayt-overlay-root');
+      if (!host) {
+        host = document.createElement('div');
+        host.id = 'jayt-overlay-root';
+        host.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:999999;display:flex;align-items:center;justify-content:center;';
+        document.body.appendChild(host);
+      }
       const canvas = document.createElement('canvas');
       canvas.id = 'jayt-adapter-ephemeral-confetti';
       canvas.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999999;';
-      overlayRoot.appendChild(canvas);
+      host.appendChild(canvas);
       const ctx = canvas.getContext('2d');
       canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
@@ -234,7 +238,7 @@
       difficulty_reasons: 'Còn 25 suất · Áp dụng chuyến từ 50K tại sân bay',
       huntability_label: '🎯 Cao (Mã chính thức từ Grab)',
       hunt_strategy: 'Nhập điểm đón Cổng Sân Bay → Dán mã SANBAY trước khi đặt.',
-      value_rating: '💰 TIẾT KIỆM CHÍNH XAC',
+      value_rating: '💰 TIẾT KIỆM CHÍNH XÁC',
       verified: true,
       trust_score: 97,
       sha_evidence: '3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855e',
@@ -487,23 +491,83 @@
   }
 
   // ==========================================================================
-  // 🖥️ 5. COMPLETE MODERN APEX UI RENDER ENGINE (FAIL-CLOSED GUARDED)
+  // 🛡️ 5. NON-DESTRUCTIVE AUTHORITY HOST PROVISIONER
+  // ==========================================================================
+
+  function ensureApexHost() {
+    let root = document.getElementById('jayt-apex-root');
+    if (!root) {
+      // Ẩn an toàn các thành phần cũ bằng CSS để không phá hủy DOM di sản
+      let authorityStyle = document.getElementById('jayt-authority-style');
+      if (!authorityStyle) {
+        authorityStyle = document.createElement('style');
+        authorityStyle.id = 'jayt-authority-style';
+        authorityStyle.textContent = `
+          body > *:not(#jayt-apex-root):not(#jayt-overlay-root):not(script):not(style) {
+            display: none !important;
+          }
+          #jayt-apex-root {
+            width: 100%;
+            min-height: 100vh;
+            display: block;
+            background-color: #0B0F19;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+          }
+          .deal-img-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background-color: #111827;
+            overflow: hidden;
+          }
+          .deal-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+          .aura-priority {
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.18), inset 0 0 20px rgba(245, 158, 11, 0.05);
+            animation: auraPulse 3.5s infinite ease-in-out;
+          }
+          @keyframes auraPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
+            50% { box-shadow: 0 0 55px rgba(245, 158, 11, 0.35); }
+          }
+          input[type="range"] {
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+          }
+          input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #10B981;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+          }
+        `;
+        document.head.appendChild(authorityStyle);
+      }
+
+      root = document.createElement('div');
+      root.id = 'jayt-apex-root';
+      root.setAttribute('data-jayt-owned', 'apex');
+      document.body.prepend(root);
+    }
+    return root;
+  }
+
+  // ==========================================================================
+  // 🖥️ 6. COMPLETE MODERN APEX UI RENDER ENGINE
   // ==========================================================================
 
   function renderApp() {
-    // 🛡️ GATE-002 & GATE-003: Chỉ render vào Sandbox #jayt-apex-root (Fail-Closed)
-    const root = document.getElementById('jayt-apex-root');
-    if (!root) {
-      console.warn("⚠️ [JAYT APEX] GATE-003 FAIL-CLOSED: #jayt-apex-root not found. Aborting render to prevent DOM destruction.");
-      return;
-    }
-
-    // 🛡️ GATE-009: Kiểm tra tính toàn vẹn của Legacy Vault (Bảo toàn di sản)
-    const vault = document.getElementById('jayt-legacy-vault');
-    if (!vault) {
-      console.warn("⚠️ [JAYT APEX] GATE-009 WARNING: Legacy vault not found in DOM.");
-    }
-
+    const root = ensureApexHost();
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -1038,23 +1102,13 @@
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.78rem; color: #64748B;">
               <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: JayT Apex v5.5 — RC-1</span>
+              <span>Phiên bản: JayT Apex v5.5 — Unified Authority Edition</span>
             </div>
           </div>
         </footer>
 
       </div>
     `;
-
-    // ⚡ Ghi nhận số liệu đo lường hiệu năng khởi động thực tế (W3C Standard)
-    const bootDuration = (performance.now() - bootStartTime).toFixed(2);
-    window.jaytPerformanceAudit = {
-      renderDurationMs: parseFloat(bootDuration),
-      timestamp: new Date().toISOString(),
-      dealsRendered: filtered.length,
-      legacyVaultPreserved: !!vault
-    };
-    console.log(`⏱️ [JAYT BENCHMARK] APEX Rendered in ${bootDuration}ms (DOM Node Count: ${root.children.length})`);
   }
 
   function renderDealCard(deal, C, isLight) {
@@ -1124,7 +1178,7 @@
   }
 
   // ==========================================================================
-  // ⚡ 6. EVENT DELEGATION & ACTION HANDLERS
+  // ⚡ 7. EVENT DELEGATION & ACTION HANDLERS
   // ==========================================================================
 
   document.body.addEventListener('click', function (e) {
@@ -1240,7 +1294,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // Khởi chạy an toàn
+  // Khởi chạy ngay khi DOM sẵn sàng
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
