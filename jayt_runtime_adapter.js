@@ -1,26 +1,21 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — CONSTITUTIONAL MASTER OPERATING ENGINE
+ * JAYT APEX v5.5 — RELEASE CANDIDATE (RC-1)
  * =============================================================================
- * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
+ * STATUS: RC-1 (PENDING RUNTIME MACHINE AUDIT UNDER JAYT-RELEASE-INTEGRITY-001)
  * =============================================================================
- * TUÂN THỦ NGHIÊM NGẶT 10 ACCEPTANCE GATES:
- * 1. JAYT-ZERO-DESTRUCTION-001: Không phá hủy Legacy DOM.
- * 2. JAYT-OWNERSHIP-001: Chỉ thao tác trên #jayt-apex-root & #jayt-overlay-root.
- * 3. JAYT-FAIL-CLOSED-001: Abort an toàn nếu không có host được ủy quyền.
- * 4. JAYT-LINK-INTEGRITY-001: Link chuẩn đích, target="_blank", rel="noopener noreferrer".
- * 5. JAYT-IMAGE-INTEGRITY-001: Minh bạch loại ảnh (Thương hiệu / Minh họa / Thực tế).
- * 6. JAYT-BOOT-PERFORMANCE-001: Khởi động tức thì với Critical CSS & Lazy Loading.
- * 7. JAYT-UI-STABILITY-001: Chống FOUC và chống layout jump tuyệt đối.
- * 8. JAYT-EVENT-SCOPE-001: Event Delegation cách ly, scoped rõ ràng.
- * 9. JAYT-LEGACY-REGRESSION-001: Bảo toàn cấu trúc Legacy trong cây DOM.
- * 10. JAYT-EVIDENCE-TRUTH-001: Minh bạch chuỗi băm SHA-256 đối soát thực địa.
+ * TÍCH HỢP HỆ THỐNG PHÒNG VỆ RUNTIME & ĐO LƯỜNG THỰC TẾ:
+ * 1. Client-Side Image Fallback: Chống gãy layout khi ảnh bên thứ ba lỗi.
+ * 2. W3C Real Performance Monitor: Đo lường thời gian Paint thực tế (Zero Fake Stats).
+ * 3. Idempotency & Legacy Integrity Guard: Chống memory leak và bảo toàn Vault di sản.
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [Constitutional Master Engine Active — 10 Gates Enforced]");
+
+  // Đánh dấu thời điểm bắt đầu khởi động APEX
+  const bootStartTime = performance.now();
 
   // ==========================================================================
   // 🔒 1. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
@@ -47,8 +42,11 @@
     return new Intl.NumberFormat('vi-VN').format(Number(n) || 0) + '₫';
   }
 
+  // Fallback SVG bản địa khi ảnh bên thứ 3 lỗi tải
+  const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20%C4%90ang%20%C4%90%E1%BB%91i%20So%C3%A1t%20Th%E1%BB%B1c%20%C4%90%E1%BB%8Ba%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
+
   // ==========================================================================
-  // 📳 2. HAPTIC & WEB AUDIO SYNTHESIZER (ZERO EXTERNAL MP3 DEPENDENCY)
+  // 📳 2. HAPTIC & WEB AUDIO SYNTHESIZER
   // ==========================================================================
 
   function triggerHaptic(type = 'light') {
@@ -135,7 +133,7 @@
   }
 
   // ==========================================================================
-  // 🧠 3. SỔ CÁI 8 KÈO ĐÀ NẴNG 43 GOLDEN MASTER (AUDIT LINK & HÌNH ẢNH MINH BẠCH)
+  // 🧠 3. SỔ CÁI 8 KÈO ĐÀ NẴNG 43 GOLDEN MASTER
   // ==========================================================================
 
   const DEALS_DATABASE = [
@@ -170,7 +168,6 @@
       sha_evidence: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
       maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
       link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
-      // JAYT-IMAGE-INTEGRITY-001: Phân loại minh bạch loại ảnh
       image_type: 'EDITORIAL_ILLUSTRATION',
       image_provenance_label: 'Ảnh minh họa trà sữa',
       image: 'https://images.unsplash.com/photo-1558857563-b37fe434c442?auto=format&fit=crop&w=800&q=80',
@@ -237,7 +234,7 @@
       difficulty_reasons: 'Còn 25 suất · Áp dụng chuyến từ 50K tại sân bay',
       huntability_label: '🎯 Cao (Mã chính thức từ Grab)',
       hunt_strategy: 'Nhập điểm đón Cổng Sân Bay → Dán mã SANBAY trước khi đặt.',
-      value_rating: '💰 TIẾT KIỆM CHÍNH XÁC',
+      value_rating: '💰 TIẾT KIỆM CHÍNH XAC',
       verified: true,
       trust_score: 97,
       sha_evidence: '3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855e',
@@ -501,6 +498,12 @@
       return;
     }
 
+    // 🛡️ GATE-009: Kiểm tra tính toàn vẹn của Legacy Vault (Bảo toàn di sản)
+    const vault = document.getElementById('jayt-legacy-vault');
+    if (!vault) {
+      console.warn("⚠️ [JAYT APEX] GATE-009 WARNING: Legacy vault not found in DOM.");
+    }
+
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -630,11 +633,10 @@
             <!-- CARD DEAL ƯU TIÊN CHIẾN THUẬT -->
             <div class="aura-priority" style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem;">
               <div class="deal-img-box" style="border-radius: 16px;">
-                <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" loading="lazy" />
+                <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" loading="lazy" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
                   👑 KÈO ĐỈNH SỐ 1 HÔM NAY
                 </div>
-                <!-- JAYT-IMAGE-INTEGRITY-001: Nhãn minh bạch nguồn ảnh -->
                 <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
                   📷 ${escapeHTML(priorityDeal.image_provenance_label)}
                 </div>
@@ -1036,13 +1038,23 @@
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.78rem; color: #64748B;">
               <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: JayT Apex v5.5 — Constitutional Master Edition</span>
+              <span>Phiên bản: JayT Apex v5.5 — RC-1</span>
             </div>
           </div>
         </footer>
 
       </div>
     `;
+
+    // ⚡ Ghi nhận số liệu đo lường hiệu năng khởi động thực tế (W3C Standard)
+    const bootDuration = (performance.now() - bootStartTime).toFixed(2);
+    window.jaytPerformanceAudit = {
+      renderDurationMs: parseFloat(bootDuration),
+      timestamp: new Date().toISOString(),
+      dealsRendered: filtered.length,
+      legacyVaultPreserved: !!vault
+    };
+    console.log(`⏱️ [JAYT BENCHMARK] APEX Rendered in ${bootDuration}ms (DOM Node Count: ${root.children.length})`);
   }
 
   function renderDealCard(deal, C, isLight) {
@@ -1051,11 +1063,10 @@
     return `
       <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%;">
         <div class="deal-img-box">
-          <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" loading="lazy" />
+          <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" loading="lazy" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
           <div style="position: absolute; top: 10px; left: 10px; background: ${deal.badge_bg}; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">
             ${escapeHTML(deal.tag)}
           </div>
-          <!-- JAYT-IMAGE-INTEGRITY-001: Nhãn minh bạch nguồn ảnh -->
           <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
             📷 ${escapeHTML(deal.image_provenance_label)}
           </div>
@@ -1136,7 +1147,6 @@
           playSound('copy-success');
           triggerHaptic('success');
           fireConfetti();
-          // JAYT-LINK-INTEGRITY-001: Mở link an toàn
           setTimeout(() => { window.open(link, '_blank', 'noopener,noreferrer'); }, 500);
           State.pendingOutcomeDeal = deal;
           renderApp();
