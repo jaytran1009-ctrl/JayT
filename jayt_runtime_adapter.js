@@ -1,30 +1,41 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P1 IMPLEMENTATION: HERO / WOW PRIORITY DEAL
+ * JAYT APEX v5.5 — P3 IMPLEMENTATION: LINK & IMAGE TRANSPARENCY
  * =============================================================================
- * DEFINITION OF DONE COMPLIANCE:
- * - Đẹp hơn: Hierarchy rõ ràng, Dark Mode cao cấp, viền hổ phách Breathing Aura.
- * - Rõ hơn: Quét 3 giây hiểu ngay (Mua gì → Bớt bao nhiêu → Điều kiện → Ở đâu → CTA).
- * - Hữu ích hơn: 1 nút bấm hành động duy nhất, hiển thị số tiền giữ lại trong túi.
- * - Trung thực hơn: Gán nhãn "📷 Ảnh minh họa địa điểm" & "🟡 Chưa kiểm chứng độc lập".
- * - An toàn hơn: Scoped Isolation, Zero-Destruction, Exclusion-Aware Fingerprint.
+ * PRODUCT TRACK ADVANCEMENTS:
+ * - P1: Hero WOW Priority Deal Above-The-Fold hoàn chỉnh.
+ * - P2: Data Contract 8 trường + 1 Single Full-Width Primary CTA.
+ * - P3: Minh bạch đích đến (Destination Domain), tên thương hiệu ngắn chuẩn,
+ *       Lá chắn Fallback SVG 16:10 và nhãn phân loại minh bạch nguồn ảnh.
+ *
+ * RELEASE INTEGRITY TRACK:
+ * - Khóa vĩnh viễn: RC-1 / PARTIAL RUNTIME EVIDENCE (Chờ Independent Audit).
+ * - Zero DOM Destruction · Scoped Isolation · Exclusion-Aware Fingerprint.
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P1: Hero / WOW Priority Deal Engine Initializing...]");
+  console.log("🚀 JayT Apex v5.5 [P3: Link & Image Transparency Engine Booting...]");
 
-  // 1. TIỆN ÍCH AN TOÀN
+  // 1. TIỆN ÍCH AN TOÀN & XỬ LÝ URL
   function escapeHTML(str) {
     if (!str) return '';
-    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
   function sanitizeURL(url) {
     if (!url) return '#';
     const u = String(url).trim();
-    if (/^(https?:\/\/|tel:|zalo:)/i.test(u)) return u.replace(/"/g, '&quot;');
+    // Chấp nhận https, http, tel, zalo và bảo toàn toàn bộ Query Params / UTM
+    if (/^(https?:\/\/|tel:|zalo:)/i.test(u)) {
+      return u.replace(/"/g, '&quot;');
+    }
     return '#';
   }
 
@@ -123,11 +134,12 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43
+  // 3. DATABASE ĐÀ NẴNG 43 — CHUẨN HÓA 8 DEAL SCHEMA & LINK PROVENANCE
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
       merchant: 'Trà Sữa Maycha',
+      brand_short: 'MAYCHA',
       branch: '436 Điện Biên Phủ, P. Thanh Khê Đông, Q. Thanh Khê',
       district: 'THANH_KHE',
       distance: '1.2 km · 4 phút',
@@ -145,6 +157,7 @@
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Sao chép mã MAYCHA0D → Mở ShopeeFood chọn size L → Dán mã trước khi ấn thanh toán.',
+      destination_label: '🛒 Mở trên ShopeeFood ↗',
       maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
       link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -154,6 +167,7 @@
     {
       deal_id: 'DNG-COMGA-AHAI',
       merchant: 'Cơm Gà A Hải',
+      brand_short: 'A HẢI',
       branch: '100 Thái Phiên (Gần Cầu Rồng, Q. Hải Châu)',
       district: 'HAI_CHAU',
       distance: '1.2 km · 5 phút',
@@ -171,6 +185,7 @@
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
       hunt_strategy: 'Bấm Săn Ngay → Chọn món Cơm gà quay → Dán mã AHAI35K trước 11:30 để tài xế nhận đơn sớm.',
+      destination_label: '🛵 Mở trên GrabFood ↗',
       maps_url: 'https://maps.google.com/?q=100+Thai+Phien+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/c%C6%A1m-g%C3%A0-a-h%E1%BA%A3i-th%C3%A1i-phi%C3%AAn-delivery/',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -180,6 +195,7 @@
     {
       deal_id: 'DNG-GRAB-0D',
       merchant: 'GrabCar Sân Bay Đà Nẵng',
+      brand_short: 'GRABCAR',
       branch: 'Ga Quốc Nội & Quốc Tế, Sân bay Đà Nẵng',
       district: 'HAI_CHAU',
       distance: '2.5 km · 7 phút',
@@ -197,6 +213,7 @@
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
       hunt_strategy: 'Nhập điểm đón tại Sân Bay Đà Nẵng → Chọn mục Ưu Đãi → Nhập SANBAY → Đặt xe.',
+      destination_label: '🚗 Mở trên App Grab ↗',
       maps_url: 'https://maps.google.com/?q=San+bay+Quoc+te+Da+Nang',
       link: 'https://www.grab.com/vn/transport/car/',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -206,6 +223,7 @@
     {
       deal_id: 'DNG-CGV-55K',
       merchant: 'CGV Vincom Ngô Quyền',
+      brand_short: 'CGV CINEMA',
       branch: 'Tầng 4 Vincom Plaza, 910A Ngô Quyền, Sơn Trà',
       district: 'SON_TRA',
       distance: '1.8 km · 6 phút',
@@ -223,6 +241,7 @@
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
       hunt_strategy: 'Đặt vé online chọn suất chiếu U22 → Xuất trình thẻ HSSV/CCCD khi nhận vé tại quầy.',
+      destination_label: '🎬 Mở trên Web CGV ↗',
       maps_url: 'https://maps.google.com/?q=Vincom+Plaza+Ngo+Quyen+Da+Nang',
       link: 'https://www.cgv.vn/en/cinox/site/cgv-vincom-da-nang/',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -232,6 +251,7 @@
     {
       deal_id: 'DNG-KATINAT-BD',
       merchant: 'Katinat Saigon Kafe',
+      brand_short: 'KATINAT',
       branch: '34 Bạch Đằng (P. Thạch Thang, Q. Hải Châu)',
       district: 'HAI_CHAU',
       distance: '0.8 km · 3 phút',
@@ -249,6 +269,7 @@
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Đến quán trước 19:30 → Đọc mã KATINAT1D khi gọi món tại quầy thu ngân tầng 1.',
+      destination_label: '☕ Mở Menu Katinat ↗',
       maps_url: 'https://maps.google.com/?q=34+Bach+Dang+Da+Nang',
       link: 'https://katinat.vn/menu/',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -258,6 +279,7 @@
     {
       deal_id: 'DNG-XANHSM-30K',
       merchant: 'Xanh SM Taxi Điện Đà Nẵng',
+      brand_short: 'XANH SM',
       branch: 'Áp dụng toàn TP Đà Nẵng (6 Quận Huyện)',
       district: 'ALL',
       distance: 'Đón tận nơi · 3 phút',
@@ -275,6 +297,7 @@
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
       hunt_strategy: 'Mở app Xanh SM → Vào mục Ưu Đãi → Nhập XANHDN30 → Đặt xe để áp dụng giảm trực tiếp.',
+      destination_label: '⚡ Mở trên App XanhSM ↗',
       maps_url: 'https://maps.google.com/?q=Da+Nang',
       link: 'https://www.xanhsm.com',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -284,6 +307,7 @@
     {
       deal_id: 'DNG-JOLLIBEE-39K',
       merchant: 'Jollibee Co.opmart & Thanh Khê',
+      brand_short: 'JOLLIBEE',
       branch: '478 Điện Biên Phủ (P. Thanh Khê Đông, Q. Thanh Khê)',
       district: 'THANH_KHE',
       distance: '0.6 km · 3 phút',
@@ -301,6 +325,7 @@
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
       hunt_strategy: 'Sao chép mã JOLLIBEE39 → Mở Web Jollibee → Thêm Combo Sinh Viên vào giỏ → Nhập mã thanh toán.',
+      destination_label: '🍗 Mở trên Jollibee.vn ↗',
       maps_url: 'https://maps.google.com/?q=478+Dien+Bien+Phu+Da+Nang',
       link: 'https://jollibee.com.vn/thuc-don',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -310,6 +335,7 @@
     {
       deal_id: 'DNG-CHELIEN-HD',
       merchant: 'Chè Sầu Liên',
+      brand_short: 'CHÈ LIÊN',
       branch: '189 Hoàng Diệu (P. Nam Dương, Q. Hải Châu)',
       district: 'HAI_CHAU',
       distance: '1.0 km · 4 phút',
@@ -327,6 +353,7 @@
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
       hunt_strategy: 'Đặt đơn nhóm 4 tô trên GrabFood → Nhập mã CHELIENFREE tại bước thanh toán.',
+      destination_label: '🍧 Mở trên GrabFood ↗',
       maps_url: 'https://maps.google.com/?q=189+Hoang+Dieu+Da+Nang',
       link: 'https://food.grab.com/vn/vi/restaurant/ch%C3%A8-li%C3%AAn-ho%C3%A0ng-di%E1%BB%87u-delivery/',
       image_provenance_label: 'Ảnh minh họa địa điểm',
@@ -335,7 +362,7 @@
     }
   ];
 
-  // 4. STATE
+  // 4. STATE MANAGEMENT
   const State = {
     deals: DEALS_DATABASE,
     theme: localStorage.getItem('jayt_theme') || 'dark',
@@ -388,7 +415,7 @@
     return targetUrl;
   }
 
-  // 5. ISOLATED HOST PROVISIONER
+  // 5. HOST PROVISIONER
   function ensureApexHost() {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
@@ -406,7 +433,7 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX
+  // 6. RENDER GIAO DIỆN APEX V5.5
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -520,7 +547,7 @@
             </div>
           </div>
 
-          <!-- 4. P1 NÂNG CẤP: TẦNG 1 WOW PRIORITY DEAL (ABOVE-THE-FOLD REDESIGN) -->
+          <!-- 4. P1 + P3 NÂNG CẤP: TẦNG 1 WOW PRIORITY DEAL -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 1.5rem; display: block;">
             <div style="text-align: center; margin-bottom: 2rem;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #059669; padding: 0.35rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem;">
@@ -534,10 +561,10 @@
               </h1>
             </div>
 
-            <!-- HERO WOW CARD: SIÊU THOÁNG · 1 CTA CHÍNH · RÕ 6 CÂU HỎI -->
+            <!-- HERO WOW CARD: 1 CTA DUY NHẤT · RÕ 6 CÂU HỎI · MINH BẠCH ĐÍCH ĐẾN -->
             <div style="background: ${C.cardBg}; border: 2px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 0 35px rgba(245, 158, 11, 0.15);">
               
-              <!-- CỘT ẢNH 16:10 + BADGES MINH BẠCH -->
+              <!-- ẢNH 16:10 + BADGES -->
               <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden; border-radius: 16px;">
                 <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
@@ -549,9 +576,18 @@
                 <div style="position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.75); color: ${priorityDeal.audit_status_color}; border: 1px solid ${priorityDeal.audit_status_color}; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 8px; backdrop-filter: blur(6px);">
                   ${priorityDeal.audit_status_label}
                 </div>
+                <!-- TOOLBAR PHỤ GÓC PHẢI -->
+                <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 0.4rem;">
+                  <button data-action="open-share-modal" data-id="${escapeHTML(priorityDeal.deal_id)}" title="Rủ bạn (+5K)" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(11,15,25,0.85); border: 1px solid ${C.border}; color: #0284C7; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    ↗
+                  </button>
+                  <button data-action="bookmark" data-id="${escapeHTML(priorityDeal.deal_id)}" title="Lưu deal" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(11,15,25,0.85); border: 1px solid ${C.border}; color: ${State.savedIds.includes(priorityDeal.deal_id) ? '#EF4444' : '#FFF'}; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    ${State.savedIds.includes(priorityDeal.deal_id) ? '❤️' : '🤍'}
+                  </button>
+                </div>
               </div>
 
-              <!-- CỘT NỘI DUNG RA QUYẾT ĐỊNH -->
+              <!-- CỘT NỘI DUNG -->
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                   <span style="font-size: 0.9rem; font-weight: 800; color: #D97706; text-transform: uppercase;">${escapeHTML(priorityDeal.merchant)}</span>
@@ -566,7 +602,7 @@
                   📍 ${escapeHTML(priorityDeal.branch)} · <strong>${escapeHTML(priorityDeal.distance)}</strong>
                 </div>
 
-                <!-- BẢNG GIÁ & MỨC TIẾT KIỆM NỔI BẬT NHẤT -->
+                <!-- BẢNG GIÁ & MỨC TIẾT KIỆM -->
                 <div style="background: ${isLight ? 'rgba(16, 185, 129, 0.08)' : 'rgba(16, 185, 129, 0.12)'}; border: 1.5px solid #10B981; border-radius: 14px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
                   <div>
                     <div style="font-size: 1.4rem; font-weight: 900; color: #059669;">
@@ -579,10 +615,11 @@
                   <span style="font-size: 0.75rem; background: #059669; color: #FFF; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700;">💰 TIẾT KIỆM 50%</span>
                 </div>
 
-                <!-- ĐIỀU KIỆN & HƯỚNG DẪN RÕ RÀNG -->
+                <!-- ĐIỀU KIỆN & ĐÍCH ĐẾN MINH BẠCH -->
                 <div style="background: ${isLight ? '#FFFBEB' : 'rgba(245, 158, 11, 0.08)'}; border: 1.5px dashed #F59E0B; border-radius: 12px; padding: 0.8rem 1rem; margin-bottom: 1.2rem;">
-                  <div style="font-size: 0.78rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.25rem;">
-                    🎟️ ĐIỀU KIỆN ÁP DỤNG:
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                    <span style="font-size: 0.78rem; font-weight: 800; color: #D97706; text-transform: uppercase;">🎟️ ĐIỀU KIỆN ÁP DỤNG:</span>
+                    <span style="font-size: 0.74rem; font-weight: 700; color: #0284C7;">${escapeHTML(priorityDeal.destination_label)}</span>
                   </div>
                   <div style="font-size: 0.82rem; color: ${C.textMain}; line-height: 1.45; font-weight: 500;">
                     ${escapeHTML(priorityDeal.terms)}<br>
@@ -590,18 +627,11 @@
                   </div>
                 </div>
 
-                <!-- NÚT BẤM CTA DUY NHẤT -->
-                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                  <button data-action="hunt-keo" data-id="${priorityDeal.deal_id}" data-code="${priorityDeal.code}" data-link="${priorityDeal.link}" data-saving="${priorityDeal.saving}" style="flex: 1.5; min-height: 50px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35);">
-                    🔥 SĂN KÈO MAYCHA (-24.000₫) ➔
-                  </button>
-                  <button data-action="open-share-modal" data-id="${priorityDeal.deal_id}" style="min-height: 50px; background: #0284C7; color: #FFF; border: none; padding: 0 1.1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
-                    ↗ Rủ Bạn (+5K)
-                  </button>
-                  <button data-action="bookmark" data-id="${priorityDeal.deal_id}" style="min-height: 50px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 1rem; border-radius: 12px; font-weight: 700; cursor: pointer;">
-                    ${State.savedIds.includes(priorityDeal.deal_id) ? '❤️' : '♡'}
-                  </button>
-                </div>
+                <!-- NÚT BẤM CTA FULL-WIDTH -->
+                <button data-action="hunt-keo" data-id="${priorityDeal.deal_id}" data-code="${priorityDeal.code}" data-link="${priorityDeal.link}" data-saving="${priorityDeal.saving}" style="width: 100%; min-height: 50px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  <span>🔥 SĂN KÈO ${escapeHTML(priorityDeal.brand_short)} (-${formatVND(priorityDeal.saving)})</span>
+                  <span>➔</span>
+                </button>
               </div>
             </div>
           </div>
@@ -640,12 +670,9 @@
                         Tiết kiệm ${formatVND(deal.saving)} (-${deal.percent}%)
                       </div>
                     </div>
-                    <div style="display: flex; gap: 0.4rem;">
-                      <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="flex: 1; min-height: 44px; background: #D97706; color: #FFF; border: none; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer;">
-                        🔥 SĂN VOUCHER ẨN
-                      </button>
-                      <button data-action="open-strategy-modal" data-id="${deal.deal_id}" style="min-height: 44px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; border-radius: 10px; padding: 0 0.8rem; font-weight: 700; cursor: pointer;">
-                        🎯 Điều Kiện
+                    <div>
+                      <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="width: 100%; min-height: 44px; background: #D97706; color: #FFF; border: none; border-radius: 10px; font-weight: 800; font-size: 0.85rem; cursor: pointer;">
+                        🔥 SĂN VOUCHER ẨN ${escapeHTML(deal.brand_short)} ➔
                       </button>
                     </div>
                   </div>
@@ -654,7 +681,7 @@
             </div>
           </div>
 
-          <!-- 6. TẦNG 3: DISCOVERY — KHO DEAL 43 (8 KÈO) -->
+          <!-- 6. TẦNG 3: DISCOVERY — KHO DEAL 43 (8 KÈO ĐỒNG NHẤT P2 + P3) -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem; display: block;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
               <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
@@ -692,7 +719,7 @@
             </div>
           </div>
 
-          <!-- 7. MÁY TÍNH TIẾT KIỆM (3 THANH TRƯỢT) -->
+          <!-- 7. MÁY TÍNH TIẾT KIỆM -->
           <div style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
             <div style="background: ${C.calcBg}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 2.2rem; box-shadow: ${C.cardShadow};">
               <div style="text-align: center; margin-bottom: 1.8rem;">
@@ -873,10 +900,12 @@
                 <strong>🎟️ Điều kiện áp dụng:</strong><br>
                 ${escapeHTML(State.strategyDeal.terms)}<br><br>
                 <strong>💡 Hướng dẫn thực chiến:</strong><br>
-                ${escapeHTML(State.strategyDeal.hunt_strategy)}
+                ${escapeHTML(State.strategyDeal.hunt_strategy)}<br><br>
+                <strong>🔗 Nền tảng mở:</strong> ${escapeHTML(State.strategyDeal.destination_label)}
               </div>
-              <button data-action="hunt-keo" data-id="${State.strategyDeal.deal_id}" data-code="${State.strategyDeal.code}" data-link="${State.strategyDeal.link}" data-saving="${State.strategyDeal.saving}" style="width: 100%; min-height: 44px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
-                🔥 SĂN KÈO NGAY ➔
+              <button data-action="hunt-keo" data-id="${State.strategyDeal.deal_id}" data-code="${State.strategyDeal.code}" data-link="${State.strategyDeal.link}" data-saving="${State.strategyDeal.saving}" style="width: 100%; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                <span>🔥 SĂN ${escapeHTML(State.strategyDeal.brand_short)} (-${formatVND(State.strategyDeal.saving)})</span>
+                <span>➔</span>
               </button>
             </div>
           </div>
@@ -940,39 +969,60 @@
     `;
   }
 
+  // 7. RENDER CARD DEAL ĐỒNG NHẤT P2 + P3
   function renderDealCard(deal, C, isLight) {
     const isFav = State.savedIds.includes(deal.deal_id);
 
     return `
-      <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%; box-sizing: border-box;">
+      <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%; box-sizing: border-box; transition: transform 0.2s ease;">
+        
+        <!-- 1. HÌNH ẢNH 16:10 + BADGES MINH BẠCH & TOOLBAR PHỤ GÓC PHẢI -->
         <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden;">
           <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
+          
           <div style="position: absolute; top: 10px; left: 10px; background: ${deal.badge_bg}; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">
             ${escapeHTML(deal.tag)}
           </div>
+          
           <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
             📷 ${escapeHTML(deal.image_provenance_label)}
           </div>
-          <div style="position: absolute; top: 10px; right: 54px; background: rgba(0,0,0,0.65); color: ${deal.audit_status_color}; border: 1px solid ${deal.audit_status_color}; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.68rem; font-weight: 700; backdrop-filter: blur(8px);">
+          
+          <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); color: ${deal.audit_status_color}; border: 1px solid ${deal.audit_status_color}; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.68rem; font-weight: 700; backdrop-filter: blur(8px);">
             ${deal.audit_status_label}
           </div>
-          <button data-action="bookmark" data-id="${escapeHTML(deal.deal_id)}" style="position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 50%; background: ${isLight ? 'rgba(255, 255, 255, 0.9)' : 'rgba(11, 15, 25, 0.85)'}; border: 1px solid ${C.border}; color: ${isFav ? '#EF4444' : '#FFF'}; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-            ${isFav ? '❤️' : '🤍'}
-          </button>
+
+          <!-- CÁC TÁC VỤ PHỤ NẰM GỌN TRÊN GÓC PHẢI (KHÔNG CẠNH TRANH CTA CHÍNH) -->
+          <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 0.35rem;">
+            <button data-action="open-share-modal" data-id="${escapeHTML(deal.deal_id)}" title="Rủ bạn săn chung (+5K)" style="width: 34px; height: 34px; border-radius: 50%; background: ${isLight ? 'rgba(255, 255, 255, 0.9)' : 'rgba(11, 15, 25, 0.85)'}; border: 1px solid ${C.border}; color: #0284C7; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem;">
+              ↗
+            </button>
+            <button data-action="bookmark" data-id="${escapeHTML(deal.deal_id)}" title="Lưu vào ví yêu thích" style="width: 34px; height: 34px; border-radius: 50%; background: ${isLight ? 'rgba(255, 255, 255, 0.9)' : 'rgba(11, 15, 25, 0.85)'}; border: 1px solid ${C.border}; color: ${isFav ? '#EF4444' : '#FFF'}; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem;">
+              ${isFav ? '❤️' : '🤍'}
+            </button>
+          </div>
         </div>
 
+        <!-- 2. NỘI DUNG RA QUYẾT ĐỊNH (CHUẨN 6 CÂU HỎI + MINH BẠCH ĐÍCH ĐẾN) -->
         <div style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; flex: 1; gap: 0.85rem;">
           <div>
+            <!-- THƯƠNG HIỆU & KHOẢNG CÁCH -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-              <span style="font-size: 0.82rem; font-weight: 700; color: #D97706; text-transform: uppercase;">${escapeHTML(deal.merchant)}</span>
-              <span style="font-size: 0.72rem; color: ${C.textSub};">📍 ${escapeHTML(deal.branch.split(',')[0])}</span>
+              <span style="font-size: 0.82rem; font-weight: 800; color: #D97706; text-transform: uppercase;">${escapeHTML(deal.merchant)}</span>
+              <span style="font-size: 0.72rem; color: ${C.textSub};">📍 ${escapeHTML(deal.distance)}</span>
             </div>
+            
+            <!-- MUA GÌ (TIÊU ĐỀ RÕ RÀNG) -->
             <h4 style="font-size: 1.05rem; font-weight: 700; color: ${C.textMain}; line-height: 1.35; margin-bottom: 0.35rem; margin-top: 0;">
               ${escapeHTML(deal.title)}
             </h4>
+
+            <div style="font-size: 0.75rem; color: ${C.textMuted}; margin-bottom: 0.65rem;">
+              🏠 ${escapeHTML(deal.branch)}
+            </div>
             
-            <!-- BẢNG GIÁ & MỨC TIẾT KIỆM -->
-            <div style="background: ${isLight ? 'rgba(16, 185, 129, 0.06)' : 'rgba(16, 185, 129, 0.08)'}; border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 0.75rem 0.9rem; text-align: center;">
+            <!-- BẢNG GIÁ & MỨC TIẾT KIỆM NỔI BẬT NHẤT -->
+            <div style="background: ${isLight ? 'rgba(16, 185, 129, 0.06)' : 'rgba(16, 185, 129, 0.08)'}; border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 0.75rem 0.9rem; text-align: center; margin-bottom: 0.65rem;">
               <div style="font-size: 1.25rem; font-weight: 800; color: #059669;">
                 TIẾT KIỆM ${formatVND(deal.saving)} (-${deal.percent}%)
               </div>
@@ -980,29 +1030,34 @@
                 Gốc: <span style="text-decoration: line-through;">${formatVND(deal.original_price)}</span> ➔ Còn: <strong style="color:${C.textMain};">${formatVND(deal.discount_price)}</strong>
               </div>
             </div>
+
+            <!-- ĐIỀU KIỆN ÁP DỤNG & LINK CHI TIẾT INLINE + MINH BẠCH NỀN TẢNG MỞ -->
+            <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 8px; padding: 0.55rem 0.75rem; font-size: 0.74rem; color: ${C.textSub}; line-height: 1.45;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                <span>🎟️ <strong>Điều kiện:</strong></span>
+                <span style="color: #0284C7; font-weight: 700; font-size: 0.72rem;">${escapeHTML(deal.destination_label)}</span>
+              </div>
+              ${escapeHTML(deal.terms)}
+              <button data-action="open-strategy-modal" data-id="${deal.deal_id}" style="background: none; border: none; color: #0284C7; font-size: 0.74rem; font-weight: 700; cursor: pointer; text-decoration: underline; padding-left: 0.3rem;">
+                [Xem mẹo săn]
+              </button>
+            </div>
           </div>
 
+          <!-- 3. NÚT BẤM CTA DUY NHẤT (100% FULL-WIDTH, TÊN THƯƠNG HIỆU NGẮN CHUẨN) -->
           <div>
-            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-              <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="flex: 1.3; min-height: 46px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; padding: 0 0.4rem; border-radius: 10px; font-weight: 800; font-size: 0.84rem; border: none; cursor: pointer;">
-                🔥 SĂN NGAY ➔
-              </button>
-              <button data-action="open-strategy-modal" data-id="${deal.deal_id}" style="flex: 0.9; min-height: 46px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; padding: 0 0.4rem; border-radius: 10px; font-weight: 700; font-size: 0.8rem; cursor: pointer;">
-                🎟️ Điều Kiện
-              </button>
-            </div>
-            <div style="display: flex; justify-content: flex-end; font-size: 0.72rem;">
-              <button data-action="open-share-modal" data-id="${escapeHTML(deal.deal_id)}" style="background: none; border: none; color: #0284C7; font-weight: 700; cursor: pointer; text-decoration: underline;">
-                ↗ Rủ bạn (+5K)
-              </button>
-            </div>
+            <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="width: 100%; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border-radius: 12px; font-weight: 800; font-size: 0.88rem; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+              <span>🔥 SĂN ${escapeHTML(deal.brand_short)} (-${formatVND(deal.saving)})</span>
+              <span>➔</span>
+            </button>
           </div>
+
         </div>
       </div>
     `;
   }
 
-  // 7. EVENT DELEGATION
+  // 8. EVENT DELEGATION
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1108,7 +1163,7 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // 8. BOOT
+  // 9. KHỞI CHẠY AN TOÀN
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
