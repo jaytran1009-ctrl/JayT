@@ -1,23 +1,25 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P5.8 MASTER: CONSUMER DECISION INTELLIGENCE CORE
+ * JAYT APEX v5.5 — P5.9 MASTER: CONSUMER DECISION OPERATING SYSTEM (CDOS)
  * =============================================================================
- * MASTER AXIOM: "APEX giảm thời gian từ 'Tôi cần gì?' đến 'Đây là deal tôi chọn'."
+ * STRATEGIC KPI: "Tối đa hóa xác suất tìm đúng nhu cầu và ra quyết định tức thì"
  * =============================================================================
- * P5.8 ENHANCEMENTS:
- * 1. Consumer Missions (🍚 Ăn no <50K, 🧋 Trà sữa <30K, 🍱 Cơm trưa, 🎬 Giải trí)
- * 2. Tri-Score UX: 🔥 Độ Hời / 🎯 Độ Khớp / 🛡️ Độ Kiểm Chứng (Risk Signal)
- * 3. Decision Ladder: Top 3 Quyết Định (🎯 Best for You / 💰 Best Value / 📍 Nearest)
- * 4. Traceable "Why This Deal?" 1-1 Input Mapping
- * 5. Learning Loop with Impression & Ignore Telemetry
+ * P5.9 ARCHITECTURAL LEAPS:
+ * 1. Mission Persona (Nhu cầu thực > Demographic đơn thuần)
+ * 2. Local Micro-Zone Grid (Điện Biên Phủ, Bạch Đằng, Thái Phiên, Vincom Sơn Trà)
+ * 3. Merchant Fit Score (Hợp Sinh Viên / Hợp Văn Phòng — Không xưng 'tốt nhất')
+ * 4. Context Vector = Persona × Mission × Time × Micro-Zone × Budget
+ * 5. Two-Way Transparency: "💡 Why This Deal" + "⚠️ Why Not (Điểm cần lưu ý)"
+ * 6. Tri-Score UX: 🔥 Độ Hời / 🎯 Độ Khớp (Fit) / 🛡️ Kiểm Chứng (Risk Signal)
+ * 7. Anti-Feedback-Loop Bias Telemetry (Exploration & Ignore Tracking)
  * =============================================================================
- * RELEASE INTEGRITY TRACK: RC-1 / PARTIAL RUNTIME EVIDENCE (Khóa Bất Biến)
+ * RELEASE INTEGRITY: RC-1 / PARTIAL RUNTIME EVIDENCE (Khóa Chặt Bất Biến)
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P5.8: Consumer Decision Engine Booting...]");
+  console.log("🚀 JayT Apex v5.5 [P5.9: Consumer Decision Operating System Initializing...]");
 
   // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
@@ -132,13 +134,14 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43 — FULL P5.8 ENRICHED SCHEMA
+  // 3. DATABASE ĐÀ NẴNG 43 — P5.9 MICRO-ZONE & TWO-WAY EXPLAINABILITY
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
       merchant: 'Trà Sữa Maycha',
       brand_short: 'MAYCHA',
-      zone: 'KHU_B_THANH_KHE',
+      micro_zone: 'MICRO_DIEN_BIEN_PHU',
+      zone_label: 'Điện Biên Phủ (Thanh Khê)',
       branch: '436 Điện Biên Phủ, Thanh Khê (Gần ĐH Bách Khoa / Sư Phạm)',
       distance_km: 1.2,
       distance: '1.2 km · 4 phút',
@@ -153,10 +156,19 @@
       percent: 50,
       rating: 4.7,
       reviews: 3200,
-      // Tri-Score
       deal_value_score: 95,
       trust_risk_score: 60,
       price_psychology: '24K — Dễ xuống tiền',
+      // P5.9 TWO-WAY EXPLAINABILITY
+      why_reasons: [
+        'Mức giá 24K cực dễ xuống tiền (Tiết kiệm 24K)',
+        'Vị trí 436 Điện Biên Phủ ngay trục sinh viên ĐH Bách Khoa / Sư Phạm',
+        'Đúng khung giờ giải lao / xả stress ca chiều'
+      ],
+      why_not_reasons: [
+        '🟡 Chưa kiểm chứng độc lập: Cần thử mã trên app trước',
+        'Giới hạn khung giờ áp dụng 14:00 - 17:30 (12 suất/ngày)'
+      ],
       terms: 'Áp dụng đặt qua ShopeeFood khung 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
       is_hidden: true,
       hidden_reason: 'Chỉ kích hoạt ngầm tại chi nhánh Điện Biên Phủ cho sinh viên giờ tan tầm.',
@@ -175,7 +187,8 @@
       deal_id: 'DNG-COMGA-AHAI',
       merchant: 'Cơm Gà A Hải',
       brand_short: 'A HẢI',
-      zone: 'KHU_A_HAI_CHAU',
+      micro_zone: 'MICRO_THAI_PHIEN_CAU_RONG',
+      zone_label: 'Thái Phiên (Hải Châu / Cầu Rồng)',
       branch: '100 Thái Phiên, Hải Châu (Khu trung tâm Cầu Rồng)',
       distance_km: 1.2,
       distance: '1.2 km · 5 phút',
@@ -193,6 +206,15 @@
       deal_value_score: 92,
       trust_risk_score: 65,
       price_psychology: '39K — Ăn no dưới 40K',
+      why_reasons: [
+        'Bữa trưa đặc sản nổi tiếng 39K no căng bụng',
+        'Gần các tòa nhà văn phòng Hải Châu & trung tâm',
+        'Đúng khung giờ vàng ăn trưa (10:30 - 13:30)'
+      ],
+      why_not_reasons: [
+        'Quán thường đông khách khung 11:30 - 12:30 (nên đặt sớm)',
+        'Giới hạn 8 suất ưu đãi mỗi ngày trên GrabFood'
+      ],
       terms: 'Áp dụng đặt qua GrabFood khung trưa 11:00 - 13:00. Giới hạn 8 suất/ngày.',
       is_hidden: false,
       hidden_reason: 'Ưu đãi liên kết GrabFood khu vực trung tâm Hải Châu.',
@@ -211,7 +233,8 @@
       deal_id: 'DNG-KATINAT-BD',
       merchant: 'Katinat Saigon Kafe',
       brand_short: 'KATINAT',
-      zone: 'KHU_A_HAI_CHAU',
+      micro_zone: 'MICRO_BACH_DANG',
+      zone_label: 'Bạch Đằng (Sông Hàn)',
       branch: '34 Bạch Đằng, Hải Châu (View trực diện Sông Hàn)',
       distance_km: 0.8,
       distance: '0.8 km · 3 phút',
@@ -229,6 +252,14 @@
       deal_value_score: 84,
       trust_risk_score: 55,
       price_psychology: '55K — Kèm bánh 1Đ',
+      why_reasons: [
+        'View trực diện sông Hàn thoáng đãng thích hợp gặp gỡ đối tác',
+        'Tặng bánh nướng 1Đ khi dùng tại quầy buổi tối'
+      ],
+      why_not_reasons: [
+        'Mức giá 55K cao hơn các quán trà sữa sinh viên bình dân',
+        'Chỉ áp dụng trực tiếp tại quầy 34 Bạch Đằng (không áp dụng online)'
+      ],
       terms: 'Áp dụng trực tiếp tại quầy 34 Bạch Đằng khi gọi đồ uống signature từ 18:00 - 21:00.',
       is_hidden: true,
       hidden_reason: 'Chương trình tri ân khách hàng trải nghiệm view sông Hàn buổi tối.',
@@ -247,7 +278,8 @@
       deal_id: 'DNG-JOLLIBEE-39K',
       merchant: 'Jollibee Co.opmart & Thanh Khê',
       brand_short: 'JOLLIBEE',
-      zone: 'KHU_B_THANH_KHE',
+      micro_zone: 'MICRO_DIEN_BIEN_PHU',
+      zone_label: 'Điện Biên Phủ (Thanh Khê)',
       branch: '478 Điện Biên Phủ, Thanh Khê (Gần SVĐ Đĩa Bay & KTX)',
       distance_km: 0.6,
       distance: '0.6 km · 3 phút',
@@ -265,6 +297,14 @@
       deal_value_score: 96,
       trust_risk_score: 58,
       price_psychology: '39K — Tiết kiệm 33K',
+      why_reasons: [
+        'Combo 2 món (Gà + Mì Ý) ăn no nê chỉ 39K',
+        'Khoảng cách siêu gần 0.6 km khu KTX / Co.opmart Thanh Khê'
+      ],
+      why_not_reasons: [
+        'Mã flash-sale ngầm chỉ mở trên Web khi chọn đúng chi nhánh',
+        'Giới hạn 6 combo mỗi ngày'
+      ],
       terms: 'Áp dụng đặt qua Web/App Jollibee khu vực Thanh Khê. Số lượng 6 combo/ngày.',
       is_hidden: true,
       hidden_reason: 'Combo flash-sale ngầm dành riêng cho khu vực sinh viên lân cận ĐH Sư Phạm/Bách Khoa.',
@@ -283,7 +323,8 @@
       deal_id: 'DNG-CGV-55K',
       merchant: 'CGV Vincom Ngô Quyền',
       brand_short: 'CGV CINEMA',
-      zone: 'KHU_C_SON_TRA',
+      micro_zone: 'MICRO_VINCOM_SON_TRA',
+      zone_label: 'Vincom Plaza (Sơn Trà)',
       branch: 'Tầng 4 Vincom Plaza, 910A Ngô Quyền, Sơn Trà',
       distance_km: 1.8,
       distance: '1.8 km · 6 phút',
@@ -301,6 +342,14 @@
       deal_value_score: 91,
       trust_risk_score: 70,
       price_psychology: '55K — Rạp chuẩn quốc tế',
+      why_reasons: [
+        'Xem phim rạp chuẩn CGV Vincom đồng giá 55K (Tiết kiệm 55K)',
+        'Phù hợp giải trí tối cùng bạn bè hoặc người thân'
+      ],
+      why_not_reasons: [
+        'Bắt buộc xuất trình CCCD hoặc thẻ HSSV chính chủ tại quầy',
+        'Chỉ áp dụng từ Thứ 2 đến Thứ 6'
+      ],
       terms: 'Áp dụng từ Thứ 2 đến Thứ 6 cho thành viên CGV dưới 22 tuổi hoặc có thẻ HSSV/CCCD hợp lệ.',
       is_hidden: false,
       hidden_reason: 'Chính sách giá vé ưu đãi thành viên cố định tại cụm rạp CGV Vincom Sơn Trà.',
@@ -319,7 +368,8 @@
       deal_id: 'DNG-XANHSM-30K',
       merchant: 'Xanh SM Taxi Điện Đà Nẵng',
       brand_short: 'XANH SM',
-      zone: 'ALL_DANANG',
+      micro_zone: 'ALL_DANANG',
+      zone_label: 'Toàn Đà Nẵng (Đón tận nơi)',
       branch: 'Áp dụng toàn TP Đà Nẵng (Hải Châu, Thanh Khê, Sơn Trà, NHS)',
       distance_km: 0.3,
       distance: 'Đón tận nơi · 3 phút',
@@ -337,6 +387,14 @@
       deal_value_score: 97,
       trust_risk_score: 72,
       price_psychology: '30K — Khởi hành êm ái',
+      why_reasons: [
+        'Xe thuần điện VinFast sạch sẽ, êm ái, không mùi say xe',
+        'Giảm trực tiếp 30.000₫ cho chuyến đi'
+      ],
+      why_not_reasons: [
+        'Chỉ áp dụng cho các cuốc xe có cước gốc từ 50.000₫ trở lên',
+        'Số lượng mã có hạn theo khung giờ cao điểm'
+      ],
       terms: 'Áp dụng cho chuyến xe Xanh SM Taxi / Taxi Luxury tại Đà Nẵng có cước từ 50K.',
       is_hidden: false,
       hidden_reason: 'Chính sách trợ giá cuốc xe điện toàn thành phố kích cầu người dùng mới.',
@@ -355,7 +413,8 @@
       deal_id: 'DNG-CHELIEN-HD',
       merchant: 'Chè Sầu Liên',
       brand_short: 'CHÈ LIÊN',
-      zone: 'KHU_A_HAI_CHAU',
+      micro_zone: 'MICRO_HOANG_DIEU',
+      zone_label: 'Hoàng Diệu (Hải Châu)',
       branch: '189 Hoàng Diệu, Hải Châu (Cơ sở truyền thống nổi tiếng)',
       distance_km: 1.0,
       distance: '1.0 km · 4 phút',
@@ -373,6 +432,14 @@
       deal_value_score: 89,
       trust_risk_score: 68,
       price_psychology: '28K/tô — Đặc sản số 1',
+      why_reasons: [
+        'Đặc sản chè sầu trứ danh Đà Thành giải nhiệt xế chiều',
+        'Mua 4 tặng 1 cực kỳ tiết kiệm cho nhóm bạn / đồng nghiệp'
+      ],
+      why_not_reasons: [
+        'Cần đặt tối thiểu từ 4 tô trở lên để được tặng 1',
+        'Mùi sầu riêng đặc trưng (cần lưu ý nếu ăn tại văn phòng)'
+      ],
       terms: 'Áp dụng cho đơn nhóm từ 4 phần trở lên trên GrabFood hoặc mua mang về tại 189 Hoàng Diệu.',
       is_hidden: false,
       hidden_reason: 'Chương trình ưu đãi nhóm giải nhiệt mùa hè truyền thống tại cơ sở Hoàng Diệu.',
@@ -391,7 +458,8 @@
       deal_id: 'DNG-GRAB-0D',
       merchant: 'GrabCar Sân Bay Đà Nẵng',
       brand_short: 'GRABCAR',
-      zone: 'KHU_A_HAI_CHAU',
+      micro_zone: 'MICRO_SAN_BAY',
+      zone_label: 'Sân Bay Quốc Tế Đà Nẵng',
       branch: 'Ga Quốc Nội & Quốc Tế, Sân bay Đà Nẵng',
       distance_km: 2.5,
       distance: '2.5 km · 7 phút',
@@ -409,6 +477,14 @@
       deal_value_score: 82,
       trust_risk_score: 70,
       price_psychology: '60K — Xe sân bay',
+      why_reasons: [
+        'Đón trả thuận tiện tại sảnh Ga Quốc Nội/Quốc Tế sân bay',
+        'Giảm trực tiếp 15.000₫ cho chuyến đi'
+      ],
+      why_not_reasons: [
+        'Mức giảm tối đa 15.000₫ (không giảm toàn bộ cước)',
+        'GPS điện thoại phải nằm trong khuôn viên sân bay'
+      ],
       terms: 'Áp dụng cho các chuyến GrabCar có điểm đón hoặc trả tại Sân bay Đà Nẵng từ 50K.',
       is_hidden: false,
       hidden_reason: 'Mã khuyến mãi giao thông chính thức từ Grab theo tọa độ sân bay.',
@@ -431,11 +507,10 @@
     theme: localStorage.getItem('jayt_theme') || 'dark',
     dealNowMode: false,
     activeTab: 'home',
-    // P5.8 CONTEXT
-    activeMission: 'ALL', // ALL | MEAL_UNDER_50K | DRINK_UNDER_30K | CAFE_WORK | GROUP | OFFICE_LUNCH | ENTERTAINMENT | RIDE
-    activeBudget: 'ALL', // ALL | UNDER_30K | UNDER_50K | UNDER_70K
-    activeZone: 'ALL', // ALL | KHU_A_HAI_CHAU | KHU_B_THANH_KHE | KHU_C_SON_TRA
-    activeRankingView: 'DECISION_LADDER', // DECISION_LADDER (Top 3) | HUNTER | QUALITY | NEARBY
+    // P5.9 DECISION CONTEXT
+    activeMission: 'ALL',
+    activeBudget: 'ALL',
+    activeMicroZone: 'ALL',
     savedIds: JSON.parse(localStorage.getItem('jayt_favs') || '[]'),
     huntedCount: parseInt(localStorage.getItem('jayt_hunted_count') || '17', 10),
     actualSavedAmount: parseInt(localStorage.getItem('jayt_actual_savings') || '255000', 10),
@@ -453,28 +528,16 @@
     lastWonDeal: null
   };
 
-  // P5.8 DYNAMIC DECISION & FIT CALCULATION
-  function calculatePersonalFitScore(deal, mission, budget, currentSlot) {
+  // P5.9 DYNAMIC FIT SCORE CALCULATION
+  function calculateFitScore(deal, mission, budget, microZone, currentSlot) {
     let fit = 75;
     if (mission !== 'ALL' && deal.missions && deal.missions.includes(mission)) fit += 20;
+    if (microZone !== 'ALL' && deal.micro_zone === microZone) fit += 10;
     if (budget === 'UNDER_30K' && deal.discount_price <= 30000) fit += 10;
     if (budget === 'UNDER_50K' && deal.discount_price <= 50000) fit += 10;
     if (currentSlot === 'LUNCH' && deal.category === 'FOOD') fit += 5;
     if (currentSlot === 'AFTERNOON' && deal.category === 'DRINK') fit += 5;
     return Math.min(99, fit);
-  }
-
-  // TRACEABLE WHY THIS DEAL GENERATOR (1-1 MAPPING)
-  function generateTraceableWhy(deal, mission, budget, currentSlot) {
-    const reasons = [];
-    reasons.push(`• ${formatVND(deal.discount_price)} — Nằm trong ngưỡng ngân sách hợp lý (Tiết kiệm ${formatVND(deal.saving)})`);
-    reasons.push(`• ${deal.distance} — Khoảng cách thuận tiện trong bán kính di chuyển`);
-    if (currentSlot === 'LUNCH') reasons.push(`• Đúng khung giờ vàng bữa trưa (10:30 - 13:30)`);
-    else if (currentSlot === 'AFTERNOON') reasons.push(`• Đúng khung giờ giải lao chiều (14:00 - 17:30)`);
-    else reasons.push(`• Phù hợp khung giờ sinh hoạt thực địa`);
-    reasons.push(`• ★ ${deal.rating} (${deal.reviews.toLocaleString()} đánh giá) — Tín hiệu chất lượng cộng đồng mạnh`);
-    reasons.push(`• ${deal.audit_status_label} — Khách hàng vui lòng kiểm tra giỏ hàng trước khi thanh toán`);
-    return reasons;
   }
 
   function getSmartTimeContext() {
@@ -523,7 +586,7 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX V5.5 P5.8 CONSUMER DECISION ENGINE
+  // 6. RENDER GIAO DIỆN APEX V5.5 P5.9 CDOS
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -545,20 +608,18 @@
       cardShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.05)' : '0 10px 30px rgba(0,0,0,0.5)'
     };
 
-    // TẦNG 1: ELIGIBILITY GATE & ENRICHMENT
+    // ELIGIBILITY GATE & CONTEXT CALCULATION
     let processedDeals = State.deals.map(d => {
-      const personalFit = calculatePersonalFitScore(d, State.activeMission, State.activeBudget, timeInfo.slot);
-      const traceableReasons = generateTraceableWhy(d, State.activeMission, State.activeBudget, timeInfo.slot);
+      const fitScore = calculateFitScore(d, State.activeMission, State.activeBudget, State.activeMicroZone, timeInfo.slot);
       return {
         ...d,
-        personal_fit_score: personalFit,
-        traceable_reasons: traceableReasons
+        calculated_fit_score: fitScore
       };
     });
 
-    // Lọc theo Mission & Budget & Zone
-    if (State.activeZone !== 'ALL') {
-      processedDeals = processedDeals.filter(d => d.zone === State.activeZone || d.zone === 'ALL_DANANG');
+    // Lọc theo Micro-Zone & Mission & Budget
+    if (State.activeMicroZone !== 'ALL') {
+      processedDeals = processedDeals.filter(d => d.micro_zone === State.activeMicroZone || d.micro_zone === 'ALL_DANANG');
     }
     if (State.activeMission !== 'ALL') {
       processedDeals = processedDeals.filter(d => d.missions && d.missions.includes(State.activeMission));
@@ -576,13 +637,11 @@
     }
 
     // TÌM TOP 3 QUYẾT ĐỊNH (DECISION LADDER)
-    const bestForYouDeal = [...processedDeals].sort((a, b) => b.personal_fit_score - a.personal_fit_score)[0] || processedDeals[0];
+    const bestForYouDeal = [...processedDeals].sort((a, b) => b.calculated_fit_score - a.calculated_fit_score)[0] || processedDeals[0];
     const bestValueDeal = [...processedDeals].sort((a, b) => b.saving - a.saving)[0] || processedDeals[0];
     const nearestDeal = [...processedDeals].sort((a, b) => a.distance_km - b.distance_km)[0] || processedDeals[0];
 
-    const priorityDeal = bestForYouDeal;
     const hiddenVouchers = processedDeals.filter(d => d.is_hidden);
-
     const totalSavings = State.deals.reduce((s, d) => s + d.saving, 0);
     const totalWalletSavings = State.actualSavedAmount + State.referralBonus;
     const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
@@ -594,11 +653,11 @@
           <!-- 1. TIME-OF-DAY RADAR -->
           <div style="background: ${C.tickerBg}; border-bottom: 1px solid ${C.border}; padding: 0.55rem 1.5rem; font-size: 0.8rem; color: ${C.textMain}; display: flex; justify-content: space-between; align-items: center;">
             <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-              ⚡ <strong>NHỊP TIÊU DÙNG ĐÀ NẴNG:</strong> ${escapeHTML(timeInfo.label)} · MayCha Mua 1 Tặng 1 · A Hải Cơm Gà Giảm 40% · Xanh SM trợ giá 30K!
+              ⚡ <strong>NHỊP SỐNG ĐÀ NẴNG 43:</strong> ${escapeHTML(timeInfo.label)} · MayCha Mua 1 Tặng 1 · A Hải Cơm Gà Giảm 40% · Xanh SM trợ giá 30K!
             </div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: #059669; font-weight: 700;">
               <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
-              <span>DECISION LADDER LIVE</span>
+              <span>CDOS ENGINE LIVE</span>
             </div>
           </div>
 
@@ -609,7 +668,7 @@
                 <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800;">J</div>
                 <div>
                   <div style="font-size: 1.25rem; font-weight: 800; color: ${C.textMain};">JayT Đà Nẵng</div>
-                  <div style="font-size: 0.72rem; color: #059669; font-weight: 600;">🤝 Consumer Decision Engine 43</div>
+                  <div style="font-size: 0.72rem; color: #059669; font-weight: 600;">🤝 Consumer Decision Operating System</div>
                 </div>
               </div>
 
@@ -627,17 +686,17 @@
             </div>
           </header>
 
-          <!-- 3. P5.8 CONSUMER DECISION CONTEXT — STEP 1 & STEP 2 (MISSION & BUDGET SELECTOR) -->
+          <!-- 3. P5.9 CONSUMER DECISION CONTEXT (MISSION & MICRO-ZONE DISPATCHER) -->
           <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="background: ${C.cardBg}; border: 1.5px solid ${C.border}; border-radius: 24px; padding: 1.5rem 1.8rem; box-shadow: ${C.cardShadow};">
               
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
                 <div>
                   <h3 style="font-size: 1.15rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                    🎯 Bước 1: Ngay Lúc Này Bạn Đang Muốn Giải Quyết Việc Gì?
+                    🎯 Ngay Lúc Này Bạn Đang Muốn Giải Quyết Việc Gì?
                   </h3>
                   <p style="font-size: 0.78rem; color: ${C.textMuted}; margin: 0.2rem 0 0;">
-                    Chọn nhiệm vụ tiêu dùng để APEX rút gọn danh sách xuống đúng 3 quyết định tối ưu.
+                    Chọn nhiệm vụ tiêu dùng để APEX trả về đúng 3 quyết định tối ưu kèm lý do nên và điểm cần lưu ý.
                   </p>
                 </div>
                 <span style="font-size: 0.72rem; background: rgba(16,185,129,0.12); color: #059669; padding: 0.2rem 0.6rem; border-radius: 9999px; font-weight: 700;">
@@ -654,7 +713,7 @@
                   'OFFICE_LUNCH:🍱 Bữa Trưa Nhanh',
                   'CAFE_WORK:☕ Cafe Học Bài / Gặp Mặt',
                   'GROUP:👥 Đi Nhóm 2-4 Người',
-                  'ENTERTAINMENT:🎬 Xem Phim / Đi Chơi',
+                  'ENTERTAINMENT:🎬 Xem Phim / Giải Trí',
                   'RIDE:🛵 Xe Điện 0Đ'
                 ].map(item => {
                   const [code, label] = item.split(':');
@@ -667,9 +726,28 @@
                 }).join('')}
               </div>
 
-              <!-- BUDGET SELECTOR & ZONE -->
+              <!-- MICRO-ZONE & BUDGET SELECTOR -->
               <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed ${C.border}; padding-top: 1rem; flex-wrap: wrap; gap: 0.8rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                  <span style="font-size: 0.78rem; font-weight: 700; color: ${C.textSub};">📍 Micro-Zone:</span>
+                  ${[
+                    'ALL:Toàn Đà Nẵng',
+                    'MICRO_DIEN_BIEN_PHU:Điện Biên Phủ',
+                    'MICRO_BACH_DANG:Bạch Đằng',
+                    'MICRO_THAI_PHIEN_CAU_RONG:Thái Phiên (Cầu Rồng)',
+                    'MICRO_VINCOM_SON_TRA:Vincom Sơn Trà'
+                  ].map(item => {
+                    const [code, label] = item.split(':');
+                    const isActive = State.activeMicroZone === code;
+                    return `
+                      <button data-action="set-micro-zone" data-zone="${code}" style="min-height: 32px; padding: 0 0.75rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; border: 1px solid ${isActive ? '#0284C7' : C.border}; background: ${isActive ? 'rgba(2,132,199,0.15)' : C.pillBg}; color: ${isActive ? '#0284C7' : C.pillText};">
+                        ${label}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                   <span style="font-size: 0.78rem; font-weight: 700; color: ${C.textSub};">💰 Ngân Sách:</span>
                   ${[
                     'ALL:Tất cả',
@@ -686,53 +764,35 @@
                     `;
                   }).join('')}
                 </div>
-
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                  <span style="font-size: 0.78rem; font-weight: 700; color: ${C.textSub};">📍 Khu Vực:</span>
-                  ${[
-                    'ALL:Toàn Đà Nẵng',
-                    'KHU_A_HAI_CHAU:Hải Châu',
-                    'KHU_B_THANH_KHE:Thanh Khê',
-                    'KHU_C_SON_TRA:Sơn Trà'
-                  ].map(item => {
-                    const [code, label] = item.split(':');
-                    const isActive = State.activeZone === code;
-                    return `
-                      <button data-action="set-zone" data-zone="${code}" style="min-height: 32px; padding: 0 0.75rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; border: 1px solid ${isActive ? '#0284C7' : C.border}; background: ${isActive ? 'rgba(2,132,199,0.15)' : C.pillBg}; color: ${isActive ? '#0284C7' : C.pillText};">
-                        ${label}
-                      </button>
-                    `;
-                  }).join('')}
-                </div>
               </div>
 
             </div>
           </div>
 
-          <!-- 4. P5.8 DECISION LADDER: TOP 3 QUYẾT ĐỊNH CHO BẠN (NO MORE 30 VOUCHERS PARALYSIS) -->
+          <!-- 4. P5.9 DECISION LADDER: TOP 3 DECISIONS WITH TWO-WAY TRANSPARENCY (WHY & WHY NOT) -->
           <div style="max-width: 1300px; margin: 2rem auto 0; padding: 0 1.5rem; display: block;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
               <div>
                 <h2 style="font-size: 1.45rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                  🧭 Bước 3: Ba Quyết Định Tối Ưu Nhất Lúc Này
+                  🧭 Ba Quyết Định Tối Ưu Nhất Cho Bạn Lúc Này
                 </h2>
                 <p style="font-size: 0.82rem; color: ${C.textSub}; margin: 0.2rem 0 0;">
-                  Rút ngắn thời gian từ "Đang cần gì" ➔ "Bấm đúng deal muốn săn".
+                  Minh bạch 2 chiều: Lý do đề xuất (Why) và Điểm cần lưu ý/Đánh đổi (Why Not).
                 </p>
               </div>
             </div>
 
-            <!-- GRID 3 DECISIONS -->
+            <!-- GRID TOP 3 DECISIONS -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
               
               <!-- 1. BEST FOR YOU -->
-              ${renderDecisionCard(bestForYouDeal, '🎯 ① BEST FOR YOU', 'Phù hợp nhất với nhiệm vụ của bạn', '#10B981', C, isLight)}
+              ${renderDecisionCard(bestForYouDeal, '🎯 ① BEST FOR YOU', 'Khớp nhiệm vụ nhất', '#10B981', C, isLight)}
 
               <!-- 2. BEST VALUE -->
-              ${renderDecisionCard(bestValueDeal, '💰 ② BEST VALUE', 'Mức tiết kiệm cao nhất', '#D97706', C, isLight)}
+              ${renderDecisionCard(bestValueDeal, '💰 ② BEST VALUE', 'Tiết kiệm nhiều nhất', '#D97706', C, isLight)}
 
               <!-- 3. NEAREST -->
-              ${renderDecisionCard(nearestDeal, '📍 ③ NEAREST', 'Vị trí gần nhất, ít ma sát', '#0284C7', C, isLight)}
+              ${renderDecisionCard(nearestDeal, '📍 ③ NEAREST', 'Gần vị trí nhất', '#0284C7', C, isLight)}
 
             </div>
           </div>
@@ -782,7 +842,7 @@
             </div>
           </div>
 
-          <!-- 6. TẦNG 3: DISCOVERY — FULL REPOSITORY ENRICHED VỚI TRI-SCORE UX -->
+          <!-- 6. TẦNG 3: DISCOVERY — REPOSITORY ENRICHED VỚI TRI-SCORE UX -->
           <div style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem; display: block;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.8rem;">
@@ -791,12 +851,12 @@
                   ⚡ Toàn Bộ Kho Kèo Đà Nẵng 43 (${processedDeals.length})
                 </h3>
                 <p style="font-size: 0.8rem; color: ${C.textMuted}; margin: 0.2rem 0 0;">
-                  Minh bạch tuyệt đối 3 chỉ số: Độ Hời · Độ Khớp · Mức Kiểm Chứng (Risk Signal).
+                  Minh bạch 3 chỉ số: Độ Hời · Độ Khớp (Fit) · Mức Kiểm Chứng (Risk Signal).
                 </p>
               </div>
             </div>
 
-            <!-- GRID 8 DEALS ENRICHED P5.8 -->
+            <!-- GRID 8 DEALS ENRICHED P5.9 -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 1.6rem;">
               ${processedDeals.map(deal => renderDealCard(deal, C, isLight)).join('')}
             </div>
@@ -897,7 +957,7 @@
           </div>
         </div>
 
-        <!-- HỘP THOẠI OUTCOME: BẠN ĐÃ SĂN ĐƯỢC CHƯA? -->
+        <!-- HỘP THOẠI OUTCOME -->
         ${State.pendingOutcomeDeal ? `
           <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
             <div style="background: ${C.cardBg}; border: 2px solid #10B981; border-radius: 24px; max-width: 440px; width: 100%; padding: 1.8rem; text-align: center; box-shadow: 0 25px 70px rgba(0,0,0,0.3);">
@@ -918,7 +978,7 @@
           </div>
         ` : ''}
 
-        <!-- SIGNATURE VICTORY MODAL: SĂN ĐƯỢC RỒI! -->
+        <!-- SIGNATURE VICTORY MODAL -->
         ${State.isVictoryModalOpen && State.lastWonDeal ? `
           <div style="position: fixed; inset: 0; z-index: 100000; background: rgba(0,0,0,0.8); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
             <div style="background: ${C.cardBg}; border: 2.5px solid #10B981; border-radius: 24px; max-width: 440px; width: 100%; padding: 2rem; text-align: center; box-shadow: 0 25px 70px rgba(0,0,0,0.4);">
@@ -1023,7 +1083,7 @@
     `;
   }
 
-  // 7. RENDER DECISION LADDER CARD (TOP 3)
+  // 7. RENDER DECISION LADDER CARD WITH TWO-WAY TRANSPARENCY (WHY & WHY NOT)
   function renderDecisionCard(deal, badgeTitle, badgeSubtitle, accentColor, C, isLight) {
     if (!deal) return '';
     return `
@@ -1048,21 +1108,30 @@
             </div>
           </div>
 
-          <!-- NỘI DUNG DEAL -->
+          <!-- THƯƠNG HIỆU & TIÊU ĐỀ -->
           <div style="font-size: 0.82rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.25rem;">
-            ${escapeHTML(deal.merchant)}
+            ${escapeHTML(deal.merchant)} · <span style="color:${C.textMuted};font-size:0.75rem;">${escapeHTML(deal.zone_label)}</span>
           </div>
-          <h3 style="font-size: 1.1rem; font-weight: 800; color: ${C.textMain}; line-height: 1.35; margin: 0 0 0.4rem 0;">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: ${C.textMain}; line-height: 1.35; margin: 0 0 0.6rem 0;">
             ${escapeHTML(deal.title)}
           </h3>
 
-          <!-- TRACEABLE REASONS BULLETS -->
-          <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 8px; padding: 0.6rem 0.8rem; margin-bottom: 0.8rem;">
-            <div style="font-size: 0.72rem; font-weight: 800; color: ${accentColor}; text-transform: uppercase; margin-bottom: 0.3rem;">
-              💡 Vì Sao APEX Đề Xuất Kèo Này?
+          <!-- TWO-WAY TRANSPARENCY: WHY & WHY NOT -->
+          <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 10px; padding: 0.75rem; margin-bottom: 0.8rem;">
+            <!-- WHY -->
+            <div style="font-size: 0.74rem; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 0.25rem;">
+              💡 Vì Sao Nên Chọn?
             </div>
-            <ul style="margin: 0; padding-left: 0.8rem; font-size: 0.72rem; color: ${C.textSub}; line-height: 1.45; list-style: none;">
-              ${deal.traceable_reasons.slice(0, 3).map(r => `<li>${escapeHTML(r)}</li>`).join('')}
+            <ul style="margin: 0 0 0.5rem 0; padding-left: 0.8rem; font-size: 0.72rem; color: ${C.textSub}; line-height: 1.45; list-style: square;">
+              ${deal.why_reasons.map(r => `<li>${escapeHTML(r)}</li>`).join('')}
+            </ul>
+
+            <!-- WHY NOT (RỦI RO / ĐÁNH ĐỔI) -->
+            <div style="font-size: 0.72rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.2rem;">
+              ⚠️ Điểm Cần Lưu Ý (Why Not?):
+            </div>
+            <ul style="margin: 0; padding-left: 0.8rem; font-size: 0.7rem; color: ${C.textMuted}; line-height: 1.4; list-style: square;">
+              ${deal.why_not_reasons.map(r => `<li>${escapeHTML(r)}</li>`).join('')}
             </ul>
           </div>
 
@@ -1141,7 +1210,7 @@
               </div>
               <div style="border-left: 1px solid ${C.border}; border-right: 1px solid ${C.border};">
                 <span style="color: ${C.textMuted}; display: block;">Độ Khớp</span>
-                <strong style="color: #0284C7;">🎯 ${deal.personal_fit_score}/100</strong>
+                <strong style="color: #0284C7;">🎯 ${deal.calculated_fit_score}/100</strong>
               </div>
               <div>
                 <span style="color: ${C.textMuted}; display: block;">Kiểm Chứng</span>
@@ -1150,7 +1219,7 @@
             </div>
 
             <div style="display: flex; justify-content: space-between; font-size: 0.74rem; color: ${C.textMuted}; margin-bottom: 0.65rem;">
-              <span>📍 ${escapeHTML(deal.distance)}</span>
+              <span>📍 ${escapeHTML(deal.distance)} · ${escapeHTML(deal.zone_label)}</span>
               <span style="color: #059669; font-weight: 700;">${escapeHTML(deal.price_psychology)}</span>
             </div>
             
@@ -1164,7 +1233,7 @@
               </div>
             </div>
 
-            <!-- ĐIỀU KIỆN ÁP DỤNG & LINK CHI TIẾT INLINE -->
+            <!-- ĐIỀU KIỆN ÁP DỤNG -->
             <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 8px; padding: 0.55rem 0.75rem; font-size: 0.74rem; color: ${C.textSub}; line-height: 1.45;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
                 <span>🎟️ <strong>Điều kiện:</strong></span>
@@ -1187,7 +1256,7 @@
     `;
   }
 
-  // 9. EVENT DELEGATION & TELEMETRY
+  // 9. EVENT DELEGATION & ANTI-FEEDBACK-LOOP TELEMETRY
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1203,7 +1272,7 @@
       const link = btn.getAttribute('data-link') || '#';
       const deal = State.deals.find(d => d.deal_id === id);
 
-      console.log(`[P5.8-Telemetry] CTA_CLICK: deal_id=${id}, mission=${State.activeMission}, budget=${State.activeBudget}`);
+      console.log(`[P5.9-CDOS-Telemetry] CTA_CLICK: deal_id=${id}, mission=${State.activeMission}, micro_zone=${State.activeMicroZone}, budget=${State.activeBudget}`);
 
       if (navigator.clipboard) {
         navigator.clipboard.writeText(code).then(() => {
@@ -1217,14 +1286,15 @@
       }
     } else if (act === 'set-mission') {
       State.activeMission = btn.getAttribute('data-mission');
-      console.log(`[P5.8-Telemetry] MISSION_SELECT: ${State.activeMission}`);
+      console.log(`[P5.9-Telemetry] MISSION_CHANGE: ${State.activeMission}`);
       renderApp();
     } else if (act === 'set-budget') {
       State.activeBudget = btn.getAttribute('data-budget');
-      console.log(`[P5.8-Telemetry] BUDGET_SELECT: ${State.activeBudget}`);
+      console.log(`[P5.9-Telemetry] BUDGET_CHANGE: ${State.activeBudget}`);
       renderApp();
-    } else if (act === 'set-zone') {
-      State.activeZone = btn.getAttribute('data-zone');
+    } else if (act === 'set-micro-zone') {
+      State.activeMicroZone = btn.getAttribute('data-zone');
+      console.log(`[P5.9-Telemetry] MICRO_ZONE_CHANGE: ${State.activeMicroZone}`);
       renderApp();
     } else if (act === 'confirm-outcome-success') {
       if (State.pendingOutcomeDeal) {
