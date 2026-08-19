@@ -1,27 +1,27 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — COMPLETE MODERN APEX OPERATING ENGINE
+ * JAYT APEX v5.5 — UNIFIED CORE MASTER OPERATING ENGINE
  * =============================================================================
  * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * =============================================================================
- * TOÀN BỘ HỆ THỐNG GIAO DIỆN APEX HIỆN ĐẠI:
- * - Top Running Marquee Ticker
- * - Master Sticky Header + Nút Săn Nhanh 10s + Đổi Theme + Ví + Zalo CSKH
- * - 5-Question Executive Summary Banner
- * - Tầng 1 WOW: Priority Deal #1 Maycha + Breathing Aura + Giải Trình "Vì Sao Chọn?"
- * - Tầng 2 ACTION: Hidden Voucher Radar + 3 Voucher Ẩn + Lý Do Ẩn Minh Bạch
- * - Tầng 3 DISCOVERY: Kho Deal 43 + Bộ Lọc 4 Quận (Liên Chiểu/Hải Châu/Sơn Trà/Toàn ĐN)
- * - Interactive Savings Calculator (3 Thanh Trượt: Trà Sữa, Bữa Ăn, Xe Công Nghệ)
- * - Hệ thống 5 Modals: Ví Cá Nhân, Rủ Bạn Zalo/Tele (+5K), SHA-256 Audit, Chiến Thuật, Vì Sao
- * - Human-Proof 2.0: Hộp Thoại Outcome "Bạn Đã Săn Được Chưa?" + Victory Modal Tiền Thật
- * - Mobile 5-Tab Bottom Navigation + Confetti Canvas + Web Audio API (Zero MP3)
- * - Grand 4-Column Footer Bản Địa Đà Nẵng
+ * ĐẦY ĐỦ 100% TÍNH NĂNG NÂNG CẤP:
+ * 1. Top Running Ticker trực quan
+ * 2. Sticky Master Header (Săn Nhanh 10s, Theme, Ví, Zalo CSKH)
+ * 3. 5-Question Executive Summary Banner
+ * 4. Tầng 1 WOW: MayCha 436 Điện Biên Phủ + Breathing Aura + Giải Trình Vì Sao
+ * 5. Tầng 2 ACTION: Hidden Voucher Radar + 3 Kèo Ẩn + Minh Bạch Lý Do
+ * 6. Tầng 3 DISCOVERY: Kho 8 Kèo Thực Địa + Bộ Lọc 4 Quận & Lọc Tính Năng
+ * 7. Bảng Tính Tiết Kiệm Tương Tác 3 Thanh Trượt
+ * 8. Human-Proof 2.0: Hỏi Kết Quả Săn + Signature Victory Modal Ăn Mừng Tiền Thật
+ * 9. Hệ thống 5 Modals Đầy Đủ (Ví, Rủ Bạn +5K, Audit SHA-256, Chiến Thuật, Vì Sao)
+ * 10. Mobile Bottom 5-Tab Navigation + Confetti Canvas + Web Audio API Synthesizer
+ * 11. Grand Footer 4 Cột Bản Địa Đà Nẵng
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [Full Modern APEX Engine Active]");
+  console.log("🚀 JayT Apex v5.5 [Core Default APEX Engine Active]");
 
   // ==========================================================================
   // 🔒 1. TIỆN ÍCH AN TOÀN & ĐỊNH DẠNG TIỀN TỆ
@@ -477,6 +477,7 @@
   // ==========================================================================
 
   function renderApp() {
+    const root = document.getElementById('jaytAppRoot') || document.body;
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -512,9 +513,8 @@
     const totalWalletSavings = State.actualSavedAmount + State.referralBonus;
     const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
 
-    // Kích hoạt giao diện APEX Siêu Cấp Hiện Đại
-    document.body.innerHTML = `
-      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; font-family: system-ui, -apple-system, sans-serif;">
+    root.innerHTML = `
+      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px;">
         
         <div>
           <!-- TOP TICKER -->
@@ -605,7 +605,7 @@
             </div>
 
             <!-- CARD DEAL ƯU TIÊN CHIẾN THUẬT -->
-            <div style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem; box-shadow: 0 15px 40px rgba(245,158,11,0.15);">
+            <div class="aura-priority" style="background: ${C.cardBg}; border: 2.5px solid #F59E0B; border-radius: 24px; padding: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; align-items: center; margin-bottom: 3rem;">
               <div style="position: relative; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; background: #000;">
                 <img src="${sanitizeURL(priorityDeal.image)}" alt="${escapeHTML(priorityDeal.title)}" style="width: 100%; height: 100%; object-fit: cover;" />
                 <div style="position: absolute; top: 12px; left: 12px; background: #F59E0B; color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
