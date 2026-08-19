@@ -1,20 +1,19 @@
 /**
- * JAYT APEX v4.5 — CONVERSION & EVIDENCE UX RUNTIME
+ * JAYT APEX v4.6 — DISCOVERY ENGINE & MOBILE UX RUNTIME
  * =============================================================================
  * ĐẠI ĐÔ THỊ ƯU ĐÃI ĐÀ NẴNG (MÃ VÙNG 43):
- * 1. Single State-to-Render Immutable Snapshot Contract.
- * 2. Hero Intent & 5 Quick Chips Khám Phá Nhanh (Ăn uống, Trà sữa, Xe, Phim, Mua sắm).
- * 3. Deterministic Multi-Level Sorting (Tie-breaker theo deal_id & expiry).
- * 4. Thẻ Ưu Đãi Tối Ưu Chuyển Đổi: Tiết kiệm nổi bật, hạn dùng Việt hóa, 2 CTA 1-chạm.
- * 5. Trung Tâm Minh Bạch Dữ Liệu 3 Tầng: Phân định rõ Deal Evidence vs Dataset SHA-256.
- * 6. Cẩm Nang 6 Câu Hỏi FAQ Mở Rộng & Footer Doanh Nghiệp 4 Cột Hoàn Thiện.
- * 7. Khóa Bất Biến: AbortController, Double Sequence Guard, Web Crypto API SHA-256.
+ * 1. Hero Discovery Intent & Clean Search Bar (Không trùng lặp icon).
+ * 2. High-Conversion Deal Cards: Tiết kiệm to, CTA Săn Ngay & Chép Mã 1-chạm.
+ * 3. Dynamic Discovery Engine: 5 phân khu tự co giãn theo dataset thực tế.
+ * 4. Human-Friendly Trust Center: 3 tầng minh bạch (Nguồn, Per-deal SHA, Dataset Fingerprint).
+ * 5. Cẩm Nang Hỏi Đáp 6 Câu Thực Tế & Footer Doanh Nghiệp 4 Cột.
+ * 6. Khóa Bất Biến: AbortController, Double Sequence Guard, Deterministic Sort, Web Crypto API.
  * =============================================================================
  */
 
 (function() {
     'use strict';
-    console.log("⚡ JAYT Comprehensive Portal Runtime v4.5 Active");
+    console.log("⚡ JAYT Discovery Engine & Portal Runtime v4.6 Active");
 
     const State = {
         deals: [],
@@ -175,7 +174,7 @@
         return await calculateSHA256(canonicalString);
     }
 
-    // 6. Render Giao Diện Đại Đô Thị Portal v4.5
+    // 6. Render Giao Diện Đại Đô Thị Portal v4.6
     function renderApp() {
         const root = document.getElementById('jaytAppRoot') || document.body;
 
@@ -234,7 +233,7 @@
             return a.deal_id.localeCompare(b.deal_id);
         });
 
-        // 5 Phân khu dữ liệu chuyên sâu (Tất cả rút trích từ State Snapshot duy nhất)
+        // 5 Phân khu dữ liệu tự động co giãn theo dataset
         const topFeaturedDeals = [...usableDeals].sort((a, b) => (b.saving_amount_vnd - a.saving_amount_vnd) || a.deal_id.localeCompare(b.deal_id)).slice(0, 3);
         const foodDeals = usableDeals.filter(d => d.category === 'FOOD');
         const drinkDeals = usableDeals.filter(d => d.category === 'DRINK');
@@ -321,7 +320,7 @@
                             </div>
                             
                             <h1 style="font-size: clamp(1.6rem, 3.8vw, 2.5rem); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 0.5rem;">
-                                Hôm nay bạn muốn tiết kiệm gì tại Đà Nẵng? <br>
+                                Hôm nay Đà Nẵng có gì đáng săn? <br>
                                 <span style="color: #059669; font-size: clamp(2.1rem, 4.8vw, 3rem); font-weight: 900;">${displaySavings} đang sẵn sàng</span>
                             </h1>
                             
@@ -329,7 +328,7 @@
                                 Đang phục vụ <strong>${totalCount} ưu đãi còn hạn</strong> từ <strong>${brandCount} thương hiệu</strong> hàng đầu tại Đà Nẵng.
                             </p>
 
-                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm (Đã bỏ kính lúp thừa) -->
+                            <!-- Ô Tìm Kiếm Lớn Trọng Tâm (Chuẩn 1 Icon) -->
                             <div style="max-width: 580px; margin: 0 auto 1.2rem; position: relative;">
                                 <input type="text" id="jaytLiveSearchInput" placeholder="Tìm quán ăn, trà sữa, rạp phim, xe điện..." value="${escapeHTML(State.searchQuery)}" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 9999px; padding: 0.8rem 1.2rem 0.8rem 2.6rem; font-size: 0.95rem; color: #0F172A; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.2s;" />
                                 <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94A3B8;">🔍</span>
@@ -356,63 +355,71 @@
 
                         ${isHomeOverview ? `
                             <!-- PHÂN KHU 1: Top 3 Ưu Đãi Tiết Kiệm Nhiều Nhất -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                    <div style="display: align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.3rem;">🔥</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi tiết kiệm nhiều nhất hôm nay</h3>
+                            ${topFeaturedDeals.length > 0 ? `
+                                <div style="margin-bottom: 2.5rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 1.3rem;">🔥</span>
+                                            <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Top 3 ưu đãi tiết kiệm nhiều nhất</h3>
+                                        </div>
+                                        <span style="font-size: 0.78rem; color: #059669; font-weight: 800; background: #ECFDF5; border: 1px solid #A7F3D0; padding: 0.2rem 0.6rem; border-radius: 9999px;">Top 3 Đáng Săn</span>
                                     </div>
-                                    <span style="font-size: 0.78rem; color: #059669; font-weight: 800; background: #ECFDF5; border: 1px solid #A7F3D0; padding: 0.2rem 0.6rem; border-radius: 9999px;">Top 3 Đáng Săn</span>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.25rem;">
+                                        ${topFeaturedDeals.map((deal, idx) => renderCard(deal, true, idx + 1)).join('')}
+                                    </div>
                                 </div>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.25rem;">
-                                    ${topFeaturedDeals.map(deal => renderCard(deal, true)).join('')}
-                                </div>
-                            </div>
+                            ` : ''}
 
                             <!-- PHÂN KHU 2: Ẩm Thực Đà Nẵng (Food & Dining) -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.3rem;">🍜</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ăn gì tiết kiệm tại Đà Nẵng?</h3>
+                            ${foodDeals.length > 0 ? `
+                                <div style="margin-bottom: 2.5rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                        <div style="display: align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 1.3rem;">🍜</span>
+                                            <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ăn gì tiết kiệm tại Đà Nẵng?</h3>
+                                        </div>
+                                        <button data-action="filter" data-category="FOOD" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                     </div>
-                                    <button data-action="filter" data-category="FOOD" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
+                                    <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Tuyển tập các món ăn trưa, ăn tối từ Cơm Gà A Hải, Mì Quảng Bà Mua, Bánh Xèo Năm Hiền, Jollibee...</p>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
+                                        ${foodDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
+                                    </div>
                                 </div>
-                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Tuyển tập các món ăn trưa, ăn tối từ Cơm Gà A Hải, Mì Quảng Bà Mua, Bánh Xèo Năm Hiền, Jollibee...</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
-                                    ${foodDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
-                                </div>
-                            </div>
+                            ` : ''}
 
                             <!-- PHÂN KHU 3: Trà Sữa & Cà Phê Chill (Drink & Cafe) -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.3rem;">☕</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi trà sữa & Cà phê Đà Nẵng</h3>
+                            ${drinkDeals.length > 0 ? `
+                                <div style="margin-bottom: 2.5rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                        <div style="display: align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 1.3rem;">☕</span>
+                                            <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Ưu đãi trà sữa & Cà phê Đà Nẵng</h3>
+                                        </div>
+                                        <button data-action="filter" data-category="DRINK" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                     </div>
-                                    <button data-action="filter" data-category="DRINK" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
+                                    <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Nạp năng lượng chill góc phố Bạch Đằng, Nguyễn Văn Linh với Katinat, Phê La, Maycha, Phúc Long...</p>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
+                                        ${drinkDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
+                                    </div>
                                 </div>
-                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Nạp năng lượng chill góc phố Bạch Đằng, Nguyễn Văn Linh với Katinat, Phê La, Maycha, Phúc Long...</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
-                                    ${drinkDeals.slice(0, 3).map(deal => renderCard(deal, false)).join('')}
-                                </div>
-                            </div>
+                            ` : ''}
 
                             <!-- PHÂN KHU 4: Di Chuyển 0Đ & Rạp Chiếu Phim (Ride & Cinema) -->
-                            <div style="margin-bottom: 2.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="display: align-items: center; gap: 0.5rem;">
-                                        <span style="font-size: 1.3rem;">🎬</span>
-                                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Mã giảm giá di chuyển & Giải trí cuối tuần</h3>
+                            ${(rideDeals.length > 0 || cinemaAndShopDeals.length > 0) ? `
+                                <div style="margin-bottom: 2.5rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                        <div style="display: align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 1.3rem;">🎬</span>
+                                            <h3 style="font-size: 1.2rem; font-weight: 900; color: #0F172A; margin: 0;">Mã giảm giá di chuyển & Giải trí cuối tuần</h3>
+                                        </div>
+                                        <button data-action="filter" data-category="RIDE" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
                                     </div>
-                                    <button data-action="filter" data-category="RIDE" style="background: none; border: none; color: #059669; font-weight: 800; font-size: 0.8rem; cursor: pointer;">Xem tất cả ➔</button>
+                                    <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Đi lại thông minh với Xanh SM 0Đ, GrabCar sân bay, beBike sinh viên và vé rạp CGV, Metiz Cinema...</p>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
+                                        ${[...rideDeals, ...cinemaAndShopDeals].slice(0, 3).map(deal => renderCard(deal, false)).join('')}
+                                    </div>
                                 </div>
-                                <p style="font-size: 0.82rem; color: #64748B; margin: 0 0 1rem;">Đi lại thông minh với Xanh SM 0Đ, GrabCar sân bay, beBike sinh viên và vé rạp CGV, Metiz Cinema...</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;">
-                                    ${[...rideDeals, ...cinemaAndShopDeals].slice(0, 3).map(deal => renderCard(deal, false)).join('')}
-                                </div>
-                            </div>
+                            ` : ''}
                         ` : ''}
 
                         <!-- PHÂN KHU 5: Kho Tổng Hợp & Công Cụ Sắp Xếp Nâng Cao -->
@@ -596,7 +603,7 @@
                         <!-- Dòng bản quyền dưới cùng -->
                         <div style="border-top: 1px solid #F1F5F9; padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94A3B8;">
                             <span>© 2026 JayT Corp. Bản quyền thuộc về JayT Ecosystem.</span>
-                            <span>Phiên bản: Production Runtime v4.5 GA Standard</span>
+                            <span>Phiên bản: Production Runtime v4.6 GA Standard</span>
                         </div>
                     </div>
                 </footer>
@@ -629,12 +636,12 @@
     }
 
     // 7. Render Card Thẻ Ưu Đãi (High-Conversion UX & XSS-Safe)
-    function renderCard(deal, isFeatured = false) {
+    function renderCard(deal, isFeatured = false, rank = null) {
         return `
             <div class="deal-card" style="background: #FFFFFF; border: ${isFeatured ? '2px solid #10B981' : '1.5px solid #E2E8F0'}; border-radius: 18px; padding: 1.3rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.9rem; box-shadow: ${isFeatured ? '0 6px 22px rgba(16,185,129,0.1)' : '0 4px 15px rgba(0,0,0,0.03)'}; position: relative;">
                 ${isFeatured ? `
                     <span style="position: absolute; top: -10px; right: 15px; background: #059669; color: #FFF; font-size: 0.65rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px; box-shadow: 0 2px 6px rgba(5,150,105,0.3);">
-                        ★ NỔI BẬT
+                        ★ TOP ${rank || 1} TIẾT KIỆM
                     </span>
                 ` : ''}
 
