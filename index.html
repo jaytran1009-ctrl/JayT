@@ -1,100 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JayT Đà Nẵng — Hệ Điều Hành Săn Kèo & Voucher Bản Địa 43</title>
-  <meta name="description" content="Hệ điều hành săn kèo, voucher ẩn và tối ưu chi tiêu bản địa Đà Nẵng 43. Không cần xem nhiều, chỉ cần săn đúng." />
-  <meta name="theme-color" content="#0B0F19" />
-
-  <!-- Critical Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>JayT Đà Nẵng 43 — Hệ Điều Hành Săn Kèo & Voucher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Critical CSS Chống Nhảy Giao Diện & Giữ Cố Định Khung Hình (CLS = 0) -->
+  
+  <!-- CRITICAL ZERO-FOUC CSS: Nền tối ngay từ mili-giây đầu tiên, không chớp nháy -->
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      background-color: #0B0F19;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background-color: #0B0F19 !important;
       color: #94A3B8;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
       overflow-x: hidden;
-      min-height: 100vh;
-    }
-    /* APEX Shell Host */
-    #jayt-apex-root {
-      width: 100%;
-      min-height: 100vh;
-      display: block;
-    }
-    /* Legacy Container: Bảo toàn nguyên vẹn trong DOM, ngủ đông an toàn */
-    #jayt-legacy-vault {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-      aria-hidden: "true";
-    }
-    /* Fixed Aspect Ratio Chống Layout Jump */
-    .deal-img-box {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      background-color: #111827;
-      overflow: hidden;
-    }
-    .deal-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .aura-priority {
-      box-shadow: 0 0 40px rgba(245, 158, 11, 0.18), inset 0 0 20px rgba(245, 158, 11, 0.05);
-      animation: auraPulse 3.5s infinite ease-in-out;
-    }
-    @keyframes auraPulse {
-      0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
-      50% { box-shadow: 0 0 55px rgba(245, 158, 11, 0.35); }
-    }
-    input[type="range"] {
-      -webkit-appearance: none;
-      height: 8px;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.1);
-      outline: none;
-    }
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #10B981;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
     }
   </style>
 </head>
 <body>
+  <!-- APEX ROOT HOST -->
+  <div id="jayt-apex-root" data-jayt-owned="apex"></div>
+  
+  <!-- OVERLAY HOST -->
+  <div id="jayt-overlay-root" data-jayt-owned="overlay"></div>
 
-  <!-- 🏛️ 1. APEX OWNED ROOT (PRODUCT & UI AUTHORITY) -->
-  <div id="jayt-apex-root" data-jayt-owned="apex" role="main"></div>
-
-  <!-- 🛡️ 2. DEDICATED OVERLAY HOST (GATE-002) -->
-  <div id="jayt-overlay-root" data-jayt-owned="overlay" style="position:fixed;inset:0;pointer-events:none;z-index:999999;display:flex;align-items:center;justify-content:center;"></div>
-
-  <!-- 🔒 3. LEGACY VAULT: BẢO TOÀN DI SẢN 100% BẤT BIẾN TRONG DOM -->
-  <div id="jayt-legacy-vault" data-jayt-preserved="legacy-ssot">
-    <!-- Cấu trúc di sản được lưu trữ an toàn, sẵn sàng dự phòng khi cần thiết -->
-    <div class="legacy-anchor-point" data-version="gessi-master-v1.0"></div>
-  </div>
-
-  <!-- 🚀 4. APEX RUNTIME ENGINE -->
-  <script src="jayt_runtime_adapter.js" defer></script>
+  <!-- RUNTIME ENGINE -->
+  <script src="jayt_runtime_adapter.js"></script>
 </body>
 </html>
