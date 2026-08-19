@@ -4,15 +4,18 @@
  * =============================================================================
  * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
  * 
- * [BẢO TỒN 100% GIAO DIỆN GOLDEN MASTER + 21/21 INVARIANTS]:
+ * BẢO TỒN 100% CẤU TRÚC GIAO DIỆN GOLDEN MASTER:
+ * - Top Running Ticker
+ * - Master Sticky Header + Nút Săn Nhanh 10s + Đổi Theme + Ví + Zalo CSKH
+ * - 5-Question Executive Summary Banner
  * - Tầng 1 WOW: Priority Deal #1 Maycha + Breathing Aura + Giải Trình "Vì Sao Chọn?"
- * - Tầng 2 ACTION: Hidden Voucher Radar + Nhãn Tín Hiệu Thực Địa + Lý Do Ẩn
+ * - Tầng 2 ACTION: Hidden Voucher Radar + 3 Voucher Ẩn + Lý Do Ẩn Minh Bạch
  * - Tầng 3 DISCOVERY: Kho Deal 43 + Bộ Lọc 4 Quận (Liên Chiểu/Hải Châu/Sơn Trà/Toàn ĐN)
- * - Interactive Savings Calculator (3 Sliders: Trà sữa, Cơm trưa, Xe công nghệ)
- * - 5 Modals: Personal Wallet, Rủ Bạn Zalo/Tele (+5K), SHA-256 Audit, Chiến Thuật, Vì Sao
- * - Human-Proof 2.0: Hộp Thoại Outcome "Bạn Đã Săn Được Chưa?" + Victory Modal Tiền Thật
- * - Mobile 5-Tab Navigation + Confetti Canvas + Web Audio Synthesizer (Zero MP3)
- * - Epistemic Firewall: "ℹ️ Chưa đủ dữ liệu" khi thiếu bằng chứng
+ * - Interactive Savings Calculator (3 Thanh Trượt: Trà Sữa, Bữa Ăn, Xe Công Nghệ)
+ * - Hệ thống 5 Modals Nguyên Bản: Ví Cá Nhân, Rủ Bạn Zalo/Tele (+5K), SHA-256 Audit, Chiến Thuật, Vì Sao
+ * - Human-Proof 2.0 Cấy Ghép: Hộp Thoại Outcome "Bạn Đã Săn Được Chưa?" + Victory Modal Tiền Thật
+ * - Mobile 5-Tab Bottom Navigation + Confetti Canvas + Web Audio API (Zero MP3)
+ * - Grand 4-Column Footer Bản Địa Đà Nẵng
  * =============================================================================
  */
 
@@ -104,7 +107,7 @@
 
       const particles = [];
       const colors = ['#10B981', '#F59E0B', '#38BDF8', '#EC4899', '#FDE047', '#3B82F6'];
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 75; i++) {
         particles.push({
           x: window.innerWidth / 2, y: window.innerHeight / 2,
           vx: (Math.random() - 0.5) * 16, vy: (Math.random() - 0.5) * 16 - 3,
@@ -424,7 +427,6 @@
   const State = {
     deals: DEALS_DATABASE,
     isOnline: navigator.onLine !== false,
-    lastSynced: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
     theme: localStorage.getItem('jayt_theme') || 'dark',
     dealNowMode: false,
     activeTab: 'home',
