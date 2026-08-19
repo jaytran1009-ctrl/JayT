@@ -1,12 +1,12 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P3 IMPLEMENTATION: LINK & IMAGE TRANSPARENCY
+ * JAYT APEX v5.5 — P4 COMPLETE EDITION: PRODUCT TRACK MASTERPIECE
  * =============================================================================
- * PRODUCT TRACK ADVANCEMENTS:
- * - P1: Hero WOW Priority Deal Above-The-Fold hoàn chỉnh.
- * - P2: Data Contract 8 trường + 1 Single Full-Width Primary CTA.
- * - P3: Minh bạch đích đến (Destination Domain), tên thương hiệu ngắn chuẩn,
- *       Lá chắn Fallback SVG 16:10 và nhãn phân loại minh bạch nguồn ảnh.
+ * PRODUCT TRACK (P1 -> P4):
+ * - P1: Hero WOW Priority Deal Above-the-Fold (1 CTA duy nhất, rõ 6 câu hỏi).
+ * - P2: Data Contract 8 trường đồng nhất + 100% Full-Width Primary CTA.
+ * - P3: Minh bạch đích đến (Destination Domain), tên ngắn chuẩn, fallback SVG.
+ * - P4: Evidence Ledger trong UX — Hiển thị mức độ kiểm chứng đẹp & hữu ích.
  *
  * RELEASE INTEGRITY TRACK:
  * - Khóa vĩnh viễn: RC-1 / PARTIAL RUNTIME EVIDENCE (Chờ Independent Audit).
@@ -16,9 +16,9 @@
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P3: Link & Image Transparency Engine Booting...]");
+  console.log("🚀 JayT Apex v5.5 [P4: Complete Dual-Track Product Engine Booting...]");
 
-  // 1. TIỆN ÍCH AN TOÀN & XỬ LÝ URL
+  // 1. TIỆN ÍCH AN TOÀN & XỬ LÝ URL NGHIÊM NGẶT
   function escapeHTML(str) {
     if (!str) return '';
     return String(str)
@@ -32,7 +32,7 @@
   function sanitizeURL(url) {
     if (!url) return '#';
     const u = String(url).trim();
-    // Chấp nhận https, http, tel, zalo và bảo toàn toàn bộ Query Params / UTM
+    // Chặn đứng các scheme nguy hiểm như javascript:, data:, vbscript:
     if (/^(https?:\/\/|tel:|zalo:)/i.test(u)) {
       return u.replace(/"/g, '&quot;');
     }
@@ -134,7 +134,7 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43 — CHUẨN HÓA 8 DEAL SCHEMA & LINK PROVENANCE
+  // 3. DATABASE ĐÀ NẴNG 43 — 8 DEAL CHUẨN SCHEMA & TRUST PROVENANCE
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-MAYCHA-0D',
@@ -156,6 +156,7 @@
       hidden_reason: 'Chỉ kích hoạt ngầm tại chi nhánh Điện Biên Phủ cho sinh viên giờ tan tầm.',
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
+      audit_tip: 'Kiểm tra mã MAYCHA0D trên ShopeeFood trong khung giờ 14:00 - 17:30.',
       hunt_strategy: 'Sao chép mã MAYCHA0D → Mở ShopeeFood chọn size L → Dán mã trước khi ấn thanh toán.',
       destination_label: '🛒 Mở trên ShopeeFood ↗',
       maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
@@ -184,6 +185,7 @@
       hidden_reason: 'Ưu đãi liên kết GrabFood khu vực trung tâm Hải Châu.',
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
+      audit_tip: 'Đặt sớm trước 11:30 để tránh quán quá tải và hết mã AHAI35K.',
       hunt_strategy: 'Bấm Săn Ngay → Chọn món Cơm gà quay → Dán mã AHAI35K trước 11:30 để tài xế nhận đơn sớm.',
       destination_label: '🛵 Mở trên GrabFood ↗',
       maps_url: 'https://maps.google.com/?q=100+Thai+Phien+Da+Nang',
@@ -212,6 +214,7 @@
       hidden_reason: 'Mã khuyến mãi giao thông chính thức từ Grab theo tọa độ sân bay.',
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
+      audit_tip: 'Áp dụng khi định vị GPS nằm trong khuôn viên sân bay Đà Nẵng.',
       hunt_strategy: 'Nhập điểm đón tại Sân Bay Đà Nẵng → Chọn mục Ưu Đãi → Nhập SANBAY → Đặt xe.',
       destination_label: '🚗 Mở trên App Grab ↗',
       maps_url: 'https://maps.google.com/?q=San+bay+Quoc+te+Da+Nang',
@@ -240,6 +243,7 @@
       hidden_reason: 'Chính sách giá vé ưu đãi thành viên cố định tại cụm rạp CGV Vincom Sơn Trà.',
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
+      audit_tip: 'Nhớ mang theo thẻ Học sinh/Sinh viên hoặc CCCD để nhân viên đối soát.',
       hunt_strategy: 'Đặt vé online chọn suất chiếu U22 → Xuất trình thẻ HSSV/CCCD khi nhận vé tại quầy.',
       destination_label: '🎬 Mở trên Web CGV ↗',
       maps_url: 'https://maps.google.com/?q=Vincom+Plaza+Ngo+Quyen+Da+Nang',
@@ -268,6 +272,7 @@
       hidden_reason: 'Chương trình tri ân khách hàng trải nghiệm view sông Hàn buổi tối.',
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
+      audit_tip: 'Đọc mã KATINAT1D trực tiếp với thu ngân tầng 1 trước khi gọi món.',
       hunt_strategy: 'Đến quán trước 19:30 → Đọc mã KATINAT1D khi gọi món tại quầy thu ngân tầng 1.',
       destination_label: '☕ Mở Menu Katinat ↗',
       maps_url: 'https://maps.google.com/?q=34+Bach+Dang+Da+Nang',
@@ -296,6 +301,7 @@
       hidden_reason: 'Chính sách trợ giá cuốc xe điện toàn thành phố kích cầu người dùng mới.',
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
+      audit_tip: 'Nhập mã XANHDN30 tại mục Khuyến Mãi trong app trước khi xác nhận cuốc xe.',
       hunt_strategy: 'Mở app Xanh SM → Vào mục Ưu Đãi → Nhập XANHDN30 → Đặt xe để áp dụng giảm trực tiếp.',
       destination_label: '⚡ Mở trên App XanhSM ↗',
       maps_url: 'https://maps.google.com/?q=Da+Nang',
@@ -324,6 +330,7 @@
       hidden_reason: 'Combo flash-sale ngầm dành riêng cho khu vực sinh viên lân cận ĐH Sư Phạm/Bách Khoa.',
       audit_status_label: '🟡 Chưa kiểm chứng độc lập',
       audit_status_color: '#D97706',
+      audit_tip: 'Ưu đãi chỉ mở trên website Jollibee khi chọn đúng chi nhánh 478 Điện Biên Phủ.',
       hunt_strategy: 'Sao chép mã JOLLIBEE39 → Mở Web Jollibee → Thêm Combo Sinh Viên vào giỏ → Nhập mã thanh toán.',
       destination_label: '🍗 Mở trên Jollibee.vn ↗',
       maps_url: 'https://maps.google.com/?q=478+Dien+Bien+Phu+Da+Nang',
@@ -352,6 +359,7 @@
       hidden_reason: 'Chương trình ưu đãi nhóm giải nhiệt mùa hè truyền thống tại cơ sở Hoàng Diệu.',
       audit_status_label: '🔵 Đang quét thực địa',
       audit_status_color: '#0284C7',
+      audit_tip: 'Thêm tối thiểu 4 phần chè vào giỏ GrabFood để kích hoạt mã tự động.',
       hunt_strategy: 'Đặt đơn nhóm 4 tô trên GrabFood → Nhập mã CHELIENFREE tại bước thanh toán.',
       destination_label: '🍧 Mở trên GrabFood ↗',
       maps_url: 'https://maps.google.com/?q=189+Hoang+Dieu+Da+Nang',
@@ -433,7 +441,7 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX V5.5
+  // 6. RENDER GIAO DIỆN APEX V5.5 HOÀN CHỈNH P1 -> P4
   function renderApp() {
     const root = ensureApexHost();
     const isLight = State.theme === 'light';
@@ -457,6 +465,8 @@
 
     const priorityDeal = State.deals[0];
     const hiddenVouchers = State.deals.filter(d => d.is_hidden);
+    const scanningDeals = State.deals.filter(d => d.audit_status_label.includes('Đang quét'));
+    const unverifiedDeals = State.deals.filter(d => d.audit_status_label.includes('Chưa kiểm chứng'));
 
     let filtered = State.deals.filter(d => {
       if (State.dealNowMode && d.percent < 40) return false;
@@ -719,7 +729,56 @@
             </div>
           </div>
 
-          <!-- 7. MÁY TÍNH TIẾT KIỆM -->
+          <!-- 7. P4 NÂNG CẤP: EVIDENCE & TRUST LEDGER (MINH BẠCH BẰNG CHỨNG HỮU ÍCH) -->
+          <div style="max-width: 1300px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
+            <div style="background: ${isLight ? '#FFFFFF' : 'rgba(17, 24, 39, 0.85)'}; border: 1.5px solid ${C.border}; border-radius: 24px; padding: 2rem; box-shadow: ${C.cardShadow};">
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain}; display: flex; align-items: center; gap: 0.6rem; margin: 0;">
+                    <span>🛡️</span> <span>JayT Trust & Provenance Ledger — Minh Bạch Kiểm Chứng</span>
+                  </h3>
+                  <p style="font-size: 0.82rem; color: ${C.textSub}; margin-top: 0.35rem; margin-bottom: 0;">
+                    JayT không tự xưng "100% thật". Chúng tôi công khai trung thực mức độ kiểm chứng của từng ưu đãi để bạn luôn là người tiêu dùng thông thái.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span style="font-size: 0.74rem; background: rgba(2,132,199,0.15); color: #0284C7; border: 1px solid #0284C7; padding: 0.25rem 0.65rem; border-radius: 8px; font-weight: 700;">
+                    🔵 ${scanningDeals.length} Kèo Đang Quét
+                  </span>
+                  <span style="font-size: 0.74rem; background: rgba(217,119,6,0.15); color: #D97706; border: 1px solid #D97706; padding: 0.25rem 0.65rem; border-radius: 8px; font-weight: 700;">
+                    🟡 ${unverifiedDeals.length} Kèo Chưa Kiểm Chứng Độc Lập
+                  </span>
+                  <span style="font-size: 0.74rem; background: rgba(148,163,184,0.15); color: #94A3B8; border: 1px solid #64748B; padding: 0.25rem 0.65rem; border-radius: 8px; font-weight: 700;">
+                    📷 100% Ảnh Minh Họa
+                  </span>
+                </div>
+              </div>
+
+              <!-- BẢNG ĐỐI SOÁT TRẠNG THÁI & MẸO TIÊU DÙNG THỰC ĐỊA -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                ${State.deals.map(d => `
+                  <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.02)'}; border: 1px solid ${C.border}; border-radius: 14px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.5rem;">
+                    <div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                        <strong style="font-size: 0.85rem; color: ${C.textMain};">${escapeHTML(d.merchant)}</strong>
+                        <span style="font-size: 0.7rem; color: ${d.audit_status_color}; font-weight: 700; background: rgba(0,0,0,0.25); padding: 0.15rem 0.45rem; border-radius: 6px;">${d.audit_status_label}</span>
+                      </div>
+                      <div style="font-size: 0.75rem; color: ${C.textSub}; line-height: 1.4;">
+                        ${escapeHTML(d.title)}
+                      </div>
+                    </div>
+                    <div style="font-size: 0.72rem; color: #059669; background: rgba(16,185,129,0.08); padding: 0.4rem 0.6rem; border-radius: 6px; border-left: 2.5px solid #10B981;">
+                      💡 <strong>Lưu ý:</strong> ${escapeHTML(d.audit_tip)}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 8. MÁY TÍNH TIẾT KIỆM (3 THANH TRƯỢT) -->
           <div style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
             <div style="background: ${C.calcBg}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 2.2rem; box-shadow: ${C.cardShadow};">
               <div style="text-align: center; margin-bottom: 1.8rem;">
@@ -935,7 +994,7 @@
           </a>
         </nav>
 
-        <!-- 8. GRAND FOOTER -->
+        <!-- 9. GRAND FOOTER -->
         <footer style="background: ${C.footerBg}; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 1.5rem 2rem; display: block;">
           <div style="max-width: 1300px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
