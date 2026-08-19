@@ -39,6 +39,15 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 32px rgba(15,23,42,0.08);
         }
+        .landmark-card {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .landmark-card:hover {
+            transform: translateY(-3px);
+            border-color: #059669 !important;
+            box-shadow: 0 8px 20px rgba(5,150,105,0.1);
+        }
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
@@ -53,7 +62,7 @@
     <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME (APP SHELL MOUNT POINT) -->
     <div id="jaytAppRoot"></div>
 
-    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v6.0 -->
-    <script src="/jayt_runtime_adapter.js?v=6.0.0"></script>
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v7.0 -->
+    <script src="/jayt_runtime_adapter.js?v=7.0.0"></script>
 </body>
 </html>
