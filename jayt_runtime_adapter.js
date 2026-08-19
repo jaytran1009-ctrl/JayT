@@ -1,23 +1,41 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — UNIFIED AUTHORITY OPERATING ENGINE
+ * JAYT APEX v5.5 — CONSTITUTIONAL RC-1 (TELEMETRY & SCOPED AUTHORITY)
  * =============================================================================
- * NORTH STAR: "JAYT ĐI SĂN CÙNG BẠN — KHÔNG CẦN XEM NHIỀU, CHỈ CẦN SĂN ĐÚNG"
- * =============================================================================
- * TÍNH NĂNG TỰ ĐỘNG KHỞI TẠO HOST AN TOÀN (NON-DESTRUCTIVE AUTHORITY):
- * - Tự động tạo #jayt-apex-root nếu chưa có trong index.html.
- * - Ẩn an toàn các node cũ bằng CSS (bảo tồn nguyên vẹn 100% Legacy DOM).
- * - Tải đầy đủ 100% Giao diện APEX Dark Mode + Ticker + WOW MayCha + Radar 3 Voucher
- *   + Kho 8 Deal + Bảng tính 3 thanh trượt + 5 Modals + Ăn mừng tiền thật.
+ * GOVERNANCE COMPLIANCE:
+ * 1. JAYT-HOST-001: Non-Destructive Authority Host Provisioning (No Wildcard).
+ * 2. JAYT-HOST-002: No Silent Render Failure (Deterministic Machine Telemetry).
+ * 3. JAYT-RELEASE-INTEGRITY-001: Idempotency & Evidence Tracing.
  * =============================================================================
  */
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [Non-Destructive Authority Engine Initializing...]");
 
   // ==========================================================================
-  // 🔒 1. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
+  // 📡 1. DETERMINISTIC LIFECYCLE TELEMETRY ENGINE (JAYT-HOST-002)
+  // ==========================================================================
+
+  window.__JAYT_TELEMETRY__ = window.__JAYT_TELEMETRY__ || {
+    version: '5.5.0-RC1',
+    boot_timestamp: new Date().toISOString(),
+    events: [],
+    status: 'INITIALIZING',
+    log: function(stage, details = {}) {
+      const entry = {
+        timestamp: performance.now().toFixed(2) + 'ms',
+        stage: stage,
+        details: details
+      };
+      this.events.push(entry);
+      console.log(`📡 [JAYT TELEMETRY] ${stage}`, details);
+    }
+  };
+
+  window.__JAYT_TELEMETRY__.log('APEX_BOOT', { userAgent: navigator.userAgent });
+
+  // ==========================================================================
+  // 🔒 2. TIỆN ÍCH AN TOÀN & XỬ LÝ DỮ LIỆU
   // ==========================================================================
 
   function escapeHTML(str) {
@@ -44,7 +62,7 @@
   const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20%C4%90ang%20%C4%90%E1%BB%91i%20So%C3%A1t%20Th%E1%BB%B1c%20%C4%90%E1%BB%8Ba%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
 
   // ==========================================================================
-  // 📳 2. HAPTIC & WEB AUDIO SYNTHESIZER
+  // 📳 3. HAPTIC & WEB AUDIO SYNTHESIZER
   // ==========================================================================
 
   function triggerHaptic(type = 'light') {
@@ -98,6 +116,7 @@
       if (!host) {
         host = document.createElement('div');
         host.id = 'jayt-overlay-root';
+        host.setAttribute('data-jayt-owned', 'overlay');
         host.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:999999;display:flex;align-items:center;justify-content:center;';
         document.body.appendChild(host);
       }
@@ -137,7 +156,7 @@
   }
 
   // ==========================================================================
-  // 🧠 3. SỔ CÁI 8 KÈO ĐÀ NẴNG 43 GOLDEN MASTER
+  // 🧠 4. DATABASE ĐÀ NẴNG 43 GOLDEN MASTER
   // ==========================================================================
 
   const DEALS_DATABASE = [
@@ -432,7 +451,7 @@
   ];
 
   // ==========================================================================
-  // 🏛️ 4. STATE MANAGEMENT (SSOT)
+  // 🏛️ 5. STATE MANAGEMENT (SSOT)
   // ==========================================================================
 
   const State = {
@@ -491,19 +510,30 @@
   }
 
   // ==========================================================================
-  // 🛡️ 5. NON-DESTRUCTIVE AUTHORITY HOST PROVISIONER
+  // 🛡️ 6. SCOPED AUTHORITY PROVISIONER (JAYT-HOST-001)
   // ==========================================================================
 
   function ensureApexHost() {
     let root = document.getElementById('jayt-apex-root');
+    
     if (!root) {
-      // Ẩn an toàn các thành phần cũ bằng CSS để không phá hủy DOM di sản
+      window.__JAYT_TELEMETRY__.log('HOST_NOT_FOUND', { action: 'PROVISIONING_HOST' });
+
+      // Cài đặt CSS Scoped Authority (Chỉ ẩn các thành phần Legacy định danh, không quét wildcard)
       let authorityStyle = document.getElementById('jayt-authority-style');
       if (!authorityStyle) {
         authorityStyle = document.createElement('style');
         authorityStyle.id = 'jayt-authority-style';
         authorityStyle.textContent = `
-          body > *:not(#jayt-apex-root):not(#jayt-overlay-root):not(script):not(style) {
+          /* SCOPED AUTHORITY: Chỉ ẩn các container Legacy cụ thể, bảo toàn 100% cây DOM */
+          #jayt-legacy-vault,
+          .sidebar,
+          #sidebar,
+          .tram-dieu-huong,
+          .main-content,
+          #main-content,
+          .gessi-container,
+          .hero-section {
             display: none !important;
           }
           #jayt-apex-root {
@@ -552,22 +582,32 @@
           }
         `;
         document.head.appendChild(authorityStyle);
+        window.__JAYT_TELEMETRY__.log('SCOPED_CSS_INJECTED');
       }
 
       root = document.createElement('div');
       root.id = 'jayt-apex-root';
       root.setAttribute('data-jayt-owned', 'apex');
       document.body.prepend(root);
+      window.__JAYT_TELEMETRY__.log('HOST_CREATED', { hostId: 'jayt-apex-root' });
+    } else {
+      window.__JAYT_TELEMETRY__.log('HOST_DISCOVERED', { hostId: 'jayt-apex-root' });
     }
+
     return root;
   }
 
   // ==========================================================================
-  // 🖥️ 6. COMPLETE MODERN APEX UI RENDER ENGINE
+  // 🖥️ 7. COMPLETE MODERN APEX UI RENDER ENGINE
   // ==========================================================================
 
   function renderApp() {
     const root = ensureApexHost();
+    if (!root) {
+      window.__JAYT_TELEMETRY__.log('APEX_MOUNT_ABORTED', { reason: 'UNABLE_TO_PROVISION_HOST' });
+      return;
+    }
+
     const isLight = State.theme === 'light';
     const timeInfo = getSmartTimeContext();
 
@@ -1102,13 +1142,16 @@
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.78rem; color: #64748B;">
               <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: JayT Apex v5.5 — Unified Authority Edition</span>
+              <span>Phiên bản: JayT Apex v5.5 — RC-1</span>
             </div>
           </div>
         </footer>
 
       </div>
     `;
+
+    window.__JAYT_TELEMETRY__.status = 'MOUNTED_SUCCESS';
+    window.__JAYT_TELEMETRY__.log('APEX_MOUNTED', { dealsCount: filtered.length });
   }
 
   function renderDealCard(deal, C, isLight) {
@@ -1178,7 +1221,7 @@
   }
 
   // ==========================================================================
-  // ⚡ 7. EVENT DELEGATION & ACTION HANDLERS
+  // ⚡ 8. EVENT DELEGATION & ACTION HANDLERS
   // ==========================================================================
 
   document.body.addEventListener('click', function (e) {
@@ -1294,7 +1337,10 @@
     else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
   });
 
-  // Khởi chạy ngay khi DOM sẵn sàng
+  // ==========================================================================
+  // 🚀 9. KHỞI TẠO AN TOÀN THEO LIFECYCLE CHUẨN
+  // ==========================================================================
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
