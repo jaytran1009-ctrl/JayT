@@ -1,68 +1,122 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JayT — Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43</title>
     
     <!-- SEO & Metadata Chính Thức Chuẩn Quốc Gia -->
-    <meta name="description" content="Cổng thông tin tự động tìm kiếm, đối soát và xếp hạng các cơ hội tiết kiệm chi tiêu ăn uống, di chuyển và giải trí hàng đầu tại Đà Nẵng (Mã Vùng 43). Đối soát mật mã học SHA-256 minh bạch.">
-    <meta name="keywords" content="JayT Đà Nẵng, ưu đãi Đà Nẵng, mã giảm giá Đà Nẵng, quán ăn ngon Đà Nẵng, săn deal Đà Nẵng, Xanh SM Đà Nẵng, CGV Đà Nẵng, trà sữa Đà Nẵng">
-    <meta property="og:title" content="JayT — Cổng Thông Tin & Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43">
-    <meta property="og:description" content="Phục vụ cộng đồng Đà Nẵng: Khám phá kho ưu đãi còn hạn, đối soát tính toàn vẹn thời gian thực mỗi 20s.">
+    <meta name="description" content="JayT Hub — Cẩm nang tiết kiệm & đặc quyền voucher 0Đ cho sinh viên, người lao động Đà Nẵng. Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí, anh em local kiểm định.">
+    <meta name="keywords" content="JayT, deal Đà Nẵng, voucher 0 đồng, mã giảm giá Grab, ShopeeFood Đà Nẵng, Katinat, Maycha, sinh viên Đà Nẵng, tiết kiệm, CGV Đà Nẵng">
+    <meta name="author" content="JayT — Đà Nẵng 43">
+    <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="JayT — Đặc Quyền Tiết Kiệm Cộng Đồng Đà Nẵng 43">
+    <meta property="og:description" content="Gom mã GrabFood, ShopeeFood, Katinat, Maycha, Xanh SM mỗi ngày. 100% miễn phí cho sinh viên & người lao động Đà Nẵng.">
+    <meta property="og:locale" content="vi_VN">
     <meta name="theme-color" content="#059669">
 
-    <!-- Google Fonts Chuẩn Quốc Tế Inter -->
+    <!-- Google Fonts: Inter, Newsreader, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #F8FAFC;
-            color: #0F172A;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
+        :root {
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Newsreader', Georgia, serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --radius-pill: 9999px;
+            --radius-card: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+            /* Dark Theme Default */
+            --bg-page: #09090B;
+            --bg-surface: #121215;
+            --bg-card: #18181B;
+            --bg-card-hover: #222226;
+            --bg-tag: #27272A;
+            --border: #27272A;
+            --border-hover: #3F3F46;
+            --text-heading: #FAFAFA;
+            --text-body: #A1A1AA;
+            --text-muted: #71717A;
+            --btn-primary-bg: #FAFAFA;
+            --btn-primary-text: #09090B;
+            --btn-primary-hover: #E4E4E7;
+            --badge-green-bg: rgba(16, 185, 129, 0.15);
+            --badge-green-text: #34D399;
+            --accent-gold: #FBBF24;
+            --accent-red: #EF4444;
+            --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+            --header-bg: rgba(9, 9, 11, 0.92);
         }
+
+        [data-theme="light"] {
+            --bg-page: #F8F9FA;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F4F4F5;
+            --bg-tag: #F4F4F5;
+            --border: #E4E4E7;
+            --border-hover: #D4D4D8;
+            --text-heading: #09090B;
+            --text-body: #52525B;
+            --text-muted: #A1A1AA;
+            --btn-primary-bg: #09090B;
+            --btn-primary-text: #FAFAFA;
+            --btn-primary-hover: #27272A;
+            --badge-green-bg: #ECFDF5;
+            --badge-green-text: #059669;
+            --accent-gold: #D97706;
+            --accent-red: #DC2626;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --header-bg: rgba(248, 249, 250, 0.92);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-bottom: 5rem;
+            transition: var(--transition);
+        }
+
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes toastIn { from { transform: translate(-50%, -20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
-        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        
-        .deal-card {
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .deal-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 32px rgba(15,23,42,0.08);
-        }
-        .landmark-card {
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        .landmark-card:hover {
-            transform: translateY(-3px);
-            border-color: #059669 !important;
-            box-shadow: 0 8px 20px rgba(5,150,105,0.1);
-        }
+        @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
-            animation: marquee 35s linear infinite;
+            animation: marqueeScroll 35s linear infinite;
         }
         .marquee-track:hover { animation-play-state: paused; }
+
+        .deal-card-luxury {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .deal-card-luxury:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+        }
         input::placeholder { color: #94A3B8; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME (APP SHELL MOUNT POINT) -->
+    <!-- ĐIỂM GẮN DUY NHẤT CỦA CẢ HỆ THỐNG RUNTIME APEX (APP MOUNT POINT) -->
     <div id="jaytAppRoot"></div>
 
-    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v7.0 -->
-    <script src="/jayt_runtime_adapter.js?v=7.0.0"></script>
+    <!-- CỖ MÁY DỮ LIỆU & ĐỐI SOÁT TOÀN VẸN REALTIME v8.0 -->
+    <script src="/jayt_runtime_adapter.js?v=8.0.0"></script>
 </body>
 </html>
