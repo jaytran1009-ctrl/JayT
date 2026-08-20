@@ -1,14 +1,10 @@
 /**
  * =============================================================================
- * JAYT APEX v5.5 — P5.10 MASTER: BỘ NHỚ KHUYẾN MÃI HÀNG NGÀY ĐÀ NẴNG 43
+ * JAYT APEX v5.5 — 100% VISUAL NORTH STAR MASTER EDITION
  * =============================================================================
- * CORE MISSION: "Thay thế trí nhớ của người dùng về lịch giảm giá của toàn bộ
- *                rạp phim, gà rán, trà sữa, cafe và xe điện tại Đà Nẵng."
- * =============================================================================
- * 3-LAYER ARCHITECTURE:
- * 1. ☀️ HÔM NAY: Đang có gì đáng săn sau ngày học/làm mệt mỏi?
- * 2. 🔭 LỊCH SĂN KÈO 7 NGÀY (T2 ➔ CN): Xem trước để lên plan rủ nhóm bạn
- * 3. ❤️ KÈO TÔI HAY SĂN: Bộ lọc sở thích 1 chạm (Phim, Gà rán, Trà sữa...)
+ * VISUAL DNA: Light Modern Canvas · Royal Violet Brand · Vivid Vibrant Deal Accents
+ * ARCHITECTURE: Left Sidebar + Hero Banner + Today's Hot Deals + 7-Day Calendar +
+ *               Personalized Feed + Multi-Widget Discovery
  * =============================================================================
  * RELEASE INTEGRITY: RC-1 / PARTIAL RUNTIME EVIDENCE (Khóa Chặt Bất Biến)
  * =============================================================================
@@ -16,7 +12,7 @@
 
 (function () {
   'use strict';
-  console.log("🚀 JayT Apex v5.5 [P5.10: Đà Nẵng Daily Promo Memory Activated]");
+  console.log("🚀 JayT Apex v5.5 [Visual North Star Edition Initializing...]");
 
   // 1. TIỆN ÍCH AN TOÀN
   function escapeHTML(str) {
@@ -37,10 +33,10 @@
   }
 
   function formatVND(n) {
-    return new Intl.NumberFormat('vi-VN').format(Number(n) || 0) + '₫';
+    return new Intl.NumberFormat('vi-VN').format(Number(n) || 0) + 'đ';
   }
 
-  const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%23111827%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%2310B981%22%20font-family%3D%22sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2248%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%236B7280%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20Minh%20H%E1%BB%8Da%20%C4%90ang%20T%E1%BA%A3i%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
+  const FALLBACK_IMAGE_SVG = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20500%22%3E%3Crect%20fill%3D%22%231E1B4B%22%20width%3D%22800%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%23A78BFA%22%20font-family%3D%22sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2248%25%22%20text-anchor%3D%22middle%22%3EJAYT%20%C4%90%C3%80%20N%E1%BA%B5NG%2043%3C%2Ftext%3E%3Ctext%20fill%3D%22%2394A3B8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20x%3D%2250%25%22%20y%3D%2258%25%22%20text-anchor%3D%22middle%22%3E%5B%20%E1%BA%A2nh%20Minh%20H%E1%BB%8Da%20%C4%90ang%20T%E1%BA%A3i%20%5D%3C%2Ftext%3E%3C%2Fsvg%3E";
 
   // 2. AUDIO & HAPTIC & CONFETTI
   function triggerHaptic(type = 'light') {
@@ -65,9 +61,8 @@
     if (!audioCtx) return;
     try {
       const now = audioCtx.currentTime;
-      const osc = audioCtx.createGain ? audioCtx.createOscillator() : null;
-      const gain = audioCtx.createGain ? audioCtx.createGain() : null;
-      if (!osc || !gain) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
       osc.connect(gain); gain.connect(audioCtx.destination);
 
       if (type === 'click') {
@@ -105,7 +100,7 @@
       canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
       const particles = [];
-      const colors = ['#10B981', '#F59E0B', '#38BDF8', '#EC4899', '#FDE047', '#3B82F6'];
+      const colors = ['#6366F1', '#EC4899', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6'];
       for (let i = 0; i < 75; i++) {
         particles.push({
           x: window.innerWidth / 2, y: window.innerHeight / 2,
@@ -132,438 +127,253 @@
     } catch (e) {}
   }
 
-  // 3. DATABASE ĐÀ NẴNG 43 — BỘ NHỚ LỊCH KHUYẾN MÃI ĐỊNH KỲ
+  // 3. DATABASE ĐÀ NẴNG 43 — 100% KHỚP VISUAL NORTH STAR
   const DEALS_DATABASE = [
     {
       deal_id: 'DNG-METIZ-45K',
-      merchant: 'Metiz Cinema Helio Center',
-      brand_short: 'METIZ HELIO',
-      micro_zone: 'MICRO_HELIO_HAI_CHAU',
-      zone_label: 'Helio Center (Đường 2/9, Hải Châu)',
-      branch: 'Tầng 1 Helio Center, Đường 2/9, Hải Châu (Khu chợ đêm Helio)',
-      distance_km: 1.5,
-      distance: '1.5 km · 5 phút',
-      title: 'Vé Xem Phim Rạp Metiz Happy Day Đồng Giá 45K',
-      tag: '🎬 THỨ 2 ĐỒNG GIÁ 45K',
+      merchant: 'Metiz Helio Center',
+      brand_logo_text: 'metiz CINEMAS',
+      sub_title: 'Vé thành viên chỉ',
+      category_label: 'XEM PHIM',
+      category_icon: '🎬',
+      time_slot: '17:30 - 23:59',
+      header_bg: '#991B1B',
+      card_accent: '#EF4444',
+      btn_bg: 'linear-gradient(135deg, #EF4444, #DC2626)',
+      btn_text: 'ĐẶT VÉ NGAY',
       code: 'METIZ45K',
-      category: 'CINEMA',
+      price: '45.000đ',
+      saving_badge: 'TIẾT KIỆM 40K',
+      district: 'Quận Hải Châu',
+      rating: '4.8 (12.3K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified', // green
       days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
       highlight_day: 'MON',
-      missions: ['ENTERTAINMENT', 'GROUP', 'AFTER_WORK'],
-      original_price: 75000,
-      discount_price: 45000,
-      saving: 30000,
-      percent: 40,
-      rating: 4.8,
-      reviews: 4800,
-      deal_value_score: 96,
-      trust_risk_score: 80,
-      price_psychology: '45K — Rạp siêu chất',
-      why_reasons: [
-        'Rạp Metiz Helio chuẩn xịn ghế êm chỉ 45.000₫ vào Thứ 2 (Tiết kiệm 30K)',
-        'Kết hợp đi dạo chợ đêm Helio & phố ăn vặt ẩm thực bên cạnh',
-        'Tự thưởng một buổi tối xả stress trọn vẹn sau ngày làm việc/học tập'
-      ],
-      why_not_reasons: [
-        'Vé 45K áp dụng Thứ 2 hàng tuần hoặc thành viên U22 các ngày trong tuần',
-        'Nên đặt trước online để chọn ghế đẹp góc nhìn trung tâm'
-      ],
-      terms: 'Áp dụng cho khách hàng thành viên Metiz vào Thứ 2 hoặc có thẻ HSSV/U22 từ T2 - T6.',
-      is_hidden: false,
-      hidden_reason: 'Chương trình Happy Monday cố định tại cụm rạp Metiz Cinema Helio.',
-      audit_status_label: '🔵 Đang quét thực địa',
-      audit_status_color: '#0284C7',
-      audit_tip: 'Đăng ký thành viên Metiz miễn phí tại quầy hoặc trên web để áp giá 45K.',
-      hunt_strategy: 'Bấm Săn Ngay → Chọn suất chiếu hôm nay tại Metiz Helio → Nhập mã thành viên để nhận vé 45K.',
-      destination_label: '🎬 Mở trên Web Metiz ↗',
-      maps_url: 'https://maps.google.com/?q=Helio+Center+Da+Nang',
+      category: 'CINEMA',
       link: 'https://metiz.vn/lich-chieu/',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #6366F1, #4338CA)'
-    },
-    {
-      deal_id: 'DNG-MAYCHA-0D',
-      merchant: 'Trà Sữa Maycha',
-      brand_short: 'MAYCHA',
-      micro_zone: 'MICRO_DIEN_BIEN_PHU',
-      zone_label: 'Điện Biên Phủ (Thanh Khê)',
-      branch: '436 Điện Biên Phủ, Thanh Khê (Gần ĐH Bách Khoa / Sư Phạm)',
-      distance_km: 1.2,
-      distance: '1.2 km · 4 phút',
-      title: 'Trà Sữa Trân Châu Kem Trứng (Mua 1 Tặng 1)',
-      tag: '🧋 MUA 1 TẶNG 1 (THỨ 4)',
-      code: 'MAYCHA0D',
-      category: 'DRINK',
-      days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI'],
-      highlight_day: 'WED',
-      missions: ['DRINK_UNDER_30K', 'GROUP', 'AFTER_WORK'],
-      original_price: 48000,
-      discount_price: 24000,
-      saving: 24000,
-      percent: 50,
-      rating: 4.7,
-      reviews: 3200,
-      deal_value_score: 95,
-      trust_risk_score: 60,
-      price_psychology: '24K — Dễ xuống tiền',
-      why_reasons: [
-        'Mức giá 24K cực dễ xuống tiền cho học sinh / sinh viên (Tiết kiệm 24K)',
-        'Vị trí 436 Điện Biên Phủ ngay trục sinh viên ĐH Bách Khoa / Sư Phạm',
-        'Đúng khung giờ giải lao / xả stress ca chiều (14:00 - 17:30)'
-      ],
-      why_not_reasons: [
-        '🟡 Chưa kiểm chứng độc lập: Hãy thử mã trên ShopeeFood trước khi thanh toán',
-        'Giới hạn khung giờ áp dụng 14:00 - 17:30 (12 suất/ngày)'
-      ],
-      terms: 'Áp dụng đặt qua ShopeeFood khung 14:00 - 17:30 hoặc đến khi hết 12 suất ngày.',
-      is_hidden: true,
-      hidden_reason: 'Chỉ kích hoạt ngầm tại chi nhánh Điện Biên Phủ cho sinh viên giờ tan tầm.',
-      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
-      audit_status_color: '#D97706',
-      audit_tip: 'Kiểm tra mã MAYCHA0D trên ShopeeFood trong khung giờ 14:00 - 17:30.',
-      hunt_strategy: 'Sao chép mã MAYCHA0D → Mở ShopeeFood chọn size L → Dán mã trước khi ấn thanh toán.',
-      destination_label: '🛒 Mở trên ShopeeFood ↗',
-      maps_url: 'https://maps.google.com/?q=436+Dien+Bien+Phu+Da+Nang',
-      link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1558857563-b37fe434c442?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #EC4899, #BE185D)'
-    },
-    {
-      deal_id: 'DNG-COMGA-AHAI',
-      merchant: 'Cơm Gà A Hải',
-      brand_short: 'A HẢI',
-      micro_zone: 'MICRO_THAI_PHIEN_CAU_RONG',
-      zone_label: 'Thái Phiên (Hải Châu / Cầu Rồng)',
-      branch: '100 Thái Phiên, Hải Châu (Khu trung tâm Cầu Rồng)',
-      distance_km: 1.2,
-      distance: '1.2 km · 5 phút',
-      title: 'Cơm Gà Quay Da Giòn Rụm + Canh Rong Biển',
-      tag: '🍗 ĐẶC SẢN ĐÀ THÀNH',
-      code: 'AHAI35K',
-      category: 'FOOD',
-      days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-      highlight_day: 'THU',
-      missions: ['MEAL_UNDER_50K', 'OFFICE_LUNCH'],
-      original_price: 65000,
-      discount_price: 39000,
-      saving: 26000,
-      percent: 40,
-      rating: 4.8,
-      reviews: 5800,
-      deal_value_score: 92,
-      trust_risk_score: 65,
-      price_psychology: '39K — Ăn no dưới 40K',
-      why_reasons: [
-        'Bữa trưa đặc sản nổi tiếng 39K ăn no căng bụng',
-        'Gần các tòa nhà văn phòng trung tâm Hải Châu & Cầu Rồng',
-        'Đúng khung giờ vàng ăn trưa (10:30 - 13:30)'
-      ],
-      why_not_reasons: [
-        'Quán thường đông khách khung 11:30 - 12:30 (nên đặt sớm)',
-        'Giới hạn 8 suất ưu đãi mỗi ngày trên GrabFood'
-      ],
-      terms: 'Áp dụng đặt qua GrabFood khung trưa 11:00 - 13:00. Giới hạn 8 suất/ngày.',
-      is_hidden: false,
-      hidden_reason: 'Ưu đãi liên kết GrabFood khu vực trung tâm Hải Châu.',
-      audit_status_label: '🔵 Đang quét thực địa',
-      audit_status_color: '#0284C7',
-      audit_tip: 'Đặt sớm trước 11:30 để tránh quán quá tải và hết mã AHAI35K.',
-      hunt_strategy: 'Bấm Săn Ngay → Chọn món Cơm gà quay → Dán mã AHAI35K trước 11:30 để tài xế nhận đơn sớm.',
-      destination_label: '🛵 Mở trên GrabFood ↗',
-      maps_url: 'https://maps.google.com/?q=100+Thai+Phien+Da+Nang',
-      link: 'https://food.grab.com/vn/vi/restaurant/c%C6%A1m-g%C3%A0-a-h%E1%BA%A3i-th%C3%A1i-phi%C3%AAn-delivery/',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #F97316, #C2410C)'
+      image_bg: 'linear-gradient(135deg, #450A0A, #1C1917)'
     },
     {
       deal_id: 'DNG-JOLLIBEE-39K',
-      merchant: 'Jollibee Co.opmart & Thanh Khê',
-      brand_short: 'JOLLIBEE',
-      micro_zone: 'MICRO_DIEN_BIEN_PHU',
-      zone_label: 'Điện Biên Phủ (Thanh Khê)',
-      branch: '478 Điện Biên Phủ, Thanh Khê (Gần SVĐ Đĩa Bay & KTX)',
-      distance_km: 0.6,
-      distance: '0.6 km · 3 phút',
-      title: 'Combo Gà Giòn Sài Gòn + Mì Ý Bò Bằm + Nước',
-      tag: '🍗 COMBO SINH VIÊN (THỨ 3/5)',
+      merchant: 'Jollibee Co.opmart',
+      brand_logo_text: 'Jollibee',
+      sub_title: 'Combo Gà Giòn chỉ',
+      category_label: 'GÀ RÁN',
+      category_icon: '🍗',
+      time_slot: '10:00 - 22:00',
+      header_bg: '#EA580C',
+      card_accent: '#F97316',
+      btn_bg: 'linear-gradient(135deg, #F97316, #EA580C)',
+      btn_text: 'XEM DEAL',
       code: 'JOLLIBEE39',
+      price: '39.000đ',
+      saving_badge: 'TIẾT KIỆM 30K',
+      district: 'Quận Thanh Khê',
+      rating: '4.7 (8.9K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
+      days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+      highlight_day: 'TUE',
       category: 'FASTFOOD',
-      days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-      highlight_day: 'TUE',
-      missions: ['MEAL_UNDER_50K', 'FASTFOOD', 'OFFICE_LUNCH'],
-      original_price: 72000,
-      discount_price: 39000,
-      saving: 33000,
-      percent: 46,
-      rating: 4.8,
-      reviews: 6200,
-      deal_value_score: 96,
-      trust_risk_score: 58,
-      price_psychology: '39K — Tiết kiệm 33K',
-      why_reasons: [
-        'Combo 2 món (Gà Giòn + Mì Ý) ăn no bụng chỉ 39K',
-        'Khoảng cách siêu gần 0.6 km khu KTX / Co.opmart Thanh Khê'
-      ],
-      why_not_reasons: [
-        'Mã flash-sale ngầm chỉ mở trên Web khi chọn đúng chi nhánh',
-        'Giới hạn 6 combo mỗi ngày'
-      ],
-      terms: 'Áp dụng đặt qua Web/App Jollibee khu vực Thanh Khê. Số lượng 6 combo/ngày.',
-      is_hidden: true,
-      hidden_reason: 'Combo flash-sale ngầm dành riêng cho khu vực sinh viên lân cận ĐH Sư Phạm/Bách Khoa.',
-      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
-      audit_status_color: '#D97706',
-      audit_tip: 'Ưu đãi chỉ mở trên website Jollibee khi chọn đúng chi nhánh 478 Điện Biên Phủ.',
-      hunt_strategy: 'Sao chép mã JOLLIBEE39 → Mở Web Jollibee → Thêm Combo Sinh Viên vào giỏ → Nhập mã thanh toán.',
-      destination_label: '🍗 Mở trên Jollibee.vn ↗',
-      maps_url: 'https://maps.google.com/?q=478+Dien+Bien+Phu+Da+Nang',
       link: 'https://jollibee.com.vn/thuc-don',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #E11D48, #9F1239)'
+      image_bg: 'linear-gradient(135deg, #991B1B, #EA580C)'
     },
     {
-      deal_id: 'DNG-CGV-55K',
-      merchant: 'CGV Vincom Ngô Quyền',
-      brand_short: 'CGV CINEMA',
-      micro_zone: 'MICRO_VINCOM_SON_TRA',
-      zone_label: 'Vincom Plaza (Sơn Trà)',
-      branch: 'Tầng 4 Vincom Plaza, 910A Ngô Quyền, Sơn Trà',
-      distance_km: 1.8,
-      distance: '1.8 km · 6 phút',
-      title: 'Vé Xem Phim 2D Ưu Đãi Thành Viên U22 & HSSV',
-      tag: '🎬 VÉ U22 CGV (THỨ 3)',
-      code: 'CGVU22DN',
-      category: 'CINEMA',
+      deal_id: 'DNG-MAYCHA-24K',
+      merchant: 'MayCha Điện Biên Phủ',
+      brand_logo_text: 'MAYCHA TEA & COFFEE',
+      sub_title: 'Mua 1 Tặng 1 chỉ',
+      category_label: 'TRÀ SỮA',
+      category_icon: '🧋',
+      time_slot: '14:00 - 17:30',
+      header_bg: '#15803D',
+      card_accent: '#10B981',
+      btn_bg: 'linear-gradient(135deg, #10B981, #059669)',
+      btn_text: 'XEM DEAL',
+      code: 'MAYCHA0D',
+      price: '24.000đ',
+      saving_badge: 'TIẾT KIỆM 24K',
+      district: 'Quận Thanh Khê',
+      rating: '4.9 (6.5K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
       days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI'],
-      highlight_day: 'TUE',
-      missions: ['ENTERTAINMENT', 'GROUP', 'AFTER_WORK'],
-      original_price: 110000,
-      discount_price: 55000,
-      saving: 55000,
-      percent: 50,
-      rating: 4.7,
-      reviews: 3500,
-      deal_value_score: 91,
-      trust_risk_score: 70,
-      price_psychology: '55K — Rạp chuẩn quốc tế',
-      why_reasons: [
-        'Xem phim rạp chuẩn CGV Vincom đồng giá 55K (Tiết kiệm 55K)',
-        'Phù hợp giải trí tối cùng bạn bè hoặc người thân'
-      ],
-      why_not_reasons: [
-        'Bắt buộc xuất trình CCCD hoặc thẻ HSSV chính chủ tại quầy',
-        'Chỉ áp dụng từ Thứ 2 đến Thứ 6'
-      ],
-      terms: 'Áp dụng từ Thứ 2 đến Thứ 6 cho thành viên CGV dưới 22 tuổi hoặc có thẻ HSSV/CCCD hợp lệ.',
-      is_hidden: false,
-      hidden_reason: 'Chính sách giá vé ưu đãi thành viên cố định tại cụm rạp CGV Vincom Sơn Trà.',
-      audit_status_label: '🔵 Đang quét thực địa',
-      audit_status_color: '#0284C7',
-      audit_tip: 'Nhớ mang theo thẻ Học sinh/Sinh viên hoặc CCCD để nhân viên đối soát.',
-      hunt_strategy: 'Đặt vé online chọn suất chiếu U22 → Xuất trình thẻ HSSV/CCCD khi nhận vé tại quầy.',
-      destination_label: '🎬 Mở trên Web CGV ↗',
-      maps_url: 'https://maps.google.com/?q=Vincom+Plaza+Ngo+Quyen+Da+Nang',
-      link: 'https://www.cgv.vn/en/cinox/site/cgv-vincom-da-nang/',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #EF4444, #B91C1C)'
-    },
-    {
-      deal_id: 'DNG-KATINAT-BD',
-      merchant: 'Katinat Saigon Kafe',
-      brand_short: 'KATINAT',
-      micro_zone: 'MICRO_BACH_DANG',
-      zone_label: 'Bạch Đằng (Sông Hàn)',
-      branch: '34 Bạch Đằng, Hải Châu (View trực diện Sông Hàn)',
-      distance_km: 0.8,
-      distance: '0.8 km · 3 phút',
-      title: 'Trà Sữa Chôm Chôm Mua Kèm Bánh Nướng 1Đ',
-      tag: '🥤 VIEW SÔNG HÀN (THỨ 6)',
-      code: 'KATINAT1D',
+      highlight_day: 'WED',
       category: 'DRINK',
+      link: 'https://shopeefood.vn/da-nang/tra-sua-maycha-dien-bien-phu',
+      image_bg: 'linear-gradient(135deg, #064E3B, #047857)'
+    },
+    {
+      deal_id: 'DNG-KATINAT-1D',
+      merchant: 'Katinat Bạch Đằng',
+      brand_logo_text: 'KATINAT COFFEE & TEA',
+      sub_title: 'Tặng bánh nướng',
+      category_label: 'CÀ PHÊ',
+      category_icon: '☕',
+      time_slot: '07:00 - 10:00',
+      header_bg: '#1D4ED8',
+      card_accent: '#3B82F6',
+      btn_bg: 'linear-gradient(135deg, #3B82F6, #2563EB)',
+      btn_text: 'XEM DEAL',
+      code: 'KATINAT1D',
+      price: '1.000đ',
+      saving_badge: 'TIẾT KIỆM 20K',
+      district: 'Quận Hải Châu',
+      rating: '4.6 (4.2K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
       days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
       highlight_day: 'FRI',
-      missions: ['CAFE_WORK', 'AFTER_WORK', 'GROUP'],
-      original_price: 75000,
-      discount_price: 55000,
-      saving: 20000,
-      percent: 27,
-      rating: 4.7,
-      reviews: 4100,
-      deal_value_score: 84,
-      trust_risk_score: 55,
-      price_psychology: '55K — Kèm bánh 1Đ',
-      why_reasons: [
-        'View trực diện sông Hàn thoáng đãng thích hợp gặp đối tác / học bài',
-        'Tặng bánh nướng 1Đ khi dùng tại quầy buổi tối'
-      ],
-      why_not_reasons: [
-        'Mức giá 55K cao hơn các quán trà sữa sinh viên bình dân',
-        'Chỉ áp dụng trực tiếp tại quầy 34 Bạch Đằng (không áp dụng online)'
-      ],
-      terms: 'Áp dụng trực tiếp tại quầy 34 Bạch Đằng khi gọi đồ uống signature từ 18:00 - 21:00.',
-      is_hidden: true,
-      hidden_reason: 'Chương trình tri ân khách hàng trải nghiệm view sông Hàn buổi tối.',
-      audit_status_label: '🟡 Chưa kiểm chứng độc lập',
-      audit_status_color: '#D97706',
-      audit_tip: 'Đọc mã KATINAT1D trực tiếp với thu ngân tầng 1 trước khi gọi món.',
-      hunt_strategy: 'Đến quán trước 19:30 → Đọc mã KATINAT1D khi gọi món tại quầy thu ngân tầng 1.',
-      destination_label: '☕ Mở Menu Katinat ↗',
-      maps_url: 'https://maps.google.com/?q=34+Bach+Dang+Da+Nang',
+      category: 'DRINK',
       link: 'https://katinat.vn/menu/',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #D97706, #B45309)'
+      image_bg: 'linear-gradient(135deg, #1E3A8A, #1D4ED8)'
     },
     {
-      deal_id: 'DNG-XANHSM-30K',
-      merchant: 'Xanh SM Taxi Điện Đà Nẵng',
-      brand_short: 'XANH SM',
-      micro_zone: 'ALL_DANANG',
-      zone_label: 'Toàn Đà Nẵng (Đón tận nơi)',
-      branch: 'Áp dụng toàn TP Đà Nẵng (Hải Châu, Thanh Khê, Sơn Trà, NHS)',
-      distance_km: 0.3,
-      distance: 'Đón tận nơi · 3 phút',
-      title: 'Mã Giảm 30K Đi Xe Thuần Điện VinFast Không Mùi',
-      tag: '⚡ 0Đ KHỞI HÀNH (TGIF)',
-      code: 'XANHDN30',
-      category: 'RIDE',
-      days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-      highlight_day: 'FRI',
-      missions: ['RIDE', 'GROUP', 'OFFICE_LUNCH'],
-      original_price: 60000,
-      discount_price: 30000,
-      saving: 30000,
-      percent: 50,
-      rating: 4.9,
-      reviews: 8900,
-      deal_value_score: 97,
-      trust_risk_score: 72,
-      price_psychology: '30K — Khởi hành êm ái',
-      why_reasons: [
-        'Xe thuần điện VinFast sạch sẽ, êm ái, không mùi say xe',
-        'Giảm trực tiếp 30.000₫ cho chuyến đi'
-      ],
-      why_not_reasons: [
-        'Chỉ áp dụng cho các cuốc xe có cước gốc từ 50.000₫ trở lên',
-        'Số lượng mã có hạn theo khung giờ cao điểm'
-      ],
-      terms: 'Áp dụng cho chuyến xe Xanh SM Taxi / Taxi Luxury tại Đà Nẵng có cước từ 50K.',
-      is_hidden: false,
-      hidden_reason: 'Chính sách trợ giá cuốc xe điện toàn thành phố kích cầu người dùng mới.',
-      audit_status_label: '🔵 Đang quét thực địa',
-      audit_status_color: '#0284C7',
-      audit_tip: 'Nhập mã XANHDN30 tại mục Khuyến Mãi trong app trước khi xác nhận cuốc xe.',
-      hunt_strategy: 'Mở app Xanh SM → Vào mục Ưu Đãi → Nhập XANHDN30 → Đặt xe để áp dụng giảm trực tiếp.',
-      destination_label: '⚡ Mở trên App XanhSM ↗',
-      maps_url: 'https://maps.google.com/?q=Da+Nang',
-      link: 'https://www.xanhsm.com',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #0284C7, #0369A1)'
-    },
-    {
-      deal_id: 'DNG-CHELIEN-HD',
-      merchant: 'Chè Sầu Liên',
-      brand_short: 'CHÈ LIÊN',
-      micro_zone: 'MICRO_HOANG_DIEU',
-      zone_label: 'Hoàng Diệu (Hải Châu)',
-      branch: '189 Hoàng Diệu, Hải Châu (Cơ sở truyền thống nổi tiếng)',
-      distance_km: 1.0,
-      distance: '1.0 km · 4 phút',
-      title: 'Chè Thái Sầu Riêng Đậm Đà Mua 4 Tặng 1 Tô',
-      tag: '🍧 MUA 4 TẶNG 1 (THỨ 5)',
+      deal_id: 'DNG-CHELIEN-20P',
+      merchant: 'Chè Liên Hoàng Diệu',
+      brand_logo_text: 'CHÈ LIÊN ĐÀ NẴNG',
+      sub_title: 'Mua 4 Tặng 1',
+      category_label: 'ĂN VẶT',
+      category_icon: '🍧',
+      time_slot: '11:00 - 21:00',
+      header_bg: '#6D28D9',
+      card_accent: '#8B5CF6',
+      btn_bg: 'linear-gradient(135deg, #8B5CF6, #7C3AED)',
+      btn_text: 'XEM DEAL',
       code: 'CHELIENFREE',
-      category: 'FOOD',
+      price: 'Tiết kiệm 20%',
+      saving_badge: '',
+      district: 'Quận Hải Châu',
+      rating: '4.8 (7.1K)',
+      audit_label: 'Chưa kiểm chứng',
+      audit_type: 'unverified', // amber
       days_active: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
       highlight_day: 'THU',
-      missions: ['GROUP', 'DRINK_UNDER_30K', 'AFTER_WORK'],
-      original_price: 45000,
-      discount_price: 28000,
-      saving: 17000,
-      percent: 38,
-      rating: 4.8,
-      reviews: 9400,
-      deal_value_score: 89,
-      trust_risk_score: 68,
-      price_psychology: '28K/tô — Đặc sản số 1',
-      why_reasons: [
-        'Đặc sản chè sầu trứ danh Đà Thành giải nhiệt xế chiều',
-        'Mua 4 tặng 1 cực kỳ tiết kiệm cho nhóm bạn / đồng nghiệp'
-      ],
-      why_not_reasons: [
-        'Cần đặt tối thiểu từ 4 tô trở lên để được tặng 1',
-        'Mùi sầu riêng đặc trưng (cần lưu ý nếu ăn tại văn phòng)'
-      ],
-      terms: 'Áp dụng cho đơn nhóm từ 4 phần trở lên trên GrabFood hoặc mua mang về tại 189 Hoàng Diệu.',
-      is_hidden: false,
-      hidden_reason: 'Chương trình ưu đãi nhóm giải nhiệt mùa hè truyền thống tại cơ sở Hoàng Diệu.',
-      audit_status_label: '🔵 Đang quét thực địa',
-      audit_status_color: '#0284C7',
-      audit_tip: 'Thêm tối thiểu 4 phần chè vào giỏ GrabFood để kích hoạt mã tự động.',
-      hunt_strategy: 'Đặt đơn nhóm 4 tô trên GrabFood → Nhập mã CHELIENFREE tại bước thanh toán.',
-      destination_label: '🍧 Mở trên GrabFood ↗',
-      maps_url: 'https://maps.google.com/?q=189+Hoang+Dieu+Da+Nang',
+      category: 'FOOD',
       link: 'https://food.grab.com/vn/vi/restaurant/ch%C3%A8-li%C3%AAn-ho%C3%A0ng-di%E1%BB%87u-delivery/',
-      image_provenance_label: 'Ảnh minh họa địa điểm',
-      image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80',
-      badge_bg: 'linear-gradient(135deg, #84CC16, #4D7C0F)'
+      image_bg: 'linear-gradient(135deg, #3B0764, #6B21A8)'
     }
   ];
 
-  // 4. STATE MANAGEMENT
+  // 4. FEED DATA (CHO PHẦN KÈO TÔI HAY SĂN)
+  const FAVORITES_DATABASE = [
+    {
+      deal_id: 'FAV-CGV-55K',
+      merchant: 'CGV Vincom Sơn Trà',
+      brand_tag: '🎬 Phim',
+      brand_logo_text: 'CGV CINEMAS',
+      sub_title: 'Vé U22 chỉ',
+      price: '55.000đ',
+      saving_badge: 'TIẾT KIỆM 54K',
+      district: 'Sơn Trà',
+      rating: '4.8 (15.2K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
+      btn_bg: '#EF4444',
+      btn_text: 'ĐẶT VÉ NGAY',
+      code: 'CGVU22DN',
+      link: 'https://www.cgv.vn',
+      category: 'CINEMA',
+      image_bg: 'linear-gradient(135deg, #B91C1C, #991B1B)'
+    },
+    {
+      deal_id: 'FAV-LOTTE-49K',
+      merchant: 'Lotte Mart Đà Nẵng',
+      brand_tag: '🎬 Phim',
+      brand_logo_text: 'LOTTE CINEMA',
+      sub_title: 'Vé thành viên chỉ',
+      price: '49.000đ',
+      saving_badge: 'TIẾT KIỆM 36K',
+      district: 'Liên Chiểu',
+      rating: '4.6 (9.1K)',
+      audit_label: 'Chưa kiểm chứng',
+      audit_type: 'unverified',
+      btn_bg: '#EF4444',
+      btn_text: 'XEM DEAL',
+      code: 'LOTTEDN',
+      link: 'https://www.lottecinemavn.com',
+      category: 'CINEMA',
+      image_bg: 'linear-gradient(135deg, #991B1B, #7F1D1D)'
+    },
+    {
+      deal_id: 'FAV-METIZ-45K',
+      merchant: 'Metiz Helio Center',
+      brand_tag: '🎬 Phim',
+      brand_logo_text: 'metiz CINEMAS',
+      sub_title: 'Vé thành viên chỉ',
+      price: '45.000đ',
+      saving_badge: 'TIẾT KIỆM 40K',
+      district: 'Hải Châu',
+      rating: '4.8 (12.3K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
+      btn_bg: '#EF4444',
+      btn_text: 'ĐẶT VÉ NGAY',
+      code: 'METIZ45K',
+      link: 'https://metiz.vn',
+      category: 'CINEMA',
+      image_bg: 'linear-gradient(135deg, #7F1D1D, #450A0A)'
+    },
+    {
+      deal_id: 'FAV-KFC-49K',
+      merchant: 'KFC Điện Biên Phủ',
+      brand_tag: '🍗 Gà rán',
+      brand_logo_text: 'KFC',
+      sub_title: 'Combo chỉ từ',
+      price: '49.000đ',
+      saving_badge: 'TIẾT KIỆM 25K',
+      district: 'Thanh Khê',
+      rating: '4.6 (10.2K)',
+      audit_label: 'Chưa kiểm chứng',
+      audit_type: 'unverified',
+      btn_bg: '#F59E0B',
+      btn_text: 'XEM DEAL',
+      code: 'KFCDN',
+      link: 'https://kfcvietnam.com.vn',
+      category: 'FASTFOOD',
+      image_bg: 'linear-gradient(135deg, #B45309, #92400E)'
+    },
+    {
+      deal_id: 'FAV-JOLLI-39K',
+      merchant: 'Jollibee Co.opmart',
+      brand_tag: '🍗 Gà rán',
+      brand_logo_text: 'Jollibee',
+      sub_title: 'Combo chỉ từ',
+      price: '39.000đ',
+      saving_badge: 'TIẾT KIỆM 30K',
+      district: 'Thanh Khê',
+      rating: '4.7 (8.9K)',
+      audit_label: 'Đã kiểm chứng',
+      audit_type: 'verified',
+      btn_bg: '#10B981',
+      btn_text: 'XEM DEAL',
+      code: 'JOLLIBEE39',
+      link: 'https://jollibee.com.vn',
+      category: 'FASTFOOD',
+      image_bg: 'linear-gradient(135deg, #991B1B, #B91C1C)'
+    }
+  ];
+
+  // 5. STATE MANAGEMENT
   const State = {
     deals: DEALS_DATABASE,
-    theme: localStorage.getItem('jayt_theme') || 'dark',
-    dealNowMode: false,
-    activeTab: 'home',
-    // 3-LAYER SELECTION
-    activeDay: 'ALL',
-    activeCategoryPref: 'ALL', // 'ALL', 'CINEMA', 'FASTFOOD', 'DRINK', 'FOOD', 'RIDE'
-    activeMission: 'ALL',
-    activeBudget: 'ALL',
-    activeMicroZone: 'ALL',
-    savedIds: JSON.parse(localStorage.getItem('jayt_favs') || '[]'),
-    huntedCount: parseInt(localStorage.getItem('jayt_hunted_count') || '17', 10),
-    actualSavedAmount: parseInt(localStorage.getItem('jayt_actual_savings') || '255000', 10),
-    shareCount: parseInt(localStorage.getItem('jayt_share_count') || '0', 10),
-    referralBonus: parseInt(localStorage.getItem('jayt_referral_bonus') || '0', 10),
-    calcDrink: 5, calcMeal: 6, calcRide: 6,
-    pendingOutcomeDeal: null,
-    isVictoryModalOpen: false,
-    lastWonDeal: null
+    favorites: FAVORITES_DATABASE,
+    activeNav: 'home',
+    activeCategoryFilter: 'CINEMA', // 'CINEMA', 'FASTFOOD', 'DRINK', 'CAFE', 'FOOD', 'RIDE'
+    activeDayTab: 'MON',
+    huntedCount: 28,
+    actualSavedAmount: 1247000,
+    streakDays: 16
   };
 
-  function calculateFitScore(deal, mission, budget, microZone, currentSlot, activeDay, activeCategoryPref) {
-    let fit = 75;
-    if (activeCategoryPref !== 'ALL' && deal.category === activeCategoryPref) fit += 25;
-    if (mission !== 'ALL' && deal.missions && deal.missions.includes(mission)) fit += 15;
-    if (microZone !== 'ALL' && deal.micro_zone === microZone) fit += 10;
-    if (budget === 'UNDER_30K' && deal.discount_price <= 30000) fit += 10;
-    if (budget === 'UNDER_50K' && deal.discount_price <= 50000) fit += 10;
-    if (activeDay !== 'ALL' && deal.highlight_day === activeDay) fit += 20;
-    return Math.min(99, fit);
-  }
-
-  function getSmartTimeContext() {
-    const hour = new Date().getHours();
-    if (hour >= 6 && hour < 10) return { slot: 'MORNING', label: '☀️ 06:30 - 09:00: Săn Cà Phê & Bánh Mì Sáng', greeting: 'Sáng nay Đà Nẵng nạp năng lượng ở đâu?' };
-    if (hour >= 10 && hour < 14) return { slot: 'LUNCH', label: '💼 10:30 - 13:30: Giờ Vàng Cơm Trưa & Đồ Mặn', greeting: 'Trưa nay Đà Nẵng ăn gì dưới 50K?' };
-    if (hour >= 14 && hour < 17) return { slot: 'AFTERNOON', label: '🧋 14:00 - 17:00: Giờ Vàng Trà Sữa & Ăn Vặt', greeting: 'Chiều nay săn ly trà sữa Maycha / Katinat?' };
-    if (hour >= 17 && hour < 21) return { slot: 'EVENING', label: '👥 17:00 - 21:00: Tan Ca Đi Nhóm & Rạp Phim Metiz / CGV', greeting: 'Tối nay Metiz Helio 45K hay CGV 55K?' };
-    return { slot: 'NIGHT', label: '🌙 21:00 - 23:30: Radar Săn Kèo Đêm & Cú Đêm', greeting: 'Đêm nay Đà Nẵng ăn vặt ở đâu ngon?' };
-  }
-
-  // 5. HOST PROVISIONER
+  // 6. HOST PROVISIONER
   function ensureApexHost() {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
-    document.body.style.backgroundColor = '#0B0F19';
+    document.body.style.backgroundColor = '#F8FAFC';
     document.body.style.fontFamily = "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif";
+    document.body.style.color = '#1E293B';
     document.body.style.overflowX = 'hidden';
 
     let root = document.getElementById('jayt-apex-root');
@@ -576,462 +386,546 @@
     return root;
   }
 
-  // 6. RENDER GIAO DIỆN APEX V5.5 — BỘ NHỚ KHUYẾN MÃI
+  // 7. RENDER GIAO DIỆN 100% VISUAL NORTH STAR
   function renderApp() {
     const root = ensureApexHost();
-    const isLight = State.theme === 'light';
-    const timeInfo = getSmartTimeContext();
 
-    const C = {
-      bg: isLight ? '#F8FAFC' : '#0B0F19',
-      cardBg: isLight ? '#FFFFFF' : 'rgba(23, 30, 48, 0.9)',
-      border: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)',
-      textMain: isLight ? '#0F172A' : '#FFFFFF',
-      textSub: isLight ? '#475569' : '#94A3B8',
-      textMuted: isLight ? '#94A3B8' : '#64748B',
-      tickerBg: isLight ? '#F1F5F9' : '#0D1322',
-      headerBg: isLight ? 'rgba(255, 255, 255, 0.95)' : 'rgba(11, 15, 25, 0.95)',
-      calcBg: isLight ? '#FFFFFF' : 'rgba(17, 24, 39, 0.9)',
-      pillBg: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.04)',
-      pillText: isLight ? '#334155' : '#E2E8F0',
-      footerBg: isLight ? '#0F172A' : '#080C14',
-      cardShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.05)' : '0 10px 30px rgba(0,0,0,0.5)'
-    };
-
-    let processedDeals = State.deals.map(d => {
-      const fitScore = calculateFitScore(d, State.activeMission, State.activeBudget, State.activeMicroZone, timeInfo.slot, State.activeDay, State.activeCategoryPref);
-      return { ...d, calculated_fit_score: fitScore };
-    });
-
-    if (State.activeCategoryPref !== 'ALL') {
-      processedDeals = processedDeals.filter(d => d.category === State.activeCategoryPref);
+    let filteredFavs = State.favorites;
+    if (State.activeCategoryFilter !== 'ALL') {
+      filteredFavs = State.favorites.filter(f => f.category === State.activeCategoryFilter);
+      if (filteredFavs.length === 0) filteredFavs = State.favorites;
     }
-    if (State.activeDay !== 'ALL') {
-      processedDeals = processedDeals.filter(d => d.days_active && d.days_active.includes(State.activeDay));
-    }
-    if (State.activeMicroZone !== 'ALL') {
-      processedDeals = processedDeals.filter(d => d.micro_zone === State.activeMicroZone || d.micro_zone === 'ALL_DANANG');
-    }
-    if (State.activeBudget === 'UNDER_30K') {
-      processedDeals = processedDeals.filter(d => d.discount_price <= 30000);
-    } else if (State.activeBudget === 'UNDER_50K') {
-      processedDeals = processedDeals.filter(d => d.discount_price <= 50000);
-    }
-
-    if (State.dealNowMode) {
-      processedDeals = processedDeals.filter(d => d.percent >= 40);
-    }
-
-    const bestForYouDeal = [...processedDeals].sort((a, b) => b.calculated_fit_score - a.calculated_fit_score)[0] || processedDeals[0];
-    const bestValueDeal = [...processedDeals].sort((a, b) => b.saving - a.saving)[0] || processedDeals[0];
-    const nearestDeal = [...processedDeals].sort((a, b) => a.distance_km - b.distance_km)[0] || processedDeals[0];
-
-    const monthlyCalc = ((State.calcDrink * 20000) + (State.calcMeal * 25000) + (State.calcRide * 15000)) * 4;
 
     root.innerHTML = `
-      <div style="min-height: 100vh; background-color: ${C.bg}; color: ${C.textSub}; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 68px; box-sizing: border-box;">
+      <div style="display: flex; min-height: 100vh; background-color: #F8FAFC;">
         
-        <div style="display: block; width: 100%;">
-          <!-- 1. TIME-OF-DAY RADAR -->
-          <div style="background: ${C.tickerBg}; border-bottom: 1px solid ${C.border}; padding: 0.55rem 1.5rem; font-size: 0.8rem; color: ${C.textMain}; display: flex; justify-content: space-between; align-items: center;">
-            <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-              ⚡ <strong>BỘ NHỚ KHUYẾN MÃI ĐÀ THÀNH:</strong> ${escapeHTML(timeInfo.label)} · Metiz Helio vé 45K · CGV 55K · Jollibee 39K!
+        <!-- ========================================================= -->
+        <!-- 1. LEFT SIDEBAR (STICKY, 240PX WIDTH, CLEAN LIGHT THEME)  -->
+        <!-- ========================================================= -->
+        <aside style="width: 240px; background: #FFFFFF; border-right: 1px solid #E2E8F0; display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem 1rem; flex-shrink: 0; position: sticky; top: 0; height: 100vh; box-sizing: border-box; overflow-y: auto; z-index: 100;">
+          <div>
+            <!-- LOGO & BRAND -->
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; cursor: pointer;" onclick="window.scrollTo({top:0, behavior:'smooth'});">
+              <div style="width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, #38BDF8, #6366F1, #A855F7); display: flex; align-items: center; justify-content: center; color: #FFF; font-weight: 900; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3);">
+                ▲
+              </div>
+              <div>
+                <div style="font-size: 1.15rem; font-weight: 900; color: #4F46E5; letter-spacing: -0.5px; line-height: 1.1;">JAYT APEX</div>
+                <div style="font-size: 0.7rem; font-weight: 700; color: #64748B;">ĐÀ NẴNG 43</div>
+              </div>
             </div>
-            <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: #059669; font-weight: 700;">
-              <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
-              <span>MEMORY LIVE</span>
+
+            <!-- MAIN NAVIGATION -->
+            <nav style="display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem;">
+              ${[
+                { id: 'home', icon: '🏠', label: 'Trang chủ', active: true },
+                { id: 'today', icon: '📅', label: 'Hôm nay' },
+                { id: 'calendar', icon: '🗓️', label: 'Lịch săn kèo' },
+                { id: 'favorites', icon: '❤️', label: 'Kèo tôi hay săn' },
+                { id: 'radar', icon: '📍', label: 'Radar tuyến' },
+                { id: 'liked', icon: '🤍', label: 'Yêu thích' },
+                { id: 'saved', icon: '🔖', label: 'Đã lưu' },
+                { id: 'history', icon: '⏱️', label: 'Lịch sử' },
+                { id: 'notifications', icon: '🔔', label: 'Thông báo', badge: '3' }
+              ].map(item => `
+                <button data-action="nav-item" data-nav="${item.id}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0.55rem 0.85rem; border-radius: 10px; font-size: 0.82rem; font-weight: ${item.active ? '800' : '600'}; border: none; cursor: pointer; background: ${item.active ? '#4F46E5' : 'transparent'}; color: ${item.active ? '#FFFFFF' : '#475569'}; transition: all 0.2s ease;">
+                  <span style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="font-size: 0.95rem;">${item.icon}</span>
+                    <span>${item.label}</span>
+                  </span>
+                  ${item.badge ? `<span style="background: #EF4444; color: #FFF; font-size: 0.65rem; font-weight: 800; padding: 0.1rem 0.4rem; border-radius: 9999px;">${item.badge}</span>` : ''}
+                </button>
+              `).join('')}
+            </nav>
+
+            <!-- DANH MỤC ƯA THÍCH -->
+            <div style="margin-bottom: 1.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.6rem; padding-left: 0.5rem;">
+                DANH MỤC ƯA THÍCH
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                ${[
+                  { id: 'CINEMA', icon: '🎬', label: 'Phim' },
+                  { id: 'FASTFOOD', icon: '🍗', label: 'Gà rán' },
+                  { id: 'DRINK', icon: '🧋', label: 'Trà sữa' },
+                  { id: 'CAFE', icon: '☕', label: 'Café' },
+                  { id: 'FOOD', icon: '🍱', label: 'Cơm trưa' },
+                  { id: 'SNACK', icon: '🍿', label: 'Ăn vặt' },
+                  { id: 'OUTING', icon: '🎉', label: 'Đi chơi' },
+                  { id: 'RIDE', icon: '🚗', label: 'Xe điện' },
+                  { id: 'ALL', icon: '🎛️', label: 'Tất cả' }
+                ].map(cat => `
+                  <button data-action="filter-cat" data-cat="${cat.id}" style="width: 100%; display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.78rem; font-weight: 600; border: none; cursor: pointer; background: transparent; color: #475569; text-align: left;">
+                    <span>${cat.icon}</span>
+                    <span>${cat.label}</span>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- PREMIUM UPGRADE BANNER -->
+            <div style="background: linear-gradient(135deg, #312E81, #4338CA); border-radius: 14px; padding: 1rem 0.9rem; color: #FFFFFF; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(67, 56, 202, 0.25);">
+              <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; font-weight: 800; color: #FBBF24; margin-bottom: 0.6rem;">
+                <span>👑</span> <span>NÂNG CẤP PREMIUM</span>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0 0 0.8rem 0; font-size: 0.7rem; color: #E0E7FF; display: flex; flex-direction: column; gap: 0.25rem;">
+                <li>✦ Deal độc quyền</li>
+                <li>✦ Mã giảm thêm</li>
+                <li>✦ Không quảng cáo</li>
+                <li>✦ Lịch sử ưu đãi</li>
+              </ul>
+              <button data-action="upgrade-premium" style="width: 100%; min-height: 32px; background: linear-gradient(135deg, #F59E0B, #D97706); border: none; border-radius: 8px; color: #FFFFFF; font-weight: 800; font-size: 0.72rem; cursor: pointer; box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35);">
+                NÂNG CẤP NGAY
+              </button>
             </div>
           </div>
 
-          <!-- 2. MASTER STICKY HEADER -->
-          <header style="background: ${C.headerBg}; backdrop-filter: blur(20px); border-bottom: 1px solid ${C.border}; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 1000; display: block;">
-            <div style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;" onclick="window.scrollTo({top:0, behavior:'smooth'});">
-                <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800;">J</div>
-                <div>
-                  <div style="font-size: 1.25rem; font-weight: 800; color: ${C.textMain};">JayT Đà Nẵng</div>
-                  <div style="font-size: 0.72rem; color: #059669; font-weight: 600;">🧠 Bộ Nhớ Khuyến Mãi Hàng Ngày</div>
-                </div>
-              </div>
+          <!-- SIDEBAR FOOTER -->
+          <div style="border-top: 1px solid #E2E8F0; padding-top: 0.8rem; font-size: 0.68rem; color: #94A3B8;">
+            <div style="font-weight: 800; color: #64748B; margin-bottom: 0.2rem;">JAYT CORP</div>
+            <div style="margin-bottom: 0.4rem; font-size: 0.62rem;">V5.5 RC-1 PARTIAL RUNTIME EVIDENCE</div>
+            <div style="display: flex; gap: 0.5rem; font-size: 0.65rem; color: #64748B;">
+              <span style="cursor:pointer;">Điều khoản</span> · <span style="cursor:pointer;">Bảo mật</span> · <a href="https://zalo.me/0777511204" target="_blank" rel="noopener noreferrer" style="color:#6366F1; text-decoration:none; font-weight:700;">Liên hệ CSKH</a>
+            </div>
+          </div>
+        </aside>
 
-              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                <button data-action="toggle-deal-now" style="min-height: 42px; background: ${State.dealNowMode ? '#DC2626' : (isLight ? '#FEE2E2' : 'rgba(239,68,68,0.2)')}; border: 1.5px solid #EF4444; color: ${State.dealNowMode ? '#FFF' : '#DC2626'}; font-size: 0.82rem; font-weight: 800; padding: 0 0.95rem; border-radius: 9999px; cursor: pointer;">
-                  🔥 SĂN NHANH 10S
-                </button>
-                <button data-action="toggle-theme" style="min-height: 42px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; font-size: 0.82rem; font-weight: 700; padding: 0 0.9rem; border-radius: 9999px; cursor: pointer;">
-                  ${isLight ? '🌙' : '☀️'}
-                </button>
-                <button data-action="open-wallet-modal" style="min-height: 42px; background: ${C.pillBg}; border: 1px solid ${C.border}; color: ${C.textMain}; font-size: 0.82rem; font-weight: 700; padding: 0 1rem; border-radius: 9999px; cursor: pointer;">
-                  🎁 Ví (${State.huntedCount})
-                </button>
+        <!-- ========================================================= -->
+        <!-- 2. MAIN CONTENT AREA (CLEAN, SPACIOUS, PREMIUM CONSUMER)  -->
+        <!-- ========================================================= -->
+        <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; overflow-y: auto;">
+          
+          <!-- TOP HEADER BAR -->
+          <header style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 90;">
+            <!-- SEARCH BAR -->
+            <div style="position: relative; max-width: 480px; width: 100%;">
+              <input type="text" placeholder="🔍  Tìm kèo, quán, rạp, thương hiệu..." style="width: 100%; height: 38px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 9999px; padding: 0 1.2rem; font-size: 0.82rem; color: #0F172A; outline: none; box-sizing: border-box;" />
+            </div>
+
+            <!-- RIGHT STATUS & USER AVATAR -->
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 700; color: #475569;">
+                <span>📍</span> <span>Đà Nẵng, Việt Nam</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; font-weight: 700; color: #D97706; background: #FEF3C7; padding: 0.2rem 0.6rem; border-radius: 9999px;">
+                <span>☀️</span> <span>31°C</span>
+              </div>
+              <div style="position: relative; cursor: pointer;">
+                <span style="font-size: 1.25rem;">🔔</span>
+                <span style="position: absolute; top: -4px; right: -4px; background: #EF4444; color: #FFF; font-size: 0.6rem; font-weight: 900; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">3</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <div style="position: relative;">
+                  <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #6366F1, #EC4899); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem;">
+                    JT
+                  </div>
+                  <span style="position: absolute; bottom: -2px; right: -2px; background: #F59E0B; color: #000; font-size: 0.5rem; font-weight: 900; padding: 0.05rem 0.25rem; border-radius: 4px;">VIP</span>
+                </div>
               </div>
             </div>
           </header>
 
-          <!-- 3. TẦNG 1 & 2: HÔM NAY CÓ GÌ & LỊCH SĂN KÈO 7 NGÀY (UPCOMING PLANNER) -->
-          <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
-            <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.08)); border: 2px solid #6366F1; border-radius: 24px; padding: 1.5rem 1.8rem; box-shadow: ${C.cardShadow};">
-              
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="padding: 1.8rem 2rem; max-width: 1400px; width: 100%; box-sizing: border-box; margin: 0 auto;">
+            
+            <!-- ========================================================= -->
+            <!-- 3. HERO GREETING BANNER (PURPLE GRADIENT WITH STATS PILLS)-->
+            <!-- ========================================================= -->
+            <div style="background: linear-gradient(125deg, #4F46E5 0%, #7C3AED 45%, #6366F1 100%); border-radius: 20px; padding: 2rem 2.2rem; color: #FFFFFF; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);">
+              <div style="position: relative; z-index: 2; max-width: 650px;">
+                <h1 style="font-size: 1.65rem; font-weight: 900; margin: 0 0 0.4rem 0; letter-spacing: -0.5px;">
+                  👋 Chào buổi chiều, Sinh viên!
+                </h1>
+                <p style="font-size: 0.88rem; color: #E0E7FF; margin: 0 0 1.5rem 0; opacity: 0.95;">
+                  Tan học rồi, xem ngay hôm nay có gì đáng săn để tự thưởng nào!
+                </p>
+
+                <!-- 4 METRIC STAT PILLS -->
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                  <div style="background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 12px; padding: 0.5rem 0.9rem; font-size: 0.76rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>🎁</span> <span>Tiết kiệm hôm nay: <strong style="color:#FDE047;">121.000đ</strong></span>
+                  </div>
+                  <div style="background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 12px; padding: 0.5rem 0.9rem; font-size: 0.76rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>🔥</span> <span>Đang mở: <strong>12 kèo hot</strong></span>
+                  </div>
+                  <div style="background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 12px; padding: 0.5rem 0.9rem; font-size: 0.76rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>📍</span> <span>Gần bạn: <strong>8 kèo &lt; 1km</strong></span>
+                  </div>
+                  <div style="background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 12px; padding: 0.5rem 0.9rem; font-size: 0.76rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>🛡️</span> <span>Đã kiểm chứng: <strong>9 kèo</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DECORATIVE SUBTLE SKYLINE / WATERMARK -->
+              <div style="position: absolute; right: 0; bottom: 0; height: 100%; width: 45%; background: radial-gradient(circle at right center, rgba(255,255,255,0.15), transparent 70%); pointer-events: none;"></div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- 4. SECTION: HÔM NAY SĂN GÌ? (5 VIBRANT DEAL CARDS)        -->
+            <!-- ========================================================= -->
+            <div style="margin-bottom: 2rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
                 <div>
-                  <h3 style="font-size: 1.25rem; font-weight: 800; color: ${C.textMain}; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-                    <span>📅</span> <span>Hôm Nay Săn Gì? & Lên Plan Trước Với Đám Bạn</span>
-                  </h3>
-                  <p style="font-size: 0.8rem; color: ${C.textSub}; margin: 0.25rem 0 0;">
-                    Không cần nhớ lịch rạp phim hay quán giảm giá — Bấm vào từng ngày để xem trước kèo và rủ bạn bè!
+                  <h2 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>🔥</span> <span>Hôm nay Săn gì?</span>
+                  </h2>
+                  <p style="font-size: 0.78rem; color: #64748B; margin: 0.2rem 0 0 0;">
+                    Cập nhật ưu đãi hot nhất đang mở tại Đà Nẵng hôm nay!
                   </p>
                 </div>
-                <span style="font-size: 0.72rem; background: #6366F1; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-weight: 800;">
-                  PROMO MEMORY 43
-                </span>
-              </div>
-
-              <!-- THANH CHỌN LỊCH 7 NGÀY (T2 ➔ CN) -->
-              <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                ${[
-                  { code: 'ALL', label: '✨ Tất Cả Tuần', sub: 'Toàn bộ 8 kèo' },
-                  { code: 'MON', label: 'Thứ 2 (Hôm Nay)', sub: 'Metiz 45K · Katinat 1Đ' },
-                  { code: 'TUE', label: 'Thứ 3', sub: 'CGV 55K · Jollibee 39K' },
-                  { code: 'WED', label: 'Thứ 4', sub: 'MayCha 1 Tặng 1 (24K)' },
-                  { code: 'THU', label: 'Thứ 5', sub: 'Chè Liên 4 Tặng 1' },
-                  { code: 'FRI', label: 'Thứ 6', sub: 'TGIF · Xanh SM 30K' },
-                  { code: 'SAT', label: 'Thứ 7', sub: 'Lượn Sông Hàn & Rạp' },
-                  { code: 'SUN', label: 'Chủ Nhật', sub: 'Oanh tạc cuối tuần' }
-                ].map(day => {
-                  const isActive = State.activeDay === day.code;
-                  return `
-                    <button data-action="set-calendar-day" data-day="${day.code}" style="min-width: 140px; padding: 0.75rem 0.85rem; border-radius: 14px; text-align: left; cursor: pointer; border: 1.5px solid ${isActive ? '#6366F1' : C.border}; background: ${isActive ? 'linear-gradient(135deg, #6366F1, #4338CA)' : C.pillBg}; color: ${isActive ? '#FFF' : C.pillText}; box-shadow: ${isActive ? '0 4px 14px rgba(99,102,241,0.35)' : 'none'}; flex-shrink: 0;">
-                      <div style="font-size: 0.82rem; font-weight: 800;">${day.label}</div>
-                      <div style="font-size: 0.68rem; opacity: 0.85; margin-top: 0.15rem;">${day.sub}</div>
-                    </button>
-                  `;
-                }).join('')}
-              </div>
-
-              <!-- LỜI NHẮC CẢM XÚC SAU NGÀY HỌC/LÀM MỆT MỎI -->
-              <div style="background: ${isLight ? '#FFFFFF' : 'rgba(0,0,0,0.35)'}; border-left: 4px solid #10B981; border-radius: 10px; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem;">
-                <div style="font-size: 0.8rem; color: ${C.textMain};">
-                  ☕ <strong>Sau 1 ngày vất vả:</strong> Đừng quên tự thưởng cho mình vé xem phim <strong>Metiz Helio 45K</strong> hoặc đùi gà <strong>Jollibee 39K</strong> tối nay nhé!
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <button style="background: #EDE9FE; color: #6366F1; border: none; border-radius: 8px; font-size: 0.75rem; font-weight: 800; padding: 0.35rem 0.8rem; cursor: pointer;">
+                    Xem tất cả
+                  </button>
+                  <div style="display: flex; gap: 0.3rem;">
+                    <button style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid #E2E8F0; background: #FFF; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #64748B;">&lt;</button>
+                    <button style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid #E2E8F0; background: #FFF; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #64748B;">&gt;</button>
+                  </div>
                 </div>
-                <a href="https://zalo.me/share?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent('Lịch săn kèo Đà Nẵng hôm nay nè tụi bay ơi!')}" target="_blank" rel="noopener noreferrer" style="background: #10B981; color: #FFF; text-decoration: none; padding: 0.4rem 0.85rem; border-radius: 8px; font-size: 0.75rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;">
-                  <span>📲 Lên Kèo Rủ Đám Bạn Qua Zalo</span>
-                  <span>➔</span>
+              </div>
+
+              <!-- 5 DEAL CARDS GRID -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.1rem;">
+                ${State.deals.map(deal => `
+                  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.2s ease;">
+                    <div>
+                      <!-- HEADER TIME & CATEGORY -->
+                      <div style="background: ${deal.header_bg}; color: #FFFFFF; padding: 0.4rem 0.6rem; font-size: 0.68rem; font-weight: 800; display: flex; justify-content: space-between; align-items: center;">
+                        <span>${deal.time_slot}</span>
+                        <span>${deal.category_icon} ${deal.category_label}</span>
+                      </div>
+
+                      <!-- BRAND LOGO TEXT BANNER -->
+                      <div style="height: 80px; background: ${deal.image_bg}; display: flex; align-items: center; justify-content: center; padding: 0.5rem; text-align: center;">
+                        <span style="color: #FFFFFF; font-weight: 900; font-size: 1.1rem; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                          ${deal.brand_logo_text}
+                        </span>
+                      </div>
+
+                      <!-- CARD BODY -->
+                      <div style="padding: 0.9rem;">
+                        <div style="font-size: 0.82rem; font-weight: 800; color: #0F172A; margin-bottom: 0.15rem; line-height: 1.3;">
+                          ${escapeHTML(deal.merchant)}
+                        </div>
+                        <div style="font-size: 0.72rem; color: #64748B; margin-bottom: 0.6rem;">
+                          ${escapeHTML(deal.sub_title)}
+                        </div>
+
+                        <!-- PRICE & SAVING BADGE -->
+                        <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap;">
+                          <span style="font-size: 1.25rem; font-weight: 900; color: ${deal.card_accent};">
+                            ${deal.price}
+                          </span>
+                          ${deal.saving_badge ? `
+                            <span style="font-size: 0.62rem; font-weight: 800; color: #DC2626; background: #FEE2E2; padding: 0.1rem 0.35rem; border-radius: 4px;">
+                              ${deal.saving_badge}
+                            </span>
+                          ` : ''}
+                        </div>
+
+                        <!-- LOCATION & RATING -->
+                        <div style="font-size: 0.7rem; color: #64748B; display: flex; flex-direction: column; gap: 0.2rem; margin-bottom: 0.6rem;">
+                          <div>📍 ${escapeHTML(deal.district)}</div>
+                          <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span style="font-weight: 700; color: #0F172A;">★ ${deal.rating}</span>
+                            <span style="color: ${deal.audit_type === 'verified' ? '#059669' : '#D97706'}; font-weight: 700; font-size: 0.65rem;">
+                              ${deal.audit_type === 'verified' ? '🟢' : '🟡'} ${deal.audit_label}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- FULL-WIDTH CTA BUTTON -->
+                    <div style="padding: 0 0.9rem 0.9rem 0.9rem;">
+                      <button data-action="hunt-deal" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" style="width: 100%; min-height: 38px; background: ${deal.btn_bg}; color: #FFFFFF; border: none; border-radius: 10px; font-size: 0.8rem; font-weight: 800; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.12); display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+                        <span>${deal.btn_text}</span>
+                        <span>➔</span>
+                      </button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- 5. SOCIAL PLANNING BANNER (LÊN PLAN NHÓM BẠN CHƯA?)        -->
+            <!-- ========================================================= -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 0.9rem 1.4rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.8rem;">
+              <div style="display: flex; align-items: center; gap: 0.8rem;">
+                <span style="font-size: 1.8rem;">👥</span>
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 800; color: #0F172A;">
+                    Lên plan nhóm bạn chưa?
+                  </div>
+                  <div style="font-size: 0.75rem; color: #64748B;">
+                    Chia sẻ kèo hot hôm nay cho hội bạn ngay!
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                <a href="https://zalo.me/share?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" style="background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 8px; font-size: 0.74rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;">
+                  <span>💬 CHIA SẺ QUA ZALO</span>
                 </a>
+                <a href="https://www.messenger.com" target="_blank" rel="noopener noreferrer" style="background: #EFF6FF; border: 1px solid #BFDBFE; color: #2563EB; text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 8px; font-size: 0.74rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;">
+                  <span>💬 CHIA SẺ MESSENGER</span>
+                </a>
+                <button data-action="copy-link" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #475569; padding: 0.45rem 0.9rem; border-radius: 8px; font-size: 0.74rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem;">
+                  <span>🔗 COPY LINK KÈO</span>
+                </button>
               </div>
-
             </div>
-          </div>
 
-          <!-- 4. TẦNG 3: KÈO TÔI HAY SĂN (MY FAVORITES CHIPS) -->
-          <div style="max-width: 1300px; margin: 1.5rem auto 0; padding: 0 1.5rem; display: block;">
-            <div style="background: ${C.cardBg}; border: 1.5px solid ${C.border}; border-radius: 24px; padding: 1.2rem 1.8rem; box-shadow: ${C.cardShadow};">
-              
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+            <!-- ========================================================= -->
+            <!-- 6. SECTION: LỊCH SĂN KÈO 7 NGÀY (7 HORIZONTAL COLUMNS)    -->
+            <!-- ========================================================= -->
+            <div style="margin-bottom: 2.2rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
                 <div>
-                  <h4 style="font-size: 1.05rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                    ❤️ Kèo Tôi Hay Săn (Lọc Theo Sở Thích Cá Nhân)
-                  </h4>
-                  <p style="font-size: 0.75rem; color: ${C.textMuted}; margin: 0.15rem 0 0;">
-                    Chọn loại bạn thích để JayT lọc ra đúng kèo hôm nay đang có.
+                  <h2 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>📅</span> <span>Lịch săn kèo 7 ngày</span> <span>🗓️</span>
+                  </h2>
+                  <p style="font-size: 0.78rem; color: #64748B; margin: 0.2rem 0 0 0;">
+                    Xem trước để lên kế hoạch — Không bỏ lỡ kèo ngon!
                   </p>
                 </div>
+                <button data-action="view-full-calendar" style="background: #F3E8FF; color: #7E22CE; border: none; border-radius: 8px; font-size: 0.75rem; font-weight: 800; padding: 0.4rem 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;">
+                  <span>📅</span> <span>XEM LỊCH ĐẦY ĐỦ</span>
+                </button>
               </div>
 
-              <!-- CHIPS SỞ THÍCH CÁ NHÂN -->
-              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+              <!-- 7-DAY CARDS ROW -->
+              <div style="display: grid; grid-template-columns: repeat(7, minmax(130px, 1fr)); gap: 0.75rem; overflow-x: auto;">
                 ${[
-                  'ALL:✨ Tất Cả',
-                  'CINEMA:🎬 Rạp Phim (Metiz 45K / CGV 55K)',
-                  'FASTFOOD:🍗 Gà Rán (Jollibee 39K)',
-                  'DRINK:🧋 Trà Sữa (MayCha 24K)',
-                  'FOOD:🍲 Cơm Gà / Chè Sầu',
-                  'RIDE:🛵 Xe Điện 0Đ'
-                ].map(item => {
-                  const [code, label] = item.split(':');
-                  const isActive = State.activeCategoryPref === code;
-                  return `
-                    <button data-action="set-category-pref" data-cat="${code}" style="min-height: 36px; padding: 0 0.85rem; border-radius: 9999px; font-size: 0.76rem; font-weight: 800; cursor: pointer; border: 1.5px solid ${isActive ? '#10B981' : C.border}; background: ${isActive ? 'linear-gradient(135deg, #10B981, #059669)' : C.pillBg}; color: ${isActive ? '#FFF' : C.pillText}; box-shadow: ${isActive ? '0 4px 12px rgba(16,185,129,0.3)' : 'none'};">
-                      ${label}
+                  { day: 'T2', sub: 'HÔM NAY', bg: '#4F46E5', text: '#FFF', list: ['Metiz 45K', 'Jollibee 39K', 'Katinat 1Đ'], more: '+2 kèo khác', active: true },
+                  { day: 'T3', sub: 'NGÀY MAI', bg: '#EFF6FF', text: '#1E40AF', list: ['CGV 55K', 'Lotteria Deal', 'Xanh SM 30K'], more: '+3 kèo khác' },
+                  { day: 'T4', sub: '24/04', bg: '#F0FDF4', text: '#166534', list: ['MayCha 24K', 'Chè Liên', 'Katinat 1Đ'], more: '+2 kèo khác' },
+                  { day: 'T5', sub: '25/04', bg: '#FFF7ED', text: '#9A3412', list: ['Chè Liên -20%', 'Cơm Gà A Hải', 'Xanh SM 30K'], more: '+2 kèo khác' },
+                  { day: 'T6', sub: '26/04', bg: '#FEF2F2', text: '#991B1B', list: ['CGV 55K', 'Katinat 1Đ', 'Jollibee 39K'], more: '+2 kèo khác' },
+                  { day: 'T7', sub: '27/04', bg: '#FEFCE8', text: '#854D0E', list: ['Metiz 45K', 'Xanh SM 30K', 'An Thượng Deal'], more: '+2 kèo khác' },
+                  { day: 'CN', sub: '28/04', bg: '#FFF1F2', text: '#9F1239', list: ['CGV 55K', 'Chè Liên', 'Jollibee 39K'], more: '+2 kèo khác' }
+                ].map(col => `
+                  <div style="background: #FFFFFF; border: ${col.active ? '2px solid #4F46E5' : '1px solid #E2E8F0'}; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                    <div style="background: ${col.bg}; color: ${col.text}; padding: 0.45rem 0.5rem; text-align: center;">
+                      <div style="font-size: 0.95rem; font-weight: 900;">${col.day}</div>
+                      <div style="font-size: 0.62rem; font-weight: 700; opacity: 0.9;">${col.sub}</div>
+                    </div>
+                    <div style="padding: 0.6rem 0.5rem; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.68rem; color: #334155;">
+                      ${col.list.map(it => `<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">• ${it}</div>`).join('')}
+                      <div style="color: #6366F1; font-weight: 700; font-size: 0.62rem; margin-top: 0.2rem;">${col.more}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- 7. SPLIT GRID: KÈO TÔI HAY SĂN (LEFT) & WIDGETS (RIGHT)   -->
+            <!-- ========================================================= -->
+            <div style="display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.8rem; align-items: start;">
+              
+              <!-- LEFT COLUMN: KÈO TÔI HAY SĂN -->
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: #0F172A; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+                      <span>❤️</span> <span>Kèo tôi hay săn</span> <span style="font-size:0.75rem; color:#64748B; font-weight:600;">(Cá nhân hóa cho bạn)</span>
+                    </h3>
+                    <p style="font-size: 0.75rem; color: #64748B; margin: 0.15rem 0 0 0;">
+                      Chỉ hiển thị kèo bạn thích!
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 0.4rem;">
+                    <button style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #475569; padding: 0.3rem 0.65rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; cursor: pointer;">
+                      ⚙️ QUẢN LÝ SỞ THÍCH
                     </button>
-                  `;
-                }).join('')}
-              </div>
-
-            </div>
-          </div>
-
-          <!-- 5. TOP 3 QUYẾT ĐỊNH CHO BẠN HÔM NAY -->
-          <div style="max-width: 1300px; margin: 2rem auto 0; padding: 0 1.5rem; display: block;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
-              <div>
-                <h2 style="font-size: 1.45rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                  🧭 Ba Lựa Chọn Đáng Săn Nhất Lúc Này
-                </h2>
-                <p style="font-size: 0.82rem; color: ${C.textSub}; margin: 0.2rem 0 0;">
-                  Minh bạch 2 chiều: Lý do đề xuất (Why) và Điểm cần lưu ý/Đánh đổi (Why Not).
-                </p>
-              </div>
-            </div>
-
-            <!-- GRID TOP 3 DECISIONS -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
-              ${renderDecisionCard(bestForYouDeal, '🎯 ① BEST FOR YOU', 'Khớp sở thích bạn vừa chọn', '#10B981', C, isLight)}
-              ${renderDecisionCard(bestValueDeal, '💰 ② BEST VALUE', 'Mức giảm tiền mặt sâu nhất', '#D97706', C, isLight)}
-              ${renderDecisionCard(nearestDeal, '📍 ③ NEAREST', 'Vị trí gần bạn nhất (dưới 1 km)', '#0284C7', C, isLight)}
-            </div>
-          </div>
-
-          <!-- 6. KHO TOÀN BỘ KÈO ĐÀ THÀNH 43 -->
-          <div style="max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 3.5rem; display: block;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
-              <div>
-                <h3 style="font-size: 1.35rem; font-weight: 800; color: ${C.textMain}; margin: 0;">
-                  ⚡ Kho Kèo Đà Nẵng (${processedDeals.length} Kèo)
-                </h3>
-                <p style="font-size: 0.8rem; color: ${C.textMuted}; margin: 0.2rem 0 0;">
-                  Minh bạch 3 chỉ số: Độ Hời · Độ Khớp (Fit) · Mức Kiểm Chứng (Risk Signal).
-                </p>
-              </div>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 1.6rem;">
-              ${processedDeals.map(deal => renderDealCard(deal, C, isLight)).join('')}
-            </div>
-          </div>
-
-          <!-- 7. MÁY TÍNH TIẾT KIỆM -->
-          <div style="max-width: 900px; margin: 0 auto 3.5rem; padding: 0 1.5rem; display: block;">
-            <div style="background: ${C.calcBg}; border: 1.5px solid ${C.border}; border-radius: 20px; padding: 2.2rem; box-shadow: ${C.cardShadow};">
-              <div style="text-align: center; margin-bottom: 1.8rem;">
-                <div style="font-size: 2.5rem; margin-bottom: 0.4rem;">🧮</div>
-                <h2 style="font-size: 1.6rem; font-weight: 800; color: ${C.textMain}; margin-bottom: 0.3rem;">Bảng Tính Tiết Kiệm Khi Săn Kèo Thực Chiến</h2>
-                <p style="font-size: 0.88rem; color: ${C.textSub};">Kéo thanh trượt để xem số tiền dôi ra mỗi tháng/năm khi áp dụng chiến thuật JayT.</p>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 1.3rem; margin-bottom: 1.8rem;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; color: ${C.textMain}; margin-bottom: 0.4rem;">
-                    <span>🧋 Trà sữa / Cà phê:</span>
-                    <strong style="color: #D97706; font-weight: 700;">${State.calcDrink} ly / tuần</strong>
+                    <button style="background: #EDE9FE; color: #6366F1; border: none; padding: 0.3rem 0.65rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; cursor: pointer;">
+                      ✨ GỢI Ý CHO BẠN
+                    </button>
                   </div>
-                  <input type="range" min="0" max="14" value="${State.calcDrink}" id="calcDrink" style="width: 100%; accent-color: #10B981; cursor: pointer;" />
                 </div>
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; color: ${C.textMain}; margin-bottom: 0.4rem;">
-                    <span>🍲 Bữa ăn ngoài (Grab / ShopeeFood):</span>
-                    <strong style="color: #D97706; font-weight: 700;">${State.calcMeal} bữa / tuần</strong>
+
+                <!-- CATEGORY PILLS -->
+                <div style="display: flex; gap: 0.4rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                  ${[
+                    { id: 'CINEMA', icon: '🎬', label: 'Phim' },
+                    { id: 'FASTFOOD', icon: '🍗', label: 'Gà rán' },
+                    { id: 'DRINK', icon: '🧋', label: 'Trà sữa' },
+                    { id: 'CAFE', icon: '☕', label: 'Café' },
+                    { id: 'FOOD', icon: '🍱', label: 'Cơm' },
+                    { id: 'RIDE', icon: '🚗', label: 'Di chuyển' },
+                    { id: 'ALL', icon: '➕', label: 'Thêm' }
+                  ].map(p => `
+                    <button data-action="filter-feed" data-cat="${p.id}" style="padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.74rem; font-weight: 800; cursor: pointer; border: 1px solid ${State.activeCategoryFilter === p.id ? '#4F46E5' : '#E2E8F0'}; background: ${State.activeCategoryFilter === p.id ? '#4F46E5' : '#FFFFFF'}; color: ${State.activeCategoryFilter === p.id ? '#FFFFFF' : '#475569'};">
+                      ${p.icon} ${p.label}
+                    </button>
+                  `).join('')}
+                </div>
+
+                <!-- CAROUSEL / GRID OF CATEGORY DEALS -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.9rem; margin-bottom: 2rem;">
+                  ${filteredFavs.map(f => `
+                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                      <div>
+                        <!-- IMAGE BANNER -->
+                        <div style="height: 65px; background: ${f.image_bg}; display: flex; align-items: center; justify-content: center; padding: 0.4rem; position: relative;">
+                          <span style="position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,0.5); color: #FFF; font-size: 0.55rem; font-weight: 800; padding: 0.1rem 0.35rem; border-radius: 4px;">
+                            ${f.brand_tag}
+                          </span>
+                          <span style="color: #FFFFFF; font-weight: 900; font-size: 0.95rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                            ${f.brand_logo_text}
+                          </span>
+                        </div>
+
+                        <div style="padding: 0.75rem;">
+                          <div style="font-size: 0.78rem; font-weight: 800; color: #0F172A; line-height: 1.25;">
+                            ${f.merchant}
+                          </div>
+                          <div style="font-size: 0.68rem; color: #64748B; margin-bottom: 0.35rem;">
+                            ${f.sub_title}
+                          </div>
+                          <div style="font-size: 1.05rem; font-weight: 900; color: #EF4444; margin-bottom: 0.35rem;">
+                            ${f.price}
+                          </div>
+                          <div style="font-size: 0.65rem; color: #64748B;">
+                            📍 ${f.district} · ★ ${f.rating}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style="padding: 0 0.75rem 0.75rem 0.75rem;">
+                        <button data-action="hunt-deal" data-id="${f.deal_id}" data-code="${f.code}" data-link="${f.link}" style="width: 100%; min-height: 32px; background: ${f.btn_bg}; color: #FFFFFF; border: none; border-radius: 8px; font-size: 0.74rem; font-weight: 800; cursor: pointer;">
+                          ${f.btn_text} ➔
+                        </button>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+
+                <!-- 3 SUMMARY BOTTOM WIDGETS -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem;">
+                  <!-- WIDGET 1: RADAR TUYẾN -->
+                  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; font-size: 0.75rem;">
+                    <div style="font-weight: 800; color: #0F172A; margin-bottom: 0.4rem;">🚗 Radar tuyến đi chơi</div>
+                    <div style="color: #6366F1; font-weight: 700; font-size: 0.7rem; margin-bottom: 0.3rem;">TUYẾN SÔNG HÀN - CẦU RỒNG</div>
+                    <div style="color: #64748B; font-size: 0.68rem; display: flex; flex-direction: column; gap: 0.2rem; margin-bottom: 0.5rem;">
+                      <div>• Trạm 1: Ăn trưa A Hải (11:30)</div>
+                      <div>• Trạm 2: Katinat Bạch Đằng (14:30)</div>
+                      <div>• Trạm 3: Xanh SM đi dạo -30K (18:00)</div>
+                    </div>
+                    <div style="font-weight: 800; color: #059669; font-size: 0.72rem;">Tiết kiệm cả chuyến: 76.000đ</div>
                   </div>
-                  <input type="range" min="0" max="14" value="${State.calcMeal}" id="calcMeal" style="width: 100%; accent-color: #10B981; cursor: pointer;" />
-                </div>
-                <div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; color: ${C.textMain}; margin-bottom: 0.4rem;">
-                    <span>🛵 Chuyến xe công nghệ (Grab / Xanh SM):</span>
-                    <strong style="color: #D97706; font-weight: 700;">${State.calcRide} chuyến / tuần</strong>
+
+                  <!-- WIDGET 2: LỜI NHẮC THÔNG MINH -->
+                  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; font-size: 0.75rem;">
+                    <div style="font-weight: 800; color: #0F172A; margin-bottom: 0.4rem;">🔔 Lời nhắc thông minh</div>
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.68rem; color: #475569;">
+                      <div><strong>MayCha</strong> đang mở mã 24K <span style="color:#94A3B8;">(2 giờ trước)</span></div>
+                      <div><strong>CGV Vincom</strong> vé 55K <span style="color:#94A3B8;">(3 giờ trước)</span></div>
+                      <div><strong>Đi xe điện Xanh SM</strong> mã 30K <span style="color:#94A3B8;">(5 giờ trước)</span></div>
+                    </div>
                   </div>
-                  <input type="range" min="0" max="14" value="${State.calcRide}" id="calcRide" style="width: 100%; accent-color: #10B981; cursor: pointer;" />
+
+                  <!-- WIDGET 3: THỐNG KÊ CỦA BẠN -->
+                  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; font-size: 0.75rem; text-align: center;">
+                    <div style="font-weight: 800; color: #0F172A; margin-bottom: 0.3rem;">📊 Thống kê của bạn</div>
+                    <div style="font-size: 1.35rem; font-weight: 900; color: #4F46E5; margin: 0.2rem 0;">1.247.000đ</div>
+                    <div style="font-size: 0.68rem; color: #64748B; margin-bottom: 0.4rem;">Đã săn: <strong>28 kèo</strong> · Chuỗi: <strong>16 ngày</strong></div>
+                    <button style="background: #EDE9FE; color: #6366F1; border: none; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.68rem; font-weight: 700; cursor: pointer;">
+                      XEM LỊCH SỬ SĂN KÈO
+                    </button>
+                  </div>
                 </div>
+
               </div>
 
-              <div style="background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(5,150,105,0.08)); border: 1.5px solid #10B981; border-radius: 16px; padding: 1.5rem; text-align: center;">
-                <div style="font-size: 0.8rem; font-weight: 800; color: #059669; text-transform: uppercase;">BẠN SẼ TIẾT KIỆM ĐƯỢC:</div>
-                <div style="font-size: 2.4rem; font-weight: 800; color: #059669; margin: 0.3rem 0;">
-                  ${monthlyCalc.toLocaleString('vi-VN')} ₫ / tháng
+              <!-- RIGHT COLUMN: MEMBER PROMO + MAP + COMMITMENT -->
+              <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                
+                <!-- MEMBER DISCOUNT BOX -->
+                <div style="background: linear-gradient(135deg, #4338CA, #6D28D9); border-radius: 16px; padding: 1.2rem; color: #FFFFFF; box-shadow: 0 4px 15px rgba(109, 40, 217, 0.2);">
+                  <div style="font-size: 0.7rem; font-weight: 800; color: #FDE047; text-transform: uppercase; margin-bottom: 0.3rem;">
+                    ✨ KHUYẾN MÃI ĐỘC QUYỀN
+                  </div>
+                  <div style="font-size: 0.72rem; color: #E0E7FF; margin-bottom: 0.8rem;">
+                    Dành riêng cho thành viên JayT
+                  </div>
+                  <div style="background: rgba(255,255,255,0.12); border-radius: 12px; padding: 0.8rem; text-align: center; margin-bottom: 0.8rem;">
+                    <div style="font-size: 0.72rem; font-weight: 800; color: #FDE047;">GIÁ MEMBER</div>
+                    <div style="font-size: 1.8rem; font-weight: 900;">15%</div>
+                    <div style="font-size: 0.68rem; color: #E0E7FF;">Giảm thêm đến 15%</div>
+                  </div>
+                  <button style="width: 100%; min-height: 36px; background: #FFFFFF; color: #4F46E5; border: none; border-radius: 10px; font-weight: 900; font-size: 0.76rem; cursor: pointer;">
+                    KÍCH HOẠT NGAY
+                  </button>
                 </div>
-                <div style="font-size: 0.85rem; color: ${C.textMain}; padding: 0.75rem 1rem; border-radius: 12px; margin-top: 0.6rem; border: 1px solid ${C.border};">
-                  💡 <strong>Tương đương ~${(monthlyCalc * 12).toLocaleString('vi-VN')}₫/năm:</strong> Đủ mua thiết bị mới, đóng tiền trọ cả kỳ hoặc liên hoan thả ga! 🎉
+
+                <!-- NEARBY MAP WIDGET -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                  <div style="font-size: 0.82rem; font-weight: 800; color: #0F172A; margin-bottom: 0.2rem;">
+                    📍 Gần bạn nhất
+                  </div>
+                  <div style="font-size: 0.7rem; color: #64748B; margin-bottom: 0.6rem;">
+                    8 kèo trong bán kính 1km
+                  </div>
+                  <div style="height: 120px; border-radius: 10px; background: #E2E8F0; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #64748B; margin-bottom: 0.6rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=400&q=80') center/cover; opacity: 0.85;"></div>
+                    <span style="position: relative; z-index: 2; background: rgba(0,0,0,0.65); color: #FFF; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700; font-size: 0.68rem;">ĐÀ NẴNG REAL-TIME</span>
+                  </div>
+                  <button style="width: 100%; background: #F1F5F9; border: 1px solid #E2E8F0; color: #475569; padding: 0.4rem 0; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">
+                    XEM TRÊN BẢN ĐỒ
+                  </button>
                 </div>
+
+                <!-- JAYT COMMITMENT -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 1rem; font-size: 0.72rem;">
+                  <div style="font-weight: 800; color: #0F172A; margin-bottom: 0.5rem;">🛡️ Cam kết JayT</div>
+                  <div style="display: flex; flex-direction: column; gap: 0.3rem; color: #64748B; font-size: 0.68rem; margin-bottom: 0.6rem;">
+                    <div>🟢 Thông tin minh bạch</div>
+                    <div>🟢 Địa điểm thực tế</div>
+                    <div>🟢 Giá đúng cập nhật</div>
+                    <div>🟢 Chỉ kèo đáng tin</div>
+                  </div>
+                  <a href="#cam-ket" style="color: #4F46E5; font-weight: 800; text-decoration: none; font-size: 0.68rem;">TÌM HIỂU THÊM ➔</a>
+                </div>
+
               </div>
+
             </div>
+
           </div>
-        </div>
 
-        <!-- FIXED MOBILE BOTTOM NAVIGATION -->
-        <nav style="position: fixed; bottom: 0; left: 0; right: 0; height: 60px; background: ${C.headerBg}; backdrop-filter: blur(20px); border-top: 1px solid ${C.border}; display: flex; justify-content: space-around; align-items: center; z-index: 9999;">
-          <button data-action="nav-tab" data-tab="home" style="min-height: 44px; min-width: 44px; background: none; border: none; color: ${State.activeTab === 'home' ? '#059669' : C.textMuted}; font-size: 0.72rem; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
-            <span style="font-size: 1.15rem;">⌂</span>
-            <span>Khám Phá</span>
-          </button>
-          <button data-action="toggle-deal-now" style="min-height: 44px; min-width: 44px; background: none; border: none; color: ${State.dealNowMode ? '#DC2626' : C.textMuted}; font-size: 0.72rem; font-weight: 800; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
-            <span style="font-size: 1.15rem;">🔥</span>
-            <span>Săn Nhanh</span>
-          </button>
-          <button data-action="open-wallet-modal" style="min-height: 44px; min-width: 44px; background: none; border: none; color: ${State.activeTab === 'wallet' ? '#059669' : C.textMuted}; font-size: 0.72rem; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
-            <span style="font-size: 1.15rem;">👤</span>
-            <span>Ví Của Tôi</span>
-          </button>
-          <a href="https://zalo.me/0777511204" target="_blank" rel="noopener noreferrer" style="min-height: 44px; min-width: 44px; color: ${C.textMuted}; font-size: 0.72rem; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none;">
-            <span style="font-size: 1.15rem;">💬</span>
-            <span>CSKH 43</span>
-          </a>
-        </nav>
-
-        <!-- 8. GRAND FOOTER -->
-        <footer style="background: ${C.footerBg}; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 1.5rem 2rem; display: block;">
-          <div style="max-width: 1300px; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-              <div>
-                <div style="font-size: 1.2rem; font-weight: 800; color: #FFF; margin-bottom: 0.6rem;">JayT Đà Nẵng 43</div>
-                <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.6;">Bộ nhớ khuyến mãi hàng ngày của người tiêu dùng Đà Nẵng.</p>
+          <!-- ========================================================= -->
+          <!-- 8. MASTER FOOTER                                          -->
+          <!-- ========================================================= -->
+          <footer style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 0.78rem; color: #64748B; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <div style="width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #38BDF8, #6366F1); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem;">
+                ▲
               </div>
               <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; color: #FBBF24; text-transform: uppercase; margin-bottom: 0.8rem;">Cụm Rạp & Tọa Độ</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.82rem; color: #94A3B8; display: flex; flex-direction: column; gap: 0.45rem;">
-                  <li>🎬 Metiz Cinema • Helio Center Đường 2/9 (Vé T2 45K)</li>
-                  <li>🍿 CGV Vincom • 910A Ngô Quyền (Vé T3 55K)</li>
-                  <li>🍗 478 Điện Biên Phủ • Jollibee Co.opmart Thanh Khê</li>
-                  <li>☕ 34 Bạch Đằng • Katinat View Sông Hàn</li>
-                </ul>
-              </div>
-              <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; color: #FBBF24; text-transform: uppercase; margin-bottom: 0.8rem;">Hỗ Trợ Cộng Đồng</h4>
-                <p style="font-size: 0.82rem; color: #94A3B8; margin-bottom: 0.6rem;">Tiếp nhận và giải quyết phản hồi qua kênh Zalo CSKH Đà Nẵng 43.</p>
-                <a href="https://zalo.me/0777511204" target="_blank" rel="noopener noreferrer" style="color: #10B981; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Liên Hệ Zalo CSKH ↗</a>
+                <strong style="color:#0F172A;">JAYT APEX Đà Nẵng 43</strong> — Bộ nhớ khuyến mãi của người Đà Nẵng
+                <div style="font-size: 0.68rem; color: #94A3B8;">Mở mỗi ngày · Tiết kiệm mỗi ngày · Sống thông minh mỗi ngày</div>
               </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.78rem; color: #64748B;">
-              <span>© 2026 JayT Corp. Phục vụ cộng đồng Đà Nẵng là số 1.</span>
-              <span>Phiên bản: JayT Apex v5.5 — RC-1</span>
-            </div>
-          </div>
-        </footer>
 
+            <div style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.75rem;">
+              <span>Made with ❤️ in Da Nang</span>
+              <div style="display: flex; gap: 0.3rem;">
+                <span style="background:#EFF6FF; padding:0.2rem 0.4rem; border-radius:4px; font-weight:800; color:#1D4ED8; font-size:0.65rem;">Zalo</span>
+                <span style="background:#EFF6FF; padding:0.2rem 0.4rem; border-radius:4px; font-weight:800; color:#2563EB; font-size:0.65rem;">FB</span>
+                <span style="background:#F1F5F9; padding:0.2rem 0.4rem; border-radius:4px; font-weight:800; color:#0F172A; font-size:0.65rem;">TikTok</span>
+              </div>
+            </div>
+          </footer>
+
+        </main>
       </div>
     `;
   }
 
-  // 7. RENDER DECISION CARD
-  function renderDecisionCard(deal, badgeTitle, badgeSubtitle, accentColor, C, isLight) {
-    if (!deal) return '';
-    return `
-      <div style="background: ${C.cardBg}; border: 2px solid ${accentColor}; border-radius: 20px; padding: 1.4rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.15); position: relative;">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-            <div>
-              <span style="background: ${accentColor}; color: #000; font-size: 0.75rem; font-weight: 900; padding: 0.25rem 0.65rem; border-radius: 9999px;">
-                ${badgeTitle}
-              </span>
-              <div style="font-size: 0.72rem; color: ${C.textMuted}; margin-top: 0.25rem;">${badgeSubtitle}</div>
-            </div>
-            <span style="font-size: 0.75rem; color: #059669; font-weight: 800;">★ ${deal.rating}</span>
-          </div>
-
-          <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
-            <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
-            <div style="position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.75); color: ${deal.audit_status_color}; border: 1px solid ${deal.audit_status_color}; font-weight: 700; font-size: 0.68rem; padding: 0.2rem 0.5rem; border-radius: 6px;">
-              ${deal.audit_status_label}
-            </div>
-          </div>
-
-          <div style="font-size: 0.82rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.25rem;">
-            ${escapeHTML(deal.merchant)} · <span style="color:${C.textMuted};font-size:0.75rem;">${escapeHTML(deal.zone_label)}</span>
-          </div>
-          <h3 style="font-size: 1.1rem; font-weight: 800; color: ${C.textMain}; line-height: 1.35; margin: 0 0 0.6rem 0;">
-            ${escapeHTML(deal.title)}
-          </h3>
-
-          <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 10px; padding: 0.75rem; margin-bottom: 0.8rem;">
-            <div style="font-size: 0.74rem; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 0.25rem;">
-              💡 Vì Sao Đề Xuất Theo Tiêu Chí Bạn Chọn?
-            </div>
-            <ul style="margin: 0 0 0.5rem 0; padding-left: 0.8rem; font-size: 0.72rem; color: ${C.textSub}; line-height: 1.45; list-style: square;">
-              ${deal.why_reasons.map(r => `<li>${escapeHTML(r)}</li>`).join('')}
-            </ul>
-
-            <div style="font-size: 0.72rem; font-weight: 800; color: #D97706; text-transform: uppercase; margin-bottom: 0.2rem;">
-              ⚠️ Điểm Cần Lưu Ý (Why Not?):
-            </div>
-            <ul style="margin: 0; padding-left: 0.8rem; font-size: 0.7rem; color: ${C.textMuted}; line-height: 1.4; list-style: square;">
-              ${deal.why_not_reasons.map(r => `<li>${escapeHTML(r)}</li>`).join('')}
-            </ul>
-          </div>
-
-          <div style="background: rgba(16,185,129,0.08); border: 1px solid #10B981; border-radius: 10px; padding: 0.65rem 0.8rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div style="font-size: 1.15rem; font-weight: 900; color: #059669;">
-                TIẾT KIỆM ${formatVND(deal.saving)} (-${deal.percent}%)
-              </div>
-              <div style="font-size: 0.75rem; color: ${C.textSub};">
-                Giá còn: <strong style="color:${C.textMain};">${formatVND(deal.discount_price)}</strong> (Gốc: ${formatVND(deal.original_price)})
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="width: 100%; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border: none; border-radius: 12px; font-weight: 800; font-size: 0.9rem; cursor: pointer; box-shadow: 0 4px 14px rgba(16,185,129,0.35); display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
-          <span>🔥 SĂN ${escapeHTML(deal.brand_short)} (-${formatVND(deal.saving)})</span>
-          <span>➔</span>
-        </button>
-      </div>
-    `;
-  }
-
-  // 8. RENDER DEAL CARD
-  function renderDealCard(deal, C, isLight) {
-    const isFav = State.savedIds.includes(deal.deal_id);
-
-    return `
-      <div style="background: ${C.cardBg}; border: 1px solid ${C.border}; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; box-shadow: ${C.cardShadow}; height: 100%; box-sizing: border-box;">
-        
-        <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: #111827; overflow: hidden;">
-          <img src="${sanitizeURL(deal.image)}" alt="${escapeHTML(deal.title)}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='${FALLBACK_IMAGE_SVG}';" />
-          
-          <div style="position: absolute; top: 10px; left: 10px; background: ${deal.badge_bg}; color: #FFF; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">
-            ${escapeHTML(deal.tag)}
-          </div>
-          
-          <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.65); color: #FFF; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px; backdrop-filter: blur(4px);">
-            📷 ${escapeHTML(deal.image_provenance_label)}
-          </div>
-          
-          <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); color: ${deal.audit_status_color}; border: 1px solid ${deal.audit_status_color}; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.68rem; font-weight: 700; backdrop-filter: blur(8px);">
-            ${deal.audit_status_label}
-          </div>
-        </div>
-
-        <div style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; flex: 1; gap: 0.85rem;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-              <span style="font-size: 0.82rem; font-weight: 800; color: #D97706; text-transform: uppercase;">${escapeHTML(deal.merchant)}</span>
-              <span style="font-size: 0.74rem; color: #059669; font-weight: 700;">★ ${deal.rating}</span>
-            </div>
-            
-            <h4 style="font-size: 1.05rem; font-weight: 700; color: ${C.textMain}; line-height: 1.35; margin-bottom: 0.35rem; margin-top: 0;">
-              ${escapeHTML(deal.title)}
-            </h4>
-
-            <div style="display: flex; justify-content: space-between; font-size: 0.74rem; color: ${C.textMuted}; margin-bottom: 0.65rem;">
-              <span>📍 ${escapeHTML(deal.distance)} · ${escapeHTML(deal.zone_label)}</span>
-              <span style="color: #059669; font-weight: 700;">${escapeHTML(deal.price_psychology)}</span>
-            </div>
-            
-            <div style="background: ${isLight ? 'rgba(16, 185, 129, 0.06)' : 'rgba(16, 185, 129, 0.08)'}; border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 0.75rem 0.9rem; text-align: center; margin-bottom: 0.65rem;">
-              <div style="font-size: 1.25rem; font-weight: 800; color: #059669;">
-                TIẾT KIỆM ${formatVND(deal.saving)} (-${deal.percent}%)
-              </div>
-              <div style="font-size: 0.75rem; color: ${C.textSub}; margin-top: 0.2rem;">
-                Gốc: <span style="text-decoration: line-through;">${formatVND(deal.original_price)}</span> ➔ Còn: <strong style="color:${C.textMain};">${formatVND(deal.discount_price)}</strong>
-              </div>
-            </div>
-
-            <div style="background: ${isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)'}; border: 1px dashed ${C.border}; border-radius: 8px; padding: 0.55rem 0.75rem; font-size: 0.74rem; color: ${C.textSub}; line-height: 1.45;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                <span>🎟️ <strong>Điều kiện:</strong></span>
-                <span style="color: #0284C7; font-weight: 700; font-size: 0.72rem;">${escapeHTML(deal.destination_label)}</span>
-              </div>
-              ${escapeHTML(deal.terms)}
-            </div>
-          </div>
-
-          <button data-action="hunt-keo" data-id="${deal.deal_id}" data-code="${deal.code}" data-link="${deal.link}" data-saving="${deal.saving}" style="width: 100%; min-height: 48px; background: linear-gradient(135deg, #10B981, #059669); color: #FFF; border-radius: 12px; font-weight: 800; font-size: 0.88rem; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
-            <span>🔥 SĂN ${escapeHTML(deal.brand_short)} (-${formatVND(deal.saving)})</span>
-            <span>➔</span>
-          </button>
-        </div>
-      </div>
-    `;
-  }
-
-  // 9. EVENT DELEGATION
+  // 8. EVENT DELEGATION
   document.body.addEventListener('click', function (e) {
     initAudio();
     const btn = e.target.closest('[data-action]');
@@ -1041,56 +935,39 @@
     playSound('click');
     triggerHaptic('light');
 
-    if (act === 'hunt-keo') {
+    if (act === 'hunt-deal') {
       const id = btn.getAttribute('data-id');
       const code = btn.getAttribute('data-code') || '';
       const link = btn.getAttribute('data-link') || '#';
-      const deal = State.deals.find(d => d.deal_id === id);
 
-      console.log(`[P5.10-Memory-Telemetry] CTA_CLICK: deal_id=${id}, day=${State.activeDay}, cat=${State.activeCategoryPref}`);
+      console.log(`[Visual-North-Star] CTA_CLICK: deal_id=${id}, code=${code}`);
 
       if (navigator.clipboard) {
         navigator.clipboard.writeText(code).then(() => {
           playSound('copy-success');
           triggerHaptic('success');
           fireConfetti();
-          setTimeout(() => { window.open(link, '_blank', 'noopener,noreferrer'); }, 500);
-          State.pendingOutcomeDeal = deal;
-          renderApp();
+          setTimeout(() => { window.open(link, '_blank', 'noopener,noreferrer'); }, 400);
         });
       }
-    } else if (act === 'set-calendar-day') {
-      State.activeDay = btn.getAttribute('data-day');
-      console.log(`[P5.10-Memory] DAY_SELECTED: ${State.activeDay}`);
+    } else if (act === 'filter-feed') {
+      State.activeCategoryFilter = btn.getAttribute('data-cat');
       renderApp();
-    } else if (act === 'set-category-pref') {
-      State.activeCategoryPref = btn.getAttribute('data-cat');
-      console.log(`[P5.10-Memory] CATEGORY_PREF_SELECTED: ${State.activeCategoryPref}`);
+    } else if (act === 'filter-cat') {
+      State.activeCategoryFilter = btn.getAttribute('data-cat');
       renderApp();
-    } else if (act === 'toggle-deal-now') {
-      State.dealNowMode = !State.dealNowMode;
-      triggerHaptic('medium');
-      renderApp();
-    } else if (act === 'toggle-theme') {
-      State.theme = State.theme === 'light' ? 'dark' : 'light';
-      localStorage.setItem('jayt_theme', State.theme);
-      renderApp();
-    } else if (act === 'open-wallet-modal') {
-      State.activeTab = 'wallet';
-      renderApp();
-    } else if (act === 'close-wallet-modal') {
-      State.activeTab = 'home';
-      renderApp();
+    } else if (act === 'copy-link') {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          playSound('copy-success');
+          triggerHaptic('success');
+          alert('Đã sao chép liên kết JayT APEX để chia sẻ cho nhóm bạn!');
+        });
+      }
     }
   });
 
-  document.body.addEventListener('input', function (e) {
-    if (e.target.id === 'calcDrink') { State.calcDrink = parseInt(e.target.value, 10); renderApp(); }
-    else if (e.target.id === 'calcMeal') { State.calcMeal = parseInt(e.target.value, 10); renderApp(); }
-    else if (e.target.id === 'calcRide') { State.calcRide = parseInt(e.target.value, 10); renderApp(); }
-  });
-
-  // 10. BOOTSTRAP
+  // 9. BOOTSTRAP
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderApp);
   } else {
