@@ -1,0 +1,22 @@
+{
+  "report_name": "JAYT_RELEASE_PARITY_AND_LINEAGE_REPORT",
+  "mandate": "JAYT-451 SECTION XIV",
+  "timestamp": "2026-09-19T08:16:26.015Z",
+  "lineage": {
+    "source_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+    "source_artifact": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "build_artifact": "deploy/jayt_apex_interface.js",
+    "deployment_artifact": "deploy/public/jayt_apex_interface.js",
+    "live_artifact_url": "https://jayt-production-v3420.vercel.app/jayt_apex_interface.js"
+  },
+  "six_point_matrix": {
+    "point_1_sot_ws1": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470",
+    "point_2_deploy_ws1": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470",
+    "point_3_deploy_public_ws1": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470",
+    "point_4_ws2_parity": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470",
+    "point_5_mirror_vercel": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470",
+    "point_6_canonical_production": "190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470"
+  },
+  "is_bit_identical": true,
+  "verdict": "APPROVED"
+}

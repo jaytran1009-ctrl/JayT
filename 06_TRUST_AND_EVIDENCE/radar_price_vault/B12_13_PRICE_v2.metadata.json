@@ -1,0 +1,56 @@
+{
+  "sku_id": "B12_13",
+  "version": "v2",
+  "product_name_observed": "Chuột Không dây Logitech M170 (Đen)",
+  "retailer": "Điện Máy XANH (Thế Giới Di Động)",
+  "retailer_url": "https://www.dienmayxanh.com/chuot-may-tinh/chuot-khong-day-logitech-m170-den",
+  "provenance": {
+    "raw_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_13_PRICE_v2.raw.html",
+    "headers_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_13_PRICE_v2.headers.json",
+    "raw_bytes": 915669,
+    "raw_sha256": "f60c3dd2b88578a10063d08665451972fc104d08e24447b64064ee164e9fe224",
+    "http_status": 200,
+    "request_started_at_utc": "2026-09-06T05:15:52.880Z",
+    "request_ended_at_utc": "2026-09-06T05:15:53.491Z",
+    "server_response_date": "Sun, 06 Sep 2026 05:15:54 GMT",
+    "content_type": "text/html; charset=utf-8",
+    "provenance_complete": true
+  },
+  "byte_spans_observed": {
+    "h1_tag": {
+      "tag": "<h1>",
+      "span": "Chu&#x1ED9;t Kh&#xF4;ng d&#xE2;y Logitech M170",
+      "tag_byte_offset": 729158,
+      "content_byte_offset": 729162
+    },
+    "present_price": {
+      "tag": "<p class=\"box-price-present\">",
+      "span": "210.000&#x20AB; </p>",
+      "tag_byte_offset": 851001,
+      "value_byte_offset": 851030,
+      "parsed_value": "210.000 VNĐ"
+    },
+    "old_price": {
+      "tag": "<p class=\"box-price-old\">",
+      "span": "260.000&#x20AB;</p>",
+      "tag_byte_offset": 851067,
+      "value_byte_offset": 851096,
+      "parsed_value": "260.000 VNĐ"
+    },
+    "discount_percent": {
+      "tag": "<p class=\"box-price-percent\">",
+      "span": "-19%</p>",
+      "tag_byte_offset": 851136,
+      "value_byte_offset": 851169,
+      "parsed_value": "-19%"
+    }
+  },
+  "unverified_fields": {
+    "part_number": "UNVERIFIED (Payload chỉ ghi tên thương mại \"Logitech M170\", không chứa mã 910-004425)",
+    "vat_status": "UNVERIFIED (Payload không có nhãn văn bản xác nhận \"đã bao gồm VAT\")",
+    "local_stock_danang": "UNVERIFIED (Payload trang web chung, không chứa dữ liệu tồn kho cụ thể cho khu vực Đà Nẵng)"
+  },
+  "public_approved": false,
+  "render_permitted": false,
+  "verdict": "INTERNAL_REVIEW__PROVENANCE_PASS_CONTENT_UNVERIFIED_FIELDS_HELD"
+}

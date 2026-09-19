@@ -1,0 +1,430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "inventory_id": "STAGING_CANDIDATE_POOL_50_DAILY_CAPACITY_v1",
+  "directive": "JAYT-245 SECTION I & SECTION K.3",
+  "created_at": "2026-08-28T23:15:00+07:00",
+  "governance_mode": "STAGING_CANDIDATE_ONLY — NO_PRODUCTION_PROMOTION_UNTIL_RAW_CAPTURE_PASS",
+  "capacity_target": 50,
+  "tier_breakdown": {
+    "tier_1_verified_deals": 6,
+    "tier_2_official_programs": 10,
+    "tier_3_verified_venues": 18,
+    "tier_4_candidate_radars": 16
+  },
+  "cluster_breakdown": {
+    "cluster_1_hoa_khanh_lien_chieu": 14,
+    "cluster_2_ngu_hanh_son_an_thuong": 12,
+    "cluster_3_hai_chau_thanh_khe_son_tra": 14,
+    "cluster_4_nationwide_official_for_danang": 10
+  },
+  "capture_forward_protocol": {
+    "step_1": "Select target merchant/entity matching customer need & daypart context",
+    "step_2": "Perform HTTP GET / Puppeteer raw network capture (capture response body, headers, timestamp)",
+    "step_3": "Compute SHA-256 hash of immutable raw capture prior to any normalization",
+    "step_4": "Extract verbatim quotes, terms, locality scope, and validity window into bundle",
+    "step_5": "QA independent sampling audit (minimum 20% sample size)",
+    "step_6": "Assign honest tier (T1 only with complete verified proof; otherwise T2/T3/T4)"
+  },
+  "candidates": [
+    {
+      "id": "STG_C1_01",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Metiz Cinema Helio",
+      "title": "Vé U22 Học Sinh Sinh Viên 45K",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://metiz.vn/khuyen-mai/u22"
+    },
+    {
+      "id": "STG_C1_02",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Starlight Cinema Hòa Khánh",
+      "title": "Giá Vé Đồng Giá U22 45K",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://starlight.vn/khuyen-mai/u22"
+    },
+    {
+      "id": "STG_C1_03",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "DanaBus",
+      "title": "Vé Tháng Xe Buýt Trợ Giá 45K/Tháng",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://danangbus.vn"
+    },
+    {
+      "id": "STG_C1_04",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "TNGO Đà Nẵng",
+      "title": "Trạm Xe Đạp Công Cộng ĐH Bách Khoa",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://tngo.vn"
+    },
+    {
+      "id": "STG_C1_05",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Căn Tin Khu F — ĐH Bách Khoa",
+      "title": "Cơm Trưa Sinh Viên 20K Sạch Sẽ",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://dut.udn.vn/canteen"
+    },
+    {
+      "id": "STG_C1_06",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Cơm Tấm Sinh Viên Bà Lang",
+      "title": "Cơm Tấm Sườn Bì Trứng Hòa Khánh",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/com-tam-hoa-khanh"
+    },
+    {
+      "id": "STG_C1_07",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Zone Six Coffee 24/7",
+      "title": "Không Gian Ôn Thi Sinh Viên Hòa Khánh",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://zonesixcoffee.vn"
+    },
+    {
+      "id": "STG_C1_08",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Nhà Sách FAHASA Hòa Khánh",
+      "title": "Cơ Sở FAHASA Nguyễn Lương Bằng",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://fahasa.com"
+    },
+    {
+      "id": "STG_C1_09",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Quán Bún Chả Sinh Viên",
+      "title": "Điểm Ăn Trưa Bình Dân Tôn Đức Thắng",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/bun-cha-hoa-khanh"
+    },
+    {
+      "id": "STG_C1_10",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "In Ấn & Photocopy Bách Khoa",
+      "title": "Cơ Sở In Giáo Trình Nhanh Đường Ngô Thì Nhậm",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangprint.vn/bach-khoa"
+    },
+    {
+      "id": "STG_C1_11",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "CellphoneS Hòa Khánh",
+      "title": "Chuột & Bàn Phím Học Tập KTX",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://cellphones.com.vn"
+    },
+    {
+      "id": "STG_C1_12",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Tiki Việt Nam",
+      "title": "Ấm Siêu Tốc & Đồ Dùng KTX Hòa Khánh",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://tiki.vn"
+    },
+    {
+      "id": "STG_C1_13",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Viettel Telecom",
+      "title": "Gói Cước 4G Sinh Viên Khu Vực Hòa Khánh",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://viettel.vn"
+    },
+    {
+      "id": "STG_C1_14",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Coolmate KTX",
+      "title": "Trang Phục Cơ Bản Sinh Viên Ở Trọ",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://coolmate.me"
+    },
+    {
+      "id": "STG_C2_01",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Galaxy Cinema",
+      "title": "Vé Ưu Đãi Thành Viên Star Member 50K",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://www.galaxycine.vn"
+    },
+    {
+      "id": "STG_C2_02",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Chợ Bắc Mỹ An",
+      "title": "Thiên Đường Ăn Vặt & Cơm Trưa DUE",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://dananggov.vn/cho-bac-my-an"
+    },
+    {
+      "id": "STG_C2_03",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Phố Đi Bộ An Thượng",
+      "title": "Tổ Hợp Cà Phê Mở & Co-working Bờ Biển",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangtourism.vn/an-thuong"
+    },
+    {
+      "id": "STG_C2_04",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Căn Tin — ĐH Kinh Tế DUE",
+      "title": "Căn Tin Sinh Viên Cơ Sở Nam Kỳ Khởi Nghĩa",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://due.udn.vn/canteen"
+    },
+    {
+      "id": "STG_C2_05",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "The Coffee House Làng ĐH",
+      "title": "Không Gian Học Nhóm Gần DUE",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://thecoffeehouse.com"
+    },
+    {
+      "id": "STG_C2_06",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Mì Quảng Bà Mua Ngũ Hành Sơn",
+      "title": "Mì Quảng Truyền Thống Trần Bạch Đằng",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/mi-quang-ba-mua"
+    },
+    {
+      "id": "STG_C2_07",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Cơm Gà Xối Mỡ Châu Thị Vĩnh Tế",
+      "title": "Quán Cơm Sinh Viên Khu Phố DUE",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/com-ga-vinh-te"
+    },
+    {
+      "id": "STG_C2_08",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Cà Phê Yên Tĩnh Sơn Trà / Bờ Đông",
+      "title": "Điểm Đọc Sách & Làm Việc Nhóm",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangcafe.vn/son-tra"
+    },
+    {
+      "id": "STG_C2_09",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Lazada Choice",
+      "title": "Đèn Bàn Học & Phụ Kiện Điện Tử",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://lazada.vn"
+    },
+    {
+      "id": "STG_C2_10",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "VinaPhone Telecom",
+      "title": "Sim Data 4G Tốc Độ Cao Cho Sinh Viên",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://vinaphone.com.vn"
+    },
+    {
+      "id": "STG_C2_11",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Ananas Sneaker",
+      "title": "Giày Thể Thao Học Đường Bền Bỉ",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://ananas.vn"
+    },
+    {
+      "id": "STG_C2_12",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "NXB Kim Đồng",
+      "title": "Sách & Truyện Tranh Giáo Dục",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://nxbkimdong.com.vn"
+    },
+    {
+      "id": "STG_C3_01",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Domino's Pizza",
+      "title": "Mua 1 Tặng 1 Thứ Ba & Thứ Năm",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://dominos.vn"
+    },
+    {
+      "id": "STG_C3_02",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Popeyes Chicken",
+      "title": "Gà Giòn Combo Học Đường Tiết Kiệm",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://popeyes.vn"
+    },
+    {
+      "id": "STG_C3_03",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Metiz Cinema Super Monday",
+      "title": "Đồng Giá Vé 45K Thứ Hai Đầu Tuần",
+      "proposed_tier": "TIER_1_DEAL",
+      "target_url": "https://metiz.vn"
+    },
+    {
+      "id": "STG_C3_04",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "CGV Cinemas Vincom",
+      "title": "Ưu Đãi Vé Movie Pass Cho Học Sinh Sinh Viên",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://www.cgv.vn"
+    },
+    {
+      "id": "STG_C3_05",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Đường Sắt Việt Nam VNR",
+      "title": "Giảm 10% Vé Tàu Hỏa Cho Sinh Viên Ga Đà Nẵng",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://dsvn.vn"
+    },
+    {
+      "id": "STG_C3_06",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Thư Viện Khoa Học Tổng Hợp Đà Nẵng",
+      "title": "Phòng Đọc Công Cộng & Co-working Bạch Đằng",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://thuvien.danang.gov.vn"
+    },
+    {
+      "id": "STG_C3_07",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Chợ Đêm Helio",
+      "title": "Tổ Hợp Ẩm Thực & Sự Kiện Cuối Tuần Đường 2/9",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://helio.vn"
+    },
+    {
+      "id": "STG_C3_08",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Katinat Coffee & Tea",
+      "title": "Cơ Sở Nguyễn Văn Linh — Không Gian Làm Việc",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://katinat.vn"
+    },
+    {
+      "id": "STG_C3_09",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Highlands Coffee Đà Nẵng",
+      "title": "Cơ Sở Hải Châu Phục Vụ Dân Văn Phòng",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://highlandscoffee.com.vn"
+    },
+    {
+      "id": "STG_C3_10",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Phúc Long Coffee & Tea",
+      "title": "Cơ Sở Nguyễn Văn Linh Trung Tâm",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://phuclong.com.vn"
+    },
+    {
+      "id": "STG_C3_11",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Cơm Gà Bà Buội Hải Châu",
+      "title": "Quán Cơm Gà Bình Dân Phố Hải Châu",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://comgababuoi.vn"
+    },
+    {
+      "id": "STG_C3_12",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Bún Bò Bà Diệu Thanh Khê",
+      "title": "Điểm Ăn Sáng & Trưa Truyền Thống",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/bun-bo-thanh-khe"
+    },
+    {
+      "id": "STG_C3_13",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Chợ Hàn Đà Nẵng",
+      "title": "Khu Ẩm Thực Đường Phố Trần Phú",
+      "proposed_tier": "TIER_3_VENUE",
+      "target_url": "https://danangfood.vn/cho-han"
+    },
+    {
+      "id": "STG_C3_14",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Shopee Student Club",
+      "title": "Mã Freeship & Nhu Yếu Phẩm Cho Sinh Viên",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://shopee.vn"
+    },
+    {
+      "id": "STG_C4_01",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "GitHub Education",
+      "title": "GitHub Student Developer Pack Miễn Phí",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://education.github.com/pack"
+    },
+    {
+      "id": "STG_C4_02",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Notion Education",
+      "title": "Gói Notion Plus Miễn Phí Cho Sinh Viên & Giảng Viên",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://notion.so/product/notion-for-education"
+    },
+    {
+      "id": "STG_C4_03",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Spotify Việt Nam",
+      "title": "Gói Spotify Premium Student 29.5K/Tháng",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://spotify.com/student"
+    },
+    {
+      "id": "STG_C4_04",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Microsoft 365 Education",
+      "title": "Bộ Office 365 Miễn Phí Qua Email Trường ĐH",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://microsoft.com/education"
+    },
+    {
+      "id": "STG_C4_05",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Figma for Education",
+      "title": "Gói Figma Professional Miễn Phí Cho Sinh Viên Thiết Kế",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://figma.com/education"
+    },
+    {
+      "id": "STG_C4_06",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "AWS Educate",
+      "title": "Khóa Học & Cloud Credits Miễn Phí Cho Sinh Viên CNTT",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://aws.amazon.com/education/awseducate"
+    },
+    {
+      "id": "STG_C4_07",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Autodesk Education",
+      "title": "Bản Quyền AutoCAD / Revit 1 Năm Miễn Phí Cho Sinh Viên Kỹ Thuật",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://autodesk.com/education"
+    },
+    {
+      "id": "STG_C4_08",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Cổng Dịch Vụ Công Đà Nẵng",
+      "title": "Tra Cứu Thủ Tục Hành Chính & Tuyến Xe Buýt Trực Tuyến",
+      "proposed_tier": "TIER_2_PROGRAM",
+      "target_url": "https://dichvucong.danang.gov.vn"
+    },
+    {
+      "id": "STG_C4_09",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Samsung Official",
+      "title": "Cổng Ưu Đãi Giáo Dục Thiết Bị Học Tập",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://samsung.com"
+    },
+    {
+      "id": "STG_C4_10",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Fahasa Online",
+      "title": "Văn Phòng Phẩm & Dụng Cụ Học Đường",
+      "proposed_tier": "TIER_4_RADAR",
+      "target_url": "https://fahasa.com"
+    }
+  ]
+}

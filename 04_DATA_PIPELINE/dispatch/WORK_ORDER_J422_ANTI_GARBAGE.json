@@ -1,0 +1,51 @@
+{
+  "work_order_id": "WORK_ORDER_J422_ANTI_GARBAGE",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260918_FIX_SEARCH_QUERY_AND_MANDATORY_BLIND_TEST",
+  "task_id": "JAYT-422",
+  "authority": "CHAIRMAN_AND_CEO_CODEX",
+  "status": "COMPLETED_AND_SEALED",
+  "timestamp": "2026-09-17T16:16:00.000Z",
+  "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+  "active_deployment_id": "dpl_8Y2EZPR5BLqQKpY8rbVXg6N6ayfQ",
+  "remediation_summary": {
+    "zero_garbage_leakage_enforced": true,
+    "banned_phrases": [
+      "TikTok Shop Sản Phẩm",
+      "Sản phẩm TikTok Shop",
+      "TikTok Shop",
+      "Sản phẩm Shopee",
+      "Shopee Sản Phẩm",
+      "Shopee Việt Nam",
+      "Lazada Item",
+      "Sản phẩm Lazada",
+      "Lazada Việt Nam",
+      "mua sắm online",
+      "sản phẩm chính hãng",
+      "sản phẩm liên kết",
+      "sản phẩm thương mại điện tử",
+      "sản phẩm",
+      "Chính Hãng",
+      "tiện ích sinh viên"
+    ],
+    "numeric_ids_banned": true,
+    "shortlink_tokens_banned": true,
+    "manual_product_prompt_rendered": true,
+    "partner_ids": {
+      "shopee": "17372870594",
+      "lazada": "262501305",
+      "tiktok": "VNVNLCB6LYL3"
+    },
+    "commercial_fail_closed": true
+  },
+  "seals": {
+    "pipeline_seal_24_of_24": "PASS",
+    "w8_feed_toolchain_seal_5_of_5": "PASS",
+    "dual_workspace_parity": "100_PERCENT"
+  },
+  "blind_test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_422_BLIND_TEST_RECEIPT.json",
+  "screenshots": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/j422_live_manual_prompt.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j422_live_clean_search.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j422_live_tiktok_real_resolved.png"
+  ]
+}

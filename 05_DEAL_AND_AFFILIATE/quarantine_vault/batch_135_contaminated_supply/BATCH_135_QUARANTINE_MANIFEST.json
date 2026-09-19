@@ -1,0 +1,605 @@
+{
+  "manifest_id": "BATCH_135_QUARANTINE_MANIFEST",
+  "directive": "JAYT-135R — INVALID CAPTURE CONTAINMENT",
+  "status": "CONTAMINATED_SUPPLY_QUARANTINED",
+  "quarantined_at": "2026-08-26T18:48:00+07:00",
+  "executive_ruling": "Batch 135 rejected in its entirety as supply evidence due to flawed capture methodology.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_01_SYNTHETIC_TIMEOUT_FALLBACK",
+      "description": "Collector had fallback mechanism synthesizing placeholder text when network timed out (OFFLINE_CACHE_OR_TIMEOUT)."
+    },
+    {
+      "cause_id": "P0_CAUSE_02_CLASSIFIER_TARGET_ID_HARDCODING",
+      "description": "Classifier assigned ACTIVE_VERIFIED status and terms by matching target_id rather than extracting verbatim quotes from DOM."
+    },
+    {
+      "cause_id": "P0_CAUSE_03_UNPROVEN_CLAIMS_IN_ARTIFACTS",
+      "description": "Claims such as DanaBus 6.000₫ were assigned despite destination URL ending in Error.aspx."
+    },
+    {
+      "cause_id": "P0_CAUSE_04_MISSING_HTML_AND_SCREENSHOT_PROVENANCE",
+      "description": "Batch lacked raw page.html DOM snapshots and screenshot.png visual proofs."
+    }
+  ],
+  "summary_metrics": {
+    "total_quarantined_files": 115
+  },
+  "quarantined_files": [
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_01_CGV_PAYDAY/metadata.json",
+      "sha256": "91d59f197d6a1ac5651dd48cf74c579f3a5614ca52f9f96a41ad20df8000250e",
+      "bytes": 1056
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_01_CGV_PAYDAY/page.txt",
+      "sha256": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1",
+      "bytes": 3199
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_02_CGV_VNPAY/metadata.json",
+      "sha256": "6b52c4141f250e3f3f1e5cb84576623f82292ac7a6fd66ec8e5d3183594decb5",
+      "bytes": 996
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_02_CGV_VNPAY/page.txt",
+      "sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+      "bytes": 4984
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_03_CGV_U22/metadata.json",
+      "sha256": "b700d9105d041e1b69f854cd19045f20495109c7e77b74cde7f75f7a5099fbdc",
+      "bytes": 994
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_03_CGV_U22/page.txt",
+      "sha256": "adc97e53c40e562175ee118e30d3af35996026cdeff2c50b1aeedddbacd82bd1",
+      "bytes": 4864
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_04_CGV_VINH_TRUNG/metadata.json",
+      "sha256": "dc3107323583cd7ab84c1841cf1055ee1dc87f6275e7202893d128b70183e0c5",
+      "bytes": 1079
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_04_CGV_VINH_TRUNG/page.txt",
+      "sha256": "640403b028bd152eb9d5af911c8a3ce2d4d6860f9dc753fd9ebf0e52bb598508",
+      "bytes": 2432
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_05_METIZ_U22/metadata.json",
+      "sha256": "6ed4343b772e5b1d167be558f33d8c29158291f2a48dbfb23a213c0bb8704e37",
+      "bytes": 1127
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_05_METIZ_U22/page.txt",
+      "sha256": "fd34df8bc9a908a2b4c32a5a07d87f6ca79f3689679526129a8c18dc95b989dd",
+      "bytes": 467
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_06_METIZ_SUPER_MONDAY/metadata.json",
+      "sha256": "43ee27da83f3c790cd21dddcadb5031663bdfb042521f18cbe2f92c4a251e33b",
+      "bytes": 1033
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_06_METIZ_SUPER_MONDAY/page.txt",
+      "sha256": "9b312de357664529c1289dc63fbac613983bc297d77de067d0a5b7957a65b3fb",
+      "bytes": 427
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_07_METIZ_HELIO_VENUE/metadata.json",
+      "sha256": "394d8eec335da3f537eed72ab750a8f4abdb76cf6866f574b8c5644ff6ac0ae7",
+      "bytes": 1026
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_07_METIZ_HELIO_VENUE/page.txt",
+      "sha256": "543137cb0d4b2d994eae9ecaacd3d1d8e080d730373587345ad35e925b9fe022",
+      "bytes": 425
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_08_STARLIGHT_COMBO_10K/metadata.json",
+      "sha256": "69ef8fa0ed69b36b533b4d1157932a7cf62f129a8c0ab326119bdefe5659a442",
+      "bytes": 1107
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_08_STARLIGHT_COMBO_10K/page.txt",
+      "sha256": "b201ebd04f2c708b005631bd3f54c5ff8eb7950e194010c682cd64d7205d0d4f",
+      "bytes": 1588
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_09_STARLIGHT_HAPPY_DAY/metadata.json",
+      "sha256": "fdfe593c969d74fb5da5d01feb5bcc6adbfd0b98ec60666a2965ab7978c889c0",
+      "bytes": 1043
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_09_STARLIGHT_HAPPY_DAY/page.txt",
+      "sha256": "9f87deba8d6a311cd09a4637cf7abd110cc5ed662bcf74c15847f7b60c4d9713",
+      "bytes": 1926
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_10_STARLIGHT_NGUYEN_KIM/metadata.json",
+      "sha256": "1aabe65c8173ffebca422cec55685a931315c7abe415610e296decd5c48fe404",
+      "bytes": 1128
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_10_STARLIGHT_NGUYEN_KIM/page.txt",
+      "sha256": "e21c768506f9f850ecf1453805bee308b6251158cfbdf5f8e1fcfd0cae05c492",
+      "bytes": 86
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_11_GALAXY_HAPPY_DAY/metadata.json",
+      "sha256": "03df05839a953d195decd8c3cef34162d66db58a03ee0f5507bf753f69655b3a",
+      "bytes": 1095
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_11_GALAXY_HAPPY_DAY/page.txt",
+      "sha256": "3c2e75a5004f2af08573034cbb14628e11427475259386464c29d019e73c51c3",
+      "bytes": 981
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_12_GALAXY_U22/metadata.json",
+      "sha256": "797ba9d7e03d236423b213e3c7653c7f9b67afd07b3c49445abc164d10338694",
+      "bytes": 1035
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_12_GALAXY_U22/page.txt",
+      "sha256": "3c2e75a5004f2af08573034cbb14628e11427475259386464c29d019e73c51c3",
+      "bytes": 981
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_13_GALAXY_DANANG_VENUE/metadata.json",
+      "sha256": "0eb14736f577b3a77a05284c9252a3e40cd47e05fabdb336238cbac12a4dcdbd",
+      "bytes": 1081
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_13_GALAXY_DANANG_VENUE/page.txt",
+      "sha256": "c2f6e034ebec7423752e89a80e912cc02a06345d3d3db8172b58c49198517435",
+      "bytes": 1859
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_14_LOTTE_CINEMA_HSSV/metadata.json",
+      "sha256": "c176c244a07aa4900a9888c4d8bce73cf1cb24384aed1f4c71bfc291a70f7ed4",
+      "bytes": 1044
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_14_LOTTE_CINEMA_HSSV/page.txt",
+      "sha256": "c96dc445655e2fcac1e42ac870dc786073e408d3b2f35ff19eb1bf625c948284",
+      "bytes": 1234
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_15_LOTTE_DANANG_VENUE/metadata.json",
+      "sha256": "cee28257717422cbae07f476505fd9426e4438ac6f993917e254597dc36bde31",
+      "bytes": 1221
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_15_LOTTE_DANANG_VENUE/page.txt",
+      "sha256": "fa2f6acefd18ceec8a98bb88d5251c0fb9d44a8db02d75ac793de104d9209545",
+      "bytes": 1613
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_16_HIGHLANDS_PROMO/metadata.json",
+      "sha256": "6d7aeafd61f2a5ac17143dbbf46dc2ebf991770a9dda1e81253c900cc4f6ccd8",
+      "bytes": 1042
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_16_HIGHLANDS_PROMO/page.txt",
+      "sha256": "0a0aaaa0770b47b9fb56afce6af0b0fe73fe836f31d7f09d3d0ac2c5ee7bf31a",
+      "bytes": 1462
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_17_HIGHLANDS_BACH_DANG/metadata.json",
+      "sha256": "c8d46b6261a4f17871ebfb0fb277a56c724ec23fa9e0d7bc6db29bda44b185a2",
+      "bytes": 1115
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_17_HIGHLANDS_BACH_DANG/page.txt",
+      "sha256": "e87798961d7969b2e8ac676542095303c0eeac74f93366062af5fa336f1f3661",
+      "bytes": 9550
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_18_HIGHLANDS_NGUYEN_VAN_LINH/metadata.json",
+      "sha256": "4a420de8da936d0a8b681fd2f9dfbf3e7e9be6984ab68ec34af0980447eecfe7",
+      "bytes": 1127
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_18_HIGHLANDS_NGUYEN_VAN_LINH/page.txt",
+      "sha256": "bae8dab1e66ea4c791b066302ea2610ed0ba0346058f0f494b69c3e8c7ffffd1",
+      "bytes": 783
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_19_PHELA_MENU/metadata.json",
+      "sha256": "54a813d00034572a288297b3c990a24b23537fa65b32354abd5beca6d33bf2aa",
+      "bytes": 974
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_19_PHELA_MENU/page.txt",
+      "sha256": "044ad5830883b26f099b0a86897038e154d608a125dbeec9bf23d1c5666eb185",
+      "bytes": 903
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_20_PHELA_BACH_DANG/metadata.json",
+      "sha256": "3816ac3d60039824fdf2f0366beddb610cbb07b25d73ff52e811bba6d59216b3",
+      "bytes": 1039
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_20_PHELA_BACH_DANG/page.txt",
+      "sha256": "f11cd3a4cfa6a1e31b34561321177bcf132bca090ad1488edf3fe6304c28ec1d",
+      "bytes": 10293
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_21_PHELA_NGUYEN_VAN_THOAI/metadata.json",
+      "sha256": "f307a332aadb8debdcee59110143e38aa72f4a1bfe0acf6fa2b862713f1eba62",
+      "bytes": 1103
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_21_PHELA_NGUYEN_VAN_THOAI/page.txt",
+      "sha256": "d63dc8c9f9b702b30c4efd8cdcd8452b36189a0fc94a7ae4f17483d8fdd01395",
+      "bytes": 352
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_22_PHUCLONG_PROMO/metadata.json",
+      "sha256": "d9f4bce01c4cd241915a732ce83666790af164ad998f5522e9cc6ab95018286c",
+      "bytes": 1013
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_22_PHUCLONG_PROMO/page.txt",
+      "sha256": "57c37513db730a9791bd8ff94cd77376dd0c50819812ba5aaa4ff730d1030563",
+      "bytes": 1326
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_23_PHUCLONG_NVL/metadata.json",
+      "sha256": "40aa9f4d97e5f2fe6dc72e13619ee03b02c97294ab6bf2f6ea09914dbd3b95e9",
+      "bytes": 1085
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_23_PHUCLONG_NVL/page.txt",
+      "sha256": "457109485d56d6f0a3fcd7b366224b5b7f80abbcea2ac703418fd2b58856e6d7",
+      "bytes": 1353
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_24_GONGCHA_PROMO/metadata.json",
+      "sha256": "27aeaf991ab6bf01dfe93b4ab4b4e3c139da74b35cb012333bb8e8824185ef32",
+      "bytes": 984
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_24_GONGCHA_PROMO/page.txt",
+      "sha256": "b87abaea7e88b0bd9015707de835b5055fb50f2d63f3529b5ea111c0895ac89e",
+      "bytes": 404
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_25_GONGCHA_DANANG/metadata.json",
+      "sha256": "0a23433092fe1cd00cc2e63b314595eba46f4eaa98ecf508129368b0d4667ef8",
+      "bytes": 1034
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_25_GONGCHA_DANANG/page.txt",
+      "sha256": "0e14c328eae69553f3c8bad6d815754fd6794ef6d619290ec53229e5220c03d0",
+      "bytes": 578
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_26_KFC_LUNCH_PROMO/metadata.json",
+      "sha256": "b92a72005e6ace52b24f867fc7270708af70a2e1e6eef3323ffe2f6c819c850b",
+      "bytes": 1010
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_26_KFC_LUNCH_PROMO/page.txt",
+      "sha256": "4e4c29e6e3b4b6a6792e99a2e0958bb8c0378a0f94eb9f87d892a974c76a59db",
+      "bytes": 207
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_27_KFC_BIGC_DANANG/metadata.json",
+      "sha256": "4d6dcc24a4161ab41834b73d4390fa48c999c276dc2af134101f49d8186f2622",
+      "bytes": 1066
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_27_KFC_BIGC_DANANG/page.txt",
+      "sha256": "29f90890e9b29a1262fd402a70d2087e430055f0fb6a8c9a3572452bf0173319",
+      "bytes": 1539
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_28_LOTTERIA_HAPPY_LUNCH/metadata.json",
+      "sha256": "f46c756870e5f77a59883b4949a32da439ff21d3f86419a3c0674db8f5f42c38",
+      "bytes": 999
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_28_LOTTERIA_HAPPY_LUNCH/page.txt",
+      "sha256": "88e146d1e21bc8b8a7c2d964721f8b6a3136cf3826a2604edc9c9d3aba03c51c",
+      "bytes": 511
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_29_LOTTERIA_NUI_THANH/metadata.json",
+      "sha256": "6284e23824c04ee2e635b299bba736d61010a55363730566dae18a9ac124379d",
+      "bytes": 1038
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_29_LOTTERIA_NUI_THANH/page.txt",
+      "sha256": "88e146d1e21bc8b8a7c2d964721f8b6a3136cf3826a2604edc9c9d3aba03c51c",
+      "bytes": 511
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_30_JOLLIBEE_PROMO/metadata.json",
+      "sha256": "6542309dd664a296daa493cc0617a26826aa88947e08426fdbbfca5436362325",
+      "bytes": 986
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_30_JOLLIBEE_PROMO/page.txt",
+      "sha256": "b6498c5f2a091fc848566cee148c84655b3931e14d9b1b5079678af9a5fb5749",
+      "bytes": 977
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_31_JOLLIBEE_VINCOM_DANANG/metadata.json",
+      "sha256": "9e43c9e2c8aa4efd303f4bf09219504a5aa2eff612feb11e91e28268bdc2e3ab",
+      "bytes": 1054
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_31_JOLLIBEE_VINCOM_DANANG/page.txt",
+      "sha256": "445f5417bfa059f0261acf7421d43f83dde51e01827d15311e840b013b8f31f7",
+      "bytes": 65960
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_32_DOMINOS_BOGO/metadata.json",
+      "sha256": "78a6ba9268b269d59a4a6721d9ed0534ce582ffc2e0a5710bc57d24c556670ab",
+      "bytes": 971
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_32_DOMINOS_BOGO/page.txt",
+      "sha256": "9efe5c43e9c683046fc9881d1499749b94d318dc3c0b3c4d79f420632924e4b8",
+      "bytes": 5150
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_33_DOMINOS_DANANG/metadata.json",
+      "sha256": "77e04f367bc20080d339e8cfde4abb54970019c831129b7a96307c1b0f1bbe0a",
+      "bytes": 1041
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_33_DOMINOS_DANANG/page.txt",
+      "sha256": "36b029dc3d041aeba52eb5553c0e929952e89f09db8cf738409677a029c89863",
+      "bytes": 581
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_34_DOOKKI_BUFFET/metadata.json",
+      "sha256": "405db159cc5c66526bddd9746afb4bc4aec8216adf6dfdc11ac13d5929a8e4a4",
+      "bytes": 966
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_34_DOOKKI_BUFFET/page.txt",
+      "sha256": "6ca6fac2ef8350a339e14447a38041f78b283ad844abc05bcb1e6e1b75afa9b2",
+      "bytes": 14751
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_35_DOOKKI_INDOCHINA/metadata.json",
+      "sha256": "7f13c7777ecf6886632a92aeada081854482ad4e5a0c3b12934582701120f2f6",
+      "bytes": 1044
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_35_DOOKKI_INDOCHINA/page.txt",
+      "sha256": "9ec9ba7e19709e8e638684cdd0e7ab4087c757276d51ea00bfd3c14e5a7fd924",
+      "bytes": 733
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_36_GOGI_MENU/metadata.json",
+      "sha256": "85a8190c0baaf2774dae57917a2fd61aaeac57fca7183b92ac50920707c313f2",
+      "bytes": 961
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_36_GOGI_MENU/page.txt",
+      "sha256": "5cfaaef7fe9f29010404eb57c43b15814f5080e222821057a492c9f9ee87b632",
+      "bytes": 792
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_37_GOGI_DANANG/metadata.json",
+      "sha256": "ef29c8fb32a5dbfaecf27022423afd33df7bb4d0328efe1d3f4b36c506dd6bce",
+      "bytes": 1020
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_37_GOGI_DANANG/page.txt",
+      "sha256": "024acf53c12e476d26f9709c61d4b0d670b54d6a46a13d031305f32684c4c6f9",
+      "bytes": 7901
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_38_KICHI_BUFFET/metadata.json",
+      "sha256": "1c78f9126ad3e3c752ac646e0ade6813fe470bf09643c808fb70acdeebfd4188",
+      "bytes": 958
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_38_KICHI_BUFFET/page.txt",
+      "sha256": "7dc12519140307acddd04900d28051d70fd3ed2c08885c77422aa834c58adc18",
+      "bytes": 683
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_39_WINMART_WIN_MEMBER/metadata.json",
+      "sha256": "7d1bf53db6b3b86b6ba099bf753870a770d4d7ab071fecf16d80a508c9792c73",
+      "bytes": 1036
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_39_WINMART_WIN_MEMBER/page.txt",
+      "sha256": "69177b824be93aad612a4bc40b10a23c152a34486fd4d4dc6ab8f395db0a25f3",
+      "bytes": 354
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_40_DANABUS_FARES/metadata.json",
+      "sha256": "ff9dc6e1129757f69996119aca17d07a29f123e19b328aa00f6d34857a147834",
+      "bytes": 1120
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_40_DANABUS_FARES/page.txt",
+      "sha256": "21b4b4c6f78b9310b3a0dea68f00c93d401927477528247334299385b32f1c09",
+      "bytes": 94
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_41_DANABUS_ROUTES/metadata.json",
+      "sha256": "702831902cf0885fd9851fff5ac93d9cc5b56832f92d0c4e57d9898d8b51ea0f",
+      "bytes": 1091
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_41_DANABUS_ROUTES/page.txt",
+      "sha256": "3b7f19b27ce9e64924e5ac36de1b9a8099a33c3948566635dfdda707d30956ff",
+      "bytes": 4463
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_42_SPOTIFY_STUDENT/metadata.json",
+      "sha256": "a3c8191c8445053acda0bf43a6959e4bc39debc6bc05400bad18070c9d14f3a1",
+      "bytes": 1043
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_42_SPOTIFY_STUDENT/page.txt",
+      "sha256": "720b118d74e88617f56523d59f7aec6dbdaf4a90c31719fb952f0709522adfc4",
+      "bytes": 2345
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_43_GITHUB_STUDENT/metadata.json",
+      "sha256": "853cc23d4a8ba6f8b9f111dd72bfce61bc36d1c6a48d1811a8a4647be037eb67",
+      "bytes": 1060
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_43_GITHUB_STUDENT/page.txt",
+      "sha256": "08fb5b7d2d1c57178c8bf7c64305c56c89b48b1f1f7c2b74c7f684b75ae7e62e",
+      "bytes": 31274
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_44_NOTION_EDUCATION/metadata.json",
+      "sha256": "5bfebe5131bc38dc8c093367c0f67effe4de51c2ee051d7210cd8d1dd0fa041f",
+      "bytes": 1089
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_44_NOTION_EDUCATION/page.txt",
+      "sha256": "49cfc384d18dff835500ac551e9202297ec6321bd5b52f2c93f41bebde844593",
+      "bytes": 5017
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_45_APPLE_EDUCATION/metadata.json",
+      "sha256": "88950b631a2155ac502ad1ce98d7845e8e413aeb8ad493fa411863ae1e6141b9",
+      "bytes": 1029
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_45_APPLE_EDUCATION/page.txt",
+      "sha256": "aa6bd9880022cbbe22f37d4cc87b243dcaff058431e6b76fdb3760e615b06dda",
+      "bytes": 16340
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_46_JETBRAINS_EDUCATION/metadata.json",
+      "sha256": "a93a8d0689af5bc2daf9ed9b5ec7d3ecde3c9be0a17fe372e5d6763af649028b",
+      "bytes": 1072
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_46_JETBRAINS_EDUCATION/page.txt",
+      "sha256": "c98c4bf00302ad6e480fed3835558f227d32a3c77473f9ee4f71c0afa27868ee",
+      "bytes": 5481
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_47_VEXERE_STUDENT/metadata.json",
+      "sha256": "7052c9e58f7362b0466913455445c479c6ef8b114cbdbaa66f5e3ce6c813a031",
+      "bytes": 894
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_47_VEXERE_STUDENT/page.txt",
+      "sha256": "410fa5f8f83aff5dd9cde3874cdf4c09f61750b89a96cc2dd931a61a476fa9ce",
+      "bytes": 7407
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_48_DUT_CAMPUS/metadata.json",
+      "sha256": "6dad04251f53b811d5650b365cf787ff9bc4b11ed5e9e9ef09cbaa88b6c0d35f",
+      "bytes": 1061
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_48_DUT_CAMPUS/page.txt",
+      "sha256": "23c31b5221b3ce491f76834b2a32d524102d64911167f9417026e91357d5e091",
+      "bytes": 2358
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_49_UED_CAMPUS/metadata.json",
+      "sha256": "c5f333f803b87b487f5fa7973d4e100dc3ed37302be66c450c79fbd1931056df",
+      "bytes": 1159
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_49_UED_CAMPUS/page.txt",
+      "sha256": "bfe56ede9b6ece816a43d9b1f8606567b16153c4bd188c3e420dc74e87f4279e",
+      "bytes": 2528
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_50_DUE_CAMPUS/metadata.json",
+      "sha256": "2abe2614a2fe0b246e647bfc17f4d363fb604f04cd629ed9afb5bc0f827ea28d",
+      "bytes": 1040
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_50_DUE_CAMPUS/page.txt",
+      "sha256": "8ee32ea4600a015cf59ffdce191129ce185d988db8c8cbb5b7a87d4b98e44a5a",
+      "bytes": 1798
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_51_VKU_CAMPUS/metadata.json",
+      "sha256": "d2c90d45332bc8f50ac998e1abd2275330c337213b31ae7db5f817a01f2fb33a",
+      "bytes": 1040
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_51_VKU_CAMPUS/page.txt",
+      "sha256": "76ac37edd3ddfd145f0541e474f6a49008de8cb10b4b2d607625ed95754a8db6",
+      "bytes": 19197
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_52_DTU_CAMPUS/metadata.json",
+      "sha256": "c2a7b5f9acc5b73ff84658d367986b399787cfce17ca6c77d789423e9b4e31f3",
+      "bytes": 1026
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_52_DTU_CAMPUS/page.txt",
+      "sha256": "44793641865fde9c8276d07592943382fd9a988905264e25556ce858d28625f5",
+      "bytes": 12838
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_53_UFL_CAMPUS/metadata.json",
+      "sha256": "147749373b61e707a49636627fdbedc0c8a4a1a6ba5b6a67aef3b35073b2b968",
+      "bytes": 1064
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_53_UFL_CAMPUS/page.txt",
+      "sha256": "e9809effd0ea7891e6f1f101890fdb1f984f5c4c96355b4a9f2bde57649e2629",
+      "bytes": 172
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_54_DANANG_LIBRARY/metadata.json",
+      "sha256": "430f8d5606e54399511413b65f60500bbb8cd30497846a2d8b615085c649f135",
+      "bytes": 1065
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_54_DANANG_LIBRARY/page.txt",
+      "sha256": "77d7aa92c37c09def9abb47b96255b65df23ac6560f74456d69e3987b058baab",
+      "bytes": 4069
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_55_HELIO_CENTER/metadata.json",
+      "sha256": "88ca19a9679bb86221b16cb67e28afd54fb5fd60498e536cc7028966222dba33",
+      "bytes": 1050
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_55_HELIO_CENTER/page.txt",
+      "sha256": "235dbd31c1ba55cc8de06e14609267bdeda0b84207d21e36a767fc851abdaa74",
+      "bytes": 343
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_56_CHO_CON/metadata.json",
+      "sha256": "cabdec2afd8f7887e8cc9f1d7e62e320674464760ae4692be6163e46036d939c",
+      "bytes": 1007
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_56_CHO_CON/page.txt",
+      "sha256": "458a76970dcedd4c2f429d928b1b5b1ca4e5de049b35b2c9aeecfe16b5fe709a",
+      "bytes": 34177
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_57_CHO_HAN/metadata.json",
+      "sha256": "e7f46a5e51c44678b97c7c92483d6961e76a9377ce614369c843bbf5dc4de598",
+      "bytes": 1003
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135/captures_135/TARGET_135_57_CHO_HAN/page.txt",
+      "sha256": "6aa923f32a9930eb338ef2471086da93f714652fe58342dc7dfb8bfa6355f3c7",
+      "bytes": 45937
+    },
+    {
+      "path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/batch_capture_135_manifest.json",
+      "sha256": "7567eefb4299c4aec14cfcebe555bb9d0c773f9add6c72c248b51e8629fdc870",
+      "bytes": 64624
+    }
+  ]
+}

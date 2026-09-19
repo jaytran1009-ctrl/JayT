@@ -1,0 +1,16 @@
+{
+  "scope_id": "JAYT-319-B05-03-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "retry_authorized": false,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "target": {
+    "slot_id": "B05_03",
+    "url": "https://www.danangbus.vn/tin-tuc/tin-tuc/len-tuyen-05-vi-vu-da-nang-tu-tay-bac-den-bien-dong-5758.html",
+    "expected_text_span": "Đặc biệt, tuyến được vận hành bằng xe buýt điện hiện đại, mang đến hành trình êm ái, thoải mái và thân thiện với môi trường.",
+    "required_notice": "Lộ trình kết nối đô thị (Tra cứu lịch chạy và điểm dừng chi tiết tại cổng Danabus).",
+    "prohibited": ["fare claim", "price", "discount", "voucher", "schedule inference", "frequency inference", "ticketing", "affiliate", "tracking"]
+  }
+}

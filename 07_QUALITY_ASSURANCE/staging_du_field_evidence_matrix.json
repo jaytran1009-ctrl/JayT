@@ -1,0 +1,190 @@
+{
+  "version": "v3.449.0-staging.du",
+  "run_id": "RUN_20260830_DU_LINEAGE_1788075476398",
+  "artifact_generated_at": "2026-08-30T07:37:56.498Z",
+  "signed_at": "2026-08-30T07:37:56.598Z",
+  "governing_directive": "JAYT-245 Section DU",
+  "provenance": "Lineage preserved from DS origin fetch timestamps",
+  "matrix": [
+    {
+      "candidate_id": "CAND_BUS_R16A",
+      "entity_name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "entity_category": "PUBLIC_TRANSIT",
+      "canonical_domain": "danangbus.vn",
+      "canonical_portal_url": "https://www.danangbus.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_du/artifact_cand_bus_r16a_transit_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "fields": [
+        {
+          "field_name": "transit_network_portal_accessibility",
+          "display_label": "Cổng thông tin mạng lưới xe buýt",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>Xe Buýt Đà Nẵng & Bản Đồ Xe Bus Đà Nẵng - Danangbus.vn</title>",
+          "captured_at_utc": "2026-08-30T07:08:10.372Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 30,
+          "claim_scope": "Cổng tra cứu hệ thống xe buýt trợ giá Đà Nẵng chính thức"
+        },
+        {
+          "field_name": "route_timetable_r16a_2026",
+          "display_label": "Biểu đồ giờ chạy chi tiết tuyến R16A",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture bảng giờ xuất bến từng chuyến năm 2026; mở danangbus.vn tra cứu trực tiếp"
+        },
+        {
+          "field_name": "subsidized_student_fare_terms",
+          "display_label": "Chính sách giá vé trợ giá học sinh/sinh viên",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture quy định đăng ký vé tháng trợ giá; tra cứu tại điểm bán vé Danabus"
+        },
+        {
+          "field_name": "commercial_voucher_deal",
+          "display_label": "Voucher giảm giá thương mại",
+          "status": "FAIL_CLOSED_NOT_APPLICABLE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 0,
+          "claim_scope": "Dịch vụ công cộng phi thương mại, 0 deal/voucher"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUT",
+      "entity_name": "Trung Tâm Học Liệu & Truyền Thông ĐH Bách Khoa ĐN",
+      "entity_category": "CAMPUS_LIBRARY",
+      "canonical_domain": "lib.dut.udn.vn",
+      "canonical_portal_url": "http://lib.dut.udn.vn/primo-explore/search?vid=dut",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_du/artifact_cand_thu_vien_dut_catalog.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "fields": [
+        {
+          "field_name": "library_opac_catalog_accessibility",
+          "display_label": "Hệ thống tra cứu học liệu trực tuyến OPAC",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "primo-explore/search?vid=dut (Hệ thống thư viện điện tử Primo ExLibris DUT)",
+          "captured_at_utc": "2026-08-30T07:08:09.592Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 30,
+          "claim_scope": "Hệ thống tra cứu tài liệu học tập ĐH Bách Khoa"
+        },
+        {
+          "field_name": "external_student_entry_policy",
+          "display_label": "Quy chế tiếp nhận bạn đọc ngoài trường",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture quy định cấp thẻ bạn đọc ngoài ĐHBK"
+        },
+        {
+          "field_name": "opening_hours_weekend",
+          "display_label": "Lịch mở cửa phục vụ cuối tuần",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture thông báo lịch trực học kỳ hiện hành"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUND",
+      "entity_name": "Trung Tâm Học Liệu Đại Học Đà Nẵng",
+      "entity_category": "CAMPUS_LIBRARY",
+      "canonical_domain": "udn.vn",
+      "canonical_portal_url": "https://www.udn.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_du/artifact_cand_thu_vien_dund_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "fields": [
+        {
+          "field_name": "university_portal_accessibility",
+          "display_label": "Cổng thông tin Đại học Đà Nẵng",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>Đại học Đà Nẵng</title>",
+          "captured_at_utc": "2026-08-30T07:08:09.886Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 30,
+          "claim_scope": "Cổng thông tin đại học vùng công lập"
+        },
+        {
+          "field_name": "multi_campus_library_access",
+          "display_label": "Quy định liên thông thư viện các trường thành viên",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture văn bản liên kết mượn trả tài liệu giữa các trường thành viên ĐHĐN"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_COM_GA_A_HAI",
+      "entity_name": "Cơm Gà A Hải",
+      "entity_category": "CULINARY_LOCAL",
+      "canonical_domain": "facebook.com",
+      "canonical_portal_url": "https://www.facebook.com/comgaahaidanang/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_du/artifact_cand_com_ga_a_hai_facebook_shell.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "fields": [
+        {
+          "field_name": "menu_and_pricing",
+          "display_label": "Menu và bảng giá niêm yết",
+          "status": "UNVERIFIED_BLOCKED_DYNAMIC_SHELL",
+          "locator": "Facebook Dynamic Script/Login Barrier (Không trích xuất được giá có cấu trúc)",
+          "captured_at_utc": "2026-08-30T07:08:09.223Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 7,
+          "claim_scope": "Bị chặn bởi Facebook barrier; không suy diễn giá/menu"
+        },
+        {
+          "field_name": "commercial_voucher_deal",
+          "display_label": "Ưu đãi / Giảm giá",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 0,
+          "claim_scope": "0 bằng chứng ưu đãi"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_BUN_CHA_CA_109",
+      "entity_name": "Bún Chả Cá 109 Nguyễn Chí Thanh",
+      "entity_category": "CULINARY_LOCAL",
+      "canonical_domain": null,
+      "canonical_portal_url": null,
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_du/artifact_cand_bun_cha_ca_109_city_portal_root.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "DISCOVERY_LEAD",
+      "fields": [
+        {
+          "field_name": "canonical_source_ownership",
+          "display_label": "Trang thông tin chính thức của quán",
+          "status": "QUARANTINED_CITY_PORTAL_ROOT",
+          "locator": "danang.gov.vn (Cổng thành phố không đại diện cho quán)",
+          "captured_at_utc": "2026-08-30T07:08:06.430Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 0,
+          "claim_scope": "Isolated Lead - Không tính vào supply công khai"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_id": "JAYT_319_B09_03_INGRESS_MANIFEST",
+  "scope_id": "JAYT-319-BATCH-09-TARGETED-ONE-SHOT-INGRESS-20260904",
+  "slot_id": "B09_03",
+  "candidate_id": "B09_03_CHIEN_DICH_BAO_VE_DANH_TINH_SO_MA_SO_THUE_1022",
+  "target_url": "https://1022.vn/chien-dich-lam-sach-ma-so-thue-thao-go-diem-nghen-trong-kinh-doanh-loi-ich-kep-cho-doanh-nghiep-va-nguoi-dan/",
+  "captured_at_utc": "2026-09-04T13:52:49.733Z",
+  "http_status": 200,
+  "raw_file": "06_TRUST_AND_EVIDENCE/batch_09_ingress_vault/B09_03.raw.html",
+  "raw_size_bytes": 233539,
+  "raw_sha256": "b15c4903ba26822a35f8acbb3db120bddaf11cadd3f13e65b79f6d75fa688bdc",
+  "headers_file": "06_TRUST_AND_EVIDENCE/batch_09_ingress_vault/B09_03.headers.json",
+  "expected_text_span": "UBND thành phố cũng khuyến cáo không cho mượn, cho thuê, mua bán thông tin cá nhân, chữ ký số, tài khoản ngân hàng để thành lập hoặc vận hành doanh nghiệp, hộ kinh doanh; kịp thời phản ánh trường hợp bị giả mạo, bị lợi dụng thông tin để cơ quan chức năng xác minh, xử lý.",
+  "span_byte_offset_utf8": 115124,
+  "span_char_offset": 112787,
+  "span_occurrences": 1,
+  "source_date": "2026-09-04",
+  "source_date_verified": true,
+  "required_disclaimer": "Thông tin phổ biến an toàn danh tính số theo bài đăng của Cổng 1022 Đà Nẵng; không tiếp nhận hồ sơ thuế, mã số thuế, tài khoản ngân hàng, chữ ký số, mật khẩu hoặc thông tin định danh cá nhân.",
+  "compliance_status": {
+    "one_shot_consumed": true,
+    "retry_authorized": false,
+    "public_approved": false,
+    "rendered": false,
+    "production_mutated": false,
+    "prohibitions_enforced": {
+      "tax_advice": true,
+      "financial_advice": true,
+      "personal_data_collection": true,
+      "tax_identifier_collection": true,
+      "bank_account_collection": true,
+      "digital_signature_collection": true,
+      "password_collection": true,
+      "case_intake": true,
+      "affiliate": true,
+      "tracking": true
+    }
+  },
+  "audit_verdict": "RAW_BYTES_CAPTURED__AWAITING_VALIDATION"
+}

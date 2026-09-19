@@ -1,0 +1,59 @@
+{
+  "verdict_id": "SLA_CLOSURE_VERDICT_JETBRAINS_POST_SLA_EZ_AQ",
+  "candidate_id": "FAST_LANE_RERUN_01_JETBRAINS_STUDENT",
+  "governing_directive": "JAYT-245 Section EZ-AK Mandate 2 & Section EZ-AP",
+  "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ae/candidate_ez_ae_01_jetbrains_student_raw_bytes.bin",
+  "raw_byte_length": 494398,
+  "raw_sha256": "355d9e1e6d07125c0dfedda229b1880a78a54f86044a5c183c4b8b780637dceb",
+  "source_url": "https://www.jetbrains.com/community/education/#students",
+  "final_url": "https://www.jetbrains.com/academy/student-pack/#students",
+  "sla_open_utc": "2026-08-31T08:28:00Z",
+  "sla_close_utc": "2026-09-01T08:28:00Z",
+  "closure_runtime_utc": "2026-09-01T12:01:19Z",
+  "closure_timestamp_utc": "2026-09-01T12:01:19Z",
+  "closure_trigger": "SLA_WINDOW_24H_ELAPSED_AND_RUNTIME_AT_OR_AFTER_0828Z",
+  "verdict_tier": "T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+  "public_eligible": false,
+  "card_created": false,
+  "voucher_created": false,
+  "affiliate_link_created": false,
+  "price_claimed": false,
+  "field_status": {
+    "title": true,
+    "eligibility_cohort": true,
+    "scope": true,
+    "action_url": false
+  },
+  "locators": {
+    "title": {
+      "status": "PRESENT",
+      "text": "Free JetBrains Student Pack",
+      "byte_offset_start": 7207,
+      "byte_offset_end": 7249,
+      "excerpt": "<title>Free JetBrains Student Pack</title>"
+    },
+    "eligibility_cohort": {
+      "status": "PRESENT",
+      "text": "student / academic research",
+      "byte_offset_start": 7229,
+      "byte_offset_end": 7236,
+      "excerpt": "Free JetBrains Student Pack"
+    },
+    "scope": {
+      "status": "PRESENT",
+      "text": "strictly for non-commercial educational purposes",
+      "byte_offset_start": 407708,
+      "byte_offset_end": 407756,
+      "excerpt": "strictly for non-commercial educational purposes"
+    },
+    "action_url": {
+      "status": "MISSING",
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "excerpt": null,
+      "diagnosis": "Static raw HTML contains informational academy link (/academy/student-pack/) but lacks direct verified application form or registration CTA button. Dynamic JS-rendered application flows are not verifiable from static bytes."
+    }
+  },
+  "verdict_rationale": "Closure executed after SLA deadline elapsed (Runtime: 2026-09-01T12:01:19Z >= Close: 2026-09-01T08:28:00Z). Static raw bytes contain verified title, student eligibility, and non-commercial educational scope locators, but lack direct application/registration action CTA in static HTML. Under fail-closed protocol (EZ-AK Mandate 2), candidate is classified as T4 descriptive-only and held internal. No public card, voucher, price, or affiliate link created."
+}

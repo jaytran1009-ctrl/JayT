@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 14,
+  "offer_id": "B14_GALAXY_DANANG_TARIFF",
+  "brand": "Galaxy Cinema",
+  "category": "CINEMA",
+  "title": "Biểu Giá Vé Galaxy Cinema Coop Đà Nẵng",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_14_galaxy_danang_tariff.html",
+    "file_sha256": "12d36958c4db0addb42f5ed514f9038b44e310d9b1a743f3fb1cfea15b2fa7f9",
+    "file_bytes": 333433,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://www.galaxycine.vn",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "finding": "All four predicates verified verbatim in raw source HTML bytes. Da Nang branch explicitly proven in cinema directory list (\"Galaxy Cinema Coop Đà Nẵng\"). Fully eligible for Wave 1 Da Nang release."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Giá Vé U22: Chỉ Từ 45K",
+      "byte_offset_start": 569,
+      "byte_offset_end": 597,
+      "byte_length": 28,
+      "selector": "title",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "Giá vé U22 thay đổi tùy theo rạp phim và ngày mua trong tuần.",
+      "byte_offset_start": 116370,
+      "byte_offset_end": 116443,
+      "byte_length": 73,
+      "selector": ".content__data__wordpaste ul li p span",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "Galaxy Cinema Coop Đà Nẵng",
+      "byte_offset_start": 103496,
+      "byte_offset_end": 103526,
+      "byte_length": 30,
+      "selector": ".cinema-list a",
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "Áp dụng khách hàng thành viên từ 22 tuổi trở xuống.",
+      "byte_offset_start": 116162,
+      "byte_offset_end": 116228,
+      "byte_length": 66,
+      "selector": ".content__data__wordpaste ul li p span",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "VIEW_OFFICIAL_SCHEDULE",
+    "button_label": "Xem Biểu Giá Vé Tại Quầy",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

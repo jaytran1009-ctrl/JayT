@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site information -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='revisit-after' content='7 days'/><title>Rạp phim Starlight</title><meta itemprop='name' content='Rạp phim Starlight'><meta property='og:title' content='Rạp phim Starlight' /> <meta name='twitter:title' content ='Rạp phim Starlight'/><meta name='twitter:card' content ='summary'/><meta name='description' content ='Rạp phim Starlight'/><meta name='twitter:description' content ='Rạp phim Starlight'/><meta itemprop='description' content='Rạp phim Starlight' /><meta property='og:description' content='Rạp phim Starlight' /> <meta property='og:locale' content='vi_VN' /><link rel='alternate' hreflang='vi_VN' href='https://starlight.vn/'><meta property='og:type' content='website' /><meta name='keywords' content='Rạp phim Starlight'/><meta property='og:site_name' content='StarLightSITE' /><meta name='twitter:site' content ='StarLightSITE'/><meta name='robots' content='index,follow'/><meta property='fb:admins' content='' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,bold,100,200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- External CSS -->
+    <link href="/Content/Style?v=xf1oGI5II_4pH-Ahj-tS-OKz_HQXCaOY2PUi2vz6H8k1" rel="stylesheet"/>
+
+
+    <!-- Google Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "d17589a4-68d3-451d-98d8-ffef22409a32",
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div style="display:none" class="main-reloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Main Header -->
+    
+<header class="filmoja-header-area">
+
+    <!-- Header Top Area Start -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-3 col-sm-12">
+                    <div class="header-top-social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-9 col-sm-12">
+                    <div class="header-top-menu">
+                        <ul>
+                            
+                            <li><a href="/cau-hoi-thuong-gap.html">FAQ's</a></li>
+                            
+
+    <li><a href="/dang-nhap.html" class="btn-member">Đăng nhập</a></li>
+    <li><a href="/dang-ky.html" class="btn-member">Đăng k&#253;</a></li>
+
+
+<script>
+    function logOut() {
+        $.ajax({
+            url: "/MemberRegister/Logout",
+            type: "POST",
+            traditional: true,
+            datatype: "json",
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                //alert(result);
+                if (result === "true" || result === true) {
+                    location.href = "/";
+                } else {
+                }
+            },
+            error: function () {
+                return false;
+            }
+        });
+    }
+</script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Top Area End -->
+    <!-- Main Header Area Start -->
+    <div class="main-header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="site-logo">
+                        <a href="/">
+                            <img src="/Content/img/logo.png" alt="filmoja" />
+                        </a>
+                    </div>
+                    <!-- Responsive Menu Start -->
+                    <div class="filmoja-responsive-menu"></div>
+                    <!-- Responsive Menu End -->
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="mainmenu">
+                        <nav>
+                            <ul id="responsive_navigation">
+                                <!-- Mobile Search Start -->
+                                <!-- Mobile Search End -->
+                                <li><a href="/">Trang chủ</a></li>
+                                <li>
+                                    <a href="/lich-chieu.html">Lịch chiếu</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">Phim</a>
+                                    <ul>
+                                        <li><a href="/phim.html">Phim Đang Chiếu</a></li>
+                                        <li><a href="/phim-sap-chieu.html">Phim Sắp Chiếu</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="/uu-dai.html">Khuyến Mãi</a></li>
+                                <li><a href="/tin-tuc.html">Điện Ảnh</a></li>
+                                <li><a href="/lien-he.html">Liên hệ</a></li>
+                                <li><a href="/tuyen-dung.html">Tuyển dụng</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Header Area End -->
+
+</header>
+<script>
+    function openNav() {
+        document.getElementById("mobileMenu").style.width = "300px";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileMenu").style.width = "0";
+    }
+</script>
+
+    <!-- Main Header End -->
+    
+
+
+
+<!-- Slider Area Start -->
+<section class="filmoja-slider-area fix">
+    <div class="filmoja-slide owl-carousel">
+                    <a href="https://starlight.vn/film/ho-linh-trang-si-t13/4761fa2e-ab3a-4b4d-a6b8-64c8f8d2ed1e.html">
+                        <div class="filmoja-main-slide">
+                            <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/ho-linh-tang-si.jpg" style="max-height:550px" />
+
+                        </div>
+                    </a>
+                    <a href="https://starlight.vn/film/quy-tu-vuot-giau-k/b5786f7a-ce87-422e-97eb-0e7bbeedf26a.html">
+                        <div class="filmoja-main-slide">
+                            <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/quy-tu-v%C6%B0%E1%BB%A3t-gi%C3%A0u.jpg" style="max-height:550px" />
+
+                        </div>
+                    </a>
+                    <a href="https://starlight.vn/film/nghi-he-so-nghi-huu-t13/fd393485-73a4-4835-a7ab-ee2a117c57a2.html">
+                        <div class="filmoja-main-slide">
+                            <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/nghi-he-nghi-huu.jpg" style="max-height:550px" />
+
+                        </div>
+                    </a>
+                    <a href="https://starlight.vn/film/quy-quyet-ranh-gioi-vo-dinh-t16/d421d09b-a33f-4ad9-9801-8d997133d8a8.html">
+                        <div class="filmoja-main-slide">
+                            <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/insidious.jpg" style="max-height:550px" />
+
+                        </div>
+                    </a>
+                    <a href="https://starlight.vn/uu-dai/%F0%9F%8C%9E-he-ron-rang-deal-10k-san-sang-%F0%9F%8C%9E-1064.html">
+                        <div class="filmoja-main-slide">
+                            <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/deal%2010k%201200x500.jpg" style="max-height:550px" />
+
+                        </div>
+                    </a>
+                    <div class="filmoja-main-slide">
+                        <img src="/Areas/Admin/Content/Fileuploads/images/Slide2024/PHIM%20HOT%20T8%201200x500.png" style="max-height:550px"  />
+                    </div>
+    </div>
+</section>
+<!-- Slider Area End -->
+<div class="booking-form" style="">
+    <div class="col-lg-12">
+        <div class="booking-form-item" style="width:20%;">
+            <div class="select-box slTheater">
+
+                <div class="select-box__current uServer" tabindex="1">
+
+                    
+                    <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="s0" value="0" name="inputServer" checked="checked">
+                        <p class="select-box__input-text">Rạp</p>
+                    </div>
+
+                    <img class="select-box__icon" src="/Content/img/black-ar-down.png" alt="Arrow Icon" aria-hidden="true">
+                </div>
+                <ul class="select-box__list">
+
+                    <li>
+                        <label class="select-box__option" data-value="0" style="background-color: #36373b; color: #fff;" onclick="selectServer(this)" for="s0" aria-hidden="aria-hidden">Rạp</label>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="booking-form-item" style="width:20%;">
+            <div class="select-box slFilm">
+                <div class="select-box__current uFilm" tabindex="1">
+
+
+                    <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="0" value="0" name="inputFilm" checked="checked">
+                        <p class="select-box__input-text">Phim</p>
+                    </div>
+                    <img class="select-box__icon" src="/Content/img/black-ar-down.png" alt="Arrow Icon" aria-hidden="true">
+                </div>
+                <ul class="select-box__list">
+
+                    <li>
+                        <label class="select-box__option" data-value="0" for="0" aria-hidden="aria-hidden">Phim</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="booking-form-item" style="width:20%;">
+            <div class="select-box slDate">
+                <div class="select-box__current uDate" tabindex="1">
+                    <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="0" value="0" name="inputDate" checked="checked">
+                        <p class="select-box__input-text">Ngày xem</p>
+                    </div>
+                    <img class="select-box__icon" src="/Content/img/black-ar-down.png" alt="Arrow Icon" aria-hidden="true">
+                </div>
+                <ul class="select-box__list">
+                    <li>
+                        <label class="select-box__option" data-value="0" for="0" aria-hidden="aria-hidden">Ngày xem</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="booking-form-item" style="width:20%;">
+            <div class="select-box slTime">
+                <div class="select-box__current uTime" tabindex="1">
+                    <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="0" value="0" name="inputTime" checked="checked">
+                        <p class="select-box__input-text">Suất chiếu</p>
+                    </div>
+                    <img class="select-box__icon" src="/Content/img/black-ar-down.png" alt="Arrow Icon" aria-hidden="true">
+                </div>
+                <ul class="select-box__list">
+                    <li>
+                        <label class="select-box__option" data-value="0" for="0" aria-hidden="aria-hidden">Suất chiếu</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- Top Movies Area Start -->
+<section class="filmoja-top-movies-area section_30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="filmoja-heading">
+                    <h2>Phim:<span> Đang chiếu</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="amy-movie-carousel-2 ">
+                    <div class="amy-movie-list">
+                        <div class="amy-movie-items">
+
+
+
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/hope-vung-tu-dia-t16/fa1ded70-dc76-47eb-bea4-e76e04a364ef.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Hope-vung-tu-dia.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T16</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/hope-vung-tu-dia-t16/fa1ded70-dc76-47eb-bea4-e76e04a364ef.html">HOPE V&#217;NG TỬ ĐỊA (T16)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>2 giờ 37 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    H&#224;nh Động, Hồi Hộp, Phi&#234;u Lưu
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Na Hong-Jin
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Hwang Jung-min, Zo In-sung, Hoyeon, Taylor Russell, Cameron Britton, Alicia Vikander, Michael Fassbender
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Tại Hope Harbor, một ng&#244;i l&#224;ng hẻo l&#225;nh nằm gần khu vực phi qu&#226;n sự, cảnh s&#225;t trưởng Bum-seok đ&#227; nhận được tin b&#225;o khẩn cấp từ người d&#226;n địa phương về sự xuất hiện của một con hổ. ...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/hope-vung-tu-dia-t16/fa1ded70-dc76-47eb-bea4-e76e04a364ef.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/ma-tu-lt-t18/f44a0fba-f772-4899-91f7-c9fed8897725.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Ma-tu.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T18</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/ma-tu-lt-t18/f44a0fba-f772-4899-91f7-c9fed8897725.html">MA T&#217; (LT) (T18)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 45 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Kinh dị
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Joko Anwar
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Abimana Aryasatya, Almanzo Konoralma, Aming Sugandhi,...
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">(Bản Lồng tiếng)
+Một t&#249; nh&#226;n b&#237; ẩn xuất hiện trong một nh&#224; t&#249; kh&#233;t tiếng bạo lực nhất Indonesia, mang theo một thực thể si&#234;u nhi&#234;n chỉ săn l&#249;ng những kẻ c&#243; năng lượng ti&#234;u cực. Để...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/ma-tu-lt-t18/f44a0fba-f772-4899-91f7-c9fed8897725.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/quy-tu-vuot-giau-k/b5786f7a-ce87-422e-97eb-0e7bbeedf26a.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Quy-tu-vuot-giau.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">K</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/quy-tu-vuot-giau-k/b5786f7a-ce87-422e-97eb-0e7bbeedf26a.html">QU&#221; TỬ VƯỢT GI&#192;U (K)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 58 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Gia Đ&#236;nh, H&#224;i
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Nguyễn Quang Dũng
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Thu Trang, Tiến Luật, Ng&#244; Kiến Huy, Ng&#226;n Quỳnh, Hạo Khang, Đ&#236;nh Dương, Thanh Thuỷ, Kiến An
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Qu&#253; Tử Vượt Gi&#224;u xoay quanh gia đ&#236;nh &#244;ng Ph&#225;t, b&#224; Diệp v&#224; cậu con trai duy nhất Ph&#250; Qu&#253;. Để nu&#244;i dạy con c&#225;i trưởng th&#224;nh theo đ&#250;ng &#253; m&#236;nh, vợ chồng Ph&#225;t - Diệp li&#234;n tục g&#226;y hoang ...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/quy-tu-vuot-giau-k/b5786f7a-ce87-422e-97eb-0e7bbeedf26a.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/ho-linh-trang-si-t13/4761fa2e-ab3a-4b4d-a6b8-64c8f8d2ed1e.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Ho-linh-trang-si.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T13</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/ho-linh-trang-si-t13/4761fa2e-ab3a-4b4d-a6b8-64c8f8d2ed1e.html">HỘ LINH TR&#193;NG SĨ (T13)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>2 giờ 35 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    H&#224;nh Động, Phi&#234;u Lưu
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Nguyễn Phan Quang B&#236;nh
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Tuấn Trần, Thi&#234;n T&#250;, Johnny Tr&#237; Nguyễn, NSND Tự Long, Đỗ Thị Hải Yến, L&#234; Vũ Long, Qu&#225;ch Ngọc Ngoan, L&#234; Minh Thuấn, Hứa Vĩ Văn, Diệp Quang B&#236;nh, Danis Nguyễn
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Bộ phim huyền sử về h&#224;nh tr&#236;nh của 7 Hộ Linh Tr&#225;ng Sĩ trong nhiệm vụ cuối c&#249;ng Ti&#234;n Đế giao. Họ phải chạy đua với thời gian, đối đầu với c&#225;c thế lực th&#249; địch, đưa 99 quan t&#224;i của Đ...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/ho-linh-trang-si-t13/4761fa2e-ab3a-4b4d-a6b8-64c8f8d2ed1e.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/nghi-he-so-nghi-huu-t13/fd393485-73a4-4835-a7ab-ee2a117c57a2.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Nghi-he-so-nghi-huu.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T13</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/nghi-he-so-nghi-huu-t13/fd393485-73a4-4835-a7ab-ee2a117c57a2.html">NGHỈ H&#200; SỢ NGHỈ HƯU (T13)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 57 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Gia Đ&#236;nh, H&#224;i
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Huỳnh Lập
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    NSƯT Cao Minh, Cody Nam V&#245;, Huỳnh Lập, T&#237;n Nguyễn
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Nghỉ H&#232; Sợ Nghỉ Hưu xoay quanh Tr&#237; B&#236;nh, một ch&#224;ng trai Gen Z, trở về v&#249;ng qu&#234; hẻo l&#225;nh để trải qua kỳ nghỉ h&#232; c&#249;ng &#244;ng nội l&#224; &#244;ng Thời - một cựu chiến binh sống đơn độc nhiều năm....</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/nghi-he-so-nghi-huu-t13/fd393485-73a4-4835-a7ab-ee2a117c57a2.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/quy-quyet-ranh-gioi-vo-dinh-t16/d421d09b-a33f-4ad9-9801-8d997133d8a8.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Quy-quyet-Ranh-gioi-vo-dinh.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T16</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/quy-quyet-ranh-gioi-vo-dinh-t16/d421d09b-a33f-4ad9-9801-8d997133d8a8.html">QUỶ QUYỆT RANH GIỚI V&#212; ĐỊNH (T16)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 46 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Kinh dị
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Jacob Chase
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Lin Shaye, Sam Spruell, Brandon Perea
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Gemma, một người mẹ trẻ đang nu&#244;i con g&#225;i trong ch&#237;nh ng&#244;i nh&#224; nơi m&#236;nh từng lớn l&#234;n, ph&#225;t hiện c&#244; c&#243; thể du h&#224;nh v&#224;o The Further — một c&#245;i kh&#244;ng gian si&#234;u nhi&#234;n — nơi c&#244; sở hữu kh...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/quy-quyet-ranh-gioi-vo-dinh-t16/d421d09b-a33f-4ad9-9801-8d997133d8a8.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/shin-cau-be-but-chi-lt-ky-ky-quai-quai-ky-nghi-yeu-quai-cua-to-p/fcff8a1f-6e5e-486a-815a-a2ce8a6d6656.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Shin-ky-ky-quai-quai.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">P</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/shin-cau-be-but-chi-lt-ky-ky-quai-quai-ky-nghi-yeu-quai-cua-to-p/fcff8a1f-6e5e-486a-815a-a2ce8a6d6656.html">SHIN CẬU B&#201; B&#218;T CH&#204; (LT) KỲ KỲ QU&#193;I QU&#193;I! KỲ NGHỈ Y&#202;U QU&#193;I CỦA TỚ (P)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 41 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    H&#224;i, Hoạt H&#236;nh
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Masaki Watanabe
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Yumiko Kobayashi, Miki Narahashi, Toshiyuki Morikawa, Satomi Koorogi
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Lấy bối cảnh m&#249;a h&#232; tại Akita, bộ phim theo ch&#226;n Shin v&#224; gia đ&#236;nh Nohara trong chuyến về qu&#234; đầy h&#225;o hức. Tuy nhi&#234;n, một sự kiện kỳ lạ đ&#227; đưa cả gia đ&#236;nh lạc v&#224;o Xứ sở Y&#234;u qu&#225;i b&#237; ...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/shin-cau-be-but-chi-lt-ky-ky-quai-quai-ky-nghi-yeu-quai-cua-to-p/fcff8a1f-6e5e-486a-815a-a2ce8a6d6656.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/paw-patrol-phim-khung-long-lt-p/576d1508-99d9-40da-a74e-4378f984ca6e.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Paw-patrol-Phim-khung-long.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">P</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/paw-patrol-phim-khung-long-lt-p/576d1508-99d9-40da-a74e-4378f984ca6e.html">PAW PATROL PHIM KHỦNG LONG (LT) (P)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 29 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Gia Đ&#236;nh, Hoạt H&#236;nh
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Cal Brunker
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Cal Brunker &amp; Bob Barlen
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Khi con t&#224;u của Paw Patrol bị cuốn v&#224;o một cơn b&#227;o b&#237; ẩn, đội c&#250;n cứu hộ v&#244; t&#236;nh lưu lạc đến một h&#242;n đảo nhiệt đới v&#244; danh, nơi sinh sống của nhiều lo&#224;i khủng long cổ xưa. Họ gặp R...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/paw-patrol-phim-khung-long-lt-p/576d1508-99d9-40da-a74e-4378f984ca6e.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<div class="amy-movie-item">
+                                            <div class="amy-movie-item-inner">
+                                                <div class="amy-movie-item-front">
+                                                    <div class="slick-arrows"></div>
+                                                    <div class="amy-movie-item-poster">
+                                                        <a href="/film/nguoi-nhen-khoi-dau-moi-t13/c9e3b6b6-a1a4-4feb-b5f0-12310d8794c5.html">
+                                                            <img width="258" height="387" src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Spider-man-2026.jpg" class="attachment-258x444 size-258x444" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="amy-movie-item-back">
+                                                    <div class="amy-movie-item-back-inner">
+                                                        <div class="amy-movie-item-content">
+                                                            <span class="amy-movie-field-imdb">T13</span>
+                                                            <h3 class="amy-movie-field-title"><a href="/film/nguoi-nhen-khoi-dau-moi-t13/c9e3b6b6-a1a4-4feb-b5f0-12310d8794c5.html">NGƯỜI NHỆN KHỞI ĐẦU MỚI (T13)</a></h3>
+                                                            <div class="amy-movie-item-meta">
+                                                                <span class="amy-movie-field-mpaa">2D</span>
+                                                                <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>2 giờ 25 ph&#250;t</span>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    H&#224;i, H&#224;nh Động, Phi&#234;u Lưu
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-language">
+                                                                <label class="amy-movie-custom-field-label">Đạo diễn:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Destin Daniel Cretton
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-custom-field-group amy-movie-field-release_date">
+                                                                <label class="amy-movie-custom-field-label">Diễn vi&#234;n:</label>
+                                                                <div class="amy-movie-custom-field-content">
+                                                                    Tom Holland, Zendaya, Sadie Sink
+                                                                </div>
+                                                            </div>
+                                                            <div class="amy-movie-field-desc">
+                                                                        <p style="color:#333">Kh&#244;ng c&#242;n Tony Stark, MJ hay Ned kề cận, Peter buộc phải đơn th&#226;n độc m&#227; đối diện với phe đối đầu b&#237; ẩn. Tuy nhi&#234;n, khi &#225;p lực ng&#224;y c&#224;ng gia tăng, n&#243; k&#237;ch hoạt một sự biến đổi thể ...</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="amy-movie-item-button">
+                                                            <a href="/film/nguoi-nhen-khoi-dau-moi-t13/c9e3b6b6-a1a4-4feb-b5f0-12310d8794c5.html" class="amy-btn-icon-text link-detail fancybox.iframe amy-fancybox">
+                                                                <i class="fa fa-ticket"></i>Đặt v&#233;
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Top Movies Area End -->
+<!-- Top Movies Area Start -->
+<section class="filmoja-top-movies-area section_30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="filmoja-heading">
+                    <h2>Phim:<span> Sắp chiếu</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-movie-slider owl-carousel">
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/hanh-trinh-bat-hao-t18/c9239186-e579-4a26-85bd-323429f006a2.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Hanh-trinh-bat-hao.jpg" alt="hanh-trinh-bat-hao-t18" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/gRLEmFrvXVw?si=q6AL7IoVS3_Rz1Pk"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/hanh-trinh-bat-hao-t18/c9239186-e579-4a26-85bd-323429f006a2.html">H&#192;NH TR&#204;NH BẤT HẢO (T18)</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/mai-no-mot-loi-tam-biet/5d7af040-725d-412b-9520-eaefc80c52a9.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Mai-no-mot-loi-tam-biet.jpg" alt="mai-no-mot-loi-tam-biet" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/ck5rOLF1u98?si=VIbtTduDuIW06cv2"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/mai-no-mot-loi-tam-biet/5d7af040-725d-412b-9520-eaefc80c52a9.html">M&#195;I NỢ MỘT LỜI TẠM BIỆT</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/bat-tien-truy-tim-luu-ly-dang-k/ce58cfea-be2e-4ad8-a554-1da7fea1e859.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Bat-tien-truy-tim-luu-ly-dang.jpg" alt="bat-tien-truy-tim-luu-ly-dang-k" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/crSpzvxupN4?si=clmFuowffZIzykwI"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/bat-tien-truy-tim-luu-ly-dang-k/ce58cfea-be2e-4ad8-a554-1da7fea1e859.html">B&#193;T TI&#202;N! TRUY T&#204;M LƯU LY ĐĂNG (K)</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/len-huong/7dce73e7-9f1b-4deb-8f46-4988760bf1dd.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Len-huong.jpg" alt="len-huong" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v="><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/len-huong/7dce73e7-9f1b-4deb-8f46-4988760bf1dd.html">L&#202;N HƯƠNG</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/hon-dao-quen-lang-lt/ac9dd574-f0a2-43e4-8a8f-7aa4e701db32.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Hon-dao-quen-lang.jpg" alt="hon-dao-quen-lang-lt" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/vNCRSzGhIbM?si=RDC4__xUoLm1IU7-"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/hon-dao-quen-lang-lt/ac9dd574-f0a2-43e4-8a8f-7aa4e701db32.html">H&#210;N ĐẢO QU&#202;N L&#195;NG (LT)</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/ut-lan-2/86f92318-c898-4f5c-abe7-e7805c2bfcfd.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Ut-Lan-2.jpg" alt="ut-lan-2" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/omtxs8vTgo4?si=md9pyJuyHacoR1gB"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/ut-lan-2/86f92318-c898-4f5c-abe7-e7805c2bfcfd.html">&#218;T LAN 2</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/an-mang-karaoke/80a52836-a9dd-40f4-91c6-eaabed794a30.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/An-mang-karaoke.jpg" alt="an-mang-karaoke" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/V9AdvOLV8Hw?si=nIb54sUlwm4DrtG_"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/an-mang-karaoke/80a52836-a9dd-40f4-91c6-eaabed794a30.html">&#193;N MẠNG KARAOKE</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/an-mang-xem-hoan-hao/12de7516-b37e-405f-8fb8-9d87cc974e29.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/An-mang-xem-hoan-hao.jpg" alt="an-mang-xem-hoan-hao" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/zR7YYGMaqm0?si=FTbUdGEBMcoa8nb_"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/an-mang-xem-hoan-hao/12de7516-b37e-405f-8fb8-9d87cc974e29.html">&#193;N MẠNG X&#201;M HO&#192;N HẢO</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/chi-chi-em-em-3/22a8841e-97be-494d-8f31-dac49b771aeb.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Chi-chi-em-em-3.jpg" alt="chi-chi-em-em-3" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/nrxSyPF8OXc?si=em8soQvzQCO4EhSa"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/chi-chi-em-em-3/22a8841e-97be-494d-8f31-dac49b771aeb.html">CHỊ CHỊ EM EM 3</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/me-min/091205eb-c484-4aa4-83b2-4dfa61737832.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Me-min.jpg" alt="me-min" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/rkFC1A4xmiA?si=GHI2nPNJzHdFa3tY"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/me-min/091205eb-c484-4aa4-83b2-4dfa61737832.html">MẸ M&#204;N</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/bo-sua-bay/5dc8402d-9a98-4ac0-ac95-458b292af6ba.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Bo-sua-bay.jpg" alt="bo-sua-bay" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/u19T6zs4Ksk?si=fn0bMFcDt__3xkPZ"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/bo-sua-bay/5dc8402d-9a98-4ac0-ac95-458b292af6ba.html">B&#210; SỮA BAY</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/trai-giam-hanh-phuc/3874f601-42f0-4cda-9606-39fffd934eff.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Trai-giam-hanh-phuc.jpg" alt="trai-giam-hanh-phuc" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/4ijqx0q6aLY?si=LUwZNZ458MjJp_Hc"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/trai-giam-hanh-phuc/3874f601-42f0-4cda-9606-39fffd934eff.html">TRẠI GIAM HẠNH PH&#218;C</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/soi-chi-do/094c1e7f-6ad5-450c-9281-1dbaa31276c0.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Soi-chi-do.jpg" alt="soi-chi-do" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/c-pJTMHQPQc?si=AMcU6D_ar4_vO83L"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/soi-chi-do/094c1e7f-6ad5-450c-9281-1dbaa31276c0.html">SỢI CHỈ ĐỎ</a></h4>
+                                    </div>
+                                </div>
+<div class="single-top-movie">
+                                    <div class="top-movie-wrap">
+                                        <div class="top-movie-img">
+                                            <a href="/film/avengers-ngay-tan-the/2edc2d2e-08a4-43ec-bcb9-364fda5e9346.html">
+                                                <img src="https://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER2026/Avengers-doomdays.jpg" alt="avengers-ngay-tan-the" />
+                                            </a>
+                                        </div>
+                                        <div class="thumb-hover">
+                                            <a class="play-video" href="https://www.youtube.com/watch?v=https://youtu.be/jZMjK1Y1Fv0?si=aUpjYYYYlMa7QMVo"><i class="fa fa-play"></i></a>
+                                            <div class="thumb-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-movie-details">
+                                        <h4><a href="/film/avengers-ngay-tan-the/2edc2d2e-08a4-43ec-bcb9-364fda5e9346.html">AVENGERS: NG&#192;Y TẬN THẾ</a></h4>
+                                    </div>
+                                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Top Movies Area End -->
+
+<!-- Top Movies Area Start -->
+
+
+<section class="filmoja-top-movies-area section_30" style=" background: url(/Content/img/bgs5.jpg) no-repeat scroll 0 0; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="filmoja-heading">
+                    <h2>Khuyến m&#227;i v&#224; sự kiện</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-movie-slider-1 owl-carousel">
+
+                            <div>
+                                <a href="/uu-dai/ket-qua-quay-so-1062.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/POSTER/z7711690988498_94beb1eacd95556d45e4d0e0adeb311c.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/uu-dai/happy-family-kids-day-1053.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/POSTER/KID-FAMILY-640X960.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/uu-dai/ct-u22-rap-starlight-1047.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/Poster2024/u22-fb-640x960.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/uu-dai/thu-3-phim-viet-1046.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/Poster2024/z3970954913942_5553a1bb37330ee79929701b4eb55b53.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/uu-dai/thong-bao-tien-hanh-reset-diem-theo-thong-le-nam-2024-1044.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/Poster2024/z6057107298197_1deb166a52863f663f624695d88647d4.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/uu-dai/bang-gia-ve-ap-dung-hien-hanh-cac-rap-starlight-cinema-1043.html" style="cursor:pointer">
+                                    <img src="/Areas/Admin/Content/Fileuploads/images/POSTER/bang%20gia%20ve(1).jpg">
+                                </a>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Top Movies Area End -->
+<!-- Top Movies Area Start -->
+    <section class="filmoja-top-movies-area section_30" style="background: #22272b;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="filmoja-heading">
+                    <h2>Phim hot :<span> Tháng 8</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fw-tabs movies ui-tabs ui-widget ui-widget-content ui-corner-all">
+                    <div id="Mon" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Top Movies Area End -->
+<!-- News Area Start -->
+<section class="filmoja-news-area section_70">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="filmoja-heading">
+                    <h2>Tin Điện Ảnh</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/nhen-nho-dai-chien-hulk-trong-trailer-moi-cua-spider-man-brand-new-day-1100.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/spiderman.jpg" alt="nhen-nho-dai-chien-hulk-trong-trailer-moi-cua-spider-man-brand-new-day" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/nhen-nho-dai-chien-hulk-trong-trailer-moi-cua-spider-man-brand-new-day-1100.html">&quot;Nhện nhọ&quot; đại chiến Hulk trong trailer mới của Spider-Man: Brand New Day</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p>Mới đ&#226;y, Marvel Studios đ&#227; tung ra trailer tiếp theo d&#224;nh cho si&#234;u bom tấn Spider-Man: Brand New Day, h&#233; lộ nh...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/cuoi-nga-ngua-voi-tao-hinh-a-than-maui-cua-the-rock-trong-trailer-moana-live-action-1099.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/Moana.jpg" alt="cuoi-nga-ngua-voi-tao-hinh-a-than-maui-cua-the-rock-trong-trailer-moana-live-action" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/cuoi-nga-ngua-voi-tao-hinh-a-than-maui-cua-the-rock-trong-trailer-moana-live-action-1099.html">Cười &#39;ng&#227; ngửa&#39; với tạo h&#236;nh &#193; thần Maui của The Rock trong trailer &#39;Moana live-action&#39;</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p>Sau th&#224;nh c&#244;ng rực rỡ của phi&#234;n bản hoạt h&#236;nh, Disney ch&#237;nh thức đ&#227; đưa h&#224;nh tr&#236;nh vượt đại dương của c&#244; b&#233; Mo...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/minions-dan-dau-phong-ve-viet-chi-sau-hai-ngay-chieu-som-1098.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/Minions.jpg" alt="minions-dan-dau-phong-ve-viet-chi-sau-hai-ngay-chieu-som" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/minions-dan-dau-phong-ve-viet-chi-sau-hai-ngay-chieu-som-1098.html">&#39;Minions&#39; dẫn đầu ph&#242;ng v&#233; Việt chỉ sau hai ng&#224;y chiếu sớm</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p>Phim điện ảnh &#39;Minions v&#224; qu&#225;i vật&#39; vươn l&#234;n vị tr&#237; số một ph&#242;ng v&#233; Việt Nam với 26 tỉ đồng doanh thu, chỉ sau...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/ong-hoang-kinh-di-quang-tuan-tiep-tuc-bien-hoa-1097.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/quy-bat-hon.jpg" alt="ong-hoang-kinh-di-quang-tuan-tiep-tuc-bien-hoa" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/ong-hoang-kinh-di-quang-tuan-tiep-tuc-bien-hoa-1097.html">&quot;&#212;ng ho&#224;ng kinh dị&quot; Quang Tuấn tiếp tục biến h&#243;a</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p> Quang Tuấn - nam diễn vi&#234;n tham gia rất nhiều t&#225;c phẩm kinh dị, tiếp tục với phim mới &quot;Quỷ bắt hồn&quot;.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/giai-ma-loat-chi-tiet-an-cua-phim-kinh-di-lau-chu-hoa-1096.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/lau-chu-hoa.jpg" alt="giai-ma-loat-chi-tiet-an-cua-phim-kinh-di-lau-chu-hoa" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/giai-ma-loat-chi-tiet-an-cua-phim-kinh-di-lau-chu-hoa-1096.html">Giải m&#227; loạt chi tiết ẩn của phim kinh dị “Lầu ch&#250; Hỏa”</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p>Kịch bản lấy cảm hứng từ lời đồn “Oan hồn Hứa thị” đ&#227; tr&#244;i nổi trong d&#226;n gian cả trăm năm qua.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-side-list">
+                            <div class="single-news-side">
+                                <div class="news-side-img">
+                                    <a href="/tin-tuc/colony-chung-minh-phim-zombie-van-chua-het-phep-1095.html"><img src="/Areas/Admin/Content/Fileuploads/images/Tintuc/colony.jpg" alt="colony-chung-minh-phim-zombie-van-chua-het-phep" /></a>
+
+                                </div>
+                                <div class="news-side-text">
+                                    <h4><a href="/tin-tuc/colony-chung-minh-phim-zombie-van-chua-het-phep-1095.html">Colony chứng minh phim zombie vẫn chưa &#39;hết ph&#233;p&#39;</a></h4>
+                                    <div class="post-meta">
+                                        <p><a href="#"><i class="fa fa-user"></i>admin</a></p>
+                                        <p><a href="#"><i class="fa fa-tags"></i>01/07/2026</a></p>
+                                    </div>
+                                    <div class="post-content">
+                                                <p>Colony do Jun Ji Hyun, Koo Kyo Hwan đ&#243;ng ch&#237;nh đạt hơn 5 triệu lượt kh&#225;n giả, trở th&#224;nh phim c&#243; tốc độ b&#225;n v&#233; ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- News Area End -->
+
+<script>
+    window.onload = function () {
+        var modal = getCookie("key");
+        if (modal != "") {
+
+        } else {
+            $.ajax({
+                url: "/Home/GetAdsImage",
+                type: "GET",
+                traditional: true,
+                dataType: "text",
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    //alert(data);
+                    if (data != "" && data != null) {
+                        $("#adsImage").attr("src", data);
+                        $("#adsImageModal").modal('show');
+                        sessionStorage.setItem("key", "modal");
+                        return false;
+                    } else {
+
+                        return false;
+                    }
+                },
+                error: function () {
+                    return false;
+                }
+            });
+        }
+
+    }
+    function getCookie(cname) {
+        var ca = sessionStorage.getItem(cname);
+        if (ca == null || ca == "") {
+            return "";
+        }
+        else
+            return ca;
+    }
+</script>
+    <!-- Footer Start -->
+    
+<footer class="filmoja-footer-area">
+    <div class="footer-top-area section_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget">
+                        <a href="#"><img src="/Content/img/footer_logo.png" alt="footer logo" /></a>
+                        
+                        <div class="footer-contact">
+                            <p>Support: <a href="#">Cskh@starlight.vn</a></p>
+                            <p>Hotline: <a href="tell:1900 1722">1900 1722</a></p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Chính sách</h3>
+                        <ul>
+                                    <li><a href="/chinh-sach/dieu-khoan-chung-1.html"><i class="fa fa-angle-double-right"></i>Điều khoản chung</a></li>
+                                    <li><a href="/chinh-sach/chinh-sach-thanh-toan-2.html"><i class="fa fa-angle-double-right"></i>Ch&#237;nh s&#225;ch thanh to&#225;n</a></li>
+                                    <li><a href="/chinh-sach/chinh-sach-giao-nhan-3.html"><i class="fa fa-angle-double-right"></i>Ch&#237;nh S&#225;ch Giao Nhận</a></li>
+                                    <li><a href="/chinh-sach/bao-mat-thong-tin-4.html"><i class="fa fa-angle-double-right"></i>Bảo Mật Th&#244;ng Tin</a></li>
+                                    <li><a href="/chinh-sach/kiem-hang-doi-tra-hoan-tien-5.html"><i class="fa fa-angle-double-right"></i>Kiểm H&#224;ng, đổi trả/ho&#224;n tiền</a></li>
+                                    <li><a href="/chinh-sach/quy-dinh-rap-starlight-7.html"><i class="fa fa-angle-double-right"></i>Quy định rạp Starlight</a></li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Download App</h3>
+                        <div class="footer-app-box">
+                            <p>Tải ngay ứng dụng đặt vé online cho dế yêu của bạn !</p>
+                            <ul class="apps-list">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.kingprocompany.starlightcinemas"><img src="/Content/img/app-1.jpg" alt="app image" /></a></li>
+                                <li><a href="https://apps.apple.com/us/app/starlight-cinemas/id1588865280"><img src="/Content/img/app-2.jpg" alt="app image" /></a></li>
+                            </ul>
+                            <ul class="apps-list">
+                                <li><a href="http://online.gov.vn/Home/WebDetails/118483" target="_blank"><img alt="" title="" src="/Content/img/congthuong.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 style="color:#fff">CÔNG TY CỔ PHẦN ENTERTAINMENT 2020</h3>
+            <p>
+                Giấy chứng nhận đăng kí doanh nghiệp công ty cổ phần: 0402021264 đăng ký lần đầu ngày 03/01/2020
+            </p>
+            <p>
+                Cơ quan cấp : Phòng Đăng ký kinh doanh - Sở kế hoạch và đầu tư Thành phố Đà Nẵng
+            </p>
+            <p>
+                Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam
+            </p>
+            <p style="color:#fff">
+                Hotline (Đường dây nóng) : <a href="tel:19001722">19001722</a>
+            </p>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright-box">
+                        <p>2019 © StarLight. All rights reserved - Design by <a href="https://kingpro.vn">KingPro</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<section>
+    <div id="mobile-menu">
+        <ul>
+            <li><a class="" href="/" style="background-color:#2b2b31;"><i class="fa fa-home"></i><br />Trang Chủ</a></li>
+            <li><p onclick="toggleMBooking()" style="background-color: #2b2b31;"><i class="fa fa-ticket"></i><br /> Đặt V&#233;</p></li>
+            <li><a class="" href="/lich-chieu.html" style="background-color: #2b2b31;"><i class="fa fa-film"></i><br /> Lịch Chiếu</a></li>
+            <li><a href="/uu-dai.html" style="background-color: #2b2b31;"><i class="fa fa-gift"></i><br /> Ưu Đ&#227;i</a></li>
+        </ul>
+    </div>
+
+</section>
+<section>
+    <div class="mobile-book">
+        <select class="slMTheater" onchange="selectMServer(this)">
+            <option value="0">Rạp</option>
+        </select>
+        <select class="slMFilm" onchange="selectMFilm(this)">
+            <option value="0">Phim</option>
+        </select>
+        <select class="slMDate" onchange="selectMDate(this)">
+            <option value="0">Ng&#224;y chiếu</option>
+        </select>
+        <select class="slMTime" onchange="selectMTime(this)">
+            <option value="0">Suất chiếu</option>
+        </select>
+        <a id="btnMBooking" onclick="btnMBooking()">Mua V&#233; Ngay</a>
+    </div>
+</section>
+
+
+<script>
+    function logOutMenu() {
+        $.ajax({
+            url: "/MemberRegister/Logout",
+            type: "POST",
+            traditional: true,
+            datatype: "json",
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                //alert(result);
+                if (result === "true" || result === true) {
+                    location.href = "/";
+                } else {
+                }
+            },
+            error: function () {
+                return false;
+            }
+        });
+    }
+</script>
+<script>
+    function toggleMBooking() {
+        $(".mobile-book").toggleClass("show-mobile-book");
+    }
+</script>
+<!-- Load Facebook SDK for JavaScript -->
+
+    <div class="modal fade" id="adsImageModal" role="dialog" style="background: rgba(51, 51, 51, 0.46);">
+        <div class="modal-dialog" style="width:95%;max-width:95%;margin:100px auto;">
+            <!-- Modal content-->
+            <div class="modal-content" style="    max-width: 640px;margin: 0 auto;">
+                <div class="modal-body" style="padding:0">
+                    <img id="adsImage" style="    border: 3px solid #000;border-radius: 3px;width:100%" src="http://www.starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER/z2950019928727_f1e225b7c12d6c9e9cd4af710d7e685f.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Scripts/Style?v=naeMwFmIM4kyC6xGAeUIlJL8AIzcDUsiWUxgT26r-Qg1"></script>
+
+    <script src="/Scripts/js/film-script.js"></script>
+    
+    
+   
+</body>
+</html>

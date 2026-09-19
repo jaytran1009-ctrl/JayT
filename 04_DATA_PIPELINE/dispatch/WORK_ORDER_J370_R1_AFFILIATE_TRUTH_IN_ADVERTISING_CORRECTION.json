@@ -1,0 +1,58 @@
+{
+  "id": "WORK_ORDER_J370_R1_AFFILIATE_TRUTH_IN_ADVERTISING_CORRECTION",
+  "authority": "JAYT-370",
+  "issued_at_utc": "2026-09-10T06:25:00Z",
+  "executor": "Antigravity",
+  "scope": "Production copy and affiliate-attribution correction only",
+  "authorization": {
+    "production_deployment_permitted": true,
+    "new_feature_scope_permitted": false,
+    "purpose": "Prevent a commercial claim not supported by the provider-account registry"
+  },
+  "required_changes": [
+    {
+      "id": "COPY_01",
+      "requirement": "For all 30 SKU cards and the affiliate modal, replace commission/affiliate language with: 'Giá khảo sát — Kiểm tra tồn kho tại sàn.' Do not state or imply that JayT receives commission."
+    },
+    {
+      "id": "LINK_02",
+      "requirement": "Keep outbound navigation only as an explicit user click. Do not add tracking, referral attribution reporting, background redirects, GPS, contacts, or behavioral profiling."
+    },
+    {
+      "id": "EVIDENCE_03",
+      "requirement": "Do not mark Shopee, Tiki, or any platform as affiliate-active until provider-issued publisher/account identity and deep-link attribution evidence is recorded without secrets. A partner_id string alone is insufficient."
+    },
+    {
+      "id": "OFFER_04",
+      "requirement": "Do not change the 81-offer feed for this correction. Preserve the J370 evidence references and provide a separate stale/removed-offer procedure if a source is no longer current."
+    }
+  ],
+  "verification": [
+    "HTTP 200 for /, /deals_feed.json, /registry.json",
+    "Search live served JS and rendered affiliate modal for removed commission/affiliate-active claims",
+    "Confirm 30 SKU cards still open their product destinations only on explicit click",
+    "Record deployment ID, served hashes, screenshots at 1440, 768, and 390px"
+  ],
+  "required_artifacts": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_370_R1_AFFILIATE_COPY_CORRECTION_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_370_R1_AFFILIATE_COPY_CORRECTION_RELEASE_RECEIPT.json"
+  ],
+  "completion_definition": "Live UI does not claim verified affiliate attribution or commission before provider evidence exists; outbound shopping utility remains available.",
+  "status": "COMPLETED_AND_VERIFIED",
+  "completed_at_utc": "2026-09-10T06:23:46.350Z",
+  "execution_summary": {
+    "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+    "deployment_id": "dpl_6RqhoyAzf6LhPP4TNkFAqeaxWhrb",
+    "ready_state": "READY",
+    "commission_claims_purged": true,
+    "mandatory_disclosure": "Giá khảo sát — Kiểm tra tồn kho tại sàn.",
+    "forbidden_terms_count_in_served_js": 0,
+    "affiliate_status_manifest": "DECLARED_PENDING_AUTHENTICATION",
+    "deals_feed_offers_retained": 81,
+    "runtime_status": "PASSED_100%",
+    "receipts_sealed": [
+      "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_370_R1_AFFILIATE_COPY_CORRECTION_RECEIPT.json",
+      "08_RELEASE_VAULT/JAYT_370_R1_AFFILIATE_COPY_CORRECTION_RELEASE_RECEIPT.json"
+    ]
+  }
+}

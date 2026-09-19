@@ -1,0 +1,27 @@
+[
+  {
+    "brand_id": "lotte_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "reason": "Raw HTML contains cinemaID=8007 navigation menu item but lacks physical facility address. Per anti-synthesis rule, address is NOT synthesized."
+  },
+  {
+    "brand_id": "metiz_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "reason": "Raw HTML contains business registration 0400668112 but lacks physical facility address string. Per anti-synthesis rule, address is NOT hardcoded."
+  },
+  {
+    "brand_id": "dien_may_xanh",
+    "status": "FAILED__SERVER_ERROR_500",
+    "reason": "Official locator endpoint returns HTTP 500 Internal Server Error (Lỗi kết nối máy chủ). Per anti-synthesis rule, 0 locations emitted."
+  },
+  {
+    "brand_id": "highlands_coffee",
+    "status": "REJECTED__BLOCKED_403_WAF",
+    "reason": "Official locator endpoint is protected by Cloudflare WAF Ray ID challenge, returning HTTP 403 Forbidden. Automated extraction safely halted."
+  },
+  {
+    "brand_id": "lotteria",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "reason": "Static DOM contains only corporate headquarters in HCMC. Dynamic store list requires client-side Firebase App Check attestation which rejects automated agents (403). Per anti-synthesis rule, 0 locations emitted."
+  }
+]

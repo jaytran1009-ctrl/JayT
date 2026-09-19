@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 3,
+  "offer_id": "B19_STARLIGHT_U22_WEEKDAY",
+  "brand": "Starlight Cinema",
+  "category": "CINEMA",
+  "title": "Giá vé U22 ngày thường (Thứ 2 đến Thứ 5)",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_03_starlight_u22_weekday.html",
+    "file_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+    "file_bytes": 18822,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "finding": "All four predicates verified verbatim in source HTML bytes. Weekday U22 ticket price 45k and Da Nang branch verified in article body and footer address. Wave 1 eligible."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Đồng gi&aacute; v&eacute; 45k/v&eacute; khi mua tại quầy từ thứ 2 đến thứ 5!",
+      "byte_offset_start": 9474,
+      "byte_offset_end": 9566,
+      "byte_length": 92,
+      "selector": ".post-content div strong",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "mua tại quầy từ thứ 2 đến thứ 5!",
+      "byte_offset_start": 9521,
+      "byte_offset_end": 9566,
+      "byte_length": 45,
+      "selector": ".post-content div strong",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "&Aacute;p dụng tại c&aacute;c rạp Quy Nhơn, Đ&agrave; Nẵng",
+      "byte_offset_start": 9811,
+      "byte_offset_end": 9879,
+      "byte_length": 68,
+      "selector": ".post-content ul li",
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "Gi&aacute; v&eacute; U22 &aacute;p dụng cho kh&aacute;ch h&agrave;ng dưới 22 tuổi. U22 kh&ocirc;ng &aacute;p dụng v&agrave;o ng&agrave;y lễ tết, suất chiếu đặc biệt, thanh to&aacute;n online v&agrave; đồng thời c&ugrave;ng c&aacute;c CTKM kh&aacute;c về gi&aacute; v&eacute;",
+      "byte_offset_start": 10070,
+      "byte_offset_end": 10373,
+      "byte_length": 303,
+      "selector": ".post-content ul li",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "SHOW_STUDENT_ID_AT_COUNTER",
+    "button_label": "Mua Tại Quầy (Thứ 2 - Thứ 5)",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "contract_id": "EVIDENCE_CONTRACT_V3_VOUCHER_PILOT_ZERO",
+  "version": "3.0.0-ez.y",
+  "governing_directive": "JAYT-245 Section EZ-Y (Lines 4597-4618)",
+  "timestamp": "2026-08-31T07:59:10.281Z",
+  "capture_metadata": {
+    "request_url": "https://education.github.com/pack",
+    "final_url": "https://education.github.com/pack",
+    "redirect_chain": [
+      "https://education.github.com/pack"
+    ],
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "byte_length": 271492,
+    "sha256": "aacaf55b9a77dea9f5fa9321c8b59104184f045b24fca47d98bdcb79bca322be",
+    "raw_vault_relative_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_y/candidate_ez_y_01_github_pack_raw_bytes.bin",
+    "discovery_method": "MANUAL_READ_ONLY_NAVIGATION_ZERO_LOGIN"
+  },
+  "sentence_level_raw_excerpts": [
+    {
+      "excerpt_id": "CLAUSE_01_TITLE",
+      "claim_class": "IDENTITY",
+      "raw_string": "<title>GitHub Student Developer Pack - GitHub Education</title>",
+      "byte_start": 146,
+      "byte_end": 209,
+      "faithful_mapping": "Tiêu đề trang xác nhận chương trình GitHub Student Developer Pack do GitHub Education cung cấp."
+    },
+    {
+      "excerpt_id": "CLAUSE_02_OPERATING_BODY",
+      "claim_class": "IDENTITY",
+      "raw_string": "GitHub Education",
+      "byte_start": 185,
+      "byte_end": 201,
+      "faithful_mapping": "Đơn vị vận hành chương trình là GitHub Education."
+    },
+    {
+      "excerpt_id": "CLAUSE_03_PROGRAM_NAME",
+      "claim_class": "OFFER",
+      "raw_string": "GitHub Student Developer Pack",
+      "byte_start": 153,
+      "byte_end": 182,
+      "faithful_mapping": "Tên gói chương trình dành cho người học."
+    },
+    {
+      "excerpt_id": "CLAUSE_04_HERO_SUBHEAD",
+      "claim_class": "DESCRIPTIVE",
+      "raw_string": "Learn to ship software like a pro",
+      "byte_start": 13524,
+      "byte_end": 13557,
+      "faithful_mapping": "Khẩu hiệu mô tả mục đích học tập của chương trình."
+    }
+  ],
+  "clause_by_clause_entailment_matrix": {
+    "operator_proven": true,
+    "operator_locator": {
+      "excerpt_id": "CLAUSE_02_OPERATING_BODY",
+      "exact_source_excerpt": "GitHub Education",
+      "byte_start": 185,
+      "byte_end": 201,
+      "faithful_mapping": "Đơn vị vận hành là GitHub Education."
+    },
+    "offer_proven": true,
+    "offer_locator": {
+      "excerpt_id": "CLAUSE_03_PROGRAM_NAME",
+      "exact_source_excerpt": "GitHub Student Developer Pack",
+      "byte_start": 153,
+      "byte_end": 182,
+      "faithful_mapping": "Tên gói chương trình."
+    },
+    "code_clause_observed": "UNOBSERVED",
+    "condition_clause_observed": "UNOBSERVED",
+    "validity_clause_observed": "UNOBSERVED",
+    "scope_clause_observed": "UNOBSERVED",
+    "total_cost_clause_observed": "UNOBSERVED"
+  },
+  "entailment_and_provenance_verdict": {
+    "classification": "PILOT_ZERO_HELD_INTERNAL_INCOMPLETE_VOUCHER_FIELDS",
+    "public_eligible": false,
+    "rationale": "Trang xác minh được đơn vị vận hành (GitHub Education) và tên chương trình (GitHub Student Developer Pack), nhưng các trường voucher cụ thể (mã giảm, điều kiện chi tiết, thời hạn, phạm vi áp dụng) chưa có trên trang này nên được đánh dấu UNOBSERVED. Tuân thủ fail-closed: giữ nội bộ, 0 tạo card, 0 tạo link/CTA public.",
+    "public_card_created": false,
+    "public_cta_created": false,
+    "public_link_created": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "work_order_id": "JAYT-350",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "strategic_reviewer": "Gemini — independent strategic advisor",
+  "status": "DISPATCHED__AWAITING_EXTERNAL_RECEIPT",
+  "operating_rules": {
+    "codex_role": "Write dispatch, read external receipts, review evidence and submit acceptance decisions.",
+    "codex_terminal_execution_permitted": false,
+    "codex_crawler_implementation_permitted": false,
+    "internal_agents_may_impersonate_antigravity": false,
+    "technical_execution_owner": "External Antigravity software",
+    "external_receipt_required": true
+  },
+  "objective": "Complete Batch 16 with at least 20 evidenced voucher, counter-offer or combo candidates for Da Nang and prepare an integrated v3.426.0 release candidate.",
+  "existing_scope": "06_TRUST_AND_EVIDENCE/JAYT_346_BATCH_16_TARGETED_INGRESS_SCOPE.json",
+  "source_matrix": "04_DATA_PIPELINE/batch_matrix/LOCATOR_HARVEST_MATRIX.json",
+  "targets": [
+    {"brand_id": "cgv_cinemas", "official_origin": "https://www.cgv.vn", "url_resolution": "Use source_matrix locator and official linked offer pages"},
+    {"brand_id": "lotte_cinema", "official_origin": "https://www.lottecinemavn.com", "url_resolution": "Use source_matrix locator and official linked offer pages"},
+    {"brand_id": "jollibee", "official_origin": "https://jollibee.com.vn", "url_resolution": "Use source_matrix locator and official linked menu or combo pages"},
+    {"brand_id": "phuclong", "official_origin": "https://phuclong.com.vn", "url_resolution": "Use source_matrix locator and official linked membership or offer pages"},
+    {"brand_id": "highlands_coffee", "official_origin": "https://www.highlandscoffee.com.vn", "url_resolution": "Use source_matrix locator and official linked menu or offer pages"}
+  ],
+  "locality_rules": {
+    "region": "Da Nang",
+    "search_terms": ["Đà Nẵng", "Hải Châu", "Thanh Khê", "Liên Chiểu", "Ngũ Hành Sơn", "Sơn Trà"],
+    "require_address_context": true,
+    "inheritance": "Reuse traceable same-brand official branch evidence; record source hash and observed time. Branch presence alone does not prove item availability, price or promotion applicability.",
+    "missing_evidence_status": "HELD__LOCALITY_UNVERIFIED"
+  },
+  "execution": {
+    "runner": "04_DATA_PIPELINE/run_batch_16_harvest.js",
+    "command": "node 04_DATA_PIPELINE/run_batch_16_harvest.js",
+    "resume_rule": "Inspect existing Batch 16 artifacts and incomplete runs first; preserve historical evidence and avoid redundant captures.",
+    "vault_root": "06_TRUST_AND_EVIDENCE/batch_16_voucher_matrix_vault/",
+    "capture": "Save actual response body bytes, sanitized response headers, actual UTC capture time, requested and final URL, HTTP status and SHA-256 in a unique run directory.",
+    "validation": "Validate every extracted offer against captured source content, terms, dates and locality evidence. Deduplicate against the existing commercial catalog. Publish counts separately for newly added and existing items.",
+    "staging": "Hydrate eligible items into commercial Staging :4176 and test rendered IDs, prices, conditions, keyboard interaction and viewport 1440/768/390.",
+    "shortfall": "Report actual accepted counts and concrete per-brand blockers if fewer than 20 qualify. Never synthesize items or mark failed gates PASS."
+  },
+  "content_requirements": {
+    "required_fields": ["candidate_id", "brand_id", "offer_type", "title", "official_leaf_url", "observed_value", "conditions", "validity_status", "observed_at_utc", "source_raw_sha256", "source_record_reference", "locality_evidence_reference", "validation_status"],
+    "voucher_copy": "Enable copy only for an actual public code in source evidence; app-claim and counter offers must retain their distinct actions.",
+    "prices": "Preserve currency, eligibility, model or combo scope and observation time; do not describe a listed price as a discount without supporting evidence.",
+    "validity": "Exclude expired offers from active offers; clearly flag unpublished end dates rather than inventing them.",
+    "split_bill": "Prepare card-level client-side bill splitting and user-initiated copy/share text without collecting personal data.",
+    "affiliate_radar": "Prepare integration only for evidenced official partner feed items and authentic partner URLs; report unavailable feed access without inventing credentials or links."
+  },
+  "permissions": {
+    "capture_authorized": true,
+    "staging_implementation_authorized": true,
+    "prepare_v3426_candidate_authorized": true,
+    "production_deployment_authorized": false
+  },
+  "production": {
+    "baseline": "v3.425.0-sprint-b-r1",
+    "target_candidate": "v3.426.0",
+    "release_gate": "Submit integrated candidate, fingerprints, automated tests and rollback plan for release approval; do not mutate live Production under this work order."
+  },
+  "delivery": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350.json",
+    "receipt_sha256_sidecar": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350.json.sha256",
+    "required_receipt_fields": ["work_order_id", "executor", "run_id", "started_at_utc", "finished_at_utc", "command", "exit_code", "per_brand_results", "verified_localities", "new_staging_count", "new_staging_items_with_values", "held_items", "raw_artifact_hashes", "catalog_path", "catalog_sha256", "staging_audit", "candidate_readiness", "production_mutations", "blockers"],
+    "immutability": "Use exclusive creation for receipts. If the canonical receipt already exists, preserve it and emit a new run-specific receipt with a reference to the previous one.",
+    "acceptance": "Codex reviews the actual delivered receipt and evidence; creation of this dispatch does not establish that external Antigravity has received or executed it."
+  }
+}

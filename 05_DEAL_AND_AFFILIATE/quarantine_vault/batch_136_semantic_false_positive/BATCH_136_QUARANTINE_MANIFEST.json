@@ -1,0 +1,35 @@
+{
+  "manifest_id": "BATCH_136_QUARANTINE_MANIFEST",
+  "directive": "JAYT-136R — SEMANTIC FALSE-POSITIVE CONTAINMENT",
+  "status": "CONTAMINATED_PARSER_OUTPUT_QUARANTINED",
+  "quarantined_at": "2026-08-26T18:56:00+07:00",
+  "executive_ruling": "Batch 136 parser output rejected due to widespread semantic false positives caused by loose keyword regexes matching navigation, footers, and general text rather than bounded offer claims.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_05_LOOSE_KEYWORD_REGEX_EXTRACTION",
+      "description": "Parser matched disjoint generic words (ưu đãi, ngày, sinh viên) across headers, footers, and legal disclaimers, falsely promoting general venue and legal pages into ACTIVE_VERIFIED."
+    },
+    {
+      "cause_id": "P0_CAUSE_06_SYNTHETIC_METADATA_STRINGS",
+      "description": "Parser synthesized strings for validity (Chính sách niên khóa) and locality (Cổng sinh viên toàn quốc) that were not present in raw source DOM."
+    },
+    {
+      "cause_id": "P0_CAUSE_07_NON_DANANG_LOCALITY_LEAKAGE",
+      "description": "Parser captured addresses from non-Da Nang branches (e.g. Jollibee Mỹ Tho) as valid locality evidence."
+    },
+    {
+      "cause_id": "P0_CAUSE_08_INCOMPLETE_CONTAINMENT_IN_135",
+      "description": "Active runner run_batch_capture_135.js was left in active directory; now fully quarantined."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "name": "batch_capture_136_manifest.json",
+      "sha256": "fbc5cdc2ca7168b2ff387bd91f524223ef0e40bc3a138da415e42073322ac43d"
+    },
+    {
+      "name": "JAYT_136_EVIDENCE_SUPPLY_REVIEW_PACK.md",
+      "sha256": "cbd4a0f99f1e920a8dd59ce4a414a51bf248fa838209c2af439e6525875301bc"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-03T06:37:12.047Z",
+  "target_viewport": {
+    "width": 390,
+    "height": 844,
+    "device": "Mobile Smartphone (iPhone 12/13/14 Standard 390px)"
+  },
+  "checks": [
+    {
+      "name": "viewport_meta_tag",
+      "pass": true,
+      "detail": "width=device-width, initial-scale=1.0"
+    },
+    {
+      "name": "mobile_single_column_grid",
+      "pass": false,
+      "detail": "1-column card grid on mobile viewport"
+    },
+    {
+      "name": "touch_target_sizing",
+      "pass": true,
+      "detail": "Compliant with WCAG 2.1 Target Size standard"
+    },
+    {
+      "name": "modal_mobile_responsive",
+      "pass": false,
+      "detail": "Fits comfortably on 390px width without horizontal blowout"
+    },
+    {
+      "name": "rail_touch_scroll",
+      "pass": false,
+      "detail": "Smooth horizontal swipe gesture enabled"
+    },
+    {
+      "name": "fail_closed_modal_init",
+      "pass": false,
+      "detail": "Zero empty modal backdrop rendered on mobile page load"
+    }
+  ],
+  "overall_mobile_pass": false
+}

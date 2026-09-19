@@ -1,0 +1,141 @@
+{
+  "catalog_id": "JAYT_PLATFORM_CATALOG_AZ_20260829",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AZ)",
+  "total_catalog_categories": 8,
+  "catalog_sections": {
+    "user_interfaces_and_design": [
+      {
+        "id": "UI_STOREFRONT_AY",
+        "name": "JayT Daily Guide Storefront (AY)",
+        "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ay.js",
+        "stylesheet": "03_SOURCE_OF_TRUTH/styles_ay.css",
+        "lifecycle": "active_review",
+        "owner": "Design System Authority & Product Directorate",
+        "public_eligibility": true
+      },
+      {
+        "id": "UI_STOREFRONT_AX",
+        "name": "JAYT-242 Restored Storefront (AX)",
+        "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ax.js",
+        "stylesheet": "03_SOURCE_OF_TRUTH/styles.css",
+        "lifecycle": "historical_reference",
+        "owner": "Engineering Core",
+        "public_eligibility": false
+      },
+      {
+        "id": "UI_STOREFRONT_AT",
+        "name": "Field-Certified Storefront (AT)",
+        "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_at.js",
+        "lifecycle": "historical_reference",
+        "owner": "Data & Trust Security",
+        "public_eligibility": false
+      }
+    ],
+    "evidence_ledgers_and_vault": [
+      {
+        "id": "EVIDENCE_BINDING_AT",
+        "name": "Public Card Field-Level Evidence Binding",
+        "path": "06_TRUST_AND_EVIDENCE/PUBLIC_CARD_EVIDENCE_BINDING_AT.json",
+        "lifecycle": "active_immutable",
+        "owner": "Data & Trust Security",
+        "total_bound_items": 33
+      },
+      {
+        "id": "RAW_VAULT_BATCH_109",
+        "name": "Raw Web Captures Batch 109",
+        "path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109",
+        "lifecycle": "historical_evidence",
+        "owner": "Data & Trust Security"
+      },
+      {
+        "id": "RAW_VAULT_BATCH_132",
+        "name": "Raw Web Captures Batch 132",
+        "path": "06_TRUST_AND_EVIDENCE/evidence_records/EVIDENCE_LEDGER_BATCH_132.json",
+        "lifecycle": "historical_evidence",
+        "owner": "Data & Trust Security"
+      }
+    ],
+    "quality_assurance_suites": [
+      {
+        "id": "QA_UNIVERSAL_VERIFIER_ENGINE",
+        "name": "Universal Streaming Verifier Engine",
+        "path": "07_QUALITY_ASSURANCE/platform_verifier_engine.js",
+        "lifecycle": "active_core",
+        "owner": "Quality Assurance Directorate"
+      },
+      {
+        "id": "QA_VERIFIER_MUTATION_SUITE_AN",
+        "name": "Universal Verifier & 9 Real Mutation Suite",
+        "path": "07_QUALITY_ASSURANCE/test_platform_verifier_and_mutation_suite_an.js",
+        "lifecycle": "active_core",
+        "owner": "Quality Assurance Directorate"
+      },
+      {
+        "id": "QA_STOREFRONT_REDESIGN_AY",
+        "name": "Storefront Redesign AY QA Suite",
+        "path": "07_QUALITY_ASSURANCE/test_storefront_redesign_ay.js",
+        "lifecycle": "active_core",
+        "owner": "Quality Assurance Directorate"
+      },
+      {
+        "id": "QA_UPGRADE_ONLY_VALIDATOR_AZ",
+        "name": "Upgrade-Only Contract Executable Validator AZ",
+        "path": "07_QUALITY_ASSURANCE/test_jayt_upgrade_only_validator_az.js",
+        "lifecycle": "active_core",
+        "owner": "Quality Assurance Directorate"
+      }
+    ],
+    "deployments_and_staging": [
+      {
+        "id": "ENV_PROD_LIVE",
+        "url": "https://deploy-ten-xi-48.vercel.app",
+        "version": "v3.419.0",
+        "lifecycle": "live_locked"
+      },
+      {
+        "id": "ENV_STAGING_AY",
+        "url": "https://jayt-storefront-staging-ay.vercel.app",
+        "version": "v3.422.0-staging.ay",
+        "lifecycle": "active_review"
+      },
+      {
+        "id": "ENV_STAGING_AX",
+        "url": "https://jayt-storefront-staging-ax.vercel.app",
+        "version": "v3.421.0-staging.ax",
+        "lifecycle": "historical_comparison"
+      },
+      {
+        "id": "ENV_STAGING_AT",
+        "url": "https://jayt-storefront-staging-at.vercel.app",
+        "version": "v3.420.3-staging.at",
+        "lifecycle": "historical_comparison"
+      }
+    ],
+    "governance_and_directives": [
+      {
+        "id": "DIRECTIVE_JAYT_245",
+        "name": "Tổng Chỉ Thị CEO Duy Nhất Về Vận Hành Và Go-Live JayT",
+        "path": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md",
+        "lifecycle": "active_governing_sole_directive",
+        "owner": "Executive Council & CEO"
+      },
+      {
+        "id": "PROJECT_MEMORY_LOG",
+        "name": "Project Memory Transaction Ledger",
+        "path": "PROJECT_MEMORY.md",
+        "lifecycle": "append_only_immutable",
+        "owner": "Executive Council"
+      }
+    ],
+    "quarantine_records": [
+      {
+        "id": "QUARANTINE_CGV_ZALOPAY",
+        "target_item_id": "DEAL_120_CGV_ZALOPAY_12H",
+        "path": "06_TRUST_AND_EVIDENCE/containment_records/CONTAINMENT_RECORD_CGV_ZALOPAY_AT.json",
+        "reason": "NO_FIELD_LEVEL_EVIDENCE",
+        "lifecycle": "quarantined_isolated",
+        "owner": "Data & Trust Security"
+      }
+    ]
+  }
+}

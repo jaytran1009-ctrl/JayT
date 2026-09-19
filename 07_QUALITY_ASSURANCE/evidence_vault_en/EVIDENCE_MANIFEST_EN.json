@@ -1,0 +1,100 @@
+{
+  "version": "v3.468.0-staging.en",
+  "manifest_generated_at_utc": "2026-08-30T19:48:00.000Z",
+  "governing_directive": "JAYT-245 Section EN (Lines 3541-3544)",
+  "provenance_policy": {
+    "canonical_path_gate_enforced": true,
+    "all_root_domain_attempts_quarantined": true,
+    "cross_subject_reuse_hard_failed": true,
+    "zero_injected_facts": true
+  },
+  "summary": {
+    "total_discovery_dossiers": 6,
+    "valid_subject_attempts": 0,
+    "field_facts_verified_count": 0,
+    "invalid_quarantined_attempts_count": 8
+  },
+  "quarantined_invalid_attempts": [
+    {
+      "em_attempt_id": "ATTEMPT_EM_01_DANABUS_R16A",
+      "candidate_id": "CAND_DANABUS_R16A",
+      "exact_requested_url": "https://danangbus.vn/",
+      "invalidation_code": "INVALID_PORTAL_ROOT_AS_EVIDENCE",
+      "invalidation_reason": "Requested and resolved URL is root domain (https://danangbus.vn/). Violates canonical path gate. Cannot be used as proof for route R16A student fare.",
+      "artifact_origin": "DS (artifact_cand_bus_r16a_transit_portal.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_02_TNGO_BIKE",
+      "candidate_id": "CAND_TNGO_DANANG",
+      "exact_requested_url": "https://tngo.vn/",
+      "invalidation_code": "INVALID_PORTAL_ROOT_AS_EVIDENCE",
+      "invalidation_reason": "Requested and resolved URL is root domain (https://tngo.vn/). Violates canonical path gate. Cannot be used as proof for 45-min rental rate.",
+      "artifact_origin": "DV (artifact_cand_tngo_bike_portal.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_03_DANANG_1022",
+      "candidate_id": "CAND_DANANG_1022",
+      "exact_requested_url": "https://1022.danang.gov.vn/",
+      "invalidation_code": "CROSS_SUBJECT_ARTIFACT_REASSIGNMENT",
+      "invalidation_reason": "CRITICAL: Reassigned DanaBus artifact (artifact_cand_bus_r16a_transit_portal.html, SHA256 2374e0ca...) with DanaBus bytes to Đà Nẵng 1022 entity. Raw byte contains danangbus.vn, not 1022.danang.gov.vn.",
+      "artifact_origin": "DS (DanaBus portal snapshot re-labeled as Đà Nẵng 1022)",
+      "cross_subject_violation": true,
+      "en_status": "QUARANTINED_CROSS_SUBJECT_VIOLATION"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_04_GITHUB_STUDENT_PACK",
+      "candidate_id": "CAND_GITHUB_STUDENT_PACK",
+      "exact_requested_url": "https://education.github.com/pack",
+      "invalidation_code": "INVALID_PORTAL_ROOT_OR_SPA_SHELL",
+      "invalidation_reason": "Landing page is React client shell without static server-side rendered eligibility clause in raw bytes.",
+      "artifact_origin": "DV (artifact_cand_github_student_pack.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_05_JETBRAINS_STUDENT_PACK",
+      "candidate_id": "CAND_JETBRAINS_STUDENT_PACK",
+      "exact_requested_url": "https://www.jetbrains.com/community/education/#students",
+      "invalidation_code": "INVALID_HASH_FRAGMENT_URL_WITHOUT_SUBPAGE",
+      "invalidation_reason": "URL relies on client-side hash fragment (#students) rather than dedicated static license terms path.",
+      "artifact_origin": "DV (artifact_cand_jetbrains_student_pack.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_06_METIZ_CINEMA",
+      "candidate_id": "CAND_METIZ_CINEMA",
+      "exact_requested_url": "https://metiz.vn/",
+      "invalidation_code": "INVALID_PORTAL_ROOT_AS_EVIDENCE",
+      "invalidation_reason": "Requested and resolved URL is root domain (https://metiz.vn/). Violates canonical path gate. Cannot be used as proof for U22 pricing terms.",
+      "artifact_origin": "DV (artifact_cand_metiz_cinema_portal.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_07_STARLIGHT_CINEMA",
+      "candidate_id": "CAND_STARLIGHT_CINEMA",
+      "exact_requested_url": "https://starlight.vn/",
+      "invalidation_code": "INVALID_PORTAL_ROOT_AS_EVIDENCE",
+      "invalidation_reason": "Requested and resolved URL is root domain (https://starlight.vn/). Violates canonical path gate.",
+      "artifact_origin": "DV (artifact_cand_starlight_cinema_portal.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    },
+    {
+      "em_attempt_id": "ATTEMPT_EM_08_DOMINOS_PIZZA",
+      "candidate_id": "CAND_DOMINOS_PIZZA",
+      "exact_requested_url": "https://dominos.vn/",
+      "invalidation_code": "INVALID_PORTAL_ROOT_AS_EVIDENCE",
+      "invalidation_reason": "Requested and resolved URL is root domain (https://dominos.vn/). Violates canonical path gate.",
+      "artifact_origin": "DV (artifact_cand_dominos_pizza_portal.html)",
+      "cross_subject_violation": false,
+      "en_status": "QUARANTINED_SEMANTIC_INVALID"
+    }
+  ],
+  "valid_attempts": []
+}

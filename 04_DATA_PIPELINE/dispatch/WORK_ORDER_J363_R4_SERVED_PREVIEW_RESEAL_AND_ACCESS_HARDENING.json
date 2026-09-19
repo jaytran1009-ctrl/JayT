@@ -1,0 +1,35 @@
+{
+  "work_order_id": "J363_R4_SERVED_PREVIEW_RESEAL_AND_ACCESS_HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "TECHNICAL_RESEAL_REQUIRED",
+  "staging_mutation_authorized": true,
+  "production_deployment_authorized": false,
+  "affiliate_live_activation_authorized": false,
+  "gemini_review_authorized": false,
+  "finding": {
+    "preview_url": "https://deploy-gmn2pjz38-kuntran777-6857s-projects.vercel.app",
+    "deployment_id": "dpl_E4PAFzJScjpEfdFfVN1GxFX8qfTh",
+    "mismatch": {
+      "path": "/index.html",
+      "served": {
+        "http_status": 200,
+        "byte_length": 889,
+        "sha256": "937434b9932682019b58b0a9583619598788dd3aac608ee390f69bddfc908f5a"
+      },
+      "local_candidate": {
+        "byte_length": 726,
+        "sha256": "85cb698fe11f8388653346c0d177a15d4a0de1f32fba3b1964df899666fe3952"
+      }
+    },
+    "r3_receipt_invalidated_for_current_bytes": true,
+    "public_preview_visibility": "SSO_PROTECTION_DISABLED"
+  },
+  "required_actions": [
+    "Do not alter 03_SOURCE_OF_TRUTH, the mirrored source files, factual classifications, deals_feed.json, Production, or any affiliate setting merely to resolve this binding failure.",
+    "Determine and document the cause of the /index.html divergence. If it is platform-injected content, record the exact response headers and specify a canonicalization rule approved by CEO before claiming byte parity. If it is an artifact divergence, deploy a freshly sealed Staging build whose local and served index.html match byte-for-byte.",
+    "Run the observability runner against the final Preview URL only after all four assets (/index.html, /jayt_apex_interface.js, /styles.css, /deals_feed.json) are directly retrievable with HTTP 200 and exact documented parity. Replace the receipt and sidecar; include retrieval time, response headers relevant to transformation, bytes, SHA-256, and deployment ID.",
+    "Keep the R3 factual split intact: self-authored files remain SELF_AUTHORED_TEST_FIXTURE__NOT_SOURCE_CAPTURE; factual_verified_count stays zero unless authentic, replayable source captures satisfy the R3 evidence contract.",
+    "After the independent reseal retrieval, restore restricted Vercel Preview access and record the resulting policy and deployment scope. Do not expose this staging simulator publicly beyond the minimum verification window."
+  ],
+  "acceptance": "A future R4 receipt may restore technical-staging acceptance only when current served bytes are fully bound and restricted Preview access is recorded. Factual-content acceptance, Gemini review, production release, and affiliate activation remain blocked."
+}

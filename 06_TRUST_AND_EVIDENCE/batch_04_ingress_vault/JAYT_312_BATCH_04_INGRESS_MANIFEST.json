@@ -1,0 +1,29 @@
+{
+  "scope_id": "JAYT-312-BATCH-04-DIGITAL-INGRESS-20260904",
+  "executed_at_utc": "2026-09-04T06:22:07.423Z",
+  "one_shot_consumed": true,
+  "redirects_followed": false,
+  "retry_authorized": false,
+  "results": [
+    {
+      "slot_id": "B04_01",
+      "status": "INTAKE_FAILED__QUARANTINE",
+      "started_at_utc": "2026-09-04T06:22:06.927Z",
+      "finished_at_utc": "2026-09-04T06:22:07.155Z",
+      "error": "fetch failed",
+      "headers_redacted": true
+    },
+    {
+      "slot_id": "B04_02",
+      "status": "RAW_BYTES_CAPTURED__AWAITING_VALIDATION",
+      "started_at_utc": "2026-09-04T06:22:07.155Z",
+      "finished_at_utc": "2026-09-04T06:22:07.422Z",
+      "http_status": 200,
+      "final_url": "https://sdttg.danang.gov.vn/chi-tiet-tin/group/167/nid/4819/trien-khai-phan-he-ky-so-toan-dan-tai-da-nang-buoc-tien-moi-trong-dich-vu-cong-va-y-te",
+      "body_bytes": 99651,
+      "raw_body_sha256": "067c0892a4984b909230f806ce6f59546f70a08c60cee674450293738ed088f1",
+      "supporting_text_offset_utf8": 47870,
+      "headers_redacted": true
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "board_id": "GO_LIVE_EVIDENCE_BOARD_EQ_20260830",
+  "version": "v3.471.0-staging.eq",
+  "generated_at_utc": "2026-08-30T13:42:10.609Z",
+  "governing_directive": "JAYT-245 Section EQ (Lines 3615-3656)",
+  "overall_go_live_status": "NOT_GO_LIVE",
+  "total_items": 10,
+  "items": [
+    {
+      "item_id": "GL-P0-01",
+      "priority": "P0",
+      "title": "Production Exposure Containment Plan",
+      "owner": "Data & Trust / Engineering",
+      "dependency": "None",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_quarantine_manifest.json",
+      "freshness_policy": "PER_RELEASE_AUDIT",
+      "state": "CONTAINMENT_MAPPED_ON_STAGING",
+      "target_date": "2026-08-30",
+      "definition_of_done": "Bản đồ 17 mục production, đánh dấu 9 claim chưa có fact hiện hành là PUBLIC_EXPOSURE_UNVERIFIED; staging sạch 100%; không tự deploy production."
+    },
+    {
+      "item_id": "GL-P0-02",
+      "priority": "P0",
+      "title": "Release Lineage Một Chiều (SOT -> Staging -> Production)",
+      "owner": "Engineering / QA",
+      "dependency": "GL-P0-01",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_unified_count_contract.json",
+      "freshness_policy": "PER_BUILD_HASH",
+      "state": "STAGING_LINEAGE_ENFORCED",
+      "target_date": "2026-08-30",
+      "definition_of_done": "Manifest ký nối SOT -> build hash -> staging hash; diff public claims; changelog; rollback evidence có thể tái lập."
+    },
+    {
+      "item_id": "GL-P0-03",
+      "priority": "P0",
+      "title": "T1 Deal & Voucher Economics Evidence Gate",
+      "owner": "Product / Data & Trust",
+      "dependency": "GL-P0-02",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_voucher_hub_state.json",
+      "freshness_policy": "DAILY_OBSERVATION",
+      "state": "FAIL_CLOSED_ZERO_T1_ZERO_VOUCHERS",
+      "target_date": "2026-09-05",
+      "definition_of_done": "T1 chỉ mở khi đủ 5 trường kinh tế: giá thực trả, tổng chi phí, điều kiện, hạn dùng, phạm vi Đà Nẵng; Voucher Hub giữ 0 cho đến khi mã/hạn được chứng minh."
+    },
+    {
+      "item_id": "GL-P1-01",
+      "priority": "P1",
+      "title": "Citation-First T2 Supply & Receipt Protocol",
+      "owner": "Data & Trust",
+      "dependency": "GL-P0-02",
+      "evidence_path": "07_QUALITY_ASSURANCE/evidence_vault_eq/artifact_cand_github_education_docs_v2_receipt.json",
+      "freshness_policy": "WEEKLY_REVALIDATION",
+      "state": "CITATION_PACK_VALIDATED_NOT_PUBLIC",
+      "target_date": "2026-09-02",
+      "definition_of_done": "Mỗi fact T2 có raw artifact, receipt HTTP, exact quote, locator replay, scope; không suy diễn eligibility cho toàn bộ sinh viên."
+    },
+    {
+      "item_id": "GL-P1-02",
+      "priority": "P1",
+      "title": "50 Nội Dung Hữu Ích/Ngày Theo 4 Tầng Phân Lập",
+      "owner": "Growth / Product",
+      "dependency": "GL-P0-02",
+      "evidence_path": "00_PROGRAM_BASELINE/JAYT_PUBLIC_COUNT_LEDGER_EQ.json",
+      "freshness_policy": "DAILY_SUPPLY_BOARD",
+      "state": "DISJOINT_PARTITION_50_VERIFIED",
+      "target_date": "2026-08-30",
+      "definition_of_done": "Tổng 50 mục phân tầng chính xác: 11 Ăn gì + 14 Đi đâu + 13 Tiện ích + 12 Mua sắm/Học tập; giao nhau bằng 0; nhãn trung thực."
+    },
+    {
+      "item_id": "GL-P1-03",
+      "priority": "P1",
+      "title": "T3/T4 Quality & External Link Safety Scan",
+      "owner": "Engineering / QA",
+      "dependency": "GL-P1-02",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_no_write_attestation.json",
+      "freshness_policy": "PER_RELEASE_SCAN",
+      "state": "SCAN_PASS_ZERO_AFFILIATE",
+      "target_date": "2026-08-30",
+      "definition_of_done": "100% link dẫn tới domain chính thức; 0 link tiếp thị liên kết (affiliate); 0 app scheme deeplinks; 0 CPA/KYC action."
+    },
+    {
+      "item_id": "GL-P1-04",
+      "priority": "P1",
+      "title": "UX, Accessibility, Responsive Viewports & Performance",
+      "owner": "Design / UX-CX / QA",
+      "dependency": "GL-P0-02",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_viewport_evidence.json",
+      "freshness_policy": "PER_VIEWPORT_AUDIT",
+      "state": "AUDIT_PASS_1440_768_390",
+      "target_date": "2026-08-30",
+      "definition_of_done": "Đạt chuẩn 1440px desktop, 768px tablet, 390px mobile; touch target >= 44px; keyboard navigation đầy đủ; dark/light mode; zero layout overflow."
+    },
+    {
+      "item_id": "GL-P2-01",
+      "priority": "P2",
+      "title": "Buy Decision Engine & Price History Integrity",
+      "owner": "Product / Data & Trust",
+      "dependency": "GL-P0-03",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_raw_dom_evidence.json",
+      "freshness_policy": "OBSERVED_PRICE_LEDGER",
+      "state": "DEFAULT_NO_DATA_AWAITING_HISTORY",
+      "target_date": "2026-09-15",
+      "definition_of_done": "Mặc định hiển thị \"chưa đủ dữ liệu quan sát\"; chỉ kết luận Mua/Chờ khi có chuỗi quan sát giá thực tế."
+    },
+    {
+      "item_id": "GL-P2-02",
+      "priority": "P2",
+      "title": "Affiliate Value-First Research (PORTAL_ACCESS_NOT_VERIFIED)",
+      "owner": "Growth / Engineering",
+      "dependency": "GL-P0-02",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_no_write_attestation.json",
+      "freshness_policy": "READ_ONLY_OFFLINE",
+      "state": "READ_ONLY_OFFLINE_LOCKED",
+      "target_date": "2026-09-30",
+      "definition_of_done": "Duy trì PORTAL_ACCESS_NOT_VERIFIED; 0 AccessTrade write/secret/token; 0 campaign creation; 0 commission-driven public claims."
+    },
+    {
+      "item_id": "GL-P2-03",
+      "priority": "P2",
+      "title": "Visual Asset Rights & Community Research Protocol",
+      "owner": "Design / Legal / Community",
+      "dependency": "GL-P0-01",
+      "evidence_path": "07_QUALITY_ASSURANCE/staging_eq_asset_ownership_record.json",
+      "freshness_policy": "PROOF_OF_TITLE_CHAIN",
+      "state": "INTERNAL_STAGING_DRAFT_ONLY",
+      "target_date": "2026-09-20",
+      "definition_of_done": "12 JPEG bị cách ly fail-closed; chỉ render 4 SVG nội bộ có hồ sơ tác giả; không dùng ảnh AI giả ảnh thực; chờ phê duyệt thẩm mỹ từ chủ dự án."
+    }
+  ]
+}

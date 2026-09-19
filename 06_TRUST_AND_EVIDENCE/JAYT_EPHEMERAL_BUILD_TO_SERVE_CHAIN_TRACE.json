@@ -1,0 +1,54 @@
+{
+  "trace_record_id": "JAYT_EPHEMERAL_BUILD_TO_SERVE_CHAIN_TRACE_CORRECTION_5",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-5 (Lines 5705-5718)",
+  "execution_timestamp_utc": "2026-09-02T08:42:58.773Z",
+  "status": "CANONICAL_BUILD_TO_SERVE_VERIFIED",
+  "mandated_conditions": {
+    "condition_a_served_body_equals_build_hash": true,
+    "condition_b_approved_github_pilot_present": true,
+    "condition_c_zero_batch_02_leakage_and_clean_dom": true,
+    "condition_d_full_denylist_active_unconditionally": true,
+    "condition_e_quarantine_injection_fail_closed_in_same_run": true,
+    "all_conditions_satisfied_in_same_run": true
+  },
+  "execution_context": {
+    "parent_command": "node scratch/run_ephemeral_build_to_serve_trace_v5.js",
+    "server_pid": 28508,
+    "server_source_script": "07_QUALITY_ASSURANCE/ephemeral_staging_server.js",
+    "server_source_sha256": "a03b9ff72b53b86fb2d98fd1198e1a9465dac62712b2aceafcc23f760310e601",
+    "ephemeral_deploy_dir": "07_QUALITY_ASSURANCE/ephemeral_deploy_trace",
+    "ephemeral_port": 4178,
+    "served_url": "http://127.0.0.1:4178/"
+  },
+  "build_step": {
+    "command": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js --input 00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json --output 07_QUALITY_ASSURANCE/ephemeral_deploy_trace/index.html",
+    "canonical_registry_input": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+    "ceo_approval_id": "CEO_DECISION_EZ_AR_GITHUB_PILOT_ONLY",
+    "catalog_output_path": "07_QUALITY_ASSURANCE/ephemeral_deploy_trace/index.html",
+    "catalog_output_sha256": "8fba4fbc21479b1709926a30f046b65aa56fe3001a43fc216ac95561c9664e31",
+    "admitted_count": 1
+  },
+  "serve_step": {
+    "http_status": 200,
+    "served_body_sha256": "8fba4fbc21479b1709926a30f046b65aa56fe3001a43fc216ac95561c9664e31",
+    "exact_hash_match": true,
+    "contains_approved_pilot": true,
+    "contains_quarantined_batch_02": false,
+    "zero_dom_leakage": true
+  },
+  "quarantine_injection_step": {
+    "injected_quarantine_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json",
+    "injected_sha256": "46ad4caaadc8c288d751fb681ca1bc889ec3c8d89635775c39888d35aaa5cbf7",
+    "command": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js --input 06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json --output 07_QUALITY_ASSURANCE/ephemeral_deploy_trace/quarantine_injection_out.html",
+    "exit_code": 1,
+    "stderr_error": "CATALOG_BUILD_ERROR: ERR_UNAPPROVED_CATALOG_INPUT: Arbitrary input path \"06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json\" is forbidden. Catalog build only accepts canonical registry: 00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+    "fail_closed_verified": true,
+    "output_prevented": true
+  },
+  "final_verdict": {
+    "trace_validity": "CANONICAL_BUILD_TO_SERVE_VERIFIED",
+    "exact_hash_verified": true,
+    "quarantine_injection_prevented": true,
+    "all_five_conditions_true": true
+  }
+}

@@ -1,0 +1,874 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script>
+        var gRootTheme = 'red';
+        var gImagePath = '/images/' + gRootTheme;
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đà Nẵng và bài toán 3 cực phát triển - Hội đồng Nhân dân thành phố Đà Nẵng</title>
+
+
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="/css/w3.css?1.1">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+    <link rel="stylesheet" media="screen" href="/css/toggle-switchy.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="/css/select2.min.css">
+
+
+    <link rel="stylesheet" href="/css/red/siteWeb.css?v=VV5ikTu0odNzkSG_ooSp2Og13ghG2yaAAAWi03zZblY">
+    <link rel="stylesheet" href="/css/red/HDNDSite.css?1.2&amp;v=Dppm-DOilwb6FXZUqPhDIc-kEuweRrD0cTOaf5wALsE">
+    <link rel="stylesheet" href="/css/red/tableresponsive.css?v=uQmd4ntSSYfu9Bl-Tg6Ox-P3a4jVqDbuGwAeMlnwm0c">
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- custom scrollbar plugin -->
+    <script src="/js/custom-scrollbar/jquery.mCustomScrollbar.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="/js/jquery.datetimepicker.full.js"></script>
+
+    <script src="/js/site.js?1.1&amp;v=x_N-Ku-msJtvqB-_cDMFWAO1S85tGkeSEj8UZHzMqpA"></script>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+            jQuery(function () {
+
+                jQuery('.textDate').datetimepicker({
+                    format: 'd/m/Y',
+                    timepicker: false
+                });
+
+                jQuery('.textDateTime').datetimepicker({
+                    format: 'd/m/Y H:i:00',
+                    timepicker: true
+                });
+
+            });
+        }
+        )
+    </script>
+    
+
+    <script>
+
+        function setHomePageImage() {
+            var w = $(window).width();
+            if (w < 600) {
+
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/red/banner.jpg");
+                });
+            }
+            else {
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/red/banner.jpg");
+                });
+            }
+        }
+
+        $(window).on('load', function (e) {
+            setHomePageImage();
+        });
+
+
+        $(window).resize(function (e) {
+            setHomePageImage();
+        });
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="divPhoto">
+            <img id="homePhoto" src="/Images/red/banner.jpg" alt="Đà Nẵng" style="width:100%;">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-sm box-shadow bg-hdnd">
+
+            <div class="container-fluid div-navbar">
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="w3-row d-sm-none d-lg-none d-xl-none float-right w-75">
+                    
+
+
+
+
+
+<div class="container-fluid cc divSearch rightside">
+    <form action="/News/SearchNews" method="post">
+        <div class="w3-row cc ">
+            <div class="w3-col m11 s10" style="float:left">
+                <input type="text" id="searchtext" name="searchtext" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <div class="w3-col m1 s2" style="float:right">
+                <button type="submit" id="btnSearch" name="btnSearch" class="homeSearch">
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+                </div>
+                <div id="navbar" class="navbar-collapse collapse d-lg-inline-flex flex-lg-row bg-hdnd">
+
+                    <ul class="navbar-nav mr-auto flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/">
+                                TRANG CHỦ
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarGioiThieu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                GIỚI THIỆU
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarGioiThieu">
+                                <li><a class="dropdown-item" href="/NhanSu/DoanDBQH">Đoàn đại biểu Quốc hội thành phố</a></li>
+                                <li><a class="dropdown-item" href="/NhanSu/">Hội đồng nhân dân thành phố</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item" href="/NhanSu/DanhSach/Dai-bieu-Quoc-hoi">Đại biểu Quốc hội</a></li>
+                                <li><a class="dropdown-item" href="/NhanSu/DanhSach/Thuong-truc/HDND-thanh-pho">Thường trực Hội Đồng Nhân dân</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="/NhanSu/Ban">Các Ban HĐND thành phố</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/NhanSu/To">Các Tổ đại biểu HĐND thành phố</a>
+                                </li>
+
+                                <li><a class="dropdown-item" href="/NhanSu/VanPhong">Văn phòng Đoàn ĐQBH và HĐND thành phố</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ĐOÀN ĐẠI BIỂU QUỐC HỘI
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/48">Hoạt động tại các kỳ họp của Quốc hội</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/49">Hoạt động ngoài các kỳ họp của Quốc hội</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                HỘI ĐỒNG NHÂN DÂN
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/4">Hoạt động của HĐND, Thường trực HĐND và các Ban</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/6">Hoạt động Văn phòng</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/5">Hoạt động HĐND các xã, phường</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" style="display:none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarVanBan" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                VĂN BẢN
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarVanBan">
+                                <li><a class="dropdown-item" href="/ListVanBan/Nghi-Quyet">Thực hiện Nghị quyết Hội Đồng Nhân dân</a></li>
+                                <li><a class="dropdown-item" href="/ListVanBan/Ket-Luan">Kết luận Thường trực HĐND</a></li>
+                                <li><a class="dropdown-item" href="/ListVanBan/Y-Kien">Giải quyết ý kiến cử tri</a></li>
+                                <li><a class="dropdown-item" href="/YKienCuTri/Index">Ý kiến cử tri</a></li>
+                                <li><a class="dropdown-item" href="/TheoDoiVanBan/Index">Thực hiện Nghị quyết, Kết luận</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/News/CatNews/7">NGHIÊN CỨU TRAO ĐỔI</a>
+                        </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="/Home/IndexDaiBieu">NỘI BỘ</a>
+                            </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mainContentRegion" class="container-fluid mainContent" style="margin-top:0px">
+        
+
+<div class="container-fluid">
+    <div class="w3-row">
+        <div class="w3-col l9">
+            <div class="w3-row">
+                
+
+<div class="div-header-news">
+    <a href="/">
+    <img src="/Images/backhome.png" class="imghome"> 
+    Trang chủ
+    </a>
+    &nbsp;&gt;&nbsp; 
+    <a href="/News/LastNews">
+        Tin hoạt động
+    </a>
+    &nbsp;&gt;&nbsp;
+    <a href="/News/CatNews/7">
+        Nghiên cứu trao đổi
+    </a>
+</div>
+            </div>
+            <div class="w3-row">
+                
+
+<div class="div-body-news" style="background-color: rgb(255, 255, 255);">
+    <div class="w3-row titleBaiViet">
+        Đà Nẵng và bài toán 3 cực phát triển
+    </div>
+    <div id="w3-row actionBaiViet" class="w3-row actionBaiViet">
+        <div class="w3-col m3">
+            <i>Đăng ngày 25/08/2026 15:04</i>
+        </div>
+        <div class="w3-col m3">
+            <span onclick="openPrintWindow('/News/PreView/23952')" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-print"></i> In bài
+            </span>
+            &nbsp;
+            <button style="margin-left: 5px; margin-bottom: 5px; padding: 0px 10px; border:1px solid #d5d2d2" id="btPlay">
+                <span id="idPlay"><i class="fa fa-play"></i></span> Đọc bài viết
+            </button>
+
+        </div>
+        <div class="w3-col m3" style="display: inline;float:right">
+            <span onclick="resizeText(-1)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-small"></i>
+            </span>
+            <span onclick="resizeText(0)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-medium"></i>
+            </span>
+            <span onclick="resizeText(1)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-large"></i>
+            </span>
+
+            <span id="divContrast" style="margin-left: 20px;">
+                <span id="giamContrast" style="margin-left: 6px; cursor:pointer;color:darkcyan">
+                    <i class="fa fa-adjust icon-contrast"></i>
+                </span>
+                <span id="tangContrast" style="margin-left: 6px; cursor: pointer;color:black">
+                    <i class="fa fa-adjust icon-contrast"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+        <div class="w3-row" style="text-align:right">
+
+        </div>
+        <img id="loader" style="display: none" src="https://ttsvpubtp.danang.gov.vn/images/loader.gif"><div class="tts">
+            <div class="w3-row trichyeuBaiViet">
+                <b><p>Trong quy hoạch không gian lãnh thổ, việc xác định các cực phát triển thường được thể hiện khá đơn giản trên bản đồ: lựa chọn một số đô thị, khu kinh tế, khu công nghiệp hoặc khu vực có vị trí chiến lược rồi xác định chúng là các cực. Tuy nhiên, phía sau một ký hiệu “cực” là một vấn đề lý luận và thực tiễn phức tạp hơn nhiều: một lãnh thổ thực sự cần bao nhiêu cực, các cực nên nằm ở đâu, cách nhau bao xa, đảm nhiệm chức năng gì và trong điều kiện nào cần hình thành thêm một cực mới?</p>
+</b>
+            </div>
+                    <div class="w3-row containerImageBaiViet">
+                        <img src="/Files/Thumb/082026/639232673041107913_25-8(4).jpg" class="big-img-baiviet">
+                    </div>
+
+                <div class="w3-row noidungBaiViet">
+                    <p>Vấn đề trở nên đặc biệt rõ khi một tỉnh đã có hai cực tương đối mạnh nằm ở hai đầu lãnh thổ. Giả sử một cực ở phía Bắc và một cực ở phía Nam, cách nhau khoảng 90 km. Khi nhìn vào bản đồ, phản ứng khá tự nhiên là đặt câu hỏi: khoảng giữa có cần hình thành thêm một cực hay không? Nếu chia đều không gian, một cực thứ ba ở giữa dường như tạo nên cấu trúc cân đối hơn. Nhưng chính ở đây cần phân biệt giữa hình học của bản đồ và logic vận hành của lãnh thổ. Khoảng trống giữa hai ký hiệu trên bản đồ chưa chắc là khoảng trống của hệ thống phát triển; và một vị trí nằm chính giữa về địa lý chưa chắc đã có lý do tồn tại như một cực. Vì vậy, câu hỏi đúng không phải là “hai cực cách nhau 90 km có xa quá không?”, mà phải là: hai cực hiện hữu có đủ khả năng tổ chức, kết nối và tạo ảnh hưởng đối với toàn bộ lãnh thổ nằm giữa chúng hay không? Nếu hai cực đã tạo ra những vùng ảnh hưởng tương đối liên tục, hệ thống giao thông cho phép tiếp cận thuận lợi, các dòng lao động, hàng hóa, vốn, dịch vụ và thông tin vận động mạnh giữa hai đầu, còn dân cư khu vực giữa có khả năng tiếp cận việc làm và dịch vụ cấp cao trong thời gian hợp lý, thì khoảng giữa tuy tồn tại về địa lý nhưng không tồn tại như một khoảng trống chức năng. Trong trường hợp đó, việc tạo thêm một cực có thể không làm hệ thống mạnh hơn mà ngược lại còn phân tán nguồn lực vốn cần được tập trung để hai cực hiện hữu đạt tới quy mô đủ lớn. Ngược lại, cũng có trường hợp khoảng cách chỉ 90 km nhưng giữa hai cực lại tồn tại một vùng lãnh thổ tương đối biệt lập. Địa hình chia cắt, hạ tầng yếu, thời gian di chuyển dài, thị trường lao động phân mảnh, dịch vụ cấp cao khó tiếp cận, các hoạt động kinh tế ít liên kết và sức lan tỏa của hai cực suy giảm mạnh trước khi gặp nhau. Khi đó, vấn đề thực sự không phải là “90 km” mà là một khoảng trống chức năng trong cấu trúc lãnh thổ. Chính khái niệm khoảng trống chức năng cần trở thành một trong những khái niệm trung tâm của nghiên cứu về hệ thống cực.</p>
+
+<p><strong>Không phải khoảng cách, mà là khoảng trống chức năng</strong></p>
+
+<p>Từ đây có thể đặt ra một giả thuyết quan trọng: khoảng cách địa lý không phải là biến số quyết định trực tiếp sự cần thiết hình thành cực; khả năng tiếp cận và quan hệ chức năng mới là những biến số có ý nghĩa hơn. Cùng một khoảng cách 90 km, nếu được kết nối bằng cao tốc và có thể di chuyển trong khoảng một giờ, hai cực có thể nằm trong một hệ thống tương tác rất mạnh. Nhưng cũng 90 km đó, nếu đi qua địa hình miền núi, hạ tầng hạn chế và mất ba giờ di chuyển, cấu trúc lãnh thổ hoàn toàn khác. Vì vậy, nghiên cứu về khoảng cách giữa các cực không thể chỉ sử dụng kilomet mà phải đồng thời xem xét thời gian di chuyển, chi phí di chuyển, khả năng tiếp cận chức năng và cường độ các dòng. Tuy nhiên, phát hiện một khoảng trống chức năng vẫn chưa đủ để kết luận rằng phải hình thành một cực mới. Đây là bước phân biệt rất quan trọng. Quy hoạch có nhiều công cụ để khắc phục sự đứt gãy của lãnh thổ. Nếu nguyên nhân chủ yếu là hạ tầng giao thông yếu, giải pháp có thể là cải thiện kết nối. Nếu khu vực giữa thiếu một số dịch vụ thiết yếu, có thể nâng cấp một đô thị hiện hữu thành trung tâm dịch vụ. Nếu đây là nơi các tuyến giao thông hoặc các dòng hàng hóa gặp nhau, có thể phát triển một nút logistics hoặc nút giao thông. Nếu vấn đề nằm ở sự thiếu liên kết giữa các khu vực sản xuất, có thể hình thành hành lang kinh tế hoặc mạng lưới liên kết. Không phải mọi vấn đề không gian đều cần được giải quyết bằng một cực.</p>
+
+<p>Điều đó dẫn tới yêu cầu phải phân biệt rõ cực, trung tâm và nút. Một trung tâm trước hết là nơi tập trung các chức năng phục vụ một phạm vi lãnh thổ nhất định. Một nút là nơi các tuyến, quan hệ hoặc dòng gặp nhau và được phân phối. Còn một cực đòi hỏi nhiều hơn thế. Nó phải có mức độ tập trung nguồn lực đủ lớn, có một hoặc một số chức năng vượt trội, có khả năng kết nối cao, thu hút được các dòng người, hàng hóa, vốn, doanh nghiệp, công nghệ và tri thức, đồng thời tạo ra một trường ảnh hưởng vượt ra ngoài chính địa điểm đó. Nói cách khác, cực không chỉ là nơi có nhiều thứ; cực là nơi có khả năng làm cho những thứ khác chuyển động về phía nó, qua nó và từ nó lan ra xung quanh. Có thể mô tả quá trình hình thành cực như một chuỗi nhân quả: tập trung nguồn lực tạo điều kiện hình thành chức năng vượt trội; chức năng vượt trội kết hợp với kết nối tạo ra khả năng thu hút các dòng; các dòng làm tăng cường độ tương tác; tương tác tạo ra vùng ảnh hưởng; và khi ảnh hưởng ấy có khả năng tạo việc làm, thị trường, đầu tư và cơ hội phát triển cho những khu vực xung quanh, cực bắt đầu có năng lực lan tỏa. Vì vậy, chuỗi tập trung → chức năng → kết nối → dòng → ảnh hưởng → lan tỏa có thể được xem là logic cơ bản để nhận diện một cực thực sự.</p>
+
+<p style="text-align:center"><img alt="" src="/Files/Documents/2026/T8/25-8(5).jpg" style="height:346px; width:800px"></p>
+
+<p style="text-align:center"><em>Thành phố Đà Nẵng. Ảnh: Cổng TTĐT TP.</em></p>
+
+<p>Trên cơ sở đó, nghiên cứu cần xây dựng một bộ tiêu chí có khả năng chuyển khái niệm “cực” từ một thuật ngữ định tính thành một đối tượng có thể quan sát và kiểm chứng. Nhóm tiêu chí thứ nhất phản ánh mức độ tập trung nguồn lực thông qua dân số, lao động, doanh nghiệp, đầu tư và cơ sở hạ tầng. Nhóm thứ hai phản ánh chức năng vượt trội như công nghiệp, logistics, cảng biển, thương mại, tài chính, hành chính, giáo dục, y tế, khoa học – công nghệ hoặc du lịch. Nhóm thứ ba đo khả năng kết nối. Nhóm thứ tư đo khả năng thu hút các dòng. Nhóm thứ năm xác định quy mô và cường độ vùng ảnh hưởng. Nhóm cuối cùng đánh giá khả năng lan tỏa phát triển sang khu vực xung quanh. Điều quan trọng là không nên cộng cơ học các chỉ tiêu này để tạo ra một điểm số rồi gọi nơi có điểm cao là cực. Cần kiểm chứng mối quan hệ nhân quả giữa chúng và đặc biệt phải xác định những điều kiện tối thiểu mà nếu thiếu thì một địa điểm chưa thể vận hành như một cực.</p>
+
+<p>Từ đây xuất hiện một yếu tố quan trọng hơn: ngưỡng hình thành cực. Giữa trạng thái “không phải cực” và “cực” không nhất thiết có một ranh giới tuyệt đối, mà có thể tồn tại một quá trình phát triển. Một địa điểm ban đầu có thể chỉ là nút giao thông, sau đó phát triển thành trung tâm dịch vụ, tiếp tục tích tụ dân số và hoạt động kinh tế, hình thành chức năng vượt trội, mở rộng vùng ảnh hưởng và cuối cùng trở thành cực. Vì vậy cần phân biệt ít nhất các trạng thái: không phải cực, nút, trung tâm, trung tâm có tiềm năng phát triển thành cực, cực đang hình thành và cực trưởng thành. Cách tiếp cận này đặc biệt hữu ích cho quy hoạch bởi nó cho phép trả lời không chỉ câu hỏi “nơi này có phải cực không?” mà còn câu hỏi quan trọng hơn: “nếu chưa phải cực thì nó đang thiếu điều kiện gì để trở thành cực?”</p>
+
+<p>Đối với bài toán hai cực Bắc – Nam cách nhau 90 km, có thể thiết lập một phép thử tuần tự. Trước hết phải xác định vùng ảnh hưởng thực tế của hai cực hiện hữu. Nếu hai vùng ảnh hưởng đã bao phủ tương đối liên tục toàn bộ hành lang giữa chúng thì không có lý do rõ ràng để hình thành cực thứ ba. Nếu tồn tại khoảng trống, cần xác định bản chất của khoảng trống đó. Nếu có thể giải quyết bằng tăng cường giao thông và kết nối, nên ưu tiên kết nối. Nếu kết nối vẫn chưa giải quyết được nhu cầu tổ chức lãnh thổ, cần xem xét một trung tâm hoặc nút trung gian. Chỉ khi trung tâm đó đồng thời có tiềm năng tích tụ nguồn lực, có chức năng vượt trội, thu hút được các dòng và tạo ra một vùng ảnh hưởng tương đối độc lập thì mới xuất hiện cơ sở để xem xét nâng nó thành cực.</p>
+
+<p>Ngay cả ở bước này vẫn cần một phép thử cuối cùng: cực thứ ba có làm cho toàn bộ hệ thống mạnh hơn hay chỉ chia nhỏ sức mạnh của hai cực hiện hữu? Đây là câu hỏi về hiệu quả biên của việc hình thành thêm cực. Một cực mới đòi hỏi đầu tư rất lớn vào hạ tầng, đất đai, dịch vụ, nguồn nhân lực và các thiết chế hỗ trợ. Nếu những nguồn lực đó được phân bổ vào cực thứ ba nhưng chỉ dẫn đến sự dịch chuyển doanh nghiệp, dân cư và đầu tư từ hai cực hiện hữu sang mà không tạo ra giá trị mới đáng kể cho toàn tỉnh, thì về bản chất đây là sự phân chia lại nguồn lực chứ chưa phải tạo thêm động lực phát triển. Ngược lại, nếu cực thứ ba khai thác được một lợi thế mà hai cực kia không thể khai thác, mở ra một thị trường mới, kết nối một tiểu vùng trước đây bị tách rời hoặc tạo ra một chức năng bổ sung có sức lan tỏa, thì cực mới có thể làm tăng hiệu quả của toàn hệ thống.</p>
+
+<p><strong>Chỉ hình thành cực mới khi tạo thêm giá trị cho toàn hệ thống</strong></p>
+
+<p>Thiết nghĩ, nghiên cứu cần so sánh ít nhất ba kịch bản. Kịch bản thứ nhất duy trì hai cực Bắc – Nam và tập trung đầu tư vào hành lang kết nối giữa chúng. Kịch bản thứ hai vẫn giữ hai cực nhưng phát triển một trung tâm hoặc nút trung gian để cung cấp dịch vụ và tổ chức vùng giữa. Kịch bản thứ ba hình thành ba cực với cực mới ở khu vực trung gian. Ba kịch bản không nên chỉ được so sánh về hình thái bản đồ mà phải được đánh giá theo khả năng tiếp cận của dân cư, quy mô thị trường lao động, hiệu quả đầu tư hạ tầng, mức độ tích tụ kinh tế, cường độ các dòng, khả năng bao phủ lãnh thổ, sức lan tỏa và nguy cơ cạnh tranh hoặc phân tán nguồn lực giữa các cực.</p>
+
+<p>Mục tiêu cuối cùng không phải tìm ra một công thức cứng nhắc rằng một tỉnh có diện tích hay chiều dài nhất định phải có hai, ba hay bốn cực. Điều cần tìm là một phương pháp trả lời cho từng lãnh thổ cụ thể: cần bao nhiêu cực, ở đâu, thuộc loại nào, đảm nhiệm chức năng gì, vùng ảnh hưởng đến đâu và ở giai đoạn nào cần hình thành hoặc nâng cấp chúng. Đây thực chất là một bài toán tối ưu giữa hai xu hướng đối nghịch. Quá ít cực có thể tạo ra những vùng nằm ngoài trường ảnh hưởng phát triển; quá nhiều cực lại làm suy giảm khả năng tích tụ và phân tán nguồn lực. Cấu trúc hợp lý nằm ở điểm mà số lượng cực đủ để tổ chức lãnh thổ nhưng vẫn đủ ít để mỗi cực đạt được quy mô và sức mạnh cần thiết. Theo cách tiếp cận này, câu hỏi ban đầu “hai cực Bắc và Nam cách nhau 90 km thì có cần một cực ở giữa không?” được chuyển hóa thành một chuỗi câu hỏi khoa học hơn: giữa hai cực có tồn tại khoảng trống chức năng hay không; khoảng trống đó bắt nguồn từ thiếu kết nối, thiếu trung tâm hay thiếu động lực phát triển; liệu một nút hoặc trung tâm trung gian đã đủ giải quyết vấn đề chưa; khu vực dự kiến có thực sự có khả năng trở thành cực hay không; và cuối cùng, cực mới có tạo thêm giá trị cho toàn hệ thống lớn hơn nguồn lực phải bỏ ra để hình thành nó hay không?</p>
+
+<p>Từ đó có thể rút ra luận đề trung tâm: không hình thành cực để lấp khoảng trống trên bản đồ; chỉ hình thành cực khi cần lấp khoảng trống trong cấu trúc vận hành của lãnh thổ và khi địa điểm đó có đủ khả năng tạo ra một trường ảnh hưởng phát triển mới. Mục tiêu của quy hoạch không phải là tối đa hóa số lượng cực mà là tìm kiếm số lượng cực tối thiểu nhưng đủ mạnh để tổ chức hiệu quả toàn bộ lãnh thổ. Khi đó, “một tỉnh cần bao nhiêu cực?” không còn là câu hỏi về số lượng ký hiệu trên bản đồ mà trở thành bài toán tối ưu hóa tập trung – kết nối – bao phủ – dòng – ảnh hưởng – lan tỏa – hiệu quả sử dụng nguồn lực. Đây cũng chính là bước chuyển cần thiết từ tư duy “vẽ cực trong quy hoạch” sang tư duy “chứng minh sự tồn tại và sự cần thiết của cực bằng cách hệ thống lãnh thổ thực sự vận hành”.</p>
+
+<p style="text-align:right"><strong>LÊ TÙNG LÂM</strong></p>
+
+                </div>
+            </div>
+</div>
+
+<script>
+    var standarSize = 13;
+    var titleStandarSize = 20;
+    function resizeText(number) {
+
+        var titleSize = parseInt($('.titleBaiViet').css('font-size'));
+        var descriptionSize = parseInt($('.trichyeuBaiViet').css('font-size'));
+        var contentSize = parseInt($('.noidungBaiViet').css('font-size'));
+
+
+        if (number > 0) {
+            contentSize = contentSize + 1;
+            titleSize = titleSize + 1;
+            descriptionSize = descriptionSize + 1;
+        } else if (number < 0) {
+            contentSize = contentSize - 1;
+            titleSize = titleSize - 1;
+            descriptionSize = descriptionSize - 1;
+        } else {
+            contentSize = standarSize;
+            titleSize = titleStandarSize;
+            descriptionSize = standarSize;
+        }
+        $('.noidungBaiViet').css('font-size', contentSize + "px");
+        $('.titleBaiViet').css('font-size', titleSize + "px");
+        $('.trichyeuBaiViet').css('font-size', descriptionSize + "px");
+    }
+
+
+    function setContrast(vlContrast) {
+        if (vlContrast == 3) {
+            $(".div-body-news").css("background-color", "#FFF");
+            $(".div-related-news").css("background-color", "#FFF");
+        } else {
+            if (vlContrast == 0) {
+                $(".div-body-news").css("background-color", "#DCDCDC");
+                $(".div-related-news").css("background-color", "#DCDCDC");
+            } else {
+                if (vlContrast == 1) {
+                    $(".div-body-news").css("background-color", "#F5F5F5");
+                    $(".div-related-news").css("background-color", "#F5F5F5");
+                } else {
+                    $(".div-body-news").css("background-color", "#F8F8FF");
+                    $(".div-related-news").css("background-color", "#F8F8FF");
+                }
+            }
+        }
+    }
+
+    var vl = 3;
+    setContrast(vl);
+
+    $("#giamContrast").click(function () {
+        if (vl > 0) {
+            vl = vl - 1;
+            setContrast(vl);
+        }
+    });
+
+    $("#tangContrast").click(function () {
+        if (vl < 3) {
+            vl = vl + 1;
+            setContrast(vl);
+        }
+    });
+
+    function openPrintWindow(url) {
+        window.open(url, '', 'top=10,left=10,scrollbars=1,resizable=1');
+    }
+
+
+</script>
+<script>
+
+    $('.tts').before("<img id='loader' style='display: none' src='https://ttsvpubtp.danang.gov.vn/images/loader.gif'>");
+
+    function concatenateBlobs(blobs, type, callback) {
+        let buffers = [];
+        let index = 0;
+
+        function readNextBlob() {
+            let reader = new FileReader();
+
+            reader.onload = function (event) {
+                buffers.push(event.target.result);
+
+                if (index < blobs.length - 1) {
+                    index++;
+                    readNextBlob();
+                } else {
+                    callback(new Blob(buffers, { type: type }));
+                }
+            };
+
+            reader.readAsArrayBuffer(blobs[index]);
+        }
+
+        readNextBlob();
+    }
+
+    $('#btPlay').click(function () {
+        let content = $.trim($('.tts').text());
+        let words = content.split(" ");
+        let chunks = [];
+        let chunkSize = 200;
+        for (let i = 0; i < words.length; i += chunkSize) {
+            chunks.push(words.slice(i, i + chunkSize).join(" "));
+        }
+
+        let mp3Blobs = [];
+        let processChunk = function (index) {
+            if (index < chunks.length) {
+                let data = {
+                    'token': "30457bde-a149-42fe-b2e3-2128e9fbab80",
+                    'content': chunks[index]
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://ttsvpubtp.danang.gov.vn/api/getAudio',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    beforeSend: function () {
+                        $('#loader').show();
+                        $('#btPlay').hide();
+                    },
+                    success: function (data) {
+                        fetch(data.src).then(response => response.blob()).then(blob => {
+                            mp3Blobs.push(blob);
+                            processChunk(index + 1);
+                        });
+                    },
+                    complete: function () {
+
+                    },
+                    data: JSON.stringify(data)
+                });
+            } else {
+                concatenateBlobs(mp3Blobs, 'audio/mpeg', concatenatedBlob => {
+                    let url = URL.createObjectURL(concatenatedBlob);
+                    $('#loader').hide();
+                    $('.tts').before("<br><audio controls autoplay src='" + url + "'></audio>");
+                });
+            }
+        };
+
+        processChunk(0);
+    });
+
+</script>
+            </div>
+            <div class="w3-row">
+                
+<div class="div-footer-news">
+    <form>
+        <input type="hidden" id="previewURL" value="/News/PreView/23952">
+    </form>
+</div>
+            </div>
+            <div class="w3-row">
+                
+
+<div class="div-related-news">
+    <div class="w3-row divTinLienQuan">TIN LIÊN QUAN</div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23952">
+                    <div>
+                        Đà Nẵng và bài toán 3 cực phát triển 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23949">
+                    <div>
+                        Khi mỗi địa điểm có một định danh trong thế giới số 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23948">
+                    <div>
+                        Hạt gạo nghĩa tình 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23946">
+                    <div>
+                        Đẩy mạnh phát triển nhà ở xã hội trên địa bàn thành phố Đà Nẵng  
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23932">
+                    <div>
+                        Từ mùa Thu độc lập đến kỷ nguyên phát triển mới của dân tộc Việt Nam 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23930">
+                    <div>
+                        Khơi mở tiềm năng du lịch vùng núi phía Tây Đà Nẵng 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23929">
+                    <div>
+                        Hội đồng nhân dân các cấp trong kỷ nguyên quản trị dữ liệu 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23928">
+                    <div>
+                        Tạo nền tảng cơ sở vật chất cho giáo dục Đà Nẵng 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23916">
+                    <div>
+                        Phát triển kinh tế biển - Cơ hội và thách thức cho Đà Nẵng 
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/23912">
+                    <div>
+                        Khơi thông nguồn lực phát triển từ cơ chế, chính sách đặc thù 
+                    </div>
+
+
+                </a>
+
+            </div>
+</div>
+
+
+            </div>
+        </div>
+        <div class="w3-col l3">
+            <div class="w3-row">
+                
+
+
+
+
+
+<div class="container-fluid cc divSearch rightside">
+    <form action="/News/SearchNews" method="post">
+        <div class="w3-row cc ">
+            <div class="w3-col m11 s10" style="float:left">
+                <input type="text" id="searchtext" name="searchtext" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <div class="w3-col m1 s2" style="float:right">
+                <button type="submit" id="btnSearch" name="btnSearch" class="homeSearch">
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+            </div>
+
+            <div class="w3-row">
+                
+
+
+
+<div class="container-fluid cc rightside">
+    <div class="w3-row cc hot-links">
+        <a href="/TiepNhanYKien" target="_blank">
+            <img class="img-hot-links" src="/Images/red/TiepNhanYKCT.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links">
+        <a href="/News/ReadCatNews/50" target="_blank">
+            <img class="img-hot-links" src="/Images/red/LichTiepCongDan.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links">
+        <a href="/NghiQuyet" target="_blank">
+            <img class="img-hot-links" src="/Images/red/nghiquyet.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links">
+        <a href="https://danang.vnptipc.vn/" target="_blank">
+            <img class="img-hot-links" src="/Images/red/hdnd.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links">
+
+        <a href="/News/CatNews/18" target="_blank">
+            <img class="img-hot-links" src="/Images/red/chinhsachmoi.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links">
+        <a href="/TaiLieu" target="_blank">
+            <img class="img-hot-links" src="/Images/red/tailieu.jpg">
+        </a>
+    </div>
+
+    <div class="w3-row cc hot-links">
+
+        <a href="/Video" target="_blank">
+            <img class="img-hot-links" src="/Images/red/cutri.jpg">
+        </a>
+
+    </div>
+
+
+</div>
+
+            </div>
+            <div class="w3-row">
+                
+
+
+
+
+<div class="container-fluid cc rightside">
+
+            <div class="w3-row cc hot-links">
+                <a href="http://quochoi.vn/" target="_blank">
+                    <img class="img-hot-links" src="/Files/Images/20180126115450_congthongtindientuqh.png" alt="Cổng thông tin Quốc Hội">
+                </a>
+            </div>
+            <div class="w3-row cc hot-links">
+                <a href="https://dangbodanang.vn/" target="_blank">
+                    <img class="img-hot-links" src="/Files/Images/20180126115607_dangbotpdn.png" alt="Trang tin điện tử Đảng bộ thành phố Đà Nẵng">
+                </a>
+            </div>
+    <div class="w3-row cc hot-links" style="margin-top:15px;">
+        <a href="https://danang.gov.vn/" target="_blank">
+            <img class="img-hot-links" src="/Images/red/CongTTDT.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links" style="margin-top:15px;">
+        <a href="https://mattran.danang.gov.vn/" target="_blank">
+            <img class="img-hot-links" src="/Images/red/mattran.jpg">
+        </a>
+    </div>
+    <div class="w3-row cc hot-links" style="margin-top:15px;">
+
+        <a href="https://egov.danang.gov.vn" target="_blank">
+            <img class="img-hot-links" src="/Images/red/egov.jpg">
+        </a>
+
+    </div>
+
+
+
+
+</div>
+
+            </div>
+            <div class="w3-row">
+                
+
+
+<div class="container-fluid cc rightside" style="margin-top:15px;margin-bottom:15px;">
+
+    <select name="ddWebLinks" id="ddWebLinks" class="form-control ddWebLinks">
+        <option value="0">--- Liên kết Website ---</option>
+    <option value="http://www.danang.gov.vn/">Cổng Thông tin điện tử thành phố Đà Nẵng</option>
+<option value="http://noivu.danang.gov.vn/">Sở Nội vụ</option>
+<option value="http://dpi.danang.gov.vn/">Sở Kế hoạch &amp; Đầu tư</option>
+<option value="http://danang.edu.vn/">Sở Giáo dục &amp; Đào tạo</option>
+<option value="http://www.fad.danang.gov.vn/">Sở Ngoại vụ</option>
+<option value="http://vhtt.danang.gov.vn/">Sở Văn hóa, thể thao &amp; du lịch</option>
+<option value="http://dost.danang.gov.vn/">Sở Khoa học công nghệ</option>
+<option value="http://tnmt.danang.gov.vn/">Sở Tài nguyên và Môi trường</option>
+<option value="http://socongthuong.danang.gov.vn/">Sở Công thương</option>
+<option value="http://soyte.danang.gov.vn/">Sở Y tế</option>
+<option value="http://www.ldtbxh.danang.gov.vn/">Sở Lao động thương binh &amp; xã hội</option>
+<option value="http://sgtcc.danang.gov.vn/">Sở Giao thông vận tải</option>
+<option value="http://www.tttt.danang.gov.vn/">Sở Thông tin truyền thông</option>
+<option value="http://haichau.danang.gov.vn/">Quận Hải Châu</option>
+<option value="http://www.thanhkhe.danang.gov.vn/">Quận Thanh Khê</option>
+<option value="http://www.nguhanhson.danang.gov.vn/">Quận Ngũ Hành Sơn </option>
+<option value="http://www.sontra.danang.gov.vn/">Quận Sơn Trà </option>
+<option value="http://www.camle.danang.gov.vn/">Quận Cẩm Lệ</option>
+<option value="http://www.dngcustoms.gov.vn/">Cục Hải Quan</option>
+<option value="http://www.cucthongke.danang.gov.vn/">Cục Thống kê</option>
+<option value="http://www.iza.danang.gov.vn/">Ban QL các KCN và CX</option>
+<option value="http://ipc.danang.gov.vn/">Trung tâm Xúc tiến đầu tư</option>
+<option value="http://www.tpic.danang.gov.vn/">Trung tâm Xúc tiến thương mại</option>
+<option value="http://www.vieclamdanang.net/">Trung tâm Dịch vụ việc làm</option>
+<option value="http://www.phunudanang.org.vn/">Hội liên hiệp phụ nữ</option>
+<option value="http://www.dised.danang.gov.vn/">Viện nghiên cứu phát triển KTXH</option>
+<option value="http://lienchieu.danang.gov.vn/">Quận Liên Chiểu</option>
+<option value="http://hoavang.danang.gov.vn/">Huyện Hòa Vang</option>
+</select>
+
+
+</div>
+
+
+<script>
+    $("#ddWebLinks").change(function () {
+        var url = this.value;
+        window.open(url, '_blank');
+        this.value = "0";
+        return false;
+    });
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <hr>
+    <div class="footer pageFooter">
+        <div class="w3-col l8 m8 s12 ">
+            <div class="w3-row d-none">
+                <div class="w3-col l1 m2 mainFooterLinks">
+                    <a href="/">Trang chủ</a><br>
+                    <a href="/Video">Video</a><br>
+                    <a href="/Photo">Ảnh</a><br>
+
+                </div>
+                <div class="w3-col l3 m4 secondFooterLinks">
+                    <a href="/" class="secondFooterHeader">Tin hoạt động</a><br>
+                    <a href="/News/CatNews/21">Hoạt động Lãnh đạo HĐND</a><br>
+                    <a href="/News/CatNews/16">Văn phòng HĐND</a><br>
+                    <a href="/News/BaiVietBan">Hoạt động các Ban</a><br>
+                    <a href="/News/CatNews/22">Trao đổi</a><br>
+                </div>
+                <div class="w3-col l3 m4 secondFooterLinks">
+                    <a href="/" class="secondFooterHeader">Văn Bản</a><br>
+                    <a href="/">Thông báo</a><br>
+                    <a href="/">Hỏi đáp</a><br>
+                </div>
+            </div>
+            <div style="margin-bottom: 0px; padding: 0px">
+                <div class="w3-row bottom-menu" style="width:100%">
+                    
+                </div>
+            </div>
+            <div class="w3-row">
+                <strong>TRANG THÔNG TIN ĐIỆN TỬ CỦA ĐOÀN ĐẠI BIỂU QUỐC HỘI VÀ HỘI ĐỒNG NHÂN DÂN THÀNH PHỐ ĐÀ NẴNG.</strong><br>
+                Giấy phép: 389/GP-SVHTTDL cấp ngày 16 tháng 10 năm 2025<br>
+                Cơ quan chủ quản: Thường trực Hội đồng nhân dân thành phố Đà Nẵng.<br>
+                Trưởng ban biên tập: Hà Đức Tiến, Chánh Văn phòng Đoàn ĐBQH và HĐND thành phố Đà Nẵng.<br>
+                Trụ sở: Số 32 Bạch Đằng, phường Hải Châu, thành phố Đà Nẵng.
+                <br>
+                Điện thoại: (0236) 3817602 - (0236) 3825051
+                Email: dbnd@danang.gov.vn<br>
+               
+            </div>
+        </div>
+        <div class="w3-col l4 m4 s12">
+            <img src="/Images/red/logo.png" style="width:90%">
+            <div style="text-align:center"><a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/dbnddananggovvn-1708566063" title="Chung nhan Tin Nhiem Mang" target="_blank"><img src="https://tinnhiemmang.vn/handle_cert?id=dbnd.danang.gov.vn" width="150px" height="auto" alt="Chung nhan Tin Nhiem Mang"></a></div>
+
+        </div>
+        
+    </div>
+
+
+<script>
+    // tạo namespace an toàn
+    window.Client = window.Client || {};
+    Client.Pulse = null;
+
+    // chạy khi DOM sẵn sàng
+    $(function () {
+      Client.Heartbeat();
+
+      function setTheme(color) {
+        $.ajax({
+          url: '/Home/SetSessionValue',
+          data: { keyName: 'gRootTheme', newValue: color },
+          success: function () { location.reload(); },
+          error: function () { alert('Error occured!'); }
+        });
+      }
+
+      $(document).on('click', '#redLink', function (e) {
+        e.preventDefault();
+        setTheme('red');
+      });
+
+      $(document).on('click', '#blueLink', function (e) {
+        e.preventDefault();
+        setTheme('blue');
+      });
+    });
+
+    // ---- heartbeat giữ nguyên, chỉ đặt sau khi khai báo Client ----
+    Client.Heartbeat = function () {
+      var data = { UserName: 'f173ad92-9a9c-41d0-9084-2299142e7f98' };
+      $.ajax({
+        url: '/api/HeartBeat/CheckActive',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (response) {
+          Client.RenderActiveUsers(response);
+          Client.Pulse = setTimeout(Client.Heartbeat, 300000);
+        }
+      });
+    };
+
+    Client.RenderActiveUsers = function (response) {
+      var strStatistic = 'Online ' + response.numOnline + ' - Tổng cộng ' + response.numVisit;
+      $('#statistics').html(strStatistic);
+    };
+</script>
+
+</body></html>

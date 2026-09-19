@@ -1,0 +1,24 @@
+{
+  "scope_id": "JAYT_323_B11_02_TARGETED_INGRESS_SCOPE",
+  "governing_directive": "JAYT-323",
+  "authorization": "COUNCIL_TARGETED_INGRESS_AUTHORIZATION__STAGING_REVIEW_ONLY",
+  "issued_at_utc": "2026-09-04T15:55:00Z",
+  "capture_method": "OPERATOR_VERIFIED_BROWSER_ATTACHMENT",
+  "one_shot_quota": 1,
+  "fail_closed": true,
+  "vault_directory": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault",
+  "target": {
+    "slot_id": "B11_02",
+    "candidate_id": "B11_02_HOAT_DONG_VAN_HOA_BAO_TANG_CHAM_1022",
+    "content_tier": "T2_CIVIC_CULTURE",
+    "leaf_url": "https://1022.vn/nhieu-trai-nghiem-moi-cho-du-khach-tai-bao-tang-dieu-khac-cham-da-nang/",
+    "source_date": "2026-08-28",
+    "expected_text_span": "Chương trình nghệ thuật vũ điệu Champa gồm các tiết mục múa Apsara, hòa tấu nhạc cụ Chăm và múa Vũ hội làng Chăm sẽ được tổ chức vào buổi sáng các ngày 15 và 30 hằng tháng.",
+    "mandatory_disclaimer": "Thông tin lịch biểu diễn nghệ thuật văn hóa cộng đồng trích xuất từ thông báo chính thức của Bảo tàng Điêu khắc Chăm trên Cổng 1022 Đà Nẵng; không bán vé biểu diễn, không kinh doanh tour du lịch, không thu phí dịch vụ hay thu thập dữ liệu cá nhân."
+  },
+  "prohibitions": ["ticket_sales", "paid_show_booking", "tour_agency_intermediary", "performance_fees", "personal_data_collection", "affiliate", "tracking", "production_mutation"],
+  "post_validation_state": "EVIDENCE_COMPLETE_INTERNAL_HELD__AWAITING_CEO_ITEM_AUDIT",
+  "public_approval": "EXPLICIT_CEO_DECISION_REQUIRED",
+  "hydration": "STAGING_ONLY_AFTER_PUBLIC_APPROVAL",
+  "production_deployment_authorized": false
+}

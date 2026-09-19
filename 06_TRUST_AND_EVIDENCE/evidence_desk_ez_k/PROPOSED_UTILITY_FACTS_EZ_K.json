@@ -1,0 +1,119 @@
+{
+  "registry_id": "JAYT_EVIDENCE_CONTRACT_V3_REGISTRY_EZ_K",
+  "version": "v7.0.0-ez.k",
+  "governance_mode": "EVIDENCE_CONTRACT_V3_ENTAILMENT_GATE_FAIL_CLOSED",
+  "timestamp": "2026-08-31T06:43:22.372Z",
+  "approved_staging_t2_pilot": {
+    "pilot_card_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+    "pilot_title": "GitHub Education — Thông tin đăng ký",
+    "pilot_tier": "T2_OFFICIAL_PROGRAM_DOCUMENTATION",
+    "public_eligible": true,
+    "raw_sha256": "f21354b988f6db93fda0460932ce00f336bf8210cf69d5b3329cb68626e1f237",
+    "canonical_action_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students"
+  },
+  "approved_staging_t2_pilot_count": 1,
+  "public_eligible_count": 1,
+  "t1_voucher_verified_count": 0,
+  "new_candidates_public_count": 0,
+  "semantic_failure_matrix": [
+    {
+      "candidate_id": "CANDIDATE_EZ_J_01_NOTION_EDUCATION",
+      "source_url": "https://www.notion.so/product/notion-for-education",
+      "raw_bytes_sha256": "efa0ff3b7f8037d76fa445bf458136452541d1c981dc041576ed6f8cc1aeca30",
+      "raw_bytes_length": 188523,
+      "ez_j_isolated_tokens_used": [
+        "schoolwork",
+        "classroom"
+      ],
+      "ez_j_extrapolated_claim": "Học sinh và nhà trường … hỗ trợ học tập và quản lý dự án / Phạm vi toàn cầu",
+      "root_cause_failure": "Token match without sentence-level predicate; 'schoolwork' and 'classroom' are isolated words in unrendered template props, not an eligibility or entitlement predicate; global scope was not stated in raw text.",
+      "verdict": "HELD_INTERNAL_SEMANTIC_LOCATOR_INSUFFICIENT"
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_J_02_CANVA_EDUCATION",
+      "source_url": "https://www.canva.com/education/",
+      "raw_bytes_sha256": "a41e00e0448da7b5e0423ccb022c3e6da0f86a5d5254c5b697907231c1fb8810",
+      "raw_bytes_length": 270597,
+      "ez_j_isolated_tokens_used": [
+        "Canva",
+        "Education",
+        "learning"
+      ],
+      "ez_j_extrapolated_claim": "Cơ sở giáo dục và người học / Phạm vi toàn cầu",
+      "root_cause_failure": "Broad marketing nouns ('Education', 'learning') treated as entitlement evidence; zero predicate defining verified eligibility conditions or institutional criteria; global scope was unproven.",
+      "verdict": "HELD_INTERNAL_SEMANTIC_LOCATOR_INSUFFICIENT"
+    }
+  ],
+  "trial_candidates_v3": [
+    {
+      "contract_id": "CONTRACT_V3_EZ_K_01_NOTION_EDUCATION",
+      "version": "v3.0.0-ez.k",
+      "subject_name": "Notion for Education — Web Document",
+      "canonical_document_url": "https://www.notion.com/product/notion-for-education",
+      "raw_response_sha256": "efa0ff3b7f8037d76fa445bf458136452541d1c981dc041576ed6f8cc1aeca30",
+      "raw_bytes_length": 188523,
+      "decoding_encoding": "utf-8",
+      "claim_class": "DESCRIPTIVE_ONLY",
+      "sentence_level_raw_excerpts": [
+        {
+          "excerpt_id": "EXCERPT_01_META_DESCRIPTION",
+          "byte_start": 302,
+          "byte_end": 355,
+          "length": 53,
+          "source_language_verbatim_text": "The all-in-one workspace for students and educators.",
+          "claim_class": "DESCRIPTIVE_ONLY"
+        }
+      ],
+      "clause_by_clause_translation_mapping": [
+        {
+          "clause_index": 1,
+          "source_excerpt_ref": "EXCERPT_01_META_DESCRIPTION",
+          "source_clause_text": "The all-in-one workspace",
+          "faithful_vietnamese_clause": "Không gian làm việc tích hợp",
+          "entailment_status": "DESCRIPTIVE_ENTAILMENT"
+        },
+        {
+          "clause_index": 2,
+          "source_excerpt_ref": "EXCERPT_01_META_DESCRIPTION",
+          "source_clause_text": "for students and educators.",
+          "faithful_vietnamese_clause": "dành cho học sinh, sinh viên và nhà giáo dục.",
+          "entailment_status": "DESCRIPTIVE_ENTAILMENT"
+        }
+      ],
+      "source_scope": {
+        "provenance_basis": "Metadata mô tả chung của trang web Notion.",
+        "is_explicitly_stated_global": false,
+        "raw_basis_excerpt": "None (Global scope not explicitly stated in document body)"
+      },
+      "jayt_local_scope": {
+        "applies_to_da_nang": false,
+        "local_evidence_present": false,
+        "caveat_required": "Tài liệu này là mô tả tiếp thị chung, không chứng minh chính sách cấp tài khoản hay quyền lợi kinh tế tại Đà Nẵng."
+      },
+      "explicit_caveats_and_exclusions": [
+        "Câu trích xuất nằm trong thẻ meta description (tiếp thị), không phải điều khoản chính sách giáo dục được quy định chính thức.",
+        "Không chứng minh điều kiện xét duyệt (verification process), thời hạn áp dụng, hay quyền lợi kinh tế cụ thể.",
+        "JayT không bảo đảm việc cấp gói hay giá trị thương mại."
+      ],
+      "allowed_customer_facing_sentence": "Theo mô tả trên trang web của Notion, Notion tự giới thiệu là không gian làm việc tích hợp dành cho học sinh, sinh viên và nhà giáo dục.",
+      "disallowed_extrapolated_claims": [
+        "Học sinh và nhà trường có thể đăng ký gói miễn phí",
+        "Chương trình áp dụng toàn cầu cho mọi sinh viên",
+        "Chính sách hỗ trợ giáo dục đã được xác thực tại Đà Nẵng",
+        "Ưu đãi giảm giá phần mềm bản quyền"
+      ],
+      "entailment_gate_verification": {
+        "isolated_token_heuristic_rejected": true,
+        "all_clauses_strictly_entailed": false,
+        "no_unproven_eligibility_inferred": true,
+        "no_unproven_scope_inferred": true,
+        "publishable_status": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL"
+      },
+      "reviewer_decision": {
+        "reviewer": "DATA_AND_TRUST_COUNCIL_EZ_K",
+        "decision": "NO_PUBLISHABLE_FACT_HELD_INTERNAL_NO_STAGING_RENDER",
+        "timestamp": "2026-08-31T06:43:22.371Z"
+      }
+    }
+  ]
+}

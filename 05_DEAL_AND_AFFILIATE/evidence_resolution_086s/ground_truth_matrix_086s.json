@@ -1,0 +1,313 @@
+{
+  "$schema": "https://jayt.vn/schemas/ground-truth-matrix.v1.json",
+  "matrix_id": "GROUND_TRUTH_MATRIX_086S",
+  "work_order": "JAYT-086S-EVIDENCE-GROUNDED-RESOLUTION-AND-RADAR-UI",
+  "generated_at": "2026-08-25T11:34:00+07:00",
+  "summary": {
+    "total_sources": 28,
+    "verified_candidates": 0,
+    "signal_only": 8,
+    "out_of_scope": 1,
+    "historical_only": 0,
+    "blocked_challenge": 8,
+    "failed_404": 11,
+    "production_locked": true
+  },
+  "sources": [
+    {
+      "index": 1,
+      "brand": "Metiz Cinema Đà Nẵng",
+      "domain": "metiz.vn",
+      "sector": "CINEMA",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.txt",
+      "artifact_sha256": "daf2af203f1747a9311c6bb614fa55d867e76fe65964b4ef413e3e29b2eeae2b",
+      "captured_at": "2026-08-25T04:19:40.407Z",
+      "verbatim_quote": "SUPER MONDAY (THỨ HAI SIÊU HẠNG) ... giá cực kỳ ưu đãi 55.000 đồng/ vé 2D ... Điều kiện & điều khoản: ... 1. Chương trình áp dụng cho thành viên Metiz Cinema ... 3. Áp dụng cho hình thức mua vé trực tiếp tại rạp ... 4. Giá vé áp dụng cho ghế thường, ghế VIP và ghế đôi ... Hotline: 0236 3630 689",
+      "missing_fields": [
+        "LITERAL_STREET_ADDRESS_IN_PROMO_TEXT",
+        "EXPLICIT_EXPIRATION_DATE_OR_RECURRENCE_PROOF_IN_SINGLE_BLOCK"
+      ],
+      "note": "Hotline 02363 630 689 (mã vùng Đà Nẵng) và ĐKKD 0400668112 (Đà Nẵng) có trong footer; nhưng chuỗi địa chỉ 'Helio Center, Đường 2/9' không xuất hiện trực tiếp trong bài viết ưu đãi. Hạ cấp về SIGNAL_ONLY."
+    },
+    {
+      "index": 2,
+      "brand": "BHD Star Cineplex",
+      "domain": "bhdstar.vn",
+      "sector": "CINEMA",
+      "tier": "OUT_OF_SCOPE",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.txt",
+      "artifact_sha256": "30e5875a301b273bd573bdb879355a604e519388ce046c6be75ec752172fb892",
+      "captured_at": "2026-08-25T04:19:35.326Z",
+      "verbatim_quote": "HÀ NỘI ... TP. HUẾ ... TP. HỒ CHÍ MINH ... LONG KHÁNH ... PHÚ MỸ ... THANH HÓA ... COUPLE DAY – THỨ BA HẰNG TUẦN: GIẢM 20% ... HAPPY MONDAY – ƯU ĐÃI XEM PHIM CHỈ TỪ 48K TẠI BHD STAR ... U22 DAY – NHÂN ĐÔI ĐIỂM, NHÂN ĐÔI NIỀM VUI!",
+      "missing_fields": [
+        "DANANG_LOCALITY_PHYSICAL_PRESENCE"
+      ],
+      "note": "BHD Star công bố cụm rạp tại 6 địa phương nhưng không có chi nhánh tại Đà Nẵng. Xếp OUT_OF_SCOPE đối với người dùng Đà Nẵng."
+    },
+    {
+      "index": 3,
+      "brand": "Ví MoMo",
+      "domain": "momo.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.txt",
+      "artifact_sha256": "11b9ada8b652fe7969158c8e4b881c97680ebe16733efce729c09ec4bf17b655",
+      "captured_at": "2026-08-25T04:22:24.471Z",
+      "verbatim_quote": "Bạn mới nhập mã CHONMOMO: Có quà 500.000đ giảm nhiều dịch vụ ... Lần đầu đặt vé tàu hỏa trên MoMo: Giảm thẳng 100.000đ dịp 2/9 ... Tải MoMo, nhập MOMOBUS: Miễn phí 5 lượt đi xe buýt tại Hà Nội ... Đà Nẵng: Tầng 3, Tòa nhà DMT, Số 484-486 đường 2/9",
+      "missing_fields": [
+        "MERCHANT_SPECIFIC_LOCAL_TERMS_CONFIRMATION",
+        "IN_APP_VOUCHER_CODE_VALIDATION"
+      ],
+      "note": "Ưu đãi toàn quốc và dịch vụ trong App; MOMOBUS chỉ áp dụng tại Hà Nội; cần kiểm tra điều kiện chi tiết trong App MoMo."
+    },
+    {
+      "index": 4,
+      "brand": "Ví ZaloPay",
+      "domain": "zalopay.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.txt",
+      "artifact_sha256": "0c615a85f1cef4c041872459ca228edb745422e25309527d0f3456bc6856bd52",
+      "captured_at": "2026-08-25T04:22:31.066Z",
+      "verbatim_quote": "Zalopay ưu đãi lên đến 2 triệu đồng khi thanh toán mọi dịch vụ tại Vinpearl & VinWonders ... 18 tuần nữa kết thúc ... Nhập mã HOCHE - Nhận ưu đãi khủng đến 50.000đ ... 6 ngày nữa kết thúc ... Giải trí trên FPT Play, tiết kiệm 50.000đ ... Đua top đặt xe và đồ ăn ... Đã kết thúc ... 23 tháng tám 2026",
+      "missing_fields": [
+        "MERCHANT_SPECIFIC_LOCAL_TERMS_CONFIRMATION",
+        "IN_APP_VOUCHER_CODE_VALIDATION"
+      ],
+      "note": "Ưu đãi có countdown rõ ràng; trang ghi nhận đúng trạng thái hết hạn của chương trình cũ; cần xác thực trong App ZaloPay."
+    },
+    {
+      "index": 5,
+      "brand": "Lotte Cinema Vietnam",
+      "domain": "lottecinemavn.com",
+      "sector": "CINEMA",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.txt",
+      "artifact_sha256": "61d0380f0614db9b440d06fab1ef4bad0354958d1942206475373567fa698279",
+      "captured_at": "2026-08-25T04:19:30.345Z",
+      "verbatim_quote": "16/08/2026 ~ 17/09/2026 ... 15/08/2026 ~ 28/02/2027 ... 01/08/2026 ~ 31/12/2026",
+      "missing_fields": [
+        "TEXT_PROMO_TERMS_IN_RAW_DOM",
+        "PRICE_AND_SEAT_CONDITION_BREAKDOWN"
+      ],
+      "note": "20 sự kiện banner với các khung thời hạn cụ thể; nội dung chi tiết nằm trong ảnh banner."
+    },
+    {
+      "index": 6,
+      "brand": "KFC Vietnam",
+      "domain": "kfcvietnam.com.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/kfcvietnam.com.vn/page.txt",
+      "artifact_sha256": "4e4c29e6e3b4b6a6792e99a2e0958bb8c0378a0f94eb9f87d892a974c76a59db",
+      "captured_at": "2026-08-25T04:19:54.673Z",
+      "verbatim_quote": "RẤT TIẾC! CHÚNG TÔI XIN LỖI ... Trang bạn đang truy cập có thể đã bị xóa, đã thay đổi tên hoặc tạm thời không có.",
+      "missing_fields": [
+        "ACTIVE_PROMOTION_URL_STRUCTURE",
+        "PRICE_AND_DISCOUNT_CLAIMS"
+      ],
+      "note": "Soft-404 trên URL /uu-dai; giữ trên radar với URL trang chủ kfcvietnam.com.vn."
+    },
+    {
+      "index": 7,
+      "brand": "Phúc Long Coffee & Tea",
+      "domain": "phuclong.com.vn",
+      "sector": "COFFEE_TEA",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phuclong.com.vn/page.txt",
+      "artifact_sha256": "3bc134ee4281ea1c4ad568ff44a099ad8e39050304e6a4f052f997d8cc0ed443",
+      "captured_at": "2026-08-25T04:20:13.123Z",
+      "verbatim_quote": "Trang chủ ... Sản phẩm ... Cửa hàng ... Hộp thư ... Tài khoản ... /tin-tuc/khuyen-mai",
+      "missing_fields": [
+        "DYNAMIC_PROMOTION_TEXT_IN_DOM",
+        "PRICE_AND_DISCOUNT_CLAIMS"
+      ],
+      "note": "Trang Single Page App tải nội dung qua AJAX; giữ trên radar."
+    },
+    {
+      "index": 8,
+      "brand": "Phê La",
+      "domain": "phela.vn",
+      "sector": "COFFEE_TEA",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.txt",
+      "artifact_sha256": "1b70d376f3aec6c323c6c3d5f8fee4fe44070046afdda6d71aeeaadf3ea89e4a",
+      "captured_at": "2026-08-25T04:20:25.432Z",
+      "verbatim_quote": "Chuyện Phê Phin Đặc Sản – Cà Đặc Sản Ủ Phin ... [Chuyện Phê Phin Đặc Sản] Lần đầu tiên Cà Phê Đặc Sản kết hợp cùng Ô Long Đặc Sản Việt Nam",
+      "missing_fields": [
+        "VOUCHER_OR_DISCOUNT_PROGRAM",
+        "PROMOTION_TERMS_AND_CONDITIONS"
+      ],
+      "note": "Trang tin tức chỉ gồm bài viết thương hiệu, không có chương trình ưu đãi giảm giá."
+    },
+    {
+      "index": 9,
+      "brand": "ShopeeFood Vietnam",
+      "domain": "shopeefood.vn",
+      "sector": "FOOD_AND_RIDE",
+      "tier": "SIGNAL_ONLY",
+      "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/shopeefood.vn/page.txt",
+      "artifact_sha256": "407172dd630c7fc8656aed92f566c5acf3b82758e4190858a45fad33ce30c3a5",
+      "captured_at": "2026-08-25T04:21:48.332Z",
+      "verbatim_quote": "SHOPEEFOOD ... CHÀO BẠN ... Món ngon quán đỉnh bao la ... đặt đơn bạn nhé ShopeeFood giao liền!",
+      "missing_fields": [
+        "WEB_BASED_VOUCHER_LIST",
+        "DISCOUNT_TERMS_IN_BROWSER"
+      ],
+      "note": "Trang bộ sưu tập chuyển hướng sang trang cài đặt App; ưu đãi xem trực tiếp trong App ShopeeFood."
+    },
+    {
+      "index": 10,
+      "brand": "Galaxy Cinema",
+      "domain": "galaxycine.vn",
+      "sector": "CINEMA",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 11,
+      "brand": "Jollibee Vietnam",
+      "domain": "jollibee.com.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 12,
+      "brand": "Lotteria Vietnam",
+      "domain": "lotteria.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 13,
+      "brand": "Domino's Pizza Vietnam",
+      "domain": "dominos.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 14,
+      "brand": "The Coffee House",
+      "domain": "thecoffeehouse.com",
+      "sector": "COFFEE_TEA",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 15,
+      "brand": "Grab Vietnam / GrabFood",
+      "domain": "grab.com",
+      "sector": "FOOD_AND_RIDE",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 16,
+      "brand": "Shopee Vietnam",
+      "domain": "shopee.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 17,
+      "brand": "VNPAY-QR",
+      "domain": "vnpay.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "tier": "BLOCKED",
+      "note": "Cloudflare / Access Challenge. Tuyệt đối không bypass."
+    },
+    {
+      "index": 18,
+      "brand": "CGV Cinemas Vietnam",
+      "domain": "cgv.vn",
+      "sector": "CINEMA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 19,
+      "brand": "Beta Cinemas",
+      "domain": "betacinemas.vn",
+      "sector": "CINEMA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 20,
+      "brand": "Pizza Hut Vietnam",
+      "domain": "pizzahut.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 21,
+      "brand": "The Pizza Company",
+      "domain": "thepizzacompany.vn",
+      "sector": "FNB_FASTFOOD",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 22,
+      "brand": "Highlands Coffee",
+      "domain": "highlandscoffee.com.vn",
+      "sector": "COFFEE_TEA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 23,
+      "brand": "Katinat Saigon Kafe",
+      "domain": "katinat.vn",
+      "sector": "COFFEE_TEA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 24,
+      "brand": "Gong Cha Vietnam",
+      "domain": "gongcha.com.vn",
+      "sector": "COFFEE_TEA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 25,
+      "brand": "Trung Nguyên Legend",
+      "domain": "trungnguyenlegend.com",
+      "sector": "COFFEE_TEA",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 26,
+      "brand": "Be Group",
+      "domain": "be.com.vn",
+      "sector": "FOOD_AND_RIDE",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 27,
+      "brand": "Xanh SM",
+      "domain": "xanhsm.com",
+      "sector": "FOOD_AND_RIDE",
+      "tier": "FAILED",
+      "note": "HTTP 404 (Path đổi)."
+    },
+    {
+      "index": 28,
+      "brand": "Lazada Vietnam",
+      "domain": "lazada.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "tier": "FAILED",
+      "note": "HTTP 0 (Kết nối lỗi)."
+    }
+  ]
+}

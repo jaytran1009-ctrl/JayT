@@ -1,0 +1,30 @@
+{
+  "test_cases": [
+    {
+      "case_id": "TC_EZ_01_MISSING_SHIPPING",
+      "description": "Candidate has product price and voucher code, but shipping cost is unobserved.",
+      "evaluation": "FAIL_CLOSED",
+      "resulting_tier": "TIER_4_RADAR",
+      "public_eligible": false,
+      "reason": "Missing mandatory field 'shipping_observation.amount'. Total cost cannot be honestly computed."
+    },
+    {
+      "case_id": "TC_EZ_02_PERSONALIZED_CART_VOUCHER",
+      "description": "Voucher is dependent on user tier, loyalty point, or cart contents.",
+      "evaluation": "FAIL_CLOSED_INSTRUCTION_ONLY",
+      "resulting_tier": "TIER_4_RADAR",
+      "public_eligible": false,
+      "render_mode": "SELF_CHECK_INSTRUCTION",
+      "reason": "Personalized vouchers cannot be inventory-listed with verified claim."
+    },
+    {
+      "case_id": "TC_EZ_03_UNVERIFIED_LOCALITY_MAPS",
+      "description": "Candidate has brand name, but specific branch address in Da Nang is derived without store receipt.",
+      "evaluation": "FAIL_CLOSED_NEUTRAL_SCOPE",
+      "resulting_tier": "TIER_4_RADAR",
+      "maps_url": null,
+      "scope_text": "Phạm vi chưa xác minh bởi JayT",
+      "reason": "Mandate EY/EZ: 0 Maps href, 0 derived locality claims."
+    }
+  ]
+}

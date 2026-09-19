@@ -1,0 +1,54 @@
+{
+  "manifest_id": "BATCH_141V_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141W — CANONICAL CARD DEDUPLICATION & DOMINO’S OFFICIAL LEAF BATCH",
+  "status": "NESTED_FRAGMENTS_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:35:00+07:00",
+  "executive_ruling": "CEO audit identified nested fragment duplication (cloning card-body, col-*, wrappers into 18 duplicate fragments) and price regex false-positives (\"1 đ\" from \"mua 1 tặng 1\"). Quarantined for canonical card deduplication.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_32_NESTED_DOM_FRAGMENT_DUPLICATION",
+      "description": "querySelectorAll matched parent cards and nested child wrappers, duplicating single promotions into multiple fragments."
+    },
+    {
+      "cause_id": "P0_CAUSE_33_AMBIGUOUS_PRICE_REGEX_MATCHING",
+      "description": "Generic price regex on card text extracted \"1 đ\" from \"mua 1 tặng 1\" condition copy."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/browser_dom_provenance_141v.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/browser_dom_provenance_141v.js",
+      "sha256": "da442ee26fb2103713f79d72cac7f4a0a2cbd9bb998063c1372003ffe4d85bab"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_captures_141v.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/reprocess_captures_141v.js",
+      "sha256": "4a82fb1feea3b24aaff63faf673264a78d47ac5677437e87666c581c41e1e500"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141v.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/generic_compiler_141v.js",
+      "sha256": "6455ad8c65c1b68a543910f6679f1fac43e336d5e488c65d2e61937e91e764e5"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141v_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/batch_capture_141v_manifest.json",
+      "sha256": "e1ed8525acbe5912b759de32199689cbbad44416bf2f30bbc58ccfe2dae222ae"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_browser_native_dom_141v.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/test_browser_native_dom_141v.js",
+      "sha256": "7a593eaa32a4903b3089fbd00bb3574c3791ce016ac1ae52512709c2d65cf6fd"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141v.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/test_generic_compiler_141v.js",
+      "sha256": "f14e82c3f4b9e09ecd282cf614f38834588160759b4682efed45dc749f0ecb86"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141V_DOM_PROVENANCE_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/JAYT_141V_DOM_PROVENANCE_REVIEW_PACK.md",
+      "sha256": "8e42576a4be485d30b27239bb9a5350ebe01ea962ccc844fb02413bf0f0c4403"
+    }
+  ]
+}

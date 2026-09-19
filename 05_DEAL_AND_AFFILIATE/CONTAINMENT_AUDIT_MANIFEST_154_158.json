@@ -1,0 +1,51 @@
+{
+  "containment_id": "CONTAINMENT_AUDIT_154_158",
+  "directive": "JAYT-159: DỪNG CLAIM CỨNG, TÁCH TEST DATA VÀ KÍCH HOẠT HYBRID SUPPLY TRUNG THỰC",
+  "created_at": "2026-08-27T06:10:38.132Z",
+  "untrusted_derived_artifacts": [
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/online_student_benefits_158.json",
+      "sha256": "538a572510a2dce729853fc01ef3e9f7c4cab278516fe113e950a09d09d22199",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Hard-coded ACTIVE claims and benefits without on-disk physical capture receipts."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/autonomous_schedule_registry_158.json",
+      "sha256": "f980ad0cd0028614109ac010b279633d58d5e0addab49020901788582fbdfc4c",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Derived from unverified ACTIVE student claims and unisolated test state."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/hybrid_supply_dashboard_158.json",
+      "sha256": "b6d4afa9a106aacd3488c4527a6b0aaa7673b5004c8bff390b9ad4d8ed0d380b",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Dashboard metrics derived from unverified active claims."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/community_proof_intake_158.json",
+      "sha256": "d9f3d4ab9e2ddd401c15866f27c72be90c73467b4647ba137950841cfe99d5a2",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Contaminated by test data written directly to operational store during test run."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/community_audit_tickets_158.json",
+      "sha256": "8de39a1f7a4c81603a068e7ba5f6dcb968097184ee007c0e7938a8a389ae254c",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Contaminated by test audit tickets written directly during test execution."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_125359_9224b6/RUN_MANIFEST.json",
+      "sha256": "394656bfa8d2e1d341936c0b583f360cb06a17440f2c06b7612cf8f5b0dce7b7",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Manifest 158 contains unproven ACTIVE student benefit claims and fallback hash tokens."
+    }
+  ],
+  "trusted_physical_raw_artifacts": [
+    {
+      "run_id": "RUN_20260827_124712_4a3023",
+      "run_directory": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_124712_4a3023",
+      "total_physical_receipts": 58,
+      "status": "TRUSTED_PHYSICAL_CAPTURES_PRESERVED"
+    }
+  ]
+}

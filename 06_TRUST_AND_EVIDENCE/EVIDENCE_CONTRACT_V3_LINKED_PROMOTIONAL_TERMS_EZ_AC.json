@@ -1,0 +1,107 @@
+{
+  "contract_id": "EVIDENCE_CONTRACT_V3_LINKED_PROMOTIONAL_TERMS_EZ_AC",
+  "version": "3.3.0-ez.ac",
+  "governing_directive": "JAYT-245 Section EZ-AC (Lines 4709-4739)",
+  "timestamp": "2026-08-31T08:18:01.335Z",
+  "source_document_graph": {
+    "parent_document": {
+      "role": "STUDENT_PROGRAM_PAGE",
+      "url": "https://www.spotify.com/vn-vi/student/",
+      "raw_vault_file": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_aa/candidate_ez_aa_doc_b_program_policy_raw_bytes.bin",
+      "byte_length": 213153,
+      "sha256": "1e2ee74dfd5799e55a7fa1847693cea0e206b591c873041c50887dbff7e66118",
+      "direct_link_locator": {
+        "byte_start": 138043,
+        "byte_end": 138111,
+        "raw_string": "href=\"https://www.spotify.com/legal/premium-promotional-offer-terms\""
+      }
+    },
+    "linked_target_document": {
+      "role": "LINKED_PROMOTIONAL_OFFER_TERMS",
+      "request_url": "https://www.spotify.com/legal/premium-promotional-offer-terms",
+      "final_url": "https://www.spotify.com/vn-vi/legal/premium-promotional-offer-terms/",
+      "redirect_chain": [
+        "https://www.spotify.com/legal/premium-promotional-offer-terms",
+        "https://www.spotify.com/vn-vi/legal/premium-promotional-offer-terms/"
+      ],
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 224281,
+      "sha256": "090fab48caea184351d6c34722431055154f57fdf00626cb22a515d5e874e2d1",
+      "raw_vault_file": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ac/candidate_ez_ac_doc_c_linked_promotional_terms_raw_bytes.bin",
+      "discovery_method": "DIRECT_PAGE_HYPERLINK_NAVIGATION_ZERO_LOGIN"
+    }
+  },
+  "url_graph_exact_match": {
+    "doc_b_href_target": "https://www.spotify.com/legal/premium-promotional-offer-terms",
+    "doc_c_captured_request_url": "https://www.spotify.com/legal/premium-promotional-offer-terms",
+    "url_equality_verified": true
+  },
+  "sentence_level_raw_excerpts": {
+    "doc_b_excerpts": [
+      {
+        "excerpt_id": "DOC_B_CLAUSE_01_LISTED_PROMO",
+        "claim_class": "LISTED_OFFER_STATEMENT",
+        "raw_string": "Sinh viên nhận 2 tháng dùng gói Premium với giá 33.000&nbsp;₫",
+        "byte_start": 135883,
+        "byte_end": 135955,
+        "faithful_mapping": "Quan sát thấy câu quảng bá gói 2 tháng Premium giá 33.000₫ cho sinh viên tại thời điểm capture."
+      },
+      {
+        "excerpt_id": "DOC_B_CLAUSE_02_STUDENT_ELIGIBILITY",
+        "claim_class": "ELIGIBILITY_RULE",
+        "raw_string": "Bạn sẽ đủ điều kiện nếu là sinh viên của một trường cao đẳng hay đại học được công nhận và trên 18 tuổi. Bạn có thể sử dụng gói Premium Student trong tối đa 4 năm.",
+        "byte_start": 142593,
+        "byte_end": 142812,
+        "faithful_mapping": "Quan sát thấy điều kiện sinh viên ĐH/CĐ được công nhận, trên 18 tuổi, tối đa 4 năm."
+      }
+    ],
+    "doc_c_excerpts": [
+      {
+        "excerpt_id": "DOC_C_CLAUSE_01_TERMS_SCOPE",
+        "claim_class": "PROMOTIONAL_TERMS_SCOPE",
+        "raw_string": "Chào mừng bạn đến với Điều khoản ưu đãi khuyến mãi Spotify Premium. Trên trang này, bạn có thể tìm thấy và đọc các điều khoản và điều kiện áp dụng cho ưu đãi khuyến mãi mà bạn đã đăng ký.",
+        "byte_start": 130521,
+        "byte_end": 130772,
+        "faithful_mapping": "Văn bản quy định điều khoản và điều kiện áp dụng cho các ưu đãi khuyến mãi Premium."
+      },
+      {
+        "excerpt_id": "DOC_C_CLAUSE_02_ONE_TIME_USE",
+        "claim_class": "OFFER_RESTRICTION",
+        "raw_string": "Người dùng đủ điều kiện có thể chấp nhận Ưu đãi khuyến mãi một lần - người dùng trước đó không thể đổi lại ưu đãi.",
+        "byte_start": 137806,
+        "byte_end": 137969,
+        "faithful_mapping": "Quy định người dùng đủ điều kiện chỉ được chấp nhận ưu đãi 1 lần."
+      },
+      {
+        "excerpt_id": "DOC_C_CLAUSE_03_EXPIRY_RESERVATION",
+        "claim_class": "EXPIRATION_RULE",
+        "raw_string": "Ưu đãi khuyến mãi phải được chấp nhận trước ngày hết hạn áp dụng được quảng cáo, nếu có.",
+        "byte_start": 138039,
+        "byte_end": 138164,
+        "faithful_mapping": "Quy định ưu đãi phải được chấp nhận trước ngày hết hạn nếu có."
+      }
+    ]
+  },
+  "clause_by_clause_entailment_matrix": {
+    "listed_price_observed_at_capture": true,
+    "eligibility_observed_at_capture": true,
+    "promotional_terms_linked_proven": true,
+    "effective_period_clause_observed": "UNOBSERVED",
+    "territory_da_nang_clause_observed": "UNOBSERVED",
+    "total_cost_clause_observed": "UNOBSERVED",
+    "eligibility_verification_mechanism_observed": "UNOBSERVED",
+    "voucher_code_observed": "UNOBSERVED",
+    "operator_entity_in_linked_terms_body_observed": "UNOBSERVED",
+    "relation_to_legal_entity_proven": false
+  },
+  "entailment_and_provenance_verdict": {
+    "classification": "HELD_INTERNAL_LINKED_PROMOTIONAL_TERMS_EVALUATED",
+    "public_eligible": false,
+    "t1_t2_commercial_count": 0,
+    "rationale": "Trang Student liên kết trực tiếp đến trang Điều khoản ưu đãi khuyến mãi (Doc C). Doc C quy định điều khoản chung của ưu đãi (sử dụng 1 lần, thời hạn), nhưng không chứa mệnh đề khẳng định pháp nhân vận hành trong thân văn bản và không chứa mã voucher hay giá tổng thực trả. Mặc định fail-closed giữ nội bộ, 0 tạo card public.",
+    "public_card_created": false,
+    "public_cta_created": false,
+    "public_link_created": false
+  }
+}

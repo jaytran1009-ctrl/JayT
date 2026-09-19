@@ -1,0 +1,119 @@
+{
+  "receipt_id": "JAYT_302_DIRECT_INGRESS_RECEIPT",
+  "scope_id": "JAYT_SCOPE_302_DIRECT_20260904",
+  "executed_at_utc": "2026-09-04T04:27:17.300Z",
+  "results": [
+    {
+      "slot_id": "SLOT_01_LIB",
+      "ingress_status": "INTAKE_FAILED__QUARANTINE",
+      "error": "fetch failed",
+      "raw_written": false
+    },
+    {
+      "slot_id": "SLOT_02_DATA",
+      "captured_at_utc": "2026-09-04T04:26:13.840Z",
+      "capture_started_at_utc": "2026-09-04T04:26:13.695Z",
+      "http_status": 302,
+      "final_url": "https://opendata.danang.gov.vn/gioi-thieu",
+      "sanitized_response_headers": {
+        "cache-control": "max-age=604800, public, max-age=259200",
+        "connection": "keep-alive",
+        "content-language": "und",
+        "content-length": "0",
+        "date": "Fri, 04 Sep 2026 04:26:13 GMT",
+        "expires": "Fri, 11 Sep 2026 04:26:13 GMT",
+        "location": "https://opendata.danang.gov.vn/page-not-found",
+        "pragma": "no-cache",
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block"
+      },
+      "raw_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_text_span": "dữ liệu mở",
+      "supporting_text_offset_utf8": -1,
+      "ingress_status": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "raw_written": false
+    },
+    {
+      "slot_id": "SLOT_03_1022",
+      "ingress_status": "INTAKE_FAILED__QUARANTINE",
+      "error": "fetch failed",
+      "raw_written": false
+    },
+    {
+      "slot_id": "SLOT_04_BIKE",
+      "captured_at_utc": "2026-09-04T04:27:16.846Z",
+      "capture_started_at_utc": "2026-09-04T04:26:13.897Z",
+      "http_status": 301,
+      "final_url": "https://danang.gov.vn/vi/web/dng/tram-xe-dap-cong-cong",
+      "sanitized_response_headers": {
+        "cache-control": "private, no-cache, no-store, must-revalidate",
+        "connection": "keep-alive",
+        "content-length": "257",
+        "content-type": "text/html;charset=ISO-8859-1",
+        "date": "Fri, 04 Sep 2026 04:27:16 GMT",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "location": "https://danang.gov.vn/vi/trang-chu",
+        "pragma": "no-cache",
+        "server": "nginx",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1"
+      },
+      "raw_body_sha256": "094d694a947510685e2dc521b437fa1f591570c03ce7cf56026e2e2e8e325260",
+      "expected_text_span": "xe đạp công cộng",
+      "supporting_text_offset_utf8": -1,
+      "ingress_status": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "raw_written": false
+    },
+    {
+      "slot_id": "SLOT_05_MED",
+      "captured_at_utc": "2026-09-04T04:27:17.155Z",
+      "capture_started_at_utc": "2026-09-04T04:27:16.846Z",
+      "http_status": 301,
+      "final_url": "https://soyte.danang.gov.vn/danh-ba-kham-chua-benh",
+      "sanitized_response_headers": {
+        "cache-control": "private, no-cache, no-store, must-revalidate, no-cache, no-store, must-revalidate",
+        "connection": "keep-alive",
+        "content-length": "263",
+        "content-type": "text/html;charset=ISO-8859-1",
+        "date": "Fri, 04 Sep 2026 04:27:17 GMT",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT, 0",
+        "location": "https://soyte.danang.gov.vn/trang-chu",
+        "pragma": "no-cache, no-cache",
+        "server": "nginx",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1"
+      },
+      "raw_body_sha256": "32774962ee9e874037a02888648486de4cbb140c807805102923f8b0c92d0188",
+      "expected_text_span": "cơ sở khám chữa bệnh",
+      "supporting_text_offset_utf8": -1,
+      "ingress_status": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "raw_written": false
+    },
+    {
+      "slot_id": "SLOT_06_DUT",
+      "captured_at_utc": "2026-09-04T04:27:17.300Z",
+      "capture_started_at_utc": "2026-09-04T04:27:17.155Z",
+      "http_status": 301,
+      "final_url": "https://dut.udn.vn/Gioithieu/Coso-vatchat",
+      "sanitized_response_headers": {
+        "content-length": "173",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 04 Sep 2026 04:27:16 GMT",
+        "location": "https://dut.udn.vn/TrangDaoTaoSDH/Gioithieu/Coso-vatchat",
+        "x-redirect-reason": "Custom Redirect Requested"
+      },
+      "raw_body_sha256": "30dbf71b66c5c031e69d89a5b46d55057a46740b437cf12579e3aa6850391bd3",
+      "expected_text_span": "thư viện",
+      "supporting_text_offset_utf8": -1,
+      "ingress_status": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "raw_written": false
+    }
+  ],
+  "raw_written_count": 0,
+  "public_approved_count": 0,
+  "render_permitted": false
+}

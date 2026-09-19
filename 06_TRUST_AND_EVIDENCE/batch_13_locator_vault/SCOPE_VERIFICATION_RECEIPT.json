@@ -1,0 +1,65 @@
+{
+  "receipt_name": "SCOPE_VERIFICATION_RECEIPT",
+  "generated_at_utc": "2026-09-07T04:38:15.146Z",
+  "scope_file": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng/04_DATA_PIPELINE/batch_matrix/BATCH_13_POLICY_INGRESS_SCOPE.json",
+  "scope_file_sha256": "cdb8ee7b90a4902860b6f57ff63c8bd29e5fbbb5f06d3ef124207f41524fc121",
+  "scope_version": "3.0",
+  "candidates_count": 3,
+  "candidates_checked": 3,
+  "candidates_passed": 3,
+  "candidates_failed": 0,
+  "all_passed": true,
+  "candidate_results": [
+    {
+      "candidate_id": "CAND_POLICY_CGV_MEMBERSHIP",
+      "brand_id": "cgv_cinemas",
+      "target_url": "https://www.cgv.vn/default/cgv-membership",
+      "checks": {
+        "file_exists": true,
+        "file_sha256_match": true,
+        "byte_slice_match": true,
+        "href_start_match": true,
+        "url_resolved_match": true,
+        "expected_target_match": true,
+        "unverified_status_guarded": true,
+        "no_predefined_assertions": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "candidate_id": "CAND_POLICY_GALAXY_U22",
+      "brand_id": "galaxy_cinema",
+      "target_url": "https://www.galaxycine.vn/u22/",
+      "checks": {
+        "file_exists": true,
+        "file_sha256_match": true,
+        "byte_slice_match": true,
+        "href_start_match": true,
+        "url_resolved_match": true,
+        "expected_target_match": true,
+        "unverified_status_guarded": true,
+        "no_predefined_assertions": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "candidate_id": "CAND_POLICY_JOLLIBEE_MENU",
+      "brand_id": "jollibee",
+      "target_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+      "checks": {
+        "file_exists": true,
+        "file_sha256_match": true,
+        "byte_slice_match": true,
+        "href_start_match": true,
+        "url_resolved_match": true,
+        "expected_target_match": true,
+        "unverified_status_guarded": true,
+        "no_predefined_assertions": true
+      },
+      "errors": [],
+      "passed": true
+    }
+  ]
+}

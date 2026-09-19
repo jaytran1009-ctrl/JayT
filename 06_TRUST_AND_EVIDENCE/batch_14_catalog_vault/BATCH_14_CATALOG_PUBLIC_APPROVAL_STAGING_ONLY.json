@@ -1,0 +1,63 @@
+{
+  "document_name": "BATCH_14_CATALOG_PUBLIC_APPROVAL_STAGING_ONLY",
+  "governing_work_orders": [
+    "JAYT-330",
+    "JAYT-330-R1"
+  ],
+  "issued_at_utc": "2026-09-07T04:40:45.1204090Z",
+  "decision_authority": "CEO / EXECUTIVE_COUNCIL",
+  "approval_status": "PUBLIC_APPROVED_STAGING_ONLY",
+  "approval_granted": true,
+  "target_package": "06_TRUST_AND_EVIDENCE/batch_14_catalog_vault/BATCH_14_CATALOG_ACCEPTANCE_PACKAGE.json",
+  "target_package_sha256": "4daadbcd4115d0d878dc66410173629cee8590dd8e7069416579c6767be0b9b0",
+  "technical_receipt": "06_TRUST_AND_EVIDENCE/batch_14_catalog_vault/BATCH_14_CATALOG_VALIDATION_RECEIPT.json",
+  "technical_verdict_required": "TECHNICAL_VALIDATION_PASS",
+  "approved_counts": {
+    "total_rows": 22,
+    "new_cards": 18,
+    "update_existing": 4,
+    "expected_final_unique_staging_cards": 22
+  },
+  "approved_candidate_ids": [
+    "B14_JB_70145",
+    "B14_JB_70144",
+    "B14_JB_2840004",
+    "B14_JB_4000742",
+    "B14_JB_4000935",
+    "B14_PL_DTX64GB",
+    "B14_PL_LJDS080064G-BNBNG",
+    "B14_PL_LJDM400064G-BNBNG",
+    "B14_PL_SDDDC6-064G-G46",
+    "B14_PL_ITEM_4",
+    "B14_PL_SDCZ74-064G",
+    "B14_PL_SXS1000_1000GA",
+    "B14_PL_USB_3_2_Gen_1",
+    "B14_PL_DTX_256GB",
+    "B14_PL_SA400S37_480G",
+    "B14_PL_SKC3000S_1024G",
+    "B14_PL_SNV3S_1000G",
+    "B14_PL_KVR56S46BS8-16WP",
+    "B14_DMX_M170_DEN",
+    "B14_METIZ_U22_2D",
+    "B14_GALAXY_DANANG_TARIFF",
+    "B14_PLONG_MEMBER_BENEFITS"
+  ],
+  "rendering_conditions": {
+    "package_hash_must_match_exactly": true,
+    "no_package_regeneration_after_signature": true,
+    "apply_updates_without_duplicate_cards": true,
+    "phuclong_member_policy_has_no_price": true,
+    "galaxy_price_must_render_as_from_price": true,
+    "metiz_geographic_scope_must_remain_unverified": true,
+    "observation_disclaimers_required": true,
+    "affiliate_urls_forbidden": true,
+    "tracking_parameters_forbidden": true
+  },
+  "deployment_boundary": {
+    "staging_port": 4176,
+    "production_deployment_authorized": false,
+    "production_baseline_frozen": "v3.422.0",
+    "production_cards_count": 24
+  },
+  "fail_closed_rule": "Any byte-level package hash change, candidate-set change, failed technical gate, duplicate ID, affiliate/tracking marker, or unexpected final card count automatically revokes this approval."
+}

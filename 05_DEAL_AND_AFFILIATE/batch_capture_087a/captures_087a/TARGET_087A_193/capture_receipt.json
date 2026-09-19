@@ -1,0 +1,35 @@
+{
+  "target_id": "TARGET_087A_193",
+  "brand": "Grab Vietnam",
+  "sector": "FOOD_AND_RIDE",
+  "requested_url": "https://merchant.grab.com/vn-vn/blog/",
+  "final_url": "https://merchant.grab.com/vn-vn/blog",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:25:45.584Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+    "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+    "literal_href": "https://merchant.grab.com/vn-vn/blog/",
+    "link_offset": 149014,
+    "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+    "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 149014 trong parent DOM"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "3b0a15712c417572175adce78d3c4ce319c1755af5863536c9ac88655f0b4760",
+      "size": 291748
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "30cbd3f669cbe8337449eb5bd68040e445dff57610d3849ecf5c40d91fb64f1c",
+      "size": 3584427
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "1c9f98eab4ffec301ed3dbd85cc3cad4d6853a91abac8a918748db258c70c51c",
+      "size": 3159
+    }
+  }
+}

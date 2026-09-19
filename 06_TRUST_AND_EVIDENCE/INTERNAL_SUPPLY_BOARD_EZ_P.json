@@ -1,0 +1,94 @@
+{
+  "board_id": "INTERNAL_SUPPLY_BOARD_EZ_P",
+  "version": "1.0.0-ez.p",
+  "governance_directive": "JAYT-245 Section EZ-P (Lines 4330-4355)",
+  "state_machine_stages": [
+    "UNFETCHED",
+    "URL_REACHABLE",
+    "IDENTITY_PROVEN",
+    "FACT_CONTRACTED",
+    "CEO_REVIEW",
+    "PUBLIC_APPROVED",
+    "HELD_INTERNAL",
+    "QUARANTINED"
+  ],
+  "boundary_isolation_rule": "STRICT_INTERNAL_ONLY_ZERO_LEAKAGE_TO_PUBLIC_STOREFRONT_OR_BUNDLE",
+  "stage_summary_counts": {
+    "public_approved_count": 1,
+    "held_internal_count": 6,
+    "quarantined_count": 54,
+    "unfetched_queue_count": 6
+  },
+  "candidate_records": [
+    {
+      "candidate_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+      "subject": "GitHub Education Documentation",
+      "canonical_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+      "current_stage": "PUBLIC_APPROVED",
+      "receipt_ref": "JAYT-245-SECTION-EZ-H",
+      "approval_id": "CEO_DIRECTIVE_EZ_H",
+      "public_eligible": true,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CONTRACT_V3_EZ_K_01_NOTION_EDUCATION",
+      "subject": "Notion for Education",
+      "candidate_url": "https://www.notion.com/product/notion-for-education",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-K",
+      "verdict": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_J_02_CANVA_EDUCATION",
+      "subject": "Canva Education",
+      "candidate_url": "https://www.canva.com/education/",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-K",
+      "verdict": "HELD_INTERNAL_SEMANTIC_LOCATOR_INSUFFICIENT",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CONTRACT_EZ_M_01_DANANG_LIBRARY",
+      "subject": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "candidate_url": "http://thuvien.danang.gov.vn/",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-M",
+      "verdict": "URL_REACHABLE_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CONTRACT_EZ_M_02_DANANG_DICHVUCONG",
+      "subject": "Cổng Dịch vụ công",
+      "candidate_url": "https://dichvucong.danang.gov.vn/",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-M",
+      "verdict": "URL_REACHABLE_IDENTITY_LOCATION_UNPROVEN_HELD_INTERNAL",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CONTRACT_V3_EZ_O_CANDIDATE_EZ_O_01_VIETNAM_RAILWAY",
+      "subject": "Tổng công ty Đường sắt Việt Nam",
+      "candidate_url": "https://dsvn.vn/",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-O",
+      "verdict": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    },
+    {
+      "candidate_id": "CONTRACT_V3_EZ_O_CANDIDATE_EZ_O_02_VIETNAM_POST",
+      "subject": "Bưu điện Việt Nam (VNPost)",
+      "candidate_url": "https://vnpost.vn/",
+      "current_stage": "HELD_INTERNAL",
+      "receipt_ref": "JAYT-245-SECTION-EZ-O",
+      "verdict": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+      "public_eligible": false,
+      "last_audited_at": "2026-08-31T14:12:00+07:00"
+    }
+  ]
+}

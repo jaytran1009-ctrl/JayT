@@ -1,0 +1,194 @@
+{
+  "ledger_id": "SOURCE_PROOF_GATE_LEDGER_EZ_S",
+  "version": "2.0.0-ez.s",
+  "governance_directive": "JAYT-245 Section EZ-S (Lines 4412-4430)",
+  "schema_enforcement": {
+    "observed_with_locator_schema": [
+      "raw_receipt_id",
+      "exact_source_excerpt",
+      "byte_start",
+      "byte_end",
+      "claim_class",
+      "faithful_mapping",
+      "reviewer_status"
+    ],
+    "fallback_rule": "MISSING_ANY_REQUIRED_FIELD_FORCES_UNOBSERVED",
+    "title_vs_operating_body_separation": "IDENTITY_TITLE_OBSERVATION_DOES_NOT_GRANT_OPERATING_BODY_PROOF"
+  },
+  "evaluated_sources": [
+    {
+      "intake_id": "INTAKE_01_DANANG_BUS_PORTAL",
+      "candidate_url": "https://www.danangbus.vn/",
+      "document_path_known": false,
+      "identity_title_observed": "UNOBSERVED",
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": false,
+      "proof_gate_status": "GENERIC_HOMEPAGE_PAUSED_PENDING_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "candidate_url": "http://thuvien.danang.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_L_DANANG_LIBRARY",
+        "exact_source_excerpt": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+        "byte_start": 339,
+        "byte_end": 374,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+        "reviewer_status": "OBSERVED_TITLE_ONLY_NO_OPERATING_BODY_PROOF"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "HOMEPAGE_IDENTITY_TITLE_ONLY_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "candidate_url": "https://dichvucong.danang.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_L_DANANG_DICHVUCONG",
+        "exact_source_excerpt": "Cổng Dịch vụ công",
+        "byte_start": 178,
+        "byte_end": 196,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Cổng Dịch vụ công",
+        "reviewer_status": "OBSERVED_GENERIC_TITLE_LOCATION_UNPROVEN"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "GENERIC_TITLE_OBSERVED_LOCATION_UNPROVEN_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_04_DANANG_MUSEUM_PORTAL",
+      "candidate_url": "https://baotangdanang.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_P_DANANG_MUSEUM",
+        "exact_source_excerpt": "Bảo tàng Đà Nẵng",
+        "byte_start": 300,
+        "byte_end": 317,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Bảo tàng Đà Nẵng",
+        "reviewer_status": "OBSERVED_TITLE_ONLY_NO_OPERATING_BODY_PROOF"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "HOMEPAGE_IDENTITY_TITLE_ONLY_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_05_NATIONAL_LIBRARY_OF_VIETNAM",
+      "candidate_url": "http://nlv.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_P_NATIONAL_LIBRARY",
+        "exact_source_excerpt": "Thư viện Quốc gia Việt Nam",
+        "byte_start": 412,
+        "byte_end": 438,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Thư viện Quốc gia Việt Nam",
+        "reviewer_status": "OBSERVED_TITLE_ONLY_NO_OPERATING_BODY_PROOF"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "HOMEPAGE_IDENTITY_TITLE_ONLY_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_06_DANANG_OPEN_DATA_PORTAL",
+      "candidate_url": "https://opendata.danang.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": "UNOBSERVED",
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": false,
+      "proof_gate_status": "GENERIC_HOMEPAGE_PAUSED_PENDING_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_07_VIETNAM_RAILWAY_OFFICIAL",
+      "candidate_url": "https://dsvn.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_O_VIETNAM_RAILWAY",
+        "exact_source_excerpt": "Tổng công ty Đường sắt Việt Nam",
+        "byte_start": 210,
+        "byte_end": 242,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Tổng công ty Đường sắt Việt Nam",
+        "reviewer_status": "OBSERVED_TITLE_ONLY_NO_OPERATING_BODY_PROOF"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "HOMEPAGE_IDENTITY_TITLE_ONLY_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_08_DANANG_DEPARTMENT_OF_INDUSTRY_TRADE",
+      "candidate_url": "https://socongthuong.danang.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": "UNOBSERVED",
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": false,
+      "proof_gate_status": "GENERIC_HOMEPAGE_PAUSED_PENDING_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_09_VIETNAM_POST_PUBLIC_SERVICES",
+      "candidate_url": "https://vnpost.vn/",
+      "document_path_known": false,
+      "identity_title_observed": {
+        "raw_receipt_id": "RECEIPT_EZ_O_VIETNAM_POST",
+        "exact_source_excerpt": "Bưu điện Việt Nam",
+        "byte_start": 180,
+        "byte_end": 197,
+        "claim_class": "IDENTITY_TITLE_ONLY",
+        "faithful_mapping": "Bưu điện Việt Nam",
+        "reviewer_status": "OBSERVED_TITLE_ONLY_NO_OPERATING_BODY_PROOF"
+      },
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": true,
+      "proof_gate_status": "HOMEPAGE_IDENTITY_TITLE_ONLY_HELD_INTERNAL_NO_CARD"
+    },
+    {
+      "intake_id": "INTAKE_10_DANANG_CENTER_FOR_DISEASE_CONTROL",
+      "candidate_url": "https://cdc.danang.gov.vn/",
+      "document_path_known": false,
+      "identity_title_observed": "UNOBSERVED",
+      "operating_body_clause_observed": "UNOBSERVED",
+      "policy_or_action_clause_observed": "UNOBSERVED",
+      "freshness_clause_observed": "UNOBSERVED",
+      "canonical_relation_observed": "UNOBSERVED",
+      "raw_accessible": false,
+      "proof_gate_status": "GENERIC_HOMEPAGE_PAUSED_PENDING_DOCUMENT_PATH"
+    }
+  ],
+  "capture_state_summary": {
+    "total_sources": 10,
+    "sources_with_operating_body_proof": 0,
+    "sources_with_document_path_known": 0,
+    "capture_state": "ALL_CAPTURES_PAUSED_UNTIL_SPECIFIC_POLICY_DOCUMENT_PATH_DISCOVERED"
+  }
+}

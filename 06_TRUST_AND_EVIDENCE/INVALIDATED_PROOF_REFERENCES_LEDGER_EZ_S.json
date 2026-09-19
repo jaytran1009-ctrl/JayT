@@ -1,0 +1,57 @@
+{
+  "ledger_id": "INVALIDATED_PROOF_REFERENCES_LEDGER_EZ_S",
+  "version": "1.0.0-ez.s",
+  "governing_directive": "JAYT-245 Section EZ-S (Lines 4412-4430)",
+  "timestamp": "2026-08-31T07:26:55.542Z",
+  "root_cause_diagnosis": "In EZ-R, receipt IDs referencing raw page titles (from EZ-L, EZ-O, EZ-P) were mistakenly marked as operating_body_clause_observed. A page <title> tag is merely a generic observation of page metadata and DOES NOT constitute evidence of legal entity, operating body, authority, canonical relation, or municipal locality.",
+  "invalidated_items": [
+    {
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "candidate_url": "http://thuvien.danang.gov.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_L",
+      "raw_text_actually_observed": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Tiêu đề trang web không chứng minh cơ quan chủ quản pháp lý hay tư cách vận hành chính thức."
+    },
+    {
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "candidate_url": "https://dichvucong.danang.gov.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_L",
+      "raw_text_actually_observed": "Cổng Dịch vụ công",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Chuỗi 'Cổng Dịch vụ công' là tiêu đề chung chung, hoàn toàn không chứng minh địa phương TP Đà Nẵng hay cơ quan vận hành."
+    },
+    {
+      "intake_id": "INTAKE_04_DANANG_MUSEUM_PORTAL",
+      "candidate_url": "https://baotangdanang.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_P",
+      "raw_text_actually_observed": "Bảo tàng Đà Nẵng",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Tiêu đề trang chủ không chứng minh thẩm quyền bảo tàng hay pháp nhân quản lý di tích."
+    },
+    {
+      "intake_id": "INTAKE_05_NATIONAL_LIBRARY_OF_VIETNAM",
+      "candidate_url": "http://nlv.gov.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_P",
+      "raw_text_actually_observed": "Thư viện Quốc gia Việt Nam",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Tiêu đề trang chủ không chứng minh điều lệ hoạt động hay tư cách pháp nhân cơ quan."
+    },
+    {
+      "intake_id": "INTAKE_07_VIETNAM_RAILWAY_OFFICIAL",
+      "candidate_url": "https://dsvn.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_O",
+      "raw_text_actually_observed": "Tổng công ty Đường sắt Việt Nam",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Tiêu đề cổng vé điện tử không chứng minh điều khoản quy định vận tải hay chính sách giá vé."
+    },
+    {
+      "intake_id": "INTAKE_09_VIETNAM_POST_PUBLIC_SERVICES",
+      "candidate_url": "https://vnpost.vn/",
+      "invalidated_reference": "OBSERVED_WITH_LOCATOR_RECEIPT_EZ_O",
+      "raw_text_actually_observed": "Bưu điện Việt Nam",
+      "correction_action": "Set operating_body_clause_observed = UNOBSERVED; Record title as identity_title_observed strictly without authority claim.",
+      "reason": "Tiêu đề trang chủ không chứng minh chính sách dịch vụ công ích hay cơ quan bưu chính vận hành."
+    }
+  ]
+}

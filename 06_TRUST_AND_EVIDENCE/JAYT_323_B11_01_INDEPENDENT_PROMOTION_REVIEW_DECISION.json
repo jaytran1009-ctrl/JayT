@@ -1,0 +1,80 @@
+{
+  "decision_id": "JAYT_323_B11_01_INDEPENDENT_PROMOTION_REVIEW_DECISION",
+  "governing_directive": "JAYT-323",
+  "work_order_reference": "01_EXECUTIVE_COUNCIL/JAYT_323_B11_01_INDEPENDENT_PROMOTION_REVIEW_WORK_ORDER.md",
+  "limitation_reference": "06_TRUST_AND_EVIDENCE/JAYT_323_B11_01_RECONCILIATION_LIMITATION.json",
+  "exception_reference": "06_TRUST_AND_EVIDENCE/JAYT_323_B11_01_PROVENANCE_EXCEPTION.json",
+  "signed_at_utc": "2026-09-04T15:42:00Z",
+  "accountable_approver": {
+    "human_name": "Chairman & Executive Council Board",
+    "role": "CHAIRMAN_AND_CEO",
+    "governing_body": "JAYT_EXECUTIVE_COUNCIL",
+    "authority_level": "CHAIRMAN_EXECUTIVE_REVIEW"
+  },
+  "subject_candidate": {
+    "slot_id": "B11_01",
+    "candidate_id": "B11_01_TRA_CUU_CHUYEN_BAY_DANANG_SMART_CITY_1022",
+    "title": "Thông tin chuyến bay trên Danang Smart City",
+    "content_tier": "T2_CIVIC_NAV",
+    "leaf_url": "https://1022.vn/ra-mat-tien-ich-thong-tin-chuyen-bay-tren-ung-dung-danang-smart-city/",
+    "source_date": "2026-08-27"
+  },
+  "raw_evidence_reverification": {
+    "raw_file": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault/B11_01.raw.html",
+    "raw_sha256": "5fc20b13b11f26190db87b07cf6d7d462bc1a90bc459cd7654c2ea4fc9cfd190",
+    "raw_size_bytes": 229477,
+    "http_status": 200,
+    "supporting_text_offset_utf8": 102480,
+    "supporting_text_span": "Dịch vụ được triển khai dựa trên việc chia sẻ dữ liệu theo thời gian thực từ Hệ thống cơ sở dữ liệu điều hành sân bay (AODB), chính thức đưa vào phục vụ người dân và du khách từ ngày 27/8/2026. Sự kiện nằm trong khuôn khổ Lễ công bố triển khai các dự án mở rộng Cảng hàng không quốc tế Đà Nẵng.",
+    "verifications_passed": {
+      "hash_intact": true,
+      "payload_clean": true,
+      "span_exact_match": true,
+      "headers_redacted": true
+    }
+  },
+  "card_boundary_and_commercial_restrictions": {
+    "information_only": true,
+    "mandatory_disclaimer": "Thông tin tiện ích theo bài đăng của Cổng 1022 Đà Nẵng; không bán vé, không nhận đặt chỗ, không thu phí và không cam kết dữ liệu chuyến bay theo thời gian thực.",
+    "prohibitions_enforced": [
+      "ticket_sales",
+      "booking",
+      "fees",
+      "airline_claims",
+      "personal_data_collection",
+      "affiliate",
+      "tracking",
+      "production_mutation"
+    ],
+    "commercial_locks": {
+      "deals_feed_empty": true,
+      "voucher_count": 0,
+      "affiliate_active": false,
+      "tracking_active": false
+    }
+  },
+  "review_findings_and_prospective_scope": {
+    "historical_hydration_event": {
+      "status": "NOT_RETROSPECTIVELY_AMENDED",
+      "contemporaneous_1512z_mandate_absent": true,
+      "retrospective_assertion_disclaimed": true,
+      "note": "The Council formally disclaims any retroactive approval at 15:12:00Z. Historical evidence artifacts remain completely unedited and byte-identical."
+    },
+    "prospective_eligibility_evaluation": {
+      "content_quality": "VERIFIED_PUBLIC_CIVIC_NAV",
+      "evidence_authenticity": "VERIFIED_1022_VN_REAL_BODY",
+      "community_value": "CIVIC_FLIGHT_INFORMATION_LOOKUP_WITHOUT_COMMERCE",
+      "quality_assurance_state": "66_OF_66_PASS_DOM_AUDIT_CERTIFIED"
+    }
+  },
+  "council_verdict": "FUTURE_RELEASE_CANDIDATE_REVIEW_APPROVED",
+  "governance_controls": {
+    "release_candidate_v3421_scope": "EXCLUDED__RC_V3421_MAINTAINS_22_CARDS_ONLY",
+    "staging_status": "ACTIVE_FOR_OBSERVATION__23_CARDS",
+    "future_release_candidate_eligibility": "ELIGIBLE_FOR_INCLUSION_IN_SUBSEQUENT_RELEASE_CANDIDATE_UNDER_EXPLICIT_CHAIRMAN_DECREE",
+    "production_release_decree_granted": false,
+    "production_deployment_authorized": false,
+    "production_live_version": "v3.420.0",
+    "production_mutation": false
+  }
+}

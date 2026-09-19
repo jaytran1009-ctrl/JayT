@@ -1,0 +1,17 @@
+{
+  "template_id": "W4_FIELD_TEST_ANONYMOUS_OBSERVATION_TEMPLATE",
+  "status": "TEMPLATE_ONLY__NO_SESSIONS_RECORDED",
+  "allowed_session_codes": ["W4-S-01", "W4-S-02", "W4-S-03", "W4-S-04", "W4-S-05", "W4-S-06", "W4-O-01", "W4-O-02", "W4-O-03", "W4-O-04", "W4-O-05", "W4-O-06"],
+  "record_schema": {
+    "session_code": "one of allowed_session_codes",
+    "segment": "student | office_worker",
+    "consent": "yes | no",
+    "lunch_calculator": "completed | incomplete | misunderstood_live_pricing",
+    "ktx_stack": "completed | incomplete | misunderstood_redeemability",
+    "spotify_danabus": "completed | incomplete | misunderstood_condition_or_fare_hold",
+    "privacy_issue": "none | stop_and_escalate",
+    "optional_anonymized_feedback": "string or null"
+  },
+  "prohibited_fields": ["name", "phone", "email", "address", "bank_data", "gps", "purchase_history", "delivery_app_screenshot", "audio", "video", "photo"],
+  "records": []
+}

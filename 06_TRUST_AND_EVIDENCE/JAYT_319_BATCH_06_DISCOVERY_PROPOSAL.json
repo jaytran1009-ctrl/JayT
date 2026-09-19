@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dossier_id": "JAYT_319_BATCH_06_DISCOVERY_PROPOSAL",
+  "work_order": "JAYT_319_BATCH_06_DISCOVERY_WORK_ORDER.md",
+  "generated_at": "2026-09-04T16:10:00+07:00",
+  "governance_mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_HYDRATION",
+  "council_verdict_baseline": {
+    "B04_01": "INTAKE_FAILED__QUARANTINE",
+    "B04_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 4)",
+    "B04_03": "CONTENT_SPAN_MISMATCH__QUARANTINE",
+    "B04_04": "EVIDENCE_COMPLETE_INTERNAL_HELD (Vault only, zero render)",
+    "B04_05": "INTAKE_FAILED__QUARANTINE",
+    "B04_06": "PUBLIC_APPROVED_STAGING_ONLY (Card 6)",
+    "B04_07": "PUBLIC_APPROVED_STAGING_ONLY (Card 5)",
+    "B04_08": "SCOPE_DENIED__EXPIRED_EVENT_SOURCE",
+    "B04_09": "HELD__PENDING_PRICE_CLAIM_REMEDIATION",
+    "B04_10": "PUBLIC_APPROVED_STAGING_ONLY (Card 7)",
+    "B04_11": "REJECTED__TEMPORARY_EVENT_EXPIRING",
+    "B05_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 8)",
+    "B05_02": "HELD__INSTITUTIONAL_SIGNING_ANNOUNCEMENT (Zero direct utility intake)",
+    "B05_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 9)"
+  },
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 9,
+    "production_card_count": 3
+  },
+  "candidates": [
+    {
+      "candidate_id": "B06_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_02_13_21",
+      "service_name": "Thông báo chuyển đổi xe buýt sử dụng điện trên các tuyến xe buýt số 02, 13 và 21",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-chuyen-doi-xe-buyt-su-dung-dien-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-02-13-va-21-5761.html",
+      "publisher": "Trung tâm Quản lý và Điều hành Giao thông công cộng thành phố Đà Nẵng (Danabus)",
+      "publication_date": "28/08/2026",
+      "effective_window": "Chính thức áp dụng từ ngày 28/08/2026 theo Công văn số 16041/SXD-VTATGT",
+      "recency_proof": "Đăng tải ngày 28/08/2026 trên cổng thông tin chính thức danangbus.vn",
+      "pre_declared_span": "Nhằm thực hiện chủ trương chuyển đổi phương tiện sử dụng năng lượng xanh trong hoạt động vận tải hành khách công cộng bằng xe buýt trên địa bàn thành phố Đà Nẵng",
+      "verified_span_offset": 819664,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH CÔNG CỘNG (KHÔNG QUẢNG CÁO GIÁ VÉ/KHÔNG CLAIM 0 ĐỒNG)",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "BATCH03_DS_07 (Lộ trình tổng thể mạng lưới xe buýt trợ giá)",
+          "B05_03 (Tuyến buýt điện số 05 KCC Hòa Hiệp Nam - Công viên Biển Đông)"
+        ],
+        "differentiating_factor": "Thông báo chính sách chuyển đổi phương tiện buýt điện xanh cho Tuyến 02, 13, 21 kết nối liên quận và Hội An"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Thông tin điều hành giao thông công cộng năng lượng sạch; không chứa quảng cáo giá vé, không giỏ hàng vé, không thương mại hóa."
+    },
+    {
+      "candidate_id": "B06_02_BAN_TIN_SUC_KHOE_CONG_DONG_CDC_DANANG",
+      "service_name": "Bản tin Sức khỏe cộng đồng: Hướng dẫn giữ gìn vệ sinh môi trường và phòng chống dịch bệnh",
+      "official_leaf_url": "https://ksbtdanang.vn/tai-lieu-truyen-thong-gdsk/ban-tin-skcd/ban-tin-suc-khoe-cong-dong-ky-7-2026-77.html",
+      "publisher": "Trung tâm Kiểm soát bệnh tật thành phố Đà Nẵng (CDC Đà Nẵng)",
+      "publication_date": "30/07/2026",
+      "effective_window": "Kỳ 7/2026 - Thường xuyên / Y tế công cộng mùa hè 2026",
+      "recency_proof": "Đăng tải chính thức ngày 30/07/2026 trên cổng thông tin ksbtdanang.vn",
+      "pre_declared_span": "Giữ gìn vệ sinh cá nhân và vệ sinh môi trường là một trong những giải pháp quan trọng nhằm bảo vệ, chăm sóc và nâng cao sức khỏe Nhân dân.",
+      "verified_span_offset": 216,
+      "commercial_intent": "NONE",
+      "fee_tier": "MIỄN PHÍ",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_06 (An toàn tiêm chủng và theo dõi phản ứng sau tiêm)",
+          "B04_10 (Lịch tiêm chủng cho trẻ em)",
+          "B05_01 (Lịch tiêm chủng cho thai kỳ)"
+        ],
+        "differentiating_factor": "Bản tin tuyên truyền giáo dục sức khỏe môi trường và phòng dịch tễ cộng đồng, không phải lịch tiêm chủng"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tài liệu giáo dục sức khỏe cộng đồng mùa hè; không chứa tư vấn phác đồ điều trị, không đặt lịch khám, không có link giá dịch vụ."
+    },
+    {
+      "candidate_id": "B06_03_HUONG_DAN_DICH_VU_CONG_TRUC_TUYEN_DANANG",
+      "service_name": "Hướng dẫn công dân nộp hồ sơ trực tuyến trên Cổng Dịch vụ công quốc gia và TP Đà Nẵng",
+      "official_leaf_url": "https://duynghia.danang.gov.vn/vi/web/xa-duy-nghia/w/huong-dan-cong-dan-nop-ho-so-truc-tuyen-tren-cong-dich-vu-cong-quoc-gia",
+      "publisher": "Cổng Thông tin điện tử TP Đà Nẵng / Bộ phận Một cửa - Hành chính công (danang.gov.vn)",
+      "publication_date": "25/08/2026",
+      "effective_window": "Hành chính công số hiện hành (ban hành 25/08/2026)",
+      "recency_proof": "Đăng tải ngày 25/08/2026 16:30 trên trang thông tin điện tử thuộc hệ thống cổng thông tin danang.gov.vn",
+      "pre_declared_span": "Chuyển đổi số trong lĩnh vực hành chính công đang mang lại nhiều tiện ích thiết thực cho công dân. Thay vì phải xếp hàng, chờ đợi, giờ đây mọi người có thể nộp hồ sơ, theo dõi và nhận kết quả giải quyết các thủ tục hành chính ngay tại nhà thông qua Cổng Dịch vụ công quốc gia",
+      "verified_span_offset": 1005,
+      "commercial_intent": "NONE",
+      "fee_tier": "DỊCH VỤ HÀNH CHÍNH CÔNG MIỄN PHÍ",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_02 (Ký số toàn dân trong tiếp cận dịch vụ y tế điện tử)"
+        ],
+        "differentiating_factor": "Cẩm nang hướng dẫn công dân nộp hồ sơ trực tuyến qua Cổng Dịch vụ công quốc gia và VNeID trong toàn bộ thủ tục hành chính công"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tiện ích hành chính công phi thương mại phục vụ người dân tiếp cận thủ tục hành chính số; zero phí, zero quảng cáo thương mại."
+    }
+  ]
+}

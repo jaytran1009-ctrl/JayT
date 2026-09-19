@@ -1,0 +1,114 @@
+{
+  "receipt_id": "RECEIPT_SECTION_EM_20260830",
+  "version": "v3.467.0-staging.em",
+  "timestamp_utc": "2026-08-30T12:41:55.552Z",
+  "server_runtime": {
+    "port": 4173,
+    "url": "http://127.0.0.1:4173",
+    "status": "ONLINE",
+    "http_code": 200,
+    "health_endpoint": "http://127.0.0.1:4173/health",
+    "health_payload": {
+      "status": "UP",
+      "version": "v3.467.0-staging.em",
+      "ledger_sha256": "c693a785a82c9e9a41189eae6e7ecd3d3cbd27bd4f3877d52a10c470eab7eabe",
+      "port": 4173,
+      "static_dir": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\staging_deploy_em",
+      "start_time_utc": "2026-08-30T12:40:39.661Z",
+      "uptime_seconds": 60,
+      "dossiers_evaluated_count": 8,
+      "attempts_recorded_count": 8,
+      "field_facts_verified_count": 0,
+      "four_intent_dossiers": {
+        "INTENT_PUBLIC_TRANSIT": 3,
+        "INTENT_EDUCATION_POLICY": 2,
+        "INTENT_CULTURE_LEISURE": 2,
+        "INTENT_CULINARY_RETAIL": 1
+      },
+      "tier_1_deals_count": 0,
+      "vouchers_count": 0,
+      "quarantined_jpegs_in_runtime": 0
+    }
+  },
+  "ledger_fingerprint": {
+    "ledgerVersion": "v3.467.0-staging.em",
+    "ledgerSha256": "c693a785a82c9e9a41189eae6e7ecd3d3cbd27bd4f3877d52a10c470eab7eabe",
+    "countAnGi": "11",
+    "countDiDau": "14",
+    "countTienIch": "13",
+    "countMuaSam": "12",
+    "countTotal": "50",
+    "countVouchers": "0"
+  },
+  "observable_acquisition_audit": {
+    "dossiers_evaluated_count": 8,
+    "attempts_recorded_count": 8,
+    "attempts_with_full_16_fields_count": 8,
+    "one_to_one_join_valid": true,
+    "total_field_verified_facts": 0,
+    "tier_1_verified_deals": 0,
+    "voucher_hub_verified_vouchers": 0
+  },
+  "quarantine_audit": {
+    "total_quarantined_jpegs": 12,
+    "quarantined_jpegs_in_runtime": 0,
+    "all_quarantined_jpegs_isolated": true,
+    "zero_false_provenance_photographer_credits_in_dom": true,
+    "zero_unverified_badges_in_dom": true
+  },
+  "checks": {
+    "static_first_dossiers_evaluated": true,
+    "dossiers_count": 8,
+    "attempts_recorded_count": 8,
+    "fail_before_write_schema_passed": true,
+    "twelve_jpegs_quarantined_and_isolated": true,
+    "zero_jpegs_in_runtime_dom": true,
+    "zero_photographer_cc_strings_in_dom": true,
+    "asset_ownership_record_verified": true,
+    "runtime_asset_table_verified": true,
+    "fact_ledger_verified_facts_count": 0,
+    "verbatim_origin_timestamps_verified": true,
+    "identity_roster_50_items_verified": true,
+    "single_voucher_nav_instance_verified": true,
+    "voucher_button_count_in_desktop_nav": 1,
+    "honest_dual_column_scanner_verified": true,
+    "zero_forbidden_action_claims": true,
+    "allowlisted_negative_disclosures_acknowledged": true,
+    "voucher_hub_noncommercial_state_verified": true,
+    "zero_fake_vouchers_displayed": true,
+    "zero_affiliate_deeplinks": true,
+    "no_write_security_contract_verified": true,
+    "accesstrade_unverified_status_enforced": true,
+    "runtime_fingerprint_verified": true,
+    "mathematical_disjoint_partition_verified": true,
+    "disjoint_partitions_sum_equals_50": true,
+    "pairwise_intersections_zero": true,
+    "four_routes_cardinality_verified": true,
+    "journey_counts": {
+      "an_gi": 11,
+      "di_dau": 14,
+      "tien_ich": 13,
+      "mua_sam_hoc_tap": 12,
+      "total": 50
+    },
+    "public_count_ledger_em_verified": true,
+    "unified_public_count_contract_enforced": true,
+    "console_errors_count": 0,
+    "console_warnings_count": 0,
+    "browser_captures_count": 16,
+    "unique_sha256_count": 16,
+    "responsive_viewports_measured": [
+      "1440x900",
+      "768x1024",
+      "390x844"
+    ],
+    "themes_tested": [
+      "light",
+      "dark"
+    ],
+    "reduced_motion_tested": true,
+    "zero_pii_intact": true,
+    "production_lock_enforced": true
+  },
+  "governance_status": "PENDING_CEO_LIVE_REVIEW"
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_id": "JAYT_337_V3424_DETERMINISTIC_ROLLBACK_MANIFEST",
+  "target_version": "v3.423.0",
+  "target_cards_count": 47,
+  "strategy": "ATOMIC_VERCEL_ALIAS_REPOINT_TO_LAST_HEALTHY_DEPLOYMENT",
+  "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "source_bundle": "08_RELEASE_VAULT/candidates/v3.423.0/",
+  "trigger_policy": "ANY_POST_DEPLOY_GATE_FAILURE",
+  "artifacts": {
+    "index.html": {
+      "size_bytes": 11535,
+      "sha256": "839c8b86fe69b83bb6329236efa23b472fc2d863a6d2192b146609bb7a4c64bf"
+    },
+    "styles.css": {
+      "size_bytes": 50072,
+      "sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e"
+    },
+    "jayt_storefront_v3423.js": {
+      "size_bytes": 196390,
+      "sha256": "e696e873b533080d1e551c3bbdbb4c987dad7ee3d51dd75696ba57e4aa0ac48b"
+    },
+    "registry.json": {
+      "size_bytes": 16576,
+      "sha256": "b0e3d9eab6ead07a1d6cfd890cf0c44c89709f62495c77519a315e53fd410bfa"
+    }
+  }
+}

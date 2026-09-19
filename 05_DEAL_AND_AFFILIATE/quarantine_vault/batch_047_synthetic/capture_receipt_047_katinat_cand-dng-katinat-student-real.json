@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-38-KATINAT",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_38",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-KATINAT-STUDENT-REAL"
+  },
+  "target": {
+    "brand_id": "KATINAT",
+    "category": "LOCAL_COFFEE_TEA",
+    "requested_url": "https://katinat.vn/tin-tuc/",
+    "final_url": "https://katinat.vn/tin-tuc/",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Katinat Saigon Kafe có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Katinat Student Special — Đồng Giá 45.000đ Trà Sữa Oolong Nướng T2–T6",
+    "conditions_snippet": "Áp dụng khung giờ 13:00 – 18:00 từ Thứ Hai đến Thứ Sáu"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_katinat_cand-dng-katinat-student-real.png",
+      "sha256": "bef66490872dfb400be9d9a6d5f8bfb79843522f40695fe7a54adb970fb167b1",
+      "bytes": 135728,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_katinat_cand-dng-katinat-student-real.html",
+      "sha256": "03d8024084591d51d28a4b28c7cb7d7e919f8621edc18d5b654324fddf45154d",
+      "bytes": 1029
+    },
+    "text_dump": {
+      "file": "capture_047_katinat_cand-dng-katinat-student-real.txt",
+      "sha256": "2a9d0e56fdc16865395daeb5436d5969ab06a3c4549cdd6fad9b115507befd5e",
+      "bytes": 645
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

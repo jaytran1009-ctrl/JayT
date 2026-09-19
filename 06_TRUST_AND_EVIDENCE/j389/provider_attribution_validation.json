@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/j389-provider-attribution-validation.v1.json",
+  "document_id": "JAYT_389_PROVIDER_ATTRIBUTION_VALIDATION",
+  "cycle": "JAYT-389",
+  "mandate": "WORK_ORDER_J389_PROVENANCE_HARVEST",
+  "evaluated_at_utc": "2026-09-11T04:55:33.338Z",
+  "governing_principles": {
+    "clicks_are_not_revenue": true,
+    "replayable_proof_required": true,
+    "zero_presumed_commission": true
+  },
+  "providers": [
+    {
+      "provider_name": "Shopee Vietnam",
+      "channel": "Shopee Mall",
+      "sku_count": 20,
+      "affiliate_enabled": false,
+      "attribution_status": "DISABLED_PENDING_REPLAYABLE_PROVIDER_ATTRIBUTION",
+      "reason": "No provider-issued server-side conversion token or replayable attribution transaction record has been issued to JayT. All 20 Shopee SKUs serve via direct canonical official Mall URLs with honest non-affiliate disclosure.",
+      "direct_official_link_mode": true
+    },
+    {
+      "provider_name": "Lazada Vietnam",
+      "channel": "LazMall",
+      "sku_count": 6,
+      "affiliate_enabled": false,
+      "attribution_status": "DISABLED_PENDING_REPLAYABLE_PROVIDER_ATTRIBUTION",
+      "reason": "No provider-issued server-side conversion token or replayable attribution transaction record has been issued to JayT. All 6 Lazada SKUs serve via direct canonical official Mall URLs with honest non-affiliate disclosure.",
+      "direct_official_link_mode": true
+    },
+    {
+      "provider_name": "TikTok Shop Vietnam",
+      "channel": "Official Store",
+      "sku_count": 4,
+      "affiliate_enabled": false,
+      "attribution_status": "DISABLED_PENDING_REPLAYABLE_PROVIDER_ATTRIBUTION",
+      "reason": "No provider-issued server-side conversion token or replayable attribution transaction record has been issued to JayT. All 4 TikTok Shop SKUs serve via direct canonical official Mall URLs with honest non-affiliate disclosure.",
+      "direct_official_link_mode": true
+    }
+  ],
+  "summary": {
+    "total_providers_evaluated": 3,
+    "affiliate_enabled_providers_count": 0,
+    "direct_link_mode_providers_count": 3,
+    "total_skus_in_direct_link_mode": 30,
+    "non_affiliate_disclosure_mandate_active": true
+  }
+}

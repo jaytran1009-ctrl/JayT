@@ -1,0 +1,85 @@
+{
+  "candidate_id": "CANDIDATE_EZ_P_02_NATIONAL_LIBRARY",
+  "intake_id": "INTAKE_05_NATIONAL_LIBRARY_OF_VIETNAM",
+  "name": "Thư viện Quốc gia Việt Nam — Cổng thông tin học thuật",
+  "selection_rationale": "Khảo sát cổng tra cứu thư mục và học thuật quốc gia theo JTBD Không gian công cộng học tập.",
+  "jtbd_category": "KHONG_GIAN_CONG_CONG_HOC_TAP",
+  "initial_url": "http://nlv.gov.vn/",
+  "final_url": "https://nlv.gov.vn/",
+  "navigation_redirect_chain": [
+    {
+      "document_from_url": "http://nlv.gov.vn/",
+      "document_to_url": "https://nlv.gov.vn/",
+      "http_status": 301
+    }
+  ],
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "raw_bytes_length": 79122,
+  "raw_bytes_sha256": "87ce641e09a185232535ff9884cef2e05e2a8fdff2f51a464b9e615cb69af80f",
+  "raw_bytes_filename": "candidate_ez_p_02_national_library_raw_bytes.bin",
+  "extracted_title": "THƯ VIỆN QUỐC GIA VIỆT NAM",
+  "evidence_contract_v3": {
+    "contract_id": "CONTRACT_V3_EZ_P_CANDIDATE_EZ_P_02_NATIONAL_LIBRARY",
+    "version": "v3.0.0-ez.p",
+    "subject_name": "Thư viện Quốc gia Việt Nam — Cổng thông tin học thuật",
+    "canonical_document_url": "https://nlv.gov.vn/",
+    "raw_response_sha256": "87ce641e09a185232535ff9884cef2e05e2a8fdff2f51a464b9e615cb69af80f",
+    "raw_bytes_length": 79122,
+    "decoding_encoding": "utf-8",
+    "claim_class": "IDENTITY_ONLY",
+    "sentence_level_raw_excerpts": [
+      {
+        "excerpt_id": "EXCERPT_01_PAGE_TITLE",
+        "byte_start": 798,
+        "byte_end": 824,
+        "length": 26,
+        "source_language_verbatim_text": "THƯ VIỆN QUỐC GIA VIỆT NAM",
+        "claim_class": "IDENTITY_ONLY"
+      }
+    ],
+    "clause_by_clause_translation_mapping": [
+      {
+        "clause_index": 1,
+        "source_excerpt_ref": "EXCERPT_01_PAGE_TITLE",
+        "source_clause_text": "THƯ VIỆN QUỐC GIA VIỆT NAM",
+        "faithful_vietnamese_clause": "THƯ VIỆN QUỐC GIA VIỆT NAM",
+        "entailment_status": "STRICT_ENTAILMENT"
+      }
+    ],
+    "source_scope": {
+      "provenance_basis": "Cổng thông tin chính thức của đơn vị văn hóa / thư viện.",
+      "is_explicitly_stated_global": false,
+      "raw_basis_excerpt": "THƯ VIỆN QUỐC GIA VIỆT NAM"
+    },
+    "jayt_local_scope": {
+      "applies_to_da_nang": false,
+      "local_evidence_present": false,
+      "caveat_required": "Chỉ chứng minh sự tồn tại của cổng thông tin, chưa chứng minh giá vé, ưu đãi hay giờ mở cửa cụ thể."
+    },
+    "explicit_caveats_and_exclusions": [
+      "Trang chủ chỉ xác nhận danh tính cổng thông tin, chưa chứng minh giá vé tham quan, thẻ thư viện hay chính sách ưu đãi cụ thể.",
+      "Không có quyền lợi kinh tế hay giảm giá thương mại."
+    ],
+    "allowed_customer_facing_sentence": "Trang thông tin của Thư viện Quốc gia Việt Nam — Cổng thông tin học thuật.",
+    "disallowed_extrapolated_claims": [
+      "Miễn phí vé tham quan bảo tàng cho sinh viên",
+      "Mượn sách thư viện quốc gia trực tuyến miễn phí",
+      "Voucher di sản văn hóa"
+    ],
+    "entailment_gate_verification": {
+      "isolated_token_heuristic_rejected": true,
+      "all_clauses_strictly_entailed": true,
+      "no_unproven_eligibility_inferred": true,
+      "no_unproven_scope_inferred": true,
+      "publishable_status": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL"
+    },
+    "reviewer_decision": {
+      "reviewer": "DATA_AND_TRUST_COUNCIL_EZ_P",
+      "decision": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+      "timestamp": "2026-08-31T07:11:53.038Z"
+    }
+  },
+  "public_eligible": false,
+  "governance_status": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD"
+}

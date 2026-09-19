@@ -1,0 +1,129 @@
+{
+  "version": "v3.458.0-staging.ed",
+  "generated_at_utc": "2026-08-30T18:34:00.000Z",
+  "governing_directive": "JAYT-245 Section ED (Lines 3241-3242)",
+  "provenance_evolution_audit": {
+    "stage_eb": {
+      "flaw_identified": "10/12 artifact timestamps restamped to 11:22 execution time without origin lineage; false claim of 8 new field evidence.",
+      "verdict": "FAILED_PROVENANCE"
+    },
+    "stage_ec": {
+      "flaw_identified": "Timestamps rounded to minute/second (e.g. 08:14:00); DanaBus incorrectly attributed to DW instead of DS (07:08:10.372Z); 20 portal identity claimed without 20-item roster.",
+      "verdict": "FAILED_PROVENANCE_CLOSURE"
+    },
+    "stage_ed": {
+      "remediation_applied": "Restored verbatim origin timestamps with exact millisecond precision (e.g. DanaBus = 2026-08-30T07:08:10.372Z); linked exact origin manifest SHA256; mapped full 50-item identity roster with matched (8) and pending (42) breakdown.",
+      "verdict": "STRICT_PROVENANCE_PASS"
+    }
+  },
+  "artifact_diffs": [
+    {
+      "artifact_filename": "artifact_cand_bun_cha_ca_109_city_portal_root.html",
+      "origin_vault": "DS",
+      "origin_manifest_sha256": "2374e0ca33dea396ec5797557e8956b4451a56adfcb702a26714fe2effdf97c5",
+      "verbatim_original_fetched_at_utc": "2026-08-30T07:08:06.430Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T07:08:06:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T07:08:06.430Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_com_ga_a_hai_facebook_shell.html",
+      "origin_vault": "DS",
+      "origin_manifest_sha256": "2374e0ca33dea396ec5797557e8956b4451a56adfcb702a26714fe2effdf97c5",
+      "verbatim_original_fetched_at_utc": "2026-08-30T07:08:09.223Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T07:08:09:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T07:08:09.223Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_thu_vien_dut_catalog.html",
+      "origin_vault": "DS",
+      "origin_manifest_sha256": "2374e0ca33dea396ec5797557e8956b4451a56adfcb702a26714fe2effdf97c5",
+      "verbatim_original_fetched_at_utc": "2026-08-30T07:08:09.592Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T07:08:09:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T07:08:09.592Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_thu_vien_dund_portal.html",
+      "origin_vault": "DS",
+      "origin_manifest_sha256": "2374e0ca33dea396ec5797557e8956b4451a56adfcb702a26714fe2effdf97c5",
+      "verbatim_original_fetched_at_utc": "2026-08-30T07:08:09.886Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T07:08:09:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T07:08:09.886Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_bus_r16a_transit_portal.html",
+      "origin_vault": "DS",
+      "origin_manifest_sha256": "2374e0ca33dea396ec5797557e8956b4451a56adfcb702a26714fe2effdf97c5",
+      "verbatim_original_fetched_at_utc": "2026-08-30T07:08:10.372Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T07:08:10:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T07:08:10.372Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_tngo_bike_portal.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:14:56.678Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:14:56:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:14:56.678Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_metiz_cinema_portal.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:14:56.975Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:14:56:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:14:56.975Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_starlight_cinema_portal.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:14:57.204Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:14:57:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:14:57.204Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_dominos_pizza_portal.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:14:57.673Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:14:57:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:14:57.673Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_github_student_pack.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:15:01.730Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:15:01:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:15:01.730Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_jetbrains_student_pack.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:15:02.124Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:15:02:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:15:02.124Z (VERBATIM_ORIGIN_EXACT)"
+    },
+    {
+      "artifact_filename": "artifact_cand_highlands_coffee_portal.html",
+      "origin_vault": "DV",
+      "origin_manifest_sha256": "bbdb8bbefbc1d060b5b1a89d2185539fe69f9cc7fd0751b5fbc74ec183e19a24",
+      "verbatim_original_fetched_at_utc": "2026-08-30T08:15:02.480Z",
+      "eb_timestamp": "2026-08-30T11:22:... (RESTAMPED_INVALID)",
+      "ec_timestamp": "2026-08-30T08:15:02:00Z (ROUNDED_APPROXIMATE)",
+      "ed_timestamp": "2026-08-30T08:15:02.480Z (VERBATIM_ORIGIN_EXACT)"
+    }
+  ]
+}

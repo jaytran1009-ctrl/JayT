@@ -1,0 +1,60 @@
+{
+  "template_id": "EVIDENCE_PACK_TEMPLATE_162",
+  "directive": "JAYT-162: 5 CATEGORY HUBS, TRUSTED-AUTOMATION ONLY",
+  "version": "1.0.0",
+  "pack_types": {
+    "DEAL_EVIDENCE_PACK": {
+      "target_tier": "TIER_1_VERIFIED_PROOF_DEAL",
+      "badge": "🟢 Đã đối soát",
+      "mandatory_artifacts": {
+        "artifact_1_offer": {
+          "offer_title": "STRING",
+          "price_or_discount_quote": "VERBATIM_QUOTE",
+          "validity_timeframe_quote": "VERBATIM_QUOTE",
+          "offer_dom_hash": "SHA256_64_HEX",
+          "leaf_receipt_sha256": "SHA256_64_HEX"
+        },
+        "artifact_2_scope": {
+          "scope_type": "DANANG_SPECIFIC | NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+          "scope_text_quote": "VERBATIM_QUOTE",
+          "scope_dom_hash": "SHA256_64_HEX"
+        },
+        "artifact_3_branch": {
+          "branch_source_url": "HTTPS_URL",
+          "branch_evidence_quote": "VERBATIM_ADDRESS_QUOTE",
+          "branch_receipt_sha256": "SHA256_64_HEX"
+        },
+        "human_or_authorized_signoff": {
+          "signoff_type": "HUMAN_OPERATOR_VERIFIED | CAMPUS_SCOUT_VERIFIED | AUTHORIZED_FEED_IMPORT",
+          "signoff_by": "STRING_IDENTIFIER",
+          "signed_at": "ISO_8601_TIMESTAMP"
+        }
+      }
+    },
+    "VENUE_EVIDENCE_PACK": {
+      "target_tier": "TIER_2_VERIFIED_VENUE_LISTING",
+      "badge": "🔵 Địa điểm thực tế",
+      "mandatory_artifacts": {
+        "venue_name": "STRING",
+        "verified_address": "STRING_EXTRACTED_FROM_LOCATOR",
+        "address_dom_node_sha256": "SHA256_64_HEX",
+        "capture_html_sha256": "SHA256_64_HEX",
+        "locator_url": "HTTPS_URL",
+        "checked_at": "ISO_8601_TIMESTAMP",
+        "lifecycle_status": "ACTIVE_VERIFIED | RECHECK_REQUIRED | POSSIBLY_CLOSED | CLOSED_CONFIRMED"
+      }
+    },
+    "STUDENT_SOURCE_PACK": {
+      "target_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "badge": "🟣 Cổng xác thực sinh viên trực tuyến",
+      "mandatory_artifacts": {
+        "source_name": "STRING",
+        "provider": "STRING",
+        "official_source_url": "HTTPS_URL",
+        "checked_at": "ISO_8601_TIMESTAMP",
+        "status": "ONLINE_BENEFIT_SOURCE_TO_CHECK",
+        "action_label": "Mở cổng chính thức ↗"
+      }
+    }
+  }
+}

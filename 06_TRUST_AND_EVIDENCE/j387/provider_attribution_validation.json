@@ -1,0 +1,71 @@
+{
+  "$schema": "https://jayt.vn/schemas/j388-provider-attribution-validation.v1.json",
+  "document_id": "JAYT_388_PROVIDER_ATTRIBUTION_VALIDATION",
+  "cycle": "JAYT-388",
+  "mandate": "WORK_ORDER_J388_R2_EVIDENCE_EXECUTION",
+  "authority": "CHAIRMAN_AND_CEO_J388_DISPATCH",
+  "compiled_at_utc": "2026-09-11T03:30:00Z",
+  "compiled_at_local": "2026-09-11T10:30:00+07:00",
+  "governing_principles": {
+    "provider_issued_proof_required": "AFFILIATE_ACTIVATION_REQUIRES_REPLAYABLE_PROVIDER_REPORTING_RECORD",
+    "partner_id_insufficient": "CONFIG_PARAM_OR_MANUAL_URL_ASSEMBLY_DOES_NOT_PROVE_ATTRIBUTION",
+    "revenue_truth": "CLICKS_ARE_NOT_REVENUE__NEVER_REPRESENT_REDIRECTS_AS_EARNED_COMMISSION",
+    "community_first": "DIRECT_OFFICIAL_MALL_ROUTING_PRESERVES_STUDENT_PURCHASE_SAFETY"
+  },
+  "overall_status": {
+    "affiliate_enabled_globally": false,
+    "affiliate_enabled_providers_count": 0,
+    "unresolved_providers_count": 3,
+    "clicks_are_not_revenue_enforced": true
+  },
+  "providers_evaluation": {
+    "Shopee": {
+      "provider_name": "Shopee Vietnam (Shopee Mall)",
+      "partner_id_in_config": true,
+      "provider_issued_attribution_packet": "NOT_RECEIVED",
+      "replayable_server_validation_vector": null,
+      "evaluation_verdict": "REJECTED_FOR_ACTIVATION__PENDING_OFFICIAL_PROVIDER_CONFIRMATION",
+      "affiliate_enabled": false,
+      "outbound_destination_type": "DIRECT_OFFICIAL_MALL_URL",
+      "outbound_url_pattern": "https://shopee.vn/*",
+      "public_disclosure": "Trực tiếp dẫn tới Shopee Mall chính hãng, không qua cổng trung gian affiliate."
+    },
+    "Lazada": {
+      "provider_name": "Lazada Vietnam (LazMall)",
+      "partner_id_in_config": true,
+      "provider_issued_attribution_packet": "NOT_RECEIVED",
+      "replayable_server_validation_vector": null,
+      "evaluation_verdict": "REJECTED_FOR_ACTIVATION__PENDING_OFFICIAL_PROVIDER_CONFIRMATION",
+      "affiliate_enabled": false,
+      "outbound_destination_type": "DIRECT_OFFICIAL_MALL_URL",
+      "outbound_url_pattern": "https://www.lazada.vn/*",
+      "public_disclosure": "Trực tiếp dẫn tới LazMall chính hãng, không qua cổng trung gian affiliate."
+    },
+    "TikTok Shop": {
+      "provider_name": "TikTok Shop Vietnam (Mall)",
+      "partner_id_in_config": false,
+      "provider_issued_attribution_packet": "NOT_APPLICABLE",
+      "replayable_server_validation_vector": null,
+      "evaluation_verdict": "REJECTED_FOR_ACTIVATION__APP_DEEP_LINK_ONLY",
+      "affiliate_enabled": false,
+      "outbound_destination_type": "DIRECT_OFFICIAL_MALL_URL",
+      "outbound_url_pattern": "https://shop.tiktok.com/*",
+      "public_disclosure": "Trực tiếp dẫn tới gian hàng TikTok Shop chính hãng, không qua cổng trung gian affiliate."
+    },
+    "Cinema_And_Local_Transit": {
+      "provider_name": "Rạp Chiếu Phim & Tiện Ích Đô Thị Đà Nẵng (CGV, Galaxy, Metiz, Starlight, DanaBus)",
+      "partner_id_in_config": false,
+      "provider_issued_attribution_packet": "NOT_APPLICABLE",
+      "evaluation_verdict": "NON_COMMERCIAL_COMMUNITY_PUBLIC_SERVICE",
+      "affiliate_enabled": false,
+      "outbound_destination_type": "DIRECT_OFFICIAL_WEBSITE_OR_APP",
+      "public_disclosure": "Cung cấp miễn phí phục vụ sinh viên và cộng đồng Đà Nẵng."
+    }
+  },
+  "summary_accounting": {
+    "total_evaluated_providers": 4,
+    "authorized_for_commercial_monetization": 0,
+    "direct_community_service_providers": 4,
+    "compliance_with_work_order_j388": "100% COMPLIANT WITH R2_COMMERCIAL_ACTIVATION"
+  }
+}

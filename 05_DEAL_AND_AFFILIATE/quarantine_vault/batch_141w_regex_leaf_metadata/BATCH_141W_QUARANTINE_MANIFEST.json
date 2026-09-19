@@ -1,0 +1,60 @@
+{
+  "manifest_id": "BATCH_141W_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141X — DOMINO’S LEAF EVIDENCE SERIALIZATION & DANANG SCOPE RESOLUTION",
+  "status": "LEAF_REGEX_METADATA_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:40:00+07:00",
+  "executive_ruling": "CEO audit identified that 141W leaf metadata used page-wide regex, falsely extracting \"1 đ\" from \"Mua 1 Tặng 1\" copy and truncating validity spans. Raw leaf captures (HTML/text/screenshots/receipts) are preserved as valid physical artifacts, while 141W metadata is quarantined for DOM-native serialization.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_34_UNTRUSTED_PAGEWIDE_REGEX_LEAF_METADATA",
+      "description": "Pagewide regex extracted ambiguous numbers and truncated validity strings instead of node-specific DOM provenance."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/canonical_card_normalizer_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/canonical_card_normalizer_141w.js",
+      "sha256": "77660f91ef3ab716fdef7a71d244ae738024c5a92f6755aa7f0bacbcc3c6755b"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_captures_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/reprocess_captures_141w.js",
+      "sha256": "d6faa2a4c7568552a0cd194ddeac8dd453b6c750eef223c32b6df9946438fbb0"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/run_dominos_leaf_capture_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/run_dominos_leaf_capture_141w.js",
+      "sha256": "b4d89a61ac8312d040d9a7d4fcc047cc214e22fd4361a4ddc02d2b7351984e2d"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/dominos_leaf_batch_141w_report.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/dominos_leaf_batch_141w_report.json",
+      "sha256": "90606790344c535c4aacd01edd28ea20b5e0a15a74bd051add1b751509ac1c95"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/generic_compiler_141w.js",
+      "sha256": "02dc12013932ebc86b9e42b462d9972548094cac6c9d481e01ae8d31a1228f7a"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141w_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/batch_capture_141w_manifest.json",
+      "sha256": "3a337252f08ad53b198e026b9a2d38eeeacc651aaffe57baa1b9bf6b8b38444c"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_canonical_card_dedup_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/test_canonical_card_dedup_141w.js",
+      "sha256": "4acbd3d115b2c40cb2392b930d8a032d115d395639f45384c54e54ee6818dc20"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141w.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/test_generic_compiler_141w.js",
+      "sha256": "056dbd32598e64cd6f18b9f10247629f76d7c442f72d12a4e6cfa30c86ff3238"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141W_CANONICAL_CARD_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/JAYT_141W_CANONICAL_CARD_REVIEW_PACK.md",
+      "sha256": "69fb361c787036f480e51005394a2d973019fc542ea97ae6c58cde1bcda0e908"
+    }
+  ]
+}

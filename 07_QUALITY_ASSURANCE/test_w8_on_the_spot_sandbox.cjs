@@ -1,0 +1,30 @@
+const puppeteer = require('puppeteer');
+const assert = require('assert');
+
+(async () => {
+  const base = process.env.JAYT_W8_TEST_URL || 'http://127.0.0.1:4188/';
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('console', (msg) => { if (msg.type() === 'error') errors.push(msg.text()); });
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 1 });
+  const response = await page.goto(base, { waitUntil: 'networkidle2' });
+  assert.strictEqual(response.status(), 200);
+  assert.strictEqual(await page.$eval('[data-version]', (el) => el.dataset.version), 'v3.457.0-w8-staging');
+  const parsed = await page.evaluate(() => parseShopeeLink('https://www.lazada.vn/products/den-hoc-i123456789-s987654321.html'));
+  assert.strictEqual(parsed.itemId, '123456789');
+  await page.$eval('#j401-voucher-input', (el) => { el.value = 'https://www.lazada.vn/products/den-hoc-i123456789-s987654321.html'; });
+  await page.click('.j401-voucher-box .btn-cta-primary');
+  await page.waitForSelector('#j407-stack-result');
+  const disclosure = await page.$eval('.j401-voucher-result', (el) => el.textContent);
+  assert(disclosure.includes('#JayTAffiliate Sandbox'));
+  assert(disclosure.includes('Không cào voucher ẩn'));
+  const router = await page.evaluate(() => dispatchSmartAffiliate('shopee'));
+  assert.strictEqual(router.dispatchPerformed, false);
+  assert.strictEqual(router.affiliateEnabled, false);
+  assert.strictEqual(errors.length, 0, errors.join('\n'));
+  assert.strictEqual(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
+  await browser.close();
+  console.log('W8 ON-THE-SPOT SANDBOX QA: PASS | Lazada item parsed | disclosure visible | zero dispatch');
+})().catch((error) => { console.error(error); process.exit(1); });

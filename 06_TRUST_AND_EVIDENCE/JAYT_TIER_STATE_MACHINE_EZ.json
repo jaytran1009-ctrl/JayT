@@ -1,0 +1,77 @@
+{
+  "name": "JAYT_TIER_STATE_MACHINE_EZ",
+  "version": "v1.0.0-ez",
+  "states": {
+    "CANDIDATE_INGESTED": {
+      "description": "Initial intake of candidate observation from read-only sweep.",
+      "allowed_transitions": [
+        "QUARANTINED",
+        "TIER_4_RADAR",
+        "EVALUATING_EVIDENCE"
+      ]
+    },
+    "QUARANTINED": {
+      "description": "Record failed integrity, contains forbidden claims, missing provenance, or was rejected by Council.",
+      "public_display_allowed": false,
+      "allowed_transitions": [
+        "CANDIDATE_INGESTED"
+      ]
+    },
+    "TIER_4_RADAR": {
+      "description": "Fail-closed default state: Neutral tracking link with canonical source URL and standard copy only.",
+      "public_display_allowed": true,
+      "economic_claims_allowed": false,
+      "maps_links_allowed": false,
+      "allowed_transitions": [
+        "EVALUATING_EVIDENCE",
+        "QUARANTINED"
+      ]
+    },
+    "TIER_3_PUBLIC_FACILITY": {
+      "description": "Public community schedule/facility with official authoritative proof.",
+      "public_display_allowed": false,
+      "requires": [
+        "AUTHORITATIVE_GOV_OR_OFFICIAL_RECEIPT",
+        "INDEPENDENT_CEO_APPROVAL"
+      ],
+      "allowed_transitions": [
+        "TIER_4_RADAR",
+        "QUARANTINED"
+      ]
+    },
+    "TIER_2_OFFICIAL_PROGRAM": {
+      "description": "Official educational or public program terms proven by verbatim doc quote.",
+      "public_display_allowed": false,
+      "requires": [
+        "OFFICIAL_TERMS_DOC_RECEIPT",
+        "VERBATIM_QUOTE_MATCH",
+        "INDEPENDENT_CEO_APPROVAL"
+      ],
+      "allowed_transitions": [
+        "TIER_4_RADAR",
+        "QUARANTINED"
+      ]
+    },
+    "TIER_1_VERIFIED_OFFER": {
+      "description": "Verified economic offer with full 12-field evidence schema proven by raw receipt.",
+      "public_display_allowed": false,
+      "current_live_count": 0,
+      "requires": [
+        "FULL_12_FIELD_ECONOMIC_SCHEMA",
+        "PROVEN_RAW_HTTP_RECEIPT",
+        "ZERO_PERSONALIZED_AMBIGUITY",
+        "INDEPENDENT_CEO_APPROVAL"
+      ],
+      "allowed_transitions": [
+        "TIER_4_RADAR",
+        "QUARANTINED"
+      ]
+    }
+  },
+  "invariant_rules": [
+    "Rule 1: If any economic field is null or unproven -> State MUST be TIER_4_RADAR or QUARANTINED.",
+    "Rule 2: No account-dependent or cart-dependent voucher can ever enter TIER_1_VERIFIED_OFFER.",
+    "Rule 3: TIER_1_VERIFIED_OFFER count is strictly 0 until independent CEO gate sign-off.",
+    "Rule 4: Affiliate links, sub-ids, and campaign deeplinks are permanently blocked in all states."
+  ]
+}

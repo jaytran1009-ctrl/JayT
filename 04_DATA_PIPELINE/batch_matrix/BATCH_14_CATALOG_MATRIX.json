@@ -1,0 +1,176 @@
+{
+  "matrix_id": "BATCH_14_CATALOG_MATRIX_V1",
+  "governing_work_order": "JAYT-330-R1",
+  "authority": "EXECUTIVE_COUNCIL_DIRECTIVE_JAYT_330_R1",
+  "created_at_utc": "2026-09-07T04:30:00.000Z",
+  "target_candidate_range": {
+    "min": 16,
+    "max": 25
+  },
+  "constraints": {
+    "staging_only": true,
+    "production_deploy_forbidden": true,
+    "affiliate_lock": true,
+    "synthetic_data_forbidden": true,
+    "offset_requirement": "REPLACED_BY_CATALOG_ID_AND_POINTER_OR_ID",
+    "disclaimer_required": true
+  },
+  "catalogs": [
+    {
+      "catalog_id": "CAT_JOLLIBEE_COMBOS_01",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://jollibee.com.vn/c-ng-cay-c-ng-me.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_01.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_01.headers.json",
+      "target_type": "MAGENTO_BUNDLE_PAGE",
+      "item_pointer_pattern": "#product_addtocart_form/priceBundle/optionConfig",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_JOLLIBEE_COMBOS_02",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://jollibee.com.vn/m-t-minh-hit-ha.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_02.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_02.headers.json",
+      "target_type": "MAGENTO_BUNDLE_PAGE",
+      "item_pointer_pattern": "#product_addtocart_form/priceBundle/optionConfig",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_JOLLIBEE_COMBOS_03",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://jollibee.com.vn/combo-2-ngu-i.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_03.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_03.headers.json",
+      "target_type": "MAGENTO_BUNDLE_PAGE",
+      "item_pointer_pattern": "#product_addtocart_form/priceBundle/optionConfig",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_JOLLIBEE_COMBOS_04",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://jollibee.com.vn/c-p-doi-an-y.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_04.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_04.headers.json",
+      "target_type": "MAGENTO_BUNDLE_PAGE",
+      "item_pointer_pattern": "#product_addtocart_form/priceBundle/optionConfig",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_JOLLIBEE_COMBOS_05",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://jollibee.com.vn/combo-4-ngu-i.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_05.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_05.headers.json",
+      "target_type": "MAGENTO_BUNDLE_PAGE",
+      "item_pointer_pattern": "#product_addtocart_form/priceBundle/optionConfig",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_PHILONG_STUDY_TECH",
+      "brand_id": "phi_long",
+      "brand_name": "Phi Long Technology",
+      "catalog_category": "study_technology_catalog",
+      "official_url": "https://philong.com.vn/hdd-usb-kingston-64gb-datatraveler-exodia-dtx64gb-usb-3.2.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.headers.json",
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": ".p-name / .p-item / .special-price",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_DMX_STUDY_TECH",
+      "brand_id": "dien_may_xanh",
+      "brand_name": "Điện Máy XANH",
+      "catalog_category": "study_technology_catalog",
+      "official_url": "https://www.dienmayxanh.com/chuot-may-tinh/chuot-khong-day-logitech-m170-den",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_13_PRICE_v2.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_13_PRICE_v2.headers.json",
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": "script[type=\"application/ld+json\"]/0/offers",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_METIZ_TARIFFS",
+      "brand_id": "metiz_cinema",
+      "brand_name": "Metiz Cinema",
+      "catalog_category": "cinema_tariff",
+      "official_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_03.raw.html",
+      "baseline_headers_path": null,
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": ".promotion-detail / p:contains('55.000')",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_GALAXY_TARIFFS",
+      "brand_id": "galaxy_cinema",
+      "brand_name": "Galaxy Cinema",
+      "catalog_category": "cinema_tariff",
+      "official_url": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/galaxy_da_nang.raw.html",
+      "baseline_headers_path": null,
+      "target_type": "NEXTJS_SSR_PAGE",
+      "item_pointer_pattern": "meta[name=\"description\"] / props/pageProps/cinemaDetail/ticketUrls/0",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_PHUCLONG_BENEFITS",
+      "brand_id": "phuclong",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "catalog_category": "beverage_menu_programs",
+      "official_url": "https://phuclong.com.vn/hoi-vien/dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_05.raw.html",
+      "baseline_headers_path": null,
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": "dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien",
+      "expected_status": "ACTIVE_VERIFIED"
+    },
+    {
+      "catalog_id": "CAT_CGV_TARIFFS",
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "catalog_category": "cinema_tariff",
+      "official_url": "https://www.cgv.vn/default/cgv-membership",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.raw.html",
+      "baseline_headers_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.headers.json",
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": null,
+      "expected_status": "REJECTED_WAF_BOT_CHALLENGE"
+    },
+    {
+      "catalog_id": "CAT_LOTTE_TARIFFS",
+      "brand_id": "lotte_cinema",
+      "brand_name": "Lotte Cinema Vietnam",
+      "catalog_category": "cinema_tariff",
+      "official_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=8001",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/lotte_cinema.raw.html",
+      "baseline_headers_path": null,
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": null,
+      "expected_status": "REJECTED_MISSING_SERVER_PRICING"
+    },
+    {
+      "catalog_id": "CAT_LOTTERIA_MENU",
+      "brand_id": "lotteria",
+      "brand_name": "Lotteria Vietnam",
+      "catalog_category": "fast_food_menu",
+      "official_url": "https://www.lotteria.vn/",
+      "baseline_raw_path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/lotteria.raw.html",
+      "baseline_headers_path": null,
+      "target_type": "HTML_PAGE",
+      "item_pointer_pattern": null,
+      "expected_status": "REJECTED_FIREBASE_403_CLIENT_ONLY"
+    }
+  ]
+}

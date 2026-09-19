@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+            <link rel="preload" as="image" href="https://baotangdanang.vn/uploads/banners/banner_jz0vc0ou56-1778227460085.webp" fetchpriority="high">
+    
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    
+    <title>Bảo tàng Đà Nẵng</title>
+    <meta name="description" content="Bảo tàng Đà Nẵng">
+    <meta name="keywords" content="bao tang, my thuat, da nang">
+    <meta name="author" content="VR360 - Công ty Cổ phần Giải pháp Chuyển đổi số">
+
+    
+    <meta property="og:title" content="Bảo tàng Đà Nẵng">
+    <meta property="og:description" content="Bảo tàng Đà Nẵng">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baotangdanang.vn">
+    <meta property="og:image" content="https://baotangdanang.vn/uploads/settings/thumb_1766972119-1766972119751.webp">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bảo tàng Đà Nẵng">
+    <meta name="twitter:description" content="Bảo tàng Đà Nẵng">
+    <meta name="twitter:image" content="https://baotangdanang.vn/uploads/settings/thumb_1766972119-1766972119751.webp">
+
+    
+    <link rel="shortcut icon" href="https://baotangdanang.vn/uploads/settings/logo.png-1766972119751.png" type="image/x-icon">
+
+            <meta name="robots" content="index, archive, follow, noodp">
+        <meta name="googlebot" content="index, archive, follow, noodp">
+        <meta name="msnbot" content="all, index, follow">
+    
+    
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    
+    <link rel="stylesheet" href="/css/app.css?id=b155696fcb9f9ae15be7d447410b2d5c">
+
+    
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </noscript>
+
+        </head>
+
+    
+    <link rel="preload" href="/css/style.css?id=85e23cd4192c87f59e27c0cd7bd81fd0" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/responsive.css?id=b9be65206822f8e1bc3e711beab0d204" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://baotangdanang.vn/adminlte/plugins/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="/css/style.css?id=85e23cd4192c87f59e27c0cd7bd81fd0">
+        <link rel="stylesheet" href="/css/responsive.css?id=b9be65206822f8e1bc3e711beab0d204">
+        <link rel="stylesheet" href="https://baotangdanang.vn/adminlte/plugins/fontawesome-free/css/all.min.css">
+    </noscript>
+
+    
+    </head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<div class="site-header-sticky">
+    <header class="bg-white shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-2 gap-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="https://baotangdanang.vn">
+            <img class="logo-header" src="https://baotangdanang.vn/uploads/settings/1766972119-1766972119539.webp" alt="logo" loading="lazy">
+        </a>
+
+        <div id="slogan" class="marquee-container">
+            <div class="marquee-content"><img style="width: 100%; height: 90px;" src="https://baotangdanang.vn/uploads/settings/slogan_yivjbf1qti-1769483341028.webp" alt="Slogan" loading="lazy"></div>
+        </div>
+
+        <div class="search-container">
+            <button id="trigger-search-mobile" class="btn-search-mobile">
+                <i class="fa fa-search color-default-1"></i>
+            </button>
+            <div class="search-wrapper" id="search-wrapper">
+                <form action="/search" method="GET" id="search-form">
+                <div class="search-box">
+                    <input type="text" id="main-search" name="key" placeholder="Nhập từ khóa..." autocomplete="off" value="">
+                    <button type="submit"><i class="fa fa-search" style="padding: 5px 6px;"></i></button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .marquee-content {
+        display: inline-block;
+        /*padding-left: 100%;*/
+        /*animation: marquee 15s linear infinite;*/
+        font-weight: 500;
+        font-size: 24px;
+        color: var(--color-default-1);
+    }
+
+    @keyframes  marquee {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+
+    .marquee-container:hover .marquee-content {
+        animation-play-state: paused;
+    }
+
+    @media  screen and (max-width: 960px) {
+        #slogan{
+            display: none;
+        }
+    }
+
+
+    .search-wrapper { position: relative; min-width: 300px; }
+    .search-box { display: flex; background: var(--color-default-1); padding: 1px; border-radius: 1px; }
+    .search-box input { border: none; padding: 8px; width: 100%; outline: none; }
+    .search-box button{ background-color: unset; border: none; color: #ffffff }
+
+    .search-suggestions {
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: #fff; border: 1px solid #ddd;
+        list-style: none; padding: 0; margin: 5px 0 0;
+        display: none; /* Mặc định ẩn */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    .search-suggestions li { padding: 10px; cursor: pointer; border-bottom: 1px solid #eee; }
+    .search-suggestions li:hover { background: #f5f5f5; }
+    .search-suggestions li.title { font-weight: bold; background: #fafafa; cursor: default; }
+
+    /* Ẩn tất cả icon check mặc định */
+    .suggestion-item .check-icon {
+        display: none;
+        float: right;
+        color: var(--color-default-1);
+        margin-top: 4px;
+    }
+
+    /* Chỉ hiển thị icon check khi mục đó có class active */
+    .suggestion-item.active .check-icon {
+        display: block;
+    }
+
+    /* Thêm màu chữ hoặc nền cho mục đang chọn (tùy chọn) */
+    .suggestion-item.active {
+        background-color: #f0faff;
+        font-weight: bold;
+        color: var(--color-default-1);
+    }
+
+    .suggestion-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* Mặc định trên Desktop */
+    .btn-search-mobile {
+        display: none; /* Ẩn nút icon trên máy tính */
+    }
+
+    /* Cấu hình cho Mobile (Dưới 768px) */
+    @media (max-width: 767px) {
+        .btn-search-mobile {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .search-wrapper {
+            display: none; /* Mặc định ẩn khung search trên mobile */
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 60px; /* Thanh search nằm ngang đầu trang */
+            background: #fff;
+            z-index: 9999;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Khi active thì hiển thị */
+        .search-wrapper.mobile-active {
+            display: block;
+        }
+
+        .search-suggestions {
+            width: 100% !important;
+            top: 60px !important;
+        }
+    }
+</style>
+    <nav class="navbar navbar-expand-xl navbar-light bg-default">
+    <div class="main-menu" id="main-menu">
+        <a class="navbar-brand d-xl-none" href="https://baotangdanang.vn">Trang chủ</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-line line-1"></span>
+            <span class="toggler-line line-2"></span>
+            <span class="toggler-line line-3"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item d-none d-xl-block"><a class="nav-link active" href="https://baotangdanang.vn"><i class="fas fa-home"></i></a></li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Giới thiệu
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/gioi-thieu/lich-su-hinh-thanh">
+        Lịch sử hình thành
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/gioi-thieu/chuc-nang-nhiem-vu">
+        Chức năng nhiệm vụ
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/gioi-thieu/co-cau-to-chuc">
+        Cơ cấu tổ chức
+    </a>
+
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item ">
+                        <a class="nav-link  "
+                           href="https://baotangdanang.vn/tin-tuc">
+                            Tin tức
+                        </a>
+
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Bảo tàng cơ sở 1
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang/khong-gian-trung-bay">
+        Không gian trưng bày
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang/hoat-dong-nghiep-vu">
+        Hoạt động nghiệp vụ
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang/dich-vu">
+        Dịch vụ
+    </a>
+
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Hiện vật và phim tư liệu
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat-va-phim-tu-lieu/hien-vat">
+        Hiện vật
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat-va-phim-tu-lieu/phim-tu-lieu">
+        Phim tư liệu
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Bảo tàng cơ sở 2
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/khong-gian-trung-bay">
+        Không gian trưng bày
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hoat-dong-nghiep-vu">
+        Hoạt động nghiệp vụ
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/dich-vu">
+        Dịch vụ
+    </a>
+
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Hiện vật và phim tư liệu
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat-va-phim-tu-lieu/hien-vat">
+        Hiện vật
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat-va-phim-tu-lieu/phim-tu-lieu">
+        Phim tư liệu
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Bảo tàng Mỹ thuật
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/khong-gian-trung-bay">
+        Không gian trưng bày
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hoat-dong-nghiep-vu">
+        Hoạt động nghiệp vụ
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/dich-vu">
+        Dịch vụ
+    </a>
+
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Hiện vật và phim tư liệu
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat-va-phim-tu-lieu/hien-vat">
+        Hiện vật
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat-va-phim-tu-lieu/phim-tu-lieu">
+        Phim tư liệu
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Thành Điện Hải
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/thong-tin-gioi-thieu">
+        Thông tin giới thiệu
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/khong-gian-trung-bay">
+        Không gian trưng bày
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/hoat-dong-nghiep-vu">
+        Hoạt động nghiệp vụ
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/dich-vu">
+        Dịch vụ
+    </a>
+
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Hiện vật và phim tư liệu
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/hien-vat-va-phim-tu-lieu/hien-vat">
+        Hiện vật
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/thanh-dien-hai/hien-vat-va-phim-tu-lieu/phim-tu-lieu">
+        Phim tư liệu
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Bài chòi xứ quảng
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/gioi-thieu-ve-bai-choi">
+        Giới thiệu về Bài chòi
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/hoat-dong-chuyen-mon">
+        Hoạt động chuyên môn
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/nghe-si-nghe-nhan">
+        Nghệ sĩ - Nghệ Nhân
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/cau-lac-bo">
+        Câu lạc bộ
+    </a>
+
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Tài liệu số
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/tai-lieu-so/cong-trinh-nghien-cuu">
+        Công trình nghiên cứu
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/tai-lieu-so/kich-ban-bai-ban">
+        Kịch bản – Bài bản
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/tai-lieu-so/audio">
+        Audio
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/tai-lieu-so/phim-tu-lieu">
+        Phim tư liệu Bài chòi xứ Quảng
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/tai-lieu-so/tai-lieu-khac">
+        Tài liệu khác
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                                    <li class="dropdown-submenu custom-hover-dropdown">
+    <a class="dropdown-item  dropdown-toggle-side"
+       href="javascript:void(0)">
+        Hiện vật
+    </a>
+
+            <ul class="dropdown-menu shadow">
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/hien-vat/dao-cu">
+        Đạo cụ
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/hien-vat/nhac-cu">
+        Nhạc cụ
+    </a>
+
+    </li>
+                            <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/bai-choi-xu-quang/hien-vat/trang-phuc">
+        Trang phục
+    </a>
+
+    </li>
+                    </ul>
+    </li>
+                                                            </ul>
+                                            </li>
+                                                        <li class="nav-item dropdown custom-hover-dropdown">
+                        <a class="nav-link  dropdown-toggle"
+                           href="javascript:void(0)">
+                            Du khách
+                        </a>
+
+                                                    <ul class="dropdown-menu p-0 border-0 shadow-sm">
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/danh-cho-du-khach/thong-tin-can-biet">
+        Thông tin cần biết / Information
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/danh-cho-du-khach/su-kien">
+        Sự kiện / Events
+    </a>
+
+    </li>
+                                                                    <li class=" custom-hover-dropdown">
+    <a class="dropdown-item  "
+       href="https://baotangdanang.vn/danh-cho-du-khach/gop-y">
+        Góp ý / Feedback
+    </a>
+
+    </li>
+                                                            </ul>
+                                            </li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<div class="content flex-grow-1">
+        <h1 class="hidden">Bảo tàng Đà Nẵng</h1>
+    <section class="hero" style="position:relative;">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                                    <a class="cursor-pointer" onclick="show_banner('https://dnfam-website.vr360.com.vn/bao-tang-da-nang-1', 'BẢO TÀNG ĐÀ NẴNG')">
+                    <div class="carousel-item  active ">
+                                                    <img src="https://baotangdanang.vn/uploads/banners/banner_jz0vc0ou56-1778227460085.webp" alt="BẢO TÀNG ĐÀ NẴNG" class="d-block w-100 banner-img"  fetchpriority="high" >
+                                            </div>
+                    </a>
+                                    <a class="cursor-pointer" onclick="show_banner('https://dnfam-website.vr360.com.vn/bao-tang-da-nang-co-so-2-da-nang-museum-branch-2', 'Bảo tàng Đà Nẵng cơ sở 2')">
+                    <div class="carousel-item ">
+                                                    <img src="https://baotangdanang.vn/uploads/banners/banner_xf6rx8bfqr-1778227483877.webp" alt="Bảo tàng Đà Nẵng cơ sở 2" class="d-block w-100 banner-img"  loading="lazy" >
+                                            </div>
+                    </a>
+                                    <a class="cursor-pointer" onclick="show_banner('https://dnfam-website.vr360.com.vn/gioi-thieu-ve-bao-tang-my-thuat-da-nang', 'Bảo tàng Mỹ thuật Đà Nẵng')">
+                    <div class="carousel-item ">
+                                                    <img src="https://baotangdanang.vn/uploads/banners/banner_cjsjqco5mt-1778227472925.webp" alt="Bảo tàng Mỹ thuật Đà Nẵng" class="d-block w-100 banner-img"  loading="lazy" >
+                                            </div>
+                    </a>
+                            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <button id="btn-toggle-mute" onclick="toggleBannerMute()" style="position:absolute;top:12px;left:12px;z-index:10;background:rgba(0,0,0,0.45);border:none;border-radius:50%;width:38px;height:38px;color:#fff;font-size:16px;cursor:pointer;display:none;">
+            <i class="fa fa-volume-off" id="icon-mute"></i>
+        </button>
+    </section>
+    <div class="container content-home my-4">
+        <div class="row">
+            <div class="col-lg-9">
+                                                <section class="news-container">
+                    <h2 class="section-title">Tin tức</h2>
+                    <div class="row">
+    <div class="col-lg-6">
+        <div class="featured-article">
+            <a href="trien-lam-da-cam-luong-tri-va-cong-ly-da-nang-2026-hanh-trinh-danh-thuc-ky-uc-lan-toa-long-nhan-ai">
+                <div class="card border-0 mb-4">
+                    <img src="https://baotangdanang.vn/uploads/news/news_11fzyl07ir-1786436799905.webp" class="featured-image card-img-top" alt="Triển lãm “Da cam - Lương tri và Công lý” – Đà Nẵng 2026: Hành trình đánh thức ký ức, lan tỏa lòng nhân ái" loading="lazy">
+                    <div class="card-body px-0">
+                        <h3 class="article-title card-title fw-bold">Triển lãm “Da cam - Lương tri và Công lý” – Đà Nẵng 2026: Hành trình đánh thức ký ức, lan tỏa lòng nhân ái</h3>
+                        <p class="card-text">Nhân kỷ niệm 65 năm Thảm họa da cam ở Việt Nam (10/8/1961 – 10/8/2026), Ngày Vì nạn nhân chất độc da cam (10/8) và 79 năm Ngày Thương binh – Liệt sĩ (27/7/1947 – 27/7/2026), sáng 22/7/2026, triển lãm “Da cam- Lương tri và Công lý” – Đà Nẵng 2026</p>
+                        <small class="article-date"><i class="fas fa-calendar-alt"></i> 11/08/2026</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="side-news-list d-flex flex-column gap-2">
+                                                <a href="tu-bao-tieng-dan-den-trach-nhiem-xa-hoi-cua-nguoi-lam-bao">
+                        <div class="side-article d-flex gap-2">
+                            <img width="150px" src="https://baotangdanang.vn/uploads/news/news_1nl8f87ep1-1781943528457.webp" class="side-image rounded h-100" alt="Từ Báo Tiếng Dân đến trách nhiệm xã hội của người làm báo" loading="lazy">
+                            <div class="flex-grow-1">
+                                <h3 class="article-title fw-bold mb-1 custom-three-dots">Từ Báo Tiếng Dân đến trách nhiệm xã hội của người làm báo</h3>
+                                <p class="small mb-1 custom-three-dots">Trong gần hai mươi năm hoạt động báo chí, Huỳnh Thúc Kháng đã để lại dấu ấn sâu đậm với tư cách một nhà báo lớn, một nhà ngôn luận xuất sắc. Với bản lĩnh chính trị kiên cường, tư tưởng chính trực và tinh thần không khuất phục trước những chính sách hà khắ</p>
+                                <small class="article-date"><i class="fas fa-calendar-alt"></i> 20/06/2026</small>
+                            </div>
+                        </div>
+                    </a>
+                                                                <a href="trien-lam-khoa-hoc-vu-tru-con-nguoi-tri-thong-minh-umi">
+                        <div class="side-article d-flex gap-2">
+                            <img width="150px" src="https://baotangdanang.vn/uploads/news/news_7nrwwovhb1-1780559605110.webp" class="side-image rounded h-100" alt="Triển lãm khoa học “Vũ trụ - Con người - Trí thông minh” (UMI)" loading="lazy">
+                            <div class="flex-grow-1">
+                                <h3 class="article-title fw-bold mb-1 custom-three-dots">Triển lãm khoa học “Vũ trụ - Con người - Trí thông minh” (UMI)</h3>
+                                <p class="small mb-1 custom-three-dots">Chào mừng Ngày Quốc tế Bảo tàng và Ngày Khoa học và Công nghệ Việt Nam (18/5), Bảo tàng Đà Nẵng phối hợp với Viện Goethe và Hiệp hội Max Planck tổ chức triển lãm khoa học “Vũ trụ - Con người - Trí thông minh” (UMI).</p>
+                                <small class="article-date"><i class="fas fa-calendar-alt"></i> 04/06/2026</small>
+                            </div>
+                        </div>
+                    </a>
+                                                                <a href="trung-bay-chuyen-de-khong-gian-van-hoa-dong-bao-co-di-san-song-giua-dai-ngan">
+                        <div class="side-article d-flex gap-2">
+                            <img width="150px" src="https://baotangdanang.vn/uploads/news/news_chfuyhdk5h-1780560118035.webp" class="side-image rounded h-100" alt="Trưng bày chuyên đề “Không gian văn hóa đồng bào Co – Di sản sống giữa đại ngàn”" loading="lazy">
+                            <div class="flex-grow-1">
+                                <h3 class="article-title fw-bold mb-1 custom-three-dots">Trưng bày chuyên đề “Không gian văn hóa đồng bào Co – Di sản sống giữa đại ngàn”</h3>
+                                <p class="small mb-1 custom-three-dots">Chiều ngày 29/5/2026, chương trình khai mạc trưng bày chuyên đề “Không gian văn hóa đồng bào Co – Di sản sống giữa đại ngàn” do Bảo tàng Đà Nẵng phối hợp UBND xã Trà Liên và Thư viện Đà Nẵng</p>
+                                <small class="article-date"><i class="fas fa-calendar-alt"></i> 04/06/2026</small>
+                            </div>
+                        </div>
+                    </a>
+                                    </div>
+    </div>
+    <a class="view_more" href="tin-tuc">Xem thêm <i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+</div>
+                </section>
+                                <section class="display-section my-4">
+                    <h2 class="section-title">Không gian trưng bày</h2>
+                    <div class="row">
+                                                                                <a href="bao-tang-da-nang/khong-gian-trung-bay" class="col-md-4 item-display">
+                                <img src="https://baotangdanang.vn/uploads/categories/categories_2ovp511w76-1769586180915.webp" alt="Bảo tàng Đà Nẵng" loading="lazy">
+                                <h3 class="custom-three-dots-2">Bảo tàng Đà Nẵng</h3>
+                            </a>
+                                                                                <a href="bao-tang-my-thuat-da-nang/khong-gian-trung-bay" class="col-md-4 item-display">
+                                <img src="https://baotangdanang.vn/uploads/categories/categories_axzxl72kfm-1778128990298.webp" alt="Bảo tàng Mỹ thuật Đà Nẵng" loading="lazy">
+                                <h3 class="custom-three-dots-2">Bảo tàng Mỹ thuật Đà Nẵng</h3>
+                            </a>
+                                                                                <a href="bao-tang-da-nang-co-so-2/khong-gian-trung-bay" class="col-md-4 item-display">
+                                <img src="https://baotangdanang.vn/uploads/categories/categories_yccg285oaa-1769586115130.webp" alt="Bảo tàng Đà Nẵng cơ sở 2" loading="lazy">
+                                <h3 class="custom-three-dots-2">Bảo tàng Đà Nẵng cơ sở 2</h3>
+                            </a>
+                                            </div>
+                </section>
+                
+
+                                <section class="artisan-section mt-5">
+                    <h2 class="section-title">Phim tư liệu Bài chòi xứ Quảng</h2>
+                    <div class="row">
+                                                <div class="col-md-4 d-flex">
+                            <a href="gioi-thieu-nghe-thuat-bai-choi-xu-quang" class="w-100">
+                                <div class="d-flex flex-column h-100 item-artisan">
+                                    <img src="https://baotangdanang.vn/uploads/bc_digital_resources/bc_digital_resource_z5pkbhhac3-1775547524246.webp" class="side-image" alt="Phim giới thiệu Nghệ thuật bài chòi xứ Quảng" loading="lazy">
+                                    <div class="mt-auto">
+                                        <h3 class="article-title fw-bold mb-1 custom-three-dots pt-3 color-default-1">Phim giới thiệu Nghệ thuật bài chòi xứ Quảng</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                <div class="col-md-4 d-flex">
+                            <a href="phim-bai-choi" class="w-100">
+                                <div class="d-flex flex-column h-100 item-artisan">
+                                    <img src="https://baotangdanang.vn/uploads/bc_digital_resources/bc_digital_resource_5rlrlq458w-1775101739599.webp" class="side-image" alt="Phim Nghệ thuật bài chòi xứ Quảng" loading="lazy">
+                                    <div class="mt-auto">
+                                        <h3 class="article-title fw-bold mb-1 custom-three-dots pt-3 color-default-1">Phim Nghệ thuật bài chòi xứ Quảng</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                <div class="col-md-4 d-flex">
+                            <a href="cau-lac-bo-bai-choi-tinh-thuy-1" class="w-100">
+                                <div class="d-flex flex-column h-100 item-artisan">
+                                    <img src="https://baotangdanang.vn/uploads/bc_digital_resources/bc_digital_resource_03wjn4rhip-1775101876069.webp" class="side-image" alt="Phim tài liệu bài chòi xứ Quảng - Câu lạc bộ Tỉnh Thủy" loading="lazy">
+                                    <div class="mt-auto">
+                                        <h3 class="article-title fw-bold mb-1 custom-three-dots pt-3 color-default-1">Phim tài liệu bài chòi xứ Quảng - Câu lạc bộ Tỉnh Thủy</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                <a class="view_more mt-3" href="bai-choi-xu-quang/tai-lieu-so/phim-tu-lieu">Xem thêm <i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+                
+                                    <section class="artisan-section mt-5">
+                        <h2 class="section-title">Thông tin cần biết</h2>
+                        <div class="row gap-3">
+                                                            <a href="/bao-tang-da-nang-1" class="news-item">
+    <div class="news-image">
+        <img src="https://baotangdanang.vn/uploads/news/news_t0ht39wg5e-1768383942239.webp" alt="Bảo tàng Đà Nẵng/Da Nang Museum" loading="lazy">
+    </div>
+    <div class="news-content">
+        <h2 class="news-title">Bảo tàng Đà Nẵng/Da Nang Museum</h2>
+        <div class="news-meta">
+            <span><i class="fas fa-calendar-alt"></i> <small>30/12/2025</small></span>
+        </div>
+        <p class="news-description">Bảo tàng Đà Nẵng, 31 Trần Phú, phường Hải Châu, Đà Nẵng/ Da Nang Museum, 31 Tran Phu, Hai Chau Ward, Da Nang</p>
+    </div>
+</a>
+                                                            <a href="/gioi-thieu-ve-bao-tang-my-thuat-da-nang" class="news-item">
+    <div class="news-image">
+        <img src="https://baotangdanang.vn/uploads/news/news_0s2i66qff1-1769314896204.webp" alt="Bảo tàng Mỹ thuật Đà Nẵng/ The Da Nang Fine Arts Museum" loading="lazy">
+    </div>
+    <div class="news-content">
+        <h2 class="news-title">Bảo tàng Mỹ thuật Đà Nẵng/ The Da Nang Fine Arts Museum</h2>
+        <div class="news-meta">
+            <span><i class="fas fa-calendar-alt"></i> <small>30/12/2025</small></span>
+        </div>
+        <p class="news-description">Bảo tàng Mỹ thuật Đà Nẵng, 78 Lê Duẩn, phường Hải Châu, Đà Nẵng/ The Da Nang Fine Arts Museum, 78 Le Duan, Hai Chau Ward, Da Nang</p>
+    </div>
+</a>
+                                                            <a href="/bao-tang-da-nang-co-so-2-da-nang-museum-branch-2" class="news-item">
+    <div class="news-image">
+        <img src="https://baotangdanang.vn/uploads/news/news_0sn74t3x88-1769315817215.webp" alt="Bảo tàng Đà Nẵng - Cơ sở 2/ Da Nang Museum – Branch 2" loading="lazy">
+    </div>
+    <div class="news-content">
+        <h2 class="news-title">Bảo tàng Đà Nẵng - Cơ sở 2/ Da Nang Museum – Branch 2</h2>
+        <div class="news-meta">
+            <span><i class="fas fa-calendar-alt"></i> <small>25/12/2025</small></span>
+        </div>
+        <p class="news-description">Bảo tàng Đà Nẵng – Cơ sở 2, 281 Phan Bội Châu, phường Bàn Thạch, Đà Nẵng
+Da Nang Museum – Branch 2, 281 Phan Boi Chau, Ban Thach Ward, Da Nang</p>
+    </div>
+</a>
+                                                        <a class="view_more mt-3" href="danh-cho-du-khach/thong-tin-can-biet">Xem thêm <i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+                        </div>
+                    </section>
+                            </div>
+            <div class="col-lg-3 section-right">
+                <section class="video my-2">
+                    <div class="title-right"><img src="https://baotangdanang.vn/images/icons/movies.png" loading="lazy"><h2>videos</h2></div>
+                    <div class="content-right">
+                        <div class="top">
+                            <div id="youtube-player-container"></div>
+                        </div>
+                        <div class="bottom px-2 border-bottom">
+                                                            <div class="item-video video-item py-2 active" data-url="https://www.youtube.com/watch?v=ciQdEq0e-aY" data-id="3">
+                                    <small>Video recap phiên chợ ngày Tết 2026 &quot;Rước mã khai Xuân&quot;</small>
+                                </div>
+                                                            <div class="item-video video-item py-2 " data-url="https://youtu.be/nxjtQqeas2k?si=g_BeDxZjvFkhWd_a" data-id="4">
+                                    <small>Trình chiếu 3D Mapping “Câu chuyện Đà Nẵng – the story of da nang”</small>
+                                </div>
+                                                            <div class="item-video video-item py-2 " data-url="https://youtu.be/10RXQosFDdA?si=tjRhgD9V0JHS2RJZ" data-id="5">
+                                    <small>Khánh thành và đưa vào sử dụng Bảo tàng Đà Nẵng</small>
+                                </div>
+                                                    </div>
+                    </div>
+                </section>
+                <section class="notification my-2">
+                    <div class="title-right"><img src="https://baotangdanang.vn/images/icons/notification.png" loading="lazy"><h2>Thông báo</h2></div>
+                    <div class="content-right px-2">
+                                                                            <div class="item-notification border-bottom mt-2 pb-2 d-flex gap-2 align-items-baseline">
+                                <i class="fa fa-circle text-success fa-sm" aria-hidden="true"></i>
+                                <a class="custom-three-dots-2" href="bao-tang-da-nang-xin-thong-bao-gia-ve-tham-quan-tai-bao-tang-da-nang-ap-dung-tu-ngay-0372025-theo-nghi-quyet-so-102025nq-hdn-cua-thanh-pho-da-nang-cu-the">Bảo tàng Đà Nẵng xin thông báo giá vé tham quan tại Bảo tàng Đà Nẵng áp dụng từ ngày 03/7/2025 theo Nghị quyết số 10/2025/NQ-HĐN của thành phố Đà Nẵng, cụ thể</a>
+                            </div>
+                                                    <div class="item-notification border-bottom mt-2 pb-2 d-flex gap-2 align-items-baseline">
+                                <i class="fa fa-circle text-success fa-sm" aria-hidden="true"></i>
+                                <a class="custom-three-dots-2" href="thong-bao-gia-ve-tham-quan-bao-tang-my-thuat-da-nang">Thông báo giá vé tham quan Bảo tàng Mỹ thuật Đà Nẵng</a>
+                            </div>
+                                                                    </div>
+                </section>
+                                <section class="banner-right my-2">
+                                            <a class="d-block mb-2"  href="https://bandodisandanang.vn/" target="_blank" rel="noopener" >
+                            <img src="https://baotangdanang.vn/uploads/banners/banner_zgft18uynk-1775183713348.webp" alt="Bản đồ di sản văn hóa" loading="lazy" class="w-100">
+                        </a>
+                                    </section>
+                                <section class="map my-2">
+                    <div class="title-right"><img src="https://baotangdanang.vn/images/icons/location.png" loading="lazy"><h2>Đường đến bảo tàng</h2></div>
+                    <div class="content-right">
+                        <span class="name_map">Bảo tàng Đà Nẵng</span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.825275203584!2d108.2239668!3d16.074554199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183691882913%3A0xc9180a3982a9ef58!2zQuG6o28gVMOgbmcgxJDDoCBO4bq1bmc!5e0!3m2!1svi!2s!4v1768548194434!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Đường đến bảo tàng"></iframe>
+                        <hr class="m-0">
+                        <span class="name_map">Bảo tàng Mỹ thuật Đà Nẵng</span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.888983833792!2d108.2155164140094!3d16.071249688879618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218368e61cbef%3A0xf1549bd773be2c92!2zQuG6o28gdMOgbmcgTeG7uSB0aHXhuq10IMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1511795099728" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Đường đến bảo tàng"></iframe>
+                        <hr class="m-0">
+                        <span class="name_map">Bảo tàng Đà Nẵng Cơ sở 2</span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843.241323678272!2d108.4753695311152!3d15.57875008448256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169dce2ac1641eb%3A0xfa1a5687c84a12bf!2zMjgxIFBoYW4gQuG7mWkgQ2jDonUsIFBoxrDhu51uZyBUw6JuIFRo4bqhbmgsIFRhbSBL4buzLCBRdeG6o25nIE5hbSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1768547791238!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Đường đến bảo tàng"></iframe>
+                    </div>
+                </section>
+                <section class="link-website my-2">
+                    <div class="title-right"><img src="https://baotangdanang.vn/images/icons/link.png" loading="lazy"><h2>Liên kết website</h2></div>
+                    <div class="content-right">
+                        <select class="form-control border-0" onchange="openLink(this)">
+                            <option value="">— Liên kết website —</option>
+                                                            <option  value="http://vhtt.danang.gov.vn/">Sở Văn hóa và Thể thao thành phố Đà Nẵng</option>
+                                                            <option  value="http://dsvh.gov.vn/">Cục Di sản Văn hóa</option>
+                                                            <option  value="http://baotangdanang.vn/">Bảo tàng Đà Nẵng</option>
+                                                            <option  value="http://baotanglichsu.vn/">Bảo tàng Lịch sử Quốc gia</option>
+                                                            <option  value="http://www.vme.org.vn/">Bảo tàng Dân tộc học Việt Nam</option>
+                                                            <option  value="http://mysonsanctuary.com.vn/">Ban Quản lý Di sản Văn hóa Mỹ Sơn</option>
+                                                            <option  value="https://baodanang.vn/">Báo Đà Nẵng online</option>
+                                                            <option  value="http://www.baotangcungdinh.vn/">Bảo tàng Cổ vật Cung đình Huế</option>
+                                                            <option  value="http://www.baotanglichsutphcm.com.vn/">Bảo tàng Lịch sử TP. Hồ Chí Minh</option>
+                                                            <option  value="https://bvhttdl.gov.vn/">Bộ Văn hóa, Thể thao và Du lịch</option>
+                                                            <option  value="https://danang.gov.vn/web/guest/trang-chu">Cổng thông tin điện tử TP. Đà Nẵng</option>
+                                                            <option  value="http://baotang.dsvh.gov.vn/">Hệ thống Bảo tàng Việt Nam</option>
+                                                            <option  value="https://dsp.vn">Trung tâm Phát triển Hạ tầng CNTT Đà Nẵng</option>
+                                                            <option  value="http://trungtamquanlyditichvabaotangquangtri.vn">Trung tâm Quản lý Di tích và Bảo tàng Quảng Trị</option>
+                                                            <option  value="https://dised.danang.gov.vn/">Viện Nghiên cứu Phát triển Kinh tế Xã hội TP. Đà Nẵng</option>
+                                                    </select>
+                    </div>
+                </section>
+                <section class="access-statistics my-2">
+                    <div class="title-right"><img src="https://baotangdanang.vn/images/icons/statistic.png" loading="lazy"><h2>Thống kê truy cập</h2></div>
+                    <div class="content-right px-2">
+                        <div class="item-statistic p-2">
+                            <span><small>Tổng lượt truy cập:</small> <b>337487</b></span>
+                        </div>
+                        <div class="item-statistic p-2">
+                            <span><small>Hôm qua:</small> <b>2103</b> - <small>Hôm nay:</small> <b>1071</b> </span>
+                        </div>
+                        <div class="item-statistic p-2">
+                            <span><small>Tuần trước:</small> <b>13683</b> - <small>Tuần này:</small> <b>1070</b> </span>
+                        </div>
+                        <div class="item-statistic p-2">
+                            <span><small>Tháng trước:</small> <b>86767</b> - <small>Tháng này:</small> <b>63584</b> </span>
+                        </div>
+                        <div class="item-statistic p-2">
+                            <span><small>Đang trực tuyến:</small> <b>11</b></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            
+                        <section class="slider-container mt-5">
+                <h2 class="section-title">Hiện vật</h2>
+                <div class="artifacts-carousel">
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/hat-ma-nao-henh-tho-lai-nghi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_wjt2kmlu2h-1774328445422.webp" alt="Hạt mã não hình thú Lai Nghi" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hạt mã não hình thú Lai Nghi</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/bo-su-tap-trang-sc-vang-lai-nghi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_4k7343t9lm-1774402510046.webp" alt="Bộ sưu tập trang sức vàng Lai Nghi" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bộ sưu tập trang sức vàng Lai Nghi</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-than-siva">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_isd293bqc9-1774577295913.webp" alt="Tượng thần Siva" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng thần Siva</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/li-cay-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_m654023m36-1774577928132.webp" alt="Lưỡi cày đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Lưỡi cày đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/gng-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_w021dftbdb-1774578041055.webp" alt="Gương đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Gương đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/giao-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_xeguqddmxc-1774578201160.webp" alt="Giáo đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Giáo đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/reu-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_rbb7gq7woy-1774578618301.webp" alt="Rìu đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Rìu đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/yenh-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_r0xow0mvqd-1774579157970.webp" alt="Đỉnh đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đỉnh đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/sing-han">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_r329svpty3-1774586768639.webp" alt="Sông Hàn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sông Hàn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/nguon-song">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_7pj18l0qlp-1774586878649.webp" alt="Nguồn sống" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Nguồn sống</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/trong-nha-gl">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_uyirc4acwy-1774649201615.webp" alt="Trong nhà Gươl" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Trong nhà Gươl</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/hoi-an-trong-mat-tii">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_81c3nzaazi-1774649763702.webp" alt="Hội An trong mắt tôi" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hội An trong mắt tôi</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/tru-tng">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_n13flap54j-1774649899886.webp" alt="Trừu tượng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Trừu tượng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/moa-ray">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_rk3odlinwp-1774650911748.webp" alt="Mùa rẫy" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mùa rẫy</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/thieu-n-va-bien">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_wiupywvtog-1774651264864.webp" alt="Thiếu nữ và biển" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Thiếu nữ và biển</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ng-thuyan-va-bien">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_605auayvyv-1774651369957.webp" alt="Ngư thuyền và biển" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ngư thuyền và biển</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/cu-gia">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_5jtqd1alwz-1774651484750.webp" alt="Cụ già" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Cụ già</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/trang-chiau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ig02l0xwc2-1774651604258.webp" alt="Trăng chiều" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Trăng chiều</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/anh-sang-cua-bien">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_1e7ckmyocs-1774651747192.webp" alt="Ánh sáng của biển" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ánh sáng của biển</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/hoi-an-xa">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_imsks2l5im-1774651872882.webp" alt="Hội An Xưa" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hội An Xưa</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/th-yao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_px3m9jxsrj-1774651991775.webp" alt="Thư ở đảo" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Thư ở đảo</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/s-thanh-thien-cua-yat-va-ngi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_c60pzb2z45-1774652098545.webp" alt="Sự thánh thiện của đất và người" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sự thánh thiện của đất và người</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ku-c-ding-hng">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_g2nibkbb9p-1774652287904.webp" alt="Ký ức dòng Hương" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ký ức dòng Hương</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/moa-vang">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_k2itm99usd-1774652437024.webp" alt="Mùa vàng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mùa vàng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/yoc-tau-violoncello">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_i3d2rced70-1774652762510.webp" alt="Độc tấu Violoncello" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Độc tấu Violoncello</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ngi-va-cuoi-rng">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_knjvxc50zd-1774653052340.webp" alt="Người về cuối rừng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Người về cuối rừng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ban-giao-hng-ban-35">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_xcxpw734uw-1774653167271.webp" alt="Bản giao hưởng (bản 3/5)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bản giao hưởng (bản 3/5)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/vong-qua">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_o8a31hj7po-1774653258556.webp" alt="Vùng quê" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Vùng quê</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/vu-yieu-thi-gian">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_abcdk1r565-1774653360481.webp" alt="Vũ Điệu thời gian" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Vũ Điệu thời gian</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/noi-lo-van-cin">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_13fuk5l7gd-1774653465439.webp" alt="Nỗi lo vẫn còn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Nỗi lo vẫn còn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/tuoi-th">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_3aulbinx0z-1774653630415.webp" alt="Tuổi thơ" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tuổi thơ</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/mau-t">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_1ww5a6fg5k-1774653793337.webp" alt="Mẫu tử" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mẫu tử</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/yea-yao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_tun1hqa1d3-1774653901806.webp" alt="Địa đạo" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Địa đạo</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/nga-hoa">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_xomxzxtp2l-1774654057936.webp" alt="Ngựa hoa" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ngựa hoa</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/thieu-n-va-hoa-phong-lan">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_sib8u80uoc-1774654193591.webp" alt="Thiếu nữ và hoa phong lan" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Thiếu nữ và hoa phong lan</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/my-n-va-nhac-cu">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_q5laqlwwon-1774654291102.webp" alt="Mỹ nữ và nhạc cụ" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mỹ nữ và nhạc cụ</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/thanh-mau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_4v1054u9gi-1774654381609.webp" alt="Thánh mẫu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Thánh mẫu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ngi-me">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_02otebecht-1774654445293.webp" alt="Người mẹ" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Người mẹ</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/ya-nang">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_7wpt1xzn23-1774654539319.webp" alt="Đà Nẵng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đà Nẵng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/xe-bi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_vbnfo88enc-1774654661902.webp" alt="Xe bò" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Xe bò</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-my-thuat-da-nang/hien-vat/phi-li">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_tsxgs8p4ce-1774654760661.webp" alt="Phơi lưới" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Phơi lưới</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/ving-yeo-tay-thuy-tinh">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_1zhrqznvr6-1774773867807.webp" alt="Vòng đeo tay thủy tinh" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Vòng đeo tay thủy tinh</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/doi-xe-che">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_h0i7q7jsw1-1774774183511.webp" alt="Dọi xe chỉ" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Dọi xe chỉ</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/mo-chum-tabhing">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_qae2jorp3p-1774774391302.webp" alt="Mộ chum Tabhing" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mộ chum Tabhing</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/mo-noi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_mfn2ig1c9t-1774774576951.webp" alt="Mộ nồi" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mộ nồi</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/benh-gom-kendy">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_qkls9wd0v7-1774774911015.webp" alt="Bình gốm Kendy" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bình gốm Kendy</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/sac-phong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_u392gzmdqs-1774775225176.webp" alt="Sắc phong" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sắc phong</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/song-than-cing">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_93pul2vr1m-1774794472986.webp" alt="Súng thần công" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Súng thần công</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/ban-di-choc">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_m59hgxxluy-1774794845046.webp" alt="Bản di chúc" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bản di chúc</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/chan-yia-hieu-sach-viet-quang">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_wknjkb816n-1774795228687.webp" alt="Chén đĩa hiệu sách Việt Quảng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Chén đĩa hiệu sách Việt Quảng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/ong-phing-tromblom">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_snws6ml6ht-1774801416287.webp" alt="Ống phóng Tromblom" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ống phóng Tromblom</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/bo-quan-ao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_68hyngv6ts-1774801581281.webp" alt="Bộ quần áo" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bộ quần áo</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/canh-ca-nha-to">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_iosdna45zc-1774801711882.webp" alt="Cánh cửa nhà tù" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Cánh cửa nhà tù</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/tng-phat">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_fayt47lq1k-1774802259082.webp" alt="Tượng phật" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng phật</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/xe-honda-dame">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_g1loctt9hj-1774802446481.webp" alt="Xe Honda Dame" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Xe Honda Dame</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/bom-cbu-55">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_3epz1nk68i-1774802764488.webp" alt="Bom CBU 55" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bom CBU 55</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/ghe-bau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_kvx3ir44ha-1774803583740.webp" alt="Ghe bầu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ghe bầu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/tng-cong-lang">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_jy64rvzvt7-1774803969477.webp" alt="Tượng cổng làng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng cổng làng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/tng">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_tb7w487ety-1774804382275.webp" alt="Tượng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/ao-kho-v-cay">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_nuym0f4ip8-1774804926608.webp" alt="Áo khố vỏ cây" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Áo khố vỏ cây</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/kan-tghay">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_wcc21dw6ib-1774805840877.webp" alt="Kèn Tơghêy" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Kèn Tơghêy</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/sanh-yong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_p0i22ptkir-1774806282637.webp" alt="Sanh đồng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sanh đồng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/benh-tu-ba-trung">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_l8ftd0ynpb-1775017783390.webp" alt="Bình tỳ bà (trung)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bình tỳ bà (trung)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/am-ci-quai">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_pki8e97mop-1775019335726.webp" alt="Ấm có quai" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ấm có quai</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/kendy">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_nhmw0fnq3b-1775018316358.webp" alt="Kendy" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Kendy</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/am-hai-bau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_9m1w5irs29-1775018707260.webp" alt="Ấm hai bầu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ấm hai bầu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/yau-tng-yan-ing">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_fl53lq96tg-1775018797101.webp" alt="Đầu tượng đàn ông" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đầu tượng đàn ông</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/hu-ci-nap-ln">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_pviwtra8pz-1775018892773.webp" alt="Hủ có nắp (lớn)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hủ có nắp (lớn)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/chan-con-vet">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ozd1psoshq-1775019201140.webp" alt="Chén con vẹt" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Chén con vẹt</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/am-hai-yau-ga">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_lnde9qjh75-1775019292619.webp" alt="Ấm hai đầu gà" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ấm hai đầu gà</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/yia-ln">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_y5z6cxoy11-1775019502311.webp" alt="Đĩa (lớn)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đĩa (lớn)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-n-than-bay">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_x6snch33is-1775019742372.webp" alt="Tượng nữ thần bay" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng nữ thần bay</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-nam-than">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_0xcmxy23p7-1775033183990.webp" alt="Tượng nam thần" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng nam thần</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/ganara-trang-tre-tran-la-ya">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_w1vx9leumu-1775033260522.webp" alt="Ganara trang trí trên lá đề" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ganara trang trí trên lá đề</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tu-si-balamin">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_fvthlnvqwy-1775033351439.webp" alt="Tu sĩ Bàlamôn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tu sĩ Bàlamôn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/hop-ci-nap-trung">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ns2n2gfc7r-1775035267306.webp" alt="Hộp có nắp (trung)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hộp có nắp (trung)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/hu-nh">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ifqu1b7uv3-1775038167239.webp" alt="Hũ (nhỏ)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hũ (nhỏ)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/ganara">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_s5n333u8gj-1775038412257.webp" alt="Ganara" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Ganara</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-tu-si-balamin">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_16ti1h3gox-1775038491529.webp" alt="Tượng tu sĩ Bàlamôn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng tu sĩ Bàlamôn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-ngi-cau-nguyen-ngoi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_rvt4s1e2zc-1775039200863.webp" alt="Tượng người cầu nguyện (ngồi)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng người cầu nguyện (ngồi)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-ngi-ci-canh">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ekbkc2kx5j-1775039285171.webp" alt="Tượng người (có cánh)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng người (có cánh)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/s-t-ngoi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_49rmi9vpub-1775039363962.webp" alt="Sư tử ngồi" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sư tử ngồi</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/hoa-van-trang-tre-henh-chip-thap">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_4h8omn7d0y-1775039434765.webp" alt="Hoa văn trang trí hình chóp tháp" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hoa văn trang trí hình chóp tháp</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/ham-be-mat-ing-voi">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_93lduefb9g-1775039571151.webp" alt="Hầm bí mật (Ông Voi)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Hầm bí mật (Ông Voi)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/xuong">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ilb214r7by-1775039929946.webp" alt="Xuổng" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Xuổng</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/coi-va-chay-gia-gao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ghqmz2nzho-1775041955096.webp" alt="Cối và chày giã gạo" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Cối và chày giã gạo</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-go-ba-gai-c-tu">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_fpxfnje6e4-1775042081716.webp" alt="Tượng gỗ bé gái Cơ-tu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng gỗ bé gái Cơ-tu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/tng-yan-ba-c-tu-moa-ya-ya">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_jyfhfaj2fh-1775095564405.webp" alt="Tượng đàn bà Cơ-tu múa ya yá" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tượng đàn bà Cơ-tu múa ya yá</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/koong-ving-yeo-tay">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_brcnkl6qrd-1775095982469.webp" alt="Koong (Vòng đeo tay)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Koong (Vòng đeo tay)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/bo-gu-dan-toc-cor">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_jv3odo2y43-1775097358539.webp" alt="Bộ gu dân tộc Cor" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bộ gu dân tộc Cor</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/v-ri-yan">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ah28tk2qzb-1775096474551.webp" alt="Vơ ró (Đàn)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Vơ ró (Đàn)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/mi-henh-nha-gl-ctu">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_416v415rr4-1775096832845.webp" alt="Mô hình nhà Gươl- Cơtu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mô hình nhà Gươl- Cơtu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang-co-so-2/hien-vat/bo-khung-det-xa-xao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_w2z6ktmrve-1775096992675.webp" alt="Bộ khung dệt (Xa xao)" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Bộ khung dệt (Xa xao)</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/rang-heo">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_knazbbjr1y-1775099066788.webp" alt="Răng heo" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Răng heo</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/pho-yiau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_qm704x4fvt-1775100280017.webp" alt="Phù điêu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Phù điêu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/mat-bot-net">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_gmov3ugiwq-1775100429431.webp" alt="Mặt bút nịt" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Mặt bút nịt</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/khuyan-tai-hai-yau-tho-1">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_mgunotmc8f-1777263294980.webp" alt="Khuyên tai hai đầu thú" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Khuyên tai hai đầu thú</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/khuyan-tai-ba-mau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_h1jvyxi11x-1777263395371.webp" alt="Khuyên tai ba mấu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Khuyên tai ba mấu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/khuyan-tai-henh-vanh-khan">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_pwos9b7bhe-1777263510781.webp" alt="Khuyên tai hình vành khăn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Khuyên tai hình vành khăn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/trang-sc-ma-nao">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_gshe48iiab-1777263997460.webp" alt="Trang sức mã não" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Trang sức mã não</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/con-dau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_ul3ezb5tu0-1777264319781.webp" alt="Con dấu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Con dấu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/tay-ho-va-santa-thi-tap">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_4sg21j26wn-1777264500571.webp" alt="Tây Hồ và Santé thi tập" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Tây Hồ và Santé thi tập</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/sach-th-that-yiau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_2yos4vbr99-1777264593369.webp" alt="Sách &quot;Thư thất điều&quot;" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Sách &quot;Thư thất điều&quot;</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/dao-gam">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_xlhbuilfj4-1777264778842.webp" alt="Dao găm" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Dao găm</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/truyan-yn">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_vcch0ndlx5-1777265036156.webp" alt="Truyền đơn" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Truyền đơn</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/yii-bau">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_5mpvcd3k71-1777265281891.webp" alt="Đôi bầu" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đôi bầu</span>
+                            </a>
+                        </div>
+                                                                    <div class="artifact-item">
+                            <a href="https://baotangdanang.vn/bao-tang-da-nang/hien-vat/yan-mang-xing">
+                                <img src="https://baotangdanang.vn/uploads/artifacts/artifact_oxez0n6zcq-1777265366928.webp" alt="Đèn măng xông" class="img-fluid rounded" loading="lazy">
+                                <span class="p-2">Đèn măng xông</span>
+                            </a>
+                        </div>
+                                    </div>
+            </section>
+                    </div>
+    </div>
+</div>
+
+<footer class="bg-footer text-light pt-5 pb-3">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-5">
+                <h5>Bảo tàng Đà Nẵng</h5>
+                <div class="footer-address-group">
+                    <span>Bảo tàng Đà Nẵng cơ sở 1, số 31 Trần Phú, phường Hải Châu;</span><br>
+                    <span class="footer-hours"><i class="far fa-clock me-1"></i>Thời gian mở cửa: 08h00 – 17h00 (Hằng ngày)</span>
+                </div>
+                <div class="footer-address-group">
+                    <span>Bảo tàng Mỹ thuật Đà Nẵng, số 78 Lê Duẩn, phường Hải Châu;</span><br>
+                    <span class="footer-hours"><i class="far fa-clock me-1"></i>Thời gian mở cửa: 08h00 – 17h00 (Hằng ngày)</span>
+                </div>
+                <div class="footer-address-group">
+                    <span>Bảo tàng Đà Nẵng cơ sở 2, số 281 Phan Bội Châu, phường Bàn Thạch.</span><br>
+                    <span class="footer-hours"><i class="far fa-clock me-1"></i>Thời gian mở cửa: 07h30 – 11h30 và 13h30 – 16h30 (Hằng ngày)</span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Liên hệ</h5>
+                <ul class="list-unstyled contact-list">
+                    <li class="mb-1">
+                        <a class="text-decoration-none text-light" href="#">
+                            <i class="fas fa-map-marker-alt me-2"></i>Số 31 Trần Phú, phường Hải Châu, Đà Nẵng
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="text-decoration-none text-light" href="tel:0236 3886236 – 0796.544.369">
+                            <i class="fas fa-phone me-2"></i>0236 3886236 – 0796.544.369
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="text-decoration-none text-light" href="#">
+                            <i class="fab fa-youtube me-2"></i>Bao Tang Da Nang – Da Nang Museum
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="text-decoration-none text-light" href="mailto:btdn@danang.gov.vn">
+                            <i class="fas fa-envelope me-2"></i>btdn@danang.gov.vn
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="text-decoration-none text-light" href="#">
+                            <i class="fas fa-comment me-2"></i>Zalo: Bao Tang Da Nang Da Nang Museum (0796544369)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 connect_social">
+                <h5>Kết nối</h5>
+                <p>
+                    <a class="text-light me-2" href="https://www.facebook.com/profile.php?id=100053143726245" target="_blank"><img width="35px" src="https://baotangdanang.vn/images/icons/fb.png" alt="Facebook"></a>
+                    <a class="text-light me-2" href="https://www.instagram.com/danang_museum/" target="_blank"><img  width="35px"src="https://baotangdanang.vn/images/icons/instagram.webp" alt="Instagram"></a>
+                    <a class="text-light me-2" href="https://x.com/dnfam2014/" target="_blank"><img width="35px" src="https://baotangdanang.vn/images/icons/twitter.png" alt="Twitter"></a>
+                    <a class="text-light" href="https://zalo.me/0796544369" target="_blank"><img width="35px" src="https://baotangdanang.vn/images/icons/zalo.webp" alt="Zalo"></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4 small">
+            © 2026 <a href="https://vr360.com.vn" rel="nofollow" target="_blank">VR360</a>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn" title="Cuộn lên đầu trang">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<script src="https://baotangdanang.vn/js/bootstrap.bundle.min.js" defer></script>
+<script src="/js/app.js?id=4be44ce3ed3db42f9a4e18124e182462"></script>
+
+<script>
+    // Toàn bộ logic không dùng jQuery (Vanilla JS) chạy ngay khi DOM sẵn sàng
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // Tự động thêm Alt cho ảnh (tốt cho SEO và PageSpeed)
+        const defaultAlt = 'Bảo tàng Đà Nẵng';
+        document.querySelectorAll("img").forEach(img => {
+            if (!img.getAttribute("alt") || img.getAttribute("alt").trim() === "") {
+                img.setAttribute("alt", defaultAlt);
+            }
+            // Thêm lazy load trực tiếp bằng JS cho các ảnh
+            if (!img.hasAttribute("loading")) {
+                img.setAttribute("loading", "lazy");
+            }
+        });
+
+        // Nút cuộn lên đầu trang
+        const mybutton = document.getElementById("scrollToTopBtn");
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        });
+        mybutton.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Xử lý Container Menu
+        const elMenu = document.getElementById('main-menu');
+        function handleResize() {
+            if (elMenu) {
+                if (window.innerWidth <= 1199) elMenu.classList.add('container');
+                else elMenu.classList.remove('container');
+            }
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        // Logic Dropdown Menu Mobile (Không dùng jQuery)
+        document.querySelectorAll('.dropdown-toggle, .dropdown-toggle-side').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth < 1200) {
+                    const nextMenu = this.nextElementSibling;
+                    if (nextMenu && nextMenu.classList.contains('dropdown-menu')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.parentElement.parentElement.querySelectorAll(':scope > li > .dropdown-menu.show').forEach(openMenu => {
+                            if (openMenu !== nextMenu) {
+                                openMenu.classList.remove('show');
+                                openMenu.parentElement.classList.remove('show');
+                            }
+                        });
+                        nextMenu.classList.toggle('show');
+                        this.parentElement.classList.toggle('show');
+                    }
+                }
+            });
+        });
+    });
+
+    // 4. LOGIC DÙNG JQUERY: Đợi window load để chắc chắn app.js (chứa jQuery) đã sẵn sàng
+    window.addEventListener('load', function() {
+        if (typeof jQuery !== 'undefined') {
+            $(document).ready(function () {
+                const $searchWrapper = $('#search-wrapper');
+                const $searchSuggestions = $('#search-suggestions');
+                const $mainSearchInput = $('#main-search');
+                const $searchTypeInput = $('#search-type');
+                const $searchForm = $('#search-form');
+                const $triggerMobile = $('#trigger-search-mobile');
+
+                function activateSearchType(typeValue) {
+                    const $targetItem = $(`.suggestion-item[data-value="${typeValue}"]`);
+                    if ($targetItem.length > 0) {
+                        $('.suggestion-item').removeClass('active');
+                        $targetItem.addClass('active');
+                        const typeName = $targetItem.find('span').text();
+                        $mainSearchInput.attr('placeholder', 'Tìm theo: ' + typeName);
+                        $searchTypeInput.val(typeValue);
+                    }
+                }
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const typeFromUrl = urlParams.get('search_type');
+                if (typeFromUrl) activateSearchType(typeFromUrl);
+                else {
+                    const firstValue = $('.suggestion-item').first().data('value');
+                    if (firstValue) activateSearchType(firstValue);
+                }
+
+                $('.suggestion-item').on('click', function (e) {
+                    e.stopPropagation();
+                    activateSearchType($(this).data('value'));
+                    $searchSuggestions.fadeOut(200);
+                });
+
+                $mainSearchInput.on('click', function (e) {
+                    e.stopPropagation();
+                    $searchSuggestions.stop().fadeIn(200);
+                });
+
+                $triggerMobile.on('click', function (e) {
+                    e.stopPropagation();
+                    $searchWrapper.toggleClass('mobile-active');
+                    if ($searchWrapper.hasClass('mobile-active')) $mainSearchInput.focus();
+                });
+
+                $searchForm.on('submit', function (e) {
+                    if ($mainSearchInput.val().trim() === "") {
+                        e.preventDefault();
+                        alert("Vui lòng nhập từ khóa tìm kiếm!");
+                        $mainSearchInput.focus();
+                    }
+                });
+
+                $(document).on('click', function (e) {
+                    if (!$(e.target).closest('#search-suggestions, #main-search').length) {
+                        $searchSuggestions.fadeOut(200);
+                    }
+                    if ($(window).width() < 768 && !$(e.target).closest('.search-container').length) {
+                        $searchWrapper.removeClass('mobile-active');
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.artifacts-carousel').slick({
+                slidesToShow: 4,
+                dots: false,
+                centerMode: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                pauseOnHover: true,
+                infinite: true,
+                rows: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    }
+                ]
+            });
+        });
+
+        function openLink(select) {
+            if (select.value) {
+                window.open(select.value, '_blank');
+                select.selectedIndex = 0;
+            }
+        }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player;
+
+        function getYoutubeId(url) {
+            const regExp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
+            const match = url.match(regExp);
+            return match ? match[1] : null;
+        }
+
+        function onYouTubeIframeAPIReady() {
+            const firstItem = document.querySelector('.video-item');
+
+            if (!firstItem) return;
+
+            const videoUrl = firstItem.dataset.url;
+            const videoId = getYoutubeId(videoUrl);
+
+            player = new YT.Player('youtube-player-container', {
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,       // ⚠️ autoplay bắt buộc mute
+                    controls: 1,
+                    rel: 0
+                }
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            const item = e.target.closest('.video-item');
+            if (!item || !player) return;
+
+            const videoId = getYoutubeId(item.dataset.url);
+
+            if (videoId) {
+                player.loadVideoById(videoId);
+                player.unMute();          // 🔊 ĐƯỢC PHÉP
+                player.setVolume(100);
+
+                document.querySelectorAll('.video-item').forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+            }
+        });
+
+        var $bannerVideos = $('.banner-video');
+        var imageTimer = null;
+        var SLIDE_INTERVAL = 5000;
+
+        function getActiveVideo() {
+            return $('#homeCarousel .carousel-item.active .banner-video')[0] || null;
+        }
+
+        function updateMuteIcon(video) {
+            $('#icon-mute').toggleClass('fa-volume-off', video.muted).toggleClass('fa-volume-up', !video.muted);
+        }
+
+        function toggleBannerMute() {
+            var v = getActiveVideo();
+            if (!v) return;
+            v.muted = !v.muted;
+            updateMuteIcon(v);
+        }
+
+        function clearImageTimer() {
+            if (imageTimer) { clearTimeout(imageTimer); imageTimer = null; }
+        }
+
+        function handleActiveSlide() {
+            clearImageTimer();
+            var activeVideo = getActiveVideo();
+            if (activeVideo) {
+                activeVideo.currentTime = 0;
+                activeVideo.play().catch(function(){});
+                $('#btn-toggle-mute').show();
+                updateMuteIcon(activeVideo);
+                $(activeVideo).off('ended').on('ended', function() {
+                    $('#homeCarousel').carousel('next');
+                });
+            } else {
+                $('#btn-toggle-mute').hide();
+                imageTimer = setTimeout(function() {
+                    $('#homeCarousel').carousel('next');
+                }, SLIDE_INTERVAL);
+            }
+        }
+
+        // Pause video khi rời slide
+        $('#homeCarousel').on('slide.bs.carousel', function() {
+            clearImageTimer();
+            $bannerVideos.each(function() { this.pause(); });
+        });
+
+        $('#homeCarousel').on('slid.bs.carousel', handleActiveSlide);
+
+        // Lần đầu tương tác bật âm thanh
+        document.addEventListener('touchstart', function() {
+            var v = getActiveVideo();
+            if (v) { v.muted = false; updateMuteIcon(v); }
+        }, { once: true });
+        document.addEventListener('click', function() {
+            var v = getActiveVideo();
+            if (v) { v.muted = false; updateMuteIcon(v); }
+        }, { once: true });
+
+        handleActiveSlide();
+
+        function show_banner(link, name) {
+            close_banner();
+            let html = `<div class="popup-banner">
+                            <i class="fas fa-times" onclick="close_banner()"></i>
+                            <iframe src="${link}" title="${name}" frameborder="0" loading="lazy" allowfullscreen></iframe>
+                        </div>`;
+            if (link != ''){
+                $('body').append(html).css('overflow', 'hidden');
+            }
+        }
+
+        function close_banner() {
+            $('.popup-banner').remove();
+            $('body').css('overflow', 'auto');
+        }
+    </script>
+
+</body>
+</html>

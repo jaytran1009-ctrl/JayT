@@ -1,0 +1,163 @@
+{
+  "$schema": "https://jayt.vn/schemas/evidence-resolution-manifest.v1.json",
+  "manifest_id": "EVIDENCE_RESOLUTION_MANIFEST_086R",
+  "work_order": "JAYT-EVIDENCE-RESOLUTION-086R",
+  "resolved_at": "2026-08-25T11:28:00+07:00",
+  "summary_metrics": {
+    "total_sources_scanned": 28,
+    "deep_browsed_sources": 9,
+    "full_verified_bundles_danang": 1,
+    "national_programs_out_of_scope_danang": 1,
+    "signal_only_app_wallet_sources": 3,
+    "lead_sources_path_changed_or_spa": 4,
+    "blocked_challenge_sources_no_bypass": 8,
+    "failed_404_sources": 11,
+    "production_feed_length": 0,
+    "is_approved": false
+  },
+  "resolved_sources": [
+    {
+      "index": 1,
+      "brand": "Metiz Cinema Đà Nẵng",
+      "domain": "metiz.vn",
+      "sector": "CINEMA",
+      "resolution_tier": "FULL_VERIFIED_BUNDLE_DANANG",
+      "program_title": "SUPER MONDAY (Thứ Hai Siêu Hạng)",
+      "price_claim": "55.000đ / vé 2D",
+      "schedule_claim": "Thứ Hai hằng tuần",
+      "terms_summary": "Áp dụng cho thành viên Metiz Cinema (xuất trình thẻ); Mua trực tiếp tại quầy; Ghế thường, VIP, ghế đôi; Không áp dụng ngày lễ/Tết/suất chiếu sớm; Không áp dụng cùng CTKM khác.",
+      "locality": "Metiz Cinema Đà Nẵng (Tầng 1 Helio Center, đường 2/9, Hải Châu, Đà Nẵng)",
+      "purchase_channel": "AT_COUNTER",
+      "evidence_artifacts": {
+        "screenshot": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/screenshot.png",
+        "html": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+        "text": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.txt",
+        "receipt": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/capture_receipt.json"
+      },
+      "bundle_complete": true
+    },
+    {
+      "index": 2,
+      "brand": "BHD Star Cineplex",
+      "domain": "bhdstar.vn",
+      "sector": "CINEMA",
+      "resolution_tier": "SIGNAL_ONLY_OUT_OF_SCOPE_DANANG",
+      "programs_observed": [
+        "HAPPY MONDAY (Vé từ 48k Thứ Hai)",
+        "COUPLE DAY (Giảm 20% Thứ Ba)",
+        "U22 DAY (Nhân đôi điểm Thứ Năm)",
+        "Ưu đãi suất chiếu đêm (Từ 48k sau 22h)"
+      ],
+      "locality_assessment": "BHD Star có cụm rạp tại Hà Nội, Huế, TP.HCM, Long Khánh, Phú Mỹ, Thanh Hóa; KHÔNG CÓ chi nhánh tại Đà Nẵng.",
+      "radar_status": "OUT_OF_SCOPE_LOCALITY",
+      "bundle_complete": false
+    },
+    {
+      "index": 3,
+      "brand": "Ví MoMo",
+      "domain": "momo.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "resolution_tier": "SIGNAL_ONLY_APP_WALLET",
+      "programs_observed": [
+        "MOMOBUS: Miễn phí 5 lượt xe buýt (HÀ NỘI ONLY - Không áp dụng Đà Nẵng)",
+        "CHAOMOMO / CHONMOMO: Gói quà bạn mới đến 500.000đ (Toàn quốc, kiểm tra trong App)",
+        "Lần đầu đặt vé tàu dịp 2/9: Giảm thẳng 100.000đ (Hạn đến 02/09/2026, trong App)"
+      ],
+      "locality_assessment": "Có chi nhánh CSKH tại Đà Nẵng (484-486 đường 2/9, Hải Châu). Ưu đãi ví thực hiện qua ứng dụng di động.",
+      "radar_status": "CHECK_IN_APP",
+      "bundle_complete": false
+    },
+    {
+      "index": 4,
+      "brand": "Ví ZaloPay",
+      "domain": "zalopay.vn",
+      "sector": "ECOMMERCE_WALLETS",
+      "resolution_tier": "SIGNAL_ONLY_APP_WALLET",
+      "programs_observed": [
+        "Vinpearl & VinWonders: Ưu đãi đến 2.000.000đ (Áp dụng du lịch Đà Nẵng - Hội An, còn 18 tuần)",
+        "Mã HOCHE: Ưu đãi đến 50.000đ hóa đơn (Còn 6 ngày)",
+        "FPT Play / Home Credit: Giảm 50.000đ",
+        "Đua top đặt xe: ĐÃ KẾT THÚC (23/08/2026)"
+      ],
+      "locality_assessment": "Ưu đãi toàn quốc và khu vực miền Trung; xác thực thời hạn và thu thập voucher trong App ZaloPay.",
+      "radar_status": "CHECK_IN_APP",
+      "bundle_complete": false
+    },
+    {
+      "index": 5,
+      "brand": "Lotte Cinema Vietnam",
+      "domain": "lottecinemavn.com",
+      "sector": "CINEMA",
+      "resolution_tier": "SIGNAL_ONLY_BANNER_EVENT",
+      "programs_observed": [
+        "20 sự kiện banner với các khung thời hạn cụ thể (16/08-17/09/2026, 01/08-31/12/2026...)"
+      ],
+      "locality_assessment": "Có cụm rạp Lotte Cinema Đà Nẵng (Tầng 5 Lotte Mart, P. Hòa Cường Bắc, Hải Châu). Cần click chi tiết từng banner để trích giá.",
+      "radar_status": "CHECK_IN_APP_OR_WEB",
+      "bundle_complete": false
+    },
+    {
+      "index": 6,
+      "brand": "KFC Vietnam",
+      "domain": "kfcvietnam.com.vn",
+      "sector": "FNB_FASTFOOD",
+      "resolution_tier": "LEAD_PATH_CHANGED",
+      "note": "Trang /uu-dai trả về thông báo đổi đường dẫn (soft-404). Giữ trên radar với link trang chủ.",
+      "radar_status": "CHECK_OFFICIAL_WEB",
+      "bundle_complete": false
+    },
+    {
+      "index": 7,
+      "brand": "Phúc Long Coffee & Tea",
+      "domain": "phuclong.com.vn",
+      "sector": "COFFEE_TEA",
+      "resolution_tier": "LEAD_SPA_DYNAMIC",
+      "note": "Trang SPA tải nội dung dynamic qua AJAX. Giữ trên radar.",
+      "radar_status": "CHECK_OFFICIAL_WEB",
+      "bundle_complete": false
+    },
+    {
+      "index": 8,
+      "brand": "Phê La",
+      "domain": "phela.vn",
+      "sector": "COFFEE_TEA",
+      "resolution_tier": "LEAD_NO_PROMO",
+      "note": "Trang tin tức chỉ gồm bài viết thương hiệu (Chuyện Phê Phin), không có voucher.",
+      "radar_status": "CHECK_OFFICIAL_WEB",
+      "bundle_complete": false
+    },
+    {
+      "index": 9,
+      "brand": "ShopeeFood Vietnam",
+      "domain": "shopeefood.vn",
+      "sector": "FOOD_AND_RIDE",
+      "resolution_tier": "LEAD_APP_REDIRECT",
+      "note": "Trang bộ sưu tập chuyển hướng về landing cài đặt app. Khuyến mãi xem trong app.",
+      "radar_status": "CHECK_IN_APP",
+      "bundle_complete": false
+    }
+  ],
+  "blocked_challenge_sources": [
+    { "brand": "Galaxy Cinema", "domain": "galaxycine.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "Jollibee Vietnam", "domain": "jollibee.com.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "Lotteria Vietnam", "domain": "lotteria.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "Domino's Pizza Vietnam", "domain": "dominos.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "The Coffee House", "domain": "thecoffeehouse.com", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "Grab Vietnam / GrabFood", "domain": "grab.com", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "Shopee Vietnam", "domain": "shopee.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" },
+    { "brand": "VNPAY-QR", "domain": "vnpay.vn", "status": "BLOCKED_CHALLENGE", "policy": "NO_BYPASS_ATTEMPT_MAINTAIN_BLOCKED" }
+  ],
+  "failed_404_sources": [
+    { "brand": "CGV Cinemas Vietnam", "domain": "cgv.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Beta Cinemas", "domain": "betacinemas.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Pizza Hut Vietnam", "domain": "pizzahut.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "The Pizza Company", "domain": "thepizzacompany.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Highlands Coffee", "domain": "highlandscoffee.com.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Katinat Saigon Kafe", "domain": "katinat.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Gong Cha Vietnam", "domain": "gongcha.com.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Trung Nguyên Legend", "domain": "trungnguyenlegend.com", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Be Group", "domain": "be.com.vn", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Xanh SM", "domain": "xanhsm.com", "http_status": 404, "status": "FAILED_404_PATH_CHANGED" },
+    { "brand": "Lazada Vietnam", "domain": "lazada.vn", "http_status": 0, "status": "FAILED_CONNECTION" }
+  ]
+}

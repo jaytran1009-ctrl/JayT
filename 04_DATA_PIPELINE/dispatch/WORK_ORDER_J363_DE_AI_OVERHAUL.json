@@ -1,0 +1,51 @@
+{
+  "work_order_id": "J363_DE_AI_OVERHAUL",
+  "authority": "CHAIRMAN-DIRECTIVE-2026-0909-DE-AI-OVERHAUL",
+  "issued_at_utc": "2026-09-09T09:04:44Z",
+  "issued_by": "Codex CEO",
+  "executor": "Antigravity",
+  "status": "ISSUED_READY_FOR_EXECUTION",
+  "design_spec": "01_EXECUTIVE_COUNCIL/JAYT_363_DE_AI_DESIGN_HANDOFF.md",
+  "authorization": {
+    "staging_source_redesign": true,
+    "staging_preview_deployment": true,
+    "production_deployment": false,
+    "production_alias_change": false,
+    "affiliate_activation": false,
+    "automatic_factual_approval": false
+  },
+  "baseline": {
+    "staging_js_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+    "prior_receipt_sha256": "e7da6b406066febc349af6cae12dea056e1242b7f89bba9a019af493d25efc19",
+    "production_version": "v3.430.0",
+    "rule": "This directive authorizes a new Staging design revision. Preserve R5 artifacts as history; its acceptance does not certify the redesigned bytes. UI review may proceed while factual claims are pending."
+  },
+  "deployment_target": {
+    "projectName": "deploy",
+    "projectId": "prj_tfkny8yNbOPIBYRjzKv4U7cxp35C",
+    "orgId": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "environment": "preview",
+    "protection": "Keep SSO protection enabled; use authorized access for QA. Do not reopen public access to simplify testing."
+  },
+  "implementation": [
+    "Implement the Porcelain Clean design and all interaction states specified in the linked handoff. Reuse working Vanilla JS calculators and preserve integer arithmetic.",
+    "Edit 03_SOURCE_OF_TRUTH/jayt_apex_interface.js first and synchronize deploy/jayt_apex_interface.js and deploy/public/jayt_apex_interface.js. Keep canonical CSS and HTML in 03_SOURCE_OF_TRUTH, with matching deploy and deploy/public copies; inventory existing paths before creating canonical counterparts.",
+    "Preserve the isolated Staging deals_feed.json as []. Redesign cards, filters, navigation and labels without changing factual approval state or using simulated prices as verified discounts.",
+    "Archive prior runner, receipt and affected source artifacts before replacement. Record changed paths and byte hashes; do not overwrite sealed historical release candidates.",
+    "Prepare an internal snapshot schema for Shopee, Lazada, Klook and Grab with no invented capture data. Keep evidence outside the deploy payload."
+  ],
+  "required_deliverables": [
+    "Updated canonical source and exact deployment mirrors",
+    "Protected Vercel Preview URL and deployment ID with authorized reviewer access instructions",
+    "07_QUALITY_ASSURANCE/runtime_evidence/J363_DE_AI_REDESIGN_RECEIPT.json with runner hash, served artifact hashes, measured results and explicit untested items",
+    "Before/after screenshots at 1440, 768 and 390px, including calculators, empty cards, modal and mobile navigation",
+    "06_TRUST_AND_EVIDENCE/j363_de_ai/affiliate_snapshot.schema.json and an empty acquisition queue",
+    "One combined handoff covering Product, Design, UX/CX, Growth, Data & Trust, Engineering and QA; distinguish actual reviewer input from proposed responsibilities"
+  ],
+  "deadlines_asia_ho_chi_minh": {
+    "dispatch": "2026-09-09T17:00:00+07:00",
+    "staging": "2026-09-09T20:00:00+07:00",
+    "ceo_review": "2026-09-09T21:00:00+07:00"
+  },
+  "handoff_note": "Issued locally at 16:04 Asia/Ho_Chi_Minh. Executor receipt/start and completion are not yet observed; deadlines are requested milestones, not claims of completed work."
+}

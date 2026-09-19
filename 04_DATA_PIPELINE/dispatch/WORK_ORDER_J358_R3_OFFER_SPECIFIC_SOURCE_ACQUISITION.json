@@ -1,0 +1,45 @@
+{
+  "work_order_id": "J358-R3-OFFER-SPECIFIC-SOURCE-ACQUISITION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Acquire offer-specific official evidence for the 10 Batch 19 HELD candidates without weakening the R2 provenance gate.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "input": {
+    "claim_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r2_claim_provenance/CLAIM_PROVENANCE_MATRIX.json",
+    "r2_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R2_CLAIM_PROVENANCE_REPLAY.json",
+    "scope_count": 10
+  },
+  "source_policy": [
+    "Use only first-party official offer detail pages, official terms pages, or first-party structured APIs whose response explicitly contains the offer.",
+    "A source must explicitly bind title, price or benefit, conditions, validity or recurrence, and Da Nang applicability for the candidate to pass.",
+    "A legal footer, generic store locator, homepage catalog, current calendar year, brand presence, image filename, alt text alone, or historic address may not establish offer locality or validity.",
+    "Capture original response bytes, requested URL, final URL, status, UTC timestamp, headers, SHA-256 and soft-404/challenge detection. No mock, OCR-only, social repost or third-party aggregator authority.",
+    "Replay each candidate through the J358-R2 validator and return actual VERIFIED/HELD counts. Zero VERIFIED is an acceptable truthful outcome.",
+    "Do not rewrite old R1/R2 artifacts; place all acquisitions and outputs in new R3 directories with SHA-256 sidecars."
+  ],
+  "required_negative_controls": [
+    "Reject a source that contains the price but not the offer title.",
+    "Reject a source that lists a Da Nang store but does not state the offer applies there.",
+    "Reject a source with an undated or expired promotion when the displayed claim asserts current validity.",
+    "Reject source-hash drift and soft-404 redirects."
+  ],
+  "deliverables": {
+    "vault": "06_TRUST_AND_EVIDENCE/batch_19_r3_offer_specific_vault/",
+    "claim_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_offer_specific_vault/CLAIM_PROVENANCE_MATRIX_R3.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_SOURCE_ACQUISITION_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_OFFER_SPECIFIC_SOURCE_ACQUISITION.json",
+    "sha256_sidecars_required": true
+  },
+  "prohibited_actions": [
+    "staging hydration",
+    "candidate packaging",
+    "production deployment",
+    "alias mutation",
+    "scheduler mutation",
+    "rollback execution"
+  ],
+  "acceptance_gate": "CEO review required; no automatic promotion"
+}

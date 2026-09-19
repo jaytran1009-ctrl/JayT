@@ -1,0 +1,60 @@
+{
+  "proposal_id": "JAYT-319-B04-06-PRE-AUDIT-PROPOSAL",
+  "directive": "JAYT-319",
+  "governing_work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_B04_06_PRE_AUDIT_WORK_ORDER.md",
+  "mode": "DISCOVERY_ONLY__PRE_AUDIT_PROPOSAL",
+  "created_at_utc": "2026-09-04T07:38:00Z",
+  "candidate": {
+    "slot_id": "B04_06",
+    "track": "B04_HEALTH_01",
+    "institution_name": "Trung tâm Kiểm soát bệnh tật TP Đà Nẵng (CDC Đà Nẵng) — Sở Y tế TP Đà Nẵng",
+    "institution_type": "Đơn vị sự nghiệp y tế công lập trực thuộc Sở Y tế TP Đà Nẵng",
+    "geographic_scope": "THANH_KHE_HAI_CHAU_DA_NANG",
+    "service_title": "Hướng dẫn Quy trình Tiêm chủng và Phòng bệnh Cộng đồng CDC Đà Nẵng",
+    "official_leaf_url": "https://ksbtdanang.vn/cam-nang-vac-xin/quy-trinh-tiem-chung-tai-cdc-da-nang/quy-trinh-tiem-chung-16.html",
+    "visible_publication_date": "2026-06-25",
+    "published_timestamp_iso": "2026-06-25T10:02:16+07:00",
+    "pre_declared_exact_span": "Nhân viên y tế kiểm tra lại thông tin, loại vắc-xin và thực hiện tiêm đúng quy trình, đảm bảo an toàn tiêm chủng.",
+    "secondary_verbatim_span": "Phòng Tiêm chủng dịch vụ - Trung tâm Kiểm soát bệnh tật TP. Đà Nẵng",
+    "content_tier": "T2_PUBLIC_INFORMATION",
+    "utility_description": "Cung cấp thông tin hướng dẫn quy trình 6 bước tiêm chủng an toàn, tư vấn sàng lọc y tế dự phòng và địa chỉ các cơ sở tiêm chủng công lập của CDC Đà Nẵng phục vụ nhân dân.",
+    "non_commercial_check": {
+      "has_pricing": false,
+      "has_voucher": false,
+      "has_affiliate": false,
+      "has_tracking_tokens": false
+    }
+  },
+  "department_audits": {
+    "data_and_trust": {
+      "verdict": "PRE_AUDIT_PASS__OFFICIAL_DATED_LEAF_PAGE_VERIFIED",
+      "findings": "Trang lá chính thức xuất bản ngày 25/06/2026 tại tên miền ksbtdanang.vn của CDC Đà Nẵng (thuộc Sở Y tế TP Đà Nẵng). Đã kiểm chứng HTML tĩnh server-rendered chứa nguyên văn text-span chỉ dẫn an toàn tiêm chủng và thông tin cơ sở phục vụ công ích y tế cơ sở.",
+      "leaf_page_verified": true,
+      "recency_verified": true,
+      "direct_span_verified": true
+    },
+    "qa_and_compliance": {
+      "verdict": "PRE_AUDIT_PASS__READY_FOR_CEO_SCOPE_REVIEW",
+      "findings": "Đạt 100% tiêu chí Work Order JAYT_319_B04_06: là bài viết trang lá chi tiết (không phải homepage/portal, không phải category listing), có niên hạn 2026 rõ ràng, span nguyên văn duy nhất, không chứa yếu tố thương mại hay affiliate/tracking.",
+      "html_structure_audit": "PASS_SERVER_RENDERED",
+      "pre_capture_gate": "LOCKED__REQUIRES_CEO_ONE_SHOT_SCOPE"
+    },
+    "engineering": {
+      "staging_status": "5_CARDS_PRESERVED_ZERO_DRIFT",
+      "production_status": "3_CARDS_ISOLATED_HTTP_200",
+      "no_render_without_approval": true
+    }
+  },
+  "alternate_pipeline_candidate": {
+    "institution_name": "Sở Y tế Thành phố Đà Nẵng",
+    "candidate_portal": "https://soyte.danang.gov.vn/vi/web/syt/w/khai-mac-chuong-trinh-benh-vien-bay-orbis-nam-2026-tai-thanh-pho-da-nang",
+    "finding": "Bài viết trang lá chính thức đăng ngày 29/07/2026 trên Cổng Sở Y tế Đà Nẵng về Chương trình Bệnh viện Bay Orbis 2026 hỗ trợ khám, chữa mắt và chuyển giao kỹ thuật nhãn khoa cho người dân; lưu giữ trong diện dự phòng.",
+    "status": "HELD_AS_BACKUP_CANDIDATE"
+  },
+  "gate_enforcement": {
+    "capture_authorized": false,
+    "public_approved": false,
+    "render_permitted": false,
+    "next_gate": "AWAITING_CEO_TARGET_SPECIFIC_ONE_SHOT_SCOPE"
+  }
+}

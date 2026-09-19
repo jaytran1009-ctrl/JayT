@@ -1,0 +1,74 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BH_20260829",
+  "schema_version": "3.5.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BH)",
+  "verified_at": "2026-08-29T06:10:33.063Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BG.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_BRAND_SYSTEM_BH",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bh": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "brand_system_verification_bh": {
+    "brand_system_file": "00_PROGRAM_BASELINE/JAYT_BRAND_SYSTEM_BH.json",
+    "brand_system_sha256": "26f9ba861f6ced57fbe2532bfd18b4b8ae0a346f317307743ee6473a611343d0",
+    "brand_asset_manifest_file": "00_PROGRAM_BASELINE/JAYT_BRAND_ASSET_MANIFEST_BH.json",
+    "brand_asset_manifest_sha256": "82f952e4a0ada77eefe1656aae5a594c7fe421b669a58339a09e10ca1a5bc35b",
+    "three_brand_boards_presented": 3,
+    "jflow_vector_identity_active": true
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "fbd2bee4473ed63cf7a240c146a08264ad93ea844d023cffa7b6f0852662da05",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "a2857010a84731c587311a5c3303d32d0475f177d5cc8d92dce49ebb7abbb919",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "2b10f13c818a871ed1cd69cd6fe9101e36596bac1edb0ecce060fdca848e3c4b"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bh.js",
+      "description": "Storefront BH candidate with J-Flow brand identity lockup and 3 brand boards visualizer",
+      "sha256": "e6e2946d265e71ff67699088e82f0c547e042b5d255e293206db8fa631bd526c"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/JAYT_BRAND_SYSTEM_BH.json",
+      "description": "Brand System Specification & 3 Brand Boards (Section BH)",
+      "sha256": "26f9ba861f6ced57fbe2532bfd18b4b8ae0a346f317307743ee6473a611343d0"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/JAYT_BRAND_ASSET_MANIFEST_BH.json",
+      "description": "Brand Asset Rights & Governance Manifest (Section BH)",
+      "sha256": "82f952e4a0ada77eefe1656aae5a594c7fe421b669a58339a09e10ca1a5bc35b"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34227_staging_bh.json",
+      "description": "Release receipt for Staging BH deployment with brand identity verified",
+      "sha256": "b3bb60bac3b47b743b211ae694df4c55d02ee0eb0c3e4888d59cd7ade5febcf4"
+    }
+  ],
+  "verifier_audit_passed": true
+}

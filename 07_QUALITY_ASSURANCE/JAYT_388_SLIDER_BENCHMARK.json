@@ -1,0 +1,343 @@
+{
+  "$schema": "https://jayt.vn/schemas/j388-slider-benchmark.v1.json",
+  "benchmark_id": "JAYT_388_SLIDER_BENCHMARK",
+  "cycle": "JAYT-388",
+  "mandate": "WORK_ORDER_J388_R2_EVIDENCE_EXECUTION",
+  "authority": "CHAIRMAN_AND_CEO_J388_DISPATCH",
+  "component": "lunch-arbitrage-module (3-App Delivery Cost Comparator)",
+  "benchmark_timestamp_utc": "2026-09-11T03:31:04.205Z",
+  "execution_environment": {
+    "device_profile": "Apple iPhone 14 Emulation",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 3,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+    "runtime_engine": "Chromium V8 Headless / Puppeteer",
+    "host_os": "win32 x64",
+    "measurement_method": "Input event dispatch to double requestAnimationFrame paint completion via performance.now()"
+  },
+  "acceptance_criteria": {
+    "sample_count_minimum": 50,
+    "sample_count_actual": 50,
+    "latency_threshold_p50_ms": 30,
+    "latency_threshold_p95_ms": 30,
+    "latency_threshold_max_ms": 30,
+    "zero_samples_allowed": false,
+    "compliance_status": "PASS"
+  },
+  "summary_metrics": {
+    "total_samples": 50,
+    "min_latency_ms": 4.4,
+    "avg_latency_ms": 16.41,
+    "p50_latency_ms": 16.6,
+    "p95_latency_ms": 16.9,
+    "max_latency_ms": 17.6
+  },
+  "raw_samples": [
+    {
+      "sample_index": 1,
+      "input_value": 25000,
+      "displayed_label": "25.000 ₫",
+      "latency_ms": 4.4
+    },
+    {
+      "sample_index": 2,
+      "input_value": 28000,
+      "displayed_label": "30.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 3,
+      "input_value": 30000,
+      "displayed_label": "30.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 4,
+      "input_value": 33000,
+      "displayed_label": "35.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 5,
+      "input_value": 35000,
+      "displayed_label": "35.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 6,
+      "input_value": 38000,
+      "displayed_label": "40.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 7,
+      "input_value": 40000,
+      "displayed_label": "40.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 8,
+      "input_value": 43000,
+      "displayed_label": "45.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 9,
+      "input_value": 45000,
+      "displayed_label": "45.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 10,
+      "input_value": 48000,
+      "displayed_label": "50.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 11,
+      "input_value": 51000,
+      "displayed_label": "50.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 12,
+      "input_value": 53000,
+      "displayed_label": "55.000 ₫",
+      "latency_ms": 17.3
+    },
+    {
+      "sample_index": 13,
+      "input_value": 56000,
+      "displayed_label": "55.000 ₫",
+      "latency_ms": 16.1
+    },
+    {
+      "sample_index": 14,
+      "input_value": 58000,
+      "displayed_label": "60.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 15,
+      "input_value": 61000,
+      "displayed_label": "60.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 16,
+      "input_value": 63000,
+      "displayed_label": "65.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 17,
+      "input_value": 66000,
+      "displayed_label": "65.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 18,
+      "input_value": 68000,
+      "displayed_label": "70.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 19,
+      "input_value": 71000,
+      "displayed_label": "70.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 20,
+      "input_value": 73000,
+      "displayed_label": "75.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 21,
+      "input_value": 76000,
+      "displayed_label": "75.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 22,
+      "input_value": 79000,
+      "displayed_label": "80.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 23,
+      "input_value": 81000,
+      "displayed_label": "80.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 24,
+      "input_value": 84000,
+      "displayed_label": "85.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 25,
+      "input_value": 86000,
+      "displayed_label": "85.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 26,
+      "input_value": 89000,
+      "displayed_label": "90.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 27,
+      "input_value": 91000,
+      "displayed_label": "90.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 28,
+      "input_value": 94000,
+      "displayed_label": "95.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 29,
+      "input_value": 96000,
+      "displayed_label": "95.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 30,
+      "input_value": 99000,
+      "displayed_label": "100.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 31,
+      "input_value": 102000,
+      "displayed_label": "100.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 32,
+      "input_value": 104000,
+      "displayed_label": "105.000 ₫",
+      "latency_ms": 17.6
+    },
+    {
+      "sample_index": 33,
+      "input_value": 107000,
+      "displayed_label": "105.000 ₫",
+      "latency_ms": 15.7
+    },
+    {
+      "sample_index": 34,
+      "input_value": 109000,
+      "displayed_label": "110.000 ₫",
+      "latency_ms": 16.9
+    },
+    {
+      "sample_index": 35,
+      "input_value": 112000,
+      "displayed_label": "110.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 36,
+      "input_value": 114000,
+      "displayed_label": "115.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 37,
+      "input_value": 117000,
+      "displayed_label": "115.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 38,
+      "input_value": 119000,
+      "displayed_label": "120.000 ₫",
+      "latency_ms": 16.8
+    },
+    {
+      "sample_index": 39,
+      "input_value": 122000,
+      "displayed_label": "120.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 40,
+      "input_value": 124000,
+      "displayed_label": "125.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 41,
+      "input_value": 127000,
+      "displayed_label": "125.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 42,
+      "input_value": 130000,
+      "displayed_label": "130.000 ₫",
+      "latency_ms": 16.5
+    },
+    {
+      "sample_index": 43,
+      "input_value": 132000,
+      "displayed_label": "130.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 44,
+      "input_value": 135000,
+      "displayed_label": "135.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 45,
+      "input_value": 137000,
+      "displayed_label": "135.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 46,
+      "input_value": 140000,
+      "displayed_label": "140.000 ₫",
+      "latency_ms": 16.7
+    },
+    {
+      "sample_index": 47,
+      "input_value": 142000,
+      "displayed_label": "140.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 48,
+      "input_value": 145000,
+      "displayed_label": "145.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 49,
+      "input_value": 147000,
+      "displayed_label": "145.000 ₫",
+      "latency_ms": 16.6
+    },
+    {
+      "sample_index": 50,
+      "input_value": 150000,
+      "displayed_label": "150.000 ₫",
+      "latency_ms": 16.8
+    }
+  ],
+  "screenshot_evidence": "07_QUALITY_ASSURANCE/runtime_evidence/j388_live_slider_benchmark_mobile.png"
+}

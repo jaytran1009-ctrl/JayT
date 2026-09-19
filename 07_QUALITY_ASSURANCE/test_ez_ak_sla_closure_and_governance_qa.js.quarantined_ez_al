@@ -1,0 +1,120 @@
+/**
+ * JAYT SLA CLOSURE & GOVERNANCE QA SUITE (SECTION EZ-AK)
+ * Governing Directive: JAYT-245 Section EZ-AK (Lines 4960-4994)
+ */
+
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const assert = require('assert');
+
+const ROOT = 'd:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng';
+
+async function runEZAKQA() {
+  console.log('\n🔬 RUNNING JAYT SECTION EZ-AK SLA CLOSURE & GOVERNANCE QA...\n');
+
+  let totalTests = 0;
+  let passedTests = 0;
+
+  async function it(name, fn) {
+    totalTests++;
+    try {
+      await fn();
+      console.log('  ✓ ' + name);
+      passedTests++;
+    } catch (err) {
+      console.error('  ✕ ' + name + ': ' + err.message);
+      throw err;
+    }
+  }
+
+  // --- Suite 1: SLA Closure Invariants in Fast Lane Ledger ---
+  console.log('--- Suite 1: SLA Closure Invariants in Fast Lane Ledger ---');
+
+  const ledgerPath = path.join(ROOT, '06_TRUST_AND_EVIDENCE/FAST_LANE_BATCH_PILOT_2_CANDIDATES_SLA_LEDGER_EZ_AE.json');
+  const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
+
+  await it('Fast Lane Ledger has 0 open candidates and exactly 2 closed candidates', () => {
+    assert.strictEqual(ledger.batch_summary.sla_open_active_count, 0);
+    assert.strictEqual(ledger.batch_summary.sla_closed_count, 2);
+  });
+
+  await it('JetBrains candidate is CLOSED as T4_DESCRIPTIVE_ONLY_HELD_INTERNAL due to missing action_url', () => {
+    const jb = ledger.candidates[0];
+    assert.strictEqual(jb.candidate_id, 'FAST_LANE_RERUN_01_JETBRAINS_STUDENT');
+    assert.strictEqual(jb.sla_status, 'CLOSED_SLA_COMPLETED_T4_DESCRIPTIVE_ONLY_HELD_INTERNAL');
+    assert.strictEqual(jb.verdict_tier, 'T4_DESCRIPTIVE_ONLY_HELD_INTERNAL');
+    assert.deepStrictEqual(jb.missing_fields, ['action_url']);
+    assert.strictEqual(jb.public_eligible, false);
+  });
+
+  await it('Figma candidate is CLOSED as T2_DOCUMENTATION_HELD_INTERNAL awaiting Council review', () => {
+    const fg = ledger.candidates[1];
+    assert.strictEqual(fg.candidate_id, 'FAST_LANE_RERUN_02_FIGMA_EDUCATION');
+    assert.strictEqual(fg.sla_status, 'CLOSED_SLA_COMPLETED_T2_DOCUMENTATION_HELD_INTERNAL');
+    assert.strictEqual(fg.verdict_tier, 'T2_DOCUMENTATION_HELD_INTERNAL');
+    assert.deepStrictEqual(fg.missing_fields, []);
+    assert.strictEqual(fg.public_eligible, false);
+  });
+
+  // --- Suite 2: Verdict File Proofs & Raw Byte Hashes ---
+  console.log('\n--- Suite 2: Verdict File Proofs & Raw Byte Hashes ---');
+
+  const vJbPath = path.join(ROOT, '06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_JETBRAINS_EZ_AK.json');
+  const vFgPath = path.join(ROOT, '06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_EZ_AK.json');
+
+  await it('JetBrains closure verdict file exists and SHA-256 matches raw bytes', () => {
+    assert.ok(fs.existsSync(vJbPath));
+    const v = JSON.parse(fs.readFileSync(vJbPath, 'utf8'));
+    const raw = fs.readFileSync(path.join(ROOT, v.raw_vault_path));
+    const sha = crypto.createHash('sha256').update(raw).digest('hex');
+    assert.strictEqual(sha, v.raw_sha256);
+    assert.strictEqual(v.verdict_tier, 'T4_DESCRIPTIVE_ONLY_HELD_INTERNAL');
+    assert.strictEqual(v.public_eligible, false);
+    assert.strictEqual(v.field_status.action_url, false);
+  });
+
+  await it('Figma closure verdict file exists and SHA-256 matches raw bytes', () => {
+    assert.ok(fs.existsSync(vFgPath));
+    const v = JSON.parse(fs.readFileSync(vFgPath, 'utf8'));
+    const raw = fs.readFileSync(path.join(ROOT, v.raw_vault_path));
+    const sha = crypto.createHash('sha256').update(raw).digest('hex');
+    assert.strictEqual(sha, v.raw_sha256);
+    assert.strictEqual(v.verdict_tier, 'T2_DOCUMENTATION_HELD_INTERNAL');
+    assert.strictEqual(v.public_eligible, false);
+    assert.strictEqual(v.field_status.action_url, true);
+  });
+
+  // --- Suite 3: Governance & Containment Gates ---
+  console.log('\n--- Suite 3: Governance & Containment Gates ---');
+
+  await it('Total public cards created remains strictly 0 for fast lane batch', () => {
+    assert.strictEqual(ledger.batch_summary.public_actions.new_public_cards, 0);
+    assert.strictEqual(ledger.batch_summary.public_actions.new_public_links, 0);
+    assert.strictEqual(ledger.batch_summary.t1_deals_approved, 0);
+  });
+
+  await it('EZ-AK Council Pack exists and contains Decision Authority Table', () => {
+    const packPath = path.join(ROOT, '01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_AK_SLA_CLOSURE_AND_GATE_REVALIDATION_20260901.md');
+    assert.ok(fs.existsSync(packPath));
+    const content = fs.readFileSync(packPath, 'utf8');
+    assert.ok(content.includes('DANH SÁCH CÁC QUYẾT ĐỊNH CÒN CẦN AUTHORITY'));
+    assert.ok(content.includes('TECHNICAL_EXACT_VERSION_GATE_REVALIDATED'));
+  });
+
+  await it('Manifest and Receipt record closure state and exact expectedVersion', () => {
+    const m = JSON.parse(fs.readFileSync(path.join(ROOT, '00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_AK.json'), 'utf8'));
+    const r = JSON.parse(fs.readFileSync(path.join(ROOT, '00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_AK.json'), 'utf8'));
+    assert.strictEqual(m.expectedVersion, 'v3.482.0-staging.ez');
+    assert.strictEqual(m.fast_lane_status, 'CLOSED_FAIL_CLOSED_AT_SLA_CLOSE');
+    assert.strictEqual(r.production_locked, true);
+    assert.strictEqual(r.fast_lane.sla_open_active_count, 0);
+  });
+
+  console.log('\n🎉 ALL ' + passedTests + '/' + totalTests + ' EZ-AK SLA CLOSURE & GOVERNANCE QA TESTS PASSED!\n');
+}
+
+runEZAKQA().catch(e => {
+  console.error('Fatal Runner Error:', e);
+  process.exit(1);
+});

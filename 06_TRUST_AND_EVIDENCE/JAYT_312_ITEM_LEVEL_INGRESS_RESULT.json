@@ -1,0 +1,34 @@
+{
+  "result_id": "JAYT-312-ITEM-LEVEL-INGRESS-RESULT-20260904",
+  "scope": "JAYT-312-BATCH-04-DIGITAL-INGRESS-20260904",
+  "decision_boundary": "Evidence intake only; this result grants no public approval, rendering or Production mutation.",
+  "items": [
+    {
+      "slot_id": "B04_01",
+      "status": "INTAKE_FAILED__QUARANTINE",
+      "reason": "One-shot unauthenticated capture failed to establish a network connection.",
+      "retry_authorized": false,
+      "public_approved": false,
+      "render_permitted": false
+    },
+    {
+      "slot_id": "B04_02",
+      "status": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "http_status": 200,
+      "raw_body_sha256": "067c0892a4984b909230f806ce6f59546f70a08c60cee674450293738ed088f1",
+      "supporting_text_span": "triển khai ký số toàn dân và áp dụng cho các dịch vụ y tế",
+      "supporting_text_offset_utf8": 47870,
+      "headers_redacted": true,
+      "public_approved": false,
+      "render_permitted": false,
+      "next_gate": "CEO_ITEM_BY_ITEM_PUBLIC_APPROVAL_STAGING_ONLY"
+    }
+  ],
+  "summary": {
+    "raw_captured": 1,
+    "evidence_complete_internal_held": 1,
+    "quarantined": 1,
+    "public_approved": 0,
+    "production_mutations": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "protocol_id": "JAYT_CX_5SEC_TASK_PROTOCOL_20260829",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section CX)",
+  "created_at": "2026-08-29T21:46:45Z",
+  "version": "v3.431.0-staging.cx",
+  "target_url": "http://127.0.0.1:4173",
+  "moments": [
+    {
+      "moment_id": "MOMENT_2SEC_PROMISE",
+      "timeframe": "0 - 2 seconds",
+      "customer_goal": "Hiểu ngay JayT là cổng tìm deal, voucher và tư vấn mua sắm thông minh tại Đà Nẵng",
+      "pass_criteria": "Hero hiển thị rõ 'Đặc quyền thật cho hôm nay ở Đà Nẵng' & 'Khám Phá Deal, Voucher & Nhịp Sống Đà Nẵng', không chỉ có ảnh phong cảnh chung chung",
+      "fail_criteria": "Chỉ thấy cảnh thành phố hoặc slogan trừu tượng mà không biết trang làm gì"
+    },
+    {
+      "moment_id": "MOMENT_5SEC_INTENT_SELECTION",
+      "timeframe": "2 - 5 seconds",
+      "customer_goal": "Chọn được ngay 1 trong 3 ý định mua sắm cốt lõi",
+      "pass_criteria": "3 nút hành động chạm chuẩn 44px min-height rõ ràng: 'Deal dùng hôm nay', 'Voucher chính thức', 'Kiểm tra trước khi mua'",
+      "fail_criteria": "Menu phức tạp hoặc không có nút hành động chính"
+    },
+    {
+      "moment_id": "MOMENT_FIRST_CARD_TIER_CLARITY",
+      "timeframe": "Card đầu tiên xuất hiện",
+      "customer_goal": "Phân biệt ngay Deal xác minh, Cổng chính thức, Tiện ích và Radar",
+      "pass_criteria": "4 Tier Badges với màu sắc và nhãn phân biệt minh bạch, hiển thị giá thực và điều kiện nếu là Deal",
+      "fail_criteria": "Gán giá ảo hoặc % giảm khi thiếu bằng chứng đối soát"
+    },
+    {
+      "moment_id": "MOMENT_ACTION_TRANSPARENCY",
+      "timeframe": "Khi bấm nhận ưu đãi / mở voucher",
+      "customer_goal": "Đọc rõ điều kiện, hạn dùng, nguồn gốc trước khi hành động",
+      "pass_criteria": "Mở đúng cổng chính thức hoặc sao chép mã thật có kiểm chứng",
+      "fail_criteria": "Mã giảm giá giả mạo, đồng hồ đếm ngược countdown ảo, link affiliate lừa dối"
+    },
+    {
+      "moment_id": "MOMENT_VISUAL_RHYTHM",
+      "timeframe": "Khi cuộn xuống thân trang",
+      "customer_goal": "Trải nghiệm nhịp điệu mua sắm và khám phá đa dạng",
+      "pass_criteria": "Thay đổi nhịp thị giác: Hero -> Deal Radar -> Ví Voucher 3 Làn -> Điểm Hẹn Theo Khoảnh Khắc -> Cổng Tư Vấn Giá Thực",
+      "fail_criteria": "Lặp lại đơn điệu một kiểu layout ảnh trái / chữ phải"
+    },
+    {
+      "moment_id": "MOMENT_MOBILE_COMFORT",
+      "timeframe": "Trên thiết bị di động 390x844",
+      "customer_goal": "Thao tác thoải mái một tay, chữ đọc rõ, first-fold không bị che",
+      "pass_criteria": "Nút bấm tối thiểu 44px, Header 52px, Tiêu đề và CTA nhìn thấy trọn vẹn trong màn hình đầu tiên",
+      "fail_criteria": "Phải phóng to thu nhỏ, chữ tràn lề hoặc bị che khuất"
+    }
+  ]
+}

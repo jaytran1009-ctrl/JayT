@@ -1,0 +1,35 @@
+{
+  "manifest_id": "BATCH_138_QUARANTINE_MANIFEST",
+  "directive": "JAYT-139 — ATOMIC PROMOTION UNIT EXTRACTION & CANONICAL LEAF VERIFICATION",
+  "status": "CROSS_ITEM_MERGE_QUARANTINED",
+  "quarantined_at": "2026-08-27T00:30:00+07:00",
+  "executive_ruling": "Batch 138 candidate output rejected due to cross-item merge on listing/RSS page (TARGET_138_201): offer from promo A, terms from promo B, validity from promo C stitched together. Enforcing Atomic Promotion Units.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_23_CROSS_ITEM_LISTING_MERGE",
+      "description": "Parser evaluated whole-page text on multi-deal listing/RSS pages, stitching fragments from distinct unconnected promotions into a false bundle."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_138.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_138_cross_item_merge/generic_compiler_138.js",
+      "sha256": "b6e1e835a0cac8003f002ad1759fd5b5e760af3f617f1d5532cfe7828317ca7b"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_138_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_138_cross_item_merge/batch_capture_138_manifest.json",
+      "sha256": "e389632890bd64cbfa6d610e018b788c17b00a74930fb26c895d250ded614c4e"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_138.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_138_cross_item_merge/test_generic_compiler_138.js",
+      "sha256": "b08c9bb32b490d666ec8081ca58cfa31f65ad3767f54d1eaf405a39c40997a85"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_138_LEAF_SUPPLY_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_138_cross_item_merge/JAYT_138_LEAF_SUPPLY_REVIEW_PACK.md",
+      "sha256": "0727096f76669a362c448c1cafc80e36a68b62259e8fc709726abc16e3563fd0"
+    }
+  ]
+}

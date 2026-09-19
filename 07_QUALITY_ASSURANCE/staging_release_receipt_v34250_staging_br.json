@@ -1,0 +1,68 @@
+{
+  "receipt_id": "JAYT_RELEASE_RECEIPT_v3.425.0-staging.br",
+  "schema_version": "3.7.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BR)",
+  "release_tag": "v3.425.0-staging.br",
+  "environment_type": "STAGING_REVIEW_BR",
+  "live_url": "https://jayt-storefront-staging-br.vercel.app",
+  "deployed_at": "2026-08-29T07:39:04.693Z",
+  "target_audience": "CEO & Executive Council Review",
+  "platform_foundation": "Single Publish Pipeline + Four Schematized Ledgers + Zero-PII Observability Engine",
+  "render_first_verification": {
+    "zero_broken_images": true,
+    "zero_raw_jargon": true,
+    "has_real_photo_tag": true,
+    "photo_src": "https://jayt-storefront-staging-br.vercel.app/assets/images/dragon_bridge_hero_001.jpg",
+    "photo_natural_width": 1280,
+    "photo_natural_height": 940,
+    "photo_complete": true,
+    "observability_active": true,
+    "zero_pii_policy_active": true,
+    "headline": "Đà Nẵng, Chọn Điều Hay Hôm Nay",
+    "text_affordances_count": 3,
+    "has_filter_icon": true,
+    "has_city_note": true,
+    "city_note_width_px": 300,
+    "live_browser_screenshots_captured": 6
+  },
+  "four_schematized_ledgers": {
+    "content_ledger": "00_PROGRAM_BASELINE/JAYT_CONTENT_LEDGER_BR.json",
+    "evidence_ledger": "00_PROGRAM_BASELINE/JAYT_EVIDENCE_LEDGER_BR.json",
+    "visual_asset_ledger": "00_PROGRAM_BASELINE/JAYT_VISUAL_ASSET_LEDGER_BR.json",
+    "release_ledger": "00_PROGRAM_BASELINE/JAYT_RELEASE_LEDGER_BR.json"
+  },
+  "assets": {
+    "dragon_bridge_photo": {
+      "relative_path": "03_SOURCE_OF_TRUTH/assets/images/dragon_bridge_hero_001.jpg",
+      "sha256": "fe557100ed02fb8994c9a6e93ea44db07c3fe737342a177d94b3972e6dc16f9d",
+      "size_bytes": 241650,
+      "creator": "Bùi Thụy Đào Nguyên",
+      "licence": "CC BY-SA 3.0",
+      "credit": "📍 Cầu Rồng • 📷 Bùi Thụy Đào Nguyên (CC BY-SA 3.0)"
+    },
+    "observability_engine": {
+      "relative_path": "03_SOURCE_OF_TRUTH/jayt_observability_engine.js",
+      "sha256": "1675b58ff6f126862e5098815c4c7d6336c3d5cce97f0574fe05b3583fb2e49e",
+      "size_bytes": 3052
+    },
+    "storefront_js": {
+      "relative_path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_br.js",
+      "sha256": "0e3442370e555b1ff395a23379bf3374698a755ca94cef08f354618b55b468f3",
+      "size_bytes": 126123
+    },
+    "styles_css": {
+      "relative_path": "03_SOURCE_OF_TRUTH/styles.css",
+      "sha256": "267dba9302701ba6087299d45b623a895a3751d70dbfb1dff455764d55295421",
+      "size_bytes": 68759
+    }
+  },
+  "accounting_summary": {
+    "total_managed_items": 34,
+    "public_displayable": 33,
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "quarantined_isolated_items": 1
+  },
+  "production_status": "LOCKED (v3.419.0 - https://deploy-ten-xi-48.vercel.app)"
+}

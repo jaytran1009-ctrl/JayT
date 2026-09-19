@@ -1,0 +1,52 @@
+{
+  "work_order_id": "J356_BATCH18_PROMOTION",
+  "authority": "Chairman directive JAYT-356",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "target_version": "v3.429.0",
+  "baseline_version": "v3.428.0",
+  "input_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J355_BATCH18_FOOD_CINEMA.json",
+  "input_receipt_sha256": "557abdbaa20bb74b9e924f4e9344580775e762f0912e980ff6f122d15a93d31e",
+  "scope": {
+    "batch18_candidates_to_audit": 15,
+    "brands": ["Jollibee", "Phúc Long", "Highlands Coffee", "CGV Cinemas"],
+    "lotteria_held_items": "Retain both excluded",
+    "capture_authorized": true,
+    "staging_implementation_authorized": true,
+    "candidate_packaging_authorized": true,
+    "production_deployment_authorized": false,
+    "release_boundary": "Submit the sealed v3.429.0 candidate and working internal demo for the requested release submission; this dispatch does not execute a Production alias change."
+  },
+  "batch_audit": [
+    "Audit all fifteen records in one batch against raw official evidence. Verify each exact title, price/benefit, restrictions and September 2026 validity. Capture official leaf pages where existing evidence is insufficient, preserving raw bodies, sanitized headers, UTC timestamps and SHA-256.",
+    "A fresh capture date alone does not establish offer validity. Distinguish ordinary observed prices from promotions; menu prices do not count as newly verified September discounts.",
+    "Replace unsupported locality descriptions with traceable official Da Nang branch or applicable delivery evidence. Brand presence does not override campaign exclusions.",
+    "Deduplicate by merchant, product/model, campaign and source lineage against the baseline. Report updates and net-new identities separately. The 90+ goal is a target, not an assertion: publish the actual unique count without artificial IDs.",
+    "Only passing records enter the candidate; return item-level reasons for every held record. Preserve the two Lotteria exclusions and all previous active exclusions."
+  ],
+  "modules": {
+    "voucher_vault": "Display counter/app/member labels and official links. Enable copy only for an evidenced public code, show Da chep for two seconds after successful clipboard completion, and handle clipboard failure. No invented codes or copy buttons for code-free offers.",
+    "split_bill": "Embed a bill widget under eligible food/cinema cards, support 2-8 participants, conserve integer VND totals including remainder allocation, and copy an invitation with the relevant detail URL. In-memory only; no PII/GPS or automatic message sending.",
+    "timeline": "Provide seven interactive weekday tabs and measure filtering latency below 50ms on the test environment. Bind schedules, exclusions and recurrence to evidence; Culture Day must follow its actual monthly rule. Audit the requested Metiz/Galaxy/CGV/DanaBus examples using official sources before showing their prices or days. Honest empty states remain valid where no eligible offer exists.",
+    "radar": "Retain the fifteen audited Radar records with observed prices and timestamps, neutral stock notices and verified direct links. Clearly identify the two student programs separately from the thirteen hardware products."
+  },
+  "verification": [
+    "Test the candidate actually served at :4176: per-record DOM IDs and URLs, feed-to-render binding, no held actions, duplicate identities, Split Bill edge cases, clipboard success/failure, weekday filtering and measured latency.",
+    "Run automated accessibility, keyboard and responsive checks at 1440/768/390px; report actual results and zero console/runtime errors or horizontal overflow.",
+    "Seal candidate manifest, artifact hashes, regression receipt and rollback manifest. Preserve old immutable receipts."
+  ],
+  "rollback": {
+    "version": "v3.428.0",
+    "deployment_id": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL",
+    "basis": "J355-R1 accepted deployment receipt",
+    "correction": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o in J356 refers to v3.425.0-sprint-b-r1, not v3.428.0. Verify the accepted v3.428.0 target before sealing."
+  },
+  "outputs": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J356_BATCH18_PROMOTION.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J356_BATCH18_PROMOTION.json.sha256",
+    "08_RELEASE_VAULT/candidates/v3.429.0/candidate_manifest.json",
+    "08_RELEASE_VAULT/candidates/v3.429.0/rollback_manifest.json"
+  ],
+  "handoff": "Return one batch package with the working Staging demo URL, actual baseline/new/updated/held counts, source audit matrix, module results and full fingerprints. CEO prepares the release submission from these outputs."
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "report_id": "JAYT_319_B05_02_DIRECT_UTILITY_DISCOVERY_REPORT",
+  "governing_work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_B05_02_DIRECT_UTILITY_DISCOVERY_WORK_ORDER.md",
+  "generated_at": "2026-09-04T15:53:00+07:00",
+  "governance_mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_RENDER__FAIL_CLOSED",
+  "evaluation_scope": {
+    "target_entity": "B05_02_TRAO_DOI_SINH_VIEN_QUOC_TE_UED",
+    "mandate": "Documentary discovery for an official UED leaf page that directly accepts or explains an active student-exchange application: current eligibility checklist, submission instructions, deadline or application portal required.",
+    "held_article_policy": "Existing MOA signing article (24/08/2026) remains held and must not be recaptured or rendered."
+  },
+  "searched_domains": [
+    "ued.udn.vn",
+    "uednews.ued.udn.vn"
+  ],
+  "evaluated_sources": [
+    {
+      "source_url": "https://ued.udn.vn/2026/08/24/truong-dai-hoc-su-pham-dai-hoc-da-nang-ky-ket-thoa-thuan-trao-doi-sinh-vien-voi-dai-hoc-giao-duc-hong-kong/",
+      "title": "Trường Đại học Sư phạm – Đại học Đà Nẵng ký kết Thỏa thuận trao đổi sinh viên với Đại học Giáo dục Hồng Kông",
+      "date": "24/08/2026",
+      "nature": "Institutional news coverage of bilateral MOA signing ceremony",
+      "direct_utility_evaluation": "Lacks open application intake mechanism, eligibility checklist, submission instructions, deadline, and application portal. Details tuition waiver reciprocity without active applicant onboarding.",
+      "finding": "HELD__INSTITUTIONAL_SIGNING_ANNOUNCEMENT"
+    },
+    {
+      "source_url": "https://uednews.ued.udn.vn/news/thong-bao/thong-bao-nhan-ho-so-tham-gia-chuong-trinh-thuc-te-chuyen-mon-trao-doi-sinh-vien-tai-thai-lan-nam-hoc-2025-2026-149.html",
+      "title": "Thông báo: Nhận hồ sơ tham gia chương trình 'Thực tế chuyên môn - Trao đổi sinh viên tại Thái Lan' năm học 2025 - 2026",
+      "date": "01/07/2025",
+      "nature": "Historical student exchange application call for Thailand (SNRU/UDRU)",
+      "direct_utility_evaluation": "Acute temporal decay: Application deadline was 30/08/2025 (elapsed >1 year ago). Exchange cohorts concluded May–June 2026. Contains direct commercial fee claim ('Chi phí siêu tiết kiệm: Chỉ từ 7–8 triệu đồng/toàn chương trình').",
+      "finding": "DISQUALIFIED__EXPIRED_DEADLINE_AND_FEE_CLAIM"
+    },
+    {
+      "source_url": "https://ued.udn.vn (General 2026 Student Exchange Announcements)",
+      "title": "UED International Partner Announcements (Odisee Belgium, Palacký Olomouc Czech, Korean universities)",
+      "date": "2026",
+      "nature": "Institutional news coverage of visiting delegations, internship reception, and MOUs",
+      "direct_utility_evaluation": "None contain an active student intake portal or operational application instructions for enrolled students.",
+      "finding": "DISQUALIFIED__NO_ACTIVE_INTAKE_PORTAL"
+    }
+  ],
+  "discovery_determination": {
+    "qualifying_successor_found": false,
+    "status": "NO_ACTIVE_DIRECT_UTILITY_FOUND__CANDIDATE_HELD",
+    "rationale": "No qualifying official UED leaf page with an active, unexpired student-exchange application portal and zero fee claims currently exists. In accordance with fail-closed governance, B05_02 remains in HELD status.",
+    "next_action": "Zero scope authorized; zero network capture; zero rendering; zero registry mutation; zero production action."
+  },
+  "bounds_invariants_attestation": {
+    "network_capture_executed": false,
+    "public_approval_granted": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false
+  }
+}

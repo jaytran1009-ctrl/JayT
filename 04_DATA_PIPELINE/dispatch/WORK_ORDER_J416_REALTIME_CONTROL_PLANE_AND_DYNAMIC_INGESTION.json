@@ -1,0 +1,51 @@
+{
+  "work_order_id": "WORK_ORDER_J416_REALTIME_CONTROL_PLANE_AND_DYNAMIC_INGESTION",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260917_REALTIME_CONTROL_PLANE_AND_DYNAMIC_INGESTION",
+  "authority": "CHAIRMAN_APPROVED_OPC_REALTIME_CONTROL_PLANE",
+  "target_version": "v3.498.0-j416-realtime-control-plane",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "issued_at_utc": "2026-09-17T08:45:00Z",
+  "deliverables": {
+    "realtime_sentinel": {
+      "engine_script": "scripts/realtime_pdp_sentinel.cjs",
+      "schedule": "15_MINUTES_PERIODIC_SCAN",
+      "deadlink_rule": "THẬT 100% HOẶC KHÔNG HIỂN THỊ — TUYỆT ĐỐI KHÔNG ĐỂ DẪN LINK 404",
+      "action_on_404": "available: false, statusLabel: '[🔒 Chưa Có Link Chính Hãng]', url: null, button disabled",
+      "liveness_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/REALTIME_SENTINEL_LIVENESS_RECEIPT.json"
+    },
+    "dynamic_ingestion_pipeline": {
+      "engine_script": "scripts/dynamic_ingest_pdp.cjs",
+      "zero_code_change_registry": "05_DEAL_AND_AFFILIATE/dynamic_sku_registry.json",
+      "public_runtime_registry": "deploy/public/dynamic_sku_registry.json",
+      "official_partner_wrapping": {
+        "shopee": "17372870594",
+        "lazada": "262501305",
+        "tiktok": "VNVNLCB6LYL3"
+      },
+      "control_plane": {
+        "bot_username": "@affos_deal_hot_bot",
+        "channel": "@DealsIphoneHot",
+        "token_env": "TELEGRAM_BOT_TOKEN"
+      }
+    },
+    "smart_dynamic_price_range": {
+      "format_function": "formatDynamicPriceRange(listingPrice, observedPrice, voucherMaxSaving)",
+      "example_pattern": "Giá tham khảo 125.000₫ · Săn tại sàn: chỉ từ 81.250₫ – 103.750₫ khi áp mã",
+      "rendered_surfaces": ["KTX Shelf Card", "Modal So Giá 3 Sàn", "WebView Breaker Modal"]
+    },
+    "webview_breaker": {
+      "user_agent_detection": "isMessengerOrZaloWebview()",
+      "sticky_banner": "renderWebviewBreakoutBanner()",
+      "breakout_modal": "openWebviewBreakoutModal(targetUrl, deepLinkUrl, voucherCode, platformName, priceRangeInfo)",
+      "auto_clipboard_copy": true,
+      "android_chrome_intent": true
+    }
+  },
+  "quality_and_governance": {
+    "test_suite": "07_QUALITY_ASSURANCE/test_j416_realtime_sentinel_and_dynamic_ingestion.cjs",
+    "static_pipeline_seal": "24/24 PASS TUYỆT ĐỐI",
+    "w8_toolchain_seal": "5/5 PASS_TOOLCHAIN_SEAL",
+    "dual_workspace_bit_parity": "100% BIT-IDENTICAL",
+    "affiliate_enabled": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "test_suite": "PLAYWRIGHT_CROSS_BROWSER_GATE_RUNTIME",
+  "mandate": "JAYT-453 / J452-02 REAL ENGINE AUDIT",
+  "timestamp": "2026-09-19T08:35:17.321Z",
+  "playwright_package_version": "1.50.0+",
+  "engines": {
+    "chromium": {
+      "browser_type": "chromium",
+      "engine_version": "153.0.8010.12",
+      "is_real_chromium": true,
+      "status": "INITIALIZED"
+    },
+    "webkit": {
+      "browser_type": "webkit",
+      "engine_version": "26.6",
+      "is_real_webkit": true,
+      "status": "INITIALIZED"
+    }
+  },
+  "projects": [
+    {
+      "project_id": "PROJECT_A_CHROMIUM_DESKTOP",
+      "browser_type": "chromium",
+      "engine_version": "153.0.8010.12",
+      "device_profile": "Chromium Desktop (1440x900)",
+      "is_real_webkit": false,
+      "is_real_chromium": true,
+      "status": "PASS"
+    },
+    {
+      "project_id": "PROJECT_B_MOBILE_CHROME",
+      "browser_type": "chromium",
+      "engine_version": "153.0.8010.12",
+      "device_profile": "Mobile Chrome (Pixel 7 Profile)",
+      "is_real_webkit": false,
+      "is_real_chromium": true,
+      "status": "PASS"
+    },
+    {
+      "project_id": "PROJECT_C_WEBKIT_DESKTOP",
+      "browser_type": "webkit",
+      "engine_version": "26.6",
+      "device_profile": "WebKit Desktop (1440x900)",
+      "is_real_webkit": true,
+      "is_real_chromium": false,
+      "status": "PASS"
+    },
+    {
+      "project_id": "PROJECT_D_MOBILE_SAFARI_WEBKIT",
+      "browser_type": "webkit",
+      "engine_version": "26.6",
+      "device_profile": "Mobile Safari on WebKit (iPhone 14 Profile)",
+      "is_real_webkit": true,
+      "is_real_chromium": false,
+      "status": "PASS"
+    }
+  ],
+  "verdict": "VERIFIED_REAL_ENGINES_PASS"
+}

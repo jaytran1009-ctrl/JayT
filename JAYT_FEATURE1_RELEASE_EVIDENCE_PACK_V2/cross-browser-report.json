@@ -1,0 +1,100 @@
+{
+  "test_suite": "PLAYWRIGHT_CROSS_BROWSER_GATE",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_452_AND_EXECUTE_RESEAL_V2",
+  "directive_code": "JAYT-453",
+  "timestamp": "2026-09-19T08:35:25.973Z",
+  "engine_verification": {
+    "chromium_engine": "chromium (v153.0.8010.12)",
+    "webkit_engine": "webkit (v26.6)",
+    "synthetic_engine_used": false,
+    "verdict": "AUTHENTIC_DUAL_ENGINE"
+  },
+  "matrix_profiles_tested": 4,
+  "metrics": {
+    "uncaught_product_exception": 0,
+    "wrong_destination": 0,
+    "dead_CTA": 0,
+    "state_leakage": 0,
+    "review_math_failure": 0,
+    "P0_P1_functional_regression": 0
+  },
+  "verdict": "APPROVED",
+  "profiles": [
+    {
+      "profile": "PROJECT_A_CHROMIUM_DESKTOP",
+      "name": "Chromium Desktop (1440x900)",
+      "engine": "chromium",
+      "browser_engine_version": "153.0.8010.12",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "PROJECT_B_MOBILE_CHROME",
+      "name": "Mobile Chrome (Pixel 7 Profile)",
+      "engine": "chromium",
+      "browser_engine_version": "153.0.8010.12",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 412,
+        "clientWidth": 412
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "PROJECT_C_WEBKIT_DESKTOP",
+      "name": "WebKit Desktop (1440x900)",
+      "engine": "webkit",
+      "browser_engine_version": "26.6",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "PROJECT_D_MOBILE_SAFARI_WEBKIT",
+      "name": "Mobile Safari on WebKit (iPhone 14 Profile)",
+      "engine": "webkit",
+      "browser_engine_version": "26.6",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    }
+  ]
+}

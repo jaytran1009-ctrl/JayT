@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayTEvidenceGraphV2Schema",
+  "description": "Decoupled Evidence Graph Schema governing provenance, scope, economic facts, and node non-inference invariants (Directive EZ-E)",
+  "version": "2.0.0-ez.e",
+  "node_types": {
+    "SourceIdentityNode": {
+      "description": "Proves the existence and ownership of an official domain/URL via HTTPS.",
+      "required_fields": [
+        "domain",
+        "canonical_url",
+        "https_status",
+        "organization_name",
+        "captured_at_iso",
+        "raw_bytes_sha256"
+      ],
+      "allowed_conclusions": [
+        "Official web portal exists"
+      ],
+      "strictly_forbidden_conclusions": [
+        "DOES NOT prove local physical store addresses",
+        "DOES NOT prove operating hours",
+        "DOES NOT prove product prices",
+        "DOES NOT prove voucher / promotional discounts"
+      ]
+    },
+    "SubjectFactNode": {
+      "description": "Proves a specific substantive textual claim extracted verbatim from raw response bytes.",
+      "required_fields": [
+        "subject_id",
+        "raw_bytes_sha256",
+        "locator_css_or_xpath",
+        "verbatim_quote",
+        "extracted_text_hash"
+      ],
+      "allowed_conclusions": [
+        "Text claim exists in source document"
+      ],
+      "strictly_forbidden_conclusions": [
+        "DOES NOT prove merchant discounts unless full economic schema is satisfied"
+      ]
+    },
+    "LocalScopeNode": {
+      "description": "Proves geographic applicability (city, district, campus, coordinates).",
+      "required_fields": [
+        "locality_type",
+        "geographic_identifier",
+        "scope_evidence_artifact_sha256",
+        "explicit_municipal_mention"
+      ],
+      "invariant": "CANNOT be inferred from a national/global web root."
+    },
+    "EconomicFactNode": {
+      "description": "12-field economic schema proving actual out-of-pocket savings and voucher validity.",
+      "required_fields": [
+        "merchant_official_identity",
+        "original_price_vnd",
+        "net_out_of_pocket_price_vnd",
+        "exact_discount_value_vnd_or_pct",
+        "maximum_discount_cap_vnd",
+        "minimum_basket_value_vnd",
+        "valid_from_iso",
+        "valid_until_iso",
+        "eligible_user_conditions",
+        "applicable_location_scope",
+        "verification_receipt_sha256",
+        "zero_commission_compliance_check"
+      ],
+      "invariant": "Missing even 1 field results in tier T1 = 0."
+    },
+    "AssetRightNode": {
+      "description": "Proves copyright/license authorization for visual assets.",
+      "required_fields": [
+        "asset_id",
+        "asset_type",
+        "license_type",
+        "author_source"
+      ]
+    }
+  },
+  "tier_transitions": {
+    "T4_RADAR": {
+      "required_nodes": [
+        "SourceIdentityNode"
+      ],
+      "public_claim_allowed": "Canonical link and neutral official title only"
+    },
+    "T3_PUBLIC_FACILITY": {
+      "required_nodes": [
+        "SourceIdentityNode",
+        "SubjectFactNode",
+        "LocalScopeNode"
+      ],
+      "public_claim_allowed": "Facility information with proven local scope"
+    },
+    "T2_OFFICIAL_PROGRAM": {
+      "required_nodes": [
+        "SourceIdentityNode",
+        "SubjectFactNode"
+      ],
+      "public_claim_allowed": "Official program documentation with proven subject scope"
+    },
+    "T1_VERIFIED_ECONOMIC_VOUCHER": {
+      "required_nodes": [
+        "SourceIdentityNode",
+        "SubjectFactNode",
+        "LocalScopeNode",
+        "EconomicFactNode",
+        "AssetRightNode"
+      ],
+      "public_claim_allowed": "Verified savings calculation (Currently locked at count = 0)"
+    }
+  },
+  "invariants": [
+    "SourceIdentityNode CANNOT prove LocalScopeNode",
+    "SourceIdentityNode CANNOT prove EconomicFactNode",
+    "SubjectFactNode CANNOT prove EconomicFactNode without 12 mandatory fields",
+    "Report SHA-256 MUST strictly match Raw Binary SHA-256 on disk (Zero Mismatch)"
+  ]
+}

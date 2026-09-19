@@ -1,0 +1,62 @@
+{
+  "work_order_id": "WORK_ORDER_W8_LINK_INSPECTOR_AND_POS_OS",
+  "issued_at": "2026-09-13T00:00:00+07:00",
+  "status": "DISPATCHED_WITH_FAIL_CLOSED_BOUNDARIES",
+  "canonical_baseline": {
+    "version": "v3.462.0-j411",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "affiliate_enabled": false,
+    "production_mutation_authorized": false
+  },
+  "accepted_scope": {
+    "public_url_parser": {
+      "implementation": "parseShopeeLink",
+      "allowed_hosts": ["shopee.vn", "s.shopee.vn", "shopeefood.vn", "lazada.vn", "lazada.com.vn"],
+      "behavior": "Extract identifiers already present in the user-supplied URL without network resolution. Short links without embedded identifiers remain unresolved and are opened only at the official source."
+    },
+    "user_driven_stack_calculator": {
+      "implementation": "calculateDynamicStack",
+      "formula": "basket_value - shop_discount - platform_voucher + max(0, delivery_fee - freeship_credit)",
+      "inputs": "USER_ENTERED_ONLY",
+      "ranking_or_price_history": false
+    },
+    "on_the_spot_tools": {
+      "cashier_checklist": "REFERENCE_ONLY_VERIFY_AT_COUNTER",
+      "pickup_comparator": "USER_ENTERED_ONLY",
+      "split_bill_vietqr": "CLIENT_SIDE_ONLY"
+    },
+    "affiliate_sandbox": {
+      "ui_disclosure": "#JayTAffiliate Sandbox",
+      "dispatch_performed": false,
+      "destination_url": null,
+      "tracking_emitted": false,
+      "partner_credentials_loaded": false
+    }
+  },
+  "held_scope": [
+    {
+      "item": "hidden_voucher_scraping_or_private_marketplace_api",
+      "reason": "No documented partner API authorization; WAF, authentication and private endpoints must not be bypassed."
+    },
+    {
+      "item": "automatic_short_link_resolution",
+      "reason": "Would require a network resolver; client-only safe mode does not follow or proxy redirects."
+    },
+    {
+      "item": "twenty_preset_products_with_verified_floor_prices",
+      "reason": "No current first-party price and voucher evidence pack was supplied."
+    },
+    {
+      "item": "live_partner_id_injection_and_commercial_redirect",
+      "reason": "Partner authorization and credential handling have not been independently verified. Environment secrets must not be read into client code."
+    }
+  ],
+  "security_invariants": {
+    "read_dotenv_secrets": false,
+    "affiliate_enabled": false,
+    "zero_tracking": true,
+    "zero_pii": true,
+    "zero_waf_evasion": true,
+    "pipeline_seal_must_remain": "24_OF_24_PASS"
+  }
+}

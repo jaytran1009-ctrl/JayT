@@ -1,0 +1,24 @@
+{
+  "template_id": "SOURCE_CARD_TEMPLATE_162",
+  "directive": "JAYT-162: 5 CATEGORY HUBS, TRUSTED-AUTOMATION ONLY",
+  "version": "1.0.0",
+  "intended_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+  "badge": "🟣 Nguồn đang theo dõi",
+  "fields": {
+    "source_id": "SRC_BRAND_COHORT_NONCE",
+    "brand_id": "STRING_UPPERCASE",
+    "brand_name": "STRING",
+    "hub_id": "ENUM_5_HUBS",
+    "category": "STRING",
+    "official_url": "HTTPS_URL",
+    "last_checked_at": "ISO_8601_TIMESTAMP",
+    "action_label": "Mở trang chính thức ↗",
+    "disclaimer": "Nguồn công khai đang được hệ thống theo dõi; thông tin chi tiết cần đối soát trực tiếp tại website của đơn vị."
+  },
+  "invariants": {
+    "has_price_claim": false,
+    "has_discount_claim": false,
+    "has_voucher_code": false,
+    "has_buy_cta": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "report_name": "JAYT_CADENCE_WATCHDOG_MONITORING_REPORT",
+  "mandate": "JAYT-451 SECTION X WATCHDOG",
+  "timestamp": "2026-09-19T08:16:26.011Z",
+  "watchdog_agent": "Autonomous GitHub Actions Watchdog & Alert Bot",
+  "anomaly_types": [
+    {
+      "type": "MISSED_CADENCE",
+      "threshold": "6 hours without successful execution",
+      "action": "Trigger high-priority alert to Telegram @DealsIphoneHot & trigger catch-up run"
+    },
+    {
+      "type": "DATA_STALE",
+      "threshold": "7 days freshness TTL",
+      "action": "Revoke VERIFIED claim status to CONDITIONAL / UNVERIFIED"
+    }
+  ],
+  "catch_up_policy": "PERMITTED_AUTOMATICALLY",
+  "current_cadence_health": "HEALTHY",
+  "verdict": "APPROVED"
+}

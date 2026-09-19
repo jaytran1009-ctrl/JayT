@@ -1,0 +1,59 @@
+{
+  "decision_id": "JAYT_325_B11_02_INDEPENDENT_PROMOTION_REVIEW_DECISION",
+  "governing_directive": "JAYT-325",
+  "dossier_reference": "06_TRUST_AND_EVIDENCE/JAYT_325_B11_EVALUATION_DOSSIER_FUTURE_RELEASE.json",
+  "signed_at_utc": "2026-09-05T07:35:57.025Z",
+  "candidate_id": "B11_02_HOAT_DONG_VAN_HOA_BAO_TANG_CHAM_1022",
+  "candidate_title": "Lịch biểu diễn vũ điệu Champa — Bảo tàng Chăm Đà Nẵng",
+  "content_tier": "T2_CIVIC_CULTURE",
+  "geographic_scope": "DA_NANG",
+  "external_url": "https://1022.vn/nhieu-trai-nghiem-moi-cho-du-khach-tai-bao-tang-dieu-khac-cham-da-nang/",
+  "publication_date": "2026-08-28",
+  "raw_evidence": {
+    "path": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault/B11_02.raw.html",
+    "sha256": "452ed5ff689139b0201bab1c9312b539a12fd205cabb0b9c2fac2bc501c93fd8",
+    "size_bytes": 219872,
+    "http_status": 200,
+    "headers_path": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault/B11_02.headers.json"
+  },
+  "verbatim_span_verification": {
+    "text": "Chương trình nghệ thuật vũ điệu Champa gồm các tiết mục múa Apsara, hòa tấu nhạc cụ Chăm và múa Vũ hội làng Chăm sẽ được tổ chức vào buổi sáng các ngày 15 và 30 hằng tháng.",
+    "utf8_offset": 101313,
+    "occurrences_in_body": 1,
+    "verified": true
+  },
+  "schedule_recurrence_rule": {
+    "rule": "MORNING_15TH_AND_30TH_MONTHLY",
+    "vagueness_eliminated": true,
+    "exact_schedule_pinned": "Buổi sáng các ngày 15 và 30 hằng tháng"
+  },
+  "safeguards": {
+    "mandatory_disclaimer": "Lịch biểu diễn văn hóa nghệ thuật định kỳ tại Bảo tàng Điêu khắc Chăm Đà Nẵng; người xem cần đối soát thông báo trực tiếp từ ban quản lý bảo tàng trong trường hợp có điều chỉnh thời tiết hoặc lịch đón tiếp ngoại giao.",
+    "prohibitions_enforced": [
+      "ticket_sales",
+      "tour_booking",
+      "booking_fees",
+      "commercial_promotion",
+      "affiliate",
+      "tracking",
+      "production_mutation"
+    ],
+    "commercial_locks_intact": true
+  },
+  "pre_audit_qa": {
+    "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_323_B11_02_SCHEDULE_PRE_AUDIT_QA_RECEIPT.json",
+    "assertions_passed": "23/23",
+    "verdict": "SCHEDULE_PRE_AUDIT_PASS"
+  },
+  "council_verdict": "FUTURE_RELEASE_CANDIDATE_REVIEW_APPROVED",
+  "scope_boundaries_and_production_isolation": {
+    "production_release_authorized": false,
+    "live_production_version": "v3.421.0",
+    "live_production_cards_count": 22,
+    "b11_01_status": "PUBLIC_APPROVED_STAGING_ONLY__HELD_OUTSIDE_PRODUCTION",
+    "b11_02_status": "PUBLIC_APPROVED_STAGING_ONLY__HELD_OUTSIDE_PRODUCTION",
+    "staging_baseline_cards_count": 24,
+    "staging_server_port": 4173,
+    "mandatory_release_condition": "Separate Chairman Production Release Decree required before any future production inclusion"
+  }
+}

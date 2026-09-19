@@ -1,0 +1,32 @@
+{
+  "work_order_id": "J358-R3-R9-REMOVE-CUSTOM-REGISTRY-SUBSTITUTION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Eliminate caller-controlled registry source substitution from the public promotion evaluator.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r8_sealed_context_validator.cjs",
+    "runner": "04_DATA_PIPELINE/run_jayt_358_r3_r8_reproducible_replay.cjs",
+    "registry": "06_TRUST_AND_EVIDENCE/batch_19_r3_r8_replay/SEALED_METADATA_REGISTRY.json",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R8_PARTIAL_ACCEPTANCE_AND_REGISTRY_SUBSTITUTION_GATE.md"
+  },
+  "requirements": [
+    "Remove customRegistryPath and every caller-selected registry source from the public evaluator and exported API. Public evaluation must only load the canonical anchored registry.",
+    "Enforce the registry anchor independently: exact canonical path plus hard-coded digest or public-key signature verification. Sidecar alone is not an authenticity anchor.",
+    "Keep any alternate registry support internal to test-only code, unexported and structurally incapable of returning VERIFIED through the public evaluator.",
+    "Add attacks using a schema-valid forged registry whose leaf, raw SHA, metadata SHA, selector, range and card ID all match a forged fixture; caller path override, path alias and symlink/junction variants must all fail closed at public API.",
+    "Make verify-existing validate canonical registry anchor before computing outputs. Record anchor method and digest/signature verification result in receipt.",
+    "Preserve broad-shell rejection, sealed metadata bindings and semantic checks. Evaluate only existing sealed R3 bytes; retain 0 VERIFIED / 10 HELD and do not hydrate/package/deploy/mutate scheduler, alias or rollback."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r9_anchored_registry_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r9_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r9_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R9_ANCHORED_REGISTRY_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R9_ANCHORED_REGISTRY.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO verify-existing replay and public-API substitution review required; no automatic promotion"
+}

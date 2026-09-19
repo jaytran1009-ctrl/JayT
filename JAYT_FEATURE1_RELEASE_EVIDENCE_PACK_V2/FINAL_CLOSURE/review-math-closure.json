@@ -1,0 +1,101 @@
+{
+  "report_name": "JAYT_FEATURE1_REVIEW_MATH_FINAL_CLOSURE",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_EXECUTE_FINAL_CLOSURE_AND_UX_HANDOVER (J454-01)",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_455_FINAL_CLOSURE",
+  "timestamp": "2026-09-19T09:03:30.265Z",
+  "dataset_version": "v1.0.0-j455-seeding-benchmark",
+  "ground_truth_total": 10,
+  "ground_truth_seed_count": 5,
+  "detected_seed_count": 5,
+  "true_positive": 5,
+  "false_positive": 0,
+  "false_negative": 0,
+  "true_negative": 5,
+  "precision": 1,
+  "recall": 1,
+  "f1_score": 1,
+  "confusion_matrix_status": "PASS",
+  "products_audited": 11,
+  "aspects_audited": 33,
+  "mathematical_violations": 0,
+  "classified_mentions_valid": "PASS",
+  "review_math_valid": "PASS",
+  "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+  "evidence_refs": [
+    "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "JAYT_FEATURE1_RELEASE_EVIDENCE_PACK_V2/review-math-report.json"
+  ],
+  "sample_evaluations": [
+    {
+      "id": "SEED_01_INCENTIVIZED",
+      "ground_truth_is_seed": true,
+      "detected_as_seed": true,
+      "evaluation": "TRUE_POSITIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "SEED_02_SHORT_CONTENT",
+      "ground_truth_is_seed": true,
+      "detected_as_seed": true,
+      "evaluation": "TRUE_POSITIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "SEED_03_EMOJI_ONLY",
+      "ground_truth_is_seed": true,
+      "detected_as_seed": true,
+      "evaluation": "TRUE_POSITIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "SEED_04_UNVERIFIED_BUYER",
+      "ground_truth_is_seed": true,
+      "detected_as_seed": true,
+      "evaluation": "TRUE_POSITIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "SEED_05_SPAM_LYRICS",
+      "ground_truth_is_seed": true,
+      "detected_as_seed": true,
+      "evaluation": "TRUE_POSITIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "LEGIT_01_EMA_PILLOW",
+      "ground_truth_is_seed": false,
+      "detected_as_seed": false,
+      "evaluation": "TRUE_NEGATIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "LEGIT_02_SHIN_CASE",
+      "ground_truth_is_seed": false,
+      "detected_as_seed": false,
+      "evaluation": "TRUE_NEGATIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "LEGIT_03_MAGSAFE_CHARGER",
+      "ground_truth_is_seed": false,
+      "detected_as_seed": false,
+      "evaluation": "TRUE_NEGATIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "LEGIT_04_THERMOS_BOTTLE",
+      "ground_truth_is_seed": false,
+      "detected_as_seed": false,
+      "evaluation": "TRUE_NEGATIVE",
+      "classification_invariant": "PASS"
+    },
+    {
+      "id": "LEGIT_05_BRAIDED_CABLE",
+      "ground_truth_is_seed": false,
+      "detected_as_seed": false,
+      "evaluation": "TRUE_NEGATIVE",
+      "classification_invariant": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

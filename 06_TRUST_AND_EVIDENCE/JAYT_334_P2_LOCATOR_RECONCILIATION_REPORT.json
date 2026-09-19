@@ -1,0 +1,124 @@
+{
+  "document_id": "JAYT_334_P2_LOCATOR_RECONCILIATION_REPORT",
+  "generated_at_utc": "2026-09-07T08:48:28.7527468Z",
+  "scope": "PHASE_2_LOCATOR_RECONCILIATION__EXISTING_EVIDENCE_ONLY",
+  "execution_mode": "OFFLINE_EVIDENCE_RECONCILIATION",
+  "governing_directive": "JAYT-334",
+  "production_baseline": "v3.423.0",
+  "production_mutated": false,
+  "source_evidence": [
+    {
+      "path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe/RUN_ACCEPTANCE_RECEIPT.json",
+      "sha256": "577ceb35162ba882e7c6162a94a9f69fb001234a82827a9091be2481a82b3186"
+    },
+    {
+      "path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe/HARVEST_SUMMARY_REPORT.json",
+      "sha256": "53a431ed4883b3155590b0ff36a499e3c077a240c7f96505bf9bf568a71a86af"
+    },
+    {
+      "path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe/BRAND_ERROR_REPORT.json",
+      "sha256": "f0635f932525e9665ededa5289ac35c7f3ef224693cb4195e100dfbf4e832bab"
+    },
+    {
+      "path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe/LOCATIONS_DA_NANG_VERIFIED.json",
+      "sha256": "5461df21cd5f42aa930b3498ac9346ea56c8999c247acccac0720a17fe2d672c"
+    }
+  ],
+  "metrics": {
+    "configured_brands": 10,
+    "brands_with_current_locality_evidence": 6,
+    "brands_unresolved": 4,
+    "traceable_locations_from_matrix_replay": 22,
+    "additional_targeted_metiz_locations": 1,
+    "current_traceable_location_evidence_records": 23,
+    "network_captures_performed_in_this_reconciliation": 0,
+    "production_deployments_performed": 0
+  },
+  "brand_reconciliation": [
+    {
+      "brand_id": "phuclong",
+      "status": "LOCALITY_EVIDENCE_READY",
+      "location_count": 7,
+      "basis": "LATEST_ACCEPTED_MATRIX_REPLAY",
+      "limitations": "Brand presence only; no local stock, live price or offer validity is inferred."
+    },
+    {
+      "brand_id": "jollibee",
+      "status": "LOCALITY_EVIDENCE_READY",
+      "location_count": 9,
+      "basis": "LATEST_ACCEPTED_MATRIX_REPLAY",
+      "limitations": "Brand presence only; each new offer still requires dated official leaf evidence."
+    },
+    {
+      "brand_id": "phi_long",
+      "status": "LOCALITY_EVIDENCE_READY",
+      "location_count": 2,
+      "basis": "LATEST_ACCEPTED_MATRIX_REPLAY",
+      "limitations": "Locality does not establish item stock or a location-specific price."
+    },
+    {
+      "brand_id": "cgv_cinemas",
+      "status": "LOCALITY_EVIDENCE_READY",
+      "location_count": 3,
+      "basis": "LATEST_ACCEPTED_SCOPED_MULTI_LEAF_REPLAY",
+      "limitations": "Deduplicate cinema leaves before associating any new policy or offer."
+    },
+    {
+      "brand_id": "galaxy_cinema",
+      "status": "LOCALITY_EVIDENCE_READY",
+      "location_count": 1,
+      "basis": "LATEST_ACCEPTED_MATRIX_REPLAY",
+      "limitations": "Locality evidence remains separate from U22 offer provenance."
+    },
+    {
+      "brand_id": "metiz_cinema",
+      "status": "LOCALITY_EVIDENCE_READY__SUPERSEDES_OLDER_REPLAY_REJECTION",
+      "location_count": 1,
+      "basis": "J333_LOCALITY_METIZ_DANANG_2026_PUBLIC_APPROVAL_STAGING_ONLY",
+      "raw_sha256": "0e5317fb528433e3f0ad82c6ec8fd287a1f312f0f35e46d5b19d721345f83888",
+      "headers_sha256": "7e0a2732ee3a6bf2e19b8bddca2725d1fdfad5a4a9c6ccade3b04e9ab13111f1",
+      "limitations": "Amends locality only and does not create a duplicate Metiz card or prove live seat availability."
+    },
+    {
+      "brand_id": "lotte_cinema",
+      "status": "UNRESOLVED__NO_FACILITY_ADDRESS_IN_CAPTURED_SOURCE",
+      "location_count": 0,
+      "basis": "LATEST_MATRIX_REPLAY_REJECTION",
+      "next_safe_action": "Identify a dated official facility leaf containing a physical Da Nang address before requesting capture scope."
+    },
+    {
+      "brand_id": "dien_may_xanh",
+      "status": "FAIL_CLOSED__LOCALITY_UNVERIFIED",
+      "location_count": 0,
+      "basis": "JAYT_333_R3_DMX_LOCALITY_VERDICT",
+      "attempts": 2,
+      "http_statuses": [500, 500],
+      "error_body_sha256": "32f801ad52cb13f56dfd4451935a1219802470be385f9d335e6c7575019d9b55",
+      "next_safe_action": "Keep B14_DMX_M170_DEN excluded; only reconsider with a newly authorized official endpoint and real non-error bytes."
+    },
+    {
+      "brand_id": "highlands_coffee",
+      "status": "UNRESOLVED__NO_VERIFIED_CAPTURE",
+      "location_count": 0,
+      "basis": "LATEST_REPLAY_NOT_CHECKED_THIS_RUN",
+      "next_safe_action": "Pre-audit an official locator or facility leaf; do not elevate historical unverified observations to evidence."
+    },
+    {
+      "brand_id": "lotteria",
+      "status": "UNRESOLVED__NO_DANANG_ADDRESS_IN_CAPTURE",
+      "location_count": 0,
+      "basis": "LATEST_REPLAY_STATIC_SOURCE_INSUFFICIENT",
+      "next_safe_action": "Locate a server-rendered official Da Nang facility leaf or obtain separately authorized operator evidence."
+    }
+  ],
+  "phase_2_gate": {
+    "capture_authorized": false,
+    "public_approved": false,
+    "render_permitted": false,
+    "production_deploy_permitted": false,
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "verdict": "RECONCILIATION_COMPLETE__SIX_BRANDS_READY_FOR_OFFER_LEAF_DISCOVERY__FOUR_BRANDS_REMAIN_FAIL_CLOSED_OR_UNRESOLVED"
+}

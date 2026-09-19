@@ -1,0 +1,97 @@
+{
+  "snapshot_id": "J358_BATCH19_FORENSIC_SNAPSHOT_20260908",
+  "created_at_utc": "2026-09-08T09:16:04.676Z",
+  "authority": "CEO Evidence Gate Decision JAYT-358 & Dispatch J358-R1",
+  "superseding_invalidation_notice": {
+    "status": "SUPERSEDED_AND_INVALIDATED",
+    "decision_reference": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_EVIDENCE_GATE_DECISION.md",
+    "work_order_reference": "04_DATA_PIPELINE/dispatch/WORK_ORDER_J358_R1_EVIDENCE_REMEDIATION.json",
+    "reason": "Batch 19 harvester used mockHtml substitution upon fetch failure; Starlight was soft-404; Popeyes was prewritten mock. Historical receipts retained for forensics but invalidated for production promotion."
+  },
+  "preserved_files": [
+    {
+      "original_path": "04_DATA_PIPELINE/run_batch19_student_fnb_harvester.cjs",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/run_batch19_student_fnb_harvester.cjs.bak",
+      "bytes": 27141,
+      "sha256": "ec8cbafc063ae1af90fa950fa8ba00e3cc58c52cb80ee85396c8e37cab429296"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_BATCH19_STUDENT_FNB.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/RECEIPT_J358_BATCH19_STUDENT_FNB.json.bak",
+      "bytes": 17128,
+      "sha256": "b3c83aeb329df3190183e4c974a1c73d9bf043d17eb44f85801c3e3ad44882b5"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/gongcha_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/gongcha_promotions.leaf.meta.json",
+      "bytes": 274,
+      "sha256": "bb75810d81abca9beaebe699cd2c7bb1da6ac0e5fee6f54b4de686a5793d659d"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/gongcha_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/gongcha_promotions.leaf.raw.html",
+      "bytes": 53012,
+      "sha256": "c41b6e8273d5a0d1855aa0c19ee7091461ec56932522872a6c2b87e6b012dfee"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/katinat_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/katinat_promotions.leaf.meta.json",
+      "bytes": 254,
+      "sha256": "e1dee83d95349ec85eda8674a4020ce903dd5f164c6fad501419aedd396e7ea7"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/katinat_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/katinat_promotions.leaf.raw.html",
+      "bytes": 469,
+      "sha256": "7a6157de1ce166b5d83bfe66ea70e625d579d86f9bbba0f18798284b0c602b84"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/popeyes_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/popeyes_promotions.leaf.meta.json",
+      "bytes": 264,
+      "sha256": "adf01cf429d7aa574e1c52e6de3883e3bc71f2e2f6e58f1b1708247c41bd2cf0"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/popeyes_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/popeyes_promotions.leaf.raw.html",
+      "bytes": 493,
+      "sha256": "cf33dc66decfedfcc27ab7e161bd4a1aff2274ae8f4ba3f27b7dc4ba936c909e"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/starlight_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/starlight_promotions.leaf.meta.json",
+      "bytes": 293,
+      "sha256": "9bffc34b10d4700ee3d92716a78f1625f35a0a4b4981686d6329beafd363edac"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/starlight_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/starlight_promotions.leaf.raw.html",
+      "bytes": 1788,
+      "sha256": "defec76c3d0f59c39c852200d59c98f24ebc4f584324c87a23431caa748c764d"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/the_coffee_house_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/the_coffee_house_promotions.leaf.meta.json",
+      "bytes": 273,
+      "sha256": "e83624edcd322323a04b2a91f71cf00f80ed7336780ef602bc0b67f0692570a0"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/the_coffee_house_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/the_coffee_house_promotions.leaf.raw.html",
+      "bytes": 235776,
+      "sha256": "4ac7944f1f168af461b80cc7321b1e389ee3cd39c6713f8f9b1725f347f8058b"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/the_pizza_company_promotions.leaf.meta.json",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/the_pizza_company_promotions.leaf.meta.json",
+      "bytes": 274,
+      "sha256": "b32cef3da8072aa98fe1655513073359b6d912f2c5813919371664b5c4cc3edf"
+    },
+    {
+      "original_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/the_pizza_company_promotions.leaf.raw.html",
+      "snapshot_path": "06_TRUST_AND_EVIDENCE/batch_19_forensic_snapshot_j358/the_pizza_company_promotions.leaf.raw.html",
+      "bytes": 497,
+      "sha256": "c5fd0123c7c32a4187df4b0d9e45857d2ab0915f263c0e2de8f7d44bcba83c67"
+    }
+  ]
+}

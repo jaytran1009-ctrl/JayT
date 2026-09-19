@@ -1,0 +1,385 @@
+{
+  "report_title": "JAYT ALL-DEPARTMENTS PRE-LAUNCH ACCEPTANCE REPORT",
+  "work_order": "JAYT-PRELAUNCH-ALL-DEPARTMENTS-007",
+  "generated_at": "2026-08-20T15:25:59.886269+00:00",
+  "overall_status": "READY_FOR_PRELAUNCH_GATEWAY_REVIEW",
+  "integrity_status": "TAMPER_EVIDENT_LOCALLY_READ_ONLY",
+  "production_lock": {
+    "is_approved": false,
+    "status": "LOCKED_PENDING_CEO_FINAL_ORDER"
+  },
+  "summary": {
+    "total_departments": 7,
+    "total_test_cases": 21,
+    "passed_test_cases": 21,
+    "failed_test_cases": 0,
+    "blocker_count": 0,
+    "pass_rate_percent": 100.0
+  },
+  "departments": [
+    {
+      "department_code": "PRODUCT",
+      "department_name": "Phòng Phát Triển Sản Phẩm (Product Management)",
+      "role_responsible": "Head of Product",
+      "total_cases": 4,
+      "passed_cases": 4,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "PROD-01",
+          "priority": "P0",
+          "objective": "Xác nhận Onboarding modal xuất hiện, cho phép chọn Persona Sinh Viên và lọc feed chính xác",
+          "target_user_perspective": "Sinh viên Campus Đà Nẵng mở ứng dụng lần đầu",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 1.32,
+          "verified_at": "2026-08-20T15:25:51.628846+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_PRODUCT_PROD-01_372de92d633a",
+          "evidence_sha256": "372de92d633abdfda57865c662bd568479bf391198838eece40470f03e3a3512",
+          "stdout_snippet": "StudentDeals=['DNG-METIZ-45K', 'DNG-CGV-55K', 'DNG-MAYCHA-24K', 'DNG-GONGCHA-COMBO', 'ECOM-SHOPEE-VOUCHER', 'ECOM-LAZADA-TECH', 'ECOM-TIKTOK-FOOD']; ModalPresent=True; PersonaLogic=True",
+          "assertion_summary": "DOM_AND_FEED_LOGIC_VERIFIED"
+        },
+        {
+          "test_case_id": "PROD-02",
+          "priority": "P0",
+          "objective": "Xác nhận bộ lọc khung giờ Sáng (07:00 - 10:30) gợi ý đúng combo cà phê ven sông Hàn",
+          "target_user_perspective": "Dân công sở Hải Châu CBD quét deal giờ sáng",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.31,
+          "verified_at": "2026-08-20T15:25:51.629204+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_PRODUCT_PROD-02_4d3c330166bd",
+          "evidence_sha256": "4d3c330166bd3ac5fc145d3d2db74ef7c4e23bc136bf1071f0baba10263bb4af",
+          "stdout_snippet": "MorningDeals=['DNG-METIZ-45K', 'DNG-CGV-55K', 'DNG-KATINAT-BDR', 'DNG-GONGCHA-COMBO', 'ECOM-SHOPEE-VOUCHER', 'ECOM-LAZADA-TECH', 'DNG-SPFOOD-LUNCH']; KatinatIncluded=True",
+          "assertion_summary": "TIME_FILTER_VERIFIED"
+        },
+        {
+          "test_case_id": "PROD-03",
+          "priority": "P0",
+          "objective": "Xác nhận tính năng thêm vào Kế Hoạch Hôm Nay cập nhật tiến độ (X/3) và tự động reset khi sang ngày mới theo giờ Đà Nẵng",
+          "target_user_perspective": "Người dùng lập thói quen săn deal hằng ngày (Habit Loop)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.74,
+          "verified_at": "2026-08-20T15:25:51.629968+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_PRODUCT_PROD-03_040a343e7da8",
+          "evidence_sha256": "040a343e7da8df05d11494ba9a7caa46e9eca656c36fa1ee1909bce1d606759c",
+          "stdout_snippet": "DateKeyLogic=True; ProgressLogic=True",
+          "assertion_summary": "DATE_KEYED_STORAGE_VERIFIED"
+        },
+        {
+          "test_case_id": "PROD-04",
+          "priority": "P0",
+          "objective": "Xác nhận mục 'Ngày Mai Có Gì?' hiển thị nhãn minh bạch 'Dự kiến theo lịch — kiểm tra điều kiện trước khi dùng'",
+          "target_user_perspective": "Người dùng muốn biết trước ưu đãi ngày mai",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.98,
+          "verified_at": "2026-08-20T15:25:51.630968+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_PRODUCT_PROD-04_456718b1cbfc",
+          "evidence_sha256": "456718b1cbfc9b61ad3695567932c324b0b9e63ec148ee50c7a5e2632930d3c2",
+          "stdout_snippet": "TomorrowBox=True; HonestLabel=True",
+          "assertion_summary": "HONEST_LABEL_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "DESIGN_UX",
+      "department_name": "Phòng Thiết Kế & Trải Nghiệm Người Dùng (Design & UX)",
+      "role_responsible": "Lead Product Designer",
+      "total_cases": 3,
+      "passed_cases": 3,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "UX-01",
+          "priority": "P0",
+          "objective": "Xác nhận Mobile Bottom Navigation hiển thị cố định, các nút bấm có kích thước chạm tối thiểu 44px",
+          "target_user_perspective": "Người dùng cầm điện thoại 1 tay (Mobile 390px Viewport)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.95,
+          "verified_at": "2026-08-20T15:25:51.632469+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_DESIGN_UX_UX-01_b0d01ce3450a",
+          "evidence_sha256": "b0d01ce3450a80c9d4e30e9a80230a02d82b705e70c5f4d146ebd5062fb90e17",
+          "stdout_snippet": "BottomNavCSS=True; TouchTargetMin44px=True",
+          "assertion_summary": "MOBILE_TOUCH_TARGET_VERIFIED"
+        },
+        {
+          "test_case_id": "UX-02",
+          "priority": "P0",
+          "objective": "Xác nhận hệ thống Grid 2 cột tự co giãn mượt mà, thông tin giá và mức tiết kiệm dễ quét mắt",
+          "target_user_perspective": "Người dùng lướt nhanh trên máy tính bảng (Tablet 768px Viewport)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 1.94,
+          "verified_at": "2026-08-20T15:25:51.634461+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_DESIGN_UX_UX-02_29d691bcbe08",
+          "evidence_sha256": "29d691bcbe08fa75eed19a5821099cffb64a7c147197b9c9f30e9ae238e3e89e",
+          "stdout_snippet": "AutoFillGrid=True; SavingBadgeHighlight=True",
+          "assertion_summary": "TABLET_GRID_LAYOUT_VERIFIED"
+        },
+        {
+          "test_case_id": "UX-03",
+          "priority": "P0",
+          "objective": "Xác nhận Sidebar điều khiển cố định bên trái, vùng làm việc chính hiển thị lưới 3 cột tối ưu thị giác",
+          "target_user_perspective": "Dân văn phòng mở trên màn hình lớn (Desktop 1440px Viewport)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 2.12,
+          "verified_at": "2026-08-20T15:25:51.636748+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_DESIGN_UX_UX-03_a74345aa3e95",
+          "evidence_sha256": "a74345aa3e954ba6f960b618ad8a0fa725978835715b9f97aa497c46b709e06b",
+          "stdout_snippet": "SidebarCSS=True; ObsidianTheme=True; GoldTheme=True",
+          "assertion_summary": "COLOR_CONTRAST_AND_THEME_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "ENGINEERING",
+      "department_name": "Phòng Kỹ Thuật & Hạ Tầng (Engineering & Infrastructure)",
+      "role_responsible": "Principal Engineer",
+      "total_cases": 3,
+      "passed_cases": 3,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "ENG-01",
+          "priority": "P0",
+          "objective": "Xác thực 6 API Endpoints (/readyz, /healthz, /api/time, /api/deals, /api/token/issue, /out) tuân thủ contract nghiêm ngặt",
+          "target_user_perspective": "Hệ thống gọi API dữ liệu và thời gian thực",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 1473.17,
+          "verified_at": "2026-08-20T15:25:53.111173+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_ENGINEERING_ENG-01_703abf280854",
+          "evidence_sha256": "703abf280854da4a1646b263605e1f88728ba357f3da3e5f444a4fdb46b8b7d0",
+          "stdout_snippet": "readyz=200(READY); healthz=200; time=200; deals=200(count=10); issue=200; out=302(loc=https://metiz.vn/)",
+          "assertion_summary": "ALL_6_LIVE_ENDPOINTS_BEHAVIORALLY_VERIFIED"
+        },
+        {
+          "test_case_id": "ENG-02",
+          "priority": "P0",
+          "objective": "Xác thực cơ chế Tokenized Ephemeral Gateway chống Replay Attack và chống giả mạo Correlation ID",
+          "target_user_perspective": "Người dùng bấm mở trang đối tác trong điều kiện mạng biến động",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 1414.98,
+          "verified_at": "2026-08-20T15:25:54.526207+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_ENGINEERING_ENG-02_0aaff98731c3",
+          "evidence_sha256": "0aaff98731c38fdfa7d8ced35f2be7e7b31351bd989c84b0cf520c6efa72c688",
+          "stdout_snippet": "TamperCIDStatus=403; LegitStatus=302; ReplayStatus=403",
+          "assertion_summary": "ANTI_REPLAY_AND_TAMPER_PROTECTION_VERIFIED"
+        },
+        {
+          "test_case_id": "ENG-03",
+          "priority": "P0",
+          "objective": "Xác thực cơ chế Blue-Green Draining và Pointer Atomic Rollback đảm bảo Zero Downtime (0 gián đoạn kết nối)",
+          "target_user_perspective": "Người dùng đang xem trang trong lúc hệ thống cập nhật phiên bản mới",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.73,
+          "verified_at": "2026-08-20T15:25:54.526994+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_ENGINEERING_ENG-03_62ebfb1f243b",
+          "evidence_sha256": "62ebfb1f243b283735f1c976ea9840ca67782ef4ec8216a46399250ba57989c0",
+          "stdout_snippet": "InFlightSlowDrain=True; RoutedToStandby=True; ZeroDowntime=True; Total=26",
+          "assertion_summary": "BLUE_GREEN_DRAINING_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "QUALITY_ASSURANCE",
+      "department_name": "Phòng Đảm Bảo Chất Lượng (Quality Assurance)",
+      "role_responsible": "QA Director",
+      "total_cases": 3,
+      "passed_cases": 3,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "QA-01",
+          "priority": "P0",
+          "objective": "Xác thực cơ chế Safe Isolation: Chặn đứng fetch mạng cục bộ, hiển thị thẻ thông báo an toàn, không làm hỏng giao diện",
+          "target_user_perspective": "Người dùng mở tệp HTML trực tiếp từ ổ đĩa (file:// protocol)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.71,
+          "verified_at": "2026-08-20T15:25:54.528135+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_QUALITY_ASSURANCE_QA-01_f82281d5e5c5",
+          "evidence_sha256": "f82281d5e5c53ca8be472dd40e8e1b773a95da32f6a53b3ce21ebb07ba752a12",
+          "stdout_snippet": "ProtocolFileCheck=True; SafeCardRender=True",
+          "assertion_summary": "FILE_PROTOCOL_SAFE_ISOLATION_VERIFIED"
+        },
+        {
+          "test_case_id": "QA-02",
+          "priority": "P0",
+          "objective": "Xác thực phím 'Escape' và nút 'Đóng / Hủy' đóng Interstitial Modal ngay lập tức với 0 chuyển hướng",
+          "target_user_perspective": "Người dùng bấm nhầm nút 'Săn Deal' và muốn thoát nhanh",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.77,
+          "verified_at": "2026-08-20T15:25:54.528931+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_QUALITY_ASSURANCE_QA-02_f27393413af4",
+          "evidence_sha256": "f27393413af4b1c349b62658f91a769786e25eca6a3052e3a35d03c15f51079d",
+          "stdout_snippet": "EscapeKeyHandler=True; CloseButtonAction=True",
+          "assertion_summary": "KEYBOARD_ACCESSIBILITY_VERIFIED"
+        },
+        {
+          "test_case_id": "QA-03",
+          "priority": "P0",
+          "objective": "Xác thực API kích hoạt Fail-Closed (503 Service Unavailable) khi start_minutes >= end_minutes hoặc end_minutes > 1440",
+          "target_user_perspective": "Máy chủ cấp nguồn dữ liệu bị lỗi giờ hoặc ranh giới phút bị hỏng",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.36,
+          "verified_at": "2026-08-20T15:25:54.529305+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_QUALITY_ASSURANCE_QA-03_f915c77cf9fc",
+          "evidence_sha256": "f915c77cf9fcbcf7bef03059ae2da72d788cb7992c9d2156fdbf0e9222ea74b5",
+          "stdout_snippet": "MinuteBoundaryCheck=True; ServiceUnavailable503=True",
+          "assertion_summary": "FAIL_CLOSED_DATA_INTEGRITY_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "TRUST_COMPLIANCE",
+      "department_name": "Phòng Pháp Lý, Tuân Thủ & Độ Tin Cậy (Trust & Compliance)",
+      "role_responsible": "Chief Compliance Officer",
+      "total_cases": 3,
+      "passed_cases": 3,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "COMP-01",
+          "priority": "P0",
+          "objective": "Xác thực 100% deal có gắn taxonomy 'PROBING', mã bằng chứng evidence_ref hợp lệ và liên kết nguồn xác thực",
+          "target_user_perspective": "Người dùng muốn biết nguồn gốc và tính xác thực của ưu đãi",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.29,
+          "verified_at": "2026-08-20T15:25:54.529932+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_TRUST_COMPLIANCE_COMP-01_10ab9545b8be",
+          "evidence_sha256": "10ab9545b8be6a0ed600a009f05819fa74dcb17f52295038203eb0f3e285d6e4",
+          "stdout_snippet": "TotalDeals=10; AllProbing=True; AllEvidenceRef=True",
+          "assertion_summary": "TAXONOMY_EVIDENCE_AUDIT_VERIFIED"
+        },
+        {
+          "test_case_id": "COMP-02",
+          "priority": "P0",
+          "objective": "Xác thực Interstitial Modal hiển thị rõ ràng thông báo Affiliate Disclosure và điều khoản sử dụng của đối tác",
+          "target_user_perspective": "Người dùng bấm vào liên kết tiếp thị liên kết (Affiliate Link)",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.27,
+          "verified_at": "2026-08-20T15:25:54.530236+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_TRUST_COMPLIANCE_COMP-02_f6876244e482",
+          "evidence_sha256": "f6876244e482724fe748fbd2fb80181d0f502348f5eb694739f8668e24acb0dd",
+          "stdout_snippet": "AffiliateDealsCount=8; AllHaveDisclosure=True",
+          "assertion_summary": "AFFILIATE_DISCLOSURE_VERIFIED"
+        },
+        {
+          "test_case_id": "COMP-03",
+          "priority": "P0",
+          "objective": "Xác thực Domain Catalog và IP Pinning với TLS-SNI đối chiếu chặt chẽ danh sách trắng tên miền",
+          "target_user_perspective": "Kiểm toán bảo vệ tên miền đối tác chống tấn công SSRF / Open Redirect",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.2,
+          "verified_at": "2026-08-20T15:25:54.530455+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_TRUST_COMPLIANCE_COMP-03_b1cf5fba36e9",
+          "evidence_sha256": "b1cf5fba36e9429b2d1cd7b03e28de5d59f1978d57ad67735b9fa217430876a9",
+          "stdout_snippet": "CatalogDomains=['metiz.vn', 'cgv.vn', 'shopeefood.vn', 'shopee.vn', 'lazada.vn', 'tiktok.com', 'thecoffeehouse.com', 'gongcha.com.vn']",
+          "assertion_summary": "DOMAIN_CATALOG_SSRF_RESOLVER_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "OPERATIONS",
+      "department_name": "Phòng Quản Trị Vận Hành & Hạ Tầng (Operations & Release Vault)",
+      "role_responsible": "Head of Infrastructure",
+      "total_cases": 3,
+      "passed_cases": 3,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "OPS-01",
+          "priority": "P0",
+          "objective": "Xác thực Content-Addressed Sealed Build từ chối mọi thao tác ghi đè vật lý (EPERM Write Rejection) và bảo vệ thuộc tính Read-Only",
+          "target_user_perspective": "Hệ thống phát hành bản build niêm phong",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.35,
+          "verified_at": "2026-08-20T15:25:54.531112+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_OPERATIONS_OPS-01_8e26ed669fb9",
+          "evidence_sha256": "8e26ed669fb93b4a89082552dd68e2e9f97278996df5527df0baff377153552a",
+          "stdout_snippet": "TargetBuild=BUILD-758cc6cd8d10-20260820_222037; WriteRejectedEPERM=True",
+          "assertion_summary": "SEALED_BUILD_IMMUTABILITY_VERIFIED"
+        },
+        {
+          "test_case_id": "OPS-02",
+          "priority": "P0",
+          "objective": "Xác thực Pure Pointer Atomic Rollback hoàn tất trong RTO < 5.0 giây mà không cần copy tệp (Zero Copy-Item)",
+          "target_user_perspective": "Hạ tầng gặp sự cố cần quay lui khẩn cấp",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 4015.77,
+          "verified_at": "2026-08-20T15:25:58.546906+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_OPERATIONS_OPS-02_d84b25d03ef7",
+          "evidence_sha256": "d84b25d03ef713f1771b9ded6157880e34b1abc9f2834e22ca46b71597941167",
+          "stdout_snippet": "SandboxRollbackSuccess=True; SwappedTo=BUILD_PREVIOUS; RTO_ms=3595.27; ExitCode=0; StagingUntouched=True",
+          "assertion_summary": "SANDBOX_ATOMIC_ROLLBACK_RTO_BENCHMARK_VERIFIED"
+        },
+        {
+          "test_case_id": "OPS-03",
+          "priority": "P0",
+          "objective": "Xác thực endpoint /readyz kiểm tra toàn vẹn cây băm Merkle Tree và trạng thái quản trị secret",
+          "target_user_perspective": "Giám sát trạng thái hoạt động của hệ thống",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 1216.54,
+          "verified_at": "2026-08-20T15:25:59.763497+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_OPERATIONS_OPS-03_c181f7022569",
+          "evidence_sha256": "c181f70225694cd589171a5b603e2cfa1b51a2d4d2c7124af834bea1f8c20800",
+          "stdout_snippet": "HttpStatus=200; ReadyStatus=READY; SecretConfigured=True; ActiveBuild=BUILD-758cc6cd8d10-20260820_222037; ManifestHash=abb28e7a9e9728fe...",
+          "assertion_summary": "LIVE_HTTP_READYZ_MERKLE_CONTRACT_VERIFIED"
+        }
+      ]
+    },
+    {
+      "department_code": "COMMUNITY_CSKH",
+      "department_name": "Phòng Chăm Sóc Người Dùng & Cộng Đồng (Community & CSKH)",
+      "role_responsible": "Community Support Lead",
+      "total_cases": 2,
+      "passed_cases": 2,
+      "department_status": "ALL_P0_PASSED",
+      "results": [
+        {
+          "test_case_id": "CSKH-01",
+          "priority": "P0",
+          "objective": "Xác thực nút '🚩 Báo deal đã hết / thông tin chưa đúng' mở modal với thông điệp trung thực 'Lưu trên thiết bị này, chưa gửi về máy chủ JayT'",
+          "target_user_perspective": "Người dùng phát hiện deal đã hết hạn hoặc điều kiện thực tế khác",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 0.74,
+          "verified_at": "2026-08-20T15:25:59.764729+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_COMMUNITY_CSKH_CSKH-01_505716f2587b",
+          "evidence_sha256": "505716f2587ba26faa06d630fd586257faaa500c1437689c92d5ccd25389bd43",
+          "stdout_snippet": "TransparentNotice=True; LocalStorageKey=True",
+          "assertion_summary": "TRANSPARENT_FEEDBACK_NOTICE_VERIFIED"
+        },
+        {
+          "test_case_id": "CSKH-02",
+          "priority": "P0",
+          "objective": "Xác thực cơ chế rút consent bằng mã băm SHA-256 (withdraw_consent.py) có chốt chặn Exact-1-Match Guard",
+          "target_user_perspective": "Người dùng muốn rút lại sự đồng ý tham gia sau khi phỏng vấn",
+          "status": "PASS",
+          "exit_code": 0,
+          "execution_duration_ms": 121.47,
+          "verified_at": "2026-08-20T15:25:59.886222+00:00",
+          "evidence_ref": "EVID_PRELAUNCH_COMMUNITY_CSKH_CSKH-02_31e254195e1c",
+          "evidence_sha256": "31e254195e1c1fd69867078c74041a27f512b885da27c0cd959068b0badd5099",
+          "stdout_snippet": "ExitCode=0; OutputSummary=5/5 Tests Passed",
+          "assertion_summary": "CONSENT_WITHDRAWAL_ENGINE_VERIFIED"
+        }
+      ]
+    }
+  ]
+}

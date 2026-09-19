@@ -1,0 +1,260 @@
+{
+  "manifest_id": "BATCH_CAPTURE_143_MANIFEST",
+  "directive": "JAYT-143: FRESH-CAPTURE RESET & AUTONOMOUS VERIFIED-SUPPLY LOOP",
+  "generated_at": "2026-08-26T19:06:58.660Z",
+  "governance_statement": "Khởi tạo Capture mới hoàn toàn 143 với 51 URLs trên 21 thương hiệu chính thức. 100% receipt ghi nhận trực tiếp từ network event. Cấm toàn bộ body fallback và fallback defaults. Quyết định tự động: CONTINUE_ACQUISITION. Catalog locked.",
+  "streams_summary": {
+    "fresh_sources_monitored": 21,
+    "brand_store_locators_audited": 21,
+    "raw_leaves_and_utilities_evaluated": 30,
+    "total_urls_processed": 51,
+    "community_signals_queued": 0,
+    "inbound_submissions": 0
+  },
+  "receipt_trust_summary": {
+    "capture_receipt_valid": 21,
+    "capture_receipt_invalid": 0,
+    "identity_collisions_detected": 1
+  },
+  "locality_baseline_summary": {
+    "total_brands": 21,
+    "locality_verified_da_nang": 2,
+    "online_eligibility_unproven_for_danang": 2,
+    "locality_pending_address_unit_validation": 17,
+    "locality_pending_receipt_validation": 0
+  },
+  "leaf_batch_evaluation_summary": {
+    "total_items_evaluated": 30,
+    "state_distribution": {
+      "EVIDENCE_COMPLETE_FOR_REVIEW": 0,
+      "INCOMPLETE_OFFER_EVIDENCE": 5,
+      "SCOPE_UNPROVEN": 1,
+      "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG": 0,
+      "NON_OFFER_PAGE_OR_SHELL": 23,
+      "CAPTURE_RECEIPT_INVALID": 0,
+      "CAPTURE_IDENTITY_COLLISION": 1
+    },
+    "conservation_check": 30
+  },
+  "autonomous_scheduler_status": {
+    "source_index_scan_frequency": "7_DAYS (604800s)",
+    "offer_leaves_scan_frequency": "24_HOURS (86400s)",
+    "error_backoff_policy": "7_DAYS (604800s)",
+    "auto_staging_gate_threshold": ">= 10 bundles across >= 3 categories",
+    "scheduler_operational_state": "READY_CRON_STANDBY"
+  },
+  "automated_staging_gate_evaluation": {
+    "min_candidates_threshold": 10,
+    "min_candidates_met": false,
+    "complete_bundles_count": 0,
+    "decision_verdict": "CONTINUE_ACQUISITION"
+  },
+  "safe_community_feed": {
+    "layer_1_verified_deals": {
+      "badge": "🟢 ĐÃ ĐỐI SOÁT",
+      "count": 0,
+      "bundles": [],
+      "governance_note": "Khóa hoàn toàn (deals_feed.json: []). Hiện có 0 bundle chứng minh đầy đủ 5 bước trong fresh capture."
+    },
+    "layer_2_monitored_sources": {
+      "badge": "🟣 NGUỒN ĐANG THEO DÕI",
+      "count": 21,
+      "sources": [
+        {
+          "source_id": "SRC_143_01",
+          "brand_id": "BRAND_GALAXY",
+          "brand_name": "Galaxy Cinema Vietnam",
+          "canonical_url": "https://www.galaxycine.vn/rap-gia-ve",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_02",
+          "brand_id": "BRAND_CGV",
+          "brand_name": "CGV Cinemas Vietnam",
+          "canonical_url": "https://www.cgv.vn/default/cinox/site/",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_03",
+          "brand_id": "BRAND_LOTTE_CINEMA",
+          "brand_name": "Lotte Cinema Vietnam",
+          "canonical_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=5&cinemaID=5001",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_04",
+          "brand_id": "BRAND_METIZ",
+          "brand_name": "Metiz Cinema Da Nang",
+          "canonical_url": "https://metiz.vn/rap-va-gia-ve/",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_05",
+          "brand_id": "BRAND_STARLIGHT",
+          "brand_name": "Starlight Cinema Da Nang",
+          "canonical_url": "https://starlight.vn/cum-rap.html",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_06",
+          "brand_id": "BRAND_KFC",
+          "brand_name": "KFC Vietnam",
+          "canonical_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_07",
+          "brand_id": "BRAND_JOLLIBEE",
+          "brand_name": "Jollibee Vietnam",
+          "canonical_url": "https://jollibee.com.vn/cua-hang",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_08",
+          "brand_id": "BRAND_LOTTERIA",
+          "brand_name": "Lotteria Vietnam",
+          "canonical_url": "https://www.lotteria.vn/store-locator",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_09",
+          "brand_id": "BRAND_HIGHLANDS",
+          "brand_name": "Highlands Coffee",
+          "canonical_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_10",
+          "brand_id": "BRAND_PHUCLONG",
+          "brand_name": "Phúc Long Coffee & Tea",
+          "canonical_url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_11",
+          "brand_id": "BRAND_THECOFFEEHOUSE",
+          "brand_name": "The Coffee House",
+          "canonical_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_12",
+          "brand_id": "BRAND_PIZZAHUT",
+          "brand_name": "Pizza Hut Vietnam",
+          "canonical_url": "https://pizzahut.vn/store-locator",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_13",
+          "brand_id": "BRAND_DOMINOS",
+          "brand_name": "Domino's Pizza Vietnam",
+          "canonical_url": "https://dominos.vn/store-locator",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_14",
+          "brand_id": "BRAND_GONGCHA",
+          "brand_name": "Gong Cha Vietnam",
+          "canonical_url": "https://gongcha.com.vn/cua-hang/",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_15",
+          "brand_id": "BRAND_KOITHE",
+          "brand_name": "KOI Thé Vietnam",
+          "canonical_url": "https://www.koithe.com/en/global/koi-vietnam",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_16",
+          "brand_id": "BRAND_KICHIKICHI",
+          "brand_name": "Kichi-Kichi Hotpot",
+          "canonical_url": "https://kichi.com.vn/vi/he-thong-nha-hang",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_17",
+          "brand_id": "BRAND_GOGI",
+          "brand_name": "Gogi House Vietnam",
+          "canonical_url": "https://gogi.com.vn/vi/he-thong-nha-hang",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_18",
+          "brand_id": "BRAND_TEXAS_CHICKEN",
+          "brand_name": "Texas Chicken Vietnam",
+          "canonical_url": "https://texaschicken.vn/he-thong-nha-hang/",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_19",
+          "brand_id": "BRAND_POPEYES",
+          "brand_name": "Popeyes Vietnam",
+          "canonical_url": "https://popeyes.vn/he-thong-cua-hang",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_20",
+          "brand_id": "BRAND_BASKIN_ROBBINS",
+          "brand_name": "Baskin Robbins Vietnam",
+          "canonical_url": "https://baskinrobbins.vn/vn/he-thong-cua-hang",
+          "state": "HTTP_ERROR_BACKOFF",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        },
+        {
+          "source_id": "SRC_143_21",
+          "brand_id": "BRAND_VINWONDERS",
+          "brand_name": "VinWonders Da Nang",
+          "canonical_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+          "state": "OFFICIAL_SOURCE_MONITORED",
+          "next_check_due": "2026-09-03T02:00:00.000Z",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Fresh Capture Network Harness."
+        }
+      ]
+    },
+    "layer_3_verified_venues": {
+      "badge": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "count": 2,
+      "disclaimer": "Cơ sở kinh doanh đã có receipt hợp lệ và node DOM chứng minh đơn vị địa chỉ chuẩn hóa tại TP. Đà Nẵng."
+    }
+  }
+}

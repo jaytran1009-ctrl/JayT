@@ -1,0 +1,797 @@
+{
+  "specification_id": "BATCH_03_BULK_SUPPLY_READINESS_SPECIFICATION_JAYT_266",
+  "governing_directive": "JAYT-245 Section JAYT-266 (Lines 5824-5837)",
+  "generated_at_utc": "2026-09-03T05:36:45.052Z",
+  "status": "STAGED_BACKLOG_READINESS_ONLY__ZERO_BUSINESS_IO",
+  "architectural_intent": "Prepares pipeline taxonomy, schemas, and review assignments for post-scoped-unfreeze intake. Strictly barred from executing I/O, captures, or admissions under active freeze.",
+  "clusters_summary": {
+    "total_clusters": 4,
+    "total_proposals": 28,
+    "cluster_names": [
+      "Hòa Khánh — Đà Nẵng Student Cluster",
+      "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "Tiện Ích Số — Da Nang Youth Digital Services"
+    ]
+  },
+  "taxonomy_definitions": {
+    "T1": "Direct Community Deals / Student Perks (Requires written merchant agreement and verified evidence)",
+    "T2": "Community Initiatives / Institutional Pilots (Requires verified partnership or program documentation)",
+    "T3": "Local Student Utilities / Transport / Public Amenities (Requires official operating schedules and locations)",
+    "T4": "Community Radar / Free Public Benefits (Requires official source URL, provenance audit, and mandatory caveat)"
+  },
+  "t4_radar_contract_rules": {
+    "provenance_verification_mandatory": true,
+    "official_source_url_required": true,
+    "asset_rights_checklist_required": true,
+    "recheck_cadence_days_default": 14,
+    "mandatory_caveat_statement": "Thông tin tiện ích công cộng được tổng hợp từ nguồn chính thống phục vụ sinh viên và cộng đồng. Vui lòng đối chiếu website chính thức trước khi sử dụng.",
+    "zero_pricing_voucher_affiliate": true
+  },
+  "accessibility_framework": {
+    "wcag_conformance": "WCAG 2.1 AA",
+    "color_contrast_minimum": "4.5:1",
+    "touch_target_minimum": "44x44px",
+    "keyboard_navigable": true,
+    "aria_attributes_enforced": true,
+    "zero_layout_shift_contract": true
+  },
+  "target_proposals_backlog": [
+    {
+      "proposal_id": "HK_PROP_01",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T3",
+      "entity_name": "Ký túc xá ĐH Bách Khoa — Thư viện mở",
+      "category": "STUDENT_UTILITY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_02",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T4",
+      "entity_name": "Tuyến xe buýt trợ giá R16A (Hòa Khánh - Kim Liên)",
+      "category": "PUBLIC_TRANSIT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_03",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T4",
+      "entity_name": "Công viên hồ sinh thái Bàu Tràm",
+      "category": "COMMUNITY_SPACE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_04",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T3",
+      "entity_name": "Trung tâm Hỗ trợ Sinh viên ĐH Sư Phạm",
+      "category": "STUDENT_SERVICE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_05",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T4",
+      "entity_name": "Điểm nạp nước sạch miễn phí đường Tôn Đức Thắng",
+      "category": "PUBLIC_AMENITY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_06",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T2",
+      "entity_name": "CLB Sáng tạo Trẻ Bách Khoa Đà Nẵng",
+      "category": "INNOVATION_PILOT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HK_PROP_07",
+      "cluster_id": "HOA_KHANH",
+      "cluster_name": "Hòa Khánh — Đà Nẵng Student Cluster",
+      "tier": "T4",
+      "entity_name": "Khu thể thao sinh viên Hòa Khánh",
+      "category": "COMMUNITY_HEALTH",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_01",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T4",
+      "entity_name": "Phố đi bộ An Thượng — Điểm đọc sách cộng đồng",
+      "category": "PUBLIC_CULTURE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_02",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T4",
+      "entity_name": "Trạm cứu hộ bãi biển Mỹ Khê (Khu vực Sao Biển)",
+      "category": "PUBLIC_SAFETY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_03",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T3",
+      "entity_name": "Không gian làm việc chung Sinh viên ven biển",
+      "category": "CO_WORKING",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_04",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T4",
+      "entity_name": "Điểm phân loại rác tái chế An Thượng",
+      "category": "ENVIRONMENT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_05",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T4",
+      "entity_name": "Trạm đỗ xe đạp công cộng bãi biển T20",
+      "category": "GREEN_MOBILITY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_06",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T2",
+      "entity_name": "Sáng kiến Văn hóa Thanh niên Sơn Trà",
+      "category": "CULTURAL_PILOT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "AT_PROP_07",
+      "cluster_id": "AN_THUONG",
+      "cluster_name": "An Thượng — Đà Nẵng Coastal & Creative Cluster",
+      "tier": "T4",
+      "entity_name": "Bản đồ số du lịch văn minh An Thượng",
+      "category": "DIGITAL_GUIDE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_01",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T3",
+      "entity_name": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "category": "PUBLIC_LIBRARY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_02",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T4",
+      "entity_name": "Bảo tàng Điêu khắc Chăm — Vé hỗ trợ học sinh sinh viên",
+      "category": "CULTURAL_HERITAGE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_03",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T4",
+      "entity_name": "Đường sách Bạch Đằng — Điểm tra cứu sách mở",
+      "category": "COMMUNITY_BOOKS",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_04",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T4",
+      "entity_name": "Trạm phát sóng WiFi công cộng Sông Hàn",
+      "category": "PUBLIC_WIFI",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_05",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T3",
+      "entity_name": "Trung tâm Y tế quận Hải Châu — Khám tư vấn thanh niên",
+      "category": "PUBLIC_HEALTH",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_06",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T2",
+      "entity_name": "Chương trình Giao lưu Thanh niên Quốc tế Hải Châu",
+      "category": "YOUTH_EXCHANGE",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "HC_PROP_07",
+      "cluster_id": "HAI_CHAU",
+      "cluster_name": "Hải Châu — Đà Nẵng Central & Civic Hub",
+      "tier": "T4",
+      "entity_name": "Không gian văn hóa Cầu Rồng bờ Tây",
+      "category": "PUBLIC_ARTS",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_01",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T4",
+      "entity_name": "Ứng dụng Danang Smart City — Chuyên mục tiện ích sinh viên",
+      "category": "CIVIC_APP",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_02",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T4",
+      "entity_name": "Cổng dữ liệu mở Đà Nẵng (opendata.danang.gov.vn)",
+      "category": "OPEN_DATA",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_03",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T4",
+      "entity_name": "Hệ thống Cảnh báo Thiên tai & Mưa ngập Đà Nẵng",
+      "category": "DISASTER_ALERT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_04",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T3",
+      "entity_name": "Thẻ thư viện điện tử dùng chung ĐH Đà Nẵng",
+      "category": "DIGITAL_LIBRARY",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_05",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T4",
+      "entity_name": "Bản đồ số trạm y tế và nhà thuốc trực 24/7",
+      "category": "HEALTH_MAP",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_06",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T2",
+      "entity_name": "Sáng kiến Đổi mới Sáng tạo Đà Nẵng (Danang Startup Hub)",
+      "category": "DIGITAL_STARTUP",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    },
+    {
+      "proposal_id": "DU_PROP_07",
+      "cluster_id": "DIGITAL_UTILITIES",
+      "cluster_name": "Tiện Ích Số — Da Nang Youth Digital Services",
+      "tier": "T4",
+      "entity_name": "Cổng thông tin xe buýt công cộng DanaBus App",
+      "category": "DIGITAL_TRANSIT",
+      "governing_rules": {
+        "is_candidate": false,
+        "sla_started": false,
+        "pricing_field": null,
+        "voucher_field": null,
+        "commercial_claim": null,
+        "raw_capture_performed": false,
+        "network_request_performed": false,
+        "render_eligible_before_unfreeze": false
+      },
+      "reviewer_matrix": {
+        "product_reviewer": "Product Lead",
+        "design_reviewer": "Design Lead",
+        "ux_cx_reviewer": "UX/CX Lead",
+        "growth_reviewer": "Growth Lead",
+        "data_trust_reviewer": "Data & Trust Lead",
+        "engineering_reviewer": "Engineering Lead",
+        "qa_reviewer": "QA Lead"
+      }
+    }
+  ]
+}

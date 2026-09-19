@@ -1,0 +1,115 @@
+{
+  "matrix_id": "JAYT_REGRESSION_TEST_MATRIX_V1",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-3 (Lines 5678-5690)",
+  "generated_at_utc": "2026-09-02T08:22:36.588Z",
+  "summary": {
+    "total_suites_in_repository": 19,
+    "active_suites_passing": 18,
+    "historical_suites_expected_failing": 1
+  },
+  "active_passing_suites": [
+    {
+      "suite": "test_jayt_262_correction_3_closed_loop_staging_trace_qa.js",
+      "status": "PASS",
+      "tests_passed": 17
+    },
+    {
+      "suite": "test_jayt_262_correction_2_runtime_enforcement_and_baseline_recovery_qa.js",
+      "status": "PASS",
+      "tests_passed": 18
+    },
+    {
+      "suite": "test_jayt_262_correction_1_quarantine_and_clock_guard_qa.js",
+      "status": "PASS",
+      "tests_passed": 32
+    },
+    {
+      "suite": "test_jayt_260_correction_10_authority_gate_qa.js",
+      "status": "PASS",
+      "tests_passed": 19
+    },
+    {
+      "suite": "test_jayt_260_correction_9_capture_envelope_and_registry_pinning_qa.js",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite": "test_jayt_260_correction_8_raw_first_worker_and_catalog_qa.js",
+      "status": "PASS",
+      "tests_passed": 19
+    },
+    {
+      "suite": "test_jayt_260_correction_7_process_trace_integration_qa.js",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite": "test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite": "test_jayt_260_correction_5_live_trace_and_fail_closed_verifier_qa.js",
+      "status": "PASS",
+      "tests_passed": 20
+    },
+    {
+      "suite": "test_jayt_260_correction_4_real_runtime_caller_graph_qa.js",
+      "status": "PASS",
+      "tests_passed": 26
+    },
+    {
+      "suite": "test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+      "status": "PASS",
+      "tests_passed": 24
+    },
+    {
+      "suite": "test_jayt_260_correction_2_vault_quarantine_and_denylist_qa.js",
+      "status": "PASS",
+      "tests_passed": 24
+    },
+    {
+      "suite": "test_jayt_260_correction_1_batch_quarantine_qa.js",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite": "test_jayt_258_correction_4_sole_watchdog_writer_qa.js",
+      "status": "PASS",
+      "tests_passed": 23
+    },
+    {
+      "suite": "test_jayt_256_correction_2_runtime_truth_and_viewports_qa.js",
+      "status": "PASS",
+      "tests_passed": 23
+    },
+    {
+      "suite": "test_jayt_256_correction_1_p0_semantics_qa.js",
+      "status": "PASS",
+      "tests_passed": 15
+    },
+    {
+      "suite": "test_ez_ar_post_sla_decision_and_governance_qa.js",
+      "status": "PASS",
+      "tests_passed": 9
+    },
+    {
+      "suite": "test_ez_aq_post_sla_closure_and_council_checkpoint_qa.js",
+      "status": "PASS",
+      "tests_passed": 16
+    },
+    {
+      "suite": "test_ez_ao_build_immutability_and_manifest_parity_qa.js",
+      "status": "PASS",
+      "tests_passed": 20
+    }
+  ],
+  "historical_expected_failing_suites": [
+    {
+      "suite": "test_jayt_262_micro_batch_02_human_reviewed_intake_qa.js",
+      "status": "EXPECTED_FAILURE_AFTER_QUARANTINE",
+      "governing_directive_reason": "JAYT-245 Section JAYT-262-CORRECTION-1 (Lines 5649-5664)",
+      "explanation": "Test requires existence of active vault directory '06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/' which was permanently quarantined under JAYT-262-CORRECTION-1. Preserved as immutable historical regression baseline without modification."
+    }
+  ]
+}

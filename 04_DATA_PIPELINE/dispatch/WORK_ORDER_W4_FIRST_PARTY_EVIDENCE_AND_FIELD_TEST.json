@@ -1,0 +1,115 @@
+{
+  "work_order_id": "WORK_ORDER_W4_FIRST_PARTY_EVIDENCE_AND_FIELD_TEST",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W4-STRATEGY",
+  "prepared_on": "2026-09-11",
+  "directive_effective_date": "2026-09-12",
+  "status": "DISPATCHED__SAFE_COLLECTION_AND_RESEARCH_PREPARATION",
+  "production_boundary": {
+    "canonical_version": "v3.448.0-w3",
+    "canonical_deployment": "dpl_FVrUNSADMUQore2umH5VyywADiXS",
+    "production_mutation_authorized": false,
+    "affiliate_enabled": false
+  },
+  "evidence_collection": {
+    "destination": "04_DATA_PIPELINE/raw_evidence/",
+    "required_artifacts_per_accepted_capture": [
+      "raw HTML bytes",
+      "sanitized response headers",
+      "UTC timestamp",
+      "full-page PNG screenshot",
+      "disk re-read SHA-256 receipt"
+    ],
+    "pre_write_gates": [
+      "one public first-party session only",
+      "HTTP 200 only",
+      "final HTTPS origin must match the approved host",
+      "reject CAPTCHA, WAF, access-denied, or login-wall markers before any evidence write",
+      "no login, credential, proxy, CAPTCHA solving, or WAF bypass",
+      "no offer can be published until its page-level terms, scope, and current validity have a separate CEO audit"
+    ],
+    "targets": [
+      {
+        "target_id": "W4_SRC_01_METIZ",
+        "approved_hosts": ["metiz.vn"],
+        "exact_public_url": "https://metiz.vn/tin-tuc/thu-hai-vui-ve-45k/",
+        "detail_url_status": "READY_FOR_ASSISTED_PUBLIC_LOGGED_OUT_EXPORT",
+        "release_status": "HELD_PENDING_PHYSICAL_AND_SEMANTIC_AUDIT"
+      },
+      {
+        "target_id": "W4_SRC_02_CGV_DN",
+        "approved_hosts": ["cgv.vn"],
+        "exact_public_url": "https://www.cgv.vn/default/cinox/site/",
+        "detail_url_status": "READY_FOR_ASSISTED_PUBLIC_LOGGED_OUT_EXPORT",
+        "release_status": "HELD_PENDING_VENUE_SCOPE_AND_TERMS_AUDIT"
+      },
+      {
+        "target_id": "W4_SRC_03_LOTTE_DN",
+        "approved_hosts": ["lottemart.com.vn"],
+        "exact_public_url": "https://www.lottemart.com.vn/",
+        "detail_url_status": "READY_FOR_ASSISTED_PUBLIC_LOGGED_OUT_EXPORT",
+        "release_status": "HELD_PENDING_EXACT_PROMOTION_AND_LOCAL_SCOPE"
+      },
+      {
+        "target_id": "W4_SRC_04_COOP_DN",
+        "approved_hosts": ["coopmart.vn", "co-opmart.com.vn"],
+        "exact_public_url": "https://co-opmart.com.vn/",
+        "detail_url_status": "READY_FOR_ASSISTED_PUBLIC_LOGGED_OUT_EXPORT",
+        "release_status": "HELD_PENDING_EXACT_PROMOTION_AND_LOCAL_SCOPE"
+      },
+      {
+        "target_id": "W4_SHOPEEFOOD_DANANG",
+        "approved_hosts": ["shopeefood.vn"],
+        "detail_url_status": "PENDING_EXACT_PUBLIC_PROMOTION_URL",
+        "known_constraint": "Automated capture of the Da Nang route was disabled after a CAPTCHA pre-write rejection. Do not retry that route without a new approved public detail URL and audit reason.",
+        "release_status": "HELD"
+      },
+      {
+        "target_id": "W4_GRABFOOD_DANANG",
+        "approved_hosts": ["food.grab.com", "grab.com"],
+        "detail_url_status": "PREWRITE_REJECTED__WAF_OR_LOGIN_MARKER",
+        "latest_checked_public_url": "https://food.grab.com/vn/vi/da-nang/cuisines/m%C3%B3n-nh%E1%BA%ADt-delivery/300003",
+        "latest_prewrite_outcome": "Rejected before write: rendered page contained marker 'just a moment'.",
+        "release_status": "HELD"
+      },
+      {
+        "target_id": "W4_SHOPEE_KTX",
+        "approved_hosts": ["shopee.vn"],
+        "detail_url_status": "PENDING_EXACT_OFFICIAL_MERCHANT_PRODUCT_URL",
+        "release_status": "HELD"
+      },
+      {
+        "target_id": "W4_LAZADA_KTX",
+        "approved_hosts": ["lazada.vn"],
+        "detail_url_status": "PENDING_EXACT_OFFICIAL_MERCHANT_PRODUCT_URL",
+        "release_status": "HELD"
+      },
+      {
+        "target_id": "W4_KLOOK_DANANG",
+        "approved_hosts": ["klook.com"],
+        "detail_url_status": "PREWRITE_REJECTED__HTTP_403",
+        "latest_checked_public_url": "https://www.klook.com/vi/activity/13283-ba-na-hills-ticket-da-nang/",
+        "latest_prewrite_outcome": "Rejected before write: HTTP status 403.",
+        "release_status": "HELD"
+      }
+    ]
+  },
+  "field_research": {
+    "planned_sessions": 12,
+    "segments": {"students": 6, "office_workers": 6},
+    "authorization": "CONSENTED_ANONYMOUS_SESSIONS_ONLY",
+    "prohibited_data": ["name", "phone", "email", "bank data", "GPS", "purchase history", "delivery-app screenshot"],
+    "results_status": "NO_RECRUITMENT_OR_SESSIONS_COMPLETED"
+  },
+  "track1_sandbox": {
+    "requested_affiliate_enabled": true,
+    "implemented_affiliate_enabled": false,
+    "reason": "Written provider authorization and approved destination/parameter schemas are not present.",
+    "prohibited": ["sub-ID insertion", "affiliate redirect", "tracking", "attribution", "public affiliate disclosure"]
+  },
+  "acceptance_conditions": [
+    "independent review of every physical evidence bundle",
+    "consented anonymous field-test evidence, not invented results",
+    "separate written provider authorization before any affiliate sandbox or production activation",
+    "separate production authorization"
+  ]
+}

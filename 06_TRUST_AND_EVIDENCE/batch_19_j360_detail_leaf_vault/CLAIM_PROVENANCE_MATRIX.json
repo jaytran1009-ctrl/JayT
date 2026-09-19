@@ -1,0 +1,368 @@
+{
+  "matrix_id": "J360_BATCH19_CLAIM_PROVENANCE_MATRIX",
+  "directive": "JAYT-360 Article 3 & WORK_ORDER_J360_BATCH19_RECAPTURE",
+  "timestamp_utc": "2026-09-09T05:30:00.000Z",
+  "methodology": "DETAIL_LEAF_TEXT_SCOPED_EVIDENCE",
+  "summary": {
+    "total_original_candidates": 10,
+    "verified_count": 0,
+    "held_count": 10,
+    "discovery_pending_count": 2,
+    "shortfall_policy_compliant": true,
+    "ceo_minimum_target": 8,
+    "target_met": false,
+    "shortfall_disclosure": "CANDID SHORTFALL: Fresh detail leaves lack explicit Da Nang applicability and/or active 2026 validity clauses for 10/10 candidates. Zero synthetic evidence created."
+  },
+  "matrix": [
+    {
+      "candidate_id": "B19_STARLIGHT_U22_WEEKDAY",
+      "brand": "Starlight Cinema",
+      "leaf_id": "j360_starlight_u22_program",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "CT U22 RẠP STARLIGHT",
+          "byte_range": [
+            291,
+            313
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "45k/v&eacute;",
+          "byte_range": [
+            9503,
+            9516
+          ],
+          "amount": 45000
+        },
+        "validity_or_recurrence": {
+          "verified": true,
+          "quoted_span": "từ thứ 2 đến thứ 5!",
+          "byte_range": [
+            9538,
+            9566
+          ]
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality"
+      ],
+      "shortfall_notes": "Page explicitly states 45k is at counter elsewhere; in Quy Nhơn and Đà Nẵng the U22 rate is 55k. Furthermore article is dated 11-Thg3-2025 without active 2026 recurrence clause."
+    },
+    {
+      "candidate_id": "B19_STARLIGHT_U22_WEEKEND",
+      "brand": "Starlight Cinema",
+      "leaf_id": "j360_starlight_u22_program",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "CT U22 RẠP STARLIGHT",
+          "byte_range": [
+            291,
+            313
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "55k/v&eacute;",
+          "byte_range": [
+            9935,
+            9948
+          ],
+          "amount": 55000
+        },
+        "da_nang_locality": {
+          "verified": true,
+          "quoted_span": "Đ&agrave; Nẵng",
+          "byte_range": [
+            9862,
+            9879
+          ]
+        }
+      },
+      "missing_dimensions": [
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "Explicit Da Nang locality span verified for 55k price, but article publication is 2025 without active 2026 validity clause."
+    },
+    {
+      "candidate_id": "B19_STARLIGHT_THU_3_PHIM_VIET",
+      "brand": "Starlight Cinema",
+      "leaf_id": "j360_starlight_thu_3_phim_viet",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "THỨ 3 PHIM VIỆT",
+          "byte_range": [
+            291,
+            310
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "45 k",
+          "byte_range": [
+            8475,
+            8479
+          ],
+          "amount": 45000
+        },
+        "validity_or_recurrence": {
+          "verified": true,
+          "quoted_span": "v&agrave;o ng&agrave;y thứ 3 h&agrave;ng tuần",
+          "byte_range": [
+            8518,
+            8567
+          ]
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality"
+      ],
+      "shortfall_notes": "Recurrence is Tuesday weekly, but offer body lacks explicit Da Nang applicability clause and article publication is 2025."
+    },
+    {
+      "candidate_id": "B19_TPC_COMBO_VU_LAN_315K",
+      "brand": "The Pizza Company",
+      "leaf_id": "j360_tpc_combo_vu_lan_22662",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "Combo Vu Lan An L&#xE0;nh",
+          "byte_range": [
+            104,
+            129
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "315.000",
+          "byte_range": [
+            65685,
+            65692
+          ],
+          "amount": 315000
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National product listing; lacks explicit Da Nang promotional applicability clause and active 2026 recurrence."
+    },
+    {
+      "candidate_id": "B19_TPC_COMBO_COT_MAM_KEO_479K",
+      "brand": "The Pizza Company",
+      "leaf_id": "j360_tpc_combo_cot_mam_keo",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "Combo &quot;C&#x1ED1;t&quot; M&#x1EAF;m K&#x1EB9;o",
+          "byte_range": [
+            104,
+            154
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "479.000",
+          "byte_range": [
+            75048,
+            75055
+          ],
+          "amount": 479000
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National product listing; lacks explicit Da Nang promotional applicability clause and active 2026 recurrence."
+    },
+    {
+      "candidate_id": "B19_TPC_COMBO_COT_MAI_MAN_599K",
+      "brand": "The Pizza Company",
+      "leaf_id": "j360_tpc_combo_cot_mai_man",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "Combo &quot;C&#x1ED1;t&quot; M&#xE3;i M&#x1EB7;n",
+          "byte_range": [
+            104,
+            152
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "599.000",
+          "byte_range": [
+            82560,
+            82567
+          ],
+          "amount": 599000
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National product listing; lacks explicit Da Nang promotional applicability clause and active 2026 recurrence."
+    },
+    {
+      "candidate_id": "B19_TPC_BOGO_PEPSI_15L",
+      "brand": "The Pizza Company",
+      "leaf_id": "j360_tpc_mua_1_tang_1_nuoc",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "Mua 1 T&#x1EB7;ng 1 N&#x1B0;&#x1EDB;c",
+          "byte_range": [
+            104,
+            141
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "50.000",
+          "byte_range": [
+            50287,
+            50293
+          ],
+          "amount": 50000
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National product listing; lacks explicit Da Nang promotional applicability clause and active 2026 recurrence."
+    },
+    {
+      "candidate_id": "B19_TPC_BO_DOI_NHU_Y_169K",
+      "brand": "The Pizza Company",
+      "leaf_id": "j360_tpc_bo_doi_nhu_y_combo_1",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "B&#x1ED9; &#x110;&#xF4;i Nh&#x1B0; &quot;Y&#x301;&quot; Combo 1",
+          "byte_range": [
+            104,
+            167
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "169.000",
+          "byte_range": [
+            91837,
+            91844
+          ],
+          "amount": 169000
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National product listing; lacks explicit Da Nang promotional applicability clause and active 2026 recurrence."
+    },
+    {
+      "candidate_id": "B19_GONGCHA_MEMBER_POLICY",
+      "brand": "Gong Cha",
+      "leaf_id": "j360_gongcha_member_policy",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "byte_range": [
+            1911,
+            1961
+          ]
+        },
+        "price": {
+          "verified": true,
+          "quoted_span": "10,000 vnđ = 1 Lá trà",
+          "byte_range": [
+            38618,
+            38642
+          ]
+        }
+      },
+      "missing_dimensions": [
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National app policy; lacks explicit Da Nang applicability clause."
+    },
+    {
+      "candidate_id": "B19_KATINAT_APP_LOYALTY",
+      "brand": "Katinat Saigon Kafe",
+      "leaf_id": "j360_katinat_app_loyalty",
+      "status": "HELD",
+      "held_reason": "HELD__INSUFFICIENT_DETAIL_TEXT_CLAIMS: Missing [explicit_price, explicit_da_nang_locality, current_validity_or_recurrence]",
+      "preconditions_passed": true,
+      "verified_claims": {
+        "title": {
+          "verified": true,
+          "quoted_span": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG",
+          "byte_range": [
+            417,
+            460
+          ]
+        }
+      },
+      "missing_dimensions": [
+        "explicit_price",
+        "explicit_da_nang_locality",
+        "current_validity_or_recurrence"
+      ],
+      "shortfall_notes": "National loyalty app announcement; lacks explicit Da Nang applicability clause and explicit price span."
+    },
+    {
+      "candidate_id": "B19_TCH_DISCOVERY_001",
+      "status": "DISCOVERY_PENDING",
+      "held_reason": "DISCOVERY_PENDING: Placeholder discovery lineage. Does not count toward target.",
+      "preconditions_passed": true,
+      "missing_dimensions": [
+        "detail_offer_identification"
+      ]
+    },
+    {
+      "candidate_id": "B19_POPEYES_DISCOVERY_001",
+      "status": "DISCOVERY_PENDING",
+      "held_reason": "DISCOVERY_PENDING: Placeholder discovery lineage. Does not count toward target.",
+      "preconditions_passed": true,
+      "missing_dimensions": [
+        "detail_offer_identification"
+      ]
+    }
+  ]
+}

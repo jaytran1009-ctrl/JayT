@@ -1,0 +1,131 @@
+{
+  "report_name": "JAYT_REVIEW_BENCHMARK_AUTHENTICITY_VERIFICATION",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_456_AUTHENTICITY_ENFORCEMENT (AUTH-05)",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_457_AUTHENTICITY_GATE",
+  "timestamp": "2026-09-19T09:16:33.036Z",
+  "dataset_version": "v1.0.0-j457-authenticity-gate",
+  "dataset_file": "review-authenticity-benchmark.json",
+  "dataset_sha256": "4cc86e85f3c87a4d92d07218fb4c8f3078e0b5c54a3af47a2cce699b90b110b4",
+  "classifier_source_sha256": "cac03d31b847f7b420930d4a2a7b2a2f64616a5edb8c381c9f2fe5e7221bbd9b",
+  "execution_timestamp": "2026-09-19T09:16:33.036Z",
+  "execution_environment": "Node.js v24.18.0 (VM Isolated Context)",
+  "confusion_matrix": {
+    "ground_truth_total": 10,
+    "ground_truth_seed_count": 5,
+    "ground_truth_legitimate_count": 5,
+    "true_positive": 5,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 5
+  },
+  "precision": 1,
+  "recall": 1,
+  "f1": 1,
+  "samples": [
+    {
+      "sample_id": "SEED_01_INCENTIVIZED",
+      "text_preview": "cho 5 sao nhận xu nha shop ơi quà tặng siêu to ...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "classified_label": "SEEDING",
+      "classification_type": "TRUE_POSITIVE",
+      "ground_truth_reason": "BANNED_INCENTIVIZED_KEYWORD (\"nhận xu\")",
+      "match": true
+    },
+    {
+      "sample_id": "SEED_02_SHORT_CONTENT",
+      "text_preview": "đẹp lắm nha",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "classified_label": "SEEDING",
+      "classification_type": "TRUE_POSITIVE",
+      "ground_truth_reason": "LENGTH_BELOW_15_CHARS (len=11 < 15)",
+      "match": true
+    },
+    {
+      "sample_id": "SEED_03_EMOJI_ONLY",
+      "text_preview": "👍👍👍❤️❤️❤️⭐⭐⭐⭐⭐",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "classified_label": "SEEDING",
+      "classification_type": "TRUE_POSITIVE",
+      "ground_truth_reason": "EMOJI_ONLY_STRIPPED_CHARS_LESS_THAN_5 (len=0 < 5)",
+      "match": true
+    },
+    {
+      "sample_id": "SEED_04_UNVERIFIED_BUYER",
+      "text_preview": "Hàng xài cực thích nha mn, mua ủng hộ shop nhiệ...",
+      "is_verified_buyer": false,
+      "ground_truth_label": "SEEDING",
+      "classified_label": "SEEDING",
+      "classification_type": "TRUE_POSITIVE",
+      "ground_truth_reason": "UNVERIFIED_PURCHASE_ACCOUNT (isVerifiedBuyer === false)",
+      "match": true
+    },
+    {
+      "sample_id": "SEED_05_SPAM_LYRICS",
+      "text_preview": "lời bài hát anh muốn đưa em về không phải vì tr...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "classified_label": "SEEDING",
+      "classification_type": "TRUE_POSITIVE",
+      "ground_truth_reason": "BANNED_KEYWORD_LYRICS_SPAM (\"lời bài hát\")",
+      "match": true
+    },
+    {
+      "sample_id": "LEGIT_01_EMA_PILLOW",
+      "text_preview": "Gối nằm êm ái, nâng đỡ cổ vai gáy rất tốt sau 2...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "classified_label": "LEGITIMATE",
+      "classification_type": "TRUE_NEGATIVE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_DETAILED_PRODUCT_EXPERIENCE",
+      "match": true
+    },
+    {
+      "sample_id": "LEGIT_02_SHIN_CASE",
+      "text_preview": "Ốp lưng cầm chắc chắn viền gợn sóng bảo vệ góc ...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "classified_label": "LEGITIMATE",
+      "classification_type": "TRUE_NEGATIVE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_PRODUCT_ATTRIBUTES_FEEDBACK",
+      "match": true
+    },
+    {
+      "sample_id": "LEGIT_03_MAGSAFE_CHARGER",
+      "text_preview": "Đế sạc MagSafe lực hút nam châm rất mạnh, sạc k...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "classified_label": "LEGITIMATE",
+      "classification_type": "TRUE_NEGATIVE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_TECHNICAL_PERFORMANCE_REVIEW",
+      "match": true
+    },
+    {
+      "sample_id": "LEGIT_04_THERMOS_BOTTLE",
+      "text_preview": "Bình giữ nhiệt giữ đá lạnh được hơn 12 tiếng, s...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "classified_label": "LEGITIMATE",
+      "classification_type": "TRUE_NEGATIVE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_LONG_TERM_DURABILITY_REVIEW",
+      "match": true
+    },
+    {
+      "sample_id": "LEGIT_05_BRAIDED_CABLE",
+      "text_preview": "Dây sạc bọc dù chống đứt gãy tốt, sạc nhanh chu...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "classified_label": "LEGITIMATE",
+      "classification_type": "TRUE_NEGATIVE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_SPECIFICATION_CONFORMANCE",
+      "match": true
+    }
+  ],
+  "all_samples_concordant": true,
+  "zero_false_positives": true,
+  "zero_false_negatives": true,
+  "verdict": "PASS",
+  "result_sha256": "481054b8aa894afe1d69102c53f415ec9674c3663affc325eabb2aefcf96e63d"
+}

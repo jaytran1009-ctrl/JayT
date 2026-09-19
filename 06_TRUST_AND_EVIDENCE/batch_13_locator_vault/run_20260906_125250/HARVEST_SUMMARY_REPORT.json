@@ -1,0 +1,416 @@
+{
+  "batch_id": "BATCH_13",
+  "run_timestamp_utc": "2026-09-06T05:52:50.959Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250",
+  "matrix_version": "1.0",
+  "brands_total_configured": 10,
+  "brands_resolved_count": 5,
+  "brands_unresolved_count": 5,
+  "locations_raw_count": 20,
+  "duplicates_removed_count": 0,
+  "locations_verified_unique_count": 20,
+  "stats_by_brand": {
+    "phuclong": 7,
+    "jollibee": 9,
+    "phi_long": 2,
+    "lotte_cinema": 1,
+    "metiz_cinema": 1
+  },
+  "stats_by_eligibility": {
+    "ELIGIBLE": 7,
+    "EXCLUDED": 1,
+    "UNVERIFIED": 12
+  },
+  "brand_errors": [
+    {
+      "brand_id": "dien_may_xanh",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "reason": "Locator URL not yet resolved; per strict instructions, URL is kept null without guessing."
+    },
+    {
+      "brand_id": "cgv_cinemas",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "reason": "Locator URL not yet resolved; per strict instructions, URL is kept null without guessing."
+    },
+    {
+      "brand_id": "galaxy_cinema",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "reason": "Locator URL not yet resolved; per strict instructions, URL is kept null without guessing."
+    },
+    {
+      "brand_id": "highlands_coffee",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "reason": "Locator URL not yet resolved; per strict instructions, URL is kept null without guessing."
+    },
+    {
+      "brand_id": "lotteria",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "reason": "Locator URL not yet resolved; per strict instructions, URL is kept null without guessing."
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "phuclong_2005",
+      "brand_id": "phuclong",
+      "store_code": "2005",
+      "name": "DNG-CH Lotte Số 6 Đại Nam P.HCB",
+      "verbatim_address": "Tầng 1, 1F-09 tại Lotte Mart Đà Nẵng, Số 06 đường Nại Nam   TP. Đà Nẵng",
+      "district": null,
+      "phone": "02363688555",
+      "source_type": "JSON_API",
+      "source_pointer": "/data/4",
+      "source_page": 1,
+      "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Cửa hàng tiêu chuẩn áp dụng chính sách hội viên tích điểm và đổi quà"
+      }
+    },
+    {
+      "location_id": "phuclong_2006",
+      "brand_id": "phuclong",
+      "store_code": "2006",
+      "name": "DNG-CH 59-61 Nguyen Van Linh P.PN",
+      "verbatim_address": "59-61 Nguyễn Văn Linh   TP. Đà Nẵng",
+      "district": null,
+      "phone": "02363750000",
+      "source_type": "JSON_API",
+      "source_pointer": "/data/5",
+      "source_page": 1,
+      "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Cửa hàng tiêu chuẩn áp dụng chính sách hội viên tích điểm và đổi quà"
+      }
+    },
+    {
+      "location_id": "phuclong_2116",
+      "brand_id": "phuclong",
+      "store_code": "2116",
+      "name": "DNG - 511 Trần Hưng Đạo",
+      "verbatim_address": "511 Trần Hưng Đạo   TP. Đà Nẵng",
+      "district": null,
+      "phone": "(028) 7100 1968 (Ext.21168)",
+      "source_type": "JSON_API",
+      "source_pointer": "/data/69",
+      "source_page": 1,
+      "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Cửa hàng tiêu chuẩn áp dụng chính sách hội viên tích điểm và đổi quà"
+      }
+    },
+    {
+      "location_id": "phuclong_2129",
+      "brand_id": "phuclong",
+      "store_code": "2129",
+      "name": "DNG - Sân bay Đà Nẵng",
+      "verbatim_address": "DV-03 Cảng hàng không quốc tế Đà Nẵng   TP. Đà Nẵng",
+      "district": null,
+      "phone": "(028) 7100 1968 (Ext.21298)",
+      "source_type": "JSON_API",
+      "source_pointer": "/data/78",
+      "source_page": 1,
+      "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "EXCLUDED",
+        "reason": "Bị loại trừ tích điểm theo điều khoản minh thị (ngoại trừ cửa hàng tại Sân Bay)"
+      }
+    },
+    {
+      "location_id": "phuclong_2176",
+      "brand_id": "phuclong",
+      "store_code": "2176",
+      "name": "DNG - Xô Viết Nghệ Tĩnh",
+      "verbatim_address": "114 - 116 Xô Viết Nghệ Tĩnh   TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "source_type": "JSON_API",
+      "source_pointer": "/data/15",
+      "source_page": 2,
+      "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Cửa hàng tiêu chuẩn áp dụng chính sách hội viên tích điểm và đổi quà"
+      }
+    },
+    {
+      "location_id": "phuclong_2217",
+      "brand_id": "phuclong",
+      "store_code": "2217",
+      "name": "DNG - Mega Market",
+      "verbatim_address": "167 Nguyễn Sinh Sắc Phía Đông Nam ký túc xá sinh viên Phường Hòa Khánh TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "source_type": "JSON_API",
+      "source_pointer": "/data/44",
+      "source_page": 2,
+      "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Cửa hàng tiêu chuẩn áp dụng chính sách hội viên tích điểm và đổi quà"
+      }
+    },
+    {
+      "location_id": "phuclong_2237",
+      "brand_id": "phuclong",
+      "store_code": "2237",
+      "name": "DNG - 111 Trần Hưng Đạo",
+      "verbatim_address": "Số 111 Trần Hưng Đạo Số 111 Trần Hưng Đạo Phường Hội An TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "source_type": "JSON_API",
+      "source_pointer": "/data/52",
+      "source_page": 2,
+      "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+      "is_open": true,
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ ghi nhận Hội An, cần xác minh địa bàn hành chính"
+      }
+    },
+    {
+      "location_id": "jollibee_59",
+      "brand_id": "jollibee",
+      "store_code": "59",
+      "name": "Jollibee Vincom Đà Nẵng",
+      "verbatim_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+      "district": "Sơn Trà",
+      "phone": "(0236) 393-8000",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=59]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:30 AM - 9:30 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_106",
+      "brand_id": "jollibee",
+      "store_code": "106",
+      "name": "Jollibee Tiểu La - Đà Nẵng",
+      "verbatim_address": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "(0236) 355-6996",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=106]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:30 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_121",
+      "brand_id": "jollibee",
+      "store_code": "121",
+      "name": "Jollibee Nguyễn Đức Trung - Đà Nẵng",
+      "verbatim_address": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "district": "Thanh Khê",
+      "phone": "(0236) 379-9989",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=121]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:00 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_132",
+      "brand_id": "jollibee",
+      "store_code": "132",
+      "name": "Jollibee Phan Đăng Lưu - Đà Nẵng",
+      "verbatim_address": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "(0236) 362-6979",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=132]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "10:00 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_135",
+      "brand_id": "jollibee",
+      "store_code": "135",
+      "name": "Jollibee Phạm Như Xương - Đà Nẵng",
+      "verbatim_address": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "district": "Liên Chiểu",
+      "phone": "(0236) 362-2979",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=135]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:00 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_139",
+      "brand_id": "jollibee",
+      "store_code": "139",
+      "name": "Jollibee Lý Thái Tổ - Đà Nẵng",
+      "verbatim_address": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "district": "Thanh Khê",
+      "phone": "(023) 6381-9789",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=139]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:30 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_156",
+      "brand_id": "jollibee",
+      "store_code": "156",
+      "name": "Jollibee Đống Đa - Đà Nẵng",
+      "verbatim_address": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "'02363913579",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=156]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:30 AM - 9:30 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_158",
+      "brand_id": "jollibee",
+      "store_code": "158",
+      "name": "Jollibee Ngô Văn Sở - Đà Nẵng",
+      "verbatim_address": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng",
+      "district": "Liên Chiểu",
+      "phone": "02363573368",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=158]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:00 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "jollibee_252",
+      "brand_id": "jollibee",
+      "store_code": "252",
+      "name": "Jollibee MM Mega Market - Đà Nẵng",
+      "verbatim_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "district": "Liên Chiểu",
+      "phone": "023 6366 7799",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "source_pointer": "window.storeIframes[id=252]",
+      "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "hours": "9:00 AM - 9:00 PM",
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa chỉ cơ sở đã xác minh qua API; đang chờ khảo sát lá menu combo giá trị B12_09"
+      }
+    },
+    {
+      "location_id": "phi_long_sr_1",
+      "brand_id": "phi_long",
+      "store_code": "PL_DNG_1",
+      "name": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+      "verbatim_address": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+      "district": "Thanh Khê",
+      "phone": "(0236) 3 888 000",
+      "source_type": "HTML",
+      "source_pointer": "DOM::li.s-item::match[0]",
+      "raw_sha256": "62284fd74922e459b48cb157a59de9d46cfc0d8c772db1b371aa3970da1edd75",
+      "policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Showroom bán lẻ chính thức đã đối soát trên thẻ giá quan sát B12_15"
+      }
+    },
+    {
+      "location_id": "phi_long_sr_2",
+      "brand_id": "phi_long",
+      "store_code": "PL_DNG_2",
+      "name": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+      "verbatim_address": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "(0236) 3 888 000",
+      "source_type": "HTML",
+      "source_pointer": "DOM::li.s-item::match[1]",
+      "raw_sha256": "62284fd74922e459b48cb157a59de9d46cfc0d8c772db1b371aa3970da1edd75",
+      "policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+      "policy_eligibility": {
+        "status": "ELIGIBLE",
+        "reason": "Showroom bán lẻ chính thức đã đối soát trên thẻ giá quan sát B12_15"
+      }
+    },
+    {
+      "location_id": "lotte_cinema_8007",
+      "brand_id": "lotte_cinema",
+      "store_code": "8007",
+      "name": "Lotte Cinema Đà Nẵng",
+      "verbatim_address": "Tầng 5 Lotte Mart Đà Nẵng, Số 06 Nại Nam, P. Hòa Cường Bắc, Q. Hải Châu, TP. Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "(0236) 367 9667",
+      "source_type": "HTML",
+      "source_pointer": "DOM::a[cinemaID=8007]",
+      "raw_sha256": "7b4b8607412d9897ab90d07c04c4f8a7e6f1beb4e487b3fb0a129d73f37b0fe5",
+      "policy_id": "POLICY_B13_LOTTE_CINEMA_MEMBER",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Cụm rạp xác minh tại Lotte Mart; đang chờ thẩm định chính sách ưu đãi thành viên"
+      }
+    },
+    {
+      "location_id": "metiz_cinema_helio",
+      "brand_id": "metiz_cinema",
+      "store_code": "METIZ_DNG_01",
+      "name": "Metiz Cinema Đà Nẵng",
+      "verbatim_address": "Tầng 1 Helio Center, Đường 2 Tháng 9, P. Hòa Cường Bắc, Q. Hải Châu, TP. Đà Nẵng",
+      "district": "Hải Châu",
+      "phone": "0236 3630 689",
+      "source_type": "HTML",
+      "source_pointer": "DOM::footer::legal_entity",
+      "raw_sha256": "db04e82f1ed8dce8db4204399529dc356c14f8139a6cdc1adadb7c6dd358d8ac",
+      "policy_id": "POLICY_B12_03_METIZ_U22",
+      "policy_eligibility": {
+        "status": "UNVERIFIED",
+        "reason": "Địa điểm rạp đang chờ văn bản xác nhận hiệu lực áp dụng tại quầy năm 2026"
+      }
+    }
+  ]
+}

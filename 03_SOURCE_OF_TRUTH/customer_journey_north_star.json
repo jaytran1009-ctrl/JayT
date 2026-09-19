@@ -1,0 +1,111 @@
+{
+  "contract_id": "JAYT_CUSTOMER_JOURNEY_NORTH_STAR_2026",
+  "version": "4.0.0",
+  "updated_at": "2026-08-26T15:30:00+07:00",
+  "directive": "JAYT-MASTER-DIRECTIVE-2026",
+  "north_star_vision": "JayT là Super-App Khám Phá & Tối Ưu Chi Tiêu Chuẩn Top 1 Thế Giới cho sinh viên và người trẻ Đà Nẵng: 'Biết hôm nay đi đâu, ăn gì, xem gì, đi bằng phương tiện nào đáng tiền; quyết định được trong 3 giây và có thể hành động ngay.'",
+  "five_tier_canvas_architecture": {
+    "tier_1_today_hero": "Today Decision Hub & Lịch Rạp 7 Ngày: Bento 3 cột kính mờ + 11:30 Gauge + Suất Chiếu U22 (Vé 45K) + Nút [ 🍿 Rủ Bạn Đi Chung ] xuất vé Boarding Pass PNG Canvas.",
+    "tier_2_arbitrage_engine": "Hot Now & Trọng Tài Giỏ Hàng 3 App: Thẻ Monogram Squircle 44px + Bảng Trọng Tài 3 App (ShopeeFood vs GrabFood vs BeFood) viền ngọc bích phát sáng + Phản hồi slider <= 50ms.",
+    "tier_3_plan_ahead_fintech": "Plan Ahead & Lên Kế Hoạch Tuần: Thẻ đếm ngược deal rạp + Nút [ 📅 Lưu Vào Lịch ] .ics + Cảnh báo cao điểm 17:30 Cầu Rồng + Smart Fintech Split 50k/người.",
+    "tier_4_smart_buy_affiliate": "Thông Tin Tiện Ích Sinh Viên <= 50K: Lưới sản phẩm KTX có tem Hỗ trợ vận chuyển 0đ, tem Đáy 90 Ngày + Universal Deep-Link mở thẳng app Shopee/TikTok Shop.",
+    "tier_5_voucher_hub": "Kho Voucher Toàn Sàn & Affiliate Hub: Vé đục lỗ phát sáng Neon + 1-Click sao chép mã giảm giá và mở sàn TMĐT kèm nhãn JayT_Verified_Contract."
+  },
+  "provenance_and_evidence_invariants": {
+    "zero_unverified_active_claim": "Mọi ưu đãi mang nhãn ACTIVE_VERIFIED bắt buộc phải có tệp capture leaf vật lý trên đĩa (page.txt), SHA-256, dung lượng bytes, ngày hết hạn và phạm vi chi nhánh Đà Nẵng đã đối soát. Nếu thiếu bất kỳ thành phần nào, chuyển ngay về WATCHLIST_RECHECK hoặc MENU_REFERENCE.",
+    "canonical_single_truth": "Mỗi ưu đãi hoặc địa điểm chỉ thuộc đúng một trạng thái canonical duy nhất: ACTIVE_VERIFIED, POLICY_REFERENCE, WATCHLIST_RECHECK, hoặc MENU_REFERENCE. Nghiêm cấm xuất hiện một ID ở hai trạng thái.",
+    "delivery_calculator_transparency": "Bàn So Sánh Thực Trả hoạt động ở Chế độ Máy tính Cục bộ Tự Nhập. JayT không tuyên bố sở hữu giỏ hàng mẫu đã đối soát liên ứng dụng khi chưa có capture hóa đơn thực tế."
+  },
+  "coverage_dashboard_metrics": {
+    "journey_1_cinema": {
+      "name": "Lịch rạp, vé rẻ, hội viên, lên kèo",
+      "coverage_pct": "85%",
+      "verified_supply_count": 5,
+      "policy_schedule_count": 5,
+      "status": "STRONG_COVERAGE"
+    },
+    "journey_2_delivery_comparison": {
+      "name": "So sánh ShopeeFood / GrabFood / BeFood",
+      "coverage_pct": "40%",
+      "verified_supply_count": 0,
+      "policy_schedule_count": 4,
+      "status": "LOCAL_CALCULATOR_MODE"
+    },
+    "journey_3_nearby_savings": {
+      "name": "Tìm món / quán rẻ gần mình",
+      "coverage_pct": "65%",
+      "verified_supply_count": 5,
+      "policy_schedule_count": 26,
+      "status": "MODERATE_COVERAGE"
+    },
+    "journey_4_fnb_happy_hour": {
+      "name": "Happy hour, gà rán, cà phê, lý do quay lại",
+      "coverage_pct": "60%",
+      "verified_supply_count": 5,
+      "policy_schedule_count": 12,
+      "status": "MODERATE_COVERAGE"
+    }
+  },
+  "four_canonical_status_model": {
+    "ACTIVE_VERIFIED": {
+      "name": "Ưu đãi có hạn (Limited-Time Deals)",
+      "live_records_count": 5
+    },
+    "POLICY_REFERENCE": {
+      "name": "Chính sách & Tiện ích công cộng (Policy Reference)",
+      "live_records_count": 1
+    },
+    "WATCHLIST_RECHECK": {
+      "name": "Đang theo dõi (Watchlist Recheck)",
+      "live_records_count": 3
+    },
+    "MENU_REFERENCE": {
+      "name": "Giá tham khảo / Menu niêm yết (Menu Reference)",
+      "live_records_count": 9
+    }
+  },
+  "canonical_status_harmonization": {
+    "ACTIVE_VERIFIED": {
+      "description": "Ưu đãi có thời hạn đã xác thực với đầy đủ bằng chứng tệp capture leaf, SHA-256, dung lượng bytes, thời hạn hiệu lực và chi nhánh Đà Nẵng cụ thể.",
+      "live_records_count": 5,
+      "records": [
+        "DEAL_120_CGV_PAYDAY_30K",
+        "DEAL_120_CGV_MUA1TANG1",
+        "DEAL_120_CGV_ZALOPAY_12H",
+        "DEAL_120_METIZ_U22_45K",
+        "DEAL_120_STARLIGHT_COMBO_10K"
+      ]
+    },
+    "POLICY_REFERENCE": {
+      "description": "Chính sách công cộng hoặc tiện ích di chuyển có biểu giá niêm yết chính thức.",
+      "live_records_count": 1,
+      "records": [
+        "SERVICE_DANABUS_TRO_GIA_6K"
+      ]
+    },
+    "WATCHLIST_RECHECK": {
+      "description": "Ưu đãi đối tác ngân hàng hoặc chương trình toàn quốc cần đối soát tại quầy/app trước khi mua.",
+      "live_records_count": 3,
+      "records": [
+        "WATCHLIST_120_HIGHLANDS_JCB_30",
+        "WATCHLIST_120_WINMART_WINECO_20",
+        "CANDIDATE_132D_01_JOLLIBEE_69K"
+      ]
+    },
+    "MENU_REFERENCE": {
+      "description": "Thực đơn niêm yết tiêu chuẩn tại quán giúp người dùng tham khảo chi phí thực tế.",
+      "live_records_count": 9,
+      "records": [
+        "MENU_120_KFC_DZUT_DEAL_88K",
+        "MENU_120_KFC_XO_HOP_CA",
+        "MENU_120_JOLLIBEE_COMBO_73K",
+        "MENU_120_LOTTERIA_HAPPY_LUNCH_40K",
+        "MENU_120_GONGCHA_ALISAN_53K",
+        "MENU_120_PHUCLONG_TEA_55K",
+        "MENU_120_PHELA_SPECIALTY",
+        "MENU_120_GOGI_COMBO_529K",
+        "MENU_120_DOOKKI_BUFFET_139K"
+      ]
+    }
+  }
+}

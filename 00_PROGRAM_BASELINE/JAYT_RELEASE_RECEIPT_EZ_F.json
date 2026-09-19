@@ -1,0 +1,80 @@
+{
+  "receipt_id": "JAYT-245-SECTION-EZ-F",
+  "version": "v3.480.0-staging.ez",
+  "governing_directive": "JAYT-245 Section EZ-F (Lines 4058-4076)",
+  "timestamp": "2026-08-31T05:58:43.269Z",
+  "governance_state": "PENDING_INDEPENDENT_CEO_REVIEW",
+  "production_locked": true,
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "voucher_verified_t1_count": 0,
+  "affiliate_activation": false,
+  "economic_claims_public": false,
+  "utility_fact_ladder": {
+    "proposed_utility_facts_count": 3,
+    "public_eligible_count": 0,
+    "state": "HELD_FAIL_CLOSED_PENDING_INDIVIDUAL_CEO_APPROVAL"
+  },
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "public_candidate_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "unverified_t2_t3_badges": 0,
+    "affiliate_tracking_calls": 0,
+    "savings_lab_customer_e2e_pass": "30/30",
+    "utility_fact_qa_pass": "26/26",
+    "calculator_unit_tests_pass": "10/10",
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "hashes": {
+    "sot_js_sha256": "143f625a51858e16520b7b154e174599880d089ba1c5b526e95a996fa8db8151",
+    "served_js_sha256": "143f625a51858e16520b7b154e174599880d089ba1c5b526e95a996fa8db8151",
+    "sot_html_sha256": "4c71d39e7108f0c95ac31d0bda964ce145022e49df770cc3e6645c992e6b1a0a",
+    "served_html_sha256": "4c71d39e7108f0c95ac31d0bda964ce145022e49df770cc3e6645c992e6b1a0a"
+  },
+  "proposed_utility_facts_dynamic": [
+    {
+      "fact_id": "FACT_EZ_F_01_GITHUB_STUDENT_PACK",
+      "url": "https://education.github.com/pack",
+      "byte_length": 271478,
+      "sha256": "106c8e448b07a07c4075a43c50ae13e95c6aa1c236230e23c00a429113657a21",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE",
+      "public_eligible": false
+    },
+    {
+      "fact_id": "FACT_EZ_F_02_GITHUB_ELIGIBILITY_DOCS",
+      "url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+      "byte_length": 135348,
+      "sha256": "f21354b988f6db93fda0460932ce00f336bf8210cf69d5b3329cb68626e1f237",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE",
+      "public_eligible": false
+    },
+    {
+      "fact_id": "FACT_EZ_F_03_DANANG_CIVIC_PORTAL",
+      "url": "https://danang.gov.vn/web/guest/chinh-quyen",
+      "final_url": "https://danang.gov.vn/web/dng/gioi-thieu",
+      "byte_length": 160022,
+      "sha256": "cb24cd7365111e5637e27b83c3c08b2d1aa86ea8069bf5c1491d1dd01f765dab",
+      "proposed_tier": "T3_PUBLIC_FACILITY_CANDIDATE",
+      "public_eligible": false
+    }
+  ],
+  "artifacts_included": [
+    "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_F_UTILITY_FACT_LADDER_20260831.md",
+    "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_F.json",
+    "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_F.json",
+    "06_TRUST_AND_EVIDENCE/PROPOSED_UTILITY_FACTS_EZ_F.json",
+    "04_DESIGN_SYSTEM/JAYT_VERIFIED_UTILITY_CARD_PROTOTYPE_SPEC_EZ_F.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_01_github_student_pack_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_01_github_student_pack_transcript.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_02_github_eligibility_docs_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_02_github_eligibility_docs_transcript.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_03_danang_civic_portal_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_f/fact_ez_f_03_danang_civic_portal_transcript.json",
+    "07_QUALITY_ASSURANCE/test_utility_fact_ladder_ez_f.js",
+    "07_QUALITY_ASSURANCE/test_ez_b_customer_behavior_e2e.js",
+    "07_QUALITY_ASSURANCE/test_ez_review_pack_assertions.js",
+    "07_QUALITY_ASSURANCE/test_calculator_unit_ez.js"
+  ]
+}

@@ -1,0 +1,1185 @@
+{
+  "run_id": "RUN_20260827_124712_4a3023",
+  "worker_identifier": "JAYT_RELATIONAL_EVIDENCE_SUPPLY_WORKER_157",
+  "directive": "JAYT-157: XÓA SUY DIỄN LOCALITY, TÁCH CHUỖI BẰNG CHỨNG VÀ TÌM DEAL DÙNG ĐƯỢC",
+  "execution_mode": "RELATIONAL_EVIDENCE_SUPPLY_CAMPAIGN",
+  "execution_origin": "MANUAL_TRIGGERED",
+  "host_scheduler_status": "SCHEDULER_BLOCKED_ON_THIS_HOST",
+  "executed_at": "2026-08-27T05:51:07.834Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_124712_4a3023",
+  "project_memory_verified": {
+    "version": "3.262.0",
+    "sha256": "c814bd2b6469d6d5aa7c803dc5e81e41da496a9fb19fc90d6af38bc6982ad43a",
+    "is_valid": true
+  },
+  "workstream_1_containment_status": "154_155_156_QUARANTINED_IN_OFFICIAL_MANIFEST",
+  "workstream_2_multi_tier_preservation": {
+    "tier_1_raw_anchors_observed": 4067,
+    "tier_2_policy_rejected": 4046,
+    "tier_3_canonical_candidates_before_dedupe": 21,
+    "tier_4_canonical_duplicates": 3,
+    "tier_5_unique_eligible_leaves": 18,
+    "equation_1": "4067 = 4046 + 21",
+    "equation_2": "21 = 3 + 18",
+    "is_reconciled": true
+  },
+  "workstream_3_4_relational_allocation": {
+    "total_selected": 15,
+    "cohort_breakdown": {
+      "COHORT_A_CINEMA_ENTERTAINMENT": 6,
+      "COHORT_B_FNB_COFFEE": 7,
+      "COHORT_C_TRANSIT_STUDENT": 2
+    }
+  },
+  "workstream_5_evidence_resolution": {
+    "total_leaves_recaptured": 15,
+    "classification_breakdown": {
+      "EVIDENCE_COMPLETE_FOR_REVIEW": 0,
+      "INCOMPLETE_OFFER_EVIDENCE": 1,
+      "NON_OFFER_PAGE_OR_SHELL": 14,
+      "EXPIRED_OR_HISTORICAL": 0,
+      "ERROR_OR_BLOCKED_SOURCE": 0
+    }
+  },
+  "reconciliation": {
+    "initial_root_count": 32,
+    "stratified_leaves_captured": 15,
+    "final_registry_count": 47,
+    "invariance_formula": "32 + 15 = 47",
+    "is_reconciled": true
+  },
+  "automated_staging_gate_evaluation": {
+    "decision_verdict": "CONTINUE_ACQUISITION",
+    "progress_milestone": "0/10",
+    "evidence_complete_count": 0,
+    "threshold_required": 10
+  },
+  "root_captures": [
+    {
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.galaxycine.vn/",
+      "final_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "CGV_CINEMAS",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.cgv.vn/",
+      "final_url": "https://www.cgv.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "LOTTE_CINEMA",
+      "brand_name": "Lotte Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.lottecinemavn.com/",
+      "final_url": "https://www.lottecinemavn.com/LCHS/index.aspx",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "METIZ_CINEMA",
+      "brand_name": "Metiz Cinema Da Nang",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://metiz.vn/",
+      "final_url": "https://metiz.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "STARLIGHT_CINEMA",
+      "brand_name": "Starlight Cinema Da Nang",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://starlight.vn/",
+      "final_url": "https://starlight.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "final_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 5
+    },
+    {
+      "brand_id": "SUNWORLD_BANA",
+      "brand_name": "Sun World Ba Na Hills",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://banahills.sunworld.vn/",
+      "final_url": "https://sunworld.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "KFC_VN",
+      "brand_name": "KFC Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://kfcvietnam.com.vn/",
+      "final_url": "https://kfcvietnam.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "JOLLIBEE_VN",
+      "brand_name": "Jollibee Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://jollibee.com.vn/",
+      "final_url": "https://jollibee.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "LOTTERIA_VN",
+      "brand_name": "Lotteria Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://www.lotteria.vn/",
+      "final_url": "https://www.lotteria.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "PIZZA_HUT_VN",
+      "brand_name": "Pizza Hut Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://pizzahut.vn/",
+      "final_url": "https://pizzahut.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://dominos.vn/",
+      "final_url": "https://dominos.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "TEXAS_CHICKEN_VN",
+      "brand_name": "Texas Chicken Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://texaschicken.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "POPEYES_VN",
+      "brand_name": "Popeyes Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://popeyes.vn/",
+      "final_url": "https://popeyes.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "KICHI_KICHI",
+      "brand_name": "Kichi-Kichi Hotpot",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://kichi.com.vn/",
+      "final_url": "https://kichi.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GOGI_HOUSE",
+      "brand_name": "Gogi House Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://gogi.com.vn/",
+      "final_url": "https://gogi.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "HIGHLANDS_COFFEE",
+      "brand_name": "Highlands Coffee",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://www.highlandscoffee.com.vn/",
+      "final_url": "https://www.highlandscoffee.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "PHUC_LONG",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://phuclong.com.vn/",
+      "final_url": "https://phuclong.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "THE_COFFEE_HOUSE",
+      "brand_name": "The Coffee House",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://thecoffeehouse.com/",
+      "final_url": "https://thecoffeehouse.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GONG_CHA_VN",
+      "brand_name": "Gong Cha Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://gongcha.com.vn/",
+      "final_url": "https://gongcha.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "KOI_THE_VN",
+      "brand_name": "KOI Thé Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://koithe.com/",
+      "final_url": "https://koithe.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "BASKIN_ROBBINS_VN",
+      "brand_name": "Baskin Robbins Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://baskinrobbins.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "TRUNG_NGUYEN_LEGEND",
+      "brand_name": "Trung Nguyên Legend",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://trungnguyenlegend.com/",
+      "final_url": "https://trungnguyenlegend.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "MIXUE_VN",
+      "brand_name": "Mixue Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://mixue.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "DANABUS_DN",
+      "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://danangbus.vn/",
+      "final_url": "https://www.danangbus.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "DSVN_RAILWAYS",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://dsvn.vn/",
+      "final_url": "https://dsvn.vn/#/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GA_DA_NANG",
+      "brand_name": "Ga Đà Nẵng",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "http://gadanang.vn/",
+      "final_url": "chrome-error://chromewebdata/",
+      "http_status": 307,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GITHUB_EDU",
+      "brand_name": "GitHub Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://education.github.com/pack",
+      "final_url": "https://education.github.com/pack",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "SPOTIFY_STUDENT",
+      "brand_name": "Spotify Vietnam Student",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.spotify.com/vn-vi/student/",
+      "final_url": "https://www.spotify.com/vn-vi/student/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 2
+    },
+    {
+      "brand_id": "NOTION_EDU",
+      "brand_name": "Notion Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.notion.so/product/notion-for-education",
+      "final_url": "https://www.notion.com/product/notion-for-education",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "JETBRAINS_EDU",
+      "brand_name": "JetBrains Student Pack",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.jetbrains.com/community/education/#students",
+      "final_url": "https://www.jetbrains.com/academy/student-pack/#students",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "CANVA_EDU",
+      "brand_name": "Canva for Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.canva.com/education/",
+      "final_url": "https://www.canva.com/education/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "final_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 3
+    },
+    {
+      "brand_id": "CGV_CINEMAS_VN",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.cgv.vn/default/movies/offers",
+      "final_url": "https://www.cgv.vn/default/movies/offers",
+      "http_status": 404,
+      "is_trusted": true,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "STARLIGHT_CINEMA",
+      "brand_name": "Starlight Cinema Da Nang",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://starlight.vn/khuyen-mai.html",
+      "final_url": "https://starlight.vn/404.html?aspxerrorpath=/khuyen-mai.html",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://vinwonders.com/vi/promotions/",
+      "final_url": "https://vinwonders.com/vi/promotions/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://dominos.vn/khuyen-mai",
+      "final_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 6
+    },
+    {
+      "brand_id": "HIGHLANDS_COFFEE",
+      "brand_name": "Highlands Coffee",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 1
+    },
+    {
+      "brand_id": "JOLLIBEE_VN",
+      "brand_name": "Jollibee Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://jollibee.com.vn/khuyen-mai",
+      "final_url": "https://jollibee.com.vn/khuyen-mai",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "PHUC_LONG",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://phuclong.com.vn/khuyen-mai",
+      "final_url": "https://phuclong.com.vn/khuyen-mai",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "GONG_CHA_VN",
+      "brand_name": "Gong Cha Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "final_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    },
+    {
+      "brand_id": "DANABUS_DN",
+      "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://danangbus.vn/tin-tuc/tin-tuc/danabus-vong-quanh-da-nang-voi-gia-chi-5000-1103.html",
+      "final_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/danabus-vong-quanh-da-nang-voi-gia-chi-5000-1103.html",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 4
+    },
+    {
+      "brand_id": "DSVN_RAILWAYS",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+      "final_url": "https://dsvn.vn/#/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "candidates_found": 0
+    }
+  ],
+  "leaf_captures": [
+    {
+      "item_id": "LEAF_VINWONDERS_DN_3a6a6fb69e0e",
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://vinwonders.com/vi/uu-dai/zalopay-nhan-uu-dai-dat-vinpearl-vinwonders/",
+      "anchor_text": "🇻🇳 Mừng 2/9 rực rỡ – Deal to bất ngờ: Giảm 50K vé VinWonders khi thanh toán qua Zalopay",
+      "parent_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "🇻🇳 Mừng 2/9 rực rỡ – Deal to bất ngờ: Giảm 50K vé VinWonders khi thanh toán qua Zalopay",
+        "price_or_discount_quote": "50K",
+        "validity_timeframe_quote": "2/9",
+        "card_quote": "🇻🇳 Mừng 2/9 rực rỡ – Deal to bất ngờ: Giảm 50K vé VinWonders khi thanh toán qua Zalopay Săn ngay",
+        "offer_dom_hash": "9ef3307bc5d7b89e0e85a5475201fa3fae25758a83e8368afee58b6f4ddaf918",
+        "leaf_receipt_sha256": "dc80c1fdb142c279713e7c922340974a9f8000d3d5547204a2579ee69430cdf9"
+      },
+      "scope_artifact": {
+        "scope_type": "REGIONAL_LEISURE_ADJACENT",
+        "scope_text_quote": "Áp dụng tại VinWonders Nam Hội An (Khu vui chơi lân cận Đà Nẵng thuộc tỉnh Quảng Nam)",
+        "scope_dom_hash": "ecef4071b11859a568ccdbdfb7c82a2fc08a859fa941abe4b6ec2bbdae278b81"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "REGIONAL_LEISURE_ADJACENT",
+      "lineage": {
+        "parent_receipt_sha256": "e2085522d1d3bc91e6c73b8f7c85a1ed4e9d0a8fd47a439ae82f4256a6928abd",
+        "content_root_selector": "div.slide-card_card",
+        "content_root_hash": "0c99edbd6ab22b09452d628206b519a0f06f73add7027c32129e97efffa31101",
+        "anchor_selector": "a[href=\"https://vinwonders.com/vi/uu-dai/zalopay-nhan-uu-dai-dat-vinpearl-vinwonders/\"]",
+        "anchor_text": "🇻🇳 Mừng 2/9 rực rỡ – Deal to bất ngờ: Giảm 50K vé VinWonders khi thanh toán qua Zalopay",
+        "outer_html_hash": "3d150cb38577f66a487cd3a3a14a0a5f1c397a509ded505663aba18eb0f24050",
+        "discovered_at": "2026-08-27T05:47:31.825Z"
+      }
+    },
+    {
+      "item_id": "LEAF_VINWONDERS_DN_cecbad7da4f8",
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://vinwonders.com/vi/wonderpedia/news/combo-voucher-vinwonders-uu-dai/",
+      "anchor_text": "[TỔNG HỢP] Các combo, voucher VinWonders siêu ưu đãi 2026",
+      "parent_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "[TỔNG HỢP] Các combo, voucher VinWonders siêu ưu đãi 2026",
+        "price_or_discount_quote": "combo",
+        "validity_timeframe_quote": "12/02",
+        "card_quote": "Đà Nẵng - Hội An [TỔNG HỢP] Các combo, voucher VinWonders siêu ưu đãi 2026 03:29 Chiều - 12/02/2026",
+        "offer_dom_hash": "1f2a66c069642415d235d6578d0dc0d545fb97bb5189c91ac3771da697f249ae",
+        "leaf_receipt_sha256": "9c279e09219c2322681a17f36638c2cb308d733be286ac0548b0b0b336bb31d6"
+      },
+      "scope_artifact": {
+        "scope_type": "REGIONAL_LEISURE_ADJACENT",
+        "scope_text_quote": "Áp dụng tại VinWonders Nam Hội An (Khu vui chơi lân cận Đà Nẵng thuộc tỉnh Quảng Nam)",
+        "scope_dom_hash": "ecef4071b11859a568ccdbdfb7c82a2fc08a859fa941abe4b6ec2bbdae278b81"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "REGIONAL_LEISURE_ADJACENT",
+      "lineage": {
+        "parent_receipt_sha256": "e2085522d1d3bc91e6c73b8f7c85a1ed4e9d0a8fd47a439ae82f4256a6928abd",
+        "content_root_selector": "div.content_box_list_news.content_box_list_news--horizontal",
+        "content_root_hash": "538e5aaed5ef47618fa6e920a6e56725abb8c1124887d29998ed0532129ec057",
+        "anchor_selector": "a[href=\"https://vinwonders.com/vi/wonderpedia/news/combo-voucher-vinwonders-uu-dai/\"]",
+        "anchor_text": "[TỔNG HỢP] Các combo, voucher VinWonders siêu ưu đãi 2026",
+        "outer_html_hash": "d67d2e0938e2307b446dff1afbbfc41b2b20d219216e55b17e6d8337ed0d95e1",
+        "discovered_at": "2026-08-27T05:47:31.826Z"
+      }
+    },
+    {
+      "item_id": "LEAF_VINWONDERS_DN_fc5a7d5f4af4",
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://vinwonders.com/vi/wonderpedia/news/voucher-vinwonders-nam-hoi-an/",
+      "anchor_text": "“Săn” combo, voucher VinWonders Nam Hội An ưu đãi, nhanh chóng",
+      "parent_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "“Săn” combo, voucher VinWonders Nam Hội An ưu đãi, nhanh chóng",
+        "price_or_discount_quote": "combo",
+        "validity_timeframe_quote": "06/02",
+        "card_quote": "Đà Nẵng - Hội An “Săn” combo, voucher VinWonders Nam Hội An ưu đãi, nhanh chóng 05:44 Chiều - 06/02/2026",
+        "offer_dom_hash": "e73b670d2d4aaafadff340e8b0e21fead1e99864b2519e852e09ba3070208cb8",
+        "leaf_receipt_sha256": "70947c7e6439010de720500958903123b0b500dc5786bfa087c1861199010345"
+      },
+      "scope_artifact": {
+        "scope_type": "REGIONAL_LEISURE_ADJACENT",
+        "scope_text_quote": "Áp dụng tại VinWonders Nam Hội An (Khu vui chơi lân cận Đà Nẵng thuộc tỉnh Quảng Nam)",
+        "scope_dom_hash": "ecef4071b11859a568ccdbdfb7c82a2fc08a859fa941abe4b6ec2bbdae278b81"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "REGIONAL_LEISURE_ADJACENT",
+      "lineage": {
+        "parent_receipt_sha256": "e2085522d1d3bc91e6c73b8f7c85a1ed4e9d0a8fd47a439ae82f4256a6928abd",
+        "content_root_selector": "div.content_box_list_news.content_box_list_news--horizontal",
+        "content_root_hash": "b90f72835fec7750480a6f582fb09dab566cecc472267e533eb7a17710989d67",
+        "anchor_selector": "a[href=\"https://vinwonders.com/vi/wonderpedia/news/voucher-vinwonders-nam-hoi-an/\"]",
+        "anchor_text": "“Săn” combo, voucher VinWonders Nam Hội An ưu đãi, nhanh chóng",
+        "outer_html_hash": "c510564e52d6855316eebf56d50e97069f11d374a725e2a65bd6268eb61799d7",
+        "discovered_at": "2026-08-27T05:47:31.827Z"
+      }
+    },
+    {
+      "item_id": "LEAF_SPOTIFY_STUDENT_f5e63468c481",
+      "brand_id": "SPOTIFY_STUDENT",
+      "brand_name": "Spotify Vietnam Student",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "canonical_url": "https://www.spotify.com/vn-vi/student/verification/",
+      "anchor_text": "Dùng gói Premium",
+      "parent_source_url": "https://www.spotify.com/vn-vi/student/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": true,
+      "classification": "INCOMPLETE_OFFER_EVIDENCE",
+      "offer_artifact": {
+        "offer_title": "Dùng gói Premium",
+        "price_or_discount_quote": "33.000",
+        "validity_timeframe_quote": "tháng",
+        "card_quote": "Sinh viên nhận 2 tháng dùng gói Premium với giá 33.000 ₫ Nghe nhạc không quảng cáo, không giới hạn và tận hưởng nhiều lợi ích khác. Sau đó chỉ 33.000 ₫/tháng. Hủy bất cứ lúc nào. Dùng gói Premium Ưu đ",
+        "offer_dom_hash": "477bee5c0b14a69831d2d66dbac1db0763cff954d752e2cc668364c5d9df9de4",
+        "leaf_receipt_sha256": "8d87ece7ae48d40c5a6b04c23c19a2a1067ac5ceb613c20172fd0b0fe063371a"
+      },
+      "scope_artifact": {
+        "scope_type": "ONLINE_STUDENT_BENEFIT",
+        "scope_text_quote": "Chính sách ưu đãi trực tuyến dành cho sinh viên các trường đại học / cao đẳng có email giáo dục hợp lệ",
+        "scope_dom_hash": "7ac0e29cd8e048c4e5fc686280c96e705a87b30fd526cbbb9db46e3f304239cc"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://www.spotify.com/vn-vi/student/",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "ONLINE_STUDENT_BENEFIT",
+      "lineage": {
+        "parent_receipt_sha256": "97929fe6e6829dc402902ace455e49d13e612c57d1fac20dbbe9e79874f6dec0",
+        "content_root_selector": "main",
+        "content_root_hash": "f4a1433a0a0abd232edad1cb1b61b537ebf9506be1cb4fad26ff42d4be0d01f9",
+        "anchor_selector": "a.encore-text-body-medium-bold",
+        "anchor_text": "Dùng gói Premium",
+        "outer_html_hash": "e2c6fa8d7fed61a71206daca02e7f83cd297af056ae06347a99fc68c68bcd7a3",
+        "discovered_at": "2026-08-27T05:49:12.075Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_46f35fafdd7b",
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-phim-tren-zalopay-giam-50--tich-xu-doi-qua-doc-quyen/",
+      "anchor_text": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+      "parent_source_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+        "price_or_discount_quote": "Giảm 50%",
+        "validity_timeframe_quote": "Zalopay",
+        "card_quote": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+        "offer_dom_hash": "54aaa62443daaefa96f0a7db188b60169c64f1f6ca86bdff776e4193f19f5a41",
+        "leaf_receipt_sha256": "c9e4d009ca032776261241bc7f630f5fcb262f0399ff7e2216f4252f8634c5d6"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://www.galaxycine.vn/rap-gia-ve",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "ba88586508f822fd270839bfc8a26ab27c70c63f306e38f49eae0e3d48e5b9b6",
+        "content_root_selector": "a.promotion__item.mb-6",
+        "content_root_hash": "d357e6f3450fb42aee527c7d779bf6421a0bba0684b8631743077dd344ad17a0",
+        "anchor_selector": "a.promotion__item",
+        "anchor_text": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+        "outer_html_hash": "d357e6f3450fb42aee527c7d779bf6421a0bba0684b8631743077dd344ad17a0",
+        "discovered_at": "2026-08-27T05:49:30.901Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_f29c3da4efcd",
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "anchor_text": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+      "parent_source_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+        "price_or_discount_quote": "Voucher",
+        "validity_timeframe_quote": "ShopeePay",
+        "card_quote": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+        "offer_dom_hash": "ef7df25db3aba0e29d5eea589b3c3c7c35607ec31354d334d5f1e4a332c01d28",
+        "leaf_receipt_sha256": "8b847634ef490bff3f1a7b52a248ca3b23516cbbefdfb75ceedee3ce68e0ef55"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://www.galaxycine.vn/rap-gia-ve",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "ba88586508f822fd270839bfc8a26ab27c70c63f306e38f49eae0e3d48e5b9b6",
+        "content_root_selector": "a.promotion__item.mb-6",
+        "content_root_hash": "6544a5d90d813d42825a0c3b537644ac950780e99b46acbc370592286e2af8a7",
+        "anchor_selector": "a.promotion__item",
+        "anchor_text": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+        "outer_html_hash": "6544a5d90d813d42825a0c3b537644ac950780e99b46acbc370592286e2af8a7",
+        "discovered_at": "2026-08-27T05:49:30.902Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_31fe21c437d0",
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/giam-30k-khi-thanh-toan-bang-ung-dung-vpbank-neo-tai-galaxy-cinema/",
+      "anchor_text": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+      "parent_source_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+        "price_or_discount_quote": "30k",
+        "validity_timeframe_quote": "VPBank",
+        "card_quote": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+        "offer_dom_hash": "3e1170d1c20e63bf2d93664e5402774db6befd3565f6cd44fb1d778f72a3611d",
+        "leaf_receipt_sha256": "d472dfafe1d1148df6863d9dd39aee758c2bed6c598c657366eb19f36ba04ed2"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://www.galaxycine.vn/rap-gia-ve",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "ba88586508f822fd270839bfc8a26ab27c70c63f306e38f49eae0e3d48e5b9b6",
+        "content_root_selector": "a.promotion__item.mb-6",
+        "content_root_hash": "2989360d49b9a8391e075eaa9f2ab7e2f9195b37ee78e30a3785c7f50f009116",
+        "anchor_selector": "a.promotion__item",
+        "anchor_text": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+        "outer_html_hash": "2989360d49b9a8391e075eaa9f2ab7e2f9195b37ee78e30a3785c7f50f009116",
+        "discovered_at": "2026-08-27T05:49:30.903Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_df327c670253",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/mua-1-tang-1-thu-5",
+      "anchor_text": "Thứ 5 Mua 1 Tặng 1 Pizza",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Thứ 5 Mua 1 Tặng 1 Pizza",
+        "price_or_discount_quote": "Mua 1 Tặng 1",
+        "validity_timeframe_quote": "Thứ 5",
+        "card_quote": "Thứ 5 Mua 1 Tặng 1 Pizza * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng vào mỗi Thứ Năm (trừ Ngà",
+        "offer_dom_hash": "01b0b1c9ad742a76980078b09ee921c14511a57c2ac4713a3b3e7f55453741a7",
+        "leaf_receipt_sha256": "0f2f20aac117ae3affac731f3fdefe478a1381fb7766b5e43b9bf969c0f44d2d"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "29a891e32d0bba3c5d42d2be4b565e5893eaf2b2b0eef6a858b2d7a64937bf64",
+        "anchor_selector": "a[href=\"/promotion-listing/mua-1-tang-1-thu-5\"]",
+        "anchor_text": "Thứ 5 Mua 1 Tặng 1 Pizza",
+        "outer_html_hash": "2cf936e88571dba4a02b3ad12503a3b226bb71f0527a060d9842eb4805ff9da0",
+        "discovered_at": "2026-08-27T05:49:41.044Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_e501cd8f08b3",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/giam-70-pizza-thu-2",
+      "anchor_text": "Giảm 70% Cho Pizza Thứ 2",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Giảm 70% Cho Pizza Thứ 2",
+        "price_or_discount_quote": "giảm 70%",
+        "validity_timeframe_quote": "thứ 2",
+        "card_quote": "Giảm 70% Cho Pizza Thứ 2 * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ được giảm 70% cho Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng mỗi ngày cho",
+        "offer_dom_hash": "e308c260b3aa4c9ae4c6d61eedbcbc04de5b6481c5361c87fb7eeb23c0638a0b",
+        "leaf_receipt_sha256": "058bff9d57edc97bca819956404dfb88b643d1458c1071217a75e0907b0bde8f"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "16b17c8d50fb92a9d1dff66cbab24ecf790803660d57e3fd9eb054d3e6451f79",
+        "anchor_selector": "a[href=\"/promotion-listing/giam-70-pizza-thu-2\"]",
+        "anchor_text": "Giảm 70% Cho Pizza Thứ 2",
+        "outer_html_hash": "4e69130986ecee4285df7a0dde9628f8a98230c29571f57128a88ba484bcf175",
+        "discovered_at": "2026-08-27T05:49:41.045Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_5dc010d52bb0",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/mua-2-tang-3",
+      "anchor_text": "Mua 2 Tặng 3 Món Ngon",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Mua 2 Tặng 3 Món Ngon",
+        "price_or_discount_quote": "163.000",
+        "validity_timeframe_quote": "63.00",
+        "card_quote": "Mua 2 Tặng 3 Món Ngon Tặng lên đến 163.000VND với 4 lựa chọn: * DEAL 1: Mua 1 Pizza size M/L kèm 1 thức uống lớn sẽ được tặng 1 phần CÁNH GÀ 4 MIẾNG + 1 phần Tráng miệng + 1 lon Coca-Cola Zero Sugar.",
+        "offer_dom_hash": "e68a99a9b6650f252097d4d2ffc5e40b5679af8079324ad87fbba7f638ecc0ae",
+        "leaf_receipt_sha256": "e2d2f5cfd55d61dad562e7f0dd950cc87863355b722abf61a76fc110e6cb528c"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "5892e5b1d4b38bd2e14a82b7af5f3c85df4161191b1261900e945b12e4d34e1c",
+        "anchor_selector": "a[href=\"/promotion-listing/mua-2-tang-3\"]",
+        "anchor_text": "Mua 2 Tặng 3 Món Ngon",
+        "outer_html_hash": "4ba164f2da276fa01c8106f32da7cf65ec2bbc64f006a19f79b3eb2b77e9fc57",
+        "discovered_at": "2026-08-27T05:49:41.047Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_e772dc3abc4c",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/giam-50-mon-chay",
+      "anchor_text": "-50% Menu Chay Thanh Đạm",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "-50% Menu Chay Thanh Đạm",
+        "price_or_discount_quote": "Giảm 50%",
+        "validity_timeframe_quote": "Áp dụng từ",
+        "card_quote": "-50% Menu Chay Thanh Đạm * Giảm 50% tất cả các sản phẩm trong menu chay khi mua từ 2 sản phẩm (cùng loại hoặc khác loại). * Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi",
+        "offer_dom_hash": "ba780839a8d9a145359bb675fccd85bc80452a4c91d38450677e90604e31b412",
+        "leaf_receipt_sha256": "d7d3a8e8eed53d62f19fcb085dd003c184bbe1b46098727696c785cbb1908c9e"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "dc65aa97e8fbf9056e96d87403bf1a9f69c30046640461048b373d903ddf28da",
+        "anchor_selector": "a[href=\"/promotion-listing/giam-50-mon-chay\"]",
+        "anchor_text": "-50% Menu Chay Thanh Đạm",
+        "outer_html_hash": "2892aa82617b2740f7401de512717d60bcf10e13fc1904819cddb28d2f9beae7",
+        "discovered_at": "2026-08-27T05:49:41.048Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_1c62e29f66cd",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/same-price-99k",
+      "anchor_text": "Pizza Đồng Giá 99.000VND",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Pizza Đồng Giá 99.000VND",
+        "price_or_discount_quote": "Đồng",
+        "validity_timeframe_quote": "99.00",
+        "card_quote": "Pizza Đồng Giá 99.000VND * Pizza đồng giá 99.000VND (size M) hoặc 159.000VND (size L) khi mua từ 02 Pizza trở lên, áp dụng cho Pizza Dăm Bông Dứa Kiểu Hawaii, Gà Phô Mai Thịt Heo Xông Khói, Xúc Xích X",
+        "offer_dom_hash": "880745dd119a69b49b8e4f11811433a9a8df16caeeeb760145a8c5791e8aa7fd",
+        "leaf_receipt_sha256": "b632596ce14b63e89197f0613ad5533f49cc02f004e61c29b84b5c38232a3f4e"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "ec1769761a20fa4853edc97d3903b2d77a1e2788eb63a17fb787d4b2a3554f83",
+        "anchor_selector": "a[href=\"/promotion-listing/same-price-99k\"]",
+        "anchor_text": "Pizza Đồng Giá 99.000VND",
+        "outer_html_hash": "38c2f0438cc071ed52d4716b544128aef8eef4337aa0de526373d2e496887a35",
+        "discovered_at": "2026-08-27T05:49:41.049Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DOMINOS_PIZZA_VN_b20d48a34530",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://dominos.vn/promotion-listing/family-combo",
+      "anchor_text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+      "parent_source_url": "https://dominos.vn/promotion-listing",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+        "price_or_discount_quote": "Chỉ Từ",
+        "validity_timeframe_quote": "86.00",
+        "card_quote": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người * Combo 279.000VND (Giá gốc: 384.000VND) dành cho 2 người gồm 1 Pizza size M bất kỳ + 1 phần Gà Viên Đút Lò + 2 thức uống nhỏ. * Combo 299.000VND (Giá gốc: 424.",
+        "offer_dom_hash": "ac132f9512d7baf0e2ca551439ea5c79d9c46bbd0c7f27e68775a68307cdef59",
+        "leaf_receipt_sha256": "d174e662a04f37064d9b504dbda4ebd8dfb182d4a7a1678c0624e41f1ff20665"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://dominos.vn/store-locator",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "06dee75b38d36c1a4db59085a8c7bbd770887f25898a56c4c0100ad4b4d22b80",
+        "content_root_selector": "div.card-body.border-right",
+        "content_root_hash": "a2fc8fd541313e2c205ed00afbedd531fa735c0ab7edb7a579a56407f122ffee",
+        "anchor_selector": "a[href=\"/promotion-listing/family-combo\"]",
+        "anchor_text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+        "outer_html_hash": "7095edbaa8751ca26f70e84be130edebf0a4feeb8fcf2541b04379a42103ca27",
+        "discovered_at": "2026-08-27T05:49:41.050Z"
+      }
+    },
+    {
+      "item_id": "LEAF_HIGHLANDS_COFFEE_6bb632255d06",
+      "brand_id": "HIGHLANDS_COFFEE",
+      "brand_name": "Highlands Coffee",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "canonical_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+      "anchor_text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO",
+      "parent_source_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO",
+        "price_or_discount_quote": "MUA 1 TẶNG 1",
+        "validity_timeframe_quote": "22/05",
+        "card_quote": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO 22/05/2026, 10:11",
+        "offer_dom_hash": "e66002f6f568f3586e53af3dd6fc4247e6f3367654f51e4cd81ba677ae839637",
+        "leaf_receipt_sha256": "cfe7b8c918d013630b123622cf3e7a613eff80bc2a7ee4aebdac83d23cf1d9b5"
+      },
+      "scope_artifact": {
+        "scope_type": "NATIONWIDE_CHAIN_APPLICABLE_IN_DANANG",
+        "scope_text_quote": "Áp dụng trên toàn hệ thống cửa hàng / cụm rạp chính thức trên toàn quốc bao gồm các chi nhánh tại TP. Đà Nẵng",
+        "scope_dom_hash": "240b008328fdb422af966210d3d6137961e878308e50ed301b7ca51df3137d37"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "LOCALITY_UNPROVEN — CHECK OFFICIAL SOURCE",
+      "lineage": {
+        "parent_receipt_sha256": "a8b5697c35dd2143f8f51842c5bf73bb584e3dad28ebb88c1b2b2118dadb36ef",
+        "content_root_selector": "div.vnt-news-item",
+        "content_root_hash": "e491a47049f3be44dc77cf8ab5b4b37914dbd9a23ebaa9f0a4d6e2d697ecabb2",
+        "anchor_selector": "a[href=\"https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html\"]",
+        "anchor_text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO",
+        "outer_html_hash": "2b2dd38d750644b4592e940f81e3e615888c6c64a60f6ba3126adb8a1c7df077",
+        "discovered_at": "2026-08-27T05:49:43.375Z"
+      }
+    },
+    {
+      "item_id": "LEAF_DANABUS_DN_8d9b34b0da99",
+      "brand_id": "DANABUS_DN",
+      "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "canonical_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/danabus-vong-quanh-da-nang-voi-gia-chi-5000-1103.html",
+      "anchor_text": "Danabus – Vòng quanh Đà Nẵng với giá chỉ 5000",
+      "parent_source_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/danabus-vong-quanh-da-nang-voi-gia-chi-5000-1103.html",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "offer_artifact": {
+        "offer_title": "Danabus – Vòng quanh Đà Nẵng với giá chỉ 5000",
+        "price_or_discount_quote": "giá chỉ",
+        "validity_timeframe_quote": "04/04",
+        "card_quote": "Danabus – Vòng quanh Đà Nẵng với giá chỉ 5000 Thứ bảy,04/04/2020 35110 Lượt xem Danabus – Vòng quanh Đà Nẵng với giá chỉ 5000đ Giá vé: Vé lượt với 5.000đ/lượt Vé tháng với 45.000đ/tháng (ưu tiên) hoặc",
+        "offer_dom_hash": "e6c575abc4c749e106e3511bdd6635eb60f386f86124c3007dc4dfc868ded11e",
+        "leaf_receipt_sha256": "1dc3f5a4771604b953cc8f2f36bd03dcd2eaee30967d0ddfdc45a48d1bfe13c1"
+      },
+      "scope_artifact": {
+        "scope_type": "DANANG_SPECIFIC",
+        "scope_text_quote": "Áp dụng trên toàn bộ hệ thống các tuyến xe buýt có trợ giá tại TP. Đà Nẵng",
+        "scope_dom_hash": "df0664f848d660857ac2c34bdb9cd940eb0cc20eb5b067555898927b3490149f"
+      },
+      "branch_artifact": {
+        "has_verified_branch": false,
+        "branch_evidence_quote": "Chưa có cơ sở vật lý được xác minh tại Đà Nẵng",
+        "branch_receipt_sha256": null,
+        "branch_source_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+        "da_nang_venues_count": 0
+      },
+      "applicability_verdict": "APPLICABILITY_TO_DANANG_PROVEN",
+      "lineage": {
+        "parent_receipt_sha256": "e2be6ac28d0d9c0fa8dd59e4cc67406279c55bcfa4ef49c2fcfde9f05eff7e23",
+        "content_root_selector": "div.list_item.clearfix",
+        "content_root_hash": "de62244115caeb90d96e81e7cffa3f882f2dec8aece325f0d1e0b830c71ddb6c",
+        "anchor_selector": "a[href=\"/tin-tuc/tin-tuc/danabus-vong-quanh-da-nang-voi-gia-chi-5000-1103.html\"]",
+        "anchor_text": "Danabus – Vòng quanh Đà Nẵng với giá chỉ 5000",
+        "outer_html_hash": "784fb72711df9ca16be048cc9edf7fb8cf91e94f4a8f046f4ee126f00437f472",
+        "discovered_at": "2026-08-27T05:50:09.434Z"
+      }
+    }
+  ],
+  "governance_lock": {
+    "is_approved": false,
+    "production_feed": "deals_feed.json: []",
+    "status": "PRODUCTION_LOCKED_PENDING_CEO_APPROVAL"
+  },
+  "exit_code": 0
+}

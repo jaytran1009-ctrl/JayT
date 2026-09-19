@@ -1,0 +1,172 @@
+{
+  "schema_version": "j373_r1.0",
+  "authority": "WORK_ORDER_J373_R1_ITEMIZED_QR_AND_FACTUAL_REMEDIATION",
+  "generated_at_utc": "2026-09-10T08:55:23.531Z",
+  "policy": {
+    "no_unsupported_stacking": true,
+    "cheapest_known_only": true,
+    "fallback_on_missing_data": "Hỏi nhân viên về điều kiện",
+    "prohibit_invented_offers": true
+  },
+  "step_definitions": [
+    {
+      "step_number": 1,
+      "step_id": "eligibility",
+      "title": "Điều kiện đối tượng",
+      "description": "Xuất trình Thẻ Sinh viên hoặc Thẻ Thành viên quán trước khi gọi món",
+      "options": [
+        {
+          "id": "STUDENT_ID",
+          "label": "🎓 Thẻ Sinh viên chính quy (Student Card)",
+          "applicable_brands": [
+            "cgv_cinemas",
+            "jollibee",
+            "popeyes"
+          ],
+          "discount_type": "SPECIAL_TARIFF_OR_BENEFIT",
+          "evidence_chain": {
+            "cgv_cinemas": {
+              "source_artifact": "06_TRUST_AND_EVIDENCE/batch_18_food_cinema_vault/run_20260908T065539Z_batch18/cgv_offers.raw.html",
+              "artifact_sha256": "102c9026c37a454cfcb0c5cacb20bf160ee7094504e5bde1f2929dcc0d1616e6",
+              "source_url": "https://www.cgv.vn/default/movies/offers",
+              "captured_at": "2026-09-08T06:55:41Z",
+              "terms_note": "Vé U22 đồng giá áp dụng cho thành viên dưới 22 tuổi xuất trình CCCD hoặc thẻ sinh viên"
+            },
+            "other_brands": {
+              "status": "UNVERIFIED_BRANCH_LEVEL",
+              "terms_note": "Hỏi nhân viên tại quầy về chính sách ưu đãi sinh viên của cửa hàng"
+            }
+          }
+        },
+        {
+          "id": "BRAND_MEMBER",
+          "label": "⭐ Thành viên quán (K-Club / Member)",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "cgv_cinemas"
+          ],
+          "discount_type": "MEMBER_BENEFIT",
+          "evidence_chain": {
+            "status": "UNVERIFIED_BRANCH_LEVEL",
+            "terms_note": "Tích điểm hoặc giảm theo hạng thành viên đã đăng ký ứng dụng chính thức; hỏi nhân viên tại quầy"
+          }
+        },
+        {
+          "id": "GENERAL_GUEST",
+          "label": "👤 Khách thông thường (Không thẻ)",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "cgv_cinemas",
+            "popeyes",
+            "phi_long"
+          ],
+          "discount_type": "STANDARD_PRICE",
+          "evidence_chain": {
+            "status": "STANDARD_OBSERVED_PRICE",
+            "terms_note": "Áp dụng biểu giá niêm yết chuẩn không yêu cầu điều kiện đối tượng"
+          }
+        }
+      ]
+    },
+    {
+      "step_number": 2,
+      "step_id": "payment_wallet",
+      "title": "Ưu đãi ví & phương thức thanh toán",
+      "description": "Tham khảo các ví điện tử (Hỏi nhân viên tại quầy về việc áp dụng voucher ví tại thời điểm thanh toán)",
+      "options": [
+        {
+          "id": "VIETQR_BANK_TRANSFER",
+          "label": "Chuyển khoản VietQR / Tiền mặt (Chuẩn)",
+          "discount_amount": 0,
+          "min_spend": 0,
+          "cap": 0,
+          "status": "VERIFIED_NEUTRAL_STANDARD",
+          "terms": "Thanh toán theo giá thực tế không áp dụng voucher ví trung gian",
+          "evidence_chain": {
+            "spec_artifact": "06_TRUST_AND_EVIDENCE/j373/vietqr_spec_reference.json",
+            "source": "NAPAS_EMVCO_STANDARDS"
+          }
+        },
+        {
+          "id": "ZALOPAY_QR",
+          "label": "ZaloPay QR (Tham khảo ví)",
+          "discount_amount": 0,
+          "min_spend": 0,
+          "cap": 0,
+          "status": "UNVERIFIED_AT_BRANCH_LEVEL",
+          "terms": "Chương trình ví điện tử có thể thay đổi theo từng ngày; hỏi nhân viên về áp dụng voucher ví tại quầy",
+          "evidence_chain": {
+            "status": "GENERAL_REFERENCE_ONLY",
+            "status_reason": "HOMEPAGE_REFERENCE_INSUFFICIENT_FOR_BRANCH_DISCOUNT_CLAIM"
+          }
+        },
+        {
+          "id": "VNPAY_QR",
+          "label": "VNPAY-QR (Tham khảo ví)",
+          "discount_amount": 0,
+          "min_spend": 0,
+          "cap": 0,
+          "status": "UNVERIFIED_AT_BRANCH_LEVEL",
+          "terms": "Nhập mã khuyến mãi trong app ngân hàng; hỏi nhân viên về áp dụng voucher ví tại quầy",
+          "evidence_chain": {
+            "status": "GENERAL_REFERENCE_ONLY",
+            "status_reason": "HOMEPAGE_REFERENCE_INSUFFICIENT_FOR_BRANCH_DISCOUNT_CLAIM"
+          }
+        }
+      ]
+    },
+    {
+      "step_number": 3,
+      "step_id": "menu_selection",
+      "title": "Món & Combo áp dụng",
+      "description": "Chọn món từ bảng giá niêm yết đã kiểm chứng độc lập",
+      "brand_tariffs": {
+        "jollibee": [
+          {
+            "item_id": "JB_COMBO_CANG_CAY",
+            "title": "Combo Càng Cay Càng Mê",
+            "list_price": 157000,
+            "source_offer_id": "B18_JB_CANG_CAY",
+            "evidence_chain": {
+              "artifact_path": "06_TRUST_AND_EVIDENCE/batch_18_food_cinema_vault/run_20260908T065539Z_batch18/jollibee_new_menu.raw.html",
+              "artifact_sha256": "6cd572ec5d9643fe74fc0f7ceb35c63c5122579d023ca85d6774f1840fde43e7",
+              "source_url": "https://jollibee.com.vn/c-ng-cay-c-ng-me.html",
+              "captured_at": "2026-09-08T06:55:41Z",
+              "verification_status": "VERIFIED_PRICE_OBSERVATION"
+            }
+          }
+        ],
+        "popeyes": [
+          {
+            "item_id": "POP_COMBO_GA_GION",
+            "title": "Combo Gà Giòn Popeyes",
+            "list_price": 89000,
+            "source_offer_id": "B19_POP_COMBO_GA",
+            "evidence_chain": {
+              "artifact_path": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/popeyes_promotions.leaf.raw.html",
+              "artifact_sha256": "cf33dc66decfedfcc27ab7e161bd4a1aff2274ae8f4ba3f27b7dc4ba936c909e",
+              "captured_at": "2026-09-08T07:15:00Z",
+              "verification_status": "VERIFIED_PRICE_OBSERVATION"
+            }
+          }
+        ],
+        "cgv_cinemas": [
+          {
+            "item_id": "CGV_VE_U22",
+            "title": "Vé Xem Phim U22 (Học sinh / Sinh viên 2D)",
+            "list_price": 55000,
+            "source_offer_id": "B18_CGV_U22",
+            "evidence_chain": {
+              "artifact_path": "06_TRUST_AND_EVIDENCE/batch_18_food_cinema_vault/run_20260908T065539Z_batch18/cgv_offers.raw.html",
+              "artifact_sha256": "102c9026c37a454cfcb0c5cacb20bf160ee7094504e5bde1f2929dcc0d1616e6",
+              "captured_at": "2026-09-08T06:55:41Z",
+              "verification_status": "VERIFIED_SPECIAL_TARIFF"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

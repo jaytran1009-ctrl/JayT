@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-37-HIGHLANDS",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_37",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-HIGHLANDS-FREEZE-THU-REAL"
+  },
+  "target": {
+    "brand_id": "HIGHLANDS",
+    "category": "LOCAL_COFFEE_TEA",
+    "requested_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html",
+    "final_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Highlands Coffee có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Highlands Coffee Combo Freeze 65.000đ Thứ Năm Hàng Tuần (Đà Nẵng)",
+    "conditions_snippet": "Áp dụng vào Thứ Năm hàng tuần tại các quán Highlands Coffee Đà Nẵng"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_highlands_cand-dng-highlands-freeze-thu-real.png",
+      "sha256": "bef66490872dfb400be9d9a6d5f8bfb79843522f40695fe7a54adb970fb167b1",
+      "bytes": 135728,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_highlands_cand-dng-highlands-freeze-thu-real.html",
+      "sha256": "bbce6ba0da3be2df33f573aee164de3e71d424439cdbc3c176fd2431f2218de1",
+      "bytes": 1000
+    },
+    "text_dump": {
+      "file": "capture_047_highlands_cand-dng-highlands-freeze-thu-real.txt",
+      "sha256": "f1f298109671bd8ddafeb06b47a11c2651f101c003d60f9484f5e41a1d341fda",
+      "bytes": 629
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

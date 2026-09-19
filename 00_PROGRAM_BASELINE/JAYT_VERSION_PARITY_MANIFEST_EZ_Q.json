@@ -1,0 +1,36 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_Q",
+  "version": "v3.480.0-staging.ez",
+  "timestamp": "2026-08-31T07:17:15.737Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "staging_containment_gate": "PERMANENT_RELEASE_GATE_ACTIVE",
+  "ux_research_protocol": "ZERO_PII_INSTRUMENT_FREE_ACTIVE",
+  "source_selection_rubric": "GENERIC_HOMEPAGES_FROZEN_ACTIVE",
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "a0bad32cb43406fd185fbf812f0d912a0746b4aaf2360ad4e603221bae631055"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "a0bad32cb43406fd185fbf812f0d912a0746b4aaf2360ad4e603221bae631055"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "58b73a2cae5eda2f420a712390f8725489ea6145e5fd1408ff519a9b63eab0e7"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "58b73a2cae5eda2f420a712390f8725489ea6145e5fd1408ff519a9b63eab0e7"
+    }
+  },
+  "runtime_health_endpoint": {
+    "url": "http://127.0.0.1:4173/health",
+    "expected_version": "v3.480.0-staging.ez",
+    "status": "UP"
+  },
+  "signoff": {
+    "engineering_lead": "VERIFIED_ZERO_DEPLOY_DRIFT",
+    "qa_lead": "VERIFIED_LIVE_HTTP_AND_E2E"
+  }
+}

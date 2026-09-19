@@ -1,0 +1,55 @@
+{
+  "id": "WORK_ORDER_J371_R1_HERO_AND_PUBLIC_COPY_CORRECTION",
+  "authority": "JAYT-371",
+  "issued_at_utc": "2026-09-10T06:46:00Z",
+  "executor": "Antigravity",
+  "status": "COMPLETED_AND_VERIFIED",
+  "production_deployment_permitted": true,
+  "target": {
+    "project": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "required_changes": [
+    {
+      "id": "HERO_01",
+      "requirement": "Replace the daytime Dragon Bridge image with a sharp 16:9 asset that visibly depicts Dragon Bridge at sunset and/or fire-breathing. Keep bridge composition recognizable at 390px without distortion or a misleading crop."
+    },
+    {
+      "id": "HERO_02",
+      "requirement": "Make alt text factually describe the served image. Do not say sunset or fire when neither is visible."
+    },
+    {
+      "id": "COPY_03",
+      "requirement": "Replace 'DỮ LIỆU ĐỐI SOÁT • ĐÀ NẴNG 2026' with customer language. Recommended text: 'Gợi ý tiết kiệm mỗi ngày'. Do not show audit, provenance, quarantine, gate, or internal-operational language on the public hero."
+    },
+    {
+      "id": "ASSET_04",
+      "requirement": "Update 06_TRUST_AND_EVIDENCE/j371/asset_manifest.json with file hash, dimensions, source/license or generated-asset declaration, accurate alt, and responsive variants. Do not present a generated image as a photograph."
+    }
+  ],
+  "preservation": [
+    "Retain four modules, 81-offer feed, 30-SKU catalog, two themes and current J370 R2 commercial wording.",
+    "Retain no-90-day-low badge until actual historical data exists."
+  ],
+  "verification": [
+    "Live HTTP 200 for /, /styles.css, /jayt_apex_interface.js, /deals_feed.json and /registry.json.",
+    "Screenshots at 1440, 768 and 390px in both themes; inspect hero visual and public copy, not only DOM values.",
+    "0 console errors, 0 horizontal overflow and all three CTA actions available at scrollY=0 on 390px.",
+    "Record served hashes, deployment ID and corrected asset manifest hash."
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_371_R1_HERO_CORRECTION_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_371_R1_HERO_CORRECTION_RELEASE_RECEIPT.json"
+  ],
+  "acknowledged_at_utc": "2026-09-10T06:45:36.604Z",
+  "execution_record": {
+    "executor": "Antigravity Executive Pair",
+    "completed_at_utc": "2026-09-10T06:48:55.586Z",
+    "completed_at_local": "2026-09-10T13:48:00+07:00",
+    "deployment_id": "dpl_F1KHmdZpobwpFN7KxDX82twMPeb5",
+    "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+    "qa_runtime_receipt_sha256": "6ba87260001dbc34712bb8ff4bd8823ac1e7d1cb626d59dbfb9b32dd821cedc5",
+    "release_receipt_sha256": "80e482e6a51d1c233e4dfb64ca3bcaeff3455f7c5afc1b848b99eaf585687a06"
+  }
+}

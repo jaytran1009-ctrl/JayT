@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayTEvidenceContractV3",
+  "description": "Evidence Contract v3 schema enforcing strict sentence-level verbatim excerpts, clause-by-clause translation mapping, claim-class taxonomy, and formal entailment verification.",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "version",
+    "subject_name",
+    "canonical_document_url",
+    "raw_response_sha256",
+    "raw_bytes_length",
+    "decoding_encoding",
+    "claim_class",
+    "sentence_level_raw_excerpts",
+    "clause_by_clause_translation_mapping",
+    "source_scope",
+    "jayt_local_scope",
+    "explicit_caveats_and_exclusions",
+    "allowed_customer_facing_sentence",
+    "disallowed_extrapolated_claims",
+    "entailment_gate_verification",
+    "reviewer_decision"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "enum": [
+        "v3.0.0-ez.k"
+      ]
+    },
+    "subject_name": {
+      "type": "string"
+    },
+    "canonical_document_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "raw_response_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "raw_bytes_length": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "decoding_encoding": {
+      "type": "string",
+      "enum": [
+        "utf-8",
+        "utf8",
+        "ascii"
+      ]
+    },
+    "claim_class": {
+      "type": "string",
+      "enum": [
+        "IDENTITY_ONLY",
+        "DESCRIPTIVE_ONLY",
+        "ELIGIBILITY_REQUIREMENT",
+        "SCOPE_RESTRICTION",
+        "ECONOMIC_BENEFIT",
+        "LOCAL_TERRITORY"
+      ]
+    },
+    "sentence_level_raw_excerpts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "excerpt_id",
+          "byte_start",
+          "byte_end",
+          "length",
+          "source_language_verbatim_text",
+          "claim_class"
+        ],
+        "properties": {
+          "excerpt_id": {
+            "type": "string"
+          },
+          "byte_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "byte_end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "length": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "source_language_verbatim_text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "claim_class": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "clause_by_clause_translation_mapping": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "clause_index",
+          "source_excerpt_ref",
+          "source_clause_text",
+          "faithful_vietnamese_clause",
+          "entailment_status"
+        ],
+        "properties": {
+          "clause_index": {
+            "type": "integer"
+          },
+          "source_excerpt_ref": {
+            "type": "string"
+          },
+          "source_clause_text": {
+            "type": "string"
+          },
+          "faithful_vietnamese_clause": {
+            "type": "string"
+          },
+          "entailment_status": {
+            "type": "string",
+            "enum": [
+              "STRICT_ENTAILMENT",
+              "DESCRIPTIVE_ENTAILMENT",
+              "NON_ENTAILED_REJECTED"
+            ]
+          }
+        }
+      }
+    },
+    "source_scope": {
+      "type": "object",
+      "required": [
+        "provenance_basis",
+        "is_explicitly_stated_global",
+        "raw_basis_excerpt"
+      ],
+      "properties": {
+        "provenance_basis": {
+          "type": "string"
+        },
+        "is_explicitly_stated_global": {
+          "type": "boolean"
+        },
+        "raw_basis_excerpt": {
+          "type": "string"
+        }
+      }
+    },
+    "jayt_local_scope": {
+      "type": "object",
+      "required": [
+        "applies_to_da_nang",
+        "local_evidence_present",
+        "caveat_required"
+      ],
+      "properties": {
+        "applies_to_da_nang": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "local_evidence_present": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "caveat_required": {
+          "type": "string"
+        }
+      }
+    },
+    "explicit_caveats_and_exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_customer_facing_sentence": {
+      "type": "string"
+    },
+    "disallowed_extrapolated_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entailment_gate_verification": {
+      "type": "object",
+      "required": [
+        "isolated_token_heuristic_rejected",
+        "all_clauses_strictly_entailed",
+        "no_unproven_eligibility_inferred",
+        "no_unproven_scope_inferred",
+        "publishable_status"
+      ],
+      "properties": {
+        "isolated_token_heuristic_rejected": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "all_clauses_strictly_entailed": {
+          "type": "boolean"
+        },
+        "no_unproven_eligibility_inferred": {
+          "type": "boolean"
+        },
+        "no_unproven_scope_inferred": {
+          "type": "boolean"
+        },
+        "publishable_status": {
+          "type": "string",
+          "enum": [
+            "PUBLISHABLE_AS_T2_DOCUMENTATION",
+            "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+            "QUARANTINED_FAILED_ENTAILMENT"
+          ]
+        }
+      }
+    },
+    "reviewer_decision": {
+      "type": "object",
+      "required": [
+        "reviewer",
+        "decision",
+        "timestamp"
+      ],
+      "properties": {
+        "reviewer": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

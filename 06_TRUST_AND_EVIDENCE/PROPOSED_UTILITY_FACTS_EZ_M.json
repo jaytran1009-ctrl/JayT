@@ -1,0 +1,82 @@
+{
+  "registry_id": "JAYT_SOURCE_INTAKE_AND_IDENTITY_PROOF_REGISTRY_EZ_M",
+  "version": "v9.0.0-ez.m",
+  "governance_mode": "SEPARATE_IDENTITY_PROOF_GATE_FAIL_CLOSED",
+  "timestamp": "2026-08-31T06:52:15.978Z",
+  "approved_staging_t2_pilot": {
+    "pilot_card_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+    "pilot_title": "GitHub Education — Thông tin đăng ký",
+    "pilot_tier": "T2_OFFICIAL_PROGRAM_DOCUMENTATION",
+    "public_eligible": true,
+    "raw_sha256": "f21354b988f6db93fda0460932ce00f336bf8210cf69d5b3329cb68626e1f237",
+    "canonical_action_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students"
+  },
+  "approved_staging_t2_pilot_count": 1,
+  "public_eligible_count": 1,
+  "t1_voucher_verified_count": 0,
+  "new_candidates_public_count": 0,
+  "cohort_closure_notice": "NOTION_CANVA_COHORT_CLOSED_FOR_30_DAYS_UNTIL_20260930",
+  "invalidated_fields_ledger": [
+    {
+      "candidate": "Cổng Dịch vụ công",
+      "invalidated_field": "claimed_source_owner_unverified: Cổng Dịch vụ công Trực tuyến TP Đà Nẵng",
+      "reason": "Raw bytes only contain 'Cổng Dịch vụ công'; TP Đà Nẵng was inferred from domain name."
+    },
+    {
+      "candidate": "Thư viện Đà Nẵng",
+      "invalidated_field": "allowed_customer_facing_sentence: cơ quan nhà nước / chính thức",
+      "reason": "Raw bytes only contain title text; official status requires operating body proof."
+    }
+  ],
+  "evaluated_contracts": [
+    {
+      "contract_id": "CONTRACT_EZ_M_01_DANANG_LIBRARY",
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "candidate_url": "http://thuvien.danang.gov.vn/",
+      "raw_bytes_sha256": "c031788ecdcd0686859d3e3a5d3ccb8948d5806e1a57865fcfe9340e8dc19ec2",
+      "raw_bytes_length": 63331,
+      "raw_title_observed": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "identity_evidence_state": "IDENTITY_TITLE_OBSERVED_OPERATING_BODY_UNPROVEN",
+      "invalidated_claims_ledger": [
+        "Khẳng định quyền hạn cơ quan quản lý nhà nước cấp thành phố (thiếu sentence-level operating body proof)",
+        "Khẳng định chính sách mượn sách, mở cửa phục vụ (thiếu policy document)"
+      ],
+      "raw_excerpts": [
+        {
+          "excerpt_id": "EXCERPT_01_TITLE",
+          "verbatim_text": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+          "byte_start": 368,
+          "byte_end": 405,
+          "claim_class": "IDENTITY_ONLY"
+        }
+      ],
+      "governance_status": "URL_REACHABLE_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL",
+      "public_eligible": false
+    },
+    {
+      "contract_id": "CONTRACT_EZ_M_02_DANANG_DICHVUCONG",
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "candidate_url": "https://dichvucong.danang.gov.vn/",
+      "raw_bytes_sha256": "51c7e55d0fbf67536dc0d6c50c5a04721243cb5bab26145970c5be5a546cb2fd",
+      "raw_bytes_length": 5464,
+      "raw_title_observed": "Cổng Dịch vụ công",
+      "identity_evidence_state": "GENERIC_TITLE_OBSERVED_LOCATION_AND_OWNER_UNPROVEN",
+      "invalidated_claims_ledger": [
+        "Cụm từ 'TP Đà Nẵng' (raw title chỉ có 'Cổng Dịch vụ công', không có từ Đà Nẵng)",
+        "Cụm từ 'Cổng Dịch vụ công Trực tuyến TP Đà Nẵng' (extrapolation từ URL domain)",
+        "Khẳng định cơ quan vận hành chính thức (thiếu sentence-level operating authority proof)"
+      ],
+      "raw_excerpts": [
+        {
+          "excerpt_id": "EXCERPT_01_TITLE",
+          "verbatim_text": "Cổng Dịch vụ công",
+          "byte_start": 86,
+          "byte_end": 104,
+          "claim_class": "IDENTITY_ONLY"
+        }
+      ],
+      "governance_status": "URL_REACHABLE_IDENTITY_LOCATION_UNPROVEN_HELD_INTERNAL",
+      "public_eligible": false
+    }
+  ]
+}

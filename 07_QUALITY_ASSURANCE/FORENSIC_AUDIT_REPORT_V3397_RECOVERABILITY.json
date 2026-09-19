@@ -1,0 +1,45 @@
+{
+  "audit_id": "FORENSIC_AUDIT_V3397_20260829",
+  "target_version": "v3.397.0",
+  "audit_timestamp": "2026-08-28T19:09:27.769Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AV)",
+  "forensic_scope": {
+    "vercel_deployment_history_inspected": 14,
+    "workspace_files_scanned": 15973,
+    "local_release_receipts_found": 0,
+    "local_deploy_bundles_found": 0
+  },
+  "recoverability_verdict": "NOT_RECOVERABLE_FROM_DEPLOY_HISTORY",
+  "compliance_and_provenance_findings": [
+    {
+      "finding_id": "F_01_NO_DEPLOY_ARTIFACT",
+      "detail": "All 14 historical Vercel deployment URLs return HTTP 302 or redirect without valid v3.397.0 bundle assets. Zero deployment receipt exists for v3.397.0."
+    },
+    {
+      "finding_id": "F_02_TEST_SPEC_NON_COMPLIANT",
+      "detail": "The historical test file (test_jayt_241_full_community_discovery_gate.js) requires synthetic price history, unverified net_paid_price, and advisor_verdict affiliate fields that violate current trust and evidence directives."
+    },
+    {
+      "finding_id": "F_03_ZERO_SYNTHESIS_RULE",
+      "detail": "Per Directive AV.1, reconstructing v3.397.0 from memory, screenshots, or unverified test specs is strictly prohibited."
+    }
+  ],
+  "ui_component_migration_recommendation": {
+    "permitted_for_selective_migration": [
+      "Discovery navigation flow (Category & Tier pill filters)",
+      "Card visual rhythm & 44px touch targets",
+      "Fast instant search indexing across title/brand/scope",
+      "Accessible modal backdrop with escape & focus trapping"
+    ],
+    "strictly_excluded_legacy_data": [
+      "Synthetic price history & unverified savings claims",
+      "Affiliate links, campaign buttons, and commission CTAs",
+      "Unverified phone numbers, physical venue opening hours without local raw capture"
+    ]
+  },
+  "current_production_state": {
+    "live_url": "https://deploy-ten-xi-48.vercel.app",
+    "version": "v3.419.0",
+    "status": "LOCKED_ROLLBACK_BASELINE_MAINTAINED"
+  }
+}

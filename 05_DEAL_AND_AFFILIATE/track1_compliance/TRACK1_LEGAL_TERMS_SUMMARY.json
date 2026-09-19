@@ -1,0 +1,47 @@
+{
+  "summary_id": "TRACK1_LEGAL_TERMS_SUMMARY",
+  "prepared_on": "2026-09-11",
+  "purpose": "Public-terms triage only; this document is not provider authorization and does not activate an affiliate integration.",
+  "providers": [
+    {
+      "provider": "Shopee Affiliate",
+      "official_public_sources": [
+        "https://help.shopee.vn/portal/10/article/122944",
+        "https://shopee.vn/affiliate/chinh-sach-chong-hanh-vi-gian-lan/"
+      ],
+      "public_terms_signal": "The program refers to a valid affiliate account and program conditions; anti-fraud material prohibits deceptive or automated behaviors.",
+      "jayt_authorization_status": "NOT_PRESENT",
+      "activation_result": "HELD"
+    },
+    {
+      "provider": "Lazada Affiliate",
+      "official_public_sources": [
+        "https://www.lazada.vn/blog/qa/",
+        "https://pages.lazada.vn/wow/i/vn/corp/affiliate-faq?hybrid=1"
+      ],
+      "public_terms_signal": "The public FAQ describes approval, identity/tax/payment requirements, and affiliate-program terms. It does not approve JayT or any particular tracking schema.",
+      "jayt_authorization_status": "NOT_PRESENT",
+      "activation_result": "HELD"
+    },
+    {
+      "provider": "Klook",
+      "official_public_sources": [],
+      "public_terms_signal": "No current first-party Klook affiliate authorization or parameter policy was located in this review. Merchant-portal materials are not treated as affiliate permission.",
+      "jayt_authorization_status": "NOT_PRESENT",
+      "activation_result": "HELD"
+    }
+  ],
+  "sandbox_gate": {
+    "affiliate_enabled": false,
+    "destination_urls": null,
+    "sub_id_schema": null,
+    "tracking_enabled": false,
+    "disclosure_publicly_displayed": false,
+    "requirements_before_any_sandbox": [
+      "written provider authorization bound to JayT",
+      "provider-approved destination allowlist and parameter schema",
+      "privacy and consumer-disclosure approval",
+      "separate CEO technical acceptance"
+    ]
+  }
+}

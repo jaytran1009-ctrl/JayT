@@ -1,0 +1,973 @@
+{
+  "matrix_id": "J358_R2_CLAIM_PROVENANCE_MATRIX",
+  "generated_at_utc": "2026-09-08T11:34:15.884Z",
+  "work_order_id": "J358-R2-CLAIM-PROVENANCE-REPLAY",
+  "policy": "FAIL_CLOSED_UNLESS_EVERY_PUBLISHED_DISPLAY_CLAIM_HAS_A_RECORDED_SOURCE_SPAN",
+  "matching": "HTML entities normalized for matching; raw substring and UTF-8 byte offsets retained",
+  "scope_count": 10,
+  "verified_count": 0,
+  "held_count": 10,
+  "items": [
+    {
+      "b19_id": "B19_STARLIGHT_U22_WEEKDAY",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:locality",
+      "display_claims_under_review": {
+        "title": "Vé U22 Học Đường (Thứ 2 - Thứ 5)",
+        "price_or_benefit": "45.000 ₫",
+        "conditions": [
+          "Giá vé ưu đãi thành viên U22 tại quầy",
+          "Khách hàng dưới 22 tuổi xuất trình CCCD hoặc thẻ HSSV tại quầy",
+          "Mua vé trực tiếp tại quầy vé Starlight Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Áp dụng Thứ 2 đến Thứ 5 năm 2026 (trừ ngày Lễ/Tết)",
+        "locality": "Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, Q. Thanh Khê, TP. Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_u22_program.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_u22_program.leaf.meta.json",
+        "requested_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+        "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+        "captured_at_utc": "2026-09-08T09:31:30.029Z",
+        "raw_bytes": 18822,
+        "raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "CT U22 RẠP STARLIGHT",
+          "normalized_span": "CT U22 RẠP STARLIGHT",
+          "exact_raw_substring": "CT U22 RẠP STARLIGHT",
+          "raw_char_offset_start": 291,
+          "raw_char_offset_end_exclusive": 311,
+          "raw_byte_offset_start": 291,
+          "raw_byte_offset_end_exclusive": 313,
+          "occurrence_count": 6,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Đồng giá vé 45k/vé khi mua tại quầy từ thứ 2 đến thứ 5!",
+          "normalized_span": "Đồng giá vé 45k/vé khi mua tại quầy từ thứ 2 đến thứ 5!",
+          "exact_raw_substring": "Đồng gi&aacute; v&eacute; 45k/v&eacute; khi mua tại quầy từ thứ 2 đến thứ 5!",
+          "raw_char_offset_start": 9383,
+          "raw_char_offset_end_exclusive": 9459,
+          "raw_byte_offset_start": 9474,
+          "raw_byte_offset_end_exclusive": 9566,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Mang thêm giấy tờ chứng minh độ tuổi (CCCD/thẻ học sinh/thẻ sinh viên...)",
+          "normalized_span": "Mang thêm giấy tờ chứng minh độ tuổi (CCCD/thẻ học sinh/thẻ sinh viên...)",
+          "exact_raw_substring": "Mang th&ecirc;m giấy tờ chứng minh độ tuổi (CCCD/thẻ học sinh/thẻ sinh vi&ecirc;n...)",
+          "raw_char_offset_start": 9093,
+          "raw_char_offset_end_exclusive": 9178,
+          "raw_byte_offset_start": 9163,
+          "raw_byte_offset_end_exclusive": 9265,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "validity_or_recurrence": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Giá vé U22 áp dụng cho khách hàng dưới 22 tuổi. U22 không áp dụng vào ngày lễ tết, suất chiếu đặc biệt, thanh toán online và đồng thời cùng các CTKM khác về giá vé.",
+          "normalized_span": "Giá vé U22 áp dụng cho khách hàng dưới 22 tuổi. U22 không áp dụng vào ngày lễ tết, suất chiếu đặc biệt, thanh toán online và đồng thời cùng các CTKM khác về giá vé.",
+          "exact_raw_substring": "Gi&aacute; v&eacute; U22 &aacute;p dụng cho kh&aacute;ch h&agrave;ng dưới 22 tuổi. U22 kh&ocirc;ng &aacute;p dụng v&agrave;o ng&agrave;y lễ tết, suất chiếu đặc biệt, thanh to&aacute;n online v&agrave; đồng thời c&ugrave;ng c&aacute;c CTKM kh&aacute;c về gi&aacute; v&eacute;.",
+          "raw_char_offset_start": 9931,
+          "raw_char_offset_end_exclusive": 10206,
+          "raw_byte_offset_start": 10070,
+          "raw_byte_offset_end_exclusive": 10374,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_STARLIGHT_U22_WEEKEND",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence",
+      "display_claims_under_review": {
+        "title": "Vé U22 Cuối Tuần (Thứ 6 - Chủ Nhật)",
+        "price_or_benefit": "55.000 ₫",
+        "conditions": [
+          "Giá vé ưu đãi thành viên U22 cuối tuần",
+          "Khách hàng dưới 22 tuổi xuất trình CCCD hoặc thẻ HSSV tại quầy",
+          "Mua vé trực tiếp tại quầy vé Starlight Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Áp dụng Thứ 6, Thứ 7, Chủ Nhật năm 2026 (trừ ngày Lễ/Tết)",
+        "locality": "Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, Q. Thanh Khê, TP. Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_u22_program.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_u22_program.leaf.meta.json",
+        "requested_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+        "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+        "captured_at_utc": "2026-09-08T09:31:30.029Z",
+        "raw_bytes": 18822,
+        "raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Giá vé cuối tuần",
+          "normalized_span": "Giá vé cuối tuần",
+          "exact_raw_substring": "Gi&aacute; v&eacute; cuối tuần",
+          "raw_char_offset_start": 9532,
+          "raw_char_offset_end_exclusive": 9562,
+          "raw_byte_offset_start": 9639,
+          "raw_byte_offset_end_exclusive": 9673,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Áp dụng tại các rạp Quy Nhơn, Đà Nẵng dành cho khách hàng U22 là 55k/vé",
+          "normalized_span": "Áp dụng tại các rạp Quy Nhơn, Đà Nẵng dành cho khách hàng U22 là 55k/vé",
+          "exact_raw_substring": "&Aacute;p dụng tại c&aacute;c rạp Quy Nhơn, Đ&agrave; Nẵng d&agrave;nh cho kh&aacute;ch h&agrave;ng U22 l&agrave; 55k/v&eacute;",
+          "raw_char_offset_start": 9690,
+          "raw_char_offset_end_exclusive": 9817,
+          "raw_byte_offset_start": 9811,
+          "raw_byte_offset_end_exclusive": 9948,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Giá vé U22 áp dụng cho khách hàng dưới 22 tuổi. U22 không áp dụng vào ngày lễ tết, suất chiếu đặc biệt, thanh toán online và đồng thời cùng các CTKM khác về giá vé.",
+          "normalized_span": "Giá vé U22 áp dụng cho khách hàng dưới 22 tuổi. U22 không áp dụng vào ngày lễ tết, suất chiếu đặc biệt, thanh toán online và đồng thời cùng các CTKM khác về giá vé.",
+          "exact_raw_substring": "Gi&aacute; v&eacute; U22 &aacute;p dụng cho kh&aacute;ch h&agrave;ng dưới 22 tuổi. U22 kh&ocirc;ng &aacute;p dụng v&agrave;o ng&agrave;y lễ tết, suất chiếu đặc biệt, thanh to&aacute;n online v&agrave; đồng thời c&ugrave;ng c&aacute;c CTKM kh&aacute;c về gi&aacute; v&eacute;.",
+          "raw_char_offset_start": 9931,
+          "raw_char_offset_end_exclusive": 10206,
+          "raw_byte_offset_start": 10070,
+          "raw_byte_offset_end_exclusive": 10374,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Áp dụng tại các rạp Quy Nhơn, Đà Nẵng dành cho khách hàng U22 là 55k/vé",
+          "normalized_span": "Áp dụng tại các rạp Quy Nhơn, Đà Nẵng dành cho khách hàng U22 là 55k/vé",
+          "exact_raw_substring": "&Aacute;p dụng tại c&aacute;c rạp Quy Nhơn, Đ&agrave; Nẵng d&agrave;nh cho kh&aacute;ch h&agrave;ng U22 l&agrave; 55k/v&eacute;",
+          "raw_char_offset_start": 9690,
+          "raw_char_offset_end_exclusive": 9817,
+          "raw_byte_offset_start": 9811,
+          "raw_byte_offset_end_exclusive": 9948,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+          "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+          "captured_at_utc": "2026-09-08T09:31:30.029Z"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_STARLIGHT_THU_3_PHIM_VIET",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:locality",
+      "display_claims_under_review": {
+        "title": "Thứ 3 Phim Việt — Vé Đồng Giá 45K",
+        "price_or_benefit": "45.000 ₫",
+        "conditions": [
+          "Ưu đãi đồng giá định kỳ ngày Thứ Ba cho phim Việt",
+          "Khách hàng mua vé xem các phim Việt Nam",
+          "Mua trực tiếp tại quầy vé Starlight Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Thứ Ba hàng tuần năm 2026 (trừ ngày Lễ/Tết)",
+        "locality": "Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, Q. Thanh Khê, TP. Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_thu_3_phim_viet.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/starlight_thu_3_phim_viet.leaf.meta.json",
+        "requested_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+        "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+        "captured_at_utc": "2026-09-08T09:31:30.373Z",
+        "raw_bytes": 17477,
+        "raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "THỨ 3 PHIM VIỆT",
+          "normalized_span": "THỨ 3 PHIM VIỆT",
+          "exact_raw_substring": "THỨ 3 PHIM VIỆT",
+          "raw_char_offset_start": 291,
+          "raw_char_offset_end_exclusive": 306,
+          "raw_byte_offset_start": 291,
+          "raw_byte_offset_end_exclusive": 310,
+          "occurrence_count": 6,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+          "source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "captured_at_utc": "2026-09-08T09:31:30.373Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Áp dụng giá : 45 k cho tất cả các phim Việt vào ngày thứ 3 hàng tuần.",
+          "normalized_span": "Áp dụng giá : 45 k cho tất cả các phim Việt vào ngày thứ 3 hàng tuần.",
+          "exact_raw_substring": "&Aacute;p dụng gi&aacute; : 45 k cho tất cả c&aacute;c phim Việt v&agrave;o ng&agrave;y thứ 3 h&agrave;ng tuần.",
+          "raw_char_offset_start": 8377,
+          "raw_char_offset_end_exclusive": 8488,
+          "raw_byte_offset_start": 8445,
+          "raw_byte_offset_end_exclusive": 8568,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+          "source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "captured_at_utc": "2026-09-08T09:31:30.373Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Chương trình khuyến mãi áp dụng cho khách hàng mua vé các phim Việt Nam.",
+          "normalized_span": "Chương trình khuyến mãi áp dụng cho khách hàng mua vé các phim Việt Nam.",
+          "exact_raw_substring": "Chương tr&igrave;nh khuyến m&atilde;i &aacute;p dụng cho kh&aacute;ch h&agrave;ng mua v&eacute; c&aacute;c phim Việt Nam.",
+          "raw_char_offset_start": 8505,
+          "raw_char_offset_end_exclusive": 8626,
+          "raw_byte_offset_start": 8585,
+          "raw_byte_offset_end_exclusive": 8714,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+          "source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "captured_at_utc": "2026-09-08T09:31:30.373Z"
+        },
+        "validity_or_recurrence": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "“Thứ 3 : Ngày phim Việt” : Áp dụng từ ngày 20/01/2022",
+          "normalized_span": "“Thứ 3 : Ngày phim Việt” : Áp dụng từ ngày 20/01/2022",
+          "exact_raw_substring": "&ldquo;Thứ 3 : Ng&agrave;y phim Việt&rdquo; : &Aacute;p dụng từ ng&agrave;y 20/01/2022",
+          "raw_char_offset_start": 8268,
+          "raw_char_offset_end_exclusive": 8354,
+          "raw_byte_offset_start": 8328,
+          "raw_byte_offset_end_exclusive": 8422,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+          "source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+          "captured_at_utc": "2026-09-08T09:31:30.373Z"
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_VU_LAN_315K",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Combo Vu Lan An Lành",
+        "price_or_benefit": "315.000 ₫",
+        "conditions": [
+          "Combo ưu đãi tiết kiệm mùa Vu Lan",
+          "Tất cả khách hàng dùng tại chỗ hoặc mang về",
+          "Các chi nhánh The Pizza Company Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Mùa Vu Lan 2026 (Tháng 8 - Tháng 9/2026)",
+        "locality": "173 Nguyễn Văn Thoại & Tầng 4 Vincom Plaza Ngô Quyền, Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.meta.json",
+        "requested_url": "https://thepizzacompany.vn/",
+        "final_url": "https://thepizzacompany.vn/",
+        "captured_at_utc": "2026-09-08T09:31:30.651Z",
+        "raw_bytes": 141111,
+        "raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Combo Vu Lan An Lành",
+          "normalized_span": "Combo Vu Lan An Lành",
+          "exact_raw_substring": "Combo Vu Lan An L&#xE0;nh",
+          "raw_char_offset_start": 50888,
+          "raw_char_offset_end_exclusive": 50913,
+          "raw_byte_offset_start": 50977,
+          "raw_byte_offset_end_exclusive": 51002,
+          "occurrence_count": 4,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "315.000đ",
+          "normalized_span": "315.000đ",
+          "exact_raw_substring": "315.000&#x111;",
+          "raw_char_offset_start": 52402,
+          "raw_char_offset_end_exclusive": 52416,
+          "raw_byte_offset_start": 52562,
+          "raw_byte_offset_end_exclusive": 52576,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "01 Pizza Rau Củ/ Phô Mai, Cỡ Vừa, Đế Dày/ Cực Mỏng",
+          "normalized_span": "01 Pizza Rau Củ/ Phô Mai, Cỡ Vừa, Đế Dày/ Cực Mỏng",
+          "exact_raw_substring": "01 Pizza Rau Củ/ Phô Mai, Cỡ Vừa, Đế Dày/ Cực Mỏng",
+          "raw_char_offset_start": 51703,
+          "raw_char_offset_end_exclusive": 51753,
+          "raw_byte_offset_start": 51792,
+          "raw_byte_offset_end_exclusive": 51857,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_COT_MAM_KEO_479K",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Combo \"Cốt\" Mắm Kẹo",
+        "price_or_benefit": "479.000 ₫",
+        "conditions": [
+          "Combo khuyến mãi LTO nhóm bạn / sinh viên",
+          "Tất cả khách hàng",
+          "Dùng tại chỗ / Mua mang về The Pizza Company Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Tháng 6 - Tháng 9/2026 theo thông báo LTO chính thức",
+        "locality": "173 Nguyễn Văn Thoại & Tầng 4 Vincom Plaza Ngô Quyền, Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.meta.json",
+        "requested_url": "https://thepizzacompany.vn/",
+        "final_url": "https://thepizzacompany.vn/",
+        "captured_at_utc": "2026-09-08T09:31:30.651Z",
+        "raw_bytes": 141111,
+        "raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Combo \"Cốt\" Mắm Kẹo",
+          "normalized_span": "Combo \"Cốt\" Mắm Kẹo",
+          "exact_raw_substring": "Combo &quot;C&#x1ED1;t&quot; M&#x1EAF;m K&#x1EB9;o",
+          "raw_char_offset_start": 53298,
+          "raw_char_offset_end_exclusive": 53348,
+          "raw_byte_offset_start": 53458,
+          "raw_byte_offset_end_exclusive": 53508,
+          "occurrence_count": 4,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "479.000đ",
+          "normalized_span": "479.000đ",
+          "exact_raw_substring": "479.000&#x111;",
+          "raw_char_offset_start": 54703,
+          "raw_char_offset_end_exclusive": 54717,
+          "raw_byte_offset_start": 54926,
+          "raw_byte_offset_end_exclusive": 54940,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Đế Dày/Cực Mỏng",
+          "normalized_span": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Đế Dày/Cực Mỏng",
+          "exact_raw_substring": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Đế Dày/Cực Mỏng",
+          "raw_char_offset_start": 54221,
+          "raw_char_offset_end_exclusive": 54283,
+          "raw_byte_offset_start": 54381,
+          "raw_byte_offset_end_exclusive": 54466,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_COT_MAI_MAN_599K",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Combo \"Cốt\" Mãi Mặn",
+        "price_or_benefit": "599.000 ₫",
+        "conditions": [
+          "Combo khuyến mãi nhóm bạn / họp lớp",
+          "Tất cả khách hàng",
+          "Dùng tại chỗ / Mua mang về The Pizza Company Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Tháng 6 - Tháng 9/2026 theo thông báo LTO",
+        "locality": "173 Nguyễn Văn Thoại & Tầng 4 Vincom Plaza Ngô Quyền, Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.meta.json",
+        "requested_url": "https://thepizzacompany.vn/",
+        "final_url": "https://thepizzacompany.vn/",
+        "captured_at_utc": "2026-09-08T09:31:30.651Z",
+        "raw_bytes": 141111,
+        "raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Combo \"Cốt\" Mãi Mặn",
+          "normalized_span": "Combo \"Cốt\" Mãi Mặn",
+          "exact_raw_substring": "Combo &quot;C&#x1ED1;t&quot; M&#xE3;i M&#x1EB7;n",
+          "raw_char_offset_start": 55599,
+          "raw_char_offset_end_exclusive": 55647,
+          "raw_byte_offset_start": 55822,
+          "raw_byte_offset_end_exclusive": 55870,
+          "occurrence_count": 4,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "599.000đ",
+          "normalized_span": "599.000đ",
+          "exact_raw_substring": "599.000&#x111;",
+          "raw_char_offset_start": 57062,
+          "raw_char_offset_end_exclusive": 57076,
+          "raw_byte_offset_start": 57363,
+          "raw_byte_offset_end_exclusive": 57377,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Viền Phô Mai/ Đế Dày/ Cực Mỏng",
+          "normalized_span": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Viền Phô Mai/ Đế Dày/ Cực Mỏng",
+          "exact_raw_substring": "1 Pizza Hải Sản Calamari Xốt Nước Mắm, Cỡ Vừa, Viền Phô Mai/ Đế Dày/ Cực Mỏng",
+          "raw_char_offset_start": 56514,
+          "raw_char_offset_end_exclusive": 56591,
+          "raw_byte_offset_start": 56737,
+          "raw_byte_offset_end_exclusive": 56840,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_BOGO_PEPSI_15L",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Mua 1 Tặng 1 Nước Chai Pepsi 1.5L",
+        "price_or_benefit": "50.000 ₫ (Mua 1 Tặng 1)",
+        "conditions": [
+          "Ưu đãi Mua 1 Tặng 1 Nước ngọt PET 1.5L kèm đơn hàng",
+          "Khách hàng mua kèm pizza / combo",
+          "The Pizza Company Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Áp dụng theo chương trình khuyến mãi hiện hành 2026",
+        "locality": "173 Nguyễn Văn Thoại & Tầng 4 Vincom Plaza Ngô Quyền, Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.meta.json",
+        "requested_url": "https://thepizzacompany.vn/",
+        "final_url": "https://thepizzacompany.vn/",
+        "captured_at_utc": "2026-09-08T09:31:30.651Z",
+        "raw_bytes": 141111,
+        "raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Mua 1 Tặng 1 Nước",
+          "normalized_span": "Mua 1 Tặng 1 Nước",
+          "exact_raw_substring": "Mua 1 T&#x1EB7;ng 1 N&#x1B0;&#x1EDB;c",
+          "raw_char_offset_start": 60389,
+          "raw_char_offset_end_exclusive": 60426,
+          "raw_byte_offset_start": 60792,
+          "raw_byte_offset_end_exclusive": 60829,
+          "occurrence_count": 4,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "normalized_span": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "exact_raw_substring": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "raw_char_offset_start": 61255,
+          "raw_char_offset_end_exclusive": 61317,
+          "raw_byte_offset_start": 61658,
+          "raw_byte_offset_end_exclusive": 61722,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "normalized_span": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "exact_raw_substring": "Tặng 1 Chai Pepsi PET 1.5L, khi Mua 1 Chai Pepsi/ 7UP PET 1.5L",
+          "raw_char_offset_start": 61255,
+          "raw_char_offset_end_exclusive": 61317,
+          "raw_byte_offset_start": 61658,
+          "raw_byte_offset_end_exclusive": 61722,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_BO_DOI_NHU_Y_169K",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:title,conditions,validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Bộ Đôi Như \"Ý\" Combo 1",
+        "price_or_benefit": "169.000 ₫",
+        "conditions": [
+          "Combo tiết kiệm 2 người gồm pizza và món khai vị",
+          "Tất cả khách hàng",
+          "Dùng tại chỗ / Mua mang về The Pizza Company Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Áp dụng theo biểu giá combo niêm yết hiện hành",
+        "locality": "173 Nguyễn Văn Thoại & Tầng 4 Vincom Plaza Ngô Quyền, Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/the_pizza_company_homepage.leaf.meta.json",
+        "requested_url": "https://thepizzacompany.vn/",
+        "final_url": "https://thepizzacompany.vn/",
+        "captured_at_utc": "2026-09-08T09:31:30.651Z",
+        "raw_bytes": 141111,
+        "raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": false,
+          "reason": "CLAIM_NOT_FOUND_IN_NORMALIZED_RAW_BYTES",
+          "alternatives": [
+            {
+              "query": "Bộ Đôi Như \"Ý\" - Combo 1",
+              "occurrence_count": 0
+            },
+            {
+              "query": "Bộ Đôi Như “Ý” - Combo 1",
+              "occurrence_count": 0
+            }
+          ]
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "169.000đ",
+          "normalized_span": "169.000đ",
+          "exact_raw_substring": "169.000&#x111;",
+          "raw_char_offset_start": 64020,
+          "raw_char_offset_end_exclusive": 64034,
+          "raw_byte_offset_start": 64487,
+          "raw_byte_offset_end_exclusive": 64501,
+          "occurrence_count": 2,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "6c3e25622f3e7c9fcd926211abb199ef1f43e1b9add622765d49b09b413babef",
+          "source_url": "https://thepizzacompany.vn/",
+          "final_url": "https://thepizzacompany.vn/",
+          "captured_at_utc": "2026-09-08T09:31:30.651Z"
+        },
+        "conditions": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_GONGCHA_MEMBER_POLICY",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:validity_or_recurrence,locality",
+      "display_claims_under_review": {
+        "title": "Chính Sách Thành Viên & Tích Điểm Gong Cha",
+        "price_or_benefit": "Miễn phí đăng ký",
+        "conditions": [
+          "Chương trình quyền lợi hội viên đổi thức uống miễn phí",
+          "Khách hàng đăng ký tài khoản thành viên Gong Cha",
+          "App Gong Cha hoặc trực tiếp tại Gong Cha Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Chương trình thường niên 2026",
+        "locality": "225 Nguyễn Văn Linh & 29 Nguyễn Văn Thoại, TP. Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/gongcha_member_policy.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/gongcha_member_policy.leaf.meta.json",
+        "requested_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+        "final_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+        "captured_at_utc": "2026-09-08T09:31:34.165Z",
+        "raw_bytes": 61735,
+        "raw_sha256": "8fcc9c2d947021e86b1fc2b402e6afda426daa317c948a0ca141b611fd1fb2b2",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "8fcc9c2d947021e86b1fc2b402e6afda426daa317c948a0ca141b611fd1fb2b2",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "normalized_span": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "exact_raw_substring": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "raw_char_offset_start": 1903,
+          "raw_char_offset_end_exclusive": 1945,
+          "raw_byte_offset_start": 1911,
+          "raw_byte_offset_end_exclusive": 1961,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "8fcc9c2d947021e86b1fc2b402e6afda426daa317c948a0ca141b611fd1fb2b2",
+          "source_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "final_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "captured_at_utc": "2026-09-08T09:31:34.165Z"
+        },
+        "price_or_benefit": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Chương trình tích điểm thành viên Gong Cha VN cho phép bạn tích điểm và chủ động đổi điểm để lấy những ưu đãi, phần quà hấp dẫn từ Gong Cha.",
+          "normalized_span": "Chương trình tích điểm thành viên Gong Cha VN cho phép bạn tích điểm và chủ động đổi điểm để lấy những ưu đãi, phần quà hấp dẫn từ Gong Cha.",
+          "exact_raw_substring": "Chương trình tích điểm thành viên Gong Cha VN cho phép bạn tích điểm và chủ động đổi điểm để lấy những ưu đãi, phần quà hấp dẫn từ Gong Cha.",
+          "raw_char_offset_start": 1963,
+          "raw_char_offset_end_exclusive": 2103,
+          "raw_byte_offset_start": 1984,
+          "raw_byte_offset_end_exclusive": 2171,
+          "occurrence_count": 2,
+          "duplicate_span_warning": true,
+          "source_raw_sha256": "8fcc9c2d947021e86b1fc2b402e6afda426daa317c948a0ca141b611fd1fb2b2",
+          "source_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "final_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "captured_at_utc": "2026-09-08T09:31:34.165Z"
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "Với mỗi hóa đơn chi tiêu tại cửa hàng, bạn sẽ được tích điểm tương đương với số tiền mà bạn đã thanh toán.",
+          "normalized_span": "Với mỗi hóa đơn chi tiêu tại cửa hàng, bạn sẽ được tích điểm tương đương với số tiền mà bạn đã thanh toán.",
+          "exact_raw_substring": "Với mỗi hóa đơn chi tiêu tại cửa hàng, bạn sẽ được tích điểm tương đương với số tiền mà bạn đã thanh toán.",
+          "raw_char_offset_start": 38016,
+          "raw_char_offset_end_exclusive": 38122,
+          "raw_byte_offset_start": 38255,
+          "raw_byte_offset_end_exclusive": 38403,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "8fcc9c2d947021e86b1fc2b402e6afda426daa317c948a0ca141b611fd1fb2b2",
+          "source_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "final_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+          "captured_at_utc": "2026-09-08T09:31:34.165Z"
+        },
+        "validity_or_recurrence": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "b19_id": "B19_KATINAT_APP_LOYALTY",
+      "prior_r1_status": "VERIFIED",
+      "r2_verification_status": "HELD",
+      "held_reason": "HELD_CLAIM_TO_SOURCE_SPAN_UNPROVEN:price_or_benefit,locality",
+      "display_claims_under_review": {
+        "title": "Quyền Lợi Thành Viên Ứng Dụng Katinat",
+        "price_or_benefit": "Miễn phí đăng ký",
+        "conditions": [
+          "Chương trình thành viên tích Katipoints đổi ưu đãi",
+          "Thành viên tải và đăng ký ứng dụng Katinat",
+          "App Katinat và cửa hàng Katinat Đà Nẵng"
+        ],
+        "validity_or_recurrence": "Chương trình chính thức thường niên 2026",
+        "locality": "142 Nguyễn Văn Linh & 48 Bạch Đằng, Hải Châu, TP. Đà Nẵng"
+      },
+      "source": {
+        "raw_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/katinat_app_loyalty.leaf.raw.html",
+        "meta_relpath": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault/katinat_app_loyalty.leaf.meta.json",
+        "requested_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+        "final_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+        "captured_at_utc": "2026-09-08T09:31:36.120Z",
+        "raw_bytes": 74206,
+        "raw_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+        "validation": {
+          "passed": true,
+          "disk_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+          "failures": []
+        }
+      },
+      "claims": {
+        "title": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG, “KƯNG” THÀNH VIÊN KHÔNG GIỚI HẠN",
+          "normalized_span": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG, “KƯNG” THÀNH VIÊN KHÔNG GIỚI HẠN",
+          "exact_raw_substring": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG, &#8220;KƯNG&#8221; THÀNH VIÊN KHÔNG GIỚI HẠN",
+          "raw_char_offset_start": 48052,
+          "raw_char_offset_end_exclusive": 48132,
+          "raw_byte_offset_start": 48139,
+          "raw_byte_offset_end_exclusive": 48236,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+          "source_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "final_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "captured_at_utc": "2026-09-08T09:31:36.120Z"
+        },
+        "price_or_benefit": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        },
+        "conditions": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "ứng dụng thành viên & đặt món dành riêng cho Katies",
+          "normalized_span": "ứng dụng thành viên & đặt món dành riêng cho Katies",
+          "exact_raw_substring": "ứng dụng thành viên &amp; đặt món dành riêng cho Katies",
+          "raw_char_offset_start": 48890,
+          "raw_char_offset_end_exclusive": 48945,
+          "raw_byte_offset_start": 49011,
+          "raw_byte_offset_end_exclusive": 49078,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+          "source_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "final_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "captured_at_utc": "2026-09-08T09:31:36.120Z"
+        },
+        "validity_or_recurrence": {
+          "supported": true,
+          "match_mode": "HTML_ENTITY_NORMALIZED_CASE_INSENSITIVE",
+          "matched_query": "chương trình chăm sóc thành viên hoàn toàn mới áp dụng từ 25/4/2024",
+          "normalized_span": "chương trình chăm sóc thành viên hoàn toàn mới áp dụng từ 25/4/2024",
+          "exact_raw_substring": "chương trình chăm sóc thành viên hoàn toàn mới áp dụng từ 25/4/2024",
+          "raw_char_offset_start": 50309,
+          "raw_char_offset_end_exclusive": 50376,
+          "raw_byte_offset_start": 50606,
+          "raw_byte_offset_end_exclusive": 50689,
+          "occurrence_count": 1,
+          "duplicate_span_warning": false,
+          "source_raw_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+          "source_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "final_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+          "captured_at_utc": "2026-09-08T09:31:36.120Z"
+        },
+        "locality": {
+          "supported": false,
+          "reason": "NO_SOURCE_SPAN_SPECIFIED",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "quarantine_id": "QUARANTINE_JAYT_257_CORRECTION_1",
+  "governing_directive": "JAYT-245 Section JAYT-257-CORRECTION-1 (Lines 5092-5112)",
+  "audit_runtime_utc": "2026-09-01T14:17:30.022Z",
+  "quarantined_artifact": {
+    "original_path": "06_TRUST_AND_EVIDENCE/JAYT_COHORT_15_SLA_CLOSURE_LEDGER.json",
+    "quarantine_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_JAYT_COHORT_15_SLA_CLOSURE_LEDGER_FUTURE_TIMESTAMP.json",
+    "byte_length": 22903,
+    "sha256": "642dacf1af81963d0b3f77946669ef49de7dc2a983dba7cf70801b3df415eca4",
+    "recorded_future_runtime_utc": "2026-09-01T19:05:00.000Z"
+  },
+  "reason": "P0_FUTURE_TIMESTAMP_FIXTURE_CONTAINMENT: Test fixture executed at ~14:00Z passed hardcoded future timestamp 19:05:00.000Z and generated active operational closure ledger before candidate SLA close (19:04:01Z+).",
+  "enforcement": "Active closure ledger removed. No operational closure ledger is permitted to exist while runtime UTC < candidate sla_close_utc. Cohort 15 remains pre-SLA intake."
+}

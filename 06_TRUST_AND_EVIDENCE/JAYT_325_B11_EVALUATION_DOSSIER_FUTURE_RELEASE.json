@@ -1,0 +1,87 @@
+{
+  "dossier_id": "JAYT_325_B11_EVALUATION_DOSSIER_FUTURE_RELEASE",
+  "governing_directive": "JAYT-325",
+  "created_at_utc": "2026-09-05T07:30:12.309Z",
+  "purpose": "EVALUATION_DOSSIER_FOR_FUTURE_SEPARATE_RELEASE_CANDIDATE",
+  "production_isolation_boundary": {
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "active_production_version": "v3.421.0",
+    "active_cards_count": 22,
+    "production_deployment_permitted": false,
+    "isolation_mandate": "B11_01 and B11_02 remain strictly OUTSIDE production; zero production deploy permitted in current cycle"
+  },
+  "staging_baseline_context": {
+    "staging_port": 4173,
+    "staging_cards_count": 24,
+    "b11_01_slot": "STAGING_CARD_23",
+    "b11_02_slot": "STAGING_CARD_24",
+    "status": "PUBLIC_APPROVED_STAGING_ONLY"
+  },
+  "candidates": [
+    {
+      "candidate_id": "B11_01_TRA_CUU_CHUYEN_BAY_DANANG_SMART_CITY_1022",
+      "title": "Thông tin chuyến bay trên Danang Smart City",
+      "content_tier": "T2_CIVIC_NAV",
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://1022.vn/ra-mat-tien-ich-thong-tin-chuyen-bay-tren-ung-dung-danang-smart-city/",
+      "publication_date": "2026-08-27",
+      "raw_payload": {
+        "path": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault/B11_01.raw.html",
+        "sha256": "5fc20b13b11f26190db87b07cf6d7d462bc1a90bc459cd7654c2ea4fc9cfd190",
+        "size_bytes": 229477
+      },
+      "verbatim_text_span": "Dịch vụ được triển khai dựa trên việc chia sẻ dữ liệu theo thời gian thực từ Hệ thống cơ sở dữ liệu điều hành sân bay (AODB), chính thức đưa vào phục vụ người dân và du khách từ ngày 27/8/2026. Sự kiện nằm trong khuôn khổ Lễ công bố triển khai các dự án mở rộng Cảng hàng không quốc tế Đà Nẵng.",
+      "utf8_offset": 102480,
+      "mandatory_disclaimer": "Thông tin tiện ích theo bài đăng của Cổng 1022 Đà Nẵng; không bán vé, không nhận đặt chỗ, không thu phí và không cam kết dữ liệu chuyến bay theo thời gian thực.",
+      "prohibitions_enforced": [
+        "ticket_sales",
+        "booking",
+        "fees",
+        "airline_claims",
+        "personal_data_collection",
+        "affiliate",
+        "tracking",
+        "production_mutation"
+      ],
+      "current_governance_status": "FUTURE_RELEASE_CANDIDATE_REVIEW_APPROVED",
+      "council_reference": "01_EXECUTIVE_COUNCIL/JAYT_323_B11_01_INDEPENDENT_PROMOTION_REVIEW_DECISION.md",
+      "readiness_for_future_release": "HIGH (Audit-ready for packaging into prospective Release Candidate v3.422.0 upon separate Chairman decree)"
+    },
+    {
+      "candidate_id": "B11_02_HOAT_DONG_VAN_HOA_BAO_TANG_CHAM_1022",
+      "title": "Lịch biểu diễn vũ điệu Champa — Bảo tàng Chăm Đà Nẵng",
+      "content_tier": "T2_CIVIC_CULTURE",
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://1022.vn/nhieu-trai-nghiem-moi-cho-du-khach-tai-bao-tang-dieu-khac-cham-da-nang/",
+      "publication_date": "2026-08-28",
+      "raw_payload": {
+        "path": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault/B11_02.raw.html",
+        "sha256": "452ed5ff689139b0201bab1c9312b539a12fd205cabb0b9c2fac2bc501c93fd8",
+        "size_bytes": 219872
+      },
+      "verbatim_text_span": "Chương trình nghệ thuật vũ điệu Champa gồm các tiết mục múa Apsara, hòa tấu nhạc cụ Chăm và múa Vũ hội làng Chăm sẽ được tổ chức vào buổi sáng các ngày 15 và 30 hằng tháng.",
+      "utf8_offset": 101313,
+      "schedule_recurrence_rule": "MORNING_15TH_AND_30TH_MONTHLY",
+      "mandatory_disclaimer": "Lịch biểu diễn văn hóa nghệ thuật định kỳ tại Bảo tàng Điêu khắc Chăm Đà Nẵng; người xem cần đối soát thông báo trực tiếp từ ban quản lý bảo tàng trong trường hợp có điều chỉnh thời tiết hoặc lịch đón tiếp ngoại giao.",
+      "prohibitions_enforced": [
+        "ticket_sales",
+        "tour_booking",
+        "booking_fees",
+        "commercial_promotion",
+        "affiliate",
+        "tracking",
+        "production_mutation"
+      ],
+      "current_governance_status": "PUBLIC_APPROVED_STAGING_ONLY",
+      "pre_audit_reference": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_323_B11_02_SCHEDULE_PRE_AUDIT_QA_RECEIPT.json",
+      "readiness_for_future_release": "HIGH (Pre-audit passed 23/23; awaiting independent promotion review decision in dedicated release cycle)"
+    }
+  ],
+  "governance_prerequisites_for_future_release": [
+    "Independent promotion review decision formally enacted for all candidate additions",
+    "Candidate registry explicitly created (e.g. RELEASE_CANDIDATE_v3.422.0_REGISTRY.json)",
+    "Candidate bundle built and isolated with dedicated preview server",
+    "Automated DOM audit certifying WCAG AA contrast and exact 24/24 URL matches",
+    "Separate Chairman Production Release Decree signed by human approver before any deployment command is issued"
+  ]
+}

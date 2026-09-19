@@ -1,0 +1,713 @@
+{
+  "batch_id": "FORWARD_RAW_CAPTURE_V2_PILOT_BATCH_002",
+  "directive": "JAYT-245 SECTION N",
+  "generated_at": "2026-08-28T15:50:21.447Z",
+  "collector_version": "v2.1_FAIL_CLOSED",
+  "total_targets": 10,
+  "valid_terminal_200_count": 10,
+  "records": [
+    {
+      "target_id": "TGT_C1_01",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Metiz Cinema Helio",
+      "customer_need": "Xem phim sinh viên U22",
+      "initial_url": "https://metiz.vn",
+      "final_url": "https://metiz.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://metiz.vn",
+          "status_code": 200,
+          "response_headers": {
+            "cache-control": "private",
+            "content-type": "text/html; charset=utf-8",
+            "server": "Microsoft-IIS/10.0",
+            "set-cookie": [
+              "ASP.NET_SessionId=pj3cj1mroebycqmaiqyr2v3j; path=/; HttpOnly; SameSite=Lax"
+            ],
+            "x-powered-by": "ASP.NET",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "content-security-policy": "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' http: https: data: blob:;",
+            "date": "Fri, 28 Aug 2026 15:50:13 GMT",
+            "content-length": "53334"
+          },
+          "location_header": null,
+          "body_bytes": 53334,
+          "hop_started_at": "2026-08-28T15:50:11.846Z",
+          "hop_finished_at": "2026-08-28T15:50:12.111Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:11.845Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:12.190Z",
+      "duration_ms": 344.61,
+      "final_http_status": 200,
+      "final_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "server": "Microsoft-IIS/10.0",
+        "set-cookie": [
+          "ASP.NET_SessionId=pj3cj1mroebycqmaiqyr2v3j; path=/; HttpOnly; SameSite=Lax"
+        ],
+        "x-powered-by": "ASP.NET",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer-when-downgrade",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "content-security-policy": "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' http: https: data: blob:;",
+        "date": "Fri, 28 Aug 2026 15:50:13 GMT",
+        "content-length": "53334"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_01_FINAL_2026-08-28T15-50-11-845Z.txt",
+      "pre_normalization_sha256": "450b62946f7adde71f389c4d22b7b2f5dafee30e1c4ac08fa06f7d8d89a40f13",
+      "payload_bytes": 53334,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C1_03",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "DanaBus",
+      "customer_need": "Xe buýt công cộng sinh viên",
+      "initial_url": "https://danangbus.vn",
+      "final_url": "https://www.danangbus.vn/",
+      "hop_count": 2,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://danangbus.vn",
+          "status_code": 301,
+          "response_headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "location": "https://www.danangbus.vn/",
+            "vary": "Accept-Encoding",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by-plesk": "PleskWin",
+            "access-control-allow-origin": "https://static.danangbus.vn",
+            "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+            "content-length": "148"
+          },
+          "location_header": "https://www.danangbus.vn/",
+          "body_bytes": 148,
+          "hop_started_at": "2026-08-28T15:50:12.192Z",
+          "hop_finished_at": "2026-08-28T15:50:12.294Z"
+        },
+        {
+          "hop_index": 2,
+          "requested_url": "https://www.danangbus.vn/",
+          "status_code": 200,
+          "response_headers": {
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding",
+            "server": "Microsoft-IIS/10.0",
+            "set-cookie": [
+              "ASP.NET_SessionId=5k2sgk15qpvj3veokz1iwyj0; path=/; HttpOnly; SameSite=Lax"
+            ],
+            "x-aspnet-version": "4.0.30319",
+            "x-powered-by-plesk": "PleskWin",
+            "access-control-allow-origin": "https://static.danangbus.vn",
+            "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+            "content-length": "115281"
+          },
+          "location_header": null,
+          "body_bytes": 115281,
+          "hop_started_at": "2026-08-28T15:50:12.294Z",
+          "hop_finished_at": "2026-08-28T15:50:12.608Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:12.192Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:12.652Z",
+      "duration_ms": 459.75,
+      "final_http_status": 200,
+      "final_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding",
+        "server": "Microsoft-IIS/10.0",
+        "set-cookie": [
+          "ASP.NET_SessionId=5k2sgk15qpvj3veokz1iwyj0; path=/; HttpOnly; SameSite=Lax"
+        ],
+        "x-aspnet-version": "4.0.30319",
+        "x-powered-by-plesk": "PleskWin",
+        "access-control-allow-origin": "https://static.danangbus.vn",
+        "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+        "content-length": "115281"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_03_FINAL_2026-08-28T15-50-12-192Z.txt",
+      "pre_normalization_sha256": "8995ec9a9f479c625869bc5b578605f72b279fffbe9f006146a079590d6295e3",
+      "payload_bytes": 115281,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C1_04",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "TNGO Da Nang",
+      "customer_need": "Xe đạp công cộng ĐH Bách Khoa",
+      "initial_url": "https://tngo.vn",
+      "final_url": "https://tngo.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://tngo.vn",
+          "status_code": 200,
+          "response_headers": {
+            "transfer-encoding": "chunked",
+            "content-type": "text/html; charset=utf-8",
+            "server": "Microsoft-IIS/10.0",
+            "strict-transport-security": "max-age=2592000",
+            "x-powered-by": "ASP.NET",
+            "date": "Fri, 28 Aug 2026 15:50:14 GMT"
+          },
+          "location_header": null,
+          "body_bytes": 52968,
+          "hop_started_at": "2026-08-28T15:50:12.655Z",
+          "hop_finished_at": "2026-08-28T15:50:12.841Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:12.654Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:12.884Z",
+      "duration_ms": 229.34,
+      "final_http_status": 200,
+      "final_headers": {
+        "transfer-encoding": "chunked",
+        "content-type": "text/html; charset=utf-8",
+        "server": "Microsoft-IIS/10.0",
+        "strict-transport-security": "max-age=2592000",
+        "x-powered-by": "ASP.NET",
+        "date": "Fri, 28 Aug 2026 15:50:14 GMT"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_04_FINAL_2026-08-28T15-50-12-654Z.txt",
+      "pre_normalization_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "payload_bytes": 52968,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C1_08",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Fahasa",
+      "customer_need": "Sách & văn phòng phẩm Hòa Khánh",
+      "initial_url": "https://fahasa.com",
+      "final_url": "https://www.fahasa.com/",
+      "hop_count": 2,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://fahasa.com",
+          "status_code": 301,
+          "response_headers": {
+            "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "server-timing": "cfEdge;dur=3,cfOrigin;dur=0",
+            "location": "https://www.fahasa.com/",
+            "speculation-rules": "\"/cdn-cgi/speculation\"",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ijLCCSbcDoA%2FHlgqKzx96yXgVoCPhk13GHK5BkJqK0hYmkfkc0R9vjuH%2B04hkw2kqtRTsjizss3mQKJ2Cs4MhUOERhEhglE%2FGGRoqRv1xO%2BXL%2BhcY297RQpbrwI%3D\"}]}",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "server": "cloudflare",
+            "cf-ray": "a324787b0eca74f0-HKG",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "location_header": "https://www.fahasa.com/",
+          "body_bytes": 520,
+          "hop_started_at": "2026-08-28T15:50:12.885Z",
+          "hop_finished_at": "2026-08-28T15:50:13.046Z"
+        },
+        {
+          "hop_index": 2,
+          "requested_url": "https://www.fahasa.com/",
+          "status_code": 200,
+          "response_headers": {
+            "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "server": "cloudflare",
+            "x-frame-options": "SAMEORIGIN",
+            "accept-ranges": "bytes",
+            "age": "18050",
+            "set-cookie": [
+              "frontend=7b3aa9297775477580060d2f5686c8aa; expires=Fri, 04-Sep-2026 15:50:15 UTC; path=/; domain=www.fahasa.com; httponly"
+            ],
+            "access-control-allow-origin": "*",
+            "cf-cache-status": "DYNAMIC",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "speculation-rules": "\"/cdn-cgi/speculation\"",
+            "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=13,cfOrigin;dur=81",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SDhMjlb54gozuagzYk5lOLt9OUZRYaJLIVQPY9gu1Nl4%2FSqvk33dZsUgfCqBuz%2FBJpMHv1AGgwJvCXh7IFo6g8Vk4ynajxvX1pB2%2BESrYuxhU32ORlrV349jRwNO%2FUFV\"}]}",
+            "cf-ray": "a324787c8d0d8497-HKG",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "location_header": null,
+          "body_bytes": 421909,
+          "hop_started_at": "2026-08-28T15:50:13.047Z",
+          "hop_finished_at": "2026-08-28T15:50:13.387Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:12.885Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:13.571Z",
+      "duration_ms": 685.42,
+      "final_http_status": 200,
+      "final_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "server": "cloudflare",
+        "x-frame-options": "SAMEORIGIN",
+        "accept-ranges": "bytes",
+        "age": "18050",
+        "set-cookie": [
+          "frontend=7b3aa9297775477580060d2f5686c8aa; expires=Fri, 04-Sep-2026 15:50:15 UTC; path=/; domain=www.fahasa.com; httponly"
+        ],
+        "access-control-allow-origin": "*",
+        "cf-cache-status": "DYNAMIC",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "speculation-rules": "\"/cdn-cgi/speculation\"",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=13,cfOrigin;dur=81",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SDhMjlb54gozuagzYk5lOLt9OUZRYaJLIVQPY9gu1Nl4%2FSqvk33dZsUgfCqBuz%2FBJpMHv1AGgwJvCXh7IFo6g8Vk4ynajxvX1pB2%2BESrYuxhU32ORlrV349jRwNO%2FUFV\"}]}",
+        "cf-ray": "a324787c8d0d8497-HKG",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_08_FINAL_2026-08-28T15-50-12-885Z.txt",
+      "pre_normalization_sha256": "444b60f62b61b8a520730379fd0d214400cee563dc1c81cb745b292e1a58d1b9",
+      "payload_bytes": 421909,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C2_01",
+      "cluster": "NGU_HANH_SON_AN_THUONG",
+      "brand": "Galaxy Cinema",
+      "customer_need": "Xem phim sinh viên DUE",
+      "initial_url": "https://www.galaxycine.vn",
+      "final_url": "https://www.galaxycine.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://www.galaxycine.vn",
+          "status_code": 200,
+          "response_headers": {
+            "server": "nginx",
+            "date": "Fri, 28 Aug 2026 15:50:16 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "set-cookie": [
+              "x-session-id=web_3613f707ab39a83a7cf0588d37ed339e; Max-Age=86400; Path=/; Secure; SameSite=Strict",
+              "glx_uuid=c4e14b14-efa7-431c-9cad-5361faa21000; path=/;"
+            ],
+            "x-session-id": "web_3613f707ab39a83a7cf0588d37ed339e",
+            "x-powered-by": "Next.js",
+            "etag": "W/\"oaj1ihurg57as\"",
+            "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "x-glx-server": "fe1",
+            "timing-allow-origin": "*",
+            "via": "mly inter",
+            "x-mly-id": "69c674ba828473144a47dc2eb655724a",
+            "accept-ranges": "bytes",
+            "x-cache": "MISS from da001.vn06.veloceed.com:443",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "access-control-allow-methods": "GET, POST, PUT, DELETE, HEAD, OPTIONS, CONNECT,TRACE",
+            "access-control-allow-origin": "*"
+          },
+          "location_header": null,
+          "body_bytes": 105063,
+          "hop_started_at": "2026-08-28T15:50:13.574Z",
+          "hop_finished_at": "2026-08-28T15:50:14.441Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:13.574Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:14.547Z",
+      "duration_ms": 973.36,
+      "final_http_status": 200,
+      "final_headers": {
+        "server": "nginx",
+        "date": "Fri, 28 Aug 2026 15:50:16 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "set-cookie": [
+          "x-session-id=web_3613f707ab39a83a7cf0588d37ed339e; Max-Age=86400; Path=/; Secure; SameSite=Strict",
+          "glx_uuid=c4e14b14-efa7-431c-9cad-5361faa21000; path=/;"
+        ],
+        "x-session-id": "web_3613f707ab39a83a7cf0588d37ed339e",
+        "x-powered-by": "Next.js",
+        "etag": "W/\"oaj1ihurg57as\"",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "vary": "Accept-Encoding",
+        "x-glx-server": "fe1",
+        "timing-allow-origin": "*",
+        "via": "mly inter",
+        "x-mly-id": "69c674ba828473144a47dc2eb655724a",
+        "accept-ranges": "bytes",
+        "x-cache": "MISS from da001.vn06.veloceed.com:443",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, HEAD, OPTIONS, CONNECT,TRACE",
+        "access-control-allow-origin": "*"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C2_01_FINAL_2026-08-28T15-50-13-574Z.txt",
+      "pre_normalization_sha256": "c3c06e22f3f5343dd1dfeb242d2acdbd72d328c20c0fb4b5857027de03ddecd6",
+      "payload_bytes": 105063,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C3_01",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Domino's Pizza",
+      "customer_need": "Bữa ăn nhóm bạn",
+      "initial_url": "https://dominos.vn",
+      "final_url": "https://dominos.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://dominos.vn",
+          "status_code": 200,
+          "response_headers": {
+            "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "51512",
+            "connection": "keep-alive",
+            "x-powered-by": "Next.js",
+            "etag": "\"c938-FariQHQ2O8pf06X4qF5VR8Tcr4A\"",
+            "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding"
+          },
+          "location_header": null,
+          "body_bytes": 51512,
+          "hop_started_at": "2026-08-28T15:50:14.550Z",
+          "hop_finished_at": "2026-08-28T15:50:15.007Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:14.550Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:15.070Z",
+      "duration_ms": 519.99,
+      "final_http_status": 200,
+      "final_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "51512",
+        "connection": "keep-alive",
+        "x-powered-by": "Next.js",
+        "etag": "\"c938-FariQHQ2O8pf06X4qF5VR8Tcr4A\"",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "vary": "Accept-Encoding"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_01_FINAL_2026-08-28T15-50-14-550Z.txt",
+      "pre_normalization_sha256": "9f78d30d6740ee6358f3c6440a9a50d5d89d081f4ebd1401293d2f4ba899ea14",
+      "payload_bytes": 51512,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C3_04",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "CGV Cinemas",
+      "customer_need": "Xem phim cuối tuần",
+      "initial_url": "https://www.cgv.vn",
+      "final_url": "https://www.cgv.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://www.cgv.vn",
+          "status_code": 200,
+          "response_headers": {
+            "content-length": "5366",
+            "pragma": "no-cache",
+            "cache-control": "no-cache",
+            "content-type": "text/html"
+          },
+          "location_header": null,
+          "body_bytes": 5366,
+          "hop_started_at": "2026-08-28T15:50:15.071Z",
+          "hop_finished_at": "2026-08-28T15:50:15.160Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:15.071Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:15.160Z",
+      "duration_ms": 89.18,
+      "final_http_status": 200,
+      "final_headers": {
+        "content-length": "5366",
+        "pragma": "no-cache",
+        "cache-control": "no-cache",
+        "content-type": "text/html"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_04_FINAL_2026-08-28T15-50-15-071Z.txt",
+      "pre_normalization_sha256": "614545d2d5eb8ce4d2446d9856a353fe5d75761908784f7a62291fab11c97f28",
+      "payload_bytes": 5366,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C3_05",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Duong Sat Viet Nam VNR",
+      "customer_need": "Di chuyển tàu hỏa Ga Đà Nẵng",
+      "initial_url": "https://dsvn.vn",
+      "final_url": "https://dsvn.vn",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://dsvn.vn",
+          "status_code": 200,
+          "response_headers": {
+            "server": "nginx/1.8.0",
+            "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+            "content-type": "text/html",
+            "content-length": "27076",
+            "last-modified": "Thu, 20 Aug 2026 09:22:50 GMT",
+            "connection": "keep-alive",
+            "etag": "\"6a86c76a-69c4\"",
+            "accept-ranges": "bytes"
+          },
+          "location_header": null,
+          "body_bytes": 27076,
+          "hop_started_at": "2026-08-28T15:50:15.162Z",
+          "hop_finished_at": "2026-08-28T15:50:15.227Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:15.162Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:15.241Z",
+      "duration_ms": 79.3,
+      "final_http_status": 200,
+      "final_headers": {
+        "server": "nginx/1.8.0",
+        "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+        "content-type": "text/html",
+        "content-length": "27076",
+        "last-modified": "Thu, 20 Aug 2026 09:22:50 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6a86c76a-69c4\"",
+        "accept-ranges": "bytes"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_05_FINAL_2026-08-28T15-50-15-162Z.txt",
+      "pre_normalization_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+      "payload_bytes": 27076,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C4_01",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "GitHub Education",
+      "customer_need": "Bộ công cụ lập trình sinh viên",
+      "initial_url": "https://education.github.com/pack",
+      "final_url": "https://education.github.com/pack",
+      "hop_count": 1,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://education.github.com/pack",
+          "status_code": 200,
+          "response_headers": {
+            "server": "GitHub.com",
+            "date": "Fri, 28 Aug 2026 15:50:20 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "x-frame-options": "DENY",
+            "x-xss-protection": "0",
+            "x-content-type-options": "nosniff",
+            "x-permitted-cross-domain-policies": "none",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "link": "</assets/landing-page-2eb30c7b84352d076192b39c067eb48c7436fe100c70b19f1999e8155a37fb30.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-GFMlX+EM+Mgz364qlp4ZnKd2R9HIHEwO7Op8no8HgtI=; nopush,</assets/pack-page-0cb4d1ef8ec0233217878189a1f065fbfa442b511f7bc07d241ff390052f53d3.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-j25qGCYEoZnoH6QrOYPVxBI9OMFjuAavEmcydKW8C2Y=; nopush,</assets/twitter-id-adbff101354db187731c8d02dd21dac51e5b49e1a0beb3cfa35d55e0e837116b.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-s6U2UGxB/5StNgYl0vAjg2F+mOMqrKse57uxq0sBcN0=; nopush,</assets/social-media-7c4f440ed5a9463b49265cf85f13989ce1787f34f588520e0dca4463545e1325.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-Hz6Y5CnHkqWc2qOceHi9jhVB22TUTl3eZ+OJ7QiBPzs=; nopush",
+            "etag": "W/\"95c2250101860d3f54cba07227806ea3\"",
+            "cache-control": "max-age=0, private, must-revalidate",
+            "content-security-policy": "default-src 'self' dwa5x7aod66zk.cloudfront.net; object-src 'self'; frame-src *.vimeo.com platform.twitter.com connect.facebook.net cdn.usefathom.com *.facebook.com speakerdeck.com *.youtube.com *.youtube-nocookie.com embed.twitch.tv player.twitch.tv; connect-src 'self' blobaccountproduction.blob.core.windows.net *.clearbit.com www.google.com *.githubusercontent.com geoip-js.com *.virtualearth.net *.bing.com *.virtualearth.net api.github.com atlas.microsoft.com collector.githubapp.com; img-src 'self' blob: dwa5x7aod66zk.cloudfront.net data: github.com blobaccountproduction.blob.core.windows.net cdn.usefathom.com *.clearbit.com avatars.githubusercontent.com user-images.githubusercontent.com analytics.twitter.com t.co t.com *.facebook.com *.twitter.com *.youtube.com raw.githubusercontent.com static-cdn.jtvnw.net dl.airtable.com *.bing.com *.virtualearth.net atlas.microsoft.com; font-src 'self' dwa5x7aod66zk.cloudfront.net atlas.microsoft.com; script-src 'self' dwa5x7aod66zk.cloudfront.net www.google.com cdn.usefathom.com api.demandbase.com speakerdeck.com platform.twitter.com connect.facebook.net *.facebook.com *.github.com *.githubassets.com js.maxmind.com static.ads-twitter.com snap.licdn.com geoip-js.com embed.twitch.tv analytics.twitter.com *.bing.com *.virtualearth.net *.jquery.com *.cloudflare.com *.bootstrapcdn.com unpkg.com 'nonce-89Pc+dtkQt0KU1QEMa2JuA=='; style-src 'self' dwa5x7aod66zk.cloudfront.net 'unsafe-inline' www.google.com ajax.googleapis.com *.github.com *.bing.com *.virtualearth.net unpkg.com",
+            "set-cookie": [
+              "_octo=GH1.1.698878331.1787932218; domain=github.com; path=/; expires=Sat, 28 Aug 2027 15:50:18 GMT; SameSite=Lax"
+            ],
+            "x-runtime": "2.097391",
+            "strict-transport-security": "max-age=31536000",
+            "x-github-backend": "Kubernetes",
+            "x-github-request-id": "CC29:257D25:3293F:3BEBB:6A91AE3A",
+            "x-github-edge-region": "iad"
+          },
+          "location_header": null,
+          "body_bytes": 271516,
+          "hop_started_at": "2026-08-28T15:50:15.242Z",
+          "hop_finished_at": "2026-08-28T15:50:18.209Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:15.242Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:20.211Z",
+      "duration_ms": 4968.32,
+      "final_http_status": 200,
+      "final_headers": {
+        "server": "GitHub.com",
+        "date": "Fri, 28 Aug 2026 15:50:20 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "0",
+        "x-content-type-options": "nosniff",
+        "x-permitted-cross-domain-policies": "none",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "link": "</assets/landing-page-2eb30c7b84352d076192b39c067eb48c7436fe100c70b19f1999e8155a37fb30.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-GFMlX+EM+Mgz364qlp4ZnKd2R9HIHEwO7Op8no8HgtI=; nopush,</assets/pack-page-0cb4d1ef8ec0233217878189a1f065fbfa442b511f7bc07d241ff390052f53d3.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-j25qGCYEoZnoH6QrOYPVxBI9OMFjuAavEmcydKW8C2Y=; nopush,</assets/twitter-id-adbff101354db187731c8d02dd21dac51e5b49e1a0beb3cfa35d55e0e837116b.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-s6U2UGxB/5StNgYl0vAjg2F+mOMqrKse57uxq0sBcN0=; nopush,</assets/social-media-7c4f440ed5a9463b49265cf85f13989ce1787f34f588520e0dca4463545e1325.js>; rel=preload; as=script; crossorigin=anonymous; integrity=sha256-Hz6Y5CnHkqWc2qOceHi9jhVB22TUTl3eZ+OJ7QiBPzs=; nopush",
+        "etag": "W/\"95c2250101860d3f54cba07227806ea3\"",
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-security-policy": "default-src 'self' dwa5x7aod66zk.cloudfront.net; object-src 'self'; frame-src *.vimeo.com platform.twitter.com connect.facebook.net cdn.usefathom.com *.facebook.com speakerdeck.com *.youtube.com *.youtube-nocookie.com embed.twitch.tv player.twitch.tv; connect-src 'self' blobaccountproduction.blob.core.windows.net *.clearbit.com www.google.com *.githubusercontent.com geoip-js.com *.virtualearth.net *.bing.com *.virtualearth.net api.github.com atlas.microsoft.com collector.githubapp.com; img-src 'self' blob: dwa5x7aod66zk.cloudfront.net data: github.com blobaccountproduction.blob.core.windows.net cdn.usefathom.com *.clearbit.com avatars.githubusercontent.com user-images.githubusercontent.com analytics.twitter.com t.co t.com *.facebook.com *.twitter.com *.youtube.com raw.githubusercontent.com static-cdn.jtvnw.net dl.airtable.com *.bing.com *.virtualearth.net atlas.microsoft.com; font-src 'self' dwa5x7aod66zk.cloudfront.net atlas.microsoft.com; script-src 'self' dwa5x7aod66zk.cloudfront.net www.google.com cdn.usefathom.com api.demandbase.com speakerdeck.com platform.twitter.com connect.facebook.net *.facebook.com *.github.com *.githubassets.com js.maxmind.com static.ads-twitter.com snap.licdn.com geoip-js.com embed.twitch.tv analytics.twitter.com *.bing.com *.virtualearth.net *.jquery.com *.cloudflare.com *.bootstrapcdn.com unpkg.com 'nonce-89Pc+dtkQt0KU1QEMa2JuA=='; style-src 'self' dwa5x7aod66zk.cloudfront.net 'unsafe-inline' www.google.com ajax.googleapis.com *.github.com *.bing.com *.virtualearth.net unpkg.com",
+        "set-cookie": [
+          "_octo=GH1.1.698878331.1787932218; domain=github.com; path=/; expires=Sat, 28 Aug 2027 15:50:18 GMT; SameSite=Lax"
+        ],
+        "x-runtime": "2.097391",
+        "strict-transport-security": "max-age=31536000",
+        "x-github-backend": "Kubernetes",
+        "x-github-request-id": "CC29:257D25:3293F:3BEBB:6A91AE3A",
+        "x-github-edge-region": "iad"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C4_01_FINAL_2026-08-28T15-50-15-242Z.txt",
+      "pre_normalization_sha256": "95c2250101860d3f54cba07227806ea3bd992c7d80e6c2d43e797197b5d3c47b",
+      "payload_bytes": 271516,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    },
+    {
+      "target_id": "TGT_C4_02",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "Notion Education",
+      "customer_need": "Gói quản lý học tập sinh viên",
+      "initial_url": "https://www.notion.so/product/notion-for-education",
+      "final_url": "https://www.notion.com/product/notion-for-education",
+      "hop_count": 2,
+      "redirect_chain": [
+        {
+          "hop_index": 1,
+          "requested_url": "https://www.notion.so/product/notion-for-education",
+          "status_code": 301,
+          "response_headers": {
+            "date": "Fri, 28 Aug 2026 15:50:23 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "158",
+            "connection": "keep-alive",
+            "location": "https://www.notion.com/product/notion-for-education",
+            "x-notion-request-id": "9dae3168-eedd-4f85-acb8-29b2fff9ca1a",
+            "server-timing": "r;dur=694",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+            "document-policy": "include-js-call-stacks-in-crash-reports",
+            "content-security-policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gist.github.com https://apis.google.com https://cdn.amplitude.com https://api.amplitude.com https://dev-embed.notion.co https://embed.notion.co https://static.zdassets.com https://api.smooch.io\t https://solve-widget.forethought.ai https://decagon.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://embed.typeform.com https://admin.typeform.com https://ucv.bynder.com https://js.sentry-cdn.com https://js.chilipiper.com https://platform.twitter.com https://cdn.syndication.twimg.com https://accounts.google.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://app.cal.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://cdn.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://d34r8q7sht0t9k.cloudfront.net https://transcend-cdn.com https://wcs.naver.com https://wcs.naver.net https://ssl.pstatic.net https://cdn01.boxcdn.net https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://cdn.sprig.com https://assets.customer.io https://track.customer.io https://code.gist.build https://www.google.com https://www.gstatic.com https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://maps.googleapis.com https://pagead2.googlesyndication.com https://x.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzrcdn.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://static.hotjar.com https://script.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://*.vector.co https://d-code.liadm.com/ https://*.usbrowserspeed.com https://*.jam.dev;connect-src 'self' data: blob: https://img.notionusercontent.com https://artifact.notionusercontent.com https://notion.so/eap https://cdn.amplitude.com https://api.amplitude.com https://app.notion.com notion://app.notion.com https://api.embed.ly https://dev-embed.notion.co https://embed.notion.co https://ekr.zdassets.com https://ekr.zendesk.com\t https://makenotion.zendesk.com\t https://api.smooch.io\t wss://api.smooch.io\t https://api.forethought.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://m.stripe.com https://library.notion.com https://d8ejoa1fys2rk.cloudfront.net https://cdn.contentful.com https://preview.contentful.com https://images.ctfassets.net https://tracking.chilipiper.com https://api.chilipiper.com https://api.unsplash.com https://api.giphy.com/ https://giphy-analytics.giphy.com/ https://media0.giphy.com/ https://media1.giphy.com/ https://media2.giphy.com/ https://media3.giphy.com/ https://media4.giphy.com/ https://media5.giphy.com/ https://media6.giphy.com/ https://media7.giphy.com/ https://media8.giphy.com/ https://media9.giphy.com/ https://media10.giphy.com/ https://boards-api.greenhouse.io https://accounts.google.com https://oauth2.googleapis.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://www.googletagmanager.com https://analytics.google.com https://ad.doubleclick.net/ccm/s/collect https://www.googleadservices.com https://googleads.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com https://www.google-analytics.com https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://api.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://verifi.podscribe.com https://verifi.pdscrb.com https://pixel.tapad.com https://ipv4.podscribe.com https://ipv4.pdscrb.com https://transcend-cdn.com https://telemetry.transcend.io https://wcs.naver.com https://pgncd.notion.com https://api.statsig.com https://statsigapi.net https://exp.notion.com https://us1.gb-ingest.com https://in.getmilana.ai https://api.box.com https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://*.mux.com https://api.sprig.com https://storage.googleapis.com https://cdn.sprig.com https://cdn.userleap.com https://assets.customer.io https://track.customer.io https://*.api.gist.build https://*.cloud.gist.build https://www.google.com https://hcaptcha.com https://*.hcaptcha.com https://tiles.versatiles.org https://maps.googleapis.com https://places.googleapis.com https://pagead2.googlesyndication.com https://google.com https://x.clearbitjs.com https://app.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://*.mktoresp.com https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://grsm.io https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzr.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://api.mail.dev.notion.so/graphql https://api.mail.notion.so/graphql https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://api.vector.co/ wss://msgstore.www.notion.so wss://msgstore-001.www.notion.so wss://msgstore-002.www.notion.so wss://msgstore.app.notion.com wss://msgstore-001.app.notion.com wss://msgstore-002.app.notion.com https://msgstore.www.notion.so https://msgstore-001.www.notion.so https://msgstore-002.www.notion.so https://msgstore.app.notion.com https://msgstore-001.app.notion.com https://msgstore-002.app.notion.com https://audioprocessor.www.notion.so wss://audioprocessor.www.notion.so https://audioprocessor.app.notion.com wss://audioprocessor.app.notion.com ws://localhost:* ws://127.0.0.1:* https://realtime.app.notion.com wss://realtime.app.notion.com https://prod-files-secure.s3.us-west-2.amazonaws.com https://prod-files-secure-euc1.s3.eu-central-1.amazonaws.com https://prod-files-secure-apne2.s3.ap-northeast-2.amazonaws.com https://prod-files-secure-apne1.s3.ap-northeast-1.amazonaws.com https://prod-notion-temporary-files-euc1.s3.eu-central-1.amazonaws.com https://prod-notion-temporary-files-apne2.s3.ap-northeast-2.amazonaws.com https://prod-notion-temporary-files-apne1.s3.ap-northeast-1.amazonaws.com https://notion-emojis.s3-us-west-2.amazonaws.com https://s3-us-west-2.amazonaws.com https://s3.us-west-2.amazonaws.com https://notion-production-snapshots-2.s3.us-west-2.amazonaws.com https://local-workers-code-bundles.s3.us-west-2.amazonaws.com https://dev-space-apne1-0001-workers-code-bundles.s3.ap-northeast-1.amazonaws.com https://dev-space-apne2-0001-workers-code-bundles.s3.ap-northeast-2.amazonaws.com https://dev-space-euc1-0001-workers-code-bundles.s3.eu-central-1.amazonaws.com https://dev-space-usw2-0001-workers-code-bundles.s3.us-west-2.amazonaws.com https://dev-space-usw2-0002-workers-code-bundles.s3.us-west-2.amazonaws.com https://stg-space-usw2-0001-workers-code-bundles.s3.us-west-2.amazonaws.com https://prod-space-apne1-0001-workers-code-bundles.s3.ap-northeast-1.amazonaws.com https://prod-space-apne2-0001-workers-code-bundles.s3.ap-northeast-2.amazonaws.com https://prod-space-euc1-0001-workers-code-bundles.s3.eu-central-1.amazonaws.com https://prod-space-usw2-0001-workers-code-bundles.s3.us-west-2.amazonaws.com https://prod-space-usw2-0002-workers-code-bundles.s3.us-west-2.amazonaws.com https://prod-space-usw2-0003-workers-code-bundles.s3.us-west-2.amazonaws.com https://prod-space-usw2-0004-workers-code-bundles.s3.us-west-2.amazonaws.com https://file.notion.so notion://file.notion.so https://file.notion.com notion://file.notion.com https://www.notion.com https://calendar.notion.so;font-src 'self' data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://d8ejoa1fys2rk.cloudfront.net https://cdn01.boxcdn.net https://fonts.gstatic.com;img-src 'self' data: blob: https: https://img.notionusercontent.com https://mail-resource-proxy.mail.notion.com https://app.notion.com notion://app.notion.com https://images.ctfassets.net https://platform.twitter.com https://syndication.twitter.com https://pbs.twimg.com https://ton.twimg.com https://region1.google-analytics.com https://region1.analytics.google.com https://*.mux.com https://track.customer.io https://bzr.openai.com https://file.notion.so notion://file.notion.so https://file.notion.com notion://file.notion.com;style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://github.githubassets.com https://d8ejoa1fys2rk.cloudfront.net https://js.chilipiper.com https://platform.twitter.com https://ton.twimg.com https://accounts.google.com https://transcend-cdn.com https://cdn01.boxcdn.net https://code.gist.build https://hcaptcha.com https://*.hcaptcha.com https://fonts.googleapis.com;frame-src 'self' https: http: https://artifact.notionusercontent.com https://app.notion.com notion://app.notion.com https://accounts.google.com https://renderer.gist.build https://code.gist.build https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://notion.notion.site https://notion-templates.notion.site https://identity.notion.so https://identity.notion.com https://*.jam.dev;frame-ancestors 'self' https://app.notion.com notion://app.notion.com notion://www.notion.so https://app.contentful.com https://mail.notion.so https://mail.notion.com;worker-src 'self' blob:;child-src 'self' blob:;media-src blob: https: http: https://*.mux.com https://file.notion.so notion://file.notion.so https://file.notion.com notion://file.notion.com",
+            "x-dns-prefetch-control": "off",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "x-download-options": "noopen",
+            "x-content-type-options": "nosniff",
+            "x-permitted-cross-domain-policies": "none",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "x-xss-protection": "0",
+            "vary": "Accept, Accept-Encoding",
+            "cf-cache-status": "DYNAMIC",
+            "set-cookie": [
+              "notion_browser_id=5d0b0dc1-f398-4767-95a5-3c3806baac4b; Domain=www.notion.so; Path=/; Expires=Sat, 28 Aug 2027 15:50:23 GMT; Secure",
+              "device_id=3cad872b-594c-813e-b278-003b290d9be0; Domain=www.notion.so; Path=/; Expires=Sat, 28 Aug 2027 15:50:23 GMT; HttpOnly; Secure",
+              "notion_check_cookie_consent=false; Domain=www.notion.so; Path=/; Expires=Sat, 29 Aug 2026 15:50:23 GMT; Secure",
+              "__cf_bm=SV7NZ3OE65XWX741V6bj4OfDGdlr.dy8gJhAccIa.eA-1787932222.912617-1.0.1.1-4EsqlKqkx9P2zdgtjxJ2hoOcZRA9sXemW_S_ynDfrvp4Y5O92VHtcOizKJJCQAVl8zsBlIGqk9u0CrHoq.Pb2sciUR_OkXrY9GsyI71T8zInvtsUqBpvAnoDvX3jjvpa; HttpOnly; SameSite=None; Secure; Path=/; Domain=notion.so; Expires=Fri, 28 Aug 2026 16:20:23 GMT"
+            ],
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nLP81oPflpQMDN%2Bw6%2Fgq%2F7PfCBx%2B7JLHy5Ch%2FMMvZxRcPqhloZ4xfeGPQXJ%2BQ47lVXI6whmdiY72z2rB7AYpU6kULhRIafgS4Tsg9FS14IjqHMJqhI9EZuSuyNa2aZk%3D\"}]}",
+            "server": "cloudflare",
+            "cf-ray": "a32478a939d7260c-SIN",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "location_header": "https://www.notion.com/product/notion-for-education",
+          "body_bytes": 158,
+          "hop_started_at": "2026-08-28T15:50:20.213Z",
+          "hop_finished_at": "2026-08-28T15:50:20.655Z"
+        },
+        {
+          "hop_index": 2,
+          "requested_url": "https://www.notion.com/product/notion-for-education",
+          "status_code": 200,
+          "response_headers": {
+            "date": "Fri, 28 Aug 2026 15:50:23 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cf-ray": "a32478abf83c3daa-SIN",
+            "cf-cache-status": "DYNAMIC",
+            "age": "1180",
+            "cache-control": "public, max-age=0",
+            "content-language": "en-US",
+            "server": "cloudflare",
+            "x-vercel-id": "sin1::pdx1::xf4lx-1787932223390-e9d26705ea36",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "accept-encoding",
+            "content-security-policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gist.github.com https://apis.google.com https://cdn.amplitude.com https://api.amplitude.com https://dev-embed.notion.co https://embed.notion.co https://static.zdassets.com https://api.smooch.io\t https://solve-widget.forethought.ai https://decagon.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://embed.typeform.com https://admin.typeform.com https://ucv.bynder.com https://js.sentry-cdn.com https://js.chilipiper.com https://platform.twitter.com https://cdn.syndication.twimg.com https://accounts.google.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://app.cal.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://cdn.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://d34r8q7sht0t9k.cloudfront.net https://transcend-cdn.com https://wcs.naver.com https://wcs.naver.net https://ssl.pstatic.net https://cdn01.boxcdn.net https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://cdn.sprig.com https://assets.customer.io https://track.customer.io https://code.gist.build https://www.google.com https://www.gstatic.com https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://maps.googleapis.com https://pagead2.googlesyndication.com https://x.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzrcdn.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://static.hotjar.com https://script.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://*.vector.co https://d-code.liadm.com/ https://*.usbrowserspeed.com;connect-src 'self' data: blob: https://img.notionusercontent.com https://artifact.notionusercontent.com https://notion.so/eap https://cdn.amplitude.com https://api.amplitude.com https://app.notion.com notion://app.notion.com https://api.embed.ly https://dev-embed.notion.co https://embed.notion.co https://ekr.zdassets.com https://ekr.zendesk.com\t https://makenotion.zendesk.com\t https://api.smooch.io\t wss://api.smooch.io\t https://api.forethought.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://m.stripe.com https://library.notion.com https://d8ejoa1fys2rk.cloudfront.net https://cdn.contentful.com https://preview.contentful.com https://images.ctfassets.net https://tracking.chilipiper.com https://api.chilipiper.com https://api.unsplash.com https://api.giphy.com/ https://giphy-analytics.giphy.com/ https://media0.giphy.com/ https://media1.giphy.com/ https://media2.giphy.com/ https://media3.giphy.com/ https://media4.giphy.com/ https://media5.giphy.com/ https://media6.giphy.com/ https://media7.giphy.com/ https://media8.giphy.com/ https://media9.giphy.com/ https://media10.giphy.com/ https://boards-api.greenhouse.io https://accounts.google.com https://oauth2.googleapis.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://www.googletagmanager.com https://analytics.google.com https://ad.doubleclick.net/ccm/s/collect https://www.googleadservices.com https://googleads.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com https://www.google-analytics.com https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://api.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://verifi.podscribe.com https://verifi.pdscrb.com https://pixel.tapad.com https://ipv4.podscribe.com https://ipv4.pdscrb.com https://transcend-cdn.com https://telemetry.transcend.io https://wcs.naver.com https://pgncd.notion.com https://api.statsig.com https://statsigapi.net https://exp.notion.com https://us1.gb-ingest.com https://in.getmilana.ai https://api.box.com https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://*.mux.com https://api.sprig.com https://storage.googleapis.com https://cdn.sprig.com https://cdn.userleap.com https://assets.customer.io https://track.customer.io https://*.api.gist.build https://*.cloud.gist.build https://www.google.com https://hcaptcha.com https://*.hcaptcha.com https://tiles.versatiles.org https://maps.googleapis.com https://places.googleapis.com https://pagead2.googlesyndication.com https://google.com https://x.clearbitjs.com https://app.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://*.mktoresp.com https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://grsm.io https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzr.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://api.mail.dev.notion.so/graphql https://api.mail.notion.so/graphql https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://api.vector.co/;font-src 'self' data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://d8ejoa1fys2rk.cloudfront.net https://cdn01.boxcdn.net https://fonts.gstatic.com;img-src 'self' data: blob: https: https://img.notionusercontent.com https://mail-resource-proxy.mail.notion.com https://app.notion.com notion://app.notion.com https://images.ctfassets.net https://platform.twitter.com https://syndication.twitter.com https://pbs.twimg.com https://ton.twimg.com https://region1.google-analytics.com https://region1.analytics.google.com https://*.mux.com https://track.customer.io https://bzr.openai.com;style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://github.githubassets.com https://d8ejoa1fys2rk.cloudfront.net https://js.chilipiper.com https://platform.twitter.com https://ton.twimg.com https://accounts.google.com https://transcend-cdn.com https://cdn01.boxcdn.net https://code.gist.build https://hcaptcha.com https://*.hcaptcha.com https://fonts.googleapis.com;frame-src 'self' https: http: https://artifact.notionusercontent.com https://app.notion.com notion://app.notion.com https://accounts.google.com https://renderer.gist.build https://code.gist.build https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://notion.notion.site https://notion-templates.notion.site;frame-ancestors 'self' https://app.notion.com notion://app.notion.com notion://www.notion.so https://app.contentful.com;worker-src 'self' blob:;child-src 'self' blob:;media-src blob: https: http: https://*.mux.com",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "x-device-class": "windows",
+            "x-matched-path": "/en-us/__mdpb/[...pathname]",
+            "x-notion-global-experiments": "",
+            "x-powered-by": "Next.js",
+            "x-vercel-cache": "HIT",
+            "set-cookie": [
+              "notion_browser_id=95b3c441-79d0-43c1-85fd-4ab99be67352; Path=/; Expires=Sat, 28 Aug 2027 15:50:23 GMT; Domain=.notion.com",
+              "notion_check_cookie_consent=false; Path=/; Expires=Sat, 29 Aug 2026 15:50:23 GMT; Domain=.notion.com",
+              "__cf_bm=tf9qGFFdp2J6DOH1fEBG4iJ7EBcI.9Xb1XKIxfgVwSI-1787932223.3591866-1.0.1.1-1kBNlezK7dwr8MpGhkIP.6hBOh76T95y06ckBLxiKl_u1yy6iyx07WoaIQPAdoQ2DKVrD1Q9L5qCh4g10tpy50pvl27TOMuHdCjGjJdCgdij4s1T7aO.UFhTR2yHFtfP; HttpOnly; SameSite=None; Secure; Path=/; Domain=notion.com; Expires=Fri, 28 Aug 2026 16:20:23 GMT"
+            ],
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "location_header": null,
+          "body_bytes": 188523,
+          "hop_started_at": "2026-08-28T15:50:20.655Z",
+          "hop_finished_at": "2026-08-28T15:50:21.294Z"
+        }
+      ],
+      "capture_started_at_iso": "2026-08-28T15:50:20.213Z",
+      "capture_finished_at_iso": "2026-08-28T15:50:21.445Z",
+      "duration_ms": 1232.29,
+      "final_http_status": 200,
+      "final_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:23 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "cf-ray": "a32478abf83c3daa-SIN",
+        "cf-cache-status": "DYNAMIC",
+        "age": "1180",
+        "cache-control": "public, max-age=0",
+        "content-language": "en-US",
+        "server": "cloudflare",
+        "x-vercel-id": "sin1::pdx1::xf4lx-1787932223390-e9d26705ea36",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "accept-encoding",
+        "content-security-policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gist.github.com https://apis.google.com https://cdn.amplitude.com https://api.amplitude.com https://dev-embed.notion.co https://embed.notion.co https://static.zdassets.com https://api.smooch.io\t https://solve-widget.forethought.ai https://decagon.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://embed.typeform.com https://admin.typeform.com https://ucv.bynder.com https://js.sentry-cdn.com https://js.chilipiper.com https://platform.twitter.com https://cdn.syndication.twimg.com https://accounts.google.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://app.cal.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://cdn.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://d34r8q7sht0t9k.cloudfront.net https://transcend-cdn.com https://wcs.naver.com https://wcs.naver.net https://ssl.pstatic.net https://cdn01.boxcdn.net https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://cdn.sprig.com https://assets.customer.io https://track.customer.io https://code.gist.build https://www.google.com https://www.gstatic.com https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://maps.googleapis.com https://pagead2.googlesyndication.com https://x.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzrcdn.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://static.hotjar.com https://script.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://*.vector.co https://d-code.liadm.com/ https://*.usbrowserspeed.com;connect-src 'self' data: blob: https://img.notionusercontent.com https://artifact.notionusercontent.com https://notion.so/eap https://cdn.amplitude.com https://api.amplitude.com https://app.notion.com notion://app.notion.com https://api.embed.ly https://dev-embed.notion.co https://embed.notion.co https://ekr.zdassets.com https://ekr.zendesk.com\t https://makenotion.zendesk.com\t https://api.smooch.io\t wss://api.smooch.io\t https://api.forethought.ai https://http-inputs-notion.splunkcloud.com https://*.sentry.io https://checkout.stripe.com https://js.stripe.com https://m.stripe.com https://library.notion.com https://d8ejoa1fys2rk.cloudfront.net https://cdn.contentful.com https://preview.contentful.com https://images.ctfassets.net https://tracking.chilipiper.com https://api.chilipiper.com https://api.unsplash.com https://api.giphy.com/ https://giphy-analytics.giphy.com/ https://media0.giphy.com/ https://media1.giphy.com/ https://media2.giphy.com/ https://media3.giphy.com/ https://media4.giphy.com/ https://media5.giphy.com/ https://media6.giphy.com/ https://media7.giphy.com/ https://media8.giphy.com/ https://media9.giphy.com/ https://media10.giphy.com/ https://boards-api.greenhouse.io https://accounts.google.com https://oauth2.googleapis.com https://vimeo.com https://player.vimeo.com https://youtube.com https://www.youtube.com https://www.googletagmanager.com https://analytics.google.com https://ad.doubleclick.net/ccm/s/collect https://www.googleadservices.com https://googleads.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com https://www.google-analytics.com https://cdn.metadata.io https://platformapi.metadata.io https://api-gw.metadata.io https://api.cr-relay.com https://d2hrivdxn8ekm8.cloudfront.net https://d1lu3pmaz2ilpx.cloudfront.net https://dvqigh9b7wa32.cloudfront.net https://d330aiyvva2oww.cloudfront.net https://verifi.podscribe.com https://verifi.pdscrb.com https://pixel.tapad.com https://ipv4.podscribe.com https://ipv4.pdscrb.com https://transcend-cdn.com https://telemetry.transcend.io https://wcs.naver.com https://pgncd.notion.com https://api.statsig.com https://statsigapi.net https://exp.notion.com https://us1.gb-ingest.com https://in.getmilana.ai https://api.box.com https://api.tailorhq.ai https://app.tailorhq.ai https://cdn.tailorhq.ai https://cached-api.tailorhq.ai https://*.mux.com https://api.sprig.com https://storage.googleapis.com https://cdn.sprig.com https://cdn.userleap.com https://assets.customer.io https://track.customer.io https://*.api.gist.build https://*.cloud.gist.build https://www.google.com https://hcaptcha.com https://*.hcaptcha.com https://tiles.versatiles.org https://maps.googleapis.com https://places.googleapis.com https://pagead2.googlesyndication.com https://google.com https://x.clearbitjs.com https://app.clearbitjs.com https://connect.facebook.net https://snap.licdn.com/ https://px.ads.linkedin.com/ https://munchkin.marketo.net https://*.mktoresp.com https://info.notion.com https://bat.bing.com https://s.yimg.jp https://www.youtube-nocookie.com https://www.youtube.com/iframe_api https://js.partnerstack.com https://grsm.io https://partnerlinks.io https://analytics.tiktok.com/ https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live https://www.redditstatic.com https://static.ads-twitter.com https://insights.metadata.io https://bzr.openai.com https://acdn.adnxs.com/dmp/up/pixie.js https://a.usbrowserspeed.com https://api.mail.dev.notion.so/graphql https://api.mail.notion.so/graphql https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://cloud.memsource.com https://editor.memsource.com https://api.vector.co/;font-src 'self' data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://d8ejoa1fys2rk.cloudfront.net https://cdn01.boxcdn.net https://fonts.gstatic.com;img-src 'self' data: blob: https: https://img.notionusercontent.com https://mail-resource-proxy.mail.notion.com https://app.notion.com notion://app.notion.com https://images.ctfassets.net https://platform.twitter.com https://syndication.twitter.com https://pbs.twimg.com https://ton.twimg.com https://region1.google-analytics.com https://region1.analytics.google.com https://*.mux.com https://track.customer.io https://bzr.openai.com;style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://github.githubassets.com https://d8ejoa1fys2rk.cloudfront.net https://js.chilipiper.com https://platform.twitter.com https://ton.twimg.com https://accounts.google.com https://transcend-cdn.com https://cdn01.boxcdn.net https://code.gist.build https://hcaptcha.com https://*.hcaptcha.com https://fonts.googleapis.com;frame-src 'self' https: http: https://artifact.notionusercontent.com https://app.notion.com notion://app.notion.com https://accounts.google.com https://renderer.gist.build https://code.gist.build https://challenges.cloudflare.com https://hcaptcha.com https://*.hcaptcha.com https://notion.notion.site https://notion-templates.notion.site;frame-ancestors 'self' https://app.notion.com notion://app.notion.com notion://www.notion.so https://app.contentful.com;worker-src 'self' blob:;child-src 'self' blob:;media-src blob: https: http: https://*.mux.com",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-device-class": "windows",
+        "x-matched-path": "/en-us/__mdpb/[...pathname]",
+        "x-notion-global-experiments": "",
+        "x-powered-by": "Next.js",
+        "x-vercel-cache": "HIT",
+        "set-cookie": [
+          "notion_browser_id=95b3c441-79d0-43c1-85fd-4ab99be67352; Path=/; Expires=Sat, 28 Aug 2027 15:50:23 GMT; Domain=.notion.com",
+          "notion_check_cookie_consent=false; Path=/; Expires=Sat, 29 Aug 2026 15:50:23 GMT; Domain=.notion.com",
+          "__cf_bm=tf9qGFFdp2J6DOH1fEBG4iJ7EBcI.9Xb1XKIxfgVwSI-1787932223.3591866-1.0.1.1-1kBNlezK7dwr8MpGhkIP.6hBOh76T95y06ckBLxiKl_u1yy6iyx07WoaIQPAdoQ2DKVrD1Q9L5qCh4g10tpy50pvl27TOMuHdCjGjJdCgdij4s1T7aO.UFhTR2yHFtfP; HttpOnly; SameSite=None; Secure; Path=/; Domain=notion.com; Expires=Fri, 28 Aug 2026 16:20:23 GMT"
+        ],
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C4_02_FINAL_2026-08-28T15-50-20-213Z.txt",
+      "pre_normalization_sha256": "00426771d38323bf1d9b6888b9b53440718ad5e4fe62a08f386fe28bc540c212",
+      "payload_bytes": 188523,
+      "capture_success": true,
+      "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+      "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+    }
+  ]
+}

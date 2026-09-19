@@ -1,0 +1,53 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "manifest_id": "QUARANTINE_MANIFEST_BATCH_073B",
+  "work_order": "JAYT-073B-INCIDENT",
+  "quarantine_reason": "073B REJECTED: Agent-created CSV was not a human-provided dashboard export; G4 day coverage was synthetic without valid_to/terms evidence.",
+  "quarantined_at": "2026-08-24T08:41:26.619Z",
+  "snapshot_byte_for_byte_persisted": true,
+  "total_files_quarantined": 6,
+  "items": [
+    {
+      "filename": "shopee_affiliate_product_feed_export_raw.csv",
+      "type": "SYNTHESIZED_CSV_FILE",
+      "size_bytes": 5138,
+      "sha256": "0cf99b5d993fef07dfafcdede65e46f9004daaf62ba449e0bf1a0b70ae9f2e0c",
+      "quarantine_reason": "Agent-created CSV transcribed from text/screenshot instead of raw human-provided file export."
+    },
+    {
+      "filename": "process_shopee_product_feed_batch_073b.js",
+      "type": "SYNTHETIC_PROCESSOR_SCRIPT",
+      "size_bytes": 12801,
+      "sha256": "134b5f811662160fc20d4fffaa605a6abe097d496c05a8c5144f09a72a7f4ca0",
+      "quarantine_reason": "Hardcoded 7-day schedule and synthesized G4 threshold claims without valid_to/terms."
+    },
+    {
+      "filename": "SHOPEE_AFFILIATE_BATCH_REVIEW_PACK_073B.md",
+      "type": "INVALID_REVIEW_PACK_MD",
+      "size_bytes": 9064,
+      "sha256": "0efdcbb10b66de095533b826c1c60442f27f37e4e1e467af412ff733223277d2",
+      "quarantine_reason": "Review pack generated from agent-created CSV and synthetic 7-day schedule."
+    },
+    {
+      "filename": "SHOPEE_AFFILIATE_BATCH_REVIEW_PACK_073B.json",
+      "type": "INVALID_REVIEW_PACK_JSON",
+      "size_bytes": 21733,
+      "sha256": "0967e86810b8f5d6e76fe2d636cdaa5bb67f5b482b6e4ebb07f0637c26cba6e9",
+      "quarantine_reason": "JSON review pack generated from agent-created CSV."
+    },
+    {
+      "filename": "run_shopee_product_feed_1787560615273_receipt_shopee_product_feed_batch_073b.json",
+      "type": "SYNTHETIC_RAW_EVIDENCE",
+      "size_bytes": 903,
+      "sha256": "e07e1b541cfe5a739d30420425047ca23bff74311fd6f1faf46a1fae9355f490",
+      "quarantine_reason": "Raw payload and receipt minted from agent-created CSV."
+    },
+    {
+      "filename": "run_shopee_product_feed_1787560615273_shopee_product_feed_batch_raw.json",
+      "type": "SYNTHETIC_RAW_EVIDENCE",
+      "size_bytes": 9707,
+      "sha256": "e9e4171f7f2b71b73cb1f27c94ce0aca3656acaecbbea02a5384649bd57ba22e",
+      "quarantine_reason": "Raw payload and receipt minted from agent-created CSV."
+    }
+  ]
+}

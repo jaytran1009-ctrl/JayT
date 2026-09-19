@@ -1,0 +1,55 @@
+{
+  "release_id": "JAYT-245-SECTION-EY",
+  "version": "v3.478.0-staging.ey",
+  "directive": "JAYT-245 Section EY (Lines 3848-3877)",
+  "timestamp": "2026-08-31T04:16:22.566Z",
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "fake_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "t2_badge_count": 0,
+    "t3_badge_count": 0,
+    "affiliate_tracking_count": 0,
+    "voucher_verified_t1_count": 0
+  },
+  "test_results": {
+    "live_http_assertion_suite": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "browser_e2e_suite": {
+      "total": 27,
+      "passed": 27,
+      "failed": 0
+    },
+    "viewports_tested": [
+      "Desktop 1440x900",
+      "Tablet 768x1024",
+      "Mobile 390x844"
+    ]
+  },
+  "hashes": {
+    "sot_js_sha256": "ef588e163f073aa23acb338e72414330b359805d073642f216ec2df4220f22e8",
+    "sot_html_sha256": "329a5a877d8ca3cb5f4b6789b9a135221a260666ef73ceba47a5deb27317a9fd",
+    "deploy_js_sha256": "ef588e163f073aa23acb338e72414330b359805d073642f216ec2df4220f22e8",
+    "deploy_html_sha256": "329a5a877d8ca3cb5f4b6789b9a135221a260666ef73ceba47a5deb27317a9fd",
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "functional_features": {
+    "calculator_local_first": true,
+    "wallet_3_lane": true,
+    "journey_filter_chips": 20,
+    "time_filter_chips": 4,
+    "campus_zone_chips": 6,
+    "discovery_items_total": 50,
+    "discovery_items_public_eligible": 0,
+    "wallet_entries_total": 13,
+    "wallet_entries_verified": 0
+  },
+  "production_status": "NOT_GO_LIVE",
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "ceo_action_required": "Browser check staging at http://127.0.0.1:4173/ and verify gate assertions independently."
+}

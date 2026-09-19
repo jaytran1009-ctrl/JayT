@@ -1,0 +1,23 @@
+{
+  "work_order_id": "J363_DE_AI_R1_VISUAL_REMEDIATION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "STAGING_VISUAL_REMEDIATION_REQUIRED",
+  "supersedes": "Visual acceptance only; it does not revoke J363_DE_AI_OVERHAUL source or asset-parity evidence.",
+  "authorization": {
+    "staging_source_mutation": true,
+    "staging_preview_deployment": true,
+    "production_deployment": false,
+    "affiliate_activation": false,
+    "factual_approval_mutation": false
+  },
+  "required_actions": [
+    "Correct header/content collision at 1440px, 768px and 390px using a shared header-height layout contract. Verify initial load at scrollY=0, keyboard focus and browser zoom 200%.",
+    "Remove blank visual controls. Each visible interactive control needs an accessible name and a visible purpose; decorative icons must not create a bordered, focusable or clickable square.",
+    "Complete the consumer-language pass on rendered public strings. Do not use technical approval labels such as DEAL XÁC MINH on the new surface. Preserve data fields for governance internally, but render user-facing category/benefit language.",
+    "For every rendered home catalog card, emit or link an existing stable evidence ID. If no evidence record is present, render a neutral pending state and suppress commercial/actionable wording. Do not manufacture, rewrite or promote evidence.",
+    "Correct the QA scanner so only actual interactive controls (button, input, select, textarea, anchor[href], or explicit role with keyboard support) count toward touch-target compliance. Record the raw list of controls and failures.",
+    "Create a new protected Preview, retain the current receipt as historical evidence, and write a new visual QA receipt. Include full-page and viewport-at-scrollY=0 screenshots at 1440, 768 and 390px; each must show header and first content section together. Include one screenshot of the fixed header after a scroll interaction.",
+    "Preserve canonical-to-mirror parity and leave J363 factual verified count, affiliate state and staging deals_feed.json unchanged."
+  ],
+  "acceptance": "CEO will review the protected Preview and screenshots after the defects are corrected. Technical, visual, factual-content and release decisions remain separate."
+}

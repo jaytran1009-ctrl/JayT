@@ -1,0 +1,30 @@
+{
+  "workOrderId": "WORK_ORDER_J417_OPC_AUTONOMOUS_PIPELINE",
+  "directiveCode": "CHAIRMAN_DIRECTIVE_20260917_ACTIVATE_OPC_AUTONOMOUS_PIPELINE_AND_GO_LIVE",
+  "authority": "Hội đồng Quản trị Tập đoàn JayT Corp & Ban Điều hành CEO Codex",
+  "timestampUtc": "2026-09-17T08:53:00.000Z",
+  "mandates": [
+    {
+      "pillar": "PILLAR_1_AUTOMATED_SENTINEL",
+      "target": "Periodic 10-15 minute liveness scan across Shopee, Lazada, TikTok Shop. Auto-lock 404 links with [🔒 Chưa Có Link Chính Hãng].",
+      "engine": "scripts/realtime_pdp_sentinel.cjs",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_2_TELEGRAM_CONTROL_PLANE_AND_ZERO_CODE_INGESTION",
+      "target": "Telegram Bot Control Plane (@affos_deal_hot_bot, TELEGRAM_BOT_TOKEN, TELEGRAM_CEO_CHAT_ID). Auto-parse URLs, auto-wrap partner IDs (Shopee 17372870594, Lazada 262501305, TikTok Shop VNVNLCB6LYL3), compute dynamic price ranges without touching central code.",
+      "engine": "scripts/telegram_bot_control_plane.cjs",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_3_WEBVIEW_BREAKER",
+      "target": "Detect Messenger/Zalo In-App Browser, show sticky top banner and 2-step breakout modal with Safari/Chrome guidance and Android Intent.",
+      "status": "PRESERVED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_4_COMMERCIAL_SAFETY_AND_DUAL_KEY_SEALS",
+      "target": "Maintain CONFIG.affiliate_enabled: false fail-closed on Canonical Production. Maintain 24/24 static pipeline seal, 5/5 W8 toolchain seal, 100% WS1-WS2 bit parity.",
+      "status": "VERIFIED_100_PERCENT"
+    }
+  ]
+}

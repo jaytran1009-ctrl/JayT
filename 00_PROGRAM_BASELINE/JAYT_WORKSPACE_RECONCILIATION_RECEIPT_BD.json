@@ -1,0 +1,78 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BD_20260829",
+  "schema_version": "3.1.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BD)",
+  "verified_at": "2026-08-29T05:46:16.100Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BC.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_CANONICAL_LEDGER_BD",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bd": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "live_browser_availability_verification": {
+    "target_url": "https://jayt-storefront-staging-bd.vercel.app",
+    "version": "v3.422.3-staging.bd",
+    "http_status_code": 200,
+    "rendered_body_text_length": 10739,
+    "rendered_cards_count": 33,
+    "brand_present": true,
+    "hero_present": true,
+    "gateways_present": true,
+    "verified_deal_card_present": true,
+    "neutral_pending_card_present": true,
+    "horizontal_overflow_desktop": false,
+    "horizontal_overflow_mobile": false,
+    "screenshots": {
+      "desktop": "07_QUALITY_ASSURANCE/screenshots/staging_bd_desktop.png",
+      "mobile": "07_QUALITY_ASSURANCE/screenshots/staging_bd_mobile_390px.png"
+    }
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "939bdea8eb99be5532b4ff3ec2679af6b1b464607f901c25c6c0501c74950940",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "7e271dd1ffbe7e3b596ce6f9012e3e73fad9b8c7eff5fbb61517b418fd9e7c87",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "accaea43e2f7cf939c7595d67d0669105a0e0993a4d1be7152376f2294a7b2a3"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bd.js",
+      "description": "Storefront BD candidate with robust DOM mounting, field-level render gate and canonical ledger binding",
+      "sha256": "2057ea2c0e4610081ff2d71f198fa991b3563496bfd9a0ff515f20a1f3171ed3"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+      "description": "Single machine-readable true field ledger for 33 public items and 1 quarantined deal",
+      "sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34223_staging_bd.json",
+      "description": "Release receipt for Staging BD deployment with live availability verified",
+      "sha256": "1bdef57dafc5f94e41328797a6f8b410e94eebb267a71e9e86d88ded0a20747f"
+    }
+  ],
+  "verifier_audit_passed": true
+}

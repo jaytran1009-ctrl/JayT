@@ -1,0 +1,35 @@
+{
+  "receipt_id": "JAYT_COHORT_15_AUTOMATION_REGISTRATION_RECEIPT",
+  "governing_directive": "JAYT-245 Section JAYT-258-CORRECTION-4 (Lines 5193-5206)",
+  "registered_at_utc": "2026-09-01T14:43:16.872Z",
+  "operational_writer_model": "SOLE_TEMPORARY_AUDITABLE_WATCHDOG_WRITER",
+  "windows_scheduled_task_status": {
+    "task_name": "JayT_Cohort15_Operational_Closure",
+    "status": "DELETED_PER_CORRECTION_4_TO_PREVENT_DUAL_WRITER",
+    "schtasks_query_exit_code": 1,
+    "schtasks_query_result": "ERROR: The system cannot find the file specified."
+  },
+  "sole_temporary_watchdog_writer": {
+    "daemon_script": "06_TRUST_AND_EVIDENCE/watchdog_cohort_15_sla_monitor.js",
+    "log_file_path": "06_TRUST_AND_EVIDENCE/jayt_cohort_15_watchdog.log",
+    "process_pid": 15032,
+    "polling_interval_ms": 30000,
+    "max_heartbeat_staleness_threshold_ms": 90000,
+    "operational_runner_path": "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+    "operational_runner_sha256": "e464941ad542633a71275f384cf278c8c67cb2449da0c1e28bb4d76bd93910d1",
+    "current_lifecycle_state": "RUNNING_PRE_SLA_POLLING",
+    "last_dry_run_verdict": "SLA_NOT_YET_REACHED",
+    "unreached_candidates_count": 15,
+    "active_operational_ledger_written": false
+  },
+  "read_only_verification_contract": {
+    "dual_writer_eliminated": true,
+    "runner_accepts_time_override": false,
+    "runner_is_idempotent": true,
+    "operational_closure_ledger_absent_pre_sla": true,
+    "commercial_locks_intact": true,
+    "production_locked": true,
+    "production_version": "v3.419.0",
+    "p0_eq_status": "OPEN"
+  }
+}

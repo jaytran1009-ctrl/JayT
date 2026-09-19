@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JayT Voucher 1-Tap Copy Isolated Test Fixture (QA ONLY)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 24px;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .fixture-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .btn-copy-code {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .btn-copy-code.copied {
+      background: #059669 !important;
+      color: #ffffff !important;
+    }
+    .status-announcer {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-top: 12px;
+      min-height: 20px;
+    }
+    .code-display {
+      font-family: monospace;
+      background: #f1f5f9;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .fallback-box {
+      margin-top: 14px;
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixture-container">
+    <h2>🧪 Isolated Test Fixture: Voucher 1-Tap Copy Behavior</h2>
+    <p style="font-size: 0.85rem; color: #64748b;">
+      Tệp kiểm thử cô lập phục vụ Audit JAYT-352 Module C. Loại trừ tuyệt đối khỏi candidate release.
+    </p>
+
+    <!-- Card 1: Offer with public redeemable code -->
+    <article class="test-voucher-card" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin: 16px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span style="background: #f3e8ff; color: #581c87; padding: 3px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 700;">
+          🟣 Claim qua App
+        </span>
+        <span style="font-size: 0.75rem; color: #64748b; font-family: monospace;">TEST_FIXTURE_CODE_01</span>
+      </div>
+      <h3 style="margin: 0 0 10px 0; font-size: 1.05rem;">Ưu đãi mẫu có mã công khai: Giảm 20K vé 2D</h3>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <div>Mã ưu đãi: <code class="code-display" id="test-code-val">JAYT2026TEST</code></div>
+        <button type="button" class="btn-copy-code" id="btn-test-copy" data-code="JAYT2026TEST" aria-label="Sao chép mã JAYT2026TEST">
+          Sao chép mã
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 2: Code-less card (Proof that no copy button renders) -->
+    <article class="test-voucher-card" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin: 16px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span style="background: #d1fae5; color: #065f46; padding: 3px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 700;">
+          🟢 Ưu đãi quầy
+        </span>
+        <span style="font-size: 0.75rem; color: #64748b; font-family: monospace;">TEST_FIXTURE_NO_CODE_02</span>
+      </div>
+      <h3 style="margin: 0 0 10px 0; font-size: 1.05rem;">Ưu đãi mẫu không có mã (Chỉ nhận tại quầy)</h3>
+      <div id="no-code-action-section">
+        <span>🏷️ <strong>Cách nhận:</strong> Xuất trình CCCD trực tiếp tại quầy vé</span>
+      </div>
+    </article>
+
+    <div id="fixture-live-status" role="status" aria-live="polite" class="status-announcer"></div>
+
+    <div id="fixture-fallback-box" class="fallback-box">
+      <p style="font-size: 0.85rem; color: #b45309; font-weight: 700; margin: 0 0 6px 0;">
+        ⚠️ Clipboard bị từ chối: Bôi đen mã bên dưới để sao chép:
+      </p>
+      <input type="text" id="fixture-fallback-input" style="width: 100%; padding: 6px; font-family: monospace;" readonly value="JAYT2026TEST">
+    </div>
+
+    <div style="margin-top: 20px; padding-top: 14px; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #64748b;">
+      <div>Lần bấm gần nhất: <span id="stat-click-count">0</span></div>
+      <div>Thời gian nhãn "Đã chép" hiển thị: <span id="stat-copied-duration">0</span> ms</div>
+      <div>Hỗ trợ vibration: <span id="stat-vibrate-called">false</span></div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      let clickCount = 0;
+      let copiedStartTime = 0;
+      let lastCopiedDuration = 0;
+      let vibrateCalled = false;
+
+      const btn = document.getElementById('btn-test-copy');
+      const statusEl = document.getElementById('fixture-live-status');
+      const fallbackBox = document.getElementById('fixture-fallback-box');
+      const fallbackInput = document.getElementById('fixture-fallback-input');
+
+      btn?.addEventListener('click', async () => {
+        clickCount++;
+        document.getElementById('stat-click-count').textContent = String(clickCount);
+        const code = btn.getAttribute('data-code');
+
+        try {
+          if (window.__forceClipboardFail) {
+            throw new Error('Forced clipboard permission denial');
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(code);
+          } else {
+            throw new Error('Clipboard API unavailable');
+          }
+
+          try {
+            if (navigator.vibrate) {
+              navigator.vibrate(50);
+              vibrateCalled = true;
+              document.getElementById('stat-vibrate-called').textContent = 'true';
+            }
+          } catch(e) {}
+
+          copiedStartTime = performance.now();
+          btn.textContent = '✓ Đã chép';
+          btn.classList.add('copied');
+          statusEl.textContent = "Đã sao chép mã ưu đãi \"" + code + "\" vào khay nhớ tạm.";
+
+          setTimeout(() => {
+            lastCopiedDuration = Math.round(performance.now() - copiedStartTime);
+            document.getElementById('stat-copied-duration').textContent = String(lastCopiedDuration);
+            btn.textContent = 'Sao chép mã';
+            btn.classList.remove('copied');
+          }, 2000);
+
+        } catch (err) {
+          btn.textContent = 'Lỗi sao chép';
+          statusEl.textContent = 'Không thể tự động sao chép mã. Vui lòng sao chép thủ công.';
+          if (fallbackBox) {
+            fallbackBox.style.display = 'block';
+            fallbackInput.select();
+          }
+          setTimeout(() => {
+            btn.textContent = 'Sao chép mã';
+          }, 2000);
+        }
+      });
+
+      window.__getFixtureStats = function() {
+        return {
+          clickCount,
+          lastCopiedDuration,
+          vibrateCalled,
+          buttonText: btn.textContent,
+          hasCopiedClass: btn.classList.contains('copied'),
+          statusText: statusEl.textContent
+        };
+      };
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:19:11.322Z",
+  "target_id": "TARGET_102_DOMINOS_STORES",
+  "venue_name": "Domino's Cửa Hàng",
+  "source_url": "https://dominos.vn/cua-hang",
+  "district": "UNSPECIFIED",
+  "sector": "FNB_FASTFOOD",
+  "http_response": {
+    "status": 200,
+    "url": "https://dominos.vn/store-locations",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.html",
+      "size_bytes": 124566,
+      "sha256": "ce19104a41bb3f997f4c2a587d1a9b5176d74cfd45c373202fa378d0c9665fef"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.txt",
+      "size_bytes": 696,
+      "sha256": "7eb0cb171f5d5bf4e180f89e37e4a6c30aef1c5d467fda274f86b24459c9712f"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.png",
+      "size_bytes": 421472,
+      "sha256": "49ea17cca4aa0042fa8354ba71ce62ab36a85fa43f1428462f62c99f0ec287e7"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

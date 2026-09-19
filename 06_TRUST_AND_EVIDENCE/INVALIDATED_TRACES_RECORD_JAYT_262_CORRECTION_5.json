@@ -1,0 +1,15 @@
+{
+  "invalidation_record_id": "INVALIDATED_TRACES_RECORD_JAYT_262_CORRECTION_5",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-5 (Lines 5705-5718)",
+  "invalidated_at_utc": "2026-09-02T08:40:34.787Z",
+  "invalidation_reasons": [
+    "Ephemeral trace port 4178 reported contains_approved_pilot=false and zero_dom_leakage=false.",
+    "Loader guard denylist was improperly weakened to filter JSON extensions instead of full hash locking.",
+    "Evidence contamination detected: byte-identical SHA-256 collision between MB02_04_TNGO and Cohort 15 COHORT_EZ_AM_15."
+  ],
+  "status": "INVALIDATED_SUPERSEDED_BY_CORRECTION_5",
+  "invalidated_files": [
+    "06_TRUST_AND_EVIDENCE/JAYT_EPHEMERAL_BUILD_TO_SERVE_CHAIN_TRACE.json",
+    "06_TRUST_AND_EVIDENCE/JAYT_RIGOROUS_REGRESSION_TEST_MATRIX.json"
+  ]
+}

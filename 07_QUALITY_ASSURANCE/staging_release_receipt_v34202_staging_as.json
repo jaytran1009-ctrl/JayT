@@ -1,0 +1,64 @@
+{
+  "receipt_id": "RECEIPT_STAGING_v34202_STAGING_AS_20260829",
+  "environment": "STAGING_REVIEW_AS_ONLY",
+  "staging_url": "https://jayt-storefront-staging-as.vercel.app",
+  "staging_version": "v3.420.2-staging.as",
+  "deployed_at": "2026-08-28T18:53:29.676Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AS)",
+  "comparison_baselines": {
+    "production_locked_rollback": {
+      "url": "https://deploy-ten-xi-48.vercel.app",
+      "version": "v3.419.0",
+      "receipt": "07_QUALITY_ASSURANCE/production_release_receipt_v3419.json",
+      "status": "LOCKED_ROLLBACK_BASELINE"
+    },
+    "staging_aq_historical_review": {
+      "url": "https://jayt-storefront-staging.vercel.app",
+      "version": "v3.420.0-staging.ak",
+      "status": "HISTORICAL_REVIEW_BASELINE"
+    },
+    "staging_ar_visual_revision": {
+      "url": "https://jayt-storefront-staging-ar.vercel.app",
+      "version": "v3.420.1-staging.ar",
+      "status": "UI_POLISH_REVISION_BASELINE"
+    }
+  },
+  "staging_assets": [
+    {
+      "relative_path": "staging_deploy_as/jayt_storefront_staging_as.js",
+      "sha256": "83a3bffcbaf268f0abe6e75bbe6f1af6e7ab7af4d7970c82eebfe35440dc577b",
+      "size_bytes": 74635
+    },
+    {
+      "relative_path": "staging_deploy_as/index.html",
+      "sha256": "7db5b9cdeea8d67b075bf319f6e991324fbe7ac10439ba1ae1bff5cad02e2155",
+      "size_bytes": 767
+    },
+    {
+      "relative_path": "staging_deploy_as/styles.css",
+      "sha256": "d6a27de540ac51a2fd366dbff53845ba62a87e726f2b20293a9ce03754851424",
+      "size_bytes": 18910
+    }
+  ],
+  "tier_breakdown_actual": {
+    "tier_1_verified_deals": 6,
+    "tier_2_official_programs": 9,
+    "tier_3_verified_facilities": 6,
+    "tier_4_radar_tracking": 13,
+    "total_public_inventory": 34
+  },
+  "needs_coverage": {
+    "food_and_beverage": 7,
+    "entertainment_and_cinema": 7,
+    "transport_and_mobility": 3,
+    "learning_and_tools": 10,
+    "civic_and_healthcare": 3,
+    "essential_shopping": 4
+  },
+  "zero_unproven_claims_verified": true,
+  "zero_repeated_generic_copy": true,
+  "affiliate_status": "PORTAL_ACCESS_NOT_VERIFIED",
+  "quarantine_isolation_verified": true,
+  "zero_secret_verified": true,
+  "council_pack": "01_EXECUTIVE_COUNCIL/COUNCIL_DECISION_PACK_AS_MULTI_TIER_SUPPLY_20260829.md"
+}

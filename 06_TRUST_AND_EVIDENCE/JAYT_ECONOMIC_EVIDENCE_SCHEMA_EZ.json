@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Economic Offer Evidence Schema (Section EZ)",
+  "description": "Mandatory schema for any economic claim, price assertion, or voucher verification. Missing ANY required field strictly locks the record to public_eligible=false and Tier=T4_RADAR.",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "product_service_name",
+    "merchant_or_operator",
+    "canonical_official_url",
+    "list_price_observation",
+    "shipping_observation",
+    "discount_observation",
+    "total_cost_formula",
+    "source_receipt",
+    "capture_timestamp",
+    "recheck_timestamp",
+    "history_observations",
+    "reviewer"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string",
+      "pattern": "^(OFFER|DEAL|PROG|RADAR)_[A-Z0-9_]+$"
+    },
+    "product_service_name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "merchant_or_operator": {
+      "type": "string",
+      "minLength": 2
+    },
+    "canonical_official_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "list_price_observation": {
+      "type": "object",
+      "required": [
+        "amount",
+        "currency",
+        "observed_at",
+        "receipt_artifact_id"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "enum": [
+            "VND",
+            "USD"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "receipt_artifact_id": {
+          "type": "string"
+        }
+      }
+    },
+    "shipping_observation": {
+      "type": "object",
+      "required": [
+        "amount",
+        "conditions",
+        "observed_at",
+        "receipt_artifact_id"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "conditions": {
+          "type": "string"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "receipt_artifact_id": {
+          "type": "string"
+        }
+      }
+    },
+    "discount_observation": {
+      "type": "object",
+      "required": [
+        "code_or_rule",
+        "value_type",
+        "value_amount",
+        "eligibility_conditions",
+        "expiry_timestamp"
+      ],
+      "properties": {
+        "code_or_rule": {
+          "type": "string"
+        },
+        "value_type": {
+          "type": "string",
+          "enum": [
+            "PERCENTAGE",
+            "FIXED_AMOUNT",
+            "CUSTOM_RULE"
+          ]
+        },
+        "value_amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "eligibility_conditions": {
+          "type": "string"
+        },
+        "min_order_value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_discount_amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "expiry_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "total_cost_formula": {
+      "type": "string",
+      "description": "Exact reproducible mathematical formula: final_total = list_price + shipping - discount"
+    },
+    "source_receipt": {
+      "type": "object",
+      "required": [
+        "raw_artifact_id",
+        "sha256",
+        "http_status",
+        "response_timestamp",
+        "headers_digest"
+      ],
+      "properties": {
+        "raw_artifact_id": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "http_status": {
+          "type": "integer",
+          "enum": [
+            200
+          ]
+        },
+        "response_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "headers_digest": {
+          "type": "string"
+        }
+      }
+    },
+    "capture_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recheck_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "history_observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "observed_at",
+          "list_price",
+          "discount_value",
+          "receipt_sha256"
+        ],
+        "properties": {
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "list_price": {
+            "type": "number"
+          },
+          "discount_value": {
+            "type": "number"
+          },
+          "receipt_sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "required": [
+        "sign_off_id",
+        "council_member_role",
+        "decision_timestamp",
+        "approval_status"
+      ],
+      "properties": {
+        "sign_off_id": {
+          "type": "string"
+        },
+        "council_member_role": {
+          "type": "string"
+        },
+        "decision_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approval_status": {
+          "type": "string",
+          "enum": [
+            "APPROVED_BY_CEO",
+            "REJECTED",
+            "QUARANTINED",
+            "PENDING_REVIEW"
+          ]
+        }
+      }
+    }
+  }
+}

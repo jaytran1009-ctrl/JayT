@@ -1,0 +1,39 @@
+{
+  "capture_run_id": "RUN_20260827_123206_4d8222",
+  "receipt_id": "RECEIPT_LEAF_SPOTIFY_STUDENT_f5e63468c481_1787808975464",
+  "brand_id": "SPOTIFY_STUDENT",
+  "brand_name": "Spotify Vietnam Student",
+  "cohort": "COHORT_B_OFFERS",
+  "target_type": "HIGH_SIGNAL_DANANG_OFFER_LEAF",
+  "requested_url": "https://www.spotify.com/vn-vi/student/verification/",
+  "final_url": "https://accounts.spotify.com/vi/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+  "navigation_response_observed": true,
+  "http_status": 200,
+  "redirect_chain": [
+    {
+      "url": "https://www.spotify.com/vn-vi/student/verification/",
+      "http_status": 302
+    },
+    {
+      "url": "https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+      "http_status": 307
+    },
+    {
+      "url": "https://accounts.spotify.com/vi/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+      "http_status": 200
+    }
+  ],
+  "captured_at": "2026-08-27T05:36:15.213Z",
+  "browser_version": "Chrome/152.0.7977.42",
+  "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "network_error": "Navigation timeout of 15000 ms exceeded",
+  "fresh_hashes": {
+    "html_sha256": "509f59eada2b36e57a4e347dd0538dd622b388857b6b933aa4991efdf6b9b2f7",
+    "text_sha256": "5784574f04642f6de7bc22ac6b8a9d44b517e82e239f0f83698af051df28484b",
+    "screenshot_sha256": "a453df70536d11bb6ce752a4bd3f99ae5daded73da2fcdaa3cc633c401cbc8be"
+  }
+}

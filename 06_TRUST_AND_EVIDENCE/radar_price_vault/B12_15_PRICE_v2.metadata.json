@@ -1,0 +1,58 @@
+{
+  "sku_id": "B12_15",
+  "version": "v2",
+  "product_name_observed": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+  "retailer": "Phi Long Technology (Đà Nẵng)",
+  "retailer_url": "https://philong.com.vn/hdd-usb-kingston-64gb-datatraveler-exodia-dtx64gb-usb-3.2.html",
+  "provenance": {
+    "raw_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.raw.html",
+    "headers_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.headers.json",
+    "raw_bytes": 329524,
+    "raw_sha256": "108a8554e25c93ac97ccb7da249a019da6069ce17df63626a72cd5843b9ed993",
+    "http_status": 200,
+    "request_started_at_utc": "2026-09-06T05:15:53.494Z",
+    "request_ended_at_utc": "2026-09-06T05:15:53.969Z",
+    "server_response_date": "Sun, 06 Sep 2026 05:15:55 GMT",
+    "server": "nginx",
+    "content_type": "text/html; charset=UTF-8",
+    "provenance_complete": true
+  },
+  "byte_spans_observed": {
+    "title_tag": {
+      "tag": "<title>",
+      "span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "tag_byte_offset": 206,
+      "content_byte_offset": 213
+    },
+    "h1_tag": {
+      "tag": "<h1>",
+      "span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "tag_byte_offset": 241182,
+      "content_byte_offset": 241186
+    },
+    "part_number": {
+      "span": "DTX/64GB",
+      "offset_in_title_byte": 255,
+      "offset_in_h1_byte": 241228,
+      "verified_in_h1_and_title": true
+    },
+    "present_price": {
+      "tag": "<span class=\"p-price\">",
+      "span": "290.000đ",
+      "tag_byte_offset": 243472,
+      "value_byte_offset": 243519,
+      "parsed_value": "290.000 VNĐ"
+    },
+    "showroom_address": {
+      "span": "152 Hàm Nghi, Thanh Khê, TP. Đà Nẵng",
+      "byte_offset": 249504
+    }
+  },
+  "unverified_fields": {
+    "vat_status": "UNVERIFIED (Payload không có nhãn văn bản xác nhận \"đã bao gồm VAT\")",
+    "ham_nghi_warehouse_stock": "UNVERIFIED (Địa chỉ showroom 152 Hàm Nghi không chứng minh tồn kho tại kho Hàm Nghi)"
+  },
+  "public_approved": false,
+  "render_permitted": false,
+  "verdict": "INTERNAL_REVIEW__PROVENANCE_PASS_CONTENT_UNVERIFIED_FIELDS_HELD"
+}

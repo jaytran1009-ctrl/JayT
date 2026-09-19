@@ -1,0 +1,35 @@
+{
+  "target_id": "TARGET_087A_147",
+  "brand": "Domino's Pizza",
+  "sector": "FNB_FASTFOOD",
+  "requested_url": "https://dominos.vn/blogs",
+  "final_url": "https://dominos.vn/blogs",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:23:42.847Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+    "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+    "literal_href": "/blogs",
+    "link_offset": 26182,
+    "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+    "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 26182 trong parent DOM"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "0fe290a4da878aa1124334218ed69c9e7f0dbcc9b1e0762202b244285c635b13",
+      "size": 706147
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "bc29c08a0b77330111d003435a53e895412ca385b00b3e0ddbe003e4bbdb3399",
+      "size": 64988
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "accb15cc3b818df1507f62578a8d4ba08b7fce1a560d4d96c45242cede520a42",
+      "size": 1627
+    }
+  }
+}

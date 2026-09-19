@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "functions": {
+    "api/affiliate/inspect.js": {
+      "regions": ["sin1"]
+    },
+    "api/resolve-link.js": {
+      "regions": ["sin1"],
+      "maxDuration": 10
+    },
+    "api/affiliate-webhook.js": {
+      "regions": ["sin1"],
+      "maxDuration": 10
+    }
+  },
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(sw.js|index.html|jayt_apex_interface.js|styles.css|published_manifest.json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

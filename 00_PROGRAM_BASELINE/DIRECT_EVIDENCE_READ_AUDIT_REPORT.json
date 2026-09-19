@@ -1,0 +1,20 @@
+{
+  "report_id": "DIRECT_EVIDENCE_READ_AUDIT_REPORT",
+  "governing_directive": "JAYT-245 Section JAYT-260-CORRECTION-5 (Lines 5504-5517)",
+  "generated_at_utc": "2026-09-03T06:03:45.857Z",
+  "total_runtime_files_scanned": 994,
+  "compliant_gateway_integrations": [
+    "00_PROGRAM_BASELINE/verify_ast_direct_evidence_reads.js",
+    "00_PROGRAM_BASELINE/verify_heuristic_direct_evidence_reads.js",
+    "03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+    "03_SOURCE_OF_TRUTH/jayt_catalog_render_entrypoint.js",
+    "03_SOURCE_OF_TRUTH/jayt_dynamic_catalog_renderer.js",
+    "06_TRUST_AND_EVIDENCE/jayt_intake_admission_entrypoint.js",
+    "06_TRUST_AND_EVIDENCE/run_batch_02_intake_worker.js",
+    "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+    "07_QUALITY_ASSURANCE/jayt_qa_evidence_loader_entrypoint.js"
+  ],
+  "violations_count": 0,
+  "violations": [],
+  "verdict": "PASS_ZERO_DIRECT_EVIDENCE_READS"
+}

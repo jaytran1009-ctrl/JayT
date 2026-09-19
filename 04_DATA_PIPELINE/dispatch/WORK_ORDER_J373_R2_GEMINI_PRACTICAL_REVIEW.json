@@ -1,0 +1,26 @@
+{
+  "id": "WORK_ORDER_J373_R2_GEMINI_PRACTICAL_REVIEW",
+  "authority": "JAYT-373 CEO R2",
+  "status": "COMPLETED",
+  "candidate": {
+    "version": "v3.437.0-j373-r1",
+    "staging_url": "http://127.0.0.1:4176",
+    "storefront_sha256": "354f11de35259360cda77608804982ab5908d12a34468b2e733eaa4484cf958d"
+  },
+  "review_scenarios": [
+    "At-counter: find a branch, inspect three steps and ensure no unverified payment discount is presented as fact.",
+    "Table: three people, individual/shared items and an odd fee; edit quantity and participants; confirm exact VND conservation and QR stays hidden until recipient confirmation.",
+    "Nearby: manual campus origin, 500m list and denied GPS; ensure distance language is radius only and unverified utilities remain UNKNOWN."
+  ],
+  "required_findings": [
+    "Record observed PASS/FAIL for the concrete UI interactions, console errors and mobile 390px behavior.",
+    "Record physical QR scanning as PASS/FAIL/NOT_TESTED with device/app and test receipt; do not infer it from CRC validation.",
+    "Do not grant production approval; Gemini result is evidence for Chairman consideration only."
+  ],
+  "production_deployment_authorized": false,
+  "production_alias_mutation_authorized": false,
+  "affiliate_enabled": false,
+  "deliverable": "01_EXECUTIVE_COUNCIL/JAYT_373_GEMINI_PRACTICAL_REVIEW_RESULT.md",
+  "completed_at_utc": "2026-09-10T09:14:00.646Z",
+  "review_finding_summary": "All 3 practical review scenarios evaluated PASS on staging :4176. Physical QR banking app scanning explicitly recorded as NOT_TESTED. No production authorization granted; review result submitted for Chairman consideration."
+}

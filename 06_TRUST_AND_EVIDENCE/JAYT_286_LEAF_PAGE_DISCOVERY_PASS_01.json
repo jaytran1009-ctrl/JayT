@@ -1,0 +1,47 @@
+{
+  "report_id": "JAYT_286_LEAF_PAGE_DISCOVERY_PASS_01",
+  "issued_at_utc": "2026-09-04T00:00:00.000Z",
+  "scope": "Static discovery only. This report grants neither raw capture nor public rendering.",
+  "method": "Official-source search; each candidate still requires operator-verified raw bytes, metadata, SHA-256, UTF-8 offset validation and CEO item approval.",
+  "findings": [
+    {
+      "target_id": "BATCH03_HK_01",
+      "state": "AWAITING_TOPIC_MATCHED_CURRENT_LEAF_PAGE",
+      "reason": "A current DUT page was found, but it concerns a scholarship rather than the learning-space utility originally proposed; no substitution is made in this pass."
+    },
+    { "target_id": "BATCH03_HK_02", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official R16A leaf page with a direct supporting span found in pass 01." },
+    { "target_id": "BATCH03_HK_03", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official Bàu Tràm public-utility leaf page found in pass 01." },
+    { "target_id": "BATCH03_HK_05", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official public drinking-water-station leaf page found in pass 01." },
+    { "target_id": "BATCH03_HK_06", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official youth-innovation-club leaf page found in pass 01." },
+    { "target_id": "BATCH03_AT_01", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "The found An Thượng street-market sources are archive material, not a current operational notice." },
+    {
+      "target_id": "BATCH03_AT_02",
+      "state": "OFFICIAL_CURRENT_SOURCE_CANDIDATE__AWAITING_OPERATOR_RAW",
+      "candidate_url": "https://danang.gov.vn/vi/w/dam-bao-an-toan-cho-nguoi-dan-va-du-khach-khi-tam-bien-tai-cac-bai-bien-cua-thanh-pho-i",
+      "published_context": "2026 municipal beach-safety notice",
+      "supporting_topic": "The city states that beach-rescue staffing was increased and directs visitors to the official lifeguard-duty timetable.",
+      "capture_authorized": false,
+      "public_approved": false
+    },
+    { "target_id": "BATCH03_AT_03", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official community-space leaf page found in pass 01." },
+    { "target_id": "BATCH03_AT_04", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official community-recycling leaf page found in pass 01." },
+    { "target_id": "BATCH03_AT_05", "state": "AWAITING_CURRENT_OFFICIAL_LEAF_PAGE", "reason": "No current official coastal green-transport leaf page found in pass 01." }
+  ],
+  "expired_replacement_candidates": [
+    {
+      "retired_target": "BATCH03_HK_04",
+      "candidate_url": "https://dut.udn.vn/TTHLTT/Thongbao/id/12046",
+      "subject": "Thông báo chương trình học bổng Đinh Thiện Lý đối với sinh viên năm cuối năm học 2026-2027",
+      "state": "OFFICIAL_CANDIDATE__APPLICATION_WINDOW_REQUIRES_RAW_VERIFICATION",
+      "public_approved": false
+    },
+    {
+      "retired_target": "BATCH03_HC_07",
+      "state": "AWAITING_CURRENT_OFFICIAL_WEEKEND_SCHEDULE",
+      "reason": "The located official Dragon Bridge schedule result is from 2020; it is not eligible as a current replacement."
+    }
+  ],
+  "capture_authorized_count": 0,
+  "public_approved_count": 0,
+  "prohibitions": ["no feed mutation", "no affiliate", "no production deployment", "no public render"]
+}

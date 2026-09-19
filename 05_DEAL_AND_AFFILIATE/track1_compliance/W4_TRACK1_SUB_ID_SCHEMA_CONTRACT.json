@@ -1,0 +1,27 @@
+{
+  "contract_id": "W4_TRACK1_SUB_ID_SCHEMA_CONTRACT",
+  "status": "CONTRACT_ONLY__RUNTIME_DISABLED_PENDING_PROVIDER_AUTHORIZATION",
+  "router": "dispatchSmartAffiliate(providerKey)",
+  "parameter_schema": {
+    "sub1": {"semantic": "campus_code", "allowed_values": ["dut", "due", "dtu", "ued"], "runtime_enabled": false},
+    "sub2": {"semantic": "cluster_group", "allowed_values": ["hoa_khanh", "ngu_hanh_son", "hai_chau"], "runtime_enabled": false},
+    "sub3": {"semantic": "epoch_seconds", "generation_rule": "only after an explicit user click and only after provider authorization", "runtime_enabled": false}
+  },
+  "disclosure": {
+    "candidate_text": "#JayTAffiliate — Nếu liên kết tiếp thị được kích hoạt sau khi có phê duyệt, JayT sẽ công bố rõ ràng. Hãy kiểm tra giá và điều kiện trực tiếp tại đối tác.",
+    "public_display": false,
+    "forbidden_claims": ["guaranteed lowest price", "commission claim before authorization", "automatic discount", "hidden tracking"]
+  },
+  "activation_requirements": [
+    "written provider authorization for JayT",
+    "provider-approved destination allowlist and parameter schema",
+    "privacy and consumer-disclosure approval",
+    "separate CEO technical acceptance"
+  ],
+  "runtime_state": {
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "redirect_enabled": false,
+    "sub_id_insertion_enabled": false
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "manifest_id": "STORE_PHOTO_RIGHTS_AND_TRUTH_RESOLUTION_107",
+  "version": "1.0.0",
+  "generated_at": "2026-08-25T17:58:00+07:00",
+  "directive": "JAYT-107-STORE-PHOTO-TRUTH-AND-RIGHTS-RESOLUTION",
+  "governance_policy": {
+    "mandatory_four_part_truth_test": [
+      "1. media_original_url: URL media gốc trực tiếp từ hạ tầng CDN/website của thương hiệu",
+      "2. file_sha256: Tệp ảnh gốc vật lý trên đĩa kèm mã băm SHA-256 xác thực",
+      "3. facility_attribution_match: Trang nguồn chính thức phải ghi nhận tường minh đúng tên chi nhánh & địa chỉ cơ sở tại Đà Nẵng (cấm tự suy diễn banner/trang chủ thành ảnh chi nhánh)",
+      "4. rights_status == DISPLAY_PERMISSION_CONFIRMED: Quyền sao chép và hiển thị lại trên JayT phải được xác nhận minh bạch từ merchant, media kit công khai cho phép, hoặc giấy phép thỏa thuận"
+    ],
+    "fail_closed_rule": "Nếu thiếu bất kỳ 1 trong 4 điều kiện trên: KHÔNG host và KHÔNG render ảnh trên JayT; bắt buộc sử dụng Monogram thương hiệu chính hãng và nút 'Xem không gian tại kênh chính thức ↗'.",
+    "historical_106_crop_status": "Toàn bộ 6 ảnh crop HTML 106 được chuyển trạng thái thành OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY; không đủ tư cách làm ảnh thực tế chi nhánh và bị gỡ 100% khỏi giao diện.",
+    "ai_image_strict_ban": "Tuyệt đối cấm sử dụng ảnh AI để mô tả các chi nhánh/quán thật."
+  },
+  "summary_metrics": {
+    "total_cobalt_venues": 18,
+    "venues_with_confirmed_display_rights": 0,
+    "venues_using_fallback_monograms_and_outbound_links": 18,
+    "ai_store_photos_count": 0,
+    "crop_screenshots_hosted": 0
+  },
+  "venues_audit": [
+    {
+      "venue_id": "VLOC_01_METIZ_HELIO",
+      "brand_name": "Metiz Cinema",
+      "branch_name": "Metiz Cinema Đà Nẵng",
+      "district": "Hải Châu",
+      "street_address": "Số 01 Đường 2 Tháng 9, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+      "source_url": "https://metiz.vn/",
+      "facility_attribution_match": "METIZ_HOME_PAGE_NO_DIRECT_FACILITY_PHOTO",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_02_PHELA_BACH_DANG",
+      "brand_name": "Phê La",
+      "branch_name": "Phê La - Bạch Đằng",
+      "district": "Hải Châu",
+      "street_address": "Số 36 - 38 đường Bạch Đằng, Hải Châu, Đà Nẵng",
+      "source_url": "https://phela.vn/",
+      "facility_attribution_match": "PHELA_HOME_BANNER_ONLY_NOT_BRANCH_SPECIFIC",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_03_PHELA_NVL",
+      "brand_name": "Phê La",
+      "branch_name": "Phê La - Nguyễn Văn Linh",
+      "district": "Hải Châu",
+      "street_address": "125 Nguyễn Văn Linh, Nam Dương, Hải Châu, Đà Nẵng",
+      "source_url": "https://phela.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_LISTING_ONLY_NO_RIGHTS",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_04_GONGCHA_NVL",
+      "brand_name": "Gong Cha Vietnam",
+      "branch_name": "Gong Cha - Nguyễn Văn Linh",
+      "district": "Hải Châu",
+      "street_address": "01 Nguyễn Văn Linh, Bình Hiên, Hải Châu, Đà Nẵng",
+      "source_url": "https://gongcha.com.vn/",
+      "facility_attribution_match": "GONGCHA_HOME_BANNER_ONLY_NOT_BRANCH_SPECIFIC",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_05_JOLLIBEE_TIEU_LA",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Tiểu La",
+      "district": "Hải Châu",
+      "street_address": "254 Tiểu La, Hòa Cường Bắc, Hải Châu, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_06_JOLLIBEE_DONG_DA",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Đống Đa",
+      "district": "Hải Châu",
+      "street_address": "180 Đống Đa, Thuận Phước, Hải Châu, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_07_JOLLIBEE_PHAN_DANG_LUU",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Phan Đăng Lưu",
+      "district": "Hải Châu",
+      "street_address": "12 Phan Đăng Lưu, Hòa Cường Bắc, Hải Châu, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_08_CGV_VINCOM",
+      "brand_name": "CGV Cinemas",
+      "branch_name": "CGV Vincom Đà Nẵng",
+      "district": "Sơn Trà",
+      "street_address": "Tầng 4 Vincom, 910A Ngô Quyền, An Hải Bắc, Sơn Trà, Đà Nẵng",
+      "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+      "facility_attribution_match": "CGV_STORE_LOCATOR_UNVERIFIED_RIGHTS",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_09_JOLLIBEE_VINCOM",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Vincom Đà Nẵng",
+      "district": "Sơn Trà",
+      "street_address": "Tầng 4 Vincom, 910A Ngô Quyền, Sơn Trà, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "JOLLIBEE_HOME_BANNER_ONLY_NOT_BRANCH_SPECIFIC",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_10_CGV_VINH_TRUNG",
+      "brand_name": "CGV Cinemas",
+      "branch_name": "CGV Vĩnh Trung Plaza",
+      "district": "Thanh Khê",
+      "street_address": "255-257 đường Hùng Vương, Thanh Khê, Đà Nẵng",
+      "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+      "facility_attribution_match": "CGV_PAGE_BLANK_OR_UNRENDERED_FRAME",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_11_GALAXY_COOP",
+      "brand_name": "Galaxy Cinema",
+      "branch_name": "Galaxy Cinema Co.opmart Đà Nẵng",
+      "district": "Thanh Khê",
+      "street_address": "Tầng 3 Co.opmart, 478 Điện Biên Phủ, Thanh Khê, Đà Nẵng",
+      "source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "facility_attribution_match": "GALAXY_PAGE_GENERIC_HEADER_UNVERIFIED_RIGHTS",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "OFFICIAL_PAGE_SCREENSHOT_CONTEXT_ONLY"
+    },
+    {
+      "venue_id": "VLOC_12_GALAXY_CINEX_AEON",
+      "brand_name": "Galaxy Cinema",
+      "branch_name": "Galaxy CineX AEON Mall Thanh Khê",
+      "district": "Thanh Khê",
+      "street_address": "AEON Mall Thanh Khê (Đang cập nhật lịch khai trương)",
+      "source_url": "https://galaxycine.vn/",
+      "facility_attribution_match": "UPCOMING_BRANCH_NO_PHOTOS",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_13_JOLLIBEE_LY_THAI_TO",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Lý Thái Tổ",
+      "district": "Thanh Khê",
+      "street_address": "334 Lý Thái Tổ, Mỹ An, Thanh Khê, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_14_JOLLIBEE_NGUYEN_DUC_TRUNG",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Nguyễn Đức Trung",
+      "district": "Thanh Khê",
+      "street_address": "82 Nguyễn Đức Trung, Thanh Khê Đông, Thanh Khê, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_15_CGV_MM_MEGA",
+      "brand_name": "CGV Cinemas",
+      "branch_name": "CGV MM Mega Market Đà Nẵng",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "street_address": "TTTM MM Mega Market, Nguyễn Sinh Sắc, Hòa Minh, Liên Chiểu",
+      "source_url": "https://www.cgv.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_16_JOLLIBEE_PHAM_NHU_XUONG",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Phạm Như Xương (Cụm ĐH Sư Phạm)",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "street_address": "52 Phạm Như Xương, Hòa Khánh Nam, Liên Chiểu, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_17_JOLLIBEE_NGO_VAN_SO",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee Ngô Văn Sở (Cụm ĐH Bách Khoa)",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "street_address": "12 Ngô Văn Sở, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    },
+    {
+      "venue_id": "VLOC_18_JOLLIBEE_MEGA_MARKET",
+      "brand_name": "Jollibee Vietnam",
+      "branch_name": "Jollibee MM Mega Market",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "street_address": "Lô L1-01 TTTM MM Mega Market, Nguyễn Sinh Sắc, Liên Chiểu",
+      "source_url": "https://jollibee.com.vn/",
+      "facility_attribution_match": "STORE_LOCATOR_TEXT_ONLY",
+      "rights_status": "UNAUTHORIZED_PENDING_RIGHTS",
+      "display_mode": "FALLBACK_BRAND_MONOGRAM_WITH_OUTBOUND_LINK",
+      "crop_106_status": "NONE"
+    }
+  ]
+}

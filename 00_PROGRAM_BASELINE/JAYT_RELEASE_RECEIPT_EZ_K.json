@@ -1,0 +1,68 @@
+{
+  "receipt_id": "JAYT-245-SECTION-EZ-K",
+  "version": "v3.480.0-staging.ez",
+  "governing_directive": "JAYT-245 Section EZ-K (Lines 4182-4210)",
+  "timestamp": "2026-08-31T06:43:52.757Z",
+  "governance_state": "EVIDENCE_CONTRACT_V3_ACTIVE_ALL_NEW_CANDIDATES_HELD_FAIL_CLOSED",
+  "production_locked": true,
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "voucher_verified_t1_count": 0,
+  "affiliate_activation": false,
+  "economic_claims_public": false,
+  "approved_staging_t2_pilot": {
+    "pilot_card_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+    "pilot_title": "GitHub Education — Thông tin đăng ký",
+    "pilot_tier": "T2_OFFICIAL_PROGRAM_DOCUMENTATION",
+    "public_eligible_t2_documentation_count": 1,
+    "caveat_statement": "Phạm vi: chương trình toàn cầu; điều kiện và quyền lợi áp dụng do GitHub quyết định. JayT không xác nhận voucher, giá hay ưu đãi tại Đà Nẵng.",
+    "canonical_action_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students"
+  },
+  "semantic_failure_matrix_summary": [
+    {
+      "candidate_id": "CANDIDATE_EZ_J_01_NOTION_EDUCATION",
+      "verdict": "HELD_INTERNAL_SEMANTIC_LOCATOR_INSUFFICIENT",
+      "reason": "Isolated words 'schoolwork' and 'classroom' lacked predicate for eligibility or global scope"
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_J_02_CANVA_EDUCATION",
+      "verdict": "HELD_INTERNAL_SEMANTIC_LOCATOR_INSUFFICIENT",
+      "reason": "Generic marketing tokens 'Education' and 'learning' lacked predicate for eligibility or global scope"
+    }
+  ],
+  "trial_contract_v3_result": {
+    "contract_id": "CONTRACT_V3_EZ_K_01_NOTION_EDUCATION",
+    "claim_class": "DESCRIPTIVE_ONLY",
+    "entailment_gate_status": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+    "staging_render": false,
+    "public_eligible": false
+  },
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "public_candidate_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "unverified_t2_t3_badges": 0,
+    "affiliate_tracking_calls": 0,
+    "savings_lab_local_first_pass": true,
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "hashes": {
+    "sot_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "served_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "sot_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a",
+    "served_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a"
+  },
+  "artifacts_included": [
+    "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_K_EVIDENCE_CONTRACT_V3_20260831.md",
+    "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_K.json",
+    "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_K.json",
+    "06_TRUST_AND_EVIDENCE/JAYT_EVIDENCE_CONTRACT_V3_SCHEMA_EZ_K.json",
+    "06_TRUST_AND_EVIDENCE/PROPOSED_UTILITY_FACTS_EZ_K.json",
+    "07_QUALITY_ASSURANCE/test_evidence_contract_v3_and_entailment_ez_k.js",
+    "07_QUALITY_ASSURANCE/test_document_provenance_and_quarantine_ez_j.js",
+    "07_QUALITY_ASSURANCE/test_ez_h_t2_pilot_e2e.js",
+    "07_QUALITY_ASSURANCE/test_ez_review_pack_assertions.js",
+    "07_QUALITY_ASSURANCE/test_calculator_unit_ez.js"
+  ]
+}

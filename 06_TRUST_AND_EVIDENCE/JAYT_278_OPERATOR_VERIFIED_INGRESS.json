@@ -1,0 +1,43 @@
+{
+  "ingress_id": "JAYT-278-OPERATOR-VERIFIED-EVIDENCE-INTAKE",
+  "scope": "THREE_BATCH03B_LEAF_PAGES_ONLY",
+  "status": "BROWSER_IDENTITY_CONFIRMED__RAW_HTTP_ARTIFACTS_REQUIRED",
+  "operator_browser_review_at_utc": "2026-09-03T14:12:09.521Z",
+  "constraints": {
+    "raw_payload_required_before_evidence_held": true,
+    "required_artifacts_per_item": ["unaltered HTML/PDF response body", "sanitized response headers", "UTC response timestamp", "SHA-256 of saved raw bytes", "verbatim supporting-span offset"],
+    "public_approved": false,
+    "render_permitted": false,
+    "affiliate_permitted": false,
+    "production_mutation_permitted": false
+  },
+  "items": [
+    {
+      "target_id": "BATCH03_HK_04",
+      "source_url": "https://ued.udn.vn/2025/02/18/thong-bao-ve-hoc-bong-ho-tro-sinh-vien-nghien-cuu-khoa-hoc-nam-2025/",
+      "browser_identity_title": "Thông báo về Học bổng hỗ trợ sinh viên nghiên cứu khoa học năm 2025 - Trường Đại học Sư phạm (UED)",
+      "visible_supporting_span": "Thông báo về Học bổng hỗ trợ sinh viên nghiên cứu khoa học năm 2025",
+      "raw_body_file": null,
+      "raw_body_sha256": null,
+      "operator_intake_state": "AWAITING_OPERATOR_RAW_ATTACHMENT"
+    },
+    {
+      "target_id": "BATCH03_HC_07",
+      "source_url": "https://www.danang.gov.vn/vi/web/dng/w/to-chuc-phun-nuoc-phun-lua-cau-rong-va-quay-nhip-cau-song-han-phuc-vu-tet-nguyen-dan-binh-ngo-2026",
+      "browser_identity_title": "Tổ chức phun nước, phun lửa cầu Rồng và quay nhịp cầu sông Hàn phục vụ Tết Nguyên đán Bính Ngọ 2026 - Cổng Thông tin điện tử thành phố Đà Nẵng - Cổng thông tin thành phố Đà Nẵng",
+      "visible_supporting_span": "Tổ chức phun nước, phun lửa cầu Rồng và quay nhịp cầu sông Hàn phục vụ Tết Nguyên đán Bính Ngọ 2026",
+      "raw_body_file": null,
+      "raw_body_sha256": null,
+      "operator_intake_state": "AWAITING_OPERATOR_RAW_ATTACHMENT"
+    },
+    {
+      "target_id": "BATCH03_DS_07",
+      "source_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/danabus--nguoi-ban-dong-hanh-thong-minh-cua-hanh-khach-xe-buyt-da-nang-5727.html",
+      "browser_identity_title": "DANABUS – NGƯỜI BẠN ĐỒNG HÀNH THÔNG MINH CỦA HÀNH KHÁCH XE BUÝT ĐÀ NẴNG",
+      "visible_supporting_span": "DanaBus hiển thị vị trí của xe trên bản đồ, giúp hành khách chủ động hơn trong việc sắp xếp thời gian di chuyển.",
+      "raw_body_file": null,
+      "raw_body_sha256": null,
+      "operator_intake_state": "AWAITING_OPERATOR_RAW_ATTACHMENT"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "system_name": "JayT Community OS Design System",
+  "version": "v3.433.0-staging.cz",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section CZ)",
+  "created_at": "2026-08-29T15:02:33.920Z",
+  "color_tokens": {
+    "brand_primary_teal": {
+      "name": "River Teal (Niềm Tin Sông Hàn / Biển Đà Nẵng)",
+      "base": "#0284c7",
+      "hover": "#0369a1",
+      "active": "#075985",
+      "light_bg": "#f0f9ff",
+      "border": "#bae6fd",
+      "usage": "Navigation, trust badges, verified gateways, interactive accents"
+    },
+    "brand_coral": {
+      "name": "Coral (Hành Động & Ưu Đãi)",
+      "base": "#f43f5e",
+      "hover": "#e11d48",
+      "active": "#be123c",
+      "light_bg": "#fff1f2",
+      "border": "#fecdd3",
+      "usage": "Primary deal CTAs, urgent savings actions, deal highlight badges"
+    },
+    "brand_sun_sand": {
+      "name": "Sun Sand (Nắng Biển / Khoảnh Khắc)",
+      "base": "#d97706",
+      "hover": "#b45309",
+      "light_bg": "#fef3c7",
+      "border": "#fde68a",
+      "usage": "Time-aware moment pills, warning alerts, informational badges"
+    },
+    "neutrals_light": {
+      "bg_canvas": "#fffdfa",
+      "bg_card": "#ffffff",
+      "bg_card_subtle": "#f8fafc",
+      "border_color": "#e2e8f0",
+      "border_subtle": "#f1f5f9",
+      "text_primary": "#0f172a",
+      "text_secondary": "#475569",
+      "text_muted": "#64748b"
+    },
+    "neutrals_dark": {
+      "bg_canvas": "#0b1320",
+      "bg_card": "#131d2e",
+      "bg_card_subtle": "#1e293b",
+      "border_color": "#334155",
+      "border_subtle": "#1e293b",
+      "text_primary": "#f8fafc",
+      "text_secondary": "#cbd5e1",
+      "text_muted": "#94a3b8"
+    }
+  },
+  "typography_tokens": {
+    "font_family_heading": "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', system-ui, -apple-system, sans-serif",
+    "scale": {
+      "hero_title": {
+        "size": "clamp(1.75rem, 4vw, 2.5rem)",
+        "weight": 800,
+        "line_height": 1.15
+      },
+      "section_title": {
+        "size": "1.4rem",
+        "weight": 700,
+        "line_height": 1.25
+      },
+      "card_title": {
+        "size": "1.05rem",
+        "weight": 600,
+        "line_height": 1.35
+      },
+      "body": {
+        "size": "0.925rem",
+        "weight": 400,
+        "line_height": 1.55
+      },
+      "meta": {
+        "size": "0.8rem",
+        "weight": 500,
+        "line_height": 1.4
+      },
+      "eyebrow": {
+        "size": "0.725rem",
+        "weight": 700,
+        "letter_spacing": "0.05em",
+        "transform": "uppercase"
+      }
+    }
+  },
+  "spacing_scale_pt": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px",
+    "xl": "20px",
+    "2xl": "24px",
+    "3xl": "32px",
+    "4xl": "48px"
+  },
+  "components_matrix": [
+    {
+      "component": "Intent Chip (Lối Vào Ý Định)",
+      "variants": [
+        "Deal Dùng Hôm Nay",
+        "Voucher Chính Thức",
+        "Kiểm Tra Giá"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus-visible"
+      ],
+      "min_touch_target": "44px",
+      "a11y_contrast_ratio": "5.4:1 (WCAG AA Pass)"
+    },
+    {
+      "component": "Tier Badge (Nhãn Phân Tầng)",
+      "variants": [
+        "Tier 1: Deal Xác Minh",
+        "Tier 2: Cổng Chính Thức",
+        "Tier 3: Tiện Ích Xác Minh",
+        "Tier 4: Radar"
+      ],
+      "states": [
+        "default"
+      ],
+      "a11y_contrast_ratio": "4.8:1 (WCAG AA Pass)"
+    },
+    {
+      "component": "Deal Card (Thẻ Ưu Đãi)",
+      "elements": [
+        "Tier Badge",
+        "Price / Discount Box",
+        "Conditions Line",
+        "Save Button",
+        "Action Button (Coral)",
+        "Map Link"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "saved-state"
+      ],
+      "min_touch_target": "44px"
+    },
+    {
+      "component": "Voucher Card (Thẻ Vé Quyền Lợi)",
+      "elements": [
+        "Lane Badge",
+        "Merchant",
+        "Question Breakdown (3 Làn)",
+        "Action Button (Teal / Gray)",
+        "Save Button"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "saved-state"
+      ],
+      "min_touch_target": "44px"
+    },
+    {
+      "component": "Place Card (Thẻ Điểm Hẹn & Tiện Ích)",
+      "elements": [
+        "Real Photo Media",
+        "Licensed Attribution Tag",
+        "Moment Tag",
+        "Title",
+        "Transit Hint",
+        "Map Link"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus-visible"
+      ],
+      "min_touch_target": "44px"
+    },
+    {
+      "component": "Evidence Drawer & Zero-PII Report Modal",
+      "elements": [
+        "Dialog Container",
+        "Header",
+        "Zero-PII Privacy Notice",
+        "Source Input",
+        "Close Button (Escape)"
+      ],
+      "states": [
+        "open",
+        "closed",
+        "validation-error",
+        "success-feedback"
+      ],
+      "min_touch_target": "44px"
+    }
+  ],
+  "accessibility_standards": {
+    "wcag_compliance": "WCAG 2.1 Level AA",
+    "min_touch_target_px": 44,
+    "focus_ring": "2px solid #0284c7 with 2px offset",
+    "reduced_motion_rule": "prefers-reduced-motion: reduce -> transition: none !important"
+  }
+}

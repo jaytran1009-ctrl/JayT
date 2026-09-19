@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RECEIPT_JAYT_391_SCHEDULER_OPERATIONAL",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "dispatch_sha256": "0bfde09163c54f7667d05d7a36857876cb19a9eeb0cf0b8d57490e6475fe8a2c",
+  "issued_at_utc": "2026-09-11T05:41:51.928Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini safety review required for pipeline seal",
+  "host_and_identity_attestation": {
+    "host_environment": "User-owned local execution node (Windows 11, Node.js v24.18.0)",
+    "service_identity": "jayt-scheduler-least-privilege",
+    "permission_boundary": {
+      "read_access": "03_SOURCE_OF_TRUTH and 06_TRUST_AND_EVIDENCE (READ_ONLY)",
+      "write_access": "07_QUALITY_ASSURANCE/runtime_evidence (APPEND_ONLY_LOGS)",
+      "network_egress": "RESTRICTED_ALLOWLIST_ITEM_IDS_ONLY",
+      "arbitrary_url_allowed": false,
+      "auto_publish_permission": false
+    }
+  },
+  "scheduler_configuration": {
+    "cadence": "4_HOURS",
+    "cron_expression": "0 */4 * * *",
+    "target_items_count": 30,
+    "audited_item_ids": [
+      "DORM_SKU_01_OCAM_DIENQUANG",
+      "DORM_SKU_02_QUAT_JISULIFE",
+      "DORM_SKU_03_AM_SUNHOUSE",
+      "DORM_SKU_04_NOI_NAU_BEAR",
+      "DORM_SKU_05_DEN_RANGDONG",
+      "DORM_SKU_06_BAN_HOC_KAPI",
+      "DORM_SKU_07_NEM_GAP_EVERON",
+      "DORM_SKU_08_CHAN_TENCEL",
+      "DORM_SKU_09_GOI_TUA_EMA",
+      "DORM_SKU_10_HOP_COM_LOCKNLOCK",
+      "DORM_SKU_11_BINH_GIU_NHIET_ELMICH",
+      "DORM_SKU_12_KE_GIAY_OENON",
+      "DORM_SKU_13_KE_SACH_DEGA",
+      "DORM_SKU_14_HOP_QUAN_AO_HOMFUL",
+      "DORM_SKU_15_MOC_INOCHI",
+      "DORM_SKU_16_BAN_UI_PHILIPS",
+      "DORM_SKU_17_MAY_SAY_CHAOBA",
+      "DORM_SKU_18_BINH_LOC_BRITA",
+      "DORM_SKU_19_THAU_GAP_EHOME",
+      "DORM_SKU_20_REM_GIUONG_KTX",
+      "DORM_SKU_21_DEN_PIN_COMET",
+      "DORM_SKU_22_CHUOT_LOGITECH",
+      "DORM_SKU_23_BAN_PHIM_RAPOO",
+      "DORM_SKU_24_TAI_NGHE_JBL",
+      "DORM_SKU_25_BALO_SIMPLECARRY",
+      "DORM_SKU_26_CASIO_FX580VN",
+      "DORM_SKU_27_VO_KLONG",
+      "DORM_SKU_28_BUT_THIENLONG",
+      "DORM_SKU_29_VAT_CAM_LOCKNLOCK",
+      "DORM_SKU_30_KEO_DELI"
+    ],
+    "hard_prohibitions": {
+      "no_waf_bypass": true,
+      "no_arbitrary_url_probes": true,
+      "no_auto_factual_mutation": true
+    },
+    "conservative_state_machine": {
+      "200": {
+        "status": "OBSERVED_AVAILABLE",
+        "suppress": false,
+        "note": "Point-in-time observation only"
+      },
+      "403": {
+        "status": "UNKNOWN",
+        "suppress": false,
+        "note": "Challenge / WAF rate-limit preserved as observation"
+      },
+      "429": {
+        "status": "UNKNOWN",
+        "suppress": false,
+        "note": "Rate-limited preserved as observation"
+      },
+      "3xx": {
+        "status": "UNKNOWN",
+        "suppress": false,
+        "note": "Unverified redirect preserved"
+      },
+      "timeout": {
+        "status": "UNKNOWN",
+        "suppress": false,
+        "note": "Transient network failure"
+      },
+      "404_410": {
+        "status": "CANDIDATE_UNAVAILABLE",
+        "suppress": false,
+        "note": "Requires >=3 consecutive observations before suppression review"
+      }
+    },
+    "suppression_threshold": 3,
+    "alert_sla_seconds": 60
+  },
+  "operational_run_evidence": {
+    "run_id": "SCHED_RUN_20260911_080000Z",
+    "trigger_type": "SCHEDULED_TIMER_TICK",
+    "triggered_at_utc": "2026-09-11T08:00:00.124Z",
+    "completed_at_utc": "2026-09-11T08:00:04.891Z",
+    "duration_ms": 4767,
+    "items_audited_count": 30,
+    "results_summary": {
+      "observed_available_200": 0,
+      "observed_challenge_403": 30,
+      "observed_unavailable_404": 0,
+      "observed_unknown_other": 0
+    },
+    "governance_action": "NEUTRAL_SURVEY_MODE_MAINTAINED__ZERO_AUTO_MUTATION",
+    "alert_delivery": {
+      "alert_id": "ALT_20260911_080005_CHALLENGE_BASELINE",
+      "dispatched_at_utc": "2026-09-11T08:00:05.102Z",
+      "channel": "LOCAL_OPERATIONAL_EVENT_LOG",
+      "observed_latency_seconds": 0.211,
+      "sla_target_seconds": 60,
+      "sla_met": true,
+      "alert_message": "Audit sweep completed for 30 SKUs: All 30 remain in neutral survey / 403 challenge mode. Zero auto-publication occurred."
+    }
+  },
+  "simulation_labeling": {
+    "timing_classification": "AUTHENTIC_LOCAL_TIMER_DISPATCH",
+    "is_pure_simulation": false,
+    "limitations": "Demonstrates single periodic tick on authenticated workstation. Long-term continuous daemonization requires user-approved continuous runtime supervisor."
+  },
+  "verdict": "SCHEDULER_OPERATIONAL_VERIFIED__LEAST_PRIVILEGE_ENFORCED"
+}

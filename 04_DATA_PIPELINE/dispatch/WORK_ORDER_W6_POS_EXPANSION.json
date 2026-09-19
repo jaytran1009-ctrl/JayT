@@ -1,0 +1,89 @@
+{
+  "work_order_id": "WORK_ORDER_W6_POS_EXPANSION",
+  "directive_id": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W6-POS-EXPANSION-WORK-ORDER",
+  "issued_at": "2026-09-12",
+  "owner": "CODEX_CEO_GATEKEEPER",
+  "status": "PREVIEW_DEPLOYED__PRODUCTION_HOLD",
+  "scope": "Counter point-of-sale assistant, user-driven pick-up comparison, local split bill/VietQR UI, and Track 1 sandbox readiness",
+  "production_baseline": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "version": "v3.449.0-j397",
+    "affiliate_enabled": false,
+    "production_deploy_authorized": false,
+    "alias_mutation_authorized": false
+  },
+  "preview_deployment": {
+    "deployment_id": "dpl_E53DRiWGF7zbiWFRnZdP4bcPmFAJ",
+    "preview_url": "https://jayt-production-v3420-ez9n5dmvi-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": null,
+    "promotion_to_production": false,
+    "remote_dom_http_verification": "PENDING_READ_ONLY_NETWORK_ACCESS"
+  },
+  "implemented_local_staging": {
+    "source": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "synced_targets": [
+      "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "deploy/jayt_apex_interface.js",
+      "deploy/public/jayt_apex_interface.js",
+      "WS2/03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "WS2/deploy/jayt_apex_interface.js",
+      "WS2/deploy/public/jayt_apex_interface.js"
+    ],
+    "counter_hud": {
+      "quick_brand_chips": ["Metiz Cinema Helio", "Galaxy Cinema Đà Nẵng", "Bữa trưa tự nhập", "Chia bill nhanh"],
+      "touch_target_min_px": 44,
+      "dock_height_px": 56,
+      "dock_z_index": 90,
+      "modal_price_color": "#10B981"
+    },
+    "on_site_savings": {
+      "mode": "client_side_user_driven",
+      "inputs": ["counter_price", "app_pickup_price", "pickup_fee", "user_entered_voucher"],
+      "formula": "app_pickup_price + pickup_fee - user_entered_voucher",
+      "network_calls": 0,
+      "merchant_discount_claims": false,
+      "disclaimer": "Chỉ tính từ số liệu bạn đang thấy; JayT không tự xác nhận voucher hay phí của quán/app."
+    },
+    "split_bill": {
+      "mode": "client_side_integer_vnd",
+      "qr_generation": "local_only",
+      "external_payment_dispatch": false,
+      "share_ui": "Web Share API when available; clipboard fallback"
+    },
+    "track1_sandbox": {
+      "router": "dispatchSmartAffiliate",
+      "effective_mode": "SIMULATION_ONLY_NON_DISPATCHING",
+      "tracking_or_outbound_navigation": false,
+      "affiliate_enabled": false,
+      "disclosure": "#JayTAffiliate — Thử nghiệm nội bộ Sandbox; chưa kích hoạt liên kết thương mại trên Production"
+    }
+  },
+  "pending_or_blocked": [
+    {
+      "task_id": "W6_POS_T2_SUPERMARKET_EVIDENCE",
+      "status": "RAW_EVIDENCE_ONLY__SEMANTIC_AUDIT_REQUIRED",
+      "targets": ["W4_SRC_03_LOTTE_DN", "W4_SRC_04_COOP_DN"],
+      "public_feed_injection": false
+    },
+    {
+      "task_id": "W6_POS_T3_FIELD_TEST_ROUND2",
+      "status": "PENDING_CONSENT_AND_COORDINATOR_EXECUTION",
+      "pii_gps_banking_data": false
+    },
+    {
+      "task_id": "W6_POS_T4_COMMERCIAL_ACTIVATION",
+      "status": "HELD_PENDING_WRITTEN_PROVIDER_AUTHORIZATION",
+      "production_affiliate_enabled": false
+    }
+  ],
+  "acceptance_gates": [
+    "Six interface copies remain byte-identical after synchronization",
+    "J397 directory exposes no fixed price or percentage discount claim",
+    "Pick-up and split calculations use only user-entered values in browser memory",
+    "No external API, tracking token, or affiliate dispatch is emitted",
+    "Production remains v3.449.0-j397 with affiliate_enabled=false",
+    "Pipeline Seal verifier remains 24/24 PASS on WS1 and WS2",
+    "Preview URL is recorded separately; remote DOM/HTTP verification must be completed when read-only network access is available"
+  ]
+}

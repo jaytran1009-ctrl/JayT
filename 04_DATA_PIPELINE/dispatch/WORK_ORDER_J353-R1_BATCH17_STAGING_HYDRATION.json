@@ -1,0 +1,35 @@
+{
+  "work_order_id": "J353-R1_BATCH17_STAGING_HYDRATION",
+  "directive": "JAYT-353",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "authority": "01_EXECUTIVE_COUNCIL/JAYT_353_CEO_BATCH17_PROVENANCE_ACCEPTANCE.md",
+  "environment": "commercial staging only: http://127.0.0.1:4176/",
+  "authorized_items": [
+    "B17_RADAR_PL_DTX64GB",
+    "B17_RADAR_PL_LENOVO_STUDENT_2026",
+    "B17_RADAR_PL_HP_BTS_2026"
+  ],
+  "required_rendering": {
+    "official_source_link_only": true,
+    "show_observed_at_timestamp": true,
+    "show_stock_availability_warning": true,
+    "show_exact_eligibility_or_terms": true,
+    "affiliate_tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false,
+    "inventory_claims_permitted": false
+  },
+  "hard_exclusions": [
+    "B17_RADAR_DMX_M170",
+    "all 12 items marked HELD__SHARED_PRODUCT_URL_LACKS_DEDICATED_LEAF_PROVENANCE",
+    "all Batch 17 held schedule candidates"
+  ],
+  "verification": [
+    "Run DOM, keyboard, console/runtime, and overflow audit at 1440, 768, and 390 px.",
+    "Verify no duplicate candidate IDs or official URLs against the existing staging registry.",
+    "Verify all three source URLs and raw SHA-256 values exactly match the approved provenance matrix.",
+    "Write 07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J353-R1_BATCH17_STAGING_HYDRATION.json and its .sha256 sidecar."
+  ],
+  "production_deploy_authorized": false,
+  "production_alias_change_authorized": false
+}

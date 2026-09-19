@@ -1,0 +1,39 @@
+{
+  "work_order_id": "J353-R3_BATCH17_STAGING_HYDRATION",
+  "directive": "JAYT-353",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "authority": "01_EXECUTIVE_COUNCIL/JAYT_353_CEO_R2_BATCH17_PROVENANCE_ACCEPTANCE.md",
+  "environment": "commercial staging only: http://127.0.0.1:4176/",
+  "authorized_items": [
+    "B17_RADAR_PL_LJDS080064G",
+    "B17_RADAR_PL_LJDM400064G",
+    "B17_RADAR_PL_SDDDC6",
+    "B17_RADAR_PL_CZ600",
+    "B17_RADAR_PL_SDCZ74",
+    "B17_RADAR_PL_SXS1000",
+    "B17_RADAR_PL_DTXM128GB",
+    "B17_RADAR_PL_DTX256GB",
+    "B17_RADAR_PL_SA400_480G",
+    "B17_RADAR_PL_SKC3000_1024G",
+    "B17_RADAR_PL_SNV3S_1000G",
+    "B17_RADAR_PL_KVR56S46BS8"
+  ],
+  "rendering_requirements": {
+    "show_exact_official_source_link": true,
+    "show_observed_at_timestamp": true,
+    "show_availability_warning": true,
+    "show_raw_sha256": true,
+    "no_inventory_assertion": true,
+    "affiliate_tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "verification": [
+    "Verify all 12 candidate IDs and exact leaf URLs against R2 receipt.",
+    "Run DOM, keyboard, console/runtime, overflow, deduplication, and filter counts at 1440, 768, and 390 px.",
+    "Keep B17_RADAR_DMX_M170 and all Batch 17 schedule candidates excluded.",
+    "Write 07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J353-R3_BATCH17_STAGING_HYDRATION.json and .sha256 sidecar."
+  ],
+  "production_deploy_authorized": false,
+  "production_alias_change_authorized": false
+}

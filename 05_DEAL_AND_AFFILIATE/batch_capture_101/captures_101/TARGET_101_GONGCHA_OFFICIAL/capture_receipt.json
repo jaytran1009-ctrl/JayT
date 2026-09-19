@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:10:27.854Z",
+  "target_id": "TARGET_101_GONGCHA_OFFICIAL",
+  "venue_name": "Gong Cha Vietnam",
+  "source_url": "https://gongcha.com.vn/",
+  "district": "UNSPECIFIED",
+  "sector": "COFFEE_TEA",
+  "http_response": {
+    "status": 200,
+    "url": "https://gongcha.com.vn/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.html",
+      "size_bytes": 78766,
+      "sha256": "d530f4edc2d11933fadc03031ddfeea1f068c1b5fd1b582be647ea5c64b93ea4"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.txt",
+      "size_bytes": 1567,
+      "sha256": "db9be8c4a007a7a416f914522ee4d9ebdf318ff485026f0b8dae6a062b97b2d1"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.png",
+      "size_bytes": 1343741,
+      "sha256": "fb9f2dc8d419bc29a8b1dc2608c6a84a14df7955ae0e7e7f180b551c26dfa983"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "map_id": "COMMERCIAL_OPPORTUNITY_MAP_QUALITATIVE_EZ_V",
+  "version": "1.0.0-ez.v",
+  "governing_directive": "JAYT-245 Section EZ-V (Lines 4475-4539)",
+  "timestamp": "2026-08-31T07:44:23.968Z",
+  "nature": "QUALITATIVE_READ_ONLY_VALUE_FIRST_JTBD_MAPPING",
+  "prohibitions": [
+    "NO_COMMISSION_RATES_OR_REVENUE_CLAIMS",
+    "NO_CAMPAIGN_SALES_VOLUME_OR_RATINGS",
+    "NO_PRODUCT_PRICES_OR_UNVERIFIED_COUPONS",
+    "NO_DEEPLINKS_OR_AFFILIATE_ACTIVATION_WITHOUT_AUTHORITY",
+    "NO_SECRET_OR_PORTAL_SCRAPING"
+  ],
+  "jtbd_categories": [
+    {
+      "category_id": "JTBD_01_LUNCH_AND_FOOD",
+      "customer_need": "Ăn trưa văn phòng và sinh viên tiết kiệm, nhanh chóng.",
+      "problem_to_solve": "Phí giao hàng cao và giá món ăn đội lên khi đặt đơn lẻ vào giờ cao điểm.",
+      "potential_merchant_type": "F&B Delivery Apps, Merchant Stores quanh các trường ĐH và khu văn phòng.",
+      "value_hypothesis": "Công cụ tính gộp nhóm và tự tính thực trả (giá món + ship - voucher) giúp người dùng thấy rõ số tiền chia đều.",
+      "required_evidence_for_t1_t2": "Chính sách ưu đãi vận chuyển chính thức, voucher cấp bởi nền tảng có thời hạn rõ ràng.",
+      "missing_commercial_authority": "Chưa có hợp đồng affiliate F&B và chưa có ủy quyền phát hành deal chính thức."
+    },
+    {
+      "category_id": "JTBD_02_DAILY_COMMUTE",
+      "customer_need": "Di chuyển hàng ngày từ KTX/nhà trọ đến trường học và nơi làm việc.",
+      "problem_to_solve": "Chi phí xăng xe hoặc cước gọi xe tăng vọt vào khung giờ tan tầm và trời mưa.",
+      "potential_merchant_type": "Xe buýt trợ giá công cộng (DanaBus), ứng dụng gọi xe công nghệ.",
+      "value_hypothesis": "Thông tin rõ ràng về điều kiện vé tháng học sinh/sinh viên và công cụ so sánh chi phí di chuyển hàng tháng.",
+      "required_evidence_for_t1_t2": "Văn bản quyết định biểu giá vé trợ giá hiện hành, điều khoản áp dụng vé xe buýt.",
+      "missing_commercial_authority": "Chưa có văn bản biểu giá hiện hành năm 2026."
+    },
+    {
+      "category_id": "JTBD_03_WORK_AND_STUDY",
+      "customer_need": "Công cụ phần mềm và tài liệu học tập kỹ thuật số 0đ.",
+      "problem_to_solve": "Sinh viên không có thẻ thanh toán quốc tế hoặc không đủ kinh phí mua bản quyền công cụ học tập đắt đỏ.",
+      "potential_merchant_type": "Global Education Programs (GitHub Education, Notion, Canva, Microsoft 365 Education).",
+      "value_hypothesis": "Hướng dẫn trung thực, đúng quy định tài liệu gốc để sinh viên tự đăng ký hợp lệ mà không bị lừa mua tài khoản rác.",
+      "required_evidence_for_t1_t2": "Tài liệu chính thức đạt Evidence Contract v3 với trích dẫn locator chuẩn xác.",
+      "missing_commercial_authority": "Đã có 1 Pilot (GitHub Docs T2); các chương trình khác tiếp tục giữ nội bộ."
+    },
+    {
+      "category_id": "JTBD_04_DORM_ESSENTIALS",
+      "customer_need": "Mua sắm vật dụng KTX và đồ gia dụng thiết yếu với ngân sách sinh viên (dưới 50K).",
+      "problem_to_solve": "Khó tìm các món đồ dùng nhỏ lẻ (móc áo, ổ cắm, đèn bàn, hộp đựng) có freeship và giá thực trả hợp lý.",
+      "potential_merchant_type": "Shopee KOL Feed, TikTok Shop Creator Affiliate (thông qua AccessTrade).",
+      "value_hypothesis": "Danh mục chọn lọc 18–30 sản phẩm thiết yếu được kiểm định nhu cầu thật, giúp sinh viên không mua nhầm hàng kém chất lượng.",
+      "required_evidence_for_t1_t2": "Bằng chứng sản phẩm chính hãng, đường dẫn canonical, chính sách hoàn trả của sàn TMĐT.",
+      "missing_commercial_authority": "Cần phê duyệt riêng bằng văn bản cho tài khoản/campaign AccessTrade trước khi kích hoạt tracking link."
+    },
+    {
+      "category_id": "JTBD_05_HEALTH_AND_FITNESS",
+      "customer_need": "Chăm sóc sức khỏe, phòng tập và thể thao sinh viên.",
+      "problem_to_solve": "Chi phí gói tập thể hình hoặc khám sức khỏe ban đầu không minh bạch về điều kiện thẻ sinh viên.",
+      "potential_merchant_type": "Phòng tập thể thao địa phương, trung tâm y tế dự phòng công cộng.",
+      "value_hypothesis": "Thông tin chính sách giá vé tập theo tháng có kiểm chứng rõ ràng.",
+      "required_evidence_for_t1_t2": "Biểu giá niêm yết công khai của đơn vị thể thao/y tế.",
+      "missing_commercial_authority": "Chưa có đối soát đơn vị thể thao."
+    },
+    {
+      "category_id": "JTBD_06_WEEKEND_ENTERTAINMENT",
+      "customer_need": "Giải trí cuối tuần, xem phim rạp với giá vé học đường hợp lý.",
+      "problem_to_solve": "Khó tra cứu khung giờ áp dụng giá vé sinh viên (U22) giữa các rạp chiếu phim khác nhau tại Đà Nẵng.",
+      "potential_merchant_type": "Rạp chiếu phim (Metiz Cinema, Galaxy Cinema, CGV, Lotte Cinema).",
+      "value_hypothesis": "Bảng tổng hợp điều kiện nhận ưu đãi U22 (mang thẻ HSSV/CCCD) và khung giờ áp dụng chính thức.",
+      "required_evidence_for_t1_t2": "Quy chế vé thành viên / U22 chính thức trên website cụ thể của cụm rạp.",
+      "missing_commercial_authority": "Chưa thu thập raw bytes quy định cụm rạp năm 2026."
+    },
+    {
+      "category_id": "JTBD_07_ESSENTIAL_GROCERY",
+      "customer_need": "Mua sắm nhu yếu phẩm và thực phẩm tươi sống.",
+      "problem_to_solve": "So sánh giá cả các gói hàng tiêu dùng cơ bản giữa siêu thị và tạp hóa quanh trường.",
+      "potential_merchant_type": "Chuỗi siêu thị mini (WinMart+, Bách Hóa Xanh, Co.op Food).",
+      "value_hypothesis": "Gợi ý danh mục mua sắm chung để tối ưu chi phí sinh hoạt hàng tuần.",
+      "required_evidence_for_t1_t2": "Cẩm nang mua sắm công khai của hệ thống bán lẻ.",
+      "missing_commercial_authority": "Chưa có liên kết thương mại."
+    }
+  ]
+}

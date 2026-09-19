@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-40-GRABFOOD",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_40",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-ECOM-GRABFOOD-GROUP-50K-REAL"
+  },
+  "target": {
+    "brand_id": "GRABFOOD",
+    "category": "ONLINE_APP_DEAL",
+    "requested_url": "https://food.grab.com/vn/vi/",
+    "final_url": "https://food.grab.com/vn/vi/",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của GrabFood Đà Nẵng có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "GrabFood Đơn Nhóm — Mã GRABGROUP50 Giảm 50K Đơn Từ 150K",
+    "conditions_snippet": "Áp dụng tính năng Đặt Đơn Nhóm (Group Order) từ Thứ Hai đến Thứ Sáu"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_grabfood_cand-ecom-grabfood-group-50k-real.png",
+      "sha256": "03bcb3e42fcc002eba928d498e14e714bf97249821f316d6953b836112ac59fa",
+      "bytes": 140625,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_grabfood_cand-ecom-grabfood-group-50k-real.html",
+      "sha256": "e560c2282f7a9fe65ae83b354e398c085082c72e3e22771e029b1c845d367f96",
+      "bytes": 949
+    },
+    "text_dump": {
+      "file": "capture_047_grabfood_cand-ecom-grabfood-group-50k-real.txt",
+      "sha256": "6b43bd4fcf87c5061bff8a038d6bdfb832fdaf0d64df5d0d9d91e37983c4a82c",
+      "bytes": 586
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

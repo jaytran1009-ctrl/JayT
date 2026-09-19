@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <script>
+        var gRootTheme = 'blue';
+        var gImagePath = '/images/' + gRootTheme;
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Th&#x1EE7; t&#x1EE5;c c&#x1EA5;p th&#x1EBB; THƯ VIỆN ĐÀ NẴNG</title>
+
+
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="/css/w3.css?1.1" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+    <link rel="stylesheet" media="screen" href="/css/toggle-switchy.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="/css/select2.min.css" />
+
+
+    <link rel="stylesheet" href="/css/blue/siteWeb.css?v=mpq89U5Y3V78oT7pZb39sCAiJKzuTdehaBAXFM-f2Ko" />
+    <link rel="stylesheet" href="/css/blue/CustomSite.css?v=hymE4dnstFnwlCxK08xLv050-Z4sEl__4jbd-mOMboc" />
+
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- custom scrollbar plugin -->
+    <script src="/js/custom-scrollbar/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/jquery.datetimepicker.full.js"></script>
+
+    <script src="/js/site.js?1.1&amp;v=x_N-Ku-msJtvqB-_cDMFWAO1S85tGkeSEj8UZHzMqpA"></script>
+
+    <script type='text/javascript'>
+        $(window).on('load', function () {
+
+            jQuery(function () {
+
+                jQuery('.textDate').datetimepicker({
+                    format: 'd/m/Y',
+                    timepicker: false
+                });
+
+                jQuery('.textDateTime').datetimepicker({
+                    format: 'd/m/Y H:i:00',
+                    timepicker: true
+                });
+
+            });
+        }
+        )
+    </script>
+    
+
+    <script>
+
+        function setHomePageImage() {
+            var w = $(window).width();
+            if (w < 600) {
+
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/blue/banner.jpg");
+                });
+            }
+            else {
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/blue/banner.jpg");
+                });
+            }
+        }
+
+        $(window).on('load', function (e) {
+            setHomePageImage();
+        });
+
+
+        $(window).resize(function (e) {
+            setHomePageImage();
+        });
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        // Tạo phần tử chatbox với page_id và attribution
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "102615185260981");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        // Khởi tạo Facebook SDK
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true, // Kích hoạt render các plugin đã cài đặt sẵn (như Messenger)
+                version: 'v18.0' // Cập nhật phiên bản SDK mới nhất
+            });
+        };
+
+        // Tải Facebook SDK
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=2620950081501324&autoLogAppEvents=1" nonce="IKQ81c2P"></script>
+    <header>
+        <nav class="navbar navbar-expand-sm box-shadow bg-hdnd">
+            <div class="container-fluid div-navbar">
+                <button type="button" class="navbar-toggler ml-auto"
+                        data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div id="navbar" class="navbar-collapse collapse d-lg-inline-flex flex-lg-row bg-hdnd">
+                    <ul class="navbar-nav mr-auto flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarGioiThieu"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Thư viện Đà Nẵng
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarGioiThieu">
+                                <li><a class="dropdown-item" href="/News/ReadNews/19">Lịch sử hình thành</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/20">Chức năng nhiệm vụ</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/21">Cơ cấu tổ chức</a></li>
+                                <li><a class="dropdown-item" href="/VanBan">Quản lý Văn bản</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tin hoạt động
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/19">Thư viện công cộng</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/20">Thư viện Đà Nẵng</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/51">Xe thư viện lưu động</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Đà Nẵng qua báo chí
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/22">Chính trị</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/23">Xã hội</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/24">Giáo dục</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/25">Văn hóa</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/26">Y tế</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/27">Hoàng Sa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dành cho bạn đọc
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/ReadNews/1410">Giờ làm việc</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/1409">Nội quy Thư viện</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/1408">Thủ tục cấp thẻ</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="http://opac.thuvien.danang.gov.vn:82/pages/opac/wpid-regreader.html">Đăng ký thẻ</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="http://opac.thuvien.danang.gov.vn:82/">Gia hạn sách</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/News/ListCatNews/62">
+                                Báo Xuân
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        </li>
+                        <li class="nav-item dropdown">
+                            
+
+
+
+
+
+<div class="container-fluid cc divSearch rightside">
+    <form action="/News/SearchNews" method="post">
+        <div class="w3-row cc " >
+            <div class="w3-col m11 s10" style="float:left">
+                <input type="text" id="searchtext"
+                       name="searchtext" class="form-control"
+                       placeholder="Tìm kiếm" />
+            </div>
+            <div class="w3-col m1 s2" style="float:right">
+                <button type="submit" id="btnSearch" name="btnSearch" class="homeSearch">
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="header">
+        <div class="divPhoto">
+            <img width="100%" id="homePhoto" src="/Images/blue/Banner.jpg" alt="Đà Nẵng" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="mainContentRegion" class="container-fluid mainContent" style="margin-top:0px">
+        
+
+<div class="container-fluid">
+    <div class="w3-row  pl-4 pr-4">
+        <div class="w3-col l8 pr-4">
+            <div class="w3-row">
+                
+
+<div class="div-header-news mt-3">
+    <a href="/">
+    <img src="/Images/backhome.png" class="imghome"/> 
+    Trang chủ
+    </a>
+    &nbsp;>&nbsp; 
+    
+    <a href="/News/CatNews/28">
+        D&#xE0;nh cho b&#x1EA1;n &#x111;&#x1ECD;c
+    </a>
+</div>
+            </div>
+            <div class="w3-row">
+                
+
+<div class="div-body-news">
+    <div class="w3-row titleBaiViet">
+        Th&#x1EE7; t&#x1EE5;c c&#x1EA5;p th&#x1EBB;
+    </div>
+    <div id="w3-row actionBaiViet" class="w3-row actionBaiViet">
+        <div class="w3-col m3">
+            <i>&#x110;&#x103;ng ng&#xE0;y 11/03/2016 02:33</i>
+        </div>
+        <div class="w3-col m3">
+            <span onclick="openPrintWindow('/News/PreView/1408')" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-print"></i> In bài
+            </span> &nbsp;
+            <button style="margin-left: 5px; margin-bottom: 5px; padding: 0px 10px; border:1px solid #d5d2d2" id="btPlay">
+                <span id="idPlay"><i class="fa fa-play"></i></span> Đọc bài viết
+            </button>
+
+
+        </div>
+        <div class="w3-col m3" style="display: inline;float:right">
+            <span onclick="resizeText(-1)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-small"></i>
+            </span>
+            <span onclick="resizeText(0)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-medium"></i>
+            </span>
+            <span onclick="resizeText(1)" style="margin-left: 6px; cursor: pointer">
+                <i class="fa fa-font icon-fontsize-large"></i>
+            </span>
+
+            <span id="divContrast" style="margin-left: 20px;">
+                <span id="giamContrast" style="margin-left: 6px; cursor:pointer;color:darkcyan">
+                    <i class="fa fa-adjust icon-contrast"></i>
+                </span>
+                <span id="tangContrast" style="margin-left: 6px; cursor: pointer;color:black">
+                    <i class="fa fa-adjust icon-contrast"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+                    <div class="w3-row" style="text-align:right">
+                    </div>
+                    <div class="tts">
+                        <div class="w3-row trichyeuBaiViet">
+                            <b><p style="margin: 0cm -36pt 0.0001pt -42px;"><span style="font-size: 13pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SỞ VĂN HO&Aacute; &amp; THỂ THAO TP. Đ&Agrave; NẴNG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>CỘNG HO&Agrave; X&Atilde; HỘI CHỦ NGHĨA VIỆT NAM</strong></span></p>
+<p style="margin: 0cm -36pt 0.0001pt -36px;"><span style="font-size: 13pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>THƯ VIỆN KHOA HỌC TỔNG HỢP</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size: 14pt;">Độc lập &ndash; Tự do &ndash; Hạnh ph&uacute;c</span></strong></p>
+<p style="margin: 0cm -36pt 0.0001pt -36px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: 21pt;">THỂ LỆ L&Agrave;M THẺ TẠI THƯ VIỆN Đ&Agrave; NẴNG</span></strong></p>
+<p style="text-align: justify;"><strong><span style="text-decoration: underline;"><span style="font-size: 13pt;">I. LOẠI THẺ</span></span></strong><span style="font-size: 13pt;">: &nbsp;Gồm 3 loại:&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 14pt;">1. </span></strong></span><span style="font-size: 14pt;"><strong>Thẻ Đọc</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2. </strong><strong>Thẻ Mượn</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>3. </strong></span><strong><span style="font-size: 13pt;"><span style="font-size: 14pt;">Thẻ Thiếu Nhi</span> </span></strong><em><span style="font-size: 13pt;">(Từ 1 đến 15 tuổi)</span></em></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;"></span></em><span style="text-align: justify; font-size: 14pt;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; 4.&nbsp;</strong></span><strong><span style="font-size: 13pt;"><span style="font-size: 14pt;">Thẻ Shub</span></span></strong></p>
+<p style="text-align: justify;"><strong><span style="font-size: 13pt;">II. THỜI GIAN CẤP THẺ, THU PH&Iacute; V&Agrave; TRẢ CƯỢC:</span></strong></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thời gian cấp thẻ &amp; r&uacute;t cược từ: Thứ 3 đến Chủ nhật h&agrave;ng tuần (Trừ chiều Thứ 6) tại bộ phận cấp thẻ.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>S&aacute;ng </strong>: Từ 7h30 đến 11h15</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>Chiều </strong>: Từ 13h30 đến 16h50.</span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 13pt;">III. THỂ LỆ L&Agrave;M THẺ:</span></strong></p>
+<p style="text-align: justify;"><strong><span style="text-decoration: underline;"><span style="font-size: 13pt;">A. THẺ ĐỌC</span></span></strong><strong><span style="font-size: 13pt;"> (đọc s&aacute;ch tại chỗ v&agrave; sử dụng thư viện để học tập, nghi&ecirc;n cứu, l&agrave;m việc) </span></strong></p>
+<p style="text-align: justify; text-indent: 27pt;"><strong><span style="font-size: 13pt;">1. Đối tượng:</span></strong><span style="font-size: 13pt;"> C&ocirc;ng d&acirc;n đang sinh sống v&agrave; l&agrave;m việc tr&ecirc;n địa b&agrave;n TP. Đ&agrave; Nẵng.</span></p>
+<p style="text-align: justify; text-indent: 27pt;"><strong><span style="font-size: 13pt;">2. Thời gian sử dụng thẻ: </span></strong></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">- Thẻ đọc c&oacute; gi&aacute; trị 01 năm kể từ ng&agrave;y cấp thẻ</span></p>
+<p style="text-align: justify; text-indent: 27pt;"><strong><span style="font-size: 13pt;">3. Thủ tục l&agrave;m thẻ:</span></strong></p>
+<p style="text-align: justify; text-indent: 27pt;"><span style="font-size: 13pt;">- Tờ khai cấp thẻ: Ph&aacute;t h&agrave;nh tại bộ phận cấp thẻ.</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">- Chứng minh nh&acirc;n d&acirc;n</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">- 01 ảnh 3x4 hoặc 4x6 mới nhất.</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">- Tiền thẻ nhựa cứng: 30.000 đồng / 1 thẻ / 1 năm</span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 13pt;">* Lưu &yacute;: Đối với bạn đọc kh&ocirc;ng hộ khẩu tại Đ&agrave; Nẵng, khi đọc tại chổ phải cược tiền. </span></strong></p>
+<p style="text-align: justify;"><strong><span style="text-decoration: underline;"><span style="font-size: 13pt;">B. THẺ MƯỢN</span></span></strong><strong><span style="font-size: 13pt;"> (thẻ tổng hợp: đọc s&aacute;ch tại chỗ, mượn s&aacute;ch về nh&agrave; &amp; sử dụng thư viện để học tập, nghi&ecirc;n cứu v&agrave; l&agrave;m việc)</span></strong></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><strong style="text-indent: 36pt;"><span style="font-size: 13pt;">1. Đối tượng</span></strong><span style="font-size: 13pt;">: Học sinh THPT, Trung học chuy&ecirc;n nghiệp, sinh vi&ecirc;n c&aacute;c trường Đại học, c&aacute;n bộ c&ocirc;ng chức, vi&ecirc;n chức, hưu tr&iacute; v&agrave; nh&acirc;n d&acirc;n sống v&agrave; l&agrave;m việc tr&ecirc;n địa b&agrave;n TP. Đ&agrave; Nẵng.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>2. Thủ tục:</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>a. Đối với nh&acirc;n d&acirc;n v&agrave; C&aacute;n bộ c&ocirc;ng chức &ndash; vi&ecirc;n chức:</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Chứng minh nh&acirc;n d&acirc;n</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Hộ khẩu thường tr&uacute; tại Đ&agrave; Nẵng (Sổ ch&iacute;nh hoặc sổ photo)</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">&nbsp; &nbsp; - Đối với nh&acirc;n d&acirc;n, c&ocirc;ng chức &ndash; vi&ecirc;n chức &nbsp;ngoại tỉnh phải c&oacute; giấy x&aacute;c nhận tạm tr&uacute;; thời gian tạm tr&uacute; v&agrave; giấy x&aacute;c nhận của cơ quan đang l&agrave;m việc.</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">&nbsp; &nbsp; - 01 ảnh 3x4 hoặc 4x6 mới nhất.</span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 13pt;">b, Đối với học sinh, sinh vi&ecirc;n cần c&oacute;:</span></strong></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Chứng minh nh&acirc;n d&acirc;n hoặc Thẻ học sinh, sinh vi&ecirc;n</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Hộ khẩu thưởng tr&uacute; tại Đ&agrave; Nẵng. </span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">&nbsp; &nbsp; - Đối với Sinh vi&ecirc;n ngoại tỉnh phải c&oacute; Giấy x&aacute;c nhận tạm tr&uacute; v&agrave; thời gian tạm tr&uacute; tại th&agrave;nh phố Đ&agrave; Nẵng (hoặc giấy x&aacute;c nhận k&yacute; t&uacute;c x&aacute;).</span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">- 01 ảnh 3x4 hoặc 4x6 mới nhất.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>3</strong>. <strong>Ph&iacute; thẻ nhựa cứng:</strong></span></p>
+<p style="text-align: justify; text-indent: 36pt;"><span style="font-size: 13pt;">&nbsp; &nbsp;+ Ph&iacute; thẻ nhựa cứng: 30.000 đồng/ 01 thẻ/ 3 năm</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>4. Tiền cược s&aacute;ch </strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <em>Đối với bạn đọc c&oacute; k&egrave;m theo hộ khẩu thường tr&uacute; tại Đ&agrave; Nẵng.</em></span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thẻ mượn 01 cuốn về nh&agrave; cược: 70.000 đồng/ 01 thẻ.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thẻ mượn 02 cuốn về nh&agrave; cược: 150.000 đồng/ 01 thẻ.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <em>Đối với bạn đọc kh&ocirc;ng c&oacute; hộ khẩu thường tr&uacute; tại Đ&agrave; Nẵng:</em></span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thẻ mượn 01 cuốn v&agrave; cược :100.000 đồng/01 thẻ.</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;"></span><strong><span style="text-decoration: underline;"><span style="font-size: 13pt;">C.THẺ THIẾU NHI</span></span></strong><strong><span style="font-size: 13pt;"> (đọc s&aacute;ch tại chỗ v&agrave; mượn s&aacute;ch về nh&agrave;)</span></strong></p>
+<p style="margin-left: 30px; text-align: justify;">&nbsp;<strong><span style="font-size: 13pt;">1. Đối tượng</span></strong><span style="font-size: 13pt;">: Học sinh mẫu gi&aacute;o, học sinh tiểu học v&agrave; THCS của c&aacute;c trường tr&ecirc;n địa b&agrave;n TP. Đ&agrave; Nẵng từ 01 đến 15 tuổi.</span></p>
+<p style="margin-left: 30px; text-align: justify;"><strong><span style="font-size: 13pt;">2. Thủ tục gồm:</span></strong></p>
+<p style="text-align: justify; text-indent: 27pt;"><span style="font-size: 13pt;">- Tờ khai cấp thẻ: C&oacute; x&aacute;c nhận của phụ huynh học sinh hoặc người gi&aacute;m hộ.</span></p>
+<p style="margin-left: 30px; text-align: justify;"><span style="font-size: 13pt;">- &nbsp;01 ảnh thẻ cỡ 3x4 mới nhất.</span></p>
+<p style="margin-left: 30px; text-align: justify;"><span style="font-size: 13pt;">- &nbsp;Thẻ mượn s&aacute;ch về nh&agrave; cược: 100.000 đồng/ tối đa 02 cuốn/01 thẻ.</span></p>
+<p style="margin-left: 30px; text-align: justify;"><span style="font-size: 13pt;">-&nbsp; Tiền thẻ thiếu nhi: 10.000 đồng / thẻ / 1 năm</span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 13pt;">LƯU &Yacute;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></strong></p>
+<p style="text-align: justify;">&nbsp;<em><span style="font-size: 13pt;">* <strong>Bạn đọc nộp Tiền l&agrave;m thẻ + Tiền cược khi bắt đầu l&agrave;m thẻ.</strong></span></em></p>
+<p style="margin-bottom: 6pt; text-align: justify;"><span style="font-size: 13pt;">** <strong><em>Tiền cược s&aacute;ch được ho&agrave;n lại khi bạn đọc kh&ocirc;ng c&ograve;n nhu cầu sử dụng thẻ Thư Viện. (&Aacute;p dụng với thẻ mượn về nh&agrave; v&agrave; thẻ thiếu nhi)</em></strong></span></p>
+<p style="margin-bottom: 6pt; text-align: justify;"><strong><em><span style="font-size: 13pt;">*** Tiền cược s&aacute;ch đọc tại chỗ, ho&agrave;n trả lại sau khi bạn đọc trả s&aacute;ch hoặc t&agrave;i liệu.</span></em></strong></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;">- Đối với học sinh THPT cuối cấp (lớp 12) thẻ bạn đọc chỉ c&oacute; gi&aacute; trị đến 30/6 h&agrave;ng năm.</span></em></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;">- Tiền cược s&aacute;ch Thư Viện chỉ thu tượng trưng chứ kh&ocirc;ng thu theo gi&aacute; trị của cuốn s&aacute;ch.</span></em></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;">- Thẻ Thư viện được miễn đ&oacute;ng tiền lệ ph&iacute; hằng năm. </span></em></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;">- Thẻ Thiếu nhi, thẻ Đọc : &nbsp;1 năm đổi 1 lần </span></em></p>
+<p style="text-align: justify;"><em><span style="font-size: 13pt;">- Thẻ Mượn: 03 năm đổi 1 lần ./.</span></em></p></b>
+                        </div>
+                        <div class="w3-row noidungBaiViet">
+                            
+                        </div>
+                    </div>
+                    <div class="fb-like" data-href="https://thuvien.danangportal.gov.vn/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+</div>
+
+
+<script>
+    var standarSize = 13;
+    var titleStandarSize = 20;
+    function resizeText(number) {
+
+        var titleSize = parseInt($('.titleBaiViet').css('font-size'));
+        var descriptionSize = parseInt($('.trichyeuBaiViet').css('font-size'));
+        var contentSize = parseInt($('.noidungBaiViet').css('font-size'));
+
+
+        if (number > 0) {
+            contentSize = contentSize + 1;
+            titleSize = titleSize + 1;
+            descriptionSize = descriptionSize + 1;
+        } else if (number < 0) {
+            contentSize = contentSize - 1;
+            titleSize = titleSize - 1;
+            descriptionSize = descriptionSize - 1;
+        } else {
+            contentSize = standarSize;
+            titleSize = titleStandarSize;
+            descriptionSize = standarSize;
+        }
+        $('.noidungBaiViet').css('font-size', contentSize + "px");
+        $('.titleBaiViet').css('font-size', titleSize + "px");
+        $('.trichyeuBaiViet').css('font-size', descriptionSize + "px");
+        $('.trichyeuBaiViet p').css('font-size', descriptionSize + "px");
+        $('.trichyeuBaiViet span').css('font-size', descriptionSize + "px");
+    }
+
+
+    function setContrast(vlContrast) {
+        if (vlContrast == 3) {
+            $(".div-body-news").css("background-color", "#FFF");
+            $(".div-related-news").css("background-color", "#FFF");
+        } else {
+            if (vlContrast == 0) {
+                $(".div-body-news").css("background-color", "#DCDCDC");
+                $(".div-related-news").css("background-color", "#DCDCDC");
+            } else {
+                if (vlContrast == 1) {
+                    $(".div-body-news").css("background-color", "#F5F5F5");
+                    $(".div-related-news").css("background-color", "#F5F5F5");
+                } else {
+                    $(".div-body-news").css("background-color", "#F8F8FF");
+                    $(".div-related-news").css("background-color", "#F8F8FF");
+                }
+            }
+        }
+    }
+
+    var vl = 3;
+    setContrast(vl);
+
+    $("#giamContrast").click(function () {
+        if (vl > 0) {
+            vl = vl - 1;
+            setContrast(vl);
+        }
+    });
+
+    $("#tangContrast").click(function () {
+        if (vl < 3) {
+            vl = vl + 1;
+            setContrast(vl);
+        }
+    });
+
+    function openPrintWindow(url) {
+        window.open(url, '', 'top=10,left=10,scrollbars=1,resizable=1');
+    }
+
+
+</script>
+<script>
+
+
+    $('.tts').before("<img id='loader' style='display: none' src='https://ttsvpubtp.danang.gov.vn/images/loader.gif'>");
+
+    $('#btPlay').click(function () {
+        let data = {
+            'token': "5056167b-b990-4723-9f86-aac80a6a85fa",
+            'content': $.trim($('.tts').text())
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'https://ttsvpubtp.danang.gov.vn/api/getAudio',
+            dataType: 'json',
+            contentType: 'application/json',
+            beforeSend: function () {
+                $('#loader').show()
+                $('#btPlay').hide()
+            },
+            success: function (data) {
+                $('.tts').before("<br><audio controls autoplay src='" + data.src + "'></audio>")
+            },
+            complete: function () {
+                $('#loader').hide();
+            },
+            data: JSON.stringify(data)
+        });
+    });
+
+
+
+
+
+</script>
+
+<script>
+        $(document).ready(function () {
+
+        $('.trichyeuBaiViet').find("span").each(function () {
+
+            var $el;
+            $el = $(this);
+            $el.removeAttr('style');
+
+        });
+
+
+        $('.noidungBaiViet').find("span").each(function () {
+
+            var $el;
+            $el = $(this);
+            console.log($el.html());
+            $el.css("font-family", 'Arial');
+            $el.css("font-size", '1.125em');
+            });
+    });
+</script>
+
+            </div>
+            <div class="w3-row">
+                
+<div class="div-footer-news">
+    <form>
+        <input type="hidden" id="previewURL" value="/News/PreView/1408"/>
+    </form>
+</div>
+            </div>
+            <div class="w3-row">
+                
+
+<div class="div-related-news">
+    <hr />
+    <div id="headChuDe" class="headChuDe">
+        TIN LIÊN QUAN
+    </div>
+
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/1410">
+                    <div>
+                        Gi&#x1EDD; l&#xE0;m vi&#x1EC7;c
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/1409">
+                    <div>
+                        N&#x1ED9;i quy Th&#x1B0; vi&#x1EC7;n
+                    </div>
+
+
+                </a>
+
+            </div>
+            <div class="w3-row lineBaiViet">
+                <a href="/News/ReadNews/1408">
+                    <div>
+                        Th&#x1EE7; t&#x1EE5;c c&#x1EA5;p th&#x1EBB;
+                    </div>
+
+
+                </a>
+
+            </div>
+</div>
+
+
+            </div>
+        </div>
+        <div class="w3-col l4">
+            <div class="w3-row pt-3">
+                
+
+
+
+
+    <div id="container-fluid cc rightside">
+        <div class="w3-row cc hot-links">
+            <div class="w3-col">
+                <a href="#" target="_blank">
+                    <div class="cropImageBanner">
+                        <img src="/Images/blue/lichphucvu.jpg" width="100%" class="img-hot-links" />
+                    </div>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+            </div>
+            <div class="w3-row">
+                
+
+
+
+<div class="container-fluid cc rightside">
+
+    <div class="w3-row cc hot-links">
+        <div class="w3-col  l6 m6">
+            <a href="https://s-hub.vn/" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//shub.png" />
+            </a>
+        </div>
+        <div class="w3-col l6 m6">
+            <a href="http://opac.thuvien.danang.gov.vn/pages/opac/wpid-search-stype-form-quick.html" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//tracuusach.png" />
+            </a>
+        </div>
+    </div>
+
+    <div class="w3-row cc hot-links">
+        <div class="w3-col  l6 m6">
+            <a href="/News/ReadNews/1408" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//thutuccapthe.png" />
+            </a>
+        </div>
+        <div class="w3-col l6 m6">
+            <a href="http://opac.thuvien.danang.gov.vn/pages/opac/wpid-regreader.html" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//dangkythe.png" />
+            </a>
+        </div>
+    </div>
+
+    <div class="w3-row cc hot-links">
+        <div class="w3-col  l6 m6">
+            <a href="http://opac.thuvien.danang.gov.vn/pages/opac/wpid-search-stype-form-quick.html" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//tctl.png" />
+            </a>
+        </div>
+        <div class="w3-col l6 m6">
+            <a href="http://sachdientu.thuvien.danang.gov.vn/" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//sdt.png" />
+            </a>
+        </div>
+    </div>
+    <div class="w3-row cc hot-links">
+        <div class="w3-col l6 m6">
+            <a href="http://tailieuso.thuvien.danang.gov.vn" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//tailieuso.png" />
+            </a>
+        </div>
+        <div class="w3-col l6 m6">
+            <a href="http://thuviendientu.thuvien.danang.gov.vn" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//thuviendientu.png" />
+            </a>
+        </div>
+
+    </div>
+    <div class="w3-row cc hot-links">
+        <div class="w3-col  l6 m6">
+            <a href="https://egov.danang.gov.vn" target="_blank">
+                <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//qc5.png" />
+            </a>
+        </div>
+
+        <div class="w3-col l6 m6">
+                <a href="/GuiCauHoi" target="_blank">
+                    <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//hoidap.png" />
+                </a>
+            </div>
+    </div>
+
+    <div class="w3-row cc hot-links">
+        <a href="/News/CatNews/64" target="_blank">
+            <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//cds.jpg" />
+        </a>
+    </div>
+</div>
+
+            </div>
+            <div class="w3-row">
+                
+
+
+<div class="container-fluid rightside" style="margin-top:15px;margin-bottom:15px; border-top:2px solid #c7c5c5">
+    <div id="headChuDe" class="headChuDe">
+        LIÊN KẾT WEBSITE THƯ VIỆN
+    </div>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: inline-block;">
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://vuthuvien.bvhttdl.gov.vn/" target="_blank" class="weblink logo-none">V&#x1EE5; Th&#x1B0; vi&#x1EC7;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://nlv.gov.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Qu&#x1ED1;c gia</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienhanoi.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Tp. H&#xE0; N&#x1ED9;i</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvientphcm.gov.vn/index.php?lang=vi" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n t&#x1ED5;ng h&#x1EE3;p HCM</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienhoabinh.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n H&#xF2;a B&#xEC;nh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviennamdinh.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Nam &#x110;&#x1ECB;nh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviensonla.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n S&#x1A1;n La</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienkhanhhoa.gov.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Kh&#xE1;nh H&#xF2;a</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienhaiphu.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ph&#xFA; Y&#xEA;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvientinhgialai.vn/CMPortal/Default.aspx?TabId=Home" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Gia Lai</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvien.daknong.gov.vn/Default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n &#x110;&#x1EAF;k N&#xF4;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienkontum.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Kontum</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienquangnam.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Qu&#x1EA3;ng Nam</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://thuvien.thuathienhue.gov.vn." target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Th&#x1EEB;a Thi&#xEA;n Hu&#x1EBF;</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.cantholib.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n C&#x1EA7;n Th&#x1A1;</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbinhthuan.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xEC;nh Thu&#x1EAD;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://thuvienninhthuan.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ninh Thu&#x1EAD;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviensoctrang.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n S&#xF3;c Tr&#x103;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbinhduong.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xEC;nh D&#x1B0;&#x1A1;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvientravinh.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Tr&#xE0; Vinh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienkiengiang.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ki&#xEA;n Giang</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbrvt.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xE0; R&#x1ECB;a V&#x169;ng T&#xE0;u</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvientinhyenbai.gov.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n T&#x1EC9;nh Y&#xEA;n B&#xE1;i</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienhatinh.org" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n H&#xE0; T&#x129;nh</a>
+                </li>
+    </ul>
+
+    <div id="headChuDe" class="headChuDe">
+        LIÊN KẾT WEBSITE
+    </div>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: inline-block;">
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://vhtt.danang.gov.vn/" target="_blank" class="weblink logo-www">S&#x1EDF; V&#x103;n h&#xF3;a - Th&#x1EC3; thao v&#xE0; Du l&#x1ECB;ch</a>
+                </li>
+    </ul>
+</div>
+
+
+<script>
+    $("#ddWebLinks").change(function () {
+        var url = this.value;
+        window.open(url, '_blank');
+        this.value = "0";
+        return false;
+    });
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <hr />
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="13PHTFl9peQQVGq5gw1Y8";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    <div class="footer-site">
+        <div class="w3-row pl-5 pt-2">
+            <div class="w3-col m9">
+                <div>
+                    <p class="logo-none font-weight-bold">THƯ VIỆN ĐÀ NẴNG.</p>
+                    Địa chỉ: 46 Bạch Đằng, 33 Trần Phú, Phường Hải Châu, Thành phố Đà Nẵng<br>
+                    Cơ quan chủ quản: Sở Văn hóa, Thể thao và Du lịch thành phố Đà Nẵng<br>
+                    Giấy phép số: 856/GP-STTTT, cấp ngày 13 tháng 7 năm 2021<br>
+                    Chịu Trách nhiệm nội dung: Bà Lê Thị Bích Phượng, Giám đốc Thư viện Đà Nẵng<br>
+                    Điện thoại: 0236 3827533 Địa chỉ website: https://thuvien.danang.gov.vn;<br>
+                    Email: <a href="mailto:tvkhth@danang.gov.vn" style="color:white">tvkhth@danang.gov.vn</a><br />
+                    <a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/thuviendananggovvn-1703057809" title="Chung nhan Tin Nhiem Mang" target="_blank"><img src="https://tinnhiemmang.vn/handle_cert?id=thuvien.danang.gov.vn" width="150px" height="auto" alt="Chung nhan Tin Nhiem Mang" /></a>
+                </div>
+                <!-- Begin EMC Tracking Code -->
+
+                <script type="text/javascript">
+                        var _govaq = window._govaq || [];
+                    _govaq.push(['trackPageView']);
+                    _govaq.push(['enableLinkTracking']);
+                    (function () {
+                        _govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+                        _govaq.push(['setSiteId', '8499']);
+                        var d = document,
+                            g = d.createElement('script'),
+                            s = d.getElementsByTagName('script')[0];
+                        g.type = 'text/javascript';
+                        g.async = true;
+                        g.defer = true;
+                        g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+                        s.parentNode.insertBefore(g, s);
+                    })();
+                </script>
+                <!-- End EMC Tracking Code -->
+            </div>
+
+            <div class="w3-col m3">
+                
+<div class="visitor-info">    
+    <div>Hôm nay: 14</div>
+    <div>Hôm qua: 83</div>
+    <div>Tuần này: 97</div>
+    <div>Tuần trước: 983</div>
+    <div>Tháng này: 3789</div>
+    <div>Tháng trước: 16158</div>
+    <div><strong>Tổng cộng: 1665295</strong></div>
+</div>
+
+                <div id="statistics" class="pt-2"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var Client = Client || {};
+    Client.Pulse = null;
+    $(document).ready(function () {
+        Client.Heartbeat();
+
+    });
+
+
+
+
+    /// Sends the heartbeat signal and retrieves the currently active user list
+    Client.Heartbeat = function () {
+        data = {
+            UserName: '66de5b75-f1e7-431a-800d-0fc81cb3a5cc'
+        };
+        strdata = JSON.stringify(data)
+        $.ajax({ //Send the signal and recieve the information about active users back
+            url: '/api/HeartBeat/CheckActive',
+            type: 'POST',
+            contentType: 'application/json',
+            data: strdata,
+            success: function (response, sStatus, jqXHR) {
+                Client.RenderActiveUsers(response);
+                Client.Pulse = setTimeout(function () {
+                    Client.Heartbeat();
+                }, 300000); //300 second delay before next trigger
+            } //success
+        }); //$.ajax
+    } //Heartbeat
+
+    Client.RenderActiveUsers = function (response) {
+        var numVisit = response.numVisit;
+        var numOnline = response.numOnline;
+        var strStatistic = '<b>Tổng cộng 009398' + numVisit.toString() +'</b>';
+        var his = '<p>Hôm nay: ' + ViewBag.DailyCount.ToString() + '<br>' + 'Hôm qua: 26<br>' + 'Tuần này: 167<br>' + 'Tháng này:182<br>' + 'Tháng trước: 2344 <br>';
+        $('#statistics').html(strStatistic + his);
+    } //RenderActiveUsers
+</script>

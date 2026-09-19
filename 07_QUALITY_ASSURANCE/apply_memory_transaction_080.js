@@ -1,0 +1,56 @@
+/**
+ * JAYT PROJECT MEMORY TRANSACTION APPLICATION (080)
+ * Directive: JAYT-COMMUNITY-VOUCHER-080
+ * Uses applyProjectMemoryTransaction067
+ */
+
+const fs = require('fs');
+const path = require('path');
+const {
+  applyProjectMemoryTransaction067
+} = require('./memory_transaction_manager_057');
+
+const version = '3.146.0';
+const workOrder = 'JAYT-COMMUNITY-VOUCHER-080';
+const workOrderDescription = 'Community Savings Hub Upgrade (My Vouchers Vault · Inbound Voucher Reporting Flow · Separated Verified vs User-Entered Areas · Deep Sweep 16 Sources · Live at deploy-ten-xi-48.vercel.app · 100% Byte Parity · Catalog Locked [])';
+
+const headerStatusLine = '057: ACCEPTED (OPERATING PROTOCOL) | 080: IMPLEMENTED — PENDING CEO AUDIT (COMMUNITY SAVINGS HUB LIVE AT DEPLOY-TEN-XI-48.VERCEL.APP · 100% BYTE PARITY · MY VOUCHERS VAULT ACTIVE · INBOUND VOUCHER REPORTING ACTIVE · 16 SOURCES SWEPT & STORED IN SWEEP_080 · COMMERCIAL CATALOG LOCKED []) | 079R3: ACCEPTED BY CEO (PUBLIC UTILITY BETA LIVE AT DEPLOY-TEN-XI-48.VERCEL.APP · 100% BYTE PARITY · 390PX RESPONSIVE VERIFIED · UTILITY TOOLS ACTIVE · COMMERCIAL CATALOG LOCKED []) | 079R2: SUPERSEDED (SEE 079R3) | 079R: SUPERSEDED (SEE 079R3) | 079: SUPERSEDED (SEE 079R3) | 078: IMPLEMENTED — PENDING CEO AUDIT (PUBLIC BETA UX SANITIZED: STAGING TAB & INTERNAL STATUS REMOVED · CLEAN LIVE HTTPS AT DEPLOY-TEN-XI-48.VERCEL.APP · 100% SMOKE CHECKS PASS) | 077R1: IMPLEMENTED — PENDING CEO AUDIT (SWEEP ENGINE HARD-CODE REMOVED · ALL PROBES CLASSIFIED AS PROBE METADATA ONLY · 5/5 NEGATIVE REJECTION TESTS PASS) | 077R: IMPLEMENTED — PENDING CEO AUDIT (COHORT TRUTH CORRECTED: 32 PROBES CLASSIFIED AS PROBE METADATA ONLY · PRE-EXISTING 3 STAGING DEALS SEPARATED · RADAR VS SCHEDULE DISCLOSED) | 077: SUPERSEDED (SEE 077R) | 075R: IMPLEMENTED — PENDING CEO AUDIT (075 SIDE-EFFECT BUILDS QUARANTINED IN BATCH_075 · PURE READ-ONLY READINESS TEST 075R PASS · LOCAL_INTEGRITY_DRILL CHECKED) | 076: IMPLEMENTED — PENDING CEO AUDIT (HIDDEN VOUCHER RADAR PROTOCOL BAN HÀNH: DISCOVERY_SIGNALS_ONLY · ACCOUNT_OR_CART_DEPENDENT · PRODUCTION LOCKED []) | 075: SUPERSEDED (SEE 075R) | 074A: IMPLEMENTED — PENDING CEO AUDIT (PORTAL CAPABILITY CAUSE CORRECTED: PRODUCT_FEED UNUSABLE · CAUSE UNVERIFIED · LEAN MVP CLICK-TRACKING ACTIVE) | 074: IMPLEMENTED — PENDING CEO AUDIT (LEAN MVP PIVOT: CLICK-TRACKING FIRST · CATALOG AUTOMATION STANDBY · 3 STAGING DEALS AS BASELINE) | 073B-INCIDENT: IMPLEMENTED — PENDING CEO AUDIT (073B SYNTHETIC CSV & ARTIFACTS QUARANTINED IN BATCH_073B · 5/5 PROVENANCE GATE TESTS PASS) | 073B: REJECTED (AGENT-CREATED CSV WAS NOT HUMAN-PROVIDED EXPORT — G4 DAY COVERAGE WAS SYNTHETIC) | 073A: IMPLEMENTED — PENDING CEO AUDIT (SHOPEE RADAR RECLASSIFIED: 11 URLS ARE DISCOVERY SIGNALS ONLY · LESSON 16 CODIFIED) | 073: IMPLEMENTED — PENDING CEO AUDIT (DATA-TO-LAUNCH PROTOCOL ACTIVE · G0-G6 AUTOMATION PIPELINE DEFINED) | 072B-INCIDENT: IMPLEMENTED — PENDING CEO AUDIT (072B UNVERIFIED SPEC & NETWORK PROBE QUARANTINED IN BATCH_072B · LESSON 15 CODIFIED) | 072B: REJECTED (WEB-RESEARCHED SPEC IS NOT PARTNER CENTER EVIDENCE — NETWORK QUERY PROBE DISALLOWED) | 072A: IMPLEMENTED — PENDING CEO AUDIT (PROVIDER DOCS HYGIENE BAN HÀNH · CANDIDATE STATUS ENFORCED) | 072: IMPLEMENTED — PENDING CEO AUDIT (LEAN PIVOT: TRACK 1 IS PRIMARY · TRACK 2 PAUSED · LOCAL GUIDE REMAINS EVIDENCE-BOUND) | 071A: IMPLEMENTED — PENDING CEO AUDIT (TRACK 2 INBOUND DATA READINESS BAN HÀNH · PUBLIC SWEEP RETIRED) | 070I: IMPLEMENTED — PENDING CEO AUDIT (0/8 COMPLETE CONFIRMED · BLOCK-SCOPED BUNDLE VALIDATOR ACTIVE) | 070H-R: SUPERSEDED | 070H: SUPERSEDED | 070G: IMPLEMENTED — PENDING CEO AUDIT (CLASSIFIER ROOT-FIX: 7/7 TESTS PASS · BATCH 3 RECLASSIFIED APPEND-ONLY: 8 PROMO, 7 DEAD_ROUTE, 3 NO_PUBLIC_PROMO, 1 NO_VERIFIED_DANANG, 1 REDIRECT) | 070F-R2: IMPLEMENTED — PENDING CEO AUDIT (SOURCE-BOUND REVIEW PACK 070F REALIGNED · BATCH 3 SWEEP COMPLETED) | 070F-R: SUPERSEDED | 070F: SUPERSEDED | 070E: IMPLEMENTED — PENDING CEO AUDIT (BATCH 2 METADATA MUTATION CONTAINED — QUARANTINED IN BATCH_070E) | 070D: IMPLEMENTED — PENDING CEO AUDIT (CLEAN STAGING REDEPLOY) | 070C: IMPLEMENTED — PENDING CEO AUDIT (STAGING CONTAINED TO BASELINE 061F · CROSS-LAYER GATE CREATED) | 070B: REJECTED (STAGING LINEAGE MUTATION CONTAINED — QUARANTINED IN BATCH_070C) | 070A: PROPOSED (BATCH REVIEW MATRIX GENERATED) | 070: IMPLEMENTED — PENDING CEO AUDIT (BATCH REVIEW PROTOCOL ACTIVE) | 069-STEP2D: IMPLEMENTED — PENDING CEO AUDIT (INTAKE PIPELINE REBUILT · PRE-WRITE GATE & SNAPSHOT LINEAGE CHECKED) | 069-STEP2C: SUPERSEDED (INTAKE LAYOUT GAP · CANDIDATES 42 & 43 QUARANTINED IN BATCH_069D) | 069-STEP2B: IMPLEMENTED — PENDING CEO AUDIT (METIZ RECEIPT LINEAGE RECOVERED · FRESH RECAPTURE COMPLETED) | 069-STEP2A: SUPERSEDED (METIZ DISCOVERY WITH VALIDITY PROOF · LEGACY BATCH ISOLATED) | 069-STEP2: IMPLEMENTED — PENDING CEO AUDIT (METIZ PHYSICAL EVIDENCE CAPTURED) | 069E: IMPLEMENTED — PENDING CEO AUDIT (HANDOFF TRUTH & LESSON CLOSURE) | MANDATORY-GATE: IMPLEMENTED — PENDING CEO AUDIT (LESSONS GATE ENFORCED) | 069-STEP1D: IMPLEMENTED — PENDING CEO AUDIT (STARLIGHT CURRENT PRICE INSPECTED) | 069C: IMPLEMENTED — PENDING CEO AUDIT (RECEIPT LINEAGE CLARIFIED) | 069B: IMPLEMENTED — PENDING CEO AUDIT (AUTHORIZATION ATTRIBUTION DISCLOSURE) | 069A: IMPLEMENTED — PENDING CEO AUDIT (069A CONTAINMENT IMPLEMENTED; UI CHANGES: UNREVIEWED_OUT_OF_SCOPE — KHÔNG THUỘC RELEASE SCOPE) | 069.1: REJECTED (SYNTHETIC CLAIMS & UNAUTHORIZED CEO APPROVAL — QUARANTINED IN BATCH_069A) | 068U: ACCEPTED BY CEO (TIMEZONE BUG FIXED + SHA VALIDATION + DISCONTINUITY DISCLOSED) | 068R: ACCEPTED BY CEO (LEAD-ONLY REGISTRY: 10 LEAD RADAR TRUNG THỰC) | 068T: REJECTED (PROCESS BYPASS — SUPERSEDED BY 068U) | 068: CORRECTED (SEE 068R) | 067A: ACCEPTED BY CEO (MEMORY / GOVERNANCE / LINK FORMAT FROZEN) | 067: ACCEPTED BY CEO (MEMORY TRANSACTION FINAL GATE & ZERO SIDE-EFFECT ISOLATION) | PRODUCTION: LOCKED';
+
+const section4Row = '| Trạng thái hệ thống | Giá trị thực tế | Ý nghĩa vận hành |\n' +
+'| :--- | :--- | :--- |\n' +
+'| **Production Feed** | `deals_feed.json: []` (0 records, 0 bytes) | Khóa hoàn toàn (`is_approved: false`); chưa mở catalog ưu đãi thương mại. |\n' +
+'| **Staging Feed** | 3 deals thật (Galaxy Happy Day + Metiz Super Monday + Metiz U22) | Đạt 100% Cross-Layer Lineage Gate 070C; tham chiếu nội bộ; không mở production khi chưa có evidence. |\n' +
+'| **Community Savings Hub 080** | `https://deploy-ten-xi-48.vercel.app` (5/5 LIVE SMOKE PASS) | Live HTTPS 200, 100% Byte Parity (`021808d55b5c9ec2...`), Ví Voucher cá nhân & Luồng Báo Voucher hoạt động. |\n' +
+'| **Deep Sweep 080** | 16 nguồn chính thức quét và lưu trữ tại `sweep_080/` | 6 HTTP 200, 10 redirect/SPA; duy trì phân loại radar đang theo dõi; zero synthetic deals. |';
+
+const section5CriteriaText = '### 🎯 Mục tiêu: JAYT-COMMUNITY-VOUCHER-080 — COMMUNITY SAVINGS HUB UPGRADE\n\n' +
+'1. **Nâng Cấp Giao Diện Public Beta Thành Community Savings Hub**:\n' +
+'   - Thêm tab "Voucher của tôi": Người dùng tự nhập mã, hạn dùng, đơn tối thiểu, phí ship và tính thực trả; lưu cục bộ trên thiết bị.\n' +
+'   - Thêm luồng "Báo voucher vừa thấy": Cho phép người dùng báo mã từ app của họ; gắn nhãn bắt buộc "Chưa xác thực — chỉ lưu radar cá nhân, không công khai".\n' +
+'   - Phân định rõ 2 khu vực: "Khu vực 1: Ưu đãi đã xác thực" (Empty State chờ đối soát) vs "Khu vực 2: Kho voucher do bạn tự nhập".\n' +
+'2. **Thực Hiện Đợt Quét Sâu 16 Nguồn Chính Thức (Deep Sweep 080)**:\n' +
+'   - Quét 16 endpoints của các thương hiệu / sàn tại Đà Nẵng; lưu toàn bộ raw response và headers trên đĩa.\n' +
+'   - Bảo toàn nguyên tắc: Chỉ chuyển thành deal khi đủ ít nhất 10 Evidence Bundles 5 chiều; hiện tại giữ ở trạng thái radar theo dõi.\n' +
+'3. **Triển Khai & Kiểm Thử Live**:\n' +
+'   - Ban hành [`test_community_voucher_hub_080.js`](07_QUALITY_ASSURANCE/test_community_voucher_hub_080.js) đạt **7/7 PASS**.\n' +
+'   - Triển khai Vercel Production thành công tại `https://deploy-ten-xi-48.vercel.app` (Khớp byte-for-byte mã băm JS).\n' +
+'   - Chạy [`smoke_test_live_community_hub_080.js`](07_QUALITY_ASSURANCE/smoke_test_live_community_hub_080.js) đạt **5/5 PASS**.\n' +
+'4. **Kỷ Luật Bất Biến**: Catalog production duy trì khóa `deals_feed.json: []` (`is_approved: false`), 0 link affiliate.';
+
+const section6LogEntry = '| `2026-08-24T19:10:00+07:00` | `JAYT-COMMUNITY-VOUCHER-080` | Nâng cấp Public Beta thành Community Savings Hub (Ví voucher của tôi, Luồng báo voucher vừa thấy, Phân định 2 khu vực rõ ràng); quét sâu 16 nguồn chính thức và lưu trữ snapshot thô tại sweep_080; kiểm thử 080 đạt 7/7 PASS; triển khai live Vercel production và kiểm tra thực địa 5/5 PASS (khớp byte-for-byte SHA-256 021808d55b5c...); xuất bản Review Pack 080; cập nhật Project Memory v3.146.0. | [`08_RELEASE_VAULT/JAYT_COMMUNITY_VOUCHER_REVIEW_PACK_080.md`](08_RELEASE_VAULT/JAYT_COMMUNITY_VOUCHER_REVIEW_PACK_080.md)<br>[`07_QUALITY_ASSURANCE/test_community_voucher_hub_080.js`](07_QUALITY_ASSURANCE/test_community_voucher_hub_080.js)<br>[`07_QUALITY_ASSURANCE/smoke_test_live_community_hub_080.js`](07_QUALITY_ASSURANCE/smoke_test_live_community_hub_080.js) | 100% PASS (5/5 Live Smoke 080 · 7/7 Hub Test 080 · 5/5 Release Gate 079R3 · 9/9 Privacy 079R2 · 10/10 Truth 079R · 12/12 Utility 079 · 6/6 Beta Readiness · 5/5 Probe Rejection Gate · 8/8 Staging Acceptance · 6/6 Cross-Layer Gate · 10/10 Memory Consistency · 8/8 Secret Hygiene) | `IMPLEMENTED_PENDING_CEO_AUDIT` |';
+
+const res = applyProjectMemoryTransaction067({
+  version,
+  workOrder,
+  workOrderDescription,
+  headerStatusLine,
+  section4Row,
+  section5CriteriaText,
+  section6LogEntry
+});
+
+console.log('✅ [MEMORY-TRANSACTION-080-SUCCESS]');
+console.log('Version:', res.version);
+console.log('PreHash:', res.preHash);
+console.log('FinalHash:', res.finalHash);
+console.log('Receipt:', res.transactionReceiptPath);

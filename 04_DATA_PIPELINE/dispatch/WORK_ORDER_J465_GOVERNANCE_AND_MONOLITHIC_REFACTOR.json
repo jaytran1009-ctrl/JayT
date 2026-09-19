@@ -1,0 +1,36 @@
+{
+  "work_order_id": "JAYT-465-GOVERNANCE-AND-MONOLITHIC-REFACTOR",
+  "issued_by": "CEO Codex — orchestration only",
+  "execution_owner": "Antigravity Execution",
+  "design_owner": "CDO / Design System",
+  "acceptance_owner": "QA Directorate",
+  "scope": [
+    "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "03_SOURCE_OF_TRUTH/index.html"
+  ],
+  "design_contract": {
+    "canvas": "#0B120E",
+    "surface": "#141F18",
+    "input": "#0E1712",
+    "hairline": "rgba(197,168,128,0.25)",
+    "forbidden_component_surfaces": ["#FFFDF8", "#F4EFE5", "#FFFFFF"],
+    "hero_exception": "The Dragon Bridge image is an intentional media surface and must remain visible.",
+    "name_card": "No personal name-card or JayT Pass banner in public DOM."
+  },
+  "execution_constraints": {
+    "one_runtime_stylesheet": true,
+    "preserve_functional_dom": true,
+    "no_affiliate_activation": true,
+    "no_production_deploy_without_independent_qa": true
+  },
+  "acceptance": {
+    "viewports": [390, 1440],
+    "full_page_screenshots": true,
+    "zero_cream_component_surfaces": true,
+    "zero_console_errors": true,
+    "zero_horizontal_overflow": true,
+    "cashier_hud_max_ms": 30,
+    "static_seal": "24/24 on WS1 and WS2",
+    "runtime": "HEALTHY / exit_code 0"
+  }
+}

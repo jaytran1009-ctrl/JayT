@@ -1,0 +1,75 @@
+{
+  "receipt_id": "BU_CYCLE_2_VALIDATION_RECEIPT_20260829",
+  "timestamp": "2026-08-29T08:16:41.512Z",
+  "governing_directive": "JAYT-245 Section BU",
+  "target": "https://jayt-storefront-staging-bt.vercel.app",
+  "total_tests": 14,
+  "passed": 14,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "Time-aware slot detected",
+      "passed": true,
+      "detail": "SLOT_AFTERNOON (Chiều nay)"
+    },
+    {
+      "name": "Greeting rendered in subcopy",
+      "passed": true,
+      "detail": "Khám phá chiều mát Đà Nẵng"
+    },
+    {
+      "name": "Affordance matches time slot",
+      "passed": true,
+      "detail": "Chiều nay"
+    },
+    {
+      "name": "Kicker is time-aware",
+      "passed": true,
+      "detail": "☕ CHIỀU NAY ĐI ĐÂU?"
+    },
+    {
+      "name": "data-quick-loc navigates to EXPLORE",
+      "passed": true,
+      "detail": "view=EXPLORE"
+    },
+    {
+      "name": "data-quick-loc sets activeLocality",
+      "passed": true,
+      "detail": "locality=HAI_CHAU"
+    },
+    {
+      "name": "Keyboard Enter triggers view change",
+      "passed": true,
+      "detail": "view=EXPLORE"
+    },
+    {
+      "name": "Spotlight voucher active",
+      "passed": true
+    },
+    {
+      "name": "11 standard tickets rendered",
+      "passed": true,
+      "detail": "count=11"
+    },
+    {
+      "name": "No NaN in expiry dates",
+      "passed": true
+    },
+    {
+      "name": "Zero \"undefined\" leak",
+      "passed": true
+    },
+    {
+      "name": "Zero \"null\" leak",
+      "passed": true
+    },
+    {
+      "name": "Zero \"NaN\" leak",
+      "passed": true
+    },
+    {
+      "name": "Zero broken images",
+      "passed": true
+    }
+  ]
+}

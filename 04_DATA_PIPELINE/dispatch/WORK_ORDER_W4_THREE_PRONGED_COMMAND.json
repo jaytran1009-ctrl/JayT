@@ -1,0 +1,33 @@
+{
+  "work_order_id": "WORK_ORDER_W4_THREE_PRONGED_COMMAND",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W4-THREE-PRONGED-COMMAND",
+  "status": "DISPATCHED__THREE_PRONGS_IN_PARALLEL_WITH_SAFETY_BOUNDARIES",
+  "prong_1_assisted_first_party_ingress": {
+    "mode": "HUMAN_OPERATOR_EXPORT_ONLY",
+    "collector": "04_DATA_PIPELINE/ingest_w4_assisted_raw_capture.cjs",
+    "destination": "04_DATA_PIPELINE/raw_evidence/",
+    "allowed_inputs": ["public logged-out HTML export", "public full-page PNG", "sanitized capture metadata"],
+    "hard_rejections": ["non-200 status", "unapproved HTTPS origin", "CAPTCHA/WAF/login marker", "cookies", "authorization headers", "tokens", "credentials", "personal data visible", "browser automation bypass"],
+    "publication_rule": "A physical capture is raw evidence only. CEO semantic audit is still required before any offer claim or publication."
+  },
+  "prong_2_field_test": {
+    "sessions": 12,
+    "segments": {"students_bach_khoa_due": 6, "office_workers_nguyen_van_linh": 6},
+    "mode": "CONSENTED__ANONYMOUS__HUMAN_COORDINATION_REQUIRED",
+    "recording": "04_DATA_PIPELINE/field_test/W4_FIELD_TEST_ANONYMOUS_OBSERVATION_TEMPLATE.json",
+    "prohibited_data": ["name", "phone", "email", "bank_data", "GPS", "purchase_history", "personal_app_screen", "recording"],
+    "results_status": "NO_SESSIONS_COMPLETED"
+  },
+  "prong_3_track1": {
+    "legal_summary": "05_DEAL_AND_AFFILIATE/track1_compliance/TRACK1_LEGAL_TERMS_SUMMARY.json",
+    "requested_sandbox": "affiliate_enabled=true",
+    "actual_sandbox": "NOT_ENABLED",
+    "reason": "Public terms are not written provider authorization for JayT, and no approved destination/parameter schema is bound.",
+    "prohibited": ["affiliate URL", "sub-ID insertion", "redirect", "tracking", "attribution", "commission claim", "public #JayTAffiliate label"]
+  },
+  "production_boundary": {
+    "canonical_version": "v3.448.0-w3",
+    "production_mutation_authorized": false,
+    "affiliate_enabled": false
+  }
+}

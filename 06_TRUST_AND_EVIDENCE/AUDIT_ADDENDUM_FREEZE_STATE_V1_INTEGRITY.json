@@ -1,0 +1,13 @@
+{
+  "addendum_id": "AUDIT_ADDENDUM_FREEZE_STATE_V1_INTEGRITY",
+  "governing_directive": "JAYT-245 Section JAYT-263-CORRECTION-1 (Lines 5746-5759)",
+  "audit_timestamp_utc": "2026-09-02T09:08:31.681Z",
+  "target_artifact": {
+    "file_path": "00_PROGRAM_BASELINE/JAYT_CONTAMINATION_FREEZE_STATE.json",
+    "self_declared_hash_field": "aee7e71bb09503cf4dafb58040d44678ce64c472f0924a9bd407881f60855960",
+    "actual_file_bytes_sha256": "97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a"
+  },
+  "audit_verdict": "FREEZE_ENFORCEMENT_ACTIVE__INTEGRITY_UNVERIFIED",
+  "root_cause_analysis": "Self-referencing hash field was computed prior to embedding the field into the JSON file, causing file bytes SHA-256 to diverge from the embedded field value. Preflight guard in v1 did not compute digest.",
+  "supersession_decision": "Preserve v1 historical file intact; supersede via JAYT_CONTAMINATION_FREEZE_STATE_V2.json employing deterministic non-self-referencing canonical payload hash contract."
+}

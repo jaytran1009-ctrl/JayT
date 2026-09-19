@@ -1,0 +1,43 @@
+{
+  "department_code": "TRUST_COMPLIANCE",
+  "department_name": "Phòng Pháp Lý, Tuân Thủ & Độ Tin Cậy (Trust & Compliance)",
+  "role_responsible": "Chief Compliance Officer",
+  "test_cases": [
+    {
+      "test_case_id": "COMP-01",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng muốn biết nguồn gốc và tính xác thực của ưu đãi",
+      "objective": "Xác thực 100% deal có gắn taxonomy 'PROBING', mã bằng chứng evidence_ref hợp lệ và liên kết nguồn xác thực",
+      "actions_step_by_step": [
+        "Duyệt qua toàn bộ deal trong deals_feed.json",
+        "Đối chiếu taxonomy, evidence_ref và source_url"
+      ],
+      "expected_outcome": "100% deal tuân thủ taxonomy PROBING, không có deal nào tự xưng VERIFIED khi chưa qua đối soát thực địa",
+      "verification_type": "AUTOMATED_TAXONOMY_INTEGRITY_AUDIT"
+    },
+    {
+      "test_case_id": "COMP-02",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng bấm vào liên kết tiếp thị liên kết (Affiliate Link)",
+      "objective": "Xác thực Interstitial Modal hiển thị rõ ràng thông báo Affiliate Disclosure và điều khoản sử dụng của đối tác",
+      "actions_step_by_step": [
+        "Bấm deal MayCha / Katinat (ShopeeFood affiliate)",
+        "Đọc nội dung trong Interstitial Modal"
+      ],
+      "expected_outcome": "Modal nêu rõ: 'Mã khuyến mãi qua đối tác ShopeeFood. Phí giao hàng tính tại bước thanh toán', hoàn toàn minh bạch",
+      "verification_type": "AUTOMATED_DOM_DISCLOSURE_AUDIT"
+    },
+    {
+      "test_case_id": "COMP-03",
+      "priority": "P0",
+      "target_user_perspective": "Kiểm toán bảo vệ tên miền đối tác chống tấn công SSRF / Open Redirect",
+      "objective": "Xác thực Domain Catalog và IP Pinning với TLS-SNI đối chiếu chặt chẽ danh sách trắng tên miền",
+      "actions_step_by_step": [
+        "Thử nghiệm chuyển hướng tới tên miền ngoài whitelist (e.g. evil.com)",
+        "Thử nghiệm chuyển hướng tới IP nội bộ (127.0.0.1, 169.254.169.254)"
+      ],
+      "expected_outcome": "Chặn đứng 100% tên miền lạ và IP nội bộ, chỉ cho phép metiz.vn, cgv.vn, shopeefood.vn",
+      "verification_type": "AUTOMATED_SSRF_RESOLVER_AUDIT"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "work_order_id": "J358-R3-R7-REMOVE-CALLER-AUTH-INJECTION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Restore the evidence trust boundary by accepting card-ID authenticity only from sealed, source-bound metadata.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r6_authenticated_card_semantics_validator.cjs",
+    "runner": "04_DATA_PIPELINE/run_jayt_358_r3_r6_reproducible_replay.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R6_PARTIAL_ACCEPTANCE_AND_TRUST_BOUNDARY_GATE.md"
+  },
+  "requirements": [
+    "Remove candidate.authenticated_offer_id and every candidate-controlled path from authenticity decisions. Candidate data may state claims only, never attest a source ID.",
+    "Authenticate only through sealed metadata/manifest bytes loaded from the same leaf. Bind authenticated ID to leaf identifier, raw source SHA-256, DOM selector and exact card byte range; require all bindings to match the selected card.",
+    "Reject mappings whose metadata hash is absent from receipt inputs, whose source SHA differs, whose DOM selector/range differs, or whose ID is only schema-valid. Fail closed with distinct reason codes.",
+    "Add mandatory negative tests: caller-injected authenticated_offer_id with empty mapping; forged metadata mapping with SHA mismatch; ID mapped to a different byte range/card; valid schema but missing sealed mapping. Every case must HELD.",
+    "Keep R3-R6 broad-shell, directed-locality and validity protections. Positive control must derive its authenticity only from a sealed fixture metadata mapping that is hashed and listed as a test input.",
+    "Default verify-existing must remain non-mutating and compare all output/sidecar digests. Evaluate only sealed R3 vault bytes; preserve 0 VERIFIED / 10 HELD and perform no hydrate/package/deploy/scheduler/alias/rollback mutation."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r7_sealed_authentication_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r7_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r7_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R7_SEALED_AUTHENTICATION_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R7_SEALED_AUTHENTICATION.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO verify-existing replay and trust-boundary review required; no automatic promotion"
+}

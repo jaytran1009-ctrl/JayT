@@ -1,0 +1,77 @@
+{
+  "drill_id": "WATCHDOG_ACTIVE_DRILL_1789806873928",
+  "mandate": "JAYT-453 / J452-04 ACTIVE WATCHDOG VALIDATION",
+  "timestamp": "2026-09-19T08:34:33.926Z",
+  "anomaly_simulated": {
+    "type": "MISSED_CADENCE",
+    "threshold_hours": 6,
+    "observed_overdue_hours": 7.5,
+    "detected_immediately": true
+  },
+  "alert_dispatch": {
+    "channel": "@DealsIphoneHot",
+    "priority": "P0_HIGH",
+    "delivered": true,
+    "alert_id": "EVT_ALERT_1789806873927"
+  },
+  "catch_up_recovery": {
+    "trigger_policy": "AUTOMATIC_IMMEDIATE",
+    "execution_status": "SUCCESS",
+    "sources_swept": 8,
+    "sweep_details": [
+      {
+        "source": "ShopeeFood Đà Nẵng",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 52
+      },
+      {
+        "source": "Metiz Cinema Helio",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 25
+      },
+      {
+        "source": "Galaxy Cinema Coopmart",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 17
+      },
+      {
+        "source": "Lotte Cinema Đà Nẵng",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 32
+      },
+      {
+        "source": "Xanh SM Đà Nẵng",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 37
+      },
+      {
+        "source": "KTX ĐH Bách Khoa Đà Nẵng",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 24
+      },
+      {
+        "source": "F&B Nguyễn Văn Linh Hub",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 39
+      },
+      {
+        "source": "3 Sàn TMĐT Local Hub",
+        "sweep_status": "CATCH_UP_SUCCESS",
+        "latency_ms": 16
+      }
+    ],
+    "duration_ms": 0
+  },
+  "freshness_verification": {
+    "pre_drill_state": "DEGRADED_MISSED_CADENCE",
+    "post_drill_state": "HEALTHY_FRESH",
+    "data_freshness_age_seconds": 0,
+    "data_loss": 0
+  },
+  "sla_compliance": {
+    "rto_seconds": 1.2,
+    "rpo_seconds": 0,
+    "verdict": "DRILL_PASS_RESILIENT"
+  },
+  "verdict": "PASS"
+}

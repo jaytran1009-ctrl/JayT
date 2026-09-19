@@ -1,0 +1,56 @@
+{
+  "receipt_id": "BU_CYCLE_3_BENCHMARK_RECEIPT_20260829",
+  "timestamp": "2026-08-29T08:18:34.323Z",
+  "governing_directive": "JAYT-245 Section BU",
+  "target": "https://jayt-storefront-staging-bt.vercel.app",
+  "total_tests": 8,
+  "passed": 8,
+  "failed": 0,
+  "performance_metrics": {
+    "domNodes": 400,
+    "domInteractiveMs": 840,
+    "jsHeapMB": 1
+  },
+  "tests": [
+    {
+      "name": "DOM Node Count < 1500 (Lean DOM)",
+      "pass": true,
+      "detail": "400 nodes"
+    },
+    {
+      "name": "DOM Interactive < 3000ms (Cloud Staging)",
+      "pass": true,
+      "detail": "840ms"
+    },
+    {
+      "name": "JS Heap Size < 50MB",
+      "pass": true,
+      "detail": "1MB"
+    },
+    {
+      "name": "Discovery items cached in localStorage",
+      "pass": true,
+      "detail": "count=50"
+    },
+    {
+      "name": "Vouchers cached in localStorage",
+      "pass": true,
+      "detail": "count=12"
+    },
+    {
+      "name": "Phone number input blocked by Zero-PII",
+      "pass": true,
+      "detail": "⚠️ Vì lý do bảo mật Zero-PII, vui lòng KHÔNG nhập số điện thoại hoặc email cá nhân."
+    },
+    {
+      "name": "Email input blocked by Zero-PII",
+      "pass": true,
+      "detail": "⚠️ Vì lý do bảo mật Zero-PII, vui lòng KHÔNG nhập số điện thoại hoặc email cá nhân."
+    },
+    {
+      "name": "Valid URL accepted & modal closed",
+      "pass": true,
+      "detail": "✓ Cảm ơn bạn! Thông tin nguồn đã được tiếp nhận để đối soát."
+    }
+  ]
+}

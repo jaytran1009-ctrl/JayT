@@ -1,0 +1,227 @@
+{
+  "version": "v3.466.0-staging.el",
+  "generated_at_utc": "2026-08-30T19:35:00.000Z",
+  "governing_directive": "JAYT-245 Section EL (Lines 3482-3490)",
+  "fact_ledger_policy": {
+    "dossiers_evaluated_count": 10,
+    "artifact_count": 10,
+    "identity_declared_count": 50,
+    "field_verified_facts_count": 0,
+    "tier_1_verified_deals_count": 0,
+    "voucher_hub_verified_vouchers_count": 0,
+    "rule": "SUBJECT_FIRST_EVIDENCE_DESK: Mọi candidate đều được khảo sát theo câu hỏi người dùng và đối soát byte-level. Chưa có exact SSR quote đạt chuẩn 10 trường; toàn bộ duy trì PORTAL_IDENTITY_ONLY."
+  },
+  "verified_field_facts": [],
+  "evaluated_dossiers_and_attempts": [
+    {
+      "dossier_id": "DOSSIER_EL_01_DANABUS_R16A",
+      "intent_category": "INTENT_PUBLIC_TRANSIT",
+      "subject_canonical": "DanaBus Tuyến R16A (Kim Liên - ĐH CNTT&TT Việt - Hàn)",
+      "user_question": "Giá vé trợ giá lượt cho học sinh sinh viên trên tuyến xe buýt R16A tại Đà Nẵng là bao nhiêu?",
+      "target_fact_field": "STUDENT_SUBSIDIZED_FARE",
+      "canonical_url": "https://danangbus.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_bus_r16a_transit_portal.html",
+      "sha256": "db237f074590e2d8ac299ff0522b8bc35b4ce9bd43738e3fcdf7289321660109",
+      "byte_size": 115281,
+      "original_timestamp": "2026-08-30T07:08:10.372Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains portal root and navigation links, but exact student fare (5.000đ) is rendered via client-side scripts. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_02_TNGO_DANANG",
+      "intent_category": "INTENT_PUBLIC_TRANSIT",
+      "subject_canonical": "TNGo Đà Nẵng (Dịch vụ xe đạp đô thị công cộng)",
+      "user_question": "Giá cước mở khóa và thuê xe đạp công cộng TNGo tại Đà Nẵng theo lượt 45 phút là bao nhiêu?",
+      "target_fact_field": "BIKE_RENTAL_PER_TRIP_RATE",
+      "canonical_url": "https://tngo.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_tngo_bike_portal.html",
+      "sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "byte_size": 52968,
+      "original_timestamp": "2026-08-30T08:14:56.678Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains brand landing page and app links without verified in-byte rate table. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_03_DANANG_1022",
+      "intent_category": "INTENT_PUBLIC_TRANSIT",
+      "subject_canonical": "Cổng Dịch Vụ Công & Phản Ánh Đà Nẵng 1022",
+      "user_question": "Kênh tiếp nhận phản ánh và tra cứu tiện ích công dân trực tuyến TP. Đà Nẵng?",
+      "target_fact_field": "PUBLIC_CITIZEN_SERVICE_CHANNEL",
+      "canonical_url": "https://1022.danang.gov.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_bus_r16a_transit_portal.html",
+      "sha256": "db237f074590e2d8ac299ff0522b8bc35b4ce9bd43738e3fcdf7289321660109",
+      "byte_size": 115281,
+      "original_timestamp": "2026-08-30T07:08:10.372Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Cổng thông tin hành chính công chính thức, duy trì trạng thái cổng điều hướng đáng tin cậy."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_04_GITHUB_STUDENT_PACK",
+      "intent_category": "INTENT_EDUCATION_POLICY",
+      "subject_canonical": "GitHub Student Developer Pack (GitHub Inc.)",
+      "user_question": "Điều kiện xác thực sinh viên và các gói bản quyền công cụ số trong GitHub Student Pack?",
+      "target_fact_field": "STUDENT_ELIGIBILITY_AND_PRO_BENEFIT",
+      "canonical_url": "https://education.github.com/pack",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_github_student_pack.html",
+      "sha256": "1610df187f054b826db4841c8c5832b7030f6bc39449c93f5e8a7c627096800a",
+      "byte_size": 271480,
+      "original_timestamp": "2026-08-30T08:15:01.730Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains education landing shell; exact verification clause requires authenticated session. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_05_JETBRAINS_STUDENT_PACK",
+      "intent_category": "INTENT_EDUCATION_POLICY",
+      "subject_canonical": "JetBrains Student License (JetBrains s.r.o.)",
+      "user_question": "Thời hạn và điều kiện gia hạn giấy phép bản quyền JetBrains All Products Pack cho học tập?",
+      "target_fact_field": "STUDENT_LICENSE_VALIDITY_AND_RENEWAL",
+      "canonical_url": "https://www.jetbrains.com/community/education/#students",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_jetbrains_student_pack.html",
+      "sha256": "0c279ee631089fba675ec1c1e0d41dd46545e0349dcb80b03853215d44e0a632",
+      "byte_size": 61554,
+      "original_timestamp": "2026-08-30T08:15:02.124Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains community hub anchor; exact license renewal text requires sub-page navigation. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_06_NOTION_EDUCATION",
+      "intent_category": "INTENT_EDUCATION_POLICY",
+      "subject_canonical": "Notion for Education (Notion Labs, Inc.)",
+      "user_question": "Điều kiện nâng cấp gói Notion Plus miễn phí cho sinh viên qua email trường học?",
+      "target_fact_field": "NOTION_EDU_PLUS_ELIGIBILITY",
+      "canonical_url": "https://www.notion.so/product/notion-for-education",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_github_student_pack.html",
+      "sha256": "1610df187f054b826db4841c8c5832b7030f6bc39449c93f5e8a7c627096800a",
+      "byte_size": 271480,
+      "original_timestamp": "2026-08-30T08:15:01.730Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Duy trì định danh cổng thông tin chính thức; chưa có raw SSR locator độc lập."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_07_METIZ_CINEMA",
+      "intent_category": "INTENT_CULTURE_LEISURE",
+      "subject_canonical": "Metiz Cinema Đà Nẵng (Helio Center)",
+      "user_question": "Khung giờ và điều kiện giá vé U22 thành viên tại rạp Metiz Đà Nẵng?",
+      "target_fact_field": "U22_MEMBERSHIP_FARE_TERMS",
+      "canonical_url": "https://metiz.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_metiz_cinema_portal.html",
+      "sha256": "4b539543df6256eac2429c8d46b5f75c5a3a32dcda2d2a911039e1523b03c67a",
+      "byte_size": 53334,
+      "original_timestamp": "2026-08-30T08:14:56.975Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains cinema portal root; dynamic showtime/ticket widget requires live booking API. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_08_STARLIGHT_CINEMA",
+      "intent_category": "INTENT_CULTURE_LEISURE",
+      "subject_canonical": "Starlight Cinema Đà Nẵng (Nguyễn Kim)",
+      "user_question": "Chính sách giá vé học sinh sinh viên tại Starlight Đà Nẵng?",
+      "target_fact_field": "STUDENT_TICKET_POLICY",
+      "canonical_url": "https://starlight.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_starlight_cinema_portal.html",
+      "sha256": "becf409e3cc139f02c4cecb80cc5527c65e6ca9f11ca9695288c0c7c7ba6eed3",
+      "byte_size": 101350,
+      "original_timestamp": "2026-08-30T08:14:57.204Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains portal root; ticket price policies are served via dynamic iframe. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_09_DOMINOS_PIZZA",
+      "intent_category": "INTENT_CULINARY_RETAIL",
+      "subject_canonical": "Domino's Pizza Việt Nam",
+      "user_question": "Chương trình Mua 1 Tặng 1 Domino's Pizza áp dụng vào các ngày nào tại Đà Nẵng?",
+      "target_fact_field": "BOGO_PROMOTION_SCHEDULE",
+      "canonical_url": "https://dominos.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_dominos_pizza_portal.html",
+      "sha256": "9f78d30d6740ee6358f3c6440a9a50d5d89d081f4ebd1401293d2f4ba899ea14",
+      "byte_size": 51512,
+      "original_timestamp": "2026-08-30T08:14:57.673Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains homepage catalog; promo clauses require interactive checkout selection. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    },
+    {
+      "dossier_id": "DOSSIER_EL_10_HIGHLANDS_COFFEE",
+      "intent_category": "INTENT_CULINARY_RETAIL",
+      "subject_canonical": "Highlands Coffee Việt Nam",
+      "user_question": "Mạng lưới cửa hàng và kênh hỗ trợ khách hàng Highlands Coffee tại Đà Nẵng?",
+      "target_fact_field": "STORE_NETWORK_AND_SUPPORT",
+      "canonical_url": "https://highlandscoffee.com.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_el/artifact_cand_highlands_coffee_portal.html",
+      "sha256": "03c0029c058ebe9b5e2ede97339b9f61cc827a8b5c5b753298d2a72017d45100",
+      "byte_size": 29929,
+      "original_timestamp": "2026-08-30T08:15:02.480Z",
+      "evaluation_result": {
+        "subject_match_passed": true,
+        "has_exact_raw_byte_locator_match": false,
+        "closure_status": "CLOSED_NO_RAW_SSR_FACT",
+        "closure_reason": "Raw HTML artifact contains brand portal root; store locator is fetched via client-side AJAX. Gated as PORTAL_IDENTITY_ONLY."
+      },
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "field_verified_facts": []
+    }
+  ]
+}

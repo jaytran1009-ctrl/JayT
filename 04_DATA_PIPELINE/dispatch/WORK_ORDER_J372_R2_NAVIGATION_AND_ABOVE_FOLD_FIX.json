@@ -1,0 +1,61 @@
+{
+  "id": "WORK_ORDER_J372_R2_NAVIGATION_AND_ABOVE_FOLD_FIX",
+  "authority": "JAYT-372 CEO R2",
+  "issued_at_utc": "2026-09-10T07:54:00Z",
+  "executor": "Antigravity",
+  "status": "COMPLETED_AND_VERIFIED",
+  "production_deployment_permitted": true,
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "required_changes": [
+    {
+      "id": "NAV_01",
+      "requirement": "Desktop >=1024px: header is one 64px horizontal row. Logo/wordmark stays left; navigation links render horizontally; theme switch stays at the end. Header content max width aligns to page grid. No vertical nav stack."
+    },
+    {
+      "id": "NAV_02",
+      "requirement": "Mobile 390px: header is one 56px row with logo/wordmark, theme toggle and accessible menu button. Nav links open in a controlled menu/sheet with focus trap, Escape close, outside-click close and return focus. Do not show a vertical link list above hero."
+    },
+    {
+      "id": "ATF_03",
+      "requirement": "At scrollY=0 after header, show hero label, headline and Campus Dock CTA on 390px. Preserve 16:9 hero but place it after priority actions."
+    },
+    {
+      "id": "COPY_04",
+      "requirement": "Bind result summary to selectedCluster eligible count. ALL states 65 currently available offers; a cluster states its own actual count. Remove unsupported blanket '81 offers verified' wording from selected results."
+    },
+    {
+      "id": "VISUAL_05",
+      "requirement": "Campus Dock remains the proximity filter below hero. Header navigation is page navigation; do not duplicate one as a tall list. Preserve both J371 themes and J372 R1 evidence states."
+    }
+  ],
+  "verification": [
+    "Screenshots at 1440x900, 768x1024 and 390x844 in both themes, scrollY=0 and after opening the mobile menu.",
+    "Measure header height and verify horizontal desktop nav. At 390px, verify hero label/headline/Campus Dock CTA are visible after header; no horizontal overflow.",
+    "Keyboard test: tab order, focus visibility, menu focus trap, Escape, return focus and selected campus aria-pressed.",
+    "Verify cluster summary equals rendered eligible card count for all five selections, then record served hashes and runtime errors."
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_372_R2_NAVIGATION_VISUAL_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_372_R2_NAVIGATION_VISUAL_RELEASE_RECEIPT.json"
+  ],
+  "completed_at_utc": "2026-09-10T08:08:16.266Z",
+  "live_deployment_id": "dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q",
+  "verification_results": {
+    "NAV_01_desktop": "PASS_64PX_HORIZONTAL_ROW",
+    "NAV_02_mobile": "PASS_56PX_ACCESSIBLE_DRAWER",
+    "ATF_03_mobile": "PASS_HERO_LABEL_HEADLINE_CAMPUS_CTA_VISIBLE_AT_SCROLLY_0",
+    "COPY_04_summary": "PASS_BOUND_TO_ELIGIBLE_COUNT_BLANKET_81_REMOVED",
+    "VISUAL_05_preservation": "PASS_100_PERCENT_R1_DATA_PRESERVED"
+  },
+  "canonical_live_deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+  "superseded_staging_deployment_id": "dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q",
+  "reconciliation_ledger_reference": "08_RELEASE_VAULT/JAYT_372_VERCEL_DEPLOYMENT_RECONCILIATION_LEDGER.json",
+  "commercial_containment": {
+    "affiliate_enabled": false,
+    "revenue_claims_authorized": false
+  }
+}

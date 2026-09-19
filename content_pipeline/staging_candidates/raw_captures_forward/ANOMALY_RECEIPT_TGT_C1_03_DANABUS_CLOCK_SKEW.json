@@ -1,0 +1,17 @@
+{
+  "receipt_id": "ANOMALY_RECEIPT_TGT_C1_03_DANABUS_CLOCK_SKEW",
+  "directive": "JAYT-245 SECTION O.1",
+  "target_id": "TGT_C1_03",
+  "brand": "DanaBus",
+  "target_url": "https://danangbus.vn",
+  "resolved_final_url": "https://www.danangbus.vn/",
+  "capture_started_at_iso": "2026-08-28T15:56:07.579Z",
+  "capture_finished_at_iso": "2026-08-28T15:56:07.899Z",
+  "server_date_header": "Fri, 28 Aug 2026 15:59:33 GMT",
+  "clock_skew_seconds": 205,
+  "skew_evaluation": "SIGNIFICANT_SERVER_CLOCK_SKEW_DETECTED",
+  "raw_payload_bytes": 115281,
+  "raw_payload_sha256": "8995ec9a9f479c625869bc5b578605f72b279fffbe9f006146a079590d6295e3",
+  "verdict": "FAIL_CLOSED: EXCLUDED_FROM_SEMANTIC_CLAIM_BINDING_DUE_TO_CLOCK_SKEW_ANOMALY",
+  "governance_action": "Quarantined from semantic binding until external server clock aligns or verified via independent multi-source trace"
+}

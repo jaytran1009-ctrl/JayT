@@ -1,0 +1,44 @@
+{
+  "receipt_id": "STAGING_RELEASE_RECEIPT_v34223_STAGING_BD_20260829",
+  "environment": "STAGING_REVIEW_BD",
+  "version": "v3.422.3-staging.bd",
+  "deployment_id": "dpl_4ZRNKigNgJu7ko5BY3G9GUdZGzPq",
+  "deployment_url": "https://jayt-storefront-staging-bd.vercel.app",
+  "inspection_url": "https://vercel.com/kuntran777-6857s-projects/jayt-storefront-staging-bd/4ZRNKigNgJu7ko5BY3G9GUdZGzPq",
+  "deployed_at": "2026-08-29T05:44:25.290Z",
+  "target": "staging_candidate",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BD)",
+  "locked_production_baseline": "v3.419.0",
+  "root_cause_fix": {
+    "issue": "In BC, index.html container id was 'app', but script looked for 'jayt-app-root'.",
+    "fix": "Patched index.html with <div id='jayt-app-root'></div> and added multi-selector fallback in script.",
+    "status": "RESOLVED"
+  },
+  "package_integrity": {
+    "entrypoint_html": {
+      "file": "index.html",
+      "size_bytes": 1198,
+      "sha256": "7707a115dafdad01ec1594ef195ca63479dc5de5263a22fadd7da6762eb880a8"
+    },
+    "storefront_js": {
+      "file": "jayt_storefront_staging_bd.js",
+      "size_bytes": 81887,
+      "sha256": "2057ea2c0e4610081ff2d71f198fa991b3563496bfd9a0ff515f20a1f3171ed3"
+    },
+    "stylesheet_css": {
+      "file": "styles.css",
+      "size_bytes": 23643,
+      "sha256": "ba74813231df03388dd2203d97a590410a869f1c0be648213749f5a1f0b4499d"
+    }
+  },
+  "state_truth_summary": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "field_level_render_gate_enforced": true,
+    "unproven_pricing_removed_from_rendered_dom": true
+  }
+}

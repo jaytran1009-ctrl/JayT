@@ -1,0 +1,25 @@
+{
+  "scope_id": "JAYT-317-B04-04-05-ONE-SHOT-INGRESS-20260904",
+  "one_shot_consumed": true,
+  "redirects_followed": false,
+  "retry_authorized": false,
+  "executed_at_utc": "2026-09-04T06:58:44.399Z",
+  "results": [
+    {
+      "slot_id": "B04_04",
+      "status": "RAW_BYTES_CAPTURED__AWAITING_VALIDATION",
+      "http_status": 200,
+      "final_url": "https://egov.danang.gov.vn/tienich",
+      "body_bytes": 28512,
+      "raw_body_sha256": "a8454a801d25629a97139469a057f8683287eb59b54fdff139eb76620e1b22c8",
+      "supporting_text_offset_utf8": 15547,
+      "headers_redacted": true
+    },
+    {
+      "slot_id": "B04_05",
+      "status": "INTAKE_FAILED__QUARANTINE",
+      "error": "fetch failed",
+      "headers_redacted": true
+    }
+  ]
+}

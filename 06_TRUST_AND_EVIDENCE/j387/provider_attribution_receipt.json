@@ -1,0 +1,47 @@
+{
+  "$schema": "https://jayt.vn/schemas/j387-provider-attribution-receipt.v1.json",
+  "receipt_id": "JAYT_387_PROVIDER_ATTRIBUTION_RECEIPT",
+  "cycle": "JAYT-387",
+  "mandate": "WORK_ORDER_J387_LEVEL_MAX_INTEGRITY",
+  "compiled_at_utc": "2026-09-11T03:15:00Z",
+  "compiled_at_local": "2026-09-11T10:15:00+07:00",
+  "governing_directive": "CEO_R1_RULE_4__REPLAYABLE_PROVIDER_ATTRIBUTION_ONLY",
+  "overall_affiliate_status": "DISABLED_ALL_PROVIDERS",
+  "clicks_are_not_revenue": true,
+  "providers": {
+    "Shopee": {
+      "partner_id_configured": true,
+      "provider_issued_validation_packet": "NOT_RECEIVED__AWAITING_REPLAYABLE_AFFILIATE_TEST_VECTOR",
+      "affiliate_enabled": false,
+      "outbound_route": "DIRECT_OFFICIAL_MALL_URL",
+      "action_type": "COMMUNITY_NON_COMMERCIAL_GUIDANCE"
+    },
+    "Lazada": {
+      "partner_id_configured": true,
+      "provider_issued_validation_packet": "NOT_RECEIVED__AWAITING_REPLAYABLE_AFFILIATE_TEST_VECTOR",
+      "affiliate_enabled": false,
+      "outbound_route": "DIRECT_OFFICIAL_MALL_URL",
+      "action_type": "COMMUNITY_NON_COMMERCIAL_GUIDANCE"
+    },
+    "TikTok Shop": {
+      "partner_id_configured": false,
+      "provider_issued_validation_packet": "NOT_APPLICABLE__DIRECT_APP_ROUTING_ONLY",
+      "affiliate_enabled": false,
+      "outbound_route": "DIRECT_OFFICIAL_MALL_URL",
+      "action_type": "COMMUNITY_NON_COMMERCIAL_GUIDANCE"
+    }
+  },
+  "cinema_and_transit_partners": {
+    "status": "NON_COMMERCIAL_DIRECT_DISPATCH",
+    "affiliate_enabled": false,
+    "entities": [
+      "CGV",
+      "Galaxy",
+      "Metiz",
+      "Starlight",
+      "DanaBus",
+      "TNGo",
+      "DSVN"
+    ]
+  }
+}

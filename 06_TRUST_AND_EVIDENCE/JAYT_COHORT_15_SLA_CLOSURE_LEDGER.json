@@ -1,0 +1,531 @@
+{
+  "ledger_id": "JAYT_COHORT_15_SLA_CLOSURE_LEDGER",
+  "governing_directive": "JAYT-245 Section JAYT-257 & JAYT-258",
+  "version": "v3.483.0-staging.ao",
+  "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+  "runtime_clock_utc": "2026-09-02T07:01:42.597Z",
+  "closure_summary": {
+    "total_candidates_in_cohort": 15,
+    "total_candidates_closed": 15,
+    "held_new_cohort_required_count": 14,
+    "closed_count": 1,
+    "public_approved_count_in_cohort": 0,
+    "evidence_complete_internal_held_count": 0
+  },
+  "cohort_15_matrix_4x5": {
+    "T1_DEAL": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "T2_PROGRAM": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "T3_PLACE": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "T4_RADAR": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "unclassified_intake_lifecycle": {
+      "OPEN_EVALUATING": 0,
+      "HELD_NEW_COHORT_REQUIRED": 14,
+      "CLOSED": 1,
+      "total": 15
+    },
+    "column_totals": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 14,
+      "CLOSED": 1,
+      "PUBLIC_APPROVED": 0,
+      "grand_total": 15
+    }
+  },
+  "system_wide_public_approved_note": "PUBLIC_APPROVED = 0 applies strictly to Cohort 15. The approved GitHub Education Pilot (T2_PROGRAM + PUBLIC_APPROVED) in the system-wide registry remains unchanged and active.",
+  "public_dom_diff_audit": {
+    "diff_count": 0,
+    "approved_cards_rendered": 1,
+    "approved_card_title": "GitHub Education — Thông tin đăng ký",
+    "cohort_cards_rendered": 0,
+    "total_external_links": 1,
+    "external_link_url": "https://docs.github.com/en/education/explore-the-benefits-of-github-education/use-github-for-your-schoolwork/apply-for-a-student-developer-pack",
+    "console_errors_across_viewports": 0
+  },
+  "commercial_locks": {
+    "production_locked": true,
+    "production_version": "v3.419.0",
+    "p0_eq_status": "OPEN",
+    "t1_public_deals": 0,
+    "public_vouchers": 0,
+    "affiliate_activation": false,
+    "affiliate_links_created": 0
+  },
+  "departmental_reviews": {
+    "product": "Xác nhận 15 candidate Cohort 15 đã đóng SLA fail-closed; 14 mục HELD_NEW_COHORT_REQUIRED, 1 mục CLOSED; 0 thẻ public.",
+    "design": "Bảo đảm 0 thẻ cohort nào được xuất bản ra staging; DOM công khai chỉ giữ nguyên 1 thẻ GitHub Education.",
+    "ux_cx": "Zero-state và Savings Lab giữ nguyên hiển thị trung lập; không có CTA thương mại hay deeplink.",
+    "growth": "Cam kết không đếm 15 candidate này vào số lượng deals hay vouchers; voucher công khai giữ nghiêm = 0.",
+    "data_trust": "Bảo toàn 100% hash của 14 raw payloads; BHD Star đóng CLOSED có audit trail rõ ràng; Clock Guard đạt 100%.",
+    "engineering": "Staging giữ nguyên v3.483.0-staging.ao; health endpoint đạt PERFECT_MATCH_ZERO_DRIFT; 0 console error trên 1440/768/390.",
+    "qa": "Kiểm định độc lập từng candidate theo runtime clock thực tế; negative tests chống closure sớm đều PASS."
+  },
+  "candidates": [
+    {
+      "candidate_id": "COHORT_EZ_AM_01",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:01.489Z",
+      "sla_close_utc": "2026-09-01T19:04:01.489Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "2c4e43d7fa7ed9676d7b88a425e5687d5be2ef940e192f0c9c8a6804ec80fbc4",
+      "raw_bytes_length": 5364,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_02",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:01.627Z",
+      "sla_close_utc": "2026-09-01T19:04:01.627Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "287a5065df97ddba0eb28a06b3e3fd9b0338b1e241c8500a78b8fd7f5d7fa3f4",
+      "raw_bytes_length": 491,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_03",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:01.931Z",
+      "sla_close_utc": "2026-09-01T19:04:01.931Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "52f59f86a7335642e8c824263ca4b92c4cca0422fce5ba44de9d4ef65c0e3fe1",
+      "raw_bytes_length": 250208,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_04",
+      "intakeStatus": "INTAKE_FAILED_NO_RAW",
+      "sla_open_utc": "2026-09-01T07:04:02.295Z",
+      "sla_close_utc": "2026-09-01T19:04:02.295Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "CLOSED",
+      "public_eligible": false,
+      "raw_sha256": null,
+      "raw_bytes_length": 0,
+      "missing_fields": [
+        "all_fields_missing_due_to_intake_failure"
+      ],
+      "closure_rationale": "Network connection refused (ECONNREFUSED) during intake. Permanently closed fail-closed with immutable audit trail per Mandate JAYT-257.3.",
+      "reopen_policy": "Requires completely new cohort intake and new capture."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_05",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:04.515Z",
+      "sla_close_utc": "2026-09-01T19:04:04.515Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "11355514735af4f9eb21222f8cafc04c6feeee27e7630fe10c7578fa23773610",
+      "raw_bytes_length": 197724,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_06",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:05.264Z",
+      "sla_close_utc": "2026-09-01T19:04:05.264Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "8060e799a4f784e80b029c3892c9e059466398d988d8214e6b5d1de6d6a2dd59",
+      "raw_bytes_length": 463694,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_07",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:05.376Z",
+      "sla_close_utc": "2026-09-01T19:04:05.376Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "eae773389bcc4a566a9ef793a9005d64ddb23f6a31d09c6b0f7ec8fe42f9d2a2",
+      "raw_bytes_length": 155723,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_08",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:05.610Z",
+      "sla_close_utc": "2026-09-01T19:04:05.610Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "c0b6dd4b9f57558750a472373a0410a79c9b388c6a460480b15491da678505ff",
+      "raw_bytes_length": 115281,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_09",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:06.041Z",
+      "sla_close_utc": "2026-09-01T19:04:06.041Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "803c0c0884368d78d0147165835b5eba1a7d47d84f38648cf0518177b7b7599c",
+      "raw_bytes_length": 337317,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_10",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:06.240Z",
+      "sla_close_utc": "2026-09-01T19:04:06.240Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "ec920921d1b4a4383379ebda50bc48ea72b7faa05aa6d3a07d96f259601ec739",
+      "raw_bytes_length": 73804,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_11",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:06.567Z",
+      "sla_close_utc": "2026-09-01T19:04:06.567Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "7d23015c96296934d4ea9d3099ff0a6b174550c959effabb45e4593aace9a7e1",
+      "raw_bytes_length": 227587,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_12",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:07.023Z",
+      "sla_close_utc": "2026-09-01T19:04:07.023Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+      "raw_bytes_length": 27076,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_13",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:07.107Z",
+      "sla_close_utc": "2026-09-01T19:04:07.107Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "c73ff2f67419447be2f16a70e68042b00c26d92af201bcbe16928807e928bed7",
+      "raw_bytes_length": 4279949,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_14",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:07.715Z",
+      "sla_close_utc": "2026-09-01T19:04:07.715Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "216e5d91f77a2456fe566c8820d60462cb4fb0fd22000a4f8f3913266996e67a",
+      "raw_bytes_length": 10334,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_15",
+      "intakeStatus": "RAW_CAPTURED",
+      "sla_open_utc": "2026-09-01T07:04:07.909Z",
+      "sla_close_utc": "2026-09-01T19:04:07.909Z",
+      "closure_timestamp_utc": "2026-09-02T07:01:42.597Z",
+      "clock_guard_verified": true,
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_eligible": false,
+      "raw_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "raw_bytes_length": 52968,
+      "field_status": {
+        "title": true,
+        "listed_price": false,
+        "total_cost": false,
+        "conditions": false,
+        "validity_window": false,
+        "standalone_t4_contract": false
+      },
+      "missing_fields": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator",
+        "standalone_6_field_t4_contract"
+      ],
+      "closure_rationale": "Raw payload is a general portal capture. Lacks commercial T1 pricing/cost/terms locators and lacks standalone 6-field T4 contract. SLA expired; routed to HELD_NEW_COHORT_REQUIRED fail-closed per Mandate JAYT-257.3.",
+      "reopen_policy": "SLA is closed and cannot be extended. Reopening requires a fresh cohort, new capture, and new audit trail."
+    }
+  ]
+}

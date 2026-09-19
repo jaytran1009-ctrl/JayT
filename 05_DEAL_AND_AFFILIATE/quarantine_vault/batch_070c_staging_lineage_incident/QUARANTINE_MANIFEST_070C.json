@@ -1,0 +1,17 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "manifest_id": "QUARANTINE_MANIFEST_070C_STAGING_LINEAGE_INCIDENT",
+  "work_order": "JAYT-070C",
+  "incident_id": "INC-STAGING-LINEAGE-MUTATION-070B",
+  "quarantined_at": "2026-08-24T06:58:10.198Z",
+  "quarantine_reason": "Staging transformer added/modified claims, artifact hashes, and captured_at timestamps not matching raw candidate/receipt SSOT.",
+  "snapshot_byte_for_byte_persisted": true,
+  "items": [
+    {
+      "filename": "staging_deals_feed_070b_mutated.json",
+      "size_bytes": 9239,
+      "sha256": "9b723812c6a3c0122e9e19b33c418480402d88e62928056a2053c0ff68bac2ae",
+      "quarantine_reason": "Mutated 3-deal staging feed deployed during 070B containing mutated Metiz claims and altered hashes."
+    }
+  ]
+}

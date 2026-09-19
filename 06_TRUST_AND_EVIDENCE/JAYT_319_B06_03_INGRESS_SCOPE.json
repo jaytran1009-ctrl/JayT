@@ -1,0 +1,16 @@
+{
+  "scope_id": "JAYT-319-B06-03-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "retry_authorized": false,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "target": {
+    "slot_id": "B06_03",
+    "url": "https://duynghia.danang.gov.vn/vi/web/xa-duy-nghia/w/huong-dan-cong-dan-nop-ho-so-truc-tuyen-tren-cong-dich-vu-cong-quoc-gia",
+    "expected_text_span": "Chuyển đổi số trong lĩnh vực hành chính công đang mang lại nhiều tiện ích thiết thực cho công dân.",
+    "required_notice": "Cẩm nang hướng dẫn nộp hồ sơ dịch vụ công trực tuyến qua VNeID; các khoản phí, lệ phí nhà nước (nếu có) thực hiện theo quy định của cơ quan thẩm quyền tại thời điểm tiếp nhận.",
+    "prohibited": ["zero-fee claim", "fee claim", "payment flow", "collection", "intermediary service", "affiliate", "tracking"]
+  }
+}

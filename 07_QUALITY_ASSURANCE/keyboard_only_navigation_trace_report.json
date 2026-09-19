@@ -1,0 +1,208 @@
+{
+  "audit_title": "JayT Community Web — Full Keyboard-Only Navigation Trace Report",
+  "version": "1.0.0",
+  "evaluated_at": "2026-08-28T15:17:40.666Z",
+  "standard": "WCAG 2.1 Success Criterion 2.1.1 (Keyboard) & 2.1.2 (No Keyboard Trap)",
+  "summary": {
+    "total_steps_executed": 18,
+    "escape_key_modal_close_verified": true,
+    "verdict": "100% PASS"
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "A",
+        "id": null,
+        "role": null,
+        "ariaLabel": "Trang chủ JayT Đà Nẵng",
+        "text": "J\nJayT Đà Nẵng",
+        "className": "apex-nav-brand-title"
+      }
+    },
+    {
+      "step": 2,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "SELECT",
+        "id": "select-hub-district",
+        "role": null,
+        "ariaLabel": "Chọn khu vực",
+        "text": "Toàn Đà Nẵng\nHải Châu\nThanh Kh",
+        "className": "apex-nav-select"
+      }
+    },
+    {
+      "step": 3,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": "btn-toggle-theme",
+        "role": null,
+        "ariaLabel": "Đổi giao diện Sáng / Tối",
+        "text": "Tối",
+        "className": "apex-btn-secondary"
+      }
+    },
+    {
+      "step": 4,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": "Đóng góp hoặc báo sai lệch ưu đãi",
+        "text": "Báo Tín Hiệu",
+        "className": "apex-btn"
+      }
+    },
+    {
+      "step": 5,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Hôm nay tiết kiệm gì?",
+        "className": "jayt-context-pill active"
+      }
+    },
+    {
+      "step": 6,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Gần bạn có gì?",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 7,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Radar nguồn theo dõi",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 8,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Săn voucher đúng lúc",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 9,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Ăn trưa",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 10,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Cà phê",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 11,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Phim & Kèo nhóm",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 12,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "KTX & Học tập",
+        "className": "jayt-context-pill "
+      }
+    },
+    {
+      "step": 13,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "INPUT",
+        "id": "jayt-search-input",
+        "role": null,
+        "ariaLabel": "Tìm kiếm ưu đãi theo từ khóa",
+        "text": "Tìm quán ăn, cà phê, rạp phim, đồ KTX...",
+        "className": null
+      }
+    },
+    {
+      "step": 14,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Xem điều kiện & Lấy ưu đãi\n↗",
+        "className": "apex-btn"
+      }
+    },
+    {
+      "step": 15,
+      "action": "Tab",
+      "focusedElement": {
+        "tag": "BUTTON",
+        "id": null,
+        "role": null,
+        "ariaLabel": null,
+        "text": "Xem điều kiện & Lấy ưu đãi\n↗",
+        "className": "apex-btn"
+      }
+    },
+    {
+      "step": 16,
+      "action": "Type \"popeyes\"",
+      "note": "Search input filtered"
+    },
+    {
+      "step": 17,
+      "action": "Open Radar Modal",
+      "modalOpen": true
+    },
+    {
+      "step": 18,
+      "action": "Press Escape",
+      "modalClosedOnEscape": true
+    }
+  ]
+}

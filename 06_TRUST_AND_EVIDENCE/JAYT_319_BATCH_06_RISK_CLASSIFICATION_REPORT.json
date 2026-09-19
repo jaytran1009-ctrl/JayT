@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "report_id": "JAYT_319_BATCH_06_RISK_CLASSIFICATION_REPORT",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_BATCH_06_RISK_CLASSIFICATION_WORK_ORDER.md",
+  "generated_at": "2026-09-04T16:15:00+07:00",
+  "governance_mode": "FAIL_CLOSED__RISK_CLASSIFICATION_BEFORE_SCOPE",
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 9,
+    "production_card_count": 3
+  },
+  "evaluations": {
+    "B06_01": {
+      "candidate_id": "B06_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_02_13_21",
+      "service_name": "Thông báo chuyển đổi xe buýt sử dụng điện trên các tuyến xe buýt số 02, 13 và 21",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-chuyen-doi-xe-buyt-su-dung-dien-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-02-13-va-21-5761.html",
+      "mandated_check": "verify whether the 28/08/2026 Danabus conversion notice remains a current operational public-utility source rather than a temporary rollout announcement; lock any later card against fare, schedule, frequency, ticketing, voucher, affiliate and tracking claims",
+      "risk_analysis": "Inspection of the leaf page demonstrates that notice 5761 (issued 28/08/2026 under Công văn 16041/SXD-VTATGT) establishes an official operational fleet transition to electric vehicles across non-subsidized urban and suburban routes: Route 02 (Bến xe Trung tâm - TT Hành chính - Hội An), Route 13 (Kim Liên - ĐH Việt Hàn), and Route 21 (Bến xe Trung tâm - TT Hành chính - Cầu Tam Kỳ). Section 4 confirms effective date 'từ ngày 28/8/2026' ongoing. This constitutes an ongoing operational public transit regime change rather than a temporary 1-day event or limited-run ceremony. However, the body text mentions route frequency ranges (e.g. 15-30 mins, 15-60 mins). Stating specific frequencies or schedules as hardcoded card claims creates risk of drift if timetables adjust.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA establish strict structural locks preventing any fare, frequency, or timetable hallucination: (1) Card Tag: 'Giao thông công cộng / Xe buýt điện Đà Nẵng'; (2) Operational Scope: Restricted strictly to the route connectivity (Routes 02, 13, 21) and clean energy transit transition; (3) Zero Fare Claim: Explicit prohibition against stating ticket prices, discounts, or '0 đồng' claims; (4) Zero Schedule & Frequency Inference: Strictly prohibits asserting departure hours or fixed headway frequencies; mandates the note 'Thông tin chuyển đổi phương tiện xe buýt điện (Tra cứu lịch trình và tần suất chi tiết tại cổng Danabus)'; (5) Commercial Lock: Zero ticketing sales cart, zero voucher claims, zero affiliate links, zero tracking tokens; (6) CTA Lock: Outbound action button linking directly to official Danabus portal.",
+      "operational_locks": {
+        "tag": "Giao thông công cộng / Xe buýt điện Đà Nẵng",
+        "corridor": "Tuyến 02 (Bến xe TT – Hội An), Tuyến 13 (Kim Liên – ĐH Việt Hàn), Tuyến 21 (Bến xe TT – Cầu Tam Kỳ)",
+        "effective_status": "OPERATIONAL_REGIME_ONGOING_FROM_20260828",
+        "fare_claim_prohibited": true,
+        "schedule_and_frequency_inference_prohibited": true,
+        "ticketing_cart_prohibited": true,
+        "voucher_affiliate_tracking_prohibited": true,
+        "mandated_guidance_note": "Thông tin chuyển đổi phương tiện xe buýt điện (Tra cứu lịch trình và tần suất chi tiết tại cổng Danabus)"
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B06_02": {
+      "candidate_id": "B06_02_BAN_TIN_SUC_KHOE_CONG_DONG_CDC_DANANG",
+      "service_name": "Bản tin Sức khỏe cộng đồng: Hướng dẫn giữ gìn vệ sinh môi trường và phòng chống dịch bệnh",
+      "official_leaf_url": "https://ksbtdanang.vn/tai-lieu-truyen-thong-gdsk/ban-tin-skcd/ban-tin-suc-khoe-cong-dong-ky-7-2026-77.html",
+      "mandated_check": "classify as public-health education only; define a plain-language medical disclaimer and prohibit diagnosis, treatment direction, booking, patient intake and commercial vaccine claims",
+      "risk_analysis": "The source is an official monthly health publication (Bản tin Sức khỏe cộng đồng Kỳ 7/2026, dated 30/07/2026) issued by the municipal preventive health authority (CDC Đà Nẵng). It provides public health communication regarding environmental sanitation, personal hygiene, and seasonal disease prevention in residential communities. Inspection confirms zero individualized clinical diagnosis, zero therapeutic treatment directions, zero patient appointment flows, and zero direct commercial sales. While other pages on ksbtdanang.vn contain commercial vaccine pricing links (which were filtered out during discovery), this specific leaf URL is purely educational and accompanied by an official PDF bulletin (skcd-thang-7.pdf).",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA establish strict public health boundaries: (1) Card Tag: 'Y tế dự phòng / Sức khỏe cộng đồng'; (2) Content Scope: Restricted to community environmental sanitation, hygiene education, and seasonal epidemic prevention; (3) Mandatory Plain-Language Medical Disclaimer: 'Tài liệu phổ biến kiến thức truyền thông y tế và vệ sinh môi trường phòng bệnh của CDC Đà Nẵng; không mang tính chất chẩn đoán hay phác đồ điều trị bệnh cá nhân. Khi có triệu chứng bất thường, người dân cần đến cơ sở y tế gần nhất để được thăm khám.'; (4) Negative Constraints: Zero diagnosis, zero treatment direction, zero appointment booking, zero patient intake, zero commercial vaccine claims or pricing links; (5) Action CTA: 'Xem Bản tin Sức khỏe cộng đồng' linking strictly outbound to ksbtdanang.vn.",
+      "disclaimer_text": "Tài liệu phổ biến kiến thức truyền thông y tế và vệ sinh môi trường phòng bệnh của CDC Đà Nẵng; không mang tính chất chẩn đoán hay phác đồ điều trị bệnh cá nhân. Khi có triệu chứng bất thường, người dân cần đến cơ sở y tế gần nhất để được thăm khám.",
+      "compliance_locks": {
+        "tag": "Y tế dự phòng / Sức khỏe cộng đồng",
+        "diagnosis_and_treatment_prohibited": true,
+        "booking_and_intake_prohibited": true,
+        "commercial_vaccine_pricing_prohibited": true,
+        "mandated_disclaimer_required": true
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B06_03": {
+      "candidate_id": "B06_03_HUONG_DAN_DICH_VU_CONG_TRUC_TUYEN_DANANG",
+      "service_name": "Hướng dẫn công dân nộp hồ sơ trực tuyến trên Cổng Dịch vụ công quốc gia và TP Đà Nẵng",
+      "official_leaf_url": "https://duynghia.danang.gov.vn/vi/web/xa-duy-nghia/w/huong-dan-cong-dan-nop-ho-so-truc-tuyen-tren-cong-dich-vu-cong-quoc-gia",
+      "mandated_check": "verify the official publisher, city-wide applicability and that its guidance is not limited to a local administrative process; prohibit fee claims or any collection/payment flow",
+      "risk_analysis": "Inspection confirms the publisher is the municipal portal network (danang.gov.vn) operating under city administration, specifically authored by the Public Administration Center (Trung tâm Hành chính công) on 25/08/2026. The guidance details a 5-step standardized protocol for citizens submitting online dossiers via the National Public Service Portal (dichvucong.gov.vn) authenticated with VNeID. Although hosted on a ward/commune portal subpath, the instructions cover universal national and municipal administrative procedures (birth certificates, marital status, land records) and cite the national hotline 1800 1096. Thus, its utility is city-wide and universally applicable across Da Nang. The article contains zero fee charges, but statutory administrative procedures may carry state statutory duties depending on the specific procedure. There is a risk of users misinterpreting administrative submission as guaranteed '0 đồng' for all state certificates.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA establish strict civic service safeguards: (1) Card Tag: 'Hành chính công / Dịch vụ công trực tuyến'; (2) Universal City-wide Scope: Guidance applies across Da Nang for digital administrative dossier submission via VNeID; (3) Fee Claim Prohibition: Strictly prohibits claiming that all administrative certifications are free ('0 đồng'); strictly prohibits any payment, collection, or fee payment flows on JayT; (4) Mandatory Guidance Note: 'Cẩm nang hướng dẫn nộp hồ sơ dịch vụ công trực tuyến qua VNeID; các khoản phí, lệ phí nhà nước (nếu có) thực hiện theo quy định của cơ quan thẩm quyền tại thời điểm tiếp nhận.'; (5) Commercial Lock: Zero affiliate links, zero tracking tokens, zero third-party service fees; (6) Action CTA: 'Xem hướng dẫn nộp hồ sơ trực tuyến' linking outbound to official municipal portal.",
+      "civic_locks": {
+        "tag": "Hành chính công / Dịch vụ công trực tuyến",
+        "publisher_verified": "Cổng thông tin điện tử TP Đà Nẵng (danang.gov.vn) / Trung tâm Hành chính công",
+        "applicability": "CITY_WIDE__UNIVERSAL_VNEID_PUBLIC_SERVICE_ONBOARDING",
+        "fee_claim_and_collection_flow_prohibited": true,
+        "mandated_fee_notice": "Cẩm nang hướng dẫn nộp hồ sơ dịch vụ công trực tuyến qua VNeID; các khoản phí, lệ phí nhà nước (nếu có) thực hiện theo quy định của cơ quan thẩm quyền tại thời điểm tiếp nhận."
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    }
+  },
+  "council_recommendation": {
+    "eligible_candidates": [
+      "B06_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_02_13_21",
+      "B06_02_BAN_TIN_SUC_KHOE_CONG_DONG_CDC_DANANG",
+      "B06_03_HUONG_DAN_DICH_VU_CONG_TRUC_TUYEN_DANANG"
+    ],
+    "held_candidates": [],
+    "priority_ranking": [
+      {
+        "rank": 1,
+        "candidate_id": "B06_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_02_13_21",
+        "rationale": "High operational recency (28/08/2026), official fleet transition under Công văn 16041/SXD-VTATGT, clean parity with existing Danabus transit footprint (Card 2, Card 9), zero fee claims with comprehensive route locks."
+      },
+      {
+        "rank": 2,
+        "candidate_id": "B06_03_HUONG_DAN_DICH_VU_CONG_TRUC_TUYEN_DANANG",
+        "rationale": "Strengthens civic administrative utility cluster (currently only Card 4), verified official danang.gov.vn publisher, universal VNeID onboarding, zero fee collection with explicit statutory fee notice lock."
+      },
+      {
+        "rank": 3,
+        "candidate_id": "B06_02_BAN_TIN_SUC_KHOE_CONG_DONG_CDC_DANANG",
+        "rationale": "Clean community health educational bulletin from CDC Đà Nẵng (30/07/2026), guarded by mandatory plain-language medical disclaimer, but healthcare cluster already holds 3 cards (Cards 6, 7, 8)."
+      }
+    ],
+    "recommended_action": "Submit all three candidates to CEO with written determinations; recommend B06_01 as immediate N+1 priority for one-shot capture scope due to clear transit operation evidence and established domain parity, followed by B06_03 to expand civic eGov representation."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "WORK_ORDER_J373_R3_INDEPENDENT_GEMINI_ATTESTATION",
+  "authority": "JAYT-373 CEO R3",
+  "status": "COMPLETED_ATTESTATION_SEALED",
+  "candidate": {
+    "version": "v3.437.0-j373-r1",
+    "staging_url": "http://127.0.0.1:4176",
+    "storefront_sha256": "354f11de35259360cda77608804982ab5908d12a34468b2e733eaa4484cf958d"
+  },
+  "purpose": "Obtain an independently attributable Gemini practical-review attestation; this is not a production-release authorization.",
+  "attestation_minimum": [
+    "Review identity/source and immutable result locator or signed receipt.",
+    "Candidate SHA-256, test timestamp, browser/device and all three scenario outcomes.",
+    "QR physical scan result as PASS/FAIL/NOT_TESTED with raw evidence. If no real device test exists, keep NOT_TESTED.",
+    "Explicit separation of technical review outcome from Production deployment authority."
+  ],
+  "prohibitions": {
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false
+  },
+  "deliverable": "01_EXECUTIVE_COUNCIL/JAYT_373_GEMINI_INDEPENDENT_ATTESTATION.md",
+  "completed_at_utc": "2026-09-10T09:26:00Z",
+  "attestation_results": {
+    "reviewer_identity": "Gemini Independent Subagent Audit (12f9c2b8-174f-4c80-af98-241e408f20c2)",
+    "transcript_uri": "file:///C:/Users/tritr/.gemini/antigravity/brain/12f9c2b8-174f-4c80-af98-241e408f20c2/.system_generated/logs/transcript.jsonl",
+    "verdict": "GEMINI_INDEPENDENT_TECHNICAL_ATTESTATION_ESTABLISHED__STAGING_THREE_SCENARIOS_VERIFIED_PASS__QR_PHYSICAL_SCAN_CONFIRMED_NOT_TESTED__PRODUCTION_NOT_AUTHORIZED",
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_373_GEMINI_INDEPENDENT_ATTESTATION_RECEIPT.json",
+    "receipt_sha256": "857fc7baf5fb9cf08c1e33611e758a99dceb7e0b5e0625b060ee5d1f134c606f",
+    "document_path": "01_EXECUTIVE_COUNCIL/JAYT_373_GEMINI_INDEPENDENT_ATTESTATION.md",
+    "document_sha256": "98f8d6494bd0b459ce938f76d1123101ccfef13a2fc47546f24e1ba00b8f91d3"
+  }
+}

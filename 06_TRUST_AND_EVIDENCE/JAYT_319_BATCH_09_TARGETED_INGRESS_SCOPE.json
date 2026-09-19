@@ -1,0 +1,34 @@
+{
+  "scope_id": "JAYT-319-BATCH-09-TARGETED-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "capture_authorized": true,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "targets": [
+    {
+      "slot_id": "B09_01",
+      "url": "https://www.danangbus.vn/tin-tuc/tin-tuc/chi-mot-tuyen-xe-mo-ra-ca-da-nang-ket-noi-hoc-tap-y-te-mua-sam-va-giai-tri-5757.html",
+      "expected_text_span": "Không chỉ mang lại sự tiện lợi, việc lựa chọn xe buýt còn góp phần hình thành thói quen sử dụng phương tiện công cộng văn minh, hiện đại, phù hợp với xu hướng phát triển đô thị bền vững của Đà Nẵng.",
+      "source_date": "2026-07-08",
+      "prohibited": ["fare_claim", "schedule_or_frequency_claim", "ticket_sales", "affiliate", "tracking"]
+    },
+    {
+      "slot_id": "B09_02",
+      "url": "https://1022.vn/da-nang-ung-dung-chuyen-doi-so-dua-phap-luat-vao-cuoc-song/",
+      "expected_text_span": "Điểm sáng của Đà Nẵng là việc đổi mới hình thức tuyên truyền đa dạng. Thành phố đã đưa Trợ lý số DaNang AI vào vận hành trên nền tảng số, số hóa dữ liệu hộ tịch và phát triển truyền thanh cơ sở thông minh.",
+      "source_date": "2026-09-04",
+      "required_disclaimer": "Thông tin giới thiệu hoạt động phổ biến pháp luật số theo bài đăng của Cổng 1022 Đà Nẵng; không phải tư vấn pháp lý cá nhân hay cam kết kết quả thủ tục/tố tụng.",
+      "prohibited": ["legal_advice", "case_intake", "outcome_guarantee", "personal_data_collection", "paid_legal_service", "affiliate", "tracking"]
+    },
+    {
+      "slot_id": "B09_03",
+      "url": "https://1022.vn/chien-dich-lam-sach-ma-so-thue-thao-go-diem-nghen-trong-kinh-doanh-loi-ich-kep-cho-doanh-nghiep-va-nguoi-dan/",
+      "expected_text_span": "UBND thành phố cũng khuyến cáo không cho mượn, cho thuê, mua bán thông tin cá nhân, chữ ký số, tài khoản ngân hàng để thành lập hoặc vận hành doanh nghiệp, hộ kinh doanh; kịp thời phản ánh trường hợp bị giả mạo, bị lợi dụng thông tin để cơ quan chức năng xác minh, xử lý.",
+      "source_date": "2026-09-04",
+      "required_disclaimer": "Thông tin phổ biến an toàn danh tính số theo bài đăng của Cổng 1022 Đà Nẵng; không tiếp nhận hồ sơ thuế, mã số thuế, tài khoản ngân hàng, chữ ký số, mật khẩu hoặc thông tin định danh cá nhân.",
+      "prohibited": ["tax_advice", "financial_advice", "personal_data_collection", "tax_identifier_collection", "bank_account_collection", "digital_signature_collection", "password_collection", "case_intake", "affiliate", "tracking"]
+    }
+  ]
+}

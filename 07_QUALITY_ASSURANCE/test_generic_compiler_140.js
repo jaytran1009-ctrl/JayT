@@ -1,0 +1,148 @@
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const assert = require('assert');
+
+console.log('========================================================================');
+console.log('🔍 JAYT-140: FRESH SUPPLY OPERATING LOOP & RED-TEAM AUDIT');
+console.log('========================================================================\n');
+
+const repoRoot = path.resolve(__dirname, '..');
+const compilerPath = path.join(repoRoot, '05_DEAL_AND_AFFILIATE', 'generic_compiler_140.js');
+const manifestPath = path.join(repoRoot, '05_DEAL_AND_AFFILIATE', 'batch_capture_140_manifest.json');
+const freshRegistryPath = path.join(repoRoot, '05_DEAL_AND_AFFILIATE', 'fresh_source_registry_140.json');
+const communityQueuePath = path.join(repoRoot, '05_DEAL_AND_AFFILIATE', 'community_signal_queue_140.json');
+const prodFeedPath = path.join(repoRoot, '05_DEAL_AND_AFFILIATE', 'deals_feed.json');
+const releaseManifestPath = path.join(repoRoot, '08_RELEASE_VAULT', 'RELEASE_MANIFEST.json');
+
+const compilerCode = fs.readFileSync(compilerPath, 'utf8');
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const freshRegistry = JSON.parse(fs.readFileSync(freshRegistryPath, 'utf8'));
+const communityQueue = JSON.parse(fs.readFileSync(communityQueuePath, 'utf8'));
+
+let passCount = 0;
+let failCount = 0;
+
+function test(description, fn) {
+  try {
+    fn();
+    console.log(`  ✅ PASS: ${description}`);
+    passCount++;
+  } catch (err) {
+    console.error(`  ❌ FAIL: ${description}`);
+    console.error(`     Error: ${err.message}`);
+    failCount++;
+  }
+}
+
+console.log('--- GATE 1: METRIC CONSERVATION INVARIANCE ---');
+test('Sum of all categories equals exact total leaf targets evaluated (360 == 360)', () => {
+  const m = manifest.summary_metrics;
+  const sum = (
+    m.evidence_bundle_candidates_count +
+    m.discovery_only_listing_count +
+    m.cross_item_merge_blocked_count +
+    m.incomplete_offer_benefit_unproven_count +
+    m.incomplete_scope_unproven_count +
+    m.incomplete_location_proof_count +
+    m.locality_only_strict_count +
+    m.incomplete_count +
+    m.blocked_or_error_count
+  );
+  console.log(`     Total Targets:                    ${m.total_targets_evaluated}`);
+  console.log(`     EVIDENCE_BUNDLE_CANDIDATE:        ${m.evidence_bundle_candidates_count}`);
+  console.log(`     DISCOVERY_ONLY_LISTING:           ${m.discovery_only_listing_count}`);
+  console.log(`     CROSS_ITEM_MERGE_BLOCKED:         ${m.cross_item_merge_blocked_count}`);
+  console.log(`     INCOMPLETE_OFFER_BENEFIT_UNPROVEN:${m.incomplete_offer_benefit_unproven_count}`);
+  console.log(`     INCOMPLETE_SCOPE_UNPROVEN:        ${m.incomplete_scope_unproven_count}`);
+  console.log(`     INCOMPLETE_LOCATION_PROOF:        ${m.incomplete_location_proof_count}`);
+  console.log(`     LOCALITY_ONLY_STRICT:             ${m.locality_only_strict_count}`);
+  console.log(`     INCOMPLETE:                       ${m.incomplete_count}`);
+  console.log(`     BLOCKED_OR_ERROR:                 ${m.blocked_or_error_count}`);
+  console.log(`     Conservation Sum:                 ${sum}`);
+
+  assert.strictEqual(m.total_targets_evaluated, 360, 'Expected 360 total targets');
+  assert.strictEqual(sum, 360, 'Metric conservation broken');
+  assert.strictEqual(m.metric_conservation_check, 360, 'Manifest internal check failed');
+});
+
+console.log('\n--- GATE 2: THREE-STREAM SUPPLY ARCHITECTURE INTEGRATION ---');
+test('Fresh Source Loop, Community Signal Queue, and Inbound Evidence are fully integrated', () => {
+  assert(manifest.streams_summary, 'Missing streams_summary in manifest');
+  assert.strictEqual(manifest.streams_summary.fresh_sources_monitored, freshRegistry.sources.length);
+  assert.strictEqual(manifest.streams_summary.community_signals_queued, communityQueue.signals.length);
+  assert.strictEqual(manifest.streams_summary.inbound_submissions, 0);
+  console.log(`     Integrated ${freshRegistry.sources.length} fresh sources, ${communityQueue.signals.length} community signals.`);
+});
+
+console.log('\n--- GATE 3: COMMUNITY SIGNALS QUARANTINE & DISCLAIMER ENFORCEMENT ---');
+test('100% of community signals have status COMMUNITY_SIGNAL_UNVERIFIED and disclaimer', () => {
+  for (const sig of manifest.safe_community_feed.community_signals_under_review) {
+    assert.strictEqual(sig.status, 'COMMUNITY_SIGNAL_UNVERIFIED');
+    assert(sig.disclaimer.includes('không phải ưu đãi đã xác thực'), 'Missing community disclaimer');
+    assert.strictEqual(sig.badge, '🟡 TÍN HIỆU CỘNG ĐỒNG ĐANG KIỂM TRA');
+  }
+});
+
+console.log('\n--- GATE 4: AUTOMATED STAGING GATE DECISION VERDICT ---');
+test('Under-threshold batch correctly evaluated as CONTINUE_ACQUISITION (No premature staging)', () => {
+  const gate = manifest.summary_metrics.automated_staging_gate_evaluation;
+  assert.strictEqual(gate.decision_verdict, 'CONTINUE_ACQUISITION', 'Expected CONTINUE_ACQUISITION decision');
+  assert.strictEqual(gate.min_candidates_met, false, 'Candidate threshold (>=10) should not be met');
+});
+
+console.log('\n--- GATE 5: DISCOVERY-ONLY LISTING ISOLATION ---');
+test('126 listing/feed sources are strictly isolated in DISCOVERY_ONLY_LISTING', () => {
+  assert.strictEqual(manifest.discovery_only_listing.length, 126);
+  for (const disc of manifest.discovery_only_listing) {
+    assert(disc.reason.includes('Discovery-Only'), `Unexpected discovery item reason: ${disc.reason}`);
+  }
+});
+
+console.log('\n--- GATE 6: ZERO "VERIFIED" STATUS IN COMPILER OUTPUT ---');
+test('Manifest 140 contains ZERO "VERIFIED" statuses or CTA buy/book buttons', () => {
+  assert(!manifest.verified_bundles, 'Violation: manifest.verified_bundles exists');
+  const manifestStr = JSON.stringify(manifest);
+  assert(!manifestStr.includes('"status": "VERIFIED"'), 'Violation: Found "status": "VERIFIED" in manifest');
+  assert(!manifestStr.includes('"status":"VERIFIED"'), 'Violation: Found "status":"VERIFIED" in manifest');
+});
+
+console.log('\n--- GATE 7: STATIC SOURCE SCAN — ZERO BRANDS, VENUES, LANDMARKS, OR WHITELISTS ---');
+test('generic_compiler_140.js contains ZERO hardcoded brands, venues, malls, landmarks, or voucher codes', () => {
+  const forbiddenTokens = [
+    'cgv', 'domino', 'galaxy', 'starlight', 'lotte', 'jollibee', 'kfc', 'highlands', 'phúc long', 'phê la',
+    'vĩnh trung', 'vinh trung', 'helio', 'co.opmart', 'nguyễn kim', 'nguyen kim', 'lotte mart', 'vincom', 'indochina',
+    'COMBOHE10K', 'MUA1TANG1', 'TIKTOKVIP0D',
+    '255-257 đường Hùng Vương', 'Tầng 4 Trung tâm Thương Mại', 'OFFLINE_CACHE'
+  ];
+
+  for (const token of forbiddenTokens) {
+    const regex = new RegExp(`\\b${token}\\b`, 'i');
+    assert(!regex.test(compilerCode), `Violation: Found forbidden hardcoded token "${token}" in compiler source!`);
+  }
+  console.log('     Static scan verified 0% hardcoding across all forbidden brand/venue/landmark/voucher tokens.');
+});
+
+console.log('\n--- GATE 8: PRODUCTION LOCK & ZERO LIVE DEPLOYMENT IN 140 ---');
+test('Production catalog is strictly locked (deals_feed.json = [], is_approved = false) and zero deployment ran', () => {
+  const prodRaw = fs.readFileSync(prodFeedPath, 'utf8');
+  const prodJson = JSON.parse(prodRaw);
+  const prodSha = crypto.createHash('sha256').update(prodRaw).digest('hex');
+  assert(Array.isArray(prodJson) && prodJson.length === 0, 'Production feed is not empty');
+  assert.strictEqual(prodSha, '4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945', 'deals_feed.json SHA-256 altered');
+
+  const releaseManifest = JSON.parse(fs.readFileSync(releaseManifestPath, 'utf8'));
+  const isApproved = releaseManifest.governance_locks?.immutable_ceo_approval_record?.is_approved ?? releaseManifest.is_approved;
+  assert.strictEqual(isApproved, false, 'Production is_approved lock is not false');
+});
+
+console.log('\n========================================================================');
+console.log(`📊 SUMMARY: ${passCount} PASSED, ${failCount} FAILED`);
+console.log('========================================================================\n');
+
+if (failCount > 0) {
+  process.exit(1);
+} else {
+  console.log('✨ ALL 8 JAYT-140 FRESH SUPPLY OPERATING LOOP GATES PASSED 100% CLEAN!');
+  process.exit(0);
+}

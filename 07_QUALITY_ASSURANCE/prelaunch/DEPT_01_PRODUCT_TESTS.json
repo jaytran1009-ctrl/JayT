@@ -1,0 +1,59 @@
+{
+  "department_code": "PRODUCT",
+  "department_name": "Phòng Phát Triển Sản Phẩm (Product Management)",
+  "role_responsible": "Head of Product",
+  "test_cases": [
+    {
+      "test_case_id": "PROD-01",
+      "priority": "P0",
+      "target_user_perspective": "Sinh viên Campus Đà Nẵng mở ứng dụng lần đầu",
+      "objective": "Xác nhận Onboarding modal xuất hiện, cho phép chọn Persona Sinh Viên và lọc feed chính xác",
+      "actions_step_by_step": [
+        "Truy cập ứng dụng với localStorage trống",
+        "Quan sát modal Chào mừng xuất hiện",
+        "Bấm chọn 'Sinh Viên'",
+        "Kiểm tra danh sách ưu đãi hiển thị"
+      ],
+      "expected_outcome": "localStorage lưu 'jayt_preferred_persona': 'student', feed chỉ hiển thị deal phù hợp sinh viên (CGV Vincom, MayCha Điện Biên Phủ, Metiz)",
+      "verification_type": "AUTOMATED_DOM_AND_LOCALSTORAGE"
+    },
+    {
+      "test_case_id": "PROD-02",
+      "priority": "P0",
+      "target_user_perspective": "Dân công sở Hải Châu CBD quét deal giờ sáng",
+      "objective": "Xác nhận bộ lọc khung giờ Sáng (07:00 - 10:30) gợi ý đúng combo cà phê ven sông Hàn",
+      "actions_step_by_step": [
+        "Chọn Persona 'Dân Công Sở'",
+        "Bấm chọn bộ lọc thời gian 'Buổi Sáng'",
+        "Quan sát deal hiển thị trên feed"
+      ],
+      "expected_outcome": "Hiển thị ưu đãi Katinat Bạch Đằng (07:00 - 10:30, tiết kiệm 20.000đ)",
+      "verification_type": "AUTOMATED_FILTER_EVALUATION"
+    },
+    {
+      "test_case_id": "PROD-03",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng lập thói quen săn deal hằng ngày (Habit Loop)",
+      "objective": "Xác nhận tính năng thêm vào Kế Hoạch Hôm Nay cập nhật tiến độ (X/3) và tự động reset khi sang ngày mới theo giờ Đà Nẵng",
+      "actions_step_by_step": [
+        "Bấm '➕ Kế Hoạch' trên thẻ deal",
+        "Quan sát widget Kế Hoạch Hôm Nay nhảy tiến độ 1/3",
+        "Mô phỏng bước sang ngày hôm sau (Date Rollover)"
+      ],
+      "expected_outcome": "Kế hoạch hôm nay tự động reset về 0/3, không bị tích tụ rác từ ngày cũ",
+      "verification_type": "AUTOMATED_DATE_KEYED_STORAGE"
+    },
+    {
+      "test_case_id": "PROD-04",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng muốn biết trước ưu đãi ngày mai",
+      "objective": "Xác nhận mục 'Ngày Mai Có Gì?' hiển thị nhãn minh bạch 'Dự kiến theo lịch — kiểm tra điều kiện trước khi dùng'",
+      "actions_step_by_step": [
+        "Bấm chuyển sang tab 'Ngày Mai'",
+        "Kiểm tra nội dung mô tả và nhãn cảnh báo"
+      ],
+      "expected_outcome": "100% deal ngày mai có nhãn cảnh báo trung thực, không gây hiểu lầm là deal chắc chắn còn voucher",
+      "verification_type": "AUTOMATED_DOM_LABEL_AUDIT"
+    }
+  ]
+}

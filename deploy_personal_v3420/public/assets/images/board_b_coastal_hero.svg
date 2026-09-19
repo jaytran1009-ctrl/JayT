@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+      <defs>
+        <linearGradient id="coastal-sky-b" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#e0f2fe"/>
+          <stop offset="60%" stop-color="#f0f9ff"/>
+          <stop offset="100%" stop-color="#fffbeb"/>
+        </linearGradient>
+        <linearGradient id="warm-sand-b" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fef3c7"/>
+          <stop offset="100%" stop-color="#fed7aa"/>
+        </linearGradient>
+        <linearGradient id="ocean-wave-b" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0284c7"/>
+          <stop offset="50%" stop-color="#06b6d4"/>
+          <stop offset="100%" stop-color="#14b8a6"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Sky & Atmosphere -->
+      <rect width="1200" height="500" fill="url(#coastal-sky-b)"/>
+      
+      <!-- Ocean Horizon & Soft Waves -->
+      <rect x="0" y="240" width="1200" height="120" fill="url(#ocean-wave-b)" opacity="0.85"/>
+      <path d="M 0 320 Q 300 300 600 320 Q 900 340 1200 320 L 1200 360 L 0 360 Z" fill="#38bdf8" opacity="0.5"/>
+      
+      <!-- Warm Sand Beach -->
+      <rect x="0" y="360" width="1200" height="140" fill="url(#warm-sand-b)"/>
+      
+      <!-- Gentle Coastal Palm Silhouette & Sun -->
+      <circle cx="950" cy="140" r="60" fill="#fde047" opacity="0.8"/>
+      
+      <!-- Board Badge -->
+      <g transform="translate(420, 40)">
+        <rect width="360" height="42" rx="21" fill="rgba(255, 255, 255, 0.9)" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="180" y="26" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle" letter-spacing="1.5">BOARD B &#8226; ĐÀ NẴNG MỞ CỬA</text>
+      </g>
+    </svg>

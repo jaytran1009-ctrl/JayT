@@ -1,0 +1,133 @@
+{
+  "contract_id": "HYBRID_SUPPLY_DATA_CONTRACT_158",
+  "directive": "JAYT-158: HYBRID LOCAL SUPPLY ENGINE",
+  "version": "1.0.0",
+  "created_at": "2026-08-27T12:53:00.000Z",
+  "north_star": "JayT là cỗ máy giúp sinh viên và người trẻ Đà Nẵng biết hôm nay ăn, đi, mua gì tiết kiệm hơn thông qua Hybrid Supply 3 luồng minh bạch.",
+  "streams": {
+    "STREAM_A_OFFICIAL_AND_AFFILIATE": {
+      "name": "Official & Affiliate Supply",
+      "description": "Deal/voucher có khả năng bấm dùng ngay từ nguồn chính thức được provider ủy quyền hoặc trang chương trình chính thức.",
+      "allowed_source_types": [
+        "AUTHORIZED_API_FEED",
+        "AFFILIATE_PORTAL_EXPORT",
+        "OFFICIAL_CAMPAIGN_PAGE_VERIFIED"
+      ],
+      "rules": [
+        "ZERO_FABRICATED_API_KEYS_OR_LINKS",
+        "ZERO_UNPROVEN_LOCALITY_ASSUMPTIONS",
+        "MANDATORY_TTL_EXPIRY_TRACKING",
+        "UNVERIFIED_API_REMAINS_TRACKED_SOURCE"
+      ]
+    },
+    "STREAM_B_ONLINE_STUDENT_BENEFITS": {
+      "name": "Ưu đãi sinh viên trực tuyến",
+      "description": "Các quyền lợi cố định, ít phụ thuộc địa phương dành cho sinh viên.",
+      "display_category": "ONLINE_STUDENT_BENEFIT",
+      "mandatory_fields": [
+        "official_source_url",
+        "eligible_audience",
+        "verification_method",
+        "recheck_date",
+        "status"
+      ],
+      "status_enum": [
+        "ACTIVE",
+        "RECHECK_REQUIRED",
+        "EXPIRED"
+      ]
+    },
+    "STREAM_C_COMMUNITY_PROOF_OF_DEAL": {
+      "name": "Community Proof-of-Deal",
+      "description": "Nguồn cung quán bình dân, cà phê, món cứu đói và địa điểm quanh trường được cộng đồng ghi nhận.",
+      "reliability_tiers": {
+        "TIER_1_VERIFIED_PROOF": {
+          "badge": "🟢 Đã đối soát thực tế",
+          "code": "VERIFIED_PROOF_DEAL",
+          "definition": "Có ảnh menu/hóa đơn/check-in còn hạn và địa điểm xác minh."
+        },
+        "TIER_2_VERIFIED_VENUE": {
+          "badge": "🔵 Địa điểm thực tế",
+          "code": "VERIFIED_VENUE_LISTING",
+          "definition": "Có cơ sở thật; giá và ưu đãi cần kiểm tra tại quầy nếu chưa đủ proof."
+        },
+        "TIER_3_TRACKED_SOURCE": {
+          "badge": "🟣 Nguồn đang theo dõi",
+          "code": "TRACKED_SOURCE_SIGNAL",
+          "definition": "Tín hiệu từ cộng đồng hoặc nguồn chính thức, chưa phải deal."
+        }
+      },
+      "safety_and_privacy_rules": [
+        "START_AT_SOURCE_SIGNAL_ONLY",
+        "MANDATORY_ONE_ROUND_VERIFICATION_BEFORE_TIER_1",
+        "ZERO_FABRICATED_PHONE_OR_OPENING_HOURS",
+        "OPTIONAL_COARSE_CLUSTER_GPS_ONLY",
+        "ZERO_EXPOSED_PERSONAL_PII"
+      ]
+    }
+  },
+  "da_nang_community_clusters": [
+    {
+      "cluster_id": "CLUSTER_1_HOA_KHANH_LIEN_CHIEU",
+      "name": "Hòa Khánh / Liên Chiểu",
+      "focus": "Bữa ăn sinh viên Bách Khoa / Sư Phạm, cà phê học bài, cơm bình dân",
+      "metrics": {
+        "listed_locations_count": 0,
+        "community_signals_count": 0,
+        "verified_offers_count": 0,
+        "needs_recheck_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+      "name": "Bắc Mỹ An / Hòa Quý",
+      "focus": "Ăn vặt chợ Bắc Mỹ An, KTX, sinh viên DUE / FPT / VKU",
+      "metrics": {
+        "listed_locations_count": 0,
+        "community_signals_count": 0,
+        "verified_offers_count": 0,
+        "needs_recheck_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+      "name": "Hải Châu / Thanh Khê",
+      "focus": "Cơm trưa văn phòng, rạp chiếu phim, chuỗi cà phê trung tâm",
+      "metrics": {
+        "listed_locations_count": 2,
+        "community_signals_count": 0,
+        "verified_offers_count": 0,
+        "needs_recheck_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+      "name": "Khu Công nghệ cao / Công viên phần mềm",
+      "focus": "Bữa trưa nhanh, ưu đãi phần mềm công nghệ cho sinh viên IT & kỹ sư",
+      "metrics": {
+        "listed_locations_count": 0,
+        "community_signals_count": 0,
+        "verified_offers_count": 0,
+        "needs_recheck_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_5_SON_TRA_BEACH",
+      "name": "Sơn Trà / Ven biển",
+      "focus": "Cuối tuần, điểm hẹn cà phê ngắm cảnh, ẩm thực hải sản giá sinh viên",
+      "metrics": {
+        "listed_locations_count": 0,
+        "community_signals_count": 0,
+        "verified_offers_count": 0,
+        "needs_recheck_count": 0
+      }
+    }
+  ],
+  "freshness_and_anti_fraud_policy": {
+    "time_limited_deal_ttl_rule": "Auto-transition to RECHECK_REQUIRED when current timestamp > offer_validity_end",
+    "community_proof_ttl_days": 14,
+    "location_listing_recheck_days": 30,
+    "user_feedback_rule": "Upvotes/Downvotes create ticket for audit; zero direct automated data mutation",
+    "reward_points_phase_1": "Record contributions and anti-spam only; zero cash/voucher conversion in Phase 1"
+  }
+}

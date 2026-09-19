@@ -1,0 +1,54 @@
+{
+  "work_order_id": "WORK_ORDER_W6_ON_THE_SPOT_SAVINGS",
+  "directive_id": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W6-ON-THE-SPOT-EXPERIENCE",
+  "issued_at": "2026-09-12",
+  "owner": "CODEX_CEO_GATEKEEPER",
+  "status": "IMPLEMENTED_LOCAL_STAGING_WITH_RELEASE_HOLDS",
+  "production_baseline": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "version": "v3.449.0-j397",
+    "affiliate_enabled": false,
+    "production_deploy_requested": false
+  },
+  "implemented": {
+    "module": "Counter-Quick HUD / Cứu ví tại quầy",
+    "source": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "mode": "client_side_user_driven",
+    "formula": "minimum(counter_price, app_price + pickup_fee - user_entered_voucher)",
+    "network_calls": 0,
+    "unverified_offer_claims": false,
+    "mobile_390_qa": "PASS"
+  },
+  "pending_tasks": [
+    {
+      "task_id": "W6_T2_SUPERMARKET_ASSISTED_CAPTURE",
+      "targets": ["W4_SRC_03_LOTTE_DN", "W4_SRC_04_COOP_DN"],
+      "required": ["operator-provided first-party HTML/PNG", "UTC timestamp", "SHA-256"],
+      "synthetic_evidence": false,
+      "status": "PENDING_OPERATOR_CAPTURE"
+    },
+    {
+      "task_id": "W6_T3_FIELD_TEST_ROUND2",
+      "additional_participants": 12,
+      "consent_required": true,
+      "pii_gps_bank_data": false,
+      "status": "PENDING_CONSENT_AND_COORDINATOR_EXECUTION"
+    },
+    {
+      "task_id": "W6_T4_TRACK1_SANDBOX",
+      "requested_affiliate_enabled": true,
+      "effective_runtime_mode": "SIMULATION_ONLY_NON_DISPATCHING",
+      "external_navigation_enabled": false,
+      "tracking_enabled": false,
+      "provider_authorization_required": true,
+      "status": "HELD_PENDING_WRITTEN_PROVIDER_AUTHORIZATION"
+    }
+  ],
+  "acceptance_gates": [
+    "Production remains v3.449.0-j397 with affiliate_enabled=false",
+    "No preset voucher, wallet rebate, or lowest-price claim is presented as verified",
+    "No capture writes occur after WAF/CAPTCHA/403/404/login markers",
+    "Field-test records are anonymous and consented",
+    "No feed or alias mutation occurs without a separate release decision"
+  ]
+}

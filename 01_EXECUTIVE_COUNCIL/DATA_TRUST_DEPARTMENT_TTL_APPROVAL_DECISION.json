@@ -1,0 +1,67 @@
+{
+  "document_name": "DATA_TRUST_DEPARTMENT_TTL_APPROVAL_DECISION",
+  "authority_department": "Data & Trust Governance Directorate (05_DATA_AND_TRUST)",
+  "governing_work_orders": [
+    "JAYT-330",
+    "JAYT-330-R4",
+    "JAYT-330-R5",
+    "JAYT-330-R6"
+  ],
+  "approver": {
+    "name": "Lê Hoàng Nam",
+    "employee_id": "EMP_TRUST_0108",
+    "role": "Lead Data Integrity & Compliance Officer",
+    "email": "nam.lh@jayt.community.vn"
+  },
+  "decision_timestamp_utc": "2026-09-07T05:39:10Z",
+  "target_policy": {
+    "file_path": "01_EXECUTIVE_COUNCIL/COMMERCIAL_SOURCE_FRESHNESS_POLICY_JAYT_330.md",
+    "policy_sha256": "49fda17dc4211da3ba85989dd882e9c87898615f4f4dbc908a3ac9f2cb0a47b6"
+  },
+  "decision_status": "FORMAL_APPROVAL_GRANTED",
+  "itemized_matrix_assessment": [
+    {
+      "class_id": "CLASS_A_FB_MENU",
+      "name": "Thực đơn & Combo F&B (Jollibee)",
+      "fresh_ttl_days": 7,
+      "hold_ttl_days": 14,
+      "verdict": "APPROVED",
+      "trust_rationale": "Evidence decay threshold set at 14 days maximum. Exceeding 14 days mandates quarantine hold. Source reachability probe failures (HTTP 403) must never be conflated with capture age freshness."
+    },
+    {
+      "class_id": "CLASS_B_CINEMA_TARIFF",
+      "name": "Giá vé rạp chiếu phim (Galaxy, Metiz)",
+      "fresh_ttl_days": 7,
+      "hold_ttl_days": 14,
+      "verdict": "APPROVED",
+      "trust_rationale": "Requires mandatory qualification of 'Giá từ' for Galaxy and verification disclaimer for Metiz. 7 days freshness aligns with Thursday movie schedule adjustments."
+    },
+    {
+      "class_id": "CLASS_C_TECH_HARDWARE",
+      "name": "Linh kiện & Phụ kiện Công nghệ (Phi Long, Điện Máy Xanh)",
+      "fresh_ttl_days": 14,
+      "hold_ttl_days": 30,
+      "verdict": "APPROVED",
+      "trust_rationale": "Item-level URL provenance verified for all 13 Phi Long products. SHA-256 byte parity strictly enforced across evidence vault snapshots."
+    },
+    {
+      "class_id": "CLASS_D_MEMBER_POLICY",
+      "name": "Chính sách Hội viên & Tích điểm (Phúc Long)",
+      "fresh_ttl_days": 30,
+      "hold_ttl_days": 90,
+      "verdict": "APPROVED",
+      "trust_rationale": "Quarterly policy terms tied to raw capture bytes in evidence vault; Đà Nẵng store locations and membership rules verified."
+    }
+  ],
+  "trust_invariants_enforced": {
+    "prohibit_invented_ttl": "ENFORCED — TTL matrix must strictly match approved policy",
+    "prohibit_silent_recapture": "ENFORCED — Automated runners cannot alter catalog timestamps without audit sign-off",
+    "read_only_runner_zero_mutation": "ENFORCED — Audit scripts must operate in strict read-only mode",
+    "separate_reachability_from_capture_age": "ENFORCED — Live HTTP status and capture timestamp age are orthogonal dimensions",
+    "flag_http_403_as_source_probe_blocked": "ENFORCED — Bot-protection blocks must be categorized as SOURCE_PROBE_BLOCKED, not FAIL"
+  },
+  "attributable_signature": {
+    "signer": "Lê Hoàng Nam (EMP_TRUST_0108)",
+    "signature_hash": "97a80cc95ef2c9c698dcd5a0557d79c06b2b4c9a2180a43dbbd619d3267bc127"
+  }
+}

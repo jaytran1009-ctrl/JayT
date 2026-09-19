@@ -1,0 +1,86 @@
+{
+  "receipt_name": "POLICY_INGRESS_CAPTURE_RECEIPT",
+  "run_id": "run_20260906_075712_2aaec7",
+  "vault_directory": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7",
+  "executed_at_utc": "2026-09-06T07:57:12.332Z",
+  "runner": {
+    "file": "04_DATA_PIPELINE/capture_policy_ingress_targets.cjs",
+    "sha256": "1898d455ee383c3e04ea3a58eac13f60957dbd613bd182315e3ad266d051186e"
+  },
+  "scope": {
+    "file": "04_DATA_PIPELINE/batch_matrix/BATCH_13_POLICY_INGRESS_SCOPE.json",
+    "sha256": "cdb8ee7b90a4902860b6f57ff63c8bd29e5fbbb5f06d3ef124207f41524fc121",
+    "version": "3.0"
+  },
+  "staging_guard": {
+    "public_approved": false,
+    "render_permitted": false,
+    "production_deployment_permitted": false
+  },
+  "targets_count": 3,
+  "targets_succeeded": 3,
+  "targets_failed": 0,
+  "all_targets_succeeded": true,
+  "results": [
+    {
+      "candidate_id": "CAND_POLICY_CGV_MEMBERSHIP",
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "requested_url": "https://www.cgv.vn/default/cgv-membership",
+      "final_url": "https://www.cgv.vn/default/cgv-membership",
+      "http_status": 200,
+      "status_text": "OK",
+      "is_redirect": false,
+      "redirect_location": null,
+      "raw_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.headers.json",
+      "receipt_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.receipt.json",
+      "raw_sha256": "5ef9bdd04da5fa7af28a119303ec38cf9ddfc5022973a6b76f2d1f1a239d77b6",
+      "raw_bytes": 5390,
+      "started_at_utc": "2026-09-06T07:57:12.333Z",
+      "captured_at_utc": "2026-09-06T07:57:12.584Z",
+      "success": true,
+      "error": null
+    },
+    {
+      "candidate_id": "CAND_POLICY_GALAXY_U22",
+      "brand_id": "galaxy_cinema",
+      "brand_name": "Galaxy Cinema",
+      "requested_url": "https://www.galaxycine.vn/u22/",
+      "final_url": "https://www.galaxycine.vn/u22/",
+      "http_status": 302,
+      "status_text": "Moved Temporarily",
+      "is_redirect": true,
+      "redirect_location": "https://www.galaxycine.vn/u22/",
+      "raw_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.headers.json",
+      "receipt_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.receipt.json",
+      "raw_sha256": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "raw_bytes": 138,
+      "started_at_utc": "2026-09-06T07:57:12.587Z",
+      "captured_at_utc": "2026-09-06T07:57:12.913Z",
+      "success": true,
+      "error": null
+    },
+    {
+      "candidate_id": "CAND_POLICY_JOLLIBEE_MENU",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "requested_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+      "final_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+      "http_status": 200,
+      "status_text": "OK",
+      "is_redirect": false,
+      "redirect_location": null,
+      "raw_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.headers.json",
+      "receipt_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.receipt.json",
+      "raw_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+      "raw_bytes": 264495,
+      "started_at_utc": "2026-09-06T07:57:12.915Z",
+      "captured_at_utc": "2026-09-06T07:57:14.681Z",
+      "success": true,
+      "error": null
+    }
+  ]
+}

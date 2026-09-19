@@ -1,0 +1,158 @@
+{
+  "dossier_id": "JAYT_263_CONTAMINATION_IMPACT_AUDIT_DOSSIER",
+  "governing_directive": "JAYT-245 Section JAYT-263 (Lines 5733-5745)",
+  "generated_at_utc": "2026-09-02T09:01:27.503Z",
+  "executive_summary": {
+    "colliding_raw_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+    "incident_nature": "Provenance reuse/contamination between Cohort 15 candidate COHORT_EZ_AM_15 and Micro-Batch 02 candidate MB02_04_TNGO",
+    "containment_status": "100% CONTAINED UNDER HARD CIRCUIT BREAKER & UNCONDITIONAL HASH DENYLIST",
+    "leakage_to_public_surface": "ZERO (0 cards in DOM, 0 entities in canonical public registry)",
+    "remedial_state": "FROZEN_PENDING_CEO_AUDIT"
+  },
+  "colliding_evidence_artifacts": [
+    {
+      "entity_id": "MB02_04_TNGO",
+      "cohort_or_batch": "MICRO_BATCH_02",
+      "file_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_04_TNGO_RAW_CAPTURE.html",
+      "sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "relationship": "Source raw HTML capture in quarantined Micro-Batch 02 vault",
+      "current_state": "QUARANTINED_ISOLATED_IMMUTABLE",
+      "permitted_state_under_freeze": "LOCKED_IN_QUARANTINE_NO_ADMISSION",
+      "remedial_action": "Preserve raw bytes in quarantined vault; do not delete; deny all runtime loading."
+    },
+    {
+      "entity_id": "COHORT_EZ_AM_15",
+      "cohort_or_batch": "COHORT_15",
+      "candidate_name": "TNGo Xe Đạp Công Cộng Đà Nẵng",
+      "file_path": "06_TRUST_AND_EVIDENCE/COHORT_CINEMA_TRANSIT_15_CANDIDATES_LEDGER_EZ_AM.json",
+      "sha256": "d018ee3105f7bdb866805f63292c4ca408262059fd464c01ce5cdaf334d05956",
+      "relationship": "Cohort candidate definition citing raw_sha256 matching quarantined Batch 02 payload",
+      "current_state": "QUARANTINED_SHARED_RAW_PROVENANCE",
+      "permitted_state_under_freeze": "HELD_NO_PUBLIC_RENDER_NO_ADMISSION",
+      "remedial_action": "Candidate isolated under CONTAMINATION_QUARANTINE_RECORD_COHORT_15_TNGO.json; banned from admission and rendering."
+    }
+  ],
+  "impacted_subsystems_and_components": [
+    {
+      "component_name": "ACTIVE_OPERATIONAL_LEDGER",
+      "file_path": "06_TRUST_AND_EVIDENCE/JAYT_COHORT_15_SLA_CLOSURE_LEDGER.json",
+      "sha256": "bbba8a976dbe3353a99a41a6fa37eb7bc98498e66d1a15dca6fdc26a74d86389",
+      "relationship": "Operational SLA closure ledger containing candidate COHORT_EZ_AM_15",
+      "current_state": "FROZEN_PENDING_CEO_AUDIT",
+      "permitted_state_under_freeze": "READ_ONLY_HISTORICAL_AUDIT",
+      "remedial_action": "Preserve historical records (14 HELD_NEW_COHORT_REQUIRED, 1 CLOSED, 0 PUBLIC_APPROVED). Do not mutate ledger."
+    },
+    {
+      "component_name": "ARTIFACT_LOADER_GUARD",
+      "file_path": "00_PROGRAM_BASELINE/jayt_artifact_loader_guard.js",
+      "sha256": "b8b69d72cc7aa20d59eee28e85381a3d779b31145238b19dc81a9e39e17cfcb1",
+      "relationship": "Gatekeeper enforcing SHA-256 and path denylist against quarantined artifacts",
+      "current_state": "ACTIVE_UNCONDITIONAL_DENYLIST",
+      "permitted_state_under_freeze": "ENFORCING_FULL_DENYLIST_WITHOUT_EXCEPTION",
+      "remedial_action": "Maintain full unconditional denylisting of hash b34fdd82... and all Batch 02 artifacts across all loaders."
+    },
+    {
+      "component_name": "CANONICAL_ADMISSION_GATEWAY",
+      "file_path": "00_PROGRAM_BASELINE/jayt_canonical_admission_gateway.js",
+      "sha256": "40270649f48d7bd237d97482ab41640c788a055c0ae8fd449c64733545b818bf",
+      "relationship": "Admission gateway validating evidence integrity before rendering",
+      "current_state": "FAIL_CLOSED_ON_DENYLISTED_HASH",
+      "permitted_state_under_freeze": "STRICT_FAIL_CLOSED",
+      "remedial_action": "Rejects admission for any ledger or candidate containing denylisted SHA-256."
+    },
+    {
+      "component_name": "CANONICAL_PUBLIC_APPROVED_REGISTRY",
+      "file_path": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+      "sha256": "bc3aab79585e50ca1d652e63649ca79bb7d7c57880fcf8bec7e3eab564724b63",
+      "relationship": "Sole canonical registry for public storefront rendering",
+      "current_state": "CLEAN_UNCONTAMINATED",
+      "permitted_state_under_freeze": "PINNED_CANONICAL_T2_PILOT_ONLY",
+      "remedial_action": "Contains strictly GITHUB_EDUCATION_PILOT_T2. Zero Batch 02 or Cohort 15 contamination."
+    },
+    {
+      "component_name": "STOREFRONT_CATALOG_BUILDER",
+      "file_path": "03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+      "sha256": "3bfd04fdfeea176ea3463bb8b1f74d3f867c0ebae1e60db880e7470874e793b2",
+      "relationship": "Storefront catalog build pipeline",
+      "current_state": "FROZEN_CONTAMINATION_CIRCUIT_BREAKER_ACTIVE",
+      "permitted_state_under_freeze": "HALTED_BEFORE_IO",
+      "remedial_action": "Hard circuit breaker prevents any build execution until CEO unfreeze directive."
+    },
+    {
+      "component_name": "OPERATIONAL_SLA_RUNNER",
+      "file_path": "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+      "sha256": "d1f05bdfbf042a0f382db424165de1e6757c91d1d75b49eff172af8797af53be",
+      "relationship": "Cohort 15 operational SLA closure executor",
+      "current_state": "FROZEN_CONTAMINATION_CIRCUIT_BREAKER_ACTIVE",
+      "permitted_state_under_freeze": "HALTED_BEFORE_IO",
+      "remedial_action": "Hard circuit breaker prevents any operational run until CEO unfreeze directive."
+    },
+    {
+      "component_name": "STAGING_PREVIEW_SURFACE",
+      "file_path": "staging_deploy_ey/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71",
+      "relationship": "Served static preview on port 4173",
+      "current_state": "STATIC_PREVIEW_PARITY",
+      "permitted_state_under_freeze": "APPROVED_PILOT_ONLY_ZERO_DOM_LEAKAGE",
+      "remedial_action": "Maintains strictly 1 card (GitHub Pilot), 0 Batch 02 cards, 100% local requests."
+    }
+  ],
+  "regression_matrix_impact_mapping": {
+    "total_suites_evaluated": 22,
+    "passing_suites_count": 18,
+    "failing_suites_count": 3,
+    "historical_expected_failure_count": 1,
+    "passing_suites": [
+      "test_jayt_262_correction_5_full_denylist_and_contamination_guard_qa.js",
+      "test_jayt_262_correction_4_ephemeral_build_to_serve_trace_qa.js",
+      "test_jayt_262_correction_3_closed_loop_staging_trace_qa.js",
+      "test_jayt_262_correction_2_runtime_enforcement_and_baseline_recovery_qa.js",
+      "test_jayt_262_correction_1_quarantine_and_clock_guard_qa.js",
+      "test_jayt_260_correction_10_authority_gate_qa.js",
+      "test_jayt_260_correction_9_capture_envelope_and_registry_pinning_qa.js",
+      "test_jayt_260_correction_8_raw_first_worker_and_catalog_qa.js",
+      "test_jayt_260_correction_7_process_trace_integration_qa.js",
+      "test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js",
+      "test_jayt_260_correction_5_live_trace_and_fail_closed_verifier_qa.js",
+      "test_jayt_260_correction_1_batch_quarantine_qa.js",
+      "test_jayt_258_correction_4_sole_watchdog_writer_qa.js",
+      "test_jayt_256_correction_2_runtime_truth_and_viewports_qa.js",
+      "test_jayt_256_correction_1_p0_semantics_qa.js",
+      "test_ez_ar_post_sla_decision_and_governance_qa.js",
+      "test_ez_aq_post_sla_closure_and_council_checkpoint_qa.js",
+      "test_ez_ao_build_immutability_and_manifest_parity_qa.js"
+    ],
+    "failing_suites_analysis": [
+      {
+        "suite_file": "test_jayt_260_correction_4_real_runtime_caller_graph_qa.js",
+        "failure_reason": "QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash b34fdd82... matches quarantined artifact when loading Cohort 15 ledger.",
+        "impact_classification": "EXPECTED_FAIL_UNDER_FULL_DENYLIST_CONTAINMENT",
+        "remedial_path": "Awaits CEO decision on whether to regenerate Cohort 15 ledger or retire candidate COHORT_EZ_AM_15."
+      },
+      {
+        "suite_file": "test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+        "failure_reason": "QUARANTINED_ARTIFACT_REFERENCE: Gateway blocks loading of Cohort 15 ledger due to hash collision.",
+        "impact_classification": "EXPECTED_FAIL_UNDER_FULL_DENYLIST_CONTAINMENT",
+        "remedial_path": "Awaits CEO decision on Cohort 15 remediation."
+      },
+      {
+        "suite_file": "test_jayt_260_correction_2_vault_quarantine_and_denylist_qa.js",
+        "failure_reason": "QUARANTINED_ARTIFACT_REFERENCE: Assertion for active Cohort 15 ledger validity triggers denylist rejection.",
+        "impact_classification": "EXPECTED_FAIL_UNDER_FULL_DENYLIST_CONTAINMENT",
+        "remedial_path": "Awaits CEO decision on Cohort 15 remediation."
+      }
+    ],
+    "historical_expected_failure": {
+      "suite_file": "test_jayt_262_micro_batch_02_human_reviewed_intake_qa.js",
+      "status": "EXPECTED_FAILURE_AFTER_QUARANTINE",
+      "reason": "Historical baseline asserting active presence of Batch 02 vault, quarantined under JAYT-262-CORRECTION-1."
+    }
+  },
+  "ceo_governance_verdict": {
+    "automatic_unfreeze_permitted": false,
+    "directive_required_for_unfreeze": "CEO_APPEND_ONLY_DIRECTIVE_POST_AUDIT",
+    "production_gate": "LOCKED (v3.419.0, P0_EQ = OPEN)",
+    "commercial_gate": "LOCKED (voucher = 0, affiliate = false)",
+    "staging_public_surface": "HOLD (static preview approved pilot only)"
+  }
+}

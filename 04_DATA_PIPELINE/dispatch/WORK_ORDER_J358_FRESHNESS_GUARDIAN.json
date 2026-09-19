@@ -1,0 +1,23 @@
+{
+  "work_order_id": "J358_FRESHNESS_GUARDIAN",
+  "authority": "Chairman directive JAYT-358",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "baseline": {"version": "v3.429.0", "deployment_id": "dpl_BiD7syWRkLVgXFjPNjxesMJ2h4mM", "url": "https://jayt-production-v3420.vercel.app", "canonical_entities": 87, "visible_cards": 68, "civic_cards": 24, "vault_cards": 29, "radar_cards": 15},
+  "rollback": {"version": "v3.428.0", "deployment_id": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL"},
+  "schedule": "Inspect and update the existing hourly monitor and scheduler; do not create a duplicate task. Prove the actual registered schedule and one completed execution.",
+  "requirements": [
+    "Use immutable J357 approved artifact fingerprints as the comparison baseline. Check /, /registry.json, /deals_feed.json and published bundle fingerprints, actual registry and public card counts, prior held exclusions, link hygiene, runtime/console errors and mobile overflow.",
+    "Create an evidence-bound lifecycle matrix for all twenty-nine public Vault cards. Distinguish promotions, ordinary observed prices, recurring programs and recipient-specific benefits; do not assign September expiry to every card by assumption.",
+    "Evaluate explicit expiry against the real current time with Asia/Ho_Chi_Minh timezone and documented inclusivity. A changed capture timestamp does not extend validity. Renewal requires actual source evidence.",
+    "If an offer is expired without proven renewal, an endpoint fails, an approved fingerprint drifts, or console/runtime/mobile overflow fails, immediately publish a P0 alert during the detecting run. Do not label unknown expiry HEALTHY: report the specific missing evidence for review.",
+    "Run hourly, stay quiet on healthy unchanged state, and record last successful check plus scheduler failures. State that an hourly probe can detect an incident only at its next run; do not claim continuous uptime from snapshots.",
+    "Write timestamped append-only rolling receipts and a P0 mailbox artifact with affected IDs, evidence and detection time. Preserve immutable deployment receipts. Verify the configured notification delivery path and identify whether it is only a local mailbox.",
+    "Monitoring may write operational evidence and scheduler configuration, but may not deploy, change aliases, mutate the live feed or automatically rollback. Submit actionable incidents to CEO."
+  ],
+  "production_deployment_authorized": false,
+  "output": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_FRESHNESS_GUARDIAN_SETUP.json",
+  "rolling_output_pattern": "07_QUALITY_ASSURANCE/runtime_evidence/J358_FRESHNESS_<RUN_ID>.json",
+  "alert_mailbox": "01_EXECUTIVE_COUNCIL/J358_P0_ALERT_LATEST.md",
+  "sha256_sidecars_required": true
+}

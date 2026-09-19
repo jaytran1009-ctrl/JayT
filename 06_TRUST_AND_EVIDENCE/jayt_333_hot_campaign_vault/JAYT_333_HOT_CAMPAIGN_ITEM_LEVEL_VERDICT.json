@@ -1,0 +1,89 @@
+{
+  "document_id": "JAYT_333_HOT_CAMPAIGN_ITEM_LEVEL_VERDICT",
+  "issued_at_utc": "2026-09-07T06:55:00.000Z",
+  "zero_synthetic_claim": true,
+  "items": [
+    {
+      "candidate_id": "J333_HOT_01_JOLLIBEE_69K",
+      "raw_sha256": "49c2be96af560ca48d8769efebacfc733132ea950658087cc8ca230d64cc4373",
+      "targeted_leaf_capture": {
+        "requested_url": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+        "final_url": "https://jollibee.com.vn/",
+        "http_status": 200,
+        "raw_sha256": "a65ab9b13b2c0f4e561f197262bb6f1031d7c478a8cc001fdedd9db279126977",
+        "raw_bytes": 252695,
+        "declared_spans_found": false
+      },
+      "verdict": "QUARANTINE__OFFICIAL_LEAF_REDIRECTS_TO_HOMEPAGE__DECLARED_69K_SPANS_ABSENT",
+      "new_card_authorized": false
+    },
+    {
+      "candidate_id": "J333_HOT_02_GALAXY_U22",
+      "verdict": "PUBLIC_APPROVED_STAGING_ONLY__OBSERVED_PRICE_WITH_DIRECT_FACILITY",
+      "new_card_authorized": true,
+      "source_url": "https://www.galaxycine.vn/u22/",
+      "raw_sha256": "12d36958c4db0addb42f5ed514f9038b44e310d9b1a743f3fb1cfea15b2fa7f9",
+      "raw_bytes": 333433,
+      "headers_sha256": "7a2e5bdb2659dc81a1658210ade8a1ad4bc8cc766053a3bef4853ff4e5754d5f",
+      "verified_price_vnd": 45000,
+      "verified_claims": [
+        "Chỉ Từ 45K",
+        "áp dụng mua 01 vé U22",
+        "Combo U22 cần mua trực tiếp tại quầy",
+        "Galaxy Cinema Coop Đà Nẵng"
+      ],
+      "production_promotion_authorized": false
+    },
+    {
+      "candidate_id": "J333_HOT_03_METIZ_U22_2026",
+      "leaf_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "leaf_raw_sha256": "6735f1376d757eed814c7d402dc86e10998924a5d944060fbda73a561439aea8",
+      "leaf_raw_bytes": 82451,
+      "verified_claims": [
+        "KHUYẾN MÃI GIÁ VÉ U22",
+        "Áp dụng giá vé 2D chỉ 55.000đ cho thành viên Metiz Cinema từ 22 tuổi trở xuống",
+        "Áp dụng từ thứ Ba đến thứ Năm; mua trực tiếp tại quầy"
+      ],
+      "validity_disclosure": "The leaf page states recurring weekdays and no expiration date. The earlier listing capture recorded 01/01/2026 - 31/12/2026, but that listing raw was overwritten during targeted capture and cannot be reconstituted from its hash alone.",
+      "verdict": "EXISTING_STAGING_CARD_CORROBORATED__NO_NEW_CARD__LOCALITY_REMAINS_UNVERIFIED",
+      "new_card_authorized": false,
+      "production_promotion_authorized": false
+    },
+    {
+      "candidate_id": "J333_HOT_04_DANABUS_QR_MONTHLY",
+      "raw_sha256": "96cf0e0b4b11280539dcd9e7fb757dd082e1b82cff84abdc3f1c02ff63050751",
+      "verdict": "EVIDENCE_COMPLETE__DEDUP_BLOCKED_BY_EXISTING_DANABUS_CIVIC_CARD",
+      "new_card_authorized": false
+    },
+    {
+      "candidate_id": "J333_HOT_05_JOLLIBEE_SPICY_SPAGHETTI_40K",
+      "leaf_raw_sha256": "653d84a0a2ab5c455478dae56ef7bc5a94a576bee981a0d9463f4a687576d14b",
+      "leaf_raw_bytes": 216325,
+      "verified_price_vnd": 40000,
+      "verified_scope_span": "có mặt tại các cửa hàng Jollibee trên toàn quốc",
+      "published_date": "2026-03-30",
+      "expiration_clause": "NONE_STATED_ON_LEAF",
+      "verdict": "PUBLIC_APPROVED_STAGING_ONLY__OBSERVED_PRICE_WITH_RECHECK_DISCLOSURE",
+      "new_card_authorized": true,
+      "production_promotion_authorized": false
+    }
+  ],
+  "forensic_correction": {
+    "incident": "TARGETED_CAPTURE_PATH_COLLISION_OVERWROTE_METIZ_LISTING_RAW",
+    "affected_recorded_listing_sha256": "cffc424c38070d480b79a1ee4e6be08959eb923bda09c451f2cb94f9c13ca327",
+    "correction": "The retained leaf payload was renamed to a .leaf artifact and the capture runner now reserves .leaf filenames for targeted captures.",
+    "listing_raw_recreated": false,
+    "historical_capture_report_preserved": true
+  },
+  "metrics": {
+    "new_cards_approved": 2,
+    "existing_cards_corroborated": 1,
+    "dedup_blocked": 1,
+    "quarantined": 1
+  },
+  "safeguards": {
+    "affiliate_links_activated": 0,
+    "voucher_codes_synthesized": 0,
+    "production_mutated": false
+  }
+}

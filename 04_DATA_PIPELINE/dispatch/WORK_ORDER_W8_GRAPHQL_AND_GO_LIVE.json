@@ -1,0 +1,40 @@
+{
+  "work_order_id": "WORK_ORDER_W8_GRAPHQL_AND_GO_LIVE",
+  "issued_at_utc": "2026-09-14T05:47:28.4493162Z",
+  "governing_directive": "03/2026/SL-CT-JAYT-TOTAL-EXECUTION-MANDATE",
+  "status": "GRAPHQL_INTEGRATION_ORDERED__AUTH_CONTRACT_GATE_ACTIVE",
+  "mission": "Replace marketplace DOM capture with an authenticated official partner data path without guessing the provider contract or exposing credentials.",
+  "antigravity_tasks": [
+    {
+      "id": "W8-GQL-01",
+      "task": "Ingest official Partner Center developer documentation and provider test vector into the evidence vault; hash every source file.",
+      "acceptance": "Exact HTTP method, signature base string, timestamp rules, headers, GraphQL schema and sanitized expected response are present on disk."
+    },
+    {
+      "id": "W8-GQL-02",
+      "task": "Implement a server-only Shopee adapter against the documented contract with secret redaction, timeout, rate limiting and schema validation.",
+      "acceptance": "Deterministic test vector passes; no secret or raw authorization header appears in client bundles, logs or API responses."
+    },
+    {
+      "id": "W8-GQL-03",
+      "task": "Fetch and seal first-party JSON records for the 20 registered SKU identities through the authenticated adapter.",
+      "acceptance": "Each accepted slot has provider request ID, capture timestamp, response SHA-256, price fields and provider-supported promotion fields."
+    },
+    {
+      "id": "W8-GQL-04",
+      "task": "Enable affiliate URL generation only for provider-documented link creation responses and explicit user clicks.",
+      "acceptance": "Disclosure is adjacent to CTA; sub1/sub2 are allowlisted; sub3 is server-generated; open redirect and SSRF tests pass."
+    }
+  ],
+  "current_findings": {
+    "partner_identifiers_present": true,
+    "credential_values_logged": false,
+    "official_partner_contract_on_disk": false,
+    "provider_test_vector_on_disk": false,
+    "authenticated_identity_verified": false,
+    "twenty_provider_json_records_accepted": 0,
+    "dual_key_w8_signed": false
+  },
+  "release_rule": "affiliate_enabled may become true only after W8-GQL-01 through W8-GQL-04 pass and an independently signed W8 Dual-Key manifest is present.",
+  "production_state": "HOLD_AFFILIATE_FALSE"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_id": "JAYT_256_SCHEMA_CONTRACTS",
+  "version": "1.0.0-jayt.256",
+  "governing_directive": "JAYT-245 Section JAYT-256-ADDENDUM (Lines 4962-5010)",
+  "timestamp": "2026-09-01T12:50:30.059Z",
+  "dimensions": {
+    "contentTier": {
+      "description": "Answers what type of content this entity is. Independent of publication state.",
+      "allowed_values": [
+        "T1_DEAL",
+        "T2_PROGRAM",
+        "T3_PLACE",
+        "T4_RADAR"
+      ],
+      "definitions": {
+        "T1_DEAL": "Commercial discounted deal with verifiable listed price, total cost, conditions, and validity window.",
+        "T2_PROGRAM": "Institutional or official program with educational/professional documentation from official body.",
+        "T3_PLACE": "Physical community, civic, or cultural location/amenity with verified operating body and public access.",
+        "T4_RADAR": "Non-commercial demand-tracking radar item observing market hypotheses without prices, vouchers, or purchase decisions."
+      }
+    },
+    "admissionState": {
+      "description": "Answers whether this entity is published or where it sits in the admission lifecycle. Independent of tier.",
+      "allowed_values": [
+        "OPEN_EVALUATING",
+        "EVIDENCE_COMPLETE_INTERNAL_HELD",
+        "HELD_NEW_COHORT_REQUIRED",
+        "CLOSED",
+        "PUBLIC_APPROVED"
+      ],
+      "definitions": {
+        "OPEN_EVALUATING": "Entity is currently undergoing active SLA evaluation from raw evidence.",
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": "Entity has proven raw evidence and locators for required fields, but is held internal awaiting Council review and CEO authorization.",
+        "HELD_NEW_COHORT_REQUIRED": "Entity closed its SLA window with missing fields. SLA is expired and closed; reopening requires a fresh cohort, new capture, and new audit trail.",
+        "CLOSED": "Entity failed intake, had invalid provenance, expired terms, or was permanently rejected fail-closed.",
+        "PUBLIC_APPROVED": "Entity has been explicitly approved for public storefront rendering via a formal written CEO decision with valid CEO approval ID."
+      }
+    }
+  },
+  "tier_contracts": {
+    "T1_DEAL": {
+      "required_fields": [
+        "target_id",
+        "demand_category",
+        "merchant_name",
+        "listed_price",
+        "total_cost",
+        "conditions",
+        "validity_window",
+        "raw_evidence_ref",
+        "locators"
+      ],
+      "locator_requirements": [
+        "listed_price_locator",
+        "total_cost_locator",
+        "conditions_locator",
+        "validity_window_locator"
+      ],
+      "rules": "Missing any required field or locator strictly prevents T1 classification or PUBLIC_APPROVED admission."
+    },
+    "T2_PROGRAM": {
+      "required_fields": [
+        "target_id",
+        "program_name",
+        "operating_body",
+        "eligibility_cohort",
+        "scope",
+        "action_url",
+        "caveat",
+        "raw_evidence_ref",
+        "locators"
+      ],
+      "locator_requirements": [
+        "title_locator",
+        "eligibility_locator",
+        "scope_locator",
+        "action_url_locator"
+      ]
+    },
+    "T3_PLACE": {
+      "required_fields": [
+        "target_id",
+        "place_name",
+        "operating_body",
+        "location_address",
+        "public_access_policy",
+        "raw_evidence_ref",
+        "locators"
+      ],
+      "locator_requirements": [
+        "title_locator",
+        "operating_body_locator",
+        "location_locator"
+      ]
+    },
+    "T4_RADAR": {
+      "required_fields": [
+        "target_id",
+        "demand_category",
+        "tracking_rationale",
+        "candidate_source_url",
+        "recheck_due_at",
+        "caveat"
+      ],
+      "forbidden_fields": [
+        "price",
+        "total_cost",
+        "discount",
+        "voucher_code",
+        "buy_decision",
+        "merchant_cta",
+        "affiliate_link",
+        "rating",
+        "review",
+        "promo_promise"
+      ],
+      "rules": "T4 must describe an auditable tracking rationale. Storing or rendering any forbidden commercial field is strictly prohibited."
+    }
+  },
+  "admission_policy": {
+    "auto_publish_forbidden": true,
+    "public_approved_rule": "PUBLIC_APPROVED state can ONLY be assigned if a valid ceo_approval_id is present and traceable to canonical CEO directive."
+  }
+}

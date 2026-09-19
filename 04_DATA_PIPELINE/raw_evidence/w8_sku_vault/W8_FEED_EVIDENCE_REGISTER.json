@@ -1,0 +1,382 @@
+{
+  "register_id": "W8_FEED_EVIDENCE_REGISTER",
+  "schema_version": "1.2.0",
+  "ingested_at_utc": "2026-09-15T08:20:11.848Z",
+  "pipeline_state": "PROPOSED_STAGING_EXPERIMENTAL",
+  "provenance_ledger_link": {
+    "sequence_number": 1,
+    "ledger_block_sha256": "5f54e5878e426aaa681b6525a59234b9500aa2bf548cd7f83eeb97efe8cbe861",
+    "ledger_file": "PROVENANCE_LEDGER.jsonl",
+    "local_anchor_file": "LEDGER_HEAD_ANCHOR.json",
+    "vault_anchor_file": "W8_LEDGER_HEAD_ANCHOR.json"
+  },
+  "source_evidence": {
+    "file_name": "shopee_product_offer_export_17372870594.csv",
+    "file_sha256": "54b493fd21a3ae2c96128c796a10d08526e7945a4c25cb1179bb6da68af93b98",
+    "file_size_bytes": 5233,
+    "sidecar_sha256_verified": true,
+    "operator_declared_account": "17372870594",
+    "account_verified": false,
+    "governance_rule": "Account provenance requires formal operator executive sign-off; cannot be self-verified by code or CLI."
+  },
+  "schema_verification": {
+    "matched_template": "SHOPEE_PRODUCT_OFFER_FEED",
+    "exact_match_enforced": true,
+    "headers_detected": [
+      "Mã sản phẩm",
+      "Tên sản phẩm",
+      "Giá",
+      "Doanh thu",
+      "Tên cửa hàng",
+      "Tỉ lệ hoa hồng",
+      "Hoa hồng",
+      "Link sản phẩm",
+      "Link ưu đãi"
+    ],
+    "schema_pass": true,
+    "zero_imputation_enforced": true,
+    "raw_preservation_enforced": true
+  },
+  "duplicate_audit": {
+    "duplicate_count": 0,
+    "status": "PASS_ZERO_DUPLICATES"
+  },
+  "authoritative_verification_notice": {
+    "syntactic_format_verified": true,
+    "authoritative_catalog_existence_verified": false,
+    "first_party_account_attribution_verified": false,
+    "governance_notice": "Syntactic check validates URL/ID structure against Shopee formats only. It does NOT prove the SKU is active in merchant catalog or attributed to partner account. Commercial attribution strictly requires Shopee Validated Conversion Reports and Executive Dual-Key execution."
+  },
+  "threat_model_and_trust_boundary": {
+    "intra_host_crash_consistency_verified": true,
+    "concurrency_mutex_locked": true,
+    "ownership_nonce_verified": true,
+    "stale_lock_recovery_verified": true,
+    "out_of_band_digital_signature_present": false,
+    "trust_tier": "LOCAL_WORKSPACE_STAGING",
+    "acl_note": "Local dual anchors share filesystem ACLs; Byzantine tamper-resistance strictly requires out-of-band Dual-Key asymmetric digital signatures before commercial unleash."
+  },
+  "total_records": 20,
+  "records": [
+    {
+      "source_row_index": 1,
+      "raw_columns": {
+        "_source_row_index": 1,
+        "Mã sản phẩm": "23552060269",
+        "Tên sản phẩm": "Giấy vệ sinh treo tường TopGia đa sắc đa năng từ bột giấy thiên nhiên, 1280tờ/4lớp",
+        "Giá": "125,0k",
+        "Doanh thu": "1tr+",
+        "Tên cửa hàng": "TopGia HCM Store",
+        "Tỉ lệ hoa hồng": "9%",
+        "Hoa hồng": "₫11.250",
+        "Link sản phẩm": "https://shopee.vn/product/1016604648/23552060269",
+        "Link ưu đãi": "https://s.shopee.vn/6L4SG0dEw9"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 2,
+      "raw_columns": {
+        "_source_row_index": 2,
+        "Mã sản phẩm": "26609048170",
+        "Tên sản phẩm": "Ốp Lưng iPhone TPU Chống Bẩn Lót Nhung, Bảo Vệ Camera - iP 7/8/X/XS/XR/11/12/13/14/15/16/17/Mini/Plus/Pro/Max/Air",
+        "Giá": "41,5k",
+        "Doanh thu": "1tr+",
+        "Tên cửa hàng": "SHIN CASE - ỐP LƯNG CƯỜNG LỰC",
+        "Tỉ lệ hoa hồng": "20%",
+        "Hoa hồng": "₫8.300",
+        "Link sản phẩm": "https://shopee.vn/product/89827191/26609048170",
+        "Link ưu đãi": "https://s.shopee.vn/6Al23hdsH8"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 3,
+      "raw_columns": {
+        "_source_row_index": 3,
+        "Mã sản phẩm": "25171045245",
+        "Tên sản phẩm": "Áo mưa đi xe máy đơn nam nữ trong suốt cao cấp 1 người thời trang  đẹp",
+        "Giá": "146,6k",
+        "Doanh thu": "30k+",
+        "Tên cửa hàng": "dhf18-HN",
+        "Tỉ lệ hoa hồng": "9%",
+        "Hoa hồng": "₫13.196",
+        "Link sản phẩm": "https://shopee.vn/product/1218336683/25171045245",
+        "Link ưu đãi": "https://s.shopee.vn/60RbrOeVc7"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 4,
+      "raw_columns": {
+        "_source_row_index": 4,
+        "Mã sản phẩm": "29428705340",
+        "Tên sản phẩm": "Sốt Chấm CayTeDai x2 SIÊU CAY - Sốt Muối Chấm Lâm Vlog Cay Tê Dại x2",
+        "Giá": "88,7k",
+        "Doanh thu": "200k+",
+        "Tên cửa hàng": "Lâm Vlog Food",
+        "Tỉ lệ hoa hồng": "8%",
+        "Hoa hồng": "₫7.096",
+        "Link sản phẩm": "https://shopee.vn/product/1424739765/29428705340",
+        "Link ưu đãi": "https://s.shopee.vn/7AdZFXa4FM"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 5,
+      "raw_columns": {
+        "_source_row_index": 5,
+        "Mã sản phẩm": "24491019937",
+        "Tên sản phẩm": "Khăn giấy vệ sinh treo tường Tiểu Hạ 1000 tờ làm từ bột gỗ thiên nhiên, an toàn, 6 bịch hoặc 10 bịch",
+        "Giá": "119,0k",
+        "Doanh thu": "2tr+",
+        "Tên cửa hàng": "TopGia HCM",
+        "Tỉ lệ hoa hồng": "8%",
+        "Hoa hồng": "₫9.520",
+        "Link sản phẩm": "https://shopee.vn/product/729014007/24491019937",
+        "Link ưu đãi": "https://s.shopee.vn/70K93EahaL"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 6,
+      "raw_columns": {
+        "_source_row_index": 6,
+        "Mã sản phẩm": "28818204493",
+        "Tên sản phẩm": "Sạc Dựng Phòng Trong Suốt 30000mAh Với 2 Cổng Sạc Nhanh 22.5w và PD 20W Kèm 4 Đầu Sạc Màn Hình LED",
+        "Giá": "225,0k",
+        "Doanh thu": "600k+",
+        "Tên cửa hàng": "Pin dự phòng nội địa Trung",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫22.500",
+        "Link sản phẩm": "https://shopee.vn/product/938402459/28818204493",
+        "Link ưu đãi": "https://s.shopee.vn/6q0iqvbKvK"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 7,
+      "raw_columns": {
+        "_source_row_index": 7,
+        "Mã sản phẩm": "28257218140",
+        "Tên sản phẩm": "Chân Gà Không Xương -  ĂN CÙNG BÀ TUYẾT M11",
+        "Giá": "50,0k",
+        "Doanh thu": "30k+",
+        "Tên cửa hàng": "Ăn Cùng Bà Tuyết",
+        "Tỉ lệ hoa hồng": "11%",
+        "Hoa hồng": "₫5.500",
+        "Link sản phẩm": "https://shopee.vn/product/279658061/28257218140",
+        "Link ưu đãi": "https://s.shopee.vn/6fhIecbyGJ"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 8,
+      "raw_columns": {
+        "_source_row_index": 8,
+        "Mã sản phẩm": "48054201493",
+        "Tên sản phẩm": "Máy bơm lốp ôtô cầm tay sạc USB ngắt tự động,thiết kế nhỏ gọn công suất lớn",
+        "Giá": "170,1k",
+        "Doanh thu": "181",
+        "Tên cửa hàng": "FineLife",
+        "Tỉ lệ hoa hồng": "12%",
+        "Hoa hồng": "₫20.412",
+        "Link sản phẩm": "https://shopee.vn/product/1497798432/48054201493",
+        "Link ưu đãi": "https://s.shopee.vn/7ptG2lXWtY"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 9,
+      "raw_columns": {
+        "_source_row_index": 9,
+        "Mã sản phẩm": "17532975547",
+        "Tên sản phẩm": "Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói",
+        "Giá": "74,0k",
+        "Doanh thu": "2tr+",
+        "Tên cửa hàng": "TopGia HCM",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫7.400",
+        "Link sản phẩm": "https://shopee.vn/product/729014007/17532975547",
+        "Link ưu đãi": "https://s.shopee.vn/7fZpqSYAEX"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 10,
+      "raw_columns": {
+        "_source_row_index": 10,
+        "Mã sản phẩm": "23244410073",
+        "Tên sản phẩm": "Ốp Lưng iPhone TPU Silicon Mềm 4 Góc Cao Cấp, Chống Sốc, Bảo Vệ Camera - iP 6/7/8/Plus/X/XS/11/12/13/14/15/16/17/Pro/Max",
+        "Giá": "20,9k",
+        "Doanh thu": "1tr+",
+        "Tên cửa hàng": "SHIN CASE - ỐP LƯNG CƯỜNG LỰC",
+        "Tỉ lệ hoa hồng": "20%",
+        "Hoa hồng": "₫4.180",
+        "Link sản phẩm": "https://shopee.vn/product/89827191/23244410073",
+        "Link ưu đãi": "https://s.shopee.vn/7VGPe9YnZW"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 11,
+      "raw_columns": {
+        "_source_row_index": 11,
+        "Mã sản phẩm": "23073213252",
+        "Tên sản phẩm": "Bộ thun lạnh tay dài quần dài cho Bé trai , Bé gái 5 - 20kg, Đồ Bộ Cho Bé Mặc Nhà , Chuchoe Baby",
+        "Giá": "65,0k",
+        "Doanh thu": "300k+",
+        "Tên cửa hàng": "CHUCHOE BABY",
+        "Tỉ lệ hoa hồng": "13%",
+        "Hoa hồng": "₫8.450",
+        "Link sản phẩm": "https://shopee.vn/product/137184188/23073213252",
+        "Link ưu đãi": "https://s.shopee.vn/7KwzRqZQuV"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 12,
+      "raw_columns": {
+        "_source_row_index": 12,
+        "Mã sản phẩm": "56059964080",
+        "Tên sản phẩm": "Tai nghe cắm tai không dây Blueclouds để làm việc Bảo vệ thính giác khử tiếng ồn 35dB cho xây dựng và nhà máy mới",
+        "Giá": "216,2k",
+        "Doanh thu": "5",
+        "Tên cửa hàng": "blueclouds.vn",
+        "Tỉ lệ hoa hồng": "2%",
+        "Hoa hồng": "₫4.325",
+        "Link sản phẩm": "https://shopee.vn/product/1280282335/56059964080",
+        "Link ưu đãi": "https://s.shopee.vn/3B7QUBpIMi"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 13,
+      "raw_columns": {
+        "_source_row_index": 13,
+        "Mã sản phẩm": "46859620849",
+        "Tên sản phẩm": "[SIÊU TIẾT KIỆM] Khăn Giấy Pio TopGia Đa Năng Cao Cấp Thùng 10 8 5 4 Siêu Dai Mềm Mịn 200 Lần Rút",
+        "Giá": "69,0k",
+        "Doanh thu": "100k+",
+        "Tên cửa hàng": "TopGia HCM",
+        "Tỉ lệ hoa hồng": "8%",
+        "Hoa hồng": "₫5.520",
+        "Link sản phẩm": "https://shopee.vn/product/729014007/46859620849",
+        "Link ưu đãi": "https://s.shopee.vn/30o0Hspvhh"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 14,
+      "raw_columns": {
+        "_source_row_index": 14,
+        "Mã sản phẩm": "29000715432",
+        "Tên sản phẩm": "Kính Cường Lực iPhone Khung Tự Dán, Tự Hút Bụi, Chống Nhìn Trộm, Full Màn - Ốp iP X/XS/11/12/13/14/15/16/17Pro/MaxAir",
+        "Giá": "31,9k",
+        "Doanh thu": "100k+",
+        "Tên cửa hàng": "SHIN CASE - ỐP LƯNG CƯỜNG LỰC",
+        "Tỉ lệ hoa hồng": "22%",
+        "Hoa hồng": "₫7.018",
+        "Link sản phẩm": "https://shopee.vn/product/89827191/29000715432",
+        "Link ưu đãi": "https://s.shopee.vn/2qUa5ZqZ2g"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 15,
+      "raw_columns": {
+        "_source_row_index": 15,
+        "Mã sản phẩm": "40900937672",
+        "Tên sản phẩm": "[Made in Malaysia] Phuộc RCB RACING BOY Bình Dầu Flow-S Series | Wave/Sirius/Airblade/Vario150/160 | Hàng Chính Hãng",
+        "Giá": "2,4tr",
+        "Doanh thu": "3",
+        "Tên cửa hàng": "SHOPXEMAY.VN",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫239.000",
+        "Link sản phẩm": "https://shopee.vn/product/1513260379/40900937672",
+        "Link ưu đãi": "https://s.shopee.vn/2gB9tGrCNf"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 16,
+      "raw_columns": {
+        "_source_row_index": 16,
+        "Mã sản phẩm": "17376598691",
+        "Tên sản phẩm": "Sữa tắm nam 3 in 1 ACEMAN 320ML sữa tắm nước hoa nam tính lôi cuốn, kết hợp tắm gội rửa mặt tiện lợi",
+        "Giá": "178,0k",
+        "Doanh thu": "100k+",
+        "Tên cửa hàng": "ACEMAN Official Store",
+        "Tỉ lệ hoa hồng": "7%",
+        "Hoa hồng": "₫12.460",
+        "Link sản phẩm": "https://shopee.vn/product/799994218/17376598691",
+        "Link ưu đãi": "https://s.shopee.vn/3qN7HPml0u"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 17,
+      "raw_columns": {
+        "_source_row_index": 17,
+        "Mã sản phẩm": "52306955570",
+        "Tên sản phẩm": "Khăn giấy cao cấp Mộc an Topgia hàng Việt Nam 4 lớp, 1000 tờ  tặng 3 móc treo tiện lợi",
+        "Giá": "109,0k",
+        "Doanh thu": "60k+",
+        "Tên cửa hàng": "TopGia HCM",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫10.900",
+        "Link sản phẩm": "https://shopee.vn/product/729014007/52306955570",
+        "Link ưu đãi": "https://s.shopee.vn/3g3h56nOLt"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 18,
+      "raw_columns": {
+        "_source_row_index": 18,
+        "Mã sản phẩm": "48913645670",
+        "Tên sản phẩm": "JF157 Quạt Nhỏ Mini Tốc Độ Cao Turbo Bạo Lực Quạt Cầm Tay Nhỏ Không Khí Sạc USB Quạt Bỏ Túi Di Động",
+        "Giá": "213,5k",
+        "Doanh thu": "0",
+        "Tên cửa hàng": "johndarr.vn",
+        "Tỉ lệ hoa hồng": "80%",
+        "Hoa hồng": "₫170.778",
+        "Link sản phẩm": "https://shopee.vn/product/1660158090/48913645670",
+        "Link ưu đãi": "https://s.shopee.vn/3VkGsno1gs"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 19,
+      "raw_columns": {
+        "_source_row_index": 19,
+        "Mã sản phẩm": "52460495899",
+        "Tên sản phẩm": "(BỊCH LỚN 300 CÁI) Găng tay đa dụng TPE TOPGIA treo tường dạng rút, tặng kèm móc treo siêu tiết kiệm kích thước phù hợp",
+        "Giá": "69,0k",
+        "Doanh thu": "50k+",
+        "Tên cửa hàng": "TopGia HCM",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫6.900",
+        "Link sản phẩm": "https://shopee.vn/product/729014007/52460495899",
+        "Link ưu đãi": "https://s.shopee.vn/3LQqgUof1r"
+      },
+      "imputed": false
+    },
+    {
+      "source_row_index": 20,
+      "raw_columns": {
+        "_source_row_index": 20,
+        "Mã sản phẩm": "28708632089",
+        "Tên sản phẩm": "Loa Bluetooth Mini Không Dây Thiết Kế Nhỏ Gọn Sang Trọng Nghe Nhạc Hay Có Móc Treo Giá Rẻ",
+        "Giá": "199,0k",
+        "Doanh thu": "300k+",
+        "Tên cửa hàng": "TRẦN HÀ LINH SHOP ",
+        "Tỉ lệ hoa hồng": "10%",
+        "Hoa hồng": "₫19.900",
+        "Link sản phẩm": "https://shopee.vn/product/938419975/28708632089",
+        "Link ưu đãi": "https://s.shopee.vn/4Vco4dkDf6"
+      },
+      "imputed": false
+    }
+  ]
+}

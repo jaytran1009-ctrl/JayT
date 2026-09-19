@@ -1,0 +1,27 @@
+{
+  "work_order_id": "WORK_ORDER_W8_SERVERLESS_AFFILIATE_UNLEASH",
+  "issued_at": "2026-09-13T00:00:00+07:00",
+  "status": "PARTIALLY_IMPLEMENTED__PARTNER_API_AND_COMMERCIAL_DISPATCH_HELD",
+  "implemented": {
+    "endpoint": "/api/affiliate/inspect.js",
+    "method": "POST",
+    "contract": { "url": "HTTPS_ALLOWLISTED_MARKETPLACE_URL" },
+    "controls": ["host_allowlist", "https_only", "no_credentials_in_url", "dns_private_ip_rejection", "pinned_dns_address", "manual_redirect_validation", "four_hop_limit", "2500ms_timeout", "no_store"],
+    "outputs": ["platform", "shop_id", "item_id", "final_url", "redirect_hops"]
+  },
+  "not_implemented_without_partner_authorization": [
+    "private_voucher_api_queries",
+    "hidden_live_or_video_voucher_discovery",
+    "price_history_claims",
+    "affiliate_deep_link_generation",
+    "partner_id_or_secret_loading",
+    "twenty_presets_with_unverified_floor_prices"
+  ],
+  "staging_boundary": {
+    "affiliate_enabled": false,
+    "affiliate_url_returned": null,
+    "tracking_emitted": false,
+    "production_alias_mutation_authorized": false
+  },
+  "next_gate": "Provide the official partner API/deep-link specification and proof that the account is authorized for the requested operations; then implement server-side signing and an isolated Preview security audit."
+}

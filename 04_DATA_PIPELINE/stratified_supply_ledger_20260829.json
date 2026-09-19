@@ -1,0 +1,116 @@
+{
+  "ledger_id": "LEDGER_STRATIFIED_SUPPLY_20260829_V2",
+  "timestamp": "2026-08-28T17:14:11.846Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section Z, R, I)",
+  "total_tracked_opportunities": 10,
+  "layers": {
+    "layer_1_verified_deals": {
+      "layer_name": "Làn 1 — Deal hôm nay đã đối soát",
+      "current_public_count": 0,
+      "status": "STAGING_VERIFICATION_IN_PROGRESS",
+      "criteria": "Bắt buộc có capture gốc, giá niêm yết/thực trả, điều kiện áp dụng, scope cơ sở và hạn kiểm tra.",
+      "items": []
+    },
+    "layer_2_official_programs": {
+      "layer_name": "Làn 2 — Chương trình chính thức",
+      "current_public_count": 1,
+      "status": "ACTIVE_PUBLIC_TIER",
+      "criteria": "Có nguồn landing page official, đối soát 4 trường atomic (tên, mục đích, ngữ cảnh, URL).",
+      "items": [
+        {
+          "target_id": "TGT_C4_01",
+          "name": "GitHub Student Developer Pack",
+          "brand": "GitHub Education",
+          "category": "Học tập",
+          "cluster": "Toàn quốc",
+          "evidence_source": "https://education.github.com/pack",
+          "atomic_binding_status": "VERIFIED_4_CLAIMS",
+          "pricing_claim": "NONE_DERIVED"
+        }
+      ]
+    },
+    "layer_3_verified_venues": {
+      "layer_name": "Làn 3 — Gần bạn hôm nay (Địa điểm / Tiện ích xác minh)",
+      "current_public_count": 0,
+      "status": "CANDIDATE_INGESTION_IN_PROGRESS",
+      "criteria": "Địa điểm, cơ sở vật chất, tiện ích cộng đồng thực tế tại Đà Nẵng; không gán khuyến mãi.",
+      "items": []
+    },
+    "layer_4_radar_tracking": {
+      "layer_name": "Làn 4 — Radar đáng theo dõi (Demand Tracking)",
+      "current_public_count": 9,
+      "status": "ACTIVE_PUBLIC_TIER",
+      "criteria": "Có nhu cầu và nguồn theo dõi; tuyệt đối 0 giá, 0 voucher, 0 locality suy diễn, 0 CTA thương mại.",
+      "items": [
+        {
+          "target_id": "TGT_C1_01",
+          "name": "Rạp Chiếu Phim Metiz Cinema",
+          "category": "Phim",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://metiz.vn"
+        },
+        {
+          "target_id": "TGT_C1_03",
+          "name": "Trung Tâm Quản Lý Vận Tải Công Cộng DanaBus",
+          "category": "Đi lại",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://www.danangbus.vn/"
+        },
+        {
+          "target_id": "TGT_C1_04",
+          "name": "Dịch Vụ Xe Đạp Công Nghệ TNGO",
+          "category": "Đi lại",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://tngo.vn"
+        },
+        {
+          "target_id": "TGT_C1_08",
+          "name": "Nhà Sách Fahasa",
+          "category": "Học tập",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://www.fahasa.com/"
+        },
+        {
+          "target_id": "TGT_C2_01",
+          "name": "Cụm Rạp Galaxy Cinema",
+          "category": "Phim",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://www.galaxycine.vn"
+        },
+        {
+          "target_id": "TGT_C3_01",
+          "name": "Thương Hiệu Domino's Pizza",
+          "category": "Ăn trưa",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://dominos.vn"
+        },
+        {
+          "target_id": "TGT_C3_04",
+          "name": "Cụm Rạp CGV Cinemas",
+          "category": "Phim",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://www.cgv.vn"
+        },
+        {
+          "target_id": "TGT_C3_05",
+          "name": "Tổng Công Ty Đường Sắt Việt Nam",
+          "category": "Đi lại",
+          "cluster": "Khu vực đang xác minh",
+          "source": "https://dsvn.vn"
+        },
+        {
+          "target_id": "TGT_C4_02",
+          "name": "Gói Notion for Education",
+          "category": "Học tập",
+          "cluster": "Toàn quốc",
+          "source": "https://www.notion.com/product/notion-for-education"
+        }
+      ]
+    }
+  },
+  "governance_rules": [
+    "Không tự ý chuyển mục Radar sang Deal xác minh khi chưa có capture giá quầy",
+    "Toàn bộ locality chưa có raw binding đều bị hạ thành \"Khu vực đang xác minh\"",
+    "Affiliate duy trì trạng thái RESEARCH_PLAN_ONLY (0 link, 0 campaign, 0 CTA)"
+  ]
+}

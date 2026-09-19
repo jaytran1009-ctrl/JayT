@@ -1,0 +1,51 @@
+{
+  "evidence": {
+    "EVID_CORRUPTED_HASH_20260821": {
+      "deal_id": "DNG-CORRUPTED-HASH-DEAL",
+      "source_url": "https://thecoffeehouse.com/pages/uu-dai-combo-sang-39k/",
+      "source_type": "OFFICIAL_PROMOTION_ANNOUNCEMENT",
+      "recorded_by": "JAYT_DESK_REVIEW_PUBLIC_SOURCE",
+      "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "checked_at": "2026-08-21T03:30:00Z",
+      "captured_at": "2026-08-21T03:30:00Z",
+      "claim_summary": "Rà soát kiểm thử lỗi can thiệp mã băm SHA-256",
+      "source_specificity": "EXACT_OFFER_PAGE",
+      "observed_price_or_offer": "Combo 39K",
+      "observed_conditions": "Thử nghiệm mã băm sai",
+      "expiry_basis": "Hạn 30/09/2026 theo trang ưu đãi",
+      "capture_file": "snapshot_thecoffeehouse_promo_20260821.txt",
+      "evidence_content_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "capture_method": "MANUAL_DESK_CAPTURE",
+      "notes": "Hồ sơ vi phạm: Khai báo mã băm SHA-256 không khớp với tệp lưu vết thực tế trên đĩa (REJECTED)."
+    }
+  },
+  "deals": [
+    {
+      "deal_id": "DNG-CORRUPTED-HASH-DEAL",
+      "title": "Deal Sai Lệch Mã Băm Bằng Chứng (The Coffee House)",
+      "merchant": "The Coffee House Đà Nẵng",
+      "zone": "ZONE_HAI_CHAU_CBD",
+      "category": "local_beverage",
+      "need_collection": "coffee_work",
+      "budget_tier": "under_50k",
+      "duration_mins": 60,
+      "group_size": "1_person",
+      "contextual_reason": "Gợi ý tham khảo: Thử nghiệm phát hiện can thiệp tệp bằng chứng.",
+      "original_price": 55000,
+      "deal_price": 39000,
+      "discount_pct": 29,
+      "start_minutes": 420,
+      "end_minutes": 1050,
+      "days_of_week": [1, 2, 3, 4, 5],
+      "persona": ["office", "student"],
+      "taxonomy": "PROBING",
+      "affiliate_type": "DIRECT_DEAL",
+      "source_url": "https://thecoffeehouse.com/pages/uu-dai-combo-sang-39k/",
+      "evidence_ref": "EVID_CORRUPTED_HASH_20260821",
+      "disclosure": "Thẻ khám phá nguồn (PROBING) — Vi phạm: băm SHA-256 không khớp.",
+      "lifecycle_status": "PROBING",
+      "expires_at": "2026-09-30T23:59:59+07:00",
+      "category_scope": "LOCAL_EXPERIENCE"
+    }
+  ]
+}

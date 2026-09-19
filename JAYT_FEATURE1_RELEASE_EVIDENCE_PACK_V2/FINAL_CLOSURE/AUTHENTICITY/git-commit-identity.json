@@ -1,0 +1,24 @@
+{
+  "report_name": "JAYT_GIT_COMMIT_IDENTITY_VERIFICATION",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_456_AUTHENTICITY_ENFORCEMENT (AUTH-02)",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_457_AUTHENTICITY_GATE",
+  "timestamp": "2026-09-19T09:16:33.036Z",
+  "repository_path": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng",
+  "remote_origin": null,
+  "branch": null,
+  "git_commit_sha": "NOT_VERIFIED",
+  "commit_parent": null,
+  "commit_timestamp": null,
+  "worktree_clean": "NOT_VERIFIED_NO_LOCAL_GIT_REPOSITORY",
+  "source_artifact_path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+  "source_artifact_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
+  "source_artifact_bytes": 1103674,
+  "collected_at": "2026-09-19T09:16:33.036Z",
+  "invariant_check": {
+    "git_commit_sha_distinct_from_artifact_hash": "PASS",
+    "semantic_authority_separated": "PASS",
+    "source_file_hash_not_misrepresented_as_git_sha": "PASS"
+  },
+  "governance_finding": "Current project directory is not an initialized Git working tree (.git absent at root), and git binary is not installed in host PATH. Source artifact authority is strictly anchored by SHA-256 hash (d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca) and is NEVER conflated with Git commit SHA.",
+  "overall_status": "NOT_VERIFIED"
+}

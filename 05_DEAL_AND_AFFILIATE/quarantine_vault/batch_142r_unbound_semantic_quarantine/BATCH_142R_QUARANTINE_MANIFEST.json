@@ -1,0 +1,64 @@
+{
+  "manifest_id": "BATCH_142R_QUARANTINE_MANIFEST",
+  "directive": "JAYT-142S: SEMANTIC-ROOT RECOVERY & RECEIPT-TRUST REBUILD",
+  "status": "REJECTED_FOR_UNBOUND_WIDGET_EXTRACTION",
+  "quarantined_at": "2026-08-26T18:52:36.690Z",
+  "executive_ruling": "CEO audit identified that 142R extracted global UI widgets (\"Mua vé nhanh\", \"Miễn phí\") outside the article content root, relied on inherited locator metadata, and matched raw keyword mentions instead of address units. Quarantining derived 142R files; proceeding with genuine semantic-root parser and address-unit locality extraction.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_36_UNBOUND_GLOBAL_WIDGET_POLLUTION",
+      "description": "Extracted title and price from shared booking widget/navigation container instead of scoping strictly to the leaf article content root."
+    },
+    {
+      "cause_id": "P0_CAUSE_37_INHERITED_RECEIPT_TRUST_VIOLATION",
+      "description": "Receipts contained inherited metadata from revoked batch 142 that was not stripped before re-evaluation."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_leaf_dom_parser_142r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/generic_leaf_dom_parser_142r.js",
+      "sha256": "0550216742c0dbd73f27edba0adbbd77b1c3cfb177916a6abc9b8f6da1f10446"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/locality_verifier_142r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/locality_verifier_142r.js",
+      "sha256": "e85b12365cf549651fca141775932b655283c4d8c46feeb693f24ece24037400"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_batch_142r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/reprocess_batch_142r.js",
+      "sha256": "89d0dd3182306861c4f4319cff0e444970bb03896fa5cd2e7bd69c7bb6883001"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_142r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/generic_compiler_142r.js",
+      "sha256": "cd4d71539a32ffa9a395052ac39508b9cae2ba6ceeb51c6cb65a1a77ad7ad61a"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/brand_locality_registry_142r.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/brand_locality_registry_142r.json",
+      "sha256": "a66e2ca9ca55dffae9346c0669ecb852bb468343afef99330569712d368a9959"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/leaf_batch_142r_table.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/leaf_batch_142r_table.json",
+      "sha256": "391d129875b8770407160d5009d1e932d900050375c4927651e340509e9cc6c9"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_142r_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/batch_capture_142r_manifest.json",
+      "sha256": "3a19e7d75d2f80fbc91f0ff441a1011b84f55e5baaddddcdb739cfc68cebb1f7"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_reprocessing_142r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/test_reprocessing_142r.js",
+      "sha256": "22779c61cb8919f5344f115b58f26bcfb3e0777209cc8b057ffa13baf97a37ff"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_142R_REPROCESSING_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/JAYT_142R_REPROCESSING_PACK.md",
+      "sha256": "1ea0868a477e4efb903310b2348d10746424ebdf324644d4f6ed96c96e0dc32b"
+    }
+  ]
+}

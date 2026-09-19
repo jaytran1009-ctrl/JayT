@@ -1,0 +1,54 @@
+{
+  "manifest_id": "BATCH_141S_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141T — SEMANTIC INTEGRITY REPAIR BEFORE AUTONOMOUS ACTIVATION",
+  "status": "GREEDY_NORMALIZER_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:20:00+07:00",
+  "executive_ruling": "CEO audit identified greedy normalizer defects: greedy div deletion stripped valid offer banners, regex stripped valid operational hours (HH:MM:SS), registry lacked baseline semantic snapshots, and keyword-based delta detection was brittle.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_28_GREEDY_BANNER_AND_TIME_DELETION",
+      "description": "Greedy regex stripped div matching banner/popup and stripped HH:MM:SS operational condition hours."
+    },
+    {
+      "cause_id": "P0_CAUSE_29_MISSING_STRUCTURED_SEMANTIC_BASELINE_SNAPSHOT",
+      "description": "Registry lacked structured semantic snapshot, causing inability to compare structured offer blocks and links."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/semantic_normalizer_141s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/semantic_normalizer_141s.js",
+      "sha256": "c49d9146b6fc7cf7ed2414193a4ebe24f3e1297721ac45b029810fe2df8d5203"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/run_semantic_scheduler_141s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/run_semantic_scheduler_141s.js",
+      "sha256": "f03d3e16b156fd3bc381c855b265e7deae21b79aab9e92652f29ce1c29dae773"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/generic_compiler_141s.js",
+      "sha256": "44e9037c848a8d10e4a8285bf2e676f58683b9eb980d00b4915265568a3850cc"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141s_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/batch_capture_141s_manifest.json",
+      "sha256": "9925a044f48592ae1d2e52d8702e8d7f119b09d36de3d232e949fa2d011e0c93"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_semantic_delta_recovery_141s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/test_semantic_delta_recovery_141s.js",
+      "sha256": "2c23ecb232ef286aa5c9705dbf1cc1bff5da4319741d37fd13022370e258de41"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/test_generic_compiler_141s.js",
+      "sha256": "b35155ad0e1d2a52c5eef495f3fd0458b2e4b5f95d0a3cdf9ad8a482f50e6334"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141S_SEMANTIC_DELTA_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/JAYT_141S_SEMANTIC_DELTA_REVIEW_PACK.md",
+      "sha256": "f6dce36a27d6938f7e4403c484c72f460f56c5b081f518e2be4782fa982321bb"
+    }
+  ]
+}

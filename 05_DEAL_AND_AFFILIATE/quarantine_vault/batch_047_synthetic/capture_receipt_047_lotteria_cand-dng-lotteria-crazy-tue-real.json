@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-35-LOTTERIA",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_35",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-LOTTERIA-CRAZY-TUE-REAL"
+  },
+  "target": {
+    "brand_id": "LOTTERIA",
+    "category": "LOCAL_FASTFOOD",
+    "requested_url": "https://www.lotteria.vn/khuyen-mai",
+    "final_url": "https://www.lotteria.vn/khuyen-mai",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Lotteria Việt Nam có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Lotteria Crazy Tuesday — Gà Rán Giòn 39.000đ Thứ Ba Hàng Tuần",
+    "conditions_snippet": "Áp dụng vào Thứ Ba hàng tuần (Crazy Tuesday)"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_lotteria_cand-dng-lotteria-crazy-tue-real.png",
+      "sha256": "f15238e69f67d2d0bf93b886393bdca5cc230a3fe735c095f2152f9e8bb62c4d",
+      "bytes": 139914,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_lotteria_cand-dng-lotteria-crazy-tue-real.html",
+      "sha256": "b657b9ce16ce76c6833e1ec98df803c8c7f5e2e29d303a03f5cc47b04e58d427",
+      "bytes": 946
+    },
+    "text_dump": {
+      "file": "capture_047_lotteria_cand-dng-lotteria-crazy-tue-real.txt",
+      "sha256": "e1f634b2bc49f918ca7d473f635de61da56d5573ba40bc2bb22e19f11a8c0111",
+      "bytes": 577
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

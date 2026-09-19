@@ -1,0 +1,86 @@
+{
+  "work_order_id": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "authority": "JAYT-392 final directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T06:30:00Z",
+  "deadline_local": "2026-09-11T19:00:00+07:00",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini independently reviews the final dual-key seal",
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "new_remote_previews": false
+  },
+  "authorization": {
+    "candidate_build_and_evidence_collection": true,
+    "production_deployment": "CONDITIONAL_ONLY_AFTER_CEO_R2_EVIDENCE_REVIEW",
+    "real_os_scheduler": "AUTHORIZED_ON_USER_OWNED_EXECUTOR_HOST_ONLY",
+    "real_nonproduction_alias_drill": "AUTHORIZED_ONLY_ON_AN_EXISTING_OR_EXPLICITLY_AUTHORIZED_DRILL_ALIAS",
+    "destructive_project_deletion": "NOT_AUTHORIZED_BY_THIS_WORK_ORDER; REQUIRES_A_SEPARATE_EXPLICIT_EXECUTION_ORDER_AT_TIME_OF_ACTION",
+    "prohibitions": [
+      "Do not bypass WAF, CAPTCHA, authentication, access controls, rate limits, robots directives, paywalls, geofencing or provider terms.",
+      "Do not fabricate, alter or infer captures, screenshots, prices, dates, eligibility, scope, codes, images, task logs, Vercel logs or attribution.",
+      "Do not claim an offer is live, a product is verified, a scheduler is running, or a drill is measured unless its underlying retained evidence independently proves it."
+    ]
+  },
+  "required_results": [
+    {
+      "id": "TWO_CURRENT_UNIQUE_LOCAL_OFFERS",
+      "scope": "Metiz Cinema Helio and Galaxy Cinema Da Nang",
+      "minimum_verified_count": 2,
+      "requirements": [
+        "Each offer has original first-party response bytes and, if used, original screenshot bytes with source URL, capture timestamp, viewport/browser metadata and SHA-256.",
+        "Each offer has byte-locatable offer_quote, validity_quote showing September 2026 currency/current status, scope_quote for the Da Nang branch and terms_quote for actual eligibility.",
+        "The two offers must have distinct source-backed benefit/redemption routes; duplicated Galaxy tariff/U22 claims count once.",
+        "No self-reference to jayt.vn and no copy-code control unless the source visibly provides that exact public code.",
+        "Publish CTA only as justified by its source: counter, app or schedule."
+      ]
+    },
+    {
+      "id": "RADAR_VISUAL_SANITIZATION",
+      "requirements": [
+        "Remove the 30 visually broken placeholder cards from the verified Radar UI. An empty/neutral state is permitted and must be clearly labelled rather than styled as a verified product.",
+        "For every product card shown as a verified surveyed item, retain a correct official PNG/WebP photo, rights/source record, item/variant match, observed-price timestamp, official Mall destination, file hash and dimensions.",
+        "If fewer than ten records pass, show only that exact verified count; do not pad the experience with generic, generated or mismatched imagery.",
+        "Keep affiliate_enabled false without provider-issued replayable attribution proof."
+      ]
+    },
+    {
+      "id": "OS_SCHEDULER_AND_DRILL_PROOF",
+      "requirements": [
+        "Register an actual OS scheduler task/service with four-hour cadence, fixed item IDs, least-privilege identity and no auto-publication capability.",
+        "Submit raw scheduler registration/query output, task executable/config hashes, PID/process evidence, system timestamps and a durable audit log from a scheduler-triggered (not manually invoked) network probe run.",
+        "Perform a reversible actual alias swap only on an authorized non-production drill alias. Retain Vercel command/API output, alias mapping before/after, repeated CDN response logs, rollback restoration proof and measured RTO.",
+        "Canonical production alias must remain untouched during the drill."
+      ]
+    },
+    {
+      "id": "FINAL_DUAL_KEY_SEAL",
+      "requirements": [
+        "Refresh PIPELINE_SEAL_MANIFEST with hashes for executed collectors, validators, schemas, scheduler config and drill artifacts.",
+        "Status stays PENDING_DUAL_KEY until a Chairman written-approval reference and an independently supplied Gemini safety-review reference are present. A seal manifest does not physically prevent all filesystem modifications."
+      ]
+    }
+  ],
+  "required_deliverables": [
+    "06_TRUST_AND_EVIDENCE/j392/final_wave_1_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j392/final_ktx_radar_evidence_index.json",
+    "07_QUALITY_ASSURANCE/JAYT_392_FINAL_WAVE_1_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_392_FINAL_OS_SCHEDULER_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_392_FINAL_NONPRODUCTION_DRILL_RECEIPT.json",
+    "08_RELEASE_VAULT/PIPELINE_SEAL_MANIFEST.json",
+    "08_RELEASE_VAULT/JAYT_392_FINAL_RELEASE_REQUEST.json"
+  ],
+  "ceo_gate": {
+    "approval": "CEO independently checks retained source bytes, screenshots, current dates, quote locations, UI output, scheduler registration/log and Vercel drill evidence.",
+    "pass": "Only if at least two unique current Da Nang offers and every asserted verified Radar item pass; exact count must be reported.",
+    "hold": "Any missing/old/duplicate/non-local offer, unverified media, simulated task/drill, or missing proof holds canonical release and affiliate activation."
+  },
+  "reporting": {
+    "ack": "Report actual executor acknowledgement and start time.",
+    "completion": "Report evidence paths, hashes, verified counts and blockers. Executor cannot self-award CEO/Gemini pass or mutate production before the CEO gate."
+  }
+}

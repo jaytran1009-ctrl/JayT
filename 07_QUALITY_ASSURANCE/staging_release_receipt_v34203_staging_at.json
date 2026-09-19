@@ -1,0 +1,65 @@
+{
+  "receipt_id": "RECEIPT_STAGING_v34203_STAGING_AT_20260829",
+  "environment": "STAGING_REVIEW_AT_ONLY",
+  "staging_url": "https://jayt-storefront-staging-at.vercel.app",
+  "staging_version": "v3.420.3-staging.at",
+  "deployed_at": "2026-08-28T18:59:26.606Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AT)",
+  "comparison_baselines": {
+    "production_locked_rollback": {
+      "url": "https://deploy-ten-xi-48.vercel.app",
+      "version": "v3.419.0",
+      "receipt": "07_QUALITY_ASSURANCE/production_release_receipt_v3419.json",
+      "status": "LOCKED_ROLLBACK_BASELINE"
+    },
+    "staging_aq_historical_review": {
+      "url": "https://jayt-storefront-staging.vercel.app",
+      "version": "v3.420.0-staging.ak",
+      "status": "HISTORICAL_REVIEW_BASELINE"
+    },
+    "staging_ar_visual_revision": {
+      "url": "https://jayt-storefront-staging-ar.vercel.app",
+      "version": "v3.420.1-staging.ar",
+      "status": "UI_POLISH_REVISION_BASELINE"
+    },
+    "staging_as_supply_expansion": {
+      "url": "https://jayt-storefront-staging-as.vercel.app",
+      "version": "v3.420.2-staging.as",
+      "status": "DISCOVERY_EXPANSION_BASELINE"
+    }
+  },
+  "staging_assets": [
+    {
+      "relative_path": "staging_deploy_at/jayt_storefront_staging_at.js",
+      "sha256": "1676b766f64ba19f6d347410c475bcb26d7ad5933c46c2cf071e609d8e030c01",
+      "size_bytes": 74804
+    },
+    {
+      "relative_path": "staging_deploy_at/index.html",
+      "sha256": "36ccbcbfea0f71e54d9a7539aef76ebd3d89c8bf3a23a8cfb46c0a94bdfc09d2",
+      "size_bytes": 767
+    },
+    {
+      "relative_path": "staging_deploy_at/styles.css",
+      "sha256": "d6a27de540ac51a2fd366dbff53845ba62a87e726f2b20293a9ce03754851424",
+      "size_bytes": 18910
+    }
+  ],
+  "supply_accounting_actual": {
+    "public_certified_now": 33,
+    "candidate_awaiting_evidence": 1,
+    "tier_1_verified_deals": 5,
+    "tier_2_official_programs": 9,
+    "tier_3_verified_facilities": 6,
+    "tier_4_radar_tracking": 13
+  },
+  "item_isolation_record": "06_TRUST_AND_EVIDENCE/containment_records/CONTAINMENT_RECORD_CGV_ZALOPAY_AT.json",
+  "field_evidence_binding": "06_TRUST_AND_EVIDENCE/PUBLIC_CARD_EVIDENCE_BINDING_AT.json",
+  "exact_source_urls_verified_for_deals": true,
+  "zero_unproven_claims_verified": true,
+  "zero_repeated_generic_copy": true,
+  "affiliate_status": "PORTAL_ACCESS_NOT_VERIFIED",
+  "quarantine_isolation_verified": true,
+  "zero_secret_verified": true,
+  "council_pack": "01_EXECUTIVE_COUNCIL/COUNCIL_DECISION_PACK_AT_FIELD_LEVEL_CERTIFICATION_20260829.md"
+}

@@ -1,0 +1,183 @@
+{
+  "version": "v3.464.0-staging.ej",
+  "generated_at_utc": "2026-08-30T19:22:00.000Z",
+  "governing_directive": "JAYT-245 Section EJ (Lines 3421-3430)",
+  "scanner_methodology": "DUAL_COLUMN_HONEST_SEMANTIC_TOKEN_SCANNER",
+  "allowlist_policy": {
+    "permitted_negative_contexts": [
+      "không thực hiện kyc/cpa",
+      "không yêu cầu đăng ký tài khoản ngân hàng, không thực hiện kyc/cpa",
+      "tuyệt đối không yêu cầu đăng ký tài khoản ngân hàng, không thực hiện kyc/cpa"
+    ],
+    "rationale": "Permit consumer-protection disclaimers (e.g. \"JayT tuyệt đối không thực hiện KYC/CPA\") while strictly forbidding active execution or solicitation."
+  },
+  "scanned_targets": {
+    "index.html": [
+      {
+        "token": "kyc",
+        "category": "PROHIBITED_FINANCIAL_ACTION",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "cpa",
+        "category": "PROHIBITED_CAMPAIGN_MODEL",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "go.isclix",
+        "category": "PROHIBITED_AFFILIATE_URL",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "isclix",
+        "category": "PROHIBITED_AFFILIATE_HOST",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "sub_id",
+        "category": "PROHIBITED_AFFILIATE_PARAM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "aff_sub",
+        "category": "PROHIBITED_AFFILIATE_PARAM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "copilot",
+        "category": "PROHIBITED_UNPROVEN_BENEFIT",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "đáy 90 ngày",
+        "category": "PROHIBITED_UNPROVEN_PRICING_CLAIM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "mở tài khoản ngân hàng nhận tiền",
+        "category": "PROHIBITED_FINANCIAL_ACTION",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      }
+    ],
+    "jayt_storefront_staging_ej.js": [
+      {
+        "token": "kyc",
+        "category": "PROHIBITED_FINANCIAL_ACTION",
+        "raw_token_occurrences": 1,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ALLOWLISTED_NEGATIVE_DISCLOSURE",
+        "occurrences": [
+          {
+            "position": 158800,
+            "context_snippet": "ký tài khoản ngân hàng, không thực hiện KYC/CPA, không chứa link tiếp thị liên kết",
+            "is_allowlisted_negative_disclosure": true,
+            "semantic_classification": "ALLOWLISTED_SAFETY_DISCLOSURE"
+          }
+        ]
+      },
+      {
+        "token": "cpa",
+        "category": "PROHIBITED_CAMPAIGN_MODEL",
+        "raw_token_occurrences": 1,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ALLOWLISTED_NEGATIVE_DISCLOSURE",
+        "occurrences": [
+          {
+            "position": 158804,
+            "context_snippet": "ài khoản ngân hàng, không thực hiện KYC/CPA, không chứa link tiếp thị liên kết hay",
+            "is_allowlisted_negative_disclosure": true,
+            "semantic_classification": "ALLOWLISTED_SAFETY_DISCLOSURE"
+          }
+        ]
+      },
+      {
+        "token": "go.isclix",
+        "category": "PROHIBITED_AFFILIATE_URL",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "isclix",
+        "category": "PROHIBITED_AFFILIATE_HOST",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "sub_id",
+        "category": "PROHIBITED_AFFILIATE_PARAM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "aff_sub",
+        "category": "PROHIBITED_AFFILIATE_PARAM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "copilot",
+        "category": "PROHIBITED_UNPROVEN_BENEFIT",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "đáy 90 ngày",
+        "category": "PROHIBITED_UNPROVEN_PRICING_CLAIM",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      },
+      {
+        "token": "mở tài khoản ngân hàng nhận tiền",
+        "category": "PROHIBITED_FINANCIAL_ACTION",
+        "raw_token_occurrences": 0,
+        "forbidden_action_claims": 0,
+        "status": "PASS_ZERO_TOKEN",
+        "occurrences": []
+      }
+    ]
+  },
+  "summary_verdict": {
+    "total_forbidden_action_claims": 0,
+    "is_fully_compliant": true,
+    "disclosure_transparency_guarantee": "All occurrences of KYC/CPA tokens are verified to be inside safety disclaimers protecting users against third-party solicitations."
+  }
+}

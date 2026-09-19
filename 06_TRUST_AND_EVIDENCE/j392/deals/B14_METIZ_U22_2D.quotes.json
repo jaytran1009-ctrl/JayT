@@ -1,0 +1,81 @@
+{
+  "schema_version": "2.0.0",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "deal_index": 1,
+  "offer_id": "METIZ_HELIO_U22_2026",
+  "brand": "Metiz Cinema Helio Da Nang",
+  "category": "CINEMA",
+  "title": "Vé U22 Metiz Cinema — Đồng Giá 55.000đ (Thứ Ba Đến Thứ Năm)",
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "now_showing_ref": "Người Nhện: Khởi Đầu Mới, Paw Patrol Phim Khủng Long (Active Schedule 2026)",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_01_metiz_u22.html",
+    "file_sha256": "c7e25e6c507c53ee0514f46d8d0f8c5b6a9b52fa3e99ecb26b958a032a180309",
+    "file_bytes": 104606,
+    "captured_timestamp_utc": "2026-09-11T07:20:38.115Z",
+    "official_source_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "screenshot_evidence": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_01_metiz_u22_capture.png",
+    "file_sha256": "91076a0e2b3a26dc9b49b02db8f3f6c6b88a6bc409e160121ba9697dad512e5a",
+    "file_bytes": 1218134,
+    "dimensions": {
+      "width": 1440,
+      "height": 900
+    },
+    "capture_tool": "puppeteer_headless_chromium_single_session"
+  },
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "deduplicated_unique_offer": true,
+    "finding": "All 4 predicates verified verbatim at exact non-overlapping byte offsets in physical source HTML. Single-session capture bound."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Áp dụng giá vé 2D chỉ 55.000đ cho thành viên Metiz Cinema từ 22 tuổi trở xuống, đối với mọi suất chiếu tại Metiz Cinema.",
+      "byte_offset_start": 36442,
+      "byte_offset_end": 36593,
+      "byte_length": 151,
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "NGHỈ HÈ SỢ NGHỈ HƯU (T13)",
+      "byte_offset_start": 44961,
+      "byte_offset_end": 44994,
+      "byte_length": 33,
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "Hotline: 0236 3630 689",
+      "byte_offset_start": 70319,
+      "byte_offset_end": 70341,
+      "byte_length": 22,
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "Chương trình chỉ áp dụng cho thành viên Metiz Cinema, dưới 22 tuổi trở xuống.",
+      "byte_offset_start": 38451,
+      "byte_offset_end": 38547,
+      "byte_length": 96,
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "SHOW_STUDENT_ID_AT_COUNTER",
+    "button_label": "Xuất Trình Thẻ HSSV / CCCD Tại Quầy Metiz",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

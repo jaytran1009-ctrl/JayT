@@ -1,0 +1,21 @@
+{
+  "receipt_id": "JAYT_389_PHYSICAL_PROVENANCE_RECEIPT",
+  "cycle": "JAYT-389",
+  "mandate": "WORK_ORDER_J389_PROVENANCE_HARVEST",
+  "verified_at_utc": "2026-09-11T04:54:10.404Z",
+  "total_sku_raw_snapshots_on_disk": 30,
+  "raw_snapshots_directory": "06_TRUST_AND_EVIDENCE/j389/raw_snapshots/",
+  "sku_leaves_directory": "06_TRUST_AND_EVIDENCE/j389/sku_leaves/",
+  "byte_integrity_audit": {
+    "all_files_exist_on_disk": true,
+    "all_declared_bytes_equal_physical_bytes": true,
+    "all_declared_sha256_match_disk_sha256": true,
+    "zero_synthetic_json_wrappers": true
+  },
+  "gate_breakdown": {
+    "total_candidates": 30,
+    "clean_verified_skus": 0,
+    "challenge_or_blocked_skus": 30,
+    "verdict_notes": "All 30 raw byte files exist physically on disk. Captures blocked by anti-bot WAF/challenge are classified truthfully as unverified evidence per J389 directives."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "trace_id": "JAYT_RUNTIME_FREEZE_ENFORCEMENT_TRACE",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-6 (Lines 5719-5732)",
+  "execution_timestamp_utc": "2026-09-02T08:56:02.538Z",
+  "freeze_state_reference": {
+    "freeze_record_id": "JAYT_CONTAMINATION_FREEZE_STATE",
+    "freeze_active": true,
+    "ceo_directive_id": "JAYT-262-CORRECTION-6",
+    "unlock_authority": "CEO_DIRECTIVE_ONLY"
+  },
+  "enforcement_traces": [
+    {
+      "component_name": "COHORT_15_OPERATIONAL_RUNNER",
+      "entry_script": "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+      "source_sha256": "d1f05bdfbf042a0f382db424165de1e6757c91d1d75b49eff172af8797af53be",
+      "command": "node 06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+      "exit_code": 1,
+      "error_code": "ERR_CONTAMINATION_FREEZE_ACTIVE",
+      "stderr_snippet": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\00_PROGRAM_BASELINE\\jayt_freeze_state_guard.js:29\r",
+      "preflight_block_verified": true,
+      "io_prevented": true
+    },
+    {
+      "component_name": "STOREFRONT_CATALOG_BUILDER",
+      "entry_script": "03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+      "source_sha256": "3bfd04fdfeea176ea3463bb8b1f74d3f867c0ebae1e60db880e7470874e793b2",
+      "command": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js --input 00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json --output 07_QUALITY_ASSURANCE/ephemeral_deploy_trace/freeze_test_out.html",
+      "exit_code": 1,
+      "error_code": "ERR_CONTAMINATION_FREEZE_ACTIVE",
+      "stderr_snippet": "CATALOG_BUILD_ERROR: ERR_CONTAMINATION_FREEZE_ACTIVE: Component \"STOREFRONT_CATALOG_BUILDER\" is strictly FROZEN under JAYT-262-CORRECTION-6. Reason: Contamination containment freeze following byte-identical SHA-256 raw HTML collision between Cohort 15 and Micro-Batch 02. Active until independent CEO audit.",
+      "preflight_block_verified": true,
+      "output_file_created": false,
+      "io_prevented": true
+    }
+  ],
+  "input_rejection_classification": {
+    "allowlist_path_rejection_type": "ALLOWLIST_INPUT_REJECTION",
+    "guard_hash_rejection_type": "QUARANTINED_ARTIFACT_REFERENCE",
+    "direct_guard_hash_denial_verified": true,
+    "guard_error_sample": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_01_DANABUS_RAW_CAPTURE.html\" references a quarantined artifact."
+  },
+  "final_verdict": {
+    "runtime_freeze_enforced_at_entrypoints": true,
+    "production_paths_untouched": true,
+    "unlock_permitted_without_ceo_directive": false
+  }
+}

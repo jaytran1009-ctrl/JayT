@@ -1,0 +1,77 @@
+{
+  "dossier_id": "COUNCIL_RISK_RECOMMENDATION_SCOPED_UNFREEZE_DOSSIER",
+  "governing_directive": "JAYT-245 Section JAYT-268 (Lines 5847-5855)",
+  "compiled_at_utc": "2026-09-03T06:01:12.802Z",
+  "participating_councils": [
+    "Product Council",
+    "Design Council",
+    "UX/CX Council",
+    "Growth Council",
+    "Data & Trust Council",
+    "Engineering Council",
+    "Quality Assurance Council"
+  ],
+  "status": "COUNCIL_ADVISORY_RECOMMENDATION_ONLY__NO_UNFREEZE_AUTHORITY",
+  "four_prerequisite_conditions_audit": {
+    "condition_a_lane_a_runtime_evidence": {
+      "prerequisite": "Lane A runtime evidence produced under contract and audited",
+      "status": "MET_AND_VERIFIED",
+      "artifact": "06_TRUST_AND_EVIDENCE/RUNTIME_FREEZE_TRACE_EVIDENCE.log",
+      "file_bytes_sha256": "3d9daa923752f41efbcaa2449773a58d8e4b645c5650144d2ad781a5a792c54b",
+      "runner_exit_code": 1,
+      "builder_exit_code": 1,
+      "zero_business_io_verified": true,
+      "timebox_compliance": "WITHIN_4_HOUR_TIMEBOX"
+    },
+    "condition_b_lane_b_pre_review_complete": {
+      "prerequisite": "Lane B Batch 03 readiness ledger pre-reviewed and accepted by Councils",
+      "status": "MET_AND_VERIFIED",
+      "artifact": "06_TRUST_AND_EVIDENCE/JAYT_BATCH_03_PRE_REVIEW_REPORT.json",
+      "verdict": "READINESS_PRE_REVIEWED",
+      "total_slots": 28,
+      "distribution_7_7_7_7": true,
+      "zero_commercial_claim_invariants_met": true
+    },
+    "condition_c_council_risk_recommendation": {
+      "prerequisite": "Comprehensive risk analysis and recommendation submitted by Council",
+      "status": "MET_AND_COMPILED",
+      "risk_evaluation": {
+        "continued_hard_freeze_risks": "Eliminates supply intake, stalls student community value delivery, and postpones validation of clean intake pipelines.",
+        "scoped_unfreeze_risks": "Potential risk of unvetted candidate data intake if containment gates fail.",
+        "risk_mitigation_strategy": "Strict isolation of intake worker to pre-reviewed non-commercial proposals; Catalog Builder, Staging index, and Production DOM remain strictly locked.",
+        "blast_radius_containment": "Micro-Batch 02 and Cohort 15 (COHORT_EZ_AM_15) remain permanently blocked by remediation overlay (CLOSED_CONTAMINATION_SHARED_RAW). Zero contamination leakage possible.",
+        "council_verdict": "The Council unanimously advises that a strictly scoped, conditional unfreeze limited to preparatory evidence collection for verified civic proposals is technically manageable and safe, subject to explicit CEO authorization."
+      }
+    },
+    "condition_d_scope_path_rollback_observability": {
+      "prerequisite": "Explicit boundaries for scope, target paths, rollback mechanisms, and observability",
+      "status": "MET_AND_SPECIFIED",
+      "scoped_boundaries": {
+        "allowed_scope": "Candidate intake worker execution for proposals within BATCH_03_READINESS_LEDGER only",
+        "disallowed_scope": "Catalog building, HTML rendering, deployment mutations, commercial deal approvals, voucher creation, or public DOM edits",
+        "target_paths_read_only": [
+          "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+          "06_TRUST_AND_EVIDENCE/REMEDIATION_OVERLAY_COHORT_15_RETIREMENT.json",
+          "06_TRUST_AND_EVIDENCE/JAYT_BATCH_03_READINESS_LEDGER.json"
+        ],
+        "target_paths_isolated_write": [
+          "06_TRUST_AND_EVIDENCE/batch_03_staging_candidates/"
+        ]
+      },
+      "rollback_mechanism": {
+        "primary_killswitch": "Set state back to 'ACTIVE' in 00_PROGRAM_BASELINE/JAYT_CONTAMINATION_FREEZE_STATE.json",
+        "circuit_breaker_latency": "Instantaneous (assertContaminationFreezeNotActive halts synchronously on preflight)",
+        "data_purging_rule": "Immediate removal of any staged candidate evidence in the event of anomaly"
+      },
+      "observability_framework": {
+        "audit_log_path": "06_TRUST_AND_EVIDENCE/SCOPED_UNFREEZE_EXECUTION_AUDIT.log",
+        "monitoring_cadence": "Automated 2-hour periodic verification cycle",
+        "dom_leakage_detection": "Puppeteer headless check on staging preview (port 4173) asserts exactly 1 approved GitHub card and 0 Batch 02/03 cards"
+      }
+    }
+  },
+  "governance_conclusion": {
+    "recommendation_type": "CONDITIONAL_SCOPED_UNFREEZE_ADVISORY",
+    "authority_reservation": "The Council emphasizes that this document is purely an advisory risk evaluation. It does NOT constitute an unfreeze order, does NOT authorize the opening of Batch 03, and does NOT alter existing platform locks. Sole authority resides with the CEO."
+  }
+}

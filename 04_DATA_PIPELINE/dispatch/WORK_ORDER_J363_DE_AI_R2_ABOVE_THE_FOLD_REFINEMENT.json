@@ -1,0 +1,21 @@
+{
+  "work_order_id": "J363_DE_AI_R2_ABOVE_THE_FOLD_REFINEMENT",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "STAGING_VISUAL_REFINEMENT_REQUIRED",
+  "authorization": {
+    "staging_source_mutation": true,
+    "staging_preview_deployment": true,
+    "production_deployment": false,
+    "affiliate_activation": false,
+    "factual_approval_mutation": false
+  },
+  "finding": "At desktop 1440px the hero photograph fills the entire initial content viewport. The page purpose and first actionable savings choice are below the fold, despite the 3-second-retention objective.",
+  "required_actions": [
+    "At 1440px and 768px, limit the hero image to a supporting composition: maximum 320px visible height or a 5/7 text-to-image split. Keep the headline, its one-line explanation and at least two primary action choices visible without scrolling.",
+    "At 390px, preserve the readable R1 header but move the headline and first primary action into the initial viewport. The image may crop above or beside the copy; it must retain an accessible text attribution and no claim may depend on the image.",
+    "Use object-fit: cover and responsive crops to avoid distortion. Keep image credit visible through a concise linked attribution or the accessible adjacent caption; do not make the attribution compete with the primary decision.",
+    "Do not change calculator semantics, card evidence IDs, provenance classifications, affiliate mode, staging feed or Production.",
+    "Create new scrollY=0 screenshots at 1440, 768 and 390px. Each must show the header, the complete headline, the explanatory line, and two primary actions. Update the visual receipt with measured hero height and the count of primary actions visible at initial load."
+  ],
+  "acceptance": "CEO will grant Staging visual acceptance when the initial viewport makes the page purpose and savings choices immediately clear. Technical and factual gates remain independent."
+}

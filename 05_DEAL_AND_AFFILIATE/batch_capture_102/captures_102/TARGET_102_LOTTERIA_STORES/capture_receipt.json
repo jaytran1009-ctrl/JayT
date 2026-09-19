@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:19:18.694Z",
+  "target_id": "TARGET_102_LOTTERIA_STORES",
+  "venue_name": "Lotteria Cửa Hàng",
+  "source_url": "https://www.lotteria.vn/store/",
+  "district": "UNSPECIFIED",
+  "sector": "FNB_FASTFOOD",
+  "http_response": {
+    "status": 200,
+    "url": "https://www.lotteria.vn/store/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.html",
+      "size_bytes": 58228,
+      "sha256": "558727a508c6d2e6dc4b6286b52f5ce63f555429a985e6b05f476ceb63a2f2bc"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.txt",
+      "size_bytes": 534,
+      "sha256": "6af0d17958d9c81bbd951ffcc1072d6d2011da4a993ad6b039f1d3cf5bacb7ba"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.png",
+      "size_bytes": 128673,
+      "sha256": "387e5da205722d608a93247c7861f41121945de8e989532f88587d8a9b00017b"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

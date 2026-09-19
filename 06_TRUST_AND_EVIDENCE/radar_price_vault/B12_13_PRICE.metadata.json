@@ -1,0 +1,60 @@
+{
+  "sku_id": "B12_13",
+  "product_name_observed": "Chuột Không dây Logitech M170 (Đen)",
+  "retailer": "Điện Máy XANH (Thế Giới Di Động)",
+  "retailer_url": "https://www.dienmayxanh.com/chuot-may-tinh/chuot-khong-day-logitech-m170-den",
+  "provenance": {
+    "raw_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_13_PRICE.raw.html",
+    "raw_bytes": 905183,
+    "raw_sha256": "7e98d53f8e504b9273cc6564ea12e5de2e2747e2c0ffd45ff998ab42d90d0dc2",
+    "http_status": 200,
+    "file_created_on_disk_utc": "2026-09-06T04:57:31.494Z",
+    "metadata_audited_at_utc": "2026-09-06T05:11:00.000Z",
+    "server_response_headers_provenance": "THIẾU_PROVENANCE_RESPONSE_HEADERS (Lượt curl -o lưu body không kèm headers đồng thời; tuyệt đối không dùng timestamp tạo tệp hoặc audit để mạo danh response time máy chủ)",
+    "response_headers": null
+  },
+  "spans_observed": {
+    "product_name_h1": {
+      "tag": "<h1 class=\"title\">",
+      "span": "Chu&#x1ED9;t Kh&#xF4;ng d&#xE2;y Logitech M170",
+      "offset_utf8": 718701
+    },
+    "present_price": {
+      "span": "<p class=\"box-price-present\">210.000&#x20AB; </p>",
+      "offset_utf8": 840525,
+      "parsed_value": "210.000 VNĐ"
+    },
+    "old_price": {
+      "span": "<p class=\"box-price-old\">260.000&#x20AB;</p>",
+      "offset_utf8": 840595,
+      "parsed_value": "260.000 VNĐ"
+    },
+    "discount_percent": {
+      "span": "<p class=\"box-price-percent\">-19%</p>",
+      "offset_utf8": 840664,
+      "parsed_value": "-19%"
+    }
+  },
+  "unverified_fields": {
+    "part_number": "UNVERIFIED (Payload chỉ ghi tên thương mại \"Logitech M170\", không chứa mã 910-004425)",
+    "vat_status": "UNVERIFIED (Payload không có nhãn văn bản xác nhận \"đã bao gồm VAT\")",
+    "local_stock_danang": "UNVERIFIED (Payload trang web chung, không chứa dữ liệu tồn kho cụ thể cho khu vực Đà Nẵng)"
+  },
+  "public_approved": false,
+  "render_permitted": false,
+  "status": "INTERNAL_REVIEW",
+  "corrigendum": {
+    "corrigendum_date_utc": "2026-09-06T05:16:00.000Z",
+    "issue": "Chuẩn hóa byte offset bằng Buffer thay vì String index.",
+    "correction": {
+      "h1_tag_byte_offset": 718697,
+      "h1_content_byte_offset": 718701,
+      "present_price_tag_byte_offset": 840525,
+      "present_price_num_byte_offset": 840554,
+      "old_price_tag_byte_offset": 840591,
+      "old_price_num_byte_offset": 840620,
+      "discount_tag_byte_offset": 840660,
+      "discount_num_byte_offset": 840693
+    }
+  }
+}

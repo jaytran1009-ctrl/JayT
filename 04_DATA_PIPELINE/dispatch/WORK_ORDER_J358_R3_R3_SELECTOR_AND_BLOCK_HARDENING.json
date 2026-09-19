@@ -1,0 +1,30 @@
+{
+  "work_order_id": "J358-R3-R3-SELECTOR-AND-BLOCK-HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Remove semantic-block fail-open paths and bind all five claims to the same offer subtree before any VERIFIED result is allowed.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r2_contextual_binding_validator.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R2_PARTIAL_ACCEPTANCE_AND_SELECTOR_GATE.md"
+  },
+  "requirements": [
+    "Remove the document-wide fallback. If a safe, closed semantic offer block cannot be identified, return HELD__SEMANTIC_BLOCK_NOT_FOUND.",
+    "Implement and test occurrence-aware span selection. A selected title/price/conditions/locality/validity span must be the occurrence inside the identified offer block; options such as searchStartChar must either work or be removed.",
+    "Require title, price, conditions, locality and validity to resolve within one smallest safe offer-card subtree, or to explicitly share one unambiguous offer identifier. A broad page section, generic overview or sibling proximity is insufficient.",
+    "Require locality binding language and target-year/expiry evidence within that same offer subtree or explicitly linked terms subtree; record subtree byte boundaries and each selected span's occurrence index/count.",
+    "Run full-evaluator negative attacks for metadata title versus body title, title and price from different cards, no closed semantic block, generic locality clause from another card in the same overview, and duplicate identical offers without an identifier. Each must return HELD.",
+    "Include a positive control whose five evidence fields share one card with a stable identifier; it may return VERIFIED only in the fixture.",
+    "Evaluate existing R3 bytes without refetching. Preserve truthful production data result at 0 VERIFIED / 10 HELD unless independently proven otherwise. Do not hydrate, package, deploy, alter scheduler/alias or rollback.",
+    "Put R3-R3 artifacts in new paths with SHA-256 sidecars; do not mutate prior artifacts."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r3_offer_subtree_validator.cjs",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R3_SELECTOR_AND_BLOCK_HARDENING_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R3_SELECTOR_AND_BLOCK_HARDENING.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO review required; no automatic promotion"
+}

@@ -1,0 +1,728 @@
+{
+  "run_id": "RUN_20260827_115134_fb687e",
+  "worker_identifier": "JAYT_TWO_PHASE_SUPPLY_WORKER_152",
+  "directive": "JAYT-152: OFFICIAL ROOT DISCOVERY & LEAF RE-CAPTURE CAMPAIGN",
+  "execution_mode": "TWO_PHASE_CAMPAIGN_MANUAL_BATCH",
+  "execution_origin": "MANUAL_TRIGGERED",
+  "host_scheduler_status": "SCHEDULER_BLOCKED_ON_THIS_HOST",
+  "executed_at": "2026-08-27T04:54:24.787Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_115134_fb687e",
+  "project_memory_verified": {
+    "version": "3.262.0",
+    "sha256": "e2b4c6d48b42c931ffc3bd0155eb032c5e4ed6ccad14131ede94621020062c63",
+    "is_valid": true
+  },
+  "phase_1_root_discovery_summary": {
+    "total_official_roots_scanned": 32,
+    "active_roots_proven": 29,
+    "unresolved_roots": 3,
+    "total_valid_lineage_leaves_discovered": 62,
+    "total_rejected_candidates_filtered": 213,
+    "cohort_breakdown": {
+      "COHORT_A_CINEMA_ENTERTAINMENT": 7,
+      "COHORT_B_FNB_COFFEE": 17,
+      "COHORT_C_TRANSIT_STUDENT": 8
+    }
+  },
+  "phase_2_leaf_recapture_summary": {
+    "total_leaves_recaptured": 15,
+    "classification_breakdown": {
+      "EVIDENCE_COMPLETE_FOR_REVIEW": 0,
+      "INCOMPLETE_OFFER_EVIDENCE": 0,
+      "SCOPE_UNPROVEN": 0,
+      "NON_OFFER_PAGE_OR_SHELL": 15,
+      "ERROR_OR_BLOCKED_SOURCE": 0
+    }
+  },
+  "reconciliation": {
+    "initial_root_count": 32,
+    "new_valid_discovered_leaves": 15,
+    "rejected_filtered_count": 213,
+    "final_registry_count": 47,
+    "invariance_formula": "32 + 15 = 47",
+    "is_reconciled": true
+  },
+  "automated_staging_gate_evaluation": {
+    "decision_verdict": "CONTINUE_ACQUISITION",
+    "progress_milestone": "0/10",
+    "evidence_complete_count": 0,
+    "threshold_required": 10
+  },
+  "root_captures": [
+    {
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.galaxycine.vn/",
+      "final_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 17
+    },
+    {
+      "brand_id": "CGV_CINEMAS",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.cgv.vn/",
+      "final_url": "https://www.cgv.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "LOTTE_CINEMA",
+      "brand_name": "Lotte Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://www.lottecinemavn.com/",
+      "final_url": "https://www.lottecinemavn.com/LCHS/index.aspx",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "METIZ_CINEMA",
+      "brand_name": "Metiz Cinema Da Nang",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://metiz.vn/",
+      "final_url": "https://metiz.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "STARLIGHT_CINEMA",
+      "brand_name": "Starlight Cinema Da Nang",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://starlight.vn/",
+      "final_url": "https://starlight.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 6
+    },
+    {
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "final_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 14
+    },
+    {
+      "brand_id": "SUNWORLD_BANA",
+      "brand_name": "Sun World Ba Na Hills",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "root_url": "https://banahills.sunworld.vn/",
+      "final_url": "https://sunworld.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "KFC_VN",
+      "brand_name": "KFC Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://kfcvietnam.com.vn/",
+      "final_url": "https://kfcvietnam.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "JOLLIBEE_VN",
+      "brand_name": "Jollibee Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://jollibee.com.vn/",
+      "final_url": "https://jollibee.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 2
+    },
+    {
+      "brand_id": "LOTTERIA_VN",
+      "brand_name": "Lotteria Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://www.lotteria.vn/",
+      "final_url": "https://www.lotteria.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "PIZZA_HUT_VN",
+      "brand_name": "Pizza Hut Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://pizzahut.vn/",
+      "final_url": "https://pizzahut.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://dominos.vn/",
+      "final_url": "https://dominos.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "TEXAS_CHICKEN_VN",
+      "brand_name": "Texas Chicken Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://texaschicken.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "POPEYES_VN",
+      "brand_name": "Popeyes Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://popeyes.vn/",
+      "final_url": "https://popeyes.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "KICHI_KICHI",
+      "brand_name": "Kichi-Kichi Hotpot",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://kichi.com.vn/",
+      "final_url": "https://kichi.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "GOGI_HOUSE",
+      "brand_name": "Gogi House Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://gogi.com.vn/",
+      "final_url": "https://gogi.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "HIGHLANDS_COFFEE",
+      "brand_name": "Highlands Coffee",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://www.highlandscoffee.com.vn/",
+      "final_url": "https://www.highlandscoffee.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 1
+    },
+    {
+      "brand_id": "PHUC_LONG",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://phuclong.com.vn/",
+      "final_url": "https://phuclong.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 8
+    },
+    {
+      "brand_id": "THE_COFFEE_HOUSE",
+      "brand_name": "The Coffee House",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://thecoffeehouse.com/",
+      "final_url": "https://thecoffeehouse.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "GONG_CHA_VN",
+      "brand_name": "Gong Cha Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://gongcha.com.vn/",
+      "final_url": "https://gongcha.com.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 1
+    },
+    {
+      "brand_id": "KOI_THE_VN",
+      "brand_name": "KOI Thé Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://koithe.com/",
+      "final_url": "https://koithe.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "BASKIN_ROBBINS_VN",
+      "brand_name": "Baskin Robbins Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://baskinrobbins.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "TRUNG_NGUYEN_LEGEND",
+      "brand_name": "Trung Nguyên Legend",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://trungnguyenlegend.com/",
+      "final_url": "https://trungnguyenlegend.com/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "MIXUE_VN",
+      "brand_name": "Mixue Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "root_url": "https://mixue.vn/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "root_status": "ERROR_OR_BLOCKED_SOURCE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "DANABUS_DN",
+      "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://danangbus.vn/",
+      "final_url": "https://www.danangbus.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 7
+    },
+    {
+      "brand_id": "DSVN_RAILWAYS",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://dsvn.vn/",
+      "final_url": "https://dsvn.vn/#/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "GA_DA_NANG",
+      "brand_name": "Ga Đà Nẵng",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "http://gadanang.vn/",
+      "final_url": "chrome-error://chromewebdata/",
+      "http_status": 307,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "GITHUB_EDU",
+      "brand_name": "GitHub Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://education.github.com/pack",
+      "final_url": "https://education.github.com/pack",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "SPOTIFY_STUDENT",
+      "brand_name": "Spotify Vietnam Student",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.spotify.com/vn-vi/student/",
+      "final_url": "https://www.spotify.com/vn-vi/student/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 0
+    },
+    {
+      "brand_id": "NOTION_EDU",
+      "brand_name": "Notion Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.notion.so/product/notion-for-education",
+      "final_url": "https://www.notion.com/product/notion-for-education",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 1
+    },
+    {
+      "brand_id": "JETBRAINS_EDU",
+      "brand_name": "JetBrains Student Pack",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.jetbrains.com/community/education/#students",
+      "final_url": "https://www.jetbrains.com/academy/student-pack/#students",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 3
+    },
+    {
+      "brand_id": "CANVA_EDU",
+      "brand_name": "Canva for Education",
+      "cohort_151": "COHORT_C_TRANSIT_STUDENT",
+      "root_url": "https://www.canva.com/education/",
+      "final_url": "https://www.canva.com/education/",
+      "http_status": 200,
+      "is_trusted": true,
+      "root_status": "OFFICIAL_ROOT_ACTIVE",
+      "discovered_leaves_count": 2
+    }
+  ],
+  "leaf_captures": [
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_0395e04f39a2",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/mung-chuoi-vang-tro-lai-san-lien-minions/",
+      "anchor_text": "Mừng Chuối Vàng Trở Lại, Săn Liền Minions",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Mừng Chuối Vàng Trở Lại, Săn Liền Minions",
+        "outer_html_hash": "2cd68833a615567e0dc326e1553980a409eeec8da3aa252f9b38aae86f3c4cb8",
+        "discovered_at": "2026-08-27T04:51:38.441Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_6ec2f46fb51a",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinex---hanoi-centre-man-nhan-voi-khong-gian-man-vi-voi-menu-tiec-khai-truong-dang-cap/",
+      "anchor_text": "Galaxy CineX - Hanoi Centre: Mãn Nhãn Với Không Gian, \"Mãn Vị\" Với Menu Tiệc Khai Trương Đẳng Cấp!",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Galaxy CineX - Hanoi Centre: Mãn Nhãn Với Không Gian, \"Mãn Vị\" Với Menu Tiệc Khai Trương Đẳng Cấp!",
+        "outer_html_hash": "a289b5d3805480c4a505dc1226b00e6643d0e603776543a37ea7da085c6dc0d9",
+        "discovered_at": "2026-08-27T04:51:38.441Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_31fe21c437d0",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/giam-30k-khi-thanh-toan-bang-ung-dung-vpbank-neo-tai-galaxy-cinema/",
+      "anchor_text": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+        "outer_html_hash": "aaf0a9b99451b4fbafbcbdb1e62dec5aa9339bc8422ebd081edd0f62747991c1",
+        "discovered_at": "2026-08-27T04:51:38.442Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_6d351387f64e",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/tin-do-so-co-la-bat-song-vi-ngot-ovaltine-nang-tam-trai-nghiem-xem-phim-tai-galaxy/",
+      "anchor_text": "Tín Đồ Sô-cô-la: \"Bắt Sóng\" Vị Ngọt Ovaltine, Nâng Tầm Trải Nghiệm Xem Phim Tại Galaxy",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Tín Đồ Sô-cô-la: \"Bắt Sóng\" Vị Ngọt Ovaltine, Nâng Tầm Trải Nghiệm Xem Phim Tại Galaxy",
+        "outer_html_hash": "66a666526c88955918118d598712d36209220eacce617525f2fa0adc3d6edef4",
+        "discovered_at": "2026-08-27T04:51:38.442Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_28475f0f3a16",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/mien-phi-ve-xem-phim-tai-galaxy-cineo-vincom-dan-phuong/",
+      "anchor_text": "Miễn Phí Vé Xem Phim Tại Galaxy CineO Vincom Đan Phượng",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Miễn Phí Vé Xem Phim Tại Galaxy CineO Vincom Đan Phượng",
+        "outer_html_hash": "8ec36191edaedf76b13c9c355ebcc58e2b21ab432fbb713d64ea3ca1271a3323",
+        "discovered_at": "2026-08-27T04:51:38.443Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_77bd1e676bfd",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/qua-tang-mung-quoc-khanh-29--tu-hao-viet-nam/",
+      "anchor_text": "Quà Tặng Mừng Quốc Khánh 2/9 – Tự Hào Việt Nam",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Quà Tặng Mừng Quốc Khánh 2/9 – Tự Hào Việt Nam",
+        "outer_html_hash": "0cf7ca8aa52ff168adf1c3f171474294c3cfe77004c7989051d42bed252c01f2",
+        "discovered_at": "2026-08-27T04:51:38.443Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_57707b6d583f",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/cine-chao-summer--dam-minh-trong-sac-mau-mua-he/",
+      "anchor_text": "Cine Chào Summer – Đắm Mình Trong Sắc Màu Mùa Hè",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Cine Chào Summer – Đắm Mình Trong Sắc Màu Mùa Hè",
+        "outer_html_hash": "103cf50817c56bdf1ce0cca89042164a27f4a82353f1cc14ae5d5609982252ba",
+        "discovered_at": "2026-08-27T04:51:38.443Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_dab6a9c4e839",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinex-aeon-mall-thanh-khe-rap-moi---phim-hay---qua-da-tay/",
+      "anchor_text": "Galaxy CineX AEON Mall Thanh Khê: Rạp Mới - Phim Hay - Quà Đã Tay",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Galaxy CineX AEON Mall Thanh Khê: Rạp Mới - Phim Hay - Quà Đã Tay",
+        "outer_html_hash": "b7be4bef0b495f70238953db259aa70a5bb227f1b22d1425a69aae6db3d4ebd2",
+        "discovered_at": "2026-08-27T04:51:38.444Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_d6d7b170ad32",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/bap-ngot-vi-com--huong-vi-mua-thu-ha-noi-giua-long-rap-chieu/",
+      "anchor_text": "Bắp Ngọt Vị Cốm – Hương Vị Mùa Thu Hà Nội Giữa Lòng Rạp Chiếu",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Bắp Ngọt Vị Cốm – Hương Vị Mùa Thu Hà Nội Giữa Lòng Rạp Chiếu",
+        "outer_html_hash": "8c9685a1c4eca244ea9d2b51679f342abb2f8caf894d2004ae9812cc2ed8a4f6",
+        "discovered_at": "2026-08-27T04:51:38.444Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_46f35fafdd7b",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-phim-tren-zalopay-giam-50--tich-xu-doi-qua-doc-quyen/",
+      "anchor_text": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Đặt Vé Phim Trên Zalopay Giảm 50% & Tích Xu Đổi Quà Độc Quyền",
+        "outer_html_hash": "a0fae04e948c21901a8c4d3d34945952ecb98d62c41370961b2119042d785061",
+        "discovered_at": "2026-08-27T04:51:38.445Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_6f491ae0036b",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+      "anchor_text": "Ưu Đãi 30% Khi Thanh Toán Bằng Thẻ JCB Tại Galaxy Cinema",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Ưu Đãi 30% Khi Thanh Toán Bằng Thẻ JCB Tại Galaxy Cinema",
+        "outer_html_hash": "0b6c747ac84244fe756366cd226d31a188657410762dcaa7a7e1b9ebb0eec6f4",
+        "discovered_at": "2026-08-27T04:51:38.445Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_1277e94779ca",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinema-x-kfc-tang-den-100k/",
+      "anchor_text": "Galaxy Cinema x KFC Tặng Đến 100K",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Galaxy Cinema x KFC Tặng Đến 100K",
+        "outer_html_hash": "7b08f6d84ba7811397135b975edeacdfbba3de8d54f55ad390a19ce3d9b01bc3",
+        "discovered_at": "2026-08-27T04:51:38.445Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_f29c3da4efcd",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "anchor_text": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+        "outer_html_hash": "e366c01d373aa5cc57cb4468d1d8bd36f635b05fd81ebc77c87f1c7f6c8a70db",
+        "discovered_at": "2026-08-27T04:51:38.446Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_dd674d28088a",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/happy-day---ve-chi-tu-45k/",
+      "anchor_text": "Happy Day - Vé Chỉ Từ 45K",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Happy Day - Vé Chỉ Từ 45K",
+        "outer_html_hash": "d683b61fd52096e0bee779d7ff82e485d564d23f53303c355228e9c4b796e752",
+        "discovered_at": "2026-08-27T04:51:38.446Z"
+      }
+    },
+    {
+      "item_id": "LEAF_GALAXY_CINEMA_197ff12b795d",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort_151": "COHORT_A_CINEMA_ENTERTAINMENT",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+      "anchor_text": "Ưu Đãi Thành Viên Galaxy Cinema 2026",
+      "parent_source_url": "https://www.galaxycine.vn/",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "lineage": {
+        "parent_receipt_sha256": "3c3ebf4b7c76a50fdc11b3be1339701bdb78513f78346bd5bf860c4f6111e742",
+        "content_root_selector": "main.Home_main__EtNt2",
+        "content_root_hash": "3fa4971035214254b23b3bc549eb353c94d76a4ec348d752475f9cd208d975af",
+        "anchor_selector": "a.text-center",
+        "anchor_text": "Ưu Đãi Thành Viên Galaxy Cinema 2026",
+        "outer_html_hash": "414c9d05a3dd095af75db8003bad39335fc21bbafbab924b3b45da40d987ec2d",
+        "discovered_at": "2026-08-27T04:51:38.446Z"
+      }
+    }
+  ],
+  "governance_lock": {
+    "is_approved": false,
+    "production_feed": "deals_feed.json: []",
+    "status": "PRODUCTION_LOCKED_PENDING_CEO_APPROVAL"
+  },
+  "exit_code": 0
+}

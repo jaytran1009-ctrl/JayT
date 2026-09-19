@@ -1,0 +1,61 @@
+{
+  "index_id": "W4_EVIDENCE_INTAKE_INDEX",
+  "status": "SEMANTIC_AUDIT_COMPLETE__ONE_EXISTING_OFFER_REVALIDATED__ONE_SCOPE_ONLY_BUNDLE_HELD",
+  "accepted_capture_bundles": [
+    {
+      "target_id": "W4_SRC_01_METIZ",
+      "bundle_path": "04_DATA_PIPELINE/raw_evidence/W4_SRC_01_METIZ/assisted/2026-09-11T16-14-28-648Z",
+      "raw_html_sha256": "c66346c5a1884e45beee109b16ff141648ca9231881937e2d43b7290e3abe1ef",
+      "screenshot_sha256": "fd2eb97e5cf01d0d860c405dac057fb2cd577ea2ef246647e6e1d6ae84fa3a14",
+      "semantic_result": "REVALIDATES_EXISTING_B14_METIZ_U22_2D_ONLY__NOT_A_NEW_FEED_RECORD",
+      "review_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/W4_CINEMA_SEMANTIC_AUDIT_RECEIPT.json"
+    },
+    {
+      "target_id": "W4_SRC_02_CGV_DN",
+      "bundle_path": "04_DATA_PIPELINE/raw_evidence/W4_SRC_02_CGV_DN/assisted/2026-09-11T16-14-32-651Z",
+      "raw_html_sha256": "25645a36381c6dda6a998ad9fab28372327db2cbdb29d6eec1a32e57161c70b2",
+      "screenshot_sha256": "dc55d98b654c35f61fc05eed46a26c67b71ea79fcd30a461155c130fe1105051",
+      "semantic_result": "VENUE_SCOPE_ONLY__OFFER_PRICE_TERMS_AND_VALIDITY_MISSING__NOT_PUBLISHABLE",
+      "review_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/W4_CINEMA_SEMANTIC_AUDIT_RECEIPT.json"
+    }
+  ],
+  "held_targets": [
+    {
+      "target_id": "W4_SHOPEEFOOD_DANANG",
+      "reason": "Known CAPTCHA pre-write rejection; no new approved public detail URL was supplied."
+    },
+    {
+      "target_id": "W4_GRABFOOD_DANANG",
+      "reason": "A first public detail-route pre-write check was rejected on 2026-09-11 because the rendered page contained marker 'just a moment'. No artifact was written."
+    },
+    {
+      "target_id": "W4_SHOPEE_KTX",
+      "reason": "An exact official merchant product URL is required before capture."
+    },
+    {
+      "target_id": "W4_LAZADA_KTX",
+      "reason": "An exact official merchant product URL is required before capture."
+    },
+    {
+      "target_id": "W4_KLOOK_DANANG",
+      "reason": "The public Klook Ba Na Hills detail-route pre-write check returned HTTP 403 on 2026-09-11. No artifact was written."
+    },
+    {
+      "target_id": "W4_SRC_02_CGV_DN_OFFER",
+      "reason": "The accepted venue-list bundle establishes CGV Vĩnh Trung Plaza and CGV Vincom Đà Nẵng, but contains no Culture Day, 58.000đ, Monday, terms, or validity text. A clean first-party Culture Day offer artifact is required before any CGV deal can be published."
+    },
+    {
+      "target_id": "W4_SRC_03_LOTTE_DN",
+      "reason": "Awaiting a sanitized public logged-out HTML/PNG export for an exact current official promotion detail page."
+    },
+    {
+      "target_id": "W4_SRC_04_COOP_DN",
+      "reason": "Awaiting a sanitized public logged-out HTML/PNG export for an exact current official promotion detail page."
+    }
+  ],
+  "publication_boundary": {
+    "production_authorized": false,
+    "affiliate_enabled": false,
+    "unreviewed_capture_is_not_an_offer": true
+  }
+}

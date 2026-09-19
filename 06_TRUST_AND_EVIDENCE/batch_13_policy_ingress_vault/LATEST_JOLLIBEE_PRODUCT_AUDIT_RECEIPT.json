@@ -1,0 +1,352 @@
+{
+  "receipt_name": "JOLLIBEE_MENU_PRODUCT_AUDIT_RECEIPT",
+  "generated_at_utc": "2026-09-06T08:12:48.259Z",
+  "parent_run_id": "run_20260906_075712_2aaec7",
+  "source_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+  "source_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+  "source_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+  "three_state_guards": {
+    "response_saved": true,
+    "policy_content_verified": false,
+    "publication_approved": false
+  },
+  "governance_rules": {
+    "no_synthetic_slugs": "Tất cả 5 action URL và tọa độ byte được trích xuất 100% nguyên văn từ thẻ span Levinci_Catalog quickview trong tệp raw; tuyệt đối không tự ghép slug.",
+    "menu_price_boundary": "Phân loại là 'thực đơn / giá quan sát', không gắn nhãn 'giảm giá', 'tiết kiệm', hoặc 'miễn phí giao hàng' khi thiếu chứng cứ chiết khấu.",
+    "embedded_data_labeling": "Giá trong dữ liệu nhúng GA4 được đối chiếu với minPrice hiển thị trong DOM; không gọi là giá bán ưu đãi đã xác minh.",
+    "unverified_scope_gaps": "Phạm vi chi nhánh Đà Nẵng, đối tượng thụ hưởng và kênh mua tiếp tục duy trì UNVERIFIED."
+  },
+  "total_combos_audited": 5,
+  "products": [
+    {
+      "candidate_id": "PROD_JOLLIBEE_COMBO_01",
+      "item_name": "CÀNG CAY CÀNG MÊ",
+      "product_item_id": "70145",
+      "catalog_product_id": 680,
+      "target_url": "https://jollibee.com.vn/cang-cay-cang-m.html",
+      "provenance": {
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+        "parent_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+        "element_type": "SPAN_ACTION (Levinci_Catalog quickview action element)",
+        "element_raw": "<span class=\"js-quickview-trigger\" style=\"display:none\"\n                                              data-mage-init='{\n                                                        \"Levinci_Catalog/js/popup-product-view\": {\n                                                          \"action\": \"https://jollibee.com.vn/cang-cay-cang-m.html\",\n                                                          \"product_id\": 680                                                        }\n                                                      }'></span>",
+        "span_start": 193921,
+        "span_length": 532,
+        "action_url_attr_start": 288,
+        "action_url_start": 194209,
+        "action_url_length": 44,
+        "verified_slice_match": true
+      },
+      "qa_data_reconciliation": {
+        "ga4_data_layer": {
+          "item_id": "70145",
+          "item_name": "CÀNG CAY CÀNG MÊ",
+          "price_in_embedded_data": 157000,
+          "currency": "VND",
+          "category": "Combo Bán Chạy",
+          "offset": 242520
+        },
+        "dom_visible_display": {
+          "name": {
+            "text_span": "CÀNG CAY CÀNG MÊ",
+            "byte_offset": 191970,
+            "match": true
+          },
+          "description": {
+            "text_span": "2 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Gà Giòn Vui Vẻ + 2 Nước ngọt + 1 Khoai tây chiên vừa",
+            "byte_offset": 192213,
+            "match": true
+          },
+          "price_from": {
+            "text_span": "157,000 ₫",
+            "byte_offset": 192892,
+            "numeric_value": 157000,
+            "match": true
+          },
+          "price_to": {
+            "text_span": "225,000 ₫",
+            "byte_offset": 193337,
+            "match": true
+          },
+          "product_type": "bundle (customizable options)",
+          "display_structure": "Dải giá hiển thị: Từ [minPrice] đến [maxPrice]"
+        },
+        "reconciliation_verdict": "Giá trong dữ liệu nhúng GA4 (157k/80k/73k/145k/185k) khớp chính xác với mức giá khởi điểm (minPrice) hiển thị trong DOM. Giá tối đa phụ thuộc tùy chọn bundle."
+      },
+      "product_policy_dossier": {
+        "classification": "THỰC ĐƠN / GIÁ QUAN SÁT (Observed Menu Bundle Prices)",
+        "is_promotional_discount": false,
+        "audit_rationale": "Giá niêm yết của các combo tiêu chuẩn trong danh mục thực đơn. Nguồn không chứa bất kỳ điều khoản giảm giá, chiết khấu phần trăm, hay so sánh với giá bán lẻ từng món. Tuyệt đối KHÔNG gắn nhãn 'giảm giá' hoặc 'tiết kiệm'.",
+        "applicability_gaps": {
+          "danang_physical_scope": "UNVERIFIED (Từ khóa 'Đà Nẵng' xuất hiện 0 lần trong 264.495 bytes raw HTML)",
+          "target_audience_eligibility": "UNVERIFIED (Không có điều khoản học sinh/sinh viên hay giới hạn độ tuổi)",
+          "validity_timeframe": "UNVERIFIED (Không có mốc thời gian bắt đầu hay kết thúc khuyến mãi)",
+          "service_and_delivery_channel": "UNVERIFIED (Có banner hotline 1900-1533 nhưng thiếu điều kiện áp dụng cho từng kênh)"
+        }
+      }
+    },
+    {
+      "candidate_id": "PROD_JOLLIBEE_COMBO_02",
+      "item_name": "MỘT MÌNH HÍT HÀ",
+      "product_item_id": "70144",
+      "catalog_product_id": 679,
+      "target_url": "https://jollibee.com.vn/m-t-minh-hit-ha.html",
+      "provenance": {
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+        "parent_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+        "element_type": "SPAN_ACTION (Levinci_Catalog quickview action element)",
+        "element_raw": "<span class=\"js-quickview-trigger\" style=\"display:none\"\n                                              data-mage-init='{\n                                                        \"Levinci_Catalog/js/popup-product-view\": {\n                                                          \"action\": \"https://jollibee.com.vn/m-t-minh-hit-ha.html\",\n                                                          \"product_id\": 679                                                        }\n                                                      }'></span>",
+        "span_start": 198778,
+        "span_length": 532,
+        "action_url_attr_start": 288,
+        "action_url_start": 199066,
+        "action_url_length": 44,
+        "verified_slice_match": true
+      },
+      "qa_data_reconciliation": {
+        "ga4_data_layer": {
+          "item_id": "70144",
+          "item_name": "MỘT MÌNH HÍT HÀ",
+          "price_in_embedded_data": 80000,
+          "currency": "VND",
+          "category": "Combo Bán Chạy",
+          "offset": 242793
+        },
+        "dom_visible_display": {
+          "name": {
+            "text_span": "MỘT MÌNH HÍT HÀ",
+            "byte_offset": 196879,
+            "match": true
+          },
+          "description": {
+            "text_span": "1 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Nước ngọt",
+            "byte_offset": 197123,
+            "match": true
+          },
+          "price_from": {
+            "text_span": "80,000 ₫",
+            "byte_offset": 197750,
+            "numeric_value": 80000,
+            "match": true
+          },
+          "price_to": {
+            "text_span": "106,000 ₫",
+            "byte_offset": 198194,
+            "match": true
+          },
+          "product_type": "bundle (customizable options)",
+          "display_structure": "Dải giá hiển thị: Từ [minPrice] đến [maxPrice]"
+        },
+        "reconciliation_verdict": "Giá trong dữ liệu nhúng GA4 (157k/80k/73k/145k/185k) khớp chính xác với mức giá khởi điểm (minPrice) hiển thị trong DOM. Giá tối đa phụ thuộc tùy chọn bundle."
+      },
+      "product_policy_dossier": {
+        "classification": "THỰC ĐƠN / GIÁ QUAN SÁT (Observed Menu Bundle Prices)",
+        "is_promotional_discount": false,
+        "audit_rationale": "Giá niêm yết của các combo tiêu chuẩn trong danh mục thực đơn. Nguồn không chứa bất kỳ điều khoản giảm giá, chiết khấu phần trăm, hay so sánh với giá bán lẻ từng món. Tuyệt đối KHÔNG gắn nhãn 'giảm giá' hoặc 'tiết kiệm'.",
+        "applicability_gaps": {
+          "danang_physical_scope": "UNVERIFIED (Từ khóa 'Đà Nẵng' xuất hiện 0 lần trong 264.495 bytes raw HTML)",
+          "target_audience_eligibility": "UNVERIFIED (Không có điều khoản học sinh/sinh viên hay giới hạn độ tuổi)",
+          "validity_timeframe": "UNVERIFIED (Không có mốc thời gian bắt đầu hay kết thúc khuyến mãi)",
+          "service_and_delivery_channel": "UNVERIFIED (Có banner hotline 1900-1533 nhưng thiếu điều kiện áp dụng cho từng kênh)"
+        }
+      }
+    },
+    {
+      "candidate_id": "PROD_JOLLIBEE_COMBO_03",
+      "item_name": "Một Mình Ăn Ngon",
+      "product_item_id": "2840004",
+      "catalog_product_id": 36,
+      "target_url": "https://jollibee.com.vn/mi-y-so-t-bo-ba-m-1-mie-ng-ga-ra-n-nuo-c-ngo-t.html",
+      "provenance": {
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+        "parent_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+        "element_type": "SPAN_ACTION (Levinci_Catalog quickview action element)",
+        "element_raw": "<span class=\"js-quickview-trigger\" style=\"display:none\"\n                                              data-mage-init='{\n                                                        \"Levinci_Catalog/js/popup-product-view\": {\n                                                          \"action\": \"https://jollibee.com.vn/mi-y-so-t-bo-ba-m-1-mie-ng-ga-ra-n-nuo-c-ngo-t.html\",\n                                                          \"product_id\": 36                                                        }\n                                                      }'></span>",
+        "span_start": 203686,
+        "span_length": 562,
+        "action_url_attr_start": 288,
+        "action_url_start": 203974,
+        "action_url_length": 75,
+        "verified_slice_match": true
+      },
+      "qa_data_reconciliation": {
+        "ga4_data_layer": {
+          "item_id": "2840004",
+          "item_name": "Một Mình Ăn Ngon",
+          "price_in_embedded_data": 73000,
+          "currency": "VND",
+          "category": "Combo Bán Chạy",
+          "offset": 243060
+        },
+        "dom_visible_display": {
+          "name": {
+            "text_span": "Một Mình Ăn Ngon",
+            "byte_offset": 201774,
+            "match": true
+          },
+          "description": {
+            "text_span": "1 Gà Giòn Vui Vẻ + 1 Mì Ý Jolly + 1 Nước ngọt + 1 Tương Chua Ngọt",
+            "byte_offset": 202018,
+            "match": true
+          },
+          "price_from": {
+            "text_span": "73,000 ₫",
+            "byte_offset": 202660,
+            "numeric_value": 73000,
+            "match": true
+          },
+          "price_to": {
+            "text_span": "135,000 ₫",
+            "byte_offset": 203102,
+            "match": true
+          },
+          "product_type": "bundle (customizable options)",
+          "display_structure": "Dải giá hiển thị: Từ [minPrice] đến [maxPrice]"
+        },
+        "reconciliation_verdict": "Giá trong dữ liệu nhúng GA4 (157k/80k/73k/145k/185k) khớp chính xác với mức giá khởi điểm (minPrice) hiển thị trong DOM. Giá tối đa phụ thuộc tùy chọn bundle."
+      },
+      "product_policy_dossier": {
+        "classification": "THỰC ĐƠN / GIÁ QUAN SÁT (Observed Menu Bundle Prices)",
+        "is_promotional_discount": false,
+        "audit_rationale": "Giá niêm yết của các combo tiêu chuẩn trong danh mục thực đơn. Nguồn không chứa bất kỳ điều khoản giảm giá, chiết khấu phần trăm, hay so sánh với giá bán lẻ từng món. Tuyệt đối KHÔNG gắn nhãn 'giảm giá' hoặc 'tiết kiệm'.",
+        "applicability_gaps": {
+          "danang_physical_scope": "UNVERIFIED (Từ khóa 'Đà Nẵng' xuất hiện 0 lần trong 264.495 bytes raw HTML)",
+          "target_audience_eligibility": "UNVERIFIED (Không có điều khoản học sinh/sinh viên hay giới hạn độ tuổi)",
+          "validity_timeframe": "UNVERIFIED (Không có mốc thời gian bắt đầu hay kết thúc khuyến mãi)",
+          "service_and_delivery_channel": "UNVERIFIED (Có banner hotline 1900-1533 nhưng thiếu điều kiện áp dụng cho từng kênh)"
+        }
+      }
+    },
+    {
+      "candidate_id": "PROD_JOLLIBEE_COMBO_04",
+      "item_name": "Cặp Đôi Ăn Ý",
+      "product_item_id": "4000742",
+      "catalog_product_id": 158,
+      "target_url": "https://jollibee.com.vn/combo-an-ngon-th-ga-cho-khu-v-c-mi-n-b-c-1.html",
+      "provenance": {
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+        "parent_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+        "element_type": "SPAN_ACTION (Levinci_Catalog quickview action element)",
+        "element_raw": "<span class=\"js-quickview-trigger\" style=\"display:none\"\n                                              data-mage-init='{\n                                                        \"Levinci_Catalog/js/popup-product-view\": {\n                                                          \"action\": \"https://jollibee.com.vn/combo-an-ngon-th-ga-cho-khu-v-c-mi-n-b-c-1.html\",\n                                                          \"product_id\": 158                                                        }\n                                                      }'></span>",
+        "span_start": 208669,
+        "span_length": 559,
+        "action_url_attr_start": 288,
+        "action_url_start": 208957,
+        "action_url_length": 71,
+        "verified_slice_match": true
+      },
+      "qa_data_reconciliation": {
+        "ga4_data_layer": {
+          "item_id": "4000742",
+          "item_name": "Cặp Đôi Ăn Ý",
+          "price_in_embedded_data": 145000,
+          "currency": "VND",
+          "category": "Combo Bán Chạy",
+          "offset": 243336
+        },
+        "dom_visible_display": {
+          "name": {
+            "text_span": "Cặp Đôi Ăn Ý",
+            "byte_offset": 206695,
+            "match": true
+          },
+          "description": {
+            "text_span": "2 Gà Giòn Vui Vẻ + 2 Mì Ý Jolly vừa + 1 Khoai tây chiên vừa + 2 Nước ngọt vừa + 2 Tương Chua Ngọt + 1 Tương Cà",
+            "byte_offset": 206937,
+            "match": true
+          },
+          "price_from": {
+            "text_span": "145,000 ₫",
+            "byte_offset": 207640,
+            "numeric_value": 145000,
+            "match": true
+          },
+          "price_to": {
+            "text_span": "225,000 ₫",
+            "byte_offset": 208085,
+            "match": true
+          },
+          "product_type": "bundle (customizable options)",
+          "display_structure": "Dải giá hiển thị: Từ [minPrice] đến [maxPrice]"
+        },
+        "reconciliation_verdict": "Giá trong dữ liệu nhúng GA4 (157k/80k/73k/145k/185k) khớp chính xác với mức giá khởi điểm (minPrice) hiển thị trong DOM. Giá tối đa phụ thuộc tùy chọn bundle."
+      },
+      "product_policy_dossier": {
+        "classification": "THỰC ĐƠN / GIÁ QUAN SÁT (Observed Menu Bundle Prices)",
+        "is_promotional_discount": false,
+        "audit_rationale": "Giá niêm yết của các combo tiêu chuẩn trong danh mục thực đơn. Nguồn không chứa bất kỳ điều khoản giảm giá, chiết khấu phần trăm, hay so sánh với giá bán lẻ từng món. Tuyệt đối KHÔNG gắn nhãn 'giảm giá' hoặc 'tiết kiệm'.",
+        "applicability_gaps": {
+          "danang_physical_scope": "UNVERIFIED (Từ khóa 'Đà Nẵng' xuất hiện 0 lần trong 264.495 bytes raw HTML)",
+          "target_audience_eligibility": "UNVERIFIED (Không có điều khoản học sinh/sinh viên hay giới hạn độ tuổi)",
+          "validity_timeframe": "UNVERIFIED (Không có mốc thời gian bắt đầu hay kết thúc khuyến mãi)",
+          "service_and_delivery_channel": "UNVERIFIED (Có banner hotline 1900-1533 nhưng thiếu điều kiện áp dụng cho từng kênh)"
+        }
+      }
+    },
+    {
+      "candidate_id": "PROD_JOLLIBEE_COMBO_05",
+      "item_name": "Cả Nhà No Nê",
+      "product_item_id": "4000935",
+      "catalog_product_id": 143,
+      "target_url": "https://jollibee.com.vn/combo-179.html",
+      "provenance": {
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+        "parent_file_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+        "element_type": "SPAN_ACTION (Levinci_Catalog quickview action element)",
+        "element_raw": "<span class=\"js-quickview-trigger\" style=\"display:none\"\n                                              data-mage-init='{\n                                                        \"Levinci_Catalog/js/popup-product-view\": {\n                                                          \"action\": \"https://jollibee.com.vn/combo-179.html\",\n                                                          \"product_id\": 143                                                        }\n                                                      }'></span>",
+        "span_start": 213690,
+        "span_length": 526,
+        "action_url_attr_start": 288,
+        "action_url_start": 213978,
+        "action_url_length": 38,
+        "verified_slice_match": true
+      },
+      "qa_data_reconciliation": {
+        "ga4_data_layer": {
+          "item_id": "4000935",
+          "item_name": "Cả Nhà No Nê",
+          "price_in_embedded_data": 185000,
+          "currency": "VND",
+          "category": "Combo Bán Chạy",
+          "offset": 243603
+        },
+        "dom_visible_display": {
+          "name": {
+            "text_span": "Cả Nhà No Nê",
+            "byte_offset": 211718,
+            "match": true
+          },
+          "description": {
+            "text_span": "3 Gà giòn vui vẻ + 2 Mì Ý Jolly vừa + 1 Khoai tây chiên vừa + 3 Nước ngọt vừa + 3 Tương Chua Ngọt + 1 Tương Cà",
+            "byte_offset": 211958,
+            "match": true
+          },
+          "price_from": {
+            "text_span": "185,000 ₫",
+            "byte_offset": 212661,
+            "numeric_value": 185000,
+            "match": true
+          },
+          "price_to": {
+            "text_span": "282,000 ₫",
+            "byte_offset": 213106,
+            "match": true
+          },
+          "product_type": "bundle (customizable options)",
+          "display_structure": "Dải giá hiển thị: Từ [minPrice] đến [maxPrice]"
+        },
+        "reconciliation_verdict": "Giá trong dữ liệu nhúng GA4 (157k/80k/73k/145k/185k) khớp chính xác với mức giá khởi điểm (minPrice) hiển thị trong DOM. Giá tối đa phụ thuộc tùy chọn bundle."
+      },
+      "product_policy_dossier": {
+        "classification": "THỰC ĐƠN / GIÁ QUAN SÁT (Observed Menu Bundle Prices)",
+        "is_promotional_discount": false,
+        "audit_rationale": "Giá niêm yết của các combo tiêu chuẩn trong danh mục thực đơn. Nguồn không chứa bất kỳ điều khoản giảm giá, chiết khấu phần trăm, hay so sánh với giá bán lẻ từng món. Tuyệt đối KHÔNG gắn nhãn 'giảm giá' hoặc 'tiết kiệm'.",
+        "applicability_gaps": {
+          "danang_physical_scope": "UNVERIFIED (Từ khóa 'Đà Nẵng' xuất hiện 0 lần trong 264.495 bytes raw HTML)",
+          "target_audience_eligibility": "UNVERIFIED (Không có điều khoản học sinh/sinh viên hay giới hạn độ tuổi)",
+          "validity_timeframe": "UNVERIFIED (Không có mốc thời gian bắt đầu hay kết thúc khuyến mãi)",
+          "service_and_delivery_channel": "UNVERIFIED (Có banner hotline 1900-1533 nhưng thiếu điều kiện áp dụng cho từng kênh)"
+        }
+      }
+    }
+  ]
+}

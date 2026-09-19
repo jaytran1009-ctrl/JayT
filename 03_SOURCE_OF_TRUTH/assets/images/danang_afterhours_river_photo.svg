@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="night-sky-co" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#091322"/>
+      <stop offset="60%" stop-color="#112444"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="river-glow-co" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c"/>
+      <stop offset="100%" stop-color="#061224"/>
+    </linearGradient>
+    <radialGradient id="fire-glow-co" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="night-glow-co" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  
+  <!-- Deep Twilight Sky -->
+  <rect width="1200" height="675" fill="url(#night-sky-co)"/>
+  
+  <!-- City Skyline with Glowing Windows -->
+  <g opacity="0.65">
+    <rect x="80" y="240" width="70" height="160" fill="#1e293b"/>
+    <rect x="160" y="180" width="90" height="220" fill="#0f172a"/>
+    <rect x="260" y="220" width="60" height="180" fill="#1e293b"/>
+    <rect x="920" y="190" width="80" height="210" fill="#1e293b"/>
+    <rect x="1010" y="150" width="110" height="250" fill="#0f172a"/>
+    <!-- Yellow Window Lights -->
+    <circle cx="180" cy="210" r="2.5" fill="#fef08a"/>
+    <circle cx="210" cy="250" r="2.5" fill="#fef08a"/>
+    <circle cx="950" cy="220" r="2.5" fill="#fef08a"/>
+    <circle cx="1040" cy="180" r="2.5" fill="#fef08a"/>
+  </g>
+  
+  <!-- Han River Dark Water Surface -->
+  <rect x="0" y="400" width="1200" height="275" fill="url(#river-glow-co)"/>
+  
+  <!-- Golden Water Reflections -->
+  <ellipse cx="600" cy="460" rx="350" ry="20" fill="#f59e0b" opacity="0.4" filter="url(#night-glow-co)"/>
+  <ellipse cx="600" cy="510" rx="260" ry="16" fill="#ef4444" opacity="0.3" filter="url(#night-glow-co)"/>
+  
+  <!-- Dragon Bridge 21:00 Fire Breathing Climax -->
+  <path d="M 100 400 Q 350 140 600 320 Q 850 140 1100 400" stroke="#f59e0b" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M 100 400 Q 350 160 600 330 Q 850 160 1100 400" stroke="#ef4444" stroke-width="5" fill="none"/>
+  
+  <!-- Dragon Head Breathing Fire (Đầu Rồng Phun Lửa 21:00) -->
+  <circle cx="1100" cy="400" r="30" fill="#ea580c"/>
+  <circle cx="1150" cy="380" r="50" fill="url(#fire-glow-co)" filter="url(#night-glow-co)"/>
+  
+  <!-- Editorial Tag -->
+  <g transform="translate(48, 48)">
+    <rect width="460" height="38" rx="19" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="230" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" fill="#fde047" text-anchor="middle" letter-spacing="1">✨ CẦU RỒNG 21:00 PHUN LỬA • SÔNG HÀN ĐÀ NẴNG</text>
+  </g>
+</svg>

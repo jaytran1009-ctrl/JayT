@@ -1,0 +1,43 @@
+{
+  "manifest_id": "BATCH_136U_QUARANTINE_MANIFEST",
+  "directive": "JAYT-136V — SCOPE SEMANTICS & LOCALITY PROOF HARDENING",
+  "status": "IMPLICIT_WHITELIST_COMPILER_QUARANTINED",
+  "quarantined_at": "2026-08-26T19:22:00+07:00",
+  "executive_ruling": "Batch 136U rejected due to residual implicit venue whitelisting (e.g. Vĩnh Trung Plaza, Helio Center, Co.opmart), unproven scope linkage in Starlight (Quy Nhơn/Đà Nẵng list treated as application), and loose single-keyword locality matching.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_18_IMPLICIT_VENUE_WHITELISTING",
+      "description": "generic_provenance_compiler_136u.js contained specific mall and venue names (vinh trung, helio, co.opmart) in regexes, acting as an implicit whitelist."
+    },
+    {
+      "cause_id": "P0_CAUSE_19_SCOPE_APPEARS_VS_SCOPE_APPLIES_CONFUSION",
+      "description": "Starlight location list (Starlight Quy Nhơn / Starlight Đà Nẵng) was treated as proof of offer application without an enclosing application predicate clause."
+    },
+    {
+      "cause_id": "P0_CAUSE_20_LOOSE_KEYWORD_LOCALITY_MATCHING",
+      "description": "Single keywords (Đà Nẵng, Hải Châu) without full administrative address structure were accepted into LOCALITY_ONLY."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_provenance_compiler_136u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136u_implicit_whitelist/generic_provenance_compiler_136u.js",
+      "sha256": "7b1202addefb43888a33b785f2d8c2939fa041fe1d81b798194c43977abc074b"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_136u_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136u_implicit_whitelist/batch_capture_136u_manifest.json",
+      "sha256": "39dbc1cdcbe7c93a3a13e53520a76cb2ae0f3673cf829697765348b96329d028"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_provenance_compiler_136u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136u_implicit_whitelist/test_generic_provenance_compiler_136u.js",
+      "sha256": "1b013142802c6c0886346f21d61577f72d18d7750e99a22ed003339d57731f66"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_136U_GENERIC_PROVENANCE_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136u_implicit_whitelist/JAYT_136U_GENERIC_PROVENANCE_REVIEW_PACK.md",
+      "sha256": "176d865b4a4b851e5eced9bbcb371f42eb7c979cb403132e5f008689ba71cd5a"
+    }
+  ]
+}

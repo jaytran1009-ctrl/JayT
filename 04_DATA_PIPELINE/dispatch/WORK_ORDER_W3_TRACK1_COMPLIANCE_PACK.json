@@ -1,0 +1,22 @@
+{
+  "work_order_id": "WORK_ORDER_W3_TRACK1_COMPLIANCE_PACK",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0911-W3-PROD-AND-AFFILIATE",
+  "scope": "PREPARE_COMPLIANCE_ARTIFACTS_ONLY",
+  "required_outputs": [
+    "05_DEAL_AND_AFFILIATE/track1_compliance/TRACK1_SCOPED_ACTIVATION_PACK.json",
+    "05_DEAL_AND_AFFILIATE/track1_compliance/README.md"
+  ],
+  "required_design_constraints": {
+    "future_redirect_requires_explicit_user_click": true,
+    "future_disclosure_label": "#JayTAffiliate",
+    "future_analytics_fields": ["campus", "cluster", "timestamp"]
+  },
+  "hard_stops": {
+    "affiliate_enabled": false,
+    "sandbox_affiliate_enabled": false,
+    "tracking_parameters": false,
+    "external_affiliate_redirects": false,
+    "commission_or_revenue_claims": false
+  },
+  "release_gate": "WRITTEN_PROVIDER_AUTHORIZATION_AND_SEPARATE_RUNTIME_REVIEW_REQUIRED"
+}

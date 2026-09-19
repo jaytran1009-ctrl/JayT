@@ -1,0 +1,210 @@
+{
+  "report_id": "BU_CYCLE_1_GAP_MEASUREMENT_20260829",
+  "governing": "JAYT-245 Section BU (Lines 1733-1765)",
+  "measured_at": "2026-08-29T08:07:51.497Z",
+  "target": "https://jayt-storefront-staging-bt.vercel.app",
+  "summary": {
+    "total_passes": 45,
+    "p0_gaps": 0,
+    "p1_gaps": 0,
+    "p2_gaps": 2
+  },
+  "passes": [
+    {
+      "dept": "Engineering",
+      "description": "Hero section rendered correctly"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Dragon Bridge hero image loaded successfully"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "Dragon Bridge CC BY-SA 3.0 credit correctly displayed"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "3 city journey routes rendered"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "2 destination gateway cards rendered"
+    },
+    {
+      "dept": "Engineering",
+      "description": "No \"undefined\" text leaked"
+    },
+    {
+      "dept": "Engineering",
+      "description": "No \"null\" text leaked"
+    },
+    {
+      "dept": "Engineering",
+      "description": "No \"NaN\" text leaked"
+    },
+    {
+      "dept": "Supply",
+      "description": "50 tiered content items rendered in EXPLORE"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Filter bar rendered in EXPLORE"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "All source links have valid href"
+    },
+    {
+      "dept": "Engineering",
+      "description": "Every card has a save/bookmark button"
+    },
+    {
+      "dept": "Engineering",
+      "description": "AN_GI gateway filter works: 11 items"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Wallet hero section rendered"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Spotlight ticket: \"CGV Cinemas x VNPAY-QR: Mua 1 Tặng 1 Vé 2D\""
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "Spotlight code VNPAYCGV displayed correctly"
+    },
+    {
+      "dept": "Engineering",
+      "description": "Spotlight copy button present"
+    },
+    {
+      "dept": "Engineering",
+      "description": "Copy code toast verified: \"Mã ưu đãi: VNPAYCGV\""
+    },
+    {
+      "dept": "Supply",
+      "description": "11 voucher tickets rendered"
+    },
+    {
+      "dept": "Engineering",
+      "description": "All 11 tickets have action buttons"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "All tickets have save-to-wallet button"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "6 voucher filter tabs available"
+    },
+    {
+      "dept": "Engineering",
+      "description": "Buy Decision Hub input + submit rendered"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Fail-closed truth status card displayed"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "SAVED empty state rendered correctly"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "All focusable elements have accessible labels"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "All images have alt text"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Banner landmark present"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Main landmark present"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Navigation landmark present"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Exactly 1 <h1> element"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Mobile bottom navigation bar present"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "No horizontal overflow at 390px"
+    },
+    {
+      "dept": "Supply",
+      "description": "50 discovery items present in runtime"
+    },
+    {
+      "dept": "Supply",
+      "description": "12 vouchers present in runtime"
+    },
+    {
+      "dept": "Supply",
+      "description": "6 VERIFIED_DEAL items"
+    },
+    {
+      "dept": "Supply",
+      "description": "12 OFFICIAL_PROGRAM items"
+    },
+    {
+      "dept": "Supply",
+      "description": "18 CIVIC_FACILITY items"
+    },
+    {
+      "dept": "Supply",
+      "description": "14 RADAR_SOURCE items"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "All items have required fields"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "Quarantine isolation intact"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "All COPY_CODE vouchers have actual code text"
+    },
+    {
+      "dept": "Data & Trust",
+      "description": "All official source URLs are valid"
+    },
+    {
+      "dept": "Design/UX",
+      "description": "Theme toggle button present"
+    },
+    {
+      "dept": "Growth",
+      "description": "\"+ Báo nguồn\" community report button present"
+    }
+  ],
+  "gaps": [
+    {
+      "dept": "Design/UX",
+      "severity": "P2",
+      "description": "Heading hierarchy has skipped levels",
+      "evidence": {},
+      "measured_at": "2026-08-29T08:07:50.289Z"
+    },
+    {
+      "dept": "Design/UX",
+      "severity": "P2",
+      "description": "16 touch targets smaller than 44x44px",
+      "evidence": {},
+      "measured_at": "2026-08-29T08:07:51.156Z"
+    }
+  ]
+}

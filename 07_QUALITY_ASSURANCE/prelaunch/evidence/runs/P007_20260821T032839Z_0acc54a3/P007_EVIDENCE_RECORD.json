@@ -1,0 +1,21 @@
+{
+  "work_order": "JAYT-PRELAUNCH-ALL-DEPARTMENTS-007",
+  "run_id": "P007_20260821T032839Z_0acc54a3",
+  "generated_at": "2026-08-21T03:29:00.287998+00:00",
+  "integrity_classification": "TAMPER_EVIDENT_LOCALLY_READ_ONLY",
+  "global_staging_pointer_isolation": {
+    "pre_suite_sha256": "55f25a334024d991b73fe7170ce1e9f1255c6b24ad8ac0a36f3942b757da4d49",
+    "post_suite_sha256": "55f25a334024d991b73fe7170ce1e9f1255c6b24ad8ac0a36f3942b757da4d49",
+    "isolation_intact_byte_for_byte": true
+  },
+  "negative_tests_results": {
+    "NEG_01_departmental_fault_injection": "PASS",
+    "NEG_02_readyz_secret_tamper_503": "PASS",
+    "NEG_03_sandbox_rollback_continuous_traffic": "PASS",
+    "GATEWAY_CLEAN_21_cases_execution": "PASS"
+  },
+  "production_lock": {
+    "is_approved": false,
+    "status": "LOCKED_PENDING_CEO_FINAL_ORDER"
+  }
+}

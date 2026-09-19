@@ -1,0 +1,50 @@
+# Environment and Secrets (Section V Security Pre-Flight)
+.env
+.env.*
+.env.local
+!.env.example
+*.pem
+*.key
+*.token
+*.credentials
+credentials.json
+*secret*
+!*.md
+
+# Vercel & Deployment Cache
+.vercel/
+.vercel_build_output/
+
+# Browser profiles and playwright runtime
+.playwright/
+browser_profile/
+test-results/
+playwright-report/
+
+# Logs and runtime
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated QA evidence & release vaults: retain on disk, but never index as source code.
+07_QUALITY_ASSURANCE/runtime_evidence/
+07_QUALITY_ASSURANCE/candidate_evidence_lake/
+07_QUALITY_ASSURANCE/private_sandbox/
+07_QUALITY_ASSURANCE/**/__pycache__/
+08_RELEASE_VAULT/
+staging_deploy_*/
+staging_workspace_*/
+_archive/
+
+# Dependencies
+node_modules/
+
+# OS artifacts & IDE
+.DS_Store
+Thumbs.db
+.gemini/
+.vscode/
+scratch/
+
+

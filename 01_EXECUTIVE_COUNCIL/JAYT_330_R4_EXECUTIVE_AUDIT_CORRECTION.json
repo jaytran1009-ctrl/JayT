@@ -1,0 +1,54 @@
+{
+  "document_name": "JAYT_330_R4_EXECUTIVE_AUDIT_CORRECTION",
+  "issued_at_utc": "2026-09-07T05:28:38.4625317Z",
+  "authority": "CEO_EXECUTIVE_REVIEW_GATE",
+  "reviewed_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/STAGING_BATCH_14_MANUAL_A11Y_CLOSEOUT_RECEIPT.json",
+  "verdict": "R4_PARTIAL_ACCEPTANCE__CLOSEOUT_WITHHELD",
+  "accepted_gates": [
+    "GATE_01_CONTENT_AND_TOKEN_FREEZE",
+    "GATE_03_READ_ONLY_CATALOG_INVARIANCE",
+    "GATE_05_LINK_PURPOSE_AND_NEW_TAB_DISCLOSURE",
+    "GATE_06_DOM_LANDMARKS_AND_HEADING_HIERARCHY",
+    "GATE_08_SEQUENTIAL_KEYBOARD_OPERABILITY",
+    "GATE_09_INTERACTIVE_COMPONENT_STATES",
+    "GATE_10_STATIC_TOKEN_CONTRAST_MATRIX",
+    "GATE_11_ZERO_CONSOLE_AND_RUNTIME_ERRORS",
+    "GATE_12_PRODUCTION_BOUNDARY_ISOLATION"
+  ],
+  "corrected_gates": [
+    {
+      "gate": "GATE_02_COMMERCIAL_FRESHNESS_POLICY",
+      "corrected_status": "DRAFT_PENDING_PRODUCT_AND_DATA_TRUST_SIGNOFF",
+      "reason": "The R4 work order prohibited inventing TTL values without Product and Data & Trust approval. File creation and an automatically generated CEO receipt are not independent evidence of both required departmental approvals."
+    },
+    {
+      "gate": "GATE_03_SOURCE_FRESHNESS_RESULT",
+      "corrected_status": "CAPTURE_AGE_FRESH__SOURCE_REACHABILITY_PARTIAL",
+      "reason": "All 22 records are within the proposed age thresholds, but the audit observed 17 HTTP 200 responses and 5 HTTP 403 responses. Therefore ALL_FRESH may describe capture age only, not universal source reachability."
+    },
+    {
+      "gate": "GATE_04_SCREEN_READER_ANNOUNCEMENT_AND_SEMANTICS",
+      "corrected_status": "DOM_SEMANTICS_PASS__REAL_SCREEN_READER_NOT_TESTED",
+      "reason": "The test runner inspected roles, labels and DOM order with Puppeteer. It did not launch or record NVDA, Narrator or another real assistive technology."
+    },
+    {
+      "gate": "GATE_07_ZOOM_AND_REFLOW_200_AND_400_PERCENT",
+      "corrected_status": "NARROW_VIEWPORT_REFLOW_PASS__ACTUAL_BROWSER_ZOOM_NOT_TESTED",
+      "reason": "The runner changed viewport widths to 640 and 320 CSS pixels. It did not set or verify browser zoom at 200 percent, so WCAG 1.4.4 browser-zoom behavior remains unverified."
+    }
+  ],
+  "prohibited_claims_until_r5": [
+    "MANUAL_A11Y_CERTIFIED",
+    "WCAG_2_1_AA_CERTIFIED",
+    "12_OF_12_GATES_PASS",
+    "ZERO_NOT_TESTED"
+  ],
+  "immutable_boundaries": {
+    "batch_14_package_sha256": "4daadbcd4115d0d878dc66410173629cee8590dd8e7069416579c6767be0b9b0",
+    "commercial_catalog_sha256": "67d98cdf56380a8cdb1ade3a257cee41ee2c01d05f05e3358391b52ab2da8226",
+    "commercial_staging_cards": 22,
+    "production_baseline": "v3.422.0",
+    "production_deployment_authorized": false
+  },
+  "next_work_order": "01_EXECUTIVE_COUNCIL/JAYT_330_R5_EVIDENCE_CLOSEOUT_WORK_ORDER.md"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "WORK_ORDER_J371_LUXURY_REDESIGN",
+  "authority": "JAYT-371",
+  "issued_at_utc": "2026-09-10T06:29:46Z",
+  "deadline_local": "2026-09-11T13:29:46+07:00",
+  "executor": "Antigravity",
+  "status": "COMPLETED_AND_VERIFIED",
+  "deployment_authorized": true,
+  "production_target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_preview_deployment": false
+  },
+  "handoff_spec": "01_EXECUTIVE_COUNCIL/JAYT_371_DESIGN_HANDOFF.md",
+  "source_of_truth": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+  "implementation": [
+    "Implement the handoff in canonical HTML, CSS and Vanilla JS; synchronize deploy and deploy/public, then assemble the actual production payload in deploy_personal_v3420.",
+    "Replace the directory-style home with an editorial bento grid, 20–24px corners, subtle glass and three-layer shadows; provide Obsidian Titanium and Porcelain Light themes.",
+    "Use a sharp 16:9 Dragon Bridge sunset/fire hero without stretching or cutting off the bridge; add Son Tra, Han River Bridge, My Khe and professional food imagery with asset rights records.",
+    "Expose the three-app calculator, voucher tickets, integer split bill with downloadable Canvas PNG, and 30-product shopping catalog directly on the home page.",
+    "Preserve existing offer records and CTA distinctions; map real codes to copy, in-store offers to terms, app offers to official app/campaign links.",
+    "Implement 90-day-low badge and affiliate attribution support, populating badges only from measured comparable price history and provider-confirmed affiliate links. Source and verify real product URLs and current prices for all 30 products; a count of rendered cards is insufficient."
+  ],
+  "commercial_accuracy": {
+    "affiliate_activation_authorized": true,
+    "provider_evidence_required_to_claim_activation": true,
+    "current_known_status": "DECLARED_PENDING_AUTHENTICATION",
+    "ninety_day_low_requires": "At least 90 days of comparable SKU/variant/merchant price observations, coverage and timestamps; no invented history or badge.",
+    "when_history_missing": "Show dated observed price without a 90-day-low badge.",
+    "when_affiliate_unconfirmed": "Use a verified direct product URL and keep the current reference-catalog wording. Continue UI rollout independently.",
+    "when_product_unverified": "Acquire a real replacement in the same category; do not invent item IDs, store identity or prices.",
+    "when_affiliate_confirmed": "Enable provider-issued links and restore a clear commission disclosure for those links. Do not claim earned revenue without a provider report."
+  },
+  "milestones_hours_from_issue": {
+    "4": "Responsive shell, themes and asset selection ready for local review",
+    "12": "Four home modules implemented and linked to preserved data",
+    "20": "Mobile interaction, accessibility, performance and product-link checks complete",
+    "24": "Production deployed, live receipt and Gemini review packet delivered"
+  },
+  "release_workflow": [
+    "Record current deployment and archive its payload before mutation; preserve rollback capability.",
+    "Run local browser checks at 1440, 768 and 390px for both themes. Measure real slider-input-to-render latency, not an unrelated arithmetic loop.",
+    "Deploy to the authorized canonical project after local checks; do not wait for another general release decree.",
+    "Verify live endpoint statuses, served hashes, real module interactions and screenshots; correct or roll back a broken deployment under existing authority.",
+    "Prepare the live 390px experience and evidence for Gemini; record Gemini's actual response separately and never predeclare PASS."
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_371_LIVE_UI_RUNTIME_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_371_PRODUCTION_RELEASE_RECEIPT.json",
+    "06_TRUST_AND_EVIDENCE/j371/asset_manifest.json",
+    "06_TRUST_AND_EVIDENCE/j371/product_link_and_price_manifest.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_371_GEMINI_REVIEW_PACKET.md",
+    "PROJECT_MEMORY.md transaction recording actual execution results"
+  ],
+  "executor_ack_utc": "2026-09-10T06:31:59.999Z",
+  "executor_note": "Antigravity technical unit has formally acknowledged and accepted WORK_ORDER_J371_LUXURY_REDESIGN. Implementation plan under drafting.",
+  "execution_record": {
+    "executor": "Antigravity Executive Pair",
+    "completed_at_utc": "2026-09-10T06:40:16.500Z",
+    "completed_at_local": "2026-09-10T13:40:00+07:00",
+    "deployment_id": "dpl_Fi9wyraCAmgMQZzzerQLAgCbHjJf",
+    "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+    "qa_runtime_receipt_sha256": "05452573b67701fb270bfabe1e0ee2f33fa66968310ca96a94e7606c1eef2c53",
+    "production_release_receipt_sha256": "694ace273daca68b5899dc476cce8bb6044e6bdd83ee9397e8f82f9cd87f9a03"
+  }
+}

@@ -1,0 +1,1458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <script>
+        var gRootTheme = 'blue';
+        var gImagePath = '/images/' + gRootTheme;
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG</title>
+
+
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="/css/w3.css?1.1" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+    <link rel="stylesheet" media="screen" href="/css/toggle-switchy.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="/css/select2.min.css" />
+
+
+    <link rel="stylesheet" href="/css/blue/siteWeb.css?v=mpq89U5Y3V78oT7pZb39sCAiJKzuTdehaBAXFM-f2Ko" />
+    <link rel="stylesheet" href="/css/blue/CustomSite.css?v=hymE4dnstFnwlCxK08xLv050-Z4sEl__4jbd-mOMboc" />
+
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- custom scrollbar plugin -->
+    <script src="/js/custom-scrollbar/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/jquery.datetimepicker.full.js"></script>
+
+    <script src="/js/site.js?1.1&amp;v=x_N-Ku-msJtvqB-_cDMFWAO1S85tGkeSEj8UZHzMqpA"></script>
+
+    <script type='text/javascript'>
+        $(window).on('load', function () {
+
+            jQuery(function () {
+
+                jQuery('.textDate').datetimepicker({
+                    format: 'd/m/Y',
+                    timepicker: false
+                });
+
+                jQuery('.textDateTime').datetimepicker({
+                    format: 'd/m/Y H:i:00',
+                    timepicker: true
+                });
+
+            });
+        }
+        )
+    </script>
+    
+
+    <script>
+
+        function setHomePageImage() {
+            var w = $(window).width();
+            if (w < 600) {
+
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/blue/banner.jpg");
+                });
+            }
+            else {
+                $("#homePhoto").each(function () {
+                    $(this).attr("src", "/Images/blue/banner.jpg");
+                });
+            }
+        }
+
+        $(window).on('load', function (e) {
+            setHomePageImage();
+        });
+
+
+        $(window).resize(function (e) {
+            setHomePageImage();
+        });
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        // Tạo phần tử chatbox với page_id và attribution
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "102615185260981");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        // Khởi tạo Facebook SDK
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true, // Kích hoạt render các plugin đã cài đặt sẵn (như Messenger)
+                version: 'v18.0' // Cập nhật phiên bản SDK mới nhất
+            });
+        };
+
+        // Tải Facebook SDK
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=2620950081501324&autoLogAppEvents=1" nonce="IKQ81c2P"></script>
+    <header>
+        <nav class="navbar navbar-expand-sm box-shadow bg-hdnd">
+            <div class="container-fluid div-navbar">
+                <button type="button" class="navbar-toggler ml-auto"
+                        data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div id="navbar" class="navbar-collapse collapse d-lg-inline-flex flex-lg-row bg-hdnd">
+                    <ul class="navbar-nav mr-auto flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarGioiThieu"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Thư viện Đà Nẵng
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarGioiThieu">
+                                <li><a class="dropdown-item" href="/News/ReadNews/19">Lịch sử hình thành</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/20">Chức năng nhiệm vụ</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/21">Cơ cấu tổ chức</a></li>
+                                <li><a class="dropdown-item" href="/VanBan">Quản lý Văn bản</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tin hoạt động
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/19">Thư viện công cộng</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/20">Thư viện Đà Nẵng</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/51">Xe thư viện lưu động</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Đà Nẵng qua báo chí
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/CatNews/22">Chính trị</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/23">Xã hội</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/24">Giáo dục</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/25">Văn hóa</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/26">Y tế</a></li>
+                                <li><a class="dropdown-item" href="/News/CatNews/27">Hoàng Sa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarHoatDong"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dành cho bạn đọc
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarHoatDong">
+                                <li><a class="dropdown-item" href="/News/ReadNews/1410">Giờ làm việc</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/1409">Nội quy Thư viện</a></li>
+                                <li><a class="dropdown-item" href="/News/ReadNews/1408">Thủ tục cấp thẻ</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="http://opac.thuvien.danang.gov.vn:82/pages/opac/wpid-regreader.html">Đăng ký thẻ</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="http://opac.thuvien.danang.gov.vn:82/">Gia hạn sách</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="/News/ListCatNews/62">
+                                Báo Xuân
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        </li>
+                        <li class="nav-item dropdown">
+                            
+
+
+
+
+
+<div class="container-fluid cc divSearch rightside">
+    <form action="/News/SearchNews" method="post">
+        <div class="w3-row cc " >
+            <div class="w3-col m11 s10" style="float:left">
+                <input type="text" id="searchtext"
+                       name="searchtext" class="form-control"
+                       placeholder="Tìm kiếm" />
+            </div>
+            <div class="w3-col m1 s2" style="float:right">
+                <button type="submit" id="btnSearch" name="btnSearch" class="homeSearch">
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="header">
+        <div class="divPhoto">
+            <img width="100%" id="homePhoto" src="/Images/blue/Banner.jpg" alt="Đà Nẵng" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="mainContentRegion" class="container-fluid mainContent" style="margin-top:0px">
+        
+
+
+<link href="/js/liScroll/jquery.liScroll.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/js/custom-scrollbar/jquery.mCustomScrollbar.css">
+
+<script type="text/javascript" src="/js/liScroll/jquery.liScroll.js"></script>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<div class="container-fluid">
+    <div class="w3-row">
+
+
+<script type="text/javascript">
+    $().ready(function () {
+        $(".liScrollDiv").liScroll({
+            showControls: false ,
+        });
+    });
+</script>
+
+<div class="container-fluid">
+    <div class="w3-row scrollingNews">
+        <div class="w3-col l1 m2 headScrollDiv">
+            Tin nổi bật
+        </div>
+        <div class="w3-col l11 m10 liScrollDiv">
+            <ul>
+                    <li>
+                        <a href="/News/ReadNews/5668" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> &#x110;&#xE0; N&#x1EB5;ng t&#x1EAD;p hu&#x1EA5;n nghi&#x1EC7;p v&#x1EE5;, n&#xE2;ng cao n&#x103;ng l&#x1EF1;c &#x111;&#x1ED9;i ng&#x169; l&#xE0;m c&#xF4;ng t&#xE1;c th&#x1B0; vi&#x1EC7;n
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5598" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> L&#xE3;nh &#x111;&#x1EA1;o th&#xE0;nh ph&#x1ED1; d&#xE2;ng hoa t&#x1B0;&#x1EDF;ng nh&#x1EDB; c&#xF4;ng lao to l&#x1EDB;n c&#x1EE7;a Ch&#x1EE7; t&#x1ECB;ch H&#x1ED3; Ch&#xED; Minh nh&#xE2;n k&#x1EF7; ni&#x1EC7;m 136 n&#x103;m ng&#xE0;y sinh nh&#x1EAD;t B&#xE1;c
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5594" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Khai m&#x1EA1;c Ng&#xE0;y h&#x1ED9;i S&#xE1;ch &#x110;&#xE0; N&#x1EB5;ng 2026 t&#x1EA1;i Ph&#xFA; Ninh
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5593" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Ng&#xE0;y h&#x1ED9;i S&#xE1;ch &#x110;&#xE0; N&#x1EB5;ng 2026 lan t&#x1ECF;a v&#x103;n h&#xF3;a &#x111;&#x1ECD;c t&#x1EA1;i Ti&#xEA;n Ph&#x1B0;&#x1EDB;c
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5578" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Khai m&#x1EA1;c h&#x1ED9;i B&#xE1;o Xu&#xE2;n B&#xED;nh Ng&#x1ECD; v&#xE0; ng&#xE0;y h&#x1ED9;i V&#x103;n h&#xF3;a &#x111;&#x1ECD;c &#x110;&#xE0; N&#x1EB5;ng n&#x103;m 2026
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5429" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Tr&#x1B0;ng b&#xE0;y t&#xE0;i nguy&#xEA;n th&#xF4;ng tin Ch&#xE0;o m&#x1EEB;ng k&#x1EF7; ni&#x1EC7;m 81 n&#x103;m ng&#xE0;y th&#xE0;nh l&#x1EAD;p Qu&#xE2;n &#x111;&#x1ED9;i nh&#xE2;n d&#xE2;n Vi&#x1EC7;t Nam
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5228" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> &#x110;&#xE0; N&#x1EB5;ng ph&#xE1;t tri&#x1EC3;n h&#x1EC7; th&#x1ED1;ng th&#x1B0; vi&#x1EC7;n tr&#x1EDF; th&#xE0;nh trung t&#xE2;m tri th&#x1EE9;c m&#x1EDF; c&#x1EE7;a c&#x1ED9;ng &#x111;&#x1ED3;ng
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5156" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Tr&#x1B0;ng b&#xE0;y t&#xE0;i nguy&#xEA;n th&#xF4;ng tin, t&#x1B0; li&#x1EC7;u &#x1EA3;nh v&#xE0; n&#xF3;i chuy&#x1EC7;n chuy&#xEA;n &#x111;&#x1EC1; &#x201C;B&#xE1;c H&#x1ED3; v&#x1EDB;i V&#x103;n h&#xF3;a &#x111;&#x1ECD;c&#x201D;
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5155" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Khai m&#x1EA1;c Ng&#xE0;y h&#x1ED9;i v&#x103;n h&#xF3;a &#x111;&#x1ECD;c 2025 - l&#x1EA7;n 3
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/News/ReadNews/5131" class="news-title bold">
+                            <img src="/Images/icon_arrow.gif" /> Kh&#xE1;nh th&#xE0;nh t&#x1B0;&#x1EE3;ng B&#xE1;c H&#x1ED3; trong khu&#xF4;n vi&#xEA;n Th&#x1B0; vi&#x1EC7;n Khoa h&#x1ECD;c t&#x1ED5;ng h&#x1EE3;p &#x110;&#xE0; N&#x1EB5;ng
+                        </a>
+
+                    </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+    <div class="mr-4 ml-4">
+        <div class="w3-row" style="background-color: #e8e6e6">
+            <div class="w3-col l6 pr-lg-4">
+                <div class="w3-row p-4">
+                            <div class="w3-row">
+            <a href="/News/ReadNews/5668" class="link-header-baiviet">
+                <h3>&#x110;&#xE0; N&#x1EB5;ng t&#x1EAD;p hu&#x1EA5;n nghi&#x1EC7;p v&#x1EE5;, n&#xE2;ng cao n&#x103;ng l&#x1EF1;c &#x111;&#x1ED9;i ng&#x169; l&#xE0;m c&#xF4;ng t&#xE1;c th&#x1B0; vi&#x1EC7;n</h3>
+            </a>
+        </div>
+        <div class="w3-row">
+            <img src="/Files/Thumb/082026/639214394696051521_taphuan1.jpg" style="width:100%"/>
+        </div>
+
+
+
+
+
+<script>
+
+
+    $(document).ready(function () {
+        var clickEvent = false;
+        $('.carousel').carousel({
+            interval: 4000
+        }).on('click', '.list-group li', function () {
+            clickEvent = true;
+            $('.list-group li').removeClass('active');
+            $(this).addClass('active');
+        }).on('slid.bs.carousel', function (e) {
+            if (!clickEvent) {
+                var count = $('.list-group').children().length - 1;
+                var current = $('.list-group li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.list-group li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+    });
+
+    $('#myCarousel').on('slide.bs.carousel', function () {
+        // do something…
+    });
+
+    $('#myCarousel').on('slid.bs.carousel', function () {
+        //do something
+
+
+    });
+
+
+
+</script>
+
+                </div>
+            </div>
+            <div class="w3-col l6 pr-lg-2 mt-1 d-none d-lg-block" style="background-color: #FFF">
+                <div class="w3-row  ml-4  mt-4">
+                    <div class="w3-col l4">
+                        <a href="/News/CatNews/10">
+                            <img src="/Images/blue/Gioithieu.jpg" width="100%" />
+
+                            <div class="text-center text-white font-weight-bold bg-primary mt-1">
+                                <h5 style="line-height:160%">
+                                    GIỚI THIỆU
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-col l4">
+                        <a href="/News/ListCatNews/47">
+                            <img src="/Images/blue/chuyende.jpg" width="100%" />
+                            <div class="text-center text-white font-weight-bold bg-primary mt-1">
+                                <h5 style="line-height:160%">CHUYÊN ĐỀ</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-col l4">
+                        <a href="/News/CatNews/11">
+                            <img src="/Images/blue/thongbao.jpg" width="100%" />
+                            <div class="text-center text-white font-weight-bold bg-primary mt-1">
+                                <h5 style="line-height:160%">THÔNG BÁO</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w3-row ml-4 mt-2">
+                    <div class="w3-col l6">
+                        <a href="/News/CatNews/42"><img src="/Images/blue/tailieutructuyen.jpg" width="100%" /></a>
+                    </div>
+                    <div class="w3-col l6">
+                        <a href="/News/CatNews/9"><img src="/Images/blue/sachmoi.jpg" width="100%" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l8 pr-lg-2">
+                <div class="w3-row mb-3 mt-3">
+                    
+<div id="slideshow">
+            <div>
+                <a href="" target="_blank">
+                    <div class="cropImageBanner">
+                        <img src="https://thuvien.danang.gov.vn/Files/Banners/Khau%20hieu%20tt%20-%20web.png" class="ImageBanner" />
+                    </div>
+
+                </a>
+            </div>
+
+
+
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#slideshow > div:gt(0)").hide();
+
+        var buttons = "<button class=\"slidebtn prev\"><i class=\"fa fa-chevron-circle-left\"></i></button><button class=\"slidebtn next\"><i class=\"fa fa-chevron-circle-right\"></i></button\>";
+
+        var slidesl = $('.slideitem').length
+        var d = "<li class=\"dot active-dot\">&bull;</li>";
+        for (var i = 1; i < slidesl; i++) {
+            d = d + "<li class=\"dot\">&bull;</li>";
+        }
+        var dots = "<ul class=\"slider-dots\">" + d + "</ul\>";
+
+        $("#slideshow").append(dots).append(buttons);
+        var interval = setInterval(slide, 3000);
+
+        function intslide(func) {
+            if (func == 'start') {
+                interval = setInterval(slide, 3000);
+            } else {
+                clearInterval(interval);
+            }
+        }
+
+        function slide() {
+            sact('next', 0, 1200);
+        }
+
+        function sact(a, ix, it) {
+            var currentSlide = $('.current');
+            var nextSlide = currentSlide.next('.slideitem');
+            var prevSlide = currentSlide.prev('.slideitem');
+            var reqSlide = $('.slideitem').eq(ix);
+
+            var currentDot = $('.active-dot');
+            var nextDot = currentDot.next();
+            var prevDot = currentDot.prev();
+            var reqDot = $('.dot').eq(ix);
+
+            if (nextSlide.length == 0) {
+                nextDot = $('.dot').first();
+                nextSlide = $('.slideitem').first();
+            }
+
+            if (prevSlide.length == 0) {
+                prevDot = $('.dot').last();
+                prevSlide = $('.slideitem').last();
+            }
+
+            if (a == 'next') {
+                var Slide = nextSlide;
+                var Dot = nextDot;
+            }
+            else if (a == 'prev') {
+                var Slide = prevSlide;
+                var Dot = prevDot;
+            }
+            else {
+                var Slide = reqSlide;
+                var Dot = reqDot;
+            }
+
+            currentSlide.fadeOut(it).removeClass('current');
+            Slide.fadeIn(it).addClass('current');
+
+            currentDot.removeClass('active-dot');
+            Dot.addClass('active-dot');
+        }
+
+        $('.next').on('click', function () {
+            intslide('stop');
+            sact('next', 0, 400);
+            intslide('start');
+        });//next
+
+        $('.prev').on('click', function () {
+            intslide('stop');
+            sact('prev', 0, 400);
+            intslide('start');
+        });//prev
+
+        $('.dot').on('click', function () {
+            intslide('stop');
+            var index = $(this).index();
+            sact('dot', index, 400);
+            intslide('start');
+        });//prev
+        //slideshow
+    });
+
+</script>
+                </div>
+                <div class="w3-row">
+                    
+
+<div id="headChuDe" class="headChuDe">
+    <a class="text-dark" href="/News/CatNews/20">Tin ho&#x1EA1;t &#x111;&#x1ED9;ng</a>
+</div>
+
+<div id="lstBaiViet" class="w3-row pl-3">
+            <div class="w3-col l6 p-3">
+                <div class="w3-row pr-1 pb-2">
+                    <img src="/Files/Thumb/082026/639214394696051521_taphuan1.jpg" class="small-img-title-4 w3-round-large" />
+                </div>
+                <div class="w3-row pr-1">
+                    <a target="_parent" href="/News/ReadNews/5668" 
+                        class="link-header-baiviet">
+                        <h5>&#x110;&#xE0; N&#x1EB5;ng t&#x1EAD;p hu&#x1EA5;n nghi&#x1EC7;p v&#x1EE5;, n&#xE2;ng cao n&#x103;ng l&#x1EF1;c</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col l6 p-3">
+                <div class="w3-row pr-1 pb-2">
+                    <img src="/Files/Thumb/052026/639135058251717778_PhuNinh1.jpg" class="small-img-title-4 w3-round-large" />
+                </div>
+                <div class="w3-row pr-1">
+                    <a target="_parent" href="/News/ReadNews/5594" 
+                        class="link-header-baiviet">
+                        <h5>Khai m&#x1EA1;c Ng&#xE0;y h&#x1ED9;i S&#xE1;ch &#x110;&#xE0; N&#x1EB5;ng 2026 t&#x1EA1;i Ph&#xFA;</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col l6 p-3">
+                <div class="w3-row pr-1 pb-2">
+                    <img src="/Files/Thumb/052026/639135055890878374_Tienphuoc1.jpg" class="small-img-title-4 w3-round-large" />
+                </div>
+                <div class="w3-row pr-1">
+                    <a target="_parent" href="/News/ReadNews/5593" 
+                        class="link-header-baiviet">
+                        <h5>Ng&#xE0;y h&#x1ED9;i S&#xE1;ch &#x110;&#xE0; N&#x1EB5;ng 2026 lan t&#x1ECF;a v&#x103;n h&#xF3;a</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col l6 p-3">
+                <div class="w3-row pr-1 pb-2">
+                    <img src="/Files/Thumb/052026/639135054073210511_Tamky1.jpg" class="small-img-title-4 w3-round-large" />
+                </div>
+                <div class="w3-row pr-1">
+                    <a target="_parent" href="/News/ReadNews/5592" 
+                        class="link-header-baiviet">
+                        <h5>Ng&#xE0;y h&#x1ED9;i S&#xE1;ch &#x110;&#xE0; N&#x1EB5;ng 2026: Lan t&#x1ECF;a v&#x103;n h&#xF3;a</h5>
+                    </a>
+                </div>
+            </div>
+
+</div>
+
+
+
+
+                </div>
+                <div class="w3-row">
+                    
+
+<script>
+
+    $(document).ready(function () {
+        $('.slider-news').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        //    fade: true,
+        //    arrows: true,
+        //    infinite: true,
+        });
+    });
+</script>
+
+
+<div id="headChuDe" class="headChuDe">
+    S&#xE1;ch m&#x1EDB;i
+</div>
+<div class="w3-row news-slider-3">
+        <div class="slider slider-news">
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5644" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166822237675578_VV086233.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5643" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166819689262541_VV086228.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5642" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166819426249443_VV086229.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5641" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166807844387587_VV086221.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5640" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166806122299987_VV086220.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5639" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166804100782243_VV086201.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5638" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166799688482708_VV086182.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5637" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166778602870748_VV086176.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5636" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166776291781667_VV086172.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="slick-slide">
+                    <a href="/News/ReadNews/5635" class="carousel-news-title">
+                        
+                        <div class="cropImageSlide">
+                            <img src="/Files/Thumb/062026/639166773408240630_VV086132.jpg"  class="w3-round-large" />
+                        </div>
+
+                    </a>
+                </div>
+
+        </div>
+
+</div>
+
+                </div>
+                <div class="w3-row">
+                    
+
+<div id="headChuDe" class="headChuDe ">
+    <a class="text-dark" class="text-dark" href="/News/ListCatNews/47">Chuy&#xEA;n &#x111;&#x1EC1;</a>
+</div>
+
+<div id="lstBaiViet" class="w3-row">
+            <div class="w3-col l4 pt-3">
+                <div class="w3-row pr-3"><img src="/Files/Thumb/072026/639207640377560999_Bia TMCD Thuong binh liet si 2026_Page1_Image1.jpg" class="small-img-title-4 w3-round-large" /></div>                
+                <div class="w3-row pr-3">
+                    <a target="_blank" href="/News/ReadPDF/5652"  class="link-header-baiviet">
+                        <h5>Th&#x1B0; m&#x1EE5;c chuy&#xEA;n &#x111;&#x1EC1; - K&#x1EF7; ni&#x1EC7;m 79 n&#x103;m ng&#xE0;y</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col l4 pt-3">
+                <div class="w3-row pr-3"><img src="/Files/Thumb/072026/639191929120779957_Bia 555 namjpg.jpg" class="small-img-title-4 w3-round-large" /></div>                
+                <div class="w3-row pr-3">
+                    <a target="_blank" href="/News/ReadPDF/5651"  class="link-header-baiviet">
+                        <h5>Th&#x1B0; m&#x1EE5;c chuy&#xEA;n &#x111;&#x1EC1; - K&#x1EF7; ni&#x1EC7;m 555 n&#x103;m l&#x1EAD;p</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col l4 pt-3">
+                <div class="w3-row pr-3"><img src="/Files/Thumb/062026/639184342551385272_Bia Thu muc 01 nam.png" class="small-img-title-4 w3-round-large" /></div>                
+                <div class="w3-row pr-3">
+                    <a target="_blank" href="/News/ReadPDF/5649"  class="link-header-baiviet">
+                        <h5>Th&#x1B0; m&#x1EE5;c chuy&#xEA;n &#x111;&#x1EC1; - &quot;D&#x1EA5;u &#x1EA5;n m&#x1ED9;t n&#x103;m th&#xE0;nh</h5>
+                    </a>
+                </div>
+            </div>
+
+</div>
+
+
+
+
+                </div>
+            </div>
+            <div class="w3-col l4 pr-lg-2">
+                <div class="w3-row pt-3">
+                    
+
+
+
+
+    <div id="container-fluid cc rightside">
+        <div class="w3-row cc hot-links">
+            <div class="w3-col">
+                <a href="#" target="_blank">
+                    <div class="cropImageBanner">
+                        <img src="/Images/blue/lichphucvu.jpg" width="100%" class="img-hot-links" />
+                    </div>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+                </div>
+                <div class="w3-row">
+                    
+
+<div id="headChuDe" class="headChuDe">
+    <a class="text-dark" href="/News/CatNews/11">Th&#xF4;ng b&#xE1;o</a>
+</div>
+
+<div id="lstBaiViet" class="w3-row">
+            <div class="container-link-baiviet">
+                <div class="w3-row">
+                    <a target="_parent" href="/News/ReadNews/5036"  class="link-header-baiviet">
+                        <h5>Th&#xF4;ng b&#xE1;o v&#x1EC1; vi&#x1EC7;c &#x111;&#x1EA5;u gi&#xE1; t&#xE0;i s&#x1EA3;n</h5>
+
+                    </a>
+
+                </div>
+                <div class="w3-row">
+
+                    <img src="/Images/default_img_news.jpg" class="small-img-title w3-round-large" />
+
+
+                <div class="containerBaiViet">Trung t&#xE2;m d&#x1ECB;ch v&#x1EE5; &#x111;&#x1EA5;u gi&#xE1; t&#xE0;i s&#x1EA3;n th&#xE0;nh ph&#x1ED1; &#x110;&#xE0; N&#x1EB5;ng th&#xF4;ng b&#xE1;o &#x111;&#x1EA5;u gi&#xE1; t&#xE0;i s&#x1EA3;n nh&#x1B0; sau: &#xD;&#xD;1. T&#xEA;n, &#x111;&#x1ECB;a ch&#x1EC9; t&#x1ED5; ch&#x1EE9;c h&#xE0;nh ngh&#x1EC1; &#x111;&#x1EA5;u gi&#xE1; t&#xE0;i s&#x1EA3;n: Trung t&#xE2;m d&#x1ECB;ch v&#x1EE5; &#x111;&#x1EA5;u gi&#xE1; t&#xE0;i s&#x1EA3;n ...</div>
+
+                                </div>
+
+
+            </div>
+            <div class="container-link-baiviet">
+                <div class="w3-row">
+                    <a target="_parent" href="/News/ReadNews/5018"  class="link-header-baiviet">
+                        <h5>5 b&#x1B0;&#x1EDB;c l&#x1EA5;y &#xFD; ki&#x1EBF;n nh&#xE2;n d&#xE2;n s&#x1EED;a &#x111;&#x1ED5;i Hi&#x1EBF;n ph&#xE1;p n&#x103;m 2013 tr&#xEA;n VNeID</h5>
+
+                    </a>
+
+                </div>
+                <div class="w3-row">
+
+                    <img src="/Images/default_img_news.jpg" class="small-img-title w3-round-large" />
+
+
+                <div class="containerBaiViet">Qu&#x1ED1;c h&#x1ED9;i t&#x1ED5; ch&#x1EE9;c l&#x1EA5;y &#xFD; ki&#x1EBF;n nh&#xE2;n d&#xE2;n, c&#xE1;c ng&#xE0;nh, c&#xE1;c c&#x1EA5;p v&#x1EC1; d&#x1EF1; th&#x1EA3;o ngh&#x1ECB; quy&#x1EBF;t s&#x1EED;a &#x111;&#x1ED5;i, b&#x1ED5; sung m&#x1ED9;t s&#x1ED1; &#x111;i&#x1EC1;u c&#x1EE7;a Hi&#x1EBF;n ph&#xE1;p n&#x1B0;&#x1EDB;c C&#x1ED9;ng h&#xF2;a x&#xE3; h&#x1ED9;i ch&#x1EE7; ngh&#x129;a Vi&#x1EC7;t Nam n&#x103;m 2013 t&#x1EEB; ...</div>
+
+                                </div>
+
+
+            </div>
+
+</div>
+
+
+
+
+                </div>
+                <div class="w3-row">
+                    
+
+<div id="container-fluid cc rightside">
+    <div class="w3-row cc hot-links">
+                <div class="w3-col l6 m6">
+                    <a href="https://s-hub.vn/" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/shub.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://203.205.51.40:82/pages/opac/wpid-search-stype-form-quick.html" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/tracuusach.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="https://thuvien.danang.gov.vn/News/ReadNews/1408" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/thutuccapthe.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://203.205.51.40:82/pages/opac/wpid-regreader.html" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/dangkythe.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="https://link.gale.com/apps/GVRL?u=dadgslib" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/gale.jpg" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://tailieuso.thuvien.danang.gov.vn" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/tailieuso.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://sachdientu.thuvien.danang.gov.vn/" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/sdt.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://203.205.51.40:82/pages/opac/wpid-search-stype-form-quick.html" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/tctl.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="https://www.letsreadasia.org/" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="https://thuvien.danang.gov.vn/Files/Banners_lienket/letRead.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="http://lhtv.vista.vn/" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="https://thuvien.danang.gov.vn/Files/Banners_lienket/proquestcentral.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="/GuiCauHoi" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/hoidap.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+                <div class="w3-col l6 m6">
+                    <a href="https://egov.danang.gov.vn" target="_blank">
+                        <div class="cropImageBanner">
+                            <img src="/Files/Banners_lienket/qc5.png" width="100%" class="img-hot-links" />
+                        </div>
+
+                    </a>
+                </div>
+
+
+    </div>
+    <div class="w3-row cc hot-links">
+        <a href="/News/CatNews/64" target="_blank">
+            <img width="100%" class="img-hot-links" src="/Files/Banners_lienket//cds.jpg" />
+        </a>
+    </div>
+</div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="w3-row" style="background-color: #e5e5e5">
+            <div class="w3-row p-3">
+                
+
+<script>
+
+    $(document).ready(function () {
+        $('.slider-video').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            //    fade: true,
+            //    arrows: true,
+            //    infinite: true,
+        });
+    });
+</script>
+
+
+
+<div class="w3-row video-slider-3">
+    <div id="headChuDe" class="headChuDe">
+        <a href="/video" class="text-dark">GIỚI THIỆU SÁCH VÀ CÁC HOẠT ĐỘNG CỦA THƯ VIỆN</a>
+    </div>
+    <div id="lstBaiViet" class="w3-row">
+
+            <div class="w3-col l6">
+                <div class="w3-row">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/8W9vktknNGA" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="w3-row">
+                    <a href="/Video/ViewVideo/68" target="_blank" class="link-header-baiviet">
+                        <h5>H&#x1AF;&#x1EDA;NG D&#x1EAA;N GIA H&#x1EA0;N S&#xC1;CH</h5>
+                    </a>
+                </div>
+            </div>
+
+    <div class="w3-col l6">
+        <div class="w3-row">
+            <a href="/Video/ViewVideo/67"  class="link-header-baiviet">
+                <div class="cropImage w3-col l6">
+                    <img src="https://img.youtube.com/vi/3pA49gfXPIo/0.jpg" class="imgBaiViet w3-round-large" />
+                </div>
+                <div class="w3-col l6">
+                    <h5>M&#x1ED9;t ng&#xE0;y t&#x1EA1;i Th&#x1B0; vi&#x1EC7;n KHTH &#x110;&#xE0; N&#x1EB5;ng</h5>
+                </div>
+            </a>
+        </div>
+        <div class="w3-row">
+            <a href="/Video/ViewVideo/66"  class="link-header-baiviet">
+                <div class="cropImage w3-col l6">
+                    <img src="https://img.youtube.com/vi/73TWKQ0TnHM/0.jpg" class="imgBaiViet w3-round-large" />
+                </div>
+                <div class="w3-col l6">
+                    <h5>&#xD4;ng gi&#xE1;o l&#xE0;ng tr&#xEA;n t&#x1EA7;ng g&#xE1;c m&#xE1;i</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    </div>
+
+            </div>
+            <div class="w3-row pl-3 pr-3 pt-3">
+                
+<link rel="stylesheet" href="/css/MainTopNews.css" media="screen">
+
+
+<div class="w3-row u-grey-5 p3">
+    <div class="w3-col m6 s12">
+        <div class="w3-row" style="text-align: center; align-items:center">
+            <img class="u-image u-image-round
+                u-radius-20" src="/Images/blue/DiaChi.png" style="width:100%" alt="" data-image-width="980" data-image-height="653">
+        </div>        
+        <div class="w3-row p-2" >
+            <div class="w3-col m6">
+                <h5 style="font-weight:700">Cổng Trần Phú</h5>
+                <p>
+                    33 Trần Phú,Hải Châu, Đà Nẵng
+                </p>
+            </div>
+            <div class="w3-col m6">
+                <h5 style="font-weight:700">Cổng Bạch Đằng</h5>
+                <p>
+                    46 Bạch Đằng, Hải Châu, Đà Nẵng
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="w3-col m6 s12 pl-2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.9650967501349!2d108.22414456893783!3d16.07390927008239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218304674f139%3A0x5e4d117e1cdd4656!2zVGjGsCB2aeG7h24gS2hvYSBo4buNYyB04buVbmcgaOG7o3AgxJDDoCBO4bq1bmc!5e0!3m2!1svi!2s!4v1665538054567!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+</div>
+
+
+
+
+
+
+            </div>
+            <div class="w3-row pl-3 pr-3 pt-3">
+                
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.slider-photo').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        //    fade: true,
+        //    arrows: true,
+        //    infinite: true,
+        });
+    });
+</script>
+
+
+
+<div class="w3-row photo-slider-3 div-black">
+    <div class="w3-row">
+            <img src="/Images/multimedia.png" class="logo_multimedia"/>
+            <a href="/Photo">
+                <label class="text_multimedia">THƯ VIỆN HÌNH ẢNH</label>
+            </a>
+            
+    </div>
+        <div class="slider slider-photo ">
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (4).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (4).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (5).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (5).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (6).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (6).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (7).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (7).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (1).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (1).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (2).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (2).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+            <div class="slick-slide ">
+                        <a href="/Files/Photo/pt (3).jpg" class="carousel-photo-title" target="_blank">
+                            <div class="cropImageSlide">
+                                <img src="/Files/Photo/pt (3).jpg" class="w3-round-large" />
+                            </div>
+
+                        </a>
+
+            </div>
+
+        </div>
+
+</div>
+
+            </div>
+            <div class="w3-row pl-3 pr-3 pb-3">
+                
+
+
+<div class="container-fluid rightside" style="margin-top:15px;margin-bottom:15px; border-top:2px solid #c7c5c5">
+    <div id="headChuDe" class="headChuDe">
+        LIÊN KẾT WEBSITE THƯ VIỆN
+    </div>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: inline-block;">
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://vuthuvien.bvhttdl.gov.vn/" target="_blank" class="weblink logo-none">V&#x1EE5; Th&#x1B0; vi&#x1EC7;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://nlv.gov.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Qu&#x1ED1;c gia</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienhanoi.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Tp. H&#xE0; N&#x1ED9;i</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvientphcm.gov.vn/index.php?lang=vi" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n t&#x1ED5;ng h&#x1EE3;p HCM</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienhoabinh.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n H&#xF2;a B&#xEC;nh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviennamdinh.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Nam &#x110;&#x1ECB;nh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviensonla.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n S&#x1A1;n La</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienkhanhhoa.gov.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Kh&#xE1;nh H&#xF2;a</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienhaiphu.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ph&#xFA; Y&#xEA;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvientinhgialai.vn/CMPortal/Default.aspx?TabId=Home" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Gia Lai</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvien.daknong.gov.vn/Default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n &#x110;&#x1EAF;k N&#xF4;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienkontum.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Kontum</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienquangnam.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Qu&#x1EA3;ng Nam</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://thuvien.thuathienhue.gov.vn." target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Th&#x1EEB;a Thi&#xEA;n Hu&#x1EBF;</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.cantholib.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n C&#x1EA7;n Th&#x1A1;</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbinhthuan.com.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xEC;nh Thu&#x1EAD;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://thuvienninhthuan.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ninh Thu&#x1EAD;n</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuviensoctrang.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n S&#xF3;c Tr&#x103;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbinhduong.org.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xEC;nh D&#x1B0;&#x1A1;ng</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvientravinh.org.vn/default.aspx" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Tr&#xE0; Vinh</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienkiengiang.vn/" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n Ki&#xEA;n Giang</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvienbrvt.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n B&#xE0; R&#x1ECB;a V&#x169;ng T&#xE0;u</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://thuvientinhyenbai.gov.vn" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n T&#x1EC9;nh Y&#xEA;n B&#xE1;i</a>
+                </li>
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="http://www.thuvienhatinh.org" target="_blank" class="weblink logo-none">Th&#x1B0; vi&#x1EC7;n H&#xE0; T&#x129;nh</a>
+                </li>
+    </ul>
+
+    <div id="headChuDe" class="headChuDe">
+        LIÊN KẾT WEBSITE
+    </div>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: inline-block;">
+                <li class="nav-item" style="display: inline-block; width:230px">
+                    <a href="https://vhtt.danang.gov.vn/" target="_blank" class="weblink logo-www">S&#x1EDF; V&#x103;n h&#xF3;a - Th&#x1EC3; thao v&#xE0; Du l&#x1ECB;ch</a>
+                </li>
+    </ul>
+</div>
+
+
+<script>
+    $("#ddWebLinks").change(function () {
+        var url = this.value;
+        window.open(url, '_blank');
+        this.value = "0";
+        return false;
+    });
+
+</script>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+    <hr />
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="13PHTFl9peQQVGq5gw1Y8";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    <div class="footer-site">
+        <div class="w3-row pl-5 pt-2">
+            <div class="w3-col m9">
+                <div>
+                    <p class="logo-none font-weight-bold">THƯ VIỆN ĐÀ NẴNG.</p>
+                    Địa chỉ: 46 Bạch Đằng, 33 Trần Phú, Phường Hải Châu, Thành phố Đà Nẵng<br>
+                    Cơ quan chủ quản: Sở Văn hóa, Thể thao và Du lịch thành phố Đà Nẵng<br>
+                    Giấy phép số: 856/GP-STTTT, cấp ngày 13 tháng 7 năm 2021<br>
+                    Chịu Trách nhiệm nội dung: Bà Lê Thị Bích Phượng, Giám đốc Thư viện Đà Nẵng<br>
+                    Điện thoại: 0236 3827533 Địa chỉ website: https://thuvien.danang.gov.vn;<br>
+                    Email: <a href="mailto:tvkhth@danang.gov.vn" style="color:white">tvkhth@danang.gov.vn</a><br />
+                    <a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/thuviendananggovvn-1703057809" title="Chung nhan Tin Nhiem Mang" target="_blank"><img src="https://tinnhiemmang.vn/handle_cert?id=thuvien.danang.gov.vn" width="150px" height="auto" alt="Chung nhan Tin Nhiem Mang" /></a>
+                </div>
+                <!-- Begin EMC Tracking Code -->
+
+                <script type="text/javascript">
+                        var _govaq = window._govaq || [];
+                    _govaq.push(['trackPageView']);
+                    _govaq.push(['enableLinkTracking']);
+                    (function () {
+                        _govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+                        _govaq.push(['setSiteId', '8499']);
+                        var d = document,
+                            g = d.createElement('script'),
+                            s = d.getElementsByTagName('script')[0];
+                        g.type = 'text/javascript';
+                        g.async = true;
+                        g.defer = true;
+                        g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+                        s.parentNode.insertBefore(g, s);
+                    })();
+                </script>
+                <!-- End EMC Tracking Code -->
+            </div>
+
+            <div class="w3-col m3">
+                
+<div class="visitor-info">    
+    <div>Hôm nay: 10</div>
+    <div>Hôm qua: 83</div>
+    <div>Tuần này: 93</div>
+    <div>Tuần trước: 983</div>
+    <div>Tháng này: 3785</div>
+    <div>Tháng trước: 16158</div>
+    <div><strong>Tổng cộng: 1665291</strong></div>
+</div>
+
+                <div id="statistics" class="pt-2"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var Client = Client || {};
+    Client.Pulse = null;
+    $(document).ready(function () {
+        Client.Heartbeat();
+
+    });
+
+
+
+
+    /// Sends the heartbeat signal and retrieves the currently active user list
+    Client.Heartbeat = function () {
+        data = {
+            UserName: 'dea52aa0-ce4b-4e53-a759-43b6c4601f73'
+        };
+        strdata = JSON.stringify(data)
+        $.ajax({ //Send the signal and recieve the information about active users back
+            url: '/api/HeartBeat/CheckActive',
+            type: 'POST',
+            contentType: 'application/json',
+            data: strdata,
+            success: function (response, sStatus, jqXHR) {
+                Client.RenderActiveUsers(response);
+                Client.Pulse = setTimeout(function () {
+                    Client.Heartbeat();
+                }, 300000); //300 second delay before next trigger
+            } //success
+        }); //$.ajax
+    } //Heartbeat
+
+    Client.RenderActiveUsers = function (response) {
+        var numVisit = response.numVisit;
+        var numOnline = response.numOnline;
+        var strStatistic = '<b>Tổng cộng 009398' + numVisit.toString() +'</b>';
+        var his = '<p>Hôm nay: ' + ViewBag.DailyCount.ToString() + '<br>' + 'Hôm qua: 26<br>' + 'Tuần này: 167<br>' + 'Tháng này:182<br>' + 'Tháng trước: 2344 <br>';
+        $('#statistics').html(strStatistic + his);
+    } //RenderActiveUsers
+</script>

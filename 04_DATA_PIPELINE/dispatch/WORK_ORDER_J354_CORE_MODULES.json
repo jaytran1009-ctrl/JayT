@@ -1,0 +1,44 @@
+{
+  "work_order_id": "J354_CORE_MODULES",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "authority": "Chairman decree JAYT-354",
+  "canonical_workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "delivery_target": "Full internal preview on staging :4176 within 48 hours of dispatch acknowledgement",
+  "permissions": {
+    "official_source_discovery_and_capture": true,
+    "staging_code_changes": true,
+    "staging_deals_feed_population": true,
+    "verified_partner_affiliate_links_in_staging": true,
+    "production_deploy_of_new_core_module_changes": false
+  },
+  "sequence": "Execute following release work. If release scope reconciliation blocks deployment, continue staging work without waiting for a new instruction.",
+  "modules": {
+    "voucher_vault": [
+      "Populate staging deals_feed.json with at least 20 distinct evidenced offers across counter offers, brand codes and app-claim offers. Deduplicate existing campaigns and distinguish ordinary observed prices from discounts.",
+      "Bind each entry to official raw body and sanitized headers, SHA-256, capture time, exact terms, validity and locality evidence. Preserve recipient-only, model, budget and holiday restrictions.",
+      "Copy only real public codes. Show Đã chép for 2 seconds after successful clipboard write; provide accessible feedback and fallback. Counter offers use source actions and app-only offers use verified claim links. Never synthesize a code to enable a button."
+    ],
+    "split_bill": [
+      "Reuse the existing calculator and expose it from each applicable utility/offer card, with a canonical detail link in the invitation.",
+      "Accept 2–8 people, use integer VND and deterministic remainder allocation. Keep calculation in memory with no PII/GPS or storage. Copy the invitation for the user to share; do not send messages automatically."
+    ],
+    "seven_day_timeline": [
+      "Filter Monday–Sunday using source-backed recurrence, date validity, timezone Asia/Ho_Chi_Minh and exclusions. Monthly events must appear only on applicable dates, not every week.",
+      "Measure click-to-visible-result p95 below 50 ms on stated test conditions. Use honest empty states for days without qualifying evidence."
+    ],
+    "value_radar": [
+      "Display all 15 approved Batch 17 records with accurate classification: 13 priced products and 2 student campaigns, not 15 individually priced products.",
+      "Use dedicated product/campaign links, observed price and time, and neutral stock warnings. Do not infer stock from merchant address.",
+      "Affiliate links require an existing authorized official partner feed/account, exact product destination and commission disclosure. Record permitted partner parameters explicitly. If partner credentials/feed are unavailable, keep official direct links and report the dependency; never fabricate partner IDs."
+    ]
+  },
+  "batch_delivery": [
+    "Preserve the baseline civic and commercial routes; report full unique counts and per-route counts with a lineage matrix.",
+    "Run integrated regression, keyboard and automated accessibility checks across 1440/768/390. Manual Narrator remains waived, not recorded as tested PASS.",
+    "Submit one complete preview package with source-bound feed, screenshots, test results, observed shortages versus targets, and a release diff. Preserve previous immutable evidence and issue new timestamped receipts.",
+    "Do not claim that old captured records are newly harvested or that repeated existing offers add net new entities."
+  ],
+  "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J354_CORE_MODULES.json",
+  "production_rule": "New core-module code/feed changes remain staging-only pending review and a release decision; J354_RELEASE separately carries the authorized baseline-plus-Batch17 deployment."
+}

@@ -1,0 +1,117 @@
+{
+  "id": "WORK_ORDER_J373_ONSITE_COPILOT",
+  "authority": "JAYT-373",
+  "issued_at_utc": "2026-09-10T08:30:03Z",
+  "status": "ACKNOWLEDGED_IN_PROGRESS",
+  "executor": "Antigravity",
+  "scope": "Implement and demonstrate on-site suite on local staging :4176; prepare Gemini practical review",
+  "schedule": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "dispatch_issued_local": "2026-09-10T15:30:03+07:00",
+    "staging_due_local": "2026-09-11T09:30:03+07:00",
+    "suite_review_target_local": "2026-09-11T15:30:03+07:00",
+    "note": "18h implementation / 24h overall target from issue. Executor must acknowledge and report blockers with concrete remaining tasks; Gemini review timing is not an asserted external commitment."
+  },
+  "authorization": {
+    "local_implementation": true,
+    "local_staging_execution": true,
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false,
+    "production_release_requires": "Gemini practical review followed by Chairman approval"
+  },
+  "baseline": {
+    "version": "v3.436.0-j372-r2",
+    "deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "preserve": "J372 accepted UI, 65 eligible offers and cluster applicability, 16 held exclusions, 30 reference SKUs, no unsupported badges"
+  },
+  "implementation": {
+    "source": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "staging_url": "http://127.0.0.1:4176",
+    "staging_root": "staging_workspace_j328",
+    "server": "staging_workspace_j328/server.cjs",
+    "instructions": [
+      "Inspect source vs accepted served bundle before editing; build from the accepted J372 baseline without reverting to an old staging snapshot.",
+      "Keep existing user edits; isolate J373 candidate and synchronize all staging assets with a manifest. Do not overwrite sealed release artifacts.",
+      "The existing :4176 server injects search.css/search.js: audit/remove collisions in candidate and bind the receipt to actual HTTP-served bytes, not an unrelated folder.",
+      "Use Vanilla JS client-side; keep existing functionalities working. Verify any root/public mirrors involved in staging serve identical candidate bytes."
+    ]
+  },
+  "features": [
+    {
+      "id": "COUNTER_01",
+      "requirements": [
+        "Place 'Bạn đang ở quán nào?' brand/branch combobox directly below header, above hero; search accent-insensitively using preloaded local index.",
+        "Selection opens accessible compact sheet with 3 numbered steps: student/member eligibility, wallet/payment offer, combo/order choice.",
+        "Compute cheapest only among documented compatible options for selected branch, date, basket and customer eligibility; show caps/min spend/exclusions and evidence links. No unsupported stacking or promise of a global cheapest price.",
+        "Missing data leaves a usable step with 'Hỏi nhân viên' or 'Chưa có thông tin'; do not invent Phê La or other offers from mandate examples.",
+        "100 actual input/selection interactions: input-to-result-DOM p95 <50ms; separately measure next paint and exclude sheet animation from filtering budget."
+      ]
+    },
+    {
+      "id": "SPLIT_02",
+      "requirements": [
+        "1–30 local participant aliases, 1–100 items; integer VND totals, qty 1–99; assign each line to one or multiple participants. Shared fees split across all current participants.",
+        "Allocate each shared integer total with quotient/remainder in stable participant-ID order. Sum allocations exactly equals all line totals plus fees. Recompute after edits/deletion; unresolved assignments block settlement.",
+        "Use safe integer validation and maximum total 1000000000 VND; reject decimals, negatives, NaN, zero people and out-of-range quantities; show preview before generating QR.",
+        "User enters receiving bank/BIN, account and optional display name; preserve account as a string including leading zeros. Confirm recipient and exact per-person amount before QR.",
+        "Generate VietQR locally using official current format/bank directory verified by executor with source/version/date. Do not use a remote QR image URL containing account details.",
+        "Decode generated payload and check recipient, amount, checksum and actual bank-app recognition with consented test recipient; no funds transfer needed. An untested bank compatibility result remains NOT_TESTED.",
+        "No invented bank/recipient, no auto-transfer, no confirmation of paid status from QR creation. Zero-share participants show 0 VND and no payment QR."
+      ]
+    },
+    {
+      "id": "LOCAL_03",
+      "requirements": [
+        "Branch details show Wi-Fi, sockets, air conditioning, motorcycle parking and return bus information as independently sourced fields.",
+        "Publish Wi-Fi only when venue authorizes guest disclosure or public guest signage supports it; store branch ID, source capture SHA256, observed_at, checked_at, validity and permitted disclosure. Expired or unknown data displays unavailable.",
+        "Bus display distinguishes published timetable from live arrival. Show stop, route, direction and service date from official source; no 'nearest departure' realtime claim without corresponding live feed.",
+        "Support selected campus/branch/map pin as origin; optional browser geolocation only after tapping a clearly labeled action, keep coordinates in RAM.",
+        "500m default uses geodesic distance and states 'Trong bán kính 500m'; do not label 500m as three-minute walk. Walking distance/time requires routed pedestrian evidence; list location accuracy when relevant.",
+        "Facilities without coordinates are not eligible for numeric proximity ranking; denied GPS or no nearby results retains manual origin selection."
+      ]
+    }
+  ],
+  "privacy": {
+    "storage": "RAM only for names, account, amounts and coordinates; clear on explicit reset/end session and reload",
+    "telemetry": "No sensitive values in URL, localStorage, logs, analytics or external requests",
+    "external_actions": "Open source/map links only on explicit tap; disclose when opening an external map shares chosen location"
+  },
+  "deliverables": [
+    "01_EXECUTIVE_COUNCIL/JAYT_373_DESIGN_HANDOFF.md",
+    "06_TRUST_AND_EVIDENCE/j373/branch_micro_utilities.json",
+    "06_TRUST_AND_EVIDENCE/j373/counter_offer_rules.json",
+    "06_TRUST_AND_EVIDENCE/j373/vietqr_spec_reference.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_373_STAGING_ONSITE_RECEIPT.json",
+    "08_RELEASE_VAULT/candidates/j373/candidate_manifest.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_373_GEMINI_REVIEW_PACKET.md"
+  ],
+  "acceptance": {
+    "viewports": [
+      1440,
+      768,
+      390
+    ],
+    "themes": [
+      "Porcelain Light",
+      "Obsidian Titanium"
+    ],
+    "checks": [
+      "Keyboard combobox and sheet focus trap/Escape/return focus, touch targets >=44px, AA contrast, zoom200%, no page overflow",
+      "Arithmetic: 100000/3 = 33334+33333+33333; qty and multi-owner items, odd shared fee, participant removal, invalid input, exact conservation",
+      "Decode QR independently; recipient leading zeros and Unicode memo, amount and checksum; bank-app compatibility proof or explicit NOT_TESTED",
+      "500m threshold boundary tests, missing coordinates, GPS denied/inaccurate, empty brand, expired offer, unknown Wi-Fi/bus",
+      "Capture console/page errors and sensitive-data network/storage audit using synthetic test data",
+      "Receipt includes actual served hashes, screenshots, runner command/environment, per-test PASS/FAIL/NOT_TESTED, measured timings and raw evidence paths; no blanket PASS for missing evidence"
+    ],
+    "gemini_scenarios": [
+      "At cafe: choose branch, read applicable payment options and guest utilities",
+      "At restaurant: 3 people share one item, two individual items and an odd shared fee; inspect each QR amount",
+      "Choose campus origin and find known facilities within 500m; try no GPS and no bus data"
+    ]
+  },
+  "handoff": "File dispatch is issued locally in both workspaces; receipt of Antigravity ACK and actual completion must be recorded separately.",
+  "acknowledged_at_utc": "2026-09-10T08:39:47.869Z",
+  "executor_note": "Antigravity acknowledged dispatch and began implementation for local staging :4176 target due 2026-09-11T09:30:03+07:00."
+}

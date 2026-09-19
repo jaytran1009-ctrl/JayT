@@ -1,0 +1,49 @@
+{
+  "$schema": "https://jayt.vn/schemas/vulnerable-deployment-containment.v1.json",
+  "document_id": "JAYT_386_VULNERABLE_DEPLOYMENT_CONTAINMENT",
+  "cycle": "JAYT-386",
+  "mandate": "WORK_ORDER_J386_SECURITY_AND_LEVEL_MAX",
+  "authority": "CHAIRMAN_AND_CEO_J386_DISPATCH",
+  "contained_at_utc": "2026-09-11T01:53:00Z",
+  "contained_at_local": "2026-09-11T08:53:00+07:00",
+  "vulnerable_deployment": {
+    "deployment_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+    "version": "v3.441.0-j385-m2",
+    "immutable_host_url": "https://jayt-production-v3420-2msb4btaq-kuntran777-6857s-projects.vercel.app",
+    "classification": "REJECTED_M2_VULNERABLE_CONTAINED",
+    "vulnerability_type": "PUBLIC_UNAUTHENTICATED_SSRF",
+    "vulnerable_endpoint": "/api/health-check?url=...",
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+    "root_cause_forensics": "Incoming query string parameter 'url' was passed directly to http/https.request without hostname allowlist, DNS IP range filtering (RFC 1918, link-local, loopback), or IP pinning."
+  },
+  "containment_actions": {
+    "canonical_alias_reassignment": {
+      "status": "EXECUTED",
+      "canonical_url": "https://jayt-production-v3420.vercel.app",
+      "active_target_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+      "active_target_version": "v3.440.0-j385-m1",
+      "vulnerable_code_serving_on_canonical": false
+    },
+    "source_code_remediation": {
+      "status": "COMPLETED",
+      "file_path": "deploy/api/health-check.js",
+      "contract": "POST ONLY { itemId: string }",
+      "url_query_param_rejected": true,
+      "dns_ip_pinning_enforced": true,
+      "private_and_reserved_ip_blocked": true,
+      "security_suite_verdict": "12_OF_12_TESTS_PASS"
+    },
+    "immutable_deployment_isolation": {
+      "action": "FLAGGED_FOR_RETIREMENT_POST_FORENSIC_SEAL",
+      "status": "FORENSIC_PRESERVED_IN_VAULT",
+      "forensic_vault_path": "08_RELEASE_VAULT/candidates/v3.441.0-j385-m2/api/health-check.js",
+      "access_state": "UNALIASED__NOT_SERVED_ON_CANONICAL_DOMAIN"
+    },
+    "rollback_preservation": {
+      "primary_rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+      "secondary_rollback_baseline_deployment_id": "dpl_DatNfwCsETc8WEYGVPbEAdzN3hkW",
+      "state": "INTACT_AND_VERIFIED"
+    }
+  },
+  "compliance_statement": "The public SSRF attack surface has been neutralized on the codebase and unlinked from the canonical domain. Immutable deployment dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg is formally isolated for forensic audit only."
+}

@@ -1,0 +1,19 @@
+{
+  "contract_id": "JAYT-279-OPERATOR-RAW-HTTP-ATTACHMENT-ENFORCEMENT",
+  "vault": "06_TRUST_AND_EVIDENCE/batch_03b_micro_capture_vault",
+  "allowed_targets": ["BATCH03_HK_04", "BATCH03_HC_07", "BATCH03_DS_07"],
+  "required_per_target": {
+    "raw_body": "<target_id>.operator.raw.html",
+    "metadata": "<target_id>.operator.metadata.json"
+  },
+  "metadata_schema": {
+    "required": ["captured_at_utc", "http_status", "final_url", "sanitized_response_headers", "raw_body_sha256", "supporting_text_span", "supporting_text_offset_utf8"],
+    "http_status_must_equal": 200,
+    "prohibited_header_names_pattern": "cookie|token|authorization|set-cookie"
+  },
+  "state_transition": "Only the local validator may report EVIDENCE_COMPLETE_INTERNAL_HELD after full-byte hash and exact UTF-8 span-offset verification. This contract does not grant PUBLIC_APPROVED or render permission.",
+  "public_approved": false,
+  "render_permitted": false,
+  "feed_mutation_permitted": false,
+  "production_mutation_permitted": false
+}

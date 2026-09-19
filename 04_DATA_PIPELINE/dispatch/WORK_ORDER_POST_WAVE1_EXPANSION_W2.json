@@ -1,0 +1,71 @@
+{
+  "work_order_id": "WORK_ORDER_POST_WAVE1_EXPANSION_W2",
+  "status": "AUTHORIZED_FOR_STAGING_AND_EVIDENCE_COLLECTION_ONLY",
+  "governing_directive": "CHAIRMAN-SUPREME-DIRECTIVE-2026-0911-POST-WAVE1-EXPANSION",
+  "chairman_mandate_reference": "CHAIRMAN-SUPREME-MANDATE-2026-0911-OPC-EXPANSION",
+  "supplemental_mandate_reference": "CHAIRMAN-SUPREME-MANDATE-2026-0911-W2-EXECUTION",
+  "j394_governance_reference": "JAYT-394",
+  "production_baseline": {
+    "version": "v3.446.0-j392",
+    "deployment_id": "dpl_6SZZk5KYChanKHjvVKZxXn5hpc78",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "scope": {
+    "priority_order": ["DANABUS_STUDENT", "SPOTIFY_STUDENT_VN", "SHOPEEFOOD_DANANG", "GRABFOOD_DANANG"],
+    "evidence_targets": [
+      {"id": "DANABUS_STUDENT", "official_url": "https://danangbus.vn/", "category": "transit"},
+      {"id": "SPOTIFY_STUDENT_VN", "official_url": "https://www.spotify.com/vn-vi/student/", "category": "student_digital_benefit"},
+      {"id": "SHOPEEFOOD_DANANG", "official_url": "https://shopeefood.vn/da-nang", "category": "food_discovery"},
+      {"id": "GRABFOOD_DANANG", "official_url": "https://food.grab.com/vn/vi/", "category": "food_discovery"}
+    ],
+    "staging_features": [
+      "client-side order-value calculator with clear simulation labels until partner terms are verified",
+      "three-service lunch comparison UI using user-entered values only, with no unverified fees, discounts, rankings, or provider claims",
+      "three-layer KTX order simulation using user-entered reductions and delivery values only",
+      "Spotify Student Vietnam staging card preserving SheerID, eligibility, and four-year conditions",
+      "consumer-facing Vietnamese copy cleanup"
+    ],
+    "staging_implementation_contract": {
+      "source_root": "03_SOURCE_OF_TRUTH/",
+      "required_sync_targets": ["deploy/", "deploy/public/"],
+      "calculate_dynamic_stack": "Accept user-entered basket value and user-entered discount inputs only; label all output as simulation until terms from a provider are independently verified.",
+      "lunch_comparator": "Compare only values entered by the user; do not derive or claim provider fees, bridge surcharges, discounts, or a cheapest-service ranking from unverified data.",
+      "consumer_copy": ["Ưu đãi hôm nay", "Bữa trưa tiết kiệm", "Lịch xem phim tuần này", "Đặc quyền sinh viên"],
+      "internal_terms_prohibited_on_public_surface": ["Bento Hub", "Đối soát 4 lớp", "Provenance Audit", "Fail-closed", "Quarantine Manifest"]
+    }
+  },
+  "j394_delivery_platform_decoupling": {
+    "automated_shopeefood_capture": "DISABLED_BY_POLICY",
+    "delivery_surface": "USER_DRIVEN_CALCULATOR_ONLY",
+    "formula": "user_entered_food_price + user_entered_delivery_fee - user_entered_voucher",
+    "prohibited": ["delivery-platform scraping", "CAPTCHA or WAF bypass", "provider fee or voucher defaults", "provider ranking or coverage claims"]
+  },
+  "evidence_contract": {
+    "required_per_target": [
+      "first-party final URL and capture timestamp",
+      "raw response stored on disk",
+      "response headers stored from the same capture session",
+      "screenshot from the same capture session",
+      "SHA-256 and exact file byte counts",
+      "direct term/price/eligibility quote with UTF-8 byte offsets",
+      "Da Nang applicability evidence where a local claim is proposed"
+    ],
+    "forbidden": [
+      "WAF or login bypass",
+      "invented prices, coupon codes, locations, fees, or affiliate terms",
+      "credential collection or storage",
+      "production deploy, alias mutation, affiliate activation, or commercial attribution"
+    ]
+  },
+  "release_gate": {
+    "staging_only": true,
+    "production_authorized": false,
+    "affiliate_enabled": false,
+    "requires_ceo_evidence_audit_before_publication": true
+  },
+  "affiliate_readiness": {
+    "status": "HOLD",
+    "permitted": ["local router review", "unit tests with inert example data", "disclosure-copy preparation"],
+    "prohibited": ["affiliate URLs", "tracking parameters", "provider attribution", "revenue claims", "production activation"]
+  }
+}

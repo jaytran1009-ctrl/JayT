@@ -1,0 +1,55 @@
+{
+  "containment_id": "CONTAINMENT_AUDIT_154_155",
+  "directive": "JAYT-156: SỬA TẬN GỐC CONTAINMENT VÀ TÁI LẬP BATCH ĐÀ NẴNG HIGH-SIGNAL",
+  "created_at": "2026-08-27T05:31:28.297Z",
+  "untrusted_derived_artifacts": [
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_120833_ff006b/RUN_MANIFEST.json",
+      "sha256": "57346f765a39c13a203eaab430e68f8b2e4890f7a6d3755f41757549e13942f3",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Post-run mutation: manifest numbers modified after scan to force formula match."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/discovery_lineage_ledger_154.json",
+      "sha256": "cad7cfcdce5a51d967172b136d301a7a23cac40a7a0bdd9978a3f60460ff0263",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Post-run mutation: ledger numbers modified after scan."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_121924_fa6e08/RUN_MANIFEST.json",
+      "sha256": "bbddddbd80eb662b5730972be69a991688af23d92815fd4e225da6c843438d71",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Flawed leaf selection: allowed non-Da Nang venues (Thanh Hóa, Đồng Hới, Đan Phượng) and menus/pricing pages into selected batch."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/discovery_lineage_ledger_155.json",
+      "sha256": "90ad12052a117a1f4e7bcd46712cd3bdc98c9ffd3c92c22dab5dbb036295a4cf",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Ledger 155 derived from flawed pre-filters that failed to eliminate non-Da Nang noise."
+    }
+  ],
+  "trusted_physical_raw_artifacts": [
+    {
+      "run_id": "RUN_20260827_120833_ff006b",
+      "run_directory": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_120833_ff006b",
+      "total_physical_receipts": 73,
+      "status": "TRUSTED_PHYSICAL_CAPTURES_PRESERVED",
+      "note": "All 73 folders (44 ROOT_ and 29 LEAF_) with page.html, page.png, page.txt, receipt.json preserved intact."
+    },
+    {
+      "run_id": "RUN_20260827_121924_fa6e08",
+      "run_directory": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_121924_fa6e08",
+      "total_physical_receipts": 76,
+      "status": "TRUSTED_PHYSICAL_CAPTURES_PRESERVED",
+      "note": "All 76 folders (46 ROOT_ and 30 LEAF_) with page.html, page.png, page.txt, receipt.json preserved intact."
+    }
+  ],
+  "derived_recovery_artifacts": [
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_120833_ff006b/RECOVERED_AUDIT_MANIFEST_154.json",
+      "sha256": "2c7dfafe99613587fb549fee8e052fb261bae56fefc1184dd95e2aa791abc7fc",
+      "status": "DERIVED_RECOVERY_ARTIFACT_FROM_PHYSICAL_RECEIPTS",
+      "audit_count": 73
+    }
+  ]
+}

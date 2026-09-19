@@ -1,0 +1,27 @@
+{
+  "verdict_id": "JAYT-274-CEO-ITEM-LEVEL-AUDIT-VERDICT",
+  "governing_order": "JAYT-274 — EXECUTIVE ITEM-BY-ITEM APPROVAL & CONTROLLED STAGING RELEASE",
+  "audit_scope": "8 JAYT-273 internal audit dossiers",
+  "decision": "NO_PUBLIC_APPROVAL_ISSUED__STAGING_RELEASE_NOT_AUTHORIZED",
+  "public_approved_count": 0,
+  "release_authorized": false,
+  "decision_basis": "A raw-body SHA-256 and HTTP 200 receipt establish capture integrity, but do not establish that the captured page is the current, specific source page for the proposed public card.",
+  "items": [
+    { "target_id": "BATCH03_HK_01", "decision": "HELD", "reason": "Captured page identifies the faculty portal; the library reference is only a footer link, not evidence for the proposed library page." },
+    { "target_id": "BATCH03_HK_02", "decision": "HELD", "reason": "Captured body is an Error Styles / 404 page." },
+    { "target_id": "BATCH03_HK_04", "decision": "HELD", "reason": "Captured source is a historical 2021 student-support news item and does not establish a current program matching the proposed public card." },
+    { "target_id": "BATCH03_HK_05", "decision": "HELD", "reason": "Captured body is the DAWACO home page and contains no corroborating source span for the proposed public drinking-water-station item." },
+    { "target_id": "BATCH03_AT_05", "decision": "HELD", "reason": "Captured body is a generic Da Nang city portal landing page, not a verified page for the proposed green-transport/bike-station item." },
+    { "target_id": "BATCH03_HC_07", "decision": "HELD", "reason": "Captured body is a generic Da Nang city portal landing page, not a verified Dragon Bridge schedule page." },
+    { "target_id": "BATCH03_DS_05", "decision": "HELD", "reason": "Captured body is a generic Department of Health portal landing page, not a verified 24/7 pharmacy directory page." },
+    { "target_id": "BATCH03_DS_07", "decision": "HELD", "reason": "Captured body is an Error Styles / 404 page." }
+  ],
+  "invariants": {
+    "deals_feed_mutated": false,
+    "public_registry_mutated": false,
+    "public_dom_mutated": false,
+    "affiliate_enabled": false,
+    "production_mutated": false
+  },
+  "next_allowed_action": "Prepare Batch 03B leaf-page replacement proposals with independently verified source identity; do not capture or publish until a separate CEO authorization specifies scope and controls."
+}

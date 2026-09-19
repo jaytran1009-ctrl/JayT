@@ -1,0 +1,81 @@
+{
+  "contract_id": "JAYT_CSS_COMPONENT_CONTRACT_BF_20260829",
+  "schema_version": "1.1.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BF)",
+  "timestamp": "2026-08-29T05:56:54.437Z",
+  "source_components": {
+    "source_js_file": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bf.js",
+    "stylesheet_file": "03_SOURCE_OF_TRUTH/styles.css",
+    "stylesheet_sha256": "6d681bba51e617a2a32afc9b14934a2a97e821ee86107a98547d80737a1c8672",
+    "stylesheet_size_bytes": 22188,
+    "base_release": "v3.422.4-staging.be",
+    "successor_release": "v3.422.5-staging.bf"
+  },
+  "information_architecture_refinement": {
+    "desktop_primary_destinations_count": 3,
+    "desktop_primary_destinations": [
+      "HOME (Hôm nay)",
+      "EXPLORE (Khám phá)",
+      "SAVED (Đã lưu)"
+    ],
+    "mobile_primary_destinations_count": 3,
+    "mobile_primary_destinations": [
+      "HOME (Hôm nay)",
+      "EXPLORE (Khám phá)",
+      "SAVED (Đã lưu)"
+    ],
+    "contextual_destinations": [
+      "BUY_DECISION (Mua có hời không?)",
+      "VOUCHERS (Voucher Hub)"
+    ],
+    "keyboard_accessibility": {
+      "escape_key_closes_modal": true,
+      "focus_visible_indicator": true,
+      "card_keyboard_activation": true
+    }
+  },
+  "three_customer_journeys": [
+    {
+      "id": "JOURNEY_1_FOOD",
+      "title": "Ăn gì hôm nay?",
+      "trigger": "Gateway Card 1 (.card-gateway-food)",
+      "destination": "EXPLORE View with activeCategory='food'",
+      "supported_states": [
+        "LOADING",
+        "FILTERED_RESULTS",
+        "DETAIL_MODAL",
+        "PROVENANCE_DISCLOSURE",
+        "SAVE_ITEM",
+        "EMPTY_FILTER"
+      ]
+    },
+    {
+      "id": "JOURNEY_2_PLACES",
+      "title": "Đi đâu sau giờ học/làm?",
+      "trigger": "Gateway Card 2 (.card-gateway-places)",
+      "destination": "EXPLORE View with activeCategory='entertainment'",
+      "supported_states": [
+        "LOADING",
+        "FILTERED_RESULTS",
+        "DETAIL_MODAL",
+        "PROVENANCE_DISCLOSURE",
+        "SAVE_ITEM",
+        "EMPTY_FILTER"
+      ]
+    },
+    {
+      "id": "JOURNEY_3_TOOLS_STUDENT",
+      "title": "Cần mua sắm & Tiện ích gì?",
+      "trigger": "Gateway Card 3 (.card-gateway-tools)",
+      "destination": "EXPLORE View with activeCategory='student'",
+      "supported_states": [
+        "LOADING",
+        "FILTERED_RESULTS",
+        "DETAIL_MODAL",
+        "PROVENANCE_DISCLOSURE",
+        "SAVE_ITEM",
+        "EMPTY_FILTER"
+      ]
+    }
+  ]
+}

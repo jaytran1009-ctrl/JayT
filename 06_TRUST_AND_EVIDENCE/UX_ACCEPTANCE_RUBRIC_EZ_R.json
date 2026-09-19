@@ -1,0 +1,45 @@
+{
+  "rubric_id": "UX_ACCEPTANCE_RUBRIC_EZ_R",
+  "version": "2.0.0-ez.r",
+  "governance_directive": "JAYT-245 Section EZ-R (Lines 4386-4410)",
+  "evaluation_scope": "AUTOMATED_ENGINEERING_AND_ACCESSIBILITY_INVARIANTS",
+  "user_research_status": "NOT_CONDUCTED_WITH_USERS_PENDING_AUTHORITY",
+  "evaluation_dimensions": [
+    {
+      "dimension": "Comprehension & Information Architecture",
+      "criteria": "Phân cấp thông tin rõ ràng giữa thí điểm T2, zero-state trung tính và công cụ tính toán; không gây hiểu nhầm về quyền lợi hay voucher.",
+      "verification_method": "AUTOMATED_DOM_STRUCTURE_ASSERTION",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "dimension": "Keyboard Navigation & Focus Order",
+      "criteria": "Toàn bộ nút điều hướng, link ngoài, form tính toán và modal có thể truy cập tuần tự qua phím Tab; phím Escape đóng modal; :focus-visible hiển thị rõ nét.",
+      "verification_method": "AUTOMATED_KEYBOARD_EVENT_AND_FOCUS_ASSERTION",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "dimension": "Screen Reader & Accessibility Labels",
+      "criteria": "Đầy đủ landmark roles (banner, main, contentinfo, dialog), aria-label, aria-labelledby, và aria-modal.",
+      "verification_method": "AUTOMATED_ACCESSIBILITY_TREE_AUDIT",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "dimension": "Multi-Viewport Layout Integrity",
+      "criteria": "Hiển thị hoàn hảo trên Desktop 1440x900, Tablet 768x1024, Mobile 390x844 không vỡ khung, tràn ngang hay che lấp nội dung.",
+      "verification_method": "AUTOMATED_PUPPETEER_VIEWPORT_AUDIT",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "dimension": "Color Contrast & Touch Targets",
+      "criteria": "Độ tương phản chữ/nền đạt chuẩn WCAG AAA/AA; kích thước mục bấm tối thiểu 44px chiều cao.",
+      "verification_method": "AUTOMATED_COMPUTED_STYLE_AUDIT",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "dimension": "Reduced Motion Support",
+      "criteria": "Tương thích truy vấn prefers-reduced-motion, không sử dụng hiệu ứng chuyển động gây chóng mặt.",
+      "verification_method": "AUTOMATED_CSS_MEDIA_QUERY_AUDIT",
+      "status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    }
+  ]
+}

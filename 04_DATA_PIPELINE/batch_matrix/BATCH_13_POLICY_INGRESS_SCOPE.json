@@ -1,0 +1,151 @@
+{
+  "scope_name": "BATCH_13_POLICY_INGRESS_SCOPE",
+  "version": "3.0",
+  "batch_id": "BATCH_13",
+  "scope": "STAGING_INTERNAL_AUDIT — COUNCIL_AUTHORIZED_POLICY_INGRESS_SCOPE",
+  "status": "COUNCIL_AUTHORIZED_FOR_INTERNAL_CAPTURE",
+  "council_approval_reference": "COUNCIL_WORK_ORDER_PART_2_AUTO_CHAINED",
+  "council_approved_at_utc": "2026-09-06T07:53:39.000Z",
+  "capture_authorized": true,
+  "public_approved": false,
+  "render_permitted": false,
+  "self_granted_capture_permissions": false,
+  "updated_at_utc": "2026-09-06T07:56:00.000Z",
+  "governance_rules": {
+    "zero_synthetic_urls": "Tất cả các URL đề xuất bắt buộc phải có link provenance đối soát từ DOM/HTML chính thức đã capture trên đĩa; nghiêm cấm tự suy đoán URL từ tên chương trình.",
+    "unverified_proposal_gate": "Toàn bộ đề xuất giữ trạng thái PROPOSAL_UNVERIFIED cho đến khi Hội đồng phê duyệt độc lập. Tuyệt đối không tự cấp quyền capture hoặc fetch mạng (capture_authorized: false).",
+    "strict_byte_fidelity": "Mỗi URL đề xuất phải được trích nguyên văn thẻ liên kết với span_start, span_length, href_start và parent_file_sha256 khớp 100% byte gốc.",
+    "no_predefined_policy_assertions": "Phạm vi điều khoản chỉ bao gồm các câu hỏi kiểm toán khách quan để trích xuất điều khoản thực tế có trong nguồn, không áp đặt kết quả định trước về giá, độ tuổi, món hay ngoại lệ.",
+    "anti_synthesis_rejections": "Các URL tự đoán từ tên chương trình không xuất hiện trong DOM bị loại bỏ dứt khoát với lý do cụ thể."
+  },
+  "candidates_count": 3,
+  "candidates": [
+    {
+      "candidate_id": "CAND_POLICY_CGV_MEMBERSHIP",
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "target_program": "CGV Membership (Quyền lợi Thành viên & U22)",
+      "target_url": "https://www.cgv.vn/default/cgv-membership",
+      "link_provenance": {
+        "parent_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/cgv_vinh_trung_plaza.raw.html",
+        "parent_file_sha256": "715c517c08381d1f0aeeaaf929d624118c8ddedbabe5713c7cdea087b4e6fc2e",
+        "href_value": "https://www.cgv.vn/default/cgv-membership",
+        "span_start": 27364,
+        "span_length": 84,
+        "href_attr_start": 27382,
+        "href_start": 27388,
+        "anchor_tag_raw": "<a class=\"level1\" href=\"https://www.cgv.vn/default/cgv-membership\">Quyền lợi</a>",
+        "dom_selector": "li.nav-4.parent > ul > li.nav-4-3.last > a.level1",
+        "menu_path": "Thành viên > Quyền lợi",
+        "link_label": "Quyền lợi"
+      },
+      "policy_scope_required": [
+        "audit_question_target_eligibility: Trích xuất định nghĩa và điều kiện đối tượng hội viên / độ tuổi áp dụng thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_price_structure: Trích xuất bảng giá vé 2D và các mức phụ thu định dạng chiếu/loại ghế thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_theater_applicability: Trích xuất danh mục cụm rạp áp dụng (đặc biệt tại Đà Nẵng: Vĩnh Trung, Vincom, MM Supercenter) thực tế có trong nguồn (nếu có).",
+        "audit_question_verification_procedure: Trích xuất quy trình và giấy tờ xác thực danh tính tại quầy hoặc online thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_timeframe_and_exclusions: Trích xuất khung giờ, ngày áp dụng và các ngoại lệ ngày Lễ/Tết hoặc suất chiếu đặc biệt thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_promotion_stacking: Trích xuất quy định kết hợp hoặc loại trừ với các chương trình ưu đãi khác thực tế có trong văn bản nguồn (nếu có)."
+      ],
+      "rejected_synthesized_urls": [
+        {
+          "url": "https://www.cgv.vn/default/u22",
+          "reason": "SYNTHESIZED_GUESS: Tự suy diễn từ tên chương trình U22; 0 lần xuất hiện trong toàn bộ raw DOM CGV trên đĩa."
+        },
+        {
+          "url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza/u22",
+          "reason": "SYNTHESIZED_GUESS: Tự ghép đường dẫn rạp với mã chương trình; 0 lần xuất hiện trong DOM."
+        }
+      ],
+      "status": "COUNCIL_AUTHORIZED_FOR_INTERNAL_CAPTURE",
+      "capture_authorized": true,
+      "public_approved": false,
+      "render_permitted": false
+    },
+    {
+      "candidate_id": "CAND_POLICY_GALAXY_U22",
+      "brand_id": "galaxy_cinema",
+      "brand_name": "Galaxy Cinema",
+      "target_program": "Galaxy Cinema U22",
+      "target_url": "https://www.galaxycine.vn/u22/",
+      "link_provenance": {
+        "parent_url": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/galaxy_da_nang.raw.html",
+        "parent_file_sha256": "8de892a4834a403c8361b375133d2c5306a9bfeee5be9c5cb8db3495c6dd348c",
+        "href_value": "/u22/",
+        "span_start": 39227,
+        "span_length": 158,
+        "href_attr_start": 39365,
+        "href_start": 39371,
+        "anchor_tag_raw": "<a class=\"py-7 flex text-sm justify-between items-center md:pr-0 pr-5 group capitalize hover:text-orange-500 transition-all duration-300\" href=\"/u22/\">U22</a>",
+        "dom_selector": "header nav a[href='/u22/']",
+        "menu_path": "Header Navigation > U22",
+        "link_label": "U22"
+      },
+      "policy_scope_required": [
+        "audit_question_target_eligibility: Trích xuất điều kiện đối tượng, độ tuổi hoặc tiêu chuẩn tài khoản Stars thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_price_structure: Trích xuất biểu giá vé 2D theo ngày trong tuần hoặc cuối tuần thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_theater_applicability: Trích xuất phạm vi rạp áp dụng (đặc biệt tại Galaxy Đà Nẵng) thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_timeframe_and_validity: Trích xuất thời hạn hiệu lực của chương trình và các ngoại lệ phòng chiếu/suất chiếu thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_concession_benefits: Trích xuất chính sách ưu đãi bắp nước kèm theo (nếu có) thực tế có trong văn bản nguồn.",
+        "audit_question_booking_channel: Trích xuất quy định kênh mua vé (tại quầy vs trực tuyến) thực tế có trong văn bản nguồn (nếu có)."
+      ],
+      "rejected_synthesized_urls": [
+        {
+          "url": "https://www.galaxycine.vn/khuyen-mai/gia-ve-u22/",
+          "reason": "SYNTHESIZED_GUESS: Tự ghép từ khóa danh mục khuyến mãi; 0 lần xuất hiện trong DOM."
+        },
+        {
+          "url": "https://www.galaxycine.vn/u22-gia-ve/",
+          "reason": "SYNTHESIZED_GUESS: Tự đoán định dạng slug; 0 lần xuất hiện trong DOM."
+        }
+      ],
+      "status": "COUNCIL_AUTHORIZED_FOR_INTERNAL_CAPTURE",
+      "capture_authorized": true,
+      "public_approved": false,
+      "render_permitted": false
+    },
+    {
+      "candidate_id": "CAND_POLICY_JOLLIBEE_MENU",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "target_program": "Jollibee Combo Bán Chạy / Thực đơn",
+      "target_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+      "link_provenance": {
+        "parent_url": "https://jollibee.com.vn/cua-hang",
+        "parent_file": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260906_125250/jollibee.raw.html",
+        "parent_file_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+        "href_value": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+        "span_start": 146396,
+        "span_length": 216,
+        "href_attr_start": 146399,
+        "href_start": 146405,
+        "anchor_tag_raw": "<a href=\"https://jollibee.com.vn/mon-moi-mon-ngon.html\"  class=\"level-top\" ><img src='https://jollibee.com.vn//media/catalog/category/web-12_1_1.png' class='thumbnail' width='100px'><span>Combo Bán Chạy</span></a>",
+        "dom_selector": "li.level0[data-item-nav='item-menu'] ul.menu-list > li.level0.nav-1 > a",
+        "menu_path": "Thực đơn > Combo Bán Chạy",
+        "link_label": "Combo Bán Chạy"
+      },
+      "policy_scope_required": [
+        "audit_question_menu_items_and_prices: Trích xuất danh mục sản phẩm, thành phần món và mức giá niêm yết chính thức thực tế có trong văn bản nguồn.",
+        "audit_question_store_applicability: Trích xuất phạm vi cửa hàng áp dụng tại khu vực TP. Đà Nẵng thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_service_channels: Trích xuất điều kiện phục vụ (ăn tại chỗ, mua mang về, giao hàng tận nơi) thực tế có trong văn bản nguồn (nếu có).",
+        "audit_question_timeframe_and_exclusions: Trích xuất thời gian áp dụng và các giới hạn hoặc ngoại lệ thực tế có trong văn bản nguồn (nếu có)."
+      ],
+      "rejected_synthesized_urls": [
+        {
+          "url": "https://jollibee.com.vn/thuc-don/combo-tiet-kiem",
+          "reason": "SYNTHESIZED_GUESS: Tự đoán slug 'combo-tiet-kiem'; 0 lần xuất hiện trong DOM."
+        },
+        {
+          "url": "https://jollibee.com.vn/combo-khuyen-mai",
+          "reason": "SYNTHESIZED_GUESS: Tự ghép đường dẫn khuyến mãi; 0 lần xuất hiện trong DOM."
+        }
+      ],
+      "status": "COUNCIL_AUTHORIZED_FOR_INTERNAL_CAPTURE",
+      "capture_authorized": true,
+      "public_approved": false,
+      "render_permitted": false
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "work_order_id": "WORK_ORDER_W7_POS_AND_DEEP_LINK_EXTRACTOR",
+  "issued_at": "2026-09-13T09:30:00+07:00",
+  "execution_scope": "STAGING_PREVIEW_ONLY",
+  "production_baseline": "v3.455.0-j405",
+  "tasks": {
+    "W7_T1_SAFE_LINK_INSPECTOR": {
+      "status": "AUTHORIZED_FOR_STAGING",
+      "behavior": [
+        "Accept only allowlisted public Shopee and ShopeeFood URLs",
+        "Extract shop_id and item_id locally when present in the pasted URL",
+        "Do not resolve short links server-side, scrape hidden vouchers, call private APIs, or bypass access controls",
+        "Calculate payable amount only from values entered by the user"
+      ]
+    },
+    "W7_T2_ON_THE_SPOT_OS": {
+      "status": "PRESERVE_AND_VERIFY",
+      "components": ["counter checklist", "pickup comparator", "lunch comparator"]
+    },
+    "W7_T3_SPLIT_BILL": {
+      "status": "PRESERVE_AND_VERIFY",
+      "components": ["integer VND allocation", "local QR", "Zalo Pass"]
+    },
+    "W7_T4_AFFILIATE_SANDBOX": {
+      "status": "NON_DISPATCHING_SIMULATION_ONLY",
+      "affiliate_enabled": false,
+      "production_authorized": false,
+      "requirements_before_activation": [
+        "written partner authorization",
+        "provider-specific allowlist",
+        "disclosure review",
+        "dual-key production approval"
+      ]
+    }
+  },
+  "invariants": {
+    "zero_pii": true,
+    "zero_hidden_tracking": true,
+    "zero_fabricated_vouchers": true,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false
+  }
+}

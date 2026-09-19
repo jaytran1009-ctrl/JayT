@@ -1,0 +1,43 @@
+{
+  "department_code": "OPERATIONS",
+  "department_name": "Phòng Quản Trị Vận Hành & Hạ Tầng (Operations & Release Vault)",
+  "role_responsible": "Head of Infrastructure",
+  "test_cases": [
+    {
+      "test_case_id": "OPS-01",
+      "priority": "P0",
+      "target_user_perspective": "Hệ thống phát hành bản build niêm phong",
+      "objective": "Xác thực Content-Addressed Sealed Build từ chối mọi thao tác ghi đè vật lý (EPERM Write Rejection) và bảo vệ thuộc tính Read-Only",
+      "actions_step_by_step": [
+        "Tạo sealed build qua backup.ps1",
+        "Thử nghiệm sửa đổi nội dung tệp đã seal bằng fs.appendFile"
+      ],
+      "expected_outcome": "Hệ điều hành Windows từ chối ghi (mã lỗi EPERM / EACCES), đảm bảo tính bất biến tuyệt đối",
+      "verification_type": "AUTOMATED_SEALED_IMMUTABILITY_AUDIT"
+    },
+    {
+      "test_case_id": "OPS-02",
+      "priority": "P0",
+      "target_user_perspective": "Hạ tầng gặp sự cố cần quay lui khẩn cấp",
+      "objective": "Xác thực Pure Pointer Atomic Rollback hoàn tất trong RTO < 5.0 giây mà không cần copy tệp (Zero Copy-Item)",
+      "actions_step_by_step": [
+        "Kích hoạt rollback.ps1",
+        "Đo thời gian chuyển con trỏ JSON và xác thực tính toàn vẹn SHA-256"
+      ],
+      "expected_outcome": "Thời gian RTO đo đạc thực tế đạt ~3.0 giây, active pointer chuyển đổi nguyên tử ngay lập tức",
+      "verification_type": "AUTOMATED_ROLLBACK_RTO_BENCHMARK"
+    },
+    {
+      "test_case_id": "OPS-03",
+      "priority": "P0",
+      "target_user_perspective": "Giám sát trạng thái hoạt động của hệ thống",
+      "objective": "Xác thực endpoint /readyz kiểm tra toàn vẹn cây băm Merkle Tree và trạng thái quản trị secret",
+      "actions_step_by_step": [
+        "Gọi GET /readyz trên máy chủ Staging",
+        "Kiểm tra trường active_build_id và secret_governed"
+      ],
+      "expected_outcome": "Trả về 200 READY, xác nhận mã hash khớp 100% với BUILD_MANIFEST.json",
+      "verification_type": "AUTOMATED_READINESS_PROBE"
+    }
+  ]
+}

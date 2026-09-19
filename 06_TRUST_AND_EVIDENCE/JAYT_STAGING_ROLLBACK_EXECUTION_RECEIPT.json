@@ -1,0 +1,37 @@
+{
+  "receipt_id": "JAYT_STAGING_ROLLBACK_EXECUTION_RECEIPT",
+  "governing_mandate": "CEO Work Order (JAYT-274 / Pre-Mục DA Safety Gate)",
+  "execution_pid": 26568,
+  "started_at_utc": "2026-09-03T07:55:38.441Z",
+  "completed_at_utc": "2026-09-03T07:55:38.451Z",
+  "actions_executed": [
+    "RESET_DEALS_FEED_TO_EMPTY_ARRAY",
+    "RESTORE_BATCH_03_LEDGER_TO_STATIC_BACKLOG",
+    "ENFORCE_ZERO_COMMERCIAL_SAFETY_INVARIANTS",
+    "BLOCK_PRODUCTION_DEPLOYMENT"
+  ],
+  "deals_feed_audit": {
+    "file_path": "05_DEAL_AND_AFFILIATE/deals_feed.json",
+    "content_verified": "[]",
+    "item_count": 0,
+    "sha256_after": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "batch_03_ledger_audit": {
+    "ledger_path": "06_TRUST_AND_EVIDENCE/JAYT_BATCH_03_READINESS_LEDGER.json",
+    "ledger_status": "STATIC_BACKLOG_PROPOSALS_ONLY__PRE_UNFREEZE",
+    "total_proposals": 28,
+    "candidates_admitted": 0,
+    "render_eligible_count": 0,
+    "public_approved_count": 1,
+    "sha256_after": "a4cdd41bbade1fe9230996613d4067cfaa92976ed24e194bb563889beef7e60e",
+    "matches_expected_canonical": true
+  },
+  "production_safety_attestation": {
+    "production_deployed": false,
+    "vercel_prod_called": false,
+    "production_version_retained": "v3.419.0",
+    "production_p0_eq_status": "OPEN",
+    "affiliate_router_status": "LOCKED_HOLD"
+  },
+  "verdict": "STAGING_ROLLBACK_COMPLETED__ZERO_PRODUCTION_MUTATION"
+}

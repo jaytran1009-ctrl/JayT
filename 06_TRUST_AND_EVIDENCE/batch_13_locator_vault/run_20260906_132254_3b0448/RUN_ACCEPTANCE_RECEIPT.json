@@ -1,0 +1,129 @@
+{
+  "receipt_name": "RUN_ACCEPTANCE_RECEIPT",
+  "batch_id": "BATCH_13",
+  "run_mode": "OFFLINE_REPLAY",
+  "timestamp_utc": "2026-09-06T06:22:54.974Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_132254_3b0448",
+  "provenance_hashes": {
+    "runner_script": {
+      "path": "04_DATA_PIPELINE/harvest_danang_locations.js",
+      "sha256": "40ab819a85e8bda366be4c3151642c78be1956859b0e6b08eb9a2846dea0bd51"
+    },
+    "harvest_matrix": {
+      "path": "04_DATA_PIPELINE/batch_matrix/LOCATOR_HARVEST_MATRIX.json",
+      "sha256": "847458784d6060a4153a226f2c6cfc4157477e7c9f3c10e9df8e230ae0a03727"
+    },
+    "replay_sources": {
+      "phuclong_page1.raw.json": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "phuclong_page2.raw.json": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+      "jollibee.raw.html": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244",
+      "phi_long.raw.html": "62284fd74922e459b48cb157a59de9d46cfc0d8c772db1b371aa3970da1edd75",
+      "lotte_cinema.raw.html": "7b4b8607412d9897ab90d07c04c4f8a7e6f1beb4e487b3fb0a129d73f37b0fe5",
+      "metiz_cinema.raw.html": "db04e82f1ed8dce8db4204399529dc356c14f8139a6cdc1adadb7c6dd358d8ac"
+    }
+  },
+  "traceable_locations_count": 18,
+  "brand_completeness_matrix": {
+    "phuclong": {
+      "brand_id": "phuclong",
+      "status": "COMPLETE_PAGINATION",
+      "completeness": "COMPLETE",
+      "total_pages_detected": 2,
+      "pages_harvested": 2,
+      "max_pages_limit": 2,
+      "missing_pages": [],
+      "pagination_warning": null,
+      "locations_count": 7
+    },
+    "jollibee": {
+      "brand_id": "jollibee",
+      "status": "HARVESTED_SUCCESS",
+      "completeness": "COMPLETE_SINGLE_SOURCE",
+      "locations_count": 9
+    },
+    "phi_long": {
+      "brand_id": "phi_long",
+      "status": "HARVESTED_SUCCESS",
+      "completeness": "COMPLETE_SINGLE_SOURCE",
+      "locations_count": 2
+    },
+    "lotte_cinema": {
+      "brand_id": "lotte_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "completeness": "REJECTED",
+      "locations_count": 0
+    },
+    "metiz_cinema": {
+      "brand_id": "metiz_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "completeness": "REJECTED",
+      "locations_count": 0
+    },
+    "dien_may_xanh": {
+      "brand_id": "dien_may_xanh",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "completeness": "UNRESOLVED",
+      "locations_count": 0
+    },
+    "cgv_cinemas": {
+      "brand_id": "cgv_cinemas",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "completeness": "UNRESOLVED",
+      "locations_count": 0
+    },
+    "galaxy_cinema": {
+      "brand_id": "galaxy_cinema",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "completeness": "UNRESOLVED",
+      "locations_count": 0
+    },
+    "highlands_coffee": {
+      "brand_id": "highlands_coffee",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "completeness": "UNRESOLVED",
+      "locations_count": 0
+    },
+    "lotteria": {
+      "brand_id": "lotteria",
+      "status": "SKIPPED__URL_UNRESOLVED",
+      "completeness": "UNRESOLVED",
+      "locations_count": 0
+    }
+  },
+  "staging_guard_receipt": {
+    "receipt_name": "STAGING_B13_LOCATOR_RECEIPT",
+    "generated_at_utc": "2026-09-06T06:22:56.065Z",
+    "batch_id": "BATCH_13",
+    "scope": "STAGING_ONLY — KHÔNG PHÊ DUYỆT PRODUCTION",
+    "run_reference_dir": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_132254_3b0448",
+    "run_mode": "OFFLINE_REPLAY",
+    "harvest_summary": {
+      "total_traceable_locations": 18,
+      "brands_with_traceable_locations": 3,
+      "anti_synthesis_audit": "Zero hardcoded addresses; rejected Metiz & Lotte Cinema where facility address is absent from raw source."
+    },
+    "staging_guard_assertions": {
+      "mounted_card_count": 3,
+      "mounted_ids": [
+        "B12_13",
+        "B12_15",
+        "B12_05"
+      ],
+      "expected_ids": [
+        "B12_13",
+        "B12_15",
+        "B12_05"
+      ],
+      "has_exact_count": true,
+      "has_all_expected": true,
+      "has_no_extras": true,
+      "zero_duplicates": true,
+      "zero_unapproved_deals_published": true,
+      "status": "PASS",
+      "all_passed": true
+    },
+    "all_passed": true
+  },
+  "anti_synthesis_enforced": true,
+  "all_passed": true
+}

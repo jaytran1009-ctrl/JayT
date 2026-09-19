@@ -1,0 +1,130 @@
+{
+  "ledger_id": "JAYT_WALLET_LEDGER_ES_20260830",
+  "version": "v3.473.0-staging.es",
+  "generated_at_utc": "2026-08-30T13:54:43.928Z",
+  "governing_directive": "JAYT-245 Section ES",
+  "wallet_three_lanes": {
+    "lane_a_public_verified": {
+      "lane_id": "LANE_A_PUBLIC_VERIFIED",
+      "title": "Dùng ngay — Public Verified",
+      "active_count": 0,
+      "state": "FAIL_CLOSED_ZERO",
+      "required_5_fields": [
+        "offer_description",
+        "terms_conditions",
+        "validity_expiry",
+        "danang_locality_scope",
+        "net_out_of_pocket_price"
+      ]
+    },
+    "lane_b_app_checkout_personalized": {
+      "lane_id": "LANE_B_APP_CHECKOUT_PERSONALIZED",
+      "title": "Kiểm tra trong app / giỏ hàng",
+      "active_count": 10,
+      "state": "INSTRUCTION_ONLY_NO_FAKE_CODES",
+      "policy": "Hướng dẫn tự kiểm tra trong app chính thức tại bước checkout; cấm hiển thị mã giả, số tiền tự bịa hay countdown.",
+      "records": [
+        {
+          "merchant": "ShopeeFood Đà Nẵng",
+          "category": "Ẩm thực giao tận nơi",
+          "official_url": "https://shopeefood.vn",
+          "scope": "TP. Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "GrabFood Đà Nẵng",
+          "category": "Ẩm thực giao tận nơi",
+          "official_url": "https://food.grab.com",
+          "scope": "TP. Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Domino's Pizza",
+          "category": "Chuỗi Pizza",
+          "official_url": "https://dominos.vn",
+          "scope": "Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Lotteria Vietnam",
+          "category": "Thức ăn nhanh",
+          "official_url": "https://www.lotteria.vn",
+          "scope": "Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "CGV Cinemas",
+          "category": "Rạp chiếu phim",
+          "official_url": "https://www.cgv.vn",
+          "scope": "CGV Vĩnh Trung & Vincom Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Galaxy Cinema",
+          "category": "Rạp chiếu phim",
+          "official_url": "https://www.galaxycine.vn",
+          "scope": "Coopmart Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Metiz Cinema",
+          "category": "Rạp chiếu phim",
+          "official_url": "https://metiz.vn",
+          "scope": "Helio Center Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Highlands Coffee",
+          "category": "Cà phê & Không gian học tập",
+          "official_url": "https://www.highlandscoffee.com.vn",
+          "scope": "Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Fahasa Đà Nẵng",
+          "category": "Nhà sách & Văn phòng phẩm",
+          "official_url": "https://www.fahasa.com",
+          "scope": "Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        },
+        {
+          "merchant": "Tiki Books",
+          "category": "Sách & Đồ dùng học tập",
+          "official_url": "https://tiki.vn",
+          "scope": "Toàn quốc / Đà Nẵng",
+          "status": "ACCOUNT_DEPENDENT"
+        }
+      ]
+    },
+    "lane_c_radar_monitoring": {
+      "lane_id": "LANE_C_RADAR_MONITORING",
+      "title": "Radar theo dõi",
+      "active_count": 3,
+      "state": "MONITORING_NO_CLAIMS",
+      "policy": "Chương trình công cộng / học đường đang theo dõi cập nhật chính sách.",
+      "records": [
+        {
+          "brand": "DanaBus Đà Nẵng",
+          "category": "Xe buýt trợ giá đô thị",
+          "official_url": "https://danangbus.vn",
+          "scope": "Mạng lưới buýt trợ giá TP. Đà Nẵng",
+          "status": "RADAR_MONITORING"
+        },
+        {
+          "brand": "TNGo Đà Nẵng",
+          "category": "Xe đạp công cộng",
+          "official_url": "https://tngo.vn",
+          "scope": "TP. Đà Nẵng",
+          "status": "RADAR_MONITORING"
+        },
+        {
+          "brand": "GitHub Education",
+          "category": "Chính sách học đường",
+          "official_url": "https://education.github.com/pack",
+          "scope": "Học sinh, sinh viên Đà Nẵng",
+          "status": "RADAR_MONITORING"
+        }
+      ]
+    }
+  }
+}

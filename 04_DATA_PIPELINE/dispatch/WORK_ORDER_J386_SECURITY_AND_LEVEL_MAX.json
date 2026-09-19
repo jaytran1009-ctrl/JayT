@@ -1,0 +1,90 @@
+{
+  "id": "WORK_ORDER_J386_SECURITY_AND_LEVEL_MAX",
+  "authority": "User-supplied JAYT-386 directive",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "executor": "Antigravity",
+  "reviewer": "Codex; Gemini performs actual independent review",
+  "issued_at_utc": "2026-09-11T01:48:26.843Z",
+  "deadline_local": "2026-09-11T22:00:00+07:00",
+  "authorization": {
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true,
+    "scope": "Implement, verify and deploy J386 to the named project. Affiliate activation authorized per provider after real authentication and attributed-link validation. No additional Chairman approval needed within this scope."
+  },
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_remote_previews": false
+  },
+  "baseline": {
+    "last_promoted_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "version": "v3.440.0-j385-m1",
+    "verification": "Re-resolve alias before mutation; previous HTTP follow-up timed out.",
+    "rejected_m2_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg"
+  },
+  "tasks": [
+    {
+      "id": "SECURITY",
+      "due": "Within 2 hours of actual ACK",
+      "requirements": [
+        "Remove arbitrary URL probing. Accept only strict JSON {itemId:string}, reject url/unknown fields and unknown IDs before any outbound request.",
+        "Resolve itemId against a server-owned audited catalogue. HTTPS only, exact allowed hostnames and port 443, no credentials. Validate all DNS A/AAAA results and pin the validated public address to the connection to prevent DNS rebinding. Deny private, loopback, link-local, reserved and IPv4-mapped private IPv6 destinations.",
+        "Disable redirects, or revalidate each bounded hop with identical host/DNS/IP controls. A redirect is not evidence of SKU availability.",
+        "Public readers receive stored status only; authenticated worker performs outbound requests. Secrets stay server-side; rate limits and bounded concurrency, time/body size/cache limits apply. Sanitized errors only.",
+        "Implement durable scheduler/shared observations for a 60s target if infrastructure exists. Otherwise label actual freshness, stale/UNKNOWN explicitly and do not assert a 60s guarantee. Root HTTP200 is not stock evidence.",
+        "Test rejection paths with mocked DNS/transport: arbitrary URL, unknown ID, internal IPv4/IPv6, mixed DNS, rebinding, redirects, timeout, 403/429, stale data. Assert blocked input produces zero outbound requests.",
+        "Check rejected M2 deployment URL exposure independently: removing canonical alias does not isolate an immutable deployment URL. Inventory exact aliases/access; protect or retire only that vulnerable deployment after preserving forensic artifacts. Preserve M1 rollback."
+      ]
+    },
+    {
+      "id": "PRODUCT_MEDIA_AND_AFFILIATE",
+      "requirements": [
+        "Acquire 30 real product photographs mapped to exact product/variant from official merchant sources with usable rights. Record source, rights basis, local asset path, SHA256, dimensions and alt text.",
+        "No empty gray cards, unrelated photos, error screenshots or illustration falsely labeled product photography. An item awaiting real media must be reported as pending; publish ready items without blocking unrelated modules.",
+        "Validate actual destination SKU, variant, merchant Mall status, observed price/time and delivery terms using raw artifacts. Existing M2 JSON labels alone are not evidence.",
+        "Show 'ĐÁY 30 NGÀY - RẺ HƠN XX%' only with sufficient authentic dated coverage and an explicit comparable reference price. Otherwise show truthful observed price/date; never synthesize history.",
+        "Activate provider-specific affiliate links when JayT credentials and attribution pass actual provider tests. Record redacted receipts. Unready providers retain useful official outbound links with accurate disclosure. Clicks are not revenue."
+      ]
+    },
+    {
+      "id": "CAMPUS_AND_COMPARATOR",
+      "requirements": [
+        "Dock immediately below Hero: Bách Khoa / Sư Phạm, Kinh Tế DUE, Duy Tân / Hải Châu, Sơn Trà.",
+        "Filter food <=35000 VND and <=1000m from documented campus anchors using verified branch coordinates. Label straight-line distance as such; do not imply walking-route distance. Missing coordinates remain unverified.",
+        "Render 3 comparable columns ShopeeFood, GrabFood, Xanh SM with synchronized accessible slider and integer VND totals, discounts/caps/delivery inputs. Label estimates/user-entered quotations when live prices unavailable.",
+        "Measure input-to-render p50/p95/max on declared device; target <30ms. Include boundary, empty-state and keyboard tests."
+      ]
+    },
+    {
+      "id": "ZALO_PASS",
+      "requirements": [
+        "Add 'Lập Kèo Rủ Bạn (Zalo Pass)' to every eligible F&B/cinema card.",
+        "Generate local Canvas PNG with offer identity, source price, participant count and sum-preserving integer VND allocation. Require or reuse an explicit participant count; no invented per-person price.",
+        "Use same-origin/CORS-safe assets, test decoded PNG content and download/share fallback. Native share only on user gesture; never automatically message contacts. No PII/GPS in analytics or URLs."
+      ]
+    }
+  ],
+  "release_gate": [
+    "Security tests pass and vulnerable old deployment access is addressed with recorded evidence.",
+    "Verify 1440/768/390: image decode and correct SKU association, no blank cards/overflow/runtime errors; campus/comparator/PNG interactions.",
+    "Bind candidate hashes to live assets; HTTP200 / /registry.json /deals_feed.json; safe API rejects arbitrary URL without outbound requests.",
+    "Record actual Gemini review against deployment/hash; never generate a proxy Gemini PASS."
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_386_SECURITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_386_LIVE_RECEIPT.json",
+    "06_TRUST_AND_EVIDENCE/j386/product_asset_and_price_mapping.json",
+    "06_TRUST_AND_EVIDENCE/j386/provider_validation_receipt.json",
+    "06_TRUST_AND_EVIDENCE/j386/vulnerable_deployment_containment.json",
+    "08_RELEASE_VAULT/JAYT_386_RELEASE_RECEIPT.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_386_GEMINI_REVIEW_PACKET.md"
+  ],
+  "reporting": {
+    "ack": "Record actual start/ACK. ISSUED is not proof of delivery or execution.",
+    "deadline": "Report actual completion time or missed deadline; never backdate.",
+    "completion": "Report ready product count and remaining evidence/infrastructure dependencies; continue independent UI work.",
+    "rollback": "Verify M1 recovery target before release; restore on critical regression and verify HTTP. Preserve sealed evidence."
+  }
+}

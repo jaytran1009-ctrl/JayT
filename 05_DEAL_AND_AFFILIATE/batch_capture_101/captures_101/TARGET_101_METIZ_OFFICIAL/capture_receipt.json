@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:10:03.428Z",
+  "target_id": "TARGET_101_METIZ_OFFICIAL",
+  "venue_name": "Metiz Cinema Đà Nẵng",
+  "source_url": "https://metiz.vn/",
+  "district": "UNSPECIFIED",
+  "sector": "CINEMA",
+  "http_response": {
+    "status": 200,
+    "url": "https://metiz.vn/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.html",
+      "size_bytes": 136295,
+      "sha256": "baf2a6f419c547dbfcd2cc3fa86f657b8252fa7f797fe130f1cf0f467fa79e9a"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.txt",
+      "size_bytes": 2007,
+      "sha256": "bb84fefcd9b9301bd3d05fa555500ca062f69814bfca27c9ca61eeea16bf8724"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.png",
+      "size_bytes": 969121,
+      "sha256": "5c3674bc0f4bd03b221b1d65bdb9dfddad64c2d0634e682c76c33ed40df8289e"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

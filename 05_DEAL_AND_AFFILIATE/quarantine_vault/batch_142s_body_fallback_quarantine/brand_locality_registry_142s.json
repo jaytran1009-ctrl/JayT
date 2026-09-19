@@ -1,0 +1,657 @@
+{
+  "registry_id": "BRAND_LOCALITY_REGISTRY_142S",
+  "directive": "JAYT-142S: SEMANTIC-ROOT RECOVERY & RECEIPT-TRUST REBUILD",
+  "generated_at": "2026-08-26T18:53:48.001Z",
+  "total_brands_audited": 15,
+  "locality_distribution": {
+    "LOCALITY_VERIFIED_DA_NANG": 1,
+    "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG": 6,
+    "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION": 8
+  },
+  "receipt_trust_audit": {
+    "clean_physical_receipts": 0,
+    "inherited_metadata_discarded": 15
+  },
+  "brands": [
+    {
+      "brand_id": "BRAND_CGV",
+      "locator_url": "https://www.cgv.vn/default/cinox/site/",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_CGV_LOCATOR_142",
+        "requested_url": "https://www.cgv.vn/default/cinox/site/",
+        "final_url": "https://www.cgv.vn/default/cinox/site/",
+        "redirect_chain": [
+          "https://www.cgv.vn/default/cinox/site/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:04.553Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "0494ce1e5bda5bae0d37d9cc9a8d603ee1329ac8d802e2093027105ab33665fd",
+          "text_sha256": "14162bc86bbfc69e8513f8235209f40f4645944e34dc5c05e5e5e43ecd947a08",
+          "screenshot_sha256": "1eedf7a8b70f036d581c809d64de9613db3269350fb7cdbfc476b79224597a3a"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_DANABUS",
+      "locator_url": "https://danangbus.vn/",
+      "locality_status": "LOCALITY_VERIFIED_DA_NANG",
+      "verdict_reason": "Verified 34 distinct address units in DOM for Da Nang branches.",
+      "distinct_address_units_count": 34,
+      "address_units": [
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_s07",
+          "node_outer_html_sha256": "8b975598f2459a5176e5a29092cb43eda3c3ba90b9f8455fd134f1c0168af396",
+          "address_text": "Số điện thoại liên hệ Hỗ trợ tư vấn 6h30 - 18h30 tất cả các ngày! 02363711468 Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl",
+          "node_outer_html_sha256": "89f888f260af43b3df98e859603be3ca590c302a2c43ffe1c971c785dc3f80b5",
+          "address_text": "Số điện thoại liên hệ Hỗ trợ tư vấn 6h30 - 18h30 tất cả các ngày! 02363711468 Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_Widget887_Widget_WidgetContentBlock",
+          "node_outer_html_sha256": "c335c2f9d4a94f6f65b4f66599eb8d4e690c5cc2d1b558fbdd2593a434a195f9",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config",
+          "node_outer_html_sha256": "ed9423b6d028a1871b9a64ea98066d8e50cff9d3b37911fdb5afec6c97c157b7",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main",
+          "node_outer_html_sha256": "44c6f6431509d6db3c85182249732584ccde2609bab3f3f3e28b08f887bee9e7",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set",
+          "node_outer_html_sha256": "fd7a67715d0fc093a049c1f45d88bf46b8fb31f6af59039dbe4f3a04411d1424",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box",
+          "node_outer_html_sha256": "0d870346b86e85525340022d0186c64a9c201a79270a3afa4be66c61537ac1dc",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner",
+          "node_outer_html_sha256": "595422261c6c5d02f63eceaa7be2fc7247d9cc3f52a7022a4aa231e9a68d7c7b",
+          "address_text": "Số điện thoại liên hệ right Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_Widget887_Widget_WidgetBodyPanel",
+          "node_outer_html_sha256": "7f2934fcfc02e5f2668f29b5c8299c38c7cfdec6019c8b9a0c97ba320a182f72",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent",
+          "node_outer_html_sha256": "359afa48da2c90008ac923321e3a1cf243d04c73960c2bc81d105842f8983a1c",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent > div.frrow",
+          "node_outer_html_sha256": "498a04c359d2b5e4d50e1f514b97cafd10143f5163990edc206f77bf27fd3419",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent > div.frrow > div._template_phone_right",
+          "node_outer_html_sha256": "bcf5a03ff6bb2a99b5bad4f013ed5df8d3937f1908e3c7a370ffbab0cd3b42ce",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent > div.frrow > div._template_phone_right > div.wpc-style-page",
+          "node_outer_html_sha256": "a09fbb63ce560b18651467421c8c526ecea5802cdf32970c2216339a1484f352",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent > div.frrow > div._template_phone_right > div.wpc-style-page > div.wrappers",
+          "node_outer_html_sha256": "012d7a00cbb0b374e8dfbad0058f2f49163c1b378537c2cdeed08f40804cc959",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "p",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navbelowbottom:nth-of-type(7) > div.nblm-cl > div:nth-of-type(2) > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div.frcontent > div.frrow > div._template_phone_right > div.wpc-style-page > div.wrappers > p:nth-of-type(1)",
+          "node_outer_html_sha256": "c203cf6df219965356477d957dc2b0191cd0d289c187fe1725b38a6f26610206",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_s08",
+          "node_outer_html_sha256": "78f4cd09cda30121955f4e418dbfafc0d63b8c9d847db4d806766e2973e52760",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl",
+          "node_outer_html_sha256": "6031c4dfd89676fed694b57b483a22ddb8cb8550f6ff3c6b6884f7c9f31f9b19",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_Widget818_Widget_WidgetContentBlock",
+          "node_outer_html_sha256": "c9164807d9d5c550c73bf9bbad3266d86ea0496eda8919ef0047c0ba8b9a9f01",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config",
+          "node_outer_html_sha256": "a32eefc3af2e6383a0036a55cee6434e2b780fba2129c24d9bc1c9cf7804acde",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main",
+          "node_outer_html_sha256": "90d340acc2e1173f7401485bdd885e3cf00c55400a0380906de13e1e259df17d",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set",
+          "node_outer_html_sha256": "a77a52aae5903ce6edd6ed7eb4dcd9fffdbb24c320c29b7b4a7128b28312f743",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box",
+          "node_outer_html_sha256": "e84fd3cbc8b55d167671103731440ea4b0b7ec167527779dcd0726f128295851",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner",
+          "node_outer_html_sha256": "d35d60abe7165aa9c9369c5c68354811dc4a2845c6133618dd75d314f9b4eeae",
+          "address_text": "chân trang Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_Widget818_Widget_WidgetBodyPanel",
+          "node_outer_html_sha256": "33277f0145a66c0e4baa6057e2566ef1a8414aae154359efbcc4d3fcee19dc2f",
+          "address_text": "Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#footer",
+          "node_outer_html_sha256": "c2f7d67ead57f73825e74439ac435f89c8dc69cb05dc4469d8480544b2c51e52",
+          "address_text": "Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "#ctl00_Widget818_Widget_ctl00_PanelFooter",
+          "node_outer_html_sha256": "15a2deddf5fc2c5626044fa1c22d3efd2067ce48dcf47dbaa835ed4cf1eb355c",
+          "address_text": "Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent",
+          "node_outer_html_sha256": "49107bd366697cfc1d0f8041f09995897cceee08f8254d3b22be11a24f388643",
+          "address_text": "Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow",
+          "node_outer_html_sha256": "86915c2d396d8fe31087f1e714e7c5968a0b1bfde4b7a56ae90df2958de1c74c",
+          "address_text": "Welcome! TRUNG TÂM ĐIỀU HÀNH GIAO THÔNG THÔNG MINH ĐÀ NẴNG Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(2)",
+          "node_outer_html_sha256": "683ef68234948a14bb0805d34145999b4210419cd501d32e05bae21f646f5a32",
+          "address_text": "Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(2) > div._footer_item",
+          "node_outer_html_sha256": "fe3de257c49e8a60520c9846fa8ee11cb41016fe8c1cf8f0858c70cf36a635e2",
+          "address_text": "Liên Hệ Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(2) > div._footer_item > div._footer_content",
+          "node_outer_html_sha256": "2dba0cbc9bc34aa7b4c6c5bb467539c84354eadeca867df6e628ad5b35ee239a",
+          "address_text": "Khu C3, 493 Trần Cao Vân, Q. Thanh Khê, Tp. Đà Nẵng 0236 3711 468 datramac123@gmail.com"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(3)",
+          "node_outer_html_sha256": "e3d119cb1d8fc1d70af76ddf0c38f4f8143dc2f6a1a6aacc5bbca456980e85c6",
+          "address_text": "Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(3) > div._footer_item",
+          "node_outer_html_sha256": "2e6aca6511dbd5e5febfd0943928cf6769a319f69b5795886deefd4289d8bd2d",
+          "address_text": "Liên kết Website UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        },
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > form > div.mainpage-main:nth-of-type(3) > div.navfooter:nth-of-type(8) > div.nf-cl > div > div.mainpage-config > div.box_block_main > div.mainpage-set > div.box > div.box-inner > div.box-content:nth-of-type(3) > div > div > div.frcontent > div.frrow > div._m980_fr_col4:nth-of-type(3) > div._footer_item > div._footer_content",
+          "node_outer_html_sha256": "4e8ccd883143f92d4bb91d9ec990d4bef9be8e3d074bad07198c8ea4526c864d",
+          "address_text": "UBND TP Đà Nẵng Sở Xây dựng Sở Khoa học và Công nghệ"
+        }
+      ],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_DANABUS_LOCATOR_142",
+        "requested_url": "https://danangbus.vn/",
+        "final_url": "https://danangbus.vn/",
+        "redirect_chain": [
+          "https://danangbus.vn/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:37.336Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "c7fe98b90226e18a975c0725c0b9c44ce5e2e982c45c4319586e640d7b8e8d00",
+          "text_sha256": "e93a058c62d8187ff451f5f06cfd82460ea59e50a5a69d2e776c878fcc33f76d",
+          "screenshot_sha256": "7c5784414112830b733e5ddbe34be52e8ed02a330e1a7445536505883c0d99a2"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_DOMINOS",
+      "locator_url": "https://dominos.vn/danh-sach-cua-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_DOMINOS_LOCATOR_142",
+        "requested_url": "https://dominos.vn/danh-sach-cua-hang",
+        "final_url": "https://dominos.vn/danh-sach-cua-hang",
+        "redirect_chain": [
+          "https://dominos.vn/danh-sach-cua-hang"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:32.072Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "89ce872524a6224c2f1f42866333cd210d7ce3591cf0054464b3ae67aa271420",
+          "text_sha256": "e5b66c3bd8e278a250a37ad0b880be8f8e7e9af4071fa55ac70fe4268772a888",
+          "screenshot_sha256": "7aa3aec85d6d7543d74095022c3e969c06327bfbda5f3067084e4857d2c0eb2f"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_DSVN",
+      "locator_url": "https://dsvn.vn/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_DSVN_LOCATOR_142",
+        "requested_url": "https://dsvn.vn/",
+        "final_url": "https://dsvn.vn/",
+        "redirect_chain": [
+          "https://dsvn.vn/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:41.009Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "1162140a1d0a5f8d3b8443907085dc86747aebf117cd9f3c4d23e16e846d71f4",
+          "text_sha256": "8c32470352a3d88786a81d87e30d2a2b572879e781eb94dd3de4851f2dd20da3",
+          "screenshot_sha256": "c79f556afb2d3621320a11a146a2e0d86fb7ef2dc471f027c169363ebbfcf1e5"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_GALAXY",
+      "locator_url": "https://www.galaxycine.vn/rap-gia-ve/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_GALAXY_LOCATOR_142",
+        "requested_url": "https://www.galaxycine.vn/rap-gia-ve/",
+        "final_url": "https://www.galaxycine.vn/rap-gia-ve/",
+        "redirect_chain": [
+          "https://www.galaxycine.vn/rap-gia-ve/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:10.036Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "2d0907243abb63b6fb652af5090cc17de8e53ef83e24b40a9ff9801621d70527",
+          "text_sha256": "b2cd6286ac46824f030969708a8ba3dd58477a95a10d057a05e8ce981d5ea2e4",
+          "screenshot_sha256": "aedffb5b4947bd964327168a968ebaf81f4cb62ce5ea9e5145aee8ab9b639747"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_GITHUB",
+      "locator_url": "https://education.github.com/pack",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_GITHUB_LOCATOR_142",
+        "requested_url": "https://education.github.com/pack",
+        "final_url": "https://education.github.com/pack",
+        "redirect_chain": [
+          "https://education.github.com/pack"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:52.216Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "51e42275a7e736851cfbad5f8577806dbdc4978533fc9c2d7aa9faf98258d6ca",
+          "text_sha256": "dcee6bb4ef1308f8946d759752b2216bbd3e459c8256f54e3f5eec4f83bf1e50",
+          "screenshot_sha256": "12fdc0c811f8605686827f4a750b0a34c35d133a5521201ff47e51c275d338e8"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_HIGHLANDS",
+      "locator_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_HIGHLANDS_LOCATOR_142",
+        "requested_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "final_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "redirect_chain": [
+          "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:33.173Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "037b0367661df7daecd775d13852f0afe74072456273594d08b9b31aed54effe",
+          "text_sha256": "4619956418a1f1413455841b4d0ee2e5bf8f4b258fc1271e56bbd94f68542911",
+          "screenshot_sha256": "57accf12f8841f57a4e270d246af8d69041bdb8132ee08bd31905c1fbbb7d2de"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_JOLLIBEE",
+      "locator_url": "https://jollibee.com.vn/cua-hang",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_JOLLIBEE_LOCATOR_142",
+        "requested_url": "https://jollibee.com.vn/cua-hang",
+        "final_url": "https://jollibee.com.vn/cua-hang",
+        "redirect_chain": [
+          "https://jollibee.com.vn/cua-hang"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:26.487Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "de6680b8f128363c151e1ce23788d3aff4cd91bef03dda696bfdb6c5fbe51f15",
+          "text_sha256": "08ecb2c00c9878b0338475ad029abbff20a74ba1b96d6ad2dbce193f26faa85c",
+          "screenshot_sha256": "3277fa4bbfac0120cdef9c3f0e1c8cb9a3a35f2db1e1ba37d93aaa9623507d2f"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_KFC",
+      "locator_url": "https://kfcvietnam.com.vn/he-thong-nha-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_KFC_LOCATOR_142",
+        "requested_url": "https://kfcvietnam.com.vn/he-thong-nha-hang",
+        "final_url": "https://kfcvietnam.com.vn/he-thong-nha-hang",
+        "redirect_chain": [
+          "https://kfcvietnam.com.vn/he-thong-nha-hang"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:18.570Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "28d6b09da70719479e03d4675aeea92ae740fd407492f504bd5906c5ec4afdc4",
+          "text_sha256": "c40334eec5b71d8ab53576d81a8c187d35a8bf469669148c3c51b0a60d4e8fd8",
+          "screenshot_sha256": "a88d747522307a541bc8bc17174babcd91032e2cd18c6b89807ad6c2fb805ce2"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_LOTTERIA",
+      "locator_url": "https://www.lotteria.vn/store-locator",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_LOTTERIA_LOCATOR_142",
+        "requested_url": "https://www.lotteria.vn/store-locator",
+        "final_url": "https://www.lotteria.vn/store-locator",
+        "redirect_chain": [
+          "https://www.lotteria.vn/store-locator"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:29.381Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "970a96e6e589be74ad501b99e66780c53f7269eeab8ab0058ee2a1db78974959",
+          "text_sha256": "42067bee594d874b9752c5c27b28ccf429797070cecb4e5189472940e3b16228",
+          "screenshot_sha256": "bbe73edaa2700416056f3f12563635578efbaa79c4f3e3eeb2dd36423f7d5166"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_LOTTE_CINEMA",
+      "locator_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_LOTTE_CINEMA_LOCATOR_142",
+        "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx",
+        "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx",
+        "redirect_chain": [
+          "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:17.481Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "712545e4a4efbf75c28c9b4aa63a944fef0b9c02fe0569d0ccaed9556d6ce7d2",
+          "text_sha256": "b9ae07a18c58c5b14a30188298dbb043672cf4ab2facb45e9b2a4ee1e0a96828",
+          "screenshot_sha256": "7d31312e80a69c2200f39f1dc16cbbf2be9419eb1ed1c1b65157bd9f8cdf3169"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_METIZ",
+      "locator_url": "https://metiz.vn/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_METIZ_LOCATOR_142",
+        "requested_url": "https://metiz.vn/",
+        "final_url": "https://metiz.vn/",
+        "redirect_chain": [
+          "https://metiz.vn/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:13.470Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "02e3276e6ff1a6466c38f911c39dc2dc671867095b596e5f28f8d9975b787d35",
+          "text_sha256": "91f9fcf5a503ad7c5247ac7985107a35264267b880282d38819a9b54b4ca6c78",
+          "screenshot_sha256": "e7080f6772e3cdf3f9af8c0c115f5ef4e1091ea6db75ef94fdd97e82be9a3495"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_NOTION",
+      "locator_url": "https://www.notion.so/product/notion-for-education",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_NOTION_LOCATOR_142",
+        "requested_url": "https://www.notion.so/product/notion-for-education",
+        "final_url": "https://www.notion.so/product/notion-for-education",
+        "redirect_chain": [
+          "https://www.notion.so/product/notion-for-education"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:41:02.022Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "1a3d3047c56e79b98188218a9b02e141952e257266d4c317ea75cf0b5f1c68f1",
+          "text_sha256": "2b015ff7cf0786865ba13dcd1bd0a360b84a526295eccb6dd8dcc473e5295904",
+          "screenshot_sha256": "20a17ee238898c4f1b703ed6bcd2353c1a7dc9ee61c5b1051f6b9641ce572930"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_SPOTIFY",
+      "locator_url": "https://www.spotify.com/vn-vi/student/",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_SPOTIFY_LOCATOR_142",
+        "requested_url": "https://www.spotify.com/vn-vi/student/",
+        "final_url": "https://www.spotify.com/vn-vi/student/",
+        "redirect_chain": [
+          "https://www.spotify.com/vn-vi/student/"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:56.913Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "d3cd6030f8f1dd8fd761e5e96a6ac07d0774819e26389f48ec12930e897d358c",
+          "text_sha256": "ba8790e3eec5656b62b19287a790086bef20f4364b9c900914f646fce14e8205",
+          "screenshot_sha256": "620047c98ca448830f5384d26c7a6b3849cbe964be9e68313105df614c938cea"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    },
+    {
+      "brand_id": "BRAND_STARLIGHT",
+      "locator_url": "https://starlight.vn/rap-chieu-phim.html",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "VERIFIED_PHYSICAL_RECEIPT",
+        "receipt_id": "RECEIPT_BRAND_STARLIGHT_LOCATOR_142",
+        "requested_url": "https://starlight.vn/rap-chieu-phim.html",
+        "final_url": "https://starlight.vn/rap-chieu-phim.html",
+        "redirect_chain": [
+          "https://starlight.vn/rap-chieu-phim.html"
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T18:40:05.709Z",
+        "capture_method": "PUPPETEER_FULL_DOM",
+        "fresh_hashes": {
+          "html_sha256": "706f524572dd30c2552eb3bd362080e2411c4b2a230817989de722935a97f944",
+          "text_sha256": "2b7fef46ee3344609c1580776d343dbe5a9c8f76b0eccefdb36271534d9fac1e",
+          "screenshot_sha256": "c85287701196035f357ea637469e76f59e0e558be7834927a7c3f45dcd8f2d6d"
+        },
+        "inherited_metadata_audit": {
+          "has_untrusted_inherited_fields": true,
+          "inherited_metadata_status": "INHERITED_METADATA_UNTRUSTED_DISCARDED"
+        }
+      }
+    }
+  ]
+}

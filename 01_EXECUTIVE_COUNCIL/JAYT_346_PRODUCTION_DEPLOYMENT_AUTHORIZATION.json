@@ -1,0 +1,26 @@
+{
+  "document_id": "JAYT_346_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
+  "directive": "JAYT-346 — FULL-ECOSYSTEM GO-LIVE MANDATE & OPERATIONAL UNLOCK",
+  "authorized_at_utc": "2026-09-07T13:27:45.4917469Z",
+  "authority": "CHAIRMAN_JAYT_CORP",
+  "target_version": "v3.425.0-sprint-b-r1",
+  "target_domain": "https://jayt-production-v3420.vercel.app",
+  "candidate_root": "08_RELEASE_VAULT/candidates/sprint_b_r1/",
+  "candidate_manifest_sha256": "48fe97c68dc3963c60566b5fb99fe4c36fef96e12b3a3762f58bd2664db15dfe",
+  "is_approved": true,
+  "deployment_permitted": true,
+  "deployment_authorized": true,
+  "candidate_hot_edit_permitted": false,
+  "required_post_deploy_cards": {
+    "total": 51,
+    "civic": 24,
+    "commercial": 27
+  },
+  "rollback": {
+    "version": "v3.423.0",
+    "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "artifact_root": "deploy_personal_v3423/",
+    "trigger": "ANY_POST_DEPLOY_GATE_FAILURE"
+  },
+  "status": "AUTHORIZED_FOR_IMMEDIATE_EXECUTION"
+}

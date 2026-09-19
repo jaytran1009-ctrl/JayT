@@ -1,0 +1,388 @@
+{
+  "ledger_id": "CANONICAL_PUBLIC_ITEM_LEDGER_BD_20260829",
+  "schema_version": "3.1.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BD)",
+  "timestamp": "2026-08-29T05:43:55.114Z",
+  "canonical_accounting": {
+    "total_tracked_items": 34,
+    "total_public_displayable": 33,
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "quarantined_isolated_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "render_permission_policy": {
+    "field_certified": "ALLOW_ALL_CERTIFIED_FIELDS",
+    "pending_field_certification_au": "NEUTRAL_TITLE_AND_PURPOSE_SUMMARY_ONLY; DENY_UNPROVEN_PRICING_PERCENTAGES_AND_CONDITIONS",
+    "radar_tracking": "BRAND_AND_OBSERVATION_PURPOSE_ONLY; DENY_COMMERCIAL_PROMOTIONS",
+    "quarantined_isolated": "DENY_ALL_PUBLIC_RENDER"
+  },
+  "items": [
+    {
+      "item_id": "DEAL_CGV_VNPAY_BOGO",
+      "tier": "VERIFIED_DEAL",
+      "lifecycle": "field_certified",
+      "brand": "CGV Cinemas",
+      "allow_field_claims": true,
+      "certified_fields": [
+        "title",
+        "value_proposition",
+        "code",
+        "validity_period",
+        "scope_locality",
+        "official_source_url"
+      ],
+      "official_source_url": "https://www.cgv.vn/default/movies/offers/vnpay-bogo",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "DEAL_LOTTERIA_HAPPY_LUNCH",
+      "tier": "PENDING_DEAL",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Lotteria Vietnam",
+      "allow_field_claims": false,
+      "neutral_title": "Lotteria Vietnam — Thực Đơn Bữa Trưa",
+      "neutral_summary": "Thông tin bữa trưa từ kênh Lotteria đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.lotteria.vn/menu/happy-lunch",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "DEAL_DOMINOS_BOGO",
+      "tier": "PENDING_DEAL",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Domino's Pizza",
+      "allow_field_claims": false,
+      "neutral_title": "Domino's Pizza — Thực Đơn & Chương Trình Định Kỳ",
+      "neutral_summary": "Thông tin khuyến mãi từ Domino's đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://dominos.vn/khuyen-mai/mua-1-tang-1",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "DEAL_METIZ_U22",
+      "tier": "PENDING_DEAL",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Metiz Cinema",
+      "allow_field_claims": false,
+      "neutral_title": "Metiz Cinema — Bảng Giá Vé Thành Viên & HSSV",
+      "neutral_summary": "Chính sách giá vé Metiz đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://metiz.vn/tin-tuc/khuyen-mai/gia-ve-u22-metiz/",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "DEAL_STARLIGHT_COMBO_10K",
+      "tier": "PENDING_DEAL",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Starlight Cinema",
+      "allow_field_claims": false,
+      "neutral_title": "Starlight Cinema — Combo Bắp Nước Rạp Chiếu",
+      "neutral_summary": "Thông tin gói bắp nước Starlight đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://starlight.vn/khuyen-mai/combo-bap-nuoc-10k.html",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "TGT_B_01",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "GitHub",
+      "allow_field_claims": false,
+      "neutral_title": "GitHub — Gói Công Cụ Lập Trình Cho Học Sinh Sinh Viên",
+      "neutral_summary": "Chương trình bản quyền lập trình từ GitHub đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://education.github.com/pack",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_02",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Notion",
+      "allow_field_claims": false,
+      "neutral_title": "Notion — Không Gian Ghi Chép & Quản Lý Học Tập",
+      "neutral_summary": "Chương trình Notion Education đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.notion.so/product/notion-for-education",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_03",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Microsoft",
+      "allow_field_claims": false,
+      "neutral_title": "Microsoft — Bộ Ứng Dụng Văn Phòng Giáo Dục",
+      "neutral_summary": "Chương trình Microsoft 365 Education đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.microsoft.com/vi-vn/education/products/office",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_04",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Canva",
+      "allow_field_claims": false,
+      "neutral_title": "Canva — Nền Tảng Thiết Kế Cho Giáo Dục",
+      "neutral_summary": "Chương trình Canva for Education đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.canva.com/vi_vn/giao-duc/",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_05",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Spotify",
+      "allow_field_claims": false,
+      "neutral_title": "Spotify — Dịch Vụ Âm Nhạc Trực Tuyến Học Sinh Sinh Viên",
+      "neutral_summary": "Gói Spotify Premium Student đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.spotify.com/vn-vi/student/",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_06",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Apple",
+      "allow_field_claims": false,
+      "neutral_title": "Apple — Dịch Vụ Nghe Nhạc Học Sinh Sinh Viên",
+      "neutral_summary": "Gói Apple Music Student đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.apple.com/vn/apple-music/",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_09",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "JetBrains",
+      "allow_field_claims": false,
+      "neutral_title": "JetBrains — Bộ Môi Trường Phát Triển Cho HSSV & Giảng Viên",
+      "neutral_summary": "Chương trình JetBrains Student Pack đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.jetbrains.com/community/education/#students",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_10",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Figma",
+      "allow_field_claims": false,
+      "neutral_title": "Figma — Công Cụ Thiết Kế Giao Diện Cho Học Tập",
+      "neutral_summary": "Chương trình Figma for Education đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.figma.com/education/",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "TGT_B_11",
+      "tier": "OFFICIAL_PROGRAM",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "AWS",
+      "allow_field_claims": false,
+      "neutral_title": "AWS — Chương Trình Học Điện Toán Đám Mây",
+      "neutral_summary": "Chương trình AWS Educate đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://aws.amazon.com/vi/education/awseducate/",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "FACILITY_DANABUS_CARD",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "DanaBus",
+      "allow_field_claims": false,
+      "neutral_title": "DanaBus — Hệ Thống Xe Buýt Công Cộng Đà Nẵng",
+      "neutral_summary": "Thông tin mạng lưới xe buýt công cộng đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://danangbus.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "FACILITY_TNGO_BIKE",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "TNGO Bike",
+      "allow_field_claims": false,
+      "neutral_title": "TNGO — Xe Đạp Đô Thị Công Cộng Đà Nẵng",
+      "neutral_summary": "Mạng lưới xe đạp chia sẻ đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://tngo.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "FACILITY_DNG_LIBRARY",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Thư Viện Tổng Hợp Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Thư Viện Khoa Học Tổng Hợp Đà Nẵng",
+      "neutral_summary": "Không gian đọc sách và tra cứu tài liệu công cộng đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "http://thuvien.danang.gov.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "FACILITY_PUBLIC_SERVICE",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "DVC Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Cổng Dịch Vụ Công Trực Tuyến TP Đà Nẵng",
+      "neutral_summary": "Cổng thông tin thủ tục hành chính trực tuyến đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://dichvucong.danang.gov.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "FACILITY_FAHASA_DNG",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Fahasa Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Nhà Sách Fahasa Đà Nẵng",
+      "neutral_summary": "Hệ thống nhà sách và đồ dùng học tập đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://www.fahasa.com",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "FACILITY_VNR_STATION",
+      "tier": "CIVIC_FACILITY",
+      "lifecycle": "pending_field_certification_au",
+      "brand": "Đường Sắt Việt Nam",
+      "allow_field_claims": false,
+      "neutral_title": "Ga Đà Nẵng — Cổng Đặt Vé Tàu Hỏa Trực Tuyến",
+      "neutral_summary": "Cổng thông tin đặt vé tàu hỏa trực tuyến đang được rà soát đối soát theo tiêu chuẩn AU. Mở cổng chính thức để tự kiểm tra.",
+      "official_source_url": "https://dsvn.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "RADAR_GALAXY_CINE",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Galaxy Cinema",
+      "allow_field_claims": false,
+      "neutral_title": "Rạp Phim Galaxy Cinema Đà Nẵng",
+      "official_source_url": "https://www.galaxycine.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "RADAR_LOTTE_CINEMA",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Lotte Cinema",
+      "allow_field_claims": false,
+      "neutral_title": "Rạp Phim Lotte Cinema Đà Nẵng",
+      "official_source_url": "https://www.lottecinemavn.com",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "RADAR_KFC",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "KFC Vietnam",
+      "allow_field_claims": false,
+      "neutral_title": "Chuỗi Cửa Hàng KFC Đà Nẵng",
+      "official_source_url": "https://kfcvietnam.com.vn",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "RADAR_JOLLIBEE",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Jollibee Vietnam",
+      "allow_field_claims": false,
+      "neutral_title": "Chuỗi Cửa Hàng Jollibee Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "RADAR_HIGHLANDS",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Highlands Coffee",
+      "allow_field_claims": false,
+      "neutral_title": "Chuỗi Cà Phê Highlands Coffee Đà Nẵng",
+      "official_source_url": "https://www.highlandscoffee.com.vn",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "RADAR_THECOFFEEHOUSE",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "The Coffee House",
+      "allow_field_claims": false,
+      "neutral_title": "Chuỗi Cà Phê The Coffee House Đà Nẵng",
+      "official_source_url": "https://thecoffeehouse.com",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "RADAR_PHUC_LONG",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Phúc Long Coffee & Tea",
+      "allow_field_claims": false,
+      "neutral_title": "Chuỗi Trà & Cà Phê Phúc Long Đà Nẵng",
+      "official_source_url": "https://phuclong.com.vn",
+      "gateway_group": "AN_GI"
+    },
+    {
+      "item_id": "RADAR_VINCOM_PLAZA",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Vincom Plaza Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Trung Tâm Thương Mại Vincom Plaza Ngô Quyền",
+      "official_source_url": "https://vincom.com.vn",
+      "gateway_group": "DI_DAU"
+    },
+    {
+      "item_id": "RADAR_COOPMART_DNG",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Co.opmart Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Siêu Thị Co.opmart Đà Nẵng",
+      "official_source_url": "http://co-opmart.com.vn",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "RADAR_GO_DANANG",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "GO! Đà Nẵng",
+      "allow_field_claims": false,
+      "neutral_title": "Đại Siêu Thị GO! Đà Nẵng",
+      "official_source_url": "https://go-vietnam.vn",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "RADAR_LONG_CHAU",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "FPT Long Châu",
+      "allow_field_claims": false,
+      "neutral_title": "Hệ Thống Nhà Thuốc FPT Long Châu Đà Nẵng",
+      "official_source_url": "https://nhathuoclongchau.com.vn",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "RADAR_PHARMACITY",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "Pharmacity",
+      "allow_field_claims": false,
+      "neutral_title": "Hệ Thống Nhà Thuốc Tiện Lợi Pharmacity Đà Nẵng",
+      "official_source_url": "https://www.pharmacity.vn",
+      "gateway_group": "MUA_GI"
+    },
+    {
+      "item_id": "RADAR_WINMART_DNG",
+      "tier": "RADAR_SOURCE",
+      "lifecycle": "radar_tracking",
+      "brand": "WinMart Vietnam",
+      "allow_field_claims": false,
+      "neutral_title": "Hệ Thống Siêu Thị WinMart / WinMart+ Đà Nẵng",
+      "official_source_url": "https://winmart.vn",
+      "gateway_group": "MUA_GI"
+    }
+  ],
+  "quarantined_items": [
+    {
+      "item_id": "DEAL_120_CGV_ZALOPAY_12H",
+      "tier": "QUARANTINED_DEAL",
+      "lifecycle": "quarantined_isolated",
+      "reason": "NO_FIELD_LEVEL_EVIDENCE",
+      "containment_record": "06_TRUST_AND_EVIDENCE/containment_records/CONTAINMENT_RECORD_CGV_ZALOPAY_AT.json"
+    }
+  ]
+}

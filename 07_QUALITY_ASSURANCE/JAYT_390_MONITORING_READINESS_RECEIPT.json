@@ -1,0 +1,149 @@
+{
+  "$schema": "https://jayt.vn/schemas/j390-monitoring-readiness-receipt.v1.json",
+  "receipt_id": "JAYT_390_MONITORING_READINESS_RECEIPT",
+  "cycle": "JAYT-390",
+  "mandate": "WORK_ORDER_J390_AUTONOMOUS_GOLIVE",
+  "authority": "DIRECT_CHAIRMAN_AND_CEO_J390_DISPATCH",
+  "evaluated_at_utc": "2026-09-11T05:12:44.383Z",
+  "scheduler_configuration": {
+    "interval_hours": 4,
+    "cron_expression": "0 */4 * * *",
+    "execution_mode": "SCHEDULED_RUNNER__FIXED_AUDITED_ITEMS_ONLY",
+    "least_privilege_credentials": {
+      "role": "READ_ONLY_HEALTH_PROBER",
+      "secrets_access": "NONE",
+      "write_permissions": "NONE",
+      "arbitrary_url_allowed": false
+    }
+  },
+  "conservative_state_machine": {
+    "status_codes": {
+      "200": {
+        "status": "AVAILABLE",
+        "suppress_purchase": false,
+        "description": "Observed available at probe time"
+      },
+      "403": {
+        "status": "UNKNOWN",
+        "suppress_purchase": false,
+        "description": "Anti-bot challenge/WAF, retained as observation"
+      },
+      "429": {
+        "status": "UNKNOWN",
+        "suppress_purchase": false,
+        "description": "Rate limited, retained as observation"
+      },
+      "301_302_307_308": {
+        "status": "UNKNOWN",
+        "suppress_purchase": false,
+        "description": "Redirect unverified, public card remains visible"
+      },
+      "408_TIMEOUT": {
+        "status": "UNKNOWN",
+        "suppress_purchase": false,
+        "description": "Transient network timeout"
+      },
+      "404_410": {
+        "status": "CANDIDATE_UNAVAILABLE",
+        "suppress_purchase": "CONDITIONAL",
+        "description": "Requires 3 consecutive failures before public card suppression"
+      }
+    },
+    "card_suppression_threshold": 3,
+    "alert_sla_seconds": 60,
+    "zero_silent_content_mutation": true
+  },
+  "runbook": {
+    "step_1": "Scheduled runner triggers every 4 hours with fixed 30 Mall SKU IDs from 03_SOURCE_OF_TRUTH/j387/sku_registry.json.",
+    "step_2": "Each probe queries health worker using exact itemId via TLS IP-pinned connection; arbitrary URL inputs are strictly rejected.",
+    "step_3": "HTTP response code is mapped to conservative state machine. Observations are recorded in immutable audit log schema.",
+    "step_4": "If an item records 3 consecutive 404/410 failures, card suppression state is toggled to true and an alert is emitted to on-call within <=60s.",
+    "step_5": "If item returns 200 on subsequent sweep, suppression is cleared automatically.",
+    "step_6": "No 100% uptime claims; public UI displays transparent observation timestamps."
+  },
+  "audit_log_schema": {
+    "fields": [
+      "timestamp_utc (ISO 8601)",
+      "itemId (audited SKU identifier)",
+      "http_code (integer or TIMEOUT)",
+      "latency_ms (numeric)",
+      "status (AVAILABLE | UNKNOWN | CANDIDATE_UNAVAILABLE | CONFIRMED_UNAVAILABLE)",
+      "error_class (string description)",
+      "consecutive_failures (integer counter)",
+      "suppression_state (boolean)",
+      "suppress_purchase (boolean)"
+    ]
+  },
+  "test_verification": {
+    "total_checks": 11,
+    "passed_checks": 11,
+    "tests": [
+      {
+        "name": "Security Contract: Arbitrary URL input rejected",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Security Contract: Unaudited item ID rejected",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "State Machine: HTTP 200 maps to AVAILABLE (suppression_state: false)",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "State Machine: HTTP 301 maps to UNKNOWN without card suppression",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "State Machine: HTTP 403 maps to UNKNOWN without card suppression",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "State Machine: Timeout maps to UNKNOWN without card suppression",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Card Suppression Rule: 1st 404 marked CANDIDATE_UNAVAILABLE (not suppressed yet)",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Card Suppression Rule: 2nd 404 marked CANDIDATE_UNAVAILABLE (not suppressed yet)",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Card Suppression Rule: 3rd 404 reaches CONFIRMED_UNAVAILABLE & triggers alert <=60s",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Recovery Rule: Subsequent HTTP 200 clears suppression and resets failure count",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Full Catalog Sweep: 30 SKUs evaluated within 4-hour cycle schedule",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "sample_alert": {
+      "alert_id": "ALT_8f789b9a",
+      "triggered_at_utc": "2026-09-11T05:12:44.383Z",
+      "itemId": "DORM_SKU_05_DEN_RANGDONG",
+      "consecutive_failures": 3,
+      "sla_target": "<=60s",
+      "simulated_alert_latency_seconds": 1.2,
+      "display_state_transition": "SAFE_FALLBACK_NEUTRAL_CARD_RENDERED",
+      "message": "Item DORM_SKU_05_DEN_RANGDONG confirmed unavailable after 3 consecutive observations. Safe display state active."
+    }
+  },
+  "readiness_verdict": "MONITORING_READINESS_VERIFIED_PASS"
+}

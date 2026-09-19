@@ -1,0 +1,524 @@
+{
+  "queue_id": "QUEUE_50_NEUTRAL_TARGET_IDENTIFIERS_AC_20260829",
+  "created_at": "2026-08-28T17:23:20.118Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AC)",
+  "schema_allowlist_keys": [
+    "target_id",
+    "target_lane",
+    "target_subject",
+    "demand_category",
+    "candidate_source_url",
+    "evidence_needed",
+    "discovery_status",
+    "source_discovery_task"
+  ],
+  "summary": {
+    "total_targets": 50,
+    "lane_a_pricing_capture": 5,
+    "lane_b_official_program": 15,
+    "lane_c_venue_research": 16,
+    "lane_d_demand_radar": 14
+  },
+  "targets": [
+    {
+      "target_id": "TGT_A_01",
+      "target_lane": "LANE_A_PRICING_CAPTURE",
+      "target_subject": "Metiz Cinema",
+      "demand_category": "Phim",
+      "candidate_source_url": "https://metiz.vn",
+      "evidence_needed": "Xác minh liệu có biểu đồ giá vé công khai và điều kiện áp dụng đối tượng học sinh sinh viên hay không",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_A_02",
+      "target_lane": "LANE_A_PRICING_CAPTURE",
+      "target_subject": "Galaxy Cinema",
+      "demand_category": "Phim",
+      "candidate_source_url": "https://www.galaxycine.vn",
+      "evidence_needed": "Xác minh liệu có chính sách giá theo ngày trong tuần và quy định suất chiếu hay không",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_A_03",
+      "target_lane": "LANE_A_PRICING_CAPTURE",
+      "target_subject": "Domino's Pizza",
+      "demand_category": "Ăn trưa",
+      "candidate_source_url": "https://dominos.vn",
+      "evidence_needed": "Xác minh liệu có danh mục thực đơn và điều kiện đặt món tại kênh chính thức hay không",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_A_04",
+      "target_lane": "LANE_A_PRICING_CAPTURE",
+      "target_subject": "Đường Sắt Việt Nam (VNR)",
+      "demand_category": "Đi lại",
+      "candidate_source_url": "https://dsvn.vn",
+      "evidence_needed": "Xác minh liệu có quy định xác thực đối tượng sinh viên khi mua vé trực tuyến hay không",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_A_05",
+      "target_lane": "LANE_A_PRICING_CAPTURE",
+      "target_subject": "DanaBus",
+      "demand_category": "Đi lại",
+      "candidate_source_url": "https://www.danangbus.vn/",
+      "evidence_needed": "Xác minh liệu có biểu đồ giá vé xe buýt sau khi xử lý xong clock skew anomaly hay không",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_01",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "GitHub Education",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://education.github.com/pack",
+      "evidence_needed": "Đã hoàn tất 4 atomic field binding nguyên văn từ raw payload",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_02",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Notion",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.notion.com/product/notion-for-education",
+      "evidence_needed": "Thu thập nguồn chính thức về quy trình xác thực email trường học",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_03",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Microsoft",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.microsoft.com/vi-vn/education/products/office",
+      "evidence_needed": "Thu thập nguồn chính thức về cổng giáo dục Microsoft 365",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_04",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Canva",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.canva.com/vi_vn/giao-duc/",
+      "evidence_needed": "Thu thập nguồn chính thức về trang giáo dục Canva",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_05",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Spotify",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.spotify.com/vn-vi/student/",
+      "evidence_needed": "Thu thập nguồn chính thức về trang gói sinh viên Spotify",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_06",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Apple",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.apple.com/vn/apple-music/",
+      "evidence_needed": "Thu thập nguồn chính thức về gói sinh viên Apple Music",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_07",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "YouTube",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.youtube.com/premium/student",
+      "evidence_needed": "Thu thập nguồn chính thức về gói sinh viên YouTube",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_08",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Autodesk",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.autodesk.com/education/edu-software",
+      "evidence_needed": "Thu thập nguồn chính thức về phần mềm giáo dục Autodesk",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_09",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "JetBrains",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.jetbrains.com/community/education/#students",
+      "evidence_needed": "Thu thập nguồn chính thức về giấy phép học tập JetBrains",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_10",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Figma",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.figma.com/education/",
+      "evidence_needed": "Thu thập nguồn chính thức về trang giáo dục Figma",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_11",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Amazon AWS",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://aws.amazon.com/education/awseducate/",
+      "evidence_needed": "Thu thập nguồn chính thức về cổng AWS Educate",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_12",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Google Cloud",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://cloud.google.com/innovators",
+      "evidence_needed": "Thu thập nguồn chính thức về cổng Google Cloud Innovators",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_13",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "VNPAY",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": "https://vnpay.vn",
+      "evidence_needed": "Thu thập thông tin chính thức về dịch vụ ví VNPAY",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_14",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "Viettel Telecom",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": "https://viettel.vn",
+      "evidence_needed": "Thu thập nguồn chính thức về chính sách gói cước sinh viên Viettel",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_B_15",
+      "target_lane": "LANE_B_OFFICIAL_PROGRAM",
+      "target_subject": "VinaPhone",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": "https://vinaphone.com.vn",
+      "evidence_needed": "Thu thập nguồn chính thức về chính sách gói cước sinh viên VinaPhone",
+      "discovery_status": "SOURCE_IDENTIFIED",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_C_01",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Thư Viện Khoa Học Tổng Hợp Đà Nẵng",
+      "demand_category": "Học tập / Làm việc",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin chính thức của thư viện và xác minh địa chỉ",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu URL cổng dịch vụ công thư viện tổng hợp TP Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_02",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Trung Tâm Hành Chính TP. Đà Nẵng",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin chính thức của bộ phận một cửa tiếp nhận hồ sơ",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu URL cổng dịch vụ hành chính công Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_03",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Cung Thiếu Nhi TP. Đà Nẵng",
+      "demand_category": "Học tập / Sinh hoạt",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin cung thiếu nhi và xác minh cơ sở vật chất",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website cung thiếu nhi Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_04",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Cung Thể Thao Tiên Sơn Đà Nẵng",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm nguồn thông tin quản lý nhà thi đấu thể thao",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu cổng thông tin quản lý cung thể thao Tiên Sơn"
+    },
+    {
+      "target_id": "TGT_C_05",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Bến Xe Trung Tâm TP. Đà Nẵng",
+      "demand_category": "Đi lại",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin bến xe trung tâm thành phố",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website bến xe khách trung tâm Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_06",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Trạm Xe Buýt Trung Tâm Hành Chính",
+      "demand_category": "Đi lại",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm nguồn thông tin các tuyến buýt dừng đỗ qua trạm",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu biểu đồ tuyến qua trạm TTHC trên cổng DanaBus"
+    },
+    {
+      "target_id": "TGT_C_07",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Thư Viện Trường Đại Học Bách Khoa Đà Nẵng",
+      "demand_category": "Học tập",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin thư viện trường đại học",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu cổng thông tin thư viện ĐH Bách Khoa ĐN"
+    },
+    {
+      "target_id": "TGT_C_08",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Thư Viện Trường Đại Học Kinh Tế Đà Nẵng",
+      "demand_category": "Học tập",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin thư viện trường đại học",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu cổng thông tin thư viện ĐH Kinh Tế ĐN"
+    },
+    {
+      "target_id": "TGT_C_09",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Không Gian Đổi Mới Sáng Tạo Danang Coworking",
+      "demand_category": "Làm việc",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm thông tin về các không gian làm việc sáng tạo công lập",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu vườn ươm doanh nghiệp Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_10",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Công Viên Vườn Hoa Tượng Đá Sông Hàn",
+      "demand_category": "Tiện ích công cộng",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm nguồn thông tin quản lý không gian công cộng ven sông Hàn",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu cổng thông tin du lịch / quản lý đô thị Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_11",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Công Viên APEC Đà Nẵng",
+      "demand_category": "Tiện ích công cộng",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm nguồn thông tin công viên APEC",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu cổng thông tin ban quản lý công viên APEC"
+    },
+    {
+      "target_id": "TGT_C_12",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Bảo Tàng Điêu Khắc Chăm Đà Nẵng",
+      "demand_category": "Học tập / Văn hóa",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin chính thức của bảo tàng",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website bảo tàng điêu khắc Chăm Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_13",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Trung Tâm Huấn Luyện Thể Thao Quốc Gia Đà Nẵng",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm nguồn thông tin trung tâm thể thao quốc gia",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu cổng thông tin trung tâm thể thao"
+    },
+    {
+      "target_id": "TGT_C_14",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Bệnh Viện Đà Nẵng",
+      "demand_category": "Tiện ích thiết yếu",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm URL cổng thông tin bệnh viện đa khoa công lập",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website bệnh viện Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_C_15",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Trạm Xe Đạp TNGO Đại Học Sư Phạm",
+      "demand_category": "Đi lại",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm tọa độ trạm xe đạp từ dữ liệu cổng TNGO",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu đối chiếu bản đồ trạm trên cổng TNGO"
+    },
+    {
+      "target_id": "TGT_C_16",
+      "target_lane": "LANE_C_VENUE_RESEARCH",
+      "target_subject": "Bưu Điện Trung Tâm Đà Nẵng",
+      "demand_category": "Tiện ích",
+      "candidate_source_url": null,
+      "evidence_needed": "Tìm cổng thông tin bưu cục trung tâm",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu mạng lưới bưu chính VNPost tại Đà Nẵng"
+    },
+    {
+      "target_id": "TGT_D_01",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Metiz Cinema",
+      "demand_category": "Phim",
+      "candidate_source_url": "https://metiz.vn",
+      "evidence_needed": "Theo dõi nhu cầu và thông tin phát hành phim",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_02",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "DanaBus",
+      "demand_category": "Đi lại",
+      "candidate_source_url": "https://www.danangbus.vn/",
+      "evidence_needed": "Theo dõi mạng lưới tuyến xe buýt đô thị",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_03",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "TNGO",
+      "demand_category": "Đi lại",
+      "candidate_source_url": "https://tngo.vn",
+      "evidence_needed": "Theo dõi dịch vụ xe đạp công cộng",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_04",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Fahasa",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.fahasa.com/",
+      "evidence_needed": "Theo dõi phát hành sách và giáo trình",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_05",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Galaxy Cinema",
+      "demand_category": "Phim",
+      "candidate_source_url": "https://www.galaxycine.vn",
+      "evidence_needed": "Theo dõi lịch chiếu rạp",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_06",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Domino's Pizza",
+      "demand_category": "Ăn trưa",
+      "candidate_source_url": "https://dominos.vn",
+      "evidence_needed": "Theo dõi thực đơn ẩm thực",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_07",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "CGV Cinemas",
+      "demand_category": "Phim",
+      "candidate_source_url": "https://www.cgv.vn",
+      "evidence_needed": "Theo dõi lịch chiếu rạp",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_08",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Đường Sắt Việt Nam (VNR)",
+      "demand_category": "Đi lại",
+      "candidate_source_url": "https://dsvn.vn",
+      "evidence_needed": "Theo dõi lịch chạy tàu",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_09",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Notion for Education",
+      "demand_category": "Học tập",
+      "candidate_source_url": "https://www.notion.com/product/notion-for-education",
+      "evidence_needed": "Theo dõi quy trình đăng ký gói học tập qua email",
+      "discovery_status": "QUALIFIED_PUBLIC_ACTIVE",
+      "source_discovery_task": null
+    },
+    {
+      "target_id": "TGT_D_10",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Highlands Coffee",
+      "demand_category": "Làm việc / Cà phê",
+      "candidate_source_url": null,
+      "evidence_needed": "Theo dõi nhu cầu không gian học tập và làm việc",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website chính thức Highlands Coffee"
+    },
+    {
+      "target_id": "TGT_D_11",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "The Coffee House",
+      "demand_category": "Làm việc / Cà phê",
+      "candidate_source_url": null,
+      "evidence_needed": "Theo dõi nhu cầu không gian học tập và làm việc",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website chính thức The Coffee House"
+    },
+    {
+      "target_id": "TGT_D_12",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Phúc Long",
+      "demand_category": "Làm việc / Cà phê",
+      "candidate_source_url": null,
+      "evidence_needed": "Theo dõi nhu cầu không gian gặp gỡ nhóm",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website chính thức Phúc Long"
+    },
+    {
+      "target_id": "TGT_D_13",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Katinat",
+      "demand_category": "Làm việc / Cà phê",
+      "candidate_source_url": null,
+      "evidence_needed": "Theo dõi nhu cầu không gian làm việc",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website chính thức Katinat"
+    },
+    {
+      "target_id": "TGT_D_14",
+      "target_lane": "LANE_D_DEMAND_RADAR",
+      "target_subject": "Jollibee",
+      "demand_category": "Ăn trưa",
+      "candidate_source_url": null,
+      "evidence_needed": "Theo dõi nhu cầu ăn trưa học sinh - sinh viên",
+      "discovery_status": "DISCOVERY_QUEUED",
+      "source_discovery_task": "Nghiên cứu tra cứu website chính thức Jollibee"
+    }
+  ]
+}

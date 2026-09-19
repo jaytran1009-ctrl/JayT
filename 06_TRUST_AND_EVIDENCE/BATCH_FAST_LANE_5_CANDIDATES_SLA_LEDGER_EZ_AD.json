@@ -1,0 +1,104 @@
+{
+  "ledger_id": "BATCH_FAST_LANE_5_CANDIDATES_SLA_LEDGER_EZ_AD",
+  "version": "1.0.0-ez.ad",
+  "governing_directive": "JAYT-245 Section EZ-AD (Lines 4741-4768)",
+  "timestamp": "2026-08-31T08:23:30.001Z",
+  "batch_policy": {
+    "max_concurrent_candidates": 5,
+    "time_box_hours": 24,
+    "prevention_of_6th_candidate": true,
+    "verdict_options": [
+      "T1_DEAL",
+      "T2_PROGRAM_DOCUMENTATION",
+      "T3_LOCATION_UTILITY",
+      "T4_SOURCE_TO_WATCH",
+      "HELD_INTERNAL",
+      "CLOSED_QUARANTINE"
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "FAST_LANE_01_NOTION_EDUCATION_DOC",
+      "jtbd_category": "OFFICIAL_PROGRAM_DOCUMENTATION",
+      "hypothesis": "HYPOTHESIS_ACADEMIC_PRODUCTIVITY_PROGRAM_DOCUMENTATION",
+      "owner": "Data & Trust / Engineering",
+      "sla_open_utc": "2026-08-31T07:00:00Z",
+      "sla_close_utc": "2026-09-01T07:00:00Z",
+      "source_url": "https://www.notion.so/product/notion-for-education",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_01_notion_education_raw_bytes.bin",
+      "verdict": "T4_SOURCE_TO_WATCH",
+      "pipeline_status": "HELD_INTERNAL",
+      "public_eligible": false,
+      "verdict_rationale": "Tài liệu mô tả chung về chương trình giáo dục, thiếu bảng giá và điều khoản giảm giá đầy đủ theo T1/T2. Giữ theo dõi tại T4."
+    },
+    {
+      "candidate_id": "FAST_LANE_02_SPOTIFY_STUDENT_PROMO",
+      "jtbd_category": "OFFICIAL_PROMOTION_SUBSCRIPTION_OFFER",
+      "hypothesis": "HYPOTHESIS_AUDIO_STREAMING_STUDENT_PROMOTIONAL_TERMS",
+      "owner": "Data & Trust",
+      "sla_open_utc": "2026-08-31T07:00:00Z",
+      "sla_close_utc": "2026-09-01T07:00:00Z",
+      "source_url": "https://www.spotify.com/vn-vi/student/",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ac/candidate_ez_ac_doc_c_linked_promotional_terms_raw_bytes.bin",
+      "verdict": "HELD_INTERNAL",
+      "pipeline_status": "HELD_INTERNAL_LINKED_PROMOTIONAL_TERMS_EVALUATED",
+      "public_eligible": false,
+      "verdict_rationale": "Tài liệu điều khoản khuyến mãi đã liên kết trực tiếp, nhưng thiếu quan hệ pháp nhân trong thân văn bản, thiếu mã và phạm vi địa phương. Chuỗi đã đóng ở HELD_INTERNAL."
+    },
+    {
+      "candidate_id": "FAST_LANE_03_DANANG_LIBRARY_PUBLIC_SERVICE",
+      "jtbd_category": "PUBLIC_LOCATION_LEARNING_UTILITY",
+      "hypothesis": "HYPOTHESIS_MUNICIPAL_LIBRARY_CARD_POLICY",
+      "owner": "Data & Trust",
+      "sla_open_utc": "2026-08-31T07:00:00Z",
+      "sla_close_utc": "2026-09-01T07:00:00Z",
+      "source_url": "http://thuvien.danang.gov.vn/ReadNews/1408",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_t/candidate_ez_t_01_danang_library_card_policy_raw_bytes.bin",
+      "verdict": "T4_SOURCE_TO_WATCH",
+      "pipeline_status": "HELD_INTERNAL",
+      "public_eligible": false,
+      "verdict_rationale": "Tài liệu quy định thẻ thư viện từ năm 2016, nhánh địa điểm lịch sử đã đóng, không đủ căn cứ T1/T3 hiện hành. Giữ theo dõi tại T4."
+    },
+    {
+      "candidate_id": "FAST_LANE_04_VIETNAM_RAILWAYS_STUDENT_POLICY",
+      "jtbd_category": "TRANSIT_PUBLIC_MOBILITY_UTILITY",
+      "hypothesis": "HYPOTHESIS_STUDENT_TRANSIT_TICKETING_POLICY",
+      "owner": "Product / QA",
+      "sla_open_utc": "2026-08-31T07:00:00Z",
+      "sla_close_utc": "2026-09-01T07:00:00Z",
+      "source_url": "https://dsvn.vn/",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_o/candidate_ez_o_01_vietnam_railway_raw_bytes.bin",
+      "verdict": "T4_SOURCE_TO_WATCH",
+      "pipeline_status": "HELD_INTERNAL",
+      "public_eligible": false,
+      "verdict_rationale": "Chưa có capture tài liệu điều khoản chính sách giảm giá sinh viên hiện hành với locator chi tiết; lưu theo dõi tại T4."
+    },
+    {
+      "candidate_id": "FAST_LANE_05_VIETNAM_POST_STUDENT_LOGISTICS",
+      "jtbd_category": "ESSENTIAL_STUDENT_LOGISTICS",
+      "hypothesis": "HYPOTHESIS_STUDENT_PARCEL_LOGISTICS_SERVICE",
+      "owner": "Product / Engineering",
+      "sla_open_utc": "2026-08-31T07:00:00Z",
+      "sla_close_utc": "2026-09-01T07:00:00Z",
+      "source_url": "https://vietnampost.vn/",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_o/candidate_ez_o_02_vietnam_post_raw_bytes.bin",
+      "verdict": "T4_SOURCE_TO_WATCH",
+      "pipeline_status": "HELD_INTERNAL",
+      "public_eligible": false,
+      "verdict_rationale": "Trang thông tin chung bưu chính, chưa có bảng giá ưu đãi sinh viên riêng lẻ có locator raw; lưu theo dõi tại T4."
+    }
+  ],
+  "batch_summary": {
+    "total_candidates_evaluated": 5,
+    "verdicts_rendered": 5,
+    "t1_deals_approved": 0,
+    "t2_programs_approved": 0,
+    "t3_locations_approved": 0,
+    "t4_held_internal": 5,
+    "public_actions": {
+      "new_public_cards": 0,
+      "new_public_links": 0,
+      "new_public_labels": 0
+    }
+  }
+}

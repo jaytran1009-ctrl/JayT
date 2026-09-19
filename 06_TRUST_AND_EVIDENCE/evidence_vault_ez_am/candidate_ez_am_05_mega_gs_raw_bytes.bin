@@ -1,0 +1,3317 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <style>
+     
+        #popup-main-booking {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            display: none;
+        }
+
+        .popup-main-booking {
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            top: 15%;
+            display: none;
+        }
+        .popup-main-err {
+            width: 100%;
+            position: fixed;
+            z-index: 9999999;
+            top: 15%;
+            display: none;
+        }
+        .show-content-booking .box-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .show-content-booking .box-table {
+            padding: 35px;
+            background-color: #fff;
+        }
+
+            .show-content-booking .box-table table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    </style>
+    <script>
+        function returnMoney(nStr) {
+            try {
+                var t = nStr.toString();
+                var e = "";
+                var s = "";
+                var j = 0;
+
+                for (var i = t.length - 1; i >= 0; i--) {
+                    if (j == 3) {
+                        e += ",";
+                        j = 0;
+                    }
+                    j++;
+                    e += t.charAt(i);
+
+                }
+                for (var i = e.length - 1; i >= 0; i--) {
+
+                    s += e.charAt(i);
+
+                }
+                return s;
+            }
+            catch (err) {
+                return "";
+            }
+        }
+        var lticket = [];
+        var memberlogin;
+        var isMemberDay = false;
+        var isMobile = false; //initiate as false
+        // device detection
+        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+            || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) isMobile = true;
+
+        if (isMobile == true) {
+
+            var Niceurl = window.location.pathname
+            if (Niceurl == "/phim" || Niceurl == "phim")
+                Niceurl = ""
+            var WapUrl = 'https://m.megagscinemas.vn'
+            window.location.assign(WapUrl + Niceurl)
+        }
+
+    </script>
+
+    <title>
+	Rạp chiếu phim Mega GS | Mega GS | Vui giải trí &#8211; Vui bạn bè !
+</title><meta charset="utf-8" />
+    <!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" /><meta name='description' content='Rạp Chiếu Phim Mega GS là một trong những rạp chiếu phim tiêu chuẩn quốc tế tại Việt Nam. Đến Mega GS để thưởng thức các siêu phẩm của Hollywood nhé các bạn!'/><meta name='keywords' content='PHIM ĐANG CHIẾU,PHIM DANG CHIEU,PHIM SẮP CHIẾU,PHIM SAP CHIEU,RẠP CHIẾU PHIM,RAP CHIEU PHIM,PHIMMOI,PHIM HAY,PHIM,PHIM CHIEU RAP,PHIM CHIẾU RẠP,LỊCH CHIẾU PHIM,LICH CHIEU PHIM,PHIM RAP,MEGA GS CINEMAS,MEGAGS,MEGA GS,RAP,RẠP,CGV,GALAXY,LOTTE,CINESTAR,BHD,STARLIGHT,CINEBOX,BETA CINEPLEX,123PHIM,MOVEEK,LỊCH CHIẾU,LICH CHIEU,RẠP CAO THẮNG,RAP CAO THANG,CINEMA,CINEMAS,MEGASTAR,MEGA STAR,MEGA CAO THẮNG,MEGA CAO THANG,CAO THẮNG,CAO THANG'/><meta property='og:url' content='https://www.megagscinemas.vn/'/><meta property='og:type' content='website'/><meta property='og:title' content='Rạp chiếu phim Mega GS | Mega GS | Vui giải trí &#8211; Vui bạn bè !'/><meta property='og:description' content='Rạp Chiếu Phim Mega GS là một trong những rạp chiếu phim tiêu chuẩn quốc tế tại Việt Nam. Đến Mega GS để thưởng thức các siêu phẩm của Hollywood nhé các bạn!'/><meta property='og:image' content=''/><link rel="shortcut icon" href="favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!-- Font Awesome core CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- bxslider CSS -->
+    <link href="/css/jquery.bxslider.css" rel="stylesheet" />
+    <!-- Slick Slider CSS -->
+    <link href="/css/slick.css" rel="stylesheet" />
+    <!-- scroll pane CSS -->
+    <link href="/css/jquery.jscrollpane.css" rel="stylesheet" />
+    <!-- drawer CSS -->
+    <link href="/css/jquery.drawer.css" rel="stylesheet" />
+    <!-- CSS modules -->
+    <!-- Custom styles for this template -->
+    <link href="/css/Cool-Style.css" rel="stylesheet" />
+    <!-- Custom fonts of Yunchang -->
+    <link href="/fonts/generated-fonts/fonts.css" rel="stylesheet" />
+    <!-- Custom styles of Yunchang -->
+    <link href="/css/custom-style.css" rel="stylesheet" /><link href="/css/nice-select.css" rel="stylesheet" /><link href="/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" /><link href="/css/css_v2.css" rel="stylesheet" /><link href="/css/cssPopup.css" rel="stylesheet" />
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.bxslider.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/jquery.mousewheel.js"></script>
+    <script src="/js/jquery.jscrollpane.min.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/jquery.drawer.min.js"></script>
+    <script src="/js/jquery.twbsPagination.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/Cool-layout.js"></script>
+    <script src="/js/openYoutube.js"></script>
+    <link href="/css/cssYoutube.css" rel="stylesheet" />
+    <style>
+        #popup-main-booking {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            display: none;
+        }
+
+        .popup-main-booking {
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            top: 15%;
+            display: none;
+        }
+
+        .show-content-booking .box-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .show-content-booking .box-table {
+            padding: 35px;
+            background-color: #fff;
+        }
+
+        .ct-ud-group .content-select p{
+            font-family: 'Open Sans Condensed',sans-serif;
+        }
+
+            .show-content-booking .box-table table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    </style>
+    <script>
+        var api = 'https://api.megagscinemas.vn/'
+        var fn = 'MegaGS.aspx'
+        var url = api + fn;
+
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-71391100-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '440041086191714');
+        fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=440041086191714&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script>
+       
+
+        
+
+      
+    </script>
+    
+    <style>
+          .popup-opacity-home {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            overflow: hidden;
+            position: fixed;
+            background: #0b0b0b;
+            opacity: 0.5;
+            display: none;
+        }
+
+        .popup-main-home {
+            width: 100%;
+            position: fixed;
+            z-index: 99999;
+            top: 15%;
+            display: none;
+        }
+
+        .popup-content-home {
+            position: relative;
+            z-index: 9999;
+            text-align: center;
+        }
+
+        .show-content-home .close-popup {
+            background: url(/images/home/close-popup.png) no-repeat;
+            width: 35px;
+            height: 44px;
+            position: absolute;
+            right: 20px;
+            margin-top: -18px;
+            cursor: pointer;
+            z-index: 110;
+            background-size: 35px 35px;
+        }
+
+        .show-content-home a {
+            position: relative;
+        }
+    </style>
+     <script>
+        var list_Mv_Str = [];
+     
+        $(document).ready(function () {
+          
+            
+            list_Mv_Str.push('NGHI HE SO NGHI HUU [T13]')
+            
+            list_Mv_Str.push('QUY TU VUOT GIAU [K]')
+            
+            list_Mv_Str.push('HO LINH TRANG SI [T13]')
+            
+            list_Mv_Str.push('HOPE [T16]')
+            
+            list_Mv_Str.push('MUTINY [T18]')
+            
+            list_Mv_Str.push('2DD CHIIKAWA: THE SECRET OF THE MERMAID ISLAND')
+            
+            list_Mv_Str.push('GHOST IN THE CELL [T18]')
+            
+            list_Mv_Str.push('THE JOURNEY TO GYEONG-JU [T18]')
+            
+            list_Mv_Str.push('INSIDIOUS: OUT OF THE FURTHER [T16]')
+            
+            list_Mv_Str.push('2DD CHARLIE THE WONDERDOG')
+            
+            list_Mv_Str.push('SPIDER-MAN: BRAND NEW DAY [T13]')
+            
+            list_Mv_Str.push('2D DEAR YOU,2DD DEAR YOU')
+            
+
+            $("#redirec_mv").click(function(){
+                $("ul.nav.nav-tabs li").each(function (index) {
+                    var id=$(this).attr('class');
+                    if(id=="active")
+                    {
+                        localStorage.setItem("indexMV", index);
+                    }
+                });
+              
+            });
+        });
+    </script>
+    
+    <style>
+        
+      .show-content-home .close-popup {
+            background: url(../images/home/close-popup.png) no-repeat;
+            width: 42px;
+            height: 44px;
+            position: absolute;
+            right: -13px;
+            margin-top: -20px;
+            cursor: pointer;
+            z-index: 110;
+        }
+       .show-content-home a{
+            position: relative;
+        }
+     </style>
+
+    <script type='text/javascript'>
+        (function () {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
+
+    <script type='text/javascript'>
+        googletag.cmd.push(function () {
+            //googletag.defineSlot('/275901723/Mega_Day_970x90', [970, 90], 'div-gpt-ad-1457081272101-0').addService(googletag.pubads());
+			googletag.defineSlot('/275901723/GS_HomePage_Header', [1140, 130], 'div-gpt-ad-1491799498433-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableSyncRendering();
+            googletag.enableServices();
+        });
+    </script>
+    <!--<script type="text/javascript" src="https://media.adnetwork.vn/js/retargeting.js"></script>
+    <script type="text/javascript">
+        try {
+            AbdTracking.Retargeting({ "id": 1470649910 });
+        } catch (e) { }
+    </script>
+    <noscript><img src="https://retg.adnetwork.vn/247/retargeting/id_1470649910/ " width="1" height="1" border="0" alt=""/></noscript>-->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KNL7KRL');</script>
+<!-- End Google Tag Manager -->	
+</head>
+<body>
+    <script>
+        $('iframe:eq(0)').hide();
+    </script>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6" />
+</div>
+
+        <div id="wrapper-main">
+            
+ <script>
+        var list_Mv_Str = [];
+        var listmvs;
+        $(document).ready(function () {
+           listmvs = [{"Id":13468,"image":"/media/77863/nhsnh_1.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"NGHỈ HÈ SỢ NGHỈ HƯU","Movie_strName":"NGHI HE SO NGHI HUU [T13]","NiceURL":"/nghi-he-so-nghi-huu/","tenTiengAnh":"","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Nghỉ Hè Sợ Nghỉ Hưu xoay quanh Trí Bình, một chàng trai Gen Z, trở về vùng quê hẻo lánh để trải qua kỳ nghỉ hè cùng ông nội là ông Thời - một cựu chiến binh sống đơn độc nhiều năm. Trí Bình liên tiếp chứng kiến hàng loạt hiện tượng kỳ lạ của ông nội và nhận được những lời cảnh báo rùng rợn từ mọi người. Khi bí mật về ông Thời dần được hé lộ, cậu buộc phải đối mặt với nỗi sợ hãi, vượt qua khoảng cách thế hệ để dần nhận ra các giá trị tưởng chừng đã bị lãng quên. Đan xen giữa tiếng cười, yếu tố tâm linh và những tình huống éo le, Nghỉ Hè Sợ Nghỉ Hưu là câu chuyện về gia đình, sự trưởng thành và hành trình đi tìm câu trả lời cho nỗi trăn trở: “Nếu cả đời này không rực rỡ thì sao?”.</span></p>\n<pre style=\"display: none;\">09:03:48 query returned open=false\n</pre>\n<pre style=\"display: none;\">03:32:18 query returned open=false\n</pre>\n<pre style=\"display: none;\">01:59:50 query returned open=false\n</pre>\n<pre style=\"display: none;\">03:25:37 query returned open=false\n</pre>","trailer":"bxv1cFxSPYM","thoiLuong":"117","theLoai":"Hài hước,Gia đình","khoiChieu":"8/21/2026 12:00:00 AM","tuyChon":"2D,T13","daoDien":"Huỳnh Lập","dienVien":"NSƯT Cao Minh, Cody Nam Võ, Huỳnh Lập, Tín Nguyễn","ngonNgu":"Tiếng Việt,Phụ đề Tiếng Anh","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":true,"newMv":false,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13516,"image":"/media/77911/quý-tử-vượt-giàu_470x700.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"QUÝ TỬ VƯỢT GIÀU","Movie_strName":"QUY TU VUOT GIAU [K]","NiceURL":"/quy-tu-vuot-giau/","tenTiengAnh":"","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Quý Tử Vượt Giàu xoay quanh gia đình ông Phát, bà Diệp và cậu con trai duy nhất Phú Quý. Để nuôi dạy con cái trưởng thành theo đúng ý mình, vợ chồng Phát - Diệp liên tục gây hoang mang khi tạo ra một cuộc sống lẫn lộn giữa giàu và nghèo, thật và giả. Thế nhưng, khi Phú Quý lớn lên với những lựa chọn khác với kỳ vọng của ba mẹ, hàng loạt tình huống dở khóc dở cười liên tiếp xảy ra, kéo theo những bí mật chưa từng được hé lộ. Ẩn sau màu sắc hài hước là câu chuyện về tình thân, khoảng cách thế hệ và hành trình để ba mẹ lẫn con cái học cách lắng nghe, thấu hiểu nhau.</span></p>\n<pre style=\"display: none;\">08:48:12 query returned open=false\n</pre>\n<pre style=\"display: none;\">08:52:57 query returned open=false\n</pre>\n<pre style=\"display: none;\">01:20:01 query returned open=false\n</pre>\n<pre style=\"display: none;\">03:59:34 query returned open=false\n</pre>","trailer":"dSlL5pEeUoY","thoiLuong":"118","theLoai":"Hài hước,Gia đình","khoiChieu":"8/28/2026 12:00:00 AM","tuyChon":"2D,K","daoDien":"Nguyễn Quang Dũng","dienVien":"Thu Trang, Tiến Luật, Ngô Kiến Huy, Ngân Quỳnh, Hạo Khang, Đình Dương, Thanh Thuỷ, Kiến An","ngonNgu":"Tiếng Việt,Phụ đề Tiếng Anh","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":true,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13485,"image":"/media/77880/788214060_1405306125072705_5650992787147470357_n-1.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"HỘ LINH TRÁNG SĨ: BÍ ẨN MỘ VUA ĐINH (RÚT GỌN)","Movie_strName":"HO LINH TRANG SI [T13]","NiceURL":"/ho-linh-trang-si-bi-an-mo-vua-dinh-rut-gon/","tenTiengAnh":"","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Cuối triều Đinh, vua Đinh Tiên Hoàng đột ngột băng hà khiến triều đình rơi vào khủng hoảng. Thù trong chưa yên, giặc ngoài đã lăm le xăm lược. </span></p>\n<p><span>Những tử sĩ được giao nhiệm vụ đưa linh cữu nhà vua đến long mạch để an táng. Cuộc hành trình nhiều cam go này trở thành chuyến đi thử thách lòng trung nghĩa...</span></p>\n<pre style=\"display: none;\">01:49:00 query returned open=false\n</pre>\n<pre style=\"display: none;\">04:21:02 query returned open=false\n</pre>\n<pre style=\"display: none;\">04:41:13 query returned open=false\n</pre>\n<pre style=\"display: none;\">03:58:57 query returned open=false\n</pre>\n<pre style=\"display: none;\">04:03:45 query returned open=false\n</pre>","trailer":"5pma1JcPWK8","thoiLuong":"135","theLoai":"Hành động","khoiChieu":"8/31/2026 12:00:00 AM","tuyChon":"2D,T13","daoDien":"Nguyễn Phan Quang Bình","dienVien":"Tuấn Trần, Quách Ngọc Ngoan, Johnny Trí Nguyễn, NSND Tự Long, Hứa Vĩ Văn, Trần Thiên Tú, Đỗ Thị Hải Yến","ngonNgu":"Tiếng Việt,Phụ đề Tiếng Anh","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":true,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13526,"image":"/media/77921/hope.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"HOPE VÙNG TỬ ĐỊA","Movie_strName":"HOPE [T16]","NiceURL":"/hope-vung-tu-dia/","tenTiengAnh":"HOPE","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Tại Hope Harbor, một ngôi làng hẻo lánh nằm gần khu vực phi quân sự, cảnh sát trưởng Bum-seok đã nhận được tin báo khẩn cấp từ người dân địa phương về sự xuất hiện của một con hổ. Khi cả ngôi làng chìm trong hoảng loạn, Bum-seok ngỡ ngàng khi phát hiện một sự thật nằm ngoài sức tưởng tượng của con người.</span></p>\n<pre style=\"display: none;\">08:49:37 query returned open=false\n</pre>\n<pre style=\"display: none;\">06:48:34 query returned open=false\n</pre>","trailer":"2al_iR2e87A","thoiLuong":"157","theLoai":"Hành động,Viễn tưởng,Hồi hộp","khoiChieu":"9/4/2026 12:00:00 AM","tuyChon":"2D,T16","daoDien":"Na Hong-Jin","dienVien":"Hwang Jung-min, Zo In-sung, Hoyeon, Taylor Russell, Cameron Britton, Alicia Vikander, Michael Fassbender.","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu,Suất chiếu đặc biệt","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":true,"hienThiNgay":true,"publish":null},{"Id":13525,"image":"/media/77920/tàu-buôn-ng.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"TÀU BUÔN NGƯỜI","Movie_strName":"MUTINY [T18]","NiceURL":"/tau-buon-nguoi/","tenTiengAnh":"MUTINY","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>\"Mutiny (Tàu buồn người) kể về Cole Reed do Jason Statham thủ vai, sau khi tận mắt chứng kiến ông chủ tỷ phú của mình bị sát hại và bản thân trở thành kẻ thế thân bị vu oan, Cole Reed (Jason Statham) đã đột nhập lên một con tàu chở hàng để bắt đầu hành trình truy tìm sự thật và trả thù cho vị sếp cũ. Tuy nhiên, chuyến đi đơn độc này lại đẩy anh vào nguy hiểm khi Cole vô tình bóc trần một âm mưu quốc tế quy mô và cực kỳ nguy hiểm.</span></p>\n<pre style=\"display: none;\">08:36:05 query returned open=false\n</pre>\n<pre style=\"display: none;\">08:42:56 query returned open=false\n</pre>\n<pre style=\"display: none;\">01:19:08 query returned open=false\n</pre>\n<pre style=\"display: none;\">01:41:34 query returned open=false\n</pre>\n<pre style=\"display: none;\">04:00:03 query returned open=false\n</pre>","trailer":"kTl-DZvgGAc","thoiLuong":"95","theLoai":"Hành động,Hồi hộp","khoiChieu":"8/28/2026 12:00:00 AM","tuyChon":"2D,T18","daoDien":"Jean-François Richet","dienVien":"Jason Statham, Annabelle Wallis, Adrian Lester","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":true,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13530,"image":"/media/77925/chiikawa.jpg","poster":null,"thumnail":"","rap":"6277,1144","tenPhim":"CHIIKAWA: BÍ MẬT ĐẢO NGƯỜI CÁ","Movie_strName":"2DD CHIIKAWA: THE SECRET OF THE MERMAID ISLAND","NiceURL":"/chiikawa-bi-mat-dao-nguoi-ca/","tenTiengAnh":"CHIIKAWA THE MOVIE: THE SECRET OF THE MERMAID ISLAND","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Bộ ba Chiikawa, Hachiware và Usagi nhận được một lời mời tham gia chuyến đi đến hòn đảo đặc biệt với những phần thưởng và đồ ăn miễn phí. Cả nhóm cùng lên đường phiêu lưu ra đảo cùng với nhân vật Rakko – người vốn mang lòng hoài nghi về những lời hứa hẹn trong tờ rơi. Hòn đảo tưởng chừng vui vẻ này lại ẩn chứa nhiều điều kỳ bí và bí mật lâu đời liên quan đến người cá.</span></p>\n<pre style=\"display: none;\">01:22:15 query returned open=false\n</pre>","trailer":"QOCmVU_16cY","thoiLuong":"99","theLoai":"Hoạt hình","khoiChieu":"8/28/2026 12:00:00 AM","tuyChon":"2D,P","daoDien":"Kei Oikawa","dienVien":"Haruka Aoki, Makoto Tanaka, Ari Ozawa, Yuka Iguchi, Takayuki Asai, Yuma Uchida, Miyuri Shimabukuro, Momo Harumi","ngonNgu":"Lồng tiếng Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":true,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13527,"image":"/media/77922/ma-tù.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"MA TÙ","Movie_strName":"GHOST IN THE CELL [T18]","NiceURL":"/ma-tu/","tenTiengAnh":"GHOST IN THE CELL","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p>Một tù nhân bí ẩn xuất hiện trong một nhà tù khét tiếng bạo lực nhất Indonesia, mang theo một thực thể siêu nhiên chỉ săn lùng những kẻ có năng lượng tiêu cực. Để sống sót, các tù nhân buộc phải cùng nhau làm việc thiện nhằm xóa bỏ bóng tối trong tâm hồn. Hoặc chết từng người một.</p>\n<pre style=\"display: none;\">09:31:26 query returned open=false\n09:33:49 dblclick \"4DX\nImax\nStarium\nGoldclass\" sidepanelOpen=false autoUpdate=true isAdv=false\n</pre>\n<pre style=\"display: none;\">03:16:22 query returned open=false\n</pre>\n<pre style=\"display: none;\">06:49:28 query returned open=false\n</pre>","trailer":"Z0BKTwHTyxs","thoiLuong":"104","theLoai":"Hài hước,Kinh dị","khoiChieu":"9/4/2026 12:00:00 AM","tuyChon":"2D,T18","daoDien":"Joko Anwar","dienVien":"Abimana Aryasatya, Almanzo Konoralma, Aming Sugandhi,...","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu,Suất chiếu đặc biệt","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":true,"hienThiNgay":true,"publish":null},{"Id":13531,"image":"/media/77926/hành-trình-bất-hảo.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"HÀNH TRÌNH BẤT HẢO","Movie_strName":"THE JOURNEY TO GYEONG-JU [T18]","NiceURL":"/hanh-trinh-bat-hao/","tenTiengAnh":"THE JOURNEY TO GYEONG-JU","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Bị bóp nghẹt bởi nỗi đau mất đi đứa con gái út, bốn mẹ con quyết tâm thực hiện kế hoạch bắt cóc kẻ giết người vừa được tại ngoại sau 8 năm thụ án. Chuyến du lịch ‘chữa lành’ sẽ là chứng cứ ngoại phạm hoàn hảo hay sẽ là hành trình đầy sóng gió cho những “sát thủ nghiệp dư”?</span></p>\n<pre style=\"display: none;\">06:44:59 query returned open=false\n</pre>\n<pre style=\"display: none;\">06:48:11 query returned open=false\n</pre>","trailer":"fc6tA-q_XA0","thoiLuong":"111","theLoai":"Hài hước,Hành động","khoiChieu":"9/4/2026 12:00:00 AM","tuyChon":"2D,T18","daoDien":"KIM MI-JO","dienVien":"LEE JUNG-EUN, KONG HYO-JIN, PARK SO-DAM & LEE YEON","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu,Suất chiếu đặc biệt","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":true,"hienThiNgay":true,"publish":null},{"Id":13515,"image":"/media/77910/insidious_1.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"QUỶ QUYỆT: RANH GIỚI VÔ ĐỊNH","Movie_strName":"INSIDIOUS: OUT OF THE FURTHER [T16]","NiceURL":"/quy-quyet-ranh-gioi-vo-dinh/","tenTiengAnh":"INSIDIOUS: OUT OF THE FURTHER","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Insidious:Quỷ Quyệt: Ranh Giới Vô Định xoay quanh Gemma (Amelia Eve), một bà mẹ trẻ trở về sống trong ngôi nhà thời thơ ấu cùng con gái và phát hiện mình có thể bước vào Cõi Vô Định, nơi giam giữ những linh hồn lạc lối. Nhưng Gemma không chỉ có thể bước vào Cõi Vô Định, cô còn sở hữu năng lực đưa những thực thể từ đó trở về thế giới thực. Khi các thế lực tà ác phát hiện ra sức mạnh này, ranh giới giữa hai thế giới dần sụp đổ, biến thế giới của người sống thành sân chơi của quỷ dữ.</span></p>\r\n<pre style=\"display: none;\">03:03:31 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">06:44:21 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">02:00:22 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">10:03:25 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">03:36:53 query returned open=false\r\n</pre>","trailer":"hcALH3PWI8k","thoiLuong":"106","theLoai":"Kinh dị","khoiChieu":"8/21/2026 12:00:00 AM","tuyChon":"2D,T16","daoDien":"Jacob Chase","dienVien":"Amelia Eve, Island Austin, Lin Shaye, Sam Spruell, Brandon Perea, and Masie Richardson- Sellers","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13517,"image":"/media/77912/siêu-chó.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"SIÊU CHÓ ĐẠP GIÓ ĐÓN LỄ","Movie_strName":"2DD CHARLIE THE WONDERDOG","NiceURL":"/sieu-cho-dap-gio-don-le/","tenTiengAnh":"CHARLIE THE WONDERDOG","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Charlie – chú chó cưng đáng yêu của Danny – bất ngờ bị người ngoài hành tinh bắt cóc và trao cho những siêu năng lực đặc biệt. Nhưng Charlie không phải là “siêu thú” duy nhất trong khu phố khi Puddy – chú mèo tinh quái nhà bên – cũng sở hữu những năng lực phi thường. Cuộc đối đầu giữa hai “siêu thú” mở ra hàng loạt tình huống hài hước, bất ngờ và đầy thú vị, đồng thời mang đến những khoảnh khắc đáng yêu về tình bạn, tình cảm gia đình và tình yêu dành cho các loài vật. Liệu Charlie có thể làm chủ sức mạnh mới và vượt qua những thử thách đang chờ đợi phía trước?</span></p>\r\n<pre style=\"display: none;\">07:32:30 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">09:19:58 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">01:21:37 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">01:30:27 query returned open=false\r\n</pre>","trailer":"lFDBCXFu_o4","thoiLuong":"95","theLoai":"Hài hước,Hoạt hình,Gia đình","khoiChieu":"8/28/2026 12:00:00 AM","tuyChon":"2D,P","daoDien":"Shea Wageman","dienVien":"Owen Wilson, Vincent Tong, Tabitha St. Germain","ngonNgu":"Lồng tiếng Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":true,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13462,"image":"/media/77857/spiderman_1.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"NGƯỜI NHỆN: KHỞI ĐẦU MỚI","Movie_strName":"SPIDER-MAN: BRAND NEW DAY [T13]","NiceURL":"/nguoi-nhen-khoi-dau-moi/","tenTiengAnh":"SPIDER-MAN: BRAND NEW DAY","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Không còn Tony Stark, MJ hay Ned kề cận, Peter buộc phải đơn thân độc mã đối diện với phe đối đầu bí ẩn. Tuy nhiên, khi áp lực ngày càng gia tăng, nó kích hoạt một sự biến đổi thể chất bất ngờ, đe dọa chính sự tồn tại của anh. Đồng thời, một chuỗi tội phạm bí ẩn mới xuất hiện, kéo theo một trong những mối đe dọa mạnh mẽ nhất mà Spider-Man từng đối mặt.</span></p>\r\n<pre style=\"display: none;\">01:49:43 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">03:19:38 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">03:25:52 query returned open=false\r\n</pre>","trailer":"sUIjrEey8fc","thoiLuong":"145","theLoai":"Hành động,Phiêu lưu,Thần thoại","khoiChieu":"7/31/2026 12:00:00 AM","tuyChon":"2D,T13","daoDien":"Destin Daniel Cretton","dienVien":"Tom Holland, Zendaya, Sadie Sink","ngonNgu":"Phụ đề Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":false,"hienThiNgay":true,"publish":null},{"Id":13507,"image":"/media/77902/thư-tình-gửi-ngoại.jpg","poster":null,"thumnail":"","rap":"1144,6277","tenPhim":"THƯ TÌNH GỬI NGOẠI","Movie_strName":"2D DEAR YOU,2DD DEAR YOU","NiceURL":"/thu-tinh-gui-ngoai/","tenTiengAnh":"DEAR YOU","MetaTl":null,"MetaDes":null,"Metakey":null,"banner":null,"noiDung":"<p><span>Tác phẩm lấy bối cảnh Trung Quốc, Thái Lan từ thập niên 1950 tới hiện tại, nói về cuộc đời của bà Diệp Thục Như (Ngô Thiếu Khanh đóng). Xuất thân tiểu thư, bà trốn nhà đi theo chàng trai nghèo Trịnh Mộc Sinh (Vương Ngạn Đồng đóng), sinh ba người con. Vì biến cố chính trị, ông Mộc Sinh phiêu bạt tới Thái Lan, ở đây làm lụng kiếm tiền gửi về cho vợ con. Trịnh Mộc Sinh đầu óc nhanh nhạy, giỏi kiếm tiền, trợ cấp đủ đầy cho gia đình và một lòng một dạ với vợ. Đôi vợ chồng gửi gắm tình yêu qua những lá thư. Một ngày, Diệp Thục Như nhận bức ảnh chồng bên một phụ nữ và những đứa trẻ kèm tin ông đã qua đời. Cháu của Diệp Thục Như trưởng thành, từ Trung Quốc tới Thái Lan tìm thân nhân của ông nội, từ đó mở ra câu chuyện ấm áp, giàu nghĩa tình sau những lá thư mà Trịnh Mộc Sinh gửi cho vợ.</span></p>\r\n<pre style=\"display: none;\">06:58:31 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">08:41:42 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">09:13:38 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">09:48:24 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">01:55:28 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">02:20:53 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">09:30:44 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">04:07:59 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">06:04:37 query returned open=false\r\n</pre>\r\n<pre style=\"display: none;\">04:24:10 query returned open=false\r\n</pre>","trailer":"IfeBxQZRdYc","thoiLuong":"117","theLoai":"Gia đình,Tâm lý","khoiChieu":"8/7/2026 12:00:00 AM","tuyChon":"2D,T13","daoDien":"Hongchun Lan","dienVien":"Li Sitong, Wang Yantong, Wu Shaoqing, Zheng Runqi, Wang Xiaohui","ngonNgu":"Phụ đề Tiếng Việt,Lồng tiếng Tiếng Việt","suatChieu":"Phim đang chiếu","phatHanh":"","imdb":"","promotion":"","hot":false,"newMv":false,"sneakShow":false,"hienThiNgay":true,"publish":null}];
+        });
+     </script>
+<input type="hidden" id="coutdetail" value="0" />
+<div id="mega-header">
+    <div class="header-wrap clearfix">
+        <div class="logo-wrap img">
+            <a title="Trang chu" href="/">
+                <img alt="Logo MegaGS" class="img-logo" alt="" src="/images/home/logo.png">
+                <img alt="Logo MegaGS" class="img-logo-fixed" alt="" src="/images/home/logo-fixed.png">
+            </a>
+        </div>
+        <div class="header-content">
+            <div class="topbar-wrap">
+                <div class="topbar-group clearfix">
+                    <div class="topbar-left">
+                        <span id="headlbt"><div class='mega-day'><span class='span-mega'>X2 Mega day</span><span class='span-cross'>-</span><span class='span-day'>Thứ 3-4 hàng tuần</span></div></span>
+                        <!-- Menu -->
+                        <div class="menu-item">
+                            <ul class="clearfix">
+                                <li id="A6"><a title="Giới Thiệu" href="/gioi-thieu/">Giới Thiệu</a></li>
+                                
+                                <li id="A8"><a title="Sự Kiện" href="/su-kien/">Sự Kiện</a></li>
+                                <li id="A7"><a title="Dịch vụ" href="/dich-vu/">Dịch vụ</a></li>
+                                <li id="A9"><a title="Tuyển Dụng" href="/tuyen-dung/">Tuyển Dụng</a></li>
+                                <li id="A10"><a title="FAQs" href="/faqs/">FAQs</a></li>
+                                <li id="A11"><a title="Liên Hệ" href="/lien-he/">Liên Hệ</a></li>
+                                <li id="A14"><a title="Mega +" href="/MegaPlus/">Mega +</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topbar-right" id="welcome_header">
+                         </div>
+                        <!-- Member Rigister -->
+                        <div class="member-register">
+                                                     
+                            <a title="Mua vé nhanh" class="buy-ticket" href="javascript:void(0);">Mua vé nhanh</a>
+                        </div>
+                        <div class="btn-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                   
+                </div>
+            </div>
+            <div class="menu-wrap">
+                <div class="menu">
+                    <ul>
+                        <li><a title="lịch chiếu" href="/lich-chieu/"><span class="item-schedule">lịch chiếu</span></a></li>
+                        <li><a title="phim" href="/phim/"><span class="item-movie">phim</span></a></li>
+                        <li><a title="rạp & giá vé" href="/rap/"><span class="item-fare">rạp & giá vé</span></a></li>
+                        <li><a title="ưu đãi" href="/uu-dai/"><span class="item-deal">ưu đãi</span></a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a title="Youtube" target="_blank" class="img-youtube" href="https://www.youtube.com/channel/UCYAIiDVBbuO6V4BBERWe-LQ"></a></li>
+                        <li><a title="Facebook" target="_blank" class="img-face" href="https://www.facebook.com/megagscinemas.vn/"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+ <script src="/js/ShowTimeHome.js"></script>
+  <script src="/js/ShowTimeDetailHome.js"></script>
+            <div id="mega-contents">
+                
+                <div id="popup_youtube">
+                    <div class="close-popup"><i></i></div>
+                    <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                
+    <div class="popup-opacity-home"></div>
+       <div class="popup-main-home">
+        <div class="popup-content-home">
+            <div class="show-content-home">
+               
+            </div>
+        </div>
+    </div>
+<!-- Silder -->
+	<div class="bxslider">
+        
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76619/nghi-he-so-nghi-huu.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/nghi-he-so-nghi-huu/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/nghi-he-so-nghi-huu/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76731/hope_2048x682.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/hope-vung-tu-dia/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/hope-vung-tu-dia/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76734/ho-linh-trang-si.jpg?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/ho-linh-trang-si-bi-an-mo-vua-dinh/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/ho-linh-trang-si-bi-an-mo-vua-dinh/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76584/ma-tù_2048x682.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/ma-tu/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/ma-tu/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76735/qtvg_2048wx682h.jpg?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/quy-tu-vuot-giau/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/quy-tu-vuot-giau/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76782/chiikawa-the-movie-the-secret-of-mermaid-island-1_1787022536788.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/phim/chiikawa-bi-mat-dao-nguoi-ca/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/phim/chiikawa-bi-mat-dao-nguoi-ca/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76676/megags-banner-web-1920x648.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/uu-dai/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/uu-dai/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="slide-group clearfix">
+                                <div class="slide-left">
+                                    <img src="https://cms.megagscinemas.vn//media/76794/megags-banner-web-1920x648-3.png?width=1920&height=648" />
+                                    <a href="https://www.megagscinemas.vn/uu-dai/" class="seemore"></a>
+
+                                    <div class="silde-control-wrap clearfix">
+                                        <div class="kind img">
+
+                                        </div>
+                                        <div class="info">
+                                            <a title="Chi Tiết" class="detail" href="https://www.megagscinemas.vn/uu-dai/">Chi Tiết</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+		
+		
+		
+	</div>
+	<div id="booking-form">
+		<div class="wrapper">
+			<div class="contents">
+				<div class="title">
+					<h3>MUA VÉ ONLINE</h3>
+					<p><span>(*) </span>Chọn vào suất chiếu để đặt vé trực tuyến</p>
+				</div>
+                <div class="form-wrapper  clearfix">
+                     <div class="form_selected_slide">
+                        <div class="customselectBox click_box_1">
+                            <span class="selected">MEGA GS CAO THẮNG</span>
+                            <div class="selectOptions" style="display: none">
+                                <div class="bg-opacity">
+                                   <span class="selectOption" data-code="MCT" data-title="MEGA GS CAO THẮNG">MEGA GS CAO THẮNG</span>
+                                    <span class="selectOption" data-code="LCT" data-title="MEGA GS LÝ CHÍNH THẮNG">MEGA GS LÝ CHÍNH THẮNG</span>
+                                </div>
+                            </div>
+                            <i class="icon-down"></i>
+                        </div>
+                        <div class="customselectBox click_box_2">
+                            <span class="selected">Chọn phim</span>
+                            <div class="selectOptions" style="display: none">
+                                <div class="bg-opacity">
+                                    <div class="group_lists">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="icon-down"></i>
+                        </div>
+                        <div class="customselectBox click_box_3">
+                            <span class="selected">Chọn ngày</span>
+                            <div class="selectOptions" style="display: none">
+                                <div class="bg-opacity">
+
+                                </div>
+                            </div>
+                            <i class="icon-down"></i>
+                        </div>
+                        <div class="bg-close-selectbox" style="display: none"></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contents -->
+	<div id="mega-contents">
+		<div class="contents-page">
+			<!-- Slideshow -->
+			<!-- Advertise -->
+		<!-- 	<div class="advertise">
+				<a href="#"><img class="adv-img" src="images/home/item-advertise.png"></a>
+			</div> -->
+			<!-- Tab Product -->
+			<div class="tab-product">
+				<ul id="tabs-all" class="nav nav-tabs">
+					<li class="active">
+						<a class="pads" data-toggle="tab" href="#movie-dc">
+							<!-- <img src="images/home/item-movie-dc.png"/> -->
+							<span class="span-tab">Phim Đang Chiếu</span>
+						</a>
+					</li>
+					<li>
+						<a class="pads" data-toggle="tab" href="#movie-sc">
+							<!-- <img src="images/home/item-movie-sc.png"/> -->
+							<span class="span-tab">Phim Sắp Chiếu</span>
+						</a>
+					</li>
+					
+				</ul>
+				<!-- Tab Contents Product -->
+				<div class="tab-content">
+					
+<script>
+    var listMVDC = [];
+    $(document).ready(function () {
+       // listMVDC = System.Collections.Generic.List`1[Movies];
+    });
+</script>
+
+
+<div id="movie-dc" class="tab-pane fade  in active ">
+    <div class="autoplay">
+        
+        <div class="product-items" mvroot="NGHI HE SO NGHI HUU [T13]">
+            <a title="NGHỈ H&#200; SỢ NGHỈ HƯU" href="#">
+                
+       <div class="icon-hot"><img alt="hot" src="images/home/item-hot.png"/></div>
+        
+        <img alt="NGHỈ H&#200; SỢ NGHỈ HƯU" src="https://cms.megagscinemas.vn//media/77863/nhsnh_1.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>21</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="NGHỈ H&#200; SỢ NGHỈ HƯU" src="https://cms.megagscinemas.vn//media/77863/nhsnh_1.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="NGHI HE SO NGHI HUU [T13]">
+                    <div class="detail_inner">
+                    <h4>NGHỈ HÈ SỢ NGHỈ HƯU</h4>
+                                           
+                                        <p>NGHI HE SO NGHI HUU [T13]</p>
+                                        
+                                        <p>
+                                            <span class="duration">117</span>
+                                            <span class="type">Hài hước, Gia đình</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/nghi-he-so-nghi-huu/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="bxv1cFxSPYM" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/nghi-he-so-nghi-huu/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/nghi-he-so-nghi-huu/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="QUY TU VUOT GIAU [K]">
+            <a title="QU&#221; TỬ VƯỢT GI&#192;U" href="#">
+                
+        <img alt="QU&#221; TỬ VƯỢT GI&#192;U" src="https://cms.megagscinemas.vn//media/77911/quý-tử-vượt-giàu_470x700.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>28</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="QU&#221; TỬ VƯỢT GI&#192;U" src="https://cms.megagscinemas.vn//media/77911/quý-tử-vượt-giàu_470x700.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="QUY TU VUOT GIAU [K]">
+                    <div class="detail_inner">
+                    <h4>QUÝ TỬ VƯỢT GIÀU</h4>
+                                           
+                                        <p>QUY TU VUOT GIAU [K]</p>
+                                        
+                                        <p>
+                                            <span class="duration">118</span>
+                                            <span class="type">Hài hước, Gia đình</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/quy-tu-vuot-giau/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="dSlL5pEeUoY" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/quy-tu-vuot-giau/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/quy-tu-vuot-giau/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="HO LINH TRANG SI [T13]">
+            <a title="HỘ LINH TR&#193;NG SĨ: B&#205; ẨN MỘ VUA ĐINH (R&#218;T GỌN)" href="#">
+                
+        <img alt="HỘ LINH TR&#193;NG SĨ: B&#205; ẨN MỘ VUA ĐINH (R&#218;T GỌN)" src="https://cms.megagscinemas.vn//media/77880/788214060_1405306125072705_5650992787147470357_n-1.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>31</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="HỘ LINH TR&#193;NG SĨ: B&#205; ẨN MỘ VUA ĐINH (R&#218;T GỌN)" src="https://cms.megagscinemas.vn//media/77880/788214060_1405306125072705_5650992787147470357_n-1.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="HO LINH TRANG SI [T13]">
+                    <div class="detail_inner">
+                    <h4>HỘ LINH TRÁNG SĨ: BÍ ẨN MỘ VUA ĐINH (RÚT GỌN)</h4>
+                                           
+                                        <p>HO LINH TRANG SI [T13]</p>
+                                        
+                                        <p>
+                                            <span class="duration">135</span>
+                                            <span class="type">Hành động</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/ho-linh-trang-si-bi-an-mo-vua-dinh-rut-gon/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="5pma1JcPWK8" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/ho-linh-trang-si-bi-an-mo-vua-dinh-rut-gon/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/ho-linh-trang-si-bi-an-mo-vua-dinh-rut-gon/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="HOPE [T16]">
+            <a title="HOPE V&#217;NG TỬ ĐỊA" href="#">
+                
+        <img class="bg-new-only" alt="HOPE V&#217;NG TỬ ĐỊA" src="https://cms.megagscinemas.vn//media/77921/hope.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="HOPE V&#217;NG TỬ ĐỊA" src="https://cms.megagscinemas.vn//media/77921/hope.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="HOPE [T16]">
+                    <div class="detail_inner">
+                    <h4>HOPE VÙNG TỬ ĐỊA</h4>
+                                           
+                                        <p>HOPE [T16]</p>
+                                        
+                                        <p>
+                                            <span class="duration">157</span>
+                                            <span class="type">Hành động, Viễn tưởng, Hồi hộp</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/hope-vung-tu-dia/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="2al_iR2e87A" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/hope-vung-tu-dia/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/hope-vung-tu-dia/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="MUTINY [T18]">
+            <a title="T&#192;U BU&#212;N NGƯỜI" href="#">
+                
+        <img alt="T&#192;U BU&#212;N NGƯỜI" src="https://cms.megagscinemas.vn//media/77920/tàu-buôn-ng.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>28</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="T&#192;U BU&#212;N NGƯỜI" src="https://cms.megagscinemas.vn//media/77920/tàu-buôn-ng.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="MUTINY [T18]">
+                    <div class="detail_inner">
+                    <h4>TÀU BUÔN NGƯỜI</h4>
+                                           
+                                        <p>MUTINY [T18]</p>
+                                        
+                                        <p>
+                                            <span class="duration">95</span>
+                                            <span class="type">Hành động, Hồi hộp</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/tau-buon-nguoi/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="kTl-DZvgGAc" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/tau-buon-nguoi/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/tau-buon-nguoi/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="2DD CHIIKAWA: THE SECRET OF THE MERMAID ISLAND">
+            <a title="CHIIKAWA: B&#205; MẬT ĐẢO NGƯỜI C&#193;" href="#">
+                
+        <img alt="CHIIKAWA: B&#205; MẬT ĐẢO NGƯỜI C&#193;" src="https://cms.megagscinemas.vn//media/77925/chiikawa.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>28</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="CHIIKAWA: B&#205; MẬT ĐẢO NGƯỜI C&#193;" src="https://cms.megagscinemas.vn//media/77925/chiikawa.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="2DD CHIIKAWA: THE SECRET OF THE MERMAID ISLAND">
+                    <div class="detail_inner">
+                    <h4>CHIIKAWA: BÍ MẬT ĐẢO NGƯỜI CÁ</h4>
+                                           
+                                        <p>2DD CHIIKAWA: THE SECRET OF THE MERMAID ISLAND</p>
+                                        
+                                        <p>
+                                            <span class="duration">99</span>
+                                            <span class="type">Hoạt hình</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/chiikawa-bi-mat-dao-nguoi-ca/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="QOCmVU_16cY" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/chiikawa-bi-mat-dao-nguoi-ca/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/chiikawa-bi-mat-dao-nguoi-ca/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="GHOST IN THE CELL [T18]">
+            <a title="MA T&#217;" href="#">
+                
+        <img class="bg-new-only" alt="MA T&#217;" src="https://cms.megagscinemas.vn//media/77922/ma-tù.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="MA T&#217;" src="https://cms.megagscinemas.vn//media/77922/ma-tù.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="GHOST IN THE CELL [T18]">
+                    <div class="detail_inner">
+                    <h4>MA TÙ</h4>
+                                           
+                                        <p>GHOST IN THE CELL [T18]</p>
+                                        
+                                        <p>
+                                            <span class="duration">104</span>
+                                            <span class="type">Hài hước, Kinh dị</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/ma-tu/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="Z0BKTwHTyxs" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/ma-tu/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/ma-tu/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="THE JOURNEY TO GYEONG-JU [T18]">
+            <a title="H&#192;NH TR&#204;NH BẤT HẢO" href="#">
+                
+        <img class="bg-new-only" alt="H&#192;NH TR&#204;NH BẤT HẢO" src="https://cms.megagscinemas.vn//media/77926/hành-trình-bất-hảo.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="H&#192;NH TR&#204;NH BẤT HẢO" src="https://cms.megagscinemas.vn//media/77926/hành-trình-bất-hảo.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="THE JOURNEY TO GYEONG-JU [T18]">
+                    <div class="detail_inner">
+                    <h4>HÀNH TRÌNH BẤT HẢO</h4>
+                                           
+                                        <p>THE JOURNEY TO GYEONG-JU [T18]</p>
+                                        
+                                        <p>
+                                            <span class="duration">111</span>
+                                            <span class="type">Hài hước, Hành động</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/hanh-trinh-bat-hao/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="fc6tA-q_XA0" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/hanh-trinh-bat-hao/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/hanh-trinh-bat-hao/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="INSIDIOUS: OUT OF THE FURTHER [T16]">
+            <a title="QUỶ QUYỆT: RANH GIỚI V&#212; ĐỊNH" href="#">
+                
+        <img alt="QUỶ QUYỆT: RANH GIỚI V&#212; ĐỊNH" src="https://cms.megagscinemas.vn//media/77910/insidious_1.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>21</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="QUỶ QUYỆT: RANH GIỚI V&#212; ĐỊNH" src="https://cms.megagscinemas.vn//media/77910/insidious_1.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="INSIDIOUS: OUT OF THE FURTHER [T16]">
+                    <div class="detail_inner">
+                    <h4>QUỶ QUYỆT: RANH GIỚI VÔ ĐỊNH</h4>
+                                           
+                                        <p>INSIDIOUS: OUT OF THE FURTHER [T16]</p>
+                                        
+                                        <p>
+                                            <span class="duration">106</span>
+                                            <span class="type">Kinh dị</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/quy-quyet-ranh-gioi-vo-dinh/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="hcALH3PWI8k" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/quy-quyet-ranh-gioi-vo-dinh/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/quy-quyet-ranh-gioi-vo-dinh/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="2DD CHARLIE THE WONDERDOG">
+            <a title="SI&#202;U CH&#211; ĐẠP GI&#211; Đ&#211;N LỄ" href="#">
+                
+        <img alt="SI&#202;U CH&#211; ĐẠP GI&#211; Đ&#211;N LỄ" src="https://cms.megagscinemas.vn//media/77912/siêu-chó.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>28</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="SI&#202;U CH&#211; ĐẠP GI&#211; Đ&#211;N LỄ" src="https://cms.megagscinemas.vn//media/77912/siêu-chó.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="2DD CHARLIE THE WONDERDOG">
+                    <div class="detail_inner">
+                    <h4>SIÊU CHÓ ĐẠP GIÓ ĐÓN LỄ</h4>
+                                           
+                                        <p>2DD CHARLIE THE WONDERDOG</p>
+                                        
+                                        <p>
+                                            <span class="duration">95</span>
+                                            <span class="type">Hài hước, Hoạt hình, Gia đình</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/sieu-cho-dap-gio-don-le/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="lFDBCXFu_o4" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/sieu-cho-dap-gio-don-le/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/sieu-cho-dap-gio-don-le/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="SPIDER-MAN: BRAND NEW DAY [T13]">
+            <a title="NGƯỜI NHỆN: KHỞI ĐẦU MỚI" href="#">
+                
+        <img alt="NGƯỜI NHỆN: KHỞI ĐẦU MỚI" src="https://cms.megagscinemas.vn//media/77857/spiderman_1.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>31</p>
+                    <p class="custom-p">07</p>
+                </div>
+                <img alt="NGƯỜI NHỆN: KHỞI ĐẦU MỚI" src="https://cms.megagscinemas.vn//media/77857/spiderman_1.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="SPIDER-MAN: BRAND NEW DAY [T13]">
+                    <div class="detail_inner">
+                    <h4>NGƯỜI NHỆN: KHỞI ĐẦU MỚI</h4>
+                                           
+                                        <p>SPIDER-MAN: BRAND NEW DAY [T13]</p>
+                                        
+                                        <p>
+                                            <span class="duration">145</span>
+                                            <span class="type">Hành động, Phiêu lưu, Thần thoại</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/nguoi-nhen-khoi-dau-moi/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="sUIjrEey8fc" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/nguoi-nhen-khoi-dau-moi/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/nguoi-nhen-khoi-dau-moi/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="2D DEAR YOU,2DD DEAR YOU">
+            <a title="THƯ T&#204;NH GỬI NGOẠI" href="#">
+                
+        <img alt="THƯ T&#204;NH GỬI NGOẠI" src="https://cms.megagscinemas.vn//media/77902/thư-tình-gửi-ngoại.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>07</p>
+                    <p class="custom-p">08</p>
+                </div>
+                <img alt="THƯ T&#204;NH GỬI NGOẠI" src="https://cms.megagscinemas.vn//media/77902/thư-tình-gửi-ngoại.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="2D DEAR YOU,2DD DEAR YOU">
+                    <div class="detail_inner">
+                    <h4>THƯ TÌNH GỬI NGOẠI</h4>
+                                           
+                                        <p>2D DEAR YOU,2DD DEAR YOU</p>
+                                        
+                                        <p>
+                                            <span class="duration">117</span>
+                                            <span class="type">Gia đình, Tâm lý</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/thu-tinh-gui-ngoai/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="IfeBxQZRdYc" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/thu-tinh-gui-ngoai/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/thu-tinh-gui-ngoai/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="see-all-wrap">
+        <a title="Xem tất cả" href="/phim/">Xem tất cả </a>
+    </div>
+</div>
+
+
+<div id="movie-sc" class="tab-pane fade  ">
+    <div class="autoplay">
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="MỘT Đ&#202;M DUY NHẤT" href="#">
+                
+        <img alt="MỘT Đ&#202;M DUY NHẤT" src="https://cms.megagscinemas.vn//media/77917/một-đêm-duy-nhất.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="MỘT Đ&#202;M DUY NHẤT" src="https://cms.megagscinemas.vn//media/77917/một-đêm-duy-nhất.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>MỘT ĐÊM DUY NHẤT</h4>
+                                           
+                                             <p>ONE NIGHT ONLY</p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Hài hước, Tình cảm</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="hyq75b6uirw" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/mot-dem-duy-nhat/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/mot-dem-duy-nhat/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="M&#195;I NỢ MỘT LỜI TẠM BIỆT" href="#">
+                
+        <img alt="M&#195;I NỢ MỘT LỜI TẠM BIỆT" src="https://cms.megagscinemas.vn//media/77916/mãi-nợ.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>11</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="M&#195;I NỢ MỘT LỜI TẠM BIỆT" src="https://cms.megagscinemas.vn//media/77916/mãi-nợ.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>MÃI NỢ MỘT LỜI TẠM BIỆT</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Gia đình, Tâm lý</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/mai-no-mot-loi-tam-biet/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/mai-no-mot-loi-tam-biet/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="L&#202;N HƯƠNG" href="#">
+                
+        <img alt="L&#202;N HƯƠNG" src="https://cms.megagscinemas.vn//media/77913/lên-hương.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>18</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="L&#202;N HƯƠNG" src="https://cms.megagscinemas.vn//media/77913/lên-hương.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>LÊN HƯƠNG</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Gia đình, Tâm lý</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="TLXQpsVtQb4" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/len-huong/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/len-huong/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="&#218;T LAN 2" href="#">
+                
+        <img alt="&#218;T LAN 2" src="https://cms.megagscinemas.vn//media/77923/út-lan-2.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>25</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="&#218;T LAN 2" src="https://cms.megagscinemas.vn//media/77923/út-lan-2.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>ÚT LAN 2</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Kinh dị</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/ut-lan-2/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/ut-lan-2/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="TR&#193;I TIM QU&#193;I TH&#218;" href="#">
+                
+        <img alt="TR&#193;I TIM QU&#193;I TH&#218;" src="https://cms.megagscinemas.vn//media/77899/trái-tim-quái-thú.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>25</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="TR&#193;I TIM QU&#193;I TH&#218;" src="https://cms.megagscinemas.vn//media/77899/trái-tim-quái-thú.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>TRÁI TIM QUÁI THÚ</h4>
+                                           
+                                             <p>HEART OF THE BEAST</p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Hành động</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="m4hc0C3KECw" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/trai-tim-quai-thu/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/trai-tim-quai-thu/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="H&#210;N ĐẢO QU&#202;N L&#195;NG" href="#">
+                
+        <img alt="H&#210;N ĐẢO QU&#202;N L&#195;NG" src="https://cms.megagscinemas.vn//media/77884/hòn-đảo-quên-lãng.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>25</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="H&#210;N ĐẢO QU&#202;N L&#195;NG" src="https://cms.megagscinemas.vn//media/77884/hòn-đảo-quên-lãng.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>HÒN ĐẢO QUÊN LÃNG</h4>
+                                           
+                                             <p>FORGOTTEN ISLAND</p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Phiêu lưu, Hoạt hình</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="KVtxQS6hGq0" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/hon-dao-quen-lang/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/hon-dao-quen-lang/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="&#193;N MẠNG KARAOKE" href="#">
+                
+        <img alt="&#193;N MẠNG KARAOKE" src="https://cms.megagscinemas.vn//media/77914/án-mạng-karaoke.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>02</p>
+                    <p class="custom-p">10</p>
+                </div>
+                <img alt="&#193;N MẠNG KARAOKE" src="https://cms.megagscinemas.vn//media/77914/án-mạng-karaoke.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>ÁN MẠNG KARAOKE</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Hài hước, Hồi hộp</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="5n1U6fYWM1Q" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/an-mang-karaoke/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/an-mang-karaoke/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="CHỊ CHỊ EM EM 3" href="#">
+                
+        <img alt="CHỊ CHỊ EM EM 3" src="https://cms.megagscinemas.vn//media/77924/chị-chị-em-em-3.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>16</p>
+                    <p class="custom-p">10</p>
+                </div>
+                <img alt="CHỊ CHỊ EM EM 3" src="https://cms.megagscinemas.vn//media/77924/chị-chị-em-em-3.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>CHỊ CHỊ EM EM 3</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Tình cảm, Tâm lý</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="TX1YaBwn6r0" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/chi-chi-em-em-3/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/chi-chi-em-em-3/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="B&#210; SỮA BAY" href="#">
+                
+        <img alt="B&#210; SỮA BAY" src="https://cms.megagscinemas.vn//media/77859/bò-sữa-bay.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>06</p>
+                    <p class="custom-p">11</p>
+                </div>
+                <img alt="B&#210; SỮA BAY" src="https://cms.megagscinemas.vn//media/77859/bò-sữa-bay.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>BÒ SỮA BAY</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Hài hước, Hành động, Tâm lý</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="6SEeRv8XjJ8" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/bo-sua-bay/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/bo-sua-bay/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="SỢI CHỈ ĐỎ" href="#">
+                
+        <img alt="SỢI CHỈ ĐỎ" src="https://cms.megagscinemas.vn//media/77838/sợi-chỉ-đỏ.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">12</p>
+                </div>
+                <img alt="SỢI CHỈ ĐỎ" src="https://cms.megagscinemas.vn//media/77838/sợi-chỉ-đỏ.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>SỢI CHỈ ĐỎ</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Kinh dị</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="ULC97wWtPxw" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/soi-chi-do/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/soi-chi-do/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="_NoShowTime_">
+            <a title="NGƯỜI MẸ XẤU" href="#">
+                
+        <img alt="NGƯỜI MẸ XẤU" src="https://cms.megagscinemas.vn//media/77867/nguoi-me-xau-500_1781239561463.jpg?width=240&height=355"/>
+
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>31</p>
+                    <p class="custom-p">12</p>
+                </div>
+                <img alt="NGƯỜI MẸ XẤU" src="https://cms.megagscinemas.vn//media/77867/nguoi-me-xau-500_1781239561463.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="_NoShowTime_">
+                    <div class="detail_inner">
+                    <h4>NGƯỜI MẸ XẤU</h4>
+                                           
+                                             <p></p>
+                                            
+                                        <p>
+                                            <span class="duration">0</span>
+                                            <span class="type">Hành động, Tình cảm</span>
+                                        </p>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/nguoi-me-xau/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/nguoi-me-xau/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="see-all-wrap">
+        <a title="Xem tất cả" href="/phim/">Xem tất cả </a>
+    </div>
+</div>
+
+
+<div id="movie-scdb" class="tab-pane fade  ">
+    <div class="autoplay">
+        
+        <div class="product-items" mvroot="HOPE [T16]">
+            <a title="HOPE V&#217;NG TỬ ĐỊA" href="#">
+                
+        <img class="bg-new-only" alt="HOPE V&#217;NG TỬ ĐỊA" src="https://cms.megagscinemas.vn//media/77921/hope.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="HOPE V&#217;NG TỬ ĐỊA" src="https://cms.megagscinemas.vn//media/77921/hope.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="HOPE [T16]">
+                    <div class="detail_inner">
+                    <h4>HOPE VÙNG TỬ ĐỊA</h4>
+                                           
+                                        <p>HOPE [T16]</p>
+                                        
+                                        <p>
+                                            <span class="duration">157</span>
+                                            <span class="type">Hành động, Viễn tưởng, Hồi hộp</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/hope-vung-tu-dia/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="2al_iR2e87A" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/hope-vung-tu-dia/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/hope-vung-tu-dia/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="GHOST IN THE CELL [T18]">
+            <a title="MA T&#217;" href="#">
+                
+        <img class="bg-new-only" alt="MA T&#217;" src="https://cms.megagscinemas.vn//media/77922/ma-tù.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="MA T&#217;" src="https://cms.megagscinemas.vn//media/77922/ma-tù.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="GHOST IN THE CELL [T18]">
+                    <div class="detail_inner">
+                    <h4>MA TÙ</h4>
+                                           
+                                        <p>GHOST IN THE CELL [T18]</p>
+                                        
+                                        <p>
+                                            <span class="duration">104</span>
+                                            <span class="type">Hài hước, Kinh dị</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/ma-tu/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="Z0BKTwHTyxs" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/ma-tu/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/ma-tu/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-items" mvroot="THE JOURNEY TO GYEONG-JU [T18]">
+            <a title="H&#192;NH TR&#204;NH BẤT HẢO" href="#">
+                
+        <img class="bg-new-only" alt="H&#192;NH TR&#204;NH BẤT HẢO" src="https://cms.megagscinemas.vn//media/77926/hành-trình-bất-hảo.jpg"/>
+        <div class="img-new-only cust-new-only-2">
+            <img class="resize-width_other" src="/Images/home/img-new-only.png" />
+        </div>
+        
+       
+                <div class="episode-all" style="display: block">
+                    <p>04</p>
+                    <p class="custom-p">09</p>
+                </div>
+                <img alt="H&#192;NH TR&#204;NH BẤT HẢO" src="https://cms.megagscinemas.vn//media/77926/hành-trình-bất-hảo.jpg?width=240&height=355" />
+            </a>
+            <!-- Link Product -->
+            <div class="links-produce">
+                <div class="detail" id="THE JOURNEY TO GYEONG-JU [T18]">
+                    <div class="detail_inner">
+                    <h4>HÀNH TRÌNH BẤT HẢO</h4>
+                                           
+                                        <p>THE JOURNEY TO GYEONG-JU [T18]</p>
+                                        
+                                        <p>
+                                            <span class="duration">111</span>
+                                            <span class="type">Hài hước, Hành động</span>
+                                        </p>
+                                        
+                                        <p >Lịch chiếu <span class="tttoday">hôm nay </span><span class="today">(1/9)</span><a title="Xem tất cả" class="view-all" href="/phim/hanh-trinh-bat-hao/#lich-chieu">Xem tất cả</a></p>
+                                        <p><span class="note">(*)</span> Chọn vào suất chiếu để đặt vé</p>
+
+                                       <a title="Xem tất cả" class="see-all" href="javascript:void(0)"></a>
+                                        
+</div>
+                </div>
+                <div class="controls">
+                    <!-- zoom image-->
+                    <a title="Xem trailer" class="product-zoom open-popup-youtube" data-youtube-id="fc6tA-q_XA0" title="" href="javascript:void(0)"></a>
+                    <!-- Detail link-->
+                    <div class="detail-link">
+                        <a title="Chi tiết" href="/phim/hanh-trinh-bat-hao/"><span>Chi tiết</span></a>
+                        <a title="Mua vé" href="/phim/hanh-trinh-bat-hao/#lich-chieu"><span>Mua vé</span></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="see-all-wrap">
+        <a title="Xem tất cả" href="/phim/">Xem tất cả </a>
+    </div>
+</div>
+
+
+
+<script src="../js/TimeDetail.js"></script>
+				
+				</div>
+			</div>
+		</div>
+		<div class="advertise-wrap">
+            <div class="content">
+                <!--<div id='div-gpt-ad-1457081272101-0' style='height: 90px; width: 970px;'>
+                    <script type='text/javascript'>
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1457081272101-0'); });
+                    </script>
+                </div>-->
+                <!-- /275901723/GS_HomePage_Header -->
+                <a href="https://www.megagscinemas.vn/uu-dai/" style="display:block">
+                    <img src="https://cms.megagscinemas.vn//media/76783/z5601108222904_442a8a8162e62d3938c64d39d462d4ca.jpg" class="img-responsive" style="margin:auto"/>
+                </a>
+                <!--<div id='div-gpt-ad-1491799498433-0' style='height:130px; width:1140px;'>
+                    <script>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491799498433-0'); });
+                    </script>
+                </div>-->
+            </div>
+        </div>
+			<!-- Product Deals-->
+		<div class="contents-page">	
+			<div class="beneift-wrapper">
+				<div class="product-details clearfix">
+					<div class="title-det clearfix">
+						<!-- <div class="det-img"><img src="images/home/item-speacial.png"/></div> -->
+						<div class="det-all">
+							<p class="text-ud">Ưu Đãi</p>
+							<a class="text-xtc" href="/uu-dai/">Xem tất cả</a>								
+						</div>
+					</div>
+					
+                         
+<div class='big-offer img'><a title='MEGA HOURS - MEGA GS L&#221; CH&#205;NH THẮNG' class='bg-special' href ='/uu-dai/mega-hours-mega-gs-ly-chinh-thang/'><img alt='MEGA HOURS - MEGA GS L&#221; CH&#205;NH THẮNG' src='https://cms.megagscinemas.vn//media/76754/mega-hour-lct-1920-x-1080-px.png?width=745&height=420' style='width:745px;height:420px'/></a></div><div class='special-offer'><div class='spec'><div class='special-item'><a title='X2 MEGA DAY - THỨ 3, 4 H&#192;NG TUẦN TẠI MEGA GS L&#221; CH&#205;NH THẮNG' class='bg-special' href ='/uu-dai/x2-mega-day-thu-3-4-hang-tuan-tai-mega-gs-ly-chinh-thang/'><img alt='X2 MEGA DAY - THỨ 3, 4 H&#192;NG TUẦN TẠI MEGA GS L&#221; CH&#205;NH THẮNG' src= 'https://cms.megagscinemas.vn//media/76759/x2-mega-day-lct-345-x-256-px-2.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/x2-mega-day-thu-3-4-hang-tuan-tai-mega-gs-ly-chinh-thang/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='MEGA HOURS - MEGA GS CAO THẮNG' class='bg-special' href ='/uu-dai/mega-hours-mega-gs-cao-thang/'><img alt='MEGA HOURS - MEGA GS CAO THẮNG' src= 'https://cms.megagscinemas.vn//media/75345/mega-hour-ct-345-x-256-px.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/mega-hours-mega-gs-cao-thang/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='X2 MEGA DAY - THỨ 3, 4 H&#192;NG TUẦN TẠI MEGA GS CAO THẮNG' class='bg-special' href ='/uu-dai/x2-mega-day-thu-3-4-hang-tuan-tai-mega-gs-cao-thang/'><img alt='X2 MEGA DAY - THỨ 3, 4 H&#192;NG TUẦN TẠI MEGA GS CAO THẮNG' src= 'https://cms.megagscinemas.vn//media/75604/x2-mega-day-ct-345-x-256-px.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/x2-mega-day-thu-3-4-hang-tuan-tai-mega-gs-cao-thang/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='THƯỞNG THỨC NƯỚC TR&#192; - THƯ THẢ XEM PHIM' class='bg-special' href ='/uu-dai/thuong-thuc-nuoc-tra-thu-tha-xem-phim/'><img alt='THƯỞNG THỨC NƯỚC TR&#192; - THƯ THẢ XEM PHIM' src= 'https://cms.megagscinemas.vn//media/76318/tra_800x600.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/thuong-thuc-nuoc-tra-thu-tha-xem-phim/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='REFILL THẢ GA - XEM PHIM CỰC Đ&#195;' class='bg-special' href ='/uu-dai/refill-tha-ga-xem-phim-cuc-da/'><img alt='REFILL THẢ GA - XEM PHIM CỰC Đ&#195;' src= 'https://cms.megagscinemas.vn//media/76281/refill-bắp_800x600.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/refill-tha-ga-xem-phim-cuc-da/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='NƯỚC NGỌT XƯA RỒI, SODA MỚI CHẤT' class='bg-special' href ='/uu-dai/nuoc-ngot-xua-roi-soda-moi-chat/'><img alt='NƯỚC NGỌT XƯA RỒI, SODA MỚI CHẤT' src= 'https://cms.megagscinemas.vn//media/76018/soda-800x600.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/nuoc-ngot-xua-roi-soda-moi-chat/'><span>Chi tiết >></span></a></div><div class='special-item'><a title='ƯU Đ&#195;I THẺ TH&#192;NH VI&#202;N' class='bg-special' href ='/uu-dai/uu-dai-the-thanh-vien/'><img alt='ƯU Đ&#195;I THẺ TH&#192;NH VI&#202;N' src= 'https://cms.megagscinemas.vn//media/75337/member-card-c.png?width=359&height=267' style='width:359px;height:267px'/></a><a class='detail-spec' href='/uu-dai/uu-dai-the-thanh-vien/'><span>Chi tiết >></span></a></div></div></div>
+
+
+						
+				</div>
+			<!-- Events-->
+				<div class="events clearfix">
+					<div class="event-right">
+						<!-- Facebook -->
+							<div class="fb-page" data-href="https://www.facebook.com/megagscinemas.vn/" data-tabs="timeline" data-width="358" data-height="307" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/megagscinemas.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/megagscinemas.vn/">Mega GS Cinemas</a></blockquote></div>
+						<!-- End Facebook -->
+					</div>
+					<div class="event-left">
+						<div class="padd-event">
+							<!-- Events title-->
+							<div class="title-event clearfix">
+								<div class="event-all">
+									<p class="text-sk">Sự Kiện</p>
+									<a class="text-xtc" href="/su-kien/">Xem tất cả</a>								
+								</div>
+							</div>
+							<!-- Events contents-->
+							<div class="contents-event clearfix">
+                                 <div class='event-item'><div class='item-left'><a title='SỰ KIỆN RA MẮT PHIM &quot;CUỘC GỌI ĐỊNH MỆNH&quot; TẠI MEGA GS' href = '/su-kien/su-kien-ra-mat-phim-cuoc-goi-dinh-menh-tai-mega-gs/' ><img alt='SỰ KIỆN RA MẮT PHIM &quot;CUỘC GỌI ĐỊNH MỆNH&quot; TẠI MEGA GS' src='https://cms.megagscinemas.vn//media/76130/46.jpg?width=134' style='width:138px; height:102px'></a></div><div class='item-right'><a title='SỰ KIỆN RA MẮT PHIM &quot;CUỘC GỌI ĐỊNH MỆNH&quot; TẠI MEGA GS' href='/su-kien/su-kien-ra-mat-phim-cuoc-goi-dinh-menh-tai-mega-gs/'><p>SỰ KIỆN RA MẮT PHIM "CUỘC GỌI ĐỊNH MỆNH" TẠI MEGA GS</p></a><span>Địa điểm: Rạp MEGA GS Cinemas.<br/> Ngày 25/2/2019.</span></div></div><div class='event-item'><div class='item-left'><a title='N&#202;N ĐI Đ&#194;U V&#192;O DỊP GI&#193;NG SINH 2018?' href = '/su-kien/nen-di-dau-vao-dip-giang-sinh-2018/' ><img alt='N&#202;N ĐI Đ&#194;U V&#192;O DỊP GI&#193;NG SINH 2018?' src='https://cms.megagscinemas.vn//media/76053/g.png?width=134' style='width:138px; height:102px'></a></div><div class='item-right'><a title='N&#202;N ĐI Đ&#194;U V&#192;O DỊP GI&#193;NG SINH 2018?' href='/su-kien/nen-di-dau-vao-dip-giang-sinh-2018/'><p>NÊN ĐI ĐÂU VÀO DỊP GIÁNG SINH 2018?</p></a><span>Địa điểm: Rạp MEGA GS Cinemas.<br/> Ngày 21/12/2018.</span></div></div><div class='event-item'><div class='item-left'><a title='BẠCH C&#212;NG KHANH RA MẮT MV MỚI TẠI MEGA GS CINEMAS' href = '/su-kien/bach-cong-khanh-ra-mat-mv-moi-tai-mega-gs-cinemas/' ><img alt='BẠCH C&#212;NG KHANH RA MẮT MV MỚI TẠI MEGA GS CINEMAS' src='https://cms.megagscinemas.vn//media/75723/bck-8.jpg?width=134' style='width:138px; height:102px'></a></div><div class='item-right'><a title='BẠCH C&#212;NG KHANH RA MẮT MV MỚI TẠI MEGA GS CINEMAS' href='/su-kien/bach-cong-khanh-ra-mat-mv-moi-tai-mega-gs-cinemas/'><p>BẠCH CÔNG KHANH RA MẮT MV MỚI TẠI MEGA GS CINEMAS</p></a><span>Địa điểm: Rạp MEGA GS Cinemas.<br/> Ngày 1/11/2017.</span></div></div>
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- -->			
+	</div>
+    <script src="/js/buyticket.js"></script>
+            <!-- Contents -->
+
+
+            </div>
+            
+<div id="mega-footer">
+		<div class="star-left">
+			<img alt="Star" src="/images/home/footer-star.png"/>
+		</div>
+		<div class="star">
+			<img alt="Star" src="/images/home/f-star.png"/>
+		</div>
+		<div class="footer-content clearfix">
+			<div class="footer-left">
+				<!-- Footer Links 1 -->
+				<div class="footer-link-1 clearfix">
+					<ul class="clearfix">
+                    
+                    <li id="AA2"><a title="lịch chiếu" href="/lich-chieu/"><span class="item-schedule-fo">lịch chiếu</span></a></li>
+                       <li id="AA1"><a title="phim" href="/phim/"><span class="item-movie-fo">phim</span></a></li>
+                         <li id="AA3"><a title="rạp &amp; giá vé" href="/rap/"><span class="item-fare-fo">rạp &amp; giá vé</span></a></li>
+                    <li id="AA4"><a title="ưu đãi" href="/uu-dai/"><span class="item-deal-fo">ưu đãi</span></a></li>
+
+						
+					</ul>
+				</div>
+				<!-- Footer Links 2 -->
+				<div class="footer-link-2">
+					<ul  class="clearfix">
+						<li><a title="Giới Thiệu" href="/gioi-thieu/">Giới Thiệu</a></li>
+						<li><a title="Sự Kiện" href="/su-kien/">Sự Kiện</a></li>
+						<li><a title="Dịch Vụ" href="/dich-vu/">Dịch Vụ</a></li>
+						<li><a title="Tuyển Dụng" href="/tuyen-dung/">Tuyển Dụng</a></li>
+						<li><a title="Điều Khoản Chung" href="/dieu-khoan-chung/">Điều Khoản Chung</a></li>
+						<li><a title="Liên Hệ" href="/lien-he/">Liên Hệ</a></li>
+                        <li><a title="Mega +" href="/MegaPlus/">Mega +</a></li>
+                    </ul>
+				</div>
+				<!-- Copyright 2015 -->
+				<div class="copyright clearfix">
+				    <div class="group-copy clearfix">
+                        <div class="copy-left">
+                            <h6>CÔNG TY TNHH MEGA GS CINEMAS</h6>
+                             <p>Địa chỉ: 213 Lý Tự Trọng, Phường Bến Thành, Thành phố Hồ Chí Minh, Việt Nam   /   Email: <img border="0" src="/Images/CSKH.png" />
+                             </p>
+                             <p>Số ĐKKD:  0312667335 - Ngày cấp: 20/07/2017 (Đăng ký thay đổi lần 12)   /   Nơi cấp: Sở kế hoạch và đầu tư thành phố Hồ Chí Minh</p>
+                             <p>Copyright ©2018 Mega GS Cinemas. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="footer-right clearfix">
+				<div class="phone-ticket">
+					<h3>TỔNG ĐÀI HỖ TRỢ</h3>
+					<div class="phone-number">
+					    <span>Rạp Cao Thắng</span>
+						<span>028 6264 9911</span>
+					</div>
+					<div class="phone-number">
+					    <span>Rạp Lý Chính Thắng</span>
+                        <span>028 6282 3737</span>
+                    </div>
+				</div>
+			    <div class="copy-right">
+					<a title="Bo Cong Thuong" target="_blank" href="http://online.gov.vn/Home/WebDetails/20687"><img alt="notify_BCT" src="/images/home/notify_BCT.png"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+        </div>
+        <!-- Script using page -->
+
+
+
+        <script>
+
+            if ($(location).attr('href').indexOf("/gioi-thieu/") > -1) {
+                $('#Mn1 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/faqs/") > -1) {
+
+                $('#Mn2 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/tuyen-dung/") > -1) {
+
+                $('#Mn3 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/lien-he/") > -1) {
+
+                $('#Mn4 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/dieu-khoan-chung/") > -1) {
+
+                $('#Mn5 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/chinh-sach-thanh-toan-ve-truc-tuyen/") > -1) {
+
+                $('#Mn6 a').addClass("active");
+            }
+            else if ($(location).attr('href').indexOf("/MegaPlus/") > -1) {
+
+                $('#Mn7 a').addClass("active");
+            }
+        </script>
+        <script>
+            var cch = "-1";
+            $(document).ready(function () {
+
+                $("#welcome_header").load("/HeaderContent.aspx?" + Math.random(), function () { });
+
+            });
+            if ($(location).attr('href').indexOf("/phim/") > -1) {
+                $('#A1 a').css('color', '#ffd555')
+                $('.header-group .header-right > ul li a i.item-movie').css('background-position', '0 -50px')
+                $('#AA1 a').css('color', '#fff')
+                $('.footer-content .footer-link-1 > ul li a span.item-movie-fo').css('background', 'url("/images/home/item-movie.png") no-repeat')
+
+            }
+            else if ($(location).attr('href').indexOf("/lich-chieu/") > -1) {
+                //$("#bg-all-title").empty();
+                $('#A2 a').css('color', '#ffd555')
+                $('.header-group .header-right > ul li a i.item-schedule').css('background-position', '-68px -51px')
+                $('#AA2 a').css('color', '#fff')
+                $('.footer-content .footer-link-1 > ul li a span.item-schedule-fo').css('background', 'url("/images/home/item-schedule.png") no-repeat')
+
+            }
+            else if ($(location).attr('href').indexOf("/rap/") > -1) {
+                $('#A3 a').css('color', '#ffd555')
+                $('.header-group .header-right > ul li a i.item-fare').css('background-position', '-141px -51px')
+                $('#AA3 a').css('color', '#fff')
+                $('.footer-content .footer-link-1 > ul li a span.item-fare-fo').css('background', 'url("/images/home/item-fare.png") no-repeat')
+
+            }
+            else if ($(location).attr('href').indexOf("/uu-dai/") > -1) {
+                $('#A4 a').css('color', '#ffd555')
+                // $('#A7 a').css('color', '#fff')
+                $('.header-group .header-right > ul li a i.item-deal').css('background-position', '-210px -51px')
+                $('#AA4 a').css('color', '#fff')
+                $('.footer-content .footer-link-1 > ul li a span.item-deal-fo').css('background', 'url("/images/home/item-deal.png") no-repeat')
+
+            }
+
+            else if ($(location).attr('href').indexOf("/gioi-thieu/") > -1) {
+                $('#A6 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/su-kien/") > -1) {
+
+                $('#A8 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/dich-vu/") > -1) {
+
+                $('#A7 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/tuyen-dung/") > -1) {
+
+                $('#A9 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/lien-he/") > -1) {
+
+                $('#A11 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/MegaPlus/") > -1) {
+
+                $('#A14 a').css('color', '#fff')
+            }
+            else if ($(location).attr('href').indexOf("/LtyHome.aspx") > -1) {
+
+                cch = "0";
+            }
+            else if ($(location).attr('href').indexOf("/LtyCreateUser.aspx") > -1) {
+
+                cch = "0";
+            }
+            else if ($(location).attr('href').indexOf("/LtyForgotDetail.aspx") > -1) {
+
+                cch = "0";
+            }
+        </script>
+        <script type="text/javascript">
+            var verifyCallback = function (response) {
+                //alert(111);
+            };
+            var widgetId1;
+            var widgetId2;
+            var onloadCallback;
+            if (cch == "0") {
+                onloadCallback = function () {
+                    // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+                    // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+                    widgetId2 = grecaptcha.render(document.getElementById('recaptcha2'), {
+                        'sitekey': '6Lep-BMTAAAAAAi8-4G63Q3dsLMFJWhcEbQ3ExCw',
+                        'theme': 'light'
+                    });
+
+                    widgetId1 = grecaptcha.render('recaptcha', {
+                        'sitekey': '6Lep-BMTAAAAAAi8-4G63Q3dsLMFJWhcEbQ3ExCw',
+                        'theme': 'light'
+                    });
+
+                };
+            }
+            else {
+                
+                //onloadCallback = function () {
+                    // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+                    // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+                    //widgetId2 = grecaptcha.render(document.getElementById('recaptcha2'), {
+                        //'sitekey': '6LfedbodAAAAAA0QSFpl7Y2m6WUCDZR__WRpAv2n',
+                        //'theme': 'light'
+                    //});
+                //} *@
+            }
+        </script>
+        
+     <script>
+       function openyoutube(link) {
+
+           var srcTL = link;
+
+           var str = "https://www.youtube.com/embed/" + srcTL + "?autoplay=1";
+
+           var iframe = '<div class="iframe-trailer">' +
+                     '<iframe src="' + str + '" allowfullscreen></iframe>' +
+                     '</div>';
+
+           $('.show-content').append(iframe);
+           // Popup Display: block
+           $('.popup-main').fadeIn(500);
+           $('.popup-opacity').css('display', 'block');
+           // Close popup.
+           $('.popup-content .close-popup i').click(function () {
+               $('.popup-main').fadeOut(0);
+               $('.popup-opacity').css('display', 'none');
+               $('.iframe-trailer').remove();
+           });
+       }
+        window.onload = function() {
+        $.post("PopupHome.aspx", function (data, status) {
+           
+            if(data == "0" && img != "")
+            {
+                var img = ''
+                var link = ''
+                var ytube=''
+              
+                if(ytube!="")
+                {
+
+                    openyoutube(ytube);
+                    $.post("closePopupHome.aspx", function (data, status) {
+                    
+                    });
+                    return false;
+                }
+         
+                var video='<video poster="'+img+'" autoplay style="border: white 5px solid;"><source src="'+img+'" type="video/mp4"></video>'
+                var imageposter = "<img src='" + img + "' style='border: white 5px solid;width:500px'/>";
+                var imgs = "<a href=" + link + " target='_blank'><i class='close-popup'></i>"+imageposter+"</a>";
+                $('.show-content-home').append(imgs);
+                // Popup Display: block
+                $('.popup-main-home').fadeIn(500);
+                $('.popup-opacity-home').css('display', 'block');
+                // Close popup.
+                $('.popup-content-home .show-content-home .close-popup').click(function () {
+                    $('.popup-main-home').fadeOut(0);
+                    $('.popup-opacity-home').css('display', 'none');
+                    $('.show-content-home').empty();
+                    return false;
+
+                });
+               
+            }
+            $.post("closePopupHome.aspx", function (data, status) {
+               
+            });
+        });
+    }
+   </script>
+
+        <script src="/js/custom.js"></script>
+        <script src="/js/custom_v2.js"></script>
+    </form>
+    <div class="modal fade" id="popup-senior" data-hocode="" tabindex="-1" role="dialog" aria-labelledby="popupSeniorLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popupSeniorLabel">Thông báo</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Bạn đang mua hạng vé đặc biệt dành cho HSSV, U22 hoặc người cao tuổi. Vui lòng mang theo CCCD hoặc thẻ HSSV có dán ảnh để xác minh trước khi vào rạp.
+                    </p>
+                    <p>
+                        Nhân viên rạp có thể từ chối không cho bạn vào xem nếu không thực hiện đúng quy định này.
+                    </p>
+                    <p>Trân trọng cảm ơn!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  id="btnAgree">Đồng ý</button>
+                    <button type="button" class="btn btn-secondary" id="btnCancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: block">
+        <div class="popup-opacity"></div>
+         <div class="popup-main-err">
+            <div class="popup-content" style="height:auto">
+                <div class="close-popup" onclick="closeerr();"><i></i></div>
+                <div class="show-content">
+
+                </div>
+            </div>
+        </div>
+        <div class="popup-main">
+            <div class="popup-content">
+                <div class="close-popup"><i></i></div>
+                <div class="show-content">
+                    <div class="iframe-trailer">
+                        <iframe allowfullscreen></iframe>
+                    </div>
+                    <div class="img-trailer">
+                        <img alt="" src="/images/movie-detail/detail-item/detail-01-1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-opacity-booking"></div>
+        <div class="popup-main-booking" style="z-index: 1045">
+            <div class="popup-content-booking">
+                <div class="close-popup"><i></i></div>
+                <div class="show-content-booking">
+                    <div class="img-loading">
+                        <img src="/Images/loading2.gif" style="width: 100px" />
+                    </div>
+                    <div id="pop-up-booking" style="z-index: 999999">
+                    </div>
+
+                    <div id="PanelTK">
+	
+                        <div class="box-table">
+                            <div id="hello" style="color: red"></div>
+							<div id="lbl_age_warning" style="color: red"></div>
+                            <table id="tbl-type-ticket" class="tbl-type-ticket" sessionmv="" data-cinema="MCT" Cinema_strID="">
+                                <tr>
+                                    <th style="width: 237px">LOẠI VÉ</th>
+                                    <th style="width: 136px">SỐ LƯỢNG</th>
+                                    <th class="align-right" style="width: 116px">GIÁ VÉ</th>
+                                    <th class="align-right" style="width: 140px">THÀNH TIỀN</th>
+                                </tr>
+
+                                <tr id="tbl-total">
+                                    <td colspan="3" class="align-right">
+                                        <span>TỔNG CỘNG</span>
+                                    </td>
+                                    <td class="align-right">
+                                        <span class="span-total">0.00</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div id="Pnsublogin">
+		
+                                <div class="block-link">
+                                    <a class="link-logg" href="/LtyHome.aspx">Đăng Nhập</a>
+                                    <span>/</span>
+                                    <a class="link-regis" href="/LtyCreateUser.aspx">Đăng Ký</a>
+                                    <span class="span-text">Thành viên Mega+ để tích lũy điểm</span>
+                                </div>
+                            
+	</div>
+                            <div class="box-captchar">
+                                <div id="recaptcha_value" style="display: inline-block"></div>
+                            </div>
+                            <div class="note-btnSelect clearfix">
+                                <div class="btnSelect clearfix">
+                                    <button type="submit" id="submitSeat">Chọn ghế</button>
+                                </div>
+                                <div class="text-note">
+                                    <p>
+                                        Ghi chú:
+                            <span class="cnt-note">Mỗi lần đặt vé bạn chỉ được chọn tối đa 10 vé.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="PnLogin">
+		
+                            <div style="display: none">
+                                <div class="box-member clearfix" style="display: block">
+                                    <div class="item-left">
+
+                                        <div class="div-register clearfix">
+                                            <div class="div-link">
+                                                <img src="/images/home/icon-benefit.png" alt="" />
+                                                <a class="link-register" href="/LtyCreateUser.aspx">Đăng ký thành viên</a>
+                                            </div>
+                                            <div class="p-text">Quyền lợi khi đăng ký thành viên</div>
+                                            <div class="image">
+                                                <img src="/Images/home/logo_banner_01.png" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="item-right">
+                                        <h3>Bạn đã là <span>thành viên ?</span></h3>
+                                        <p class="p-text">Vui lòng nhập email và mật khẩu
+                                            <br />
+                                            của bạn để đăng nhập.</p>
+                                        <div id="error_login" style="color: red"></div>
+                                        <div class="div-loggin">
+                                            <input type="text" value="" placeholder="Email" id="email" />
+                                            <input type="password" value="" placeholder="Mật khẩu" id="pass" />
+                                            <div class="group-link clearfix">
+                                                <div class="link-left">
+                                                    <div class="forgot-pass">
+                                                        <p><a href="/LtyForgotDetail.aspx?mode=password">Quên mật khẩu ?</a></p>
+                                                        <p><a href="/LtyForgotDetail.aspx?mode=activation">Gởi lại link kích hoạt</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="link-right">
+                                                    <div class="input-subm">
+                                                        <input type="submit" value="Đăng nhập" id="login-btn" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        
+	</div>
+
+
+
+                    
+</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-71391100-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71391100-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71391100-1');
+</script>
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=439744792901846";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>fbq('track', 'ViewContent');
+        var tkold = [];
+        var totalpercent = 0;
+        var totalTK = [];
+        var mv_strname = "";
+        var Cinema_strID = "";
+
+        $('#continue-tk').click(function () {
+            $('#PanelerrOnepay').hide();
+            $('#PanelTK').show();
+            $("#PanelerrOnepay").remove();
+        });
+        getmemberLogin();
+        function loadpopup() {
+
+            $("#pop-up-booking").css("display", "block");
+            $(".img-loading").css("display", "block");
+
+        }
+        function closeloadpopup() {
+            $("#pop-up-booking").css("display", "none");
+            $(".img-loading").css("display", "none");
+        }
+        $('#login-btn').click(function () {
+            var captcha = grecaptcha.getResponse();
+            if (captcha == "") {
+                $("#error_login").html("Vui lòng xác nhận mã Captcha.");
+                return false;
+            }
+
+            var user = $('#email').val().trim();
+            var pass = $('#pass').val().trim();
+
+            loadpopup();
+
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/LoginVista",
+                data: "{email:'" + user + "',pass:'" + pass + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+
+                    var obj = JSON.parse(msg.d);
+                    var rs = obj.Result
+                    if (rs == 0) {
+                        var fullname = obj.LoyaltyMember.FullName;
+                        var email = obj.LoyaltyMember.Email;
+                        var phone = obj.LoyaltyMember.MobilePhone;
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Callajax.aspx/login",
+                            data: "{fullname:'" + fullname + "',email:'" + email + "',phone:'" + phone + "',pass:'" + pass + "'}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (msg) {
+
+                                if (msg.d == "ok") {
+                                    $(".box-member").css("display", "none");
+                                    $("#hello").html("Xin chào: " + fullname);
+                                    $("#txtCardName").val(fullname);
+                                    $("#txtEmail").val(email);
+                                    $("#txtCustPhone").val(phone);
+
+                                }
+
+                            }
+                        });
+                    }
+                    else if (msg.d == "-100") {
+                        $("#error_login").html("Vui lòng xác nhận mã Captcha.");
+
+                    }
+                    else {
+                        $("#error_login").html("Thông tin user không chính xác.");
+                    }
+                    closeloadpopup();
+                }
+            });
+
+
+        });
+
+        function displayTicketType(txtSessionId, Cinema_strID) {
+            loadpopup();
+            $(".tmp").each(function (i) {
+                $(this).remove();
+
+            })
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/GetTicketTypeList",
+                data: "{cinema:'" + Cinema_strID + "',SessionMV:'" + txtSessionId + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    $("#tbl-type-ticket").attr("sessionMV", txtSessionId);
+                    $("#tbl-type-ticket").attr("Cinema_strID", Cinema_strID);
+                    var obj = $.parseXML(msg.d);
+                    lstticketorder = [];
+                    $('Table', obj).each(function (i) {
+
+                        var a = $(this).find('AreaCat_strCode').text()
+                        var name_vn = $(this).find('Price_strTicket_Type_Description_2').text();
+                        var name = $(this).find('Price_strTicket_Type_Description').text();
+                        let strHOCode = $(this).find('Price_strTicket_Type_Code').text(); 
+                        if (arrHoCode.indexOf(strHOCode) !== -1) {
+                            if (name_vn.indexOf("HSSV") !== -1) {
+                                name_vn = name_vn.replace("HSSV", "HSSV/NGƯỜI CAO TUỔI");
+                            }
+                        }
+                        if (name.toLowerCase().indexOf("123f") == -1 && name.toLowerCase().indexOf("mv") == -1 && name.toLowerCase().indexOf("mm") == -1 && name.toLowerCase().indexOf("vnp") == -1) {
+                            var oder = i;
+                            if (name.toLowerCase().indexOf("member") != -1) {
+                                oder = 0; // Vé member luôn ở đầu
+                            } else if (arrHoCode.indexOf(strHOCode) !== -1) {
+                                var hoCodeIndex = arrHoCode.indexOf(strHOCode);
+                                oder = 900 + hoCodeIndex; // Vé đặc biệt luôn ở cuối
+                            }
+                            var price = $(this).find('Price_intTicket_Price').text() + "0";
+                            if(Cinema_strID == 'MCT'){
+                                if(memberlogin){
+                                    if(strHOCode == '0100' || strHOCode == '0097' || strHOCode == "0098"){
+                                        var objtr = "<tr class='tmp' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                        objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                            "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                                "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                                "<td class='align-right'><span>0 VND</span></td>";
+                                        objtr += "</tr>";
+                                        isMemberDay = true;
+                                        $("#tbl-type-ticket").addClass('member');
+                                    }else{
+                                        if(strHOCode != '0185' && strHOCode != "0184" && strHOCode !="0186"){
+                                            var objtr = "<tr class='tmp it' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                                objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                                    "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                                        "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                                        "<td class='align-right'><span>0 VND</span></td>";
+                                                objtr += "</tr>";
+                                        }
+                                        
+                                    }
+                                }else{
+                                    // OKI
+                                    console.log(strHOCode)
+                                    if(strHOCode != '0185' && strHOCode != "0184" && strHOCode !="0186"){
+                                        var objtr = "<tr class='tmp' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                        objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                            "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                                "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                                "<td class='align-right'><span>0 VND</span></td>";
+                                        objtr += "</tr>";
+                                    }   
+                                }
+                            }else{
+                                if(memberlogin){
+                                    if(strHOCode == "0025" || strHOCode == "0066"){
+                                        var objtr = "<tr class='tmp' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                        objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                            "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                                "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                                "<td class='align-right'><span>0 VND</span></td>";
+                                        objtr += "</tr>";
+                                        isMemberDay = true;
+                                        $("#tbl-type-ticket").addClass('member');
+                                    }else{
+                                        if(strHOCode != '0073' || strHOCode != "0074"){
+                                            var objtr = "<tr class='tmp it' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                                objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                                    "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                                        "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                                        "<td class='align-right'><span>0 VND</span></td>";
+                                                objtr += "</tr>";
+                                        }                                        
+                                        
+                                    }
+                                }else{
+                                    if(strHOCode != "0073" && strHOCode != "0074"){
+                                        var objtr = "<tr class='tmp' order='" + oder + "' price='" + price + "' name='" + name + "' arear=" + a + " strHOCode=" + strHOCode + ">";
+                                    objtr += "<td>" + name_vn + "<br/><span style='font-size:12px'>" + name + "</span></td>" +
+                                        "<td><div class='number-ticket'><i class='fa fa-minus-circle' onclick='minusticket($(this))'></i><span><input type='text' value='0' class='qualyti' readonly></span><i class='fa fa-plus-circle' onclick='plusticket($(this))'></i></div></td>" +
+                                            "<td class='align-right'>" + returnMoney(price) + " VND</td>" +
+                                            "<td class='align-right'><span>0 VND</span></td>";
+                                    objtr += "</tr>";
+                                    }
+                                    console.log(strHOCode)
+                                }
+                            }
+                            
+                            //if (name.toLowerCase().indexOf("member") != -1)
+                            //    lstticketorder.splice(0, 0, objtr);
+                            //else
+                            //    lstticketorder.push(objtr);
+                            lstticketorder.push(objtr);
+
+                        }
+
+                    });
+                    // Sắp xếp theo thứ tự ưu tiên (order)
+                            lstticketorder.sort(function(a, b) {
+                                var orderA = parseInt($(a).attr("order"));
+                                var orderB = parseInt($(b).attr("order"));
+                                return orderA - orderB;
+                            });
+                    //for (var m = 0; m < lstticketorder.length - 1; m++) {
+                    //    for (var n = m + 1; n < lstticketorder.length; n++) {
+                    //
+                    //        var obj1 = lstticketorder[m];
+                    //        var oder = $(obj1).attr("order");
+                    //        if (oder != "0") {
+                    //            var obj2 = lstticketorder[n];
+                    //            var price1 = $(obj1).attr("price");
+                    //            var price2 = $(obj2).attr("price");
+                    //
+                    //            if (parseInt(price1) > parseInt(price2)) {
+                    //                var o = lstticketorder[m];
+                    //                lstticketorder[m] = lstticketorder[n];
+                    //                lstticketorder[n] = o;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    for (var j = 0; j < lstticketorder.length; j++) {
+                        var o = lstticketorder[j];
+                        $(o).insertBefore($("#tbl-total"));
+                    }
+                    closeloadpopup();
+                    if (lticket.length > 0 && $("#PanelerrOnepay").hasClass("errOp")) {
+                        $('.tmp').each(function (i) {
+
+                            for (var x = 0; x < lticket.length; x++) {
+
+                                var a = $(this).attr("strhocode");
+                                if (a == lticket[x].TicketTypeCode) {
+                                    var qly = lticket[x].Qly;
+                                    var price = lticket[x].PriceCents + "0";
+                                    var sum = parseInt(qly) * parseInt(price);
+                                    $(this).find(".align-right span").html(returnMoney(sum));
+                                    $(this).find("span input:text").val(qly);
+                                    sumticket();
+                                    break;
+                                }
+                            }
+                            //if ($(this).find("span").attr("txtsessionid") == mvsession) {
+                            //    bookingClick($(this).find("span"));
+                            //}
+                        });
+                        $.ajax({
+                            type: "POST",
+                            url: "/callApiAjax.aspx/CancelOrder",
+                            data: "{}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (msg) {
+                                lticket = [];
+                            }
+                        });
+
+                    }
+
+                }
+            });
+            showbooking();
+            $("#errorbooking").remove();
+        }
+
+        function showbooking() {
+            $("#hello").html("");
+            // Popup Display: block
+            $('.popup-main-booking').fadeIn(500);
+            $('.popup-opacity-booking').css('display', 'block');
+            // Close popup.
+            $('.popup-content-booking .close-popup i').click(function () {
+                if($("table#tbl-type-ticket").hasClass('member')){
+                    $("table#tbl-type-ticket").removeClass('member');
+                    isMemberDay = false;
+                }
+                $('.popup-main-booking').fadeOut(0);
+                $('.popup-opacity-booking').css('display', 'none');
+            });
+        }
+
+        function calculerTime(txtSessionId, cinema) {
+            var r = true;
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/GetSessionDateTime",
+                data: "{sessionMV:'" + txtSessionId + "', cinema:'" + cinema + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (msg) {
+
+                    if (msg.d == "-1")
+                        r = false;
+
+                }
+            });
+            return r;
+
+        }
+        function closeerr() {
+
+            $(".popup-opacity").hide();
+            $(".popup-main-err").hide();
+            $(".popup-main-err .show-content").html("");
+        }
+
+
+
+        function bookingClickCustom(obj) {
+            let CinemaStrID = $(obj).attr("data-cinema");
+            if(CinemaStrID != ""){
+                $("#tbl-type-ticket").data('cinema', Cinema_strID);
+            }
+            console.log(CinemaStrID);
+            var txtSessionId = $(obj).attr("txtSessionId");
+            var t = calculerTime(txtSessionId, CinemaStrID);
+            //t = true;
+            console.log(t);
+            if (t == false) {
+                $(".popup-main-err .show-content").html("Đã quá thời hạn đặt vé cho suất chiếu này, vui lòng mua vé tại quầy.");
+                $(".popup-opacity").show();
+                $(".popup-main-err").show();
+                return false;
+            }
+            var sub = $(obj).attr("submv");
+            var imgmv = $(obj).attr("imgmv");
+            localStorage.setItem("subtt", sub);
+            localStorage.setItem("imgmv", imgmv);
+
+            mv_strname = $(obj).attr("namemv");
+			update_age_warning(sub + " - " + mv_strname);
+            displayTicketType(txtSessionId, CinemaStrID);
+        }
+
+
+        function bookingClick(obj) {
+
+            Cinema_strID = ($(obj).attr("Cinema_strID") !== undefined) ? $(obj).attr("Cinema_strID") : cnm;
+            console.log(cnm);
+            var txtSessionId = $(obj).attr("txtSessionId");
+            var t = calculerTime(txtSessionId, Cinema_strID);
+            console.log(t);
+            t = true;
+
+            if (t == false) {
+                $(".popup-main-err .show-content").html("Đã quá thời hạn đặt vé cho suất chiếu này, vui lòng mua vé tại quầy.");
+                $(".popup-opacity").show();
+                $(".popup-main-err").show();
+                return false;
+            }
+            var sub = $(obj).attr("submv");
+            var imgmv = $(obj).attr("imgmv");
+            localStorage.setItem("subtt", sub);
+            localStorage.setItem("imgmv", imgmv);
+
+            mv_strname = $(obj).attr("namemv");
+			update_age_warning(mv_strname);
+            displayTicketType(txtSessionId, Cinema_strID);
+        }
+		
+		function update_age_warning(str_movie_name)
+		{
+			$("#lbl_age_warning").show();
+			
+			str = "<p>Tôi xác nhận mua vé cho người đầy đủ _age_ tuổi trở lên và đồng ý cung cấp giấy tờ tùy thân để xác thực độ tuổi người xem. Rạp sẽ không hoàn tiền nếu người xem không đáp ứng đủ điều kiện. Tham khảo quy định của Bộ Văn Hóa, Thể Thao và Du Lịch.</p>";
+			
+			if (str_movie_name.includes("[T13]")) {
+				str = str.replace("_age_", "13");
+			} else if (str_movie_name.includes("[T16]")) {
+				str = str.replace("_age_", "16");
+			} else if (str_movie_name.includes("[T18]")) {
+				str = str.replace("_age_", "18");
+			} else if (str_movie_name.includes("[K]")) {
+				str = "<p>Phim thể loại K người xem dưới 13 tuổi phải có người bảo hộ (bố, mẹ hoặc người thân đủ từ 18 tuổi trở lên) đi kèm. Tôi xác nhận rạp phim không được phép phục vụ khách hàng dưới 13 tuổi cho các suất chiếu kết thúc từ 22:00 và dưới 16 tuổi cho các suất chiếu kết thúc từ 23:00. Tôi đồng ý cung cấp giấy tờ tùy thân để xác thực độ tuổi người xem. Rạp sẽ không hoàn tiền nếu người xem không đáp ứng đủ điều kiện. Tham khảo quy định của Bộ Văn Hóa, Thể Thao và Du Lịch.</p>";
+			} else {
+				str = "";
+				$("#lbl_age_warning").hide();
+			}
+			
+			$("#lbl_age_warning").html(str);
+		}
+		
+        function vemember() {
+            var str = "Loại vé này chỉ dành cho Thành viên Mega+. <br><br>Vui lòng ";
+            str += "<a href='/LtyHome.aspx'>Đăng nhập</a> hoặc "
+            str += "<a href='/LtyCreateUser.aspx'>Đăng ký</a> để hưởng những ";
+            str += "<a href='/uu-dai/'>Ưu đãi</a> đặc biệt.";
+            $(".popup-main-err .show-content").html(str);
+            $(".popup-opacity").show();
+
+            $(".popup-main-err").show();
+        }
+        let arrHoCode = ['0187','0188','0189','0082','0190','0081','0083','0084'];
+        let seniorPopupShown = {}; // Biến cờ để kiểm tra modal đã hiển thị hay chưa
+        function minusticket(obj) {
+            var ob = $(obj).parent().parent().parent();
+            var hoCode = $(ob).attr("strhocode");
+            var name = $(ob).attr("name").toLowerCase();
+            if (name.indexOf("member") != -1) {
+                if (!memberlogin) {
+                    vemember();
+                    return false;
+                }
+            }
+            var Qlty = $(ob).find("td:eq(1) .qualyti").val();
+            if (Number(Qlty) > 0) {
+                var sl = Number(Qlty) - 1;
+                var pr = $(ob).find("td:eq(2)").html().replace(/,/g, '').replace('VND', '').trim();
+                $(ob).find("td:eq(1) .qualyti").val(sl);
+                $(ob).find("td:eq(3) span").html(returnMoney(pr * sl) + " VND");
+                sumticket();
+
+                // Nếu số lượng giảm về 0, đặt lại trạng thái popup
+                if (sl === 0 && arrHoCode.indexOf(hoCode) != -1) {
+                    seniorPopupShown[hoCode] = false;
+                    console.log("Đặt lại trạng thái popup cho hoCode: " + hoCode);
+                }
+            } 
+        }
+        function plusticket(obj) {
+            var ob = $(obj).parent().parent().parent();
+            var area = parseInt($(ob).attr("arear"));
+            var hoCode = $(ob).attr("strhocode");
+            var name = $(ob).attr("name").toLowerCase();
+            if (name && name.indexOf("member") != -1) {
+                if (!memberlogin) {
+                    vemember();
+                    return false;
+                }
+            }
+            var Qlty = $(ob).find("td:eq(1) .qualyti").val();
+            var sl = Number(Qlty) + 1;
+
+            // Kiểm tra giới hạn số lượng
+            if (area == 3 && sl > 5) {
+                return false;
+            }
+            if (sl > 10) {
+                return false;
+            }
+
+            // Lưu tham chiếu đến đối tượng hiện tại để sử dụng trong sự kiện click
+            var currentObj = ob;
+            
+            // Kiểm tra và hiển thị modal nếu hoCode thuộc danh sách cần hiển thị popup và chưa hiển thị trước đó
+            if (arrHoCode.indexOf(hoCode) != -1 && Number(Qlty) === 0) {
+                if (!seniorPopupShown[hoCode]) {
+                    // Lưu thông tin vào modal để sử dụng sau này
+                    $('#popup-senior').attr('data-hocode', hoCode);
+                    $('#popup-senior').data('currentObj', currentObj);
+                    $('#popup-senior').modal('show');
+                    $('div.popup-main-booking').addClass('isNeedHide');
+                    return; // Không tăng số lượng ngay, đợi người dùng xác nhận
+                }
+            }
+            
+            // Nếu không cần hiển thị popup hoặc đã hiển thị trước đó, tăng số lượng ngay
+            var pr = $(ob).find("td:eq(2)").html().replace(/,/g, '').replace('VND', '').trim();
+            $(ob).find("td:eq(1) .qualyti").val(sl);
+            $(ob).find("td:eq(3) span").html(returnMoney(pr * sl) + " VND");
+            sumticket();
+        }
+
+        // Cập nhật sự kiện click nút "Đồng ý"
+        $("#btnAgree").click(function (e) {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+            var hoCode = $("#popup-senior").attr('data-hocode'); // Lấy hoCode từ data attribute
+            var currentObj = $("#popup-senior").data('currentObj'); // Lấy đối tượng hiện tại
+            
+            // Đánh dấu đã hiển thị popup cho hoCode này
+            seniorPopupShown[hoCode] = true;
+            
+            // Đóng modal
+            $("#popup-senior").modal("hide");
+            
+            // Tăng số lượng vé
+            if (currentObj) {
+                var Qlty = $(currentObj).find("td:eq(1) .qualyti").val();
+                var sl = Number(Qlty) + 1;
+                var pr = $(currentObj).find("td:eq(2)").html().replace(/,/g, '').replace('VND', '').trim();
+                $(currentObj).find("td:eq(1) .qualyti").val(sl);
+                $(currentObj).find("td:eq(3) span").html(returnMoney(pr * sl) + " VND");
+                sumticket();
+            }
+        });
+
+        // Cập nhật sự kiện click nút "Đóng"
+        $("#btnCancel").click(function (evt) {
+            evt.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+            // Không tăng số lượng, chỉ đóng modal
+            $("#popup-senior").modal("hide");
+            
+            // Không đánh dấu đã hiển thị, để lần sau vẫn hiện popup
+            var hoCode = $("#popup-senior").attr('data-hocode');
+            seniorPopupShown[hoCode] = false;
+        });
+
+        $('#popup-senior').on('show.bs.modal', function (e) {
+            // Thêm hiệu ứng fadeIn
+            $(this).find('.modal-dialog').hide().fadeIn(500); // 500ms là thời gian hiệu ứng
+        });
+
+        $('#popup-senior').on('hide.bs.modal', function (e) {
+            // Thêm hiệu ứng fadeOut
+             $('div.popup-main-booking').removeClass('isNeedHide'); // Hiển thị modal
+        });
+
+        $(document).ready(function () {
+                // Xử lý sự kiện click nút "Hủy"
+                $("#btnCancel").click(function (evt) {
+                    evt.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+                    // Thực hiện hành động khi người dùng nhấn nút "Hủy"
+                    console.log("Người dùng đã nhấn Hủy.");
+                    $("#popup-senior").modal("hide");
+                    let hoCode = $("#popup-senior").data("hocode"); // Lấy hoCode từ data attribute
+                    seniorPopupShown[hoCode] = false;
+                });
+        });
+    
+        function plusticketBK(obj) {
+            var ob = $(obj).parent().parent().parent();
+            var area = parseInt($(ob).attr("arear"));
+            var name = $(ob).attr("name").toLowerCase();
+            if (name.indexOf("member") != -1) {
+                if (!memberlogin) {
+                    vemember();
+                    return false;
+                }
+            }
+            var Qlty = $(ob).find("td:eq(1) .qualyti").val();
+            var sl = Number(Qlty) + 1;
+            if (area == 3) {
+                if (sl > 5) {
+                    return false;
+                }
+            }
+            if (sl > 10) {
+                return false;
+            }
+            var pr = $(ob).find("td:eq(2)").html().replace(/,/g, '').replace('VND', '').trim();
+            $(ob).find("td:eq(1) .qualyti").val(sl);
+            $(ob).find("td:eq(3) span").html(returnMoney(pr * sl) + " VND");
+            sumticket();
+        }
+
+        function sumticket() {
+            var sum = 0;
+            $("tr.tmp").each(function () {
+                var a = $(this).find("td:eq(3) span").html().replace(/,/g, '').replace('VND', '').trim();
+                if (a == "0.00")
+                    a = "0";
+                sum += Number(a);
+
+            });
+
+            $("#PanelTK").find('.span-total').html(returnMoney(sum) + " VND");
+        }
+
+        var captcha_verify = false;
+        function captchaVerify(token){
+            
+            return false;        
+        }
+
+    
+        $('#submitSeat').click(function (evt) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            var flag = false;
+            var totalTicket = 0
+             $("#tbl-type-ticket .tmp").each(function (index) {
+                var nb = $(this).find("td:nth-child(2) span").find("input[type=text]").val();
+                totalTicket = totalTicket + parseInt(nb);
+            })
+
+            if(totalTicket <= 0){
+                $("#hello").html("Vui lòng lựa chọn số lượng vé.");
+                flag = true;
+                return false;
+            }
+            if (flag) {
+                return false;
+            }
+            $("#hello").html("");
+            var token = $("#recaptcha_value input[name=g-recaptcha-response]").val();
+            var buttonText = $(this).text();
+            $(this).prop('disabled', true).html('<i class="fa fa-spin fa-spinner"></i>');
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/VerifyCaptcha",
+                data: "{token:'" + token + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    let obj = JSON.parse(msg.d);
+                    console.log(typeof obj.success);
+                    console.log(typeof obj.score);
+                    if(obj.success != true || obj.score <= 0.5){
+                        //$("#hello").html("Vui lòng xác nhận mã Captcha.");
+                        return false;
+                    }
+                    $(this).prop('disabled', false).html(buttonText);
+                }
+            });
+
+            cancelTK = false;
+            totalTK = [];
+            var totalcuoples = [];
+
+            var sessionMV = $("#tbl-type-ticket").attr("sessionMV");
+            Cinema_strID = $("#tbl-type-ticket").attr("Cinema_strID");
+
+            $.ajax({
+                type: "POST",
+                url: "/Callajax.aspx/UpdateTitle",
+                data: "{filmname:'" + mv_strname.replace(/'/g, '#') + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.d == false) {
+                        //$("#hello").html("Vui lòng xác nhận mã Captcha.");
+                    }
+                    else {
+                        $("#tbl-type-ticket .tmp").each(function (index) {
+                            var nb = $(this).find("td:nth-child(2) span").find("input[type=text]").val();
+                            if (Number(nb) > 0) {
+                                var strHOCode = $(this).attr("strhocode");
+                                var strArear = $(this).attr("arear");
+                                var PriceInCents = Number($(this).find("td:nth-child(3)").html().replace(/,/g, '').replace('VND', '')) / 10;
+                                var tk = {
+                                    strHOCode: strHOCode,
+                                    PriceInCents: PriceInCents,
+                                    Qty: nb,
+                                    arear: strArear
+                                }
+                                //if (strHOCode == "0090")
+                                //    totalcuoples.push(tk);
+                                //else
+                                totalTK.push(tk);
+                            }
+                        });
+                        var sumtk = 0;
+                        for (var j = 0; j < totalTK.length; j++) {
+                            var ve = parseInt(totalTK[j].Qty)
+                            if (parseInt(totalTK[j].arear) == 3) {
+                                ve = ve * 2;
+                            }
+                            sumtk += parseInt(ve);
+                        }
+
+                        if (sumtk > 10) {
+                            $("#hello").html("Xin lỗi, mỗi lần đặt vé bạn chỉ được chọn tối đa 10 vé. Vui lòng chọn 10 ghế hoặc ít hơn.");
+							$('#submitSeat').prop('disabled', false).html(buttonText);
+                            closeloadpopup();
+                            return false;
+                        }
+                        $.ajax({
+                            type: "POST",
+                            url: "/callApiAjax.aspx/CancelOrder",
+                            data: "{}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (msg) {
+                                var objc = JSON.parse(msg.d);
+                                if (objc.Result != 0 && objc.Result != 1)
+                                    return false;
+                                if (totalTK.length > 0) {
+                                    loadpopup();
+                                    var myJsonString = JSON.stringify(totalTK);
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/callApiAjax.aspx/AddTicketsRequest",
+                                        data: "{cinema:'" + Cinema_strID + "',SessionMV:'" + sessionMV + "',captcha:'" + token + "',listseat:'" + myJsonString + "'}",
+                                        contentType: "application/json; charset=utf-8",
+                                        dataType: "json",
+                                        success: function (msg) {
+                                            var obj = JSON.parse(msg.d);
+                                            if (obj.Result == 0) {
+                                                getseat(sessionMV)
+                                            }
+                                            else {
+
+                                                $("#hello").html("Xin lỗi, hiện không có đủ ghế trống cho số vé đã chọn. Vui lòng chọn số ghế ít hơn hoặc giờ chiếu khác.");
+												$('#submitSeat').prop('disabled', false).html(buttonText);
+                                                try {
+
+                                                    if (tkold.length > 0) {
+                                                        var myJsonbk = JSON.stringify(tkold);
+                                                        addTicketAgain(myJsonbk)
+                                                    }
+                                                }
+                                                catch (ex) { }
+                                                closeloadpopup();
+                                            }
+                                        }
+                                    });
+
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        function addTicketAgain(myJsonString) {
+            if (Cinema_strID == "")
+            {
+                Cinema_strID = $("#tbl-type-ticket").attr("Cinema_strID");
+            }
+            var captcha = "";
+            var sessionMV = $("#tbl-type-ticket").attr("sessionMV");
+            //alert("sessionMV: " + sessionMV);
+            //alert("Cinema_strID: " + Cinema_strID);
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/AddTicketsRequest",
+                data: "{cinema:'" + Cinema_strID + "',SessionMV:'" + sessionMV + "',captcha:'" + captcha + "',listseat:'" + myJsonString + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+
+                }
+            });
+        }
+
+        function getseat(a) {
+            var sessionMV = $("#tbl-type-ticket").attr("sessionMV");
+            Cinema_strID = $("#tbl-type-ticket").attr("Cinema_strID");
+            console.log("a:"+a)
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/GetSessionSeatData",
+                data: "{cinema:'" + Cinema_strID + "',SessionMV:'" + a + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    var Seatfail = [];
+                    var listAreas = [];
+                    var obj = JSON.parse(msg.d);
+                    console.log(obj)
+
+                    for (var i = 0; i < obj.SeatLayoutData.AreaCategories.length; i++) {
+                        var AreaCategoryCode = obj.SeatLayoutData.AreaCategories[i].AreaCategoryCode;
+                        var SeatsNotAllocatedCount = obj.SeatLayoutData.AreaCategories[i].SeatsNotAllocatedCount;
+                        var st = {
+                            AreaCategoryCode: AreaCategoryCode,
+                            SeatsNotAllocatedCount: SeatsNotAllocatedCount,
+                            seatRemain: 0
+                        }
+                        listAreas.push(st);
+                    }
+                    for (var j = 0; j < listAreas.length; j++) {
+                        if (obj.SeatLayoutData.Areas[j].AreaCategoryCode == listAreas[j].AreaCategoryCode) {
+
+                            var ob = obj.SeatLayoutData.Areas[j].Rows;
+
+                            for (var k = 0; k < ob.length; k++) {
+                                if (ob[k].PhysicalName != null) {
+
+                                    var count = 0;
+                                    for (var m = 0; m < ob[k].Seats.length; m++) {
+                                        if (ob[k].Seats[m].Status == 0) {
+                                            count++;
+                                        }
+                                    }
+                                    var SeatsNot = parseInt(count);
+                                    var SeatsNotpost = parseInt(listAreas[j].SeatsNotAllocatedCount);
+                                    var cal = SeatsNot - SeatsNotpost
+
+                                    if (cal >= 0) {
+                                        // console.log("ghe trong:" + cal);
+                                    }
+                                    else {
+                                        listAreas[j].seatRemain = cal;
+                                        Seatfail.push(listAreas[j])
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (Seatfail.length > 0) {
+
+                        var e = "";
+                        for (var k = 0; k < Seatfail.length; k++) {
+                            $("#tbl-type-ticket .tmp").each(function (index) {
+                                var nb = $(this).find("td:nth-child(2) span").find("input[type=text]").val();
+                                var AreaCa = $(this).attr("arear");
+                                var tkname = $(this).attr("name");
+                                if (AreaCa == Seatfail[k].AreaCategoryCode) {
+                                    e += tkname + " thiếu:" + Seatfail[k].seatRemain + "<br>";
+                                }
+
+                            });
+                        }
+                        if (totalpercent == 0) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/callApiAjax.aspx/RemoveTickets",
+                                data: "{}",
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (msg) {
+
+                                }
+                            });
+                        }
+
+                        $("#hello").html(e);
+                    }
+                    else {
+                        location.assign("/Booking.aspx?sessionMV=" + a + "&Cinema_strID=" + Cinema_strID);
+                    }
+                }
+            });
+        }
+
+        function getmemberLogin() {
+
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/GetMember",
+                data: "{}",
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+
+                    var obj = JSON.parse(msg.d);
+                    var Result = obj.Result;
+                    if (Result == 0) {
+                        memberlogin = true;
+                        $('.block-link').hide();
+                        $("#txtCardName").val(obj.LoyaltyMember.FullName);
+                        $("#txtEmail").val(obj.LoyaltyMember.Email);
+                        $("#txtCustPhone").val(obj.LoyaltyMember.MobilePhone);
+
+                    }
+                    else {
+                        memberlogin = false;
+                        $('.box-member').show();
+                    }
+                }
+            });
+
+        }
+        function cancelOrderBuyed(vl) {
+            $.ajax({
+                type: "POST",
+                url: "/callApiAjax.aspx/CancelOrder",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    if (vl == 2)
+                        $("#errorbooking").remove();
+                }
+            });
+        }
+    </script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNL7KRL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5685e64dec853a00" async="async"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfedbodAAAAAA0QSFpl7Y2m6WUCDZR__WRpAv2n&hl=vi"></script>
+	<!-- <script id='autoAdsMaxLead-widget-script' src='https://cdn.autoads.asia/scripts/autoads-maxlead-widget.js?business_id=DBDADE0BCEC3454E8B9E3F067F497B44' type='text/javascript' charset='UTF-8' async></script> -->
+
+   <script type="">
+       // when form is submit
+    grecaptcha.ready(function() {
+            // do request for recaptcha token
+            // response is promise with passed token
+            grecaptcha.execute('6LfedbodAAAAAA0QSFpl7Y2m6WUCDZR__WRpAv2n', {action: 'create_comment'}).then(function(token) {
+
+                console.log(token)
+                // add token to form
+                $('#recaptcha_value').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                if($("#recaptcha").length> 0){
+                     $('#recaptcha').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                }
+            });
+        });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3426b69aadc853b',t:'MTc4ODI0NjI1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925" integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A==" data-cf-beacon='{"version":"2024.11.0","token":"899b5b689adb4e7d9c771970f500da0d","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>

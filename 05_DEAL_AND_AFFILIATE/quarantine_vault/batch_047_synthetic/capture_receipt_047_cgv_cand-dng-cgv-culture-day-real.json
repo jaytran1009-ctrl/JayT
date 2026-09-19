@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-32-CGV",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_32",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-CGV-CULTURE-DAY-REAL"
+  },
+  "target": {
+    "brand_id": "CGV",
+    "category": "LOCAL_CINEMA",
+    "requested_url": "https://www.cgv.vn/default/culture-day-2026/",
+    "final_url": "https://www.cgv.vn/default/culture-day-2026/",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của CGV Cinemas có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "CGV Culture Day — Vé 2D 58.000đ (CGV Vĩnh Trung Plaza Đà Nẵng)",
+    "conditions_snippet": "Áp dụng vào ngày Thứ Tư cuối cùng của tháng (Culture Day 24/08/2026)"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_cgv_cand-dng-cgv-culture-day-real.png",
+      "sha256": "28ee26e8bae7d8fd90770fff6a4a64204fd57a6856ff69b776872e94c8d55c97",
+      "bytes": 138369,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_cgv_cand-dng-cgv-culture-day-real.html",
+      "sha256": "667fac1bc2d63eb64d9a5ac39286913676f21e39490167141666fa1eb3d15c26",
+      "bytes": 1016
+    },
+    "text_dump": {
+      "file": "capture_047_cgv_cand-dng-cgv-culture-day-real.txt",
+      "sha256": "ec45a277c51a77101177cee2bd23e850f5ea90cb6f32d7b69c5396f73244fd8a",
+      "bytes": 645
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

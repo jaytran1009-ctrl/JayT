@@ -1,0 +1,85 @@
+{
+  "version": "v3.463.0-staging.ei",
+  "generated_at_utc": "2026-08-30T19:16:00.000Z",
+  "governing_directive": "JAYT-245 Section EI",
+  "ledger_fingerprint": {
+    "ledger_id": "JAYT_PUBLIC_COUNT_LEDGER_EI_20260830",
+    "ledger_sha256": "1c838bf34586cdc0400551e24dd47d30794fe884d68e78c5ca323b85cf42a33b",
+    "version": "v3.463.0-staging.ei"
+  },
+  "public_storefront_feed": {
+    "total_active_items": 50,
+    "breakdown_by_tier": {
+      "TIER_1_DEAL": 0,
+      "TIER_2_PROGRAMME": 20,
+      "TIER_3_UTILITY": 14,
+      "TIER_4_RADAR": 16
+    },
+    "directory_navigation_label": "Khám phá (50)",
+    "wallet_navigation_label": "Chương Trình (13)",
+    "voucher_hub_navigation_label": "Voucher (0)"
+  },
+  "wallet_entries_breakdown": {
+    "total_entries": 13,
+    "LANE_CONG_CHINH_THUC": 10,
+    "LANE_THEO_DOI": 3
+  },
+  "journey_disjoint_partitions": {
+    "an_gi": {
+      "count": 11,
+      "label": "11 Địa điểm ẩm thực dẫn nguồn",
+      "namespace": "FEED_PRIMARY_JOURNEY_AN_GI"
+    },
+    "di_dau": {
+      "count": 14,
+      "label": "14 Điểm tham quan & rạp chiếu",
+      "namespace": "FEED_PRIMARY_JOURNEY_DI_DAU"
+    },
+    "tien_ich": {
+      "count": 13,
+      "label": "13 Tiện ích công cộng TP. Đà Nẵng",
+      "namespace": "FEED_PRIMARY_JOURNEY_TIEN_ICH"
+    },
+    "mua_sam_hoc_tap": {
+      "count": 12,
+      "label": "12 Cổng chính sách & học đường",
+      "namespace": "FEED_PRIMARY_JOURNEY_MUA_SAM"
+    }
+  },
+  "identity_roster_summary": {
+    "total_items": 50,
+    "vault_artifact_matched": 8,
+    "pending_vault_capture": 42
+  },
+  "quarantine_audit": {
+    "total_quarantined_jpegs": 12,
+    "quarantined_jpegs_in_runtime": 0,
+    "all_quarantined_jpegs_isolated": true,
+    "all_photographer_cc_strings_purged_from_dom": true
+  },
+  "pipeline_scorecard": {
+    "DISCOVERY_LEAD": 1,
+    "CAPTURE_RETRY_REQUIRED": 1,
+    "CANONICAL_SOURCE_FOUND": 8,
+    "CAPTURE_PENDING": 2,
+    "EVIDENCE_COMPLETE": 0,
+    "PUBLIC_TOTAL_ACTIVE": 50,
+    "T1_DEAL_ELIGIBLE": 0,
+    "VOUCHERS_ELIGIBLE": 0
+  },
+  "reconciliation_checks": {
+    "sum_tiers_equals_total_public": true,
+    "sum_journey_partitions_equals_50": true,
+    "pairwise_intersections_zero": true,
+    "wallet_lanes_equals_wallet_total": true,
+    "canonical_sources_match_vault_records": true,
+    "tier1_deals_fail_closed_zero": true,
+    "voucher_hub_count_zero": true,
+    "no_write_affiliate_contract_enforced": true,
+    "single_voucher_nav_instance_enforced": true,
+    "verbatim_origin_timestamps_enforced": true,
+    "roster_cardinality_equals_public_feed": true,
+    "zero_quarantined_jpegs_in_runtime_enforced": true,
+    "zero_photographer_cc_strings_in_dom_enforced": true
+  }
+}

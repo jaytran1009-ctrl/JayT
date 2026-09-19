@@ -1,0 +1,924 @@
+{
+  "batch_id": "BATCH_102_COMPREHENSIVE_LIVE_CAPTURE",
+  "executed_at": "2026-08-25T09:16:29.762Z",
+  "collector_engine": "safe_provenance_collector_100.js",
+  "invariants_enforced": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback": true
+  },
+  "targets_total": 25,
+  "authenticated_count": 16,
+  "failed_count": 9,
+  "results": [
+    {
+      "target_id": "TARGET_102_CGV_VINCOM_DNG",
+      "venue_name": "CGV Vincom Đà Nẵng",
+      "url": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+      "sector": "CINEMA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_EMPTY_TEXT: Page text is empty or trivial (< 20 chars) for https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:16:32.770Z",
+        "target_id": "TARGET_102_CGV_VINCOM_DNG",
+        "venue_name": "CGV Vincom Đà Nẵng",
+        "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+        "error_message": "FAIL_CLOSED_EMPTY_TEXT: Page text is empty or trivial (< 20 chars) for https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_CGV_VINH_TRUNG",
+      "venue_name": "CGV Vĩnh Trung Plaza",
+      "url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+      "sector": "CINEMA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:16:35.947Z",
+        "target_id": "TARGET_102_CGV_VINH_TRUNG",
+        "venue_name": "CGV Vĩnh Trung Plaza",
+        "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "district": "UNSPECIFIED",
+        "sector": "CINEMA",
+        "http_response": {
+          "status": 200,
+          "url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.html",
+            "size_bytes": 101887,
+            "sha256": "5dd136014b5822f7a16a16690441acfd0eda7d83ea5842523ab61c5a316d1856"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.txt",
+            "size_bytes": 2615,
+            "sha256": "3b9396c1a592f3b4b8f801262aed3a081d73ac7e6bfd6229694acb3db7482d0e"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.png",
+            "size_bytes": 309490,
+            "sha256": "ba67c90fd4f6656824b72229b5c0c22dd0be939af1e2cb7ea5644884cde17978"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_CGV_MEMBERSHIP",
+      "venue_name": "CGV Membership Policy",
+      "url": "https://www.cgv.vn/default/membership",
+      "sector": "CINEMA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://www.cgv.vn/default/membership",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:16:40.952Z",
+        "target_id": "TARGET_102_CGV_MEMBERSHIP",
+        "venue_name": "CGV Membership Policy",
+        "source_url": "https://www.cgv.vn/default/membership",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://www.cgv.vn/default/membership",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_GALAXY_DANANG",
+      "venue_name": "Galaxy Cinema Đà Nẵng",
+      "url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "sector": "CINEMA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:16:48.237Z",
+        "target_id": "TARGET_102_GALAXY_DANANG",
+        "venue_name": "Galaxy Cinema Đà Nẵng",
+        "source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+        "district": "UNSPECIFIED",
+        "sector": "CINEMA",
+        "http_response": {
+          "status": 200,
+          "url": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.html",
+            "size_bytes": 213273,
+            "sha256": "128c722f9be59935b4eb094a9999d1f81cbefe59b5943b59b7ae2c1dce0dbd49"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.txt",
+            "size_bytes": 2290,
+            "sha256": "54bdf0f4d15206b25d17e938a45c83f69ada94435d63a895b4bdc6d6422c1370"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.png",
+            "size_bytes": 787351,
+            "sha256": "d4e74fcc22ab08a48aa0f89eb159268c0475389e8f90f5bb7bd518d16a9d5f08"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_GALAXY_POLICY",
+      "venue_name": "Galaxy Cinema Policy 2026",
+      "url": "https://galaxycine.vn/chinh-sach-thanh-vien-2026",
+      "sector": "CINEMA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://galaxycine.vn/chinh-sach-thanh-vien-2026",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:16:53.471Z",
+        "target_id": "TARGET_102_GALAXY_POLICY",
+        "venue_name": "Galaxy Cinema Policy 2026",
+        "source_url": "https://galaxycine.vn/chinh-sach-thanh-vien-2026",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://galaxycine.vn/chinh-sach-thanh-vien-2026",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_METIZ_POLICY",
+      "venue_name": "Metiz Cinema Member Policy",
+      "url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html",
+      "sector": "CINEMA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:16:58.931Z",
+        "target_id": "TARGET_102_METIZ_POLICY",
+        "venue_name": "Metiz Cinema Member Policy",
+        "source_url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html",
+        "district": "UNSPECIFIED",
+        "sector": "CINEMA",
+        "http_response": {
+          "status": 200,
+          "url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.html",
+            "size_bytes": 88523,
+            "sha256": "def09022ecc0d0cd165fd7a1fd7d59f9012bab380d50bbf0cf17791ab9cd6cd9"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.txt",
+            "size_bytes": 3710,
+            "sha256": "d7b416d03fa54e971b7119c9190f16d6d4e5811baa86b2379d4a437b23ca54fb"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.png",
+            "size_bytes": 92923,
+            "sha256": "c054b57f1600a6b1c466e31f4604d4ca6f91827d4e070c9ab31e2f41be5c11da"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_METIZ_HOME",
+      "venue_name": "Metiz Cinema Đà Nẵng Home",
+      "url": "https://metiz.vn/",
+      "sector": "CINEMA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:05.506Z",
+        "target_id": "TARGET_102_METIZ_HOME",
+        "venue_name": "Metiz Cinema Đà Nẵng Home",
+        "source_url": "https://metiz.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "CINEMA",
+        "http_response": {
+          "status": 200,
+          "url": "https://metiz.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.html",
+            "size_bytes": 136293,
+            "sha256": "328dd347d34075690d59e0d69a3ed15a7eb77cefb72e848b3c2b4fc33759c01a"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.txt",
+            "size_bytes": 2007,
+            "sha256": "bb84fefcd9b9301bd3d05fa555500ca062f69814bfca27c9ca61eeea16bf8724"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.png",
+            "size_bytes": 1201806,
+            "sha256": "e5496a4d883ad9ed4312ac2c84a15e65e6214a01fe2180a62245eba73e8d1988"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_LOTTE_CINEMA_DNG",
+      "venue_name": "Lotte Cinema Đà Nẵng",
+      "url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=5001",
+      "sector": "CINEMA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:11.501Z",
+        "target_id": "TARGET_102_LOTTE_CINEMA_DNG",
+        "venue_name": "Lotte Cinema Đà Nẵng",
+        "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=5001",
+        "district": "UNSPECIFIED",
+        "sector": "CINEMA",
+        "http_response": {
+          "status": 200,
+          "url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=5001",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.html",
+            "size_bytes": 90238,
+            "sha256": "1701cc0108d2e0b1cf62f8a35566151839d2a8880cde183a292fc035b5162897"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.txt",
+            "size_bytes": 1613,
+            "sha256": "fa2f6acefd18ceec8a98bb88d5251c0fb9d44a8db02d75ac793de104d9209545"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.png",
+            "size_bytes": 206722,
+            "sha256": "9252ed73a5d87853116808be7f2e34d437fb43ad491c09d7257e0dbad31f1fbd"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_PHELA_HOME",
+      "venue_name": "Phê La Vietnam",
+      "url": "https://phela.vn/",
+      "sector": "COFFEE_TEA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:18.816Z",
+        "target_id": "TARGET_102_PHELA_HOME",
+        "venue_name": "Phê La Vietnam",
+        "source_url": "https://phela.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "COFFEE_TEA",
+        "http_response": {
+          "status": 200,
+          "url": "https://phela.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.html",
+            "size_bytes": 233827,
+            "sha256": "ad72448cce6b9055d0a78ff0494225ad94e1b83bb1056a5580b8e77dd582863c"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.txt",
+            "size_bytes": 13545,
+            "sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.png",
+            "size_bytes": 1560937,
+            "sha256": "e90f574302c258a9d5d8316bf4b13e4b8392ef2807650fdfa1259e0897b1bd51"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_GONGCHA_HOME",
+      "venue_name": "Gong Cha Vietnam",
+      "url": "https://gongcha.com.vn/",
+      "sector": "COFFEE_TEA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:24.809Z",
+        "target_id": "TARGET_102_GONGCHA_HOME",
+        "venue_name": "Gong Cha Vietnam",
+        "source_url": "https://gongcha.com.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "COFFEE_TEA",
+        "http_response": {
+          "status": 200,
+          "url": "https://gongcha.com.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.html",
+            "size_bytes": 78872,
+            "sha256": "cefaf78be2fb6f87ab0dab4661928dbcc07eff771249f840e57b8bc220e40fa3"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.txt",
+            "size_bytes": 1567,
+            "sha256": "db9be8c4a007a7a416f914522ee4d9ebdf318ff485026f0b8dae6a062b97b2d1"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.png",
+            "size_bytes": 1343741,
+            "sha256": "fb9f2dc8d419bc29a8b1dc2608c6a84a14df7955ae0e7e7f180b551c26dfa983"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_GONGCHA_STORES",
+      "venue_name": "Gong Cha Cửa Hàng",
+      "url": "https://gongcha.com.vn/cua-hang/",
+      "sector": "COFFEE_TEA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:35.404Z",
+        "target_id": "TARGET_102_GONGCHA_STORES",
+        "venue_name": "Gong Cha Cửa Hàng",
+        "source_url": "https://gongcha.com.vn/cua-hang/",
+        "district": "UNSPECIFIED",
+        "sector": "COFFEE_TEA",
+        "http_response": {
+          "status": 200,
+          "url": "https://gongcha.com.vn/cua-hang/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.html",
+            "size_bytes": 76921,
+            "sha256": "a2b70358930677e150e33673319ab2e8f5dbfbe332cbed15e2c3b7ce443834c8"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.txt",
+            "size_bytes": 11649,
+            "sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.png",
+            "size_bytes": 423360,
+            "sha256": "527a78e9f83f0b41544c431ed6d39c9494a20368d064758106a9c4beb22ec6e5"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_HIGHLANDS_HOME",
+      "venue_name": "Highlands Coffee Home",
+      "url": "https://www.highlandscoffee.com.vn/",
+      "sector": "COFFEE_TEA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:17:38.178Z",
+        "target_id": "TARGET_102_HIGHLANDS_HOME",
+        "venue_name": "Highlands Coffee Home",
+        "source_url": "https://www.highlandscoffee.com.vn/",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_HIGHLANDS_STORES",
+      "venue_name": "Highlands Coffee Hệ Thống",
+      "url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "sector": "COFFEE_TEA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:17:40.199Z",
+        "target_id": "TARGET_102_HIGHLANDS_STORES",
+        "venue_name": "Highlands Coffee Hệ Thống",
+        "source_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_PHUCLONG_STORES",
+      "venue_name": "Phúc Long Hệ Thống",
+      "url": "https://phuclong.com.vn/he-thong-cua-hang",
+      "sector": "COFFEE_TEA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://phuclong.com.vn/he-thong-cua-hang",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:17:50.974Z",
+        "target_id": "TARGET_102_PHUCLONG_STORES",
+        "venue_name": "Phúc Long Hệ Thống",
+        "source_url": "https://phuclong.com.vn/he-thong-cua-hang",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://phuclong.com.vn/he-thong-cua-hang",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_THECOFFEEHOUSE_STORES",
+      "venue_name": "The Coffee House Danh Sách",
+      "url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+      "sector": "COFFEE_TEA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:17:59.579Z",
+        "target_id": "TARGET_102_THECOFFEEHOUSE_STORES",
+        "venue_name": "The Coffee House Danh Sách",
+        "source_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+        "district": "UNSPECIFIED",
+        "sector": "COFFEE_TEA",
+        "http_response": {
+          "status": 200,
+          "url": "https://thecoffeehouse.com/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.html",
+            "size_bytes": 433046,
+            "sha256": "c4df35dedd1fd75e7f3ac5e6cc218fc24e4e3b4b990731890a7c9f1e704134d8"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.txt",
+            "size_bytes": 592,
+            "sha256": "31b5f5f508fa20dbd118059859a45191717a5c1a7f73c37e540c3e64b6901f32"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.png",
+            "size_bytes": 148294,
+            "sha256": "b1b53c10afca9dd08d7cf17b30c0ea19526f95f6c85a1e531bbedff6ce44eabd"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_KATINAT_HOME",
+      "venue_name": "Katinat Saigon Kafe Home",
+      "url": "https://katinat.vn/",
+      "sector": "COFFEE_TEA",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:18:20.902Z",
+        "target_id": "TARGET_102_KATINAT_HOME",
+        "venue_name": "Katinat Saigon Kafe Home",
+        "source_url": "https://katinat.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "COFFEE_TEA",
+        "http_response": {
+          "status": 200,
+          "url": "https://katinat.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.html",
+            "size_bytes": 150676,
+            "sha256": "f972c4826c59e17823fc6b497d70f3b932f6ca1aa66e2d0f5e3574237afc852c"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.txt",
+            "size_bytes": 4136,
+            "sha256": "4839c29df02e32c844b3ee0866bee78f1107cd876686563edf141a2e7c92eac0"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.png",
+            "size_bytes": 1218463,
+            "sha256": "c5af4c1272537637c8ec7c4f54f9fbf0f47b2be6998160d21a2f36721ce0970d"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_TOCOTOCO_STORES",
+      "venue_name": "TocoToco Danh Sách Cửa Hàng",
+      "url": "https://tocotocotea.com/danh-sach-cua-hang/",
+      "sector": "COFFEE_TEA",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://tocotocotea.com/danh-sach-cua-hang/",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:18:24.361Z",
+        "target_id": "TARGET_102_TOCOTOCO_STORES",
+        "venue_name": "TocoToco Danh Sách Cửa Hàng",
+        "source_url": "https://tocotocotea.com/danh-sach-cua-hang/",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://tocotocotea.com/danh-sach-cua-hang/",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_MIXUE_HOME",
+      "venue_name": "Mixue Vietnam",
+      "url": "https://www.mxbc.vn/",
+      "sector": "COFFEE_TEA",
+      "status": "FAILED_CAPTURE",
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://www.mxbc.vn/",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:18:25.172Z",
+        "target_id": "TARGET_102_MIXUE_HOME",
+        "venue_name": "Mixue Vietnam",
+        "source_url": "https://www.mxbc.vn/",
+        "error_message": "net::ERR_NAME_NOT_RESOLVED at https://www.mxbc.vn/",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_JOLLIBEE_HOME",
+      "venue_name": "Jollibee Vietnam Home",
+      "url": "https://jollibee.com.vn/",
+      "sector": "FNB_FASTFOOD",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:18:39.418Z",
+        "target_id": "TARGET_102_JOLLIBEE_HOME",
+        "venue_name": "Jollibee Vietnam Home",
+        "source_url": "https://jollibee.com.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "FNB_FASTFOOD",
+        "http_response": {
+          "status": 200,
+          "url": "https://jollibee.com.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.html",
+            "size_bytes": 332495,
+            "sha256": "6c7192843a44d917e8390dc7388c179c25cb05f82b2870d2cd62db6967907594"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.txt",
+            "size_bytes": 5855,
+            "sha256": "2f4d15c2e178d5f1ce07685cfcc2df1bd36b5aa7c9fb2fa46cd220ca495e6562"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.png",
+            "size_bytes": 921816,
+            "sha256": "628e976753685c1a316afaa770836b8990826e6c85b86dbed2e85f91b1ad828b"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_JOLLIBEE_STORES",
+      "venue_name": "Jollibee Danh Sách Cửa Hàng",
+      "url": "https://jollibee.com.vn/cua-hang",
+      "sector": "FNB_FASTFOOD",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:18:57.481Z",
+        "target_id": "TARGET_102_JOLLIBEE_STORES",
+        "venue_name": "Jollibee Danh Sách Cửa Hàng",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "district": "UNSPECIFIED",
+        "sector": "FNB_FASTFOOD",
+        "http_response": {
+          "status": 200,
+          "url": "https://jollibee.com.vn/cua-hang",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.html",
+            "size_bytes": 792029,
+            "sha256": "0c79f65e4c99882ee9820cbc8fedd9c28b18d4c4d63be4a5fcd6f035ebe8197e"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+            "size_bytes": 68406,
+            "sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.png",
+            "size_bytes": 1036728,
+            "sha256": "615eb2c7e3a99f7c5e170f8a475b42abcae3d81650193471f4c64e6164cd9e95"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_DOMINOS_HOME",
+      "venue_name": "Domino's Pizza Vietnam",
+      "url": "https://dominos.vn/",
+      "sector": "FNB_FASTFOOD",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:19:05.326Z",
+        "target_id": "TARGET_102_DOMINOS_HOME",
+        "venue_name": "Domino's Pizza Vietnam",
+        "source_url": "https://dominos.vn/",
+        "district": "UNSPECIFIED",
+        "sector": "FNB_FASTFOOD",
+        "http_response": {
+          "status": 200,
+          "url": "https://dominos.vn/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.html",
+            "size_bytes": 76085,
+            "sha256": "33bc8189f388a4124b4454e4ac155b66baf37bc2102ef038a8d735693b5fac9a"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.txt",
+            "size_bytes": 809,
+            "sha256": "98c46ecb89d719279935ad0de920a96718ba04aa0b3d657859103effd3a31a71"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.png",
+            "size_bytes": 1672516,
+            "sha256": "43052c881b8afa30ce444e00c0e8bfe63172bf29554acd42a833779f02f1a737"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_DOMINOS_STORES",
+      "venue_name": "Domino's Cửa Hàng",
+      "url": "https://dominos.vn/cua-hang",
+      "sector": "FNB_FASTFOOD",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:19:11.322Z",
+        "target_id": "TARGET_102_DOMINOS_STORES",
+        "venue_name": "Domino's Cửa Hàng",
+        "source_url": "https://dominos.vn/cua-hang",
+        "district": "UNSPECIFIED",
+        "sector": "FNB_FASTFOOD",
+        "http_response": {
+          "status": 200,
+          "url": "https://dominos.vn/store-locations",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.html",
+            "size_bytes": 124566,
+            "sha256": "ce19104a41bb3f997f4c2a587d1a9b5176d74cfd45c373202fa378d0c9665fef"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.txt",
+            "size_bytes": 696,
+            "sha256": "7eb0cb171f5d5bf4e180f89e37e4a6c30aef1c5d467fda274f86b24459c9712f"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.png",
+            "size_bytes": 421472,
+            "sha256": "49ea17cca4aa0042fa8354ba71ce62ab36a85fa43f1428462f62c99f0ec287e7"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_KFC_STORES",
+      "venue_name": "KFC Vietnam Nhà Hàng",
+      "url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "sector": "FNB_FASTFOOD",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "receipt": {
+        "receipt_type": "FAILED_CAPTURE_RECEIPT",
+        "status": "FAILED_CAPTURE",
+        "attempted_at": "2026-08-25T09:19:13.222Z",
+        "target_id": "TARGET_102_KFC_STORES",
+        "venue_name": "KFC Vietnam Nhà Hàng",
+        "source_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+        "error_message": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+        "synthetic_fallback_permitted": false,
+        "raw_artifacts_persisted": false
+      }
+    },
+    {
+      "target_id": "TARGET_102_LOTTERIA_STORES",
+      "venue_name": "Lotteria Cửa Hàng",
+      "url": "https://www.lotteria.vn/store/",
+      "sector": "FNB_FASTFOOD",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:19:18.694Z",
+        "target_id": "TARGET_102_LOTTERIA_STORES",
+        "venue_name": "Lotteria Cửa Hàng",
+        "source_url": "https://www.lotteria.vn/store/",
+        "district": "UNSPECIFIED",
+        "sector": "FNB_FASTFOOD",
+        "http_response": {
+          "status": 200,
+          "url": "https://www.lotteria.vn/store/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.html",
+            "size_bytes": 58228,
+            "sha256": "558727a508c6d2e6dc4b6286b52f5ce63f555429a985e6b05f476ceb63a2f2bc"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.txt",
+            "size_bytes": 534,
+            "sha256": "6af0d17958d9c81bbd951ffcc1072d6d2011da4a993ad6b039f1d3cf5bacb7ba"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.png",
+            "size_bytes": 128673,
+            "sha256": "387e5da205722d608a93247c7861f41121945de8e989532f88587d8a9b00017b"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_102_COOPMART_DANANG",
+      "venue_name": "Co.opmart Đà Nẵng",
+      "url": "https://co-opmart.com.vn/he-thong-coop-mart/",
+      "sector": "RETAIL",
+      "status": "CAPTURE_AUTHENTICATED",
+      "receipt": {
+        "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+        "status": "CAPTURE_AUTHENTICATED",
+        "captured_at": "2026-08-25T09:19:24.579Z",
+        "target_id": "TARGET_102_COOPMART_DANANG",
+        "venue_name": "Co.opmart Đà Nẵng",
+        "source_url": "https://co-opmart.com.vn/he-thong-coop-mart/",
+        "district": "UNSPECIFIED",
+        "sector": "RETAIL",
+        "http_response": {
+          "status": 200,
+          "url": "https://co-opmart.com.vn/he-thong-coop-mart/",
+          "ok": true
+        },
+        "artifacts": {
+          "page_html": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.html",
+            "size_bytes": 102367,
+            "sha256": "9426e57e4ae79e4eaf8b19365614fe9fbddfd499c17e95543a8e1d9d5bdd1ad1"
+          },
+          "page_txt": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.txt",
+            "size_bytes": 1176,
+            "sha256": "107dc8b2a7bcc987182389c0499854737f71408076d50f0223022cedeb884fe7"
+          },
+          "page_png": {
+            "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.png",
+            "size_bytes": 503986,
+            "sha256": "af70f7099b627d0d260361dcd01332c43b5a4bff3d8f33770f182f1ab35c5157"
+          }
+        },
+        "invariants_verified": {
+          "authentic_http_response": true,
+          "non_empty_dom": true,
+          "non_empty_text": true,
+          "authentic_screenshot": true,
+          "zero_synthetic_fallback_injection": true
+        }
+      }
+    }
+  ]
+}

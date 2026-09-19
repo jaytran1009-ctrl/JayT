@@ -1,0 +1,529 @@
+{
+  "$schema": "https://jayt.vn/schemas/j390-retention-runtime-receipt.v1.json",
+  "receipt_id": "JAYT_390_RETENTION_RUNTIME_RECEIPT",
+  "cycle": "JAYT-390",
+  "mandate": "WORK_ORDER_J390_AUTONOMOUS_GOLIVE",
+  "authority": "DIRECT_CHAIRMAN_AND_CEO_J390_DISPATCH",
+  "verified_at_utc": "2026-09-11T05:12:20.093Z",
+  "target": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "active_deployment_id": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM"
+  },
+  "retention_tools_verified": {
+    "campus_dock": {
+      "status": "VERIFIED_OPERATIONAL",
+      "cluster_count": 5,
+      "anchors": [
+        "DUT_DAI_HOC_BACH_KHOA",
+        "DUE_DAI_HOC_KINH_TE",
+        "UED_DAI_HOC_SU_PHAM",
+        "FPT_NGU_HANH_SON"
+      ],
+      "invented_claims_detected": false
+    },
+    "delivery_comparator": {
+      "status": "VERIFIED_OPERATIONAL",
+      "apps": [
+        "ShopeeFood",
+        "GrabFood",
+        "Xanh SM"
+      ],
+      "cost_model_assumptions_disclosed": true,
+      "benchmark_50_samples": {
+        "sample_count": 50,
+        "sla_threshold_ms": 30,
+        "min_latency_ms": 0.6,
+        "max_latency_ms": 1.8,
+        "avg_latency_ms": 1.07,
+        "p95_latency_ms": 1.6,
+        "sla_satisfied": true
+      }
+    },
+    "split_bill_and_zalo_pass": {
+      "status": "VERIFIED_OPERATIONAL",
+      "arithmetic_mode": "INTEGER_VND_CONSERVATION",
+      "test_vector": "325000 / 3 -> 108334 + 108333 + 108333 = 325000",
+      "dong_lost_count": 0,
+      "pass_canvas_dimensions": "1080x1440",
+      "zero_pii_boundary_enforced": true,
+      "credentials_or_gps_in_url": false
+    },
+    "voucher_concierge": {
+      "status": "VERIFIED_OPERATIONAL",
+      "copy_action_restricted_to_source_visible_codes": true,
+      "counter_and_app_routes_truthful": true
+    }
+  },
+  "responsive_audit": {
+    "desktop_1440": {
+      "overflow_detected": false,
+      "passed": true
+    },
+    "tablet_768": {
+      "overflow_detected": false,
+      "passed": true
+    },
+    "mobile_390": {
+      "overflow_detected": false,
+      "passed": true
+    }
+  },
+  "runtime_integrity": {
+    "console_errors_count": 0,
+    "unhandled_runtime_exceptions": false
+  },
+  "benchmark_samples": [
+    {
+      "sample_index": 1,
+      "input_price_vnd": 25000,
+      "latency_ms": 1.8,
+      "rendered_label": "25.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 2,
+      "input_price_vnd": 27500,
+      "latency_ms": 1,
+      "rendered_label": "30.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 3,
+      "input_price_vnd": 30000,
+      "latency_ms": 1.4,
+      "rendered_label": "30.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 4,
+      "input_price_vnd": 32500,
+      "latency_ms": 1.2,
+      "rendered_label": "35.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 5,
+      "input_price_vnd": 35000,
+      "latency_ms": 1.6,
+      "rendered_label": "35.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 6,
+      "input_price_vnd": 37500,
+      "latency_ms": 1.3,
+      "rendered_label": "40.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 7,
+      "input_price_vnd": 40000,
+      "latency_ms": 1.2,
+      "rendered_label": "40.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 8,
+      "input_price_vnd": 42500,
+      "latency_ms": 1,
+      "rendered_label": "45.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 9,
+      "input_price_vnd": 45000,
+      "latency_ms": 0.9,
+      "rendered_label": "45.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 10,
+      "input_price_vnd": 47500,
+      "latency_ms": 1.1,
+      "rendered_label": "50.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 11,
+      "input_price_vnd": 50000,
+      "latency_ms": 1.5,
+      "rendered_label": "50.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 12,
+      "input_price_vnd": 52500,
+      "latency_ms": 1.1,
+      "rendered_label": "55.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 13,
+      "input_price_vnd": 55000,
+      "latency_ms": 0.9,
+      "rendered_label": "55.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 14,
+      "input_price_vnd": 57500,
+      "latency_ms": 1,
+      "rendered_label": "60.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 15,
+      "input_price_vnd": 60000,
+      "latency_ms": 1,
+      "rendered_label": "60.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 16,
+      "input_price_vnd": 62500,
+      "latency_ms": 1.2,
+      "rendered_label": "65.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 17,
+      "input_price_vnd": 65000,
+      "latency_ms": 1.2,
+      "rendered_label": "65.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 18,
+      "input_price_vnd": 67500,
+      "latency_ms": 1.2,
+      "rendered_label": "70.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 19,
+      "input_price_vnd": 70000,
+      "latency_ms": 0.9,
+      "rendered_label": "70.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 20,
+      "input_price_vnd": 72500,
+      "latency_ms": 1,
+      "rendered_label": "75.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 21,
+      "input_price_vnd": 75000,
+      "latency_ms": 0.9,
+      "rendered_label": "75.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 22,
+      "input_price_vnd": 77500,
+      "latency_ms": 1.4,
+      "rendered_label": "80.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 23,
+      "input_price_vnd": 80000,
+      "latency_ms": 1.2,
+      "rendered_label": "80.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 24,
+      "input_price_vnd": 82500,
+      "latency_ms": 1,
+      "rendered_label": "85.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 25,
+      "input_price_vnd": 85000,
+      "latency_ms": 1.1,
+      "rendered_label": "85.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 26,
+      "input_price_vnd": 87500,
+      "latency_ms": 1.2,
+      "rendered_label": "90.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 27,
+      "input_price_vnd": 90000,
+      "latency_ms": 0.9,
+      "rendered_label": "90.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 28,
+      "input_price_vnd": 92500,
+      "latency_ms": 1.4,
+      "rendered_label": "95.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 29,
+      "input_price_vnd": 95000,
+      "latency_ms": 1.4,
+      "rendered_label": "95.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 30,
+      "input_price_vnd": 97500,
+      "latency_ms": 1.6,
+      "rendered_label": "100.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 31,
+      "input_price_vnd": 100000,
+      "latency_ms": 1.2,
+      "rendered_label": "100.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 32,
+      "input_price_vnd": 102500,
+      "latency_ms": 1.1,
+      "rendered_label": "105.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 33,
+      "input_price_vnd": 105000,
+      "latency_ms": 1,
+      "rendered_label": "105.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 34,
+      "input_price_vnd": 107500,
+      "latency_ms": 1.2,
+      "rendered_label": "110.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 35,
+      "input_price_vnd": 110000,
+      "latency_ms": 1,
+      "rendered_label": "110.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 36,
+      "input_price_vnd": 112500,
+      "latency_ms": 0.7,
+      "rendered_label": "115.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 37,
+      "input_price_vnd": 115000,
+      "latency_ms": 0.9,
+      "rendered_label": "115.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 38,
+      "input_price_vnd": 117500,
+      "latency_ms": 1.1,
+      "rendered_label": "120.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 39,
+      "input_price_vnd": 120000,
+      "latency_ms": 1.1,
+      "rendered_label": "120.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 40,
+      "input_price_vnd": 122500,
+      "latency_ms": 1,
+      "rendered_label": "125.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 41,
+      "input_price_vnd": 125000,
+      "latency_ms": 0.8,
+      "rendered_label": "125.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 42,
+      "input_price_vnd": 127500,
+      "latency_ms": 0.7,
+      "rendered_label": "130.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 43,
+      "input_price_vnd": 130000,
+      "latency_ms": 0.7,
+      "rendered_label": "130.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 44,
+      "input_price_vnd": 132500,
+      "latency_ms": 0.7,
+      "rendered_label": "135.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 45,
+      "input_price_vnd": 135000,
+      "latency_ms": 0.7,
+      "rendered_label": "135.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 46,
+      "input_price_vnd": 137500,
+      "latency_ms": 1.2,
+      "rendered_label": "140.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 47,
+      "input_price_vnd": 140000,
+      "latency_ms": 0.9,
+      "rendered_label": "140.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 48,
+      "input_price_vnd": 142500,
+      "latency_ms": 0.6,
+      "rendered_label": "145.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 49,
+      "input_price_vnd": 145000,
+      "latency_ms": 0.6,
+      "rendered_label": "145.000 ₫",
+      "winner_app": "ShopeeFood"
+    },
+    {
+      "sample_index": 50,
+      "input_price_vnd": 147500,
+      "latency_ms": 0.8,
+      "rendered_label": "150.000 ₫",
+      "winner_app": "ShopeeFood"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Desktop: Page Title and Campus Dock Branding",
+      "pass": true,
+      "detail": "Title: \"JayT Đà Nẵng — Campus Dock & Tiện Ích Sinh Viên\""
+    },
+    {
+      "name": "Desktop: Body data-version presence",
+      "pass": true,
+      "detail": "Version: \"v3.444.0-j388\""
+    },
+    {
+      "name": "Campus Dock: Section (#campus-dock-section) present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Campus Dock: 4 University Clusters + All option present",
+      "pass": true,
+      "detail": "Found 5 cluster buttons"
+    },
+    {
+      "name": "Campus Dock: Interactive Cluster Filtering without errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Comparator: Section (#lunch-arbitrage-module) present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Comparator: Exactly 3 Delivery App Cards Rendered",
+      "pass": true,
+      "detail": "Found 3 cards"
+    },
+    {
+      "name": "Comparator: Cost Model Assumptions Honestly Disclosed",
+      "pass": true,
+      "detail": "ℹ️\nCước/giá so sánh chỉ phản ánh dữ liệu người dùng nhập và biểu phí ước tính tại Đà Nẵng; không tuyên bố là giá trực tiếp rẻ nhất thị trường khi chưa kết nối API thời gian thực."
+    },
+    {
+      "name": "Split Bill: Section (#split-bill-module) present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Split Bill: Integer-VND Quotient & Remainder Conservation (325,000 / 3 -> 0 dong lost)",
+      "pass": true,
+      "detail": "Result text excerpt: KẾT QUẢ PHÂN BỔ MỖI NGƯỜI\n108.334 ₫\nPhân bổ bù số dư lẻ (1 ₫):\n• 1 bạn chuyển: 108.334 ₫\n• 2 bạn chuyển: 108.333 ₫\n✓ 100% Bảo toàn tổng chi phí: 1 × 108.334₫ + 2 × 108.333₫ = 325.000₫\n📥 Tải Thẻ Zalo "
+    },
+    {
+      "name": "Split Bill: Zero-PII Boundary Enforced (No bank account or credentials)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Zalo Pass: Boarding Pass Modal opens and renders 1080x1440 canvas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Voucher Concierge: Deals Vault Section Present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Voucher Concierge: Rendered Verified Deals",
+      "pass": true,
+      "detail": "Rendered 12 deal cards"
+    },
+    {
+      "name": "Tablet Viewport (768px): Zero Horizontal Overflow",
+      "pass": true,
+      "detail": "Overflow: false"
+    },
+    {
+      "name": "Mobile Viewport (390px): Zero Horizontal Overflow",
+      "pass": true,
+      "detail": "Overflow: false"
+    },
+    {
+      "name": "Delivery Comparator: 50 Mobile Benchmark Samples (<30ms SLA)",
+      "pass": true,
+      "detail": "Samples: 50, Min: 0.6ms, Avg: 1.07ms, P95: 1.6ms, Max: 1.8ms"
+    },
+    {
+      "name": "Runtime Quality: Zero Console Errors across all audits",
+      "pass": true,
+      "detail": "Errors (0): 0"
+    }
+  ],
+  "screenshots": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_desktop_1440.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_campus_dock.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_delivery_comparator.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_slider_benchmark_mobile.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_zalo_pass_modal.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_voucher_concierge.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_tablet_768.png",
+    "07_QUALITY_ASSURANCE/runtime_evidence/j390_live_mobile_390.png"
+  ]
+}

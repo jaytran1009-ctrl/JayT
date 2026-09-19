@@ -1,0 +1,103 @@
+{
+  "work_order_id": "J352_FEATURE_SPRINT",
+  "directive": "JAYT-352",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "strategic_reviewer": "Gemini",
+  "status": "DISPATCHED__AWAITING_EXTERNAL_EXECUTION",
+  "delivery_window": "24 hours from external executor acknowledgement; record actual UTC acknowledgement and completion times",
+  "objective": "Deliver three accessible interactive modules integrated into the storefront on commercial Staging :4176 and prepare v3.427.0 for review.",
+  "baseline": {
+    "release": "v3.426.0",
+    "entities": 76,
+    "civic": 24,
+    "commercial": 52,
+    "deployment_id": "dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3",
+    "candidate_root": "08_RELEASE_VAULT/candidates/v3.426.0/"
+  },
+  "implementation_instructions": [
+    "Inspect existing Split Bill, Calendar and Voucher Vault implementations and reuse working behavior. Earlier release reports list these modules; document the actual gaps without assuming they are absent.",
+    "Implement and test in an isolated Staging working directory. Preserve sealed baseline artifacts and existing evidence.",
+    "Integrate all three modules into the main storefront flow and deliver one combined sprint receipt."
+  ],
+  "modules": {
+    "A_SPLIT_BILL_PRO": {
+      "placement": "Visible storefront widget with access from relevant offer cards",
+      "inputs": {
+        "total_bill": "Non-negative whole VND amount; reject empty, negative, non-finite, unsafe-integer and malformed input",
+        "people": "Integer from 2 through 8 inclusive"
+      },
+      "calculation": "Use integer VND arithmetic. Show each person's allocation; distribute remainder dong deterministically so allocations sum exactly to the bill. State that the bill is user-entered and no unproven discount or fee is applied.",
+      "share_button": "Rủ bạn đi chung (Zalo)",
+      "share_behavior": "On explicit click, copy an invitation containing the total bill, group size, per-person amount or allocation and a working canonical detail URL or stable card anchor. Explain that the text is ready to paste into Zalo; do not claim that a message was sent.",
+      "privacy": "In-memory only. Do not write bill or participant data to storage, URL parameters, telemetry or server requests; do not request PII or GPS.",
+      "acceptance": [
+        "Verify boundary group sizes 2 and 8, invalid input and non-divisible totals.",
+        "Verify allocations sum exactly to the entered total.",
+        "Verify copied text and its detail link; handle clipboard denial with a selectable-text fallback.",
+        "Verify keyboard operation and accessible validation/result announcements."
+      ]
+    },
+    "B_SEVEN_DAY_SAVINGS_TIMELINE": {
+      "placement": "Seven day controls near the top of the homepage, Monday through Sunday",
+      "behavior": "Selecting a day filters eligible cards immediately and displays selected-day state and result count. Combine predictably with existing search/category filters and provide an explicit reset.",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "requested_editorial_mapping": {
+        "monday": ["Metiz Super Monday — 55K if current evidence supports the price and conditions"],
+        "tuesday": ["Galaxy Happy Day", "ShopeePay offers where the published date and eligibility permit"],
+        "wednesday": ["CGV Culture Day only on the exact dates or recurrence established by source evidence"],
+        "thursday_through_sunday": ["DanaBus", "Study cafes", "Student lunches where verified availability supports display"]
+      },
+      "evidence_rule": "Editorial mappings are requested targets, not proof of weekly recurrence. Bind each offer to source-backed dates, weekday rules, expiry and conditions. Do not turn Culture Day into every Wednesday or an app promotion into every Tuesday without evidence. Generic service availability must be labeled separately from a discount.",
+      "missing_evidence": "Show an honest empty or unverified-schedule state and list missing evidence in the receipt; do not invent an offer, date or price.",
+      "performance": "Measure click-to-visible-filter-update using browser timing and the next painted frame. Target p95 below 50 ms over at least 30 day switches after warm-up for each viewport; report actual values, browser and hardware/emulation conditions.",
+      "acceptance": [
+        "Verify all seven controls, result membership, empty state, reset and interaction with existing filters.",
+        "Verify expired offers and date-specific campaigns do not appear as active recurring deals.",
+        "Verify keyboard focus, selected state and accessible result announcements."
+      ]
+    },
+    "C_INTERACTIVE_VOUCHER_VAULT": {
+      "labels": ["Ưu đãi quầy", "Claim qua App", "Ưu đãi thành viên"],
+      "classification": "Retain the separate Giá quan sát label for ordinary menu/product prices; do not reclassify them as vouchers.",
+      "copy_button": "Sao chép mã",
+      "eligibility": "Show copy only when a public redeemable code is explicitly present in official source evidence. Copy exactly that code.",
+      "feedback": "After clipboard success, show Đã chép for 2000 ms and announce success accessibly; restore the original label afterwards. On failure, show a truthful error and manual-copy fallback. Optional vibration may be used only where supported and must not be required for success.",
+      "outbound": "Provide a verified official-source link for every card. Provide an official app/claim link when evidenced; disclose new-tab behavior. Preserve expiry, membership conditions and budget/exhaustion warnings.",
+      "no_public_code": "Retain source/claim/member actions without a copy-code button. If no real code is available, report zero real-code items and test clipboard behavior using an isolated fixture excluded from candidate data and production assets.",
+      "acceptance": [
+        "Verify exact clipboard content, success duration, repeated click behavior and denied clipboard permissions.",
+        "Verify no copy-code action exists for code-less benefits or observed prices.",
+        "Verify labels and destinations match evidence and no synthetic codes enter the catalog."
+      ]
+    }
+  },
+  "combined_acceptance": {
+    "staging_url": "http://127.0.0.1:4176/",
+    "viewports": [1440, 768, 390],
+    "requirements": [
+      "Preserve all 76 baseline entity IDs and source links; count module projections separately from unique entities.",
+      "No console/runtime errors or horizontal overflow across all three modules and viewports.",
+      "Automated contrast, accessible names and keyboard checks pass for new and changed UI; report measured scope rather than claiming universal WCAG certification.",
+      "Touch targets at least 44 by 44 CSS pixels.",
+      "No PII/GPS collection, hidden tracking or unapproved affiliate links.",
+      "Preserve the Chairman's manual-device-test waiver; do not label waived manual checks PASS.",
+      "Exclude synthetic test fixtures and HELD items from candidate output."
+    ]
+  },
+  "permissions": {
+    "staging_code_changes_authorized": true,
+    "prepare_v3427_candidate_authorized": true,
+    "production_deploy_authorized": false,
+    "production_alias_change_authorized": false
+  },
+  "delivery": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J352_FEATURE_SPRINT.json",
+    "receipt_sha256_sidecar": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J352_FEATURE_SPRINT.json.sha256",
+    "required_fields": ["work_order_id", "executor", "run_id", "acknowledged_at_utc", "completed_at_utc", "baseline_gap_findings", "module_results", "real_public_voucher_code_count", "schedule_evidence_mapping", "performance_measurements", "test_results", "staging_url", "screenshots", "artifact_paths_and_sha256", "candidate_manifest_path_and_sha256", "rollback_manifest", "production_mutations", "open_findings"],
+    "receipt_rule": "Create immutable run-specific evidence and exclusive-write canonical receipt. Preserve existing receipts; use a new run-specific path if the canonical path already exists.",
+    "rollback_candidate": "Prepare rollback to v3.426.0 deployment dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3 with verified artifact fingerprints.",
+    "review_sequence": "Antigravity delivers combined evidence; Codex reviews; Gemini conducts strategic review; Chairman authorizes Production v3.427.0 separately.",
+    "truthful_status": "Report actual PASS, PARTIAL or FAIL per module. Creating this dispatch is not evidence that external Antigravity has received or executed it."
+  }
+}

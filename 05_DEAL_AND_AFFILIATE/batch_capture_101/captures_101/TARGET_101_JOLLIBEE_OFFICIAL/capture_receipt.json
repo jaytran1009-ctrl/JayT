@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:10:38.751Z",
+  "target_id": "TARGET_101_JOLLIBEE_OFFICIAL",
+  "venue_name": "Jollibee Vietnam",
+  "source_url": "https://jollibee.com.vn/",
+  "district": "UNSPECIFIED",
+  "sector": "FNB_FASTFOOD",
+  "http_response": {
+    "status": 200,
+    "url": "https://jollibee.com.vn/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.html",
+      "size_bytes": 321489,
+      "sha256": "ca0615e71c54eb0c120c67b095a6e580e5a8640679b3a915ab268a045a34e6f2"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.txt",
+      "size_bytes": 5843,
+      "sha256": "7256eb6e5379d794f0dbd2cea614e7b4519b6d11b29c88c6236b6aea72cb5d33"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.png",
+      "size_bytes": 1113667,
+      "sha256": "eed9b4c5e80ae4983c690f1b67b241fc9a8c509deed7ff4d4201be6dd20115dd"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

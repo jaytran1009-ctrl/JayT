@@ -1,0 +1,30 @@
+{
+  "work_order_id": "J358-R3-R2-CONTEXTUAL-BINDING-HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Make locality and validity evidence contextually bound to the same offer before the evaluator may emit VERIFIED.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r1_claim_provenance_validator.cjs",
+    "r3_r1_tests": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R1_VALIDATOR_HARDENING_TESTS.json",
+    "r3_r1_gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R1_PARTIAL_ACCEPTANCE_AND_BINDING_GATE.md"
+  },
+  "requirements": [
+    "Parse or tokenize HTML sufficiently to identify a semantic content block for each selected evidence span; raw substring existence alone is insufficient.",
+    "A locality span is valid only when it occurs in the same offer block as the claimed title/price/conditions, or in an explicit, same-block offer-to-Da-Nang clause. The candidate-selected locality span itself must pass footer/store-locator/image exclusion.",
+    "A validity/recurrence span is valid only when the target year or an unexpired expiry is in the same offer block or explicit terms block bound to that offer. Do not accept an unrelated 2026 elsewhere on the page.",
+    "Record each chosen block's raw byte boundaries plus the exact spans and occurrence counts for title, price, conditions, locality and validity.",
+    "Add full-evaluator mixed-context mutations: footer locality plus unrelated body Da Nang; store-locator locality plus unrelated offer copy; valid-looking recurrence plus unrelated 2026; a selected span inside an image attribute; and a positive control where all five claims share one valid block.",
+    "Every mixed-context mutation must return HELD. Preserve the R3-R1 real-data result at 0 VERIFIED / 10 HELD unless the hardened evaluator independently proves otherwise from existing vault bytes.",
+    "Do not refetch, modify prior artifacts, hydrate staging, package candidates, deploy production, change alias/scheduler or invoke rollback. Place only R3-R2 outputs in new files with SHA-256 sidecars."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r2_contextual_binding_validator.cjs",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R2_CONTEXTUAL_BINDING_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R2_CONTEXTUAL_BINDING_HARDENING.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO review required; no automatic promotion"
+}

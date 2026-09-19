@@ -1,0 +1,169 @@
+<html><head><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">/* ==========================================================================
+   typography.css
+   Figma mapping: Size (text-*) + Weight (font-*)
+   Rules:
+   - Figma line-height "Auto" =&gt; DO NOT set line-height in CSS
+   - Only set line-height when Figma specifies % (140/120/110)
+   ========================================================================== */
+
+/* Optional: set base font-family globally (adjust to your tokens) */
+:root {
+    --font-body: "PoppinsRegular";
+    --font-heading: "PoppinsBold";
+    --font-popin-regular: "PoppinsRegular";
+    --font-popin-medium: "PoppinsMedium";
+    --font-popin-semibold: "PoppinsSemiBold";
+    --font-popin-bold: "PoppinsBold";
+}
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url("/Content/fonts/FZPoppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PoppinsMedium";
+    src: url("/Content/fonts/FZPoppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PoppinsSemiBold";
+    src: url("/Content/fonts/FZPoppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PoppinsBold";
+    src: url("/Content/fonts/FZPoppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: var(--font-body);
+}
+
+/* =========================
+   Font weight (Regular/Medium/Bold)
+   ========================= */
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+.font-bold {
+    font-weight: 700;
+}
+/* (Optional) headings default family */
+.heading {
+    font-family: var(--font-heading);
+}
+
+.body {
+    font-family: var(--font-body);
+}
+
+/* =========================
+   Font sizes + line-height
+   - Auto =&gt; no line-height
+   ========================= */
+
+/* Auto (do not set line-height) */
+.text-xs {
+    font-size: 12px;
+}
+/* Figma: Auto */
+.text-sm {
+    font-size: 14px;
+}
+/* Figma: Auto */
+
+/* 140% */
+.text-base {
+    font-size: 16px;
+    line-height: 1.4;
+}
+/* 140% */
+.text-lg {
+    font-size: 18px;
+    line-height: 1.4;
+}
+/* 140% */
+
+/* If your Figma uses both 18px and 20px under "lg", keep one:
+   - Use .text-lg (18px) as default
+   - Use .text-lg-20 only when designer explicitly calls 20px
+*/
+.text-lg-20 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+/* 140% */
+
+/* 120% / mixed */
+.text-xl {
+    font-size: 24px;
+    line-height: 1.2;
+}
+/* 120% */
+
+/* If Figma has a 32px with 140% (as in your screenshot) */
+.text-xl-32 {
+    font-size: 32px;
+    line-height: 1.4;
+}
+/* 140% */
+
+/* 120% */
+.text-2xl {
+    font-size: 36px;
+    line-height: 1.2;
+}
+/* 120% */
+.text-3xl {
+    font-size: 40px;
+    line-height: 1.2;
+}
+/* 120% */
+
+/* 110% */
+.text-4xl {
+    font-size: 72px;
+    line-height: 1.1;
+}
+/* 110% */
+
+/* =========================
+   Optional helpers (nice-to-have)
+   ========================= */
+
+/* Prevent accidental text scaling on mobile (if needed) */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Utility for tighter headings if team wants consistent heading look
+   (use explicitly, don't force globally)
+*/
+.lh-tight {
+    line-height: 1.1;
+}
+
+.lh-snug {
+    line-height: 1.2;
+}
+
+.lh-normal {
+    line-height: 1.4;
+}
+</pre></body></html>

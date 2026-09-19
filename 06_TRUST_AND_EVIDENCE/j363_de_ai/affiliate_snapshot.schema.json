@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JayT Affiliate Evidence Snapshot Schema",
+  "description": "Internal evidence snapshot schema for authentic external affiliate and merchant terms verification (Shopee, Lazada, Klook, Grab). Zero invented captures permitted.",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "provider",
+    "publisher_program",
+    "requested_url",
+    "final_url",
+    "captured_at_utc",
+    "collection_method",
+    "http_status",
+    "raw_artifact_path",
+    "raw_artifact_sha256",
+    "condition_quotes",
+    "territory",
+    "validity_window",
+    "tracking_documentation_ref",
+    "approval_status",
+    "reviewer",
+    "verdict"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string",
+      "pattern": "^SNAP-[A-Z0-9_-]+$"
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "SHOPEE",
+        "LAZADA",
+        "KLOOK",
+        "GRAB",
+        "OTHER"
+      ]
+    },
+    "publisher_program": {
+      "type": "string"
+    },
+    "requested_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "final_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "captured_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "collection_method": {
+      "type": "string",
+      "enum": [
+        "AUTHENTIC_BROWSER_HEADLESS",
+        "AUTHENTIC_CURL_CAPTURE",
+        "FIELD_MANUAL_CAPTURE"
+      ]
+    },
+    "http_status": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 599
+    },
+    "raw_artifact_path": {
+      "type": "string"
+    },
+    "raw_artifact_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "condition_quotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verbatim_text",
+          "selector_or_span"
+        ],
+        "properties": {
+          "verbatim_text": {
+            "type": "string"
+          },
+          "selector_or_span": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "territory": {
+      "type": "string",
+      "default": "DA_NANG"
+    },
+    "validity_window": {
+      "type": "object",
+      "required": [
+        "effective_from",
+        "recheck_before"
+      ],
+      "properties": {
+        "effective_from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "recheck_before": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "tracking_documentation_ref": {
+      "type": "string"
+    },
+    "approval_status": {
+      "type": "object",
+      "required": [
+        "is_approved",
+        "reason"
+      ],
+      "properties": {
+        "is_approved": {
+          "type": "boolean",
+          "default": false
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "PENDING_ACQUISITION",
+        "RAW_CAPTURE_COLLECTED",
+        "PROVENANCE_VERIFIED",
+        "REJECTED_FALSIFICATION_OR_DRIFT"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

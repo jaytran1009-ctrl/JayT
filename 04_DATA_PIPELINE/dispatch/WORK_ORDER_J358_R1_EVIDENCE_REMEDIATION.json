@@ -1,0 +1,29 @@
+{
+  "work_order_id": "J358-R1-EVIDENCE-REMEDIATION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "authority": "JAYT-358",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "scope": {
+    "brands": ["Starlight Cinema", "Gong Cha", "The Coffee House", "Katinat", "Popeyes", "The Pizza Company"],
+    "staging_port": 4176,
+    "target_verified_offers": 15,
+    "shortfall_policy": "Report actual verified count; never manufacture evidence or offers to meet target"
+  },
+  "tasks": [
+    "Preserve existing Batch19 script, raw files, metadata and receipts with SHA-256 in a forensic snapshot before changes. Issue a superseding invalidation; do not overwrite historical receipts.",
+    "Remove Batch19 items from actionable Staging feed, filters and DOM pending clean replay; preserve unaffected prior data and record before/after counts.",
+    "Remove mockHtml substitution from capture pipeline. Retain actual response status, final URL, original body bytes, sanitized response headers and real UTC capture time. Detect soft-404, login/challenge and error bodies even when HTTP 200.",
+    "Recapture scoped official sources into a new run-specific vault. Extract offers from authentic source content, not prewritten descriptions. Map each claim, price, conditions, validity and locality to source evidence. Brand presence alone must not imply universal offer eligibility.",
+    "Deduplicate against existing catalog. Stage only verified offers; report HELD items and reasons. Menu observations must not count as verified discounts. Do not invent coupon codes.",
+    "Correct Freshness Guardian: bind each validity date and recurrence to authentic source references and hashes. Unknown expiry is unknown, not automatically healthy or September/year-end. Reconcile report with B18_CGV_NGAY_DOI date. Preserve existing hourly scheduler and network monitoring without duplicate tasks or Production changes.",
+    "Run automated tests for failed fetch, soft-404, mock rejection, expiry boundaries in Asia/Ho_Chi_Minh, unknown validity, deduplication, HELD isolation and staging DOM on 1440/768/390. Record measured results, not expected results.",
+    "Deliver one consolidated immutable receipt with per-item provenance, actual verified/held counts, source failures, staging URL, test results and SHA-256 sidecar. Append correction transaction to ledger without rewriting history."
+  ],
+  "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R1_EVIDENCE_REMEDIATION.json",
+  "acceptance_gate": "CEO reviews real receipt; no automatic production promotion",
+  "baseline": "v3.429.0",
+  "rollback_standby": "v3.428.0 / dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL"
+}

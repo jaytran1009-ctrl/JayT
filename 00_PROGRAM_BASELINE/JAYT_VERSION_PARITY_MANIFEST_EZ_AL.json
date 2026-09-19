@@ -1,0 +1,33 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_AL",
+  "expectedVersion": "v3.482.0-staging.ez",
+  "version": "v3.482.0-staging.ez",
+  "timestamp": "2026-09-01T06:53:55.371Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "build_manifest_ref": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "ceo_gate_revalidation": "TECHNICAL_EXACT_VERSION_GATE_REVALIDATED",
+  "p0_containment": {
+    "status": "P0_CONTAINED_FUTURE_DATED_CLOSURE_QUARANTINED",
+    "quarantine_ref": "06_TRUST_AND_EVIDENCE/QUARANTINE_FUTURE_DATED_SLA_CLOSURE_EZ_AL.json"
+  },
+  "fast_lane_status": "OPEN_EVALUATING_SLA_ACTIVE_UNTIL_2026-09-01T08:28:00Z",
+  "candidates_active": 2,
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "2de8b41242f0d7182f7596e06816d85722f4a71a96673c400178e61af55039fc"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "2de8b41242f0d7182f7596e06816d85722f4a71a96673c400178e61af55039fc"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "0da2091311849797cb0e2c0cc7f60f0674d4d859d936d14cc0bba74af14b1310"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "0da2091311849797cb0e2c0cc7f60f0674d4d859d936d14cc0bba74af14b1310"
+    }
+  }
+}

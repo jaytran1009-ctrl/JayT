@@ -1,0 +1,113 @@
+{
+  "contract_id": "EVIDENCE_CONTRACT_V3_DOCUMENT_PAIR_PILOT_ONE_EZ_AA",
+  "version": "3.2.0-ez.aa",
+  "governing_directive": "JAYT-245 Section EZ-AA (Lines 4642-4666)",
+  "timestamp": "2026-08-31T08:09:14.404Z",
+  "pair_architecture": {
+    "domain": "spotify.com",
+    "document_a_role": "OPERATOR_IDENTITY_AND_LEGAL_AGREEMENT",
+    "document_b_role": "PROGRAM_POLICY_AND_STUDENT_OFFER",
+    "cross_document_relationship_proven": true,
+    "cross_document_link_locator": {
+      "source_document": "DOCUMENT_B",
+      "target_document_path": "https://www.spotify.com/vn-vi/legal/",
+      "byte_start": 164626,
+      "byte_end": 164669,
+      "raw_string": "href=\"https://www.spotify.com/vn-vi/legal/\""
+    }
+  },
+  "document_a_capture_metadata": {
+    "request_url": "https://www.spotify.com/vn-vi/legal/end-user-agreement/",
+    "final_url": "https://www.spotify.com/vn-vi/legal/end-user-agreement/",
+    "redirect_chain": [
+      "https://www.spotify.com/vn-vi/legal/end-user-agreement/"
+    ],
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "byte_length": 209220,
+    "sha256": "81fecb62f0eb95409c1b2fd39d3487d94e1f9ad0da0c05bdee369b6648b23127",
+    "raw_vault_relative_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_aa/candidate_ez_aa_doc_a_operator_identity_raw_bytes.bin",
+    "discovery_method": "MANUAL_READ_ONLY_NAVIGATION_ZERO_LOGIN"
+  },
+  "document_b_capture_metadata": {
+    "request_url": "https://www.spotify.com/vn-vi/student/",
+    "final_url": "https://www.spotify.com/vn-vi/student/",
+    "redirect_chain": [
+      "https://www.spotify.com/vn-vi/student/"
+    ],
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "byte_length": 213153,
+    "sha256": "1e2ee74dfd5799e55a7fa1847693cea0e206b591c873041c50887dbff7e66118",
+    "raw_vault_relative_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_aa/candidate_ez_aa_doc_b_program_policy_raw_bytes.bin",
+    "discovery_method": "MANUAL_READ_ONLY_NAVIGATION_ZERO_LOGIN"
+  },
+  "document_a_sentence_excerpts": [
+    {
+      "excerpt_id": "DOC_A_CLAUSE_01_OPERATOR_IDENTITY",
+      "claim_class": "OPERATOR_IDENTITY",
+      "raw_string": "Các Điều khoản này là điều khoản giữa bạn và Spotify AB, Regeringsgatan 19, 111 53, Stockholm, Thụy Điển.",
+      "byte_start": 16502,
+      "byte_end": 16630,
+      "faithful_mapping": "Văn bản pháp lý khẳng định rõ đơn vị vận hành và phát hành dịch vụ là pháp nhân Spotify AB (Stockholm, Thụy Điển)."
+    }
+  ],
+  "document_b_sentence_excerpts": [
+    {
+      "excerpt_id": "DOC_B_CLAUSE_01_PROGRAM_STATEMENT",
+      "claim_class": "PROGRAM_OFFER",
+      "raw_string": "Sinh viên nhận 2 tháng dùng gói Premium với giá 33.000&nbsp;₫",
+      "byte_start": 135883,
+      "byte_end": 135955,
+      "faithful_mapping": "Trang chính sách công bố gói ưu đãi Premium dành cho sinh viên."
+    },
+    {
+      "excerpt_id": "DOC_B_CLAUSE_02_ELIGIBILITY",
+      "claim_class": "ELIGIBILITY",
+      "raw_string": "Bạn sẽ đủ điều kiện nếu là sinh viên của một trường cao đẳng hay đại học được công nhận và trên 18 tuổi. Bạn có thể sử dụng gói Premium Student trong tối đa 4 năm.",
+      "byte_start": 142593,
+      "byte_end": 142812,
+      "faithful_mapping": "Quy định điều kiện đối tượng là sinh viên đại học/cao đẳng được công nhận, trên 18 tuổi, thời hạn tối đa 4 năm."
+    }
+  ],
+  "clause_by_clause_entailment_matrix": {
+    "operator_relation_proven": true,
+    "operator_relation_locator": {
+      "document": "DOCUMENT_A",
+      "excerpt_id": "DOC_A_CLAUSE_01_OPERATOR_IDENTITY",
+      "exact_source_excerpt": "Các Điều khoản này là điều khoản giữa bạn và Spotify AB, Regeringsgatan 19, 111 53, Stockholm, Thụy Điển.",
+      "byte_start": 16502,
+      "byte_end": 16630
+    },
+    "program_policy_proven": true,
+    "program_policy_locator": {
+      "document": "DOCUMENT_B",
+      "excerpt_id": "DOC_B_CLAUSE_01_PROGRAM_STATEMENT",
+      "exact_source_excerpt": "Sinh viên nhận 2 tháng dùng gói Premium với giá 33.000&nbsp;₫",
+      "byte_start": 135883,
+      "byte_end": 135955
+    },
+    "eligibility_policy_proven": true,
+    "eligibility_policy_locator": {
+      "document": "DOCUMENT_B",
+      "excerpt_id": "DOC_B_CLAUSE_02_ELIGIBILITY",
+      "exact_source_excerpt": "Bạn sẽ đủ điều kiện nếu là sinh viên của một trường cao đẳng hay đại học được công nhận và trên 18 tuổi. Bạn có thể sử dụng gói Premium Student trong tối đa 4 năm.",
+      "byte_start": 142593,
+      "byte_end": 142812
+    },
+    "cross_document_canonical_link_proven": true,
+    "voucher_code_clause_observed": "UNOBSERVED",
+    "local_da_nang_scope_clause_observed": "UNOBSERVED",
+    "affiliate_clause_observed": "UNOBSERVED",
+    "asset_usage_clause_observed": "UNOBSERVED",
+    "total_basket_cost_clause_observed": "UNOBSERVED"
+  },
+  "entailment_and_provenance_verdict": {
+    "classification": "HELD_INTERNAL_DOCUMENT_PAIR_RELATION_PROVEN",
+    "public_eligible": false,
+    "rationale": "Cặp tài liệu đã chứng minh rõ ràng đơn vị vận hành (Spotify AB qua Doc A) và chính sách chương trình sinh viên (qua Doc B) với liên kết canonical cùng miền. Các trường voucher cụ thể, mã giảm giá, affiliate và phạm vi địa phương được giữ UNOBSERVED. Mặc định giữ nội bộ fail-closed, không tạo card public.",
+    "public_card_created": false,
+    "public_cta_created": false,
+    "public_link_created": false
+  }
+}

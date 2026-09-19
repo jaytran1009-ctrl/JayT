@@ -1,0 +1,138 @@
+{
+  "registry_id": "JAYT_DOCUMENT_PROVENANCE_AND_QUARANTINE_REGISTRY_EZ_J",
+  "version": "v6.0.0-ez.j",
+  "governance_mode": "PURE_DOCUMENT_PROVENANCE_FAIL_CLOSED",
+  "timestamp": "2026-08-31T06:37:34.478Z",
+  "approved_staging_t2_pilot_count": 1,
+  "approved_staging_t2_pilot_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+  "total_resurveyed_candidates": 2,
+  "public_eligible_count": 0,
+  "t1_voucher_verified_count": 0,
+  "quarantined_ez_i_records_count": 2,
+  "quarantined_ez_i_records": [
+    {
+      "quarantined_record_id": "QUARANTINED_EZ_I_01_NOTION_EDUCATION",
+      "original_capture_file": "candidate_ez_i_01_notion_education_raw_bytes.bin",
+      "reason": "QUARANTINED_EZ_J_LOCATOR_AND_REDIRECT_CONTAMINATION: locator <title>Notion for Education</title> was missing from raw bytes; subresource tracking logs in redirect chain",
+      "quarantined_at": "2026-08-31T06:37:34.478Z"
+    },
+    {
+      "quarantined_record_id": "QUARANTINED_EZ_I_02_CANVA_EDUCATION",
+      "original_capture_file": "candidate_ez_i_02_canva_education_raw_bytes.bin",
+      "reason": "QUARANTINED_EZ_J_LOCATOR_AND_REDIRECT_CONTAMINATION: locators missing from raw bytes; third-party tracking pixels contaminated redirect chain",
+      "quarantined_at": "2026-08-31T06:37:34.478Z"
+    }
+  ],
+  "resurveyed_candidates": [
+    {
+      "candidate_id": "CANDIDATE_EZ_J_01_NOTION_EDUCATION",
+      "name": "Notion for Education — Official Web Document",
+      "cohort": "COHORT_1_HOC_TAP",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE_INTERNAL",
+      "initial_url": "https://www.notion.so/product/notion-for-education",
+      "final_url": "https://www.notion.com/product/notion-for-education",
+      "redirect_count": 1,
+      "http_status": 200,
+      "byte_length": 188523,
+      "sha256": "efa0ff3b7f8037d76fa445bf458136452541d1c981dc041576ed6f8cc1aeca30",
+      "transcript_file": "candidate_ez_j_01_notion_education_transcript.json",
+      "bin_file": "candidate_ez_j_01_notion_education_raw_bytes.bin",
+      "locators": {
+        "title_locator": {
+          "found": true,
+          "search_string": "Notion for Education",
+          "byte_offset": 240,
+          "line_number": 1,
+          "column_number": 241,
+          "exact_excerpt": "le=1\" data-next-head=\"\"/><title data-next-head=\"\">Notion for Education</title><meta name=\"description\" content=\"The all-"
+        },
+        "eligibility_locator": {
+          "found": true,
+          "search_string": "schoolwork",
+          "byte_offset": 68669,
+          "line_number": 56,
+          "column_number": 60265,
+          "exact_excerpt": "5TkrBW__description\">One place to manage all your schoolwork, clubs, and side projects. In the classroom and b"
+        },
+        "scope_locator": {
+          "found": true,
+          "search_string": "classroom",
+          "byte_offset": 68714,
+          "line_number": 56,
+          "column_number": 60310,
+          "exact_excerpt": "your schoolwork, clubs, and side projects. In the classroom and beyond.</p><div class=\"flex flex-row items-st"
+        },
+        "action_locator": {
+          "found": true,
+          "search_string": "product/notion-for-education",
+          "byte_offset": 940,
+          "line_number": 1,
+          "column_number": 941,
+          "exact_excerpt": "property=\"og:url\" content=\"https://www.notion.com/product/notion-for-education\" data-next-head=\"\"/><meta property=\"og:title\" con"
+        }
+      },
+      "all_locators_matched": true,
+      "grounded_sentence": "Theo tài liệu chính thức từ trang web của Notion, học sinh và nhà trường có thể tìm hiểu về Notion for Education để hỗ trợ học tập và quản lý dự án.",
+      "scope_provenance": "Toàn cầu / Học sinh, sinh viên và nhà trường.",
+      "exclusions_caveat": "Tài liệu này không chứng minh phương thức xác thực cụ thể hay quyền lợi cục bộ tại bất kỳ tỉnh thành nào; JayT không bảo đảm việc cấp gói hay giá trị kinh tế.",
+      "canonical_action_url": "https://www.notion.com/product/notion-for-education",
+      "public_eligible": false,
+      "governance_status": "HELD_INTERNAL_NO_STAGING_RENDER_PENDING_INDEPENDENT_CEO_REVIEW"
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_J_02_CANVA_EDUCATION",
+      "name": "Canva for Education — Official Web Document",
+      "cohort": "COHORT_1_HOC_TAP",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE_INTERNAL",
+      "initial_url": "https://www.canva.com/education/",
+      "final_url": "https://www.canva.com/education/",
+      "redirect_count": 0,
+      "http_status": 200,
+      "byte_length": 270597,
+      "sha256": "a41e00e0448da7b5e0423ccb022c3e6da0f86a5d5254c5b697907231c1fb8810",
+      "transcript_file": "candidate_ez_j_02_canva_education_transcript.json",
+      "bin_file": "candidate_ez_j_02_canva_education_raw_bytes.bin",
+      "locators": {
+        "title_locator": {
+          "found": true,
+          "search_string": "Canva",
+          "byte_offset": 763,
+          "line_number": 1,
+          "column_number": 764,
+          "exact_excerpt": " icon\"/><meta name=\"description\" content=\"Explore Canva’s education solutions for schools and universitie"
+        },
+        "eligibility_locator": {
+          "found": true,
+          "search_string": "Education",
+          "byte_offset": 375,
+          "line_number": 1,
+          "column_number": 376,
+          "exact_excerpt": "es.canva.com/540dd49a-6916-4f14-b301-f8d762e1d063/EducationClassroomDarlinghurstPrimary011-Edited.png\"/><meta"
+        },
+        "scope_locator": {
+          "found": true,
+          "search_string": "learning",
+          "byte_offset": 28338,
+          "line_number": 4,
+          "column_number": 22280,
+          "exact_excerpt": "ot; 100\"><div class=\"_7XXcGB3\"><p><span>Reimagine learning</span></p></div></h1><span class=\"_8aVEnQ\" style="
+        },
+        "action_locator": {
+          "found": true,
+          "search_string": "canva.com/education",
+          "byte_offset": 972,
+          "line_number": 1,
+          "column_number": 973,
+          "exact_excerpt": "cation.\"/><link rel=\"canonical\" href=\"https://www.canva.com/education/\"/><meta property=\"og:url\" content=\"https://www.c"
+        }
+      },
+      "all_locators_matched": true,
+      "grounded_sentence": "Theo trang thông tin chính thức của Canva, các cơ sở giáo dục và người học có thể tìm hiểu về các giải pháp học tập của Canva for Education.",
+      "scope_provenance": "Toàn cầu / Giáo viên, học sinh và các cơ sở giáo dục.",
+      "exclusions_caveat": "Trang này không chứng minh tiêu chuẩn phê duyệt chi tiết cho từng cá nhân; JayT không xác nhận voucher, ưu đãi thương mại hay quyền lợi địa phương.",
+      "canonical_action_url": "https://www.canva.com/education/",
+      "public_eligible": false,
+      "governance_status": "HELD_INTERNAL_NO_STAGING_RENDER_PENDING_INDEPENDENT_CEO_REVIEW"
+    }
+  ]
+}

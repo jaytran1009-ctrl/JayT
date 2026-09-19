@@ -1,0 +1,48 @@
+{
+  "receipt_id": "QUARANTINE_RECEIPT_SEMANTIC_BINDING_V1",
+  "timestamp": "2026-08-28T15:59:56.565Z",
+  "directive": "JAYT-245 SECTION P.1",
+  "root_cause": "CONDITIONS_AND_SCOPE_NOT_BOUND_TO_RAW — 10 conditions and 5 locality scopes were synthetic metadata without verbatim quotes or dedicated character offsets in raw HTML payloads",
+  "quarantined_files_count": 6,
+  "quarantined_files": [
+    {
+      "filename": "semantic_binding_pilot_batch_report.json",
+      "sha256": "1162baa05476b457fa35f91c592f6611e7e86f41a87f46703cc34067f228a920",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/semantic_binding_pilot_batch_report.json"
+    },
+    {
+      "filename": "SEMANTIC_BINDING_TGT_C1_01.json",
+      "sha256": "19d6678bc15b42bfd79bdd94ca5b1645f7eb55ddf8cb083e6d0040075fded8aa",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/SEMANTIC_BINDING_TGT_C1_01.json"
+    },
+    {
+      "filename": "SEMANTIC_BINDING_TGT_C1_04.json",
+      "sha256": "28fdd57d0a27eb6560017dc558ba15cb34e6ac22f2b6ce2572648ea1193c602c",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/SEMANTIC_BINDING_TGT_C1_04.json"
+    },
+    {
+      "filename": "SEMANTIC_BINDING_TGT_C3_01.json",
+      "sha256": "cdfe844ba94517c30d7632f02d9d3755776bb468965433d8640612d91eb4e683",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/SEMANTIC_BINDING_TGT_C3_01.json"
+    },
+    {
+      "filename": "SEMANTIC_BINDING_TGT_C3_05.json",
+      "sha256": "136a8d47852dc73990f5beb5344502a7ecf421ab7193c8759d555c9db4104930",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/SEMANTIC_BINDING_TGT_C3_05.json"
+    },
+    {
+      "filename": "SEMANTIC_BINDING_TGT_C4_01.json",
+      "sha256": "b4c7551aaa8cd1f60620b243b11f3f5f20fce2ee299b164b95e3a9b146c36c20",
+      "quarantined_location": "09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_semantic_binding_records_v1_20260828/SEMANTIC_BINDING_TGT_C4_01.json"
+    }
+  ],
+  "governance_verdict": "ALL_SEMANTIC_BINDING_V1_RECORDS_ISOLATED",
+  "restored_target_status": {
+    "TGT_C1_01": "RAW_RESPONSE_CAPTURED — NO_CLAIM",
+    "TGT_C1_03": "FAIL_CLOSED: EXCLUDED_FROM_SEMANTIC_CLAIM_BINDING_DUE_TO_CLOCK_SKEW_ANOMALY",
+    "TGT_C1_04": "RAW_RESPONSE_CAPTURED — NO_CLAIM",
+    "TGT_C3_01": "RAW_RESPONSE_CAPTURED — NO_CLAIM",
+    "TGT_C3_05": "RAW_RESPONSE_CAPTURED — NO_CLAIM",
+    "TGT_C4_01": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+  }
+}

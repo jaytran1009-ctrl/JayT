@@ -1,0 +1,88 @@
+{
+  "id": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "authority": "JAYT-391 — directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T05:45:00Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini safety review required for pipeline seal",
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "new_remote_previews": false
+  },
+  "authorization": {
+    "decoupled_lane_implementation": true,
+    "fb_production_release": "CONDITIONAL_PER_DEAL_AFTER_FOUR_QUOTE_EVIDENCE_AND_CEO_RELEASE_REVIEW",
+    "ktx_production_release": "CONDITIONAL_PER_SKU_AFTER_COMPLIANT_CLEAN_PROVENANCE_AND_MEDIA_REVIEW",
+    "scheduler_installation": "CONDITIONAL_ON_USER_OWNED_HOST_WITH_LEAST_PRIVILEGE",
+    "rollback_alias_swap": "REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION_AND_APPROVED_TEST_TARGET",
+    "hard_prohibitions": [
+      "Do not bypass, evade or defeat WAF, CAPTCHA, authentication, rate limits, robots directives, geo controls, paywalls, provider terms or access controls.",
+      "Do not create, alter or infer source bytes, dates, scope, terms, codes, Mall status, inventory, price, media or provider attribution.",
+      "Do not silently mutate published factual content or enable affiliate attribution without provider-issued replayable proof."
+    ]
+  },
+  "lanes": [
+    {
+      "id": "LANE_1_LOCAL_FOOD_CINEMA_WAVE_1",
+      "purpose": "Independently qualify local F&B and cinema offers; KTX acquisition status must not block this lane.",
+      "required_count": 15,
+      "tasks": [
+        "For each retained first-party artifact, create 06_TRUST_AND_EVIDENCE/j391/deals/<offer_id>.quotes.json containing four verbatim, byte-locatable quotations: offer_quote, validity_quote, scope_quote and terms_quote.",
+        "Record source artifact path, source SHA-256, byte offsets or robust selectors, captured timestamp, source URL and extraction method. Quotes must be present in the retained artifact, not in executor-authored metadata.",
+        "Classify each offer VERIFIED_DANANG only if all four predicates prove the exact offer, active period, Da Nang scope/branch, and relevant eligibility. Otherwise classify VERIFIED_REGIONAL, SOURCE_INSUFFICIENT or EXPIRED and keep it out of the Da Nang Wave-1 count.",
+        "Render cards only for independently qualifying records. Display Copy Code only if the source artifact visibly contains a real public code; otherwise use only the source-supported app/counter CTA. Zalo Pass may share non-sensitive public offer information only.",
+        "Produce a validator that reads the raw files and rejects missing quote, mismatched hash, absent scope/date/terms predicate, self-reference, fabricated code and invalid CTA."
+      ],
+      "wave_1_release_gate": [
+        "All 15 records must separately satisfy four-quote extraction before a 15-deal Da Nang release claim. A partial verified set may be reviewed and released only with its exact count and exclusions disclosed.",
+        "CEO independently verifies the source bindings and served cards before any alias mutation."
+      ]
+    },
+    {
+      "id": "LANE_2_DORM_STUDY_KTX_SANITIZATION",
+      "purpose": "Keep 30 KTX records in neutral survey mode until clean evidence is legitimately available.",
+      "tasks": [
+        "Stop repeated bare-request capture patterns that yield challenge/404 responses. A challenge is recorded once as a block condition and is not retried aggressively.",
+        "Use only a provider-authorized data feed/API or a browser session the provider expressly permits. Retain authorization/source terms, original bytes, response metadata and hash. If unavailable, retain neutral placeholder and unverified status.",
+        "For each claimed verified SKU, enforce 1 itemId = 1 canonical URL = 1 matching product/variant = 1 rights-documented local image = hash binding. Decode and manually inspect media; reject reused, generic or mismatched content.",
+        "Affiliate remains false until a provider-issued replayable attribution validation binds that exact provider and SKU."
+      ]
+    },
+    {
+      "id": "AUTHENTIC_OPERATIONS",
+      "tasks": [
+        "Install a four-hour scheduler only on a user-owned, approved host with a dedicated least-privilege account. The scheduler accepts fixed audited item IDs only, retains immutable run logs, and does not auto-publish factual changes.",
+        "Submit scheduler registration proof, configuration, host/identity attestation, one scheduled (not manually triggered) run log and an alert delivery record. Simulated timings must be labelled simulations.",
+        "For rollback measurement, submit a separate test-target plan. Do not alter the canonical production alias without explicit execution authorization. Any real drill must log pre/post alias, timestamps, CDN response checks and restoration to the original alias.",
+        "Keep 200 as observation, 3xx/403/429/timeout as UNKNOWN, and require repeated 404/410 observations plus review before safe card suppression."
+      ]
+    },
+    {
+      "id": "DUAL_KEY_PIPELINE_SEAL",
+      "tasks": [
+        "After both lanes have a reviewed form, create 08_RELEASE_VAULT/PIPELINE_SEAL_MANIFEST.json listing every sealed runner, collector, validator, schema and their SHA-256 hashes, with an explicit change-control policy.",
+        "The manifest must remain PENDING_DUAL_KEY until it contains two independently verifiable approvals: Chairman written approval reference and Gemini safety-review reference. Executor/CEO declarations alone do not satisfy Gemini approval.",
+        "Provide a verification script that fails on hash/schema drift and reports seal status. The seal cannot technically prevent all local filesystem edits; operational enforcement is via restricted write access, code review and the two recorded approvals."
+      ]
+    }
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j391/deals/",
+    "06_TRUST_AND_EVIDENCE/j391/WAVE_1_FOUR_QUOTE_EVIDENCE_INDEX.json",
+    "scripts/verify_j391_wave_1_evidence.cjs",
+    "06_TRUST_AND_EVIDENCE/j391/ktx_acquisition_status.json",
+    "07_QUALITY_ASSURANCE/JAYT_391_WAVE_1_EVIDENCE_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_391_SCHEDULER_OPERATIONAL_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_391_ROLLBACK_DRILL_RECEIPT.json",
+    "08_RELEASE_VAULT/PIPELINE_SEAL_MANIFEST.json"
+  ],
+  "reporting": {
+    "T_plus_3h": "Report four-quote verified/insufficient/excluded counts per deal; no deployment claim until CEO review.",
+    "T_plus_12h": "Report clean KTX evidence/media count, challenge blocks, actual scheduler proof, and rollback proof. State simulations separately.",
+    "completion": "Report exact evidence counts and unresolved blockers. Executor cannot claim CEO, Gemini or commercial Go-Live PASS."
+  }
+}

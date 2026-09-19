@@ -1,0 +1,596 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "feed_version": "132.5.0",
+  "directive": "JAYT-132E-PROVENANCE-CONTAINMENT",
+  "generated_at": "2026-08-26T13:50:00.000Z",
+  "city": "Đà Nẵng",
+  "currency": "VND",
+  "summary": {
+    "total_items": 18,
+    "limited_time_deals_count": 5,
+    "watchlist_deals_count": 3,
+    "planning_menu_and_utilities_count": 10,
+    "actionable_coverage_pct": "27.8%",
+    "plan_reality_enhancements": {
+      "serviceability_gate_active": true,
+      "time_conditioned_timeline": "Kịch bản Ăn sớm (18:00 GoGi) + Phim (20:00 CGV) vs Đi muộn 20:00",
+      "danabus_post_2100_guard": "DanaBus strictly suppressed after 21:00 with Honest Late-Night Transit Notice",
+      "asset_truth_gate_4_conditions": "CGV Vincom, GoGi Nguyễn Tri Phương, Phê La Bạch Đằng passed all 4 conditions",
+      "customer_care_feedback_loop": "Integrated feedback reporting action on all decision cards"
+    }
+  },
+  "limited_time_deals": [
+    {
+      "deal_id": "LTD_CGV_CULTURE_DAY",
+      "brand_name": "CGV Cinema",
+      "title": "CGV Culture Day — Đồng giá vé 75.000₫ toàn cụm rạp",
+      "discount_badge": "Đồng giá 75K",
+      "category": "ENTERTAINMENT",
+      "terms": "Áp dụng Thứ Tư cuối cùng mỗi tháng tại CGV Vĩnh Trung & Vincom Đà Nẵng",
+      "expires_at": "2026-08-26T23:59:59+07:00"
+    },
+    {
+      "deal_id": "LTD_METIZ_U22",
+      "brand_name": "Metiz Cinema",
+      "title": "Metiz Cinema — Vé U22 & Học sinh Sinh viên 45.000₫",
+      "discount_badge": "Đồng giá 45K",
+      "category": "ENTERTAINMENT",
+      "terms": "Xuất trình thẻ HSSV hoặc CCCD dưới 22 tuổi tại quầy vé Helio Center",
+      "expires_at": "2026-08-31T23:59:59+07:00"
+    }
+  ],
+  "watchlist_deals": [
+    {
+      "id": "WATCHLIST_120_HIGHLANDS_JCB_30",
+      "brand": "Highlands Coffee",
+      "brand_id": "BRAND_HIGHLANDS",
+      "sector": "COFFEE",
+      "contextual_taxonomy": "☕ Cà phê sáng & Điểm hẹn",
+      "intent_type": "COFFEE_TEA",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ KIỂM TRA TẠI QUẦY",
+      "serviceability": {
+        "cut_off_time": "23:00",
+        "operating_window": "07:00 – 23:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_PHELA_SPECIALTY"
+      },
+      "title": "Ưu đãi thẻ JCB Contactless (Tùy thuộc ngân sách ngân hàng)",
+      "benefit": "Giảm 30% (tối đa 50.000₫) cho hóa đơn từ 100.000₫ khi còn ngân sách",
+      "primary_condition": "Hỏi nhân viên thu ngân về suất ưu đãi thẻ JCB trước khi gọi món",
+      "terms": "Chương trình áp dụng cho thẻ JCB Contactless với ngân sách phân bổ theo ngày/tháng. Vui lòng xác nhận tại quầy trước khi thanh toán.",
+      "validity": "Chương trình đối tác ngân hàng đang theo dõi — kiểm tra tại quầy",
+      "operating_hours": "Mở cửa từ 07:00 – 23:00 hàng ngày",
+      "last_mile_note": "Hỏi nhân viên thu ngân suất ưu đãi trước khi quẹt thẻ",
+      "scope": "Toàn bộ cửa hàng Highlands Coffee tại Đà Nẵng",
+      "official_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc/jcb-30-percent.html",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 30000,
+      "slot": "SLOT_0730",
+      "persona": [
+        "OFFICE",
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_09_HIGHLANDS_LEAF_01/page.txt",
+        "sha256": "cfc0b454395bcbebc5c27e11882401441785b4caf0ed015036849ce4f03b43bb",
+        "size_bytes": 1445,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_0730",
+        "SLOT_1430"
+      ],
+      "benefit_short": "Thẻ JCB (Giảm 30%)",
+      "curated_image_url": null
+    },
+    {
+      "id": "WATCHLIST_120_WINMART_WINECO_20",
+      "brand": "WinMart",
+      "brand_id": "BRAND_WINMART",
+      "sector": "SHOPPING",
+      "contextual_taxonomy": "🛒 Mua sắm nhu yếu phẩm",
+      "intent_type": "SHOPPING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ KIỂM TRA TẠI QUẦY",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "08:00 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_KFC_XO_HOP_CA"
+      },
+      "title": "Chương trình Hội viên WIN (Tiết kiệm 20% MEATDeli & WinEco)",
+      "benefit": "Tiết kiệm 20% các sản phẩm thịt MEATDeli và rau sạch WinEco cho hội viên",
+      "primary_condition": "Đọc số điện thoại hội viên WIN khi thanh toán tại quầy",
+      "terms": "Chương trình áp dụng quanh năm cho hội viên WIN đã đăng ký tài khoản. Danh mục khuyến mãi có thể thay đổi theo tuần.",
+      "validity": "Chính sách hội viên thường niên 2026",
+      "operating_hours": "08:00 – 22:00 hàng ngày",
+      "last_mile_note": "Đọc SĐT đã đăng ký tại quầy thu ngân trước khi thanh toán",
+      "scope": "Các siêu thị WinMart và cửa hàng WinMart+ tại Đà Nẵng",
+      "official_url": "https://winmart.vn/tin-tuc/hoi-vien-win-tiet-kiem-20-phan-tram",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 20000,
+      "slot": "SLOT_1730",
+      "persona": [
+        "FAMILY",
+        "OFFICE",
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_30_WINMART_LEAF_01/page.txt",
+        "sha256": "98f1106e04bba232e10d0bd6aeaa36db7c90961343ffd09c9fd95d20ca590f9c",
+        "size_bytes": 2281,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_1730"
+      ],
+      "benefit_short": "Hội viên WIN (Giảm 20%)",
+      "curated_image_url": null
+    },
+    {
+      "id": "CANDIDATE_132D_01_JOLLIBEE_69K",
+      "brand": "Jollibee Vietnam",
+      "brand_id": "BRAND_JOLLIBEE",
+      "sector": "LUNCH",
+      "contextual_taxonomy": "🍱 Ăn trưa nhanh & Gia đình",
+      "intent_type": "DINING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ KIỂM TRA TẠI QUẦY",
+      "serviceability": {
+        "cut_off_time": "21:30",
+        "operating_window": "09:00 – 21:30",
+        "is_active_at_2000": true,
+        "is_active_after_2100": false,
+        "recovery_alternative_id": "MENU_120_JOLLIBEE_COMBO_73K"
+      },
+      "title": "Jollibee Combo 69.000₫ — Chưa rõ hạn tại chi nhánh Đà Nẵng",
+      "benefit": "Combo 69.000₫ khi dùng qua app hoặc đọc mã tại cửa hàng",
+      "primary_condition": "Đọc mã ưu đãi tại quầy hoặc đặt qua app Jollibee",
+      "terms": "Chương trình khuyến mãi toàn quốc được nêu trên website Jollibee. Hiện dữ liệu chưa chứng minh riêng từng chi nhánh Đà Nẵng và thời hạn áp dụng cụ thể. Vui lòng kiểm tra tại quầy trước khi mua.",
+      "validity": "Chưa công bố ngày hết hạn cụ thể — đang trong chu kỳ recheck",
+      "operating_hours": "09:00 – 21:30 hàng ngày",
+      "last_mile_note": "Hỏi nhân viên quầy Jollibee về mã combo 69k",
+      "scope": "Jollibee Vincom Ngô Quyền, Coopmart, Hòa Khánh Đà Nẵng",
+      "official_url": "https://jollibee.com.vn/blog/category/khuyen-mai",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 20000,
+      "slot": "SLOT_1105",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_01_JOLLIBEE_LEAF_01/page.txt",
+        "sha256": "4dbc2ab11a6ccdfabfa84632cb4370644b158b7b0101be88f3d62267a2fbcf7e",
+        "size_bytes": 1800,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_1105",
+        "SLOT_1730"
+      ],
+      "benefit_short": "Combo 69k (Kiểm tra lại)",
+      "curated_image_url": null
+    }
+  ],
+  "planning_menu_and_utilities": [
+    {
+      "id": "SERVICE_DANABUS_TRO_GIA_6K",
+      "brand": "DanaBus Đà Nẵng",
+      "brand_id": "BRAND_DANABUS",
+      "sector": "MOBILITY",
+      "contextual_taxonomy": "🚌 Xe buýt trợ giá (Trước 21:00)",
+      "intent_type": "TRANSIT",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "🚌 TIỆN ÍCH DI CHUYỂN",
+      "serviceability": {
+        "cut_off_time": "21:00",
+        "operating_window": "05:30 – 21:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": false,
+        "recovery_alternative_id": "MENU_120_PHELA_SPECIALTY"
+      },
+      "title": "Xe buýt trợ giá Đà Nẵng 6.000₫ / lượt (Tuyến 05, 07, 08, 11, R16A)",
+      "benefit": "Giá vé đồng hạng 6.000₫/lượt cho học sinh sinh viên và người dân",
+      "primary_condition": "Áp dụng trên toàn bộ các tuyến xe buýt trợ giá nội đô Đà Nẵng",
+      "terms": "Chính sách trợ giá vận tải hành khách công cộng của UBND TP. Đà Nẵng. Xe hoạt động đến 21:00 mỗi ngày.",
+      "validity": "Chính sách trợ giá công cộng áp dụng thường trực",
+      "operating_hours": "05:30 – 21:00 hàng ngày (Sau 21:00 ngừng phục vụ)",
+      "last_mile_note": "Tải ứng dụng Danabus để theo dõi lộ trình và giờ xe đến trạm",
+      "scope": "Mạng lưới xe buýt công cộng trên địa bàn TP. Đà Nẵng",
+      "official_url": "https://danangbus.vn/lo-trinh-tuyen.html",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_0730",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_22_DANABUS_LEAF_01/page.txt",
+        "sha256": "b85f769fce7a99912bcbff26d294321748f34bcc254149cb6f1bbfb7626e572b",
+        "size_bytes": 2753,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_0730",
+        "SLOT_1730"
+      ],
+      "benefit_short": "Vé buýt 6k (Trước 21h)",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_KFC_DZUT_DEAL_88K",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "contextual_taxonomy": "🍗 Bữa trưa tiện lợi & Nhanh",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "10:00 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_GOGI_COMBO_529K"
+      },
+      "title": "KFC Dzựt Deal Trưa 88.000₫ (1 Burger + 1 Miếng Gà + 1 Pepsi)",
+      "benefit": "Combo bữa trưa đủ chất giá 88.000₫ niêm yết tại quầy",
+      "primary_condition": "Giá niêm yết áp dụng ăn tại nhà hàng hoặc mua mang về",
+      "terms": "Giá tiêu chuẩn theo thực đơn KFC Việt Nam. Đã bao gồm thuế GTGT.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "10:00 – 22:00 hàng ngày",
+      "last_mile_note": "KFC Nguyễn Văn Linh hoặc KFC Big C Đà Nẵng",
+      "scope": "Các chi nhánh KFC tại Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/combo-trua-88k",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1105",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_03_KFC_LEAF_01/page.txt",
+        "sha256": "5453d105c023b78d6aebc94140a7d92cc25d9a4840a28aa406907ffbcf7ff4a0",
+        "size_bytes": 11761,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_1105"
+      ],
+      "benefit_short": "Combo Trưa 88k",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_KFC_XO_HOP_CA",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "contextual_taxonomy": "🍗 Bữa ăn nhóm bạn bè",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "10:00 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_GOGI_COMBO_529K"
+      },
+      "title": "KFC Xô Hợp Cạ 189.000₫ (4 Miếng Gà + 1 Burger Zinger + 2 Pepsi)",
+      "benefit": "Combo xô gà cho nhóm 2-3 người, chia ra ~63.000₫/người",
+      "primary_condition": "Giá niêm yết áp dụng tại nhà hàng",
+      "terms": "Giá combo niêm yết chính thức trên toàn hệ thống.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "10:00 – 22:00 hàng ngày",
+      "last_mile_note": "Thích hợp ăn nhóm sau giờ học hoặc tan ca",
+      "scope": "Các nhà hàng KFC tại Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/xo-hop-ca-189k",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1730",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "valid_time_windows": [
+        "SLOT_1730"
+      ],
+      "benefit_short": "Xô Nhóm 189k (~63k/người)",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_JOLLIBEE_COMBO_73K",
+      "brand": "Jollibee Vietnam",
+      "brand_id": "BRAND_JOLLIBEE",
+      "sector": "LUNCH",
+      "contextual_taxonomy": "🍱 Ăn trưa nhanh & Trẻ trung",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "21:30",
+        "operating_window": "09:00 – 21:30",
+        "is_active_at_2000": true,
+        "is_active_after_2100": false,
+        "recovery_alternative_id": "MENU_120_KFC_DZUT_DEAL_88K"
+      },
+      "title": "Jollibee Combo Gà Giòn Cay 73.000₫ (1 Gà + 1 Mì Ý + 1 Nước)",
+      "benefit": "Combo gà giòn kèm mì Ý sốt bò bằm giá chuẩn 73.000₫",
+      "primary_condition": "Giá niêm yết tại các cửa hàng Jollibee Đà Nẵng",
+      "terms": "Giá đã bao gồm thuế VAT.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "09:00 – 21:30 hàng ngày",
+      "last_mile_note": "Jollibee Hòa Khánh hoặc Jollibee Vincom Ngô Quyền",
+      "scope": "Hệ thống Jollibee tại Đà Nẵng",
+      "official_url": "https://jollibee.com.vn/thuc-don/combo-73k",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1105",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "valid_time_windows": [
+        "SLOT_1105"
+      ],
+      "benefit_short": "Combo Gà + Mì 73k",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_LOTTERIA_HAPPY_LUNCH_40K",
+      "brand": "Lotteria Vietnam",
+      "brand_id": "BRAND_LOTTERIA",
+      "sector": "LUNCH",
+      "contextual_taxonomy": "🍔 Bữa trưa nhanh & Cơm gà",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "08:30 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_KFC_DZUT_DEAL_88K"
+      },
+      "title": "Lotteria Happy Lunch — Cơm Gà Sốt Đậu / Burger 40.000₫ – 45.000₫",
+      "benefit": "Thực đơn cơm trưa và burger giá chuẩn 40.000₫ – 45.000₫",
+      "primary_condition": "Giá niêm yết tại quầy các chi nhánh Lotteria Đà Nẵng",
+      "terms": "Giá áp dụng cho thực đơn trưa tại cửa hàng.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "08:30 – 22:00 hàng ngày",
+      "last_mile_note": "Lotteria Big C Đà Nẵng hoặc Nguyễn Thị Minh Khai",
+      "scope": "Các cửa hàng Lotteria tại Đà Nẵng",
+      "official_url": "https://www.lotteria.vn/menu/happy-lunch",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1105",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "valid_time_windows": [
+        "SLOT_1105"
+      ],
+      "benefit_short": "Cơm Trưa 40k-45k",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_GONGCHA_ALISAN_53K",
+      "brand": "Gong Cha",
+      "brand_id": "BRAND_GONGCHA",
+      "sector": "COFFEE",
+      "contextual_taxonomy": "🧋 Trà sữa & Học nhóm",
+      "intent_type": "COFFEE_TEA",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "08:30 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_PHELA_SPECIALTY"
+      },
+      "title": "Gong Cha Alisan Trà Sữa Size M 53.000₫ (Giá Niêm Yết)",
+      "benefit": "Dòng trà sữa Alisan trứ danh giá chuẩn 53.000₫",
+      "primary_condition": "Giá niêm yết tại quầy Gong Cha",
+      "terms": "Chưa bao gồm topping thêm. Giá niêm yết chuẩn.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "08:30 – 22:00 hàng ngày",
+      "last_mile_note": "Gong Cha Nguyễn Văn Linh — không gian thoáng mát học nhóm",
+      "scope": "Gong Cha Nguyễn Văn Linh & Hoàng Diệu, Đà Nẵng",
+      "official_url": "https://gongcha.com.vn/danh-muc-mon/alisan-tea/",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1430",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_08_GONGCHA_LEAF_01/page.txt",
+        "sha256": "61867881a9f544c1497171dbfb0356ab71cbb8eacdb4fdb58600901d8e2aeb5c",
+        "size_bytes": 2143,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_1430"
+      ],
+      "benefit_short": "Trà Sữa Alisan 53k",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_PHUCLONG_TEA_55K",
+      "brand": "Phúc Long Coffee & Tea",
+      "brand_id": "BRAND_PHUCLONG",
+      "sector": "COFFEE",
+      "contextual_taxonomy": "☕ Trà đậm vị & Điểm hẹn",
+      "intent_type": "COFFEE_TEA",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:30",
+        "operating_window": "07:00 – 22:30",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "MENU_120_PHELA_SPECIALTY"
+      },
+      "title": "Phúc Long Trà Ô Long / Trà Lài Sữa Size L 55.000₫",
+      "benefit": "Trà sữa đậm vị trứ danh size lớn giá niêm yết 55.000₫",
+      "primary_condition": "Giá niêm yết chính thức tại cửa hàng Phúc Long",
+      "terms": "Giá đã bao gồm thuế GTGT.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "07:00 – 22:30 hàng ngày",
+      "last_mile_note": "Phúc Long Nguyễn Văn Linh — trung tâm Hải Châu",
+      "scope": "Các chi nhánh Phúc Long tại Đà Nẵng",
+      "official_url": "https://phuclong.com.vn/thuc-don/tra-truyen-thong",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1430",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "valid_time_windows": [
+        "SLOT_1430"
+      ],
+      "benefit_short": "Trà Phúc Long L 55k",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_PHELA_SPECIALTY",
+      "brand": "Phê La",
+      "brand_id": "BRAND_PHELA",
+      "sector": "COFFEE",
+      "contextual_taxonomy": "☕ Cà phê & Trà đặc sản (Mở đến 23:00)",
+      "intent_type": "COFFEE_TEA",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "23:00",
+        "operating_window": "07:00 – 23:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "DEAL_120_CGV_PAYDAY_30K"
+      },
+      "title": "Phê La Trà Ô Long Đặc Sản Đà Lạt 55.000₫",
+      "benefit": "Trà Ô Long đặc sản kem trứng / sữa hạt giá niêm yết 55.000₫",
+      "primary_condition": "Giá niêm yết phục vụ tại không gian cắm trại view sông Hàn",
+      "terms": "Mở cửa đón khách muộn đến 23:00 mỗi ngày tại chi nhánh Bạch Đằng.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "07:00 – 23:00 hàng ngày (Cứu cánh sau 21:00)",
+      "last_mile_note": "Phê La 35-37-39 Bạch Đằng view sông Hàn thoáng mát",
+      "scope": "Phê La Bạch Đằng & Nguyễn Văn Thoại, Đà Nẵng",
+      "official_url": "https://phela.vn/thuc-don/",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_1430",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "COUPLE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_07_PHELA_LEAF_01/page.txt",
+        "sha256": "3ff520f5ae7e5034b40ce29cff5acc97c212730ecc08b2046f8cc7ebf8fba479",
+        "size_bytes": 4267,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_1105",
+        "SLOT_1430",
+        "SLOT_2000"
+      ],
+      "benefit_short": "Trà Đặc Sản 55k (Mở đến 23h)",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_GOGI_COMBO_529K",
+      "brand": "GoGi House",
+      "brand_id": "BRAND_GOGI",
+      "sector": "CINEMA",
+      "contextual_taxonomy": "🥩 Ăn tối nhóm & Buffet nướng",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "22:00",
+        "operating_window": "10:00 – 22:00",
+        "is_active_at_2000": true,
+        "is_active_after_2100": true,
+        "recovery_alternative_id": "DEAL_120_CGV_PAYDAY_30K"
+      },
+      "title": "GoGi House Combo Nướng Xèo Xèo 529.000₫ (Nhóm 3 người ~176k/người)",
+      "benefit": "Combo thịt nướng trứ danh cho nhóm 3 người, chia ra ~176.000₫/người",
+      "primary_condition": "Giá niêm yết món nướng áp dụng tại nhà hàng GoGi",
+      "terms": "Giá chưa bao gồm thuế GTGT và đồ uống.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "10:00 – 22:00 hàng ngày (Nhận bàn trước 21:30)",
+      "last_mile_note": "GoGi House Nguyễn Tri Phương — đặt bàn trước vào cuối tuần",
+      "scope": "Các nhà hàng GoGi House tại Đà Nẵng",
+      "official_url": "https://gogi.com.vn/thuc-don/combo-thit-nuong",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_05_GOGI_LEAF_01/page.txt",
+        "sha256": "a2762d2cfc2a93f53c1f8f588d060889e01bb3b049a285a1160acd09c2080a8b",
+        "size_bytes": 1413,
+        "verified_at": "2026-08-26T00:39:00+07:00"
+      },
+      "valid_time_windows": [
+        "SLOT_2000"
+      ],
+      "benefit_short": "Combo Nhóm 529k (~176k/người)",
+      "curated_image_url": null
+    },
+    {
+      "id": "MENU_120_DOOKKI_BUFFET_139K",
+      "brand": "Dookki Vietnam",
+      "brand_id": "BRAND_DOOKKI",
+      "sector": "CINEMA",
+      "contextual_taxonomy": "🍲 Buffet Tokpokki & Lẩu Hàn",
+      "intent_type": "DINING",
+      "feed_category": "PLANNING_MENU_AND_UTILITY",
+      "category_badge": "📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)",
+      "serviceability": {
+        "cut_off_time": "21:30",
+        "operating_window": "10:30 – 21:30",
+        "is_active_at_2000": true,
+        "is_active_after_2100": false,
+        "recovery_alternative_id": "MENU_120_GOGI_COMBO_529K"
+      },
+      "title": "Dookki Buffet Tokpokki Nổi Tiếng 139.000₫ / Người",
+      "benefit": "Buffet tokpokki không giới hạn 90 phút giá chuẩn 139.000₫/người",
+      "primary_condition": "Giá niêm yết tại quầy (chưa gồm 10% VAT)",
+      "terms": "Thời gian dùng bữa 90 phút. Phụ thu 40.000₫ nếu thừa nhiều thức ăn.",
+      "validity": "Biểu giá niêm yết thực đơn",
+      "operating_hours": "10:30 – 21:30 hàng ngày (Nhận khách đến 20:30)",
+      "last_mile_note": "Dookki Vincom Plaza Ngô Quyền hoặc Indochina Riverside Đà Nẵng",
+      "scope": "Các chi nhánh Dookki tại Đà Nẵng",
+      "official_url": "https://dookkivietnam.com/thuc-don-buffet-139k",
+      "visual_asset_status": "VECTOR_MONOGRAM_TREATMENT",
+      "discount_numeric": 0,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "valid_time_windows": [
+        "SLOT_2000"
+      ],
+      "benefit_short": "Buffet Tokpokki 139k/người",
+      "curated_image_url": null
+    }
+  ]
+}

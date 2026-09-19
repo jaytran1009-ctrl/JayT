@@ -1,0 +1,19 @@
+{
+  "plan_id": "TARGET_CAPTURE_PLAN_72H_20260829",
+  "created_at": "2026-08-28T17:20:18.071Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AB)",
+  "execution_phases": {
+    "hours_0_to_24": {
+      "focus": "Làn B (Chương trình chính thức: 14 staging targets) & Làn C (Cổng dịch vụ công cộng Đà Nẵng: 5 targets)",
+      "objective": "Thu thập raw HTML payload, băm SHA-256, lưu canonical URL và trích xuất quote nguyên văn để chuẩn bị atomic field binding"
+    },
+    "hours_24_to_48": {
+      "focus": "Làn C (Địa điểm cơ sở vật chất Đà Nẵng: 11 targets) & Làn A (Khảo sát quy chế giá vé thực tế: 5 targets)",
+      "objective": "Thu thập bằng chứng địa chỉ và đối soát biểu đồ giá quầy"
+    },
+    "hours_48_to_72": {
+      "focus": "Chạy QA Gate kiểm tra per-field binding và đóng gói Release Pack AA/AB cho Hội đồng thẩm định",
+      "objective": "Nâng hạng cung ứng thật theo cấp số tăng dần 1 -> 5 -> 20 -> 50"
+    }
+  }
+}

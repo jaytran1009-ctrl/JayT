@@ -1,0 +1,36 @@
+{
+  "workOrderId": "WORK_ORDER_J418_URL_RESOLVER_UPGRADE",
+  "directiveCode": "CHAIRMAN_DIRECTIVE_20260917_UPGRADE_URL_RESOLVER_AND_AFFILIATE_MONETIZATION",
+  "authority": "Hội đồng Quản trị Tập đoàn JayT Corp & Ban Điều hành CEO Codex",
+  "timestampUtc": "2026-09-17T09:17:06.713Z",
+  "mandates": [
+    {
+      "pillar": "PILLAR_1_SMART_TITLE_BRAND_CATEGORY_EXTRACTION",
+      "target": "Parse pasted product URLs from Shopee, Lazada, TikTok Shop in < 800ms. Extract title from slug, match brand against brand dictionary, categorize into TECH, HOME, FOOD, PERSONAL.",
+      "engine": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:extractSmartProductMeta",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_2_MULTI_PLATFORM_SEARCH_FALLBACK_AND_TRIPLET_RADAR",
+      "target": "If SKU is in CROSS_PLATFORM_SKU_TRIPLETS, show 3-platform floor price comparison table. If external market SKU, activate opponent columns with active Mall search buttons [🔍 Tìm Trên Shopee Mall ↗], [🔍 Tìm Trên LazMall ↗], [🔍 Tìm Trên TikTok Shop ↗] using (brand + cleanTitle) query.",
+      "engine": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:computeCrossPlatformRadar",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_3_AUTOMATED_PARTNER_ID_WRAPPING",
+      "target": "100% of product and search deep links wrapped with official partner IDs: Shopee partner=17372870594, Lazada pid=262501305, TikTok Shop code=VNVNLCB6LYL3.",
+      "engine": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:dispatchSmartAffiliate",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_4_AFFILIATE_VALUE_FIRST_DYNAMIC_RANGE",
+      "target": "Display smart dynamic price range (Tham khảo vs Săn tại sàn chỉ từ ... - ... khi áp mã) across all modals and cards.",
+      "status": "COMPLETED_AND_ACTIVE"
+    },
+    {
+      "pillar": "PILLAR_5_COMMERCIAL_SAFETY_AND_DUAL_KEY_SEALS",
+      "target": "Maintain CONFIG.affiliate_enabled: false fail-closed on Canonical Production. Maintain 24/24 static pipeline seal, 5/5 W8 toolchain seal, 100% WS1-WS2 bit parity.",
+      "status": "VERIFIED_100_PERCENT"
+    }
+  ]
+}

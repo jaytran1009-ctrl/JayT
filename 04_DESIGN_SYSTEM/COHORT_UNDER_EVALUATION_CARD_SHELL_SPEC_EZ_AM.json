@@ -1,0 +1,33 @@
+{
+  "spec_id": "COHORT_UNDER_EVALUATION_CARD_SHELL_SPEC_EZ_AM",
+  "governing_directive": "JAYT-245 Section EZ-AM (Lines 4988-5015)",
+  "timestamp_utc": "2026-09-01T07:04:49.238Z",
+  "purpose": "Neutral card shell specification for cohort candidates under 12h SLA evaluation",
+  "governance_status": "PREPARED_HELD_INTERNAL_PUBLIC_OFF",
+  "feature_flag": {
+    "name": "COHORT_PUBLIC_CARDS_ENABLED",
+    "value": false,
+    "enforcement": "Engineering strictly enforces flag OFF. 0 cohort cards rendered in public DOM."
+  },
+  "visual_and_copy_rules": {
+    "status_badge": {
+      "text": "⏳ ĐANG KIỂM ĐỊNH ĐỘC LẬP (CHƯA CÔNG BỐ)",
+      "color": "#d97706",
+      "bg": "rgba(245, 158, 11, 0.12)"
+    },
+    "neutral_copy": "Tài liệu cổng thông tin đang trong quy trình đối soát raw HTTP và liên kết locator theo SLA 12 giờ. Không có giá, không có voucher, không có liên kết thương mại.",
+    "merchant_assets_allowed": false,
+    "photos_allowed": false,
+    "prices_allowed": false,
+    "vouchers_allowed": false,
+    "reviews_allowed": false,
+    "commercial_cta_allowed": false,
+    "action_button_style": "READ_ONLY_LABEL_NO_CLICKABLE_EXTERNAL_LINK"
+  },
+  "accessibility_standards": {
+    "min_touch_target_height": "44px",
+    "contrast_ratio_text": "14.2:1 (AAA compliant)",
+    "contrast_ratio_badge": "4.8:1 (AA compliant)",
+    "aria_landmarks": "role='region' with descriptive aria-label"
+  }
+}

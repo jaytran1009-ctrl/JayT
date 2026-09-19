@@ -1,0 +1,72 @@
+{
+  "contract_id": "EVIDENCE_CONTRACT_V3_VOUCHER_PILOT_ZERO_EZ_Z",
+  "version": "3.1.0-ez.z",
+  "governing_directive": "JAYT-245 Section EZ-Z (Lines 4620-4640)",
+  "timestamp": "2026-08-31T08:02:43.650Z",
+  "capture_metadata": {
+    "request_url": "https://education.github.com/pack",
+    "final_url": "https://education.github.com/pack",
+    "redirect_chain": [
+      "https://education.github.com/pack"
+    ],
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "byte_length": 271492,
+    "sha256": "aacaf55b9a77dea9f5fa9321c8b59104184f045b24fca47d98bdcb79bca322be",
+    "raw_vault_relative_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_y/candidate_ez_y_01_github_pack_raw_bytes.bin",
+    "discovery_method": "MANUAL_READ_ONLY_NAVIGATION_ZERO_LOGIN"
+  },
+  "sentence_level_raw_excerpts": [
+    {
+      "excerpt_id": "CLAUSE_01_TITLE",
+      "claim_class": "DOCUMENT_IDENTITY",
+      "raw_string": "<title>GitHub Student Developer Pack - GitHub Education</title>",
+      "byte_start": 146,
+      "byte_end": 209,
+      "faithful_mapping": "Quan sát thấy chuỗi ký tự tiêu đề tài liệu chứa các từ 'GitHub Student Developer Pack - GitHub Education'."
+    },
+    {
+      "excerpt_id": "CLAUSE_02_HERO_SUBHEAD",
+      "claim_class": "DESCRIPTIVE",
+      "raw_string": "Learn to ship software like a pro",
+      "byte_start": 13524,
+      "byte_end": 13557,
+      "faithful_mapping": "Quan sát thấy khẩu hiệu mô tả trang."
+    }
+  ],
+  "clause_by_clause_entailment_matrix": {
+    "title_observed": true,
+    "title_locator": {
+      "excerpt_id": "CLAUSE_01_TITLE",
+      "exact_source_excerpt": "<title>GitHub Student Developer Pack - GitHub Education</title>",
+      "byte_start": 146,
+      "byte_end": 209,
+      "provenance_scope": "EXACT_TITLE_STRING_ONLY"
+    },
+    "operator_proven": false,
+    "operator_proof_gap_reason": "Tiêu đề trang không phải là mệnh đề khẳng định tư cách pháp lý hay quan hệ quản lý điều hành; không được suy diễn 'đơn vị vận hành là GitHub Education' từ title.",
+    "program_name_observed": true,
+    "program_name_locator": {
+      "excerpt_id": "CLAUSE_01_TITLE",
+      "exact_source_excerpt": "GitHub Student Developer Pack",
+      "byte_start": 153,
+      "byte_end": 182,
+      "provenance_scope": "STRING_OBSERVED_IN_TITLE"
+    },
+    "offer_proven": false,
+    "offer_proof_gap_reason": "Tên xuất hiện trong tiêu đề không chứng minh các điều khoản ưu đãi, quyền lợi, chi phí hay tính thực thi của gói ưu đãi.",
+    "code_clause_observed": "UNOBSERVED",
+    "condition_clause_observed": "UNOBSERVED",
+    "validity_clause_observed": "UNOBSERVED",
+    "scope_clause_observed": "UNOBSERVED",
+    "total_cost_clause_observed": "UNOBSERVED"
+  },
+  "entailment_and_provenance_verdict": {
+    "classification": "HELD_INTERNAL_DOCUMENT_IDENTITY_ONLY",
+    "public_eligible": false,
+    "rationale": "Trang chỉ chứng minh sự tồn tại của chuỗi ký tự tiêu đề; không chứng minh quan hệ cơ quan vận hành hay điều khoản ưu đãi. Toàn bộ các trường voucher là UNOBSERVED. Fail-closed: giữ nội bộ, 0 tạo card, 0 tạo link/CTA public.",
+    "public_card_created": false,
+    "public_cta_created": false,
+    "public_link_created": false
+  }
+}

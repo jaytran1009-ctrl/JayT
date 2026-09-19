@@ -1,0 +1,30 @@
+{
+  "work_order_id": "J358-R3-R1-VALIDATOR-HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Harden the R3 claim provenance validator before it may ever classify a Batch 19 item VERIFIED.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "r3_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_offer_specific_vault/CLAIM_PROVENANCE_MATRIX_R3.json",
+    "r3_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_OFFER_SPECIFIC_SOURCE_ACQUISITION.json",
+    "r3_gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_CONTAINMENT_ACCEPTANCE_AND_HARDENING_GATE.md"
+  },
+  "requirements": [
+    "Build a pure evaluator that consumes a candidate claim matrix plus captured source metadata and returns VERIFIED or HELD without relying on pre-assigned locality_nature, final status, or precomputed outcome fields.",
+    "Before any claim matching, require disk SHA-256 equals metadata SHA-256, exact byte length, HTTP 200, is_fetch_failed false, is_soft_404 false, and a non-empty requested URL, final URL and capture timestamp. Any failure must return HELD.",
+    "Require a raw UTF-8 span with byte offsets for title, price or benefit, conditions, validity or recurrence, and an explicit offer-to-Da-Nang binding. A footer, generic locator, generic brand identity, image-only text or calendar inference is not valid locality/validity evidence.",
+    "Write mutation tests that invoke the same evaluator with an altered price, locality, expiry, source SHA, HTTP status, soft-404 status and duplicate span. Each altered input must return HELD.",
+    "The test suite may use recorded R3 leaves and in-memory fixtures; do not refetch, overwrite, remove or alter R3 artifacts.",
+    "Keep the truthful R3 result at 0 VERIFIED / 10 HELD unless the hardened evaluator itself, against pre-existing sources, independently proves otherwise. No source acquisition, catalog hydration or promotion belongs to this work order.",
+    "Write all R3-R1 outputs to new paths with SHA-256 sidecars and preserve prior receipts append-only."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r1_claim_provenance_validator.cjs",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R1_VALIDATOR_HARDENING_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R1_VALIDATOR_HARDENING.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO review required; no automatic promotion"
+}

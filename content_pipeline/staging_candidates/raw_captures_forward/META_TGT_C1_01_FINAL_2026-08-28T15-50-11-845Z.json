@@ -1,0 +1,64 @@
+{
+  "target_id": "TGT_C1_01",
+  "cluster": "HOA_KHANH_LIEN_CHIEU",
+  "brand": "Metiz Cinema Helio",
+  "customer_need": "Xem phim sinh viên U22",
+  "initial_url": "https://metiz.vn",
+  "final_url": "https://metiz.vn",
+  "hop_count": 1,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://metiz.vn",
+      "status_code": 200,
+      "response_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "server": "Microsoft-IIS/10.0",
+        "set-cookie": [
+          "ASP.NET_SessionId=pj3cj1mroebycqmaiqyr2v3j; path=/; HttpOnly; SameSite=Lax"
+        ],
+        "x-powered-by": "ASP.NET",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer-when-downgrade",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "content-security-policy": "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' http: https: data: blob:;",
+        "date": "Fri, 28 Aug 2026 15:50:13 GMT",
+        "content-length": "53334"
+      },
+      "location_header": null,
+      "body_bytes": 53334,
+      "hop_started_at": "2026-08-28T15:50:11.846Z",
+      "hop_finished_at": "2026-08-28T15:50:12.111Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:11.845Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:12.190Z",
+  "duration_ms": 344.61,
+  "final_http_status": 200,
+  "final_headers": {
+    "cache-control": "private",
+    "content-type": "text/html; charset=utf-8",
+    "server": "Microsoft-IIS/10.0",
+    "set-cookie": [
+      "ASP.NET_SessionId=pj3cj1mroebycqmaiqyr2v3j; path=/; HttpOnly; SameSite=Lax"
+    ],
+    "x-powered-by": "ASP.NET",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-frame-options": "DENY",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "no-referrer-when-downgrade",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "content-security-policy": "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' http: https: data: blob:;",
+    "date": "Fri, 28 Aug 2026 15:50:13 GMT",
+    "content-length": "53334"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_01_FINAL_2026-08-28T15-50-11-845Z.txt",
+  "pre_normalization_sha256": "450b62946f7adde71f389c4d22b7b2f5dafee30e1c4ac08fa06f7d8d89a40f13",
+  "payload_bytes": 53334,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

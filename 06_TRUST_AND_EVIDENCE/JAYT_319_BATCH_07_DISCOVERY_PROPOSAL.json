@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dossier_id": "JAYT_319_BATCH_07_DISCOVERY_PROPOSAL",
+  "work_order": "JAYT_319_BATCH_07_DISCOVERY_WORK_ORDER.md",
+  "generated_at": "2026-09-04T19:25:00+07:00",
+  "governance_mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_HYDRATION",
+  "council_verdict_baseline": {
+    "B04_01": "INTAKE_FAILED__QUARANTINE",
+    "B04_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 4)",
+    "B04_03": "CONTENT_SPAN_MISMATCH__QUARANTINE",
+    "B04_04": "EVIDENCE_COMPLETE_INTERNAL_HELD (Vault only, zero render)",
+    "B04_05": "INTAKE_FAILED__QUARANTINE",
+    "B04_06": "PUBLIC_APPROVED_STAGING_ONLY (Card 6)",
+    "B04_07": "PUBLIC_APPROVED_STAGING_ONLY (Card 5)",
+    "B04_08": "SCOPE_DENIED__EXPIRED_EVENT_SOURCE",
+    "B04_09": "HELD__PENDING_PRICE_CLAIM_REMEDIATION",
+    "B04_10": "PUBLIC_APPROVED_STAGING_ONLY (Card 7)",
+    "B04_11": "REJECTED__TEMPORARY_EVENT_EXPIRING",
+    "B05_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 8)",
+    "B05_02": "HELD__INSTITUTIONAL_SIGNING_ANNOUNCEMENT (Zero direct utility intake)",
+    "B05_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 9)",
+    "B06_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 10)",
+    "B06_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 12)",
+    "B06_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 11)"
+  },
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 12,
+    "production_card_count": 3
+  },
+  "candidates": [
+    {
+      "candidate_id": "B07_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_03_09_14",
+      "service_name": "Thông báo điều chỉnh phương tiện khai thác xe buýt điện trên các tuyến không trợ giá số 03, 09 và 14",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-dieu-chinh-phuong-tien-khai-thac-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-03-09-va-14-5760.html",
+      "publisher": "Trung tâm Quản lý và Điều hành Giao thông công cộng thành phố Đà Nẵng (Danabus)",
+      "publication_date": "24/08/2026",
+      "effective_window": "Chính thức áp dụng theo Công văn số 15563/SXD-VTATGT ngày 21/08/2026 của Sở Xây dựng TP Đà Nẵng",
+      "recency_proof": "Đăng tải ngày 24/08/2026 trên cổng thông tin chính thức danangbus.vn",
+      "pre_declared_span": "Nhằm thực hiện chủ trương chuyển đổi phương tiện sử dụng năng lượng xanh trong hoạt động vận tải hành khách công cộng bằng xe buýt trên địa bàn thành phố Đà Nẵng",
+      "verified_span_offset": 581459,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH GIAO THÔNG CÔNG CỘNG (KHÔNG QUẢNG CÁO GIÁ VÉ/KHÔNG CLAIM 0 ĐỒNG)",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "BATCH03_DS_07 (Mạng lưới xe buýt trợ giá nói chung)",
+          "B05_03 (Tuyến xe buýt điện số 05 KCC Hòa Hiệp Nam - Công viên Biển Đông)",
+          "B06_01 (Chuyển đổi buýt điện Tuyến 02, 13, 21 theo CV 16041)"
+        ],
+        "differentiating_factor": "Thông báo chính sách chuyển đổi phương tiện buýt điện xanh Kim Long 2026 cho nhóm Tuyến số 03, 09 và 14 theo Công văn số 15563/SXD-VTATGT"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Thông tin điều hành giao thông công cộng năng lượng sạch; không chứa khiếu nại giá vé, không giỏ hàng vé, không thanh toán thương mại."
+    },
+    {
+      "candidate_id": "B07_02_CAM_NANG_AN_TOAN_SO_DEEPFAKE_1022",
+      "service_name": "Cẩm nang nhận diện và phòng chống lừa đảo trực tuyến: Cuộc gọi video Deepfake",
+      "official_leaf_url": "https://1022.vn/cam-nang-nhan-dien-va-phong-chong-lua-dao-truc-tuyen-lua-dao-cuoc-goi-video-deepfake/",
+      "publisher": "Cổng Thông tin Dịch vụ công thành phố Đà Nẵng (Tổng đài 1022 Đà Nẵng)",
+      "publication_date": "27/08/2026",
+      "effective_window": "Cẩm nang giáo dục an toàn số công dân (cập nhật 27/08/2026)",
+      "recency_proof": "Đăng tải chính thức ngày 27/08/2026 09:45 trên cổng thông tin dịch vụ công 1022.vn",
+      "pre_declared_span": "Deepfake đang là một mối đe dọa đối với sự trung thực và tin cậy của video và hình ảnh.",
+      "verified_span_offset": 99511,
+      "commercial_intent": "NONE",
+      "fee_tier": "CẨM NANG HƯỚNG DẪN CÔNG DÂN MIỄN PHÍ",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_02 (Ký số toàn dân y tế)",
+          "B06_03 (Hướng dẫn nộp hồ sơ dịch vụ công trực tuyến VNeID)"
+        ],
+        "differentiating_factor": "Cẩm nang giáo dục công dân về nhận diện giả mạo video Deepfake do AI tạo ra và các quy tắc xác minh danh tính phòng ngừa rủi ro số"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tài liệu phổ biến kỹ năng số công dân phi thương mại; zero phí, zero quảng cáo thương mại, không thu thập dữ liệu cá nhân."
+    },
+    {
+      "candidate_id": "B07_03_TRA_CUU_MAY_KHU_RUNG_TIM_AED_CONG_CONG_1022",
+      "service_name": "Cẩm nang hướng dẫn tra cứu và tiếp cận máy khử rung tim tự động (AED) tại địa điểm công cộng",
+      "official_leaf_url": "https://1022.vn/%f0%9f%9a%a8-tinh-huong-khan-cap-tim-may-khu-rung-tim-tu-dong-aed-o-dau/",
+      "publisher": "Cổng Thông tin Dịch vụ công thành phố Đà Nẵng (Tổng đài 1022 Đà Nẵng)",
+      "publication_date": "17/07/2026",
+      "effective_window": "Tiện ích y tế công cộng thường xuyên (công bố 17/07/2026)",
+      "recency_proof": "Đăng tải ngày 17/07/2026 17:33 trên cổng thông tin 1022.vn",
+      "pre_declared_span": "Theo các tài liệu cấp cứu, trong các trường hợp ngưng tuần hoàn đột ngột",
+      "verified_span_offset": 101757,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH CẤP CỨU CÔNG CỘNG MIỄN PHÍ",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_06 (An toàn tiêm chủng CDC Đà Nẵng)",
+          "B04_10 (Lịch tiêm chủng trẻ em)",
+          "B05_01 (Lịch tiêm chủng thai kỳ)",
+          "B06_02 (Bản tin sức khỏe cộng đồng và vệ sinh môi trường)"
+        ],
+        "differentiating_factor": "Cẩm nang tra cứu vị trí thiết bị y tế cấp cứu ban đầu (máy AED) tại các không gian công cộng trên địa bàn thành phố Đà Nẵng phục vụ tình huống khẩn cấp"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Thông tin tiện ích y tế cấp cứu nơi công cộng; không chứa chẩn đoán hay phác đồ điều trị cá nhân, không có thanh toán/dịch vụ thương mại."
+    }
+  ]
+}

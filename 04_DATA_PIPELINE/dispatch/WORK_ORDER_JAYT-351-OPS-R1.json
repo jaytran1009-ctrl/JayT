@@ -1,0 +1,53 @@
+{
+  "work_order_id": "JAYT-351-OPS-R1",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "status": "DISPATCHED__SCHEDULER_ACTIVATION_EVIDENCE_REQUIRED",
+  "baseline": {
+    "version": "v3.426.0",
+    "deployment_id": "dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3",
+    "url": "https://jayt-production-v3420.vercel.app",
+    "expected_entities": 76
+  },
+  "runner": "07_QUALITY_ASSURANCE/run_jayt_351_ops_monitor.cjs",
+  "required_actions": [
+    "Register one actual hourly scheduler task owned by the external Antigravity environment.",
+    "Configure the task to survive process exit and resume according to the host scheduler policy after reboot or login.",
+    "Prevent overlapping runs with a lock or equivalent single-flight guard.",
+    "Run the monitor without Production mutation or automatic rollback.",
+    "Keep healthy cycles quiet and create an immutable run-specific receipt.",
+    "Create a P0 evidence artifact on failure and surface it to the CEO data mailbox.",
+    "Allow one scheduler-triggered cycle to execute and record its result before claiming ACTIVE."
+  ],
+  "required_scheduler_receipt_fields": [
+    "scheduler_type",
+    "task_id",
+    "task_name",
+    "registered_at_utc",
+    "schedule",
+    "next_run_at",
+    "runner_path",
+    "working_directory",
+    "single_flight_guard",
+    "restart_behavior",
+    "healthy_notification_policy",
+    "failure_notification_policy",
+    "scheduler_triggered_test_run_id",
+    "scheduler_triggered_test_result",
+    "scheduler_triggered_monitor_receipt_path",
+    "scheduler_triggered_monitor_receipt_sha256",
+    "production_mutations"
+  ],
+  "delivery": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-351-OPS-R1.json",
+    "receipt_sha256_sidecar": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-351-OPS-R1.json.sha256",
+    "success_state": "HOURLY_SCHEDULER_REGISTERED__AUTOMATED_CYCLE_HEALTHY",
+    "failure_state": "SCHEDULER_NOT_ACTIVE__MANUAL_RUN_ONLY",
+    "receipt_mode": "APPEND_ONLY__NO_OVERWRITE"
+  },
+  "production_permissions": {
+    "deploy_authorized": false,
+    "alias_mutation_authorized": false,
+    "automatic_rollback_authorized": false
+  }
+}

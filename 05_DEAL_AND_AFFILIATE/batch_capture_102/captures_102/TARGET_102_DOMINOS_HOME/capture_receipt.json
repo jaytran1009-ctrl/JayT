@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:19:05.326Z",
+  "target_id": "TARGET_102_DOMINOS_HOME",
+  "venue_name": "Domino's Pizza Vietnam",
+  "source_url": "https://dominos.vn/",
+  "district": "UNSPECIFIED",
+  "sector": "FNB_FASTFOOD",
+  "http_response": {
+    "status": 200,
+    "url": "https://dominos.vn/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.html",
+      "size_bytes": 76085,
+      "sha256": "33bc8189f388a4124b4454e4ac155b66baf37bc2102ef038a8d735693b5fac9a"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.txt",
+      "size_bytes": 809,
+      "sha256": "98c46ecb89d719279935ad0de920a96718ba04aa0b3d657859103effd3a31a71"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.png",
+      "size_bytes": 1672516,
+      "sha256": "43052c881b8afa30ce444e00c0e8bfe63172bf29554acd42a833779f02f1a737"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

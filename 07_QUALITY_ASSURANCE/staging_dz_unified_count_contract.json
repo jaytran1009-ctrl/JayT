@@ -1,0 +1,73 @@
+{
+  "version": "v3.454.0-staging.dz",
+  "generated_at": "2026-08-30T08:58:38.572Z",
+  "governing_directive": "JAYT-245 Section DZ",
+  "ledger_fingerprint": {
+    "ledger_id": "JAYT_PUBLIC_COUNT_LEDGER_DZ_20260830",
+    "ledger_sha256": "772f6eea30ad8c90c6fc21dc6ddc580f5c966e9de5ba6d94f2e37af2fa5081b2",
+    "version": "v3.454.0-staging.dz"
+  },
+  "namespace_glossary": {
+    "public_feed_total": "Tổng số lượng mục nội dung công khai trong bảng cẩm nang (chính xác 50 items).",
+    "directory_navigation_label": "Nhãn nút 'Khám phá (50)' biểu thị toàn bộ 50 mục phân tầng.",
+    "wallet_navigation_label": "Nhãn nút 'Chương Trình (13)' biểu thị 13 mục trong ví quyền lợi (10 Cổng chính thức + 3 Kênh theo dõi).",
+    "journey_partition_counters": "4 bộ phân vùng rời rạc (Disjoint Sets) với tổng số lượng chính xác 11 + 14 + 13 + 12 = 50, giao nhau = 0.",
+    "copy_provenance_status": "100% copy T2 đã được làm sạch, không chứa claim điều kiện chưa có locator byte-level."
+  },
+  "public_storefront_feed": {
+    "total_active_items": 50,
+    "breakdown_by_tier": {
+      "TIER_1_DEAL": 0,
+      "TIER_2_PROGRAMME": 20,
+      "TIER_3_UTILITY": 14,
+      "TIER_4_RADAR": 16
+    },
+    "directory_navigation_label": "Khám phá (50)",
+    "wallet_navigation_label": "Chương Trình (13)"
+  },
+  "wallet_entries_breakdown": {
+    "total_entries": 13,
+    "LANE_CONG_CHINH_THUC": 10,
+    "LANE_THEO_DOI": 3
+  },
+  "journey_disjoint_partitions": {
+    "an_gi": {
+      "count": 11,
+      "label": "11 Địa điểm ẩm thực dẫn nguồn",
+      "namespace": "FEED_PRIMARY_JOURNEY_AN_GI"
+    },
+    "di_dau": {
+      "count": 14,
+      "label": "14 Điểm tham quan & rạp chiếu",
+      "namespace": "FEED_PRIMARY_JOURNEY_DI_DAU"
+    },
+    "tien_ich": {
+      "count": 13,
+      "label": "13 Tiện ích công cộng TP. Đà Nẵng",
+      "namespace": "FEED_PRIMARY_JOURNEY_TIEN_ICH"
+    },
+    "mua_sam_hoc_tap": {
+      "count": 12,
+      "label": "12 Cổng chính sách & học đường",
+      "namespace": "FEED_PRIMARY_JOURNEY_MUA_SAM"
+    }
+  },
+  "pipeline_scorecard": {
+    "DISCOVERY_LEAD": 1,
+    "CAPTURE_RETRY_REQUIRED": 1,
+    "CANONICAL_SOURCE_FOUND": 7,
+    "CAPTURE_PENDING": 5,
+    "EVIDENCE_COMPLETE": 0,
+    "PUBLIC_TOTAL_ACTIVE": 50,
+    "T1_DEAL_ELIGIBLE": 0
+  },
+  "reconciliation_checks": {
+    "sum_tiers_equals_total_public": true,
+    "sum_journey_partitions_equals_50": true,
+    "pairwise_intersections_zero": true,
+    "wallet_lanes_equals_wallet_total": true,
+    "canonical_sources_match_vault_records": true,
+    "tier1_deals_fail_closed_zero": true,
+    "unverified_copy_claims_quarantined": true
+  }
+}

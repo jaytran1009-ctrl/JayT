@@ -1,0 +1,20 @@
+{
+  "exception_id": "JAYT_323_B11_01_PROVENANCE_EXCEPTION",
+  "detected_at_utc": "2026-09-04T15:35:00Z",
+  "subject": "B11_01 Staging hydration governance chain",
+  "facts": {
+    "canonical_approval_id": "JAYT_323_B11_01_PUBLIC_APPROVAL_STAGING_ONLY",
+    "canonical_approval_timestamp_utc": "2026-09-04T15:30:00Z",
+    "receipt_approval_reference": "CEO-JAYT-323-B11-01-STAGING-ONLY",
+    "receipt_evaluated_at_utc": "2026-09-04T15:17:43.806Z"
+  },
+  "verdict": "PROVENANCE_SEQUENCE_INCONSISTENT__PROMOTION_BLOCKED_PENDING_RECONCILIATION",
+  "controls": {
+    "staging_artifact_preserved": true,
+    "production_promotion_authorized": false,
+    "release_candidate_inclusion_authorized": false,
+    "registry_rewrite_authorized": false,
+    "historical_receipt_rewrite_authorized": false
+  },
+  "required_resolution": "Issue a separately timestamped reconciliation attestation that identifies the actual approver, preserves the original receipt unchanged, and determines whether B11_01 must be re-reviewed before any future release candidate inclusion."
+}

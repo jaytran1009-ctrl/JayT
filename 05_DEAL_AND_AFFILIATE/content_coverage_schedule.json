@@ -1,0 +1,308 @@
+{
+  "$schema": "https://jayt.vn/schemas/content-coverage-schedule.v1.json",
+  "version": "1.1.0",
+  "work_order": "JAYT-CONTENT-COVERAGE-RUNTIME-042A",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "description": "Lịch trình chu kỳ thu thập dữ liệu tự động theo batch phục vụ 'Lịch hôm nay' cho Đà Nẵng",
+  "operational_principles": [
+    "Khám phá ưu tiên URL khuyến mãi chi tiết công khai (/khuyen-mai, /uu-dai, /combo, /gia-ve), không chỉ trang chủ",
+    "Tách biệt rõ ràng 4 job cron: 08:00, 16:30, T2 06:00, Ngày 1 hằng tháng 00:00",
+    "Áp dụng chuẩn Tri-State: PROMOTION_DETAIL (review), NO_PUBLIC_PROMO/GENERIC_MARKETING (ghi nhận), CHALLENGE/NOT_FOUND/DYNAMIC (recheck)",
+    "Bảo toàn chuỗi liên kết hai chiều 1-1 giữa candidate và capture receipt",
+    "Bảo toàn lịch sử revision lineage (REV_040_SYNTHETIC -> REV_041_REAL_CAPTURE -> REV_042_BATCH)",
+    "Fail-Closed: Mọi nguồn không đủ điều kiện công khai giữ nguyên render_eligible: false và deal_price: null",
+    "Zero-Mutation Boundary: Tuyệt đối không tự import deal, không tự thay đổi READY_FOR_CEO_REVIEW, không mở khóa production"
+  ],
+  "cycles": {
+    "DAILY_MORNING_0800": {
+      "frequency": "DAILY_MORNING",
+      "cron_schedule": "0 8 * * *",
+      "time_slot": "08:00:00+07:00",
+      "focus": "Quét ưu đãi trước bữa trưa: Food delivery (ShopeeFood, GrabFood), combo ăn trưa và sàn TMĐT",
+      "target_categories": [
+        "LOCAL_FOOD_DELIVERY",
+        "ECOMMERCE_SHOPEE",
+        "ECOMMERCE_LAZADA",
+        "ECOMMERCE_TIKTOK",
+        "IMMINENT_DAY_OF_WEEK"
+      ],
+      "brands": [
+        "SHOPEEFOOD",
+        "GRABFOOD",
+        "SHOPEE",
+        "LAZADA",
+        "TIKTOK"
+      ]
+    },
+    "DAILY_EVENING_1630": {
+      "frequency": "DAILY_EVENING",
+      "cron_schedule": "30 16 * * *",
+      "time_slot": "16:30:00+07:00",
+      "focus": "Quét ưu đãi trước tan ca / tối: Rạp phim tối, Flash sale sàn TMĐT giờ vàng và tụ tập bạn bè",
+      "target_categories": [
+        "ECOMMERCE_SHOPEE",
+        "ECOMMERCE_LAZADA",
+        "ECOMMERCE_TIKTOK",
+        "LOCAL_CINEMA",
+        "LOCAL_FOOD_DELIVERY"
+      ],
+      "brands": [
+        "SHOPEE",
+        "LAZADA",
+        "TIKTOK",
+        "CGV",
+        "GALAXY",
+        "METIZ",
+        "SHOPEEFOOD",
+        "GRABFOOD"
+      ]
+    },
+    "WEEKLY_LOCAL_SCHEDULE": {
+      "frequency": "WEEKLY",
+      "cron_schedule": "0 6 * * 1",
+      "time_slot": "Monday 06:00:00+07:00",
+      "focus": "Rạp phim, F&B, Cà phê / Trà sữa có ưu đãi lặp định kỳ theo thứ trong tuần hoặc khung giờ cố định",
+      "target_categories": [
+        "LOCAL_CINEMA",
+        "LOCAL_FASTFOOD",
+        "LOCAL_COFFEE_TEA"
+      ],
+      "brands": [
+        "CGV",
+        "GALAXY",
+        "METIZ",
+        "JOLLIBEE",
+        "LOTTERIA",
+        "HIGHLANDS",
+        "PHELA",
+        "KATINAT",
+        "STARBUCKS",
+        "THE_COFFEE_HOUSE",
+        "GONG_CHA"
+      ]
+    },
+    "MONTHLY_GOVERNANCE_AND_BASE_TERMS": {
+      "frequency": "MONTHLY",
+      "cron_schedule": "0 0 1 * *",
+      "time_slot": "1st day of month 00:00:00+07:00",
+      "focus": "Rà soát toàn diện điều khoản thẻ thành viên, bảng giá nền, chính sách học sinh/sinh viên U22, hạn domain allowlist và mapping zone catalog",
+      "target_categories": [
+        "MEMBERSHIP_POLICIES",
+        "BASE_PRICE_CARDS",
+        "GOVERNANCE_AUDIT"
+      ],
+      "brands": [
+        "ALL_REGISTERED_BRANDS"
+      ]
+    }
+  },
+  "deep_url_registry": [
+    {
+      "brand_id": "CGV",
+      "category": "LOCAL_CINEMA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://www.cgv.vn/default/culture-day-2026/",
+        "https://www.cgv.vn/default/movies/now-showing.html",
+        "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza"
+      ]
+    },
+    {
+      "brand_id": "GALAXY",
+      "category": "LOCAL_CINEMA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://www.galaxycine.vn/khuyen-mai/",
+        "https://www.galaxycine.vn/khuyen-mai/happy-day/",
+        "https://www.galaxycine.vn/khuyen-mai/u22/"
+      ]
+    },
+    {
+      "brand_id": "METIZ",
+      "category": "LOCAL_CINEMA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://metiz.vn/khuyen-mai/",
+        "https://metiz.vn/gia-ve/",
+        "https://metiz.vn/tin-tuc/"
+      ]
+    },
+    {
+      "brand_id": "JOLLIBEE",
+      "category": "LOCAL_FASTFOOD",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://jollibee.com.vn/khuyen-mai",
+        "https://jollibee.com.vn/thuc-don/combo-tiet-kiem"
+      ]
+    },
+    {
+      "brand_id": "LOTTERIA",
+      "category": "LOCAL_FASTFOOD",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://www.lotteria.vn/promotions",
+        "https://www.lotteria.vn/menu/combo"
+      ]
+    },
+    {
+      "brand_id": "HIGHLANDS",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://www.highlandscoffee.com.vn/vn/khuyen-mai.html",
+        "https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html"
+      ]
+    },
+    {
+      "brand_id": "PHELA",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://phela.vn/uu-dai/",
+        "https://phela.vn/tin-tuc/"
+      ]
+    },
+    {
+      "brand_id": "KATINAT",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://katinat.vn/khuyen-mai/",
+        "https://katinat.vn/tin-tuc/"
+      ]
+    },
+    {
+      "brand_id": "STARBUCKS",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://www.starbucks.vn/promotions/",
+        "https://www.starbucks.vn/rewards/"
+      ]
+    },
+    {
+      "brand_id": "THE_COFFEE_HOUSE",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://thecoffeehouse.com/pages/khuyen-mai",
+        "https://thecoffeehouse.com/blogs/news"
+      ]
+    },
+    {
+      "brand_id": "GONG_CHA",
+      "category": "LOCAL_COFFEE_TEA",
+      "priority_cycles": [
+        "WEEKLY_LOCAL_SCHEDULE"
+      ],
+      "discovery_urls": [
+        "https://gongcha.com.vn/khuyen-mai/"
+      ]
+    },
+    {
+      "brand_id": "SHOPEE",
+      "category": "ECOMMERCE_SHOPEE",
+      "priority_cycles": [
+        "DAILY_MORNING_0800",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://shopee.vn/m/ma-giam-gia",
+        "https://shopee.vn/flash_sale"
+      ]
+    },
+    {
+      "brand_id": "LAZADA",
+      "category": "ECOMMERCE_LAZADA",
+      "priority_cycles": [
+        "DAILY_MORNING_0800",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://www.lazada.vn/voucher/",
+        "https://www.lazada.vn/flash-sale/"
+      ]
+    },
+    {
+      "brand_id": "TIKTOK",
+      "category": "ECOMMERCE_TIKTOK",
+      "priority_cycles": [
+        "DAILY_MORNING_0800",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://www.tiktok.com/@tiktokshop_vietnam"
+      ]
+    },
+    {
+      "brand_id": "SHOPEEFOOD",
+      "category": "LOCAL_FOOD_DELIVERY",
+      "priority_cycles": [
+        "DAILY_MORNING_0800",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://shopeefood.vn/da-nang",
+        "https://shopeefood.vn/khuyen-mai"
+      ]
+    },
+    {
+      "brand_id": "GRABFOOD",
+      "category": "LOCAL_FOOD_DELIVERY",
+      "priority_cycles": [
+        "DAILY_MORNING_0800",
+        "DAILY_EVENING_1630"
+      ],
+      "discovery_urls": [
+        "https://www.grab.com/vn/food/",
+        "https://www.grab.com/vn/promotions/"
+      ]
+    }
+  ],
+  "tri_state_result_rules": {
+    "STATE_1_PROMOTION_DETAIL": {
+      "criteria": "Có trang khuyến mãi chi tiết công khai, ghi nhận rõ giá ưu đãi, thời hạn, điều kiện áp dụng",
+      "candidate_action": "Tạo hoặc cập nhật Candidate JSON với revision mới",
+      "readiness_state": "READY_FOR_CEO_REVIEW",
+      "eligible_for_staging_review": true
+    },
+    "STATE_2_NO_PUBLIC_PROMO_OR_GENERIC": {
+      "criteria": "Trang thông tin sản phẩm, giới thiệu chung, menu chuẩn, banner sự kiện không có giá/hạn cụ thể cho chi nhánh Đà Nẵng",
+      "candidate_action": "Ghi nhận trạng thái bằng chứng trung thực, không tự gán giá/voucher giả định",
+      "readiness_state": "NEEDS_RECHECK",
+      "render_eligible": false,
+      "deal_price": null
+    },
+    "STATE_3_CHALLENGE_OR_NOT_FOUND_OR_DYNAMIC": {
+      "criteria": "Bị chặn bởi anti-bot/Cloudflare, trang 404, hoặc voucher cá nhân hóa trong app yêu cầu đăng nhập",
+      "candidate_action": "Ghi nhận mã capture receipt và lý do kỹ thuật chi tiết",
+      "readiness_state": "NEEDS_RECHECK",
+      "render_eligible": false,
+      "deal_price": null
+    }
+  }
+}

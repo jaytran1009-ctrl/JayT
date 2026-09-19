@@ -1,0 +1,67 @@
+{
+  "receipt_id": "STAGING_RELEASE_RECEIPT_v34224_STAGING_BE_20260829",
+  "environment": "STAGING_REVIEW_BE",
+  "version": "v3.422.4-staging.be",
+  "deployment_id": "dpl_8yyEWsSEumyKf3UzM52apvVmF73b",
+  "deployment_url": "https://jayt-storefront-staging-be.vercel.app",
+  "inspection_url": "https://vercel.com/kuntran777-6857s-projects/jayt-storefront-staging-be/8yyEWsSEumyKf3UzM52apvVmF73b",
+  "deployed_at": "2026-08-29T05:51:48.358Z",
+  "target": "staging_candidate",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BE)",
+  "locked_production_baseline": "v3.419.0",
+  "css_component_contract": {
+    "contract_manifest": "00_PROGRAM_BASELINE/JAYT_CSS_COMPONENT_CONTRACT_BE.json",
+    "stylesheet_file": "styles.css",
+    "stylesheet_size_bytes": 22188,
+    "stylesheet_sha256": "6d681bba51e617a2a32afc9b14934a2a97e821ee86107a98547d80737a1c8672",
+    "status": "100_PERCENT_MATCHED_AND_BOUND"
+  },
+  "package_integrity": {
+    "entrypoint_html": {
+      "file": "index.html",
+      "size_bytes": 1198,
+      "sha256": "c4083f7efd3e451106cab4a3709826ceb396ff2e2a26532f09f902ec0d456ac5"
+    },
+    "storefront_js": {
+      "file": "jayt_storefront_staging_be.js",
+      "size_bytes": 81887,
+      "sha256": "a0e2a2e5affb216088a06ddf474e8ba3eec9a9eb9e198d8a77798ce0e0f0f0b1"
+    },
+    "stylesheet_css": {
+      "file": "styles.css",
+      "size_bytes": 22188,
+      "sha256": "6d681bba51e617a2a32afc9b14934a2a97e821ee86107a98547d80737a1c8672"
+    }
+  },
+  "visual_and_a11y_verification": {
+    "target_url": "https://jayt-storefront-staging-be.vercel.app",
+    "top_nav_sticky": true,
+    "gateways_grid_display": "grid",
+    "cards_grid_display": "grid",
+    "editorial_card_border_radius": "16px",
+    "nav_btn_height_px": 44,
+    "card_primary_cta_height_px": 55,
+    "mobile_bottom_nav_fixed": true,
+    "mobile_nav_btn_size_px": "48x48",
+    "horizontal_overflow_desktop": false,
+    "horizontal_overflow_mobile": false,
+    "screenshots": {
+      "desktop_full": "07_QUALITY_ASSURANCE/screenshots/staging_be_desktop.png",
+      "desktop_top": "07_QUALITY_ASSURANCE/screenshots/staging_be_desktop_top.png",
+      "desktop_mid": "07_QUALITY_ASSURANCE/screenshots/staging_be_desktop_mid.png",
+      "desktop_footer": "07_QUALITY_ASSURANCE/screenshots/staging_be_desktop_footer.png",
+      "mobile_top": "07_QUALITY_ASSURANCE/screenshots/staging_be_mobile_top.png",
+      "mobile_full": "07_QUALITY_ASSURANCE/screenshots/staging_be_mobile_390px.png"
+    }
+  },
+  "state_truth_summary": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "field_level_render_gate_enforced": true,
+    "unproven_pricing_removed_from_rendered_dom": true
+  }
+}

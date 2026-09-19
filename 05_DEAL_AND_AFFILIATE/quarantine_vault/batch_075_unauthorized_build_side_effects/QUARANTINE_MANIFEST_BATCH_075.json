@@ -1,0 +1,200 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "manifest_id": "QUARANTINE_MANIFEST_BATCH_075",
+  "work_order": "JAYT-075R-RELEASE-DRILL-CONTAINMENT",
+  "quarantine_reason": "075 REJECTED: Automated test perform_public_beta_release_075.js had state-mutating side effects (auto sealed builds, backups, release pack creation).",
+  "quarantined_at": "2026-08-24T09:14:31.057Z",
+  "snapshot_byte_for_byte_persisted": true,
+  "total_files_quarantined": 27,
+  "items": [
+    {
+      "filename": "JAYT_PUBLIC_BETA_RELEASE_PACK_075.md",
+      "type": "UNAUTHORIZED_RELEASE_PACK_MD",
+      "size_bytes": 2768,
+      "sha256": "0a2d36352f7e0796674461eb219c624f85c1f9f3d71979c7de01467f25501fd6",
+      "quarantine_reason": "Release pack generated automatically during test execution instead of human approval."
+    },
+    {
+      "filename": "JAYT_PUBLIC_BETA_RELEASE_PACK_075.json",
+      "type": "UNAUTHORIZED_RELEASE_PACK_JSON",
+      "size_bytes": 373,
+      "sha256": "c80e7367bbcb515a81c17833d559779e8a0f036f116c38eb57f4a6e8d33ebbe5",
+      "quarantine_reason": "Release pack JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BACKUP-BETA-075-1787562493269.json",
+      "type": "UNAUTHORIZED_BACKUP_SNAPSHOT",
+      "size_bytes": 4662,
+      "sha256": "cc458d45812483ad3796b2b2b2c0a4ab453d30689e56b39a92b8c92357614917",
+      "quarantine_reason": "Backup JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BACKUP-BETA-075-1787562513265.json",
+      "type": "UNAUTHORIZED_BACKUP_SNAPSHOT",
+      "size_bytes": 4662,
+      "sha256": "a5ffd92d9ccf4abfbccdf588089abfee05d58c9fe2bf7e34abef8d546666eac3",
+      "quarantine_reason": "Backup JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BACKUP-BETA-075-1787562545125.json",
+      "type": "UNAUTHORIZED_BACKUP_SNAPSHOT",
+      "size_bytes": 4662,
+      "sha256": "ac41d5a8921d4bc530b7d310224a9c7aabf0d3e49a48389eb990982214658732",
+      "quarantine_reason": "Backup JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BACKUP-BETA-075-1787562739595.json",
+      "type": "UNAUTHORIZED_BACKUP_SNAPSHOT",
+      "size_bytes": 4854,
+      "sha256": "4a4bb35f455dea9ee78a72ac80ffdf7be5c8904daa44c50a76c83129df435f4e",
+      "quarantine_reason": "Backup JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BACKUP-BETA-075-1787562813797.json",
+      "type": "UNAUTHORIZED_BACKUP_SNAPSHOT",
+      "size_bytes": 4854,
+      "sha256": "7c20236e425e4b5e5d7c82c066fe0aa7c85e1ff171cf55b06cb417432d9d4e5b",
+      "quarantine_reason": "Backup JSON generated automatically during test execution."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562493234_index.html",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 4218,
+      "sha256": "9b5636f80d746c17cd7963a4de11f57cf2c56ad0e34c0ae2227634ab0d5b4926",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562493234_jayt_apex_interface.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 65375,
+      "sha256": "0f2a45e84a6f287d90c721d960ee1595dfe7150828a18559994335b023a6c901",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562493234_jayt_eligibility_engine.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 7296,
+      "sha256": "4251b8329199901d4c7be28043c3af6f422fe1e9586416ca31cb3be0eeda900b",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562493234_jayt_production_server.py",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 51428,
+      "sha256": "4393ed94c1155a30f99dea3561b076521d8ec827aca41ec8abf9cb78ee2c1e93",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562493234_SEALED_MANIFEST.json",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 822,
+      "sha256": "a436468db1f397d56321bd35bbe9bd6deee2a1b126c4b5d835f8bc58633bcc23",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562513230_index.html",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 4218,
+      "sha256": "9b5636f80d746c17cd7963a4de11f57cf2c56ad0e34c0ae2227634ab0d5b4926",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562513230_jayt_apex_interface.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 65375,
+      "sha256": "0f2a45e84a6f287d90c721d960ee1595dfe7150828a18559994335b023a6c901",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562513230_jayt_eligibility_engine.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 7296,
+      "sha256": "4251b8329199901d4c7be28043c3af6f422fe1e9586416ca31cb3be0eeda900b",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562513230_jayt_production_server.py",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 51428,
+      "sha256": "4393ed94c1155a30f99dea3561b076521d8ec827aca41ec8abf9cb78ee2c1e93",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562513230_SEALED_MANIFEST.json",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 822,
+      "sha256": "8f696dda580bb637987982b804940a8b037124a5f7fc1fa08bc37ac60336d843",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562545086_index.html",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 4218,
+      "sha256": "9b5636f80d746c17cd7963a4de11f57cf2c56ad0e34c0ae2227634ab0d5b4926",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562545086_jayt_apex_interface.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 65375,
+      "sha256": "0f2a45e84a6f287d90c721d960ee1595dfe7150828a18559994335b023a6c901",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562545086_jayt_eligibility_engine.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 7296,
+      "sha256": "4251b8329199901d4c7be28043c3af6f422fe1e9586416ca31cb3be0eeda900b",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562545086_jayt_production_server.py",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 51428,
+      "sha256": "4393ed94c1155a30f99dea3561b076521d8ec827aca41ec8abf9cb78ee2c1e93",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562545086_SEALED_MANIFEST.json",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 822,
+      "sha256": "d311b244cd0bd1501973df8237c70f75663c33751ded34bcaddfd952abd0152c",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562739559_index.html",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 4218,
+      "sha256": "9b5636f80d746c17cd7963a4de11f57cf2c56ad0e34c0ae2227634ab0d5b4926",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562739559_jayt_apex_interface.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 65375,
+      "sha256": "0f2a45e84a6f287d90c721d960ee1595dfe7150828a18559994335b023a6c901",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562739559_jayt_eligibility_engine.js",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 7296,
+      "sha256": "4251b8329199901d4c7be28043c3af6f422fe1e9586416ca31cb3be0eeda900b",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562739559_jayt_production_server.py",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 51428,
+      "sha256": "4393ed94c1155a30f99dea3561b076521d8ec827aca41ec8abf9cb78ee2c1e93",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    },
+    {
+      "filename": "BUILD-SEALED-047-1787562739559_SEALED_MANIFEST.json",
+      "type": "UNAUTHORIZED_SEALED_BUILD_ARTIFACT",
+      "size_bytes": 822,
+      "sha256": "1420b09b6153a487792654df290b4bc4cc7eb403c03ddfd411f2762f5e1fa413",
+      "quarantine_reason": "Sealed build artifact generated as test side-effect."
+    }
+  ]
+}

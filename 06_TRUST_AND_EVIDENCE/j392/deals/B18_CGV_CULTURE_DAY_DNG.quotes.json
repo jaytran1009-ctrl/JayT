@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.2.0",
+  "work_order": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "deal_index": 3,
+  "offer_id": "B18_CGV_CULTURE_DAY_DNG",
+  "brand": "CGV Cinemas",
+  "category": "CINEMA",
+  "title": "CGV Culture Day — Đồng Giá 58.000đ CGV Vĩnh Trung Plaza Đà Nẵng",
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "now_showing_ref": "Thứ Hai cuối cùng của tháng, chu kỳ 2026",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_03_cgv_culture_day.html",
+    "file_sha256": "f8f1fe1922c945bf9b84e0860fd498f68a37e33e9e86be5784234d498a75e3eb",
+    "file_bytes": 55213,
+    "captured_timestamp_utc": "2026-08-22T07:25:39.000Z",
+    "official_source_url": "https://cgv.vn/default/newsoffer/cgv-culture-day-2026/",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "screenshot_evidence": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_03_cgv_culture_day_capture.png",
+    "file_sha256": "73cae9e1c2b44217bdf55cb666e242229fca9c3b2c7dea0bdb6852a82d412175",
+    "file_bytes": 638493,
+    "dimensions": {
+      "width": 1280,
+      "height": 2019
+    },
+    "capture_tool": "playwright_headless_chromium"
+  },
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "deduplicated_unique_offer": true,
+    "finding": "All 4 predicates verified verbatim at exact byte offsets in physical source HTML. Screenshot bytes, SHA-256, viewport and canonical URL verified. Zero jayt.vn leak."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "<strong>58.000đ</strong><br>/Vé",
+      "byte_offset_start": 42519,
+      "byte_offset_end": 42552,
+      "byte_length": 33,
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "Thứ Hai – 24/08/2026",
+      "byte_offset_start": 42019,
+      "byte_offset_end": 42043,
+      "byte_length": 24,
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "CGV Vĩnh Trung Plaza",
+      "byte_offset_start": 43133,
+      "byte_offset_end": 43154,
+      "byte_length": 21,
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "Áp dụng cho khách hàng đặt vé trực tuyến (online) hoặc tại quầy.",
+      "byte_offset_start": 46259,
+      "byte_offset_end": 46342,
+      "byte_length": 83,
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "OFFICIAL_SCHEDULE_APP_COUNTER",
+    "button_label": "Xem Lịch Chiếu & Đặt Vé Rạp CGV",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

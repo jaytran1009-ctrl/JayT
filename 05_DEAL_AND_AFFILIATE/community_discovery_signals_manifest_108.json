@@ -1,0 +1,882 @@
+{
+  "manifest_id": "COMMUNITY_DISCOVERY_SIGNALS_MANIFEST_108R",
+  "work_order": "JAYT-108R-SUPPLY-TRUTH-AND-CANONICALIZATION",
+  "generated_at": "2026-08-25T11:19:42.182Z",
+  "containment_policy": {
+    "rule_1": "Toàn bộ 18 địa điểm Cobalt đồng nhất 1-1 với four_layer_dataset.json và evidence_pointer on-disk",
+    "rule_2": "Các seed chưa capture có trạng thái UNCAPTURED_DISCOVERY_SEED và evidence_pointer: null",
+    "rule_3": "Các mục đã capture có trạng thái SIGNAL_ONLY kèm SHA-256 tệp text và ảnh chụp",
+    "rule_4": "Không chứa bất kỳ claim giá, voucher, discount % giả định nào",
+    "rule_5": "deals_feed.json: [] và is_approved: false"
+  },
+  "summary_metrics": {
+    "total_standardized_cobalt_venues": 18,
+    "total_discovery_items": 32,
+    "total_captured_signals": 26,
+    "total_uncaptured_seeds": 6
+  },
+  "standardized_cobalt_venues": [
+    {
+      "id": "VLOC_01_METIZ_HELIO",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "district": "Hải Châu",
+      "venue_name": "Metiz Cinema Đà Nẵng",
+      "street_address": "Số 01 Đường 2 Tháng 9, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+      "official_source_url": "https://metiz.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_224/page.txt",
+        "artifact_sha256": "7f6664b06e3a44c795c110bdcec96c0f28932882648599985ca96fe0493cf123",
+        "quote": "Địa điểm: Số 01 Đường 2 Tháng 9, Hải Châu, Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_02_PHELA_BACH_DANG",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "district": "Hải Châu",
+      "venue_name": "Phê La - Bạch Đằng",
+      "street_address": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+      "official_source_url": "https://phela.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_177/page.txt",
+        "artifact_sha256": "1e3c872066d247909b27c5cbe7ff4b5b8f5e6b9457ca9b7ac85d2e2322552c23",
+        "quote": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_03_PHELA_NVL",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "district": "Hải Châu",
+      "venue_name": "Phê La - Nguyễn Văn Linh",
+      "street_address": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+      "official_source_url": "https://phela.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_137/page.txt",
+        "artifact_sha256": "f11cd3a4cfa6a1e31b34561321177bcf132bca090ad1488edf3fe6304c28ec1d",
+        "quote": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_04_GONGCHA_NVL",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "district": "Hải Châu",
+      "venue_name": "Gong Cha - Nguyễn Văn Linh",
+      "street_address": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng.",
+      "official_source_url": "https://gongcha.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_149/page.txt",
+        "artifact_sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86",
+        "quote": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng."
+      }
+    },
+    {
+      "id": "VLOC_05_JOLLIBEE_TIEU_LA",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hải Châu",
+      "venue_name": "Jollibee Tiểu La",
+      "street_address": "32 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_06_JOLLIBEE_DONG_DA",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hải Châu",
+      "venue_name": "Jollibee Đống Đa",
+      "street_address": "254 Đống Đa, Phường Thuận Phước, Quận Hải Châu, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_07_JOLLIBEE_PHAN_DANG_LUU",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hải Châu",
+      "venue_name": "Jollibee Phan Đăng Lưu",
+      "street_address": "126 Phan Đăng Lưu, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_08_CGV_VINCOM",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "district": "Sơn Trà",
+      "venue_name": "CGV Vincom Đà Nẵng",
+      "street_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng",
+      "official_source_url": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_002/page.txt",
+        "artifact_sha256": "c0074291e8dc06d7191f62dca149b4c49b1cfe1c66bf01c7b56c3b9262b4c76d",
+        "quote": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_09_JOLLIBEE_VINCOM",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Sơn Trà",
+      "venue_name": "Jollibee Vincom Đà Nẵng",
+      "street_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_10_CGV_VINH_TRUNG",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "district": "Thanh Khê",
+      "venue_name": "CGV Vĩnh Trung Plaza",
+      "street_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+      "official_source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_001/page.txt",
+        "artifact_sha256": "be52ed70ccd17b4b34884965fd720af929684f2909cef4a6ecfbb35d3711ea6e",
+        "quote": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_11_GALAXY_COOP",
+      "brand": "Galaxy Cinema",
+      "sector": "CINEMA",
+      "district": "Thanh Khê",
+      "venue_name": "Galaxy Cinema Co.opmart Đà Nẵng",
+      "street_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+      "official_source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_062/page.txt",
+        "artifact_sha256": "77f06a073192aa5183b7735a030812d5f3c08b3b6b8d7af0d20c1e77dabfd169",
+        "quote": "Địa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_12_GALAXY_CINEX_AEON",
+      "brand": "Galaxy Cinema",
+      "sector": "CINEMA",
+      "district": "Thanh Khê",
+      "venue_name": "Galaxy CineX AEON Mall Thanh Khê",
+      "street_address": "TTTM AEON Mall Thanh Khê, TP. Đà Nẵng",
+      "official_source_url": "https://galaxycine.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088c/captures_088c/TARGET_088C_591/page.txt",
+        "artifact_sha256": "89ea1774bcd0cdeee1b5954d0a718b66f347783b2a46bc4d8df426bd4d01265f",
+        "quote": "Galaxy CineX AEON Mall Thanh Khê: Rạp Mới - Phim Hay - Quà Đã Tay"
+      }
+    },
+    {
+      "id": "VLOC_13_JOLLIBEE_LY_THAI_TO",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Thanh Khê",
+      "venue_name": "Jollibee Lý Thái Tổ",
+      "street_address": "99 Lý Thái Tổ, Phường Thạc Gián, Quận Thanh Khê, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_14_JOLLIBEE_NGUYEN_DUC_TRUNG",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Thanh Khê",
+      "venue_name": "Jollibee Nguyễn Đức Trung",
+      "street_address": "47 Nguyễn Đức Trung, Phường Hòa Khê, Quận Thanh Khê, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_15_CGV_MM_MEGA",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "venue_name": "CGV MM Mega Market Đà Nẵng",
+      "street_address": "Tầng 3, TTTM MM Mega Market Đà Nẵng, 167 Nguyễn Sinh Sắc, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng",
+      "official_source_url": "https://www.cgv.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_003/page.txt",
+        "artifact_sha256": "4eb5af7d88335e433e1989f408703d040d1136484b537a17116d0c79eb31f3c5",
+        "quote": "Tầng 3, Trung tâm thương mại MM Supercenter Đà Nẵng,Tầng 3, Trung Tâm Thương Mại MM Mega Market Đà Nẵng, 167 Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_16_JOLLIBEE_PHAM_NHU_XUONG",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "venue_name": "Jollibee Phạm Như Xương (Cụm ĐH Sư Phạm)",
+      "street_address": "10 Phạm Như Xương, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_17_JOLLIBEE_NGO_VAN_SO",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "venue_name": "Jollibee Ngô Văn Sở (Cụm ĐH Bách Khoa)",
+      "street_address": "02 Ngô Văn Sở, Phường Hòa Khánh Bắc, Quận Liên Chiểu, Đà Nẵng",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng"
+      }
+    },
+    {
+      "id": "VLOC_18_JOLLIBEE_MEGA_MARKET",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "district": "Hòa Khánh / Liên Chiểu",
+      "venue_name": "Jollibee MM Mega Market",
+      "street_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Liên Chiểu",
+      "official_source_url": "https://jollibee.com.vn/",
+      "status": "COBALT_VERIFIED_LOCATION",
+      "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+        "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+        "quote": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng"
+      }
+    }
+  ],
+  "public_discovery_signals": [
+    {
+      "signal_id": "TARGET_108_01_JOLLIBEE",
+      "brand": "Jollibee Vietnam",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Thực Đơn & Cửa Hàng Jollibee",
+      "signal_summary": "Thông tin hệ thống cửa hàng và thực đơn gà rán, mì Ý, burger chính hãng.",
+      "source_url": "https://jollibee.com.vn/",
+      "observed_at": "2026-08-25T11:17:11.622Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_01_JOLLIBEE",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_01_JOLLIBEE/page.txt",
+        "artifact_sha256": "072039da80ccf3bb7d01ddfe549def3bdb53cee87a665b58df0e124faf32d844",
+        "screenshot_sha256": "82ec73cf1074e457df84637e9685ec38a3888baf04df19c24e1fed23ad9adef9",
+        "captured_at": "2026-08-25T11:17:11.622Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_02_LOTTERIA",
+      "brand": "Lotteria Vietnam",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Cửa Hàng & Món Ăn Lotteria",
+      "signal_summary": "Thông tin hệ thống chuỗi cửa hàng thức ăn nhanh Lotteria tại Việt Nam.",
+      "source_url": "https://www.lotteria.vn/",
+      "observed_at": "2026-08-25T11:17:14.346Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_03_KFC",
+      "brand": "KFC Vietnam",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Thực Đơn & Dịch Vụ KFC",
+      "signal_summary": "Trang thông tin thực đơn gà rán truyền thống và combo dịch vụ của KFC Vietnam.",
+      "source_url": "https://www.kfcvietnam.com.vn/",
+      "observed_at": "2026-08-25T11:17:16.160Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_03_KFC",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_03_KFC/page.txt",
+        "artifact_sha256": "105c2c571c09d916a01911d28e51fd1650dc5c87a80e156696e6e3e7aaa38cac",
+        "screenshot_sha256": "73d45c16b37914f33a387ff2fafe1e21012fa7c19f3f26caec614b1de3ecfe4a",
+        "captured_at": "2026-08-25T11:17:16.160Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_04_KICHI",
+      "brand": "Kichi-Kichi",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Lẩu Băng Chuyền Kichi-Kichi",
+      "signal_summary": "Trang giới thiệu chuỗi lẩu băng chuyền và danh sách nhà hàng Kichi-Kichi.",
+      "source_url": "https://kichi.com.vn/",
+      "observed_at": "2026-08-25T11:17:18.658Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_04_KICHI",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_04_KICHI/page.txt",
+        "artifact_sha256": "c34e0d9d24f4efd61dc43449991d5cea5a6a280ebd5e57c842175ee4866fb039",
+        "screenshot_sha256": "7cf54bda4e610b5ca422f60772f742c3bcf09c8dd84d29431b6881bc2882eaf7",
+        "captured_at": "2026-08-25T11:17:18.658Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_05_GOGI",
+      "brand": "Gogi House",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Thịt Nướng Hàn Quốc Gogi House",
+      "signal_summary": "Trang thông tin nhà hàng thịt nướng chuẩn vị Hàn Quốc Gogi House.",
+      "source_url": "https://gogi.com.vn/",
+      "observed_at": "2026-08-25T11:17:20.418Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_05_GOGI",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_05_GOGI/page.txt",
+        "artifact_sha256": "1813e056f4786edcbbac3edfc4ebd951432566eaf09629ca98465aea22654ea5",
+        "screenshot_sha256": "d741949560abc21bf259be0ae04b7b8760de6c23e8628c02d87a58493ac080dc",
+        "captured_at": "2026-08-25T11:17:20.418Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_06_COM_NIEU_NHA_DO",
+      "brand": "Cơm Niêu Nhà Đỏ",
+      "category": "LUNCH",
+      "signal_title": "Kênh Thông Tin Ẩm Thực Cơm Niêu Nhà Đỏ Đà Nẵng",
+      "signal_summary": "Cổng thông tin ẩm thực truyền thống cơm niêu tại Đà Nẵng.",
+      "source_url": "https://comnieunhado.com/",
+      "observed_at": "2026-08-25T11:17:22.535Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_07_PHELA",
+      "brand": "Phê La",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Giới Thiệu Ô Long Đặc Sản Phê La",
+      "signal_summary": "Trang giới thiệu câu chuyện thương hiệu và các dòng trà ô long đặc sản Phê La.",
+      "source_url": "https://phela.vn/",
+      "observed_at": "2026-08-25T11:17:22.965Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_07_PHELA",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_07_PHELA/page.txt",
+        "artifact_sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4",
+        "screenshot_sha256": "2c464a34180f32343ceccf8bac2efb7f9093f6876f780314f243c5c5ade43286",
+        "captured_at": "2026-08-25T11:17:22.965Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_08_GONGCHA",
+      "brand": "Gong Cha Vietnam",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Thông Tin Trà Sữa & Cửa Hàng Gong Cha",
+      "signal_summary": "Trang thông tin chính hãng về các dòng trà sữa và hệ thống cửa hàng Gong Cha.",
+      "source_url": "https://gongcha.com.vn/",
+      "observed_at": "2026-08-25T11:17:25.845Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_08_GONGCHA",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_08_GONGCHA/page.txt",
+        "artifact_sha256": "db9be8c4a007a7a416f914522ee4d9ebdf318ff485026f0b8dae6a062b97b2d1",
+        "screenshot_sha256": "4b3ece97048487a028a2d5e8b267e5f34ad03ba231aa13870425f16a34bbc40e",
+        "captured_at": "2026-08-25T11:17:25.845Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_09_HIGHLANDS",
+      "brand": "Highlands Coffee",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Thông Tin Cà Phê & Điểm Hẹn Highlands Coffee",
+      "signal_summary": "Trang thông tin sản phẩm cà phê, freeze và chuỗi quán Highlands Coffee.",
+      "source_url": "https://www.highlandscoffee.com.vn/",
+      "observed_at": "2026-08-25T11:17:30.589Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_09_HIGHLANDS",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_09_HIGHLANDS/page.txt",
+        "artifact_sha256": "3410afc77fccba71d24db1c01c895ade59d7b20e1b18a04596a6a0b93bdd079e",
+        "screenshot_sha256": "0ad7fa5faa33b8063e287d0e387c81ef0eca999f7ca75d97e293fedd6c2986df",
+        "captured_at": "2026-08-25T11:17:30.589Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_10_TCH",
+      "brand": "The Coffee House",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Thông Tin Không Gian Cà Phê The Coffee House",
+      "signal_summary": "Trang giới thiệu không gian cà phê làm việc và thực đơn đồ uống The Coffee House.",
+      "source_url": "https://thecoffeehouse.com/",
+      "observed_at": "2026-08-25T11:17:32.579Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_10_TCH",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_10_TCH/page.txt",
+        "artifact_sha256": "31b5f5f508fa20dbd118059859a45191717a5c1a7f73c37e540c3e64b6901f32",
+        "screenshot_sha256": "5e561b7195c3597f1faf498d556f98e44c144f687f922315ffe93345b51437d0",
+        "captured_at": "2026-08-25T11:17:32.579Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_11_PHUCLONG",
+      "brand": "Phúc Long Coffee & Tea",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Thông Tin Trà & Cà Phê Truyền Thống Phúc Long",
+      "signal_summary": "Trang thông tin sản phẩm trà, cà phê đóng gói và thức uống pha chế Phúc Long.",
+      "source_url": "https://phuclong.com.vn/",
+      "observed_at": "2026-08-25T11:17:34.444Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_11_PHUCLONG",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_11_PHUCLONG/page.txt",
+        "artifact_sha256": "722a0051b90eee9be2a58b1459fa4e877082f699f34259090bc17411813b83b7",
+        "screenshot_sha256": "453ee042b7cd9a5025031fc3d58d8c99166e1bc3c5c3a2e7dfbfcaae5cc98bd3",
+        "captured_at": "2026-08-25T11:17:34.444Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_12_KATINAT",
+      "brand": "Katinat Saigon Kafe",
+      "category": "COFFEE_TEA",
+      "signal_title": "Kênh Thông Tin Không Gian & Đồ Uống Katinat",
+      "signal_summary": "Trang giới thiệu phong cách không gian thưởng thức và đồ uống Katinat Saigon Kafe.",
+      "source_url": "https://katinat.vn/",
+      "observed_at": "2026-08-25T11:17:36.384Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_12_KATINAT",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_12_KATINAT/page.txt",
+        "artifact_sha256": "4839c29df02e32c844b3ee0866bee78f1107cd876686563edf141a2e7c92eac0",
+        "screenshot_sha256": "bec968e1e562ad81d31b64311cad85110ad207ab96f5314c47ce65421ffe8f2c",
+        "captured_at": "2026-08-25T11:17:36.384Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_13_GALAXY",
+      "brand": "Galaxy Cinema",
+      "category": "CINEMA",
+      "signal_title": "Kênh Lịch Chiếu & Cụm Rạp Galaxy Cinema",
+      "signal_summary": "Trang tra cứu lịch chiếu phim và thông tin cụm rạp Galaxy Cinema trên toàn quốc.",
+      "source_url": "https://galaxycine.vn/",
+      "observed_at": "2026-08-25T11:17:44.456Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_13_GALAXY",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_13_GALAXY/page.txt",
+        "artifact_sha256": "88b6be6cda06bb52c0006ef929706564809e40850862d1c4ffbb50604984d34b",
+        "screenshot_sha256": "f978ee64aa1df70fe6a9ac183240e3cb62d43cb745bae78efab6c45e0c8ed7da",
+        "captured_at": "2026-08-25T11:17:44.456Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_14_CGV",
+      "brand": "CGV Cinemas",
+      "category": "CINEMA",
+      "signal_title": "Kênh Lịch Chiếu & Rạp Chiếu Phim CGV Cinemas",
+      "signal_summary": "Trang tra cứu thông tin phim đang chiếu, sắp chiếu và cụm rạp CGV Cinemas.",
+      "source_url": "https://www.cgv.vn/",
+      "observed_at": "2026-08-25T11:17:47.516Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_14_CGV",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_14_CGV/page.txt",
+        "artifact_sha256": "2352896a1000db4d1c11bbcaa202bc525949b3605d9dcd06403c895bf6db4bd2",
+        "screenshot_sha256": "ea51169b732b83338800b5c27a3ed7cf9dbdaec05a203e1173ff9ba088f3e7e7",
+        "captured_at": "2026-08-25T11:17:47.516Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_15_METIZ",
+      "brand": "Metiz Cinema",
+      "category": "CINEMA",
+      "signal_title": "Kênh Lịch Chiếu & Phòng Chiếu Phim Metiz Cinema",
+      "signal_summary": "Trang thông tin lịch chiếu và phòng chiếu phim tiêu chuẩn quốc tế tại Helio Đà Nẵng.",
+      "source_url": "https://metiz.vn/",
+      "observed_at": "2026-08-25T11:17:48.942Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_15_METIZ",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_15_METIZ/page.txt",
+        "artifact_sha256": "1117afa5e87cb4f79771e4e3c7eb88a5f186dd9de55c5e8bb53cfe6e82eb3776",
+        "screenshot_sha256": "61af3954c0381f21fd8bae1c2f754c46b71aac4bce599593dd2bb1977ea869a7",
+        "captured_at": "2026-08-25T11:17:48.942Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_16_LOTTE_CINEMA",
+      "brand": "Lotte Cinema",
+      "category": "CINEMA",
+      "signal_title": "Kênh Lịch Chiếu & Cụm Rạp Lotte Cinema",
+      "signal_summary": "Trang tra cứu lịch chiếu phim và hệ thống rạp chiếu Lotte Cinema tại Việt Nam.",
+      "source_url": "https://www.lottecinemavn.com/",
+      "observed_at": "2026-08-25T11:17:50.986Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_16_LOTTE_CINEMA",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_16_LOTTE_CINEMA/page.txt",
+        "artifact_sha256": "b930ae14e431de09320d8bd914bd6a109017b52b0ac3f2963c01177cf530dc9d",
+        "screenshot_sha256": "fc75fe1a52cb81db4bad04a489cc243588ae00c7370397448d5d71db3ebdbdbf",
+        "captured_at": "2026-08-25T11:17:50.986Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_17_STARLIGHT",
+      "brand": "Starlight Cinema",
+      "category": "CINEMA",
+      "signal_title": "Kênh Lịch Chiếu & Trung Tâm Giải Trí Starlight",
+      "signal_summary": "Trang thông tin giải trí điện ảnh và lịch chiếu cụm rạp Starlight Cinema.",
+      "source_url": "https://starlight.vn/",
+      "observed_at": "2026-08-25T11:17:54.536Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_17_STARLIGHT",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_17_STARLIGHT/page.txt",
+        "artifact_sha256": "10723679d5b5f7f3a93e160ca158748f1cf62d5598492533fce51dfbacdf62ba",
+        "screenshot_sha256": "9fe020e70bb0e6cff9db799e636c68049a08d6819dc344f44556d1bf344470a9",
+        "captured_at": "2026-08-25T11:17:54.536Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_18_CGV_U22",
+      "brand": "CGV Cinemas Vietnam",
+      "category": "CINEMA",
+      "signal_title": "Kênh Chính Sách Khách Hàng Thành Viên CGV Cinemas",
+      "signal_summary": "Trang quy định và quyền lợi dành cho tài khoản thành viên xem phim CGV.",
+      "source_url": "https://www.cgv.vn/",
+      "observed_at": "2026-08-25T11:17:56.540Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_18_CGV_U22",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_18_CGV_U22/page.txt",
+        "artifact_sha256": "2352896a1000db4d1c11bbcaa202bc525949b3605d9dcd06403c895bf6db4bd2",
+        "screenshot_sha256": "bb70b9921d3db034ff461749a8ff338c078451ad09de3de41fa43425354e70e5",
+        "captured_at": "2026-08-25T11:17:56.540Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_19_XANH_SM",
+      "brand": "Xanh SM",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Dịch Vụ Vận Chuyển Xe Điện Xanh SM",
+      "signal_summary": "Trang thông tin dịch vụ di chuyển taxi và xe máy thuần điện VinFast của Xanh SM.",
+      "source_url": "https://www.xanhsm.com/",
+      "observed_at": "2026-08-25T11:17:58.255Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_19_XANH_SM",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_19_XANH_SM/page.txt",
+        "artifact_sha256": "3b06d192db914334bed62c7baa355bcab3b6d98d1a915d793979a427ced3fb06",
+        "screenshot_sha256": "31254add0d51face19ff5f12690e51dc157ab73730b8cd2efc8f171992c9fe25",
+        "captured_at": "2026-08-25T11:17:58.255Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_20_GRAB",
+      "brand": "Grab Vietnam",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Dịch Vụ Di Chuyển & Đặt Xe Grab",
+      "signal_summary": "Cổng thông tin các dịch vụ đặt xe máy GrabBike và taxi GrabCar tại Việt Nam.",
+      "source_url": "https://www.grab.com/vn/",
+      "observed_at": "2026-08-25T11:18:00.257Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_20_GRAB",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_20_GRAB/page.txt",
+        "artifact_sha256": "155a71b11ddfe632112842851623590f8270ca3d58906a269bb24d56c7f6f502",
+        "screenshot_sha256": "c50f04ab6ca0a270c5b3cf6079ec292f062e7c70dc98e2027f4466a170bb753b",
+        "captured_at": "2026-08-25T11:18:00.257Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_21_BE",
+      "brand": "Be Group",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Dịch Vụ Vận Tải Công Nghệ Be Group",
+      "signal_summary": "Trang thông tin ứng dụng tiêu dùng đa dịch vụ và vận tải beBike, beCar.",
+      "source_url": "https://be.com.vn/",
+      "observed_at": "2026-08-25T11:18:02.293Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_21_BE",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_21_BE/page.txt",
+        "artifact_sha256": "25d3b488036ec9543b038beb2d5c7f697ff5f6b0e68ffba1b6ca875b7b534e9c",
+        "screenshot_sha256": "210655a55d5c638fdbe97da43ee093e87d43b0cb7594a5b8905189820cbae128",
+        "captured_at": "2026-08-25T11:18:02.293Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_22_DANABUS",
+      "brand": "DanaBus Đà Nẵng",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Tra Cứu Tuyến Xe Buýt Trợ Giá DanaBus",
+      "signal_summary": "Cổng thông tin mạng lưới các tuyến xe buýt công cộng nội đô thành phố Đà Nẵng.",
+      "source_url": "https://danangbus.vn/",
+      "observed_at": "2026-08-25T11:18:04.440Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_22_DANABUS",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_22_DANABUS/page.txt",
+        "artifact_sha256": "3e6470cf4f689803161584868e0b8f96120a8ee5fba2fe4740cdaa36f23909a3",
+        "screenshot_sha256": "8a87fa69d377216acc837fb98ded3dd675b3ff47dae7f1516e3669fb7b0c6dec",
+        "captured_at": "2026-08-25T11:18:04.440Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_23_TNGO",
+      "brand": "TNGo Xe Đạp",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Dịch Vụ Xe Đạp Đô Thị Công Cộng TNGo",
+      "signal_summary": "Trang thông tin các trạm thuê xe đạp đô thị công cộng tiện lợi tại Đà Nẵng.",
+      "source_url": "https://tngo.vn/",
+      "observed_at": "2026-08-25T11:18:09.825Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_23_TNGO",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_23_TNGO/page.txt",
+        "artifact_sha256": "9de3a9aa0eae18f901a9f6208d017dc54f8d40e4213ad39f115b90901291e50d",
+        "screenshot_sha256": "9825e692d1e297d1ae459ea957587f93c435557738ac198490b813a5e0e71690",
+        "captured_at": "2026-08-25T11:18:09.825Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_24_SHOPEEFOOD",
+      "brand": "ShopeeFood",
+      "category": "MOBILITY",
+      "signal_title": "Kênh Đặt Món Giao Tận Nơi ShopeeFood",
+      "signal_summary": "Cổng dịch vụ giao đồ ăn và thức uống nhanh chóng tại các quận Đà Nẵng.",
+      "source_url": "https://shopeefood.vn/",
+      "observed_at": "2026-08-25T11:18:13.036Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_24_SHOPEEFOOD",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_24_SHOPEEFOOD/page.txt",
+        "artifact_sha256": "be6d56c976140efcaddc0d397cc190a2d3f702636ab78fcfeb35f9aaabd3b525",
+        "screenshot_sha256": "9a724b79e01b34d08bdf18d7b9755055d3e6d960a7df9f561591f019e1f7f352",
+        "captured_at": "2026-08-25T11:18:13.036Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_25_COOPMART",
+      "brand": "Co.opmart",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Mua Sắm Siêu Thị Co.opmart Đà Nẵng",
+      "signal_summary": "Trang thông tin hàng tiêu dùng và hệ thống siêu thị Co.opmart tại Đà Nẵng.",
+      "source_url": "https://co-opmart.com.vn/",
+      "observed_at": "2026-08-25T11:18:15.177Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_26_MM_MEGA",
+      "brand": "MM Mega Market",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Trung Tâm Mua Sắm MM Mega Market",
+      "signal_summary": "Trang thông tin trung tâm bán buôn và bán lẻ thực phẩm MM Mega Market.",
+      "source_url": "https://mmvietnam.com/",
+      "observed_at": "2026-08-25T11:18:27.221Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_27_GO_DANANG",
+      "brand": "GO! Vietnam",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Siêu Thị & Đại Siêu Thị GO! Đà Nẵng",
+      "signal_summary": "Trang thông tin chuỗi đại siêu thị GO! phục vụ nhu cầu mua sắm gia đình.",
+      "source_url": "https://go-vietnam.vn/",
+      "observed_at": "2026-08-25T11:18:39.268Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_27_GO_DANANG",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_27_GO_DANANG/page.txt",
+        "artifact_sha256": "58b780e572ab4a68ad05a6173510543fdc886ea2a2c1e83c342b710729d74d4b",
+        "screenshot_sha256": "48340b3eaff3cb942dbd59cdcadfc83f9ac94bb42cf993a84945cc4b7620e2df",
+        "captured_at": "2026-08-25T11:18:39.268Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_28_VINCOM",
+      "brand": "Vincom Plaza",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Trung Tâm Thương Mại Vincom Plaza Đà Nẵng",
+      "signal_summary": "Trang thông tin tiện ích mua sắm, ẩm thực và giải trí tại TTTM Vincom Plaza.",
+      "source_url": "https://vincom.com.vn/",
+      "observed_at": "2026-08-25T11:18:43.701Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_29_LOTTE_MART",
+      "brand": "Lotte Mart",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Siêu Thị Trực Tuyến Lotte Mart Đà Nẵng",
+      "signal_summary": "Trang thông tin danh mục hàng hóa và trung tâm mua sắm Lotte Mart.",
+      "source_url": "https://www.lottemart.com.vn/",
+      "observed_at": "2026-08-25T11:18:55.749Z",
+      "signal_status": "UNCAPTURED_DISCOVERY_SEED",
+      "verified_deal": false,
+      "evidence_pointer": null,
+      "disclaimer": "Seed khám phá thương hiệu chưa capture nội dung thực tế; kiểm tra trực tiếp tại kênh chính thức."
+    },
+    {
+      "signal_id": "TARGET_108_30_WINMART",
+      "brand": "WinMart+",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Chuỗi Cửa Hàng Tiện Ích WinMart+",
+      "signal_summary": "Trang thông tin chuỗi siêu thị và cửa hàng tiện lợi WinMart+ tại khu dân cư.",
+      "source_url": "https://winmart.vn/",
+      "observed_at": "2026-08-25T11:18:59.001Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_30_WINMART",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_30_WINMART/page.txt",
+        "artifact_sha256": "9efa8d1f7bbb0a30c075da313c81b59e3f7d458c797a2f4bcb7828df88451813",
+        "screenshot_sha256": "cb056e52d0de024b8a3b0117b09134e751c187024bc82fe026a1044319c38d6a",
+        "captured_at": "2026-08-25T11:18:59.001Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_31_CHO_CON",
+      "brand": "Cổng TT Đà Nẵng - Chợ Cồn",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Giới Thiệu Chợ Truyền Thống Chợ Cồn",
+      "signal_summary": "Trang thông tin văn hóa ẩm thực và điểm tham quan mua sắm Chợ Cồn Đà Nẵng.",
+      "source_url": "https://danang.gov.vn/",
+      "observed_at": "2026-08-25T11:19:01.041Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_31_CHO_CON",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_31_CHO_CON/page.txt",
+        "artifact_sha256": "7730b8e35ab453acf2290294c9a220206a5ee09b0e0c3b8254b449bfd807bf04",
+        "screenshot_sha256": "0dc556d28a0645daa3992e1f6453c73e6937708fe2479505187de920ecdea985",
+        "captured_at": "2026-08-25T11:19:01.041Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    },
+    {
+      "signal_id": "TARGET_108_32_CHO_HAN",
+      "brand": "Cổng TT Đà Nẵng - Chợ Hàn",
+      "category": "SHOPPING",
+      "signal_title": "Kênh Giới Thiệu Điểm Mua Sắm Du Lịch Chợ Hàn",
+      "signal_summary": "Trang thông tin đặc sản và điểm đến du lịch mua sắm truyền thống Chợ Hàn.",
+      "source_url": "https://danang.gov.vn/",
+      "observed_at": "2026-08-25T11:19:10.433Z",
+      "signal_status": "SIGNAL_ONLY",
+      "verified_deal": false,
+      "evidence_pointer": {
+        "target_id": "TARGET_108_32_CHO_HAN",
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_108/captures_108/TARGET_108_32_CHO_HAN/page.txt",
+        "artifact_sha256": "01c57c2f121bf0016b1cc66180503dc151986556a181ab3b72dbd1c14f926f91",
+        "screenshot_sha256": "09be0698eac689beaf9d9935d00e5834fc340361404a5610b9781e8c3428076f",
+        "captured_at": "2026-08-25T11:19:10.433Z"
+      },
+      "disclaimer": "Tín hiệu quan sát từ trang thông tin chính hãng; không phải ưu đãi thương mại kích hoạt qua JayT."
+    }
+  ]
+}

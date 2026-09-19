@@ -1,0 +1,199 @@
+{
+  "$schema": "https://jayt.vn/schemas/preview-cleanup-ledger.v1.json",
+  "document_id": "JAYT_385_M2_PREVIEW_CLEANUP_LEDGER",
+  "cycle": "JAYT-385",
+  "milestone": "M2_AFFILIATE_AND_HEALTH",
+  "mandate": "WORK_ORDER_J385_SUPREME_CONSTITUTION",
+  "authority": "CHAIRMAN_DIRECTIVE__CEO_R3_GATE",
+  "created_at_utc": "2026-09-10T16:55:00Z",
+  "created_at_local": "2026-09-10T23:55:00+07:00",
+  "project_context": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "scope_team": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "canonical_alias": "https://jayt-production-v3420.vercel.app"
+  },
+  "retention_policy": {
+    "active_production_retained": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+    "primary_rollback_baseline": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "secondary_recovery_baseline": "dpl_8pSCfxWXzEMteFTV6E9YkVQARrA8",
+    "safe_isolation_rule": "DO_NOT_DELETE_UNRELATED_PROJECTS_OR_ACCOUNT_SECURITY__RECORD_EXACT_INVENTORY"
+  },
+  "deployments_inventory": [
+    {
+      "deployment_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+      "host_url": "https://jayt-production-v3420-2msb4btaq-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.441.0-j385-m2",
+      "aliases": [
+        "https://jayt-production-v3420.vercel.app",
+        "https://jayt-production-v3420-kuntran777-6857s-projects.vercel.app"
+      ],
+      "classification": "ACTIVE_PRODUCTION_CANONICAL",
+      "action": "RETAIN_ACTIVE_SERVING",
+      "public_anonymous_access": "VERIFIED_PUBLIC_ANONYMOUS"
+    },
+    {
+      "deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+      "host_url": "https://jayt-production-v3420-oshkv3px6-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.440.0-j385-m1",
+      "aliases": [],
+      "classification": "VERIFIED_PRIMARY_ROLLBACK_BASELINE",
+      "action": "PRESERVE_IN_VAULT",
+      "public_anonymous_access": "VERIFIED_PUBLIC_ANONYMOUS"
+    },
+    {
+      "deployment_id": "dpl_DatNfwCsETc8WEYGVPbEAdzN3hkW",
+      "host_url": "https://jayt-production-v3420-orxz785qq-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.440.0-j385-m0-r1",
+      "aliases": [],
+      "classification": "VERIFIED_PRIMARY_ROLLBACK_BASELINE",
+      "action": "PRESERVE_IN_VAULT",
+      "public_anonymous_access": "VERIFIED_ACCESSIBLE"
+    },
+    {
+      "deployment_id": "dpl_ERJLkCYQAocV93HqBqVJwZFzJ1in",
+      "host_url": "https://jayt-production-v3420-8vuncer5j-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.440.0-j385-m0",
+      "aliases": [],
+      "classification": "HISTORICAL_REMEDIATION_INTERMEDIATE",
+      "action": "RETIRE_OBSOLETE_SURFACE__ARCHIVE_LOGS",
+      "public_anonymous_access": "PASSIVE_ARCHIVE"
+    },
+    {
+      "deployment_id": "dpl_8pSCfxWXzEMteFTV6E9YkVQARrA8",
+      "host_url": "https://jayt-production-v3420-previous.vercel.app",
+      "target": "production",
+      "version": "v3.438.0-j374",
+      "aliases": [],
+      "classification": "HISTORICAL_J374_BASELINE",
+      "action": "PRESERVE_SECONDARY_ROLLBACK",
+      "public_anonymous_access": "PASSIVE_ARCHIVE"
+    },
+    {
+      "deployment_id": "dpl_n6siv7z00",
+      "host_url": "https://jayt-production-v3420-n6siv7z00-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.436.0-j372",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_f9wqtsm1g",
+      "host_url": "https://jayt-production-v3420-f9wqtsm1g-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.435.0-j371",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_4cp3rkmv6",
+      "host_url": "https://jayt-production-v3420-4cp3rkmv6-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.434.0-j370",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_xlcugv0y1",
+      "host_url": "https://jayt-production-v3420-xlcugv0y1-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.433.0-j365",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_dbre4cmks",
+      "host_url": "https://jayt-production-v3420-dbre4cmks-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.432.0-j364",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_o1fo9iu72",
+      "host_url": "https://jayt-production-v3420-o1fo9iu72-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.431.0-j363",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_d2k0x9tlf",
+      "host_url": "https://jayt-production-v3420-d2k0x9tlf-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.430.0-j362",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_ny0ccf3hc",
+      "host_url": "https://jayt-production-v3420-ny0ccf3hc-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.429.0-j361",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_kx7temgfj",
+      "host_url": "https://jayt-production-v3420-kx7temgfj-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.428.0-j360",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_9it35bcej",
+      "host_url": "https://jayt-production-v3420-9it35bcej-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.427.0-j359",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    },
+    {
+      "deployment_id": "dpl_mjcbp27y9",
+      "host_url": "https://jayt-production-v3420-mjcbp27y9-kuntran777-6857s-projects.vercel.app",
+      "target": "production",
+      "version": "v3.426.0-j358",
+      "aliases": [],
+      "classification": "OBSOLETE_PREVIEW_SURFACE",
+      "action": "RETIRED_RECORDED",
+      "public_anonymous_access": "ARCHIVED"
+    }
+  ],
+  "unrelated_projects_containment": {
+    "project_name": "deploy",
+    "action": "STRICT_NO_TOUCH__PRESERVED_AS_SEPARATE_PROJECT_ENTITY",
+    "rationale": "WORK_ORDER_J385 directive: Do not delete deployments based only on a URL prefix. Do not change unrelated projects."
+  },
+  "cleanup_summary": {
+    "total_audited_in_scope": 16,
+    "active_canonical_count": 1,
+    "retained_rollback_count": 2,
+    "retired_obsolete_surfaces": 12,
+    "unrelated_project_deployments_untouched": 6
+  }
+}

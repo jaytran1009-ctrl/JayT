@@ -1,0 +1,88 @@
+{
+  "id": "WORK_ORDER_J388_R2_EVIDENCE_EXECUTION",
+  "authority": "JAYT-388 — directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T03:25:44.410Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini actual artifact review",
+  "deadline_local": "2026-09-11T22:00:00+07:00",
+  "authorization": {
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true,
+    "production_alias_mutation_authorized": true,
+    "scope": "Collect R2 artifacts, implement corrections and deploy completed verified scope to named production. Affiliate activation is approved only for each provider that has both matching SKU artifacts and a provider-issued/replayable attribution validation."
+  },
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_remote_previews": false
+  },
+  "baseline": {
+    "current_provisional": "dpl_GAt7MSwLL1ubeojWLNwfYeKGwdyU",
+    "version": "v3.443.0-j387",
+    "rollback": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "require_predeploy_recheck": true
+  },
+  "workstreams": [
+    {
+      "id": "R2_SKU_PHYSICAL_EVIDENCE",
+      "tasks": [
+        "Capture 30 exact product leaf-page artifacts from official Mall domains into 06_TRUST_AND_EVIDENCE/j387/raw_snapshots/. Each snapshot must be original bytes from the observed response, named by itemId and capture timestamp. Do not synthesize, edit, compose or manually reconstruct snapshots.",
+        "Store 30 corresponding original product images only when their official source, product/variant relationship and display/use rights are documented. Place source assets under 03_SOURCE_OF_TRUTH/assets/products/ and record source URL, capture time, MIME type, dimensions and SHA-256 measured from the on-disk file. Do not hotlink production cards to partner CDN.",
+        "Write sku_leaf files only after physical artifacts exist. Every leaf includes relative snapshot path/hash, image path/hash, response capture metadata, URL, merchant, product/variant, price, availability, delivery conditions and a source-extracted text excerpt. Build fails if an artifact is absent, changes hash or does not match the immutable registry.",
+        "Use a labelled neutral placeholder for items that cannot be captured legitimately. Report exact captured/placeholder count. Never represent a login page, challenge page, generic catalogue page or search result as product evidence.",
+        "Respect provider terms, robots/rate limits and access controls. Do not defeat CAPTCHA, authentication, paywalls, geo controls or bot protections. A blocked capture is a missing artifact, not proof that the product has ended."
+      ]
+    },
+    {
+      "id": "R2_WORKER_AND_BENCHMARK",
+      "tasks": [
+        "Change HTTP 3xx in health worker to status UNKNOWN with suppress_purchase false. AVAILABLE must mean HTTP 200 only. Add unit tests for 301, 302, 307 and 308 plus 200, 404, 410, 403, 429 and timeout.",
+        "Measure the 3-app slider using 50 real input-to-render samples on a declared physical mobile device/browser. Capture raw samples, calculation method, device/browser/CPU conditions, p50/p95/max and screenshots/video if available. A zero-sample measurement fails.",
+        "Preserve itemId-only validation, strict unknown-field rejection, DNS mixed-answer denial, IP pinning and no outbound request on rejected input."
+      ]
+    },
+    {
+      "id": "R2_FOOD_CINEMA_EVIDENCE",
+      "tasks": [
+        "Collect 15 independently dated Da Nang-applicable F&B/cinema deal artifacts. Each needs an original source/poster/branch record, source URL, capture time/hash, effective dates, eligibility, redemption steps and a semantic CTA.",
+        "Requested brands/offers are acquisition targets only: Phe La BOGO, Katinat, Highlands app reduction, Metiz U22 55K, Galaxy 50K and Starlight 45K. Publish only when current evidence confirms its exact terms and local applicability.",
+        "Copy-code CTA requires a real public code from the artifact. App/counter/member CTA must match its actual redemption route. Do not describe an ordinary menu price, membership program or expired campaign as a shock deal."
+      ]
+    },
+    {
+      "id": "R2_COMMERCIAL_ACTIVATION",
+      "tasks": [
+        "For each provider requested for affiliate activation, capture a redacted provider-issued test response or reporting record that proves the exact attributed URL resolves to the exact SKU and attribution is accepted. A partner ID in config or manually assembled redirect URL is insufficient.",
+        "Enable affiliate_enabled only for passing providers/SKUs; keep other providers in direct official-link mode and disclose that destination accurately. Never count clicks as revenue.",
+        "At least 30 matching SKU artifacts alone do not establish commercial attribution. Record provider scope/count and unresolved providers."
+      ]
+    }
+  ],
+  "build_and_release_gate": [
+    "Run registry-to-UI-to-worker-to-evidence equality check and artifact-presence/hash validator; include six mutation cases (ID, URL, variant, price, media, missing snapshot).",
+    "Audit every physical image manually against its product/variant; decode image bytes and reject generic/reused/mismatched media.",
+    "Run security suite including 3xx semantics; benchmark has 50 non-zero observations; enforce all raw snapshot and deal artifact paths.",
+    "Verify 1440/768/390, no console errors/overflow, Campus Dock/filter, comparator, 15 qualified deals and Zalo Pass PNG. Bind hashes to served bytes and check HTTP200 endpoints.",
+    "Record actual Gemini review tied to deployment/artifacts; executor may prepare a packet only and cannot assert Gemini PASS."
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j388/sku_leaf_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j388/deal_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j388/provider_attribution_validation.json",
+    "07_QUALITY_ASSURANCE/JAYT_388_ARTIFACT_INTEGRITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_388_SLIDER_BENCHMARK.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_388_SECURITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_388_LIVE_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_388_RELEASE_RECEIPT.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_388_GEMINI_REVIEW_PACKET.md"
+  ],
+  "reporting": {
+    "ack": "Record actual ACK and start time.",
+    "progress": "Within the work period report artifact count, real-photo count, current deal count, provider attribution-ready count, blocked captures and exact reasons.",
+    "deadline": "22:00 local 2026-09-11; do not backdate.",
+    "completion": "Report only artifacts that physically exist and verify. Keep provisional status for unmet evidence or unverified provider attribution."
+  }
+}

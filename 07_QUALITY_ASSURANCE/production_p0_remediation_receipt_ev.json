@@ -1,0 +1,76 @@
+{
+  "receipt_id": "PRODUCTION_P0_REMEDIATION_RECEIPT_EV_20260830",
+  "version": "v3.476.0-staging.ev",
+  "generated_at_utc": "2026-08-30T14:20:34.811Z",
+  "governing_directive": "JAYT-245 Section EV (Mandate EV.5)",
+  "production_lock_enforcement": {
+    "locked_version": "v3.419.0",
+    "live_production_url": "https://deploy-ten-xi-48.vercel.app/",
+    "go_live_status": "LOCKED_PRE_GO_LIVE",
+    "rule": "Production remains strictly locked at v3.419.0 until complete multi-stage CEO sign-off."
+  },
+  "p0_remediation_summary": {
+    "legacy_items_audited": 17,
+    "legacy_raw_claims_quarantined": 9,
+    "unbacked_public_exposure_in_production": 0,
+    "runtime_go_isclix_occurrences": 0,
+    "runtime_affiliate_parameters": 0,
+    "status": "BACKLOG_REMEDIATED_CONTAINED"
+  },
+  "audit_matrix": [
+    {
+      "id": "P0_ITEM_01",
+      "subject": "Domino Pizza Promo Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_02",
+      "subject": "Lotteria Happy Lunch Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_03",
+      "subject": "CGV U22 Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_04",
+      "subject": "Galaxy Tri An Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_05",
+      "subject": "Metiz U22 Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_06",
+      "subject": "Highlands Voucher Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_07",
+      "subject": "Fahasa Discount Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_08",
+      "subject": "Tiki Discount Claims",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    },
+    {
+      "id": "P0_ITEM_09",
+      "subject": "DanaBus 5.000d Price Claim",
+      "action": "QUARANTINED_TO_MANIFEST",
+      "status": "CONTAINED"
+    }
+  ]
+}

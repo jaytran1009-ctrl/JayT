@@ -1,0 +1,42 @@
+{
+  "target_id": "TGT_C3_04",
+  "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+  "brand": "CGV Cinemas",
+  "customer_need": "Xem phim cuối tuần",
+  "initial_url": "https://www.cgv.vn",
+  "final_url": "https://www.cgv.vn",
+  "hop_count": 1,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://www.cgv.vn",
+      "status_code": 200,
+      "response_headers": {
+        "content-length": "5366",
+        "pragma": "no-cache",
+        "cache-control": "no-cache",
+        "content-type": "text/html"
+      },
+      "location_header": null,
+      "body_bytes": 5366,
+      "hop_started_at": "2026-08-28T15:50:15.071Z",
+      "hop_finished_at": "2026-08-28T15:50:15.160Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:15.071Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:15.160Z",
+  "duration_ms": 89.18,
+  "final_http_status": 200,
+  "final_headers": {
+    "content-length": "5366",
+    "pragma": "no-cache",
+    "cache-control": "no-cache",
+    "content-type": "text/html"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_04_FINAL_2026-08-28T15-50-15-071Z.txt",
+  "pre_normalization_sha256": "614545d2d5eb8ce4d2446d9856a353fe5d75761908784f7a62291fab11c97f28",
+  "payload_bytes": 5366,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

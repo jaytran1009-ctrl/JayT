@@ -1,0 +1,275 @@
+{
+  "registry_id": "JAYT_256_DATASET_2D_MAPPING_REGISTRY_CORRECTED_1",
+  "version": "1.1.0-jayt.256.correction.1",
+  "governing_directive": "JAYT-245 Section JAYT-256-CORRECTION-1",
+  "timestamp": "2026-09-01T13:00:50.236Z",
+  "policy_notes": [
+    "Content entities must satisfy tier field contracts before inclusion in the 4x5 matrix.",
+    "Open SLA intake candidates remain in intake ledger with contentTier=null and are NOT counted in the 4x5 content matrix.",
+    "BHD Star remains OPEN_EVALUATING + INTAKE_FAILED_NO_RAW until SLA closure.",
+    "JetBrains remains an internal lifecycle record outside the 4x5 content matrix until a standalone T4 contract is established."
+  ],
+  "matrix_summary_4x5": {
+    "T1_DEAL": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "T2_PROGRAM": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 2,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 1,
+      "total": 3
+    },
+    "T3_PLACE": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 1,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 1
+    },
+    "T4_RADAR": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0,
+      "total": 0
+    },
+    "column_totals": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 3,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 1,
+      "grand_total": 4
+    }
+  },
+  "content_entities": [
+    {
+      "entity_id": "PILOT_01_GITHUB_EDUCATION",
+      "display_title": "GitHub Education — Thông tin đăng ký",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "PUBLIC_APPROVED",
+      "ceo_approval_id": "JAYT-245 Section EZ-H / Section EZ-AO",
+      "evidence_bundle_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_g/fact_ez_g_01_github_education_raw_contract.json",
+      "raw_binary_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_g/fact_ez_g_01_github_docs_raw_bytes.bin",
+      "raw_sha256": "f21354b988f6db93fda0460932ce00f336bf8210cf69d5b3329cb68626e1f237",
+      "public_rendered": true,
+      "notes": "Traceable to explicit CEO written approval and immutable evidence bundle."
+    },
+    {
+      "entity_id": "FAST_LANE_RERUN_02_FIGMA_EDUCATION",
+      "display_title": "Figma for Education | Free Tools for the Classroom",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "ceo_approval_id": null,
+      "evidence_bundle_ref": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_POST_SLA_EZ_AQ.json",
+      "raw_binary_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ae/candidate_ez_ae_02_figma_education_raw_bytes.bin",
+      "raw_sha256": "090801961331bd51a6ca07ee0b16527a18854b77f51cf26f26382064cc9d7892",
+      "public_rendered": false,
+      "notes": "All 4 core fields proven in raw bytes. CEO explicitly rejected staging/public card in EZ-AR. Held internal."
+    },
+    {
+      "entity_id": "TRIAL_EZ_K_01_NOTION_EDUCATION",
+      "display_title": "Notion for Education",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "ceo_approval_id": null,
+      "evidence_bundle_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_k/candidate_ez_k_01_notion_education_contract_v3.json",
+      "raw_binary_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_01_notion_education_raw_bytes.bin",
+      "raw_sha256": "efa0ff3b7f8037d76fa445bf458136452541d1c981dc041576ed6f8cc1aeca30",
+      "public_rendered": false,
+      "notes": "Descriptive-only meta tag trial; honestly held internal under Schema v3."
+    },
+    {
+      "entity_id": "CANDIDATE_EZ_T_01_DANANG_LIBRARY",
+      "display_title": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "contentTier": "T3_PLACE",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "ceo_approval_id": null,
+      "evidence_bundle_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_t/candidate_ez_t_01_danang_library_contract_v3.json",
+      "raw_binary_ref": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_t/candidate_ez_t_01_danang_library_card_policy_raw_bytes.bin",
+      "raw_sha256": "57ff87a63afab5b6cfb029075bb073bbd11eedfc9d94cccd0680df2353903b16",
+      "public_rendered": false,
+      "notes": "Operating body proven; held internal due to historical date of published document."
+    }
+  ],
+  "intake_pool_pre_sla": {
+    "pool_id": "COHORT_CINEMA_TRANSIT_15_CANDIDATES_INTAKE_POOL",
+    "total_candidates": 15,
+    "open_evaluating_count": 15,
+    "raw_captured_count": 14,
+    "intake_failed_count": 1,
+    "tier_assigned_count": 0,
+    "candidates": [
+      {
+        "candidate_id": "COHORT_EZ_AM_01",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:01.489Z",
+        "raw_sha256": "2c4e43d7fa7ed9676d7b88a425e5687d5be2ef940e192f0c9c8a6804ec80fbc4",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_01_cgv_cinemas_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_02",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:01.627Z",
+        "raw_sha256": "287a5065df97ddba0eb28a06b3e3fd9b0338b1e241c8500a78b8fd7f5d7fa3f4",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_02_lotte_cinema_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_03",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:01.931Z",
+        "raw_sha256": "52f59f86a7335642e8c824263ca4b92c4cca0422fce5ba44de9d4ef65c0e3fe1",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_03_galaxy_cinema_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_04",
+        "intakeStatus": "INTAKE_FAILED_NO_RAW",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:02.295Z",
+        "raw_sha256": null,
+        "raw_vault_path": null,
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_05",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:04.515Z",
+        "raw_sha256": "11355514735af4f9eb21222f8cafc04c6feeee27e7630fe10c7578fa23773610",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_05_mega_gs_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_06",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:05.264Z",
+        "raw_sha256": "8060e799a4f784e80b029c3892c9e059466398d988d8214e6b5d1de6d6a2dd59",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_06_cinestar_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_07",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:05.376Z",
+        "raw_sha256": "eae773389bcc4a566a9ef793a9005d64ddb23f6a31d09c6b0f7ec8fe42f9d2a2",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_07_dcine_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_08",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:05.610Z",
+        "raw_sha256": "c0b6dd4b9f57558750a472373a0410a79c9b388c6a460480b15491da678505ff",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_08_danangbus_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_09",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:06.041Z",
+        "raw_sha256": "803c0c0884368d78d0147165835b5eba1a7d47d84f38648cf0518177b7b7599c",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_09_grab_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_10",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:06.240Z",
+        "raw_sha256": "ec920921d1b4a4383379ebda50bc48ea72b7faa05aa6d3a07d96f259601ec739",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_10_be_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_11",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:06.567Z",
+        "raw_sha256": "7d23015c96296934d4ea9d3099ff0a6b174550c959effabb45e4593aace9a7e1",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_11_xanh_sm_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_12",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:07.023Z",
+        "raw_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_12_dsvn_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_13",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:07.107Z",
+        "raw_sha256": "c73ff2f67419447be2f16a70e68042b00c26d92af201bcbe16928807e928bed7",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_13_vietnam_airlines_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_14",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:07.715Z",
+        "raw_sha256": "216e5d91f77a2456fe566c8820d60462cb4fb0fd22000a4f8f3913266996e67a",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_14_vietjet_air_raw_bytes.bin",
+        "failure_reason": null
+      },
+      {
+        "candidate_id": "COHORT_EZ_AM_15",
+        "intakeStatus": "RAW_CAPTURED",
+        "admissionState": "OPEN_EVALUATING",
+        "contentTier": null,
+        "sla_close_utc": "2026-09-01T19:04:07.909Z",
+        "raw_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_15_tngo_raw_bytes.bin",
+        "failure_reason": null
+      }
+    ]
+  },
+  "lifecycle_records_outside_content_matrix": [
+    {
+      "record_id": "FAST_LANE_RERUN_01_JETBRAINS_STUDENT",
+      "display_title": "Free JetBrains Student Pack",
+      "lifecycle_state": "HELD_NEW_COHORT_REQUIRED",
+      "internal_verdict": "T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+      "contentTier": null,
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "notes": "Lifecycle audit record. Missing static action CTA. Dynamic survey rejected by CEO in EZ-AR. Preserved outside content matrix."
+    }
+  ]
+}

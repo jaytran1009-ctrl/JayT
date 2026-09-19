@@ -1,0 +1,69 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BF_20260829",
+  "schema_version": "3.3.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BF)",
+  "verified_at": "2026-08-29T05:59:02.069Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BE.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_IA_BF",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bf": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "ia_and_journey_verification_bf": {
+    "contract_manifest_file": "00_PROGRAM_BASELINE/JAYT_CSS_COMPONENT_CONTRACT_BF.json",
+    "contract_manifest_sha256": "4db1b563e16c11aba9a6287dcd00f9a031fd71eb4b12db5073155f1a8b12ea77",
+    "desktop_primary_destinations_count": 3,
+    "mobile_primary_destinations_count": 3,
+    "three_customer_journeys_operational": true,
+    "escape_modal_dismissal_operational": true,
+    "dark_mode_operational": true
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "f9e1ae041e1127e4be289aec404db659d91215d582ad0f3c4a5318d1cbb538c3",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "ae3cc64b5e54d89692af7c8cc1bb1cc6fc1ff95e5f69048ef246af90d87f50f0",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "ebd187c061f5101598926316ae16917f9b2040779ec7cceb3802cfe307e8f05a"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bf.js",
+      "description": "Storefront BF candidate with streamlined 3-destination IA and 3 verified customer journeys",
+      "sha256": "5faf3e97c33645254c243add4d0b95607ea04b2f4777301acfbbb74121ec6df6"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/JAYT_CSS_COMPONENT_CONTRACT_BF.json",
+      "description": "CSS Component Contract & IA Manifest BF",
+      "sha256": "4db1b563e16c11aba9a6287dcd00f9a031fd71eb4b12db5073155f1a8b12ea77"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34225_staging_bf.json",
+      "description": "Release receipt for Staging BF deployment with 3 customer journeys verified",
+      "sha256": "d6c05729c2ca34de3f0566b6ed6639b93a43add9c805a5176094f21b1260dce8"
+    }
+  ],
+  "verifier_audit_passed": true
+}

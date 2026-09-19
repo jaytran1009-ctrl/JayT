@@ -1,0 +1,27 @@
+{
+  "scope_id": "JAYT_346_BATCH_16_TARGETED_INGRESS_SCOPE",
+  "status": "INGRESS_AUTHORIZED__STAGING_ONLY",
+  "target_verified_minimum": 20,
+  "brands": [
+    "cgv_cinemas",
+    "lotte_cinema",
+    "jollibee",
+    "phuclong",
+    "highlands_coffee"
+  ],
+  "source_matrix": "04_DATA_PIPELINE/batch_matrix/LOCATOR_HARVEST_MATRIX.json",
+  "vault_root": "06_TRUST_AND_EVIDENCE/batch_16_voucher_matrix_vault/",
+  "permissions": {
+    "capture_authorized": true,
+    "staging_hydration_permitted_after_bulk_validation": true,
+    "production_deploy_permitted": false,
+    "affiliate_tracking_permitted": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "required_classifications": [
+    "VERIFIED",
+    "HELD__INSUFFICIENT_EVIDENCE",
+    "FAILED_FETCH"
+  ],
+  "zero_synthetic_rule": "Raw official evidence is mandatory for offer content, conditions and observed value. Locality inheritance cannot manufacture offer evidence."
+}

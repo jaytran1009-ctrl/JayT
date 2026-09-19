@@ -1,0 +1,169 @@
+{
+  "dossier_id": "B12_05_PHUCLONG_MEMBER_BENEFIT_v2",
+  "dossier_version": "2.0",
+  "status": "AWAITING_COUNCIL_DECISION__STAGING_PREVIEW_READY",
+  "scope": "STAGING_ONLY — KHÔNG PHÊ DUYỆT PRODUCTION",
+  "brand": "Phúc Long Coffee & Tea (Tập đoàn CrownX / WinCommerce)",
+  "provenance_chain": {
+    "membership_terms_leaf": {
+      "source_url": "https://phuclong.com.vn/hoi-vien/dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien",
+      "raw_html_file": "B12_05.raw.html",
+      "raw_html_sha256": "9c4eadd1660bc043c3a6c685fd98589ead6bb4dbe5eb498ced669fbc46c938c4",
+      "raw_html_bytes": 124655,
+      "metadata_file": "B12_05.metadata.json",
+      "http_date": "Sun, 06 Sep 2026 04:46:04 GMT",
+      "verified_clauses": [
+        {
+          "clause_id": "earning_ratio",
+          "span": "Tỷ lệ quy đổi điểm khả dụng (Điểm đổi quà) và điểm tích lũy: 10.000 đồng = 1 điểm",
+          "offset_utf8": 47548
+        },
+        {
+          "clause_id": "point_validity",
+          "span": "Điểm đổi quà có hạn sử dụng là 1 năm kể từ ngày tích điểm đó.",
+          "offset_utf8": 47961
+        },
+        {
+          "clause_id": "store_earning_scope",
+          "span": "Chỉ áp dụng tích lũy điểm khi khách hàng thực hiện giao dịch tại website Phúc Long và trực tiếp tại hệ thống cửa hàng Phúc Long trên toàn quốc (ngoại trừ cửa hàng tại Sân Bay, Winmart, Winmart+, WiN, Preminum)",
+          "offset_utf8": 48205
+        },
+        {
+          "clause_id": "redemption_exclusions",
+          "span": "(ngoại trừ Phúc Long Sân Bay Tân Sơn Nhất, Winmart, Winmart+, WiN, Phúc Long Premium Xuân Thủy)",
+          "offset_utf8": 48944
+        },
+        {
+          "clause_id": "drink_redemption_rule",
+          "span": "Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)",
+          "offset_utf8": 55875
+        },
+        {
+          "clause_id": "non_combinable",
+          "span": "Điểm khả dụng (Điểm đổi quà) hay Điểm tích lũy KHÔNG ĐƯỢC ÁP DỤNG chung với các hình thức phi tiền mặt như voucher, e-voucher, coupon, e-coupon, phiếu quà tặng… và các chương trình khuyến mãi khác.",
+          "offset_utf8": 49101
+        }
+      ]
+    },
+    "store_network_api": {
+      "parent_web_page": "https://phuclong.com.vn/find-store",
+      "web_script_chunk": {
+        "path": "/_next/static/chunks/pages/_app-183ba04e33350e0d.js",
+        "url": "https://phuclong.com.vn/_next/static/chunks/pages/_app-183ba04e33350e0d.js",
+        "sha256": "a4ed8defda90df177300195e287ad808a977fdd8d72e3f490514acd31da57691",
+        "bytes": 655269,
+        "axios_base_url_pattern": "this.axios=p().create({baseURL:\"\".concat(\"https://api-crownx.winmart.vn\")"
+      },
+      "pagination_audit": {
+        "total_items_in_database": 166,
+        "page_size": 100,
+        "total_pages": 2,
+        "all_pages_fetched": true,
+        "page_1": {
+          "url": "https://api-crownx.winmart.vn/mt/api/plg/v1/store?activeCall=true&orderByDesc=true&pageNumber=1&pageSize=100&reCall=1",
+          "raw_file": "B12_05_STORES_PAGE1.raw.json",
+          "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+          "headers_file": "B12_05_STORES_PAGE1.headers.json",
+          "bytes": 85065,
+          "items_count": 100
+        },
+        "page_2": {
+          "url": "https://api-crownx.winmart.vn/mt/api/plg/v1/store?activeCall=true&orderByDesc=true&pageNumber=2&pageSize=100&reCall=1",
+          "raw_file": "B12_05_STORES_PAGE2.raw.json",
+          "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+          "headers_file": "B12_05_STORES_PAGE2.headers.json",
+          "bytes": 52400,
+          "items_count": 66
+        }
+      }
+    }
+  },
+  "candidate_card_spec": {
+    "id": "B12_05",
+    "type": "LOCAL_MEMBER_BENEFIT",
+    "title": "Chương Trình Hội Viên Phúc Long: Tích Điểm & Đổi Quà Ly Nước",
+    "brand_name": "Phúc Long Coffee & Tea",
+    "source_url": "https://phuclong.com.vn/hoi-vien/dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien",
+    "source_http_date": "Sun, 06 Sep 2026 04:46:04 GMT",
+    "program_rules": {
+      "earning": {
+        "section_name": "Tích lũy điểm",
+        "rate_description": "10.000 đồng chi tiêu = 1 điểm tích lũy / khả dụng",
+        "scope_description": "Giao dịch trực tiếp tại hệ thống cửa hàng Phúc Long trên toàn quốc và qua website phuclong.com.vn",
+        "verbatim_exception": "Ngoại trừ cửa hàng tại Sân Bay, Winmart, Winmart+, WiN, Preminum",
+        "local_airport_note": "Chi nhánh Sân bay Đà Nẵng không áp dụng tích điểm theo quy định loại trừ cửa hàng tại sân bay."
+      },
+      "redemption": {
+        "section_name": "Đổi quà ly nước",
+        "rate_description": "100 điểm khả dụng = 1 ly nước miễn phí tùy chọn size vừa (M)",
+        "scope_description": "Đổi quà tại các cửa hàng áp dụng theo quy chế hội viên",
+        "verbatim_exception": "Ngoại trừ Phúc Long Sân Bay Tân Sơn Nhất, Winmart, Winmart+, WiN, Phúc Long Premium Xuân Thủy",
+        "local_airport_note": "Điều khoản nguồn không liệt kê Sân bay Đà Nẵng trong danh sách ngoại lệ đổi quà; hệ thống không khẳng định hay phủ định quyền đổi quà tại chi nhánh này khi chưa có xác nhận quầy."
+      },
+      "validity": {
+        "section_name": "Thời hạn sử dụng điểm",
+        "duration_description": "Điểm đổi quà có hạn sử dụng là 1 năm kể từ ngày tích điểm đó."
+      },
+      "restrictions": {
+        "section_name": "Điều kiện áp dụng & kết hợp",
+        "rule_description": "Điểm khả dụng (Điểm đổi quà) hay Điểm tích lũy không được áp dụng chung với các hình thức phi tiền mặt như voucher, e-voucher, coupon, e-coupon, phiếu quà tặng… và các chương trình khuyến mãi khác."
+      }
+    },
+    "proposed_stores_danang": [
+      {
+        "store_code": "2005",
+        "store_name": "DNG-CH Lotte Số 6 Đại Nam P.HCB",
+        "address": "Tầng 1, 1F-09 tại Lotte Mart Đà Nẵng, Số 06 đường Nại Nam   TP. Đà Nẵng",
+        "source_api_pointer": "/data/4 (Trang 1 API)",
+        "source_raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      {
+        "store_code": "2006",
+        "store_name": "DNG-CH 59-61 Nguyen Van Linh P.PN",
+        "address": "59-61 Nguyễn Văn Linh   TP. Đà Nẵng",
+        "source_api_pointer": "/data/5 (Trang 1 API)",
+        "source_raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      {
+        "store_code": "2116",
+        "store_name": "DNG - 511 Trần Hưng Đạo",
+        "address": "511 Trần Hưng Đạo   TP. Đà Nẵng",
+        "source_api_pointer": "/data/69 (Trang 1 API)",
+        "source_raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      {
+        "store_code": "2176",
+        "store_name": "DNG - Xô Viết Nghệ Tĩnh",
+        "address": "114 - 116 Xô Viết Nghệ Tĩnh   TP. Đà Nẵng",
+        "source_api_pointer": "/data/15 (Trang 2 API)",
+        "source_raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a"
+      },
+      {
+        "store_code": "2217",
+        "store_name": "DNG - Mega Market",
+        "address": "167 Nguyễn Sinh Sắc Phía Đông Nam ký túc xá sinh viên Phường Hòa Khánh TP. Đà Nẵng",
+        "source_api_pointer": "/data/44 (Trang 2 API)",
+        "source_raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a"
+      }
+    ],
+    "regional_store_reference": {
+      "store_code": "2237",
+      "store_name": "DNG - 111 Trần Hưng Đạo",
+      "verbatim_address_in_source": "Số 111 Trần Hưng Đạo Số 111 Trần Hưng Đạo Phường Hội An TP. Đà Nẵng",
+      "source_api_pointer": "/data/52 (Trang 2 API)",
+      "source_raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a",
+      "classification_note": "Bản ghi mang mã định danh vùng DNG nhưng chuỗi địa chỉ chứa 'Phường Hội An'. Giữ nguyên chuỗi nguồn nguyên bản, không xếp vào nhóm 5 cửa hàng nội thành Đà Nẵng."
+    },
+    "airport_store_reference": {
+      "store_code": "2129",
+      "store_name": "DNG - Sân bay Đà Nẵng",
+      "verbatim_address_in_source": "DV-03 Cảng hàng không quốc tế Đà Nẵng   TP. Đà Nẵng",
+      "source_api_pointer": "/data/78 (Trang 1 API)",
+      "source_raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea",
+      "earning_status": "Không áp dụng tích điểm (ngoại trừ cửa hàng tại sân bay)",
+      "redemption_status": "Chưa xác nhận từ nguồn (điều khoản không liệt kê cụ thể, không suy đoán quyền đổi quà)"
+    },
+    "disclaimer": "Thông tin quyền lợi hội viên đối chiếu từ điều khoản công bố chính thức của Phúc Long Heritage; danh sách cửa hàng trích xuất từ API hệ thống. Phân tích quyền lợi mang tính tham khảo từ văn bản, không phải xác nhận trực tiếp của từng điểm bán.",
+    "render_permitted": false
+  }
+}

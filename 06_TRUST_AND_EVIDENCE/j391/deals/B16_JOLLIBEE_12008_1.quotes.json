@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 10,
+  "offer_id": "B16_JOLLIBEE_12008_1",
+  "brand": "Jollibee",
+  "category": "FOOD",
+  "title": "Burger Gà Giòn",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_10_jollibee_burger.html",
+    "file_sha256": "aa14c8d86235400591451c9062669badce321056cdfa99838b74b9adbd534d09",
+    "file_bytes": 302307,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://jollibee.com.vn/burger-com.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_REGIONAL",
+  "wave_1_eligible": false,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": false,
+    "danang_scope_proven": false,
+    "terms_proven": false,
+    "all_four_predicates_proven": false,
+    "finding": "Product name and exact price (35,000 VND) verified verbatim in raw HTML price-box. National regular delivery menu; does not contain Da Nang location predicate in bytes. Classified VERIFIED_REGIONAL and excluded from Wave 1 Da Nang count."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Burger Gà Giòn",
+      "byte_offset_start": 191937,
+      "byte_offset_end": 191953,
+      "byte_length": 16,
+      "selector": ".product-item-link span",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "byte_length": 0,
+      "selector": null,
+      "proven": false,
+      "danang_specific": false,
+      "finding": "NOT_LOCATABLE_IN_SOURCE_HTML_BYTES"
+    },
+    "scope_quote": {
+      "text": "Jollibee",
+      "byte_offset_start": 262,
+      "byte_offset_end": 270,
+      "byte_length": 8,
+      "selector": "title",
+      "proven": true,
+      "danang_specific": false
+    },
+    "terms_quote": {
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "byte_length": 0,
+      "selector": null,
+      "proven": false,
+      "danang_specific": false,
+      "finding": "NOT_LOCATABLE_IN_SOURCE_HTML_BYTES"
+    }
+  },
+  "cta_semantics": {
+    "action_type": "ORDER_ON_OFFICIAL_APP",
+    "button_label": "Đặt Món Tại Jollibee",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": false
+  }
+}

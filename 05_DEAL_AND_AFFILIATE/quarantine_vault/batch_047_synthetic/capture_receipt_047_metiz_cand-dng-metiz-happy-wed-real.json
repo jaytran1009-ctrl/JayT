@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-34-METIZ",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_34",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-METIZ-HAPPY-WED-REAL"
+  },
+  "target": {
+    "brand_id": "METIZ",
+    "category": "LOCAL_CINEMA",
+    "requested_url": "https://metiz.vn/khuyen-mai/",
+    "final_url": "https://metiz.vn/khuyen-mai/",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Metiz Cinema có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Metiz Happy Wednesday — Vé 2D 55.000đ Thứ Tư Hàng Tuần (Metiz Helio Đà Nẵng)",
+    "conditions_snippet": "Áp dụng vào Thứ Tư hàng tuần (Happy Wednesday)"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_metiz_cand-dng-metiz-happy-wed-real.png",
+      "sha256": "28ee26e8bae7d8fd90770fff6a4a64204fd57a6856ff69b776872e94c8d55c97",
+      "bytes": 138369,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_metiz_cand-dng-metiz-happy-wed-real.html",
+      "sha256": "3680b8e7057e893368bfeefe3397a0cd252f060121eb739bca439266bdbab5fd",
+      "bytes": 985
+    },
+    "text_dump": {
+      "file": "capture_047_metiz_cand-dng-metiz-happy-wed-real.txt",
+      "sha256": "47084f913fe82b91542999936bf29798b64c2a6c068c3337fb880b12cebd953f",
+      "bytes": 595
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

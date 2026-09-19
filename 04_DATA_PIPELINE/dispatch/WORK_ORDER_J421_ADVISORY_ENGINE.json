@@ -1,0 +1,45 @@
+{
+  "work_order_id": "WORK_ORDER_J421_ADVISORY_ENGINE",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260918_UPGRADE_ADVISORY_ENGINE_AND_DANANG_GO_LIVE",
+  "created_at": "2026-09-17T22:45:00+07:00",
+  "authority": "CEO Codex & Antigravity Technical Council",
+  "status": "COMPLETED_AND_DEPLOYED",
+  "mission": "Transform Feature 1 Paste-Link into JayT Buying Advisory Engine with 3 core pillars localized for 320,000 students and office workers in Da Nang",
+  "deliverables": [
+    {
+      "component": "Buying Advisory Engine (Hộp Cố Vấn Tác Chiến)",
+      "target_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "function_name": "renderBuyingAdvisoryEngineHtml",
+      "position": "Strictly BELOW 2 comparison tiers (Mall & Shop Uy Tín) in both Modal and Inline views",
+      "pillars": [
+        "Pillar 1: Phán Quyết Đánh Đổi Trực Diện (Quantified cash diff, Da Nang meal equivalence, Mall vs Shop Uy Tín verdict, 5-standard table)",
+        "Pillar 2: Mẹo Áp Mã Kép Giờ Vàng (11h30 noon & 20h00 evening drops, 15%-20% voucher stack formula)",
+        "Pillar 3: Cảnh Báo Vận Chuyển Đà Nẵng (22k-35k shipping alert, dorm/campus bundling for 0đ Freeship Xtra)"
+      ]
+    },
+    {
+      "component": "Affiliate Auto-Injection (100% Monetization Wrapping)",
+      "shopee_partner_id": "17372870594",
+      "lazada_member_id": "262501305",
+      "tiktok_partner_id": "VNVNLCB6LYL3",
+      "coverage": "100% of CTA buttons across Tier 1 and Tier 2 wrapped with official Partner IDs"
+    },
+    {
+      "component": "Production Canonical Deployment",
+      "url": "https://jayt-production-v3420.vercel.app",
+      "deployment_id": "dpl_8cB7NfpLsLbZwFYANwhv8J5eDnb5",
+      "bundle_sha256": "4ee2bca752f2099e77c922f237829e54dc612d39b40fca9439b629e67cf39948",
+      "bundle_size": 893696,
+      "remote_parity": "100% Bit-Parity Match"
+    }
+  ],
+  "quality_gates": {
+    "test_suite": "07_QUALITY_ASSURANCE/test_j421_buying_advisory_engine.cjs",
+    "test_suite_status": "5/5 PASS (100%)",
+    "regression_suites": "test_j419_hotfix (5/5 PASS), test_j419_dual_tier (5/5 PASS)",
+    "static_pipeline_seal": "24/24 PASS TUYỆT ĐỐI",
+    "w8_feed_toolchain_seal": "5/5 PASS_TOOLCHAIN_SEAL",
+    "performance_latency": "0.080ms (target <= 5ms, SLA <= 800ms)",
+    "commercial_safety": "CONFIG.affiliate_enabled: false fail-closed on Canonical Production"
+  }
+}

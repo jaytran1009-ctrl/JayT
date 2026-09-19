@@ -1,0 +1,68 @@
+{
+  "id": "WORK_ORDER_J373_R1_ITEMIZED_QR_AND_FACTUAL_REMEDIATION",
+  "authority": "JAYT-373 CEO R1",
+  "issued_at_utc": "2026-09-10T09:05:00Z",
+  "status": "COMPLETED_AWAITING_GEMINI_REVIEW",
+  "executor": "Antigravity",
+  "environment": {
+    "url": "http://127.0.0.1:4176",
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false
+  },
+  "baseline": {
+    "candidate": "v3.437.0-j373",
+    "preserve": [
+      "J372 header/navigation and data containment",
+      "J373 combobox, 390px no overflow, 65-offer baseline",
+      "local-only candidate; no production mutation"
+    ]
+  },
+  "remediation": [
+    {
+      "id": "SPLIT_R1",
+      "requirements": [
+        "Replace prompt-only item creation with visible accessible fields: item name, positive integer unit price, integer quantity 1–99, assignee multi-select. Add edit and remove controls for each item.",
+        "Add visible shared-fee rows with name, signed? No: each amount must be non-negative integer VND, add/remove controls and confirmation. Any discount must be modeled as a separately documented adjustment with amount and allowed range, never silently accepted as a negative fee.",
+        "Reject, do not coerce, decimals, blank, exponent notation, non-numeric, negative and unsafe amounts. Preserve entered invalid text long enough to show an inline error; do not replace it with 50000.",
+        "On participant removal, show and require resolution of affected items before settlement. Disable payment QR until all lines are assigned, totals are conserved and no validation error remains.",
+        "Browser test a 3-person scenario with one shared item, two individual items, odd fee, modified quantity, participant removal and every invalid field. Record actual DOM results and conservation."
+      ]
+    },
+    {
+      "id": "QR_R2",
+      "requirements": [
+        "Start recipient bank/account/name empty in the user-facing app. Do not render QR, payload or payment CTA until explicit confirmation.",
+        "Use a confirmation step that displays bank, account string including leading zeros, user-entered display name, selected participant and exact amount. Any edit invalidates confirmation and hides QR.",
+        "Keep recipient/payment fields only in RAM; clear on close, explicit reset and reload. Test with synthetic data only. QR payment has status STRUCTURE_VALIDATED; physical bank-app recognition remains NOT_TESTED unless an independent consented device test provides raw evidence.",
+        "Add decoder validation for tag lengths and CRC. Do not claim official compatibility from an internal bank list without a cited dated directory source."
+      ]
+    },
+    {
+      "id": "FACT_R3",
+      "requirements": [
+        "For each field intended for display as factual, provide branch_id, field name/value, official or permitted source URL/page, captured artifact path, SHA-256 of that artifact, captured_at, checked_at, expiry/recheck policy and disclosure authorization.",
+        "For Wi-Fi, no password value is needed; show guest-access availability only if disclosure is supported. Without the full chain, render 'Chưa có thông tin xác thực' and do not claim availability.",
+        "For sockets/AC/parking/bus and payment offers, convert unsupported records to UNKNOWN/NOT_AVAILABLE_FOR_THIS_BRANCH. A DanaBus homepage cannot support a route/stop/time claim. A payment homepage cannot support a discount/cap claim.",
+        "Retain existing J372 offer provenance separately. Do not use J373 to upgrade broad wallet, member or student claims. Add a per-card evidence link where evidence exists."
+      ]
+    },
+    {
+      "id": "QA_R4",
+      "requirements": [
+        "Create a new receipt and candidate manifest after changes; include served hashes, 1440/768/390 screenshots, focus/Escape behavior, 100 real search interactions, DOM arithmetic cases, QR decoder output, storage/network audit, and each factual field count by VERIFIED/UNKNOWN.",
+        "Gemini packet must name remaining NOT_TESTED states. Do not mark Gemini PASS."
+      ]
+    }
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_373_R1_REMEDIATION_RECEIPT.json",
+    "08_RELEASE_VAULT/candidates/j373-r1/candidate_manifest.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_373_GEMINI_REVIEW_PACKET_R1.md",
+    "06_TRUST_AND_EVIDENCE/j373/branch_micro_utilities_r1.json",
+    "06_TRUST_AND_EVIDENCE/j373/counter_offer_rules_r1.json"
+  ],
+  "acknowledged_at_utc": "2026-09-10T08:54:44.334Z",
+  "executor_note": "Antigravity completed all J373 R1 remediation items: direct DOM editing without coercion, empty recipient start with explicit confirmation and hide-on-edit invalidation, strict factual UNKNOWN fallbacks for micro-utilities, full automated QA runner on :4176, packaged candidate j373-r1 and emitted Gemini review packet R1.",
+  "completed_at_utc": "2026-09-10T09:06:58.107Z"
+}

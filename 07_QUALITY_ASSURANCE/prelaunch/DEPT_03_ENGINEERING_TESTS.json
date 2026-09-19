@@ -1,0 +1,47 @@
+{
+  "department_code": "ENGINEERING",
+  "department_name": "Phòng Kỹ Thuật & Hạ Tầng (Engineering & Infrastructure)",
+  "role_responsible": "Principal Engineer",
+  "test_cases": [
+    {
+      "test_case_id": "ENG-01",
+      "priority": "P0",
+      "target_user_perspective": "Hệ thống gọi API dữ liệu và thời gian thực",
+      "objective": "Xác thực 6 API Endpoints (/readyz, /healthz, /api/time, /api/deals, /api/token/issue, /out) tuân thủ contract nghiêm ngặt",
+      "actions_step_by_step": [
+        "Gửi GET /readyz, GET /healthz",
+        "Gửi GET /api/time, GET /api/deals",
+        "Gửi POST /api/token/issue",
+        "Gửi GET /out với token đã ký"
+      ],
+      "expected_outcome": "Tất cả trả về 200 OK với đúng schema; Token có TTL 15s và gán chặt Correlation ID",
+      "verification_type": "AUTOMATED_API_CONTRACT_TEST"
+    },
+    {
+      "test_case_id": "ENG-02",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng bấm mở trang đối tác trong điều kiện mạng biến động",
+      "objective": "Xác thực cơ chế Tokenized Ephemeral Gateway chống Replay Attack và chống giả mạo Correlation ID",
+      "actions_step_by_step": [
+        "Phát hành token với CID_A",
+        "Thử chuyển hướng với CID_B (giả mạo) -> Kỳ vọng 403 Forbidden",
+        "Sử dụng token lần 2 (Replay) -> Kỳ vọng 403 Forbidden"
+      ],
+      "expected_outcome": "Chặn đứng 100% tấn công giả mạo CID và tái sử dụng token",
+      "verification_type": "AUTOMATED_GATEWAY_SECURITY_TEST"
+    },
+    {
+      "test_case_id": "ENG-03",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng đang xem trang trong lúc hệ thống cập nhật phiên bản mới",
+      "objective": "Xác thực cơ chế Blue-Green Draining và Pointer Atomic Rollback đảm bảo Zero Downtime (0 gián đoạn kết nối)",
+      "actions_step_by_step": [
+        "Gửi 6 request chậm (1500ms) vào Slot A",
+        "Kích hoạt chuyển pointer sang Slot B",
+        "Gửi 20 request nhanh vào Proxy"
+      ],
+      "expected_outcome": "100% in-flight request trên Slot A hoàn tất an toàn; Slot B phục vụ request mới ngay lập tức",
+      "verification_type": "AUTOMATED_LOAD_TEST_WITH_TIMELINE"
+    }
+  ]
+}

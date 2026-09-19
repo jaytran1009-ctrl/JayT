@@ -1,0 +1,43 @@
+{
+  "scope_id": "JAYT_322_BATCH_10_TARGETED_INGRESS_SCOPE",
+  "governing_directive": "JAYT-322",
+  "authorization_status": "INGRESS_AUTHORIZED__STAGING_ONLY",
+  "capture_method": "OPERATOR_VERIFIED_BROWSER_ATTACHMENT",
+  "vault": "06_TRUST_AND_EVIDENCE/batch_10_ingress_vault",
+  "fail_closed": true,
+  "one_shot_capture_quota_per_slot": 1,
+  "production_deployment_authorized": false,
+  "registry_mutation_authorized_before_ceo_item_approval": false,
+  "targets": [
+    {
+      "slot_id": "B10_01",
+      "candidate_id": "B10_01_DIEM_TIEP_NHAN_THU_TUC_HANH_CHINH_TAM_KY_1022",
+      "content_tier": "T2_CIVIC_NAV",
+      "leaf_url": "https://1022.vn/bo-tri-diem-tang-cuong-tiep-nhan-thu-tuc-hanh-chinh-cap-so-tai-phuong-tam-ky/",
+      "source_date": "2026-09-04",
+      "expected_text_span": "Từ tháng 9/2026, người dân, doanh nghiệp khu vực phía nam thành phố Đà Nẵng có thể thực hiện các thủ tục hành chính thuộc thẩm quyền giải quyết của các sở, ban, ngành tại Trung tâm Phục vụ hành chính công phường Tam Kỳ.",
+      "prohibitions": ["fee_claim", "intermediary_paid_service", "case_intake", "personal_data_collection", "affiliate", "tracking", "production_mutation"]
+    },
+    {
+      "slot_id": "B10_02",
+      "candidate_id": "B10_02_PHO_CAP_KY_NANG_SO_VNEID_PHU_NU_1022",
+      "content_tier": "T2_CIVIC_SAFETY_INFORMATION",
+      "leaf_url": "https://1022.vn/dua-ky-nang-so-den-voi-phu-nu-vung-cao/",
+      "source_date": "2026-09-04",
+      "expected_text_span": "Tham gia các lớp sinh hoạt, học viên được hướng dẫn sử dụng điện thoại thông minh và một số tiện ích số, sử dụng internet, mạng xã hội an toàn, có trách nhiệm, nhận diện, phòng tránh thông tin xấu độc và các hình thức lừa đảo trên không gian mạng. Chị em bước đầu tiếp cận các ứng dụng, nền tảng số và công cụ trí tuệ nhân tạo (AI).",
+      "prohibitions": ["course_fee_claim", "commercial_training_sales", "victim_intake", "financial_recovery_claim", "personal_data_collection", "affiliate", "tracking", "production_mutation"]
+    },
+    {
+      "slot_id": "B10_03",
+      "candidate_id": "B10_03_NEN_TANG_HANH_CHINH_SO_DICH_VU_CONG_1022",
+      "content_tier": "T2_CIVIC_INFORMATION",
+      "leaf_url": "https://1022.vn/xay-dung-nen-hanh-chinh-so-hien-dai-thuc-chat/",
+      "source_date": "2026-08-25",
+      "expected_text_span": "Hiệu quả giải quyết thủ tục hành chính là một trong những chuyển biến rõ nét nhất tại Sông Vàng. Từ ngày 1/1/2026 đến 31/7/2026, xã tiếp nhận 3.369 hồ sơ, trong đó tỷ lệ hồ sơ trực tuyến đạt 99,85%.",
+      "prohibitions": ["fee_claim", "service_guarantee", "legal_advice", "case_intake", "affiliate", "tracking", "production_mutation"]
+    }
+  ],
+  "required_artifacts": ["<SLOT>.raw.html", "<SLOT>.headers.json"],
+  "required_headers_metadata": ["captured_at_utc", "http_status", "final_url", "headers_redacted"],
+  "validation_gates": ["http_status_200", "final_url_exact_match", "no_sensitive_headers", "sha256_from_raw_bytes", "utf8_span_and_offset_match", "ceo_item_by_item_public_approval"]
+}

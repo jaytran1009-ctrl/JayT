@@ -1,0 +1,35 @@
+const puppeteer = require('puppeteer');
+const assert = require('assert');
+
+(async () => {
+  const base = process.env.JAYT_W7_TEST_URL || 'http://127.0.0.1:4187/';
+  const expectedVersion = process.env.JAYT_W7_EXPECTED_VERSION || 'v3.456.0-w7';
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('console', (msg) => { if (msg.type() === 'error') errors.push(msg.text()); });
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 1 });
+  const response = await page.goto(base, { waitUntil: 'networkidle2' });
+  assert.strictEqual(response.status(), 200);
+  assert.strictEqual(await page.$eval('[data-version]', (el) => el.dataset.version), expectedVersion);
+  await page.$eval('#j401-voucher-input', (el) => { el.value = 'https://shopee.vn/product/38729104/18274910245'; });
+  await page.click('.j401-voucher-box .btn-cta-primary');
+  await page.waitForSelector('#j407-basket-value');
+  await page.$eval('#j407-basket-value', (el) => { el.value = '100000'; });
+  await page.$eval('#j407-shop-discount', (el) => { el.value = '10000'; });
+  await page.$eval('#j407-platform-voucher', (el) => { el.value = '15000'; });
+  await page.$eval('#j407-delivery-fee', (el) => { el.value = '12000'; });
+  await page.$eval('#j407-freeship-credit', (el) => { el.value = '12000'; });
+  await page.evaluate(() => calculateVoucherLookupStack());
+  const output = await page.$eval('#j407-stack-result', (el) => el.textContent);
+  assert(output.includes('75.000'));
+  const policy = await page.$eval('.j401-voucher-result', (el) => el.textContent);
+  assert(policy.includes('Không cào voucher ẩn'));
+  assert.strictEqual(await page.evaluate(() => dispatchSmartAffiliate('shopee').dispatchPerformed), false);
+  assert.strictEqual(await page.evaluate(() => dispatchSmartAffiliate('shopee').affiliateEnabled), false);
+  assert.strictEqual(errors.length, 0, errors.join('\n'));
+  assert.strictEqual(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
+  await browser.close();
+  console.log('W7 SAFE LINK INSPECTOR QA: PASS | 390px | payable 75.000đ | zero dispatch | zero console errors');
+})().catch((error) => { console.error(error); process.exit(1); });

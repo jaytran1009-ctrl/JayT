@@ -1,0 +1,15 @@
+{
+  "scope_id": "JAYT-317-B04-04-05-ONE-SHOT-INGRESS-20260904",
+  "authority": "JAYT-317",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "redirects_followed": false,
+  "retry_authorized": false,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "targets": [
+    {"slot_id":"B04_04","tier":"T2_PROGRAM","url":"https://egov.danang.gov.vn/tienich","expected_text_span":"Tình trạng về hồ sơ dịch vụ công sẽ thông tin TỰ ĐỘNG"},
+    {"slot_id":"B04_05","tier":"T2_PROGRAM","url":"https://1022.danang.gov.vn/gioi-thieu","expected_text_span":"Tổng đài 1022 Đà Nẵng tiếp nhận phản ánh, kiến nghị của tổ chức, công dân"}
+  ]
+}

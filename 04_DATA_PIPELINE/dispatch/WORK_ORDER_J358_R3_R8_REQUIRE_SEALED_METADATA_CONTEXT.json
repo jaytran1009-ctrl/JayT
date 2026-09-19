@@ -1,0 +1,33 @@
+{
+  "work_order_id": "J358-R3-R8-REQUIRE-SEALED-METADATA-CONTEXT",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Make the sealed metadata trust root mandatory at the evaluator boundary, not merely optional runner context.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r7_sealed_authentication_validator.cjs",
+    "runner": "04_DATA_PIPELINE/run_jayt_358_r3_r7_reproducible_replay.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R7_PARTIAL_ACCEPTANCE_AND_TRUST_ROOT_GATE.md"
+  },
+  "requirements": [
+    "Public promotion evaluator must require sealed metadata context; absence of a registered context fails closed. Do not silently skip receipt/metadata hash validation.",
+    "Load metadata hash allowlist and leaf bindings from a sealed registry owned by the replay/verification path, not from candidate, metadata object, evaluator options or any caller-provided allowlist.",
+    "Authenticate metadata bytes themselves before parsing their manifest. Bind registry entry to leaf ID, metadata file digest, raw source digest and permitted manifest digest.",
+    "Do not export any raw/pure function capable of returning VERIFIED without the registry check. If a low-level parser is needed, keep it internal and make it incapable of promotion decisions.",
+    "Add negative tests: direct public evaluator call with no context; forged metadata with correct raw SHA; caller-supplied validMetadataHashes; leaf substitution/path traversal. All must HELD.",
+    "Positive fixture must reference an immutable fixture registry entry whose raw and metadata digests are recorded in receipt inputs. Default verify-existing remains non-mutating and must verify registry digest too.",
+    "Use only existing sealed R3 bytes, retain 0 VERIFIED / 10 HELD, and do not hydrate/package/deploy/mutate scheduler, alias or rollback."
+  ],
+  "deliverables": {
+    "sealed_registry": "06_TRUST_AND_EVIDENCE/batch_19_r3_r8_replay/SEALED_METADATA_REGISTRY.json",
+    "validator": "04_DATA_PIPELINE/j358_r3_r8_sealed_context_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r8_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r8_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R8_SEALED_METADATA_CONTEXT_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R8_SEALED_METADATA_CONTEXT.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO verify-existing replay and mandatory trust-root review required; no automatic promotion"
+}

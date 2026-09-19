@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "audit_title": "JayT Community Web — WCAG 2.1 AA Color Contrast Independent Measurement Report",
+  "version": "2.0.0-AUTHENTIC-CONTRAST",
+  "evaluated_at": "2026-08-28T22:20:00+07:00",
+  "standard": "WCAG 2.1 Level AA (Normal Text >= 4.5:1, Large Text & UI Components >= 3.0:1)",
+  "summary": {
+    "total_pairs_tested": 14,
+    "passed_normal_text_aa": 14,
+    "passed_ui_components_aa": 14,
+    "overall_verdict": "100% PASS — ALL 14/14 UI COLOR COMBINATIONS MEET OR EXCEED WCAG 2.1 AA"
+  },
+  "color_contrast_measurements": [
+    {
+      "context": "Light Mode - Hero Heading",
+      "fg": "#0F172A",
+      "bg": "#FFFFFF",
+      "element": "h1.hero-title",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 17.85,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Body / Description Text",
+      "fg": "#334155",
+      "bg": "#FFFFFF",
+      "element": "p.hero-desc",
+      "wcag_level_target": "AA (>= 4.5:1)",
+      "measured_contrast_ratio": 10.35,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Daypart Time Badge Text",
+      "fg": "#065F46",
+      "bg": "#ECFDF5",
+      "element": "span.time-badge-text",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 7.29,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Primary Action Button Text",
+      "fg": "#FFFFFF",
+      "bg": "#047857",
+      "element": "button.apex-btn-primary",
+      "wcag_level_target": "AA (>= 4.5:1)",
+      "measured_contrast_ratio": 5.48,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Active Journey Pill Text",
+      "fg": "#FFFFFF",
+      "bg": "#047857",
+      "element": "button.jayt-context-pill.active",
+      "wcag_level_target": "AA (>= 4.5:1)",
+      "measured_contrast_ratio": 5.48,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Inactive Journey Pill Text",
+      "fg": "#334155",
+      "bg": "#FFFFFF",
+      "element": "button.jayt-context-pill",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 10.35,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Light Mode - Search Input Text",
+      "fg": "#0F172A",
+      "bg": "#FFFFFF",
+      "element": "input#jayt-search-input",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 17.85,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Hero Heading",
+      "fg": "#FFFFFF",
+      "bg": "#0F172A",
+      "element": "h1.hero-title",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 17.85,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Body / Description Text",
+      "fg": "#CBD5E1",
+      "bg": "#0F172A",
+      "element": "p.hero-desc",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 12.02,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Daypart Time Badge Text",
+      "fg": "#F1F5F9",
+      "bg": "#1E293B",
+      "element": "span.time-badge-text",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 13.35,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Primary Action Button Text",
+      "fg": "#FFFFFF",
+      "bg": "#047857",
+      "element": "button.apex-btn-primary",
+      "wcag_level_target": "AA (>= 4.5:1)",
+      "measured_contrast_ratio": 5.48,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Active Journey Pill Text",
+      "fg": "#FFFFFF",
+      "bg": "#047857",
+      "element": "button.jayt-context-pill.active",
+      "wcag_level_target": "AA (>= 4.5:1)",
+      "measured_contrast_ratio": 5.48,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Inactive Journey Pill Text",
+      "fg": "#CBD5E1",
+      "bg": "#1E293B",
+      "element": "button.jayt-context-pill",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 9.85,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    },
+    {
+      "context": "Dark Mode - Search Input Text",
+      "fg": "#FFFFFF",
+      "bg": "#0F172A",
+      "element": "input#jayt-search-input",
+      "wcag_level_target": "AAA (>= 7:1)",
+      "measured_contrast_ratio": 17.85,
+      "pass_wcag_aa_normal_text": true,
+      "pass_wcag_aa_large_text_and_ui": true,
+      "compliance_verdict": "WCAG_2.1_AA_COMPLIANT"
+    }
+  ]
+}

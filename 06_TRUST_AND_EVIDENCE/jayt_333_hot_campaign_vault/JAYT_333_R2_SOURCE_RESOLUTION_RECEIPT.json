@@ -1,0 +1,62 @@
+{
+  "document_id": "JAYT_333_R2_SOURCE_RESOLUTION_RECEIPT",
+  "generated_at_utc": "2026-09-07T07:06:00.000Z",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_333_R2_HOT_CAMPAIGN_SOURCE_RESOLUTION_WORK_ORDER.md",
+  "results": [
+    {
+      "candidate_id": "J333_HOT_01_JOLLIBEE_69K",
+      "requested_leaf": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+      "final_url": "https://jollibee.com.vn/",
+      "http_status": 200,
+      "raw_sha256": "a65ab9b13b2c0f4e561f197262bb6f1031d7c478a8cc001fdedd9db279126977",
+      "raw_bytes": 252695,
+      "verdict": "QUARANTINE__REDIRECTED_TO_HOMEPAGE_AND_REQUIRED_SPANS_ABSENT"
+    },
+    {
+      "candidate_id": "J333_HOT_02_GALAXY_U22",
+      "verdict": "PUBLIC_APPROVED_STAGING_ONLY__HYDRATED",
+      "source_url": "https://www.galaxycine.vn/u22/",
+      "http_status": 200,
+      "raw_sha256": "12d36958c4db0addb42f5ed514f9038b44e310d9b1a743f3fb1cfea15b2fa7f9",
+      "raw_bytes": 333433,
+      "headers_sha256": "7a2e5bdb2659dc81a1658210ade8a1ad4bc8cc766053a3bef4853ff4e5754d5f",
+      "verified_price_vnd": 45000
+    },
+    {
+      "candidate_id": "J333_HOT_03_METIZ_U22_2026",
+      "offer_leaf_sha256": "6735f1376d757eed814c7d402dc86e10998924a5d944060fbda73a561439aea8",
+      "offer_status": "EXISTING_CARD_CORROBORATED",
+      "locality_status": "UNVERIFIED",
+      "locality_reason": "The retained production offer leaf contains a 0236 telephone number but no explicit physical Da Nang address. A search result for a UAT host was not accepted as production provenance.",
+      "verdict": "HELD__OFFICIAL_PRODUCTION_LOCALITY_LEAF_REQUIRED"
+    },
+    {
+      "candidate_id": "J333_HOT_04_DANABUS_QR_MONTHLY",
+      "verdict": "EVIDENCE_COMPLETE__DEDUP_BLOCKED"
+    },
+    {
+      "candidate_id": "J333_HOT_05_JOLLIBEE_SPICY_SPAGHETTI_40K",
+      "source_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+      "http_status": 200,
+      "raw_sha256": "653d84a0a2ab5c455478dae56ef7bc5a94a576bee981a0d9463f4a687576d14b",
+      "raw_bytes": 216325,
+      "verified_price_vnd": 40000,
+      "verdict": "PUBLIC_APPROVED_STAGING_ONLY__HYDRATED"
+    }
+  ],
+  "metrics": {
+    "new_cards_approved": 2,
+    "existing_cards_corroborated": 1,
+    "dedup_blocked": 1,
+    "quarantined": 1,
+    "awaiting_human_attachment": 0,
+    "held_for_locality": 1
+  },
+  "safeguards": {
+    "search_cache_used_as_raw_evidence": false,
+    "uat_host_used_as_production_provenance": false,
+    "synthetic_voucher_codes_created": 0,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "pack_id": "TRACK1_SCOPED_ACTIVATION_PACK",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0911-W3-PROD-AND-AFFILIATE",
+  "status": "PREPARED__PARTNER_AUTHORIZATION_REQUIRED__NOT_ACTIVATED",
+  "runtime_state": {
+    "affiliate_enabled": false,
+    "sandbox_affiliate_enabled": false,
+    "tracking_enabled": false,
+    "external_navigation_enabled": false
+  },
+  "declarative_destination_domains": [
+    {"domain": "shopee.vn", "runtime_approved": false},
+    {"domain": "lazada.vn", "runtime_approved": false},
+    {"domain": "snssdk1180.com", "runtime_approved": false},
+    {"domain": "klook.com", "runtime_approved": false},
+    {"domain": "food.grab.com", "runtime_approved": false}
+  ],
+  "router_contract": {
+    "function": "dispatchSmartAffiliate(providerKey)",
+    "current_mode": "NON_DISPATCHING_READINESS_GUARD",
+    "user_click_required_before_any_future_redirect": true,
+    "proposed_analytics_fields": ["campus", "cluster", "timestamp"],
+    "current_destination_url": null,
+    "current_tracking_parameters": null
+  },
+  "disclosure_specification": {
+    "label": "#JayTAffiliate",
+    "placement": "directly adjacent to a future commercial CTA",
+    "display_condition": "only after provider authorization and runtime activation approval",
+    "current_public_display": false
+  },
+  "evidence_required_before_activation": [
+    "written authorization for each provider program",
+    "approved destination URL and parameter schema per provider",
+    "privacy and consumer-disclosure approval",
+    "replayable technical test showing explicit click only and no hidden injection",
+    "separate production authorization"
+  ],
+  "prohibited_before_all_evidence_exists": [
+    "affiliate link generation",
+    "sub-ID insertion",
+    "redirect dispatch",
+    "affiliate_enabled true in staging or production",
+    "commission, revenue, or attribution claim"
+  ]
+}

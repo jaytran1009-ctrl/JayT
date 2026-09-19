@@ -1,0 +1,39 @@
+{
+  "capture_run_id": "RUN_20260915_030002_813b8d",
+  "receipt_id": "RECEIPT_CAP_144_B_54_1789416083742",
+  "brand_id": "DANABUS_DN",
+  "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+  "cohort": "COHORT_C_UTILITY_STUDENT",
+  "target_type": "PUBLIC_UTILITY_LEAF",
+  "requested_url": "https://danangbus.vn/ve-xe-buyt.html",
+  "final_url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/ve-xe-buyt.html",
+  "navigation_response_observed": true,
+  "http_status": 200,
+  "redirect_chain": [
+    {
+      "url": "https://danangbus.vn/ve-xe-buyt.html",
+      "http_status": 301
+    },
+    {
+      "url": "https://www.danangbus.vn/ve-xe-buyt.html",
+      "http_status": 302
+    },
+    {
+      "url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/ve-xe-buyt.html",
+      "http_status": 200
+    }
+  ],
+  "captured_at": "2026-09-14T20:01:23.551Z",
+  "browser_version": "Chrome/152.0.7977.42",
+  "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "network_error": null,
+  "fresh_hashes": {
+    "html_sha256": "5b9c010449c799f61ffb64cf2a5387e2932812e54bb6e2673582673bf150fb54",
+    "text_sha256": "bac584b5c1bd7051811253e740bee4d3af20a7e31275e1663a8e9af586e30a88",
+    "screenshot_sha256": "d6ae96136780f110dd3a7fe323e6ce6478a785a1abb04659aec78cfa18dc5964"
+  }
+}

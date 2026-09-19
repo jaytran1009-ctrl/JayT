@@ -1,0 +1,20 @@
+{
+  "work_order_id": "J355-R1_RELEASE_METADATA_REMEDIATION",
+  "authority": "JAYT-355 release authority and CEO post-deploy gate decision",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "version": "v3.428.0",
+  "scope_lock": {"canonical_identities": 76, "content_changes_permitted": false, "held_records_permitted_in_public_bundle": false},
+  "finding": "Live registry metadata identifies JAYT_RELEASE_CANDIDATE_V3424_REGISTRY and JAYT-350 instead of v3.428.0 and JAYT-355.",
+  "required_actions": [
+    "Correct registry_id, release/version labels and governing directive to identify the public artifact as v3.428.0 under JAYT-355.",
+    "Ensure candidate manifest and public registry describe the same version, deployment scope and 76 canonical identities.",
+    "Preserve 24 civic and 52 commercial identities, the 17 actionable production feed records, and exclusion of all nine held records from public routes.",
+    "Rebuild the sealed candidate, calculate new SHA-256 fingerprints and run preflight before redeploying the corrected package.",
+    "Deploy only the corrected sealed package to the current production domain, then verify /, /registry.json and /deals_feed.json, the three viewports and all interaction modules.",
+    "If the corrected post-deploy audit fails, rollback to v3.427.0 deployment dpl_F7XM5WPhKCD34MEEMkBwai65Vqfy and publish a failure receipt."
+  ],
+  "acceptance": {"live_registry_id": "JAYT_RELEASE_CANDIDATE_V3428_REGISTRY", "governing_directive": "JAYT-355", "canonical_entities": 76, "held_entries_in_public_feed": 0, "http_status": 200, "console_runtime_overflow_failures": 0},
+  "outputs": ["08_RELEASE_VAULT/JAYT_355_R1_PRODUCTION_DEPLOYMENT_RECEIPT.json", "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J355-R1_RELEASE_METADATA_REMEDIATION.json"],
+  "production_deployment_authorized": true
+}

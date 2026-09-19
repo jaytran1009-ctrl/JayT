@@ -1,0 +1,27 @@
+{
+  "scope_id": "JAYT_323_B11_01_TARGETED_INGRESS_SCOPE",
+  "governing_directive": "JAYT-323",
+  "authorization": "CEO_TARGETED_INGRESS_AUTHORIZATION__STAGING_REVIEW_ONLY",
+  "issued_at_utc": "2026-09-04T15:20:00Z",
+  "capture_method": "OPERATOR_VERIFIED_BROWSER_ATTACHMENT",
+  "one_shot_quota": 1,
+  "fail_closed": true,
+  "vault_directory": "06_TRUST_AND_EVIDENCE/batch_11_ingress_vault",
+  "targets": [
+    {
+      "slot_id": "B11_01",
+      "candidate_id": "B11_01_TRA_CUU_CHUYEN_BAY_DANANG_SMART_CITY_1022",
+      "content_tier": "T2_CIVIC_NAV",
+      "leaf_url": "https://1022.vn/ra-mat-tien-ich-thong-tin-chuyen-bay-tren-ung-dung-danang-smart-city/",
+      "source_date": "2026-08-27",
+      "expected_text_span": "Dịch vụ được triển khai dựa trên việc chia sẻ dữ liệu theo thời gian thực từ Hệ thống cơ sở dữ liệu điều hành sân bay (AODB), chính thức đưa vào phục vụ người dân và du khách từ ngày 27/8/2026. Sự kiện nằm trong khuôn khổ Lễ công bố triển khai các dự án mở rộng Cảng hàng không quốc tế Đà Nẵng.",
+      "display_boundary": "Information-only: no flight schedule guarantee, ticket sales, booking, fees, airline claims, personal-data collection, affiliate, tracking, or production mutation."
+    }
+  ],
+  "state_transitions": {
+    "on_valid_evidence": "EVIDENCE_COMPLETE_INTERNAL_HELD__AWAITING_CEO_ITEM_AUDIT",
+    "on_missing_or_invalid_evidence": "VALIDATION_FAILED__QUARANTINE",
+    "public_approval": "EXPLICIT_CEO_DECISION_REQUIRED",
+    "hydration": "STAGING_ONLY_AFTER_PUBLIC_APPROVAL"
+  }
+}

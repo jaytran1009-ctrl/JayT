@@ -1,0 +1,73 @@
+{
+  "work_order_id": "WORK_ORDER_W5_COMMERCIAL_MOBILIZATION",
+  "directive_id": "CHAIRMAN-ACTION-MANDATE-2026-0912-W5-COMMERCIAL-MOBILIZATION",
+  "issued_at": "2026-09-12",
+  "owner": "CODEX_CEO_GATEKEEPER",
+  "status": "DISPATCHED_WITH_SAFETY_BOUNDARIES",
+  "execution_scope": "LOCAL_AND_STAGING_ONLY",
+  "production_boundary": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "baseline_version": "v3.449.0-j397",
+    "affiliate_enabled": false,
+    "deployment_authorized": false,
+    "alias_mutation_authorized": false,
+    "deals_feed_mutation_authorized": false
+  },
+  "tasks": [
+    {
+      "task_id": "W5_T1_TRACK1_SANDBOX",
+      "owner": "ANTIGRAVITY",
+      "environment": "isolated_staging_sandbox",
+      "requested_feature": "Track 1 affiliate schema and disclosure UI",
+      "requested_affiliate_enabled": true,
+      "effective_runtime_mode": "SIMULATION_ONLY_NON_DISPATCHING",
+      "router_contract": {
+        "function": "dispatchSmartAffiliate(providerKey)",
+        "parameters": ["sub1=campus", "sub2=cluster", "sub3=epoch_seconds"],
+        "external_navigation_enabled": false,
+        "tracking_enabled": false,
+        "destination_urls": null,
+        "disclosure_label": "#JayTAffiliate — Bản mô phỏng nội bộ; chưa có liên kết thương mại hoạt động."
+      },
+      "release_gate": "BLOCKED_PENDING_WRITTEN_PROVIDER_AUTHORIZATION_AND_RUNTIME_REVIEW"
+    },
+    {
+      "task_id": "W5_T2_KTX_VOUCHER_INGRESS",
+      "owner": "ANTIGRAVITY",
+      "environment": "assisted_first_party_capture",
+      "requested_count": "15-20",
+      "target_sources": ["Shopee Mall", "Lazada Mall"],
+      "required_artifacts": ["raw HTML or JSON", "PNG screenshot", "UTC timestamp", "SHA-256"],
+      "prewrite_policy": "STOP_ON_WAF_CAPTCHA_403_404_OR_LOGIN_MARKER",
+      "synthetic_data_permitted": false,
+      "status": "PENDING_OPERATOR_CAPTURE"
+    },
+    {
+      "task_id": "W5_T3_FIELD_TEST_ROUND1",
+      "owner": "FIELD_OPS_AND_QA",
+      "environment": "live_production_user_research",
+      "participant_slots": 6,
+      "consent_required": true,
+      "pii_collection": false,
+      "gps_collection": false,
+      "bank_data_collection": false,
+      "result_template": "04_DATA_PIPELINE/field_test/W4_FIELD_TEST_ANONYMOUS_OBSERVATION_TEMPLATE.json",
+      "status": "PENDING_CONSENT_AND_COORDINATOR_EXECUTION"
+    },
+    {
+      "task_id": "W5_T4_CGV_CULTURE_DAY",
+      "owner": "CEO_AND_ANTIGRAVITY",
+      "environment": "evidence_review",
+      "required_evidence": ["first-party offer artifact", "price and validity quote", "CGV Da Nang venue scope"],
+      "feed_mutation": "FORBIDDEN_UNTIL_SEMANTIC_ACCEPTANCE",
+      "status": "HELD"
+    }
+  ],
+  "acceptance_gates": [
+    "Production remains v3.449.0-j397 with affiliate_enabled=false",
+    "No external affiliate URL, tracking token, sub-ID or revenue claim is emitted",
+    "Every capture is written only after HTTP and challenge preflight passes",
+    "Every field-test record is consented and anonymous",
+    "CGV remains HELD until first-party semantic evidence is accepted"
+  ]
+}

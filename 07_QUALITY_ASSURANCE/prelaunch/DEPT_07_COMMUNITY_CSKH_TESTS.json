@@ -1,0 +1,32 @@
+{
+  "department_code": "COMMUNITY_CSKH",
+  "department_name": "Phòng Chăm Sóc Người Dùng & Cộng Đồng (Community & CSKH)",
+  "role_responsible": "Community Support Lead",
+  "test_cases": [
+    {
+      "test_case_id": "CSKH-01",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng phát hiện deal đã hết hạn hoặc điều kiện thực tế khác",
+      "objective": "Xác thực nút '🚩 Báo deal đã hết / thông tin chưa đúng' mở modal với thông điệp trung thực 'Lưu trên thiết bị này, chưa gửi về máy chủ JayT'",
+      "actions_step_by_step": [
+        "Bấm nút báo lỗi trên thẻ deal",
+        "Đọc thông báo minh bạch trong modal",
+        "Bấm gửi phản hồi"
+      ],
+      "expected_outcome": "Phản hồi được ghi vào localStorage 'jayt_community_feedback', 0 request gửi ngầm lên máy chủ, bảo vệ quyền riêng tư",
+      "verification_type": "AUTOMATED_DOM_FEEDBACK_AUDIT"
+    },
+    {
+      "test_case_id": "CSKH-02",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng muốn rút lại sự đồng ý tham gia sau khi phỏng vấn",
+      "objective": "Xác thực cơ chế rút consent bằng mã băm SHA-256 (withdraw_consent.py) có chốt chặn Exact-1-Match Guard",
+      "actions_step_by_step": [
+        "Người dùng cung cấp mã rút cầm tay WITHDRAW-XXXX",
+        "Chạy công cụ withdraw_consent.py"
+      ],
+      "expected_outcome": "Xóa sạch đúng 1 bản ghi trên Windows, fail-closed nếu có trùng lặp, ghi log Schema v2 không chứa PII",
+      "verification_type": "AUTOMATED_CONSENT_PURGE_TEST"
+    }
+  ]
+}

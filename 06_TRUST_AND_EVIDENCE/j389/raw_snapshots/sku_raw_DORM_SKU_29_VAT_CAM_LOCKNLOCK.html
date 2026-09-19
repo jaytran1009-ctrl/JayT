@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html><html><head><meta name="wpk-bid" content="nzk9v4lx-mcsc0hok">
+<script>
+      (function () {
+        try {
+          if (location.href.indexOf('disable_localStorage_hook=true') >= 0) {
+            return;
+          }
+          if (window.localStorageHooked === true) {
+            return;
+          }
+          window.localStorageHooked = true;
+          var iosVersion = -1;
+          var userAgent = window.navigator.userAgent;
+          if (/iPad|iPhone|iPod/.test(userAgent)) {
+            var iosMatch = userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+            if (iosMatch && iosMatch.length > 1) {
+              iosVersion = parseInt(iosMatch[1], 10);
+            }
+          }
+          if (iosVersion < 18) {
+            return;
+          }
+          console.log('通过ua判断系统为ios26，开始劫持localStorage');
+          var localStorageData = {};
+          for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            localStorageData[key] = localStorage.getItem(key);
+          }
+          console.log('localStorageData', localStorageData);
+          var taskQueue = [];
+          function processTaskQueue() {
+            while (taskQueue.length > 0) {
+              var task = taskQueue.shift();
+              try {
+                if (task.type === 'setItem') {
+                  localStorage.setItemOriginal(task.key, task.value);
+                  console.log(`处理任务${task.type}: ${task.key} = ${task.value}`);
+                } else if (task.type === 'removeItem') {
+                  localStorage.removeItemOriginal(task.key);
+                  console.log(`处理任务${task.type}: ${task.key}`);
+                } else {
+                  console.log(`处理任务unknown:${task}`);
+                }
+              } catch (error) {
+                console.warn(`处理任务时发生错误: ${task.type}, key: ${task.key}`, error);
+              }
+            }
+          }
+          setInterval(processTaskQueue, 500);
+          var originalSetItem = Storage.prototype.setItem;
+          Storage.prototype.setItem = function(key, value) {
+            console.log(`劫持到数据setItem:${key} = ${value}`);
+            // 完善类型判断，localStorage 只能存储字符串
+            var storageValue;
+            if (value === null || value === undefined) {
+              storageValue = '';
+            } else if (typeof value === 'string') {
+              storageValue = value;
+            } else if (typeof value === 'object' || typeof value === 'number' || typeof value === 'boolean') {
+              storageValue = JSON.stringify(value);
+            } else {
+              // function, symbol 等类型转为字符串
+              storageValue = String(value);
+            }
+            localStorageData[key] = storageValue;
+            taskQueue.push({ type: 'setItem', key, value: storageValue });
+            return;
+          };
+          Storage.prototype.setItemOriginal = function(key, value) {
+            return originalSetItem.call(this, key, value);
+          };
+          Storage.prototype.getItem = function(key) {
+            var value = localStorageData.hasOwnProperty(key) ? localStorageData[key] : null;
+            console.log(`劫持到数据getItem:${key} = ${value}`);
+            return value;
+          };
+          var originalRemoveItem = Storage.prototype.removeItem;
+          Storage.prototype.removeItem = function(key) {
+            console.log(`劫持到数据removeItem:${key}`);
+            delete localStorageData[key];
+            taskQueue.push({ type: 'removeItem', key });
+            return;
+          };
+          Storage.prototype.removeItemOriginal = function(key) {
+            return originalRemoveItem.call(this, key);
+          };
+        } catch (error) {
+          console.log('Error hook localStorage', error);
+        }
+      })();
+    </script><meta charset="utf-8"><meta name="spm-id" content="a2o4n.non-existent-products"><meta name="aplus-waiting" content="1000"><meta name="wpk-sampleRate" content="0.25"><link rel="dns-prefetch" href="//lzd-img-global.slatic.net/"><link rel="dns-prefetch" href="//acs-m.lazada.vn"><link rel="preload" as="style" href="https://g.lazcdn.com/g/code/npm/@ali/gcp-lzd-project-common-page/0.0.12/css/home-pc.css"><link rel="preload" href="//g.lazcdn.com/g/alilog/mlog/aplus_int.js" as="script"><link rel="preload" href="//g.lazcdn.com/g/mtb/??3rd/0.0.10/require.js,lib-promise/3.1.3/polyfillB.js,lib-mtop/2.6.1/mtop.js,lib-windvane/3.0.6/windvane.js" as="script"><link rel="preload" href="//g.lazcdn.com/g/lzd/assets/1.2.0/??react/17.0.2/react.production.min.js,react-dom/17.0.2/react-dom.production.min.js" as="script"><link rel="preload" crossorigin="anonymous" href="https://g.lazcdn.com/g/woodpeckerx/itrace-next/??itrace-jserror.iife.js,itrace-interface.iife.js,itrace-perf.iife.js,itrace-flow.iife.js,itrace-blank.iife.js,itrace-resource.iife.js,itrace.iife.js" as="script"><link rel="preload" crossorigin="anonymous" href="https://g.lazcdn.com/res-o/lzdfe/lzd-h5-itrace/index.js" as="script"><link rel="preload" crossorigin="anonymous" href="https://g.lazcdn.com/g/code/npm/@ali/gcp-lzd-project-common-page/0.0.12/js/home-pc.js" as="script">
+    <link rel="preload" href="//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2" as="font" crossorigin="anonymous">
+          <title>Xin lỗi! Sản phẩm này không còn tồn tại</title>
+<link rel="shortcut icon" href="/favicon.ico"><script>
+window.g_config = window.g_config || {};
+window.g_config.language = "vi";
+window.g_config.regionID = "VN";
+</script>
+    <style>
+      @font-face {
+        font-family: "NotoSans-Regular";
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Regular.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Regular";
+        font-weight: 400;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Regular.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Regular";
+        font-weight: 500;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Medium.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Regular";
+        font-weight: 600;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Regular";
+        font-weight: 700;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-SemiBold";
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Medium.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-SemiBold";
+        font-weight: 500;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Medium.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-SemiBold";
+        font-weight: 600;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-SemiBold";
+        font-weight: 700;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Bold";
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "NotoSans-Bold";
+        font-weight: 700;
+        src:url('//g.lazcdn.com/g/lzd/assets/1.2.13/font/EuclidCircularA-Bold.woff2') format('woff2');
+        font-display: fallback;
+      }
+    </style>
+<style>
+  *[style*=NotoSans-Regular i] {
+    font-family: NotoSans-Regular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,"PingFang SC","Microsoft YaHei",sans-serif !important;
+    font-weight: 400;
+  }
+  *[style*=NotoSans-SemiBold i] {
+    font-family: NotoSans-SemiBold,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,"PingFang SC","Microsoft YaHei",sans-serif !important;
+    font-weight: 500;
+  }
+  *[style*=NotoSans-Bold i] {
+    font-family: NotoSans-Bold,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,"PingFang SC","Microsoft YaHei",sans-serif !important;
+    font-weight: 700;
+  }
+</style>
+<style>
+  *[style*=NotoSans-SemiBold i], *[style*=NotoSans-Bold i] {
+    letter-spacing: -0.5px;
+  }
+</style>
+<style>
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+button,hr,input {
+    overflow: visible
+}
+progress,sub,sup {
+    vertical-align: baseline
+}
+[type=checkbox],[type=radio],legend {
+    box-sizing: border-box;
+    padding: 0
+}
+a,a:hover {
+    text-decoration: none
+}
+a,html {
+    -webkit-tap-highlight-color: transparent
+}
+body {
+    font-family: NotoSans-Regular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,"PingFang SC","Microsoft YaHei",sans-serif !important;
+    margin: 0;
+}
+details,main {
+    display: block
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+hr {
+    box-sizing: content-box;
+    height: 0
+}
+code,kbd,pre,samp {
+    font-family: NotoSans-Regular;
+    font-size: 1em
+}
+a {
+    background-color: transparent
+}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+b,strong {
+    font-weight: bolder
+}
+small {
+    font-size: 80%
+}
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative
+}
+sub {
+    bottom: -.25em
+}
+sup {
+    top: -.5em
+}
+img {
+    border-style: none
+}
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+button,select {
+    text-transform: none
+}
+[type=button],[type=reset],[type=submit],button {
+    -webkit-appearance: button
+}
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+    outline: ButtonText dotted 1px
+}
+fieldset {
+    padding: .35em .75em .625em
+}
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal
+}
+textarea {
+    overflow: auto
+}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+summary {
+    display: list-item
+}
+[hidden],template {
+    display: none
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0
+}
+caption,td,th {
+    text-align: left;
+    font-weight: 400
+}
+table,td,th {
+    vertical-align: middle
+}
+blockquote:after,blockquote:before,q:after,q:before {
+    content: ""
+}
+blockquote,q {
+    quotes: "" ""
+}
+a img {
+    border: none
+}
+html {
+    font-family: NotoSans-Regular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.15
+}
+.lzd-font-thin {
+    font-weight: 300
+}
+.lzd-font-normal {
+    font-weight: 400
+}
+.lzd-font-bold {
+    font-weight: 500
+}
+.lzd-font-bolder {
+    font-weight: 600
+}
+.lzd-font-small {
+    font-size: 12px
+}
+.lzd-font-normal {
+    font-size: 14px
+}
+.lzd-font-large {
+    font-size: 16px
+}
+.lzd-font-larger {
+    font-size: 18px
+}
+.lzd-theme-color {
+    color: #ff330c
+}
+.lzd-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.lzd-base-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.03)
+}
+.lzd-base-center {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.lzd-icon-navigation-arrow:hover {
+    background: rgba(0,0,0,.15)!important
+}
+.laz-icon-navigation-hover:hover {
+    color: #FE4960!important
+}
+.lzd-voucher-arrow:hover {
+    background: rgba(0,0,0,.3)!important
+}
+.lzd-two-line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+.lzd-item-hover-mask:hover {
+    opacity: 1!important
+}
+.product-list .product-row:last-child {
+    margin-bottom: 0!important
+}
+.elevator-tab-item:hover {
+    background-image: linear-gradient(136deg,#FF933F 0,#F93782 67%,#F93782 100%)!important
+}
+.elevator-tab-item span:hover {
+    color: #fff!important
+}
+.lzd-rwb-bottom-bar-placeholder {
+    height: 52px
+}
+@media only screen and (device-width: 375px) and (device-height:812px),screen and (device-width:414px) and (device-height:896px) {
+    .lzdrwb-navigation-base {
+        padding-bottom:17px
+    }
+    .lzd-rwb-bottom-bar-placeholder {
+        height: 69px
+    }
+}
+</style>
+<link rel="stylesheet" href="https://g.lazcdn.com/g/code/npm/@ali/gcp-lzd-project-common-page/0.0.12/css/home-pc.css">
+      <script src="https://g.lazcdn.com/g/alilog/mlog/aplus_int.js"></script></head><body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","cfgver=1.0&aplus",id="beacon-aplus",src="//g.lazcdn.com/g/alilog/mlog/aplus_int.js")
+</script>
+	<script>
+    window.g_config = window.g_config || {};
+    window.g_config.wh_project = "lazada";
+    window.g_config.pageType = "default";
+    window.g_config.channel = "default";
+    window.g_config.language = "vi";
+    window.g_config.regionID = "VN";
+    window.g_config.channelEnv = "product";
+    window.g_config.showPcSearchboxHotWords = false;
+    window.g_config.newPcHeadFoot = true;
+  </script><link rel="stylesheet" type="text/css" href="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/css/615.css"/><link rel="stylesheet" type="text/css" href="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/css/p_index-index.css"/>
+    <script>
+      console.log('[header debug data]:', 'header start');
+    </script>
+    <script>
+    (function() {
+      try {
+        if (window.aplusPageIdSetComplete || /AliApp/i.test(navigator.userAgent)) {
+          return;
+        }
+        var get_cookie = function (sName) {
+          var sRE = '(?:; )?' + sName + '=([^;]*);?';
+          var oRE = new RegExp(sRE);
+          if (oRE.test(document.cookie)) {
+          var str = decodeURIComponent(RegExp['$1']) || '';
+          if (str.trim().length > 0) {
+            return str;
+          } else {
+            return '-';
+          }
+          } else {
+            return '-';
+          }
+        };
+        var getRand = function () {
+          var page_id = get_cookie('cna') || '001';
+          page_id = page_id.toLowerCase().replace(/[^a-zd]/g, '');
+          page_id = page_id.substring(0, 16);
+          var d = (new Date()).getTime();
+          var randend = [
+            page_id,
+            d.toString(16)
+          ].join('');
+          for (var i = 1; i < 10; i++) {
+            var _r = parseInt(Math.round(Math.random() * 10000000000), 10).toString(16);
+            randend += _r;
+          }
+          randend = randend.substr(0, 42);
+          return randend;
+        };
+        var pageid = getRand();
+        var aq = (window.aplus_queue || (window.aplus_queue = []));
+        aq.push({
+          'action':'aplus.appendMetaInfo',
+          'arguments':['aplus-cpvdata', {"pageid":pageid}]
+        });
+        aq.push({
+          'action':'aplus.appendMetaInfo',
+          'arguments':['aplus-exdata',{"st_page_id":pageid}]
+        });
+        // 兼容老版本aplus
+        var gq = (window.goldlog_queue || (window.goldlog_queue = []));
+        gq.push({
+          'action':'goldlog.appendMetaInfo',
+          'arguments':['aplus-cpvdata', {"pageid":pageid}]
+        });
+        gq.push({
+          'action':'goldlog.appendMetaInfo',
+          'arguments':['aplus-exdata',{"st_page_id":pageid}]
+        });
+        window.aplusPageIdSetComplete = true;
+      } catch(err) {
+        console.error(err);
+      }
+    })();
+    </script>
+	<div id="New_LzdSiteNav" class="site-nav J_NavScroll"><div id="topActionHeaderWrapper" class="lzd-header" data-spm="header" data-tag="links"><div id="topActionHeader" class="lzd-header-content-wrap J_NavScroll"><div class="lzd-header-content "><div class="lzd-links-bar " id="topActionLinks"><div class="links-list header-content VN vi">
+      <div class="top-links-item" id="topActionInternalFeedback" style="display:none;">
+        <a class="highlight" target="_blank" href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?wx_navbar_transparent=true&amp;disable_smb=true&amp;lzd_pc_navbar_hidden=true&amp;hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/feedback/internal-feedback"  data-spm-click="gostr=/lzdpub.header.tbar;locaid=internal_feedback">INNER FEEDBACK</a>
+      </div>
+			<div class="top-links-item" id="topActionFeedback">
+				<a class="highlight" target="_blank" href="//pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/trade/feedback"  data-spm-click="gostr=/lzdpub.header.tbar;locaid=dfeedback">Góp ý</a>
+			</div>
+        <div class="top-links-item orange" id="topActionDownload" data-spm-click="gostr=/lzdpub.header.tbar;locaid=app_download">
+          <span>Tiết kiệm hơn với ứng dụng</span>
+          <div class="lzd-download-popup top-popup-wrap" id="lzdDownloadPopup">
+            <div class="top-popup-content lzd-download-content">
+              <div class="get-the-app-scope">
+                <div class="get-the-app">
+                  <div class="get-the-app-title">Tải ứng dụng để có trải nghiệm tốt nhất</div>
+                  <div class="get-the-app-promotion">
+                      <div class="get-the-app-lazada-qr-wrap">
+                        <img class="get-the-app-lazada-qr" src="https://img.lazcdn.com/us/domino/2ad4f22ce5a43dc145f221d13feed352.png" alt="">
+                      </div>
+                    <div class="promotion-text" >
+                      <a href="//www.lazada.vn/wow/i/vn/VNCampaign/uu-dai-tren-lazada-app/">
+                        <div class="get-the-app-download-text">
+                          <p>Mua sắm thông qua ứng dụng của chúng tôi để được:</p>
+<ul>
+<li>Voucher độc quyền</li>
+<li>Deal tốt hơn</li>
+<li>Các khuyến mãi chỉ dành cho bạn</li>
+<li>Luôn cập nhật đầu tiên&nbsp;</li>
+</ul>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                    <form class="get-the-app-form" id="topActionDownloadForm">
+                      <div class="top-input-wrap get-the-app-input-wrap">
+                        <input class="tel-text top-input" id="topActionDownloadInput" placeholder="eg. 0123456789" autocomplete="off">
+                        <button class="top-button button-submit" id="txt-submit">
+                          <i class="icon icon-arrow-on-button"></i>
+                        </button>
+                      </div>
+                    
+<input type="hidden" name="_csrf" value="yTRry7WP-JagcsjP0696EEZxSwy7-8rML360" /></form>
+                    <div class="success-message" id="topActionDownloadSuccessMsg">
+                      <span class="alert alert-success">Success! Please check your phone for the download link  </span>
+                    </div>
+                    <div class="error-message" id="topActionDownloadErrorMsg"></div>
+                  <div class="app-stores">
+                    <a href="https://itunes.apple.com/app/id785385147" class="store-link">
+                      <i class="app-apple"></i>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.lazada.android" class="store-link">
+                      <i class="app-google"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="top-links-item" id="topActionSell">
+        <a class="cyan" href="https://sellercenter.lazada.vn/apps/register/index?gsc=1"  data-spm-click="gostr=/lzdpub.header.tbar;locaid=sell_on">BÁN HÀNG CÙNG LAZADA</a>
+      </div>
+        <div class="top-links-item orange" id="topActionCustomCare"  data-spm-click="gostr=/lzdpub.header.tbar;locaid=customer_care">
+          <span>CHĂM SÓC KHÁCH HÀNG</span>
+          <div class="lzd-customcare-popup top-popup-wrap">
+            <div class="top-popup-content l-customcare-content">
+              <ul class="care-list">
+                  <li class="care-item">
+                        <a href="https://helpcenter.lazada.vn/s/faq" class="care-item-anchor">
+                          <span class="care-icon help-center"></span>
+                          Trung tâm hỗ trợ
+                        </a>
+                  </li>
+                  <li class="care-item">
+                        <a href="//www.lazada.vn/helpcenter/payments/#answer-faq-placeorder-ans" class="care-item-anchor">
+                          <span class="care-icon order-payment"></span>
+                          Đơn hàng &amp; Thanh toán
+                        </a>
+                  </li>
+                  <li class="care-item">
+                        <a href="//www.lazada.vn/helpcenter/shipping-and-delivery/#answer-faq-trackorder-ans" class="care-item-anchor">
+                          <span class="care-icon shipping-delivery"></span>
+                          Giao hàng &amp; Nhận hàng
+                        </a>
+                  </li>
+                  <li class="care-item">
+                        <a href="//www.lazada.vn/helpcenter/returns/#answer-faq-return-ans" class="care-item-anchor">
+                          <span class="care-icon returns-refunds"></span>
+                          Đổi trả hàng &amp; Hoàn tiền
+                        </a>
+                  </li>
+                  <li class="care-item">
+                        <a href="//www.lazada.vn/contact/" class="care-item-anchor">
+                          <span class="care-icon help-center"></span>
+                          Liên hệ với Lazada
+                        </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    <div class="top-links-item grey" id="topActionTrack" data-spm-click="gostr=/lzdpub.header.tbar;locaid=track_order">
+      <span>Kiểm tra đơn hàng</span>
+      <div class="lzd-track-popup top-popup-wrap" id="lzdTrackPop">
+        <div class="top-popup-content lzd-track-content">
+          <div id="topActionMyLastOrder"></div>
+          <div class="track-title">Kiểm tra đơn hàng</div>
+          <form class="track-order-form" id="topActionTrackForm">
+            <label for="topActionTrackOrderNumber" class="top-input-label" >Vui lòng nhập mã đơn hàng:</label>
+            <div class="top-input-wrap track-order-input-wrap">
+              <input placeholder="eg.123456789" id="topActionTrackOrderNumber" class="order-text top-input">
+              <button type="button" class="top-button button-submit">
+                <i class="icon icon-arrow-on-button"></i>
+              </button>
+            </div>
+            <p class="track-order-more-text">Nếu bạn có thắc mắc nào khác, <a href="//www.lazada.vn/faq/#answer-faq-orderstatus-ans" title="Nếu bạn có thắc mắc nào khác, ">Nhấn vào đây</a></p>
+          
+<input type="hidden" name="_csrf" value="GNMCQkLt-GQpVpC8kSDZm9pSlXLJ-7B5UDqc" /></form>
+          <div class="error-message" id="topActionTrackErrorMsg"></div>
+        </div>
+      </div>
+    </div>
+		<div class="top-links-item  grey" id="anonLogin">
+			<a class="grey"  href="//member.lazada.vn/user/login" data-spm-click="gostr=/lzdpub.header.tbar;locaid=login">ĐĂNG NHẬP</a>
+		</div>
+  <div class="top-links-item  grey" id="anonSignup">
+    <a class="grey" href="//member.lazada.vn/user/register" data-spm-click="gostr=/lzdpub.header.tbar;locaid=signup">ĐĂNG KÝ</a>
+  </div>
+    <div class="top-links-item top-links-item-hidden" id="topActionUserAccont"  data-spm-click="gostr=/lzdpub.header.tbar;locaid=account">
+      <span id="myAccountTrigger" class="grey top-links-item-text-limit"></span>
+      <div class="lzd-account-popup top-popup-wrap" id="lzdMyAccountPop">
+        <div class="top-popup-content lzd-account-content">
+          <ul class="account-list">
+              <li class="account-item">
+                  <a href="//member.lazada.vn/user/account#/" class="account-item-anchor" id="account-popup-manage-account">
+                    <span class="account-icon test manage-account"></span>Quản lý tài khoản
+                  </a>
+              </li>
+              <li class="account-item">
+                  <a href="//my.lazada.vn/customer/order/index/" class="account-item-anchor">
+                    <span class="account-icon test my-orders"></span>Đơn hàng của tôi
+                  </a>
+              </li>
+              <li class="account-item">
+                  <a href="//my.lazada.vn/wishlist/index" class="account-item-anchor">
+                    <span class="account-icon test wishlist"></span>Danh sách yêu thích và gian hàng đã theo dõi
+                  </a>
+              </li>
+              <li class="account-item">
+                  <a href="//my.lazada.vn/customer/myReview/my-reviews" class="account-item-anchor">
+                    <span class="account-icon test my-reviews"></span>Nhận xét của tôi
+                  </a>
+              </li>
+              <li class="account-item">
+                  <a href="//my.lazada.vn/customer/returns/index?requestType=return" class="account-item-anchor">
+                    <span class="account-icon test returns"></span>Quản lý đơn hàng và đổi trả
+                  </a>
+              </li>
+              <li class="account-item">
+                  <a href="//member.lazada.vn/user/logout" class="account-item-anchor" id="account-popup-logout">
+                    <span class="account-icon test logout"></span>Đăng xuất
+                  </a>
+              </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    <div class="top-links-item grey" id="topActionSwitchLang" data-spm-click="gostr=/lzdpub.header.tbar;locaid=change_language">
+      <span>change language</span>
+      <div class="lzd-switch-popup top-popup-wrap" id="lzdSwitchPop">
+        <div class="top-popup-content lzd-switch-content">
+            <div class="lzd-switch-item currentSelected" data-lang="vi">
+              <span class="lzd-switch-icon-lazada lzd-switch-icon lzd-switch-icon-vi"></span>
+              VN / Vietnamese
+              <div class="lzd-switch-checked"></div>
+            </div>
+            <div class="lzd-switch-item " data-lang="en">
+              <span class="lzd-switch-icon-lazada lzd-switch-icon lzd-switch-icon-en"></span>
+              EN / English
+            </div>
+        </div>
+      </div>
+    </div>
+	</div></div><div class="lzd-logo-bar default"><div class="logo-bar-content header-content">
+    <div class="lzd-logo-content"><a href="//www.lazada.vn/" data-spm="dhome"><img src="https://img.lazcdn.com/g/tps/images/ims-web/TB1T7K2d8Cw3KVjSZFuXXcAOpXa.png" alt="Mua sắm online Lazada.vn Logo" /></a></div>
+  <div class="lzd-nav-search"  data-spm="search">
+    <div id="button" data-spm-click="gostr=/lzdpub.header.search;locaid=d_go"></div>
+  </div>
+  <div class="lzd-nav-cart">
+    <a href="//cart.lazada.vn/cart?scm=1003.4.icms-zebra-5001419-2591642.OTHER_5196131641_2267316" data-spm="dcart">
+        <span class="cart-icon"></span>
+      <span class="cart-num " id="topActionCartNumber"></span>
+    </a>
+  </div>
+  <div class="lzd-header-banner" id="topActionLiveUpBanner">
+  </div></div></div></div><div class="lzd-site-nav-menu lzd-site-nav-menu-active" data-config="{}"><div class="lzd-site-menu-nav-container"><div class="lzd-site-menu-nav-category">
+	<div class="lzd-site-menu-nav-category-label">
+			<span class="lzd-site-menu-nav-category-text">Danh mục</span>
+	</div>
+	</div>
+  <nav class="lzd-menu-labels" data-spm="menu">
+      <a class="lzd-menu-labels-item" href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/lazmall-channel/lazmall-channel-pc">
+        <span class="lzd-site-nav-menu-iconfont lzd-menu-labels-item-icon">
+          <img alt="LazMall" class="lzd-site-nav-menu-iconfont-img" src='https://img.lazcdn.com/g/tps/images/ims-web/TB15wgLWBr0gK0jSZFnXXbRRXXa.png'/>
+        </span>
+          <span class="lzd-menu-labels-item-text">LazMall</span>
+      </a>
+      <a class="lzd-menu-labels-item" href="//pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/voucher/claimvoucher&amp;scm=1003.4.icms-zebra-5000379-2586391.OTHER_6502412016_7716864&amp;prefetch_replace=1">
+        <span class="lzd-site-nav-menu-iconfont lzd-menu-labels-item-icon">
+          <img alt="Mã" class="lzd-site-nav-menu-iconfont-img" src='https://img.lazcdn.com/g/tps/images/ims-web/TB1UiNthUT1gK0jSZFhXXaAtVXa.png'/>
+        </span>
+            <span class="lzd-menu-labels-item-text">Mã Giảm Giá</span>
+      </a>
+      <a class="lzd-menu-labels-item" href="//pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;wh_pid=/lazada/channel/vn/digitalgoods/nap-the-evoucher&amp;scm=1003.4.icms-zebra-5000379-2586391.OTHER_6502412018_7716864">
+        <span class="lzd-site-nav-menu-iconfont lzd-menu-labels-item-icon">
+          <img alt="Nạp Thẻ" class="lzd-site-nav-menu-iconfont-img" src='https://img.lazcdn.com/g/tps/images/ims-web/TB1DahvhO_1gK0jSZFqXXcpaXXa.png'/>
+        </span>
+            <span class="lzd-menu-labels-item-text">Nạp Thẻ &amp; eVoucher</span>
+      </a>
+      <a class="lzd-menu-labels-item" href="//pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;wh_pid=/lazada/channel/vn/lazglobalchannel/Laz-Quoc-Te&amp;scm=1003.4.icms-zebra-5000379-2586391.OTHER_6502412019_7716864">
+        <span class="lzd-site-nav-menu-iconfont lzd-menu-labels-item-icon">
+          <img alt="LazGlobal" class="lzd-site-nav-menu-iconfont-img" src='https://img.lazcdn.com/g/tps/images/ims-web/TB1CDWbBYj1gK0jSZFuXXcrHpXa.png'/>
+        </span>
+          <span class="lzd-menu-labels-item-text">LazGlobal</span>
+      </a>
+      <a class="lzd-menu-labels-item" href="https://www.google.com/preferences/source?q=lazada.vn">
+        <span class="lzd-site-nav-menu-iconfont lzd-menu-labels-item-icon">
+          <img alt="Thêm làm nguồn ưu tiên trên Google" class="lzd-site-nav-menu-iconfont-img" src='https://img.lazcdn.com/us/domino/e6452759-5ff4-4f1d-8f64-52485e1929dd_VN-201-196.png'/>
+        </span>
+          <span class="lzd-menu-labels-item-text">Thêm làm nguồn ưu tiên trên Google</span>
+      </a>
+  </nav></div></div></div></div></div><script src="//g.lazcdn.com/g/mtb/lib-mtop/2.7.3/mtop.js"></script>
+	<script src="https://g.lazcdn.com/g/lzd/assets/1.2.13/??react/16.8.0/react.production.min.js,react-dom/16.8.0/react-dom.production.min.js"></script><script src="//g.lazcdn.com/g/lzd/??polyfill/0.0.1/index.js"></script><script src="//g.lazcdn.com/g/lzd/assets/0.0.5/next/0.19.21/next.min.js"></script>
+	<script>
+		console.log('[header debug data]:', 'header end');
+	</script>
+      <script>
+try {
+  var body = document.querySelector('body');
+  var bodyClass = body.className;
+  if (!bodyClass || !bodyClass.match(/(?:^|s)gcp-(daraz-mybiz|daraz|lazada)-page(?:s|$)/)) {
+    var businessClass = 'gcp-lazada-page';
+    body.className = (bodyClass ? (bodyClass + ' ') : '') + businessClass;
+  }
+} catch (e) {
+  console.error(e);
+}
+</script><div id="root"></div>
+	<script>
+    window.g_config = window.g_config || {};
+    window.g_config.wh_project = "lazada";
+    window.g_config.pageType = "default";
+    window.g_config.channel = "default";
+    window.g_config.language = "vi";
+    window.g_config.regionID = "VN";
+    window.g_config.channelEnv = "product";
+    window.g_config.showPcSearchboxHotWords = false;
+    window.g_config.newPcHeadFoot = true;
+  </script>
+		<script>
+			console.log('[header debug data]:', 'footer start');
+		</script>
+	<section class="new-desktop-footer " data-config="{}">
+		<div class="footer-first">
+			<div class="lzd-footer-inner" data-spm="footer_top">
+				<div class="lzd-footer-width-25">
+					<h3 class="footer-title">LIÊN HỆ VỚI LAZADA</h3>
+					<ul class="footer-list">
+							<li class="footer-li"><a href="https://www.lazada.vn/helpcenter/">Hotline &amp; Chat trực tuyến (24/7)</a></li>
+							<li class="footer-li"><a href="https://www.lazada.vn/helpcenter/">Trung tâm hỗ trợ</a></li>
+							<li class="footer-li"><a href="//www.lazada.vn/helpcenter/payments/">Hướng dẫn đặt hàng</a></li>
+							<li class="footer-li"><a href="//www.lazada.vn/helpcenter/shipping-and-delivery/">Giao hàng &amp; Nhận hàng</a></li>
+							<li class="footer-li"><a href="https://www.lazada.vn/helpcenter/products-on-lazada/">Chính sách hàng nhập khẩu</a></li>
+							<li class="footer-li"><a href="//www.lazada.vn/helpcenter/returns/?spm=a2o4n.helpcenter.0.0.8e226171cswmxE">Hướng dẫn đổi trả hàng</a></li>
+					</ul>
+				</div>
+				<div class="lzd-footer-width-25">
+					<h3 class="footer-title">LAZADA VIỆT NAM</h3>
+					<ul class="footer-list">
+							<li class="footer-li">
+								<a href="//group.lazada.com/en/about/">Về Lazada Việt Nam</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/i/vn/sell-on-lazada/register_now/">Bán hàng cùng Lazada</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://www.lazada.vn/affiliate/">Chương trình Lazada Afﬁliate</a>
+							</li>
+							<li class="footer-li">
+								<a href="//www.lazada.com/work-at-lazada/">Tuyển dụng</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/legal/terms-of-use">Điều khoản sử dụng</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/legal/privacy">Chính sách bảo mật</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://www.lazada.vn/press/">Báo chí</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;at_iframe=1&amp;wh_pid=/lazada/channel/vn/legal/infringement/policy">Bảo vệ quyền sở hữu trí tuệ</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/i/vn/LandingPage/quy-che-ban-hang">Quy chế hoạt động sàn Lazada</a>
+							</li>
+							<li class="footer-li">
+								<a href="https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&amp;data_prefetch=true&amp;prefetch_replace=1&amp;wh_pid=/lazada/channel/vn/khuyen-mai/quy-trinh-giai-quyet-tranh-chap-khieu-nai">Quy trình giải quyết tranh chấp, khiếu nại</a>
+							</li>
+					</ul>
+				</div>
+				<div class="lzd-footer-width-50">
+						<div class="lzd-footer-app-downloads">
+							<div class="lzd-footer-appIcon pull-left logo icon-logo-lazada-footer">
+								<img loading="lazy" src="https://img.lazcdn.com/us/media/d33f1c45a4bd2fc773f8614625ed9cee-165-165.png" alt="Tải App Lazada" style="width: 100%; height: 100%;" />
+							</div>
+						<div class="pull-left lzd-app-download-text">
+							<div class="title">Always Better</div>
+							<div class="text">Tải App Lazada</div>
+						</div>
+						<div class="pull-left" style="width: 290px">
+								<a class="pull-left icon-appStore-footer icon-appstore-footer" data-spm-click="gostr=/lzdpub.footer.top;locaid=app_store" href="https://apps.apple.com/vn/app/id785385147?l=vi">
+									<img loading="lazy" src="https://img.lazcdn.com/us/domino/287a1db8-9616-4998-87c2-98f42f4f664e_VN-126-42.png" style="width: 100%; height: 100%;" alt="Apple App Download" />
+								</a>
+								<a class="pull-left icon-android-footer icon-appstore-footer" data-spm-click="gostr=/lzdpub.footer.top;locaid=android" href="https://play.google.com/store/apps/details?id=com.lazada.android&amp;hl=vi">
+									<img loading="lazy" src="https://img.lazcdn.com/us/domino/00fecce4-0f30-4d24-8a14-a22e164b8d26_VN-126-42.png" style="width: 100%; height: 100%;" alt="Android App Download" />
+								</a>
+								<a class="pull-left icon-huawei-footer" data-spm-click="gostr=/lzdpub.footer.top;locaid=huawei" href="https://appgallery.huawei.com/#/app/C100164557">
+									<img loading="lazy" src="https://img.lazcdn.com/us/domino/76421850-ecc3-468e-b747-51959d838184_VN-126-42.png" style="width: 100%; height: 100%;" alt="Huawei App Download" />
+								</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+							<div class="lzd-footer-app-supplement">
+									<div>CÔNG TY TNHH RECESS</div>
+									<div>Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 23 ngày 02/10/2025.</div>
+									<div>Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM </div>
+									<div>Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Sài Gòn, Tp. Hồ Chí Minh, Việt Nam</div>
+							</div>
+				</div>
+			</div>
+		</div>
+	<div class="footer-second"><div class="lzd-footer-inner">
+        <div class="lzd-footer-width-32">
+            <h3 class="lzd-footer-h3">CÁCH THỨC THANH TOÁN</h3>
+            <div class="payment-card-list ">
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/e33843e5-0363-4ec9-89d8-5967c636b1ab_VN-53-39.png" alt="visa" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/e713f5e2-be7c-477e-96e9-7de24e78ec6b_VN-53-39.png" alt="ms" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/507837ac-9aae-445a-b361-b96d6a12ce77_VN-53-39.png" alt="jcb" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/110408e5-c2da-4473-8da0-5181aee4d38f_VN-53-39.png" alt="cod" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/736ad3c9-867b-4bb0-a7d8-f0d2cbd84f16_VN-53-39.png" alt="napas" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/20fc159a-0eda-4542-a0ae-d9fe3587406f_VN-30-31.png" alt="ManualInstallmentsCC" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/d594365d-81d9-431e-b028-125d1a46d504_VN-64-64.png" alt="ZaloPay" style="height: 39px; width: 100%"/>
+                </span>
+                <span class="lzd-icon-payment ">
+                    <img loading="lazy" src="https://img.lazcdn.com/us/domino/c57d926d-e93f-4a59-ad9b-82083c0bc2ce_VN-64-64.png" alt="MoMo" style="height: 39px; width: 100%"/>
+                </span>
+            </div>
+        </div>
+      <div class="lzd-footer-width-32 lzd-footer-spacing">
+        <h3 class="lzd-footer-h3">DỊCH VỤ GIAO HÀNG</h3>
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i1/O1CN01m2hfUv1D7S3FSyY0d_!!6000000000169-2-tps-96-70.png" alt="Lazada Logistics" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01ahATKv21NE8iPiA0Q_!!6000000006972-2-tps-96-70.png" alt="GHN" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01S7cpxb1h5697fS0Bl_!!6000000004225-2-tps-96-70.png" alt="Ninja Van" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01wsWwqO1o1caN5JZDp_!!6000000005165-2-tps-96-70.png" alt="grab" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01wysPrK1R8jRG6tesj_!!6000000002067-2-tps-96-70.png" alt="bestInc" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01gjgEds1LYU0p2Pl9N_!!6000000001311-2-tps-96-70.png" alt="ahamove" />
+          <img loading="lazy" class="lzd-icon-delivery" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01TmRqKw1hqjKxGAxIf_!!6000000004329-2-tps-96-70.png" alt="JT" />
+      </div>
+      <div class=" lzd-footer-width-32 ">
+        <h3 class="lzd-footer-h3">Verified by</h3>
+        <div class="lzd-footer-verified">
+          <div class="lzd-footer-verified-left">
+                  <a class="lzd-footer-verified-item" href="https://img.lazcdn.com/us/media/71a069abbbe4a1df9e7801a60341d402-2480-3508.jpg" target="_blank">
+                      <img loading="lazy" alt="CHỨNG NHẬN" src="https://img.lazcdn.com/g/tps/tfs/TB1jyJMv.H1gK0jSZSyXXXtlpXa-184-120.png" style="height: 60px;" />
+                  </a>
+                  <a class="lzd-footer-verified-item" href="https://www.lazada.vn/terms-of-use/" target="_blank">
+                      <img loading="lazy" alt="vn-verified-1" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01Bd0sVV1QY5gSQHbMq_!!6000000001987-2-tps-160-160.png" style="height: 80px;" />
+                  </a>
+                  <a class="lzd-footer-verified-item" href="https://img.lazcdn.com/us/media/d295573f9cbd9ad441822b9a09845bac-2480-3508.jpg" target="_blank">
+                      <img loading="lazy" alt="ISO" src="https://img.lazcdn.com/g/tps/tfs/TB1Jnytq7L0gK0jSZFAXXcA9pXa-160-84.png" style="height: 42px;" />
+                  </a>
+          </div>
+          <div class="lzd-footer-verified-right">
+                  <a class="lzd-footer-verified-item" href="http://online.gov.vn/WebsiteDisplay.aspx?DocId=14805" target="_blank">
+                      <img loading="lazy" alt="register-0" src="https://img.lazcdn.com/g/tps/tfs/TB1fj5Nfr_I8KJjy1XaXXbsxpXa-373-140.png" style="height: 40px;" />
+                  </a>
+                  <a class="lzd-footer-verified-item" href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=15953" target="_blank">
+                      <img loading="lazy" alt="announced" src="https://img.lazcdn.com/g/tps/tfs/TB1iRzQc5qAXuNjy1XdXXaYcVXa-374-142.png" style="height: 40px;" />
+                  </a>
+                  <a class="lzd-footer-verified-item" href="http://online.gov.vn/AppDisplay.aspx?DocId=25" target="_blank">
+                      <img loading="lazy" alt="register-1" src="https://img.lazcdn.com/g/tps/tfs/TB1cULQc5qAXuNjy1XdXXaYcVXa-373-140.png" style="height: 40px;" />
+                  </a>
+          </div>
+        </div>
+      </div>
+	</div></div>
+      <div class="footer-fourth">
+          <div class="lzd-footer-inner">
+              <div class="lzd-footer-width-50" data-spm="venture">
+                <h3 class="lzd-footer-title">Lazada Southeast Asia</h3>
+                <div class="lzd-footer-venture-list">
+                  <a class="lzd-footer-country country-id " href="https://www.lazada.co.id" data-spm-click="gostr=/lzdpub.footer.venture;locaid=id">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/289777af-393a-4599-bbcb-2657299b19eb_VN-32-32.png" alt="id" />
+                  </a>
+                  <a class="lzd-footer-country country-my " href="https://www.lazada.com.my" data-spm-click="gostr=/lzdpub.footer.venture;locaid=my">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/2f56971e-8732-4db4-ad90-0f3f5bef9804_VN-32-32.png" alt="my" />
+                  </a>
+                  <a class="lzd-footer-country country-ph " href="https://www.lazada.com.ph" data-spm-click="gostr=/lzdpub.footer.venture;locaid=ph">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/fdc7c68d-c07f-48a5-8944-079be0630dc9_VN-32-32.png" alt="ph" />
+                  </a>
+                  <a class="lzd-footer-country country-sg " href="https://www.lazada.sg" data-spm-click="gostr=/lzdpub.footer.venture;locaid=sg">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/d3846da2-12fd-4d93-8eac-673143562230_VN-32-32.png" alt="sg" />
+                  </a>
+                  <a class="lzd-footer-country country-th " href="https://www.lazada.co.th" data-spm-click="gostr=/lzdpub.footer.venture;locaid=th">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/9fc9a3a0-a70c-40b4-a5cb-99773bcdf314_VN-32-32.png" alt="th" />
+                  </a>
+                  <a class="lzd-footer-country country-vn " href="https://www.lazada.vn" data-spm-click="gostr=/lzdpub.footer.venture;locaid=vn">
+                    <img loading="lazy" class="lzd-footer-country-image" src="https://img.lazcdn.com/us/domino/f8f3232e-8ade-4eae-b3f1-811ad0a4e99d_VN-32-32.png" alt="vn" />
+                  </a>
+                </div>
+              </div>
+              <div class="lzd-footer-width-25" data-spm="sns">
+              <h3 class="lzd-footer-title">Kết nối với chúng tôi</h3>
+              <div class="lzd-follow-us-icon-list">
+                  <a class="lzd-follow-us-icon "
+                      href="https://www.facebook.com/LazadaVietnam/" data-spm-click="gostr=/lzdpub.footer.sns;locaid=d_fbk"
+                  >
+                  <img loading="lazy" src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01Wdetn224xMIRNihao_!!6000000007457-2-tps-34-34.png" alt="fb" />
+                  </a>
+                  <a class="lzd-follow-us-icon "
+                      href="https://www.linkedin.com/company/lazada?spm=a2o42.pdp_revamp.sns.d_lnk.2e024fd0B1FvTr" data-spm-click="gostr=/lzdpub.footer.sns;locaid=d_lnk"
+                  >
+                  <img loading="lazy" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01D6oQr31GPG1ONK9jd_!!6000000000614-2-tps-34-34.png" alt="linkin" />
+                  </a>
+                  <a class="lzd-follow-us-icon "
+                      href="https://www.youtube.com/@LazadaVnOfficial" data-spm-click="gostr=/lzdpub.footer.sns;locaid=d_ytb"
+                  >
+                  <img loading="lazy" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01zt1zOu1zsFnzoIWje_!!6000000006769-2-tps-34-34.png" alt="yt" />
+                  </a>
+                  <a class="lzd-follow-us-icon "
+                      href="https://www.instagram.com/lazada_vn/" data-spm-click="gostr=/lzdpub.footer.sns;locaid=d_ins"
+                  >
+                  <img loading="lazy" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN011gka8L1E0PIZlHK7e_!!6000000000289-2-tps-34-34.png" alt="ins" />
+                  </a>
+                  <a class="lzd-follow-us-icon "
+                      href="https://www.tiktok.com/@lazadavietnam" data-spm-click="gostr=/lzdpub.footer.sns;locaid=d_tkk"
+                  >
+                  <img loading="lazy" src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN0193C9ay1QIykTmUlwk_!!6000000001954-2-tps-34-34.png" alt="tiktok" />
+                  </a>
+              </div>
+              </div>
+              <div class="lzd-footer-width-25">
+                <div class="lzd-footer-copyright">
+                © Lazada 2026
+                </div>
+              </div>
+          </div>
+      </div>
+	</section>
+    <script>
+      window.__ANON_CART_SCENE__ = 'default';
+      window.__ANON_CART_VERSION__ = '1.0.3';
+      window.__ANON_CART_ASSETS_ENV__ = 'product';
+    </script>
+    <script src="//g.lazcdn.com/g/code/npm/@ali/gcom-pc-anonymous-cart-sdk/1.0.3/lib_anonymousCart/index.umd.es5.production.js" crossorigin="anonymous"></script>
+    <script>
+      window.__LIB_SEARCH_BOX_SCENE__ = 'default';
+      window.__LIB_SEARCH_BOX_VERSION__ = '0.4.26';
+      window.__LIB_SEARCH_BOX_ASSETS_ENV__ = 'product';
+      window.__GCP_ENV = 'production';
+    </script>
+    <link rel="stylesheet" href="//g.lazcdn.com/g/lazada-search-fe/lzd-searchbox/0.4.26/index.css" />
+    <script src="//g.lazcdn.com/g/lazada-search-fe/lzd-searchbox/0.4.26/index.js"></script>
+    <script>
+      (() => {
+        var ele = document.querySelector('.lzd-nav-search');
+        if(!ele) return;
+        var extraParam = {
+          taobao: {
+            showOnlyInTaobao: true,
+            onlyInTaobaoChecked: true,
+          },
+        }['default'] || {};
+        if (window.LZD && window.LZD.SearchBox && window.LZD.SearchBox.init) {
+          var initOptions = extraParam;
+          initOptions.lang = 'vi';
+          initOptions.regionID = 'VN';
+          initOptions.submitSpm = 'gostr=/lzdpub.header.search;locaid=d_go';
+          window.LZD.SearchBox.init(ele, initOptions);
+        }
+      })();
+    </script>
+    <script>
+      window.__LIB_LOGIN_SIGNUP_POPUP_SCENE__ = 'default';
+      window.__LIB_LOGIN_SIGNUP_POPUP_VERSION__ = '1.1.7';
+      window.__LIB_LOGIN_SIGNUP_POPUP_ASSETS_ENV__ = 'product';
+      window.__GCP_ENV = 'production';
+    </script>
+    <script src="//g.lazcdn.com/g/code/npm/@ali/multimod-lzd-member__signup-login-pop/1.1.7/lib-signuppop/index.umd.es5.production.js" crossorigin="anonymous"></script>
+            <div id="webim-container" onclick="javascript:goldlog.record('/lazada.IM.im-msgbox','CLK','platform=desktop&pagename='+ window.LZD_RETCODE_PAGENAME || 'other','GET')"></div>
+        <script>
+          var imJsLink = '//g.lazcdn.com/g/code/npm/@ali/lazada-buyer-im-pc/1.0.17/index.js';
+          var imCssLink = '//g.lazcdn.com/g/code/npm/@ali/lazada-buyer-im-pc/1.0.17/index.css';
+          var gConfig = window.g_config || {regionID: 'SG', language: 'en'};
+          window.onload = function() {
+            if (!gConfig.regionID) return;
+            window._imSDKconfig = window._imSDKconfig || { region: (gConfig.regionID || 'sg').toLowerCase(), lang: gConfig.language || 'en', version: '1.0.17', enabled: /enable_webim=true/.test(document.location.search) || true };
+            if (window._imSDKconfig.disabled || !window._imSDKconfig.enabled) { return; }
+            var imy = document.createElement('link'); imy.rel = 'stylesheet'; imy.href = imCssLink;
+            var sty = document.getElementsByTagName('link')[0]; sty.parentNode.insertBefore(imy, sty);
+            var ims = document.createElement('script'); 
+            ims.type = 'text/javascript'; 
+            ims.async = true; 
+            ims.crossOrigin = "anonymous";
+            ims.src = imJsLink;
+            var scr = document.getElementsByTagName('body')[0]; scr.appendChild(ims);
+            var done = false; ims.onload = ims.onreadystatechange = function() {
+              if (!done && (!this.readyState || this.readyState==='loaded' || this.readyState==='complete')) {
+                done = true; window._chat && window._chat.init(window._imSDKconfig).render('webim-container');
+              }
+            };
+          };
+        </script>
+	<script async src="//g.lazcdn.com/g/??mmfe/cps-rt-tracking/0.0.6/index.js,lzdmod/back-to-third-party-app/5.0.2/m/button.js"></script><script>!(function () {var a = window.__ICE_APP_CONTEXT__ || {};var b = {"appData":null,"loaderData":{"/":{"pageConfig":{}}},"routePath":"/","matchedIds":["/"],"documentOnly":true,"renderMode":"CSR"};for (var k in a) {b[k] = a[k]}window.__ICE_APP_CONTEXT__=b;})();</script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/809.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/772.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/432.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/158.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/p_index-index.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/framework.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/386.js"></script><script src="//g.lazcdn.com/g/psolution/lzd-head-foot/1.4.5/js/main.js"></script>
+<script>!function(e){"function"==typeof define&&define.amd?define(e):e()}(function(){"use strict";var e;!function(){var e="",o=document.head.querySelector('meta[name="itrace-bid"]')||document.head.querySelector('meta[name="wpk-pid"]')||document.head.querySelector('meta[name="wpk-bid"]');o&&o.getAttribute("content")&&(e=o.getAttribute("content"));var i=1,n=document.head.querySelector('meta[name="wpk-sampleRate"]');n&&n.getAttribute("content")&&(i=Number(n.getAttribute("content")));var r=window.gcpIsPageMustImportItrace&&window.gcpIsPageMustImportItrace(),t={id:"perf",collectResTiming:!0,maxLoadTiming:5e3};window.lazada_itrace_config&&(t=Object.assign(t,window.lazada_itrace_config.perfPlugin)),window.isTrace2=!0,window.__itrace_conf={bid:e,debug:!1,cluster:"intl",sampleRate:i,beforeSend:function(e){if(e&&3===e.category){var o=Date.now()%100,i=r?1:10;if(o>=i)return console.log("[lzd-itrace-solution] report is filtered","category:",e.category,"lastTwoDigits:",o,"threshold:",i),!1;console.log("[lzd-itrace-solution]report is passed","category:",e.category,"lastTwoDigits:",o,"threshold:",i)}return e},plugins:["flow","resource","jserror",{id:"blank",maxDepth:10,rootDom:function(){return document.getElementById("container")||document.getElementById("root")||document.body}},{id:"interface",enableXHR:!1,enableFetch:!1},t]}}(),e=["report","reportError","reportJSError","reportApi","reportApiError","reportBlankPage","reportPerf","reportFlow","setConfig"],window.__wpk={},e.forEach(function(e){window.__wpk[e]=function(){}}),e.forEach(function(e){Object.defineProperty(window.__wpk,e,{get:function(){return function(){window.__iTraceLogQueue||(window.__iTraceLogQueue=[]),"reportError"===e&&(e="reportJSError"),"reportApiError"===e&&(e="reportApi");var o=[e].concat(Array.prototype.slice.call(arguments));window.__iTraceLogQueue.push(o)}}})}),window.onerror=function(e,o,i,n,r){!window.__wpk.ready&&r&&window.__wpk.reportJSError(r,{stack:(r.stack||"").toString(),w_msg:e,w_file:o,w_line:i,w_col:n})},window.iLogger={},["iLoggerInit","iLoggerMtopPluginInit","iLoggerReportApi","iLoggerSelfDefineFSP","iLoggerIntegrate"].forEach(function(e){window.iLogger[e]=function(){if(window.iLogger.isReady&&"function"==typeof window.iLogger[e])window.iLogger[e].apply(null,arguments);else{window.__iTraceExpansionQueue||(window.__iTraceExpansionQueue=[]);var o=[e].concat(Array.prototype.slice.call(arguments));window.__iTraceExpansionQueue.push(o)}}}),function(){window.lzdiTraceLifeCircle={};var e={};["NativePrefetchEnd","FirstScreenRenderingStart","FirstScreenRenderingEnd","FSPStart","FSPEnd","FetchSSRDataStart","FetchSSRDataEnd","FetchFirstScreenDataStart","FetchFirstScreenDataEnd","PageRenderingEnd","lzdiTraceShareDidMountTime"].forEach(function(o){var i=function(){window.__iTraceLifeQueue||(window.__iTraceLifeQueue=[]);var e=[o].concat(Array.prototype.slice.call(arguments));window.__iTraceLifeQueue.push(e)};window.lzdiTraceLifeCircle[o]=i,e[o]=i}),window.clearTraceLifeQueue=function(){if(window.__iTraceLifeQueue){for(var o=window.__iTraceLifeQueue,i=0;i<o.length;i++){var n=o[i]||[],r=n.shift&&n.shift();window.lzdiTraceLifeCircle&&"function"==typeof window.lzdiTraceLifeCircle[r]&&e[r]!==window.lzdiTraceLifeCircle[r]&&window.lzdiTraceLifeCircle[r].apply(null,n)}window.__iTraceLifeQueue=[]}};var o=navigator.userAgent||"",i=/iPad|iPhone|iPod/.test(o)?"pagehide":"beforeunload";window.addEventListener(i,function(){window.clearTraceLifeQueue()})}(),function(){window.addEventListener("oniLoggerMtopPluginInit",function(e){o(e.detail)},!1);var e=!(window.lib&&window.lib.mtop);window.lib||(window.lib={}),e&&(e=!1,Object.defineProperty(window.lib,"mtop",{get:function(){return window.__lzdlib_mtop__},set:function(e){window.__lzdlib_mtop__=e,Object.defineProperty(window.lib.mtop,"middlewares",{get:function(){return window.__lzdlib_mtop_middlewares__},set:function(e){var o=new CustomEvent("oniLoggerMtopPluginInit",{detail:{}});window.__lzdlib_mtop_middlewares__=e,window.dispatchEvent(o)},configurable:!0,enumerable:!0})},configurable:!0,enumerable:!0}));var o=function(){var e;window.isMtopMiddlewareReady||(window,(e=window.lib||(window.lib={}))&&e.mtop&&!e.mtop.ERROR?(window.__iTraceMtopQueue||(window.__iTraceMtopQueue=[]),e.mtop.middlewares.push(function(e){var o=this.params,i=this.options,n=i.querystring,r=parseInt((void 0===n?{}:n).t)||Date.now(),t=void 0;return performance&&"function"==typeof performance.now&&(t=Math.floor(performance.now())-Math.floor(window.preLoadTime||0)),e().then(function(){var e=(i.results[0]||{}).stat,n=(void 0===e?{}:e).oneWayTime||Date.now()-r,a={params:o,options:i,spent:n,performanceNow:t};window.iLogger&&window.iLogger.mtopReport?window.iLogger.mtopReport(a):window.__iTraceMtopQueue.push(a)})}),window.isMtopMiddlewareReady=!0,console.log("[lzd-h5-itrace] add mtop middlewares success")):console.warn("[lzd-h5-itrace] Mtop 没有初始化，无法添加 Mtop Itrace 监控插件！请参考 Mtop 文档 http://gitlab.alibaba-inc.com/mtb/lib-mtop ",e))}}(),window.__itraceBundleReady=function(){console.log("--- itrace sdk onload ---"),window.__wpk=window.__itrace,window.__wpk.reportError=window.__wpk.reportJSError,window.__wpk.reportApiError=window.__wpk.reportApi,window.__wpk.setReady(),"function"==typeof window.onWpkReady&&window.onWpkReady()},window.__itraceExpansionReady=function(){console.log("--- itrace expansion onload ---");var e=window.__iTraceExpansionQueue||[];window.iLogger.isReady=!0,window.lzdFspTrackerPlugin&&(window.iLogger.fspTracker=window.lzdFspTrackerPlugin);for(var o=0;o<e.length;o++){var i=e[o]||[],n=i.shift();"function"==typeof window.iLogger[n]&&window.iLogger[n].apply(null,i)}window.clearTraceLifeQueue(),"function"==typeof window.onTraceExpansionReady&&window.onTraceExpansionReady()}});
+</script>
+        <script>
+            if(!window.__isSSR) {
+                !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).lzdFspTrackerPlugin=e()}(this,(function(){"use strict";var t=function(){var t=-1!=location.href.indexOf("jt_debug=fsp"),e=function(){},n=t?console.log.bind(console.log,"jt_sfsp: "):e,i="ignorefspcollection",o=["mousedown","touchstart"];if("undefined"!=typeof window&&"undefined"!=typeof performance&&"undefined"!=typeof MutationObserver&&"undefined"!=typeof screen){var r={SCRIPT:1,LINK:1,HEAD:1,MATE:1,TITLE:1,STYLE:1,BR:1,SVG:2,IMG:2,CANVAS:2,VIDEO:2},a=screen,c=a.width,l=a.height,u=document.documentElement,s=u.clientWidth,f=u.clientHeight,m=Math.round(Math.max(.02*Math.min(c,l),12)),d=Math.round(.05*l),h=Math.min(f,l),g=Math.min(s,c),p=h*g,v=3e4,b=[],w=null,T=!1,y=null,E=null,M=null,x=!1,S=0,I={version:"20221212",listeners:[],lazy:function(){w||C()},on:function(t){-1===this.listeners.indexOf(t)&&this.listeners.push(t)},un:function(t){if(t){var e=this.listeners.indexOf(t);this.listeners.splice(e,1)}},forceStop:function(){B({type:"force"})},_fn:function(t){var e;for(var n in this.listeners)(e=this.listeners[n])&&e(t);this.listeners=[]},getFrames:function(){return b},getIgnoreNodes:function(){return y},install:function(){C()},getXPATH:j},k=!1;window._ITRACE_FSP_OUTPUT?(I.listeners=window._ITRACE_FSP_OUTPUT.listeners,I.forceStop=window._ITRACE_FSP_OUTPUT.forceStop,T=!0):(window._ITRACE_FSP_OUTPUT=I,k=!0);var L=new MutationObserver((function(t){if(T)return;U(t,(function(t){var e=t.target,n=t.addedNodes,i=e.nodeName;if(1!==r[i]&&!V(y,(function(t){return t&&t.contains&&t.contains(e)}))){if(b.length>0&&"HTML"!==i&&"BODY"!==i){var o=e.getBoundingClientRect(),a=o.top,c=o.left,l=o.bottom,u=o.right;if(l<d||a>h-d||u<d||c>g-d)return}U(n,(function(t){try{if(!t.parentElement)return;var e=t;if(function(t){return 3===t.nodeType&&!/^[\r\n\s]*$/.test(t.wholeText)}(t)&&1===t.parentElement.childNodes.length&&(e=t.parentElement),1!==e.nodeType&&9!==e.nodeType)return;if(1===r[e.nodeName])return;!V(_,(function(t){return t.contains(e)}))&&_.push(e)}catch(t){}}))}})),_.length>0&&null===N&&(N=setTimeout((function(){O(_),_=[],N=null}),1e3/60))})),N=null,_=[];return t&&(I.findViewRectInFirstScreen=F,I.createScreenBox=D,I.findMeaningfulDom=P),I}function C(){if(k&&!w&&!T){y=[],M=function(){var n=null,i=null;if(!t)return e;var o=function(t){if(n){var e=Date.now();if(t){cancelAnimationFrame(i);var o=(performance.timeOrigin||performance.timing.navigationStart)+t;e=Math.round(o),n.style.color="#0ff"}n.innerHTML="".concat(e," | ").concat(Math.round(t||performance.now()))}},r=function(){T||(i=requestAnimationFrame(r),n&&(n.innerHTML="".concat(Date.now())))},a=function(){if(!i){n=document.createElement("div");var t={position:"fixed",bottom:"6px",right:"6px",color:"#fff",padding:"0 4px",backgroundColor:"rgba(0, 0, 0, 0.6)",zIndex:99999990,textAlign:"center",fontSize:"12px"};for(var e in t)n.style[e]=t[e];document.body.appendChild(n),requestAnimationFrame(r)}};document.body?a():window.addEventListener("DOMContentLoaded",a);return o}();var n=document.firstElementChild;if(document.body)document.querySelectorAll("BODY > *").length>0&&(U(document.querySelectorAll("[".concat(i,"]")),(function(t){y.push(t),x=!0})),O(document.querySelectorAll("BODY IMG")));M(),L.observe(n,{childList:!0,subtree:!0});var r=function(){o.forEach((function(t){return n.addEventListener(t,B,!0)}))};"loading"!==document.readyState?r():document.addEventListener("DOMContentLoaded",r),w=setTimeout((function(){B({type:"timeout"})}),3e4)}}function A(t,e){if(!T){M(),e=e||G();var n=t.top,i=t.left,o=t.bottom,r=t.right,a=Math.abs(o-n),c=Math.abs(r-i);t.lastTime=Math.max(e,t.lastTime),t.v=Math.floor(a*c/p*1e4)/1e4,E&&clearTimeout(E),E=setTimeout((function(){B({type:"idle"})}),3e3);var l=b.length;if(!(l<4))for(var u=0,s=0,f=0,d={},h=0;h<l;h++){var g=b[h];if(g.g=g.g||h+1,!(g.bottom-g.top<m||g.right-g.left<m)){if(u+=Math.min(g.v,1),g.v>=f&&(f=g.v,s=h),u>4){B({type:"sum_area",p:s});break}for(var v=0;v<h;v++){var w=b[v];if(!(w.bottom-w.top<m||w.right-w.left<m))if(H(g,w,m)){var y=g.g=w.g;d[y]=(d[y]||0)+1,d[y]>=3&&B({type:"tail",p:y-1});break}}}}}}function O(t){try{var e=F(t),i=e.meaningfulList,o=e.box,r=e.cost;if(!o||!o.count)return;b.push(o),S+=r,n("makeFrames cost:".concat(r,"ms; frames count: ").concat(b.length),o),o.wait=0,o.imgSeq=[],U(i,(function(t){var e=t.nodeName;if("IMG"===e){o.wait+=1;var i=t.complete?1:0,r=t.src,a=function(){if(T)t.removeEventListener("load",a,!0);else{if(i>0){if(t.src===r)return;n("img change src",r,t.src,G())}++i>2&&o.startTime>1e3||q((function(){var e=t.getBoundingClientRect(),n=e.top,i=e.left,r=e.bottom,a=e.right,c=e.width,l=e.height;c<m||l<m||r<d||n>h-d||a<d||i>g-d||(o.left=Math.min(i,o.left),o.top=Math.min(n,o.top),o.bottom=Math.max(o.bottom,n+l),o.right=Math.max(o.right,i+c),o.imgSeq.push({node:t,time:G()}),A(o))}),null)}};t.addEventListener("load",a,!0)}else"VIDEO"===e&&t.poster&&o.bgImg.push(t.poster)})),A(o)}catch(t){}}function R(t,e,i){var o=function(){var t=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0]||null;if(t)return t;var e=performance.timing;return{loadEventStart:e.loadEventStart-e.navigationStart,domContentLoadedEventStart:e.domContentLoadedEventStart-e.navigationStart}}().loadEventStart;if(!0!==i&&o<=0)!function(t){var e=null,n=0,i=function(){e&&clearTimeout(e),window.removeEventListener("load",i),0==n++&&t()};e=setTimeout(i,v-G()),window.addEventListener("load",i)}((function(){return R(t,e,!0)}));else{var r={},a=-1,c=-1,l=0,u=null;U(performance.getEntries(),(function(t){var e=t.entryType,n=t.name,i=t.startTime,o=t.duration;if("paint"==e)switch(n){case"first-contentful-paint":a=i;break;case"first-paint":c=i}else/\.css$/i.test(n)?l=Math.max(i+o,l):r[W(n)]=i+o}));var s={},f=0;if(t&&t.length>0&&U(t,(function(t){t=W(t),r[t]&&(n("check img from resourceTiming: ",t,r[t]),s[t]=r[t],f=Math.max(s[t],f))})),o>0){var d=[],h=document.body&&document.body.querySelectorAll("*[style]"),g=function(t,e,i){if((e=W(e))&&!/^data:/i.test(e)){var a=r[e];if(!(a>o)){var c=D(t,i);if(c){var s=c.width,f=c.height;0==c.isCutoff&&s>m&&f>m?l<a&&(l=a,u=t):n("small size img",t)}}}};h&&h.length>0&&U(h,(function(t){var e=/url\(['"]?(.*?)['"]?\)/i.exec(t.style&&t.style.backgroundImage||"");e=e&&e[1],g(t,e,d)})),U(document.images,(function(t){return g(t,t.src,d)}))}e({ssrTime:Math.max(l,a,c),fcp:a,fp:c,ssrLastImg:u,checkResult:s,checkResultMaxValue:f})}}function B(e){if(!T){var i=e.type,r=e.p,a=0,c=G();try{var l=performance.getEntriesByName("first-contentful-paint")[0];if(l&&l.startTime&&(a=l.startTime),-1!=o.indexOf(i)&&(0===a||G()-a<200))return void n("no fcp, ignore mousedown",c)}catch(t){}w&&clearTimeout(w),E&&clearTimeout(E),T=!0,L&&(L.disconnect(),L.takeRecords(),L=null);var u=null,s=[];switch(i){case"tail":case"sum_area":u=v(b.slice(0,r));break;default:var f=v(b),d=f.length;if(d>=2){d--;var h=0;do{if(!H(f[d],f[d-1],m))break;h++}while(--d>0);h>0&&(0===d&&n("Full Screen Reflash x 2."),f=f.slice(0,d||1))}u=f}var g=0,p=null;u.length?U(u,(function(t){t.lastTime>g&&(g=t.lastTime,p=t)})):g=a,R(s,(function(e){try{var r=e.ssrTime,a=e.fcp,c=e.fp,l=e.ssrLastImg,s=e.checkResult,f=e.checkResultMaxValue;f>g&&(g=f);var m=(performance.timeOrigin||performance.timing.navigationStart)+g;n("stopHandleBy ".concat(i,", sfsp: ").concat(g,", checkImg: ").concat(f,", ssrTime: ").concat(r,", fcp: ").concat(a,", fp: ").concat(c,", ssrLastImg: "),l,u,s);var d=p||{},h=d.domSize,v=d.imgSeq,w="";try{v&&v.length>0&&(w=j(v[v.length-1].node))}catch(t){}var T={endType:-1!=o.indexOf(i)?o[0]:i,timestamp:m,cost:g,domSize:h,validFrames:u,ssrTime:r,ssrLastImg:l,bgImgRecord:s,bgImgMaxTime:f,fcp:a,fp:c,haveIgnoreAttr:x,lastImg:w,execCost:S,version:I.version};if(window.dispatchEvent&&window.CustomEvent){var E=new CustomEvent("jstracker.fsp",{detail:T});window.dispatchEvent(E)}window.__itrace_fsp_detail__=T;try{I._fn(T)}catch(t){}M(g),t||(b.length=0,y&&(y.length=0,y=null))}catch(t){}}),"force"===i)}function v(t){var e=[];if(t.length<=1){var n=((e=t.slice(0))[0]||{}).bgImg;n&&U(n,(function(t){return s.push(t)}))}else U(t,(function(t){var n=t.v,i=t.bgImg;n<.02||(i&&U(i,(function(t){return s.push(t)})),e.push(t))}));return e}}function F(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],n=G(),i={startTime:n,lastTime:n,left:Number.MAX_SAFE_INTEGER,top:Number.MAX_SAFE_INTEGER,right:0,bottom:0,count:0,searchNodes:0,bgImg:[],domSize:document.all?document.all.length:document.getElementsByTagName("*").length},o=i.meaningfulList=[],a=function(t){i.searchNodes++;var n=D(t,e);return n?(function(t,e){if(t){var n=t.top,r=t.left,a=t.width,c=t.height,l=t.backgroundImage;i.left=Math.min(r,i.left),i.top=Math.min(n,i.top),i.bottom=Math.max(i.bottom,n+c),i.right=Math.max(i.right,r+a),o.push(e),i.count++,l&&i.bgImg.push(l)}}(n,t),!0):n};return U(t,(function(t){(r[t.nodeName]||3)<2||0!==a(t)&&U(P(t,[]),a)})),{meaningfulList:o,cacheObj:e,box:i,cost:G()-n}}function D(t,e){var n=null;if(e||(e=[]),n=Y(e,t)){if(n.result)return n.result}else{if(n=z(t),e.push(n),n.ignore)return y.push(t),n.result=0;if(V(y,(function(e){return e&&e.contains&&e.contains(t)})))return n.result=0}var i=n,o=i.backgroundImage,r=void 0===o?null:o,a=i.pBox,u=a.top,s=a.left,f=a.bottom,p=a.right,v=a.width,b=a.height,w=!1,T=!0;if("IMG"!==t.nodeName||!0===t.complete||0!==v&&0!==b){if(v<m||b<m)return n.result=!1;if(f<d||u>l-d||p<d||s>c-d)return n.result=0}else T=!1;for(var E=t.parentElement,M=null,x=document.scrollingElement||document.documentElement;E;){if((M=Y(e,E))||((M=z(E)).ignore&&y.push(E),e.push(M)),M.ignore)return n.result=0;var S=M,I=S.scrollTop,k=S.scrollLeft,L=S.scrollHeight,N=S.scrollWidth,_=S.clientHeight,C=S.clientWidth,A=S.overflowX,O=S.overflowY;if(L>_&&(E===x||"visible"!==O)||N>C&&(E===x||"visible"!==A)){u+=I,f+=I,s+=k,p+=k;var R=M.box?M.box:E.getBoundingClientRect();if(M.box=M.box||R,u-R.bottom>4||s-R.right>4||R.top-f>4||R.left-p>4)return n.result=!1}E=E.parentElement,M=null}return w=w||u>=h||s>=g,n.result=(!T||!(f<d||u>h-d||p<d||s>g-d))&&{top:u,left:s,width:v,height:b,isCutoff:w,backgroundImage:r}}function q(t,e){e&&e.then&&e.catch?e.then((function(){q(t)})).catch((function(){q(t)})):window.requestAnimationFrame?requestAnimationFrame(t):setTimeout(t,0)}function H(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:8,i=Math.sqrt(Math.pow(t.top-e.top,2)+Math.pow(t.left-e.left,2)),o=Math.sqrt(Math.pow(t.bottom-e.bottom,2)+Math.pow(t.right-e.right,2));return i<2*n&&o<2*n}function P(t,e){e=e||[];var n=t.firstChild;if(n)do{switch(n.nodeType){case 1:if(1===(r[n.nodeName]||0))break;if("IMG"===n.nodeName||"VIDEO"===n.nodeName){e.push(n);break}if(0===n.childElementCount){e.push(n);break}P(n,e);break;case 3:/^[\r\n\s]*$/.test(n.wholeText)||e.push(t)}}while(n=n.nextSibling);return e}function Y(t,e){for(var n=t.length-1;n>=0;n--){var i=t[n];if(i.key===e)return i}return null}function z(t){var e={key:t,pBox:t.getBoundingClientRect(),scrollTop:t.scrollTop,scrollLeft:t.scrollLeft,scrollHeight:t.scrollHeight,scrollWidth:t.scrollWidth,clientHeight:t.clientHeight,clientWidth:t.clientWidth,isNew:!0};if("BODY"!==t.tagName){if(window.getComputedStyle){var n=window.getComputedStyle(t,null);e.display=n.display,e.position=n.position,e.overflow=n.overflow,e.overflowX=n.overflowX,e.overflowY=n.overflowY,e.transform=n.transform;var o=/url\(['"]?(.*?)['"]?\)/i,r=n.backgroundImage;o.test(r)&&(r=r.replace(o,"$1"),/^data:/i.test(r)||(e.backgroundImage=r)),("fixed"===n.position||b.length>0&&("none"===n.display||"0"===n.opacity||"hidden"===n.visibility))&&(e.ignore=!0)}t.hasAttribute(i)&&(e.ignore=!0,x=!0)}return e}function G(){return performance.now()}function U(t,e){if(e&&t)for(var n=t.length||0,i=0;i<n;i++)e(t[i],i)}function V(t,e){if(e&&t){for(var n=t.length||0,i=0;i<n;i++)if(e(t[i],i))return!0;return!1}}function W(t){return t?t.replace(/^https?:\/\//i,"//"):t}function j(t){var e=[],n=function(t){return t.className?"".concat(t.tagName,'[@class="').concat(t.className,'"]'):t.tagName},i=function(t){for(var i=n(t),o=1,r=t;r=r.previousElementSibling;)n(r)===i&&o++;e.push("".concat(i,"[").concat(o,"]"))},o=t;do{i(o)}while("BODY"!==o.tagName&&(o=o.parentElement));return e.push("/"),e.reverse().join("/")}}();return t}));
+            }
+        </script>
+    <script>!function(n){"function"==typeof define&&define.amd?define(n):n()}(function(){"use strict";var n;(n=document.head.querySelector('meta[name="lzd-itrace-close-auto-monitor"]'))&&n.getAttribute("content")&&n.getAttribute("content").includes("selfDefineFSP")||window.lzdFspTrackerPlugin&&window.lzdFspTrackerPlugin.install&&(window.lzdFspTrackerPlugin.install(),window.lzdFspTrackerPlugin.on?window.lzdFspTrackerPlugin.onReport=window.lzdFspTrackerPlugin.on:window.lzdFspTrackerPlugin.onReport=function(){})});
+</script><script async src="//g.lazcdn.com/g/woodpeckerx/itrace-next/??itrace-jserror.iife.js,itrace-interface.iife.js,itrace-perf.iife.js,itrace-flow.iife.js,itrace-blank.iife.js,itrace-resource.iife.js,itrace.iife.js" crossorigin="anonymous" onload="__itraceBundleReady()"></script><script defer src="//g.lazcdn.com/res-o/lzdfe/lzd-h5-itrace/index.js" crossorigin="anonymous" onload="__itraceExpansionReady()"></script><!--|--><!--|-->
+      <script>window.g_config = window.g_config || {};window.g_config.seed = window.g_config.seed || {"packages":{"@ali/mui-feloader":{"debug":true,"group":"tm","ignorePackageNameInUri":true,"path":"//g.alicdn.com/mui/feloader/5.0.5/","version":"5.0.5","name":"@ali/mui-feloader","base":"//g.alicdn.com/mui/feloader/5.0.5/"}},"modules":{}};</script>
+<script src="//g.alicdn.com/mui/feloader/5.0.5/??feloader-min.js"></script><script src="//g.lazcdn.com/g/mtb/??3rd/0.0.10/require.js,lib-promise/3.1.3/polyfillB.js,lib-mtop/2.6.1/mtop.js,lib-windvane/3.0.6/windvane.js"></script><script src="//g.lazcdn.com/g/lzd/assets/1.2.0/??react/17.0.2/react.production.min.js,react-dom/17.0.2/react-dom.production.min.js"></script>
+        <script>
+            window.$system = {"now":"2026-08-25T08:55:29.855Z","env":"production","hostname":"wormholesource033064192023.lazada-sg.os30","isAliIntranet":false,"isGray":false,"isGrey":false,"versions":{"node":"v16.17.1"},"spm":"00000000000000000000000000000000","storage":{},"files":{}}
+        </script>
+        <script>
+            window.$pegasus = {"components":[{"componentId":135141,"hidden":"false","fullName":"@ali/gcp-lzd-project--common-page--logoModule","uuid":"10000","version":"0.0.12","componentVersionId":1367679,"name":"gcp-lzd-project--common-page--logoModule"},{"componentId":135140,"hidden":"false","fullName":"@ali/gcp-lzd-project--common-page--productsModule","uuid":"10001","version":"0.0.12","componentVersionId":1367680,"name":"gcp-lzd-project--common-page--productsModule"}],"spma":"a2o4n","seaConfig":"","spmb":"non-existent-products","description":"","title":"Xin lỗi! Sản phẩm này không còn tồn tại","templateId":0,"path":"/vn/homepage/non-existent-products","activityId":0,"offlineUrl":"https://pages.lazada.vn","pageType":10,"customConfig":{"i18nTitle":{"default":"Xin lỗi! Sản phẩm này không còn tồn tại","en":"Sorry! This product is no longer available"}},"offlineTime":2666078731000,"id":80342750,"publishTime":1747301479765,"testPage":0,"schemaVersion":"26ae64b8-5adc-47ea-8f45-790fd8a36146","terminal":"pc","mobileNative":0,"createPlatform":"global-campaign-platform-f","name":"Non Existent Products","style":"<style></style>","channelId":1010760}
+        </script>
+    <script>
+        window.__i18n__ = {"vi":{"campaign-rwb-common-error-back-home":"QUAY LẠI TRANG CHỦ","campaign-rwb-common-error-jfy":"Chỉ dành cho bạn","campaign-rwb-page-not-found":"Trang không tìm thấy","campaign-rwb-product-not-exist-no-available":"Xin lỗi! Sản phẩm này không còn tồn tại","campaign-rwb-something-went-wrong":"Có gì đó không ổn"},"en":{"campaign-rwb-common-error-back-home":"Back to homepage","campaign-rwb-common-error-jfy":"Just For You","campaign-rwb-page-not-found":"Page Not Found","campaign-rwb-product-not-exist-no-available":"Sorry! This product is no longer available","campaign-rwb-something-went-wrong":"Something Went Wrong"}};
+        window.g_config = window.g_config || {};
+        window.flute_langs = window.__i18n__[window.g_config.language || "vi"];
+      </script><script>feloader && (function(S) {
+        window.g_config = window.g_config || {};
+        window.g_config.seed = window.g_config.seed || {};
+        S.config(window.g_config.seed);
+        S.config('combine', true);
+      })(feloader)</script><script src="//g.lazcdn.com/g/lzdmod/loader/5.1.3/??index.js"></script>
+<script>
+  (function() {
+    function loadScript(source, cb) {
+      if (!source) return;
+      var script = document.createElement('script');
+      var bodyEl = document.getElementsByTagName('body')[0];
+      function onloadHander(_, isAbort) {
+        if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+          script.onload = null;
+          script.onreadystatechange = null;
+          script = undefined;
+          if (cb && typeof cb === 'function') {
+            cb();
+          }
+        }
+      }
+      script.onload = onloadHander;
+      script.onreadystatechange = onloadHander;
+      script.crossOrigin = "anonymous";
+      script.src = source;
+      bodyEl.appendChild(script);
+    }
+    function recursiveLoadJs(list, index = 0) {
+      if (!list[index]) return;
+      var src = list[index];
+      var callback = function() {
+        recursiveLoadJs(list, index + 1)
+      };
+      loadScript(src, callback);
+    }
+    var needPolyfill = !window.fetch || !window.Promise || !Array.prototype.includes || !Object.entries;
+    var scripts = ["https://g.lazcdn.com/g/code/npm/@ali/gcp-lzd-project-common-page/0.0.12/js/home-pc.js"];
+    if (!needPolyfill) {
+      recursiveLoadJs(scripts);
+    } else {
+      scripts.unshift('//g.lazcdn.com/g/lzdbase/res/1.0.4/??polyfill/preset/default.js');
+      recursiveLoadJs(scripts);
+      (window.goldlog_queue || (window.goldlog_queue = [])).push({
+        action: "goldlog.record",
+        arguments: ["/lazada_polyfill_hit.exposure", "EXP", "page=home-pc"]
+      });
+    }
+  })();
+</script>
+      </body></html>

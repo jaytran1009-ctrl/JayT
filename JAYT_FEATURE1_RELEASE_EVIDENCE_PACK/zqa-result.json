@@ -1,0 +1,129 @@
+{
+  "test_suite": "AUTONOMOUS_OPC_GATES_ZQA_12",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_450_R1_AND_AUTHORIZE_EXECUTION",
+  "directive_code": "JAYT-451",
+  "timestamp": "2026-09-19T08:16:06.302Z",
+  "total_gates": 13,
+  "passed_gates": 13,
+  "all_passed": true,
+  "verdict": "APPROVED",
+  "results": [
+    {
+      "gate_id": "REVIEW-MATH-01",
+      "name": "Review Math Consistency & 100% Seeding Filter",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.296Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "11 products, 33 aspects verified (100% pro+con=100, seeding filter 4/5 quarantined)",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-01",
+      "name": "Dead destination / Zero 404 Link Probe",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.296Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "20 dorm SKUs, 11 triplets audited. Zero 'shopee_store_', shopIds numeric, zero 404s",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-02",
+      "name": "Wrong-product redirect Prevention",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.296Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Product identity matched strictly between offer contract and destination PDP",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-03",
+      "name": "Duplicate asset Prevention",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.296Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "44 unique real-evidence photos audited. Zero duplicates",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-04",
+      "name": "Fake evidence / Emoji Image Substitution",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.296Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Zero emoji substituted as evidence images. 100% verified real CDN photographs",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-05",
+      "name": "State contamination & Anti-State Leakage",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.297Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Zero executable window.__lastRadar fallback. 100-cycle stress sequence validated",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-06",
+      "name": "Missing claim_evidence_id Prevention",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.297Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "100% of claims (33 aspects) contain valid claim_evidence_id",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-07",
+      "name": "Stale offer & Freshness Threshold",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.297Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "20 active dorm offers verified within freshness SLA (< 7 days)",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-08",
+      "name": "Savings/review calculation violation",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.297Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Deterministic currency savings verified; claim accuracy normalized to evidence contract",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-09",
+      "name": "Affiliate disclosure verification",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.297Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Transparent disclosure rendered on modals and product cards",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-10",
+      "name": "Secret/config leakage Prevention & Partner ID Lock",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.298Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Zero private secrets exposed. Partner IDs strictly locked, affiliate_enabled: false fail-closed",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-11",
+      "name": "PII leakage Prevention",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.298Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "Zero user PII collected, stored, or transmitted (anonymous public commerce)",
+      "failure_reason": null
+    },
+    {
+      "gate_id": "ZQA-12",
+      "name": "Release parity verification",
+      "status": "PASS",
+      "tested_at": "2026-09-19T08:16:06.302Z",
+      "commit_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "evidence_ref": "100% Bit-Identical SHA-256 (190e05e0f4c4c0deff793c2b5515366d43c37de1ddba4fcbc570404faa580470) across SSOT, deploy, and deploy/public",
+      "failure_reason": null
+    }
+  ]
+}

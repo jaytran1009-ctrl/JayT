@@ -1,0 +1,209 @@
+{
+  "spec_title": "VietQR EMVCo Merchant-Presented QR Code Specification",
+  "authority": "NAPAS & State Bank of Vietnam Guidelines",
+  "version": "1.2.0 (2026 Update)",
+  "verified_at_utc": "2026-09-10T08:40:44.941Z",
+  "executor": "Antigravity",
+  "security_and_privacy": {
+    "execution_mode": "100% Client-Side Pure JavaScript in RAM",
+    "zero_external_network_requests": true,
+    "no_query_param_leakage": true,
+    "no_localstorage_persistence": true,
+    "memory_cleared_on_reset": true
+  },
+  "emvco_structure": {
+    "tag_00": {
+      "name": "Payload Format Indicator",
+      "length": "02",
+      "value": "01",
+      "required": true
+    },
+    "tag_01": {
+      "name": "Point of Initiation Method",
+      "length": "02",
+      "value": "12",
+      "description": "Dynamic QR (specific amount & transaction)",
+      "required": true
+    },
+    "tag_38": {
+      "name": "Merchant Account Information (NAPAS)",
+      "description": "Tag 38 contains nested TLV sub-tags defining beneficiary bank BIN and account",
+      "required": true,
+      "sub_tags": {
+        "sub_tag_00": {
+          "name": "GUID",
+          "length": "10",
+          "value": "A000000727",
+          "description": "National Payment Corporation of Vietnam (NAPAS)"
+        },
+        "sub_tag_01": {
+          "name": "Beneficiary Organization",
+          "description": "Nested TLV: Tag 00 = Bank BIN (6 digits), Tag 01 = Consumer Account Number (string, preserve leading zero)",
+          "sub_sub_tags": {
+            "sub_sub_tag_00": {
+              "name": "Acquirer ID / BIN",
+              "length": "06"
+            },
+            "sub_sub_tag_01": {
+              "name": "Consumer Account",
+              "length_max": "19"
+            }
+          }
+        },
+        "sub_tag_02": {
+          "name": "Service Code",
+          "length": "08",
+          "value": "QRIBFTTA",
+          "description": "Fast transfer to account (NAPAS 247)"
+        }
+      }
+    },
+    "tag_53": {
+      "name": "Transaction Currency",
+      "length": "03",
+      "value": "704",
+      "description": "VND (ISO 4217 code)",
+      "required": true
+    },
+    "tag_54": {
+      "name": "Transaction Amount",
+      "description": "Exact integer string without decimal point",
+      "required": true
+    },
+    "tag_58": {
+      "name": "Country Code",
+      "length": "02",
+      "value": "VN",
+      "required": true
+    },
+    "tag_62": {
+      "name": "Additional Data Field Template",
+      "description": "Contains transaction memo in sub-tag 08",
+      "sub_tags": {
+        "sub_tag_08": {
+          "name": "Purpose of Transaction (Memo)",
+          "length_max": "25",
+          "description": "Unaccented alphanumeric or safe text"
+        }
+      }
+    },
+    "tag_63": {
+      "name": "CRC Checksum",
+      "length": "04",
+      "algorithm": "CRC-16/CCITT-FALSE",
+      "polynomial": "0x1021",
+      "initial_value": "0xFFFF",
+      "ref_in": false,
+      "ref_out": false,
+      "xor_out": "0x0000",
+      "description": "Calculated across full payload including '6304'"
+    }
+  },
+  "napas_bank_directory": [
+    {
+      "bin": "970436",
+      "code": "VCB",
+      "name": "Vietcombank",
+      "short_name": "Vietcombank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970415",
+      "code": "CTG",
+      "name": "VietinBank",
+      "short_name": "VietinBank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970418",
+      "code": "BIDV",
+      "name": "BIDV",
+      "short_name": "BIDV",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970407",
+      "code": "TCB",
+      "name": "Techcombank",
+      "short_name": "Techcombank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970422",
+      "code": "MB",
+      "name": "MBBank",
+      "short_name": "MBBank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970416",
+      "code": "ACB",
+      "name": "ACB",
+      "short_name": "ACB",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970432",
+      "code": "VPB",
+      "name": "VPBank",
+      "short_name": "VPBank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970423",
+      "code": "TPB",
+      "name": "TPBank",
+      "short_name": "TPBank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970403",
+      "code": "STB",
+      "name": "Sacombank",
+      "short_name": "Sacombank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970437",
+      "code": "HDB",
+      "name": "HDBank",
+      "short_name": "HDBank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970448",
+      "code": "OCB",
+      "name": "OCB",
+      "short_name": "OCB",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970441",
+      "code": "VIB",
+      "name": "VIB",
+      "short_name": "VIB",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "970405",
+      "code": "VBA",
+      "name": "Agribank",
+      "short_name": "Agribank",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "546034",
+      "code": "CAKE",
+      "name": "Cake by VPBank",
+      "short_name": "CAKE",
+      "tested_status": "VALIDATED_SPEC"
+    },
+    {
+      "bin": "963388",
+      "code": "TIMO",
+      "name": "Timo by BVBank",
+      "short_name": "Timo",
+      "tested_status": "VALIDATED_SPEC"
+    }
+  ]
+}

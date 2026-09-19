@@ -1,0 +1,31 @@
+{
+  "work_order_id": "J358-R4-TARGETED-OFFER-CARD-SOURCE-REACQUISITION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Acquire fresh, official, offer-card-scoped evidence for held Batch 19 candidates without authorizing publication.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "accepted_validator": "04_DATA_PIPELINE/j358_r3_r9_anchored_registry_validator.cjs",
+    "accepted_gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R9_HARDENING_ACCEPTANCE_AND_SOURCE_REACQUISITION_GATE.md",
+    "held_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r9_replay/CLAIM_PROVENANCE_MATRIX.json"
+  },
+  "requirements": [
+    "Acquire only official first-party pages or official API responses. Record requested/final URL, HTTP status, capture timestamp, raw bytes and SHA-256; no inferred or third-party claims.",
+    "Prioritize source pages that expose an isolated explicit offer card, card ID and offer-specific title, price, conditions, Da Nang/locality applicability and 2026 validity or recurrence.",
+    "Do not alter prior R3 vault files or registry. Store every new source in a new R4 vault with immutable raw HTML/JSON, metadata and SHA-256 sidecars.",
+    "For any candidate proposed for future verification, create a manifest record binding leaf ID, raw SHA, metadata SHA, explicit DOM/API selector, card byte/range or JSON pointer, card ID and each evidence span.",
+    "Run R3-R9 evaluator only against an anchored registry extension created from the new sealed R4 vault. An extension must be separately hashed and replayable; registry update is evidence-only and cannot authorize staging hydration.",
+    "Return a candid shortfall report. Candidates lacking a directed locality or current validity claim must remain HELD; do not manufacture nationwide/Da Nang applicability.",
+    "No staging hydration, candidate packaging, production deployment, scheduler/alias mutation or rollback. CEO review is required before any future VERIFIED output can be consumed."
+  ],
+  "deliverables": {
+    "r4_vault": "06_TRUST_AND_EVIDENCE/batch_19_r4_targeted_offer_card_vault",
+    "source_manifest": "06_TRUST_AND_EVIDENCE/batch_19_r4_targeted_offer_card_vault/SEALED_SOURCE_MANIFEST.json",
+    "evidence_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r4_targeted_offer_card_vault/OFFER_CARD_EVIDENCE_MATRIX.json",
+    "replay_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R4_TARGETED_SOURCE_REACQUISITION.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO source-quality and replay review required; no automatic promotion or deployment"
+}

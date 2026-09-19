@@ -1,0 +1,24 @@
+/**
+ * JAYT PROJECT MEMORY TRANSACTION RUNNER (114)
+ * Directive: JAYT-114-DAILY-SAVINGS-LOOP-AND-REAL-SUPPLY
+ */
+
+const { applyProjectMemoryTransaction067 } = require('./memory_transaction_manager_057');
+
+const section4Content = '| **Trạng Thái Daily Savings Loop & Real Supply 114** | `DAILY_SAVINGS_LOOP_AND_REAL_SUPPLY_ACTIVE` | Đã hoàn tất JAYT-114-DAILY-SAVINGS-LOOP-AND-REAL-SUPPLY: (1) Gỡ bỏ hoàn toàn 3 mục không có raw capture artifact mới (Metiz, Galaxy, DanaBus); (2) Xây dựng Real Offer Collector Engine (run_real_offer_collector_114.js) đối soát chứng cứ vật lý từ official leaf pages; (3) Thiết lập tập dữ liệu SSOT verified_public_offers_114.json với 5 ưu đãi chuẩn có file vật lý trên đĩa (CGV 30k online, CGV Mua 1 tặng 1 VNPAY, Starlight Combo 10k, KFC Dzựt deal 88k, Jollibee Combo 73k) kèm SHA-256 hash và verbatim quotes; (4) Tái cấu trúc mặt tiền thành "3 Kèo Ngay Lúc Này": Kèo 1 (Hiệu lực theo giờ), Kèo 2 (Sắp hết hạn / Hot tuần này), Kèo 3 (Theo quận & ngữ cảnh nhóm); (5) Chuẩn hóa mỗi thẻ deal trả lời trọn vẹn 4 câu hỏi trong một màn hình (Tiết kiệm gì, Khi nào, Tại đâu, Bấm gì); (6) Thiết lập retention thật: Bookmark Lưu deal, Theo dõi thương hiệu, Smart Split Bill, Lập kèo và Amber Radar; (7) 82/82 QA test assertions pass; (8) Deploy Live Vercel Production với 100% SHA-256 byte parity đối soát 7 tệp SOT; (9) Khóa sản xuất thương mại tuyệt đối deals_feed.json: [] và is_approved: false. |';
+
+const section5Content = '### Mục Tiêu JAYT-114 (DAILY SAVINGS LOOP AND REAL SUPPLY)\n\n1. **Mục Tiêu**: Tái lập vòng lặp giá trị hàng ngày (Daily Savings Loop) của JayT: "Mở JayT → Thấy ngay kèo tiết kiệm đang còn hiệu lực → Biết rõ điều kiện / địa điểm / hạn → Mở nguồn hoặc lập kèo nhóm → Lưu theo dõi / Báo tín hiệu mới → Quay lại ở khung giờ kế tiếp", gỡ bỏ dứt điểm các ưu đãi chưa có raw artifact đối soát (Metiz, Galaxy, DanaBus), xây engine trích xuất chứng cứ vật lý thực tế từ trang chính thức và chuyển đổi mặt tiền thành "3 Kèo Ngay Lúc Này".\n2. **Phạm Vi**: `03_SOURCE_OF_TRUTH/verified_public_offers_114.json`, `03_SOURCE_OF_TRUTH/jayt_apex_interface.js`, `03_SOURCE_OF_TRUTH/index.html`, `05_DEAL_AND_AFFILIATE/run_real_offer_collector_114.js`, `07_QUALITY_ASSURANCE/test_daily_savings_loop_114.js`, `07_QUALITY_ASSURANCE/deploy_live_vercel_beta_114.js`, `08_RELEASE_VAULT/DEPLOYMENT_RECEIPT_114.json`, `08_RELEASE_VAULT/JAYT_114_DAILY_SAVINGS_LOOP_REVIEW_PACK.md`.\n3. **Bộ Quy Chuẩn Cốt Lõi 114**:\n   - **Cổng Bằng Chứng Vật Lý (Physical Evidence Gate)**: 100% ưu đãi công bố bắt buộc liên kết với file capture trên đĩa, tính SHA-256 hash và trích dẫn quote nguyên văn.\n   - **Mặt Tiền 3 Kèo Ngay Lúc Này**: Kèo 1 (Hiệu lực theo giờ), Kèo 2 (Sắp hết hạn), Kèo 3 (Theo quận & ngữ cảnh). Khi chưa có deal: hiển thị trạng thái scanner đang quét 25+ nguồn kèm địa điểm phù hợp, tuyệt đối 0 dùng số liệu giả.\n   - **Thẻ 4 Câu Hỏi**: Trả lời trọn vẹn 4 câu hỏi (Tiết kiệm gì? Khi nào? Tại đâu? Bấm gì?).\n   - **Retention Engine**: Lưu deal, Theo dõi thương hiệu, Lịch tuần, Smart Split Bill, Lập kèo và Amber Radar.\n4. **Khóa Sản Xuất**: Duy trì trạng thái đóng băng thương mại 100%: `deals_feed.json: []`, `is_approved: false`.';
+
+const section6Log = '| `2026-08-25T22:25:00+07:00` | `JAYT-114-DAILY-SAVINGS-LOOP-AND-REAL-SUPPLY` | Triển khai Daily Savings Loop & Real Supply: (1) Gỡ bỏ hoàn toàn Metiz, Galaxy, DanaBus do thiếu raw artifact; (2) Real Offer Collector Engine đối soát physical evidence (CGV, Starlight, KFC, Jollibee); (3) Mặt tiền "3 Kèo Ngay Lúc Này" (Giờ hiện tại, Sắp hết hạn, Theo quận); (4) Thẻ deal 4 câu hỏi (Tiết kiệm gì, Khi nào, Tại đâu, Bấm gì); (5) Retention engine (Lưu deal, Theo dõi thương hiệu, Split bill, Lập kèo, Amber radar); (6) 82/82 QA test suite pass; (7) Deploy Live Vercel Production với 100% SHA-256 byte parity đối soát 7 tệp SOT. | [`DEPLOYMENT_RECEIPT_114.json`](08_RELEASE_VAULT/DEPLOYMENT_RECEIPT_114.json) | `test_daily_savings_loop_114.js` (82/82 PASS) | **IMPLEMENTED — PENDING CEO AUDIT** |';
+
+const result = applyProjectMemoryTransaction067({
+  version: '3.229.0',
+  workOrder: 'JAYT-114-DAILY-SAVINGS-LOOP-AND-REAL-SUPPLY',
+  workOrderDescription: 'Gỡ bỏ deal thiếu artifact; xây real offer collector trích xuất physical evidence; mặt tiền 3 Kèo Ngay Lúc Này; thẻ deal 4 câu hỏi; retention engine (lưu deal, theo dõi, split bill, amber radar); deploy Live Vercel Beta 100% byte parity',
+  headerStatusLine: '114: IMPLEMENTED — PENDING CEO AUDIT (DAILY SAVINGS LOOP · REAL SUPPLY ENGINE · 3 KEO HOMEPAGE · 4-QUESTION CARDS · ZERO FABRICATED DEALS · PHYSICAL EVIDENCE LINKAGE · SMART SPLIT BILL · RETENTION ENGINE · VERCEL LIVE PARITY · PRODUCTION LOCKED)',
+  section4Row: section4Content,
+  section5CriteriaText: section5Content,
+  section6LogEntry: section6Log
+});
+
+console.log('TRANSACTION_114_RESULT:', result.finalHash);

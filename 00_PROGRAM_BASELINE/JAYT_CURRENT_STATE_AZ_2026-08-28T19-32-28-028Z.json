@@ -1,0 +1,93 @@
+{
+  "epoch_id": "EPOCH_AZ_2026-08-28T19-32-28-028Z",
+  "timestamp": "2026-08-28T19:32:28.029Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AZ)",
+  "production_state": {
+    "url": "https://deploy-ten-xi-48.vercel.app",
+    "version": "v3.419.0",
+    "status": "LOCKED_ROLLBACK_BASELINE",
+    "ceo_verdict": "LOCKED_MAINTAINED"
+  },
+  "current_design_candidate": {
+    "version": "v3.422.0-staging.ay",
+    "staging_url": "https://jayt-storefront-staging-ay.vercel.app",
+    "source_file": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ay.js",
+    "stylesheet_file": "03_SOURCE_OF_TRUTH/styles_ay.css",
+    "release_receipt": "07_QUALITY_ASSURANCE/staging_release_receipt_v34220_staging_ay.json",
+    "status": "READY_FOR_DIRECT_CEO_EVALUATION"
+  },
+  "staging_environments_lineage": [
+    {
+      "id": "STAGING_AY",
+      "version": "v3.422.0-staging.ay",
+      "url": "https://jayt-storefront-staging-ay.vercel.app",
+      "description": "JayT Daily Guide Full Storefront Redesign (Current Review Target)",
+      "status": "ACTIVE_REVIEW"
+    },
+    {
+      "id": "STAGING_AX",
+      "version": "v3.421.0-staging.ax",
+      "url": "https://jayt-storefront-staging-ax.vercel.app",
+      "description": "JAYT-242 Product Surface & Workstreams Restoration",
+      "status": "HISTORICAL_COMPARISON"
+    },
+    {
+      "id": "STAGING_AT",
+      "version": "v3.420.3-staging.at",
+      "url": "https://jayt-storefront-staging-at.vercel.app",
+      "description": "Field-Level Evidence Certified Baseline & False Provenance Containment",
+      "status": "HISTORICAL_COMPARISON"
+    },
+    {
+      "id": "STAGING_AS",
+      "version": "v3.420.2-staging.as",
+      "url": "https://jayt-storefront-staging-as.vercel.app",
+      "description": "Supply Expansion Sprint",
+      "status": "HISTORICAL_COMPARISON"
+    },
+    {
+      "id": "STAGING_AR",
+      "version": "v3.420.1-staging.ar",
+      "url": "https://jayt-storefront-staging-ar.vercel.app",
+      "description": "UI Bug Fix Revision",
+      "status": "HISTORICAL_COMPARISON"
+    },
+    {
+      "id": "STAGING_AQ",
+      "version": "v3.420.0-staging.ak",
+      "url": "https://jayt-storefront-staging.vercel.app",
+      "description": "Initial Staging AK Promotion",
+      "status": "HISTORICAL_COMPARISON"
+    }
+  ],
+  "data_lifecycle_accounting": {
+    "public_certified": 33,
+    "tier_1_verified_deals": 5,
+    "tier_2_official_programs": 9,
+    "tier_3_civic_facilities": 6,
+    "tier_4_radar_sources": 13,
+    "candidate_awaiting_evidence": 0,
+    "quarantined_items": 1,
+    "quarantined_details": [
+      {
+        "item_id": "DEAL_120_CGV_ZALOPAY_12H",
+        "reason": "NO_FIELD_LEVEL_EVIDENCE",
+        "containment_record": "06_TRUST_AND_EVIDENCE/containment_records/CONTAINMENT_RECORD_CGV_ZALOPAY_AT.json"
+      }
+    ]
+  },
+  "affiliate_portal_state": {
+    "network": "AccessTrade Vietnam",
+    "status": "PORTAL_ACCESS_NOT_VERIFIED",
+    "active_commercial_links": 0,
+    "active_campaigns": 0,
+    "operational_policy": "READ_ONLY_RESEARCH_ONLY"
+  },
+  "active_operational_invariants": [
+    "Upgrade-only protocol: Zero source overwrite without migration record",
+    "Fail-closed buy decision hub & voucher hub: 'Chưa đủ dữ liệu để kết luận Mua/Chờ'",
+    "Production release block: Locked at v3.419.0 pending CEO direct review",
+    "Single consolidated Vietnamese daily report rule (Directive JAYT-245 Section F)"
+  ],
+  "self_sha256": "526312fb134eb1b94293e32bbd307e904d676229bfaf068fb58d5757ed806919"
+}

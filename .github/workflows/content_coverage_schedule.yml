@@ -1,0 +1,44 @@
+name: JayT Continuous Content Coverage Scheduler
+
+on:
+  schedule:
+    # 08:00 ICT = 01:00 UTC
+    - cron: '0 1 * * *'
+    # 16:30 ICT = 09:30 UTC
+    - cron: '30 9 * * *'
+    # Monday 06:00 ICT = Sunday 23:00 UTC
+    - cron: '0 23 * * 0'
+    # 1st of month 00:00 ICT = Last day of prev month 17:00 UTC
+    - cron: '0 17 28-31 * *'
+  workflow_dispatch:
+    inputs:
+      cycle:
+        description: 'Coverage cycle to execute'
+        required: true
+        default: 'DAILY_MORNING_0800'
+        type: choice
+        options:
+          - DAILY_MORNING_0800
+          - DAILY_EVENING_1630
+          - WEEKLY_LOCAL_SCHEDULE
+          - MONTHLY_GOVERNANCE_AND_BASE_TERMS
+
+jobs:
+  coverage_sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Execute Controlled Coverage Sweep (Zero-Mutation)
+        env:
+          TZ: 'Asia/Ho_Chi_Minh'
+        run: |
+          CYCLE="${{ github.event.inputs.cycle || 'DAILY_MORNING_0800' }}"
+          echo "Executing JayT Coverage Sweep for cycle: $CYCLE"
+          node 07_QUALITY_ASSURANCE/scheduler_tasks/cron_cloud_runner.js --cycle="$CYCLE" --dry-run

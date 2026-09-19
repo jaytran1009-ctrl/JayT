@@ -1,0 +1,40 @@
+{
+  "manifest_id": "BATCH_141_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141R — REAL DELTA SCHEDULER EXECUTION & RECOVERY-TEST CERTIFICATION",
+  "status": "STATIC_SCHEDULER_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:10:00+07:00",
+  "executive_ruling": "CEO audit rejected Batch 141 runner: runner performed static inspection rather than real delta scheduling (did not capture due sources, did not compare new vs old hashes, and did not transition state to UNCHANGED or CHANGED).",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_27_STATIC_SCHEDULER_INSPECTION_ONLY",
+      "description": "Runner read baseline registry without executing real live delta captures on scheduled sources or computing delta hash differences."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/run_freshness_scheduler_141.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/run_freshness_scheduler_141.js",
+      "sha256": "7ba3b8b6889167d3553b5e00d7b7cf414ebb169d80b91773b17d952eacc64c33"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/generic_compiler_141.js",
+      "sha256": "63ef2e20b79e4ec9a23a162b051c3fdcfef369a3d6917b5cea5cbfbf18740f36"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/batch_capture_141_manifest.json",
+      "sha256": "cf43d569501a4ab9badd903d7938abc7d3d8ad7c1b8e6885b2c5e4a0b9e53d6e"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/test_generic_compiler_141.js",
+      "sha256": "0d93bfdd835208c0d256f8619dc200791326ebd827a6f3d96103c7123979f72f"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141_FRESHNESS_SCHEDULER_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/JAYT_141_FRESHNESS_SCHEDULER_REVIEW_PACK.md",
+      "sha256": "e351dc8f78484ff0a06db73283dd8caa2a25380a5578ba33609554b0a84d2613"
+    }
+  ]
+}

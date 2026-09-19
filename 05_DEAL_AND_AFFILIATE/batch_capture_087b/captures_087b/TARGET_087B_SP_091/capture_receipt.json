@@ -1,0 +1,37 @@
+{
+  "target_id": "TARGET_087B_SP_091",
+  "brand": "VNPAY",
+  "sector": "ECOMMERCE_WALLETS",
+  "requested_url": "https://vnpay.vn/khuyen-mai",
+  "final_url": "https://vnpay.vn/khuyen-mai",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:34:15.236Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_pass": "087A_CAPTURE",
+    "parent_target_id": "TARGET_087A_273",
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_087a/captures_087a/TARGET_087A_273/page.html",
+    "parent_artifact_sha256": "8e80a79e15e29464c0527ac47c54e8458c35117f59e5c159c413a4413b2c1c28",
+    "literal_href": "/khuyen-mai",
+    "link_offset": 168788,
+    "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+    "selection_reason": "Trích xuất từ thẻ <a href=\"...\"> tại offset 168788 trong 087A capture HTML (TARGET_087A_273)"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "188b018723afed06a3b7a35832b46a06f3e053e71bb9ec8e43fd9b6904c60a0d",
+      "size": 821872
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "3b59b738e2d91f02827a24338c207031f197d52247c3db6d67b8410b2fb82e02",
+      "size": 232099
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "ccb00e3157adbd9972cd45f4e0dd0ea5bc5d430b00557b04560f9722cb45e2e4",
+      "size": 2575
+    }
+  }
+}

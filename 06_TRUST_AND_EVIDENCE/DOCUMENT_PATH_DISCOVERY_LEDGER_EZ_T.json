@@ -1,0 +1,67 @@
+{
+  "ledger_id": "DOCUMENT_PATH_DISCOVERY_LEDGER_EZ_T",
+  "version": "1.0.0-ez.t",
+  "governing_directive": "JAYT-245 Section EZ-T (Lines 4432-4454)",
+  "timestamp": "2026-08-31T07:31:35.130Z",
+  "navigation_policy": {
+    "mode": "READ_ONLY_VISIBLE_DOM_NAVIGATION",
+    "max_internal_links_inspected_per_candidate": 3,
+    "prohibited_actions": [
+      "NO_LOGIN",
+      "NO_BULK_SEARCH",
+      "NO_FORM_SUBMISSION",
+      "NO_PRIVATE_OR_INTERNAL_API",
+      "NO_SECRET_COLLECTION",
+      "NO_AUTOMATED_DOWNLOAD_SCRAPING"
+    ],
+    "taxonomy_rule": "DISCOVERED_LINKS_ARE_UNVERIFIED_NOT_CANONICAL_OR_OFFICIAL"
+  },
+  "evaluated_candidates": [
+    {
+      "candidate_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "seed_url": "http://thuvien.danang.gov.vn/",
+      "parent_receipt_id": "RECEIPT_EZ_L_DANANG_LIBRARY",
+      "visible_internal_links_inspected": [
+        {
+          "link_text": "Nội quy Thư viện",
+          "href": "https://thuvien.danang.gov.vn/News/ReadNews/1409",
+          "discovery_state": "DISCOVERED_UNVERIFIED"
+        },
+        {
+          "link_text": "Thủ tục cấp thẻ",
+          "href": "https://thuvien.danang.gov.vn/News/ReadNews/1408",
+          "discovery_state": "SELECTED_FOR_V3_DOCUMENT_EVALUATION"
+        },
+        {
+          "link_text": "Đăng ký thẻ",
+          "href": "http://opac.thuvien.danang.gov.vn:82/pages/opac/wpid-regreader.html",
+          "discovery_state": "DISCOVERED_UNVERIFIED"
+        }
+      ],
+      "selected_document_path": "https://thuvien.danang.gov.vn/News/ReadNews/1408"
+    },
+    {
+      "candidate_id": "INTAKE_07_VIETNAM_RAILWAY_OFFICIAL",
+      "seed_url": "https://dsvn.vn/",
+      "parent_receipt_id": "RECEIPT_EZ_O_VIETNAM_RAILWAY",
+      "visible_internal_links_inspected": [
+        {
+          "link_text": "CÁC QUY ĐỊNH",
+          "href": "https://dsvn.vn/#/quydinhmuave",
+          "discovery_state": "DISCOVERED_UNVERIFIED_CLIENT_ROUTED"
+        },
+        {
+          "link_text": "Chính sách mua hàng",
+          "href": "https://dsvn.vn/#/pages/dieukienvadieukhoan",
+          "discovery_state": "DISCOVERED_UNVERIFIED_CLIENT_ROUTED"
+        },
+        {
+          "link_text": "Chính sách thanh toán",
+          "href": "https://dsvn.vn/#/pages/phuongthucthanhtoan",
+          "discovery_state": "DISCOVERED_UNVERIFIED_CLIENT_ROUTED"
+        }
+      ],
+      "selected_document_path": "NO_STATIC_RAW_DOCUMENT_SELECTED_IN_ROUND"
+    }
+  ]
+}

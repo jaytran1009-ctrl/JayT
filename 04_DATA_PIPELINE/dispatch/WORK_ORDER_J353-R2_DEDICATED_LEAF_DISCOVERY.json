@@ -1,0 +1,38 @@
+{
+  "work_order_id": "J353-R2_DEDICATED_LEAF_DISCOVERY",
+  "directive": "JAYT-353",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "purpose": "Resolve only the 12 Batch 17 Phi Long SKU candidates held because a different product's leaf page was reused.",
+  "target_candidate_ids": [
+    "B17_RADAR_PL_LJDS080064G",
+    "B17_RADAR_PL_LJDM400064G",
+    "B17_RADAR_PL_SDDDC6",
+    "B17_RADAR_PL_CZ600",
+    "B17_RADAR_PL_SDCZ74",
+    "B17_RADAR_PL_SXS1000",
+    "B17_RADAR_PL_DTXM128GB",
+    "B17_RADAR_PL_DTX256GB",
+    "B17_RADAR_PL_SA400_480G",
+    "B17_RADAR_PL_SKC3000_1024G",
+    "B17_RADAR_PL_SNV3S_1000G",
+    "B17_RADAR_PL_KVR56S46BS8"
+  ],
+  "requirements": {
+    "one_dedicated_canonical_leaf_per_sku": true,
+    "store_raw_html_and_sanitized_headers": true,
+    "bind_raw_sha256_and_exact_product_price_spans": true,
+    "bind_physical_Da_Nang_locality_or_mark_held": true,
+    "no_catalog_carousel_or_other_sku_url_reuse": true,
+    "no_stock_inference": true
+  },
+  "permissions": {
+    "discovery_and_evidence_capture_authorized": true,
+    "staging_hydration_authorized": false,
+    "release_candidate_authorized": false,
+    "production_deploy_authorized": false,
+    "affiliate_tracking_authorized": false
+  },
+  "expected_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J353-R2_DEDICATED_LEAF_DISCOVERY.json",
+  "acceptance": "Each target must end as VERIFIED__DEDICATED_LEAF_BOUND or HELD with a specific reason; no unverified item may be rendered."
+}

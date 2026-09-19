@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "report_id": "JAYT_319_REPLENISHMENT_RISK_CLASSIFICATION_REPORT",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_REPLENISHMENT_RISK_CLASSIFICATION_WORK_ORDER.md",
+  "generated_at": "2026-09-04T15:01:00+07:00",
+  "governance_mode": "FAIL_CLOSED__RISK_CLASSIFICATION_BEFORE_SCOPE",
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 6,
+    "production_card_count": 3
+  },
+  "evaluations": {
+    "B04_09": {
+      "candidate_id": "B04_09_MIEN_GIAM_PHI_CONG_DAN_SO_DANANG",
+      "service_name": "Chính sách miễn giảm 13 khoản phí, lệ phí cho công dân số trên địa bàn thành phố Đà Nẵng",
+      "official_leaf_url": "https://soyte.danang.gov.vn/vi/web/syt/w/cong-dan-so-duoc-mien-giam-13-khoan-phi-le-phi-tu-ngay-15-8-2026-den-28-02-2027",
+      "mandated_check": "determine whether the current fee-waiver policy can be rendered without a prohibited price/fee claim",
+      "risk_analysis": "The source document explicitly features monetary and fee waiver claims ('mức thu 0 đồng đối với 10 khoản phí, lệ phí và giảm mức thu đối với 03 khoản phí, lệ phí theo Nghị quyết 66.22/2026/NQ-CP'). On the JayT platform, strict non-commercial invariants prohibit commercial pricing, discount percentages, voucher deals, and fee-reduction claims. Although this policy represents a legitimate municipal public-service incentive, displaying '0 đồng' or fee-waiver details risks blurring public utility with promotional/deal claims. Crucially, the pre-declared verbatim span explicitly contains 'mức thu 0 đồng đối với 10 khoản phí', binding any card hydrated under this evidence to a fee claim.",
+      "risk_level": "HIGH_COMMERCIAL_AMBIGUITY",
+      "resolution_in_writing": "UNRESOLVED_UNDER_CURRENT_SPAN. Rendering without a prohibited price/fee claim would require re-sourcing or re-scoping to a leaf page focused purely on administrative portal onboarding procedures, stripping all monetary references and fee-waiver numbers. Under fail-closed discipline, B04_09 cannot proceed to capture scope under the current fee-anchored span.",
+      "classification_verdict": "HELD__PENDING_PRICE_CLAIM_REMEDIATION",
+      "eligible_for_one_shot_scope": false
+    },
+    "B04_10": {
+      "candidate_id": "B04_10_LICH_TIEM_CHUNG_TRE_EM_CDC_DANANG",
+      "service_name": "Cẩm nang hướng dẫn lịch tiêm chủng cho trẻ em bảo vệ trọn vẹn những năm đầu đời",
+      "official_leaf_url": "https://ksbtdanang.vn/cam-nang-vac-xin/lich-tiem-chung-cho-tre-em-11/lich-tiem-chung-cho-tre-em-17.html",
+      "mandated_check": "obtain QA/Compliance review of health-information scope; any future card must be informational only and not medical advice",
+      "risk_analysis": "The candidate provides health information published by the municipal disease control authority (CDC Đà Nẵng). Under health compliance standards, public health guidance must strictly avoid patient-specific diagnosis, prescription instructions, or clinical consultation claims. The pre-declared verbatim span ('tiêm chủng đầy đủ và đúng lịch không chỉ giúp trẻ phòng ngừa hiệu quả các bệnh nguy hiểm... mà còn giảm nguy cơ biến chứng nặng, nhập viện và tử vong') is purely general epidemiological education regarding the societal and personal benefit of timely vaccination. It contains zero individualized dosing, zero diagnostic protocols, zero pharmaceutical commercialization, and zero appointment solicitation.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA approve B04_10 subject to three mandatory structural card specifications: (1) Card Tag: 'Y tế dự phòng / Cẩm nang sức khỏe'; (2) Mandatory Explicit Disclaimer: 'Tài liệu phổ biến kiến thức y tế dự phòng cộng đồng của CDC Đà Nẵng; không thay thế chẩn đoán hoặc chỉ định điều trị của nhân viên y tế'; (3) Action CTA: 'Xem cẩm nang tiêm chủng' linking strictly outbound to official ksbtdanang.vn portal with zero booking/consultation forms. These locks ensure the card remains purely informational.",
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B04_11": {
+      "candidate_id": "B04_11_SINH_HOAT_CONG_DAN_SINH_VIEN_UED",
+      "service_name": "Hướng dẫn Tuần sinh hoạt công dân – sinh viên năm học 2026 – 2027",
+      "official_leaf_url": "https://ued.udn.vn/2026/08/14/truong-dai-hoc-su-pham-dai-hoc-da-nang-to-chuc-tuan-sinh-hoat-cong-dan-sinh-vien-nam-hoc-2026-2027/",
+      "mandated_check": "verify the student-orientation content has continuing applicability rather than being a past event notice",
+      "risk_analysis": "Evaluated against current platform timestamp (2026-09-04). The leaf page announces 'Tuần sinh hoạt công dân – sinh viên' taking place from 10/08/2026 to 15/09/2026, with online modules concluding on 10/09/2026. Only 11 days remain before the entire orientation concludes. Once 15/09/2026 passes, this page becomes an expired, historical event record rather than an ongoing public utility. This replicates the exact temporal obsolescence vulnerability that caused B04_08's rejection (SCOPE_DENIED__EXPIRED_EVENT_SOURCE).",
+      "risk_level": "HIGH_TEMPORAL_OBSOLESCENCE",
+      "resolution_in_writing": "UNRESOLVABLE FOR CURRENT LEAF URL. Because the content specifically covers a time-boxed orientation schedule ending mid-September 2026, it lacks enduring, year-round utility for students. It cannot be certified as having continuing applicability throughout the 2026–2027 academic year.",
+      "classification_verdict": "REJECTED__TEMPORARY_EVENT_EXPIRING",
+      "eligible_for_one_shot_scope": false
+    }
+  },
+  "council_recommendation": {
+    "single_eligible_candidate": "B04_10_LICH_TIEM_CHUNG_TRE_EM_CDC_DANANG",
+    "recommended_action": "Submit B04_10 to CEO for item-specific One-Shot Capture Scope Work Order, while holding B04_09 for price-free reformulation and rejecting B04_11 due to impending event expiration."
+  }
+}

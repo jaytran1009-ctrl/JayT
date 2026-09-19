@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "board_version": "118.0.0",
+  "updated_at": "2026-08-25T23:18:00+07:00",
+  "directive": "JAYT-118-REAL-SUPPLY-AND-HONEST-VALIDATION",
+  "matrix_dimensions": {
+    "slots": ["SLOT_0730", "SLOT_1115", "SLOT_1415", "SLOT_1730", "SLOT_2000"],
+    "sectors": ["CINEMA", "COFFEE", "LUNCH", "SHOPPING", "MOBILITY"]
+  },
+  "summary_metrics": {
+    "total_cells": 25,
+    "verified_deal_cells": 1,
+    "verified_deals_total_count": 4,
+    "watchlist_recheck_cells": 2,
+    "public_menu_and_utility_cells": 6,
+    "actionable_coverage_cells": 9,
+    "actionable_coverage_rate_percent": 36.0,
+    "gap_high_priority_cells": 4,
+    "gap_medium_priority_cells": 12
+  },
+  "matrix_cells": [
+    {
+      "cell_id": "CELL_0730_CINEMA",
+      "slot": "SLOT_0730",
+      "sector": "CINEMA",
+      "status": "GAP_MEDIUM",
+      "reason": "Rạp phim chưa mở cửa vào khung giờ sáng sớm (07:30).",
+      "target_brands": ["CGV", "Galaxy Cinema", "Metiz", "Lotte Cinema", "Starlight"],
+      "action_plan": "Tiếp tục duy trì trạng thái trống trung thực; gợi ý lịch chiếu ngày."
+    },
+    {
+      "cell_id": "CELL_0730_COFFEE",
+      "slot": "SLOT_0730",
+      "sector": "COFFEE",
+      "status": "WATCHLIST_RECHECK",
+      "active_items": ["WATCHLIST_116_HIGHLANDS_JCB_30", "MENU_116_PHELA_SPECIALTY"],
+      "target_brands": ["Highlands Coffee", "The Coffee House", "Trung Nguyên Legend", "Phê La"],
+      "action_plan": "Xác minh trực tiếp tại quầy Highlands Đà Nẵng về ưu đãi JCB."
+    },
+    {
+      "cell_id": "CELL_0730_LUNCH",
+      "slot": "SLOT_0730",
+      "sector": "LUNCH",
+      "status": "GAP_MEDIUM",
+      "reason": "Khung giờ sáng tập trung vào điểm tâm truyền thống hơn fastfood.",
+      "target_brands": ["Bánh Mì Phượng", "Cơm tấm", "Bún chả cá Đà Nẵng"],
+      "action_plan": "Ghi nhận tín hiệu quán điểm tâm uy tín vào Ghi Chú Cá Nhân."
+    },
+    {
+      "cell_id": "CELL_0730_SHOPPING",
+      "slot": "SLOT_0730",
+      "sector": "SHOPPING",
+      "status": "GAP_MEDIUM",
+      "reason": "Siêu thị và cửa hàng tiện lợi chủ yếu bán giá niêm yết buổi sáng.",
+      "target_brands": ["WinMart+", "Circle K", "GS25", "7-Eleven"],
+      "action_plan": "Theo dõi khuyến mãi combo bữa sáng tại chuỗi tiện lợi."
+    },
+    {
+      "cell_id": "CELL_0730_MOBILITY",
+      "slot": "SLOT_0730",
+      "sector": "MOBILITY",
+      "status": "PUBLIC_UTILITY_COVERED",
+      "active_items": ["UTILITY_118_DANABUS_TRANSIT"],
+      "target_brands": ["DanaBus", "Xanh SM", "Grab", "Be"],
+      "action_plan": "Hiển thị biểu giá trợ giá công cộng DanaBus 6k/8k và vé tháng SV 60k; tiếp tục săn mã giảm giá gọi xe sáng."
+    },
+    {
+      "cell_id": "CELL_1115_CINEMA",
+      "slot": "SLOT_1115",
+      "sector": "CINEMA",
+      "status": "GAP_MEDIUM",
+      "reason": "Khung giờ trưa chủ yếu là suất chiếu thông thường.",
+      "target_brands": ["CGV", "Galaxy", "Metiz"],
+      "action_plan": "Quét leaf page vé giờ trưa (Happy Lunch) của các cụm rạp."
+    },
+    {
+      "cell_id": "CELL_1115_COFFEE",
+      "slot": "SLOT_1115",
+      "sector": "COFFEE",
+      "status": "PUBLIC_MENU_COVERED",
+      "active_items": ["MENU_116_PHUCLONG_TEA_BAKERY"],
+      "target_brands": ["Phúc Long", "Highlands", "Katinat"],
+      "action_plan": "Bổ sung menu trà trưa và đồ uống sau giờ cơm."
+    },
+    {
+      "cell_id": "CELL_1115_LUNCH",
+      "slot": "SLOT_1115",
+      "sector": "LUNCH",
+      "status": "PUBLIC_MENU_COVERED",
+      "active_items": ["MENU_116_KFC_DZUT_DEAL_88K", "MENU_116_JOLLIBEE_COMBO_73K"],
+      "target_brands": ["KFC", "Jollibee", "ShopeeFood", "GrabFood", "Pizza Hut"],
+      "action_plan": "Hiển thị minh bạch giá combo niêm yết; săn voucher trưa thực tế (ShopeeFood/GrabFood)."
+    },
+    {
+      "cell_id": "CELL_1115_SHOPPING",
+      "slot": "SLOT_1115",
+      "sector": "SHOPPING",
+      "status": "GAP_MEDIUM",
+      "reason": "Nhu cầu mua sắm giờ trưa tập trung vào đồ ăn chế biến sẵn.",
+      "target_brands": ["WinMart", "Co.opmart", "Lotte Mart"],
+      "action_plan": "Theo dõi deal bento/cơm trưa siêu thị."
+    },
+    {
+      "cell_id": "CELL_1115_MOBILITY",
+      "slot": "SLOT_1115",
+      "sector": "MOBILITY",
+      "status": "GAP_HIGH",
+      "reason": "Chưa có mã giảm giá gọi xe đi ăn trưa (11:00 - 13:00).",
+      "target_brands": ["Xanh SM", "Grab", "Be"],
+      "action_plan": "Đưa vào danh sách ưu tiên hàng đầu đợt quét capture tiếp theo."
+    },
+    {
+      "cell_id": "CELL_1415_CINEMA",
+      "slot": "SLOT_1415",
+      "sector": "CINEMA",
+      "status": "GAP_MEDIUM",
+      "reason": "Chưa có deal vé chiều riêng biệt.",
+      "target_brands": ["CGV", "Galaxy", "Metiz", "Starlight"],
+      "action_plan": "Quét chương trình vé sinh viên buổi chiều."
+    },
+    {
+      "cell_id": "CELL_1415_COFFEE",
+      "slot": "SLOT_1415",
+      "sector": "COFFEE",
+      "status": "PUBLIC_MENU_COVERED",
+      "active_items": ["MENU_116_GONGCHA_ALISAN", "MENU_116_PHELA_SPECIALTY", "MENU_116_PHUCLONG_TEA_BAKERY"],
+      "target_brands": ["Gong Cha", "Phê La", "Phúc Long", "ToCoToCo", "Mixue"],
+      "action_plan": "Hiển thị menu trà sữa chiều; săn voucher giảm 20k-30k cho nhóm sinh viên."
+    },
+    {
+      "cell_id": "CELL_1415_LUNCH",
+      "slot": "SLOT_1415",
+      "sector": "LUNCH",
+      "status": "GAP_MEDIUM",
+      "reason": "Khung giờ xế chiều ít nhu cầu ăn chính.",
+      "target_brands": ["Bánh tráng kẹp", "Ốc hút", "Chè Liên"],
+      "action_plan": "Gợi ý các quán ăn xế địa phương trong danh bạ 26 quán."
+    },
+    {
+      "cell_id": "CELL_1415_SHOPPING",
+      "slot": "SLOT_1415",
+      "sector": "SHOPPING",
+      "status": "GAP_MEDIUM",
+      "reason": "Nhu cầu mua sắm xế chiều.",
+      "target_brands": ["Hasaki", "Guardian", "Watson"],
+      "action_plan": "Theo dõi flash sale mỹ phẩm/chăm sóc cá nhân."
+    },
+    {
+      "cell_id": "CELL_1415_MOBILITY",
+      "slot": "SLOT_1415",
+      "sector": "MOBILITY",
+      "status": "GAP_MEDIUM",
+      "reason": "Di chuyển chiều giữa giờ.",
+      "target_brands": ["Xanh SM", "Grab"],
+      "action_plan": "Theo dõi mã cuốc xe off-peak."
+    },
+    {
+      "cell_id": "CELL_1730_CINEMA",
+      "slot": "SLOT_1730",
+      "sector": "CINEMA",
+      "status": "GAP_MEDIUM",
+      "reason": "Suất chiếu tan sở.",
+      "target_brands": ["CGV", "Galaxy", "Metiz"],
+      "action_plan": "Gợi ý suất chiếu sớm buổi tối."
+    },
+    {
+      "cell_id": "CELL_1730_COFFEE",
+      "slot": "SLOT_1730",
+      "sector": "COFFEE",
+      "status": "GAP_MEDIUM",
+      "reason": "Cà phê sau giờ làm.",
+      "target_brands": ["Highlands", "The Alley", "Phúc Long"],
+      "action_plan": "Theo dõi chương trình Happy Hour tan sở."
+    },
+    {
+      "cell_id": "CELL_1730_LUNCH",
+      "slot": "SLOT_1730",
+      "sector": "LUNCH",
+      "status": "GAP_HIGH",
+      "reason": "Chưa có ưu đãi ăn tối gia đình / tan sở xác minh.",
+      "target_brands": ["KFC", "Jollibee", "Gà rán Popeyes", "Pizza Company"],
+      "action_plan": "Ưu tiên quét voucher đặt đồ ăn tối gia đình."
+    },
+    {
+      "cell_id": "CELL_1730_SHOPPING",
+      "slot": "SLOT_1730",
+      "sector": "SHOPPING",
+      "status": "WATCHLIST_RECHECK",
+      "active_items": ["WATCHLIST_116_WINMART_WINECO_20"],
+      "target_brands": ["WinMart", "Co.opmart", "Mega Market Đà Nẵng"],
+      "action_plan": "Cập nhật định kỳ ưu đãi hội viên rau củ thịt tươi."
+    },
+    {
+      "cell_id": "CELL_1730_MOBILITY",
+      "slot": "SLOT_1730",
+      "sector": "MOBILITY",
+      "status": "PUBLIC_UTILITY_COVERED",
+      "active_items": ["UTILITY_118_DANABUS_TRANSIT"],
+      "target_brands": ["DanaBus", "Xanh SM", "Grab", "Be"],
+      "action_plan": "Cung cấp lộ trình xe buýt tan tầm 6k; tiếp tục săn mã giảm giá giờ cao điểm chiều."
+    },
+    {
+      "cell_id": "CELL_2000_CINEMA",
+      "slot": "SLOT_2000",
+      "sector": "CINEMA",
+      "status": "VERIFIED_DEAL_ACTIVE",
+      "active_items": [
+        "VERIFIED_116_CGV_PAYDAY_30K",
+        "VERIFIED_116_CGV_MUA1TANG1",
+        "VERIFIED_116_STARLIGHT_COMBO_10K",
+        "VERIFIED_118_METIZ_U22_AND_SUPER_MONDAY"
+      ],
+      "target_brands": ["CGV", "Starlight", "Metiz", "Galaxy", "Lotte Cinema"],
+      "action_plan": "Duy trì 4 deal xác minh chất lượng cao với 100% chứng cứ trên đĩa."
+    },
+    {
+      "cell_id": "CELL_2000_COFFEE",
+      "slot": "SLOT_2000",
+      "sector": "COFFEE",
+      "status": "GAP_MEDIUM",
+      "reason": "Cà phê trà đêm.",
+      "target_brands": ["Highlands", "Cộng Cà Phê", "The Coffee House"],
+      "action_plan": "Theo dõi deal đồ uống đêm."
+    },
+    {
+      "cell_id": "CELL_2000_LUNCH",
+      "slot": "SLOT_2000",
+      "sector": "LUNCH",
+      "status": "PUBLIC_MENU_COVERED",
+      "active_items": ["MENU_118_GOGI_HOUSE_SIGNATURE"],
+      "target_brands": ["GoGi House", "Kichi Kichi", "Dookki", "Sumo BBQ"],
+      "action_plan": "Hiển thị giá menu buffet nướng niêm yết; săn voucher nhóm buffet lẩu nướng."
+    },
+    {
+      "cell_id": "CELL_2000_SHOPPING",
+      "slot": "SLOT_2000",
+      "sector": "SHOPPING",
+      "status": "GAP_MEDIUM",
+      "reason": "Mua sắm đêm tại TTTM.",
+      "target_brands": ["Vincom Plaza", "Indochina Mall", "Parkson"],
+      "action_plan": "Theo dõi khuyến mãi sự kiện TTTM cuối tuần."
+    },
+    {
+      "cell_id": "CELL_2000_MOBILITY",
+      "slot": "SLOT_2000",
+      "sector": "MOBILITY",
+      "status": "GAP_HIGH",
+      "reason": "Chưa có mã giảm giá chuyến xe về khuya (sau 22h).",
+      "target_brands": ["Xanh SM", "Grab", "Be"],
+      "action_plan": "Đưa vào danh sách quét ưu tiên cuốc xe đêm."
+    }
+  ]
+}

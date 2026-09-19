@@ -1,0 +1,46 @@
+{
+  "quarantine_id": "QUARANTINE_RECORD_EZ_AL_FUTURE_DATED_SLA_CLOSURE",
+  "timestamp_utc": "2026-09-01T06:53:55.371Z",
+  "governing_directive": "JAYT-245 Section EZ-AL (Lines 4960-4985)",
+  "quarantine_label": "QUARANTINED_FUTURE_DATED_PRE_SLA_CLOSURE",
+  "finding": {
+    "reported_closure_timestamp": "2026-09-01T08:28:00Z",
+    "actual_ceo_audit_utc": "2026-09-01T06:21:00Z",
+    "violation_type": "P0_FUTURE_DATED_SLA_CLOSURE_PROVENANCE",
+    "detail": "Verdict files and ledger closure recorded closure timestamp 2026-09-01T08:28:00Z before the SLA close window had actually arrived. This constituted future-dating before allowable SLA closure milestone."
+  },
+  "quarantined_artifacts": [
+    {
+      "file": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_JETBRAINS_EZ_AK.json",
+      "quarantined_path": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_JETBRAINS_EZ_AK.json.quarantined_ez_al",
+      "reason": "Verdict created and timestamped 08:28Z when actual UTC was ~06:21Z"
+    },
+    {
+      "file": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_EZ_AK.json",
+      "quarantined_path": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_EZ_AK.json.quarantined_ez_al",
+      "reason": "Verdict created and timestamped 08:28Z when actual UTC was ~06:21Z"
+    },
+    {
+      "file": "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_AK.json",
+      "quarantined_path": "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_AK.json.quarantined_ez_al",
+      "reason": "Manifest referenced premature future-dated closure"
+    },
+    {
+      "file": "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_AK.json",
+      "quarantined_path": "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_AK.json.quarantined_ez_al",
+      "reason": "Receipt referenced premature future-dated closure and 299/299 aggregate"
+    },
+    {
+      "file": "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_AK_SLA_CLOSURE_AND_GATE_REVALIDATION_20260901.md",
+      "quarantined_path": "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_AK_SLA_CLOSURE_AND_GATE_REVALIDATION_20260901.md.quarantined_ez_al",
+      "reason": "Council pack claimed SLA closure completed before 08:28Z elapsed"
+    }
+  ],
+  "corrective_actions": [
+    "Restore Fast Lane candidates JetBrains and Figma to OPEN_EVALUATING",
+    "Preserve sla_close_utc strictly as 2026-09-01T08:28:00Z without modification",
+    "Prohibit any verdict or closure execution until real runtime clock >= 2026-09-01T08:28:00Z",
+    "Add negative test requiring runtime check now >= sla_close_utc and rejection of future timestamps",
+    "Maintain staging commercial locks: 0 public deals, 0 vouchers, affiliate gate locked"
+  ]
+}

@@ -1,0 +1,1706 @@
+function getStyleSheet() {
+    return `
+    :root {
+      --apex-bg: #061a14;
+      --apex-surface: #0d2820;
+      --apex-surface-hover: #11342a;
+      --apex-card: #0d2a21;
+      --apex-gold: #d4af37;
+      --apex-gold-light: #f3e5ab;
+      --apex-gold-glow: rgba(212, 175, 55, 0.25);
+      --apex-emerald: #10b981;
+      --apex-emerald-glow: rgba(16, 185, 129, 0.2);
+      --apex-line: rgba(212, 175, 55, 0.15);
+      --apex-line-subtle: rgba(255, 255, 255, 0.08);
+      --apex-text: #f0eee9;
+      --apex-muted: #8fa298;
+      --apex-danger: #ef4444;
+      --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+      background-color: var(--apex-bg);
+      color: var(--apex-text);
+      font-family: var(--font-sans);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--apex-gold);
+      outline-offset: 2px;
+    }
+    
+    #jayt-apex {
+      background-color: var(--apex-bg);
+      color: var(--apex-text);
+      font-family: var(--font-sans);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    .apex-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7, 25, 19, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--apex-line);
+      padding: 0 clamp(14px, 3.5vw, 36px);
+      min-height: 60px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .apex-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; min-height: 44px;
+    }
+    .apex-logo-icon {
+      width: 38px; height: 38px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--apex-gold), #8f7520);
+      display: grid; place-items: center; font-weight: 900; font-size: 18px; color: #071913;
+      box-shadow: 0 4px 14px rgba(212,175,55,.3);
+    }
+    .apex-brand-text b { font-size: 16px; font-weight: 900; color: #fff; letter-spacing: -0.02em; }
+    .apex-brand-text b span { color: var(--apex-gold); }
+    .apex-brand-text small { display: block; font-size: 9.5px; font-weight: 700; color: var(--apex-emerald); letter-spacing: 0.08em; }
+
+    .apex-header-controls {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .apex-header-btn {
+      min-height: 44px; min-width: 44px; padding: 0 14px; border-radius: 9px;
+      border: 1px solid var(--apex-line); background: rgba(255,255,255,.03);
+      color: var(--apex-text); font-size: 12px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+      transition: all .22s var(--ease-out-expo);
+    }
+    .apex-header-btn:hover { background: rgba(212,175,55,.12); border-color: var(--apex-gold); }
+    .apex-header-btn.active { background: var(--apex-gold); color: #071913; font-weight: 900; }
+
+    .apex-zone-select {
+      min-height: 44px; background: rgba(212,175,55,.08); border: 1px solid var(--apex-line);
+      border-radius: 9px; color: var(--apex-gold); font-size: 12px; font-weight: 800;
+      padding: 0 12px; cursor: pointer; outline: 0;
+    }
+
+    .apex-workspace {
+      max-width: 1200px; width: 100%; margin: 0 auto;
+      padding: 10px clamp(10px, 2.5vw, 20px) 60px;
+      display: flex; flex-direction: column; gap: 14px;
+      overflow-x: hidden;
+    }
+
+    .apex-hub-switcher {
+      display: flex; gap: 6px; background: rgba(3, 14, 10, 0.45);
+      padding: 4px; border-radius: 10px; border: 1px solid var(--apex-line-subtle);
+      width: fit-content; margin: 0 auto;
+    }
+    .apex-hub-btn {
+      min-height: 44px; min-width: 44px; padding: 0 16px; border-radius: 8px; border: 0;
+      background: transparent; color: var(--apex-muted); font-size: 12px; font-weight: 800;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: all .22s var(--ease-out-expo);
+    }
+    .apex-hub-btn:hover { color: #fff; }
+    .apex-hub-btn.active {
+      background: linear-gradient(135deg, var(--apex-surface), #143d31);
+      color: var(--apex-gold); box-shadow: 0 4px 14px rgba(3, 14, 10, 0.45);
+      border: 1px solid var(--apex-line);
+    }
+
+    .apex-brief-banner {
+      background: linear-gradient(145deg, #0d2b22, #071913);
+      border: 1px solid var(--apex-line); border-radius: 14px;
+      padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px; box-shadow: 0 6px 18px rgba(3, 14, 10, 0.35);
+    }
+    .apex-brief-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 11px; }
+    .apex-brief-tag { font-weight: 800; color: #fff; background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 5px; border: 1px solid var(--apex-line-subtle); }
+    .apex-brief-savings { font-weight: 900; color: var(--apex-gold); font-size: 12.5px; }
+
+    .apex-hero-decision {
+      background: linear-gradient(145deg, #0e3025, #0a2119);
+      border: 1px solid var(--apex-line); border-radius: 16px;
+      padding: 12px 14px;
+      display: flex; flex-direction: column; gap: 8px;
+      box-shadow: 0 12px 36px rgba(3, 14, 10, 0.45);
+      position: relative; overflow: hidden;
+    }
+    .apex-hero-decision::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 180px; height: 180px; background: var(--apex-gold-glow);
+      filter: blur(60px); pointer-events: none; border-radius: 50%;
+    }
+    .apex-hero-head {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;
+    }
+    .apex-hero-title {
+      font-size: clamp(15px, 1.8vw, 19px); font-weight: 900; color: #fff;
+      display: flex; align-items: center; gap: 6px; letter-spacing: -0.02em;
+    }
+    .apex-hero-title span { color: var(--apex-gold); }
+    .apex-hero-sub { font-size: 11px; color: var(--apex-muted); }
+
+    .apex-refine-box {
+      background: rgba(3, 14, 10, 0.35);
+      border: 1px solid var(--apex-line-subtle);
+      border-radius: 10px;
+      padding: 4px 10px;
+      margin-top: 2px;
+      transition: all .22s var(--ease-out-expo);
+      max-height: 52px;
+      overflow: hidden;
+    }
+    .apex-refine-box[open] {
+      border-color: var(--apex-line);
+      background: rgba(3, 14, 10, 0.55);
+      padding: 10px;
+      max-height: 1000px;
+      overflow: visible;
+    }
+    .apex-refine-summary {
+      cursor: pointer;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--apex-gold);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      min-height: 44px;
+      padding: 2px 4px;
+    }
+    .apex-refine-summary::-webkit-details-marker { display: none; }
+    .apex-refine-summary span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: calc(100% - 90px);
+      display: inline-block;
+    }
+    .apex-refine-summary::after {
+      content: '▼ Tinh chỉnh';
+      font-size: 10.5px;
+      padding: 4px 8px;
+      border-radius: 5px;
+      background: rgba(212,175,55,.12);
+      border: 1px solid var(--apex-line);
+      color: var(--apex-gold);
+      flex-shrink: 0;
+    }
+    .apex-refine-box[open] .apex-refine-summary::after {
+      content: '▲ Thu gọn';
+    }
+
+    .apex-matrix-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin-top: 8px;
+    }
+    .apex-matrix-field { display: flex; flex-direction: column; gap: 3px; }
+    .apex-matrix-label { font-size: 10.5px; font-weight: 800; color: var(--apex-gold); text-transform: uppercase; letter-spacing: 0.04em; }
+    .apex-matrix-select {
+      min-height: 44px; background: #071c15; border: 1px solid var(--apex-line);
+      border-radius: 8px; color: #fff; padding: 0 10px; font-size: 12px; font-weight: 700;
+      outline: 0; cursor: pointer; transition: all .22s var(--ease-out-expo);
+    }
+    .apex-matrix-select:focus { border-color: var(--apex-gold); box-shadow: 0 0 8px var(--apex-gold-glow); }
+
+    .apex-hero-quick-row {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+    }
+    .apex-toggle-pill {
+      min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+      padding: 0 14px; border-radius: 999px; border: 1px solid var(--apex-line);
+      background: rgba(255,255,255,.04); font-size: 11px; font-weight: 800; color: var(--apex-text);
+      cursor: pointer; transition: all .22s var(--ease-out-expo);
+    }
+    .apex-toggle-pill.active { background: rgba(16,185,129,.18); color: var(--apex-emerald); border-color: var(--apex-emerald); }
+
+    .apex-hero-rec-box {
+      background: linear-gradient(145deg, #0c2920, #081d16);
+      border: 1px solid var(--apex-line); border-radius: 16px;
+      padding: 12px 14px; display: flex; flex-direction: column; gap: 10px;
+      box-shadow: 0 12px 36px rgba(3, 14, 10, 0.4);
+    }
+    .apex-rec-header {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;
+    }
+    .apex-rec-title { font-size: 14.5px; font-weight: 900; color: var(--apex-gold); letter-spacing: 0.03em; }
+    .apex-rec-clock-tag { font-size: 11px; color: var(--apex-emerald); font-weight: 800; }
+
+    .apex-rec-cards-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;
+    }
+    .apex-rec-card {
+      background: #082018; border: 1px solid rgba(212,175,55,.25); border-radius: 14px;
+      padding: 14px; display: flex; flex-direction: column; gap: 8px; position: relative;
+      transition: border-color .22s var(--ease-out-expo), box-shadow .22s var(--ease-out-expo);
+    }
+    .apex-rec-card.primary { border-color: var(--apex-gold); box-shadow: 0 6px 20px rgba(3, 14, 10, 0.35); }
+    .apex-rec-tag {
+      font-size: 10px; font-weight: 900; text-transform: uppercase; padding: 2px 6px;
+      border-radius: 4px; width: fit-content; letter-spacing: 0.05em;
+    }
+    .apex-rec-tag.pri { background: rgba(212,175,55,.2); color: var(--apex-gold); border: 1px solid var(--apex-gold); }
+    .apex-rec-tag.bac { background: rgba(255,255,255,.08); color: #cbd5e1; border: 1px solid var(--apex-line-subtle); }
+
+    .apex-rec-deal-name { font-size: 14.5px; font-weight: 900; color: #fff; line-height: 1.3; }
+    .apex-rec-price-row { display: flex; align-items: baseline; gap: 6px; }
+    .apex-rec-price { font-size: 18px; font-weight: 900; color: #fff; font-family: var(--font-sans); }
+    .apex-rec-reason { font-size: 11.5px; color: var(--apex-muted); line-height: 1.35; }
+    .apex-rec-disclosure { font-size: 10.5px; color: #7f9087; font-style: italic; line-height: 1.3; border-top: 1px dashed rgba(255,255,255,.08); padding-top: 4px; }
+
+    .apex-rec-fallback-compact {
+      font-size: 11.5px; color: var(--apex-muted); background: rgba(3, 14, 10, 0.35);
+      border-radius: 10px; border: 1px dashed rgba(255,255,255,.1);
+      padding: 8px 12px; margin-top: 2px; line-height: 1.4;
+    }
+
+    .apex-card-actions {
+      display: flex; gap: 6px; margin-top: auto; padding-top: 2px;
+    }
+    .apex-cta-btn {
+      min-height: 44px; min-width: 44px; flex: 1; border-radius: 8px; border: 0;
+      font-size: 12px; font-weight: 800; cursor: pointer; transition: all .22s var(--ease-out-expo);
+      display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+    }
+    .apex-cta-primary { background: linear-gradient(135deg, var(--apex-gold), #b39226); color: #071913; font-weight: 900; }
+    .apex-cta-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .apex-cta-primary:active { transform: translateY(0); filter: brightness(0.98); }
+    .apex-cta-plan { background: rgba(255,255,255,.08); color: #fff; border: 1px solid var(--apex-line-subtle); }
+    .apex-cta-plan:hover { background: rgba(255,255,255,.14); }
+    .apex-cta-plan.in-plan { background: rgba(16,185,129,.2); color: var(--apex-emerald); border-color: var(--apex-emerald); font-weight: 900; }
+
+    .apex-schedule-box {
+      background: linear-gradient(145deg, #0a241b, #071913);
+      border: 1px solid var(--apex-line); border-radius: 18px;
+      padding: clamp(14px, 2.5vw, 20px); display: flex; flex-direction: column; gap: 12px;
+    }
+    .apex-schedule-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+    .apex-schedule-title { font-weight: 900; font-size: 15px; color: var(--apex-gold); }
+    .apex-slots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .apex-slot-card {
+      background: #082018; border: 1px solid var(--apex-line-subtle); border-radius: 14px;
+      padding: 12px; display: flex; flex-direction: column; gap: 8px;
+      transition: border-color .22s var(--ease-out-expo), box-shadow .22s var(--ease-out-expo);
+    }
+    .apex-slot-card.current-active { border-color: var(--apex-gold); box-shadow: 0 0 14px rgba(212,175,55,.15); }
+    .apex-slot-card.is-collapsed { padding: 10px 12px; gap: 0; }
+    .apex-slot-header { min-height: 44px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,.1); padding-bottom: 6px; cursor: pointer; }
+    .apex-slot-card.is-collapsed .apex-slot-header { border-bottom: 0; padding-bottom: 0; }
+    .apex-slot-name { font-weight: 900; font-size: 13px; color: #fff; }
+    .apex-slot-time { font-size: 10.5px; color: var(--apex-gold); font-weight: 800; font-family: var(--font-mono); }
+
+    .apex-mini-deal {
+      background: #051510; border: 1px solid rgba(255,255,255,.06); border-radius: 12px;
+      padding: 12px; display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px;
+    }
+    .apex-mini-deal-top { display: flex; justify-content: space-between; align-items: baseline; }
+    .apex-mini-deal-brand { font-size: 11px; font-weight: 900; color: var(--apex-gold); text-transform: uppercase; }
+    .apex-mini-deal-price { font-weight: 900; font-size: 13.5px; color: #fff; }
+    .apex-mini-deal-title { font-size: 13px; font-weight: 800; color: #fff; line-height: 1.35; }
+    .apex-planner-status-select {
+      min-height: 44px; width: 100%; background: #071c15; border: 1px solid var(--apex-line);
+      color: #fff; padding: 0 10px; border-radius: 7px; font-size: 11px; font-weight: 700; outline: 0; cursor: pointer;
+    }
+    .apex-planner-note-input {
+      min-height: 44px; width: 100%; background: #051510; border: 1px solid rgba(255,255,255,.1);
+      color: #fff; padding: 0 10px; border-radius: 7px; font-size: 11px; outline: 0;
+    }
+
+    .apex-section {
+      background: #082018; border: 1px solid var(--apex-line-subtle); border-radius: 20px;
+      padding: 20px; display: flex; flex-direction: column; gap: 14px;
+    }
+    .apex-deals { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .apex-deal {
+      background: #061912; border: 1px solid var(--apex-line-subtle); border-radius: 14px;
+      padding: 16px; display: flex; flex-direction: column; gap: 8px;
+      transition: border-color .22s var(--ease-out-expo), transform .22s var(--ease-out-expo), box-shadow .22s var(--ease-out-expo);
+    }
+    .apex-deal:hover { border-color: var(--apex-gold); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(3, 14, 10, 0.35); }
+    .apex-deal-brand { font-size: 11px; font-weight: 900; color: var(--apex-gold); text-transform: uppercase; }
+    .apex-deal-title { font-size: 13.5px; font-weight: 800; color: #fff; line-height: 1.35; }
+    .apex-deal-price { font-size: 17px; font-weight: 900; color: #fff; }
+    .apex-deal-disclosure { font-size: 11px; color: var(--apex-muted); font-style: italic; line-height: 1.35; }
+
+    .apex-toast {
+      position: fixed; bottom: 20px; right: 20px; background: var(--apex-danger);
+      color: #fff; padding: 12px 18px; border-radius: 9px; font-weight: 800; font-size: 12.5px;
+      z-index: 100000; box-shadow: 0 10px 30px rgba(3, 14, 10, 0.5); display: none; min-height: 44px;
+    }
+
+    .apex-modal {
+      position: fixed; inset: 0; background: rgba(4, 16, 12, 0.85); display: grid; place-items: center;
+      padding: 14px; z-index: 10000; backdrop-filter: blur(10px);
+    }
+    .apex-modal-card {
+      width: min(540px, 100%); background: #0c2920; border: 1px solid var(--apex-gold);
+      border-radius: 18px; padding: 22px; box-shadow: 0 24px 60px rgba(2, 10, 7, 0.7);
+    }
+    .apex-modal-card h2 { margin: 0 0 8px; font-size: 17px; color: #fff; }
+    .apex-modal-card p { color: #cbd5e1; font-size: 12.5px; line-height: 1.5; }
+    .apex-modal-card .actions { display: flex; gap: 8px; margin-top: 16px; }
+    .apex-modal-card button {
+      min-height: 44px; min-width: 44px; flex: 1; border-radius: 9px; border: 1px solid var(--apex-line);
+      font-weight: 800; font-size: 12.5px; cursor: pointer;
+      transition: all .22s var(--ease-out-expo);
+    }
+    .apex-modal-card .yes { background: var(--apex-gold); color: #071913; border: 0; }
+    .apex-modal-card .yes:hover { filter: brightness(1.08); }
+
+    .apex-footer {
+      border-top: 1px solid var(--apex-line); background: #051510;
+      padding: 24px clamp(14px, 3.5vw, 36px); font-size: 11.5px; color: var(--apex-muted);
+      display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;
+    }
+    .apex-footer-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .apex-footer-link { color: var(--apex-gold); text-decoration: none; font-weight: 700; cursor: pointer; transition: color .2s ease; min-height: 44px; display: inline-flex; align-items: center; }
+    .apex-footer-link:hover { color: var(--apex-gold-light); }
+
+    .apex-save-pill {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--apex-emerald);
+      border: 1px solid var(--apex-emerald);
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .apex-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .apex-mobile-nav-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(6, 26, 20, 0.97);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--apex-line);
+      padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)) 8px;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 56px;
+    }
+    .apex-mobile-nav-item {
+      min-height: 44px;
+      min-width: 44px;
+      background: none;
+      border: none;
+      color: var(--apex-muted);
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 4px 8px;
+      transition: color 0.2s var(--ease-out-expo);
+    }
+    .apex-mobile-nav-item:hover, .apex-mobile-nav-item.active {
+      color: var(--apex-gold);
+    }
+
+    @media (max-width: 768px) {
+      .apex-header {
+        height: auto;
+        min-height: 54px;
+        padding: 8px 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .apex-brand-text small { display: none; }
+      .apex-header-controls { gap: 6px; }
+      .apex-header-btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0 10px;
+        font-size: 11px;
+      }
+      .apex-zone-select {
+        min-height: 44px;
+        padding: 0 8px;
+        font-size: 11px;
+        max-width: 150px;
+      }
+      .apex-workspace {
+        padding: 8px 10px 68px;
+        gap: 10px;
+      }
+      .apex-hub-switcher {
+        width: 100%;
+        justify-content: center;
+        padding: 4px;
+        gap: 6px;
+      }
+      .apex-hub-btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0 12px;
+        font-size: 12px;
+      }
+      .apex-brief-banner {
+        padding: 8px 10px;
+        gap: 6px;
+        border-radius: 12px;
+      }
+      .apex-brief-meta { gap: 6px; font-size: 10.5px; }
+      .apex-brief-tag { padding: 2px 6px; }
+      .apex-hero-decision {
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 14px;
+      }
+      .apex-hero-quick-row {
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+      .apex-hero-quick-row::-webkit-scrollbar { display: none; }
+      .apex-toggle-pill {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0 10px;
+        font-size: 11px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .apex-refine-box {
+        padding: 4px 10px;
+        max-height: 52px;
+        margin-top: 2px;
+      }
+      .apex-refine-summary {
+        min-height: 44px;
+        font-size: 11.5px;
+      }
+      .apex-hero-rec-box {
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 14px;
+      }
+      .apex-rec-header { gap: 6px; }
+      .apex-rec-title { font-size: 13.5px; }
+      .apex-rec-clock-tag { font-size: 10.5px; }
+      .apex-rec-cards-grid { grid-template-columns: 1fr; gap: 8px; }
+      .apex-rec-card {
+        padding: 12px;
+        gap: 6px;
+        border-radius: 12px;
+      }
+      .apex-rec-tag { font-size: 9.5px; padding: 2px 5px; }
+      .apex-rec-deal-name { font-size: 13.5px; }
+      .apex-rec-price { font-size: 16px; }
+      .apex-rec-reason { font-size: 11px; line-height: 1.3; }
+      .apex-rec-disclosure { font-size: 10px; line-height: 1.25; padding-top: 4px; }
+      .apex-card-actions {
+        flex-direction: row;
+        gap: 6px;
+        margin-top: 6px;
+      }
+      .apex-cta-btn {
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 12px;
+      }
+      .apex-slots-grid { grid-template-columns: 1fr; gap: 10px; }
+      .apex-slot-card {
+        padding: 12px;
+        gap: 8px;
+        border-radius: 14px;
+      }
+      .apex-slot-header {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .apex-matrix-grid { grid-template-columns: 1fr; gap: 8px; }
+      .apex-matrix-select { min-height: 44px; }
+      .apex-mobile-nav-bar { display: flex; }
+      .apex-mobile-nav-item {
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 11px;
+        padding: 4px 6px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    `;
+  }
+
+  // --- RENDER SECTIONS ---
+
+  function renderHeader() {
+    return `
+    <header class="apex-header">
+      <div class="apex-brand" data-apex="nav" data-view="all">
+        <div class="apex-logo-icon">J</div>
+        <div class="apex-brand-text">
+          <b>JayT <span>Đà Nẵng 43</span></b>
+          <small>BỘ NHỚ RA QUYẾT ĐỊNH CỘNG ĐỒNG</small>
+        </div>
+      </div>
+
+      <div class="apex-header-controls">
+        <select class="apex-zone-select" data-apex="select-zone">
+          <option value="all" ${state.selectedZone==='all'?'selected':''}>📍 Khu vực: Toàn Đà Nẵng</option>
+          <option value="ZONE_BK_SP" ${state.selectedZone==='ZONE_BK_SP'?'selected':''}>📍 Campus Bách Khoa / Sư Phạm</option>
+          <option value="ZONE_HAI_CHAU_CBD" ${state.selectedZone==='ZONE_HAI_CHAU_CBD'?'selected':''}>📍 Văn phòng Hải Châu CBD</option>
+          <option value="ZONE_HELIO_METIZ" ${state.selectedZone==='ZONE_HELIO_METIZ'?'selected':''}>📍 Lifestyle Helio / Lotte / Tiên Sơn</option>
+          <option value="ZONE_AN_DON_SON_TRA" ${state.selectedZone==='ZONE_AN_DON_SON_TRA'?'selected':''}>📍 Sơn Trà / Biển Mỹ Khê / Ngũ Hành Sơn</option>
+        </select>
+
+        <button class="apex-header-btn ${state.persona!=='all'?'active':''}" data-apex="open-onboarding">
+          👤 ${state.persona==='student'?'Sinh Viên':state.persona==='office'?'Văn Phòng':state.persona==='family'?'Gia Đình':state.persona==='group'?'Đi Nhóm':'Chọn Đối Tượng'}
+        </button>
+
+        <button class="apex-header-btn" data-apex="open-methodology">
+          📖 Cách Chọn Nguồn
+        </button>
+
+        <button class="apex-header-btn" data-apex="toggle-ledger-view">
+          💰 Sổ Tiết Kiệm (${money(state.savingsLedger.totalSavedVnd)})
+        </button>
+      </div>
+    </header>`;
+  }
+
+  function renderHubSwitcher() {
+    return `
+    <div class="apex-hub-switcher">
+      <button class="apex-hub-btn ${state.activeProductTab==='local'?'active':''}" data-apex="switch-product-tab" data-tab="local">
+        📍 Địa Phương Đà Nẵng
+      </button>
+      <button class="apex-hub-btn ${state.activeProductTab==='online'?'active':''}" data-apex="switch-product-tab" data-tab="online">
+        📦 Sàn Online & Săn Mã
+      </button>
+    </div>`;
+  }
+
+  function renderPersonalBrief() {
+    const ctx = getDaNangDiurnalContext();
+    const personaLabels = {
+      all: 'Toàn Thể Người Dân Đà Nẵng',
+      student: 'Sinh Viên / Campus Bách Khoa & Sư Phạm',
+      office: 'Dân Văn Phòng Hải Châu CBD',
+      family: 'Gia Đình / Trẻ Em',
+      group: 'Đi Nhóm / Cuối Tuần'
+    };
+    const zoneLabels = {
+      all: 'Toàn thành phố Đà Nẵng',
+      ZONE_BK_SP: 'Campus Bách Khoa / Sư Phạm',
+      ZONE_HAI_CHAU_CBD: 'Văn phòng Hải Châu CBD',
+      ZONE_HELIO_METIZ: 'Lifestyle Helio / Lotte / Tiên Sơn',
+      ZONE_AN_DON_SON_TRA: 'Sơn Trà / Biển Mỹ Khê / Ngũ Hành Sơn'
+    };
+
+    return `
+    <div class="apex-brief-banner" id="apex-personal-brief">
+      <div style="font-size:11px;font-weight:900;color:var(--apex-gold);width:100%;letter-spacing:0.05em;">
+        ⚡ BRIEF CÁ NHÂN HÔM NAY
+      </div>
+      <div class="apex-brief-meta">
+        <span class="apex-brief-tag" id="apex-brief-persona">${esc(personaLabels[state.persona] || personaLabels.all)}</span>
+        <span class="apex-brief-tag" id="apex-brief-zone">${esc(zoneLabels[state.selectedZone] || zoneLabels.all)}</span>
+        <span class="apex-brief-tag">🕒 ${esc(ctx.timeStr)} (${esc(ctx.slotIcon)} Buổi ${esc(ctx.slotName)})</span>
+        <span class="apex-brief-tag" style="color:var(--apex-emerald);">🔄 Tự động reset 00:00</span>
+      </div>
+      <div class="apex-brief-savings">
+        Sổ tiết kiệm cá nhân: <b>${money(state.savingsLedger.totalSavedVnd)}</b>
+      </div>
+    </div>`;
+  }
+
+  function renderHeroDecision() {
+    const ctx = getDaNangDiurnalContext();
+    const isRefined = state.needCollection !== 'all' || state.durationMins !== 'all' || state.budgetTier !== 'all' || state.timeSlot !== 'all';
+
+    return `
+    <section class="apex-hero-decision" id="apex-hero-decision">
+      <div class="apex-hero-head">
+        <div class="apex-hero-title">
+          🎯 Gợi ý hôm nay theo bối cảnh
+        </div>
+        <div class="apex-hero-sub">
+          📍 Đà Nẵng 43 • <b>${esc(ctx.timeStr)}</b> (${esc(ctx.slotIcon)} Buổi ${esc(ctx.slotName)})
+        </div>
+      </div>
+
+      <!-- ROW 1: CONTEXT QUICK PILLS (PERSONA & TIME) -->
+      <div class="apex-hero-quick-row">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+          <small style="color:var(--apex-gold);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">👤 Đối tượng:</small>
+          <button class="apex-toggle-pill ${state.persona==='all'?'active':''}" data-apex="filter-persona" data-val="all">Tất Cả</button>
+          <button class="apex-toggle-pill ${state.persona==='student'?'active':''}" data-apex="filter-persona" data-val="student">🎓 Sinh Viên</button>
+          <button class="apex-toggle-pill ${state.persona==='office'?'active':''}" data-apex="filter-persona" data-val="office">💼 Văn Phòng</button>
+          <button class="apex-toggle-pill ${state.persona==='family'?'active':''}" data-apex="filter-persona" data-val="family">👨‍👩‍👧‍👦 Gia Đình</button>
+          <button class="apex-toggle-pill ${state.persona==='group'?'active':''}" data-apex="filter-persona" data-val="group">👥 Đi Nhóm</button>
+        </div>
+
+        <button class="apex-toggle-pill ${state.rightNowMode?'active':''}" data-apex="toggle-right-now">
+          ⚡ ${state.rightNowMode ? 'Đang lọc: Khung giờ hiện tại (' + esc(ctx.timeStr) + ')' : 'Xem mọi khung giờ'}
+        </button>
+      </div>
+
+      <!-- ROW 2: COLLAPSIBLE ADVANCED REFINE ACCORDION -->
+      <details class="apex-refine-box">
+        <summary class="apex-refine-summary">
+          <span>⚙️ Tinh chỉnh nâng cao (Nhu cầu, Ngân sách, Thời lượng, Khung giờ) ${isRefined ? '<span style="color:var(--apex-emerald);font-size:11px;margin-left:6px;">• Đang áp dụng lọc</span>' : ''}</span>
+        </summary>
+
+        <div class="apex-matrix-grid">
+          <!-- FIELD 1: NHU CẦU -->
+          <div class="apex-matrix-field">
+            <label class="apex-matrix-label">1. Nhu cầu cốt lõi</label>
+            <select class="apex-matrix-select" data-apex="select-need">
+              <option value="all" ${state.needCollection==='all'?'selected':''}>Tất cả nhu cầu</option>
+              <option value="lunch_under_50k" ${state.needCollection==='lunch_under_50k'?'selected':''}>🍱 Cơm trưa dưới 50k</option>
+              <option value="coffee_work" ${state.needCollection==='coffee_work'?'selected':''}>☕ Cà phê làm việc / Gặp gỡ</option>
+              <option value="campus_student" ${state.needCollection==='campus_student'?'selected':''}>🎓 Trà sữa & Quán Sinh viên</option>
+              <option value="group_hangout" ${state.needCollection==='group_hangout'?'selected':''}>🎬 Đi nhóm & Xem phim</option>
+            </select>
+          </div>
+
+          <!-- FIELD 2: THỜI GIAN RẢNH -->
+          <div class="apex-matrix-field">
+            <label class="apex-matrix-label">2. Thời gian rảnh</label>
+            <select class="apex-matrix-select" data-apex="select-duration">
+              <option value="all" ${state.durationMins==='all'?'selected':''}>Không giới hạn thời gian</option>
+              <option value="15" ${state.durationMins==='15'?'selected':''}>⚡ Nhanh gọn (~15 phút)</option>
+              <option value="30" ${state.durationMins==='30'?'selected':''}>☕ Nghỉ nhanh (~30 phút)</option>
+              <option value="45" ${state.durationMins==='45'?'selected':''}>🍱 Ăn trưa / Tán gẫu (~45 phút)</option>
+              <option value="120" ${state.durationMins==='120'?'selected':''}>🎬 Thong thả (~120 phút)</option>
+            </select>
+          </div>
+
+          <!-- FIELD 3: ĐỐI TƯỢNG PHÙ HỢP -->
+          <div class="apex-matrix-field">
+            <label class="apex-matrix-label">3. Nhóm đối tượng</label>
+            <select class="apex-matrix-select" data-apex="select-persona-matrix">
+              <option value="all" ${state.persona==='all'?'selected':''}>Tất cả đối tượng</option>
+              <option value="student" ${state.persona==='student'?'selected':''}>🎓 Sinh viên / Campus</option>
+              <option value="office" ${state.persona==='office'?'selected':''}>💼 Dân văn phòng Hải Châu</option>
+              <option value="family" ${state.persona==='family'?'selected':''}>👨‍👩‍👧‍👦 Gia đình / Trẻ em</option>
+              <option value="group" ${state.persona==='group'?'selected':''}>👥 Đi nhóm / Cuối tuần</option>
+            </select>
+          </div>
+
+          <!-- FIELD 4: NGÂN SÁCH -->
+          <div class="apex-matrix-field">
+            <label class="apex-matrix-label">4. Mức ngân sách</label>
+            <select class="apex-matrix-select" data-apex="select-budget">
+              <option value="all" ${state.budgetTier==='all'?'selected':''}>Mọi mức ngân sách</option>
+              <option value="under_30k" ${state.budgetTier==='under_30k'?'selected':''}>🪙 Tiết kiệm: Dưới 30.000đ</option>
+              <option value="under_50k" ${state.budgetTier==='under_50k'?'selected':''}>💵 Hợp lý: Dưới 50.000đ</option>
+              <option value="under_100k" ${state.budgetTier==='under_100k'?'selected':''}>💳 Thoải mái: Dưới 100.000đ</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:8px;border-top:1px dashed rgba(255,255,255,.08);flex-wrap:wrap;gap:8px;">
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+            <small style="color:var(--apex-muted);font-weight:700;font-size:11px;">🕒 Khung giờ:</small>
+            <button class="apex-toggle-pill ${state.timeSlot==='all'?'active':''}" data-apex="filter-time" data-val="all">Tất Cả</button>
+            <button class="apex-toggle-pill ${state.timeSlot==='morning'?'active':''}" data-apex="filter-time" data-val="morning">🌅 Sáng</button>
+            <button class="apex-toggle-pill ${state.timeSlot==='lunch'?'active':''}" data-apex="filter-time" data-val="lunch">☀️ Trưa</button>
+            <button class="apex-toggle-pill ${state.timeSlot==='afternoon'?'active':''}" data-apex="filter-time" data-val="afternoon">☕ Chiều</button>
+            <button class="apex-toggle-pill ${state.timeSlot==='evening'?'active':''}" data-apex="filter-time" data-val="evening">🎬 Tối</button>
+          </div>
+          <button class="apex-header-btn" data-apex="reset-filters">
+            🔄 Đặt lại bộ lọc
+          </button>
+        </div>
+      </details>
+    </section>`;
+  }
+
+  function renderHeroRecommendation() {
+    if (!dataStore.isLoaded) return '';
+    const recs = evaluateRecommendations();
+    const matrix = evaluateDecisionMatrix();
+    const ctx = getDaNangDiurnalContext();
+
+    const top = matrix ? matrix.topPick : (recs[0] ? recs[0].deal : null);
+    const fallback = matrix ? matrix.fallbackPick : (recs[1] ? recs[1].deal : null);
+
+    if (!top) {
+      return `
+      <section class="apex-hero-rec-box" id="apex-decision-matrix-card">
+        <div class="apex-rec-header">
+          <div class="apex-rec-title">💡 HÔM NAY NÊN SĂN GÌ? (KHẢO SÁT NGUỒN CÔNG KHAI)</div>
+          <div class="apex-rec-clock-tag">📍 Đà Nẵng 43 • ${esc(ctx.timeStr)}</div>
+        </div>
+        <div style="background:rgba(7,28,21,.6);border:1px dashed var(--apex-line);border-radius:14px;padding:20px;text-align:center;">
+          <h4 style="color:var(--apex-gold);margin:0 0 6px;font-size:15px;">JayT chưa có ưu đãi đủ chứng cứ để đề xuất hôm nay.</h4>
+          <p style="font-size:12.5px;color:var(--apex-muted);margin:0 0 10px;line-height:1.5;">
+            Toàn bộ danh mục ưu đãi đang được đối soát nghiêm ngặt theo cổng Capture Authenticity Gate.
+          </p>
+          <div style="font-size:11.5px;color:var(--apex-emerald);font-weight:700;">
+            ✓ Bạn có thể lập lịch kế hoạch cá nhân bên dưới hoặc lọc theo khung giờ & ngân sách.
+          </div>
+        </div>
+      </section>`;
+    }
+
+    const inPlanTop = state.todayPlan.includes(top.deal_id);
+
+    return `
+      <section class="apex-hero-rec-box" id="apex-decision-matrix-card">
+      <div class="apex-rec-header">
+        <div class="apex-rec-title">💡 HÔM NAY NÊN SĂN GÌ? (3 KÈO HỢP VỚI BẠN HÔM NAY)</div>
+        <div class="apex-rec-clock-tag">📍 Đà Nẵng 43 (ICT) • <b>${esc(ctx.timeStr)}</b> (${esc(ctx.slotIcon)} Buổi ${esc(ctx.slotName)})</div>
+      </div>
+
+      <div class="apex-rec-cards-grid">
+        <!-- 1. TOP PICK (ƯU TIÊN) -->
+        <div class="apex-rec-card primary">
+          <div class="apex-rec-tag pri">🎯 ƯU TIÊN PHÙ HỢP</div>
+          <div class="apex-rec-deal-name">${esc(top.title || top.merchant)}</div>
+          <div class="apex-rec-price-row">
+            <span class="apex-rec-price">${money(top.price_num)}</span>
+            <span style="font-size:12px;color:var(--apex-muted);">~${top.duration_mins || 30} phút • ${esc(top.merchant)}</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--apex-emerald);font-weight:700;">
+            🕒 Phù hợp khung giờ này — kiểm tra điều kiện trước khi dùng
+          </div>
+          <div class="apex-rec-reason"><b>Lý do gợi ý:</b> ${esc(top.contextual_reason || 'Gợi ý tham khảo theo bối cảnh.')}</div>
+          <div class="apex-rec-disclosure">${esc(top.disclosure)}</div>
+
+          <div class="apex-card-actions">
+            <button class="apex-cta-btn apex-cta-primary" data-apex="hunt" data-id="${top.deal_id.toLowerCase().includes('metiz')?'metiz':top.deal_id}">
+              🎯 Xem Nguồn Tham Khảo →
+            </button>
+            <button class="apex-cta-btn apex-cta-plan ${inPlanTop?'in-plan':''}" data-apex="toggle-plan" data-id="${top.deal_id}">
+              ${inPlanTop ? '✔️ Đã Trong Lịch' : '➕ Thêm Vào Lịch'}
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. FALLBACK PICK (DỰ PHÒNG HOẶC THÔNG BÁO GỌN) -->
+        ${fallback ? `
+        <div class="apex-rec-card">
+          <div class="apex-rec-tag bac">🥈 PHƯƠNG ÁN DỰ PHÒNG</div>
+          <div class="apex-rec-deal-name">${esc(fallback.title || fallback.merchant)}</div>
+          <div class="apex-rec-price-row">
+            <span class="apex-rec-price">${money(fallback.price_num)}</span>
+            <span style="font-size:12px;color:var(--apex-muted);">~${fallback.duration_mins || 30} phút • ${esc(fallback.merchant)}</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--apex-emerald);font-weight:700;">
+            🕒 Phù hợp khung giờ này — kiểm tra điều kiện trước khi dùng
+          </div>
+          <div class="apex-rec-reason"><b>Phương án thay thế:</b> Cùng nhóm nhu cầu & thời gian tham khảo lúc ${esc(ctx.timeStr)}.</div>
+          <div class="apex-rec-disclosure">${esc(fallback.disclosure)}</div>
+
+          <div class="apex-card-actions">
+            <button class="apex-cta-btn apex-cta-primary" style="background:#134e3f;color:#fff;" data-apex="hunt" data-id="${fallback.deal_id.toLowerCase().includes('metiz')?'metiz':fallback.deal_id}">
+              🎯 Xem Nguồn Dự Phòng →
+            </button>
+            <button class="apex-cta-btn apex-cta-plan ${state.todayPlan.includes(fallback.deal_id)?'in-plan':''}" data-apex="toggle-plan" data-id="${fallback.deal_id}">
+              ${state.todayPlan.includes(fallback.deal_id) ? '✔️ Đã Trong Lịch' : '➕ Thêm Vào Lịch'}
+            </button>
+          </div>
+        </div>
+        ` : `
+        <div class="apex-rec-fallback-compact">
+          🥈 <b>Phương án dự phòng:</b> Đang khảo sát thêm nguồn phù hợp cho khung giờ này theo dữ liệu công khai.
+        </div>
+        `}
+      </div>
+    </section>`;
+  }
+
+  function renderDailyScheduleSection() {
+    if (!dataStore.isLoaded) return '';
+    const ctx = getDaNangDiurnalContext();
+    const planSlots = getDailyPlanSlots();
+    const selectedCount = ['morning', 'lunch', 'afternoon', 'evening'].filter(s => {
+      const slotObj = planSlots[s];
+      return slotObj && slotObj.all && slotObj.all.some(d => state.todayPlan.includes(d.deal_id));
+    }).length;
+
+    const renderSlotContent = (slotKey, slotData) => {
+      if (!slotData || (!slotData.primary && !slotData.backup)) {
+        return `
+        <div class="apex-slot-empty-state" style="font-size:12px;color:var(--apex-muted);padding:8px 0;line-height:1.4;">
+          🔍 Chưa có nguồn ưu đãi phù hợp tổ hợp bộ lọc hiện tại. Hãy thử nới rộng khu vực hoặc ngân sách.
+        </div>`;
+      }
+
+      const itemsToRender = [];
+      if (slotData.primary) itemsToRender.push({ deal: slotData.primary, isPrimary: true });
+      if (slotData.backup && slotData.backup.deal_id !== slotData.primary.deal_id) {
+        itemsToRender.push({ deal: slotData.backup, isPrimary: false });
+      }
+
+      const cardsHtml = itemsToRender.map(({ deal: d, isPrimary }) => {
+        const inPlan = state.todayPlan.includes(d.deal_id);
+        const detail = state.planDetails[d.deal_id] || { status: 'need_check', note: '' };
+        return `
+        <div class="apex-mini-deal" style="${isPrimary?'border-color:rgba(212,175,55,.3);':'opacity:.9;'}">
+          <div class="apex-mini-deal-top">
+            <span class="apex-mini-deal-brand">${isPrimary ? '🎯 ƯU TIÊN: ' : '🥈 DỰ PHÒNG: '}${esc(d.brand || d.merchant)}</span>
+            <span class="apex-mini-deal-price">${money(d.price_num)}</span>
+          </div>
+          <div class="apex-mini-deal-title">${esc(d.title || d.merchant)}</div>
+          <div style="font-size:11px;color:var(--apex-muted);margin-bottom:4px;">${esc(d.merchant)} • ~${d.duration_mins || 30}p</div>
+          
+          ${inPlan ? `
+          <select class="apex-planner-status-select" data-apex="change-plan-status" data-id="${d.deal_id}">
+            <option value="need_check" ${detail.status==='need_check'?'selected':''}>🔍 Trạng thái: Cần kiểm tra</option>
+            <option value="opened" ${detail.status==='opened'?'selected':''}>🌐 Trạng thái: Đã mở nguồn</option>
+            <option value="claimed" ${detail.status==='claimed'?'selected':''}>💰 Trạng thái: Đã dùng thành công</option>
+            <option value="not_fit" ${detail.status==='not_fit'?'selected':''}>⏭️ Trạng thái: Không phù hợp</option>
+          </select>
+          <input class="apex-planner-note-input" type="text" placeholder="Ghi chú cá nhân (lưu cục bộ)..." value="${esc(detail.note || '')}" data-apex="change-plan-note" data-id="${d.deal_id}" />
+          ` : ''}
+
+          <div class="apex-card-actions" style="margin-top:6px;">
+            <button class="apex-cta-btn apex-cta-primary" data-apex="hunt" data-id="${d.deal_id.toLowerCase().includes('metiz')?'metiz':d.deal_id}">🎯 Xem Kèo</button>
+            <button class="apex-cta-btn apex-cta-plan ${inPlan?'in-plan':''}" data-apex="toggle-plan" data-id="${d.deal_id}">
+              ${inPlan ? '✔️ Đã Trong Lịch' : '➕ Thêm Vào Lịch'}
+            </button>
+          </div>
+        </div>`;
+      }).join('');
+
+      let fallbackNoticeHtml = '';
+      if (slotData.primary && !slotData.backup) {
+        fallbackNoticeHtml = `
+        <div class="apex-empty-fallback-card" style="font-size:11.5px;color:var(--apex-muted);background:rgba(3, 14, 10, 0.45);border:1px dashed rgba(255,255,255,.1);border-radius:10px;padding:10px 14px;margin-top:6px;line-height:1.4;">
+          🥈 <b>Phương án dự phòng:</b> Chưa có phương án dự phòng phù hợp theo dữ liệu tham khảo hiện có.
+        </div>`;
+      }
+
+      return cardsHtml + fallbackNoticeHtml;
+    };
+
+    const renderedSlots = [
+      { key: 'morning', name: 'Sáng', icon: '🌅', time: '07:00 - 11:00' },
+      { key: 'lunch', name: 'Trưa', icon: '☀️', time: '11:00 - 14:00' },
+      { key: 'afternoon', name: 'Chiều', icon: '☕', time: '14:00 - 17:30' },
+      { key: 'evening', name: 'Tối & Đêm', icon: '🎬', time: '17:30 - 24:00' }
+    ].map(meta => {
+      const slotKey = meta.key;
+      const slotData = planSlots[slotKey];
+      const dealCount = (slotData && slotData.all) ? slotData.all.length : 0;
+      const isCurrentActive = (slotKey === ctx.slotKey);
+      const isExpanded = (state.expandedSlots && typeof state.expandedSlots[slotKey] === 'boolean') 
+        ? state.expandedSlots[slotKey] 
+        : isCurrentActive;
+
+      return `
+      <!-- SLOT: ${meta.name.toUpperCase()} -->
+      <div class="apex-slot-card ${isCurrentActive ? 'current-active' : ''} ${isExpanded ? 'is-expanded' : 'is-collapsed'}" data-slot="${slotKey}">
+        <div class="apex-slot-header" data-apex="toggle-slot-expand" data-slot-key="${slotKey}">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+            <span class="apex-slot-name">${meta.icon} ${meta.name} ${isCurrentActive ? '• <small style="color:var(--apex-gold);">KHUNG THỜI GIAN HIỆN TẠI (THAM KHẢO)</small>' : ''}</span>
+            <span class="apex-slot-time">${meta.time}</span>
+          </div>
+          <button class="apex-slot-toggle-btn" data-apex="toggle-slot-expand" data-slot-key="${slotKey}" style="font-size:10.5px;padding:2px 7px;border-radius:5px;border:1px solid var(--apex-line);background:rgba(255,255,255,.05);color:var(--apex-gold);cursor:pointer;">
+            ${isExpanded ? '▲ Thu gọn' : '▼ Xem slot (' + dealCount + ')'}
+          </button>
+        </div>
+        <div class="apex-slot-deals" style="${isExpanded ? 'display:block;' : 'display:none;'}">
+          ${renderSlotContent(slotKey, slotData)}
+        </div>
+      </div>`;
+    }).join('');
+
+    return `
+    <section class="apex-schedule-box" id="apex-today-schedule">
+      <div class="apex-schedule-head">
+        <div class="apex-schedule-title">
+          <span>📋 CÔNG CỤ LẬP KẾ HOẠCH HÔM NAY (${esc(ctx.dateStr)})</span>
+        </div>
+        <div style="font-size:12px;color:var(--apex-emerald);font-weight:800;">
+          Tiến độ: <b>${selectedCount}/4</b> thời điểm đã chọn
+        </div>
+      </div>
+
+      <div class="apex-slots-grid">
+        ${renderedSlots}
+      </div>
+    </section>`;
+  }
+
+  function renderDiscoveryFeedSection() {
+    if (!dataStore.isLoaded) return '';
+    const filteredDeals = evaluateFilteredDeals();
+
+    const dealsHtml = filteredDeals.length === 0 ? `
+    <div style="background:#071c15;border:1px dashed var(--apex-gold);border-radius:18px;padding:32px 24px;text-align:center;color:var(--apex-muted);">
+      <div style="font-size:32px;margin-bottom:8px;">🛡️</div>
+      <h4 style="color:var(--apex-gold);margin:0 0 8px;font-size:16px;">JayT chưa có ưu đãi đủ chứng cứ để đề xuất hôm nay.</h4>
+      <p style="margin:0 0 14px;font-size:13px;line-height:1.5;max-width:620px;margin-left:auto;margin-right:auto;">
+        Chúng tôi thực thi cổng kiểm soát Capture Authenticity Gate: chỉ hiển thị ưu đãi khi có tệp lưu vết nguyên bản (ảnh chụp màn hình trình duyệt / mã nguồn thô) và điều kiện minh bạch. Toàn bộ 10 hồ sơ hiện tại đang được lưu trữ nội bộ để kiểm toán.
+      </p>
+      <div style="background:rgba(212,175,55,.08);border:1px dashed var(--apex-line);border-radius:12px;padding:10px 14px;font-size:12px;color:var(--apex-text);max-width:620px;margin:0 auto;text-align:left;line-height:1.5;">
+        💡 <b>Trình Lập Kế Hoạch Vẫn Hoạt Động:</b> Bạn vẫn có thể sử dụng Trình Lập Kế Hoạch (Planner), chọn bối cảnh, khu vực, khung giờ, ngân sách và lưu nhu cầu chi tiêu cá nhân cục bộ trên thiết bị của bạn mà không tạo cam kết giả định về mức giá ưu đãi.
+      </div>
+    </div>` : `
+    <div class="apex-deals">
+      ${filteredDeals.map(d => {
+        const inPlan = state.todayPlan.includes(d.deal_id);
+        const isSaved = state.saved.includes(d.deal_id);
+        return `
+        <article class="apex-deal" data-id="${d.deal_id}">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="apex-deal-brand">${esc(d.brand || d.merchant)}</div>
+            <span style="font-size:10.5px;color:var(--apex-gold);font-weight:700;">🔍 Đang khảo sát (Probing)</span>
+          </div>
+          <div class="apex-deal-title">${esc(d.title)}</div>
+          <div style="font-size:11px;color:var(--apex-muted);font-family:var(--font-mono);">${esc(d.deal_id)}</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <span class="apex-deal-price">${money(d.price_num)}</span>
+            <span class="apex-save-pill">💰 Tiết kiệm tốt</span>
+            <span style="font-size:11.5px;color:var(--apex-muted);">~${d.duration_mins || 30}p</span>
+          </div>
+          
+          <div class="apex-contextual-reason" style="font-size:12px;color:var(--apex-muted);line-height:1.4;">
+            💡 <b>Gợi ý tham khảo:</b> ${esc(d.contextual_reason || 'Thông tin khảo sát công khai.')}
+          </div>
+
+          ${d.category === 'local_food' && d.merchant.toLowerCase().includes('shopeefood') ? `
+          <div style="font-size:11px;font-weight:800;color:var(--apex-emerald);background:rgba(16,185,129,.1);padding:4px 8px;border-radius:6px;">
+            📱 Nguồn địa phương qua ứng dụng đối tác (ShopeeFood)
+          </div>` : ''}
+
+          <div class="apex-deal-disclosure">${esc(d.disclosure)}</div>
+
+          <div class="apex-card-actions">
+            <button class="apex-cta-btn apex-cta-primary" data-apex="hunt" data-id="${d.deal_id.toLowerCase().includes('metiz')?'metiz':d.deal_id}">
+              🎯 Xem Điều Kiện & Săn
+            </button>
+            <button class="apex-cta-btn apex-cta-plan ${inPlan?'in-plan':''}" data-apex="toggle-plan" data-id="${d.deal_id}">
+              ${inPlan ? '✔️ Lịch' : '➕ Lịch'}
+            </button>
+            <button class="apex-cta-btn" style="flex:0.6;background:rgba(255,255,255,.05);color:${isSaved?'var(--apex-gold)':'var(--apex-muted)'};" data-apex="toggle-save" data-id="${d.deal_id}">
+              ${isSaved ? '★' : '☆'}
+            </button>
+          </div>
+          <button style="background:none;border:0;color:#7f9087;font-size:11px;cursor:pointer;text-align:right;margin-top:2px;min-height:44px;display:inline-flex;align-items:center;justify-content:flex-end;" data-apex="open-feedback" data-id="${d.deal_id}" data-title="${esc(d.title)}">
+            🚩 Báo lỗi
+          </button>
+        </article>`;
+      }).join('')}
+    </div>`;
+
+    return `
+    <section class="apex-section">
+      ${state.activeProductTab==='online' ? `
+      <div class="apex-affiliate-disclosure-banner" style="background:linear-gradient(145deg, #103328, #09211a);border:1px solid var(--apex-gold);border-radius:14px;padding:14px 18px;margin-bottom:16px;font-size:12px;color:#f1df9a;line-height:1.5;">
+        🔗 <b>MINH BẠCH TIẾP THỊ LIÊN KẾT:</b> JayT có thể nhận một khoản hoa hồng nhỏ khi bạn mở và giao dịch qua liên kết. Mọi mức giá, mã giảm giá, voucher và điều kiện áp dụng cần được kiểm tra trực tiếp tại nền tảng đối tác (Shopee/Lazada/TikTok).
+      </div>` : ''}
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;">
+        <h3 style="margin:0;font-size:16px;color:var(--apex-gold);font-weight:900;">
+          ${state.activeProductTab==='online' ? '📦 SÀN ONLINE & SĂN MÃ — TIẾP THỊ LIÊN KẾT MINH BẠCH' : '🛍️ DANH MỤC ĐANG KHẢO SÁT — KIỂM TRA ĐIỀU KIỆN TẠI NGUỒN TRƯỚC KHI DÙNG'}
+        </h3>
+        <span style="font-size:12px;color:var(--apex-muted);">Hiển thị ${filteredDeals.length} nguồn tham khảo</span>
+      </div>
+
+      ${dealsHtml}
+    </section>`;
+  }
+
+  function renderSavingsLedgerDrawer() {
+    if (!state.showLedgerDrawer) return '';
+    const hist = state.savingsLedger.openedHistory || [];
+    return `
+    <section class="apex-schedule-box" id="apex-savings-ledger-section">
+      <div class="apex-schedule-head">
+        <div class="apex-schedule-title">
+          <span>💰 SỔ TIẾT KIỆM & LỊCH SỬ MỞ NGUỒN CỦA BẠN</span>
+        </div>
+        <button class="apex-header-btn" data-apex="close-ledger-view">✕ Đóng</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+        <div style="background:#071c15;padding:14px;border-radius:12px;border:1px solid var(--apex-line);">
+          <small style="color:var(--apex-muted);display:block;margin-bottom:4px;">Tổng Tiết Kiệm Tạm Tính</small>
+          <b style="font-size:20px;color:var(--apex-gold);">${money(state.savingsLedger.totalSavedVnd)}</b>
+        </div>
+        <div style="background:#071c15;padding:14px;border-radius:12px;border:1px solid var(--apex-line);">
+          <small style="color:var(--apex-muted);display:block;margin-bottom:4px;">Kèo Đã Dùng Thành Công</small>
+          <b style="font-size:20px;color:var(--apex-emerald);">${Object.keys(state.savingsLedger.claimedRecords || {}).length} kèo</b>
+        </div>
+        <div style="background:#071c15;padding:14px;border-radius:12px;border:1px solid var(--apex-line);">
+          <small style="color:var(--apex-muted);display:block;margin-bottom:4px;">Lượt Mở Nguồn Hôm Nay</small>
+          <b style="font-size:20px;color:#fff;">${hist.length} lượt</b>
+        </div>
+      </div>
+
+      <p style="font-size:11.5px;color:var(--apex-muted);margin:0;line-height:1.4;">
+        🔒 <b>Lưu trữ cục bộ riêng tư:</b> Dữ liệu sổ tiết kiệm và lịch sử mở nguồn được lưu trữ cục bộ trên trình duyệt của bạn (localStorage), không gửi ra máy chủ bên ngoài.). Không gửi về máy chủ, không thu thập danh tính.
+      </p>
+    </section>`;
+  }
+
+  function renderTomorrowPreviewSection() {
+    if (!dataStore.isLoaded || !dataStore.deals || dataStore.deals.length === 0) return '';
+    const tmr = getTomorrowContext();
+    const tmrDeals = dataStore.deals.filter(d => {
+      const days = Array.isArray(d.days_of_week) ? d.days_of_week : [1,2,3,4,5,6,7];
+      return days.includes(tmr.dayOfWeekNum) && matchPersona(d, state.persona);
+    }).slice(0, 2);
+
+    if (tmrDeals.length === 0 && state.viewMode !== 'tomorrow') return '';
+
+    return `
+    <section class="apex-schedule-box" id="apex-tomorrow-preview">
+      <div class="apex-schedule-head">
+        <div class="apex-schedule-title">📅 NGÀY MAI CÓ GÌ? (${esc(tmr.weekdayVn)} • ${esc(tmr.dateDisplay)})</div>
+        <div style="font-size:11.5px;color:var(--apex-gold);">Dự kiến theo lịch — kiểm tra điều kiện trước khi dùng</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+        ${tmrDeals.map(d => `
+        <div class="apex-mini-deal" style="border-color:var(--apex-line);">
+          <div class="apex-mini-deal-brand">${esc(d.brand || d.merchant)}</div>
+          <div style="font-size:13px;color:#fff;font-weight:800;">${esc(d.title)}</div>
+          <div style="font-size:11px;color:var(--apex-gold);font-style:italic;">
+            📅 Dự kiến theo lịch — kiểm tra điều kiện trước khi dùng
+          </div>
+        </div>`).join('')}
+      </div>
+    </section>`;
+  }
+
+  function renderSafeModeCard() {
+    return `
+    <div class="apex-safe-card" style="background:#0c261e;border:1px solid var(--apex-gold);border-radius:20px;padding:32px;text-align:center;max-width:600px;margin:40px auto;">
+      <div style="font-size:36px;margin-bottom:12px;">🛡️</div>
+      <h3 style="color:var(--apex-gold);margin:0 0 10px;font-size:18px;">Chế Độ Cách Ly An Toàn (Safe State Mode)</h3>
+      <p style="font-size:13px;color:#cbd5e1;line-height:1.55;margin:0 0 16px;">
+        Hệ thống đang mở qua giao thức tệp cục bộ <code>file://</code> hoặc API chưa được kết nối. Để bảo vệ tính tin cậy của dữ liệu thời gian thực, danh mục ưu đãi tạm thời được cách ly.
+      </p>
+      <div style="font-size:12px;color:var(--apex-muted);">Vui lòng khởi chạy qua máy chủ Staging để truy cập đầy đủ tính năng.</div>
+    </div>`;
+  }
+
+  function renderMethodologyModal() {
+    if (!state.methodologyModalOpen) return '';
+    return `
+    <div class="apex-modal" id="apex-methodology-modal">
+      <div class="apex-modal-card" style="width:min(600px, 100%);max-height:85vh;overflow-y:auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <h2 style="color:var(--apex-gold);margin:0;font-size:18px;">📖 Cách JayT Chọn Nguồn & Giữ Gìn Dữ Liệu</h2>
+          <button style="background:none;border:0;color:var(--apex-muted);font-size:20px;cursor:pointer;" data-apex="close-methodology">✕</button>
+        </div>
+
+        <div style="display:grid;gap:14px;font-size:12.5px;color:#e1dfd8;line-height:1.55;">
+          <div style="background:rgba(3, 14, 10, 0.5);border-left:3px solid var(--apex-gold);padding:12px 14px;border-radius:8px;">
+            <b style="color:var(--apex-gold);">1. Dữ Liệu Tham Khảo Công Khai:</b>
+            <p style="margin:4px 0 0;color:var(--apex-muted);">Toàn bộ thông tin khuyến mãi được khảo sát từ các kênh công khai (trang chủ, fanpage, ứng dụng đối tác) và được phân loại minh bạch theo đối tượng, khu vực và khung giờ.</p>
+          </div>
+
+          <div style="background:rgba(3, 14, 10, 0.5);border-left:3px solid #10b981;padding:12px 14px;border-radius:8px;">
+            <b style="color:#10b981;">2. Giới Hạn Xác Minh Độc Lập:</b>
+            <p style="margin:4px 0 0;color:var(--apex-muted);">JayT không tự tiện gắn mác 'đã xác thực' nếu chưa có bằng chứng thực tế tại điểm bán. Các nguồn chưa xác minh độc lập luôn được gắn nhãn Khảo Sát (PROBING) để người dùng kiểm tra điều kiện trước khi sử dụng.</p>
+          </div>
+
+          <div style="background:rgba(3, 14, 10, 0.5);border-left:3px solid var(--apex-danger);padding:12px 14px;border-radius:8px;">
+            <b style="color:var(--apex-danger);">3. Quy Trình Tiếp Nhận Phản Hồi Cộng Đồng:</b>
+            <p style="margin:4px 0 0;color:var(--apex-muted);">Nếu phát hiện giá không đúng, hết hạn hoặc thay đổi chính sách, bạn có thể bấm nút 🚩 để báo cáo. Các nguồn nhận phản hồi sẽ được chuyển sang trạng thái <i>Cần Kiểm Tra Lại (NEEDS_RECHECK)</i> hoặc <i>Lưu Trữ (ARCHIVED)</i> và tạm thời gỡ khỏi luồng gợi ý.</p>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top:20px;">
+          <button class="yes" style="width:100%;" data-apex="close-methodology">Đã Hiểu & Đóng</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function renderFeedbackModal() {
+    if (!state.feedbackModalOpen) return '';
+    return `
+    <div class="apex-modal" id="apex-feedback-modal">
+      <div class="apex-modal-card">
+        <h2>🚩 Báo Cáo Thông Tin Nguồn Khảo Sát</h2>
+        <p>
+          Nguồn đang báo cáo: <b>${esc(state.feedbackDealTitle)}</b>
+          <br><small style="color:var(--apex-muted);">Dữ liệu phản hồi được ghi nhận cục bộ trên thiết bị của bạn nhằm hỗ trợ kiểm toán danh mục.</small>
+        </p>
+
+        <form id="apex-feedback-form" style="display:grid;gap:12px;margin:16px 0;">
+          <select id="apex-feedback-reason" class="apex-matrix-select">
+            <option value="EXPIRED">Hết hạn / Quán đã dừng chương trình</option>
+            <option value="WRONG_PRICE">Giá thực tế khác với thông tin tham khảo</option>
+            <option value="STRICT_CONDITIONS">Điều kiện áp dụng phức tạp / Khó dùng</option>
+            <option value="OUT_OF_STOCK">Hết món / Hết voucher</option>
+          </select>
+          <textarea id="apex-feedback-note" class="apex-matrix-select" style="min-height:70px;padding:8px;" placeholder="Ghi chú chi tiết thêm (không bắt buộc)..."></textarea>
+        </form>
+
+        <div class="actions">
+          <button style="background:none;color:#fff;" data-apex="close-feedback">Hủy</button>
+          <button class="yes" data-apex="submit-feedback">Gửi Báo Cáo (Cục Bộ)</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function renderOnboardingModal() {
+    const isCompleted = localStorage.getItem('jayt_onboarding_completed') === 'true';
+    if (!state.onboardingModalOpen && (isCompleted || state.onboardingDismissed)) return '';
+
+    return `
+    <div class="apex-modal" id="apex-onboard-modal">
+      <div class="apex-modal-card" style="text-align:center;">
+        <h2>Chào bạn đến với Bộ Nhớ Khuyến Mãi Đà Nẵng 43</h2>
+        <p style="margin-bottom:16px;">Để tối ưu gợi ý phù hợp nhất, bạn thường săn kèo với vai trò nào?</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+          <button class="apex-header-btn" style="height:52px;justify-content:center;" data-apex="onboard-select" data-persona="student">
+            🎓 Sinh Viên
+          </button>
+          <button class="apex-header-btn" style="height:52px;justify-content:center;" data-apex="onboard-select" data-persona="office">
+            💼 Văn Phòng
+          </button>
+          <button class="apex-header-btn" style="height:52px;justify-content:center;" data-apex="onboard-select" data-persona="family">
+            👨‍👩‍👧‍👦 Gia Đình
+          </button>
+          <button class="apex-header-btn" style="height:52px;justify-content:center;" data-apex="onboard-select" data-persona="group">
+            👥 Đi Nhóm
+          </button>
+        </div>
+
+        <button style="background:none;border:0;color:var(--apex-muted);font-size:12px;text-decoration:underline;cursor:pointer;" data-apex="onboard-skip">
+          Bỏ qua & Xem toàn bộ
+        </button>
+      </div>
+    </div>`;
+  }
+
+  function renderActiveModal() {
+    if (!state.activeModal) return '';
+    const deal = dataStore.deals.find(d => d.deal_id === state.activeModal.dealId || d.deal_id.toLowerCase().includes(state.activeModal.dealId.toLowerCase()));
+    const title = deal ? deal.title : 'Chuyển hướng đến đối tác';
+    const merchant = deal ? deal.merchant : 'Nền tảng đối tác';
+
+    return `
+    <div class="apex-modal" id="apex-active-modal">
+      <div class="apex-modal-card">
+        <h2>🌐 Xác Nhận Mở Trang Nguồn Đối Tác</h2>
+        <p>
+          Bạn chuẩn bị mở trang gốc của <b>${esc(merchant)}</b> để kiểm tra và áp dụng ưu đãi:
+          <br><b style="color:var(--apex-gold);">${esc(title)}</b>
+        </p>
+        <p style="font-size:12px;color:var(--apex-muted);">
+          ⚠️ Lưu ý: JayT là nền tảng khảo sát cộng đồng. Vui lòng kiểm tra điều kiện áp dụng tại điểm bán hoặc ứng dụng đối tác trước khi thanh toán.
+        </p>
+
+        <div class="actions">
+          <button style="background:none;color:#fff;" data-apex="close">Đóng / Hủy</button>
+          <button class="yes" data-apex="confirm" data-id="${esc(state.activeModal.dealId)}">
+            Mở Trang Đối Tác →
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function renderFooter() {
+    return `
+    <footer class="apex-footer">
+      <div class="apex-footer-links">
+        <a class="apex-footer-link" data-apex="open-methodology">Cách JayT Chọn Nguồn</a>
+        <a class="apex-footer-link" data-apex="toggle-ledger-view">Sổ Tiết Kiệm Cá Nhân</a>
+        <a class="apex-footer-link" data-apex="open-onboarding">Đổi Nhóm Đối Tượng</a>
+      </div>
+      <div>
+        🏛️ <b>Dự Án Giá Trị Cộng Đồng Đà Nẵng 43</b> — Công Cụ Hỗ Trợ Quyết Định Cho Người Dân Đà Nẵng • Lưu Trữ Cục Bộ Riêng Tư
+      </div>
+    </footer>`;
+  }
+
+  // --- MAIN RENDER ROOT ---
+  function render() {
+    syncTodayPlanState();
+    let root = document.getElementById('jayt-apex');
+
+    if (!root) {
+      root = document.createElement('div');
+      root.id = 'jayt-apex';
+      document.body.prepend(root);
+    }
+
+    if (window.location.protocol === 'file:') {
+      root.innerHTML = `
+      <style>${getStyleSheet()}</style>
+      ${renderHeader()}
+      <main class="apex-workspace">
+        ${renderSafeModeCard()}
+      </main>
+      ${renderFooter()}
+      `;
+      return;
+    }
+
+    root.innerHTML = `
+    <style>${getStyleSheet()}</style>
+    ${renderHeader()}
+
+    <main class="apex-workspace">
+      ${renderHubSwitcher()}
+      ${renderPersonalBrief()}
+      ${renderHeroDecision()}
+      ${renderHeroRecommendation()}
+      ${renderDailyScheduleSection()}
+      ${renderTomorrowPreviewSection()}
+      ${renderSavingsLedgerDrawer()}
+      ${renderDiscoveryFeedSection()}
+    </main>
+
+    ${renderFooter()}
+    
+    <nav class="apex-mobile-nav-bar" id="apex-mobile-nav">
+      <button class="apex-mobile-nav-item" data-apex="nav" data-view="all">
+        <span>🏠</span>
+        <span>Trang Chủ</span>
+      </button>
+      <button class="apex-mobile-nav-item" data-apex="open-onboarding">
+        <span>👤</span>
+        <span>Đối Tượng</span>
+      </button>
+      <button class="apex-mobile-nav-item" data-apex="open-methodology">
+        <span>📖</span>
+        <span>Chọn Nguồn</span>
+      </button>
+      <button class="apex-mobile-nav-item" data-apex="toggle-ledger-view">
+        <span>💰</span>
+        <span>Sổ Tiết Kiệm</span>
+      </button>
+    </nav>
+
+    <!-- MODALS CONTAINER -->
+    ${renderActiveModal()}
+    ${renderOnboardingModal()}
+    ${renderFeedbackModal()}
+    ${renderMethodologyModal()}
+    `;
+  }
+  window.__render = render;
+
+  // --- GLOBAL EVENT DELEGATION HANDLER ---
+  async function handleEvent(e) {
+    const rawTarget = e.target || {};
+
+    // 1. Backdrop click dismisses any active modal immediately
+    if (e.type === 'click' && rawTarget) {
+      const isBackdrop = (rawTarget.classList && rawTarget.classList.contains('apex-modal')) ||
+                         (typeof rawTarget.className === 'string' && rawTarget.className.includes('apex-modal') && !rawTarget.closest?.('.apex-modal-card'));
+      if (isBackdrop) {
+        state.activeModal = null;
+        state.feedbackModalOpen = false;
+        state.methodologyModalOpen = false;
+        if (state.onboardingModalOpen) {
+          state.onboardingModalOpen = false;
+          state.onboardingDismissed = true;
+          try { localStorage.setItem('jayt_onboarding_completed', 'true'); } catch {}
+        }
+        render();
+        return;
+      }
+    }
+
+    const target = rawTarget.closest ? (rawTarget.closest('[data-apex]') || rawTarget) : rawTarget;
+    if (!target) return;
+
+    const getAttr = (el, attr) => {
+      if (typeof el.getAttribute === 'function') {
+        const val = el.getAttribute(attr);
+        if (val !== null) return val;
+      }
+      if (el.dataset) {
+        const rawAttr = attr.replace(/^data-/, '');
+        const camel = rawAttr.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+        if (el.dataset[camel] !== undefined) return el.dataset[camel];
+        if (el.dataset[rawAttr] !== undefined) return el.dataset[rawAttr];
+        if (el.dataset[attr] !== undefined) return el.dataset[attr];
+      }
+      if (el[attr] !== undefined) return el[attr];
+      return null;
+    };
+
+    const action = getAttr(target, 'data-apex') || getAttr(target, 'apex');
+    if (!action) return;
+
+    if (action === 'switch-product-tab') {
+      state.activeProductTab = getAttr(target, 'data-tab') || getAttr(target, 'tab') || 'local';
+      state.persona = 'all';
+      state.selectedZone = 'all';
+      state.needCollection = 'all';
+      state.durationMins = 'all';
+      state.budgetTier = 'all';
+      state.rightNowMode = false;
+      render();
+    } else if (action === 'nav') {
+      const view = getAttr(target, 'data-view') || getAttr(target, 'view') || 'all';
+      state.viewMode = view;
+      const p = getAttr(target, 'persona');
+      if (p) state.persona = p;
+      if (localStorage.getItem('jayt_onboarding_completed') !== 'true') {
+        state.onboardingModalOpen = true;
+        state.onboardingDismissed = false;
+      }
+      render();
+    } else if (action === 'filter-persona') {
+      const val = getAttr(target, 'data-val') || getAttr(target, 'val') || target.value || 'all';
+      state.persona = val;
+      try { localStorage.setItem('jayt_preferred_persona', val); } catch {}
+      state.onboardingModalOpen = false;
+      render();
+    } else if (action === 'onboard-select') {
+      const p = getAttr(target, 'data-persona') || getAttr(target, 'persona') || getAttr(target, 'val') || 'all';
+      state.persona = p;
+      try {
+        localStorage.setItem('jayt_preferred_persona', p);
+        localStorage.setItem('jayt_onboarding_completed', 'true');
+      } catch {}
+      state.onboardingModalOpen = false;
+      state.onboardingDismissed = true;
+      render();
+    } else if (action === 'select-persona-matrix') {
+      state.persona = target.value;
+      try { localStorage.setItem('jayt_preferred_persona', target.value); } catch {}
+      render();
+    } else if (action === 'select-zone') {
+      const val = target.value || getAttr(target, 'value') || getAttr(target, 'val') || 'all';
+      state.selectedZone = val;
+      try { localStorage.setItem('jayt_preferred_zone', val); } catch {}
+      render();
+    } else if (action === 'select-need') {
+      state.needCollection = target.value || getAttr(target, 'value') || 'all';
+      render();
+    } else if (action === 'select-duration') {
+      state.durationMins = target.value || getAttr(target, 'value') || 'all';
+      render();
+    } else if (action === 'select-budget') {
+      state.budgetTier = target.value || getAttr(target, 'value') || 'all';
+      render();
+    } else if (action === 'filter-time') {
+      state.timeSlot = getAttr(target, 'data-val') || getAttr(target, 'val') || 'all';
+      state.rightNowMode = false;
+      render();
+    } else if (action === 'toggle-right-now') {
+      state.rightNowMode = !state.rightNowMode;
+      render();
+    } else if (action === 'quick-intent') {
+      const intent = getAttr(target, 'intent') || getAttr(target, 'data-intent');
+      state.activeProductTab = 'local';
+      if (intent === 'student') {
+        state.persona = 'student';
+        state.selectedZone = 'ZONE_BK_SP';
+        state.needCollection = 'campus_student';
+        state.budgetTier = 'under_50k';
+        state.durationMins = '30';
+        state.rightNowMode = true;
+      } else if (intent === 'office') {
+        state.persona = 'office';
+        state.selectedZone = 'ZONE_HAI_CHAU_CBD';
+        state.needCollection = 'lunch_under_50k';
+        state.budgetTier = 'under_50k';
+        state.durationMins = '45';
+        state.rightNowMode = true;
+      } else if (intent === 'group') {
+        state.persona = 'group';
+        state.selectedZone = 'all';
+        state.needCollection = 'group_hangout';
+        state.budgetTier = 'under_100k';
+        state.durationMins = '120';
+        state.rightNowMode = true;
+      }
+      render();
+    } else if (action === 'reset-filters') {
+      state.persona = 'all';
+      state.selectedZone = 'all';
+      state.needCollection = 'all';
+      state.durationMins = 'all';
+      state.budgetTier = 'all';
+      state.rightNowMode = false;
+      render();
+    } else if (action === 'toggle-save' || action === 'save') {
+      const id = getAttr(target, 'data-id') || getAttr(target, 'id');
+      if (id) {
+        if (state.saved.includes(id)) {
+          state.saved = state.saved.filter(x => x !== id);
+        } else {
+          state.saved.push(id);
+        }
+        persistSavedDeals();
+        render();
+      }
+    } else if (action === 'toggle-plan') {
+      const id = getAttr(target, 'data-id') || getAttr(target, 'id');
+      if (id) {
+        if (state.todayPlan.includes(id)) {
+          const prevStatus = state.planDetails[id]?.status || 'need_check';
+          state.todayPlan = state.todayPlan.filter(x => x !== id);
+          delete state.planDetails[id];
+          updateSavingsLedger(id, 'removed', prevStatus);
+        } else {
+          state.todayPlan.push(id);
+          state.planDetails[id] = { status: 'need_check', note: '' };
+        }
+        saveTodayPlanState();
+        render();
+      }
+    } else if (action === 'change-plan-status') {
+      const id = getAttr(target, 'data-id') || getAttr(target, 'id');
+      const val = target.value || getAttr(target, 'value') || getAttr(target, 'val');
+      if (id && state.planDetails[id]) {
+        const prevStatus = state.planDetails[id].status;
+        state.planDetails[id].status = val;
+        saveTodayPlanState();
+        updateSavingsLedger(id, val, prevStatus);
+        render();
+      }
+    } else if (action === 'undo-claim') {
+      const id = getAttr(target, 'data-id') || getAttr(target, 'id');
+      if (id && state.planDetails[id]) {
+        const prevStatus = state.planDetails[id].status;
+        state.planDetails[id].status = 'opened';
+        saveTodayPlanState();
+        updateSavingsLedger(id, 'opened', prevStatus);
+        render();
+      }
+    } else if (action === 'change-plan-note') {
+      const id = getAttr(target, 'data-id') || getAttr(target, 'id');
+      if (id && state.planDetails[id]) {
+        state.planDetails[id].note = target.value;
+        saveTodayPlanState();
+      }
+    } else if (action === 'hunt') {
+      const rawId = getAttr(target, 'data-id') || getAttr(target, 'id') || '';
+      const matched = (dataStore.deals || []).find(d => d.deal_id === rawId || d.deal_id.toLowerCase().includes(rawId.toLowerCase()) || (d.brand && d.brand.toLowerCase().includes(rawId.toLowerCase())));
+      if (!matched || !isDealRenderEligible(matched, dataStore.evidence)) {
+        showToast('Ưu đãi đang trong giai đoạn thẩm định nguồn (PROBING) — Chưa đủ chứng cứ nguyên bản để mở liên kết chuyển tiếp.');
+        return;
+      }
+      const dealId = matched ? matched.deal_id : rawId;
+      state.activeModal = { dealId };
+      render();
+    } else if (action === 'confirm' || action === 'confirm-hunt') {
+      const rawId = getAttr(target, 'data-id') || getAttr(target, 'id') || (state.activeModal ? state.activeModal.dealId : '');
+      const matched = (dataStore.deals || []).find(d => d.deal_id === rawId || d.deal_id.toLowerCase().includes(rawId.toLowerCase()) || (d.brand && d.brand.toLowerCase().includes(rawId.toLowerCase())));
+      const dealId = matched ? matched.deal_id : rawId;
+      state.activeModal = null;
+      render();
+
+      if (!matched || !isDealRenderEligible(matched, dataStore.evidence)) {
+        showToast('Ưu đãi đang trong giai đoạn thẩm định nguồn (PROBING) — Chưa đủ chứng cứ nguyên bản để mở liên kết chuyển tiếp.');
+        return;
+      }
+
+      let targetPopup = null;
+      try {
+        targetPopup = window.open('about:blank', '_blank');
+      } catch (err) {
+        console.warn('[JAYT-GATEWAY] Trình duyệt chặn popup mở nguồn:', err);
+      }
+
+      try {
+        const resp = await fetch('/api/token/issue', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ deal_id: dealId })
+        });
+        if (resp.status === 403) {
+          showToast('Ưu đãi chưa đủ chứng cứ lưu vết thô đạt chuẩn (Capture Authenticity Gate) để mở liên kết.');
+          if (targetPopup && typeof targetPopup === 'object' && targetPopup.close) targetPopup.close();
+          return;
+        }
+        if (!resp.ok) throw new Error('ERR_TOKEN_ISSUE_FAILED');
+        const tokenJson = await resp.json();
+
+        if (tokenJson && tokenJson.status === 'TOKEN_ISSUED' && tokenJson.outbound_endpoint) {
+          if (!state.savingsLedger.openedHistory) state.savingsLedger.openedHistory = [];
+          
+          if (targetPopup && typeof targetPopup === 'object') {
+            targetPopup.location.href = tokenJson.outbound_endpoint;
+          }
+
+          state.savingsLedger.openedHistory.push({
+            deal_id: dealId,
+            opened_at: new Date(getTrustedNow()).toISOString(),
+            correlation_id: tokenJson.correlation_id
+          });
+          persistSavingsLedger();
+        }
+      } catch (err) {
+        console.warn('[JAYT-GATEWAY] Lỗi phát hành token hoặc điều hướng:', err);
+        if (targetPopup && typeof targetPopup.close === 'function') {
+          targetPopup.close();
+        }
+        showToast('Không thể kết nối đến nguồn đối tác lúc này. Vui lòng thử lại sau.');
+      }
+    } else if (action === 'close-modal' || action === 'close') {
+      state.activeModal = null;
+      render();
+    } else if (action === 'open-onboarding') {
+      state.onboardingModalOpen = true;
+      render();
+    } else if (action === 'skip-onboarding' || action === 'onboard-skip') {
+      state.onboardingModalOpen = false;
+      state.onboardingDismissed = true;
+      try { localStorage.setItem('jayt_onboarding_completed', 'true'); } catch {}
+      render();
+    } else if (action === 'toggle-slot-expand') {
+      const slot = getAttr(target, 'data-slot-key') || getAttr(target, 'data-slot') || (target.closest ? (getAttr(target.closest('[data-slot-key]'), 'data-slot-key') || getAttr(target.closest('[data-slot]'), 'data-slot')) : null);
+      if (slot) {
+        const ctx = getDaNangDiurnalContext();
+        const isCurrentActive = (slot === ctx.slotKey);
+        const wasExpanded = (state.expandedSlots && typeof state.expandedSlots[slot] === 'boolean') 
+          ? state.expandedSlots[slot] 
+          : isCurrentActive;
+        if (!state.expandedSlots) state.expandedSlots = {};
+        state.expandedSlots[slot] = !wasExpanded;
+        render();
+      }
+    } else if (action === 'open-methodology') {
+      state.methodologyModalOpen = true;
+      render();
+    } else if (action === 'close-methodology') {
+      state.methodologyModalOpen = false;
+      render();
+    } else if (action === 'toggle-ledger-view') {
+      state.showLedgerDrawer = !state.showLedgerDrawer;
+      render();
+    } else if (action === 'close-ledger-view') {
+      state.showLedgerDrawer = false;
+      render();
+    } else if (action === 'open-feedback') {
+      state.feedbackDealId = getAttr(target, 'data-id') || getAttr(target, 'id');
+      state.feedbackDealTitle = getAttr(target, 'data-title') || getAttr(target, 'title');
+      state.feedbackModalOpen = true;
+      render();
+    } else if (action === 'close-feedback') {
+      state.feedbackModalOpen = false;
+      render();
+    } else if (action === 'submit-feedback') {
+      const reasonEl = document.getElementById('apex-feedback-reason');
+      const noteEl = document.getElementById('apex-feedback-note');
+      const fbPayload = {
+        deal_id: state.feedbackDealId || getAttr(target, 'data-id') || getAttr(target, 'id'),
+        reason: reasonEl ? reasonEl.value : 'UNKNOWN',
+        note: noteEl ? noteEl.value : '',
+        timestamp: new Date(getTrustedNow()).toISOString()
+      };
+      try {
+        const stored = JSON.parse(localStorage.getItem('jayt_community_feedback') || '[]');
+        stored.push(fbPayload);
+        localStorage.setItem('jayt_community_feedback', JSON.stringify(stored));
+      } catch {}
+      state.feedbackModalOpen = false;
+      render();
+    }
+  }
+
+  // --- GLOBAL EVENT LISTENERS ---
+  document.addEventListener('click', handleEvent);
+  document.addEventListener('change', handleEvent);
+  document.addEventListener('input', handleEvent);
+
+  const handleModalFocusTrap = (e) => {
+    if (e.key !== 'Tab' && e.keyCode !== 9) return;
+    const modalEl = document.querySelector('.apex-modal');
+    if (!modalEl) return;
+    const focusables = Array.from(modalEl.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+      .filter(el => !el.disabled && (el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length > 0));
+    if (focusables.length === 0) return;
+    const firstEl = focusables[0];
+    const lastEl = focusables[focusables.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === firstEl || !modalEl.contains(document.activeElement)) {
+        lastEl.focus();
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastEl || !modalEl.contains(document.activeElement)) {
+        firstEl.focus();
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+      }
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (!e) return;
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      if (state.activeModal || state.feedbackModalOpen || state.methodologyModalOpen || state.onboardingModalOpen || state.showLedgerDrawer) {
+        state.activeModal = null;
+        state.feedbackModalOpen = false;
+        state.methodologyModalOpen = false;
+        state.showLedgerDrawer = false;
+        if (state.onboardingModalOpen) {
+          state.onboardingModalOpen = false;
+          state.onboardingDismissed = true;
+          try { localStorage.setItem('jayt_onboarding_completed', 'true'); } catch {}
+        }
+        render();
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+      }
+    } else if (e.key === 'Tab' || e.keyCode === 9) {
+      handleModalFocusTrap(e);
+    } else if (e.key === 'Enter' || e.keyCode === 13) {
+      const el = e.target;
+      if (el && (el.tagName === 'BUTTON' || el.tagName === 'A' || (typeof el.getAttribute === 'function' && el.getAttribute('data-apex')))) {
+        handleEvent(e);
+      }
+    }
+  };
+  if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+    document.addEventListener('keydown', handleKeyDown);
+  }
+  if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+    window.addEventListener('keydown', handleKeyDown);
+  }
+
+
+  // --- BOOT SEQUENCE ---
+  async function boot() {
+    loadLocalStorageData();
+    render();
+    await loadSourceOfTruthData();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+
+})();

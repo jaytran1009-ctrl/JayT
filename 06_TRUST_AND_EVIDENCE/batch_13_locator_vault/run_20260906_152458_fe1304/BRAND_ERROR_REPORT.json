@@ -1,0 +1,67 @@
+[
+  {
+    "brand_id": "lotte_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": false,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": "2026-09-06T05:52:55.000Z",
+    "captured_at": null,
+    "file_mtime": "2026-09-06T05:52:54.272Z",
+    "observed_at": "2026-09-06T05:52:55.000Z",
+    "historical_observation_unverified": false,
+    "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotte_cinema.raw.html",
+    "reason": "Raw HTML contains cinemaID=8007 navigation menu item but lacks physical facility address. Per anti-synthesis rule, address is NOT synthesized."
+  },
+  {
+    "brand_id": "metiz_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": false,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": "2026-09-06T05:52:55.000Z",
+    "captured_at": null,
+    "file_mtime": "2026-09-06T05:52:54.493Z",
+    "observed_at": "2026-09-06T05:52:55.000Z",
+    "historical_observation_unverified": false,
+    "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\metiz_cinema.raw.html",
+    "reason": "Raw HTML contains business registration 0400668112 but lacks physical facility address string. Per anti-synthesis rule, address is NOT hardcoded."
+  },
+  {
+    "brand_id": "dien_may_xanh",
+    "status": "NOT_CHECKED_THIS_RUN",
+    "checked_this_run": false,
+    "observed_status": "HISTORICAL_PROBE__SERVER_ERROR_500",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": null,
+    "observed_at": null,
+    "historical_observation_unverified": true,
+    "evidence_reference": "historical_observation_unverified",
+    "reason": "Offline replay: network probe was not executed in this run. No verified historical probe receipt exists on disk. Status and timestamp remain unverified (historical_observation_unverified). Per anti-synthesis rule, 0 locations emitted."
+  },
+  {
+    "brand_id": "highlands_coffee",
+    "status": "NOT_CHECKED_THIS_RUN",
+    "checked_this_run": false,
+    "observed_status": "HISTORICAL_PROBE__BLOCKED_403_WAF",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": null,
+    "observed_at": null,
+    "historical_observation_unverified": true,
+    "evidence_reference": "historical_observation_unverified",
+    "reason": "Offline replay: network probe was not executed in this run. No verified historical probe receipt exists on disk. Status and timestamp remain unverified (historical_observation_unverified). Per anti-synthesis rule, 0 locations emitted."
+  },
+  {
+    "brand_id": "lotteria",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": false,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": "2026-09-06T06:29:09.694Z",
+    "observed_at": null,
+    "historical_observation_unverified": true,
+    "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotteria.raw.html",
+    "reason": "Static DOM contains only corporate headquarters in HCMC. Dynamic store list requires client-side Firebase App Check attestation which rejects automated agents (403). Per anti-synthesis rule, 0 locations emitted."
+  }
+]

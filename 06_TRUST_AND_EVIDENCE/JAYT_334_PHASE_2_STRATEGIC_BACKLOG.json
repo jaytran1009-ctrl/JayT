@@ -1,0 +1,105 @@
+{
+  "directive": "JAYT-334",
+  "status": "ACTIVE__DISCOVERY_AND_PRE_AUDIT_ONLY",
+  "production_baseline": {
+    "version": "v3.423.0",
+    "total_cards": 47,
+    "mutation_authorized": false
+  },
+  "source_matrix": "04_DATA_PIPELINE/batch_matrix/LOCATOR_HARVEST_MATRIX.json",
+  "governance": {
+    "capture_authorized": false,
+    "public_approved": false,
+    "render_permitted": false,
+    "production_deploy_permitted": false,
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "workstreams": [
+    {
+      "id": "P2_LOCATOR_RECONCILIATION",
+      "priority": "P0",
+      "owner": "DATA_TRUST_AND_ENGINEERING",
+      "objective": "Reconcile all 10 configured brand locators and produce a deduplicated locality evidence index.",
+      "targets": [
+        "phuclong",
+        "jollibee",
+        "phi_long",
+        "lotte_cinema",
+        "metiz_cinema",
+        "cgv_cinemas",
+        "galaxy_cinema",
+        "dien_may_xanh",
+        "highlands_coffee",
+        "lotteria"
+      ],
+      "special_cases": [
+        {
+          "brand_id": "dien_may_xanh",
+          "state": "FAIL_CLOSED__HTTP_500_EVIDENCE",
+          "instruction": "Keep B14_DMX_M170_DEN excluded; investigate a current official locator endpoint without blind retry or inherited approval."
+        },
+        {
+          "brand_id": "cgv_cinemas",
+          "state": "MULTI_LEAF_LOCATOR",
+          "instruction": "Deduplicate the three configured Đà Nẵng cinema leaves before attaching any system-wide policy."
+        }
+      ],
+      "acceptance": [
+        "One current source fingerprint per locator response",
+        "Verbatim Đà Nẵng address evidence per promoted venue",
+        "No duplicate venue identity",
+        "No price or stock inference from locality evidence"
+      ]
+    },
+    {
+      "id": "P2_OFFER_LEAF_DISCOVERY",
+      "priority": "P1",
+      "owner": "PRODUCT_AND_DATA_TRUST",
+      "objective": "Prepare dated official offer leaves for students and residents without publishing them.",
+      "categories": [
+        "cinema_student_pricing",
+        "food_and_beverage_member_benefits",
+        "bookstore_and_learning_supplies",
+        "public_transport_and_mobility_benefits"
+      ],
+      "candidate_brand_queue": [
+        "lotte_cinema",
+        "cgv_cinemas",
+        "metiz_cinema",
+        "galaxy_cinema",
+        "highlands_coffee",
+        "lotteria",
+        "phuclong",
+        "jollibee"
+      ],
+      "new_brand_discovery_queue": [
+        "fahasa",
+        "the_coffee_house",
+        "katinat"
+      ],
+      "required_fields": [
+        "official_leaf_url",
+        "verbatim_offer_span",
+        "eligibility",
+        "valid_from",
+        "expires_at_or_no_expiry_disclosure",
+        "redemption_conditions",
+        "observed_at",
+        "source_sha256",
+        "locality_evidence_id",
+        "consumer_disclosure"
+      ]
+    },
+    {
+      "id": "P2_STRATEGIC_REVIEW_PACKAGE",
+      "priority": "P1",
+      "owner": "CEO_AND_QA",
+      "objective": "Submit only evidence-complete candidates to the Strategic Advisor before any release proposal.",
+      "entry_gate": "LOCATOR_AND_OFFER_EVIDENCE_COMPLETE",
+      "exit_gate": "CHAIRMAN_TARGETED_INGRESS_OR_RELEASE_DECREE_REQUIRED"
+    }
+  ],
+  "next_decision": "STRATEGIC_ADVISOR_PHASE_2_SCOPE_REVIEW"
+}

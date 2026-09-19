@@ -1,0 +1,63 @@
+{
+  "receipt_id": "SECTION_CM_STAGING_RELEASE_RECEIPT",
+  "timestamp": "2026-08-29T12:46:28.540Z",
+  "version": "v3.427.6-staging.cm",
+  "target": "https://jayt-storefront-staging-cm.vercel.app",
+  "deployment_id": "dpl_DhkVBjNespKyMi34kDTYjRqQNwQa",
+  "total_audits": 11,
+  "passed": 11,
+  "failed": 0,
+  "browser_pack_dir": "07_QUALITY_ASSURANCE/browser_pack_cm",
+  "manifest_file": "07_QUALITY_ASSURANCE/browser_pack_cm/BROWSER_CAPTURE_MANIFEST_CM.json",
+  "audits": [
+    {
+      "name": "Zero payment assertions, zero absolute claims and zero internal selectors on public surface",
+      "pass": true,
+      "detail": "100% Clean"
+    },
+    {
+      "name": "Zero internal toolbars or board switchers in public storefront DOM",
+      "pass": true
+    },
+    {
+      "name": "Food Narrative Module screenshot distinct from Hero (No duplicate hash)",
+      "pass": true
+    },
+    {
+      "name": "Three-Lane Wallet (Dùng ngay=4, Cổng chính thức=6, Theo dõi=3)",
+      "pass": true
+    },
+    {
+      "name": "Explore Directory contains exactly 50 items",
+      "pass": true,
+      "detail": "count=50"
+    },
+    {
+      "name": "Mobile 390x844 Title fully visible without clipping",
+      "pass": true
+    },
+    {
+      "name": "Mobile 390x844 Primary CTA visible in first-fold",
+      "pass": true
+    },
+    {
+      "name": "Mobile 390x844 Civic Note lightweight (<25% of hero)",
+      "pass": true,
+      "detail": "ratio=24%"
+    },
+    {
+      "name": "Modal closes cleanly via Escape with zero residual blur",
+      "pass": true
+    },
+    {
+      "name": "Zero Empty Media Rule enforced on all visual feature stages",
+      "pass": true,
+      "detail": "rendered=4"
+    },
+    {
+      "name": "Governance recovery audited and recorded",
+      "pass": true,
+      "detail": "TX=21, Hash=ae50dff5e3ee..."
+    }
+  ]
+}

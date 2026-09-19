@@ -1,0 +1,70 @@
+{
+  "registry_name": "JAYT_FEATURE1_KNOWN_ISSUES_REGISTRY_V2",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_452_AND_EXECUTE_RESEAL_V2 (JAYT-453 / J452-07)",
+  "timestamp": "2026-09-19T08:41:52.429Z",
+  "active_p0_issues_count": 0,
+  "active_p1_issues_count": 0,
+  "verdict": "NO_OPEN_BLOCKERS",
+  "remediated_audit_issues": [
+    {
+      "issue_id": "J452-01",
+      "title": "Canonical ZQA Contract Drift & Gate Sequence Mutation",
+      "severity": "P0_BLOCKER",
+      "root_cause": "Autonomous OPC test suite drifted from canonical ZQA gate definitions (ZQA-01..12), substituting ad-hoc names and broken order.",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "ZQA_CONTRACT_MAP / zqa-contract-map.json",
+      "remediation_summary": "Bound 12 canonical gates + 7 supplementary gates in zqa-contract-map.json and aligned test_autonomous_opc_gates.cjs.",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "J452-02",
+      "title": "Synthetic WebKit Emulation via Chromium User-Agent Impersonation",
+      "severity": "P0_BLOCKER",
+      "root_cause": "Cross-browser gate launched Chromium/Edge setting Safari UA string rather than invoking real WebKit browser engine.",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "REAL_PLAYWRIGHT_WEBKIT / cross-browser-runtime.json",
+      "remediation_summary": "Installed Playwright real WebKit 26.6 & Chromium 153 engines; updated test_playwright_cross_browser.cjs to run authentic dual engines with live metadata extraction.",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "J452-03",
+      "title": "Client-Side Commercial Authority & Partner ID Exposure",
+      "severity": "P0_BLOCKER",
+      "root_cause": "Exposed SECURE_PARTNER_CONFIG and TRACK_1_AFFILIATE_REGISTRY on client window, allowing client tampering and violating server authority.",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "CLIENT_AFFILIATE_AUTHORITY / verify_route_identity_matrix.cjs",
+      "remediation_summary": "Purged all commercial partner identity objects from client; established server-side authority in /api/resolve-link.js with tamper tests.",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "J452-04",
+      "title": "Cadence Golden Hours Schedule Drift & Passive Watchdog",
+      "severity": "P0_BLOCKER",
+      "root_cause": "Sweeper and cron schedules drifted from exact 4 ICT slots (00:07, 11:37, 16:37, 20:07) and watchdog lacked active drill proof.",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "CLOUD_EXECUTION / WATCHDOG_DRILL / watchdog-drill-report.json",
+      "remediation_summary": "Aligned cron and sweeper to exact slots; implemented run_watchdog_drill.cjs verifying automated recovery from MISSED_CADENCE anomaly.",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "J452-05",
+      "title": "Live Parity Unverified Assertion",
+      "severity": "P0_BLOCKER",
+      "root_cause": "Parity report asserted live deployment match without downloading live served bytes from production URL.",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "LIVE_ARTIFACT_PARITY / live-artifact-verification.json",
+      "remediation_summary": "Created verify_live_artifact.cjs to download raw bytes from https://jayt-production-v3420.vercel.app/jayt_apex_interface.js, hash SHA-256, and verify bit-identical match.",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "J452-06",
+      "title": "Image Provenance Overclaim & Conflation with Reachability",
+      "severity": "P0_BLOCKER",
+      "root_cause": "HTTP 200 reachability was conflated with unbox provenance verification; UI displayed overclaims (\"Không Photoshop · Camera Thường\").",
+      "fix_commit": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+      "verification_gate": "IMAGE_PROVENANCE / verify_image_provenance.cjs",
+      "remediation_summary": "Differentiated asset_reachable vs asset_provenance_verified in image-provenance-report.json; replaced all UI copy with neutral honest labels (\"Ảnh Sản Phẩm Từ Nguồn\").",
+      "status": "RESOLVED"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+const assert = require('assert');
+const { MOCK_SLOTS, hydrateApprovedSlot } = require('./jayt_282_staging_four_card_mock.js');
+assert.strictEqual(MOCK_SLOTS.length, 4);
+assert.strictEqual(MOCK_SLOTS.filter((slot) => slot.public_approved).length, 1);
+assert.strictEqual(MOCK_SLOTS.filter((slot) => slot.affiliate || slot.commercial_claims).length, 0);
+assert.throws(() => hydrateApprovedSlot(MOCK_SLOTS[1]), /hydration denied/);
+assert.throws(() => hydrateApprovedSlot({ id: 'x', state: 'EVIDENCE_COMPLETE_INTERNAL_HELD', public_approved: true, render_permitted: true, affiliate: true }), /commercial/);
+const ready = hydrateApprovedSlot({ id: 'x', state: 'EVIDENCE_COMPLETE_INTERNAL_HELD', public_approved: true, render_permitted: true, affiliate: false, commercial_claims: false, title: 'Mock', source_excerpt: 'Căn cứ', source_date: '2026-09-03', official_url: 'https://example.gov.vn/leaf' });
+assert.strictEqual(ready.id, 'x');
+console.log('JAYT-282 internal four-card staging harness: 6/6 PASS');

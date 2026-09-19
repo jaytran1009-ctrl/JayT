@@ -1,0 +1,87 @@
+# HỒ SƠ HỘI ĐỒNG LIÊN BỘ — JAYT SECTION EZ-AK
+## BÁO CÁO ĐÓNG SLA FAST LANE THEO FAIL-CLOSED VÀ XÁC NHẬN EXACT GATE
+
+**Mã hồ sơ:** `COUNCIL_REVIEW_PACK_EZ_AK_SLA_CLOSURE_AND_GATE_REVALIDATION_20260901`
+**Phiên bản Staging Authoritative:** `v3.482.0-staging.ez`
+**Chỉ thị chỉ đạo:** JAYT-245 Mục EZ-AK (Dòng 4960–4994)
+**Thời điểm đóng SLA (UTC):** `2026-09-01T08:28:00Z`
+
+---
+
+### I. TIẾP NHẬN PHÁN QUYẾT CEO GATE REVALIDATION (MANDATE EZ-AK.1)
+
+CEO đã tự chạy độc lập và xác nhận:
+- `JAYT_BUILD_MANIFEST.json`, `/health`, SOT/served parity đều khớp `v3.482.0-staging.ez`.
+- Suite exact gate `test_ez_aj_exact_version_gate_qa.js` chạy **17/17 PASS**, bao gồm fixture bắt lỗi version cũ/lệch 1 ký tự.
+- **Phán quyết:** `TECHNICAL_EXACT_VERSION_GATE_REVALIDATED`.
+- Hội đồng tiếp thu nghiêm túc: không dùng báo cáo tự tổng hợp "291/291" làm bằng chứng release; mỗi đợt kiểm thử phải nêu rõ scope tự chạy.
+
+---
+
+### II. KẾT QUẢ ĐÓNG SLA FAST LANE THEO FAIL-CLOSED (MANDATE EZ-AK.2)
+
+Tại mốc đóng SLA (`2026-09-01T08:28:00Z`), Data & Trust đã hoàn tất thẩm định trên raw evidence hiện có:
+
+| Tiêu chí | Ứng viên 1: JetBrains Student | Ứng viên 2: Figma Education |
+| :--- | :--- | :--- |
+| **Mã ứng viên** | `FAST_LANE_RERUN_01_JETBRAINS_STUDENT` | `FAST_LANE_RERUN_02_FIGMA_EDUCATION` |
+| **Raw Binary** | 494.398 bytes | 1.658.429 bytes |
+| **SHA-256** | `355d9e1e6d07125c0dfedda229b1880a78a54f86044a5c183c4b8b780637dceb` | `090801961331bd51a6ca07ee0b16527a18854b77f51cf26f26382064cc9d7892` |
+| **Title Locator** | Byte 7207: "Free JetBrains Student Pack" ✅ | Byte 5091: "Figma for Education | Free Tools for the Classroom" ✅ |
+| **Eligibility Locator** | Byte 7229: "student", Byte 407768: "academic research" ✅ | Byte 175149: "all free, as a student or teacher" ✅ |
+| **Scope Locator** | Byte 407721: "strictly for non-commercial educational purposes" ✅ | Byte 5139: "Classroom", Byte 179144: "group learning" ✅ |
+| **Action URL / CTA** | **MISSING ❌** (Không có nút CTA đăng ký trực tiếp trên raw static HTML) | Byte 175202: "Get verified" CTA, Byte 5377 canonical link ✅ |
+| **Phân loại Tier** | **`T4_DESCRIPTIVE_ONLY_HELD_INTERNAL`** | **`T2_DOCUMENTATION_HELD_INTERNAL`** |
+| **Lý do Phán quyết** | Thiếu trường `action_url` khả chứng trên static HTML → áp dụng fail-closed xuống T4 | Đủ 4/4 trường cốt lõi, nhưng phải giữ nội bộ chờ Hội đồng & CEO phê duyệt |
+| **Public Eligible** | **`false`** | **`false`** |
+| **Public Card / Link** | **0** | **0** |
+| **Voucher / Giá / Deal**| **0** | **0** |
+| **Affiliate Link** | **0 (KHÓA)** | **0 (KHÓA)** |
+
+---
+
+### III. BẢNG ĐỐI CHIẾU LOCATOR CHI TIẾT THEO BYTE OFFSETS
+
+#### 1. JetBrains Student License
+- **Title:** Byte 7207–7249: `<title>Free JetBrains Student Pack</title>`
+- **Eligibility:** Byte 7229–7236: `student`
+- **Scope:** Byte 407721–407769: `strictly for non-commercial educational purposes`
+- **Action URL:** KHÔNG TÌM THẤY CTA đăng ký trên static HTML (chỉ có link chung `/academy/student-pack/`).
+- **Kết luận:** **THIẾU FIELD `action_url`** → Xếp loại **T4 Descriptive Only**; Giữ nội bộ.
+
+#### 2. Figma for Education
+- **Title:** Byte 5091–5156: `<title>Figma for Education | Free Tools for the Classroom</title>`
+- **Eligibility:** Byte 175149–175179: `all free, as a student or teacher`
+- **Scope:** Byte 5139–5148: `Classroom`; Byte 179144: `collaborative group learning`
+- **Action URL:** Byte 175202: CTA button `Get verified`; Byte 5377 canonical URL `https://www.figma.com/education/`
+- **Kết luận:** **ĐỦ 4 TRƯỜNG CỐT LÕI** → Xếp loại **T2 Documentation**; **GIỮ NỘI BỘ (HELD INTERNAL)** chờ CEO phê duyệt thẻ công khai.
+
+---
+
+### IV. DANH SÁCH CÁC QUYẾT ĐỊNH CÒN CẦN AUTHORITY (MANDATE EZ-AK.4)
+
+| STT | Vấn đề cần thẩm quyền quyết định | Bộ phận đề xuất | Quyết định đề xuất | Thẩm quyền duyệt |
+| :---: | :--- | :---: | :--- | :---: |
+| 1 | **Soạn thảo Thẻ T2 cho Figma Education** | Data & Trust / UX | Lập draft card T2 kèm đầy đủ disclaimer, không link thương mại | **CEO Duyệt** |
+| 2 | **Xử lý ứng viên JetBrains Student** | Data & Trust | Giữ T4 trong catalog nội bộ, không đưa ra public surface | **CEO Duyệt** |
+| 3 | **Cohort 15 Candidate Cinema & Transit** | Acquisition | Bắt đầu capture raw HTTP cho 15 nguồn hypothesis (SLA 12h) | **CEO Duyệt** |
+| 4 | **Authority Gate AccessTrade** | Growth / Data & Trust | Duy trì khóa tuyệt đối (`LOCKED_ABSOLUTELY`), không mở API | **CEO Duyệt** |
+| 5 | **Kế hoạch Go-Live Production** | Engineering / QA | Duy trì `HOLD v3.419.0`, giải quyết các điều kiện `P0_EQ` trước khi mở | **CEO Duyệt** |
+
+---
+
+### V. LỆNH KIỂM TRA ĐỘC LẬP DÀNH CHO CEO
+
+```powershell
+# 1. Kiểm tra ledger đóng SLA (2 ứng viên đã CLOSED, 0 active)
+Get-Content "06_TRUST_AND_EVIDENCE/FAST_LANE_BATCH_PILOT_2_CANDIDATES_SLA_LEDGER_EZ_AE.json"
+
+# 2. Xem verdict chi tiết JetBrains (T4 fail-closed)
+Get-Content "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_JETBRAINS_EZ_AK.json"
+
+# 3. Xem verdict chi tiết Figma (T2 held internal)
+Get-Content "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_EZ_AK.json"
+
+# 4. Chạy suite kiểm tra EZ-AK
+node "07_QUALITY_ASSURANCE/test_ez_ak_sla_closure_and_governance_qa.js"
+```

@@ -1,0 +1,76 @@
+{
+  "ledger_id": "ACCESSTRADE_QUALITATIVE_JTBD_RESEARCH_LEDGER_EZ_I",
+  "version": "1.0.0-ez.i",
+  "governance_directive": "JAYT-245 Section EZ-I (Lines 4127-4147)",
+  "governance_mode": "QUALITATIVE_RESEARCH_ONLY_ALL_COMMERCIAL_FIELDS_LOCKED",
+  "commercial_locks": {
+    "monetization_active": false,
+    "affiliate_links_active": false,
+    "campaign_sub_id_tracking": false,
+    "prices_rendered": false,
+    "star_ratings_rendered": false,
+    "sales_volume_rendered": false,
+    "inventory_rendered": false,
+    "commission_rates_rendered": false,
+    "unverified_promo_codes_rendered": false,
+    "public_storefront_mount": false
+  },
+  "geographic_scope_status": {
+    "campus_clusters_classification": "QUALITATIVE_RESEARCH_HYPOTHESIS_ONLY",
+    "is_empirical_fact": false,
+    "is_segmentation_fact": false,
+    "note": "Cụm trường đại học / ký túc xá / quận chỉ là giả thuyết nghiên cứu định tính (Research Hypothesis), không phải dữ liệu phân đoạn thực tế."
+  },
+  "jtbd_research_entries": [
+    {
+      "jtbd_id": "JTBD_01_STUDENT_PRODUCTIVITY_TOOLS",
+      "cohort": "HỌC TẬP & CÔNG CỤ NĂNG SUẤT SINH VIÊN",
+      "user_persona": "Sinh viên đại học / Cao đẳng ngành kỹ thuật & kinh tế",
+      "problem_statement": "Sinh viên gặp khó khăn trong việc quản lý ghi chú học tập, dự án môn học và làm việc nhóm trực tuyến mà không có công cụ chuyên nghiệp chi phí phù hợp.",
+      "desired_outcome": "Tiếp cận các công cụ cộng tác, quản lý học tập chính thức từ các nhà phát triển phần mềm toàn cầu với chính sách hỗ trợ giáo dục minh bạch.",
+      "safety_and_fit_questions": [
+        "Chính sách hỗ trợ giáo dục có yêu cầu thẻ tín dụng hoặc tự động gia hạn thu phí sau khi tốt nghiệp không?",
+        "Dữ liệu bài tập và ghi chú cá nhân của người học có được bảo mật và không bị khai thác thương mại không?",
+        "Quy trình xác thực trạng thái sinh viên có thu thập PII vượt mức cần thiết không?"
+      ],
+      "evidence_needed": [
+        "Tài liệu chính thức công khai từ tên miền nhà phát hành xác nhận chính sách giáo dục.",
+        "Quy định điều kiện đối tượng (học sinh, sinh viên, giảng viên) có thể nộp đơn.",
+        "Hợp đồng sử dụng và chính sách bảo vệ quyền riêng tư học đường."
+      ],
+      "authority_required": "Phê duyệt độc lập của CEO trước khi đưa vào bất kỳ danh mục hoặc tiện ích công khai nào."
+    },
+    {
+      "jtbd_id": "JTBD_02_AFFORDABLE_DAILY_COMMUTE",
+      "cohort": "DI CHUYỂN & TIỆN ÍCH ĐÔ THỊ HÀNG NGÀY",
+      "user_persona": "Sinh viên và người lao động trẻ di chuyển giữa các khu vực đô thị",
+      "problem_statement": "Người dùng cần nắm rõ lộ trình, khung giờ hoạt động và biểu giá niêm yết chính thức của các phương tiện giao thông công cộng đô thị để tối ưu chi phí đi lại.",
+      "desired_outcome": "Tra cứu nhanh chóng, chính xác thông tin tuyến buýt và dịch vụ công cộng từ cổng chính thống của chính quyền đô thị.",
+      "safety_and_fit_questions": [
+        "Thông tin lịch trình và giá vé niêm yết có được cập nhật mới nhất từ cơ quan quản lý giao thông đô thị không?",
+        "Có liên kết bản đồ bên thứ ba hoặc công cụ theo dõi vị trí chưa được người dùng đồng ý không?"
+      ],
+      "evidence_needed": [
+        "Văn bản hoặc cổng thông tin chính thức của Sở GTVT / Trung tâm Điều hành Giao thông Đô thị.",
+        "Bảng giá vé niêm yết công khai và điều kiện vé tháng ưu đãi học sinh/sinh viên."
+      ],
+      "authority_required": "Phê duyệt độc lập của CEO trên bản chụp mạng nguyên bản (Raw Response Bytes)."
+    },
+    {
+      "jtbd_id": "JTBD_03_NET_EXPENSE_DECISION_MAKING",
+      "cohort": "CÂN ĐỐI CHI TIÊU & TÍNH THỰC TRẢ LOCAL-FIRST",
+      "user_persona": "Người tiêu dùng trẻ và nhóm bạn sinh viên đi ăn/mua sắm chung",
+      "problem_statement": "Người tiêu dùng thường bị nhầm lẫn bởi các chương trình khuyến mãi phức tạp, phụ phí ẩn và phí vận chuyển dẫn đến chi phí thực tế cao hơn dự kiến.",
+      "desired_outcome": "Chủ động tự tính toán chính xác số tiền thực trả cuối cùng sau khi trừ mọi loại giảm giá và phí phát sinh, đồng thời chia đều số tiền minh bạch cho từng người trong nhóm.",
+      "safety_and_fit_questions": [
+        "Công cụ tính toán có hoạt động 100% trên trình duyệt (Local-First) mà không gửi dữ liệu chi tiêu cá nhân về máy chủ không?",
+        "Bảng tính có tránh hoàn toàn việc hiển thị giá mẫu hay mã giảm giá giả định không?"
+      ],
+      "evidence_needed": [
+        "Kiểm thử đơn vị tự động (Unit Tests) xác thực thuật toán chia bill và làm tròn số.",
+        "Kiểm thử bảo mật (E2E) xác nhận 0 cuộc gọi mạng, 0 lưu trữ cookie/tracking."
+      ],
+      "authority_required": "Đã được phê duyệt vận hành trong Savings Lab Staging theo Chỉ thị EZ-B và EZ-H."
+    }
+  ]
+}

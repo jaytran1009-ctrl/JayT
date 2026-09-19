@@ -1,0 +1,35 @@
+{
+  "target_id": "TARGET_087A_191",
+  "brand": "Grab Vietnam",
+  "sector": "FOOD_AND_RIDE",
+  "requested_url": "https://grab.com/vn/blog/",
+  "final_url": "https://www.grab.com/vn/blog/",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:25:26.808Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+    "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+    "literal_href": "/vn/blog/",
+    "link_offset": 136452,
+    "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+    "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 136452 trong parent DOM"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "13d2dfae6350dd11eca133db84f0bc6115b3007505b6aee507ba8816005d1af5",
+      "size": 317377
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "ef4cbafc375f74aff5d9123a42ad37cf62e12f2d446214e975b650c0c9901457",
+      "size": 274028
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "32851868325dc5a11134661082862fb6abd33803f90c12de399967fcb19836d7",
+      "size": 5990
+    }
+  }
+}

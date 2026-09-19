@@ -1,0 +1,220 @@
+{
+  "schema_version": "j373_v1.0",
+  "generated_at_utc": "2026-09-10T08:40:44.941Z",
+  "mandate": "WORK_ORDER_J373_ONSITE_COPILOT",
+  "evidence_authority": "JAYT-373 Executive Council",
+  "policy": {
+    "no_unsupported_stacking": true,
+    "cheapest_known_only": true,
+    "fallback_on_missing_data": "Hỏi nhân viên về điều kiện",
+    "prohibit_invented_offers": true
+  },
+  "step_definitions": [
+    {
+      "step_number": 1,
+      "step_id": "eligibility",
+      "title": "Điều kiện đối tượng",
+      "description": "Xuất trình Thẻ Sinh viên hoặc Thẻ Thành viên quán trước khi gọi món",
+      "options": [
+        {
+          "id": "STUDENT_ID",
+          "label": "🎓 Thẻ Sinh viên chính quy (Student Card)",
+          "applicable_brands": [
+            "jollibee",
+            "cgv_cinemas",
+            "galaxy_cinema",
+            "popeyes"
+          ],
+          "discount_type": "PERCENT_OR_SPECIAL_TARIFF",
+          "evidence_notes": "Áp dụng biểu giá vé U22 tại CGV/Galaxy hoặc quà tặng sinh viên theo chương trình xác thực"
+        },
+        {
+          "id": "BRAND_MEMBER",
+          "label": "⭐ Thành viên quán (K-Club / Phúc Long / CGV Member)",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "cgv_cinemas",
+            "popeyes"
+          ],
+          "discount_type": "MEMBER_BENEFIT",
+          "evidence_notes": "Tích điểm hoặc giảm theo hạng thành viên đã đăng ký ứng dụng chính thức"
+        },
+        {
+          "id": "GENERAL_GUEST",
+          "label": "👤 Khách thông thường (Không thẻ)",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "cgv_cinemas",
+            "galaxy_cinema",
+            "popeyes",
+            "phi_long"
+          ],
+          "discount_type": "STANDARD_PRICE",
+          "evidence_notes": "Áp dụng biểu giá niêm yết chuẩn hoặc khuyến mãi đại trà không điều kiện"
+        }
+      ]
+    },
+    {
+      "step_number": 2,
+      "step_id": "payment_wallet",
+      "title": "Ưu đãi ví & thanh toán",
+      "description": "Chọn phương thức thanh toán có voucher hoặc hoàn tiền khả dụng",
+      "options": [
+        {
+          "id": "ZALOPAY_QR",
+          "label": "ZaloPay QR tại quầy",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "popeyes",
+            "cgv_cinemas"
+          ],
+          "discount_amount": 10000,
+          "min_spend": 50000,
+          "cap": 10000,
+          "terms": "Quét mã ZaloPay QR đặt tại quầy; giảm 10k cho đơn từ 50k (1 lần/tháng)",
+          "source_url": "https://zalopay.vn"
+        },
+        {
+          "id": "VNPAY_QR",
+          "label": "VNPAY-QR (App Ngân hàng)",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "phi_long",
+            "cgv_cinemas"
+          ],
+          "discount_amount": 10000,
+          "min_spend": 40000,
+          "cap": 10000,
+          "terms": "Nhập mã khuyến mãi VNPAY trên ứng dụng ngân hàng khi quét VNPAY-QR tại quầy",
+          "source_url": "https://vnpay.vn"
+        },
+        {
+          "id": "SHOPEEPAY_QR",
+          "label": "ShopeePay Scan & Pay",
+          "applicable_brands": [
+            "jollibee",
+            "popeyes"
+          ],
+          "discount_amount": 15000,
+          "min_spend": 60000,
+          "cap": 15000,
+          "terms": "Quét mã QR ShopeePay tại quầy; áp voucher trong ví Shopee",
+          "source_url": "https://shopeepay.vn"
+        },
+        {
+          "id": "VIETQR_BANK_TRANSFER",
+          "label": "Chuyển khoản VietQR / Tiền mặt",
+          "applicable_brands": [
+            "jollibee",
+            "phuclong",
+            "cgv_cinemas",
+            "galaxy_cinema",
+            "popeyes",
+            "phi_long"
+          ],
+          "discount_amount": 0,
+          "min_spend": 0,
+          "cap": 0,
+          "terms": "Thanh toán giá thực tế không áp dụng ưu đãi ví trung gian",
+          "source_url": "https://vietqr.net"
+        }
+      ]
+    },
+    {
+      "step_number": 3,
+      "step_id": "menu_selection",
+      "title": "Món & Combo áp dụng",
+      "description": "Chọn món từ bảng giá niêm yết đã kiểm chứng để tính số tiền thực trả",
+      "brand_tariffs": {
+        "jollibee": [
+          {
+            "item_id": "JB_COMBO_CANG_CAY",
+            "title": "Combo Càng Cay Càng Mê",
+            "list_price": 157000,
+            "source_offer_id": "B18_JB_CANG_CAY"
+          },
+          {
+            "item_id": "JB_COMBO_BURGER_RICE",
+            "title": "Combo Cơm Gà Giòn Cay + Nước",
+            "list_price": 60000,
+            "source_offer_id": "B18_JB_COMBO_BURGER_RICE"
+          },
+          {
+            "item_id": "JB_COMBO_1_PIECE",
+            "title": "1 Miếng Gà Giòn Cay + Khoai Tây Vừa + Nước",
+            "list_price": 55000,
+            "source_offer_id": "B18_JB_1_PIECE"
+          }
+        ],
+        "popeyes": [
+          {
+            "item_id": "POP_COMBO_GA_GION",
+            "title": "Combo 2 Miếng Gà Giòn + Khoai + Nước",
+            "list_price": 89000,
+            "source_offer_id": "B19_POP_COMBO_GA"
+          },
+          {
+            "item_id": "POP_BURGER_COMBO",
+            "title": "Combo Burger Tôm Phô Mai + Nước",
+            "list_price": 65000,
+            "source_offer_id": "B19_POP_BURGER"
+          }
+        ],
+        "phuclong": [
+          {
+            "item_id": "PL_TRA_SUA_L",
+            "title": "Trà Sữa Phúc Long (Size L)",
+            "list_price": 55000,
+            "source_offer_id": "B18_PL_TRA_SUA"
+          },
+          {
+            "item_id": "PL_TRA_DAO_L",
+            "title": "Trà Đào Hồng Đài (Size L)",
+            "list_price": 60000,
+            "source_offer_id": "B18_PL_TRA_DAO"
+          }
+        ],
+        "cgv_cinemas": [
+          {
+            "item_id": "CGV_VE_U22",
+            "title": "Vé Xem Phim U22 (Học sinh / Sinh viên 2D)",
+            "list_price": 55000,
+            "source_offer_id": "B18_CGV_U22"
+          },
+          {
+            "item_id": "CGV_COMBO_BONG_NUOC",
+            "title": "Combo My Bắp Nước 1 Người",
+            "list_price": 65000,
+            "source_offer_id": "B18_CGV_COMBO_MY"
+          }
+        ],
+        "galaxy_cinema": [
+          {
+            "item_id": "GLX_VE_HSSV",
+            "title": "Vé Happy Day / Học sinh Sinh viên (Thứ 3)",
+            "list_price": 50000,
+            "source_offer_id": "B18_GLX_HSSV"
+          }
+        ],
+        "phi_long": [
+          {
+            "item_id": "PL_CHUOT_LOGITECH",
+            "title": "Chuột Không Dây Logitech B170 Chính Hãng",
+            "list_price": 189000,
+            "source_offer_id": "B13_PL_CHUOT"
+          },
+          {
+            "item_id": "PL_USB_32GB",
+            "title": "USB 3.2 Kingston 32GB DataTraveler",
+            "list_price": 115000,
+            "source_offer_id": "B13_PL_USB"
+          }
+        ]
+      }
+    }
+  ]
+}

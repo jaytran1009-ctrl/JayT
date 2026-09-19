@@ -1,0 +1,32 @@
+{
+  "work_order_id": "J358-R3-R4-DOM-PARSER-AND-ARTIFACT-REPRODUCIBILITY",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Eliminate broad-container promotion paths and make all validator evidence reproducible from one sealed replay entrypoint.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r3_offer_subtree_validator.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R3_PARTIAL_ACCEPTANCE_AND_REPRODUCIBILITY_GATE.md"
+  },
+  "requirements": [
+    "Replace regex pseudo-DOM block resolution with a structurally verified DOM parser or conservative tokenizer with documented malformed-HTML fail-closed behavior and raw-byte mapping.",
+    "Only accept a card through an explicit semantic-card selector allowlist or unambiguous stable offer identifier. Generic div, section, #main, post-content, page body and catalog shell are never cards by themselves.",
+    "Require title, price, conditions, locality phrase, locality target and validity/year evidence to be descendants of the same accepted card, or connected by a recorded explicit identifier relation. No subtree-wide generic regex may borrow evidence.",
+    "Exclude head descendants, metadata, attributes, footer, navigation, store locators and legal/copyright content at DOM-node level, not only by raw tag-offset heuristics.",
+    "Create one replay command that reads sealed raw bytes and metadata, runs the evaluator and tests, and writes matrix, test result and receipt in one controlled invocation. Record validator hash, runner hash, dependency/parser version, every input hash and output hash.",
+    "Make replay verification fail if any receipt digest, source input, validator, runner or declared entrypoint differs. Do not claim an absent export or absent manifest as an executable input.",
+    "Add attacks: broad post-content containing offer title/price but unrelated office locality, unrelated generic promotional clause and copyright year; broad #main; head text node versus body text; malformed/unclosed HTML; duplicate cards with identifiers. Every invalid case must HELD.",
+    "Keep real R3 sources offline and unchanged. Preserve truthful outcome 0 VERIFIED / 10 HELD unless evidence independently meets every rule. No hydrate, package, deploy, scheduler/alias mutation or rollback."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r4_strict_offer_card_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r4_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r4_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R4_STRICT_CARD_AND_REPRODUCIBILITY_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R4_STRICT_CARD_AND_REPRODUCIBILITY.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO replay and code review required; no automatic promotion"
+}

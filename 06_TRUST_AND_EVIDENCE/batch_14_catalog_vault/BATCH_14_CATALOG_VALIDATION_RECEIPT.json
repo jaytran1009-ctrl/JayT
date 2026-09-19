@@ -1,0 +1,35 @@
+{
+  "receipt_name": "BATCH_14_CATALOG_VALIDATION_RECEIPT",
+  "governing_work_order": "JAYT-330-R1",
+  "generated_at_utc": "2026-09-07T05:10:25.379Z",
+  "package_file": "06_TRUST_AND_EVIDENCE/batch_14_catalog_vault/BATCH_14_CATALOG_ACCEPTANCE_PACKAGE.json",
+  "package_sha256": "4daadbcd4115d0d878dc66410173629cee8590dd8e7069416579c6767be0b9b0",
+  "technical_verdict": "TECHNICAL_VALIDATION_PASS",
+  "status": "PENDING_CEO_BATCH_APPROVAL",
+  "all_passed": true,
+  "audit_summary": {
+    "total_audited_catalogs": 10,
+    "accepted_candidates_count": 22,
+    "new_candidates_count": 18,
+    "update_existing_count": 4,
+    "rejected_records_count": 29,
+    "duplicate_count": 0,
+    "unique_ids_verified": true,
+    "currencies_verified": true,
+    "price_types_verified": true,
+    "affiliate_lock_verified": true,
+    "disclaimers_verified": true,
+    "hashes_verified": true,
+    "deep_value_verification_passed": true,
+    "zero_synthetic_data": true
+  },
+  "errors": [],
+  "warnings": [],
+  "guards": {
+    "staging_only": true,
+    "production_deploy_forbidden": true,
+    "public_approved": false,
+    "render_permitted": false,
+    "authority_required": "EXECUTIVE_COUNCIL / CEO"
+  }
+}

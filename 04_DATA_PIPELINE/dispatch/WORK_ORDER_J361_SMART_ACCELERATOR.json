@@ -1,0 +1,64 @@
+{
+  "work_order_id": "J361_SMART_ACCELERATOR",
+  "authority": "Chairman JAYT-361",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity",
+  "status": "READY_FOR_EXECUTION",
+  "supersedes": "J360 static-selector restrictions and prohibition on preparing a new candidate before Batch 19 reaches eight",
+  "candidate_packaging_authorized": true,
+  "staging_hydration_authorized": true,
+  "production_deployment_authorized": false,
+  "release_gate": "Gemini audit PASS followed by explicit Chairman Go-Live signature, as required by JAYT-361 Article 3",
+  "target_version": "v3.430.0",
+  "deployment_target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "org_id": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "alias": "jayt-production-v3420.vercel.app"
+  },
+  "evidence_contract": {
+    "accepted_methods": ["Official rendered detail page screenshot plus reviewed terms transcription", "Official detail HTML text", "Official first-party API response"],
+    "static_selector_allowlist_required": false,
+    "copy_code_required_for_offer": false,
+    "capture_fields": ["stable_offer_id", "requested_url", "final_url", "actual_capture_time_utc", "screenshot_sha256", "raw_or_rendered_artifact_sha256", "transcription_sha256", "reviewed_quote_regions_or_spans", "benefit", "applicability", "validity_or_recurrence", "exclusions", "claim_action"],
+    "rules": [
+      "Capture authentic browser evidence before extraction. Inspect image regions supporting title, benefit, local scope and terms; OCR alone is not acceptance. Do not fabricate screenshots, text, dates or supported claims.",
+      "SPA and image-only terms are acceptable evidence methods. A page need not use a particular container or contain a literal year 2026 if its current applicability is otherwise evidenced. Old publication dates alone do not prove expiration or continuing validity.",
+      "Nationwide terms may establish Da Nang applicability when paired with an official participating-location record and no conflicting exclusions; mere brand presence does not establish participation.",
+      "Price is optional for member/campaign benefits. If no payable price is evidenced, omit Split Bill amount. Savings amounts, voucher face values and discounts must not be treated as payable ticket prices.",
+      "For Starlight U22, resolve the existing 45k claim versus recorded Da Nang 55k exception from actual official terms before accepting a local price.",
+      "Retain immutable older vaults. Store new captures in batch_19_j361_visual_leaf_vault and preserve source lineage; copying older raw bytes is not a fresh capture.",
+      "Accept VERIFIED_IN_STORE or VERIFIED_CAMPAIGN only for supported claims. Preserve remaining cards as visible source/discovery entries with clear unverified status and official-source action, without unverified prices or promises."
+    ]
+  },
+  "supply_targets": {
+    "minimum_original_batch19_verified": 8,
+    "minimum_total_new_verified_offers": 10,
+    "additional_brands": ["The Coffee House", "Popeyes"],
+    "discovery_ids": ["B19_TCH_DISCOVERY_001", "B19_POPEYES_DISCOVERY_001"],
+    "counting": "Retain 87 canonical entities; deduplicate brand/entity IDs. Count new offers separately. Fifteen existing Radar cards are not fifteen new entities. Discovery cards do not count as verified offers. Report shortfall if evidence does not support targets."
+  },
+  "storefront": {
+    "copy": "Only evidence-backed real code: Sao chép mã. Confirm clipboard success before feedback; optional haptic and accessible status; handle denial.",
+    "counter_member": "Xem điều kiện áp dụng ↗ with Ưu đãi tại quầy / Hội viên label.",
+    "app_wallet": "Mở ưu đãi trên App ↗ using verified official app/universal link; official web fallback when a deep-link is unavailable. Never invent deep-links.",
+    "visibility": "Do not hide cards for lacking a code or static selector. Clearly distinguish verified offers, ordinary observed prices and source-only discovery records.",
+    "radar": "Expose all fifteen Batch 17 cards on HOME. Use Giá quan sát đối soát — Bấm để kiểm tra tại sàn chính hãng only where the destination is actually an official marketplace shop; use website chính hãng for direct retailer sites. Keep capture timestamp and official source link.",
+    "affiliate": "Use existing authorized tracking links only; disclose affiliate relationship when applicable. If none exists, preserve the official direct link and do not imply an affiliate agreement.",
+    "privacy": "Retain payer omission; test user-entered description as well as payer fields so free text cannot silently invalidate an absolute Zero-PII export claim."
+  },
+  "deliverables": {
+    "vault": "06_TRUST_AND_EVIDENCE/batch_19_j361_visual_leaf_vault/",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_j361_visual_leaf_vault/CLAIM_PROVENANCE_MATRIX.json",
+    "timeline": "06_TRUST_AND_EVIDENCE/batch_19_j361_visual_leaf_vault/SEVEN_DAY_ELIGIBILITY.json",
+    "candidate": "08_RELEASE_VAULT/candidates/v3.430.0-j361/",
+    "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_361_CANDIDATE_AUDIT_RECEIPT.json"
+  },
+  "verification": [
+    "Bind all test results to actual served candidate hashes and record runner hash. Do not modify an existing production hotfix package.",
+    "Test all four modules at 1440, 768 and 390: actual visible IDs, three CTA types, held/discovery labels, fifteen HOME Radar cards, outbound responses, seven-day eligibility, keyboard, console/runtime and overflow.",
+    "Audit Split Bill roster semantics before calculating vectors; test amount conservation and remainder distribution for every eligible item across group sizes 2 through 8.",
+    "Preserve local and production receipts separately. Supply post-deploy audit procedure and tested rollback targets for the Chairman-approved release."
+  ],
+  "deadline": "Chairman requires CEO dossier within four working hours. Record start/completion times and actual shortfall; packaging may proceed alongside evidence acquisition."
+}

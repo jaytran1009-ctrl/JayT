@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 7,
+  "offer_id": "B19_KATINAT_APP_LOYALTY",
+  "brand": "Katinat Saigon Kafe",
+  "category": "DRINK",
+  "title": "K-Club — Chương Trình Hội Viên Trên Katinat App",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_07_katinat_app_loyalty.html",
+    "file_sha256": "74736156f5c89bde8cb5113d6a276c0cfe8dcb8d2038221f3b748ab23aaf64ef",
+    "file_bytes": 74206,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_REGIONAL",
+  "wave_1_eligible": false,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": false,
+    "terms_proven": true,
+    "all_four_predicates_proven": false,
+    "finding": "Voucher offer (30k voucher for 60k order) and terms verified verbatim in HTML. National mobile app program without Da Nang scope predicate in source bytes. Classified VERIFIED_REGIONAL and excluded from Wave 1 Da Nang count."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Nhận Voucher ưu đãi 30k cho đơn tối thiểu 60k (từ 25/04 &#8211; 09/05)",
+      "byte_offset_start": 50109,
+      "byte_offset_end": 50192,
+      "byte_length": 83,
+      "selector": ".entry-the-content p",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "áp dụng từ 25/4/2024",
+      "byte_offset_start": 50664,
+      "byte_offset_end": 50689,
+      "byte_length": 25,
+      "selector": ".entry-the-content p",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "KATINAT Coffee &amp; Tea House",
+      "byte_offset_start": 515,
+      "byte_offset_end": 545,
+      "byte_length": 30,
+      "selector": "title",
+      "proven": true,
+      "danang_specific": false
+    },
+    "terms_quote": {
+      "text": "Tải app KATINAT ngay để được &#8220;kưng&#8221; bởi các chương trình ưu đãi siêu",
+      "byte_offset_start": 49515,
+      "byte_offset_end": 49615,
+      "byte_length": 100,
+      "selector": ".entry-the-content p",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "APP_DOWNLOAD_ROUTE",
+    "button_label": "Tải Ứng Dụng Katinat",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": false
+  }
+}

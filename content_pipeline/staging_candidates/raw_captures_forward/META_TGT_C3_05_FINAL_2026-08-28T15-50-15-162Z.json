@@ -1,0 +1,50 @@
+{
+  "target_id": "TGT_C3_05",
+  "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+  "brand": "Duong Sat Viet Nam VNR",
+  "customer_need": "Di chuyển tàu hỏa Ga Đà Nẵng",
+  "initial_url": "https://dsvn.vn",
+  "final_url": "https://dsvn.vn",
+  "hop_count": 1,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://dsvn.vn",
+      "status_code": 200,
+      "response_headers": {
+        "server": "nginx/1.8.0",
+        "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+        "content-type": "text/html",
+        "content-length": "27076",
+        "last-modified": "Thu, 20 Aug 2026 09:22:50 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6a86c76a-69c4\"",
+        "accept-ranges": "bytes"
+      },
+      "location_header": null,
+      "body_bytes": 27076,
+      "hop_started_at": "2026-08-28T15:50:15.162Z",
+      "hop_finished_at": "2026-08-28T15:50:15.227Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:15.162Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:15.241Z",
+  "duration_ms": 79.3,
+  "final_http_status": 200,
+  "final_headers": {
+    "server": "nginx/1.8.0",
+    "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+    "content-type": "text/html",
+    "content-length": "27076",
+    "last-modified": "Thu, 20 Aug 2026 09:22:50 GMT",
+    "connection": "keep-alive",
+    "etag": "\"6a86c76a-69c4\"",
+    "accept-ranges": "bytes"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_05_FINAL_2026-08-28T15-50-15-162Z.txt",
+  "pre_normalization_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+  "payload_bytes": 27076,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

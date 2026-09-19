@@ -1,0 +1,50 @@
+{
+  "manifest_id": "BATCH_141U_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141V — BROWSER-NATIVE DOM PROVENANCE & AUTONOMOUS LOOP READINESS",
+  "status": "REGEX_DOM_PARSER_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:30:00+07:00",
+  "executive_ruling": "CEO audit ruled that regex/string-based DOM parsing and synthetic nth-of-type selectors do not guarantee re-verifiable DOM provenance. Migrating to browser-native DOM extraction with selector re-query hash verification.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_31_REGEX_DOM_AND_SYNTHETIC_SELECTOR_DEFICIT",
+      "description": "141U parsed HTML with regex stack and generated nth-of-type selectors without browser re-query hash verification."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/atomic_dom_normalizer_141u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/atomic_dom_normalizer_141u.js",
+      "sha256": "8d8e564cc1da922f929afb80cfa63cf88382917003f96f1ea44f22e2bf09545e"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_captures_141u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/reprocess_captures_141u.js",
+      "sha256": "e568cc99272417fba0cae183b83083fcb05e60f06b9f8d58d64e542fc56df1c4"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/generic_compiler_141u.js",
+      "sha256": "1ff595ee837194f37ed09e732fb59483ad133a959d7c9eb91523b13c4c10d5d9"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141u_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/batch_capture_141u_manifest.json",
+      "sha256": "3eb39c84a5c5d0916c205ffca88b7121171e867e17906fd45e74c4cb677d5e3e"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_atomic_dom_boundary_141u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/test_atomic_dom_boundary_141u.js",
+      "sha256": "c82c68e8c7a5d0a638fdb34f97143b96a6874e332e56156481de251bf872b070"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141u.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/test_generic_compiler_141u.js",
+      "sha256": "9b83d4532d024abe992ba145ef43e8563965d8c0d90d7e76da4fd6aafe10ff7a"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141U_ATOMIC_DOM_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/JAYT_141U_ATOMIC_DOM_REVIEW_PACK.md",
+      "sha256": "8dd72997fcf304d4065895af0a62b4fa3dcfbc8a43682ba8ab4cfd89214a96f9"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "receipt_id": "SECTION_DB_STAGING_RELEASE_RECEIPT",
+  "timestamp": "2026-08-29T15:45:43.903Z",
+  "version": "v3.435.0-staging.db",
+  "target_storefront": "http://127.0.0.1:4173",
+  "target_proof_route": "http://127.0.0.1:4173/visual-slate",
+  "deployment_id": "local_staging_daemon_4173",
+  "experience_type": "MODERN_BENTO_LOCAL_COMMERCE_DB",
+  "total_audits": 21,
+  "passed": 21,
+  "failed": 0,
+  "console_errors_count": 0,
+  "browser_pack_dir": "07_QUALITY_ASSURANCE/browser_pack_db",
+  "manifest_file": "07_QUALITY_ASSURANCE/browser_pack_db/BROWSER_CAPTURE_MANIFEST_DB.json",
+  "audits": [
+    {
+      "name": "Executable Real Photo Gate (All 6 Real Da Nang Photos decode successfully with naturalWidth > 0)",
+      "pass": true,
+      "detail": "passed=6/6"
+    },
+    {
+      "name": "Browser console clean with zero JavaScript runtime errors or redeclarations",
+      "pass": true,
+      "detail": "0 Errors"
+    },
+    {
+      "name": "Zero fake social proof, zero fake stars/quotes, zero false 4K claims on public surface",
+      "pass": true,
+      "detail": "100% Clean"
+    },
+    {
+      "name": "Modern Bento Hero Grid renders 3 functional bento regions (Stage, Moment Tile, Quick Dock)",
+      "pass": true
+    },
+    {
+      "name": "Deal Radar Rail renders 6+ honest channel cards with zero unverified Deal claims",
+      "pass": true,
+      "detail": "count=6, unverifiedDeals=0"
+    },
+    {
+      "name": "Deal Radar screenshot distinct from Hero (No duplicate hash)",
+      "pass": true
+    },
+    {
+      "name": "Moment Spotlights screenshot distinct (No duplicate hash)",
+      "pass": true
+    },
+    {
+      "name": "Food Journey Route distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Leisure Journey Route distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Three-Lane Wallet distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Three-Lane Wallet (Dùng ngay=4, Cổng chính thức=6, Theo dõi=3)",
+      "pass": true
+    },
+    {
+      "name": "Explore Directory distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Explore Directory contains exactly 50 honest tiered items (0 Deals, 20 Official Programmes, 18 Utilities, 12 Radars)",
+      "pass": true,
+      "detail": "count=50 (T1=0, T2=20, T3=18, T4=12)"
+    },
+    {
+      "name": "Mobile 390x844 Title fully visible without clipping",
+      "pass": true
+    },
+    {
+      "name": "Mobile 390x844 Primary Deal CTA visible in first-fold",
+      "pass": true
+    },
+    {
+      "name": "Mobile 390x844 Civic Note lightweight (<25% of hero)",
+      "pass": true,
+      "detail": "ratio=16%"
+    },
+    {
+      "name": "Mobile Food Journey distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Mobile Wallet distinct screenshot",
+      "pass": true
+    },
+    {
+      "name": "Modal closes cleanly via Escape with zero residual blur",
+      "pass": true
+    },
+    {
+      "name": "100% Real Photography on all visual stages (Zero Illustrations, Zero AI, all JPGs decoded)",
+      "pass": true,
+      "detail": "rendered=4, allRealPhotos=true"
+    },
+    {
+      "name": "Governance recovery audited and recorded",
+      "pass": true,
+      "detail": "TX=36, Hash=ed84017c96f3..."
+    }
+  ]
+}

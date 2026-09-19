@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.2.0",
+  "work_order": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "deal_index": 5,
+  "offer_id": "B19_STARLIGHT_U22_WEEKDAY",
+  "brand": "Starlight Cinema",
+  "category": "CINEMA",
+  "title": "Vé U22 Starlight Cinema Đà Nẵng — Đồng Giá 45.000đ (Thứ Hai Đến Thứ Năm)",
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "now_showing_ref": "Chính sách thành viên U22 niêm yết công khai tại rạp Đà Nẵng",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_05_starlight_u22.html",
+    "file_sha256": "630ed6971f4f44ef1084846e8463e18b3c1082a5a76899feab5490564ebcbee6",
+    "file_bytes": 20580,
+    "captured_timestamp_utc": "2026-08-24T05:01:21.000Z",
+    "official_source_url": "https://starlight.vn/tin-tuc/ct-u22-rap-starlight.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "screenshot_evidence": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/deal_05_starlight_u22_capture.png",
+    "file_sha256": "d55ca98b8a13f44cac290f587baeb94fb83712adb855a4fb82caa8f2762007cc",
+    "file_bytes": 526150,
+    "dimensions": {
+      "width": 1280,
+      "height": 1024
+    },
+    "capture_tool": "playwright_headless_chromium"
+  },
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "deduplicated_unique_offer": true,
+    "finding": "All 4 predicates verified verbatim at exact byte offsets in physical source HTML. Screenshot bytes, SHA-256, viewport and canonical URL verified. Zero jayt.vn leak."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Đồng giá vé 45k/vé khi mua tại quầy từ thứ 2 đến thứ 5!",
+      "byte_offset_start": 11369,
+      "byte_offset_end": 11443,
+      "byte_length": 74,
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "từ thứ 2 đến thứ 5!",
+      "byte_offset_start": 11415,
+      "byte_offset_end": 11443,
+      "byte_length": 28,
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "46 Điện Biên Phủ, TP. Đà Nẵng",
+      "byte_offset_start": 16737,
+      "byte_offset_end": 16776,
+      "byte_length": 39,
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "Mang thêm giấy tờ chứng minh độ tuổi (CCCD/thẻ học sinh/thẻ sinh viên...)",
+      "byte_offset_start": 11100,
+      "byte_offset_end": 11192,
+      "byte_length": 92,
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "SHOW_STUDENT_ID_AT_COUNTER",
+    "button_label": "Xuất Trình Thẻ HSSV / CCCD Tại Quầy Starlight",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

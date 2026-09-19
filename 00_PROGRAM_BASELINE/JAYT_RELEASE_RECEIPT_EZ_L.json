@@ -1,0 +1,84 @@
+{
+  "receipt_id": "JAYT-245-SECTION-EZ-L",
+  "version": "v3.480.0-staging.ez",
+  "governing_directive": "JAYT-245 Section EZ-L (Lines 4212-4240)",
+  "timestamp": "2026-08-31T06:48:52.885Z",
+  "governance_state": "SOURCE_INTAKE_QUEUE_AND_V3_EVIDENCE_ACTIVE",
+  "production_locked": true,
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "voucher_verified_t1_count": 0,
+  "affiliate_activation": false,
+  "economic_claims_public": false,
+  "approved_staging_t2_pilot": {
+    "pilot_card_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+    "pilot_title": "GitHub Education — Thông tin đăng ký",
+    "pilot_tier": "T2_OFFICIAL_PROGRAM_DOCUMENTATION",
+    "public_eligible_t2_documentation_count": 1,
+    "caveat_statement": "Phạm vi: chương trình toàn cầu; điều kiện và quyền lợi áp dụng do GitHub quyết định. JayT không xác nhận voucher, giá hay ưu đãi tại Đà Nẵng.",
+    "canonical_action_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students"
+  },
+  "cohort_closure_notice": {
+    "notion_canva_education_status": "COHORT_CLOSED_FOR_30_DAYS_UNTIL_20260930",
+    "rule": "No repeat capture or rewrite attempts during closure window"
+  },
+  "source_intake_queue_summary": {
+    "total_queued_sources": 10,
+    "evaluated_round_sources": 2,
+    "evaluated_items": [
+      {
+        "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+        "candidate_id": "CANDIDATE_EZ_L_01_DANANG_LIBRARY",
+        "url": "http://thuvien.danang.gov.vn/",
+        "byte_length": 63331,
+        "sha256": "c031788ecdcd0686859d3e3a5d3ccb8948d5806e1a57865fcfe9340e8dc19ec2",
+        "claim_class": "IDENTITY_ONLY",
+        "governance_status": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+        "public_eligible": false
+      },
+      {
+        "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+        "candidate_id": "CANDIDATE_EZ_L_02_DANANG_DICHVUCONG",
+        "url": "https://dichvucong.danang.gov.vn/",
+        "byte_length": 5464,
+        "sha256": "51c7e55d0fbf67536dc0d6c50c5a04721243cb5bab26145970c5be5a546cb2fd",
+        "claim_class": "IDENTITY_ONLY",
+        "governance_status": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+        "public_eligible": false
+      }
+    ]
+  },
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "public_candidate_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "unverified_t2_t3_badges": 0,
+    "affiliate_tracking_calls": 0,
+    "savings_lab_local_first_pass": true,
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "hashes": {
+    "sot_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "served_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "sot_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a",
+    "served_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a"
+  },
+  "artifacts_included": [
+    "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_L_INTAKE_QUEUE_AND_A11Y_20260831.md",
+    "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_L.json",
+    "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_L.json",
+    "06_TRUST_AND_EVIDENCE/SOURCE_INTAKE_QUEUE_EZ_L.json",
+    "06_TRUST_AND_EVIDENCE/PROPOSED_UTILITY_FACTS_EZ_L.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_l/candidate_ez_l_01_danang_library_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_l/candidate_ez_l_01_danang_library_transcript.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_l/candidate_ez_l_02_danang_dichvucong_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_l/candidate_ez_l_02_danang_dichvucong_transcript.json",
+    "07_QUALITY_ASSURANCE/test_ez_l_intake_queue_and_a11y_qa.js",
+    "07_QUALITY_ASSURANCE/test_evidence_contract_v3_and_entailment_ez_k.js",
+    "07_QUALITY_ASSURANCE/test_document_provenance_and_quarantine_ez_j.js",
+    "07_QUALITY_ASSURANCE/test_ez_h_t2_pilot_e2e.js",
+    "07_QUALITY_ASSURANCE/test_ez_review_pack_assertions.js",
+    "07_QUALITY_ASSURANCE/test_calculator_unit_ez.js"
+  ]
+}

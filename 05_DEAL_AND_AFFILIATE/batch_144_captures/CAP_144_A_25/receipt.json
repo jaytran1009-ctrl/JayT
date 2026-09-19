@@ -1,0 +1,39 @@
+{
+  "capture_run_id": "RUN_143R_1787771918417",
+  "receipt_id": "RECEIPT_CAP_144_A_25_1787771991910",
+  "brand_id": "DANABUS_DN",
+  "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+  "cohort": "COHORT_A_LOCALITY",
+  "target_type": "STORE_LOCATOR",
+  "requested_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+  "final_url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+  "navigation_response_observed": true,
+  "http_status": 200,
+  "redirect_chain": [
+    {
+      "url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+      "http_status": 301
+    },
+    {
+      "url": "https://www.danangbus.vn/lo-trinh-cac-tuyen.html",
+      "http_status": 302
+    },
+    {
+      "url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+      "http_status": 200
+    }
+  ],
+  "captured_at": "2026-08-26T19:19:51.823Z",
+  "browser_version": "Chrome/152.0.7977.42",
+  "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "network_error": null,
+  "fresh_hashes": {
+    "html_sha256": "2b9420b58ed8dd2c8cd9bd4978ea4594cd9834a3bc5583acdef72c262d36cbb1",
+    "text_sha256": "0a8c5345d8f46994915e9111e3d7501dcc82f8b9a8aea07627dc13863f02d4ee",
+    "screenshot_sha256": "5f26a20ed02fb01189a6d88d733751f74e82531e5c1acb8c94f8b0c25df73a51"
+  }
+}

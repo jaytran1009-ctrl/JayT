@@ -1,0 +1,50 @@
+{
+  "manifest_id": "BATCH_141T_QUARANTINE_MANIFEST",
+  "directive": "JAYT-141U — ATOMIC DOM OFFER BOUNDARY & SCHEDULER ACTIVATION BLOCK",
+  "status": "PAGE_LEVEL_BLOCKS_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:25:00+07:00",
+  "executive_ruling": "CEO audit identified cross-container merge defect: offer_blocks were parsed from whole-page text, merging navigation menus (e.g. \"Vé Của Tôi\") with unrelated dates appearing elsewhere on the page.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_30_PAGE_LEVEL_TEXT_OFFER_MERGING",
+      "description": "extractStructuredOfferBlocks scanned whole-page text lines, violating atomic container boundaries and cross-merging navigation with dates."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/semantic_normalizer_141t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/semantic_normalizer_141t.js",
+      "sha256": "c9ef55cec768159f2a0deed9230cb8f39098744c9a9063611f5af8fd9aa7c2e1"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_captures_141t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/reprocess_captures_141t.js",
+      "sha256": "1664ffaf0bde5cc536dcbf30f873fd5d0b746e9dfc7c07bbd4f9a6f12ea8b6f7"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_141t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/generic_compiler_141t.js",
+      "sha256": "2b9fc49e46df07ee5a6f23a99a98ba5069593e40fe10b4b6435d30dc57e7d135"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_141t_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/batch_capture_141t_manifest.json",
+      "sha256": "36f50df88f57313519f0c16270d824b8ae5675db9de170d6c55799b40c5e2837"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_semantic_integrity_141t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/test_semantic_integrity_141t.js",
+      "sha256": "0eceab24af53f7d1d299ee12258c4918b3b8c1ca930eb737b122f4758e8d6754"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_141t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/test_generic_compiler_141t.js",
+      "sha256": "db0d1a1c517233e468c716f0ffa698662c637cca4a06810ff8e03416907391b2"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_141T_SEMANTIC_INTEGRITY_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141t_page_level_blocks/JAYT_141T_SEMANTIC_INTEGRITY_REVIEW_PACK.md",
+      "sha256": "cd804a9ae0e8d009a2e670e1c1d89d7ab7d8439d5f8fc7331cf7c5f25c2408dd"
+    }
+  ]
+}

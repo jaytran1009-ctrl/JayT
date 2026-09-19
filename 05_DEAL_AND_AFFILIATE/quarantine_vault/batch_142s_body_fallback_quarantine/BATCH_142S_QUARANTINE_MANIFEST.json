@@ -1,0 +1,69 @@
+{
+  "manifest_id": "BATCH_142S_QUARANTINE_MANIFEST",
+  "directive": "JAYT-142T: CẤM BODY FALLBACK, KHÓA RECEIPT TRUTH VÀ SỬA THỨ TỰ PHÂN LOẠI",
+  "status": "REJECTED_FOR_BODY_FALLBACK_AND_RECEIPT_DEFAULTS",
+  "quarantined_at": "2026-08-26T18:58:13.146Z",
+  "executive_ruling": "CEO audit identified that 142S allowed document.body fallback as content_root (extracting \"Tin liên quan\" on Galaxy leaves) and filled missing receipt fields with default assumptions (http_status 200, final_url). Quarantining derived 142S files; proceeding with zero body fallback, strict receipt truth without defaults, normalized address units, and 5-step classification order.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_38_BODY_FALLBACK_SEMANTIC_POLLUTION",
+      "description": "Permitted document.body fallback as content_root when no article container existed, capturing unrelated page-level headers like \"Tin liên quan\"."
+    },
+    {
+      "cause_id": "P0_CAUSE_39_RECEIPT_TRUTH_DEFAULT_INFERENCE",
+      "description": "Populated missing receipt fields with default values (http_status 200, final_url) instead of flagging them UNPROVEN."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/receipt_truth_verifier_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/receipt_truth_verifier_142s.js",
+      "sha256": "29794d773ce6ad0f4a884a0cdc49a60538b434faf2706b54b10f224f802fe427"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/address_unit_locality_verifier_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/address_unit_locality_verifier_142s.js",
+      "sha256": "6d0f6a84021caec01ee67db5defc091ecd69e92128c04a0b20669093905974da"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/semantic_root_dom_parser_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/semantic_root_dom_parser_142s.js",
+      "sha256": "ba113a4cfa2e80ff6e29ee2d884069f48eb133aefd802b63789d869142317431"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/reprocess_batch_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/reprocess_batch_142s.js",
+      "sha256": "3a64b592a212375966af1835cfd12ffbb582b80d756cefd029e9f2ff908ee9be"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/generic_compiler_142s.js",
+      "sha256": "ff5085905c74b5961947ce89541a827cb4a951b03b3af92317643efbb939fe5f"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/brand_locality_registry_142s.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/brand_locality_registry_142s.json",
+      "sha256": "91114aafe079d990179d905670e4f842ff667cd5a3f70a5affbcf0d39afcebb1"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/leaf_batch_142s_table.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/leaf_batch_142s_table.json",
+      "sha256": "15b0e67b77b6f69155da587ae763ccc5337ea8a209529e83c4a83314e1873591"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_142s_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/batch_capture_142s_manifest.json",
+      "sha256": "88386d4ecc7fdfd776fd1a592d88f77bff2754a300a5c90f8e75da665e68bc7e"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_adversarial_semantic_root_142s.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/test_adversarial_semantic_root_142s.js",
+      "sha256": "ccbbae04c711ab7be076bcc021febc514a2e8f5adabe0d7c0e69f3b4bfeebdbc"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_142S_REPROCESSING_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/JAYT_142S_REPROCESSING_PACK.md",
+      "sha256": "b980514a63e1b9b93e4eb90b0d95c13f0b3cf104d2f07b463deebff7e18f53df"
+    }
+  ]
+}

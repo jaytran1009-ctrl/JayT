@@ -1,0 +1,448 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "incident_id": "INC-FALSE-PROVENANCE-084A",
+  "incident_name": "BATCH_084_FALSE_CDP_PROVENANCE_INCIDENT",
+  "quarantined_at": "2026-08-24T14:04:37.039Z",
+  "total_files_quarantined": 62,
+  "snapshot_byte_for_byte_persisted": true,
+  "root_cause": {
+    "description": "Collector sử dụng https.request thông thường nhưng receipts ghi nhận REAL_BROWSER_CDP / LIVE_CHROME_CDP_ANONYMOUS; Báo cáo sai lệch số lượng HTTP 200 (báo cáo 18, thực tế 14); CGV 404 bị ghi nhầm 200; TLS check bị suy yếu do rejectUnauthorized:false.",
+    "remediation_action": "Cô lập toàn bộ 62 files artifact/receipt/engine/test 084 vào quarantine_vault append-only; Lưu danh sách 28 URL seed tĩnh vào discovery_seeds/."
+  },
+  "quarantined_entries": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_084_community_deal_radar/BATCH_084_RADAR_REVIEW_REGISTRY.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_community_deal_radar/BATCH_084_RADAR_REVIEW_REGISTRY.json",
+      "sha256": "0606537e543e0ae18f13b76b574b6cf371229ffdcf1f1e585ed19930e53d88d8",
+      "size_bytes": 39843,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_084_community_deal_radar/BATCH_084_RAW_COLLECTION_MANIFEST.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_community_deal_radar/BATCH_084_RAW_COLLECTION_MANIFEST.json",
+      "sha256": "6bd4e900905a656de7b49aaaf277c72c5fae4ae59591174616b9bcc1a5664a65",
+      "size_bytes": 25468,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_084_community_deal_radar/batch_triage_radar_engine_084.js",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_community_deal_radar/batch_triage_radar_engine_084.js",
+      "sha256": "9a9ad7b183fab4ef886ce8dfe09d82a1859bd779d565e33b7eb91f2386a6a176",
+      "size_bytes": 6786,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_084_community_deal_radar/official_sources_catalog_084.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_community_deal_radar/official_sources_catalog_084.json",
+      "sha256": "2ab1d09a6f7beb2c7acac87e4f1d54a54293b8576580ae19611949997bee45df",
+      "size_bytes": 10577,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_084_community_deal_radar/real_batch_radar_collector_084.js",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_community_deal_radar/real_batch_radar_collector_084.js",
+      "sha256": "23749a38959c9eba01b04a5d61ffddeaa880c97d1072e01b73a2038ba0ec1207",
+      "size_bytes": 6828,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_01_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_01_snapshot.html",
+      "sha256": "9119fff92556c816ff6af6cc5aa9757e36089a1cbccbf256b5a41c9f5f04aae7",
+      "size_bytes": 37299,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_02_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_02_snapshot.html",
+      "sha256": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "size_bytes": 138,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_03_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_03_snapshot.html",
+      "sha256": "184c2cc6b4eec92037cb51b1825c69afe4d4fc0d326859a3b1d189f423227464",
+      "size_bytes": 82440,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_04_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_04_snapshot.html",
+      "sha256": "6441e3ed08c4420d0686873c6a1b4a4b6340a680b0cb02c8e24f07d222fe1c2d",
+      "size_bytes": 47,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_05_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_05_snapshot.html",
+      "sha256": "99073ae22dd7267f8cf5ab831ee6c496d0220706dcfe3d26fd8bb7937ee913e1",
+      "size_bytes": 80104,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_cinema_06_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_cinema_06_snapshot.html",
+      "sha256": "6441e3ed08c4420d0686873c6a1b4a4b6340a680b0cb02c8e24f07d222fe1c2d",
+      "size_bytes": 47,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_01_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_01_snapshot.html",
+      "sha256": "6441e3ed08c4420d0686873c6a1b4a4b6340a680b0cb02c8e24f07d222fe1c2d",
+      "size_bytes": 47,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_02_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_02_snapshot.html",
+      "sha256": "0686678b3e2e708f3c68900eabb539508262567785cc0d6149ce85aa70c507fc",
+      "size_bytes": 12092,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_03_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_03_snapshot.html",
+      "sha256": "3eb2c3c8e7b62cb17fe8c6cb51ae93110e3fbb15641015c8440fe274e05c1451",
+      "size_bytes": 47711,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_04_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_04_snapshot.html",
+      "sha256": "6624d672b8bc6ece9d0d3874b9fefef0eaee9bf829a6bd6ce369debebdfdfb2d",
+      "size_bytes": 271790,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_05_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_05_snapshot.html",
+      "sha256": "ec1973fea987427d0aff5d870906fa17704a025041c5436ecd4be430c0f684cc",
+      "size_bytes": 48752,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_06_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_06_snapshot.html",
+      "sha256": "bfbd737bd261259bd4e1013f665ead1f05916b1c53d439c056b54abbb846b633",
+      "size_bytes": 235732,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_coffee_07_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_coffee_07_snapshot.html",
+      "sha256": "a5c6b68bfc17daa04dea227f93ad2828a4ea8f06246e0f1a90308f63838566ad",
+      "size_bytes": 93069,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ecom_01_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ecom_01_snapshot.html",
+      "sha256": "1fd9d0a86f3f1e15108379a2c464d32f13fb4920d6045531d8a8f7a9a9a2ac3d",
+      "size_bytes": 162214,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ecom_02_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ecom_02_snapshot.html",
+      "sha256": "8141d16c3b62a18e348f43d61bdb9bc2169a71c865d627a42429c7310dcdecbe",
+      "size_bytes": 190659,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ecom_03_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ecom_03_snapshot.html",
+      "sha256": "5551cf9ff3d42d87dcd453c15951f650effe152236573faf7e3fa6813343bb7e",
+      "size_bytes": 241,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ecom_04_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ecom_04_snapshot.html",
+      "sha256": "e02127d5f2742d85ff245795d588d83630c5897d81e2f97d4c5c0683f8da91d1",
+      "size_bytes": 108731,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ecom_05_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ecom_05_snapshot.html",
+      "sha256": "d653dd1b8feccde7f65b15dcc2931214514a1ea23c2fa11c9aa33989125443dc",
+      "size_bytes": 71950,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_01_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_01_snapshot.html",
+      "sha256": "a64d18f5deeac2ec3b2a68d5c340b331ed9f3b16b0283b5521bd186f263dc8ad",
+      "size_bytes": 217060,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_02_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_02_snapshot.html",
+      "sha256": "65a74b62ee4e6676e0f2487e0f1d6ffe6569b46e2b35fcf3312d87069d89e531",
+      "size_bytes": 4249,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_03_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_03_snapshot.html",
+      "sha256": "948c14759625cf5249f8643a53f40ccd14e749e0eaf125dd836cc1442a81945c",
+      "size_bytes": 1982,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_04_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_04_snapshot.html",
+      "sha256": "c14ee694f76e4b5cca161cd08792588f6ac1596bd5d67eba5b4774fe941f58a2",
+      "size_bytes": 105854,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_05_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_05_snapshot.html",
+      "sha256": "6441e3ed08c4420d0686873c6a1b4a4b6340a680b0cb02c8e24f07d222fe1c2d",
+      "size_bytes": 47,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_fnb_06_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_fnb_06_snapshot.html",
+      "sha256": "6441e3ed08c4420d0686873c6a1b4a4b6340a680b0cb02c8e24f07d222fe1c2d",
+      "size_bytes": 47,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ride_01_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ride_01_snapshot.html",
+      "sha256": "7a76d352590f76a22e5d63157f26d85043e1e6199a9ed9833ec895e58bc2a921",
+      "size_bytes": 142751,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ride_02_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ride_02_snapshot.html",
+      "sha256": "8bae23e26908e90303477e604e5d85c436e082756bdc541e7454e1a7945f831b",
+      "size_bytes": 3058,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ride_03_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ride_03_snapshot.html",
+      "sha256": "240479c751fd5a3ac1c2b79fb90951c37a06ffe0965548e13b429e48cac619ab",
+      "size_bytes": 39367,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/raw_src_084_ride_04_snapshot.html",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/raw_src_084_ride_04_snapshot.html",
+      "sha256": "446a6087825fa73eadb045e5a2e9e2adf7df241b571228187728191d961dda1f",
+      "size_bytes": 167,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_01.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_01.json",
+      "sha256": "cabc2497bbcf406aa4fe0e68bf84e1028f5c2cfed6b264f7c29569bf879c9973",
+      "size_bytes": 819,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_02.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_02.json",
+      "sha256": "f541704c7497d8b26091e608b2b13471609c07599c78bd3fec617855a13e779a",
+      "size_bytes": 798,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_03.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_03.json",
+      "sha256": "715c244b4b94cd48f6a0db785680fcad79a4c768031c390b3ac3b15cfc135246",
+      "size_bytes": 849,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_04.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_04.json",
+      "sha256": "4caa5d44b00bc772f62a19bfa8520e871a37faeea5b3a1bfc438db994f9dcbdb",
+      "size_bytes": 799,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_05.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_05.json",
+      "sha256": "e005af401dbe780b333dba7d6d4e8cc28b1ecd542312a87fec6fbf71df483ab6",
+      "size_bytes": 851,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_CINEMA_06.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_CINEMA_06.json",
+      "sha256": "0ac3e894ce7ea2e7bdbf8ce842ce60e401e6aee0f4ba7b6ae0e0bba55794d115",
+      "size_bytes": 798,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_01.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_01.json",
+      "sha256": "af92119753c114d0a8943408cd319ed80b6e6437ac960bf73a3bbe25108655f2",
+      "size_bytes": 829,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_02.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_02.json",
+      "sha256": "aba8c7d5a0454ae5f56647581549272acc1704c9f8560469b0ac2b7e1e4c834f",
+      "size_bytes": 832,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_03.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_03.json",
+      "sha256": "f2498241992971f5a8c2866ee14825595017c7b289a2fdb8fbc5818610455f24",
+      "size_bytes": 813,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_04.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_04.json",
+      "sha256": "273353259bc88a99f3f638b7f5a3d8fbfc4aa96c3a41272810b51da1cd8c1a18",
+      "size_bytes": 801,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_05.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_05.json",
+      "sha256": "0ed6ef22878a640a0253b428068871d23f7c95d3e9fadb35de57a96c50f23546",
+      "size_bytes": 814,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_06.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_06.json",
+      "sha256": "5dbe240a9c80e812ebb7ec63245ab373c860f43edc75be64716bdca6f4d96b47",
+      "size_bytes": 827,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_COFFEE_07.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_COFFEE_07.json",
+      "sha256": "ed75fe72589ad76d9c0c34e88e9ffe67b9410bb14e21c7c9942548a1bbfd9f01",
+      "size_bytes": 817,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_ECOM_01.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_ECOM_01.json",
+      "sha256": "989e5041e17d335a5c6608eca171a5fde5e33807f1cd14dc1d7bb67c5435d846",
+      "size_bytes": 814,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_ECOM_02.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_ECOM_02.json",
+      "sha256": "5a691a06e5b3846df81234d52d8af4539478f8953b0950eeae44465781c47282",
+      "size_bytes": 814,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_ECOM_03.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_ECOM_03.json",
+      "sha256": "d378a27557ed2c000416f2c3111f19730a8c199c58598f864879b15cc9fe0321",
+      "size_bytes": 795,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_ECOM_04.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_ECOM_04.json",
+      "sha256": "a29e7fcc106da2ec07f2b3ec103922dd896b9ae1b2eecc68c71ec9aab4ccf499",
+      "size_bytes": 809,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_ECOM_05.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_ECOM_05.json",
+      "sha256": "89c2d9e9ff23d541cbc6156b8b5d2e6f711bc6d90b548bf62153dd7bc0c422dc",
+      "size_bytes": 803,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_01.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_01.json",
+      "sha256": "106b9738e3c34786dc4bea6c95d3bc1091d146045d72ad9da58f15c74d784688",
+      "size_bytes": 812,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_02.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_02.json",
+      "sha256": "e39c1512da617342729ab783a56c101becf014111134e3addf48676fa091538a",
+      "size_bytes": 814,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_03.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_03.json",
+      "sha256": "2e155e90b856871cf91566be967e709d0e102e7c96818dc224134dae7d1be7b7",
+      "size_bytes": 802,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_04.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_04.json",
+      "sha256": "48027c3c120620e2facfe24fe2e2b8b0776919496beb88c614dce023e2991744",
+      "size_bytes": 796,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_05.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_05.json",
+      "sha256": "8cb387e4406715da30cb36b5017dac3ece6ae6d93d86568fa2f7bcbd51627936",
+      "size_bytes": 799,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_FNB_06.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_FNB_06.json",
+      "sha256": "9325822a64c7795efa6177fa4b549525166e22b8fe0d798c0f5d09e6b9368cb6",
+      "size_bytes": 796,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_RIDE_01.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_RIDE_01.json",
+      "sha256": "96bbaf6ff696c7ef950c62c82cd33d5422d209d697cdb3546e294317dcb266b8",
+      "size_bytes": 823,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_RIDE_02.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_RIDE_02.json",
+      "sha256": "8cf21f5fc73899d5640c717d7f90c1d608d67cefcb5749dd9607f7e50a0073b8",
+      "size_bytes": 813,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_RIDE_03.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_RIDE_03.json",
+      "sha256": "d6d923a65cdbdb126ff1c01b7b1f556715bc41a1536b61c266ff4d5653309e95",
+      "size_bytes": 789,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/raw_evidence/batch_084_radar/RECEIPT_SRC_084_RIDE_04.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/batch_084_radar/RECEIPT_SRC_084_RIDE_04.json",
+      "sha256": "461ac776892c7ff0d6888fb617cff4bc84817cb0c6bc06cde997970d7bbd5e28",
+      "size_bytes": 799,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_community_deal_radar_084.js",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_084_false_cdp_incident/test_files/test_community_deal_radar_084.js",
+      "sha256": "1f93315f59032bdf297e0f447b97c81101b8fac6edb5eb79ccb7bf3f70a664da",
+      "size_bytes": 6820,
+      "reason": "FALSE_CDP_PROVENANCE_HTTPS_REQUEST_MISREPRESENTATION"
+    }
+  ]
+}

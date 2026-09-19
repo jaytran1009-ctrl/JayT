@@ -1,0 +1,1860 @@
+{
+  "registry_id": "FRESH_SOURCE_REGISTRY_141W",
+  "directive": "JAYT-141W — CANONICAL CARD DEDUPLICATION & DOMINO’S OFFICIAL LEAF BATCH",
+  "generated_at": "2026-08-26T18:32:30.942Z",
+  "governance_statement": "Deduplicate canonical card containers: 10 PAGE_RENDER_VARIATION, 3 PAGE_SEMANTIC_CHANGE_UNBOUND, 1 CANONICAL_OFFER_CARD_CHANGED, 0 NEW_OFFICIAL_OFFER_LEAF_DISCOVERED, 1 HTTP_ERROR_BACKOFF. Re-validation passed 100%.",
+  "sources": [
+    {
+      "source_id": "SRC_141_01",
+      "cohort": "COHORT_1_CINEMA_DANANG",
+      "brand_name": "CGV Cinemas Vietnam",
+      "canonical_url": "https://www.cgv.vn/default/newsoffer/",
+      "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "1b2be73471d753bbaa2d07b4acc74743dd6dafd90d9e1439ea2aa4a86b8e71e8",
+        "raw_html_current_sha256": "82f50b8da5b170da42c8cdcce25b5646350cfb947757c8e2bbb7e2490d8c94a9",
+        "semantic_content_baseline_sha256": "a18102dd48ea5593c8a5bf7323f51f4ae915b9e082711d91832c8a73d69d0f01",
+        "semantic_content_current_sha256": "a18102dd48ea5593c8a5bf7323f51f4ae915b9e082711d91832c8a73d69d0f01"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "a18102dd48ea5593c8a5bf7323f51f4ae915b9e082711d91832c8a73d69d0f01",
+        "visible_text_length": 2873,
+        "page_level_unbound_signals_count": 5,
+        "page_level_unbound_signals": [
+          "Vé Của Tôi",
+          "Đăng nhập/ Đăng ký",
+          "Xem tất cả Chọn Rạp",
+          "Xem tất cả",
+          "Chọn Rạp"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "a18102dd48ea5593c8a5bf7323f51f4ae915b9e082711d91832c8a73d69d0f01",
+        "visible_text_length": 2873,
+        "page_level_unbound_signals_count": 5,
+        "page_level_unbound_signals": [
+          "Vé Của Tôi",
+          "Đăng nhập/ Đăng ký",
+          "Xem tất cả Chọn Rạp",
+          "Xem tất cả",
+          "Chọn Rạp"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_01_1787767575864.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_01_1787767575864.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_02",
+      "cohort": "COHORT_1_CINEMA_DANANG",
+      "brand_name": "Starlight Cinema Vietnam",
+      "canonical_url": "https://starlight.vn/uu-dai.html",
+      "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Both raw HTML and canonical card snapshot are 100% byte-for-byte identical.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "40463cf5087117930ddb792deab0cdede014bb7c68912eed4008feb7fd2b45e1",
+        "raw_html_current_sha256": "40463cf5087117930ddb792deab0cdede014bb7c68912eed4008feb7fd2b45e1",
+        "semantic_content_baseline_sha256": "ea574d04adf77afe34a9f9c14c5fd085f129b830f0206f51e425b9b32633e2b9",
+        "semantic_content_current_sha256": "ea574d04adf77afe34a9f9c14c5fd085f129b830f0206f51e425b9b32633e2b9"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "ea574d04adf77afe34a9f9c14c5fd085f129b830f0206f51e425b9b32633e2b9",
+        "visible_text_length": 1826,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "FAQ's Đăng nhập Đăng ký",
+          "MENU",
+          "Ưu Đãi"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "ea574d04adf77afe34a9f9c14c5fd085f129b830f0206f51e425b9b32633e2b9",
+        "visible_text_length": 1826,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "FAQ's Đăng nhập Đăng ký",
+          "MENU",
+          "Ưu Đãi"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/fresh_captures_140r/receipts/RECEIPT_SRC_140R_02_1787767079632.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_02_1787767574473.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_03",
+      "cohort": "COHORT_1_CINEMA_DANANG",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "fbe954d41146b7d958fabd400f26874c5ffdb187883a8d778cd1c9b7e3a2826a",
+        "raw_html_current_sha256": "8aebca84ec00b68ea5b72f52feac69eaa8654ec3f71c9396142529cbd93b3c65",
+        "semantic_content_baseline_sha256": "263807a05e8f960acf31ffb4b2a5aae02bb1c76a9e0b718c7843791bffd82098",
+        "semantic_content_current_sha256": "263807a05e8f960acf31ffb4b2a5aae02bb1c76a9e0b718c7843791bffd82098"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "263807a05e8f960acf31ffb4b2a5aae02bb1c76a9e0b718c7843791bffd82098",
+        "visible_text_length": 4203,
+        "page_level_unbound_signals_count": 0,
+        "page_level_unbound_signals": [],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "263807a05e8f960acf31ffb4b2a5aae02bb1c76a9e0b718c7843791bffd82098",
+        "visible_text_length": 4203,
+        "page_level_unbound_signals_count": 0,
+        "page_level_unbound_signals": [],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_03_1787767575029.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_03_1787767575029.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_04",
+      "cohort": "COHORT_1_CINEMA_DANANG",
+      "brand_name": "Metiz Cinema Da Nang",
+      "canonical_url": "https://metiz.vn/khuyen-mai/",
+      "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+      "check_interval_hours": 168,
+      "state": "HTTP_ERROR_BACKOFF",
+      "http_status": 404,
+      "backoff_policy": "7_DAYS_URL_REVIEW_BACKOFF",
+      "next_check_due": "2026-09-02T17:58:20.788Z",
+      "hashes": {
+        "raw_html_sha256": "96c618a43f043c779e46133831854f2f260f39f0d9e7c6f1979d62a1956a5b35",
+        "semantic_content_sha256": null
+      },
+      "baseline_snapshot": null,
+      "current_snapshot": null,
+      "prior_baseline_receipt_path": "05_DEAL_AND_AFFILIATE/fresh_captures_140r/receipts/RECEIPT_SRC_140R_04_1787767082814.json"
+    },
+    {
+      "source_id": "SRC_141_05",
+      "cohort": "COHORT_1_CINEMA_DANANG",
+      "brand_name": "Lotte Cinema Vietnam",
+      "canonical_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+      "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+      "check_interval_hours": 24,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "f5f571bc7aa241a9999401ef360d2a093886bf262f00bea23b4bb53769c08d26",
+        "raw_html_current_sha256": "0a4f6b7148ccc120e29b608887faf044f80f2090ab93004ab58cd2500a9ce2b8",
+        "semantic_content_baseline_sha256": "92efd71f5c7267cd6208a14887edaee7245b580c9fca3677fcbfa94e37b0c1e4",
+        "semantic_content_current_sha256": "92efd71f5c7267cd6208a14887edaee7245b580c9fca3677fcbfa94e37b0c1e4"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "92efd71f5c7267cd6208a14887edaee7245b580c9fca3677fcbfa94e37b0c1e4",
+        "visible_text_length": 1852,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Trước khi đăng nhập"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "92efd71f5c7267cd6208a14887edaee7245b580c9fca3677fcbfa94e37b0c1e4",
+        "visible_text_length": 1852,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Trước khi đăng nhập"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_05_1787767580629.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_05_1787767580629.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_06",
+      "cohort": "COHORT_2_FNB_DANANG",
+      "brand_name": "KFC Vietnam",
+      "canonical_url": "https://kfcvietnam.com.vn/khuyen-mai",
+      "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "e739cfd186123ec17122db8ee38d31b06c0b96a52ff8ee89f466952f93a956a5",
+        "raw_html_current_sha256": "977a598782fddae3e045f4f7fdd937b3731650d88ea8cebe4fd7b4d5c02b6670",
+        "semantic_content_baseline_sha256": "67d9678c9f2408cfe8c317f79d6aeb5c5b4229282fbe66454b626d664478a09d",
+        "semantic_content_current_sha256": "67d9678c9f2408cfe8c317f79d6aeb5c5b4229282fbe66454b626d664478a09d"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "67d9678c9f2408cfe8c317f79d6aeb5c5b4229282fbe66454b626d664478a09d",
+        "visible_text_length": 155,
+        "page_level_unbound_signals_count": 2,
+        "page_level_unbound_signals": [
+          "KFC",
+          "Copyright © 2023 KFC Vietnam"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "67d9678c9f2408cfe8c317f79d6aeb5c5b4229282fbe66454b626d664478a09d",
+        "visible_text_length": 155,
+        "page_level_unbound_signals_count": 2,
+        "page_level_unbound_signals": [
+          "KFC",
+          "Copyright © 2023 KFC Vietnam"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_06_1787767578461.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_06_1787767578461.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_07",
+      "cohort": "COHORT_2_FNB_DANANG",
+      "brand_name": "Jollibee Vietnam",
+      "canonical_url": "https://jollibee.com.vn/khuyen-mai",
+      "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "27237c48551414502e1211ffcf299b06b47efa6193cb446260296728bf733a7f",
+        "raw_html_current_sha256": "264c2175a9fde9731e23924be7d66c755d2267a4c87c01614b914346bbc1b34a",
+        "semantic_content_baseline_sha256": "8cf365790f6a2521e6f876885b135d80d6dfb552601698c1ea11835d75dbf1ea",
+        "semantic_content_current_sha256": "8cf365790f6a2521e6f876885b135d80d6dfb552601698c1ea11835d75dbf1ea"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "8cf365790f6a2521e6f876885b135d80d6dfb552601698c1ea11835d75dbf1ea",
+        "visible_text_length": 2324,
+        "page_level_unbound_signals_count": 15,
+        "page_level_unbound_signals": [
+          "Đăng nhập",
+          "Trang Chủ",
+          "Về Jollibee",
+          "Khuyến mãi",
+          "Dịch Vụ",
+          "Tin Tức",
+          "Cửa hàng",
+          "Liên Hệ",
+          "Tuyển dụng",
+          "The information below is required for social login",
+          "Vui Lòng Đăng nhập",
+          "Quên mật khẩu? Đăng nhập Bạn chưa có tài khoản?Đăng ký ngay",
+          "Quên mật khẩu?",
+          "Tạo tài khoản mới",
+          "Mật khẩu Xác nhận mật khẩu"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "8cf365790f6a2521e6f876885b135d80d6dfb552601698c1ea11835d75dbf1ea",
+        "visible_text_length": 2324,
+        "page_level_unbound_signals_count": 20,
+        "page_level_unbound_signals": [
+          "Đăng nhập",
+          "Trang Chủ",
+          "Về Jollibee",
+          "Thực đơn",
+          "Combo Bán Chạy",
+          "Gà Giòn Vui Vẻ",
+          "Mì Ý Jolly",
+          "Gà Sốt Cay",
+          "Burger/Cơm",
+          "Phần Ăn Phụ",
+          "Món Tráng Miệng",
+          "Thức Uống",
+          "Khuyến mãi",
+          "Dịch Vụ",
+          "Tin Tức",
+          "Cửa hàng",
+          "Liên Hệ",
+          "Tuyển dụng",
+          "The information below is required for social login",
+          "Vui Lòng Đăng nhập"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_07_1787767578924.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_07_1787767578924.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_08",
+      "cohort": "COHORT_2_FNB_DANANG",
+      "brand_name": "Lotteria Vietnam",
+      "canonical_url": "https://www.lotteria.vn/khuyen-mai",
+      "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+      "check_interval_hours": 12,
+      "state": "PAGE_SEMANTIC_CHANGE_UNBOUND",
+      "diff_reason": "Page text changed outside canonical cards (e.g. copyright/footer/news copy). 0 canonical offer cards changed.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "d248411a70f92ad86b5f42437d3fbfc55a6ea4b6c3e41ff5526982da7a6ba7b5",
+        "raw_html_current_sha256": "699ec12576d5a5aaeb79dda94df009cfa5cbf13654403bb1e719dc4b5d1b9742",
+        "semantic_content_baseline_sha256": "25d32eb50cc813b03c4dd4ca1a70a1c8380be22ce88b2fa2014a478f3cf29813",
+        "semantic_content_current_sha256": "978ce195c33659f7a9fd942cd564044a10ded50e31593fcdbd79cee553930ea6"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "25d32eb50cc813b03c4dd4ca1a70a1c8380be22ce88b2fa2014a478f3cf29813",
+        "visible_text_length": 474,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "Đặt hàng Nhượng quyền Cửa hàng VỀ LOTTERIA DOWNLOAD APP VN Tiếng ViệtEnglish",
+          "Đặt hàng Nhượng quyền Cửa hàng VỀ LOTTERIA",
+          "Tiếng ViệtEnglish"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "978ce195c33659f7a9fd942cd564044a10ded50e31593fcdbd79cee553930ea6",
+        "visible_text_length": 423,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "Đặt hàng Nhượng quyền Cửa hàng VỀ LOTTERIA DOWNLOAD APP VN Tiếng ViệtEnglish",
+          "Đặt hàng Nhượng quyền Cửa hàng VỀ LOTTERIA",
+          "Tiếng ViệtEnglish"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_08_1787767583641.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_08_1787767583641.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_09",
+      "cohort": "COHORT_2_FNB_DANANG",
+      "brand_name": "Domino's Pizza Vietnam",
+      "canonical_url": "https://dominos.vn/khuyen-mai",
+      "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+      "check_interval_hours": 12,
+      "state": "CANONICAL_OFFER_CARD_CHANGED",
+      "diff_reason": "Canonical offer card changed within verified DOM container.",
+      "next_check_due": "2026-08-27T06:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "1855de77cb7f4f6943f062e800198c21f077905f8c8921aa674d8f75acebcc5f",
+        "raw_html_current_sha256": "eacbff06174b34f7f1e991cf79ad18582b679809b460f4ecf7d56eb2ffeb95ea",
+        "semantic_content_baseline_sha256": "b6707011be9c6fd2be7993329092d58d678cc19feac637b9b62bb5ec29126b01",
+        "semantic_content_current_sha256": "c604a4dc7f353292f0b9a065155289fedfd87f13532738583676d9dab191f182"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "b6707011be9c6fd2be7993329092d58d678cc19feac637b9b62bb5ec29126b01",
+        "visible_text_length": 3889,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Mã E-voucher Khuyến Mãi Thực Đơn Theo Dõi Đơn Hàng Danh Sách Cửa Hàng Blog 0"
+        ],
+        "canonical_offer_cards_count": 4,
+        "canonical_discovery_cards_count": 2,
+        "canonical_offer_cards": [
+          {
+            "card_id": "CARD_3",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "bb37e764e8468acfe42808559febcc2d39c1ab13915f75d61fb3cccba7700dab",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/mua-2-tang-3",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/mua-2-tang-3"
+            },
+            "price_flags": [],
+            "card_visible_text": "Mua 2 Tặng 3 Món Ngon Tặng lên đến 163.000VND với 4 lựa chọn: * DEAL 1: Mua 1 Pizza size M/L kèm 1 thức uống lớn sẽ được tặng 1 phần CÁNH GÀ 4 MIẾNG + 1 phần Tráng miệng + 1 lon Coca-Cola Zero Sugar. * DEAL 2: Mua 1 Pizza size M/L kèm 1 thức uống lớn sẽ được tặng 1 phần GÀ VIÊN + 1 phần Tráng miệng ",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Mua 2 Tặng 3 Món Ngon"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "163.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(5)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": null,
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_4",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "39d8214df45390188e8b5fdc9198c6e9129edfa3795148987cc1038351a7bcaa",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/giam-50-mon-chay",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/giam-50-mon-chay"
+            },
+            "price_flags": [],
+            "card_visible_text": "-50% Menu Chay Thanh Đạm * Giảm 50% tất cả các sản phẩm trong menu chay khi mua từ 2 sản phẩm (cùng loại hoặc khác loại). * Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng. * Không áp dụng đồng thời chương trình khuyến mãi khác. ĐẶT NGAY",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "-50% Menu Chay Thanh Đạm"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "Giảm 50%"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_5",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "e282b0058b95b4cde4252589ba63698b2d1d39e79bc68de50e15a510eda017e7",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/same-price-99k",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/same-price-99k"
+            },
+            "price_flags": [],
+            "card_visible_text": "Pizza Đồng Giá 99.000VND * Pizza đồng giá 99.000VND (size M) hoặc 159.000VND (size L) khi mua từ 02 Pizza trở lên, áp dụng cho Pizza Dăm Bông Dứa Kiểu Hawaii, Gà Phô Mai Thịt Heo Xông Khói, Xúc Xích Xốt Phô Mai, Dăm Bông Bắp Xốt Phô Mai, Thanh Cua Dứa Xốt Phô Mai, Phô Mai Truyền Thống, Rau Củ Thập C",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Pizza Đồng Giá 99.000VND"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "99.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "* Pizza đồng giá 99.000VND (size M) hoặc 159.000VND (size L) khi mua từ 02 Pizza trở lên, áp dụng cho Pizza Dăm Bông Dứa Kiểu Hawaii, Gà Phô Mai Thịt Heo Xông Khói, Xúc Xích Xốt Phô Mai, Dăm Bông Bắp Xốt Phô Mai, Thanh Cua Dứa Xốt Phô Mai, Phô Mai Truyền Thống, Rau Củ Thập Cẩm – Tiết kiệm đến 45%."
+              },
+              "validity": null,
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_6",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "b04476a08629b1078d920b1085915ff4c14b801a42be980e592a36baa2eb23e8",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/family-combo",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/family-combo"
+            },
+            "price_flags": [],
+            "card_visible_text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người * Combo 279.000VND (Giá gốc: 384.000VND) dành cho 2 người gồm 1 Pizza size M bất kỳ + 1 phần Gà Viên Đút Lò + 2 thức uống nhỏ. * Combo 299.000VND (Giá gốc: 424.000VND) dành cho 2 người gồm 1 Pizza size M bất kỳ + 1 phần Mỳ Ý 109.000VND + 2 thức uống nhỏ. * Com",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "279.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(7)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": null,
+              "scope": null
+            }
+          }
+        ],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "35370c2d29d3e3828f78573303b0495164fe32445c065cad80c8edfb3526b9ed",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/mua-1-tang-1-thu-5",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/mua-1-tang-1-thu-5"
+            },
+            "price_flags": [
+              "AMBIGUOUS_NUMERIC_TOKEN"
+            ],
+            "card_visible_text": "Thứ 5 Mua 1 Tặng 1 Pizza * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng vào mỗi Thứ Năm (trừ Ngày lễ/Tết) cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi. * Không áp dụng chung với các chương tr",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Thứ 5 Mua 1 Tặng 1 Pizza"
+              },
+              "price": null,
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng vào mỗi Thứ Năm (trừ Ngày lễ/Tết) cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "Thứ 5 Mua 1 Tặng 1 Pizza * Mua 1 Pizza size M"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_2",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "3a0f3151e3bc81e184e2b09d0cb7a63ad6128ce7785aeae9eae4122530e060f0",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/giam-70-pizza-thu-2",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/giam-70-pizza-thu-2"
+            },
+            "price_flags": [
+              "AMBIGUOUS_NUMERIC_TOKEN"
+            ],
+            "card_visible_text": "Giảm 70% Cho Pizza Thứ 2 * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ được giảm 70% cho Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi. * Không áp dụng chung với các chương trình khuyến mã",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Giảm 70% Cho Pizza Thứ 2"
+              },
+              "price": null,
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "thứ 2 cùng size có giá bằng hoặc thấp hơn Piz"
+              },
+              "scope": null
+            }
+          }
+        ]
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "c604a4dc7f353292f0b9a065155289fedfd87f13532738583676d9dab191f182",
+        "visible_text_length": 3889,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Mã E-voucher Khuyến Mãi Thực Đơn Theo Dõi Đơn Hàng Danh Sách Cửa Hàng Blog 0"
+        ],
+        "canonical_offer_cards_count": 4,
+        "canonical_discovery_cards_count": 2,
+        "canonical_offer_cards": [
+          {
+            "card_id": "CARD_3",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "bb37e764e8468acfe42808559febcc2d39c1ab13915f75d61fb3cccba7700dab",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/mua-2-tang-3",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/mua-2-tang-3"
+            },
+            "price_flags": [],
+            "card_visible_text": "Mua 2 Tặng 3 Món Ngon Tặng lên đến 163.000VND với 4 lựa chọn: * DEAL 1: Mua 1 Pizza size M/L kèm 1 thức uống lớn sẽ được tặng 1 phần CÁNH GÀ 4 MIẾNG + 1 phần Tráng miệng + 1 lon Coca-Cola Zero Sugar. * DEAL 2: Mua 1 Pizza size M/L kèm 1 thức uống lớn sẽ được tặng 1 phần GÀ VIÊN + 1 phần Tráng miệng ",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Mua 2 Tặng 3 Món Ngon"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "163.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(5)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": null,
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_4",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "39d8214df45390188e8b5fdc9198c6e9129edfa3795148987cc1038351a7bcaa",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/giam-50-mon-chay",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/giam-50-mon-chay"
+            },
+            "price_flags": [],
+            "card_visible_text": "-50% Menu Chay Thanh Đạm * Giảm 50% tất cả các sản phẩm trong menu chay khi mua từ 2 sản phẩm (cùng loại hoặc khác loại). * Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng. * Không áp dụng đồng thời chương trình khuyến mãi khác. ĐẶT NGAY",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "-50% Menu Chay Thanh Đạm"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "Giảm 50%"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_5",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "e282b0058b95b4cde4252589ba63698b2d1d39e79bc68de50e15a510eda017e7",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/same-price-99k",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/same-price-99k"
+            },
+            "price_flags": [],
+            "card_visible_text": "Pizza Đồng Giá 99.000VND * Pizza đồng giá 99.000VND (size M) hoặc 159.000VND (size L) khi mua từ 02 Pizza trở lên, áp dụng cho Pizza Dăm Bông Dứa Kiểu Hawaii, Gà Phô Mai Thịt Heo Xông Khói, Xúc Xích Xốt Phô Mai, Dăm Bông Bắp Xốt Phô Mai, Thanh Cua Dứa Xốt Phô Mai, Phô Mai Truyền Thống, Rau Củ Thập C",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Pizza Đồng Giá 99.000VND"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "99.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(6) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "* Pizza đồng giá 99.000VND (size M) hoặc 159.000VND (size L) khi mua từ 02 Pizza trở lên, áp dụng cho Pizza Dăm Bông Dứa Kiểu Hawaii, Gà Phô Mai Thịt Heo Xông Khói, Xúc Xích Xốt Phô Mai, Dăm Bông Bắp Xốt Phô Mai, Thanh Cua Dứa Xốt Phô Mai, Phô Mai Truyền Thống, Rau Củ Thập Cẩm – Tiết kiệm đến 45%."
+              },
+              "validity": null,
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_6",
+            "card_type": "CANONICAL_OFFER_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "b04476a08629b1078d920b1085915ff4c14b801a42be980e592a36baa2eb23e8",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/family-combo",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/family-combo"
+            },
+            "price_flags": [],
+            "card_visible_text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người * Combo 279.000VND (Giá gốc: 384.000VND) dành cho 2 người gồm 1 Pizza size M bất kỳ + 1 phần Gà Viên Đút Lò + 2 thức uống nhỏ. * Combo 299.000VND (Giá gốc: 424.000VND) dành cho 2 người gồm 1 Pizza size M bất kỳ + 1 phần Mỳ Ý 109.000VND + 2 thức uống nhỏ. * Com",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người"
+              },
+              "price": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+                "text": "279.000VND"
+              },
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(7) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(7)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": null,
+              "scope": null
+            }
+          }
+        ],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "35370c2d29d3e3828f78573303b0495164fe32445c065cad80c8edfb3526b9ed",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/mua-1-tang-1-thu-5",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/mua-1-tang-1-thu-5"
+            },
+            "price_flags": [
+              "AMBIGUOUS_NUMERIC_TOKEN"
+            ],
+            "card_visible_text": "Thứ 5 Mua 1 Tặng 1 Pizza * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng vào mỗi Thứ Năm (trừ Ngày lễ/Tết) cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi. * Không áp dụng chung với các chương tr",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Thứ 5 Mua 1 Tặng 1 Pizza"
+              },
+              "price": null,
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng vào mỗi Thứ Năm (trừ Ngày lễ/Tết) cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "Thứ 5 Mua 1 Tặng 1 Pizza * Mua 1 Pizza size M"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_2",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+            "outer_html_sha256": "3a0f3151e3bc81e184e2b09d0cb7a63ad6128ce7785aeae9eae4122530e060f0",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://dominos.vn/promotion-listing/giam-70-pizza-thu-2",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://dominos.vn/promotion-listing/giam-70-pizza-thu-2"
+            },
+            "price_flags": [
+              "AMBIGUOUS_NUMERIC_TOKEN"
+            ],
+            "card_visible_text": "Giảm 70% Cho Pizza Thứ 2 * Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ được giảm 70% cho Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất. * Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi. * Không áp dụng chung với các chương trình khuyến mã",
+            "field_provenance": {
+              "title": {
+                "tag": "h2",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+                "text": "Giảm 70% Cho Pizza Thứ 2"
+              },
+              "price": null,
+              "terms": {
+                "tag": "p",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+                "text": "* Áp dụng mỗi ngày cho Dùng tại chỗ, Mua mang về & Giao hàng tận nơi."
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div > div.page-transition-enter > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2)",
+                "text": "thứ 2 cùng size có giá bằng hoặc thấp hơn Piz"
+              },
+              "scope": null
+            }
+          }
+        ]
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_09_1787767583520.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_09_1787767583520.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_10",
+      "cohort": "COHORT_2_FNB_DANANG",
+      "brand_name": "Highlands Coffee",
+      "canonical_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+      "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+      "check_interval_hours": 24,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-27T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "71dec6e16104804dda4abdbfb28b16a09c66017446871febcbe528cf9fbd32cf",
+        "raw_html_current_sha256": "13141ee072a4f3db4e6b78d1afaad8176b3973554abe09a7240c4f80ec4c684d",
+        "semantic_content_baseline_sha256": "0a3b203117a5e1f3530f0eacd8aefbdcf3e1792bfc6220ab8272883187c35dac",
+        "semantic_content_current_sha256": "0a3b203117a5e1f3530f0eacd8aefbdcf3e1792bfc6220ab8272883187c35dac"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "0a3b203117a5e1f3530f0eacd8aefbdcf3e1792bfc6220ab8272883187c35dac",
+        "visible_text_length": 1480,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Tìm kiếm cửa hàng Thực Đơn Về Highlands NGHỀ NGHIỆP HỖ TRỢ ĐẶT HÀNG"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 9,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item",
+            "outer_html_sha256": "8edfe426ff3c1dfefda2f3ceaebd7b03806a2c7ff7aaa2eabfd64cdcd67f06d7",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB 13/08/2026, 15:06",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "13/08/2026, 15:06"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item",
+                "text": "13/08/2026, 15:06"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_2",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item",
+            "outer_html_sha256": "f3cf77362d31b21d4ce7a11f95b65e1e02f09ff147c1bd825d51f7048bea511b",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’ 07/08/2026, 09:00",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "07/08/2026, 09:00"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item",
+                "text": "07/08/2026, 09:00"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_3",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item",
+            "outer_html_sha256": "a13581d9c73e394088fe73bd654a378e63be0279c096e073381dc2b1c218c48d",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB 01/07/2026, 09:41",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "01/07/2026, 09:41"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item",
+                "text": "01/07/2026, 09:41"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_4",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item",
+            "outer_html_sha256": "cb122f05ebc738d0eff3f1f46f3a6a285e00623c4fd0bfd1351e7a1d89fed33f",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/he-phieu-em-100-trung-thuong-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/he-phieu-em-100-trung-thuong-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "Hè Phiêu Êm - 100% Trúng Thưởng! 22/06/2026, 10:51",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "Hè Phiêu Êm - 100% Trúng Thưởng!"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/06/2026, 10:51"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item",
+                "text": "22/06/2026, 10:51"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_5",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item",
+            "outer_html_sha256": "e491a47049f3be44dc77cf8ab5b4b37914dbd9a23ebaa9f0a4d6e2d697ecabb2",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO 22/05/2026, 10:11",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 10:11"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item",
+                "text": "22/05/2026, 10:11"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_6",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item",
+            "outer_html_sha256": "eea8305f5d181ea3b7977c6643094539f3426c72db6e60d7cba9a4e53730e8e3",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/dac-quyen-hoi-vien-bankrista-tai-highlands.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/dac-quyen-hoi-vien-bankrista-tai-highlands.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ĐẶC QUYỀN HỘI VIÊN BANKRISTA TẠI HIGHLANDS 22/05/2026, 10:06",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ĐẶC QUYỀN HỘI VIÊN BANKRISTA TẠI HIGHLANDS"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 10:06"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item",
+                "text": "22/05/2026, 10:06"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_7",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item",
+            "outer_html_sha256": "4a22ed3b22b6c425f03f04719db19fb1d6d049d6580a053b09bba7832a908318",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "MIỄN PHÍ UPSIZE TẠI HIGHLANDS COFFEE KHI THANH TOÁN BẰNG THẺ VPBANK 22/05/2026, 09:44",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "MIỄN PHÍ UPSIZE TẠI HIGHLANDS COFFEE KHI THANH TOÁN BẰNG THẺ VPBANK"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 09:44"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item",
+                "text": "22/05/2026, 09:44"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_8",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item",
+            "outer_html_sha256": "b0688558d5302c083313e25c28786957f640f5ac31bca39e53a700788d80334a",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/ket-noi-ban-be-lan-toa-niem-vui-cung-highlandsdi.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/ket-noi-ban-be-lan-toa-niem-vui-cung-highlandsdi.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "KẾT NỐI BẠN BÈ – LAN TỎA NIỀM VUI CÙNG HIGHLANDSĐI 14/04/2026, 21:14",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "KẾT NỐI BẠN BÈ – LAN TỎA NIỀM VUI CÙNG HIGHLANDSĐI"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "14/04/2026, 21:14"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item",
+                "text": "14/04/2026, 21:14"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_9",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item",
+            "outer_html_sha256": "47b0a24083b9f20b24d4e9e69be267d20b3fdce209b9a5ec2b53833fd58398bf",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/highlandsdi-cang-di-cang-vuyp-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/highlandsdi-cang-di-cang-vuyp-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "HIGHLANDSĐI - CÀNG “ĐI”, CÀNG “VUÝP\" 31/03/2026, 12:01",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "HIGHLANDSĐI - CÀNG “ĐI”, CÀNG “VUÝP\""
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "31/03/2026, 12:01"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item",
+                "text": "31/03/2026, 12:01"
+              },
+              "scope": null
+            }
+          }
+        ]
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "0a3b203117a5e1f3530f0eacd8aefbdcf3e1792bfc6220ab8272883187c35dac",
+        "visible_text_length": 1480,
+        "page_level_unbound_signals_count": 1,
+        "page_level_unbound_signals": [
+          "Tìm kiếm cửa hàng Thực Đơn Về Highlands NGHỀ NGHIỆP HỖ TRỢ ĐẶT HÀNG"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 9,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item",
+            "outer_html_sha256": "8edfe426ff3c1dfefda2f3ceaebd7b03806a2c7ff7aaa2eabfd64cdcd67f06d7",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB 13/08/2026, 15:06",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "13/08/2026, 15:06"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(1) > div.vnt-news-item",
+                "text": "13/08/2026, 15:06"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_2",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item",
+            "outer_html_sha256": "f3cf77362d31b21d4ce7a11f95b65e1e02f09ff147c1bd825d51f7048bea511b",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’ 07/08/2026, 09:00",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "07/08/2026, 09:00"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(2) > div.vnt-news-item",
+                "text": "07/08/2026, 09:00"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_3",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item",
+            "outer_html_sha256": "a13581d9c73e394088fe73bd654a378e63be0279c096e073381dc2b1c218c48d",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB 01/07/2026, 09:41",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "01/07/2026, 09:41"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(3) > div.vnt-news-item",
+                "text": "01/07/2026, 09:41"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_4",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item",
+            "outer_html_sha256": "cb122f05ebc738d0eff3f1f46f3a6a285e00623c4fd0bfd1351e7a1d89fed33f",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/he-phieu-em-100-trung-thuong-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/he-phieu-em-100-trung-thuong-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "Hè Phiêu Êm - 100% Trúng Thưởng! 22/06/2026, 10:51",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "Hè Phiêu Êm - 100% Trúng Thưởng!"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/06/2026, 10:51"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(4) > div.vnt-news-item",
+                "text": "22/06/2026, 10:51"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_5",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item",
+            "outer_html_sha256": "e491a47049f3be44dc77cf8ab5b4b37914dbd9a23ebaa9f0a4d6e2d697ecabb2",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO 22/05/2026, 10:11",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 10:11"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(5) > div.vnt-news-item",
+                "text": "22/05/2026, 10:11"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_6",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item",
+            "outer_html_sha256": "eea8305f5d181ea3b7977c6643094539f3426c72db6e60d7cba9a4e53730e8e3",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/dac-quyen-hoi-vien-bankrista-tai-highlands.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/dac-quyen-hoi-vien-bankrista-tai-highlands.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "ĐẶC QUYỀN HỘI VIÊN BANKRISTA TẠI HIGHLANDS 22/05/2026, 10:06",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "ĐẶC QUYỀN HỘI VIÊN BANKRISTA TẠI HIGHLANDS"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 10:06"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(6) > div.vnt-news-item",
+                "text": "22/05/2026, 10:06"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_7",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item",
+            "outer_html_sha256": "4a22ed3b22b6c425f03f04719db19fb1d6d049d6580a053b09bba7832a908318",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "MIỄN PHÍ UPSIZE TẠI HIGHLANDS COFFEE KHI THANH TOÁN BẰNG THẺ VPBANK 22/05/2026, 09:44",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "MIỄN PHÍ UPSIZE TẠI HIGHLANDS COFFEE KHI THANH TOÁN BẰNG THẺ VPBANK"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "22/05/2026, 09:44"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(7) > div.vnt-news-item",
+                "text": "22/05/2026, 09:44"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_8",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item",
+            "outer_html_sha256": "b0688558d5302c083313e25c28786957f640f5ac31bca39e53a700788d80334a",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/ket-noi-ban-be-lan-toa-niem-vui-cung-highlandsdi.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/ket-noi-ban-be-lan-toa-niem-vui-cung-highlandsdi.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "KẾT NỐI BẠN BÈ – LAN TỎA NIỀM VUI CÙNG HIGHLANDSĐI 14/04/2026, 21:14",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "KẾT NỐI BẠN BÈ – LAN TỎA NIỀM VUI CÙNG HIGHLANDSĐI"
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "14/04/2026, 21:14"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(8) > div.vnt-news-item",
+                "text": "14/04/2026, 21:14"
+              },
+              "scope": null
+            }
+          },
+          {
+            "card_id": "CARD_9",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item",
+            "outer_html_sha256": "47b0a24083b9f20b24d4e9e69be267d20b3fdce209b9a5ec2b53833fd58398bf",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.highlandscoffee.com.vn/vn/highlandsdi-cang-di-cang-vuyp-.html",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.highlandscoffee.com.vn/vn/highlandsdi-cang-di-cang-vuyp-.html"
+            },
+            "price_flags": [],
+            "card_visible_text": "HIGHLANDSĐI - CÀNG “ĐI”, CÀNG “VUÝP\" 31/03/2026, 12:01",
+            "field_provenance": {
+              "title": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-title:nth-of-type(1)",
+                "text": "HIGHLANDSĐI - CÀNG “ĐI”, CÀNG “VUÝP\""
+              },
+              "price": null,
+              "terms": {
+                "tag": "span",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item > div.i-desc:nth-of-type(2) > div.i-date:nth-of-type(2) > span",
+                "text": "31/03/2026, 12:01"
+              },
+              "validity": {
+                "tag": "div",
+                "selector": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div.wrapper > div.vnt-module > div.box_mid > div.mid-content:nth-of-type(2) > div.vnt-news:nth-of-type(1) > div.vnt-news-grid > div.vnt-news-grid__item:nth-of-type(9) > div.vnt-news-item",
+                "text": "31/03/2026, 12:01"
+              },
+              "scope": null
+            }
+          }
+        ]
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_10_1787767582868.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_10_1787767582868.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_11",
+      "cohort": "COHORT_3_TRANSIT_UTILITIES",
+      "brand_name": "DanaBus Da Nang",
+      "canonical_url": "https://danangbus.vn/bieu-gia-ve.html",
+      "source_type": "OFFICIAL_PUBLIC_PRICING_PAGE",
+      "check_interval_hours": 48,
+      "state": "PAGE_SEMANTIC_CHANGE_UNBOUND",
+      "diff_reason": "Page text changed outside canonical cards (e.g. copyright/footer/news copy). 0 canonical offer cards changed.",
+      "next_check_due": "2026-08-28T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "915ace36793174b00a7c1790683f405efb76bc95233b267fde54321a13c2025f",
+        "raw_html_current_sha256": "682649cce8e0734407eae62550a49c658fd587f45134249a61fb3774d0f4bd4f",
+        "semantic_content_baseline_sha256": "a4afc90e04aa5781f819bf91bce225547e6fa3565ac7b7b8ad528c9593dfe073",
+        "semantic_content_current_sha256": "6deee92f693c4825b3696e9f7794245b2aa58ddd6e47b100d74577455ee3bdd5"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "a4afc90e04aa5781f819bf91bce225547e6fa3565ac7b7b8ad528c9593dfe073",
+        "visible_text_length": 72,
+        "page_level_unbound_signals_count": 0,
+        "page_level_unbound_signals": [],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "6deee92f693c4825b3696e9f7794245b2aa58ddd6e47b100d74577455ee3bdd5",
+        "visible_text_length": 70,
+        "page_level_unbound_signals_count": 0,
+        "page_level_unbound_signals": [],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_11_1787767585477.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_11_1787767585477.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_12",
+      "cohort": "COHORT_3_TRANSIT_UTILITIES",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "canonical_url": "https://dsvn.vn/",
+      "source_type": "OFFICIAL_PUBLIC_PRICING_PAGE",
+      "check_interval_hours": 48,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-28T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "02c931205ba5028fd728cb7a20f6ef0efd32a02a341a2d7d1ab1aaab2fd4c6e8",
+        "raw_html_current_sha256": "c9f2825b72c01fdb395007282116fdb5c3be851fb03ea5cd186a39faaf53ae89",
+        "semantic_content_baseline_sha256": "60b1f1fe64c085c48737231ec2ca39e7eb44cf8f4fadf3f7f642ce490c705c0d",
+        "semantic_content_current_sha256": "60b1f1fe64c085c48737231ec2ca39e7eb44cf8f4fadf3f7f642ce490c705c0d"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "60b1f1fe64c085c48737231ec2ca39e7eb44cf8f4fadf3f7f642ce490c705c0d",
+        "visible_text_length": 6358,
+        "page_level_unbound_signals_count": 13,
+        "page_level_unbound_signals": [
+          "TÌM VÉ",
+          "TÌM GIÁ VÉ RẺ NEW",
+          "NEW",
+          "THÔNG TIN ĐẶT CHỖ",
+          "TRẢ/ĐỔI VÉ",
+          "KIỂM TRA VÉ",
+          "GIỜ TÀU - GIÁ VÉ",
+          "KHUYẾN MẠI",
+          "CÁC QUY ĐỊNH",
+          "LIÊN HỆ",
+          "TIẾNG VIỆT",
+          "ENGLISH",
+          "Giỏ vé Chưa có vé"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "60b1f1fe64c085c48737231ec2ca39e7eb44cf8f4fadf3f7f642ce490c705c0d",
+        "visible_text_length": 6358,
+        "page_level_unbound_signals_count": 13,
+        "page_level_unbound_signals": [
+          "TÌM VÉ",
+          "TÌM GIÁ VÉ RẺ NEW",
+          "NEW",
+          "THÔNG TIN ĐẶT CHỖ",
+          "TRẢ/ĐỔI VÉ",
+          "KIỂM TRA VÉ",
+          "GIỜ TÀU - GIÁ VÉ",
+          "KHUYẾN MẠI",
+          "CÁC QUY ĐỊNH",
+          "LIÊN HỆ",
+          "TIẾNG VIỆT",
+          "ENGLISH",
+          "Giỏ vé Chưa có vé"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_12_1787767585999.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_12_1787767585999.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_13",
+      "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+      "brand_name": "GitHub Education",
+      "canonical_url": "https://education.github.com/pack",
+      "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+      "check_interval_hours": 72,
+      "state": "PAGE_SEMANTIC_CHANGE_UNBOUND",
+      "diff_reason": "Page text changed outside canonical cards (e.g. copyright/footer/news copy). 0 canonical offer cards changed.",
+      "next_check_due": "2026-08-29T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "d1339072845da629508a5fc303e5ddd92d9b242270e9591e9327e298289e8586",
+        "raw_html_current_sha256": "c8130e1d4786089435f315edb3582dfc4424ad996ead6fb3c990d4238479422a",
+        "semantic_content_baseline_sha256": "5c1598f763c4082d69ece8d048ede1afc5cb5cb5a08f177f4e7e3cdba42c3669",
+        "semantic_content_current_sha256": "de7e127794914a689b20a8b7bc245b7ccd7b51deb00bd9c1459a5320307b199f"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "5c1598f763c4082d69ece8d048ede1afc5cb5cb5a08f177f4e7e3cdba42c3669",
+        "visible_text_length": 32233,
+        "page_level_unbound_signals_count": 2,
+        "page_level_unbound_signals": [
+          "GitHub.com Education Students Teachers Schools Events Sign in",
+          "Students Teachers Schools Events Sign in"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "de7e127794914a689b20a8b7bc245b7ccd7b51deb00bd9c1459a5320307b199f",
+        "visible_text_length": 32227,
+        "page_level_unbound_signals_count": 2,
+        "page_level_unbound_signals": [
+          "GitHub.com Education Students Teachers Schools Events Sign in",
+          "Students Teachers Schools Events Sign in"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_13_1787767590496.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_13_1787767590496.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_14",
+      "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+      "brand_name": "Spotify Vietnam Student",
+      "canonical_url": "https://www.spotify.com/vn-vi/student/",
+      "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+      "check_interval_hours": 72,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-29T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "54248c5ddc9fd0761e01fbc6bb665a084f356110f0d84ffe8d1cd75995d4a40d",
+        "raw_html_current_sha256": "3b78370098dd78f677ad01f144a3e4518d2bda3938e5622301bc19596eb83df5",
+        "semantic_content_baseline_sha256": "eb4bada43f7ea7659f5bd4a81ab19f8252ff51ae51d6131ceb98feafb6733344",
+        "semantic_content_current_sha256": "eb4bada43f7ea7659f5bd4a81ab19f8252ff51ae51d6131ceb98feafb6733344"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "eb4bada43f7ea7659f5bd4a81ab19f8252ff51ae51d6131ceb98feafb6733344",
+        "visible_text_length": 2701,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "Menu",
+          "Hãy để âm nhạc tiếp sức cho những buổi học của bạn",
+          "Bạn có câu hỏi? Chúng tôi sẽ giải đáp cho bạn"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "eb4bada43f7ea7659f5bd4a81ab19f8252ff51ae51d6131ceb98feafb6733344",
+        "visible_text_length": 2701,
+        "page_level_unbound_signals_count": 3,
+        "page_level_unbound_signals": [
+          "Menu",
+          "Hãy để âm nhạc tiếp sức cho những buổi học của bạn",
+          "Bạn có câu hỏi? Chúng tôi sẽ giải đáp cho bạn"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 0,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": []
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_14_1787767593161.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_14_1787767593161.json"
+      }
+    },
+    {
+      "source_id": "SRC_141_15",
+      "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+      "brand_name": "Notion Education",
+      "canonical_url": "https://www.notion.so/product/notion-for-education",
+      "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+      "check_interval_hours": 72,
+      "state": "PAGE_RENDER_VARIATION",
+      "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but canonical card snapshot is 100% identical.",
+      "next_check_due": "2026-08-29T18:06:11.959Z",
+      "hashes": {
+        "raw_html_baseline_sha256": "c697f1ebccd5b576a1e7722f4b3019a9504d7dd23fcc9db5797350861b13fecb",
+        "raw_html_current_sha256": "82797884ffef55f11307d23d989e37191a44712c9700ef00fecd4c3c3eb8a880",
+        "semantic_content_baseline_sha256": "2bab8c04748a09cca276302f3674cfb6e0a3ba5320917c825bfdfbfbf8b6d30e",
+        "semantic_content_current_sha256": "2bab8c04748a09cca276302f3674cfb6e0a3ba5320917c825bfdfbfbf8b6d30e"
+      },
+      "baseline_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "2bab8c04748a09cca276302f3674cfb6e0a3ba5320917c825bfdfbfbf8b6d30e",
+        "visible_text_length": 8047,
+        "page_level_unbound_signals_count": 20,
+        "page_level_unbound_signals": [
+          "Features",
+          "Teams Eng & Product Design Marketing IT",
+          "Teams",
+          "Eng & Product",
+          "Design",
+          "Marketing",
+          "Company size Startups Small businesses Enterprise",
+          "Company size",
+          "Startups",
+          "Small businesses",
+          "Enterprise",
+          "Use Cases Education Personal AI use cases",
+          "Use Cases",
+          "Education",
+          "Personal",
+          "AI use cases",
+          "Browse Templates Consultants Connections",
+          "Browse",
+          "Templates",
+          "Consultants"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 1,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase > section.section-module-scss-module__5T7e4a__section:nth-of-type(1) > div.row-module-scss-module__e8A4vG__row:nth-of-type(2) > article.surface:nth-of-type(2)",
+            "outer_html_sha256": "7ea2a8815f9baf92656f2fb8e9b4ccfb0eb9331521a4d15262f2ef7c394a6f87",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.notion.so/product/calendar",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.notion.so/product/calendar"
+            },
+            "price_flags": [],
+            "card_visible_text": "Notion Calendar Schedule and keep track of your deadlines and activities with ease. Learn more→",
+            "field_provenance": {
+              "title": {
+                "tag": "h3",
+                "selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase > section.section-module-scss-module__5T7e4a__section:nth-of-type(1) > div.row-module-scss-module__e8A4vG__row:nth-of-type(2) > article.surface:nth-of-type(2) > div.block-module-scss-module__cFn49q__blockStack > div.block-module-scss-module__cFn49q__blockContent:nth-of-type(1) > h3.semanticTypography-module-scss-module__Db2fhq__semanticTypography",
+                "text": "Notion Calendar"
+              },
+              "price": null,
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          }
+        ]
+      },
+      "current_snapshot": {
+        "normalizer_version": "v141w_canonical_card_dedup_v1",
+        "semantic_content_sha256": "2bab8c04748a09cca276302f3674cfb6e0a3ba5320917c825bfdfbfbf8b6d30e",
+        "visible_text_length": 8047,
+        "page_level_unbound_signals_count": 20,
+        "page_level_unbound_signals": [
+          "Features",
+          "Teams Eng & Product Design Marketing IT",
+          "Teams",
+          "Eng & Product",
+          "Design",
+          "Marketing",
+          "Company size Startups Small businesses Enterprise",
+          "Company size",
+          "Startups",
+          "Small businesses",
+          "Enterprise",
+          "Use Cases Education Personal AI use cases",
+          "Use Cases",
+          "Education",
+          "Personal",
+          "AI use cases",
+          "Browse Templates Consultants Connections",
+          "Browse",
+          "Templates",
+          "Consultants"
+        ],
+        "canonical_offer_cards_count": 0,
+        "canonical_discovery_cards_count": 1,
+        "canonical_offer_cards": [],
+        "canonical_discovery_cards": [
+          {
+            "card_id": "CARD_1",
+            "card_type": "CANONICAL_DISCOVERY_CARD",
+            "container_selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase > section.section-module-scss-module__5T7e4a__section:nth-of-type(1) > div.row-module-scss-module__e8A4vG__row:nth-of-type(2) > article.surface:nth-of-type(2)",
+            "outer_html_sha256": "7ea2a8815f9baf92656f2fb8e9b4ccfb0eb9331521a4d15262f2ef7c394a6f87",
+            "selector_revalidation_passed": true,
+            "canonical_leaf_url": "https://www.notion.so/product/calendar",
+            "url_validation": {
+              "valid": true,
+              "resolved_url": "https://www.notion.so/product/calendar"
+            },
+            "price_flags": [],
+            "card_visible_text": "Notion Calendar Schedule and keep track of your deadlines and activities with ease. Learn more→",
+            "field_provenance": {
+              "title": {
+                "tag": "h3",
+                "selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase > section.section-module-scss-module__5T7e4a__section:nth-of-type(1) > div.row-module-scss-module__e8A4vG__row:nth-of-type(2) > article.surface:nth-of-type(2) > div.block-module-scss-module__cFn49q__blockStack > div.block-module-scss-module__cFn49q__blockContent:nth-of-type(1) > h3.semanticTypography-module-scss-module__Db2fhq__semanticTypography",
+                "text": "Notion Calendar"
+              },
+              "price": null,
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          }
+        ]
+      },
+      "receipts": {
+        "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_15_1787767594810.json",
+        "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_15_1787767594810.json"
+      }
+    }
+  ]
+}

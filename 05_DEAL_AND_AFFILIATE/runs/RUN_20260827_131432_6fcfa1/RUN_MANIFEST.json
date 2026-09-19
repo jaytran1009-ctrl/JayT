@@ -1,0 +1,123 @@
+{
+  "run_id": "RUN_20260827_131432_6fcfa1",
+  "worker_identifier": "JAYT_5_CATEGORY_HUBS_ENGINE_162",
+  "directive": "JAYT-162: 5 CATEGORY HUBS, TRUSTED-AUTOMATION ONLY",
+  "execution_mode": "5_CATEGORY_HUBS_TRUSTED_AUTOMATION",
+  "execution_origin": "MANUAL_TRIGGERED",
+  "host_scheduler_status": "SCHEDULER_BLOCKED_ON_THIS_HOST",
+  "executed_at": "2026-08-27T06:14:32.868Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_131432_6fcfa1",
+  "project_memory_verified": {
+    "version": "3.262.0",
+    "sha256": "bae066804a40fab4c4b6daa91770b318cc14e3397daae6fd9a07346ec9a3498d",
+    "is_valid": true
+  },
+  "category_hubs": [
+    {
+      "hub_id": "HUB_1_FOOD_AND_DINING",
+      "name": "Ăn uống tiết kiệm",
+      "verified_proof_deals_count": 0,
+      "verified_venues_count": 0,
+      "tracked_sources_count": 10,
+      "unresolved_needs_count": 0
+    },
+    {
+      "hub_id": "HUB_2_STUDY_SPACES",
+      "name": "Không gian học bài",
+      "verified_proof_deals_count": 0,
+      "verified_venues_count": 1,
+      "tracked_sources_count": 5,
+      "unresolved_needs_count": 0
+    },
+    {
+      "hub_id": "HUB_3_CINEMA_ENTERTAINMENT",
+      "name": "Phim và giải trí",
+      "verified_proof_deals_count": 0,
+      "verified_venues_count": 1,
+      "tracked_sources_count": 6,
+      "unresolved_needs_count": 0
+    },
+    {
+      "hub_id": "HUB_4_PUBLIC_TRANSIT",
+      "name": "Di chuyển",
+      "verified_proof_deals_count": 0,
+      "verified_venues_count": 0,
+      "tracked_sources_count": 3,
+      "unresolved_needs_count": 0
+    },
+    {
+      "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+      "name": "Đồ KTX và học tập",
+      "verified_proof_deals_count": 0,
+      "verified_venues_count": 0,
+      "tracked_sources_count": 6,
+      "unresolved_needs_count": 0
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": "CLUSTER_1_HOA_KHANH_LIEN_CHIEU",
+      "name": "Hòa Khánh / Liên Chiểu",
+      "verified_venues_count": 0,
+      "tracked_sources_count": 0,
+      "recheck_needed_count": 0,
+      "community_needs_count": 0
+    },
+    {
+      "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+      "name": "Bắc Mỹ An / Hòa Quý",
+      "verified_venues_count": 0,
+      "tracked_sources_count": 0,
+      "recheck_needed_count": 0,
+      "community_needs_count": 0
+    },
+    {
+      "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+      "name": "Hải Châu / Thanh Khê",
+      "verified_venues_count": 2,
+      "tracked_sources_count": 0,
+      "recheck_needed_count": 0,
+      "community_needs_count": 0
+    },
+    {
+      "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+      "name": "Khu Công nghệ cao / Công viên phần mềm",
+      "verified_venues_count": 0,
+      "tracked_sources_count": 0,
+      "recheck_needed_count": 0,
+      "community_needs_count": 0
+    },
+    {
+      "cluster_id": "CLUSTER_5_SON_TRA_BEACH",
+      "name": "Sơn Trà / Ven biển",
+      "verified_venues_count": 0,
+      "tracked_sources_count": 0,
+      "recheck_needed_count": 0,
+      "community_needs_count": 0
+    }
+  ],
+  "autonomy_governance": {
+    "level_1_read_only_count": 38,
+    "level_2_resolution_count": 0,
+    "level_3_human_accepted_venues_count": 2
+  },
+  "reconciliation": {
+    "initial_roots_count": 32,
+    "student_sources_count": 6,
+    "verified_venues_count": 2,
+    "final_registry_count": 40,
+    "invariance_formula": "32 + 6 + 2 = 40",
+    "is_reconciled": true
+  },
+  "automated_staging_gate_evaluation": {
+    "decision_verdict": "CONTINUE_ACQUISITION",
+    "progress_milestone": "0/10",
+    "threshold_required": 10
+  },
+  "governance_lock": {
+    "is_approved": false,
+    "production_feed": "deals_feed.json: []",
+    "status": "PRODUCTION_LOCKED_PENDING_CEO_APPROVAL"
+  },
+  "exit_code": 0
+}

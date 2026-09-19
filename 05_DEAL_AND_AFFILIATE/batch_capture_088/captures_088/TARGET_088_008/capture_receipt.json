@@ -1,0 +1,37 @@
+{
+  "target_id": "TARGET_088_008",
+  "brand": "Lotte Cinema",
+  "sector": "CINEMA",
+  "requested_url": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/movie-schedule.aspx",
+  "final_url": "https://www.lottecinemavn.com/LCHS/Contents/ticketing/movie-schedule.aspx",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:45:38.675Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_pass": "087A_FIRST_PASS",
+    "parent_target_id": "TARGET_087A_010",
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_087a/captures_087a/TARGET_087A_010/page.html",
+    "parent_artifact_sha256": "7b9cd9eed7ce9ae334eedf0962a0c48fc785075ccf9f05fc0a9f7875761f52bc",
+    "literal_href": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/movie-schedule.aspx",
+    "link_offset": 32052,
+    "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+    "selection_reason": "Trích xuất từ thẻ <a href=\"...\"> tại offset 32052 trong DOM của TARGET_087A_010"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "8065cb44a7ed136361678a199b8b929d2c720a9bca3b454267c7924c43e8cad0",
+      "size": 286621
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "fe33c859fd302c339f37384a1d0e4e597a0acb96ab2a1b62c8807b5acac4154b",
+      "size": 99010
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "523617c38deed8b5f807335f6013ce1344df34ebcf599b94bfb81370ae43145a",
+      "size": 1469
+    }
+  }
+}

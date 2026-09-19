@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "report_id": "JAYT_319_BATCH_07_RISK_CLASSIFICATION_REPORT",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_BATCH_07_RISK_CLASSIFICATION_WORK_ORDER.md",
+  "generated_at": "2026-09-04T19:30:00+07:00",
+  "governance_mode": "FAIL_CLOSED__RISK_CLASSIFICATION_BEFORE_SCOPE",
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 12,
+    "production_card_count": 3
+  },
+  "evaluations": {
+    "B07_01": {
+      "candidate_id": "B07_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_03_09_14",
+      "service_name": "Thông báo điều chỉnh phương tiện khai thác xe buýt điện trên các tuyến không trợ giá số 03, 09 và 14",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-dieu-chinh-phuong-tien-khai-thac-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-03-09-va-14-5760.html",
+      "mandated_check": "verify that the Danabus notice is a current operational source rather than a temporary launch notice. Any potential card must prohibit fare, schedule, frequency, ticketing, voucher, affiliate and tracking claims.",
+      "risk_analysis": "Kiểm tra trang lá chính thức xác nhận thông báo số 5760 do Danabus ban hành ngày 24/08/2026 căn cứ Công văn số 15563/SXD-VTATGT ngày 21/08/2026 của Sở Xây dựng TP Đà Nẵng về việc chuyển đổi phương tiện xe buýt sử dụng điện Kim Long (năm sản xuất 2026, sức chứa 30 chỗ, nhiên liệu điện) đối với 3 tuyến không trợ giá số 03 (Sân bay Đà Nẵng - Bà Nà), 09 (Bệnh viện Ung bướu - Phạm Hùng) và 14 (Cảng Sông Hàn - KCN Hòa Khánh). Đây là quy chuẩn phương tiện vận hành thường xuyên và lâu dài theo chính sách chuyển đổi năng lượng xanh của thành phố, không phải thông báo ra mắt tạm thời, khuyến mãi ngắn hạn hay sự kiện cắt băng khánh thành. Trong nội dung thông báo có nêu các chỉ tiêu kỹ thuật và biểu đồ vận hành (tần suất, số xe vận doanh/dự phòng). Việc hiển thị thông số tần suất cố định hoặc giá vé trên giao diện thẻ công ích có nguy cơ gây sai lệch khi đơn vị vận hành điều chỉnh ca kíp hoặc chính sách vé liên tuyến.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Bộ phận Tuân thủ và Đảm bảo chất lượng thiết lập các rào chắn kỹ thuật nghiêm ngặt trước khi xem xét cấp scope: (1) Nhãn phân loại thẻ: 'Giao thông công cộng / Xe buýt điện Đà Nẵng'; (2) Phạm vi xác thực: Giới hạn nghiêm ngặt ở chính sách chuyển đổi phương tiện buýt điện xanh cho 3 tuyến số 03, 09 và 14 theo Công văn số 15563/SXD-VTATGT; (3) Cấm tuyệt đối công bố giá vé: Nghiêm cấm mọi tuyên bố giá vé cụ thể, bảng giá, chiết khấu hoặc quảng bá '0 đồng'; (4) Cấm khẳng định lịch trình và tần suất: Cấm cố định giờ xuất bến hoặc tần suất giãn cách; bắt buộc đính kèm ghi chú điều hướng: 'Thông tin chuyển đổi phương tiện xe buýt điện Tuyến 03, 09, 14 (Tra cứu lộ trình, biểu đồ giờ và tần suất chi tiết tại cổng Danabus)'; (5) Rào chắn thương mại & bảo mật: Cấm giỏ hàng bán vé, cấm ví voucher, cấm link tiếp thị liên kết (affiliate), cấm pixel theo dõi; (6) Nút hành động chuẩn WCAG AA: 'Xem thông báo buýt điện Danabus' dẫn trực tiếp và an toàn sang cổng danangbus.vn.",
+      "operational_locks": {
+        "tag": "Giao thông công cộng / Xe buýt điện Đà Nẵng",
+        "corridor": "Tuyến 03 (Sân bay Đà Nẵng – Bà Nà), Tuyến 09 (BV Ung bướu – Phạm Hùng), Tuyến 14 (Cảng Sông Hàn – KCN Hòa Khánh)",
+        "effective_status": "PERMANENT_OPERATIONAL_FLEET_REGIME__CV_15563_SXD_VTATGT",
+        "fare_claim_prohibited": true,
+        "schedule_and_frequency_inference_prohibited": true,
+        "ticketing_cart_prohibited": true,
+        "voucher_affiliate_tracking_prohibited": true,
+        "mandated_guidance_note": "Thông tin chuyển đổi phương tiện xe buýt điện Tuyến 03, 09, 14 (Tra cứu lộ trình, biểu đồ giờ và tần suất chi tiết tại cổng Danabus)"
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B07_02": {
+      "candidate_id": "B07_02_CAM_NANG_AN_TOAN_SO_DEEPFAKE_1022",
+      "service_name": "Cẩm nang nhận diện và phòng chống lừa đảo trực tuyến: Cuộc gọi video Deepfake",
+      "official_leaf_url": "https://1022.vn/cam-nang-nhan-dien-va-phong-chong-lua-dao-truc-tuyen-lua-dao-cuoc-goi-video-deepfake/",
+      "mandated_check": "classify the digital-safety content as general public awareness only. Prohibit victim verification, reporting guarantees, financial recovery claims, personal-data collection and third-party reporting flows.",
+      "risk_analysis": "Trang nguồn là cẩm nang hướng dẫn do Cổng thông tin dịch vụ công thành phố Đà Nẵng (Tổng đài 1022) ban hành chính thức ngày 27/08/2026. Nội dung mang tính chất truyền thông giáo dục cộng đồng, phổ biến kiến thức an toàn số giúp người dân nhận diện các dấu hiệu giả mạo hình ảnh/âm thanh từ công nghệ AI Deepfake (khuôn mặt đơ, ánh sáng bất thường, chớp mắt thiếu tự nhiên) và quy tắc kiểm chứng thông tin qua kênh độc lập trước khi thực hiện giao dịch tài chính. Rủi ro pháp lý và vận hành phát sinh nếu người dùng ngộ nhận thẻ này là cổng tiếp nhận tố giác tội phạm, cam kết lấy lại tiền bị lừa, xác minh nạn nhân hoặc dịch vụ an ninh mạng có phí.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Bộ phận Tuân thủ và Đảm bảo chất lượng xác lập phân loại và rào chắn an toàn số: (1) Phân loại nghiệp vụ: Bắt buộc phân loại là 'TÀI LIỆU TUYÊN TRUYỀN NÂNG CAO NHẬN THỨC CỘNG ĐỒNG' (GENERAL PUBLIC AWARENESS ONLY); (2) Cấm xác minh nạn nhân & tiếp nhận hồ sơ: Cấm mọi biểu mẫu thu thập thông tin người bị hại hoặc khẳng định có chức năng thẩm định vụ việc lừa đảo; (3) Cấm cam kết kết quả tố giác: Cấm cam kết thời hạn giải quyết hoặc kết quả điều tra của cơ quan chức năng; (4) Cấm tuyên bố thu hồi tài chính: Cấm khẳng định hoặc cam kết khả năng thu hồi tài sản, hoàn tiền đã bị chiếm đoạt; (5) Cấm thu thập dữ liệu cá nhân (Zero PII): Tuyệt đối không lưu trữ, không yêu cầu số điện thoại, số tài khoản hay thông tin định danh của người dùng; (6) Cấm luồng tố giác bên thứ ba: Cấm dẫn luồng sang các tổ chức an ninh mạng tư nhân hoặc phần mềm diệt virus thương mại; (7) Khóa disclaimer bắt buộc: 'Tài liệu phổ biến kiến thức an toàn số cộng đồng của Tổng đài 1022 Đà Nẵng; không tiếp nhận xử lý khiếu nại hay bồi hoàn tài chính cá nhân. Khi phát hiện dấu hiệu lừa đảo chiếm đoạt tài sản, người dân cần liên hệ ngay cơ quan Công an có thẩm quyền.'; (8) Nút hành động: 'Xem cẩm nang an toàn số 1022' dẫn trực tiếp sang 1022.vn.",
+      "disclaimer_text": "Tài liệu phổ biến kiến thức an toàn số cộng đồng của Tổng đài 1022 Đà Nẵng; không tiếp nhận xử lý khiếu nại hay bồi hoàn tài chính cá nhân. Khi phát hiện dấu hiệu lừa đảo chiếm đoạt tài sản, người dân cần liên hệ ngay cơ quan Công an có thẩm quyền.",
+      "compliance_locks": {
+        "tag": "Kỹ năng số / An toàn thông tin",
+        "content_classification": "GENERAL_PUBLIC_AWARENESS_ONLY",
+        "victim_verification_prohibited": true,
+        "reporting_guarantees_prohibited": true,
+        "financial_recovery_claims_prohibited": true,
+        "personal_data_collection_prohibited": true,
+        "third_party_reporting_flows_prohibited": true,
+        "commercial_cybersecurity_upsell_prohibited": true,
+        "mandated_disclaimer_required": true
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B07_03": {
+      "candidate_id": "B07_03_TRA_CUU_MAY_KHU_RUNG_TIM_AED_CONG_CONG_1022",
+      "service_name": "Cẩm nang hướng dẫn tra cứu và tiếp cận máy khử rung tim tự động (AED) tại địa điểm công cộng",
+      "official_leaf_url": "https://1022.vn/%f0%9f%9a%a8-tinh-huong-khan-cap-tim-may-khu-rung-tim-tu-dong-aed-o-dau/",
+      "mandated_check": "treat AED information as emergency-health navigation, not medical instruction. Verify that the source is current and authoritative; define a mandatory emergency boundary which prohibits diagnosis, CPR/AED operating instructions, outcome guarantees, location accuracy guarantees, patient intake, booking, commercial claims and tracking.",
+      "risk_analysis": "Trang nguồn là bài hướng dẫn tra cứu thực tế trên cổng 1022.vn ngày 17/07/2026, cung cấp thông tin về vị trí lắp đặt máy sốc tim/khử rung tim tự động ngoài lồng ngực (AED) tại các khu vực công cộng Đà Nẵng (sân bay, nhà ga, trung tâm hành chính, bãi biển du lịch). Rủi ro y khoa và an toàn sinh mạng đặc biệt nghiêm trọng nếu nội dung bị diễn giải thành hướng dẫn thủ thuật cấp cứu thay thế y bác sĩ, cam kết cứu sống 100%, hoặc bảo đảm thiết bị luôn sẵn sàng tại tọa độ thực tế (khi máy đang bảo trì, cất trong phòng khóa ngoài giờ, hoặc bị di dời).",
+      "risk_level": "MEDIUM_MANAGEABLE_VIA_STRICT_EMERGENCY_BOUNDARY",
+      "resolution_in_writing": "RESOLVED IN WRITING. Bộ phận Tuân thủ và Đảm bảo chất lượng xác lập ranh giới y tế khẩn cấp tối cao (Mandatory Emergency Boundary): (1) Phân loại nghiệp vụ: Bắt buộc phân loại là 'ĐIỀU HƯỚNG CẤP CỨU CÔNG CỘNG' (EMERGENCY-HEALTH NAVIGATION), cấm tuyệt đối coi là cẩm nang phác đồ y tế (NOT MEDICAL INSTRUCTION); (2) Xác minh tính thẩm quyền: Nguồn phát hành là Cổng Thông tin Dịch vụ công TP Đà Nẵng (Tổng đài 1022) phối hợp với các cơ quan quản lý không gian công cộng, đảm bảo độ tin cậy cơ sở hạ tầng; (3) Cấm chẩn đoán & phác đồ lâm sàng: Cấm chẩn đoán ngừng tim hoặc hướng dẫn phác đồ điều trị bệnh lý tim mạch; (4) Cấm hướng dẫn thao tác CPR/AED trên thẻ: Không đưa vào thẻ các bước thao tác hồi sinh tim phổi hoặc hướng dẫn sốc điện lâm sàng thay thế đào tạo chuyên môn; (5) Cấm cam kết tỷ lệ sống sót: Cấm khẳng định nạn nhân chắc chắn qua khỏi hoặc không có di chứng; (6) Cấm bảo đảm độ chính xác vị trí thời gian thực: Cấm cam kết thiết bị 100% sẵn sàng tại chỗ trong mọi thời điểm; (7) Cấm tiếp nhận bệnh nhân & đặt hẹn y tế: Cấm mọi luồng intake bệnh nhân, cấm tiếp nhận ca cấp cứu trực tuyến; (8) Rào chắn thương mại: Cấm quảng cáo bán/thuê máy AED, cấm tiếp thị khóa học sơ cấp cứu thu phí, cấm affiliate/tracking; (9) Ranh giới khẩn cấp bắt buộc (Mandatory Emergency Disclaimer): 'Thông tin hỗ trợ tra cứu địa điểm trang bị máy khử rung tim tự động (AED) nơi công cộng của Cổng 1022 Đà Nẵng; không mang tính chất hướng dẫn y khoa hay phác đồ cấp cứu chuyên sâu. Trong mọi tình huống khẩn cấp, người dân phải gọi ngay cấp cứu y tế 115 và nhờ sự hỗ trợ của nhân viên cứu hộ tại chỗ.'; (10) Nút hành động: 'Tra cứu vị trí máy AED công cộng' dẫn trực tiếp sang 1022.vn.",
+      "disclaimer_text": "Thông tin hỗ trợ tra cứu địa điểm trang bị máy khử rung tim tự động (AED) nơi công cộng của Cổng 1022 Đà Nẵng; không mang tính chất hướng dẫn y khoa hay phác đồ cấp cứu chuyên sâu. Trong mọi tình huống khẩn cấp, người dân phải gọi ngay cấp cứu y tế 115 và nhờ sự hỗ trợ của nhân viên cứu hộ tại chỗ.",
+      "emergency_boundary_locks": {
+        "tag": "Tiện ích công cộng / Cấp cứu khẩn cấp",
+        "content_classification": "EMERGENCY_HEALTH_NAVIGATION__NOT_MEDICAL_INSTRUCTION",
+        "clinical_diagnosis_prohibited": true,
+        "cpr_aed_operating_instructions_prohibited": true,
+        "survival_outcome_guarantees_prohibited": true,
+        "realtime_location_accuracy_guarantees_prohibited": true,
+        "patient_intake_and_booking_prohibited": true,
+        "commercial_device_sales_and_course_upsell_prohibited": true,
+        "voucher_affiliate_tracking_prohibited": true,
+        "mandated_emergency_disclaimer_required": true
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    }
+  },
+  "council_recommendation": {
+    "eligible_candidates": [
+      "B07_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_03_09_14",
+      "B07_02_CAM_NANG_AN_TOAN_SO_DEEPFAKE_1022",
+      "B07_03_TRA_CUU_MAY_KHU_RUNG_TIM_AED_CONG_CONG_1022"
+    ],
+    "held_candidates": [],
+    "priority_ranking": [
+      {
+        "rank": 1,
+        "candidate_id": "B07_01_DANABUS_CHUYEN_DOI_XE_BUYT_DIEN_03_09_14",
+        "rationale": "Tính hiệu lực vận hành dài hạn được xác nhận theo Công văn 15563/SXD-VTATGT; đồng bộ hoàn hảo với mạng lưới giao thông xanh Danabus trên Staging (Card 2, Card 9, Card 10); các rào chắn cấm giá vé, cấm khẳng định lịch trình và tần suất đã được định nghĩa đầy đủ."
+      },
+      {
+        "rank": 2,
+        "candidate_id": "B07_02_CAM_NANG_AN_TOAN_SO_DEEPFAKE_1022",
+        "rationale": "Giá trị nâng cao nhận thức an toàn số công dân trước tội phạm công nghệ cao AI Deepfake từ Tổng đài 1022 Đà Nẵng; đã khóa chặt phân loại 'general public awareness only', cấm xác minh nạn nhân, cấm cam kết bồi hoàn tài chính và cấm thu thập dữ liệu cá nhân."
+      },
+      {
+        "rank": 3,
+        "candidate_id": "B07_03_TRA_CUU_MAY_KHU_RUNG_TIM_AED_CONG_CONG_1022",
+        "rationale": "Tiện ích điều hướng cấp cứu cộng đồng đặc thù giúp định vị máy sốc tim công cộng; ranh giới y tế khẩn cấp đã được thiết lập nghiêm ngặt: cấm hướng dẫn thao tác cấp cứu lâm sàng, cấm cam kết cứu sống hoặc vị trí tuyệt đối, bắt buộc điều hướng gọi cấp cứu 115."
+      }
+    ],
+    "recommended_action": "Trình toàn bộ văn bản phân loại rủi ro lên CEO và Hội đồng Điều hành; đề xuất cấp scope one-shot theo thứ tự ưu tiên B07_01 trước để tiếp tục mở rộng trục giao thông xanh công ích, sau đó tiến hành B07_02 để bổ sung chiều an toàn số công dân."
+  }
+}

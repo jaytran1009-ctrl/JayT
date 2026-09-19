@@ -1,0 +1,1540 @@
+<!DOCTYPE html><html lang="vi" cversion="1.0.40"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <!-- Standard meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0;">
+    <meta name="description" content="Tìm vé tàu, đặt vé tàu trực tuyến, mua vé tàu trực tuyến, tra cứu thông tin hành trình về giờ tàu và giá vé, tra cứu lại thông tin vé đã đặt">
+    <meta name="author" content="Tập đoàn Đường sắt Quốc gia Việt Nam">
+    <!--<script type="text/javascript">
+        document.cookie = "t=c";
+        if (0 != (document.cookie ? 1 : 0)) {
+            var a; a: { if (document.cookie) try { var b = /CheckBrowser=(1|0)/i; if (null != b.exec(document.cookie)) { a = b.exec(document.cookie)[0].split("=")[1]; break a } } catch (c) { } a = "" } if ("" == a) {
+                var d; a: { try { var e = window.navigator.userAgent, f = { a: /MSIE \d+./i }, g; for (g in f) if (null != f[g].exec(e)) { var h = f[g].exec(e)[0]; if ("ie" == g && 9 > h.split(" ")[1].split(".")[0]) { d = "true"; break a } } } catch (k) { } d = "false" } "false" == d ? document.cookie = "CheckBrowser=1" : (document.cookie = "CheckBrowser=0", document.location =
+                "nosupport.html")
+            } else 0 == a && (document.location = "nosupport.html")
+        };
+    </script>-->
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Site title -->
+    <title>Tập đoàn Đường sắt Quốc gia Việt Nam - Bán vé tàu trực tuyến</title>
+    <!--<script>
+        if (window.location.protocol != "https:")
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>-->
+    <!-- compiled CSS -->
+    <link rel="stylesheet" media="screen and (min-width: 912px)" href="/css/bootstrap-cerulean.min.css">
+    <link rel="stylesheet" type="text/css" href="content/ETicket-1.0.40.css">
+    <link rel="stylesheet" media="screen and (max-width: 911px)" href="/css/bootstrap.min.css">
+    <!--<link rel='stylesheet' media='screen and (max-width: 911px)' href="/content/site-mobile.css" />-->
+    <style>
+        .cheap-ticket-new-badge {
+            display: inline-block;
+            margin-left: 4px;
+            padding: 1px 4px;
+            border-radius: 3px;
+            background: #e53935;
+            color: #fff;
+            font-size: 8px;
+            line-height: 1.2;
+            position: relative;
+            top: -5px;
+        }
+
+        @media (min-width: 1286px) {
+            .adv-left {
+                float: left;
+                display: block;
+                position: fixed;
+                top: 146px;
+                left: calc(50% - 629px);
+                left: -webkit-calccalc(50% - 629px);
+                left: -moz-calc(50% - 629px);
+            }
+            .adv-right {
+                float: right;
+                display: block;
+                position: fixed;
+                top: 146px;
+                right: calc(50% - 629px);
+                right: -webkit-calccalc(50% - 629px);
+                right: -moz-calc(50% - 629px);
+            }
+        }
+
+        @media (max-width: 1286px) {
+            .adv-left {
+                display: none;
+            }
+            .adv-right {
+                display: none;
+            }
+        }
+    </style>
+    <script id="CakeAIChatbotApp" src="https://chatbot.84soft.vn/index.min.js" async="" crossorigin="anonymous"></script><script type="text/javascript">
+
+        var abp = abp || {};
+        abp.appPath = '/';
+    </script>
+    <!-- Google Tag Manager -->
+    <!--
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M5KLS6');</script>
+    -->
+    <!-- End Google Tag Manager -->
+   
+    <style>
+        .navbar-toggle {
+            margin-right: 28px;
+        }
+
+        .navbar {
+            margin-bottom: 5px;
+            margin: -0.5px -15px;
+        }
+
+        .navbar-brand {
+            padding: 15px 30px;
+        }
+
+        .navbar-nav > li > a {
+            padding-left: 30px;
+            color: white;
+        }
+
+        .navbar-default .navbar-brand {
+            color: white;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #f1f1f1;
+            transition: 0.5s;
+        }
+
+        .navbar-default .navbar-nav > li:hover {
+            background-color: #1995dc;
+        }
+
+        .navbar-nav {
+            margin: 0.5px -15px;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #f1f1f1;
+        }
+
+        .cart-item {
+            position: absolute;
+            right: 13px;
+            top: 30px;
+            background: #f89406;
+            color: #ffffff;
+            padding: 2px 5px;
+            display: inline-block;
+            border-radius: 16px;
+            font-size: 9px;
+            z-index: 1000;
+        }
+
+        .fa {
+            display: inline-block;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        .visible-xs {
+            display: block !important;
+        }
+    @-webkit-keyframes marqueeAnimation-3085085  { 100%  {margin-left:-0px}}</style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <!--<noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5KLS6"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>-->
+    <!-- End Google Tag Manager (noscript) -->
+    <div ng-app="app" class="super-container ng-scope">
+        <div id="menu-fixed">
+            <div class="visible-print">
+                <h3 style="border-bottom: solid 1px #ccc;padding-bottom: 6px;margin-bottom: -20px;">Tập đoàn Đường sắt Quốc gia Việt Nam</h3>
+            </div>
+            <div class="et-banner hidden-print">
+                <div class="container et-banner" style="max-width:1024px;">
+                    <div class="pull-left banner-logo">
+                        <div class="pull-left banner-logo"><img src="/images/LOGO_n.png"></div>
+                        <div class="pull-left" id="bannerDate">Thứ năm, 27/08/2026</div>
+                    </div>
+                    <div class="pull-right banner-language">
+                        <div class="text-right" ng-show="!bannerTet">
+                            <!--<a href="javascript:;" translation-lang="en"><img src="/images/en-icon.png" width="20" height="20" /></a>
+                            <a href="javascript:;" translation-lang="vi"><img src="/images/vn-icon.gif" width="20" height="16" /></a>-->
+                        </div>
+                        <div class="text-right banner-logo-2" style="padding-top: 20px;display:none;"><img src="/images/fpt-logo2.png" width="75" height="48"></div>
+                        <div class="text-right ticket-cart-number" style="padding-top: 6px; display:none;">
+                            <div et-ticket-cart-number="" class="ng-isolate-scope">
+<div class="visible-xs">
+    <a analytics-on="click" analytics-event="Checkout" href="" ng-click="pocketDetail($event)" id="btnCheckOut" target="_blank" class="btn">
+        <span class="cart-item ng-binding">0</span>
+        <img src="../../images/Shopping-Cart-03.png" style="font-size:20px;z-index: 1; width:25px;">
+    </a>
+</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ngInclude: 'app/tet/tet.html' --><div class="container et-main-content ng-scope ng-hide ng-animate" ng-show="bannerTet" ng-include="'app/tet/tet.html'"><div class="shuffle-animation col-md-12 ng-scope">
+    <h3 class="text-center" style="margin: 20px; font-size: 32px;color: #d64e00; font-family: 'Times New Roman';" id="tet-text">
+        Đường sắt Việt Nam sẽ chính thức mở bán vé tàu Tết Đinh Dậu 2017<br>
+        vào lúc 08:00 ngày 1 tháng 10 năm 2017
+    </h3>
+    <h3 class="text-center" style="margin: 20px; font-size: 18px;color: #0C4DA2;" id="tet-remain">Hệ thống sẽ mở bán trong:</h3>
+    <div style="padding-left: 226px;">
+        <div id="tet-clockdiv">
+            <div>
+                <span class="tet-days">00</span>
+                <div class="tet-smalltext">Ngày</div>
+            </div>
+            <div>
+                <span class="tet-hours">00</span>
+                <div class="tet-smalltext">Giờ</div>
+            </div>
+            <div>
+                <span class="tet-minutes">00</span>
+                <div class="tet-smalltext">Phút</div>
+            </div>
+            <div>
+                <span class="tet-seconds">00</span>
+                <div class="tet-smalltext">Giây</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center" style="padding: 8px;">
+        <!--<img src="/images/banner-tet-2018.jpg" alt="banner-tet-2017.jpg" width="510" />-->
+    </div>
+</div>
+<div class="et-col-md-12 et-footer hidden-print ng-scope">
+
+    <div class="row et-footer-logo-group">
+
+        <div class="et-col-md-12 et-footer-logo">
+            <div class="et-col-md-12 text-center" style="font-size: 10px; color: #999;">
+                Tổng công ty Đường  sắt Việt Nam. Số 118 Lê Duẩn, Hoàn Kiếm, Hà Nội. Điện thoại: 19006469. Email: dsvn@vr.com.vn
+                <br>
+
+                Giấy chứng nhận ĐKKD số 113642 theo QĐ thành lập số 973/QĐ-TTg ngày 25/06/2010 của Thủ tướng Chính phủ.
+                <br>
+
+                Mã số doanh nghiệp: 0100105052, đăng ký lần đầu ngày 26/07/2010, đăng ký thay đổi lần 4 ngày 27/06/2014 tại Sở KHĐT Thành phố Hà Nội.
+            </div>
+        </div>
+
+        <div class="et-col-md-12 text-center" style="font-size: 10px; color: #999;">
+            <img src="/images/fptlogo.png" width="28" height="17">
+            Copyright by FPT Technology Solutions
+        </div>
+    </div>
+</div></div>
+        <div class="navbar-default bg-primary ng-scope" role="navigation" ng-controller="app.controllers.layout.layout" ng-show="!bannerTet" style="margin-top:10PX;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-expanded="false" id="buton-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a>-->
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" id="nav">
+                        <!--<ul class="nav navbar-nav" ng-if="showMenu()" ng-show="showMenu()">-->
+                        <!-- ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-image-menu" href="#/">
+                                <!-- ngIf: route.config.menuImage != undefined --><span class="glyphicon glyphicon-home ng-scope" ng-if="route.config.menuImage != undefined"></span><!-- end ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/timve" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/timve">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">TÌM VÉ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="https://giavere.dsvn.vn/" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="_blank_" class="nav-menu et-text-menu" href="https://giavere.dsvn.vn/">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">TÌM GIÁ VÉ RẺ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' --><span class="cheap-ticket-new-badge ng-scope" ng-if="route.config.menuItem == 'cheapPrice'" aria-label="New">NEW</span><!-- end ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/thongtingiaodich" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/thongtingiaodich">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">THÔNG TIN ĐẶT CHỖ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/trave" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/trave">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">TRẢ/ĐỔI VÉ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/kiemtrave" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/kiemtrave">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">KIỂM TRA VÉ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="https://k.vnticketonline.vn/#/thongtinhanhtrinh/gadi" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="_blank_" class="nav-menu et-text-menu" href="https://k.vnticketonline.vn/#/thongtinhanhtrinh/gadi">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">GIỜ TÀU - GIÁ VÉ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="https://cophanvantaiduongsat.vn/category/tin-tuc/tin-khuyen-mai" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="_blank_" class="nav-menu et-text-menu" href="https://cophanvantaiduongsat.vn/category/tin-tuc/tin-khuyen-mai">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">KHUYẾN MẠI</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/quydinhmuave" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/quydinhmuave">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">CÁC QUY ĐỊNH</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu --><li ng-repeat="route in routes | filter:true:route.config.showInMenu" ng-click="changeMenuItem(route.config)" class="ng-scope">
+                            <a ng-href="#/lienhe" ng-class="{'et-text-menu': !route.config.menuImage, 'et-image-menu': route.config.menuImage}" target="" class="nav-menu et-text-menu" href="#/lienhe">
+                                <!-- ngIf: route.config.menuImage != undefined -->
+                                <!-- ngIf: route.config.menuImage == undefined --><span ng-if="route.config.menuImage == undefined" class="ng-binding ng-scope">LIÊN HỆ</span><!-- end ngIf: route.config.menuImage == undefined -->
+                                <!-- ngIf: route.config.menuItem == 'cheapPrice' -->
+                            </a>
+                        </li><!-- end ngRepeat: route in routes | filter:true:route.config.showInMenu -->
+                        <!--<li id="language"><a href='javascript:;' translation-lang='en'>ENGLISH &nbsp;<img src='/images/en-icon.png' width='20' height='20' /></a>
+                        </li>-->
+                        <li>
+                            <a href="javascript:;" style="padding: 4px 9px !important; display: none;" class="nav-menu et-text-menu" translation-lang="vi" ng-style="{'display': language=='vi'?'none':'block'}">TIẾNG VIỆT &nbsp;<img src="/images/vn-icon.gif" width="20" height="16"></a>
+                            <a href="javascript:;" style="padding: 4px 9px !important; display: block;" class="nav-menu et-text-menu" translation-lang="en" ng-style="{'display': language=='en'?'none':'block'}">ENGLISH &nbsp;<img src="/images/en-icon.png" width="20" height="20"></a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <div class="adv-left">
+            <a target="_blank" href="http://www.vr.com.vn/cam-nang-di-tau/khuyen-cao-khach-hang-chu-y-khi-mua-ve-truc-tuyen.html">
+                <img src="images/dsvn1.jpg">
+            </a>
+        </div>
+        <div class="text-center text-primary ng-binding ng-hide" ng-show="!loadedSettings" ng-bind-html="'Error_SystemLoading'|translate">Hệ thống đang tải dữ liệu, vui lòng đợi trong giây lát...</div>
+        <div class="container et-main-content" ng-show="!bannerTet">
+            <div class="marquee"><div style="width: 100000px; margin-left: 992px; animation: 15s linear 1s infinite normal none running marqueeAnimation-3085085;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;"></div></div></div>
+            <!-- ngView:  --><div data-ng-view="" class="shuffle-animation ng-scope ng-animate ng-enter" style="padding-right: 0px; padding-left: 0px; transition-property: none;"><style class="ng-scope">.parent {
+    height: 50%; /* Chiều cao cố định của div cha */
+    /* border: 1px solid #000; Chỉ để dễ thấy div cha */
+
+}
+
+.child {
+
+    max-height: 100%; /* Giới hạn chiều cao của div con trong div cha */
+}</style><div ng-controller="searchController" ng-keypress="onEnter($event)" id="searchScreen" class="row ng-scope"><div class="col-xs-12 col-sm-4 et-col-md-3"><div class="et-col-md-12 et-widget" style="margin-bottom: 5px;padding-bottom: 0px"><div class="row et-widget-header"><img src="/images/widgetIcon.png"><span><strong class="ng-binding">Thông tin hành trình</strong></span></div><div class="form-group" ng-class="{'has-error': gaDiError}"><h6 class="ng-binding">Ga đi</h6><span class="control-label ng-binding ng-hide" ng-show="gaDiError">Ga đi không hợp lệ</span> <input type="text" class="form-control input-sm ng-pristine ng-valid" ng-model="searchData.tenGaDi" ng-change="verifyGa(searchData.tenGaDi, true)" autocomplete="off" typeahead-on-select="setMaGaDi($item)" typeahead="ga.TenGa for ga in searchData.gas | filter:$viewValue | limitTo:10" placeholder="Ga đi" id="gaDi" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-013-9702"><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;;display: block;" role="listbox" aria-hidden="true" typeahead-popup="" id="typeahead-013-9702" matches="matches" active="activeIdx" select="select(activeIdx)" query="query" position="position">
+    <!-- ngRepeat: match in matches track by $index -->
+</ul></div><div class="form-group" ng-class="{'has-error': gaDenError}"><h6 class="ng-binding">Ga đến</h6><span class="control-label ng-binding ng-hide" ng-show="gaDenError">Ga đến không hợp lệ</span> <input type="text" class="form-control input-sm ng-pristine ng-valid" ng-model="searchData.tenGaDen" ng-change="verifyGa(searchData.tenGaDen, false)" autocomplete="off" typeahead-on-select="setMaGaDen($item)" typeahead="ga.TenGa for ga in searchData.gas | filter:$viewValue | limitTo:10" placeholder="Ga đến" id="gaDen" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-014-2513"><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;;display: block;" role="listbox" aria-hidden="true" typeahead-popup="" id="typeahead-014-2513" matches="matches" active="activeIdx" select="select(activeIdx)" query="query" position="position">
+    <!-- ngRepeat: match in matches track by $index -->
+</ul></div><div class="et-direct-block"><input ng-model="searchData.isOneWay" type="radio" value="0" name="oneWay" class="ng-pristine ng-valid"><span class="ng-binding">Một chiều</span> <input ng-model="searchData.isOneWay" type="radio" name="oneWay" value="1" ng-checked="searchData.isOneWay == 1" class="ng-pristine ng-valid"><span class="ng-binding">Khứ hồi</span></div><div class="form-group"><h6 class="ng-binding">Ngày đi</h6><span class="control-label ng-binding ng-hide" ng-show="ngayDiError" ng-class="{'et-error-label': ngayDiError}">Ngày đi không hợp lệ</span><div class="input-group input-cal-picker"><input type="text" class="form-control input-sm ng-isolate-scope ng-pristine ng-invalid ng-invalid-required ng-valid-date" show-weeks="false" show-button-bar="false" datepicker-popup="dd/MM/yyyy" ng-model="searchData.ngayDi" is-open="ngayDi_opened" min-date="minDate" datepicker-options="dateOptions" ng-required="true" ng-click="open_ngayDi($event)" ng-change="setNgayDi()" placeholder="Ngày đi" id="ngayDi" ng-readonly="true" ng-class="{'et-error-block': ngayDiError}" readonly="readonly" required="required"><ul class="dropdown-menu ng-pristine ng-valid ng-valid-date-disabled" style="padding-left: 2px; display: none;" ng-style="{display: (isOpen &amp;&amp; 'block') || 'none', top: position.top+'px', left: position.left+'px'}" ng-keydown="keydown($event)" datepicker-popup-wrap="" ng-model="date" ng-change="dateSelection()">
+	<li ng-transclude=""><div ng-switch="datepickerMode" role="application" ng-keydown="keydown($event)" datepicker="" format-year="yy" starting-day="1" min-date="watchData.minDate" class="ng-isolate-scope">
+  <!-- ngSwitchWhen: day --><table role="grid" aria-labelledby="datepicker-01A-3709-title" aria-activedescendant="datepicker-01A-3709-31" ng-switch-when="day" tabindex="0">
+  <thead>
+    <tr>
+      <th><button type="button" class="btn btn-default btn-sm pull-left" ng-click="move(-1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-left"></i></button></th>
+      <th colspan="6"><button id="datepicker-01A-3709-title" role="heading" aria-live="assertive" aria-atomic="true" type="button" class="btn btn-default btn-sm" ng-click="toggleMode()" tabindex="-1" style="width:100%;"><strong class="ng-binding">Tháng 8 năm 2026</strong></button></th>
+      <th><button type="button" class="btn btn-default btn-sm pull-right" ng-click="move(1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-right"></i></button></th>
+    </tr>
+    <tr>
+      <th ng-show="showWeeks" class="text-center"></th>
+      <!-- ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ hai" class="ng-binding">T2</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ ba" class="ng-binding">T3</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ tư" class="ng-binding">T4</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ năm" class="ng-binding">T5</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ sáu" class="ng-binding">T6</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ bảy" class="ng-binding">T7</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Chủ nhật" class="ng-binding">CN</small></th><!-- end ngRepeat: label in labels track by $index -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">31</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-0" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">27</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">14/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-1" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">28</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">15</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-2" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">29</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">16</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-3" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">30</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">17</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-4" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">31</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">18</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-5" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">01</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">19</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-6" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">02</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">20</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">32</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-7" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">03</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">21</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-8" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">04</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">22</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-9" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">05</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">23</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-10" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">06</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">24</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-11" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">07</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">25</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-12" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">08</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">26/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">26/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">26</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-13" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">09</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">27/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">27/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">27</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">33</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-14" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">10</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">28/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">28/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">28</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-15" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">11</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">29/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">29/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">29</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-16" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">12</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">30/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">30/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">30</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-17" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">13</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">1/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">1/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">1</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-18" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">14</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">2/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">2/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">2</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-19" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">15</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">3/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">3/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">3</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-20" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">16</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">4/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">4/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">4</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">34</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-21" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">17</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">5/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">5/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">5</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-22" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">18</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">6/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">6/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">6</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-23" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">19</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">7/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">7/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">7</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-24" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">20</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">8/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">8/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">8</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-25" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">21</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">9/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">9/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">9</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-26" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">22</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">10/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">10/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">10</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-27" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">23</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">11/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">11/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">11</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">35</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-28" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">24</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">12/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">12/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">12</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-29" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">25</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">13/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">13/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">13</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-30" aria-disabled="true">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">26</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">14</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-31" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm active" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-info">27</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">15</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-32" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">28</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">16</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-33" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">29</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">17</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-34" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">30</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">18</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">36</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-35" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">31</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">19</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-36" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">01</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">20</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-37" aria-disabled="false">
+        <button type="button" style="font-size: 13px; width: 38px; padding: 0px 10px 10px 0px; position: relative; border-color: rgb(248, 163, 131);" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">02</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">21</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-38" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">03</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">22</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-39" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">04</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">23</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-40" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">05</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">24</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01A-3709-41" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">06</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">25</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index -->
+  </tbody>
+</table>
+  <!-- ngSwitchWhen: month -->
+  <!-- ngSwitchWhen: year -->
+</div></li>
+	<!-- ngIf: showButtonBar -->
+</ul> <span class="input-group-btn"><button type="button" class="btn btn-primary btn-sm" ng-click="open_ngayDi($event)" style="padding: 3px 8px"><i class="glyphicon glyphicon-calendar" style="font-size: 18px"></i></button></span></div></div><div class="form-group"><h6 class="ng-binding">Ngày về</h6><span class="control-label ng-binding ng-hide" ng-show="ngayVeError" ng-class="{'et-error-label': ngayDenError}">Ngày về không hợp lệ</span><div class="input-group input-cal-picker"><input type="text" class="form-control input-sm ng-isolate-scope ng-pristine ng-invalid ng-invalid-required ng-valid-date" show-weeks="false" show-button-bar="false" datepicker-popup="dd/MM/yyyy" ng-model="searchData.ngayVe" is-open="ngayVe_opened" min-date="searchData.ngayDi" datepicker-options="dateOptions" ng-required="true" ng-click="open_ngayVe($event)" ng-disabled="searchData.isOneWay == 0" placeholder="Ngày về" id="ngayDen" ng-readonly="true" ng-class="{'et-error-block': ngayDenError}" required="required" readonly="readonly" disabled="disabled"><ul class="dropdown-menu ng-pristine ng-valid ng-valid-date-disabled" style="padding-left: 2px; display: none;" ng-style="{display: (isOpen &amp;&amp; 'block') || 'none', top: position.top+'px', left: position.left+'px'}" ng-keydown="keydown($event)" datepicker-popup-wrap="" ng-model="date" ng-change="dateSelection()">
+	<li ng-transclude=""><div ng-switch="datepickerMode" role="application" ng-keydown="keydown($event)" datepicker="" format-year="yy" starting-day="1" min-date="watchData.minDate" class="ng-isolate-scope">
+  <!-- ngSwitchWhen: day --><table role="grid" aria-labelledby="datepicker-01C-3198-title" aria-activedescendant="datepicker-01C-3198-31" ng-switch-when="day" tabindex="0">
+  <thead>
+    <tr>
+      <th><button type="button" class="btn btn-default btn-sm pull-left" ng-click="move(-1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-left"></i></button></th>
+      <th colspan="6"><button id="datepicker-01C-3198-title" role="heading" aria-live="assertive" aria-atomic="true" type="button" class="btn btn-default btn-sm" ng-click="toggleMode()" tabindex="-1" style="width:100%;"><strong class="ng-binding">Tháng 8 năm 2026</strong></button></th>
+      <th><button type="button" class="btn btn-default btn-sm pull-right" ng-click="move(1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-right"></i></button></th>
+    </tr>
+    <tr>
+      <th ng-show="showWeeks" class="text-center"></th>
+      <!-- ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ hai" class="ng-binding">T2</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ ba" class="ng-binding">T3</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ tư" class="ng-binding">T4</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ năm" class="ng-binding">T5</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ sáu" class="ng-binding">T6</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Thứ bảy" class="ng-binding">T7</small></th><!-- end ngRepeat: label in labels track by $index --><th ng-repeat="label in labels track by $index" class="text-center ng-scope"><small aria-label="Chủ nhật" class="ng-binding">CN</small></th><!-- end ngRepeat: label in labels track by $index -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">31</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-0" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">27</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">14/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-1" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">28</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">15</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-2" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">29</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">16</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-3" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">30</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">17</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-4" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">31</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">18</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-5" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">01</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">19</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-6" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">02</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">20</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">32</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-7" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">03</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">21</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-8" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">04</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">22</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-9" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">05</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">23</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-10" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">06</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">24</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-11" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">07</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">25</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-12" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">08</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">26/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">26/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">26</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-13" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">09</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">27/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">27/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">27</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">33</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-14" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">10</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">28/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">28/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">28</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-15" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">11</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">29/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">29/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">29</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-16" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">12</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">30/6*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">30/6</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">30</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-17" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">13</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">1/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">1/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">1</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-18" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">14</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">2/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">2/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">2</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-19" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">15</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">3/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">3/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">3</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-20" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">16</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">4/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">4/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">4</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">34</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-21" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">17</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">5/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">5/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">5</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-22" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">18</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">6/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">6/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">6</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-23" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">19</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">7/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">7/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">7</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-24" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">20</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">8/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">8/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">8</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-25" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">21</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">9/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">9/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">9</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-26" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">22</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">10/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">10/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">10</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-27" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">23</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">11/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">11/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">11</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">35</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-28" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">24</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">12/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">12/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">12</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-29" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">25</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">13/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">13/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">13</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-30" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">26</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">14/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">14</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-31" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm active" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-info">27</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">15/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">15</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-32" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">28</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">16/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">16</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-33" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">29</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">17/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">17</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-34" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">30</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">18/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">18</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <td ng-show="showWeeks" class="text-center h6"><em class="ng-binding">36</em></td>
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-35" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding">31</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">19/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">19</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-36" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">01</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">20/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">20</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-37" aria-disabled="false">
+        <button type="button" style="font-size: 13px; width: 38px; padding: 0px 10px 10px 0px; position: relative; border-color: rgb(248, 163, 131);" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">02</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">21/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">21</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-38" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">03</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">22/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">22</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-39" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">04</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">23/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">23</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-40" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">05</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">24/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">24</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-01C-3198-41" aria-disabled="false">
+        <button type="button" style="font-size:13px;width:38px;height30px;padding:0px 10px 10px 0px;position:relative;" ng-style="{'border-color':dt.isTet?'red':((dt.isLeAL||dt.isLeDL)?'#f8a383':undefined)}" class="btn btn-default btn-sm" ng-class="{'btn-info': dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1">
+          <span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}" class="ng-binding text-muted">06</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/7*</span>
+          <span ng-show="(dt.isTet||dt.isLeAL||dt.lunar.day==1||($parent.$index==0&amp;&amp;$index==0))&amp;&amp;!dt.lunar.leap" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding ng-hide">25/7</span>
+          <span ng-show="!dt.isTet&amp;&amp;!dt.isLeAL&amp;&amp;dt.lunar.day!=1&amp;&amp;($parent.$index!=0||$index!=0)" style="position:absolute;bottom:0px;right:0px;font-size:9px;color:#70a0f5;" class="ng-binding">25</span>
+        </button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index -->
+  </tbody>
+</table>
+  <!-- ngSwitchWhen: month -->
+  <!-- ngSwitchWhen: year -->
+</div></li>
+	<!-- ngIf: showButtonBar -->
+</ul> <span class="input-group-btn"><button type="button" class="btn btn-primary btn-sm" ng-click="open_ngayVe($event)" ng-disabled="searchData.isOneWay == 0" style="padding: 3px 8px" disabled="disabled"><i class="glyphicon glyphicon-calendar" style="font-size: 18px"></i></button></span></div></div><canvas id="searchJourneyBtn" width="192" height="42"></canvas></div><div class="hidden-xs" style="padding-bottom: 5px;clear:both"><div ng-hide="searchData.position3" class="text-center et-widget text-info ng-hide" style="margin: 5px -10px"><strong style="font-size:13px" ng-bind-html="'PSearch_tauHueDaNang'|translate" class="ng-binding">Khai trương tàu du lịch<br> kết nối di sản Huế - Đà Năng</strong></div><div class="text-center et-widget ng-hide" ng-hide="searchData.position3"><a href="https://ketnoidisan.dsvn.vn" target="_blank"><img src="/images/tau-du-lich-hue-da-nang.jpg" style="width:194px;margin-top:6px;border:solid 1px #929292"></a></div><div ng-show="searchData.position3" et-slide-header3="" class="ng-isolate-scope"><style>.bi {
+        background-color: skyblue;
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        min-height: 100px;
+    }</style><!-- ngRepeat: item in listSlider3 --></div></div><div class="et-col-md-12 et-widget" style="margin:0px; padding:0px;display:none"><img src="/images/banner-momo-vetau.jpg" style="width:100%"></div></div><div class="col-xs-12 col-sm-8 et-col-md-6"><div ng-show="!searchData.listBanner" style="text-align :center;height: 400px;width: 100%; margin-top: 10px" class=""><img src="/images/loading51.gif" style="height: 50px;width: 50px; margin-top: 180px" class="et-medium-loading-icon"></div><div et-slide-header1="" class="ng-isolate-scope"><style>.slider-div {
+        height: 400px;
+/*        margin: 10px;*/
+    }
+    .slider-div img {
+        height: 100px;
+        width: auto;
+    }</style><script type="text/javascript">jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+            //   {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+            //   {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+            //   {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+            //  {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+            //   {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
+            //   {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
+            //   {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
+            ];
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 5000,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };</script><style>/*jssor slider loading skin spin css*/
+    .jssorl-009-spin img {
+        animation-name: jssorl-009-spin;
+        animation-duration: 1.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes jssorl-009-spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /*jssor slider bullet skin 053 css*/
+    .jssorb053 .i {
+        position: absolute;
+        cursor: pointer;
+    }
+
+        .jssorb053 .i .b {
+            fill: #fff;
+            fill-opacity: 0.5;
+        }
+
+        .jssorb053 .i:hover .b {
+            fill-opacity: .7;
+        }
+
+    .jssorb053 .iav .b {
+        fill-opacity: 1;
+    }
+
+    .jssorb053 .i.idn {
+        opacity: .3;
+    }
+
+    /*jssor slider arrow skin 093 css*/
+    .jssora093 {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+    }
+
+        .jssora093 .c {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 400;
+            stroke-miterlimit: 10;
+        }
+
+        .jssora093 .a {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 400;
+            stroke-miterlimit: 10;
+        }
+
+        .jssora093:hover {
+            opacity: .8;
+        }
+
+        .jssora093.jssora093dn {
+            opacity: .6;
+        }
+
+        .jssora093.jssora093ds {
+            opacity: .3;
+            pointer-events: none;
+        }
+    .slide1 {
+        background-color: skyblue;
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        height:100%;
+    }</style><div ng-show="isViewImage" style="position:relative;margin:0 auto;top:0px;left:0px;width:100%;height:400px" class="ng-hide"><img class="img" style="margin-top: 10px;width:480px;height:392px" src="/images/banner-home.jpg"></div><div ng-show="listSlider1" id="jssor_1" style="position:relative;margin:0px;top:0px;left:0px;width:480px;height:402px;overflow:hidden;visibility:hidden" class="ng-hide"><div data-u="slides" style="cursor:default;position:relative;top:10px;left:0px;width:480px;height:392px;overflow:hidden"><!-- ngRepeat: item in listSlider1 track by $index --></div><div ng-hide="listSlider1.length === 1" data-u="navigator" class="jssorb053" style="position:absolute;bottom:20px;right:12px" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75"><div data-u="prototype" class="i" style="width:16px;height:30px"><svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%"><path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path></svg></div></div></div></div><div et-slide-header2="" style="margin-top: 10px" class="ng-isolate-scope"><style>.bi2 {
+        background-color: skyblue;
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        min-height: 100px;
+    }</style><!-- ngRepeat: item in listSlider2 --></div></div><div class="col-xs-12 col-sm-12 et-col-md-3"><div et-ticket-pocket="" class="list-ticket-deskhop ng-isolate-scope"><div class="col-md-12 et-widget" id="ticketPocket" style="padding-bottom: 8px"><div class="row et-widget-header"><img src="/images/widgetIcon.png"><span><strong class="ng-binding">Giỏ vé</strong></span></div><div class="row"><div class="col-md-12 text-center" ng-show="searchData.ves.chieuDi.length == 0 &amp;&amp; searchData.ves.chieuVe.length == 0"><h5 sstyle="margin-top: 4px;" class="ng-binding">Chưa có vé</h5></div><div class="col-md-12 text-center ng-hide" ng-show="searchData.ves.chieuDi.length &gt; 0 || searchData.ves.chieuVe.length &gt; 0"><h6 class="ng-binding">Chiều đi</h6></div><!-- ngRepeat: ve in searchData.ves.chieuDi --><div class="col-md-12 text-center ng-hide" ng-show="searchData.ves.chieuVe.length &gt; 0"><h6 class="ng-binding">Chiều về</h6></div><!-- ngRepeat: ve in searchData.ves.chieuVe --></div><div class="col-md-12 text-center ng-hide" style="margin-top: 6px" ng-show="searchData.ves.chieuDi.length &gt; 0 || searchData.ves.chieuVe.length &gt; 0"><a analytics-on="click" analytics-event="RemoveTicket" href="" ng-click="removeListTicket($event)" id="btnRemoveTicket" target="_blank" class="btn btn-sm et-btn ng-binding ng-hide" style="padding: 2px 4px;min-width: unset !important" ng-show="isChonChoTuDong()">Xóa vé</a> <a analytics-on="click" analytics-event="Checkout" href="" ng-click="pocketDetail($event)" id="btnCheckOut" target="_blank" class="btn btn-sm et-btn ng-binding" style="padding: 2px 4px;min-width: unset !important">Mua vé</a></div></div></div><div class="hidden-lg hidden-md hidden-sm" style="padding-bottom: 5px;clear:both"><div ng-hide="searchData.position3" class="text-center text-info et-widget ng-hide" style="margin: 5px -10px"><strong style="font-size:13px" ng-bind-html="'PSearch_tauHueDaNang'|translate" class="ng-binding">Khai trương tàu du lịch<br> kết nối di sản Huế - Đà Năng</strong></div><div class="text-center et-widget ng-hide" ng-hide="searchData.position3"><a href="https://ketnoidisan.dsvn.vn" target="_blank"><img src="/images/tau-du-lich-hue-da-nang.jpg" style="width:194px;margin-top:6px;border:solid 1px #929292"></a></div><div ng-show="searchData.position3" et-slide-header3="" class="ng-isolate-scope"><style>.bi {
+        background-color: skyblue;
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        min-height: 100px;
+    }</style><!-- ngRepeat: item in listSlider3 --></div></div><div et-social="" class="ng-isolate-scope"><div class="col-md-12 et-widget" style="padding-bottom: 5px;">
+    <div class="text-center text-info" style="margin-top: 5px; margin-bottom: 5px;" ng-show="!doneCount">
+        <strong style="font-size:13px;" class="ng-binding"><!--Kết nối với chúng tôi-->Kết nối với chúng tôi</strong>
+    </div>
+    <div class="text-center">
+        <a href="https://zalo.me/1400098068669393989" target="_blank"><img src="/images/zalo.jpg" style="width:32px; height:32px" ;=""></a>
+        <a href="https://www.facebook.com/vetauduongsat" target="_blank"><img src="/images/facebook.png" style="width:32px; height:32px" ;=""></a>
+        <a href="https://www.youtube.com/@vetauduongsat/" target="_blank"><img src="/images/icon-youtube.png" style="width:32px; height:32px" ;=""></a>
+        <a href="http://hoivien.dsvn.vn" target="_blank"><img src="/images/Member.png" style="width:32px; height:32px" ;=""></a>
+    </div>
+    <div class="text-center">
+        <a href="http://vr.com.vn" target="_blank"><img src="/images/banner-vr.com.vn.png" style="width:194px;height:80px;margin-top:6px;border:solid 1px #929292;"></a>
+    </div>
+</div>
+<div class="col-md-12 et-widget" style="padding-bottom: 5px;">
+    <div class="text-center text-info" style="margin-top: 5px; margin-bottom: 5px;" ng-show="!doneCount">
+        <strong style="font-size:13px;" class="ng-binding"><!--Kết nối với tổng đài Hà Nội-->Tổng đài Hà Nội</strong>
+    </div>
+    <div class="text-center">
+        <a href="https://www.facebook.com/congtyvantaiduongsathanoi" target="_blank"><img src="/images/icon-ksg-facebook.png" style="width:32px; height:32px" ;=""></a>
+        &nbsp; 
+        <a href="https://cophanvantaiduongsat.vn" target="_blank"><img src="/images/icon-ksg-website.png" style="width:32px; height:32px" ;=""></a>
+        &nbsp;
+        <a href="tel:19000109"><img src="/images/phone-hn.png" style="width:100px; height:32px" ;=""></a>
+    </div>
+</div>
+<div class="col-md-12 et-widget" style="padding-bottom: 5px;">
+    <div class="text-center text-info" style="margin-top: 5px; margin-bottom: 5px;" ng-show="!doneCount">
+        <strong style="font-size:13px;" class="ng-binding"><!--Kết nối với tổng đài Sài Gòn-->Tổng đài Sài Gòn</strong>
+    </div>
+    <div class="text-center">
+        <a href="https://www.facebook.com/cpvtdssg" target="_blank"><img src="/images/icon-ksg-facebook.png" style="width:32px; height:32px" ;=""></a>
+        &nbsp; 
+        <a href="https://cophanvantaiduongsat.vn" target="_blank"><img src="/images/icon-ksg-website.png" style="width:32px; height:32px" ;=""></a>
+        &nbsp;
+        <a href="tel:19001520"><img src="/images/phone-sg.png" style="width:100px; height:32px" ;=""></a>
+    </div>
+</div>
+</div><div et-hoadon="" class="ng-isolate-scope"><div class="col-md-12 et-widget" ng-show="!doneCount" style="padding-bottom: 4px;">
+    <div class="text-center text-info" style="margin-top: 5px; margin-bottom: 5px;">
+        <strong>Tra cứu hóa đơn</strong>
+    </div>
+    <div class="text-justify text-primary" style="margin-top: 5px; margin-bottom: 5px;">
+        Để tra cứu hóa đơn điện tử, quý khách hàng vui lòng <strong><a href="javascript:;" ng-click="viewPopupHoaDon()">bấm vào đây</a></strong>
+    </div>
+</div>
+<div class="col-md-12 et-widget" ng-show="!doneCount" style="padding-bottom: 4px;">
+    <div class="text-center text-info" style="margin-top: 5px; margin-bottom: 5px;">
+        <strong>Hành trình tàu thực tế</strong>
+    </div>
+    <div class="text-justify text-primary" style="margin-top: 5px; margin-bottom: 5px;">
+        <a href="https://zalo.me/s/3473456967665033237" target="_blank" title="Tra cứu thông tin hành trình thực tế đoàn tàu"><img src="/images/icon-time-table.png" style="width:100%;"></a>
+    </div>
+</div></div></div><div class="col-md-12 ng-isolate-scope" et-news=""><style>
+    .sales-infor {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    .item a:hover {
+        text-decoration: none;
+    }
+
+    .box-title {
+        border-bottom: 3px solid #359BED;
+        padding: 5px 0px;
+        display: inline-block;
+        color: #FFFFFF;
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 15px;
+        text-indent: 36px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .box-text {
+        background: url(../../images/category.png) no-repeat 10px center;
+        background-color: #359BED;
+        display: block;
+        margin-top: -8px;
+        width: 232px;
+        padding: 7px 0px;
+    }
+
+    h4 {
+        font-weight: 600;
+        font-family: initial;
+    }
+
+    .sale-content {
+        font-family: 'Times New Roman';
+        font-size: 17px;
+        border-radius: 10px;
+        background: #fff;
+        padding: 12px 0px 0px 0px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid #e4e4e4;
+        margin-left: -5px;
+        margin-right: -5px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .sale-content:hover p {
+        color: #ff6a00!important;
+    }
+
+</style>
+<div class="et-col-md-12 hidden-print ng-hide" style="margin-top: 15px;margin-bottom:15px;" ng-show="tinTucs.length&gt;0">
+    <div class="panel panel-warning" style="margin-bottom: -15px;margin-left:-15px; margin-right:-15px">
+        <div class="panel-heading">
+            <h3 class="panel-title ng-binding"><!--TIN TỨC & SỰ KIỆN--> TIN TỨC &amp; SỰ KIỆN</h3>
+        </div>
+        <div class="panel-body">
+            <div style="margin-bottom: 5px!important;">
+                <div class="row">
+                    <div class="sales-infor">
+
+                        <div class="clear"></div> <br>
+                        <!-- ngRepeat: item in tinTucs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div></div></div>
+            <div class="row hidden-print" style="padding-top: 15px; display: none;clear:both;">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>QUY ĐỊNH ĐỔI, TRẢ VÉ TẾT ẤT TỴ 2025</strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <p><strong>1. Thời gian cao điểm Tết: Mức khấu trừ đối với vé trả lại, đổi vé là 30% giá tiền in trên Thẻ lên tàu hỏa (vé).</strong></p>
+                            <p>- Từ ngày 21/01/2025 đến ngày 31/01/2025: đối với đoàn tàu số chẵn.</p>
+                            <p>- Từ ngày 01/02/2025 đến ngày 09/02/2025: đối với đoàn tàu số lẻ.</p>
+                            <p>- Từ ngày 23/01/2025 đến ngày 27/01/2025: đối với đoàn tàu số lẻ có ga đi là ga Hà Nội và có ga đến từ ga Phủ Lý đến ga Đồng Hới.</p>
+                            <p>- Từ ngày 31/01/2025 đến ngày 09/02/2025: đối với đoàn tàu số chẵn có ga đi từ ga Đồng Hới đến ga Phủ Lý và có ga đến là ga Hà Nội.</p>
+                            <p>(*) Thời gian đổi, trả vé</p>
+                            <p>- Hành khách đổi, trả vé cá nhân: chậm nhất trước giờ tàu chạy là 24 giờ.</p>
+                            <p>- Hành khách trả vé tập thể: chậm nhất trước giờ tàu chạy là 48 giờ.</p>
+
+                            <p><strong>2. Ngoài thời gian quy định tại điểm (1.) nêu trên, mức khấu trừ phí, thời gian đổi, trả vé thực hiện như sau:</strong></p>
+                            <p>- Đổi vé: Vé cá nhân đổi trước giờ tàu chạy 24 giờ trở lên, lệ phí là 20.000 đồng/vé; không áp dụng đổi vé đối với vé tập thể.</p>
+                            <p>- Trả vé:</p>
+                            <p>&nbsp; &nbsp;+ Vé cá nhân: Trả vé trước giờ tàu chạy từ 4 giờ đến dưới 24 giờ, lệ phí là 20% giá vé; từ 24 giờ trở lên lệ phí là 10% giá vé.</p>
+                            <p>&nbsp; &nbsp;+ Vé tập thể: Trả vé trước giờ tàu chạy từ 24 giờ đến dưới 72 giờ, lệ phí là 20% giá vé; từ 72 giờ trở lên lệ phí là 10% giá vé.</p>
+
+                            <p><strong>3. Hình thức trả vé.</strong></p>
+                            <p>- Khi hành khách mua vé và thanh toán online qua website bán vé của Ngành Đường sắt, app bán vé hoặc các ứng dụng mua vé tàu hỏa của các đối tác thứ ba thì có thể trả vé online qua các website bán vé của Ngành Đường sắt hoặc đến trực tiếp nhà ga.</p>
+                            <p>- Khi hành khách mua vé bằng các hình thức khác, muốn đổi vé, trả vé hành khách đến trực tiếp nhà ga kèm theo giấy tờ tùy thân bản chính của người đi tàu (hoặc người mua vé) cho nhân viên đường sắt. Đồng thời, thông tin trên thẻ đi tàu phải trùng khớp với giấy tờ tùy thân của hành khách.</p>
+                            <i>Trân trọng cảm ơn!.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row hidden-print" style="margin-top: 15px; display: none;">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Quy định đổi, trả vé: từ ngày 6/2/2023 đến ngày 26/4/2023</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>1. Thời gian, mức phí đổi trả vé:</p>
+                            <p>- Đổi vé: Vé cá nhân đổi trước giờ tàu chạy 24 giờ trở lên, lệ phí là 20.000 đồng/vé, dưới 24 giờ không đổi vé; không áp dụng đổi vé đối với vé tập thể.</p>
+                            <p>- Trả vé:</p>
+                            <p>&nbsp; &nbsp; + Vé cá nhân: Trả vé trước giờ tàu chạy từ 24 giờ trở lên lệ phí là 10% giá vé, từ 4 giờ đến dưới 24 giờ lệ phí là 20% giá vé, dưới 4 giờ không trả vé.</p>
+                            <p>&nbsp; &nbsp; + Vé tập thể: Trả vé trước giờ tàu chạy từ 72 giờ trở lên lệ phí là 10% giá vé ,từ 24 giờ đến dưới 72 giờ lệ phí là 20% giá vé, dưới 24 giờ không trả vé.</p>
+                            <p>2. Hình thức trả vé.</p>
+                            <p>- Khi hành khách mua vé và thanh toán online qua website bán vé của ngành Đường sắt, app bán vé hoặc các ứng dụng mua vé tàu hỏa của các đối tác thứ ba thì có thể trả vé online qua các website bán vé của ngành đường sắt hoặc đến trực tiếp nhà ga.</p>
+                            <p>- Khi hành khách mua vé bằng các hình thức khác, muốn đổi vé, trả vé hành khách đến trực tiếp nhà ga kèm theo giấy tờ tùy thân bản chính của người đi tàu hoặc người mua vé cho nhân viên đường sắt. Đồng thời, thông tin trên thẻ đi tàu phải trùng khớp với giấy tờ tùy thân của hành khách.</p>
+                            <i>Trân trọng cảm ơn!.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row hidden-print" style="padding-top: 15px;clear:both;">
+                <div class="col-md-12">
+                    <div class="alert alert-info">
+                        <a href="https://cophanvantaiduongsat.vn/2025/11/18/chinh-sach-gia-ve-quy-dinh-doi-tra-ve-tau-va-huong-dan-tai-hoa-don-ve-tau-hoa-nam-2025/" target="_blank"><strong>CHÍNH SÁCH GIÁ VÉ, QUY ĐỊNH ĐỔI - TRẢ VÉ TÀU VÀ HƯỚNG DẪN TẢI HÓA ĐƠN VÉ TÀU HỎA – Năm 2026</strong></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center clear" style="padding-top: 15px;">
+                <p>Tải ứng dụng</p>
+                <a href="https://itunes.apple.com/app/id1515139705" target="_blank"><img src="/images/appstore.png" width="134" alt=""></a>
+                <a href="https://play.google.com/store/apps/details?id=com.tls.dsvn.muave2" target="_blank"><img src="/images/playstore.png" width="134" alt=""></a><p></p>
+                <!-- <a href="https://data.vnticketonline.vn/B608791DF2FD4267AD2322EFD20A026A/com.tls.dsvn.muave.apk" target="_blank"><img src="/images/androidapk.png" width="134" alt=""></a></p> -->
+            </div>
+            <div class="et-col-md-12 et-footer hidden-print ng-scope" ng-controller="app.controllers.layout.footer">
+                <div class="et-footer-menu text-center" style="height:50px;">
+                    <div>
+                        <a href="/#/" ng-bind-html="'Menu_search'|translate" class="ng-binding">Tìm vé</a>&nbsp;|&nbsp;
+                        <!--<a href="/#/trave" ng-bind-html="'Menu_returnTicket'|translate">Trả vé</a>&nbsp;|&nbsp;-->
+                        <a href="/#/thongtingiaodich" ng-bind-html="'Menu_searchBookingInfo'|translate" class="ng-binding">Thông tin đặt chỗ</a>&nbsp;|&nbsp;
+                        <a href="http://k.vnticketonline.vn/#/thongtinhanhtrinh/gadi" target="_blank" ng-bind-html="'Menu_trainTimeTable'|translate" class="ng-binding">Giờ tàu - Giá vé</a>&nbsp;|&nbsp;
+                        <a href="/#/huongdan" ng-bind-html="'Menu_guide'|translate" class="ng-binding">Hướng dẫn</a>&nbsp;|&nbsp;
+                        <a href="/#/lienhe" ng-bind-html="'Menu_contact'|translate" class="ng-binding">Liên hệ</a>
+                    </div>
+                    <div>
+                        <a href="/#/pages/dieukienvadieukhoan" ng-bind-html="'Menu2_dieuKienDieuKhoan'|translate" class="ng-binding">Chính sách mua hàng</a>&nbsp;|&nbsp;
+                        <a href="/#/pages/phuongthucthanhtoan" ng-bind-html="'Menu2_phuongThucThanhToan'|translate" class="ng-binding">Chính sách thanh toán</a>&nbsp;|&nbsp;
+                        <a href="/#/pages/chinhsachhoantra" ng-bind-html="'Menu2_chinhSachHoanTraVe'|translate" class="ng-binding">Chính sách hoàn trả</a>&nbsp;|&nbsp;
+                        <a href="/#/pages/chinhsachbaomat" ng-bind-html="'Menu2_chinhSachBaoMat'|translate" class="ng-binding">Chính sách bảo mật thông tin</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="et-col-md-12 et-footer-logo">
+                        <div class="et-col-md-12 text-center" style="font-size: 16px; color: #636363;font-family:'Verdana, Geneva, Tahoma, sans-serif';">
+                            <div ng-bind-html="'Footer_line1'|translate" class="ng-binding">Tập đoàn Đường sắt Quốc gia Việt Nam. Số 118 đường Lê Duẩn, Phường Văn Miếu - Quốc Tử Giám, Thành phố Hà Nội, Việt Nam.</div>
+                            <!--<div ng-bind-html="'Footer_line2'|translate">Điện thoại: (84-24) 39425972. Fax: (84-24) 39422866. Email: dsvn@vr.com.vn.</div>-->
+                            <div ng-bind-html="'Footer_line3'|translate" style="color:#af3f3f;" class="ng-binding">Giấy chứng nhận ĐKKD số 113642 theo QĐ thành lập số 973/QĐ-TTg ngày 25/06/2010 của Thủ tướng Chính phủ.</div>
+                            <div ng-bind-html="'Footer_line4'|translate" style="color:#af3f3f;" class="ng-binding">Mã số doanh nghiệp: 0100105052, đăng ký lần đầu ngày 26/07/2010, đăng ký thay đổi lần 4 ngày 27/06/2014 tại Sở KHĐT Thành phố Hà Nội.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center" style="font-size: 10px; color: #999;display:none;">
+                        <img src="/images/fptlogo.png" width="28" height="17">
+                        Copyright by FPT Technology Solutions
+                    </div>
+                    <div class="col-md-12 text-center" style="font-size: 10px; color: #999;">
+                        <a href="http://online.gov.vn/Home/WebDetails/69864">
+                            <!--<img alt="" title="" src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" width="150" height="55">-->
+                            <img alt="" title="" src="/images/logoSaleNoti.png" width="150" height="55">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adv-right">
+            <a target="_blank" href="http://www.vr.com.vn/">
+                <img src="images/dsvn2.jpg">
+            </a>
+        </div>
+    </div>
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="ETicket-1.0.40.js.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C0EKWPM0LY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C0EKWPM0LY');
+    </script>
+    <!--
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7314325-29', 'auto');
+        //ga('send', 'pageview');
+
+    </script>
+        -->
+    <!--
+    <script type='text/javascript'>
+        window._sbzq || function (e) {
+            e._sbzq = [];
+            var t = e._sbzq;
+            t.push(["_setAccount", 13269]);
+            var n = e.location.protocol == "https:" ? "https:" : "http:";
+            var r = document.createElement("script");
+            r.type = "text/javascript";
+            r.async = true;
+            r.src = n + "//static.subiz.com/public/js/loader.js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(r, i)
+        }(window);
+    </script>
+    -->
+    <script type="text/javascript">jQuery(document).ready(function () { window.setInterval(function () { jQuery("div.sbzon").addClass("hidden-print"); }, 5000); });</script>
+    <script type="text/javascript">
+        function get_browser_info() {
+            var e, r = navigator.userAgent, i = r.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+            return /trident/i.test(i[1]) ? (e = /\brv[ :]+(\d+)/g.exec(r) || [], { name: "IE", version: e[1] || "" }) : "Chrome" === i[1] && (e = r.match(/\bOPR\/(\d+)/), null != e) ? { name: "Opera", version: e[1] } : (i = i[2] ? [i[1], i[2]] : [navigator.appName, navigator.appVersion, "-?"], null != (e = r.match(/version\/(\d+)/i)) && i.splice(1, 1, e[1]), { name: i[0], version: i[1] })
+        }
+
+        function is_mobile() {
+            var e = ["android", "webos", "iphone", "ipad", "blackberry"];
+            for (i in e) if (navigator.userAgent.match("/" + e[i] + "/i")) return !0;
+            return !1
+        }
+
+        jQuery(document).ready(function () {
+            if (is_mobile()) jQuery("#menu-print").hide();
+            else {
+                var e = get_browser_info();
+                "Chrome" == e.name && screen.width == window.innerWidth && screen.height == window.innerHeight ? (jQuery("#menu-print").show(), jQuery("#invehref").attr("href", KioskPrintUrl)) : jQuery("#menu-print").hide()
+            }
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+
+            jQuery('.nav-menu').click(function () {
+                jQuery("#bs-example-navbar-collapse-1").removeClass("show");
+            });
+
+        });
+    </script>
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w["CakeAIChatbotApp_widget"] = o;
+            w[o] =
+                w[o] ||
+                function () {
+                    (w[o].q = w[o].q || []).push(arguments);
+                };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            js.crossOrigin = "anonymous";
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "CakeAIChatbotApp", "https://chatbot.84soft.vn/index.min.js");
+        CakeAIChatbotApp("init", {
+            token: "c8b5d6b4-4186-497b-90bc-17b300a243f9",
+        });
+    </script>
+
+
+<div id="CakeAIChatbotApp-wrapper" style="width: 100%; max-width: 80px; height: 100%; max-height: 80px; min-height: 75px; position: fixed; bottom: 0px; right: 0px; z-index: 9999;"><iframe src="https://chatbot.84soft.vn/dist/index.html?token=jKUOK9ZFR3f0OhtSs%2FK6enMmBcX1bhvq85%2BBrCTfMIEqvnWXttHQzQ%3D%3D" id="widget-CakeAIChatbotApp" allow="fullscreen" role="dialog" style="width: 100%; height: 100%; max-height: none; max-width: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none;"></iframe></div></body></html>

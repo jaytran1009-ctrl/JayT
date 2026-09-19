@@ -1,0 +1,86 @@
+{
+  "version": "v3.446.0-staging.dr",
+  "run_id": "RUN_20260830_DR_CHRONO_1788072968432",
+  "runner": "JayT Chronology Engine v1.0.0 (Node.js/UTC)",
+  "artifact_generated_at": "2026-08-30T06:56:08.932Z",
+  "signed_at": "2026-08-30T06:56:09.032Z",
+  "governing_directive": "JAYT-245 Section DR",
+  "time_integrity_contract": {
+    "rule": "checked_at <= artifact_generated_at <= signed_at",
+    "status": "CHRONOLOGY_VERIFIED_PASS"
+  },
+  "scorecard": {
+    "DISCOVERY_LEAD": 1,
+    "CAPTURE_RETRY_REQUIRED": 4,
+    "CANONICAL_SOURCE_FOUND": 0,
+    "CAPTURE_PENDING": 4,
+    "EVIDENCE_COMPLETE": 0,
+    "PUBLIC_T2_PROGRAMME": 20,
+    "PUBLIC_T3_UTILITY": 14,
+    "PUBLIC_T4_RADAR": 16,
+    "PUBLIC_TOTAL_ACTIVE": 50,
+    "T1_DEAL_ELIGIBLE": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "CAND_COM_GA_A_HAI",
+      "name": "Cơm Gà A Hải",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": "https://www.facebook.com/comgaahaidanang/",
+      "probe_type": "SOCIAL_PROFILE_SHELL",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T06:56:08.432Z",
+      "latest_capture_ref": "CAP_DR_CAND_COM_GA_A_HAI_1",
+      "notes": "DR MANDATE: Facebook fanpage là dynamic social shell, không thể chứng thực menu/bảng giá niêm yết mà không có raw contract/capture độc lập. Quarantined về CAPTURE_RETRY_REQUIRED."
+    },
+    {
+      "candidate_id": "CAND_BUN_CHA_CA_109",
+      "name": "Bún Chả Cá 109 Nguyễn Chí Thanh",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": null,
+      "probe_type": "CITY_PORTAL_ROOT",
+      "pipeline_stage": "DISCOVERY_LEAD",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T06:56:08.482Z",
+      "latest_capture_ref": "CAP_DR_CAND_BUN_CHA_CA_109_2",
+      "notes": "DR/DQ MANDATE: danang.gov.vn là trang chủ thành phố, không phải canonical source của quán. Đang lưu ở DISCOVERY_LEAD trong private queue."
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUT",
+      "name": "Trung Tâm Học Liệu & Truyền Thông ĐH Bách Khoa ĐN",
+      "locality": "Quận Liên Chiểu",
+      "canonical_source_url": "http://lib.dut.udn.vn/",
+      "probe_type": "CAMPUS_PORTAL",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T06:56:08.532Z",
+      "latest_capture_ref": "CAP_DR_CAND_THU_VIEN_DUT_3",
+      "notes": "DR MANDATE: Website thư viện hoạt động nhưng đang chờ xác thực chính sách mở cửa/phí thẻ cho sinh viên trường ngoài trước khi tính vào supply."
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUND",
+      "name": "Trung Tâm Học Liệu Đại Học Đà Nẵng",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": "https://clc.udn.vn/",
+      "probe_type": "CAMPUS_PORTAL",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T06:56:08.582Z",
+      "latest_capture_ref": "CAP_DR_CAND_THU_VIEN_DUND_4",
+      "notes": "DR MANDATE: Cổng thông tin học liệu trung tâm ĐHĐN, đang chờ xác minh điều kiện phục vụ cộng đồng sinh viên."
+    },
+    {
+      "candidate_id": "CAND_BUS_R16A",
+      "name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "locality": "Liên Chiểu - Cẩm Lệ",
+      "canonical_source_url": "https://danangbus.vn/lo-trinh-tuyen-r16a.html",
+      "probe_type": "TRANSIT_PORTAL",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T06:56:08.632Z",
+      "latest_capture_ref": "CAP_DR_CAND_BUS_R16A_5",
+      "notes": "DR MANDATE: Trang lộ trình chi tiết tuyến R16A, đang chờ capture biểu đồ giờ chạy cập nhật năm 2026."
+    }
+  ]
+}

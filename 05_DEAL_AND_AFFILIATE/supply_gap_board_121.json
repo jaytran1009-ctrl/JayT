@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "board_version": "121.0.0",
+  "release_directive": "JAYT-121-DECISION-CONVERSION-PREMIUM",
+  "updated_at": "2026-08-25T16:54:11.824Z",
+  "matrix_dimensions": {
+    "slots": [
+      {
+        "id": "SLOT_0730",
+        "label": "07:30 (Sáng)",
+        "intent": "Cà phê, học bài, ăn sáng & xe buýt đi làm/đi học"
+      },
+      {
+        "id": "SLOT_1115",
+        "label": "11:15 (Trưa)",
+        "intent": "Bữa trưa nhanh văn phòng, sinh viên & vé phim trưa Zalopay"
+      },
+      {
+        "id": "SLOT_1415",
+        "label": "14:15 (Chiều)",
+        "intent": "Trà chiều, cà phê làm việc & học nhóm"
+      },
+      {
+        "id": "SLOT_1730",
+        "label": "17:30 (Tan ca)",
+        "intent": "Di chuyển về, mua sắm siêu thị & combo gà nhóm tan ca"
+      },
+      {
+        "id": "SLOT_2000",
+        "label": "20:00 (Tối)",
+        "intent": "Rạp phim, kèo khuya, buffet nướng & xe về đêm"
+      }
+    ],
+    "sectors": [
+      {
+        "id": "CINEMA",
+        "label": "Rạp chiếu phim",
+        "icon": "🎬"
+      },
+      {
+        "id": "COFFEE",
+        "label": "Cà phê & Trà",
+        "icon": "☕"
+      },
+      {
+        "id": "LUNCH",
+        "label": "Cơm trưa & Fastfood",
+        "icon": "🍱"
+      },
+      {
+        "id": "SHOPPING",
+        "label": "Siêu thị & Tiện ích",
+        "icon": "🛒"
+      },
+      {
+        "id": "MOBILITY",
+        "label": "Di chuyển & Gọi xe",
+        "icon": "🚗"
+      }
+    ]
+  },
+  "summary_metrics": {
+    "total_matrix_cells": 25,
+    "verified_deals_count": 5,
+    "watchlist_recheck_count": 2,
+    "planning_menu_pricing_count": 7,
+    "public_utility_savings_count": 1,
+    "actionable_coverage_cells": 13,
+    "actionable_coverage_rate_percent": 52,
+    "high_priority_gaps_count": 3
+  },
+  "high_priority_target_gaps": [
+    {
+      "gap_id": "GAP_121_01_LUNCH_MOBILITY",
+      "slot": "SLOT_1115",
+      "sector": "MOBILITY",
+      "priority": "HIGH",
+      "target_brands": [
+        "GrabFood",
+        "BeFood",
+        "ShopeeFood"
+      ],
+      "action_plan": "Khai thác batch quét tiếp theo cho voucher di chuyển & freeship ăn trưa tại Đà Nẵng"
+    },
+    {
+      "gap_id": "GAP_121_02_LATE_NIGHT_RIDE",
+      "slot": "SLOT_2000",
+      "sector": "MOBILITY",
+      "priority": "HIGH",
+      "target_brands": [
+        "Xanh SM",
+        "Be",
+        "Grab"
+      ],
+      "action_plan": "Rà soát mã cuốc xe di chuyển sau suất chiếu phim hoặc ăn tối"
+    },
+    {
+      "gap_id": "GAP_121_03_AFTERNOON_SNACK",
+      "slot": "SLOT_1415",
+      "sector": "LUNCH",
+      "priority": "HIGH",
+      "target_brands": [
+        "Bánh mì Bà Lan",
+        "Chè Liên",
+        "Cơm gà Đà Nẵng"
+      ],
+      "action_plan": "Bổ sung menu niêm yết các món ăn xế nổi bật cho sinh viên/văn phòng"
+    }
+  ],
+  "matrix_cells": [
+    {
+      "slot": "SLOT_0730",
+      "sector": "CINEMA",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "COFFEE",
+      "status": "WATCHLIST_COVERED",
+      "coverage_type": "WATCHLIST_RECHECK",
+      "items": [
+        {
+          "id": "WATCHLIST_120_HIGHLANDS_JCB_30",
+          "brand": "Highlands Coffee",
+          "title": "Giảm 30% tối đa 50.000₫ khi thanh toán bằng thẻ JCB Contactless"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "LUNCH",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "SHOPPING",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "MOBILITY",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "UTILITY_120_DANABUS_TRANSIT",
+          "brand": "DanaBus Đà Nẵng",
+          "title": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "CINEMA",
+      "status": "VERIFIED_COVERED",
+      "coverage_type": "VERIFIED_DEAL",
+      "items": [
+        {
+          "id": "DEAL_120_CGV_ZALOPAY_50K",
+          "brand": "CGV Cinemas",
+          "title": "Đặt vé phim giảm 50% khung giờ trưa 12h-13h qua Zalopay"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "COFFEE",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_PHELA_SPECIALTY",
+          "brand": "Phê La",
+          "title": "Trà Ô Long Sữa Đặc Sản / Cà Phê Moka Cắm Trại"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "LUNCH",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_KFC_DZUT_DEAL_88K",
+          "brand": "KFC Vietnam",
+          "title": "Combo Dzựt Deal 88.000₫ (1 Burger Zinger + 1 Miếng Gà Rán + 1 Pepsi)"
+        },
+        {
+          "id": "MENU_120_JOLLIBEE_COMBO_73K",
+          "brand": "Jollibee Vietnam",
+          "title": "Combo 1 Miếng Gà Giòn + 1 Mì Ý Sốt Bò Bằm + 1 Nước ngọt"
+        }
+      ],
+      "note": "Đã có 2 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "SHOPPING",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "CINEMA",
+      "status": "VERIFIED_COVERED",
+      "coverage_type": "VERIFIED_DEAL",
+      "items": [
+        {
+          "id": "DEAL_120_STARLIGHT_COMBO_10K",
+          "brand": "Starlight Cinema",
+          "title": "Giảm 10.000₫ khi mua bắp nước online trên Web/App"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "COFFEE",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_GONGCHA_ALISAN",
+          "brand": "Gong Cha",
+          "title": "Trà Sữa Alisan / Trà Xanh Gong Cha Milkfoam"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "LUNCH",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "SHOPPING",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "CINEMA",
+      "status": "VERIFIED_COVERED",
+      "coverage_type": "VERIFIED_DEAL",
+      "items": [
+        {
+          "id": "DEAL_120_METIZ_U22_AND_SUPER_MONDAY",
+          "brand": "Metiz Cinema",
+          "title": "Đồng giá vé 45.000₫ ngày Thứ Hai Siêu Hạng & Giá vé U22"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "COFFEE",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "LUNCH",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_KFC_XO_HOP_CA_189K",
+          "brand": "KFC Vietnam",
+          "title": "Combo Xô Hợp Cạ 189.000₫ (4 Miếng Gà Rán + 1 Burger + 2 Khoai vừa + 2 Pepsi)"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "SHOPPING",
+      "status": "WATCHLIST_COVERED",
+      "coverage_type": "WATCHLIST_RECHECK",
+      "items": [
+        {
+          "id": "WATCHLIST_120_WINMART_WINECO_20",
+          "brand": "WinMart",
+          "title": "Hội viên WIN tiết kiệm 20% toàn bộ rau củ WinEco & thịt sạch MEATDeli"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "CINEMA",
+      "status": "VERIFIED_COVERED",
+      "coverage_type": "VERIFIED_DEAL",
+      "items": [
+        {
+          "id": "DEAL_120_CGV_PAYDAY_30K",
+          "brand": "CGV Cinemas",
+          "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim"
+        },
+        {
+          "id": "DEAL_120_CGV_MUA1TANG1",
+          "brand": "CGV Cinemas",
+          "title": "Mua 1 Tặng 1 vé xem phim khi thanh toán qua VNPAY / App Ngân hàng"
+        }
+      ],
+      "note": "Đã có 2 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "COFFEE",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_PHUCLONG_TEA_BAKERY",
+          "brand": "Phúc Long Coffee & Tea",
+          "title": "Trà Đào Cam Sả / Trà Ô Long Mãng Cầu"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "LUNCH",
+      "status": "ACTIONABLE_MENU_COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        {
+          "id": "MENU_120_GOGI_HOUSE_SIGNATURE",
+          "brand": "GoGi House",
+          "title": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)"
+        }
+      ],
+      "note": "Đã có 1 lựa chọn hành động"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "SHOPPING",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có dữ liệu ưu đãi"
+    }
+  ]
+}

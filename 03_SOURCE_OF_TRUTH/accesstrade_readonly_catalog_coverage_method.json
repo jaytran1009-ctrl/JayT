@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "document_title": "JayT Value-First Affiliate Read-Only Catalog Coverage Research Plan",
+  "document_type": "AFFILIATE_CATALOG_RESEARCH_PLAN_ONLY",
+  "version": "2.0.0-RESEARCH-PLAN",
+  "directive": "JAYT-244 M3 READ-ONLY RESEARCH PLAN RECOVERY",
+  "last_updated": "2026-08-28T22:10:00+07:00",
+  "governance_status": "RESEARCH_PLAN_ONLY — PENDING_AUTHENTICATED_COVERAGE_PROOF",
+  "executive_mandate": "Document the precise, reproducible methodology for surveying the entire affiliate merchant catalog under read-only boundaries. Zero tracking links, campaign registrations, price claims, 30-day-history claims, Buy/Wait recommendations, or commercial CTAs are authorized.",
+  "catalog_survey_methodology": {
+    "authenticated_scope": {
+      "publisher_platform": "Official Affiliate Partner Network / Publisher Directory",
+      "authentication_mode": "Read-Only Token Authorization with Zero Write / Campaign Creation Permissions",
+      "network_boundary": "Isolated Read-Only Ingestion Pipeline with Zero Public Secret Leakage"
+    },
+    "pagination_and_completeness_protocol": {
+      "traversal_strategy": "Exhaustive Cursor-Based Pagination across all Active Merchant Categories",
+      "page_size": 50,
+      "stopping_condition": "Total Count Reconciled against Platform Category Metadata (Zero Partial Drops)",
+      "survey_receipt_artifact": "08_RELEASE_VAULT/affiliate_catalog_survey_receipt_raw.json (Secrets Redacted)"
+    },
+    "excluded_merchant_verticals": [
+      {
+        "vertical": "Gambling / Online Casinos",
+        "action": "STRICT_HARD_EXCLUSION"
+      },
+      {
+        "vertical": "Predatory Financial Lending / P2P High-Interest Apps",
+        "action": "STRICT_HARD_EXCLUSION"
+      },
+      {
+        "vertical": "Unverified Health & Cosmetics",
+        "action": "STRICT_HARD_EXCLUSION"
+      },
+      {
+        "vertical": "Counterfeit & Unofficial Goods",
+        "action": "STRICT_HARD_EXCLUSION"
+      },
+      {
+        "vertical": "Spam / Multi-Level Marketing (MLM)",
+        "action": "STRICT_HARD_EXCLUSION"
+      }
+    ],
+    "essential_community_category_clusters": [
+      {
+        "id": "EDU_DEV",
+        "name": "Giáo Dục, Lập Trình & Công Cụ Học Tập",
+        "target_audience": "Sinh viên CNTT & Học sinh"
+      },
+      {
+        "id": "ELECTRONICS_KTX",
+        "name": "Thiết Bị & Đồ Dùng KTX Thiết Yếu",
+        "target_audience": "Sinh viên nội trú & Người đi làm"
+      },
+      {
+        "id": "BOOKS_STATIONERY",
+        "name": "Sách Giáo Trình & Văn Phòng Phẩm",
+        "target_audience": "Học sinh & Sinh viên Đà Nẵng"
+      },
+      {
+        "id": "STUDY_WORK_FASHION",
+        "name": "Thời Trang Học Đường & Công Sở Bền Vững",
+        "target_audience": "Sinh viên & Nhân viên văn phòng"
+      },
+      {
+        "id": "DAILY_TELECOM",
+        "name": "Viễn Thông & Gói Cước Data 4G Học Tập",
+        "target_audience": "Sinh viên & Người lao động"
+      },
+      {
+        "id": "HOUSEHOLD_ESSENTIALS",
+        "name": "Nhu Yếu Phẩm & Đèn Bàn Học Tập",
+        "target_audience": "Sinh viên ở trọ"
+      },
+      {
+        "id": "OFFICIAL_CINEMA",
+        "name": "Rạp Chiếu Phim Chính Thức",
+        "target_audience": "Giới trẻ & Sinh viên"
+      },
+      {
+        "id": "GREEN_MOBILITY",
+        "name": "Di Chuyển Công Cộng & Xe Đạp Xanh",
+        "target_audience": "Cộng đồng Đà Nẵng"
+      }
+    ]
+  },
+  "candidate_pre_selection_inventory": {
+    "status": "CANDIDATE_LIST_ONLY — NOT_FULL_CATALOG_SURVEY",
+    "total_candidates": 11,
+    "current_operational_tier": "TIER_4_PURE_RADAR",
+    "commercial_links_authorized": false,
+    "candidates": [
+      {
+        "id": "RADAR_01_TIKI",
+        "brand": "Tiki Việt Nam",
+        "cluster": "ELECTRONICS_KTX",
+        "pure_radar_destination": "https://tiki.vn"
+      },
+      {
+        "id": "RADAR_02_CELLPHONES",
+        "brand": "CellphoneS",
+        "cluster": "ELECTRONICS_KTX",
+        "pure_radar_destination": "https://cellphones.com.vn"
+      },
+      {
+        "id": "RADAR_03_SAMSUNG",
+        "brand": "Samsung Official",
+        "cluster": "EDU_DEV",
+        "pure_radar_destination": "https://samsung.com"
+      },
+      {
+        "id": "RADAR_04_KIMDONG",
+        "brand": "NXB Kim Đồng",
+        "cluster": "BOOKS_STATIONERY",
+        "pure_radar_destination": "https://nxbkimdong.com.vn"
+      },
+      {
+        "id": "RADAR_05_FAHASA",
+        "brand": "Nhà Sách Fahasa",
+        "cluster": "BOOKS_STATIONERY",
+        "pure_radar_destination": "https://fahasa.com"
+      },
+      {
+        "id": "RADAR_06_SHOPEE",
+        "brand": "Shopee Student Club",
+        "cluster": "HOUSEHOLD_ESSENTIALS",
+        "pure_radar_destination": "https://shopee.vn"
+      },
+      {
+        "id": "RADAR_07_LAZADA",
+        "brand": "Lazada Choice",
+        "cluster": "HOUSEHOLD_ESSENTIALS",
+        "pure_radar_destination": "https://lazada.vn"
+      },
+      {
+        "id": "RADAR_08_VIETTEL",
+        "brand": "Viettel Đà Nẵng",
+        "cluster": "DAILY_TELECOM",
+        "pure_radar_destination": "https://viettel.vn"
+      },
+      {
+        "id": "RADAR_09_VINAPHONE",
+        "brand": "VinaPhone Đà Nẵng",
+        "cluster": "DAILY_TELECOM",
+        "pure_radar_destination": "https://vinaphone.com.vn"
+      },
+      {
+        "id": "RADAR_10_COOLMATE",
+        "brand": "Coolmate",
+        "cluster": "STUDY_WORK_FASHION",
+        "pure_radar_destination": "https://coolmate.me"
+      },
+      {
+        "id": "RADAR_11_ANANAS",
+        "brand": "Ananas Sneaker",
+        "cluster": "STUDY_WORK_FASHION",
+        "pure_radar_destination": "https://ananas.vn"
+      }
+    ]
+  }
+}

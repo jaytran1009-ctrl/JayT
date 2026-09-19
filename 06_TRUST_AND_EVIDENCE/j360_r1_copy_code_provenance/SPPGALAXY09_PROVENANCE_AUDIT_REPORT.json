@@ -1,0 +1,215 @@
+{
+  "report_id": "SPPGALAXY09_PROVENANCE_AUDIT_REPORT",
+  "directive": "WORK_ORDER_J360_R1_RUNTIME_AND_PROVENANCE_REMEDIATION",
+  "evaluated_at_utc": "2026-09-09T05:36:43.098Z",
+  "candidate_id": "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+  "brand": "Galaxy Cinema & ShopeePay",
+  "title": "Voucher ShopeePay tại Galaxy Cinema — Tháng 09/2026",
+  "source_url": "https://shopeepay.vn/khuyen-mai/galaxy-cinema-2026/",
+  "official_leaf_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+  "underlying_evidence_artifact": {
+    "path": "06_TRUST_AND_EVIDENCE/batch_15_p2_vault/run_20260907092151_b36bd8/P2O_GALAXY_SHOPEEPAY_SEP_2026.raw.html",
+    "sha256": "9037998cc5093d17bce4fa3b173b8f1129e9a72454185f99036b7413182b3966",
+    "size_bytes": 144821
+  },
+  "text_presence_check": {
+    "searched_term": "SPPGALAXY09",
+    "found_in_raw_html": false,
+    "occurrence_count": 0
+  },
+  "historical_verdict_records": {
+    "j334_shortlist_verdict": {
+      "document": "06_TRUST_AND_EVIDENCE/JAYT_334_P2_OFFER_SHORTLIST_PRE_AUDIT_VERDICT.json",
+      "risk_flags": [
+        "BUDGET_LIMITED",
+        "TTL_EXPIRES_2026_09_30",
+        "NO_VOUCHER_CODE_MAY_BE_SYNTHESIZED"
+      ],
+      "verbatim_spans": [
+        "Galaxy Cinema x ShopeePay Giảm Đến 50K từ 01/09/2026 - 30/09/2026",
+        "Khách hàng cần đăng nhập vào App ShopeePay và claim voucher tại mục \"Mã Giảm giá\""
+      ]
+    },
+    "j335_promotion_review": {
+      "document": "06_TRUST_AND_EVIDENCE/JAYT_335_BATCH_15_P2_STRATEGIC_PROMOTION_REVIEW_PACKAGE.json",
+      "mandatory_disclosures": [
+        "User must claim the voucher in the official ShopeePay app",
+        "Offer can end early when budget is exhausted",
+        "JayT does not publish or synthesize a voucher code"
+      ]
+    }
+  },
+  "provenance_finding": "CODE_NOT_SUPPORTED_BY_FIRST_PARTY_EVIDENCE",
+  "remediation_action_decided": "REMOVE_COPY_CONTROL__NO_UNSUPPORTED_CODE_FIELD_ADDED",
+  "justification": "In strict compliance with Work Order J360-R1 Article 1, because SPPGALAXY09 is not attested in immutable first-party source HTML and the promotion requires an in-app claim via the official ShopeePay application, the Copy control must be completely removed from the served card. No synthetic code field may be added to deals_feed.json.",
+  "remediated_card_config": {
+    "has_code": false,
+    "code": null,
+    "claim_instruction": "Mở ứng dụng ShopeePay tại mục \"Mã Giảm giá\" để nhận voucher thanh toán vé xem phim tại Galaxy Cinema."
+  },
+  "fresh_captures": [
+    {
+      "id": "B17_RADAR_PL_DTX64GB_FRESH",
+      "url": "https://philong.com.vn/hdd-usb-kingston-64gb-datatraveler-exodia-dtx64gb-usb-3.2.html",
+      "sku": "DTX/64GB",
+      "title": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "status": 200,
+      "bytes": 329423,
+      "sha256": "93f96eb324dd71601b4a2dcbc06b23c75f29736874a1237391cbaf5331e5d206",
+      "raw_file": "B17_RADAR_PL_DTX64GB_FRESH.raw.html",
+      "headers_file": "B17_RADAR_PL_DTX64GB_FRESH.headers.json"
+    },
+    {
+      "id": "B17_RADAR_PL_S80_64GB_FRESH",
+      "url": "https://philong.com.vn/usb-lexar-jumpdrive-s80-64gb.html",
+      "sku": "LJDS080064G-BNBNG",
+      "title": "USB Lexar JumpDrive S80 64GB USB 3.2 Gen 1 150MB/s (LJDS080064G-BNBNG)",
+      "status": 200,
+      "bytes": 346180,
+      "sha256": "58237904a0095e29a2a2021d629f7e5ef1fb4b5d83f4b5fbc5706c83b19c4d1c",
+      "raw_file": "B17_RADAR_PL_S80_64GB_FRESH.raw.html",
+      "headers_file": "B17_RADAR_PL_S80_64GB_FRESH.headers.json"
+    }
+  ],
+  "radar_15_links_status": {
+    "total": 15,
+    "all_passed_200": true,
+    "results": [
+      {
+        "index": 1,
+        "url": "https://philong.com.vn/hdd-usb-kingston-64gb-datatraveler-exodia-dtx64gb-usb-3.2.html",
+        "status": 200,
+        "bytes": 329423,
+        "sha256": "89105b68937b46b09765ce211aae3047adb84a0411405e730da59f337e7f0417",
+        "latency_ms": 199,
+        "pass": true
+      },
+      {
+        "index": 2,
+        "url": "https://philong.com.vn/usb-lexar-jumpdrive-s80-64gb.html",
+        "status": 200,
+        "bytes": 346182,
+        "sha256": "be25b5968e1af216563a23844fc70c132d95271a0b15d1662b9b0b7b43031237",
+        "latency_ms": 166,
+        "pass": true
+      },
+      {
+        "index": 3,
+        "url": "https://philong.com.vn/usb-lexar-jumpdrive-m400-64gb-ljdm400064g-bnbng.html",
+        "status": 200,
+        "bytes": 344385,
+        "sha256": "55097194ece2b36abc18ffcac1dec4ad05e9e0625bea1e0975ae779b6e55fd69",
+        "latency_ms": 152,
+        "pass": true
+      },
+      {
+        "index": 4,
+        "url": "https://philong.com.vn/usb-sandisk-64gb-phone-drive-sdddc6-064g-g46.html",
+        "status": 200,
+        "bytes": 341045,
+        "sha256": "c8afd25fa6fd715217bc33bad4d038bf0ce26037afe652ccb3ee2393ad0d0da1",
+        "latency_ms": 172,
+        "pass": true
+      },
+      {
+        "index": 5,
+        "url": "https://philong.com.vn/usb-64gb-sandisk-3.0-cz600.html",
+        "status": 200,
+        "bytes": 331050,
+        "sha256": "6307850fd9103ce792d299ae100d7a7b03e6ae4ca2d3d5df86bc17b38675494c",
+        "latency_ms": 166,
+        "pass": true
+      },
+      {
+        "index": 6,
+        "url": "https://philong.com.vn/usb-64gb-sandisk-ultra-luxe-sdcz74-3.1.html",
+        "status": 200,
+        "bytes": 324927,
+        "sha256": "17f46e7c2256c53b55bd32d2dbbdfdac725829c6adeef3c71179d04f97595eb4",
+        "latency_ms": 167,
+        "pass": true
+      },
+      {
+        "index": 7,
+        "url": "https://philong.com.vn/usb-kingston-datatraveler-exodia-m-dtxm-128gb.html",
+        "status": 200,
+        "bytes": 337293,
+        "sha256": "acb86ab225c22be17b889830a2ffe9f2dbbdb1b8239242323f4b7893215ebc83",
+        "latency_ms": 181,
+        "pass": true
+      },
+      {
+        "index": 8,
+        "url": "https://philong.com.vn/usb-kingston-256gb-datatraveler-exodia-dtx-256gb.html",
+        "status": 200,
+        "bytes": 335538,
+        "sha256": "610d30be16211bdc97514b098982346829a1bb4b48620d4d80e15d5ab2c426b8",
+        "latency_ms": 166,
+        "pass": true
+      },
+      {
+        "index": 9,
+        "url": "https://philong.com.vn/ssd-kingston-xs1000-1tb-black-sxs1000-1000ga.html",
+        "status": 200,
+        "bytes": 344401,
+        "sha256": "a433d083af1e6120b43f64cf898f4ca3100becc0c8043d32c718920c39942561",
+        "latency_ms": 152,
+        "pass": true
+      },
+      {
+        "index": 10,
+        "url": "https://philong.com.vn/ssd-kingston-480gb-a400-sa400s37480g-sata-iii.html",
+        "status": 200,
+        "bytes": 335945,
+        "sha256": "07f5f8dae35db3bcd83a480a7cf2bf0f0e29397347a6d0a9f3eacd0418225020",
+        "latency_ms": 179,
+        "pass": true
+      },
+      {
+        "index": 11,
+        "url": "https://philong.com.vn/ssd-kingston-kc3000-1024gb-pcie-4.0-nvme-m.2-ssd.html",
+        "status": 200,
+        "bytes": 350154,
+        "sha256": "b4bcfc41f913c550cd459d45f03daa91235fb95080b70f7d598e5d39e07f719f",
+        "latency_ms": 186,
+        "pass": true
+      },
+      {
+        "index": 12,
+        "url": "https://philong.com.vn/o-cung-gan-trong-ssd-kingston-nv3-1tb.html",
+        "status": 200,
+        "bytes": 344567,
+        "sha256": "dd07430b6ebbbf7dee6dcfbf676f15600ecf3f8bb955cba08fa3757dfaaa5c8f",
+        "latency_ms": 173,
+        "pass": true
+      },
+      {
+        "index": 13,
+        "url": "https://philong.com.vn/ram-laptop-ddr5-kingston-16gb-5600mhz-kvr56s46bs8-16wp.html",
+        "status": 200,
+        "bytes": 322148,
+        "sha256": "db78296a7f6986c1e31adafd548bc09e98df4dd0a413587be1a398278430df6f",
+        "latency_ms": 399,
+        "pass": true
+      },
+      {
+        "index": 14,
+        "url": "https://philong.com.vn/lap-xin-qua-slay-cung-lenovo.html",
+        "status": 200,
+        "bytes": 295617,
+        "sha256": "9153f81c069191ac9720510789a776b6a1f151dfccd1ca1da77497a4063d04bb",
+        "latency_ms": 148,
+        "pass": true
+      },
+      {
+        "index": 15,
+        "url": "https://philong.com.vn/uu-dai-hp-back-to-school-2026.html",
+        "status": 200,
+        "bytes": 286432,
+        "sha256": "350cf8294836606d786ede917a6604f340421034a0e239556b4dea269c1dbf96",
+        "latency_ms": 126,
+        "pass": true
+      }
+    ]
+  }
+}

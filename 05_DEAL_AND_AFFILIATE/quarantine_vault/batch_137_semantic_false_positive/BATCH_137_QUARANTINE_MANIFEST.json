@@ -1,0 +1,39 @@
+{
+  "manifest_id": "BATCH_137_QUARANTINE_MANIFEST",
+  "directive": "JAYT-137R — SEMANTIC FALSE-POSITIVE CORRECTION & CORPUS RECERTIFICATION",
+  "status": "SEMANTIC_FALSE_POSITIVE_QUARANTINED",
+  "quarantined_at": "2026-08-26T23:25:00+07:00",
+  "executive_ruling": "Batch 137 output rejected due to two identified false positives: (1) CGV offer quote was a generic heading without quantified benefit; (2) Danang Fantasticity matched copyright footer year (2024 UBND TP. Đà Nẵng...) into LOCALITY_ONLY_STRICT.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_21_GENERIC_HEADING_ACCEPTED_AS_OFFER",
+      "description": "generic_compiler_137.js accepted broad heading / category title without an explicit quantified benefit (price, discount amount, percentage, BOGO)."
+    },
+    {
+      "cause_id": "P0_CAUSE_22_COPYRIGHT_FOOTER_PARSED_AS_ADDRESS",
+      "description": "Address regex parsed year (2024) in copyright footer (2024 UBND TP. Đà Nẵng) as a house number and TP. as an administrative unit inside text."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_137.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_137_semantic_false_positive/generic_compiler_137.js",
+      "sha256": "eb3ffc048ddc7599cb9a3e778b93a26fe690804c1e1489f67d6927c469705eae"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_137_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_137_semantic_false_positive/batch_capture_137_manifest.json",
+      "sha256": "bf4c74df51f38d0a9c910ef3b87ba57259bae1004546caab1ff392b1b5713a29"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_137.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_137_semantic_false_positive/test_generic_compiler_137.js",
+      "sha256": "18b06ee1dcf276842a937c4d3e91de9c2adfb1b6e8a21269daaefc03137b46e1"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_137_EXPANDED_SUPPLY_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_137_semantic_false_positive/JAYT_137_EXPANDED_SUPPLY_REVIEW_PACK.md",
+      "sha256": "7f73213b58461621c132ddbcbe19579d1b4bbc4452caf4308d965f4af2bbb106"
+    }
+  ]
+}

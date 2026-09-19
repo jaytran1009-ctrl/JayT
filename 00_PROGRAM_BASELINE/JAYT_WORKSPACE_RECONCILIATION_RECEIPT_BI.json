@@ -1,0 +1,66 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BI_20260829",
+  "schema_version": "3.6.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BI)",
+  "verified_at": "2026-08-29T06:16:37.336Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BH.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_MERCHANDISING_BI",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bi": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "visual_merchandising_verification_bi": {
+    "brand_campaign_asset_manifest": "00_PROGRAM_BASELINE/JAYT_VERIFIED_BRAND_CAMPAIGN_ASSET_MANIFEST_BI.json",
+    "brand_campaign_asset_manifest_sha256": "4c3e5768171c0455061503827d19e6b3733d4b4bf51516ddf906223c2593625e",
+    "four_treatments_active": true,
+    "spotlight_feature_card_active": true
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "896a0272208b9d463c94581586cf5bd60cf009cac7e126ee98266fb63486fac9",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "79aea72486148fcac0e967b173d3b98ce8f5ceca625ab9085f90f3c0bb746bfb",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "5d20fcbd48f1cdfe8c7deda199254372e40852cc5cae01a106fe5d57f7d864b9"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bi.js",
+      "description": "Storefront BI candidate with 4 visual treatments and editorial commerce merchandising",
+      "sha256": "fca9fcf2cae6f427f60e4948b128daa833c4321d6b63fc47e997e62c8b23856b"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/JAYT_VERIFIED_BRAND_CAMPAIGN_ASSET_MANIFEST_BI.json",
+      "description": "Verified Brand & Campaign Asset Manifest (Section BI)",
+      "sha256": "4c3e5768171c0455061503827d19e6b3733d4b4bf51516ddf906223c2593625e"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34228_staging_bi.json",
+      "description": "Release receipt for Staging BI deployment with merchandising verified",
+      "sha256": "be8472f95af8d615e92549d7ad82571f0fef1985d37652200ce206ce6cc4fc35"
+    }
+  ],
+  "verifier_audit_passed": true
+}

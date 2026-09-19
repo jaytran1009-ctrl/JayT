@@ -1,0 +1,26 @@
+{
+  "transaction_id": "REMEDIATION_OVERLAY_COHORT_15_RETIREMENT_JAYT_264",
+  "governing_directive": "JAYT-245 Section JAYT-264 (Lines 5792-5801)",
+  "system_utc": "2026-09-03T04:56:25.024Z",
+  "candidate_id": "COHORT_EZ_AM_15",
+  "previous_state": "HELD_NEW_COHORT_REQUIRED",
+  "new_state": "CLOSED_CONTAMINATION_SHARED_RAW",
+  "disallowed_hash": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+  "reason": "Permanent retirement following byte-identical SHA-256 raw HTML collision with Micro-Batch 02 (TNGo). Strictly barred from all future admission, rendering, recheck, or new cohorts.",
+  "parent_ledger_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/JAYT_COHORT_15_SLA_CLOSURE_LEDGER.json",
+    "bytes_sha256": "bbba8a976dbe3353a99a41a6fa37eb7bc98498e66d1a15dca6fdc26a74d86389"
+  },
+  "writer_source": {
+    "script": "scratch/write_jayt_264_artifacts.js",
+    "governing_section": "JAYT-245 Section JAYT-264"
+  },
+  "commercial_and_permission_constraints": {
+    "pricing_fields_present": false,
+    "voucher_fields_present": false,
+    "affiliate_fields_present": false,
+    "tier_granted": null,
+    "public_permission": false
+  },
+  "enforcement_rule": "All future admission gateways and catalog builders must reject candidate_id COHORT_EZ_AM_15 and raw hash b34fdd82... with error CLOSED_CONTAMINATION_SHARED_RAW."
+}

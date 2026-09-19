@@ -1,0 +1,449 @@
+{
+  "schema_version": "3.0.0-r3",
+  "work_order_id": "WORK_ORDER_J392_R3_RELATIONAL_SCOPE_EVIDENCE",
+  "audit_status": "SUBMITTED_CANDIDATE_FOR_CEO_AUDIT",
+  "brand_id": "METIZ_CINEMA",
+  "brand_name": "Metiz Cinema Helio Da Nang",
+  "relational_binding_summary": {
+    "binding_logic": "Artifact B links directly to Artifact A via /promotion/khuyen-mai-gia-ve-u22-21.html and affirms validity period covering 2026-09-11 (01/01/2026 - 31/12/2026). Artifact C1 and C2 from first-party origin metiz.vn explicitly bind Metiz Cinema to Helio Center and Da Nang address. Candidate C0 (lien-he.html) is provided for complete candidate audit transparency.",
+    "offer_artifact_captured": true,
+    "validity_artifact_captured": true,
+    "venue_artifact_captured": true,
+    "all_from_first_party_origin": true
+  },
+  "linked_artifacts": {
+    "artifact_a_offer": {
+      "capture_id": "CAPT_METIZ_U22_OFFER_R3_20260911T080230",
+      "target_id": "METIZ_CINEMA_U22_OFFER_R3",
+      "brand_id": "METIZ_CINEMA",
+      "requested_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "final_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "http_status": 200,
+      "response_headers": {
+        "cache-control": "no-cache, no-store",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 11 Sep 2026 08:02:44 GMT",
+        "server": "Microsoft-IIS/10.0"
+      },
+      "timing": {
+        "capture_start_utc": "2026-09-11T08:02:35.801Z",
+        "dom_snapshot_utc": "2026-09-11T08:02:40.714Z",
+        "screenshot_utc": "2026-09-11T08:02:40.719Z",
+        "capture_end_utc": "2026-09-11T08:02:40.834Z",
+        "single_session_coherence": true
+      },
+      "container_selector": "div.blog-item-info",
+      "container_byte_span": {
+        "start": 35384,
+        "end": 40358,
+        "length": 4974
+      },
+      "quote_byte_offsets": {
+        "offer": {
+          "key": "offer",
+          "quote_text": "Áp dụng giá vé 2D chỉ 55.000đ cho thành viên Metiz Cinema từ 22 tuổi trở xuống, đối với mọi suất chiếu tại Metiz Cinema.",
+          "byte_offset_start": 36452,
+          "byte_offset_end": 36603,
+          "byte_length": 151,
+          "container_relative_start": 1068,
+          "container_relative_end": 1219,
+          "within_container_span": true
+        },
+        "terms": {
+          "key": "terms",
+          "quote_text": "Chương trình chỉ áp dụng cho thành viên Metiz Cinema, dưới 22 tuổi trở xuống.",
+          "byte_offset_start": 38461,
+          "byte_offset_end": 38557,
+          "byte_length": 96,
+          "container_relative_start": 3077,
+          "container_relative_end": 3173,
+          "within_container_span": true
+        }
+      },
+      "artifacts": {
+        "raw_html": {
+          "file_name": "metiz_u22_offer_r3_20260911T080230.html",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_u22_offer_r3_20260911T080230.html",
+          "size_bytes": 104616,
+          "sha256": "c28588c90144e181df2242ab1dabf3c2b0b16830ea7e3f5d7fc352abf315d393"
+        },
+        "screenshot": {
+          "file_name": "metiz_u22_offer_r3_20260911T080230.png",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_u22_offer_r3_20260911T080230.png",
+          "size_bytes": 707270,
+          "sha256": "cf647e2a32902734210078b1ef3000273c8804b71e6d8e4ea804257037bc4f82",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      },
+      "post_write_html_sha256": "c28588c90144e181df2242ab1dabf3c2b0b16830ea7e3f5d7fc352abf315d393",
+      "post_write_png_sha256": "cf647e2a32902734210078b1ef3000273c8804b71e6d8e4ea804257037bc4f82",
+      "non_overlapping_verified": true,
+      "content_hygiene": {
+        "verified": true,
+        "waf_challenge_detected": false,
+        "issues": []
+      }
+    },
+    "artifact_b_validity": {
+      "capture_id": "CAPT_METIZ_U22_VALIDITY_R3_20260911T080230",
+      "target_id": "METIZ_CINEMA_U22_VALIDITY_R3",
+      "brand_id": "METIZ_CINEMA",
+      "requested_url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "final_url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "http_status": 200,
+      "response_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 11 Sep 2026 08:02:49 GMT",
+        "server": "Microsoft-IIS/10.0"
+      },
+      "timing": {
+        "capture_start_utc": "2026-09-11T08:02:40.895Z",
+        "dom_snapshot_utc": "2026-09-11T08:02:48.733Z",
+        "screenshot_utc": "2026-09-11T08:02:48.738Z",
+        "capture_end_utc": "2026-09-11T08:02:48.893Z",
+        "single_session_coherence": true
+      },
+      "container_selector": "div.col-md-6.col-lg-3.blog-item-wrap:has(a[href*=\"khuyen-mai-gia-ve-u22-21.html\"])",
+      "container_byte_span": {
+        "start": 38411,
+        "end": 39674,
+        "length": 1263
+      },
+      "quote_byte_offsets": {
+        "offer_link": {
+          "key": "offer_link",
+          "quote_text": "/promotion/khuyen-mai-gia-ve-u22-21.html",
+          "byte_offset_start": 38729,
+          "byte_offset_end": 38769,
+          "byte_length": 40,
+          "container_relative_start": 318,
+          "container_relative_end": 358,
+          "within_container_span": true
+        },
+        "validity_date_range": {
+          "key": "validity_date_range",
+          "quote_text": "01/01/2026 - 31/12/2026",
+          "byte_offset_start": 39198,
+          "byte_offset_end": 39221,
+          "byte_length": 23,
+          "container_relative_start": 787,
+          "container_relative_end": 810,
+          "within_container_span": true
+        },
+        "card_title": {
+          "key": "card_title",
+          "quote_text": "KHUYẾN MÃI GIÁ VÉ U22",
+          "byte_offset_start": 39495,
+          "byte_offset_end": 39521,
+          "byte_length": 26,
+          "container_relative_start": 1084,
+          "container_relative_end": 1110,
+          "within_container_span": true
+        }
+      },
+      "artifacts": {
+        "raw_html": {
+          "file_name": "metiz_u22_validity_r3_20260911T080230.html",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_u22_validity_r3_20260911T080230.html",
+          "size_bytes": 92189,
+          "sha256": "e484b0376be759ce64be9cc54e4811dabc7db1c48c8c1f7aebf86ddab00c88c6"
+        },
+        "screenshot": {
+          "file_name": "metiz_u22_validity_r3_20260911T080230.png",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_u22_validity_r3_20260911T080230.png",
+          "size_bytes": 841136,
+          "sha256": "7290a050cddfac9019732bb0444627535da5aa573f315ff73191a2bfffde68fd",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      },
+      "post_write_html_sha256": "e484b0376be759ce64be9cc54e4811dabc7db1c48c8c1f7aebf86ddab00c88c6",
+      "post_write_png_sha256": "7290a050cddfac9019732bb0444627535da5aa573f315ff73191a2bfffde68fd",
+      "non_overlapping_verified": true,
+      "content_hygiene": {
+        "verified": true,
+        "waf_challenge_detected": false,
+        "issues": []
+      },
+      "relational_link_to_artifact_a": "/promotion/khuyen-mai-gia-ve-u22-21.html"
+    },
+    "artifact_c1_venue_parking": {
+      "capture_id": "CAPT_METIZ_VENUE_PARKING_R3_20260911T080230",
+      "target_id": "METIZ_CINEMA_VENUE_PARKING_R3",
+      "brand_id": "METIZ_CINEMA",
+      "requested_url": "https://metiz.vn/news/huong-dan-loi-vao-khu-vuc-giu-xe-metiz-cinema-2.html",
+      "final_url": "https://metiz.vn/news/huong-dan-loi-vao-khu-vuc-giu-xe-metiz-cinema-2.html",
+      "http_status": 200,
+      "response_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 11 Sep 2026 08:02:57 GMT",
+        "server": "Microsoft-IIS/10.0"
+      },
+      "timing": {
+        "capture_start_utc": "2026-09-11T08:02:48.947Z",
+        "dom_snapshot_utc": "2026-09-11T08:02:50.992Z",
+        "screenshot_utc": "2026-09-11T08:02:50.997Z",
+        "capture_end_utc": "2026-09-11T08:02:51.123Z",
+        "single_session_coherence": true
+      },
+      "container_selector": "div.blog-item-info",
+      "container_byte_span": {
+        "start": 35471,
+        "end": 39988,
+        "length": 4517
+      },
+      "quote_byte_offsets": {
+        "title": {
+          "key": "title",
+          "quote_text": "HƯỚNG DẪN LỐI VÀO KHU VỰC GIỮ XE METIZ CINEMA",
+          "byte_offset_start": 35650,
+          "byte_offset_end": 35707,
+          "byte_length": 57,
+          "container_relative_start": 179,
+          "container_relative_end": 236,
+          "within_container_span": true
+        },
+        "street_29": {
+          "key": "street_29",
+          "quote_text": "Mặt tiền Metiz đường 2/9",
+          "byte_offset_start": 37011,
+          "byte_offset_end": 37043,
+          "byte_length": 32,
+          "container_relative_start": 1540,
+          "container_relative_end": 1572,
+          "within_container_span": true
+        },
+        "venue_helio_entry": {
+          "key": "venue_helio_entry",
+          "quote_text": "Lối vào tầng hầm Helio Center:",
+          "byte_offset_start": 37504,
+          "byte_offset_end": 37541,
+          "byte_length": 37,
+          "container_relative_start": 2033,
+          "container_relative_end": 2070,
+          "within_container_span": true
+        },
+        "venue_helio_basement": {
+          "key": "venue_helio_basement",
+          "quote_text": "di chuyển vào TẦNG HẦM HELIO.",
+          "byte_offset_start": 38139,
+          "byte_offset_end": 38175,
+          "byte_length": 36,
+          "container_relative_start": 2668,
+          "container_relative_end": 2704,
+          "within_container_span": true
+        }
+      },
+      "artifacts": {
+        "raw_html": {
+          "file_name": "metiz_venue_parking_r3_20260911T080230.html",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_venue_parking_r3_20260911T080230.html",
+          "size_bytes": 107339,
+          "sha256": "9f066406a7fd4e2fcef833a2ef26e6b1c2e1c4f8980d1930a107f363c390db61"
+        },
+        "screenshot": {
+          "file_name": "metiz_venue_parking_r3_20260911T080230.png",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_venue_parking_r3_20260911T080230.png",
+          "size_bytes": 739324,
+          "sha256": "e610545b5ce0f3771e1c3ec1e573a213823b0a21491d5dc6165e3139a58f5ea2",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      },
+      "post_write_html_sha256": "9f066406a7fd4e2fcef833a2ef26e6b1c2e1c4f8980d1930a107f363c390db61",
+      "post_write_png_sha256": "e610545b5ce0f3771e1c3ec1e573a213823b0a21491d5dc6165e3139a58f5ea2",
+      "non_overlapping_verified": true,
+      "content_hygiene": {
+        "verified": true,
+        "waf_challenge_detected": false,
+        "issues": []
+      }
+    },
+    "artifact_c2_venue_review": {
+      "capture_id": "CAPT_METIZ_VENUE_REVIEW_R3_20260911T080230",
+      "target_id": "METIZ_CINEMA_VENUE_REVIEW_R3",
+      "brand_id": "METIZ_CINEMA",
+      "requested_url": "https://metiz.vn/news/review-rap-metiz-cinema-da-nang-co-that-su-dang-xem-nhu-loi-don-10.html",
+      "final_url": "https://metiz.vn/news/review-rap-metiz-cinema-da-nang-co-that-su-dang-xem-nhu-loi-don-10.html",
+      "http_status": 200,
+      "response_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 11 Sep 2026 08:02:59 GMT",
+        "server": "Microsoft-IIS/10.0"
+      },
+      "timing": {
+        "capture_start_utc": "2026-09-11T08:02:51.182Z",
+        "dom_snapshot_utc": "2026-09-11T08:02:55.669Z",
+        "screenshot_utc": "2026-09-11T08:02:55.676Z",
+        "capture_end_utc": "2026-09-11T08:02:55.795Z",
+        "single_session_coherence": true
+      },
+      "container_selector": "div.blog-item-info",
+      "container_byte_span": {
+        "start": 35616,
+        "end": 58602,
+        "length": 22986
+      },
+      "quote_byte_offsets": {
+        "title": {
+          "key": "title",
+          "quote_text": "REVIEW RẠP METIZ CINEMA ĐÀ NẴNG: CÓ THẬT SỰ ĐÁNG XEM NHƯ LỜI ĐỒN",
+          "byte_offset_start": 35795,
+          "byte_offset_end": 35878,
+          "byte_length": 83,
+          "container_relative_start": 179,
+          "container_relative_end": 262,
+          "within_container_span": true
+        },
+        "overview": {
+          "key": "overview",
+          "quote_text": "TỔNG QUAN VỀ RẠP METIZ CINEMA ĐÀ NẴNG",
+          "byte_offset_start": 36950,
+          "byte_offset_end": 36997,
+          "byte_length": 47,
+          "container_relative_start": 1334,
+          "container_relative_end": 1381,
+          "within_container_span": true
+        },
+        "address": {
+          "key": "address",
+          "quote_text": "Địa điểm: Số 01 Đường 2 Tháng 9, Hải Châu, Đà Nẵng",
+          "byte_offset_start": 39277,
+          "byte_offset_end": 39347,
+          "byte_length": 70,
+          "container_relative_start": 3661,
+          "container_relative_end": 3731,
+          "within_container_span": true
+        },
+        "proximity_helio": {
+          "key": "proximity_helio",
+          "quote_text": "gần helio nên cũm okie",
+          "byte_offset_start": 57620,
+          "byte_offset_end": 57646,
+          "byte_length": 26,
+          "container_relative_start": 22004,
+          "container_relative_end": 22030,
+          "within_container_span": true
+        }
+      },
+      "artifacts": {
+        "raw_html": {
+          "file_name": "metiz_venue_review_r3_20260911T080230.html",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_venue_review_r3_20260911T080230.html",
+          "size_bytes": 125953,
+          "sha256": "b7b1794bf1d5689f381ecdbef57b9e71e3e5da5f6452dd0983831210b174c68e"
+        },
+        "screenshot": {
+          "file_name": "metiz_venue_review_r3_20260911T080230.png",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_venue_review_r3_20260911T080230.png",
+          "size_bytes": 611110,
+          "sha256": "071a7cb76cb084cf07b7e5e69a0e0194d706d942fbe276b8c2f5ed7110e9ea7c",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      },
+      "post_write_html_sha256": "b7b1794bf1d5689f381ecdbef57b9e71e3e5da5f6452dd0983831210b174c68e",
+      "post_write_png_sha256": "071a7cb76cb084cf07b7e5e69a0e0194d706d942fbe276b8c2f5ed7110e9ea7c",
+      "non_overlapping_verified": true,
+      "content_hygiene": {
+        "verified": true,
+        "waf_challenge_detected": false,
+        "issues": []
+      }
+    },
+    "artifact_c0_contact_reference": {
+      "capture_id": "CAPT_METIZ_CONTACT_REF_R3_20260911T080230",
+      "target_id": "METIZ_CINEMA_CONTACT_REF_R3",
+      "brand_id": "METIZ_CINEMA",
+      "requested_url": "https://metiz.vn/lien-he.html",
+      "final_url": "https://metiz.vn/lien-he.html",
+      "http_status": 200,
+      "response_headers": {
+        "cache-control": "private",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 11 Sep 2026 08:03:04 GMT",
+        "server": "Microsoft-IIS/10.0"
+      },
+      "timing": {
+        "capture_start_utc": "2026-09-11T08:02:55.864Z",
+        "dom_snapshot_utc": "2026-09-11T08:02:56.761Z",
+        "screenshot_utc": "2026-09-11T08:02:56.769Z",
+        "capture_end_utc": "2026-09-11T08:02:56.896Z",
+        "single_session_coherence": true
+      },
+      "container_selector": "main.main",
+      "container_byte_span": {
+        "start": 35034,
+        "end": 75581,
+        "length": 40547
+      },
+      "quote_byte_offsets": {
+        "hotline": {
+          "key": "hotline",
+          "quote_text": "Hotline: 02363 630 689",
+          "byte_offset_start": 40995,
+          "byte_offset_end": 41017,
+          "byte_length": 22,
+          "container_relative_start": 5961,
+          "container_relative_end": 5983,
+          "within_container_span": true
+        },
+        "email": {
+          "key": "email",
+          "quote_text": "contact@metiz.vn",
+          "byte_offset_start": 42946,
+          "byte_offset_end": 42962,
+          "byte_length": 16,
+          "container_relative_start": 7912,
+          "container_relative_end": 7928,
+          "within_container_span": true
+        }
+      },
+      "artifacts": {
+        "raw_html": {
+          "file_name": "metiz_contact_ref_r3_20260911T080230.html",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_contact_ref_r3_20260911T080230.html",
+          "size_bytes": 117181,
+          "sha256": "dd466def96093744b511d25c06d5523d05d5b7daf58a83e8556fb886e275cc18"
+        },
+        "screenshot": {
+          "file_name": "metiz_contact_ref_r3_20260911T080230.png",
+          "relative_path": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_contact_ref_r3_20260911T080230.png",
+          "size_bytes": 528542,
+          "sha256": "9a4394ec1bc910e70d922dae9d0368a9964cd9bd93f8a14251ecef13fe99976f",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      },
+      "post_write_html_sha256": "dd466def96093744b511d25c06d5523d05d5b7daf58a83e8556fb886e275cc18",
+      "post_write_png_sha256": "9a4394ec1bc910e70d922dae9d0368a9964cd9bd93f8a14251ecef13fe99976f",
+      "non_overlapping_verified": true,
+      "content_hygiene": {
+        "verified": true,
+        "waf_challenge_detected": false,
+        "issues": []
+      }
+    }
+  },
+  "governance": {
+    "is_approved": false,
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false,
+    "destructive_deletion_authorized": false
+  }
+}

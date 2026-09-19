@@ -1,0 +1,127 @@
+{
+  "version": "v3.450.0-staging.dv",
+  "run_id": "RUN_20260830_DV_SPRINT_1788077696400",
+  "artifact_generated_at": "2026-08-30T08:15:02.482Z",
+  "signed_at": "2026-08-30T08:15:02.583Z",
+  "governing_directive": "JAYT-245 Section DV",
+  "matrix": [
+    {
+      "candidate_id": "CAND_BUS_R16A",
+      "entity_name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "entity_category": "PUBLIC_TRANSIT",
+      "canonical_domain": "danangbus.vn",
+      "canonical_portal_url": "https://www.danangbus.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dv/artifact_cand_bus_r16a_transit_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "fields": [
+        {
+          "field_name": "transit_network_portal_accessibility",
+          "display_label": "Cổng thông tin mạng lưới xe buýt",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>Xe Buýt Đà Nẵng & Bản Đồ Xe Bus Đà Nẵng - Danangbus.vn</title>",
+          "captured_at_utc": "2026-08-30T07:08:10.372Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 30,
+          "claim_scope": "Cổng tra cứu hệ thống xe buýt trợ giá Đà Nẵng chính thức"
+        },
+        {
+          "field_name": "route_timetable_r16a_2026",
+          "display_label": "Biểu đồ giờ chạy chi tiết tuyến R16A",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture bảng giờ xuất bến từng chuyến năm 2026; mở danangbus.vn tra cứu trực tiếp"
+        },
+        {
+          "field_name": "subsidized_student_fare_terms",
+          "display_label": "Chính sách giá vé trợ giá học sinh/sinh viên",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture quy định đăng ký vé tháng trợ giá; tra cứu tại điểm bán vé Danabus"
+        },
+        {
+          "field_name": "commercial_voucher_deal",
+          "display_label": "Voucher giảm giá thương mại",
+          "status": "FAIL_CLOSED_NOT_APPLICABLE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 0,
+          "claim_scope": "Dịch vụ công cộng phi thương mại, 0 deal/voucher"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_TNGO_BIKE",
+      "entity_name": "TNGo - Xe Đạp Công Nghệ Số Đà Nẵng",
+      "entity_category": "PUBLIC_TRANSIT",
+      "canonical_domain": "tngo.vn",
+      "canonical_portal_url": "https://tngo.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dv/artifact_cand_tngo_bike_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_dv",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "fields": [
+        {
+          "field_name": "service_portal_accessibility",
+          "display_label": "Cổng thông tin dịch vụ xe đạp TNGo",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>TNGo - Xe đạp công nghệ số</title>",
+          "captured_at_utc": "2026-08-30T08:14:56.678Z",
+          "lineage": "DIRECT_LIVE_CAPTURE_SECTION_DV",
+          "freshness_window_days": 30,
+          "claim_scope": "Dịch vụ thuê xe đạp công cộng tại các trạm công cộng TP Đà Nẵng"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_METIZ_CINEMA",
+      "entity_name": "Metiz Cinema Đà Nẵng (Helio Center)",
+      "entity_category": "ENTERTAINMENT_CINEMA",
+      "canonical_domain": "metiz.vn",
+      "canonical_portal_url": "https://metiz.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dv/artifact_cand_metiz_cinema_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_dv",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "fields": [
+        {
+          "field_name": "cinema_portal_accessibility",
+          "display_label": "Cổng thông tin & lịch chiếu phim Metiz Cinema",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>Metiz Cinema | Rạp chiếu phim Metiz Cinema</title>",
+          "captured_at_utc": "2026-08-30T08:14:56.975Z",
+          "lineage": "DIRECT_LIVE_CAPTURE_SECTION_DV",
+          "freshness_window_days": 14,
+          "claim_scope": "Cổng chính thức rạp chiếu phim Metiz tại Helio Center Đà Nẵng"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_GITHUB_STUDENT_PACK",
+      "entity_name": "GitHub Student Developer Pack",
+      "entity_category": "EDUCATION_POLICY",
+      "canonical_domain": "education.github.com",
+      "canonical_portal_url": "https://education.github.com/pack",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dv/artifact_cand_github_student_pack.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_dv",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "fields": [
+        {
+          "field_name": "programme_eligibility_portal",
+          "display_label": "Cổng đăng ký gói công cụ sinh viên GitHub",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>GitHub Student Developer Pack - GitHub Education</title>",
+          "captured_at_utc": "2026-08-30T08:15:01.730Z",
+          "lineage": "DIRECT_LIVE_CAPTURE_SECTION_DV",
+          "freshness_window_days": 60,
+          "claim_scope": "Gói công cụ lập trình miễn phí cho học sinh/sinh viên toàn cầu"
+        }
+      ]
+    }
+  ]
+}

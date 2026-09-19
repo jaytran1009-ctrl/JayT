@@ -1,0 +1,48 @@
+{
+  "manifest_id": "JAYT_BUILD_MANIFEST",
+  "expectedVersion": "v3.483.0-staging.ao",
+  "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+  "build_channel": "staging",
+  "build_timestamp_utc": "2026-09-01T07:22:58.365Z",
+  "governing_directive": "JAYT-245 Section EZ-AO (Lines 5018-5040)",
+  "historical_predecessor": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST_v3.482.0-staging.ez.json",
+  "policy": {
+    "exact_version_matching_required": true,
+    "prefix_matching_forbidden": true,
+    "off_by_one_rejection_mandatory": true,
+    "exact_artifact_hash_matching_required": true
+  },
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "c111ca3c0959cf86b4e251e0434a75a968d3ba45e8f9d212d591c6530ac434d9"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "c111ca3c0959cf86b4e251e0434a75a968d3ba45e8f9d212d591c6530ac434d9"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "9e6cedb6e8094ac397924335b5108425e7094d0adf95507240b87136d6f4b1b7"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "9e6cedb6e8094ac397924335b5108425e7094d0adf95507240b87136d6f4b1b7"
+    }
+  },
+  "version_identity_targets": [
+    "health_endpoint",
+    "sot_js_comment",
+    "sot_js_ledger_version",
+    "sot_js_version_field",
+    "served_js_comment",
+    "served_js_ledger_version",
+    "served_js_version_field",
+    "html_title",
+    "html_data_ledger_version",
+    "html_header_tagline",
+    "html_footer",
+    "release_receipt_version",
+    "parity_manifest_version"
+  ]
+}

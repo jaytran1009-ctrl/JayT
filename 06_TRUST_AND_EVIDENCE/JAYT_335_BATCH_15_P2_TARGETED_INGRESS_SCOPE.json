@@ -1,0 +1,84 @@
+{
+  "document_id": "JAYT_335_BATCH_15_P2_TARGETED_INGRESS_SCOPE",
+  "authorized_at_utc": "2026-09-07T00:00:00Z",
+  "capture_method": "ONE_SHOT_UNAUTHENTICATED_HTTPS_GET",
+  "vault": "06_TRUST_AND_EVIDENCE/batch_15_p2_vault",
+  "targets": [
+    {
+      "candidate_id": "P2O_GALAXY_MEMBER_2026",
+      "brand_name": "Galaxy Cinema",
+      "title": "Quyền lợi thành viên Galaxy Cinema 2026",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+      "commercial_surface": "BRAND_PROGRAM",
+      "voucher_tier": "BRAND_PROGRAM",
+      "validity": "Đến hết 31/12/2026; điều kiện thành viên và quy đổi điểm theo trang chính thức.",
+      "conditions": "Cần tài khoản thành viên; quyền lợi sinh nhật và đổi điểm có điều kiện áp dụng.",
+      "expected_text_spans": [
+        "Năm 2026, Galaxy Cinema tiếp tục duy trì chính sách tích lũy điểm thưởng và sử dụng thanh toán vé/ bắp nước.",
+        "Điểm tích lũy có hạn sử dụng trong suốt năm 2026"
+      ],
+      "locality_note": "Galaxy Cinema có cơ sở đã đối soát tại Đà Nẵng; không suy diễn suất chiếu, ghế hoặc tồn kho."
+    },
+    {
+      "candidate_id": "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+      "brand_name": "Galaxy Cinema x ShopeePay",
+      "title": "Voucher ShopeePay tại Galaxy Cinema — tháng 09/2026",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "commercial_surface": "APP_VOUCHER",
+      "voucher_tier": "APP_HIDDEN_CODE",
+      "validity": "01/09/2026–30/09/2026 hoặc kết thúc sớm khi hết ngân sách.",
+      "conditions": "Phải đăng nhập ứng dụng ShopeePay và tự claim voucher chính thức; JayT không phát hành hoặc hiển thị mã giả.",
+      "expected_text_spans": [
+        "Galaxy Cinema x ShopeePay Giảm Đến 50K",
+        "01/09/2026 - 30/09/2026",
+        "claim voucher"
+      ],
+      "locality_note": "Kế thừa bằng chứng Galaxy Cinema có cơ sở tại Đà Nẵng; quyền nhận voucher phụ thuộc ứng dụng và ngân sách."
+    },
+    {
+      "candidate_id": "P2O_PHILONG_LENOVO_STUDENT_2026",
+      "brand_name": "Phi Long x Lenovo",
+      "title": "Ưu đãi học sinh, sinh viên Lenovo 2026 tại Phi Long",
+      "source_url": "https://philong.com.vn/lap-xin-qua-slay-cung-lenovo.html",
+      "commercial_surface": "VALUE_RADAR",
+      "voucher_tier": "VALUE_RADAR",
+      "validity": "26/08/2026–31/10/2026 hoặc đến khi hết quà.",
+      "conditions": "Chỉ áp dụng cho các model Lenovo được liệt kê trên trang nguồn; quà tặng tùy model và tồn kho.",
+      "expected_text_spans": [
+        "Từ ngày 26/08/2026 đến ngày 31/10/2026",
+        "152 Hàm Nghi, Đà Nẵng",
+        "52 Nguyễn Văn Linh, Đà Nẵng"
+      ],
+      "locality_note": "Trang ưu đãi nêu trực tiếp hai showroom Phi Long tại Đà Nẵng; không cam kết tồn kho từng model."
+    },
+    {
+      "candidate_id": "P2O_PHILONG_HP_BTS_2026",
+      "brand_name": "Phi Long x HP",
+      "title": "HP Back to School 2026 tại Phi Long",
+      "source_url": "https://philong.com.vn/uu-dai-hp-back-to-school-2026.html",
+      "commercial_surface": "VALUE_RADAR",
+      "voucher_tier": "VALUE_RADAR",
+      "validity": "01/08/2026–31/10/2026.",
+      "conditions": "Chỉ áp dụng cho danh mục model HP OmniBook/HP Victus và các model được liệt kê; điều kiện kích hoạt phần mềm theo bên cung cấp.",
+      "expected_text_spans": [
+        "Chương trình áp dụng từ 01/08/2026 đến 31/10/2026",
+        "BỘ QUÀ TẶNG CAO CẤP",
+        "HP OmniBook"
+      ],
+      "locality_note": "Kế thừa bằng chứng Phi Long có hai showroom tại Đà Nẵng; không suy diễn tồn kho từng model."
+    }
+  ],
+  "held_candidates": [
+    "P2O_CGV_FANC_2026",
+    "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+    "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+  ],
+  "gate": {
+    "capture_authorized": true,
+    "staging_hydration_authorized_for_verified_items_only": true,
+    "production_deploy_permitted": false,
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  }
+}

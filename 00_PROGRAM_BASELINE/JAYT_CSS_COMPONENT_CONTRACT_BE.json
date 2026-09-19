@@ -1,0 +1,186 @@
+{
+  "contract_id": "JAYT_CSS_COMPONENT_CONTRACT_BE_20260829",
+  "schema_version": "1.0.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BE)",
+  "timestamp": "2026-08-29T05:51:00.777Z",
+  "source_components": {
+    "source_js_file": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_be.js",
+    "stylesheet_file": "03_SOURCE_OF_TRUTH/styles.css",
+    "stylesheet_sha256": "6d681bba51e617a2a32afc9b14934a2a97e821ee86107a98547d80737a1c8672",
+    "stylesheet_size_bytes": 22188,
+    "base_release": "v3.422.3-staging.bd",
+    "successor_release": "v3.422.4-staging.be"
+  },
+  "component_class_inventory": [
+    {
+      "component": "AppShell_And_TopNav",
+      "selectors": [
+        ".jayt-shell-container",
+        ".jayt-top-nav",
+        ".nav-container",
+        ".nav-brand",
+        ".brand-logotype",
+        ".brand-sub",
+        ".brand-edition-pill",
+        ".nav-links-desktop",
+        ".nav-btn",
+        ".nav-saved-count",
+        ".nav-actions-desktop",
+        ".btn-icon-theme",
+        ".btn-report-source"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "DailyGuideHero",
+      "selectors": [
+        ".home-guide-layout",
+        ".guide-hero-section",
+        ".hero-badge",
+        ".hero-main-title",
+        ".hero-description",
+        ".hero-search-wrapper",
+        ".search-input-box",
+        ".search-icon",
+        "#home-search-input",
+        ".btn-clear-search"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "ThreePrimaryDailyGateways",
+      "selectors": [
+        ".daily-gateways-section",
+        ".gateways-grid",
+        ".gateway-card",
+        ".card-gateway-food",
+        ".card-gateway-places",
+        ".card-gateway-tools",
+        ".gateway-tag",
+        ".gateway-heading",
+        ".gateway-sub",
+        ".gateway-action-hint"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "TimeSlotContextualSwitcher",
+      "selectors": [
+        ".time-slot-context-bar",
+        ".time-slot-label",
+        ".time-slot-pills",
+        ".time-pill",
+        ".time-pill.active"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "ContentRails_And_EditorialCards",
+      "selectors": [
+        ".content-rail-section",
+        ".rail-header",
+        ".rail-kicker",
+        ".kicker-deal",
+        ".kicker-verified",
+        ".kicker-facility",
+        ".kicker-radar",
+        ".rail-title",
+        ".rail-meta",
+        ".cards-layout-grid",
+        ".editorial-card",
+        ".card-tier-deal",
+        ".card-tier-verified",
+        ".card-tier-facility",
+        ".card-tier-radar",
+        ".card-head",
+        ".brand-badge-lockup",
+        ".brand-monogram",
+        ".brand-info",
+        ".brand-name",
+        ".tier-kicker-label",
+        ".btn-card-save",
+        ".card-content",
+        ".card-title",
+        ".card-summary",
+        ".card-meta-chips",
+        ".meta-chip",
+        ".card-foot",
+        ".btn-card-primary",
+        ".btn-card-radar",
+        ".btn-card-detail"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "FeatureDestinations",
+      "selectors": [
+        ".feature-destinations-section",
+        ".destination-card",
+        ".dest-buy",
+        ".dest-voucher",
+        ".dest-badge",
+        ".dest-title",
+        ".dest-sub",
+        ".dest-cta"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "AccessibleModals",
+      "selectors": [
+        ".jayt-modal-backdrop",
+        ".jayt-modal-card",
+        ".jayt-modal-header",
+        ".modal-badge-row",
+        ".modal-tier-badge",
+        ".badge-deal",
+        ".badge-verified",
+        ".badge-facility",
+        ".badge-radar",
+        ".modal-brand-tag",
+        ".jayt-modal-title",
+        ".jayt-modal-close-btn",
+        ".jayt-modal-body",
+        ".modal-sec-heading",
+        ".modal-info-grid",
+        ".modal-info-item",
+        ".info-label",
+        ".info-value",
+        ".modal-quote-box",
+        ".modal-provenance-box",
+        ".trust-note",
+        ".jayt-modal-footer",
+        ".btn-modal-primary",
+        ".btn-modal-secondary"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "MobileBottomNavigation",
+      "selectors": [
+        ".jayt-mobile-bottom-nav",
+        ".mobile-nav-btn",
+        ".mobile-nav-btn.active"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    },
+    {
+      "component": "Footer",
+      "selectors": [
+        ".jayt-footer",
+        ".footer-container",
+        ".footer-logo",
+        ".footer-mission",
+        ".footer-heading",
+        ".footer-text"
+      ],
+      "contract_status": "MATCHED_AND_BOUND"
+    }
+  ],
+  "accessibility_contract": {
+    "min_touch_target_px": 44,
+    "focus_visible_indicator": "2px solid var(--primary-color) with 2px offset",
+    "dark_mode_supported": true,
+    "horizontal_overflow_prevented": true
+  }
+}

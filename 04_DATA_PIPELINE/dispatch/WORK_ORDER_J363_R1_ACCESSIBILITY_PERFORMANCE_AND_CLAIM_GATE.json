@@ -1,0 +1,24 @@
+{
+  "work_order_id": "J363_R1_ACCESSIBILITY_PERFORMANCE_AND_CLAIM_GATE",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "REMEDIATION_REQUIRED",
+  "candidate_mutation_authorized": true,
+  "staging_preview_deployment_authorized": true,
+  "production_deployment_authorized": false,
+  "affiliate_live_activation_authorized": false,
+  "blocking_findings": [
+    "The J363-A1 receipt reports only 70% touch-target compliance and 38% WCAG AA contrast compliance.",
+    "The runner can report PASS while accessibility requirements fail, performance is absent and 768px is untested.",
+    "Rendered factual claims lack a stable claim-to-source/hash/validity mapping in the receipt."
+  ],
+  "required_actions": [
+    "Bring every interactive control to at least 44x44 CSS px across 1440, 768 and 390 viewports. Count all controls that can receive a pointer/touch action; document explicit excluded noninteractive text.",
+    "Repair every relevant foreground/background state to WCAG 2.1 AA: at least 4.5:1 normal text and 3:1 large text/UI boundaries. Measure default, hover, focus, disabled and modal states; report each failure rather than averaging. AAA is aspirational and must be reported separately.",
+    "Extend the runner to test 1440, 768 and 390, and fail overall status for any console/page error, overflow, touch-target failure, AA failure, missing module assertion or unavailable Preview response.",
+    "Measure representative interaction frame timing and layout shift for the stack calculator, campus filter, lunch slider, Split Bill export and affiliate dry-run. Write measured p50/p95/max frame duration and CLS/shift observations to receipt. Do not claim 60 FPS or CLS=0 when not measured.",
+    "Create a J363 claim matrix mapping each factual meal, cinema scenario, DanaBus fare and education benefit to source URL, capture time, raw/screenshot hash, locality/eligibility, validity or explicit simulation state. Claims without support must remain simulation or awaiting-verification cards and must not be called verified.",
+    "Test Canvas PNG download, clipboard denial, Web Share fallback and outbound links with an actual user-gesture simulation. Verify no PII/GPS/contact request and no background network or automatic affiliate navigation.",
+    "Reissue STAGING_OBSERVABILITY_RECEIPT.json with runner hash, served preview URL/hash, full assertions, source matrix hash and a PASS only if every required gate passes."
+  ],
+  "acceptance": "CEO independently replays the in-workspace runner against the served preview and confirms 100% touch target/AA compliance, 1440/768/390 coverage, measured interaction evidence and claim provenance before submitting v3.431.0 to Gemini."
+}

@@ -1,0 +1,114 @@
+{
+  "receipt_id": "RECEIPT_SECTION_EQ_20260830",
+  "version": "v3.471.0-staging.eq",
+  "timestamp_utc": "2026-08-30T13:44:05.040Z",
+  "server_runtime": {
+    "port": 4173,
+    "url": "http://127.0.0.1:4173",
+    "status": "ONLINE",
+    "http_code": 200,
+    "health_endpoint": "http://127.0.0.1:4173/health",
+    "health_payload": {
+      "status": "UP",
+      "version": "v3.471.0-staging.eq",
+      "ledger_sha256": "9475630e10a472620b9759084718c8b6afd940ef5dbff801575de7dbbdd095cd",
+      "port": 4173,
+      "static_dir": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\staging_deploy_eq",
+      "start_time_utc": "2026-08-30T13:43:53.268Z",
+      "uptime_seconds": 11,
+      "discovery_dossiers_count": 6,
+      "captured_artifacts_with_receipt_count": 1,
+      "evaluated_citation_facts_count": 2,
+      "github_capture_receipt_valid": true,
+      "valid_subject_attempts_count": 0,
+      "field_facts_verified_count": 0,
+      "tier_1_deals_count": 0,
+      "vouchers_count": 0,
+      "quarantined_jpegs_in_runtime": 0
+    }
+  },
+  "ledger_fingerprint": {
+    "ledgerVersion": "v3.471.0-staging.eq",
+    "ledgerSha256": "9475630e10a472620b9759084718c8b6afd940ef5dbff801575de7dbbdd095cd",
+    "countAnGi": "11",
+    "countDiDau": "14",
+    "countTienIch": "13",
+    "countMuaSam": "12",
+    "countTotal": "50",
+    "countVouchers": "0"
+  },
+  "go_live_gap_audit": {
+    "overall_status": "NOT_GO_LIVE",
+    "p0_production_exposure_containment_mapped": true,
+    "p0_lineage_enforced_on_staging": true,
+    "p0_t1_voucher_economics_fail_closed": true,
+    "total_backlog_items_tracked": 10
+  },
+  "citation_pack_audit": {
+    "discovery_dossiers_count": 6,
+    "captured_artifacts_with_receipt_count": 1,
+    "proposed_facts_evaluated_count": 2,
+    "github_capture_receipt_valid": true,
+    "terminal_dynamic_only_count": 5,
+    "total_field_verified_facts_on_storefront": 0,
+    "tier_1_verified_deals": 0,
+    "voucher_hub_verified_vouchers": 0
+  },
+  "quarantine_audit": {
+    "total_quarantined_jpegs": 12,
+    "quarantined_jpegs_in_runtime": 0,
+    "all_quarantined_jpegs_isolated": true,
+    "zero_false_provenance_photographer_credits_in_dom": true,
+    "zero_unverified_badges_in_dom": true
+  },
+  "checks": {
+    "github_capture_receipt_attached_and_valid": true,
+    "twelve_point_fact_schema_enforced": true,
+    "unbacked_dynamic_narratives_cleaned": true,
+    "twelve_jpegs_quarantined_and_isolated": true,
+    "zero_jpegs_in_runtime_dom": true,
+    "zero_photographer_cc_strings_in_dom": true,
+    "asset_ownership_record_verified": true,
+    "runtime_asset_table_verified": true,
+    "fact_ledger_verified_facts_count": 0,
+    "identity_roster_50_items_verified": true,
+    "single_voucher_nav_instance_verified": true,
+    "voucher_button_count_in_desktop_nav": 1,
+    "voucher_hub_noncommercial_state_verified": true,
+    "zero_fake_vouchers_displayed": true,
+    "zero_affiliate_deeplinks": true,
+    "no_write_security_contract_verified": true,
+    "accesstrade_unverified_status_enforced": true,
+    "runtime_fingerprint_verified": true,
+    "mathematical_disjoint_partition_verified": true,
+    "disjoint_partitions_sum_equals_50": true,
+    "pairwise_intersections_zero": true,
+    "four_routes_cardinality_verified": true,
+    "journey_counts": {
+      "an_gi": 11,
+      "di_dau": 14,
+      "tien_ich": 13,
+      "mua_sam_hoc_tap": 12,
+      "total": 50
+    },
+    "public_count_ledger_eq_verified": true,
+    "unified_public_count_contract_enforced": true,
+    "console_errors_count": 1,
+    "console_warnings_count": 0,
+    "browser_captures_count": 16,
+    "unique_sha256_count": 8,
+    "responsive_viewports_measured": [
+      "1440x900",
+      "768x1024",
+      "390x844"
+    ],
+    "themes_tested": [
+      "light",
+      "dark"
+    ],
+    "reduced_motion_tested": true,
+    "zero_pii_intact": true,
+    "production_lock_enforced": true
+  },
+  "governance_status": "PENDING_CEO_LIVE_REVIEW"
+}

@@ -1,0 +1,46 @@
+{
+  "report_id": "JAYT-289-DISCOVERY-PASS-01",
+  "issued_at_utc": "2026-09-04T04:00:00Z",
+  "scope": "Read-only leaf-page identity and recency discovery for Cohorts 3 and 4; no raw capture.",
+  "results": [
+    {
+      "target_id": "BATCH03_HC_07",
+      "state": "REJECTED__TET_2026_EVENT_EXPIRED",
+      "reason": "The located official Dragon Bridge source applies to the February 2026 Tết event, not a current recurring-weekend schedule.",
+      "capture_authorized": false
+    },
+    {
+      "target_id": "BATCH03_HC_01",
+      "state": "HELD__LEAF_PAGE_UNVERIFIABLE",
+      "reason": "The proposed URL could not be safely opened or corroborated by a domain-restricted discovery result; no date or direct service span was verified.",
+      "capture_authorized": false
+    },
+    {
+      "target_id": "BATCH03_DS_01",
+      "state": "HELD__LEAF_PAGE_UNVERIFIABLE",
+      "reason": "The proposed URL could not be safely opened or corroborated by a domain-restricted discovery result; no date or direct service span was verified.",
+      "capture_authorized": false
+    },
+    {
+      "target_id": "BATCH03_DS_02",
+      "state": "HELD__LEAF_PAGE_UNVERIFIABLE",
+      "reason": "The proposed URL could not be safely opened or corroborated by a domain-restricted discovery result; no date or direct resource span was verified.",
+      "capture_authorized": false
+    },
+    {
+      "target_id": "BATCH03_DS_05",
+      "state": "HELD__LEAF_PAGE_UNVERIFIABLE",
+      "reason": "The proposed URL could not be safely opened or corroborated by a domain-restricted discovery result; no date or operating-directory span was verified.",
+      "capture_authorized": false
+    }
+  ],
+  "summary": {
+    "targets_reviewed": 5,
+    "leaf_pages_confirmed": 0,
+    "capture_authorized": 0,
+    "public_approved": 0,
+    "render_permitted": 0,
+    "next_action": "Submit only a new official leaf-page proposal with a direct span and a 2025-2026 date for a fresh CEO scope decision."
+  },
+  "invariants": { "feed_mutated": false, "affiliate_enabled": false, "voucher_enabled": false, "production_mutated": false }
+}

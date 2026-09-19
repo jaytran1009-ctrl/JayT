@@ -1,0 +1,178 @@
+{
+  "version": "v3.465.0-staging.ek",
+  "generated_at_utc": "2026-08-30T19:28:00.000Z",
+  "governing_directive": "JAYT-245 Section EK (Lines 3450-3460)",
+  "fact_ledger_policy": {
+    "backlog_candidates_count": 8,
+    "artifact_count": 8,
+    "identity_declared_count": 50,
+    "field_verified_facts_count": 0,
+    "quarantined_injected_facts_count": 3,
+    "tier_1_verified_deals_count": 0,
+    "voucher_hub_verified_vouchers_count": 0,
+    "rule": "REFERENTIAL_INTEGRITY_FAIL_CLOSED: Toàn bộ 3 claim EJ đã bị cô lập vì không có raw locator replay trong artifact bytes. Hệ thống trở về 0 verified field facts."
+  },
+  "quarantined_injected_facts_log": [
+    {
+      "fact_id": "FACT_DANABUS_R16A_STUDENT_FARE",
+      "subject": "DanaBus Tuyến R16A (Kim Liên - ĐH CNTT&TT Việt - Hàn)",
+      "quarantine_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML chỉ chứa portal root, chưa chứa biểu giá chi tiết 5.000đ.",
+      "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+    },
+    {
+      "fact_id": "FACT_GITHUB_STUDENT_PACK_BENEFIT",
+      "subject": "GitHub Student Developer Pack",
+      "quarantine_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML chỉ chứa landing page, chưa chứa exact benefit locator.",
+      "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+    },
+    {
+      "fact_id": "FACT_JETBRAINS_STUDENT_FREE_ALL_PRODUCTS",
+      "subject": "JetBrains Student Free License",
+      "quarantine_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML chỉ chứa landing page, chưa chứa exact license clause locator.",
+      "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+    }
+  ],
+  "verified_field_facts": [],
+  "attempts_and_artifacts": [
+    {
+      "attempt_id": "ATTEMPT_CAND_BUS_R16A",
+      "candidate_id": "CAND_BUS_R16A",
+      "merchant_name": "DanaBus Tuyến R16A (Kim Liên - ĐH CNTT&TT Việt - Hàn)",
+      "inquiry_question": "Lộ trình cụ thể và chính sách giá vé xe buýt trợ giá cho học sinh sinh viên tại Đà Nẵng là bao nhiêu?",
+      "canonical_url": "https://danangbus.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_bus_r16a_transit_portal.html",
+      "sha256": "db237f074590e2d8ac299ff0522b8bc35b4ce9bd43738e3fcdf7289321660109",
+      "byte_size": 115281,
+      "original_timestamp": "2026-08-30T07:08:10.372Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": {
+        "is_quarantined_fact": true,
+        "quarantined_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML only contains portal root without exact fare table quotes or exact route locator.",
+        "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+      },
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_GITHUB_STUDENT_PACK",
+      "candidate_id": "CAND_GITHUB_STUDENT_PACK",
+      "merchant_name": "GitHub Inc. / Microsoft Corporation",
+      "inquiry_question": "Điều kiện nộp hồ sơ và danh mục công cụ lập trình miễn phí cho sinh viên chính quy trong GitHub Student Pack gồm những gì?",
+      "canonical_url": "https://education.github.com/pack",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_github_student_pack.html",
+      "sha256": "1610df187f054b826db4841c8c5832b7030f6bc39449c93f5e8a7c627096800a",
+      "byte_size": 271480,
+      "original_timestamp": "2026-08-30T08:15:01.730Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": {
+        "is_quarantined_fact": true,
+        "quarantined_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML only contains landing page without exact benefit terms or verified locator.",
+        "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+      },
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_JETBRAINS_STUDENT_PACK",
+      "candidate_id": "CAND_JETBRAINS_STUDENT_PACK",
+      "merchant_name": "JetBrains s.r.o.",
+      "inquiry_question": "Chính sách cấp bản quyền trọn bộ công cụ IDE JetBrains cho sinh viên có miễn phí không và gia hạn thế nào?",
+      "canonical_url": "https://www.jetbrains.com/community/education/#students",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_jetbrains_student_pack.html",
+      "sha256": "0c279ee631089fba675ec1c1e0d41dd46545e0349dcb80b03853215d44e0a632",
+      "byte_size": 61554,
+      "original_timestamp": "2026-08-30T08:15:02.124Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": {
+        "is_quarantined_fact": true,
+        "quarantined_reason": "UNVERIFIED_LEDGER_INJECTION: Artifact raw HTML only contains landing page without exact free license clause locator.",
+        "quarantined_at_directive": "DIRECTIVE_EK_LINES_3434_3461"
+      },
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_TNGO_BIKE",
+      "candidate_id": "CAND_TNGO_BIKE",
+      "merchant_name": "TNGo (CTCP Tập Đoàn Trí Nam)",
+      "inquiry_question": "Biểu giá thuê xe đạp công cộng theo lượt và vị trí trạm tại Đà Nẵng?",
+      "canonical_url": "https://tngo.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_tngo_bike_portal.html",
+      "sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "byte_size": 52968,
+      "original_timestamp": "2026-08-30T08:14:56.678Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": null,
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_METIZ_CINEMA",
+      "candidate_id": "CAND_METIZ_CINEMA",
+      "merchant_name": "Metiz Cinema Đà Nẵng (Helio Center)",
+      "inquiry_question": "Chương trình giá vé thành viên U22 áp dụng vào khung giờ nào tại rạp Helio Đà Nẵng?",
+      "canonical_url": "https://metiz.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_metiz_cinema_portal.html",
+      "sha256": "4b539543df6256eac2429c8d46b5f75c5a3a32dcda2d2a911039e1523b03c67a",
+      "byte_size": 53334,
+      "original_timestamp": "2026-08-30T08:14:56.975Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": null,
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_STARLIGHT_CINEMA",
+      "candidate_id": "CAND_STARLIGHT_CINEMA",
+      "merchant_name": "Starlight Cinema Đà Nẵng (Nguyễn Kim)",
+      "inquiry_question": "Chính sách giá vé học sinh sinh viên tại Starlight Đà Nẵng?",
+      "canonical_url": "https://starlight.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_starlight_cinema_portal.html",
+      "sha256": "becf409e3cc139f02c4cecb80cc5527c65e6ca9f11ca9695288c0c7c7ba6eed3",
+      "byte_size": 101350,
+      "original_timestamp": "2026-08-30T08:14:57.204Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": null,
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_DOMINOS_PIZZA",
+      "candidate_id": "CAND_DOMINOS_PIZZA",
+      "merchant_name": "Domino's Pizza Việt Nam",
+      "inquiry_question": "Chương trình Mua 1 Tặng 1 áp dụng vào những thứ mấy trong tuần tại Đà Nẵng?",
+      "canonical_url": "https://dominos.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_dominos_pizza_portal.html",
+      "sha256": "9f78d30d6740ee6358f3c6440a9a50d5d89d081f4ebd1401293d2f4ba899ea14",
+      "byte_size": 51512,
+      "original_timestamp": "2026-08-30T08:14:57.673Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": null,
+      "field_verified_facts": []
+    },
+    {
+      "attempt_id": "ATTEMPT_CAND_HIGHLANDS_COFFEE",
+      "candidate_id": "CAND_HIGHLANDS_COFFEE",
+      "merchant_name": "Highlands Coffee Việt Nam",
+      "inquiry_question": "Địa chỉ mạng lưới chi nhánh Highlands Coffee tại Đà Nẵng?",
+      "canonical_url": "https://highlandscoffee.com.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ek/artifact_cand_highlands_coffee_portal.html",
+      "sha256": "03c0029c058ebe9b5e2ede97339b9f61cc827a8b5c5b753298d2a72017d45100",
+      "byte_size": 29929,
+      "original_timestamp": "2026-08-30T08:15:02.480Z",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "verification_level": "PORTAL_IDENTITY_ONLY",
+      "has_verified_field_fact": false,
+      "quarantine_audit": null,
+      "field_verified_facts": []
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "specification_id": "TRUSTED_AUTONOMY_SPECIFICATION_161",
+  "directive": "JAYT-161: TRUSTED AUTONOMY, KHÔNG ZERO-HITL",
+  "version": "1.0.0",
+  "created_at": "2026-08-27T13:12:00.000Z",
+  "brand_positioning": "Lịch tiết kiệm hằng ngày đáng tin cậy cho người Đà Nẵng: biết hôm nay có gì, tính được mình trả bao nhiêu, rồi rủ đúng người đi cùng.",
+  "strategic_decision": "REJECT_ZERO_HITL_MODEL",
+  "operational_paradigm": "AUTOMATED DISCOVERY + EVIDENCE CAPTURE + FAIL-CLOSED RESOLUTION + HUMAN/AUTHORIZED SOURCE ACCEPTANCE",
+  "autonomy_levels": {
+    "LEVEL_1_FULLY_AUTOMATED_READ_ONLY": {
+      "name": "Level 1 — Fully Automated, Read-Only",
+      "allowed_actions": [
+        "Quét nguồn website công khai chính thức",
+        "Phát hiện thay đổi và biến động nội dung",
+        "Capture HTML, text, screenshot vật lý",
+        "Tính mã băm SHA-256 artifact trên đĩa",
+        "Đối chiếu TTL và thời hạn hiệu lực",
+        "Tạo ticket recheck kiểm toán khi hết hạn",
+        "Đưa tín hiệu vào hàng đợi TRACKED_SOURCE_SIGNAL"
+      ],
+      "forbidden_actions": [
+        "Tạo deal public",
+        "Gán nhãn ưu đãi đã xác minh",
+        "Công bố giá tiền, mức giảm hoặc voucher"
+      ]
+    },
+    "LEVEL_2_AUTOMATED_RESOLUTION_WITH_EVIDENCE": {
+      "name": "Level 2 — Automated Resolution with Evidence",
+      "allowed_actions": [
+        "Phân loại EVIDENCE_COMPLETE_FOR_REVIEW khi đủ 100% artifact và đối chiếu pass",
+        "Xác định tính toàn vẹn chuỗi bằng chứng 3 tầng"
+      ],
+      "forbidden_actions": [
+        "Tự chuyển thành live deal trên trang chủ",
+        "Tự gắn nhãn Đã xác minh bởi JayT khi chưa có Human/Authorized signoff"
+      ]
+    },
+    "LEVEL_3_HUMAN_OR_AUTHORIZED_PROVIDER_ACCEPTANCE": {
+      "name": "Level 3 — Human or Authorized-Provider Acceptance",
+      "requirement": "Chỉ nguồn do Human Operator / Campus Scout cung cấp hoặc API/feed được provider ủy quyền mới được kích hoạt",
+      "promoted_states": [
+        "🟢 VERIFIED_PROOF_DEAL (Deal đã đối soát)",
+        "🔵 VERIFIED_VENUE_LISTING (Địa điểm đã xác minh)",
+        "Affiliate hoặc checkout action",
+        "Thông tin giá, điều kiện, mã, giờ hoạt động hoặc chỉ đường"
+      ]
+    }
+  },
+  "forbidden_unproven_claims_list": [
+    "Giá vé theo từng ngày của rạp chiếu phim (CGV, Galaxy, Metiz, Starlight, Lotte)",
+    "Giá vé cố định xe buýt DanaBus",
+    "Giá hoặc đặc quyền cụ thể của Spotify, YouTube, Notion, Canva, JetBrains, GitHub Student",
+    "Món ăn dưới 25k chưa có proof thực tế",
+    "Mã giảm ship, ưu đãi app giao đồ ăn chưa có feed ủy quyền",
+    "Trạng thái quán Đang mở hoặc Đã đóng tự suy diễn",
+    "Tự ý xóa địa điểm khi có nguồn báo đóng (Bắt buộc chuyển sang RECHECK_REQUIRED hoặc POSSIBLY_CLOSED)"
+  ],
+  "da_nang_community_clusters": [
+    {
+      "cluster_id": "CLUSTER_1_HOA_KHANH_LIEN_CHIEU",
+      "name": "Hòa Khánh / Liên Chiểu",
+      "focus": "Bữa ăn sinh viên Bách Khoa / Sư Phạm, cà phê học bài, cơm bình dân",
+      "metrics": {
+        "verified_venues_count": 0,
+        "tracked_sources_count": 0,
+        "recheck_needed_count": 0,
+        "community_needs_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+      "name": "Bắc Mỹ An / Hòa Quý",
+      "focus": "Ăn vặt chợ Bắc Mỹ An, KTX, sinh viên DUE / FPT / VKU",
+      "metrics": {
+        "verified_venues_count": 0,
+        "tracked_sources_count": 0,
+        "recheck_needed_count": 0,
+        "community_needs_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+      "name": "Hải Châu / Thanh Khê",
+      "focus": "Cơm trưa văn phòng, rạp chiếu phim, chuỗi cà phê trung tâm",
+      "metrics": {
+        "verified_venues_count": 2,
+        "tracked_sources_count": 0,
+        "recheck_needed_count": 0,
+        "community_needs_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+      "name": "Khu Công nghệ cao / Công viên phần mềm",
+      "focus": "Bữa trưa nhanh, ưu đãi phần mềm công nghệ cho sinh viên IT & kỹ sư",
+      "metrics": {
+        "verified_venues_count": 0,
+        "tracked_sources_count": 0,
+        "recheck_needed_count": 0,
+        "community_needs_count": 0
+      }
+    },
+    {
+      "cluster_id": "CLUSTER_5_SON_TRA_BEACH",
+      "name": "Sơn Trà / Ven biển",
+      "focus": "Cuối tuần, điểm hẹn cà phê ngắm cảnh, ẩm thực hải sản giá sinh viên",
+      "metrics": {
+        "verified_venues_count": 0,
+        "tracked_sources_count": 0,
+        "recheck_needed_count": 0,
+        "community_needs_count": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "ledger_id": "DOCUMENT_PAIR_PILOT_ONE_LEDGER_EZ_AA",
+  "version": "1.0.0-ez.aa",
+  "governing_directive": "JAYT-245 Section EZ-AA (Lines 4642-4666)",
+  "timestamp": "2026-08-31T08:09:14.404Z",
+  "pilot_objective": "PROVE_SAME_DOMAIN_CROSS_DOCUMENT_OPERATOR_AND_POLICY_RELATION",
+  "evaluation_record": {
+    "pilot_id": "DOCUMENT_PAIR_PILOT_01_SPOTIFY_VIETNAM",
+    "domain": "spotify.com",
+    "doc_a_record": {
+      "url": "https://www.spotify.com/vn-vi/legal/end-user-agreement/",
+      "vault_file": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_aa/candidate_ez_aa_doc_a_operator_identity_raw_bytes.bin",
+      "byte_length": 209220,
+      "sha256": "81fecb62f0eb95409c1b2fd39d3487d94e1f9ad0da0c05bdee369b6648b23127",
+      "operator_entity_proven": "Spotify AB"
+    },
+    "doc_b_record": {
+      "url": "https://www.spotify.com/vn-vi/student/",
+      "vault_file": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_aa/candidate_ez_aa_doc_b_program_policy_raw_bytes.bin",
+      "byte_length": 213153,
+      "sha256": "1e2ee74dfd5799e55a7fa1847693cea0e206b591c873041c50887dbff7e66118",
+      "program_policy_proven": "Premium dành cho Sinh viên"
+    },
+    "cross_document_relation_proven": true,
+    "contract_id": "EVIDENCE_CONTRACT_V3_DOCUMENT_PAIR_PILOT_ONE_EZ_AA",
+    "pipeline_status": "HELD_INTERNAL_DOCUMENT_PAIR_RELATION_PROVEN",
+    "public_eligible": false,
+    "public_actions": {
+      "new_public_cards": 0,
+      "new_public_links": 0,
+      "new_public_labels": 0
+    }
+  }
+}

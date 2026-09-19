@@ -1,0 +1,32 @@
+{
+  "readiness_id": "W3_TRACK1_SCOPED_READINESS",
+  "governing_work_order": "WORK_ORDER_W3_MOBILIZATION_STAGING",
+  "status": "PREPARATION_ONLY__NO_COMMERCIAL_ACTIVATION",
+  "affiliate_enabled": false,
+  "router_review": {
+    "dispatchSmartAffiliate_present": true,
+    "mode": "NON_DISPATCHING_READINESS_GUARD",
+    "finding": "The storefront router returns only pending-authentication state and cannot generate a destination, tracking parameters, or a network request.",
+    "required_before_implementation": [
+      "written partner-program authorization",
+      "approved destination-domain allowlist",
+      "replayable attribution and disclosure review",
+      "privacy and consumer-copy approval"
+    ]
+  },
+  "providers": [
+    {"provider": "Shopee Affiliate", "status": "PENDING_PARTNER_AUTHENTICATION", "tracking_url": null},
+    {"provider": "Lazada", "status": "PENDING_PARTNER_AUTHENTICATION", "tracking_url": null},
+    {"provider": "TikTok Shop", "status": "PENDING_PARTNER_AUTHENTICATION", "tracking_url": null},
+    {"provider": "AccessTrade", "status": "PENDING_PARTNER_AUTHENTICATION", "tracking_url": null},
+    {"provider": "Klook", "status": "PENDING_PARTNER_AUTHENTICATION", "tracking_url": null}
+  ],
+  "prohibited_until_separate_approval": [
+    "affiliate URL generation",
+    "tracking parameters or sub-IDs",
+    "commission or revenue claims",
+    "automatic redirects",
+    "Production activation"
+  ],
+  "planned_disclosure_copy": "Liên kết tiếp thị liên kết sẽ chỉ được hiển thị sau khi JayT có xác thực đối tác và thông báo minh bạch cho người dùng."
+}

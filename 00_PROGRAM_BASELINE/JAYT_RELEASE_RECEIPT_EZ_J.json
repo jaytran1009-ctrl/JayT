@@ -1,0 +1,83 @@
+{
+  "receipt_id": "JAYT-245-SECTION-EZ-J",
+  "version": "v3.480.0-staging.ez",
+  "governing_directive": "JAYT-245 Section EZ-J (Lines 4150-4179)",
+  "timestamp": "2026-08-31T06:38:22.007Z",
+  "governance_state": "PURE_DOCUMENT_PROVENANCE_AND_QUARANTINE_ACTIVE",
+  "production_locked": true,
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "voucher_verified_t1_count": 0,
+  "affiliate_activation": false,
+  "economic_claims_public": false,
+  "approved_staging_t2_pilot": {
+    "pilot_card_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+    "pilot_title": "GitHub Education — Thông tin đăng ký",
+    "pilot_tier": "T2_OFFICIAL_PROGRAM_DOCUMENTATION",
+    "public_eligible_t2_documentation_count": 1,
+    "caveat_statement": "Phạm vi: chương trình toàn cầu; điều kiện và quyền lợi áp dụng do GitHub quyết định. JayT không xác nhận voucher, giá hay ưu đãi tại Đà Nẵng.",
+    "canonical_action_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students"
+  },
+  "quarantined_ez_i_candidates": [
+    {
+      "quarantine_id": "QUARANTINED_EZ_I_01_NOTION_EDUCATION",
+      "reason": "Locator <title>Notion for Education</title> was missing from raw bytes; subresource tracking logs in redirect chain"
+    },
+    {
+      "quarantine_id": "QUARANTINED_EZ_I_02_CANVA_EDUCATION",
+      "reason": "Locators missing from raw bytes; third-party tracking pixels contaminated redirect chain"
+    }
+  ],
+  "resurveyed_pure_document_candidates": [
+    {
+      "candidate_id": "CANDIDATE_EZ_J_01_NOTION_EDUCATION",
+      "url": "https://www.notion.so/product/notion-for-education",
+      "final_url": "https://www.notion.com/product/notion-for-education",
+      "byte_length": 188523,
+      "sha256": "efa0ff3b7f8037d76fa445bf458136452541d1c981dc041576ed6f8cc1aeca30",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE_INTERNAL",
+      "governance_status": "HELD_INTERNAL_NO_STAGING_RENDER_PENDING_INDEPENDENT_CEO_REVIEW",
+      "public_eligible": false
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_J_02_CANVA_EDUCATION",
+      "url": "https://www.canva.com/education/",
+      "final_url": "https://www.canva.com/education/",
+      "byte_length": 270597,
+      "sha256": "a41e00e0448da7b5e0423ccb022c3e6da0f86a5d5254c5b697907231c1fb8810",
+      "proposed_tier": "T2_OFFICIAL_PROGRAM_CANDIDATE_INTERNAL",
+      "governance_status": "HELD_INTERNAL_NO_STAGING_RENDER_PENDING_INDEPENDENT_CEO_REVIEW",
+      "public_eligible": false
+    }
+  ],
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "public_candidate_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "unverified_t2_t3_badges": 0,
+    "affiliate_tracking_calls": 0,
+    "savings_lab_local_first_pass": true,
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "hashes": {
+    "sot_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "served_js_sha256": "e1f725ba956edcdc1e040b499e52092d3ba1adc0644b50f2f15f161d4e7f3602",
+    "sot_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a",
+    "served_html_sha256": "8e23a410483a99aa6681183d68f817bfb01ad28c8bd939a04f69b7cb226b0a2a"
+  },
+  "artifacts_included": [
+    "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_J_PROVENANCE_AND_QUARANTINE_20260831.md",
+    "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_J.json",
+    "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_J.json",
+    "06_TRUST_AND_EVIDENCE/PROPOSED_UTILITY_FACTS_EZ_J.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_01_notion_education_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_01_notion_education_transcript.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_02_canva_education_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_j/candidate_ez_j_02_canva_education_transcript.json",
+    "07_QUALITY_ASSURANCE/test_document_provenance_and_quarantine_ez_j.js",
+    "07_QUALITY_ASSURANCE/test_ez_h_t2_pilot_e2e.js",
+    "07_QUALITY_ASSURANCE/test_ez_review_pack_assertions.js",
+    "07_QUALITY_ASSURANCE/test_calculator_unit_ez.js"
+  ]
+}

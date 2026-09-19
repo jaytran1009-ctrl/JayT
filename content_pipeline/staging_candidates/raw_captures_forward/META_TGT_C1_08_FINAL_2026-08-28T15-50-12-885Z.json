@@ -1,0 +1,95 @@
+{
+  "target_id": "TGT_C1_08",
+  "cluster": "HOA_KHANH_LIEN_CHIEU",
+  "brand": "Fahasa",
+  "customer_need": "Sách & văn phòng phẩm Hòa Khánh",
+  "initial_url": "https://fahasa.com",
+  "final_url": "https://www.fahasa.com/",
+  "hop_count": 2,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://fahasa.com",
+      "status_code": 301,
+      "response_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "server-timing": "cfEdge;dur=3,cfOrigin;dur=0",
+        "location": "https://www.fahasa.com/",
+        "speculation-rules": "\"/cdn-cgi/speculation\"",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ijLCCSbcDoA%2FHlgqKzx96yXgVoCPhk13GHK5BkJqK0hYmkfkc0R9vjuH%2B04hkw2kqtRTsjizss3mQKJ2Cs4MhUOERhEhglE%2FGGRoqRv1xO%2BXL%2BhcY297RQpbrwI%3D\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "a324787b0eca74f0-HKG",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "location_header": "https://www.fahasa.com/",
+      "body_bytes": 520,
+      "hop_started_at": "2026-08-28T15:50:12.885Z",
+      "hop_finished_at": "2026-08-28T15:50:13.046Z"
+    },
+    {
+      "hop_index": 2,
+      "requested_url": "https://www.fahasa.com/",
+      "status_code": 200,
+      "response_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "server": "cloudflare",
+        "x-frame-options": "SAMEORIGIN",
+        "accept-ranges": "bytes",
+        "age": "18050",
+        "set-cookie": [
+          "frontend=7b3aa9297775477580060d2f5686c8aa; expires=Fri, 04-Sep-2026 15:50:15 UTC; path=/; domain=www.fahasa.com; httponly"
+        ],
+        "access-control-allow-origin": "*",
+        "cf-cache-status": "DYNAMIC",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "speculation-rules": "\"/cdn-cgi/speculation\"",
+        "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=13,cfOrigin;dur=81",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SDhMjlb54gozuagzYk5lOLt9OUZRYaJLIVQPY9gu1Nl4%2FSqvk33dZsUgfCqBuz%2FBJpMHv1AGgwJvCXh7IFo6g8Vk4ynajxvX1pB2%2BESrYuxhU32ORlrV349jRwNO%2FUFV\"}]}",
+        "cf-ray": "a324787c8d0d8497-HKG",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "location_header": null,
+      "body_bytes": 421909,
+      "hop_started_at": "2026-08-28T15:50:13.047Z",
+      "hop_finished_at": "2026-08-28T15:50:13.387Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:12.885Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:13.571Z",
+  "duration_ms": 685.42,
+  "final_http_status": 200,
+  "final_headers": {
+    "date": "Fri, 28 Aug 2026 15:50:15 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "server": "cloudflare",
+    "x-frame-options": "SAMEORIGIN",
+    "accept-ranges": "bytes",
+    "age": "18050",
+    "set-cookie": [
+      "frontend=7b3aa9297775477580060d2f5686c8aa; expires=Fri, 04-Sep-2026 15:50:15 UTC; path=/; domain=www.fahasa.com; httponly"
+    ],
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "speculation-rules": "\"/cdn-cgi/speculation\"",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=13,cfOrigin;dur=81",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SDhMjlb54gozuagzYk5lOLt9OUZRYaJLIVQPY9gu1Nl4%2FSqvk33dZsUgfCqBuz%2FBJpMHv1AGgwJvCXh7IFo6g8Vk4ynajxvX1pB2%2BESrYuxhU32ORlrV349jRwNO%2FUFV\"}]}",
+    "cf-ray": "a324787c8d0d8497-HKG",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_08_FINAL_2026-08-28T15-50-12-885Z.txt",
+  "pre_normalization_sha256": "444b60f62b61b8a520730379fd0d214400cee563dc1c81cb745b292e1a58d1b9",
+  "payload_bytes": 421909,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

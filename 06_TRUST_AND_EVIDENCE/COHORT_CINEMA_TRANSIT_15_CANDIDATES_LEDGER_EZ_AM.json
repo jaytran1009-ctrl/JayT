@@ -1,0 +1,623 @@
+{
+  "ledger_id": "COHORT_CINEMA_TRANSIT_15_CANDIDATES_LEDGER_EZ_AM",
+  "governing_directive": "JAYT-245 Section EZ-AM & Section EZ-AN (Lines 5018-5046)",
+  "cohort_type": "CINEMA_AND_TRANSIT_HYPOTHESIS_DISCOVERY",
+  "created_utc": "2026-09-01T07:04:08.094Z",
+  "total_candidates": 15,
+  "sla_hours_per_candidate": 12,
+  "clock_guard_enforced": true,
+  "strict_rules": {
+    "no_prices": true,
+    "no_codes": true,
+    "no_u22_claims": true,
+    "no_equal_price_claims": true,
+    "no_schedules": true,
+    "no_addresses": true,
+    "no_commercial_links": true,
+    "no_maps_as_evidence": true,
+    "no_future_timestamps": true,
+    "no_verdict_before_close": true,
+    "fail_closed_tier_policy": "Missing core field defaults to T4_DESCRIPTIVE_ONLY or HELD_INTERNAL",
+    "no_pre_sla_tier_labels": true,
+    "no_interim_assessments": true
+  },
+  "batch_summary": {
+    "total_candidates": 15,
+    "cinema_candidates": 7,
+    "transit_candidates": 8,
+    "raw_captured_success": 14,
+    "intake_failed_no_raw_count": 1,
+    "sla_open_evaluating_count": 14,
+    "early_verdicts_rendered": 0,
+    "public_eligible_count": 0,
+    "public_cards_created": 0,
+    "ez_an_semantics": {
+      "governing_directive": "JAYT-245 Section EZ-AN (Lines 5018-5046)",
+      "pre_sla_tier_labels_prohibited": true,
+      "open_candidates_count": 14,
+      "intake_failed_no_raw_count": 1,
+      "tier_verdicts_rendered": 0
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "COHORT_EZ_AM_01",
+      "group": "CINEMA",
+      "hypothesis_name": "CGV Cinemas Official Portal",
+      "canonical_url": "https://www.cgv.vn/",
+      "initial_url": "https://www.cgv.vn/",
+      "owner": "CJ CGV Vietnam Co., Ltd.",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_01_cgv_cinemas_raw_bytes.bin",
+      "raw_sha256": "2c4e43d7fa7ed9676d7b88a425e5687d5be2ef940e192f0c9c8a6804ec80fbc4",
+      "raw_byte_length": 5364,
+      "capture_timestamp_utc": "2026-09-01T07:04:01.489Z",
+      "sla_open_utc": "2026-09-01T07:04:01.489Z",
+      "sla_close_utc": "2026-09-01T19:04:01.489Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": null,
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.cgv.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_02",
+      "group": "CINEMA",
+      "hypothesis_name": "Lotte Cinema Official Portal",
+      "canonical_url": "https://www.lottecinemavn.com/",
+      "initial_url": "https://www.lottecinemavn.com/",
+      "owner": "Lotte Cinema Vietnam Co., Ltd.",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_02_lotte_cinema_raw_bytes.bin",
+      "raw_sha256": "287a5065df97ddba0eb28a06b3e3fd9b0338b1e241c8500a78b8fd7f5d7fa3f4",
+      "raw_byte_length": 491,
+      "capture_timestamp_utc": "2026-09-01T07:04:01.627Z",
+      "sla_open_utc": "2026-09-01T07:04:01.627Z",
+      "sla_close_utc": "2026-09-01T19:04:01.627Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": null,
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.lottecinemavn.com/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_03",
+      "group": "CINEMA",
+      "hypothesis_name": "Galaxy Cinema Official Portal",
+      "canonical_url": "https://www.galaxycine.vn/",
+      "initial_url": "https://www.galaxycine.vn/",
+      "owner": "Galaxy Cinema (Thien Ngan JSC)",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_03_galaxy_cinema_raw_bytes.bin",
+      "raw_sha256": "52f59f86a7335642e8c824263ca4b92c4cca0422fce5ba44de9d4ef65c0e3fe1",
+      "raw_byte_length": 250208,
+      "capture_timestamp_utc": "2026-09-01T07:04:01.931Z",
+      "sla_open_utc": "2026-09-01T07:04:01.931Z",
+      "sla_close_utc": "2026-09-01T19:04:01.931Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Galaxy Cinema: Hệ Thống Rạp Chiếu Phim Hiện Đại",
+          "byte_start": 229,
+          "byte_end": 304
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.galaxycine.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_04",
+      "group": "CINEMA",
+      "hypothesis_name": "BHD Star Cineplex Official Portal",
+      "canonical_url": "https://www.bhdstar.vn/",
+      "initial_url": "https://www.bhdstar.vn/",
+      "owner": "BHD Star Cineplex (Binh Hanh Dan JSC)",
+      "http_status": 0,
+      "raw_vault_path": null,
+      "raw_sha256": null,
+      "raw_byte_length": 0,
+      "capture_timestamp_utc": "2026-09-01T07:04:02.295Z",
+      "sla_open_utc": "2026-09-01T07:04:02.295Z",
+      "sla_close_utc": "2026-09-01T19:04:02.295Z",
+      "sla_window_hours": 12,
+      "status": "INTAKE_FAILED_NO_RAW",
+      "sla_status": "INTAKE_FAILED_NO_RAW",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {},
+      "missing_fields": [
+        "raw_binary",
+        "http_status_200",
+        "economic_price",
+        "voucher_code"
+      ],
+      "preclosure_block_reason": "Target server connection failed (ECONNREFUSED) during initial intake. No raw bytes captured. Not a verdict or closure; may be re-surveyed in future cohort."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_05",
+      "group": "CINEMA",
+      "hypothesis_name": "Mega GS Cinemas Official Portal",
+      "canonical_url": "https://www.megagscinemas.vn/",
+      "initial_url": "https://www.megagscinemas.vn/",
+      "owner": "Mega GS Cinemas Co., Ltd.",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_05_mega_gs_raw_bytes.bin",
+      "raw_sha256": "11355514735af4f9eb21222f8cafc04c6feeee27e7630fe10c7578fa23773610",
+      "raw_byte_length": 197724,
+      "capture_timestamp_utc": "2026-09-01T07:04:04.515Z",
+      "sla_open_utc": "2026-09-01T07:04:04.515Z",
+      "sla_close_utc": "2026-09-01T19:04:04.515Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Rạp chiếu phim Mega GS | Mega GS | Vui giải trí &#8211; Vui bạn bè !",
+          "byte_start": 4361,
+          "byte_end": 4459
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.megagscinemas.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_06",
+      "group": "CINEMA",
+      "hypothesis_name": "CineStar Official Portal",
+      "canonical_url": "https://cinestar.com.vn/",
+      "initial_url": "https://cinestar.com.vn/",
+      "owner": "CineStar Cinemas Vietnam",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_06_cinestar_raw_bytes.bin",
+      "raw_sha256": "8060e799a4f784e80b029c3892c9e059466398d988d8214e6b5d1de6d6a2dd59",
+      "raw_byte_length": 463694,
+      "capture_timestamp_utc": "2026-09-01T07:04:05.264Z",
+      "sla_open_utc": "2026-09-01T07:04:05.264Z",
+      "sla_close_utc": "2026-09-01T19:04:05.264Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Cinestar - Hệ thống rạp chiếu phim giá rẻ, hiện đại",
+          "byte_start": 919,
+          "byte_end": 1001
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://cinestar.com.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_07",
+      "group": "CINEMA",
+      "hypothesis_name": "DCINE Official Portal",
+      "canonical_url": "https://dcine.vn/",
+      "initial_url": "https://dcine.vn/",
+      "owner": "DCINE Vietnam Co., Ltd.",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_07_dcine_raw_bytes.bin",
+      "raw_sha256": "eae773389bcc4a566a9ef793a9005d64ddb23f6a31d09c6b0f7ec8fe42f9d2a2",
+      "raw_byte_length": 155723,
+      "capture_timestamp_utc": "2026-09-01T07:04:05.376Z",
+      "sla_open_utc": "2026-09-01T07:04:05.376Z",
+      "sla_close_utc": "2026-09-01T19:04:05.376Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Rạp phim Dcine",
+          "byte_start": 284,
+          "byte_end": 315
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://dcine.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_08",
+      "group": "TRANSIT",
+      "hypothesis_name": "Da Nang Bus (DanaBus) Official Portal",
+      "canonical_url": "https://www.danangbus.vn/",
+      "initial_url": "https://danangbus.vn/",
+      "owner": "Trung tam Dieu hanh Den tin hieu giao thong va Van tai cong cong Da Nang (DATRAMAC)",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_08_danangbus_raw_bytes.bin",
+      "raw_sha256": "c0b6dd4b9f57558750a472373a0410a79c9b388c6a460480b15491da678505ff",
+      "raw_byte_length": 115281,
+      "capture_timestamp_utc": "2026-09-01T07:04:05.610Z",
+      "sla_open_utc": "2026-09-01T07:04:05.610Z",
+      "sla_close_utc": "2026-09-01T19:04:05.610Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Xe Buýt Đà Nẵng & Bản Đồ Xe Bus Đà Nẵng - Danangbus.vn",
+          "byte_start": 1915,
+          "byte_end": 2003
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.danangbus.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_09",
+      "group": "TRANSIT",
+      "hypothesis_name": "Grab Vietnam Official Portal",
+      "canonical_url": "https://www.grab.com/vn/",
+      "initial_url": "https://www.grab.com/vn/",
+      "owner": "Grab Vietnam Co., Ltd.",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_09_grab_raw_bytes.bin",
+      "raw_sha256": "803c0c0884368d78d0147165835b5eba1a7d47d84f38648cf0518177b7b7599c",
+      "raw_byte_length": 337317,
+      "capture_timestamp_utc": "2026-09-01T07:04:06.041Z",
+      "sla_open_utc": "2026-09-01T07:04:06.041Z",
+      "sla_close_utc": "2026-09-01T19:04:06.041Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Grab. Siêu Ứng Dụng Đa Dịch Vụ Hàng Đầu",
+          "byte_start": 87,
+          "byte_end": 168
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.grab.com/vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_10",
+      "group": "TRANSIT",
+      "hypothesis_name": "Be Group Official Portal",
+      "canonical_url": "https://be.com.vn/",
+      "initial_url": "https://be.com.vn/",
+      "owner": "Be Group JSC",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_10_be_raw_bytes.bin",
+      "raw_sha256": "ec920921d1b4a4383379ebda50bc48ea72b7faa05aa6d3a07d96f259601ec739",
+      "raw_byte_length": 73804,
+      "capture_timestamp_utc": "2026-09-01T07:04:06.240Z",
+      "sla_open_utc": "2026-09-01T07:04:06.240Z",
+      "sla_close_utc": "2026-09-01T19:04:06.240Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Be &#8211; Tự hào là một công ty công nghệ Việt, Be mong muốn trở thành cầu nối giữa mọi khách hàng và người cung cấp dịch vụ",
+          "byte_start": 589,
+          "byte_end": 766
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://be.com.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_11",
+      "group": "TRANSIT",
+      "hypothesis_name": "Xanh SM Electric Transport Portal",
+      "canonical_url": "https://www.greensm.com/vn-vi",
+      "initial_url": "https://xanhsm.com/",
+      "owner": "GSM Smart and Green Mobility JSC",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_11_xanh_sm_raw_bytes.bin",
+      "raw_sha256": "7d23015c96296934d4ea9d3099ff0a6b174550c959effabb45e4593aace9a7e1",
+      "raw_byte_length": 227587,
+      "capture_timestamp_utc": "2026-09-01T07:04:06.567Z",
+      "sla_open_utc": "2026-09-01T07:04:06.567Z",
+      "sla_close_utc": "2026-09-01T19:04:06.567Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Green SM - Dịch vụ di chuyển thuần điện, chất lượng 5 sao | Green SM",
+          "byte_start": 153,
+          "byte_end": 252
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.greensm.com/vn-vi"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_12",
+      "group": "TRANSIT",
+      "hypothesis_name": "Vietnam Railways (DSVN) Official Portal",
+      "canonical_url": "https://dsvn.vn/",
+      "initial_url": "https://dsvn.vn/",
+      "owner": "Vietnam Railway Corporation (VNR)",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_12_dsvn_raw_bytes.bin",
+      "raw_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+      "raw_byte_length": 27076,
+      "capture_timestamp_utc": "2026-09-01T07:04:07.023Z",
+      "sla_open_utc": "2026-09-01T07:04:07.023Z",
+      "sla_close_utc": "2026-09-01T19:04:07.023Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Tập đoàn Đường sắt Quốc gia Việt Nam - Bán vé tàu trực tuyến",
+          "byte_start": 1701,
+          "byte_end": 1797
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://dsvn.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_13",
+      "group": "TRANSIT",
+      "hypothesis_name": "Vietnam Airlines Official Portal",
+      "canonical_url": "https://www.vietnamairlines.com/vn/vi/",
+      "initial_url": "https://www.vietnamairlines.com/",
+      "owner": "Vietnam Airlines JSC",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_13_vietnam_airlines_raw_bytes.bin",
+      "raw_sha256": "c73ff2f67419447be2f16a70e68042b00c26d92af201bcbe16928807e928bed7",
+      "raw_byte_length": 4279949,
+      "capture_timestamp_utc": "2026-09-01T07:04:07.107Z",
+      "sla_open_utc": "2026-09-01T07:04:07.107Z",
+      "sla_close_utc": "2026-09-01T19:04:07.107Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Vietnam Airlines | Sải cánh vươn cao | Website chính thức",
+          "byte_start": 80,
+          "byte_end": 160
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.vietnamairlines.com/vn/vi/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_14",
+      "group": "TRANSIT",
+      "hypothesis_name": "VietJet Air Official Portal",
+      "canonical_url": "https://www.vietjetair.com/",
+      "initial_url": "https://www.vietjetair.com/",
+      "owner": "VietJet Aviation JSC",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_14_vietjet_air_raw_bytes.bin",
+      "raw_sha256": "216e5d91f77a2456fe566c8820d60462cb4fb0fd22000a4f8f3913266996e67a",
+      "raw_byte_length": 10334,
+      "capture_timestamp_utc": "2026-09-01T07:04:07.715Z",
+      "sla_open_utc": "2026-09-01T07:04:07.715Z",
+      "sla_close_utc": "2026-09-01T19:04:07.715Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "Vietjet Air | Bay là thích ngay! | Website chính thức",
+          "byte_start": 1555,
+          "byte_end": 1628
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://www.vietjetair.com/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    },
+    {
+      "candidate_id": "COHORT_EZ_AM_15",
+      "group": "TRANSIT",
+      "hypothesis_name": "TNGO Public Bike Sharing Portal",
+      "canonical_url": "https://tngo.vn/",
+      "initial_url": "https://tngo.vn/",
+      "owner": "Tri Nam Group JSC",
+      "http_status": 200,
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_am/candidate_ez_am_15_tngo_raw_bytes.bin",
+      "raw_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "raw_byte_length": 52968,
+      "capture_timestamp_utc": "2026-09-01T07:04:07.909Z",
+      "sla_open_utc": "2026-09-01T07:04:07.909Z",
+      "sla_close_utc": "2026-09-01T19:04:07.909Z",
+      "sla_window_hours": 12,
+      "status": "OPEN_EVALUATING",
+      "sla_status": "OPEN_EVALUATING",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "card_created": false,
+      "locators": {
+        "title_locator": {
+          "field": "TITLE",
+          "verbatim": "TNGo - Xe đạp công nghệ số",
+          "byte_start": 131,
+          "byte_end": 180
+        },
+        "canonical_locator": {
+          "field": "CANONICAL_URL",
+          "verbatim": "https://tngo.vn/"
+        }
+      },
+      "missing_fields": [
+        "economic_price",
+        "voucher_code",
+        "exclusive_student_terms",
+        "verified_discount_rate"
+      ],
+      "preclosure_block_reason": "Under active 12h SLA evaluation. Core voucher/pricing fields unproven on general portal. Awaiting SLA close for formal evaluation."
+    }
+  ]
+}

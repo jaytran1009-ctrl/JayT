@@ -1,0 +1,19 @@
+{
+  "report_id": "AST_EVIDENCE_READ_AUDIT_REPORT",
+  "governing_directive": "JAYT-245 Section JAYT-260-CORRECTION-6 (Lines 5520-5535)",
+  "generated_at_utc": "2026-09-03T06:03:36.845Z",
+  "total_runtime_modules_scanned": 993,
+  "explicit_allowlist_exclusions": [
+    {
+      "module_path": "00_PROGRAM_BASELINE/jayt_canonical_admission_gateway.js",
+      "rationale": "Canonical Admission Gateway: Authoritative kernel for reading raw evidence, validating SHA-256 hashes, and enforcing quarantine denylist."
+    },
+    {
+      "module_path": "00_PROGRAM_BASELINE/jayt_artifact_loader_guard.js",
+      "rationale": "Low-level Quarantine Guard: Loads QUARANTINE_RECORD_JAYT_260_CORRECTION_2.json to initialize in-memory quarantine denylist."
+    }
+  ],
+  "violations_count": 0,
+  "violations": [],
+  "verdict": "PASS_ZERO_UNAUTHORIZED_DIRECT_EVIDENCE_READS"
+}

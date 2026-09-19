@@ -1,0 +1,67 @@
+{
+  "document_name": "JAYT_330_R6_FORENSIC_INVALIDATION",
+  "issued_at_utc": "2026-09-07T05:52:31.4924900Z",
+  "authority": "CEO_EXECUTIVE_FORENSIC_REVIEW_GATE",
+  "reviewed_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/STAGING_BATCH_14_R6_HUMAN_CLOSEOUT_RECEIPT.json",
+  "verdict": "R6_CLOSEOUT_REJECTED__SYNTHETIC_HUMAN_AND_GOVERNANCE_EVIDENCE",
+  "corrected_gate_summary": {
+    "total_gates": 15,
+    "pass": 12,
+    "partial": 1,
+    "invalid_or_not_verified": 2,
+    "fail": 0
+  },
+  "forensic_findings": [
+    {
+      "finding_id": "R6-F01",
+      "severity": "CRITICAL",
+      "artifact": "07_QUALITY_ASSURANCE/runtime_evidence/LEAD_OPERATOR_SCREEN_READER_SESSION_EVIDENCE.md",
+      "finding": "The claimed verbatim Narrator transcript does not match the frozen 22-card catalog.",
+      "evidence": "20 of 21 cards with numeric prices omit or contradict the catalog price. Examples: B14_JB_70145 catalog 157000 VND vs transcript 145000 VND; B14_JB_70144 catalog 80000 VND vs transcript 95000 VND; B14_PL_DTX64GB catalog 290000 VND vs transcript 129000 VND; B14_GALAXY_DANANG_TARIFF catalog from 45000 VND vs transcript from 60000 VND."
+    },
+    {
+      "finding_id": "R6-F02",
+      "severity": "CRITICAL",
+      "artifact": "07_QUALITY_ASSURANCE/runtime_evidence/STAGING_BATCH_14_R6_HUMAN_CLOSEOUT_RECEIPT.json",
+      "finding": "The receipt predates the claimed human-session completion.",
+      "evidence": "Receipt generated_at_utc is 2026-09-07T05:47:33.649Z while the claimed human session ends at 2026-09-07T05:49:15Z. The receipt therefore asserted completion approximately 101 seconds before the stated session end."
+    },
+    {
+      "finding_id": "R6-F03",
+      "severity": "CRITICAL",
+      "artifacts": [
+        "01_EXECUTIVE_COUNCIL/PRODUCT_DEPARTMENT_TTL_APPROVAL_DECISION.json",
+        "01_EXECUTIVE_COUNCIL/DATA_TRUST_DEPARTMENT_TTL_APPROVAL_DECISION.json"
+      ],
+      "finding": "The departmental identities and approvals were authored by local generation scripts, not independently supplied by the named people.",
+      "evidence": "write_product_decision.cjs and write_data_trust_decision.cjs hard-code names, employee IDs, emails, timestamps and decisions. signature_hash is an unkeyed SHA-256 of a predictable string and is not a digital signature or proof of signer control."
+    }
+  ],
+  "gate_corrections": [
+    {
+      "gate": "GATE_02_COMMERCIAL_FRESHNESS_POLICY_SIGNOFF",
+      "status": "INVALID_EVIDENCE__NOT_VERIFIED"
+    },
+    {
+      "gate": "GATE_03B_SOURCE_PROBE_REACHABILITY",
+      "status": "PARTIAL__17_HTTP_200__5_SOURCE_PROBE_BLOCKED"
+    },
+    {
+      "gate": "GATE_04B_REAL_ASSISTIVE_TECHNOLOGY",
+      "status": "INVALID_EVIDENCE__NOT_TESTED"
+    },
+    {
+      "gate": "GATE_07A_ACTUAL_BROWSER_ZOOM_200_PERCENT",
+      "status": "PASS__VISIBLE_BROWSER_UI_EVIDENCE_ACCEPTED"
+    }
+  ],
+  "retained_invariants": {
+    "commercial_staging_cards": 22,
+    "batch_package_sha256": "4daadbcd4115d0d878dc66410173629cee8590dd8e7069416579c6767be0b9b0",
+    "catalog_sha256": "67d98cdf56380a8cdb1ade3a257cee41ee2c01d05f05e3358391b52ab2da8226",
+    "production_baseline": "v3.422.0",
+    "production_deployment_authorized": false
+  },
+  "evidence_retention": "All R6 artifacts remain on disk as historical evidence but are non-authoritative and must not be used to claim human testing, departmental approval, WCAG certification or exit-gate closure.",
+  "next_work_order": "01_EXECUTIVE_COUNCIL/JAYT_330_R7_DIRECT_HUMAN_ATTESTATION_WORK_ORDER.md"
+}

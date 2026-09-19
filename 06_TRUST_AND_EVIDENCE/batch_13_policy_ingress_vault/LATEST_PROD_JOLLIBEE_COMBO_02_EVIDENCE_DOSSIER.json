@@ -1,0 +1,254 @@
+{
+  "candidate_id": "PROD_JOLLIBEE_COMBO_02",
+  "brand_id": "jollibee",
+  "brand_name": "Jollibee Vietnam",
+  "item_name": "MỘT MÌNH HÍT HÀ",
+  "target_url": "https://jollibee.com.vn/m-t-minh-hit-ha.html",
+  "raw_file": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_jollibee_combos_20260906_082143_dc594d/PROD_JOLLIBEE_COMBO_02.raw.html",
+  "raw_bytes": 189048,
+  "raw_sha256": "6c9aff91c21ea0d0d4162562a87bb4429562052da1397298696e2bf67b4e2e92",
+  "extracted_at_utc": "2026-09-06T08:31:52.720Z",
+  "parser_analysis": {
+    "parser_type": "JSON.parse on script[type='text/x-magento-init'] with path #product_addtocart_form -> priceBundle -> optionConfig",
+    "script_offset": 110202,
+    "bundle_id": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/bundleId",
+      "value": "679",
+      "verified_integer": 679
+    },
+    "base_price": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/prices/basePrice/amount",
+      "value": 80000,
+      "currency": "VND",
+      "audit_note": "Trích xuất trực tiếp từ nhánh prices.basePrice của root bundle bằng parser JSON, tách biệt hoàn toàn với giá của từng tùy chọn con (selection prices)."
+    },
+    "old_price": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/prices/oldPrice/amount",
+      "value": 80000
+    },
+    "final_price": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/prices/finalPrice/amount",
+      "value": 80000
+    },
+    "is_fixed_price_flag": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/isFixedPrice",
+      "value": true,
+      "audit_note": "Cờ isFixedPrice: true trong Magento Bundle chỉ định gói có giá cơ sở cố định cho cấu hình mặc định (delta = 0), KHÔNG ĐỒNG NGHĨA VỚI GIÁ THANH TOÁN CỐ ĐỊNH nếu người dùng thay đổi tùy chọn có phụ phí."
+    },
+    "bundle_options": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/options",
+      "options_count": 4,
+      "max_addon_variance": 26000,
+      "calculated_max_price": 106000,
+      "options": [
+        {
+          "option_id": "2019",
+          "title": "Chọn Mỳ ý sốt cay",
+          "max_delta": 10000,
+          "selections_count": 2,
+          "selections": [
+            {
+              "selection_id": "11065",
+              "name": "Mì Ý Sốt Cay vừa",
+              "qty": 1,
+              "price_delta": 0
+            },
+            {
+              "selection_id": "11066",
+              "name": "Mì Ý Sốt Cay Lớn (Up)",
+              "qty": 1,
+              "price_delta": 10000
+            }
+          ]
+        },
+        {
+          "option_id": "2020",
+          "title": "Chọn Gà sốt cay",
+          "max_delta": 0,
+          "selections_count": 1,
+          "selections": [
+            {
+              "selection_id": "11067",
+              "name": "1 miếng Gà Sốt Cay",
+              "qty": 1,
+              "price_delta": 0
+            }
+          ]
+        },
+        {
+          "option_id": "2021",
+          "title": "Chọn Thức Uống",
+          "max_delta": 15000,
+          "selections_count": 11,
+          "selections": [
+            {
+              "selection_id": "11068",
+              "name": "Pepsi vừa",
+              "qty": 1,
+              "price_delta": 0
+            },
+            {
+              "selection_id": "11069",
+              "name": "7UP vừa",
+              "qty": 1,
+              "price_delta": 0
+            },
+            {
+              "selection_id": "11070",
+              "name": "Mirinda vừa",
+              "qty": 1,
+              "price_delta": 0
+            },
+            {
+              "selection_id": "11071",
+              "name": "Pepsi lớn (up)",
+              "qty": 1,
+              "price_delta": 5000
+            },
+            {
+              "selection_id": "11072",
+              "name": "7Up (up)",
+              "qty": 1,
+              "price_delta": 5000
+            },
+            {
+              "selection_id": "11073",
+              "name": "Mirinda lớn (up)",
+              "qty": 1,
+              "price_delta": 5000
+            },
+            {
+              "selection_id": "11074",
+              "name": "Nước Suối",
+              "qty": 1,
+              "price_delta": 5000
+            },
+            {
+              "selection_id": "11075",
+              "name": "Cacao sữa đá vừa",
+              "qty": 1,
+              "price_delta": 10000
+            },
+            {
+              "selection_id": "11076",
+              "name": "Cacao Sữa Đá Lớn",
+              "qty": 1,
+              "price_delta": 15000
+            },
+            {
+              "selection_id": "11077",
+              "name": "Nước ép xoài đào",
+              "qty": 1,
+              "price_delta": 15000
+            },
+            {
+              "selection_id": "11078",
+              "name": "Trà chanh hạt chia",
+              "qty": 1,
+              "price_delta": 15000
+            }
+          ]
+        },
+        {
+          "option_id": "2022",
+          "title": "Thêm Sốt",
+          "max_delta": 1000,
+          "selections_count": 2,
+          "selections": [
+            {
+              "selection_id": "11079",
+              "name": "Thêm 2 Gói Tương Chua Ngọt",
+              "qty": 1,
+              "price_delta": 1000
+            },
+            {
+              "selection_id": "11080",
+              "name": "Thêm 2 Gói Tương Cà",
+              "qty": 1,
+              "price_delta": 1000
+            }
+          ]
+        }
+      ]
+    },
+    "default_selected": {
+      "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/selected",
+      "selections": {
+        "2019": [
+          "11065"
+        ],
+        "2020": [
+          "11067"
+        ],
+        "2021": [
+          "11068"
+        ]
+      }
+    }
+  },
+  "exact_byte_spans": {
+    "product_id": {
+      "primary_form": {
+        "text_span": "type=\"hidden\" name=\"product\" value=\"679\"",
+        "byte_offset": 109618,
+        "byte_length": 40
+      },
+      "secondary_handle": {
+        "text_span": "catalog_product_view_id_679",
+        "byte_offset": 156205,
+        "byte_length": 27
+      }
+    },
+    "sku": {
+      "primary_form": {
+        "text_span": "data-product-sku=\"70144\"",
+        "byte_offset": 109383,
+        "byte_length": 24
+      },
+      "secondary_handle": {
+        "text_span": "catalog_product_view_sku_70144",
+        "byte_offset": 156235,
+        "byte_length": 30
+      },
+      "tertiary_script": {
+        "text_span": "'sku': \"70144\"",
+        "byte_offset": 146680,
+        "byte_length": 14
+      }
+    },
+    "base_price": {
+      "dom_display": {
+        "text_span": "<span class=\"price\">80,000 ₫</span>",
+        "byte_offset": 143054,
+        "byte_length": 37
+      },
+      "json_config": {
+        "text_span": "\"basePrice\":{\"amount\":80000}",
+        "byte_offset": 114912,
+        "byte_length": 28
+      }
+    },
+    "default_ingredients": {
+      "inner_text": {
+        "text_span": "1 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Nước ngọt",
+        "byte_offset": 109224,
+        "byte_length": 61
+      },
+      "full_container": {
+        "text_span": "<div class=\"product attribute overview\">\n        <div class=\"value\" itemprop=\"description\"><p>1 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Nước ngọt</p></div>\n</div>",
+        "byte_offset": 109130,
+        "byte_length": 172
+      }
+    },
+    "title": {
+      "text_span": "<title>MỘT MÌNH HÍT HÀ</title>",
+      "byte_offset": 77244,
+      "byte_length": 35
+    },
+    "target_url": {
+      "text_span": "https://jollibee.com.vn/m-t-minh-hit-ha.html",
+      "byte_offset": 92006,
+      "byte_length": 44
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "quarantine_id": "QUARANTINE_RECORD_JAYT_260_CORRECTION_1",
+  "verdict": "JAYT_260_MICRO_BATCH_01_QUARANTINED_FALSE_PROVENANCE_AND_OUT_OF_SCOPE",
+  "governing_directive": "JAYT-245 Section JAYT-260-CORRECTION-1 (Lines 5433-5450)",
+  "quarantined_at_utc": "2026-09-01T15:16:14.704Z",
+  "quarantined_artifacts": [
+    {
+      "path": "06_TRUST_AND_EVIDENCE/JAYT_260_MICRO_BATCH_01_INTAKE_LEDGER.json",
+      "destination": "06_TRUST_AND_EVIDENCE/QUARANTINED_JAYT_260_MICRO_BATCH_01_INTAKE_LEDGER.json",
+      "sha256": "5f1cf4df3f8ad20193e61a4dcb3c8a84a6f127c983d351cc4beeb6efb4a115cf",
+      "byte_length": 7832
+    },
+    {
+      "path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/",
+      "type": "DIRECTORY_SYNTHETIC_RAW_VAULT",
+      "reason": "Synthetic self-composed HTML files lacking HTTP status/headers, canonical provenance, and containing out-of-scope geographic targets (Hanoi, HCMC)."
+    }
+  ],
+  "detailed_findings": {
+    "synthetic_raw_defect": "The HTML payloads were self-composed without HTTP response metadata, status codes, server headers, or verifiable remote HTTP capture provenance.",
+    "out_of_scope_defect": "Targets included local transit systems for Hanoi (Transerco) and HCMC (MAUR Metro 1), which violate the Da Nang student ecosystem scope.",
+    "mitigation": "Micro-Batch 01 is permanently isolated. No closure ledger will be produced. Micro-Batch 02 will enforce strict Da Nang geographic scope and full HTTP capture receipts."
+  }
+}

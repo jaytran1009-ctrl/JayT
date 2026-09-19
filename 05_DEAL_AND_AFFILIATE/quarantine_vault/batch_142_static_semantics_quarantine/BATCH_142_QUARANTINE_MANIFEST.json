@@ -1,0 +1,55 @@
+{
+  "manifest_id": "BATCH_142_QUARANTINE_MANIFEST",
+  "directive": "JAYT-142R: THU HỒI KẾT LUẬN 142, KHÔI PHỤC BẰNG CHỨNG GỐC VÀ TÁI XỬ LÝ BATCH LỚN",
+  "status": "REJECTED_FOR_DATA_QUALIFICATION",
+  "quarantined_at": "2026-08-26T18:47:21.693Z",
+  "executive_ruling": "CEO audit identified that 142 populated locality and leaf semantics via static hardcoded maps (leafSemanticsMap, expected_da_nang_verified, known_da_nang_venues) instead of purely extracting from raw node provenance. Derived outputs quarantined; raw captures (HTML/text/screenshots/receipts) preserved for genuine DOM-native reprocessing.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_35_STATIC_DICTIONARY_OVERRIDE_IN_PIPELINE",
+      "description": "Used static dictionaries (leafSemanticsMap, expected_da_nang_verified) to inject structured fields and locality verdicts into compiler outputs rather than parsing raw DOM nodes."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/store_locator_verifier_142.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/store_locator_verifier_142.js",
+      "sha256": "34a1ea1a721e77f3fbe5d2300d42fb62e826fdd53ca0ae33107964a638efeb02"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/leaf_evidence_serializer_142.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/leaf_evidence_serializer_142.js",
+      "sha256": "92d5ad47de259a395c5d7bb86dfca94eba3407fa59aac7807410dddd39cf9a11"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_142.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/generic_compiler_142.js",
+      "sha256": "41e76da739d5f3819dfb06f0a4a5720f606656031a862fdda395976fe2ca2d1e"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/brand_locality_registry_142.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/brand_locality_registry_142.json",
+      "sha256": "7c724ce3ac7d401125d837822893754df6ab171c56705c45ad7d688a8df6ed28"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/leaf_batch_142_table.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/leaf_batch_142_table.json",
+      "sha256": "82835557d095360312919b1368adb41c590df3f0ec115dbcd0a7871d5675075a"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_142_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/batch_capture_142_manifest.json",
+      "sha256": "30fc631ee2ff04adffc90a735886d45a7b85f9d5e2bcecb410e482bb1a265f9d"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_large_scale_supply_142.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/test_large_scale_supply_142.js",
+      "sha256": "ff3ac89b73cfb3b52353998624b4d0b896c986e0c4651c297bb639d95a323b50"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_142_LARGE_SCALE_SUPPLY_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/JAYT_142_LARGE_SCALE_SUPPLY_REVIEW_PACK.md",
+      "sha256": "5711cadb0d5fbabec21336624db33ee7349becd73742e5bdbe4d9e0c6cb87dfd"
+    }
+  ]
+}

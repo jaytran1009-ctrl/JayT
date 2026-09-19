@@ -1,0 +1,26 @@
+{
+  "work_order_id": "J355_BATCH18_FOOD_CINEMA",
+  "authority": "Chairman decree JAYT-355",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "brands": ["Jollibee", "Lotteria", "Phúc Long", "Highlands Coffee", "CGV Cinemas"],
+  "target": "At least 10 distinct counter offers or student combos demonstrably valid during September 2026 in Da Nang",
+  "capture_authorized": true,
+  "staging_hydration_authorized_for_verified_records": true,
+  "production_deployment_authorized": false,
+  "source_selection": "Resolve official promotion leaf URLs using the existing locator matrix and official brand sites. Record exact resolved URLs before capture; do not invent URLs or use search snippets as raw evidence.",
+  "requirements": [
+    "Run batch discovery, capture, extraction and validation through a reusable runner.",
+    "Preserve original raw response body, sanitized response headers, actual UTC capture time and binary SHA-256 in batch_18 vault.",
+    "For each offer record exact terms, observed price or benefit, validity window, student/member restrictions, official source and Da Nang applicability.",
+    "Reuse verified locality evidence where applicable; a local branch alone does not prove an offer applies when its terms exclude that branch. Resolve missing locator evidence within this authorized brand scope.",
+    "Deduplicate against existing records and report new identities separately from updates. Classify ordinary menu prices separately from promotional offers.",
+    "Hold expired, unsupported or inaccessible offers with their reasons. Report any shortfall against ten; never fabricate records or copy codes.",
+    "Hydrate verified records on internal Staging :4176 and run DOM, keyboard and 1440/768/390px regression checks.",
+    "Return a single batch receipt containing verified and held counts, item IDs, brands, actual benefits/prices, source URLs, evidence hashes, locality references and test results."
+  ],
+  "vault": "06_TRUST_AND_EVIDENCE/batch_18_food_cinema_vault/",
+  "output": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J355_BATCH18_FOOD_CINEMA.json",
+  "receipt_sha256_sidecar_required": true
+}

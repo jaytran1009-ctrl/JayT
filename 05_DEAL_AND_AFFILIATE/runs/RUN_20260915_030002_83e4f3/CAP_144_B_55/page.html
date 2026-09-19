@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><link href="/ErrorStyles/config.css" rel="stylesheet" type="text/css"><link href="/ErrorStyles/custom.css" rel="stylesheet" type="text/css"><link href="/ErrorStyles/m.custom.css" rel="stylesheet" type="text/css"><link href="/ErrorStyles/font.css" rel="stylesheet" type="text/css"><link href="/ErrorStyles/animate.css" rel="stylesheet" type="text/css"><link href="/ErrorStyles/error-404.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/ErrorStyles/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        var ID_txtSearch = 'txtSearch';
+        $(function () {
+            var Input = $('#' + ID_txtSearch);
+            var default_value = Input.val();
+            if (default_value == '') {
+                alert('Bạn phải nhập dữ liệu mới tìm kiếm được!');
+            }
+            else {
+                $(Input).focus(function () {
+                    if ($(this).val() == default_value) {
+                        $(this).val("");
+                    }
+                }).blur(function () {
+                    if ($(this).val().length == 0) /*Small update*/ {
+                        $(this).val(default_value);
+                    }
+                });
+            }
+        });
+
+
+        function clickButton(e, buttonid) {
+            var evt = e ? e : window.event;
+            var bt = document.getElementById(buttonid);
+
+
+            if (bt) {
+                if (evt.keyCode == 13) {
+                    var Input = $('#' + ID_txtSearch);
+                    var default_value = Input.val();
+                    if (default_value == '') {
+                        alert('Vui lòng nhập ký tự vào để tìm kiếm!');
+                        return false;
+                    } else {
+                        bt.click();
+                        return false;
+                    }
+                }
+            }
+
+        }
+
+        $(function () {
+            $("#txtSearch").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/modules/page/funcs/main.aspx/GetSearchHint',
+                    data: "{ 'prefix': '" + request.term + "'}",
+                    dataType: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+
+                    success: function (data) {
+                        response($.map(data.d, function (item) {
+                            var itemt = item.split("|");
+                            return {
+
+                                label: itemt[1],
+                                val: itemt[0]
+                            }
+                        }))
+                        //console.log(data.d);
+                        //var availableTags = [data.d];
+                        //response(
+                        //availableTags
+                        //    )
+
+                    },
+                    error: function (response) {
+                        // alert(response.responseText);
+                    },
+                    failure: function (response) {
+                        //  alert(response.responseText);
+                    }
+                });
+            },
+            select: function (e, i) {
+                $("#txtSearch").val(i.item.label);
+                window.location.href = i.item.val;
+
+            },
+            minLength: 1
+        });
+    });
+        function reLoadPage() {
+            window.location.reload();
+        }
+    </script>
+<title>
+	Error Styles
+</title></head>
+<body style="">
+    <div id="ctl00_ContentStyles" class="mainpage-main">
+        <div class="mainpage-config">
+            <div class="mainpage-set">
+                <form name="form1" method="post" action="./Error.aspx?aspxerrorpath=%2fchinh-sach-ve-thang-sinh-vien.html" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNTExNzU3MTQPZBYCAgMPZBYCZg8PZBYCHgpvbmtleXByZXNzBSVyZXR1cm4gY2xpY2tCdXR0b24oZXZlbnQsJ2J0blNlYXJjaCcpZGQZS7eJFbGcM0UcqM0QbHK+uk6s9g==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AB827D4F">
+</div>
+                    <div class="_error_public frcontent">
+                        <div class="frrow">
+                            <div class="_m320_fr_col12">
+                                <h1 id="error" class="center wow fadeInRight animated animated" data-wow-duration="0s" style="visibility: visible;-webkit-animation-duration: 0s; -moz-animation-duration: 0s; animation-duration: 0s;">398</h1>
+                                <h3 class="center capital f1 wow fadeInLeft animated animated" data-wow-duration="2s" style="visibility: visible;-webkit-animation-duration: 2s; -moz-animation-duration: 2s; animation-duration: 2s;">KHÔNG TÌM THẤY TRANG</h3>
+                                
+                                <p class="center wow bounceIn animated animated" data-wow-delay="0.5s" style="visibility: visible;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">Xin lỗi ! Trang web bạn tìm kiếm không tồn tại. </p>
+                            </div>
+                        </div>
+                        <div class="frrow">
+                            <div class="_m320_fr_col12">
+                               <div class="_center">
+										<a class="_frame_logo" href="/">
+											<img src="/UploadImages/logo.png" alt="DanaBus">
+										</a>
+								</div>
+                            </div>
+                        </div>
+                        <div class="frrow">
+                            <div class="_m320_fr_col12">
+                                <div id="cflask-holder" class="wow fadeIn animated animated" data-wow-delay="600ms" style="visibility: visible;-webkit-animation-delay: 600ms; -moz-animation-delay: 600ms; animation-delay: 600ms;">
+                                    <span class="wow tada  animated animated" data-wow-delay="800ms" style="visibility: visible;-webkit-animation-delay: 800ms; -moz-animation-delay: 800ms; animation-delay: 800ms;"><i class="icost icon-flask fa-5x flask wow flip animated animated" data-wow-delay="3300ms" style="visibility: visible;-webkit-animation-delay: 3300ms; -moz-animation-delay: 3300ms; animation-delay: 3300ms;"></i>
+                                        <i id="b1" class="bubble"></i>
+                                        <i id="b2" class="bubble"></i>
+                                        <i id="b3" class="bubble"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frrow">
+                            <div class="_m320_fr_col12 _push_none">
+                                <div class="_m320_fr_col12 _m768_fr_col6 _push_center search-form wow fadeInUp animated animated" data-wow-delay="500ms" style="visibility: visible;-webkit-animation-delay: 500ms; -moz-animation-delay: 500ms; animation-delay: 500ms;">
+                                    
+                                        
+                                        <span class="block_search">
+											<input name="txtSearch" type="text" value="Nhập từ khóa tìm kiếm" id="txtSearch" class="search" onkeypress="return clickButton(event,'btnSearch')">
+											<a id="btnSearch" class="" value="Tìm kiếm" href="javascript:__doPostBack('btnSearch','')">
+												<i class="icost icon-search"></i></a>
+										</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frrow">
+                            <div class="_m320_fr_col12 _push_none">
+                                <div class="links-wrapper _m320_fr_col12 _m768_fr_col6 _push_center">
+                                    <ul class="links">
+                                        <li class="wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible;-webkit-animation-delay: 400ms; -moz-animation-delay: 400ms; animation-delay: 400ms;"><a href="/"><i class="icost icon-home fa-2x"></i></a></li>
+                                        <li class="wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;"><a href="#"><i class="icost icon-facebook fa-2x"></i></a></li>
+                                        <li class="wow fadeInRight animated" data-wow-delay="200ms" style="visibility: visible;-webkit-animation-delay: 200ms; -moz-animation-delay: 200ms; animation-delay: 200ms;"><a href="#"><i class="icost icon-twitter fa-2x"></i></a></li>
+                                        <li class="wow fadeInLeft animated" data-wow-delay="200ms" style="visibility: visible;-webkit-animation-delay: 200ms; -moz-animation-delay: 200ms; animation-delay: 200ms;"><a href="#"><i class="icost icon-google-plus fa-2x"></i></a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div></form>
+
+                    <!--ADDING THE REQUIRED SCRIPT FILES-->
+                    
+                    <script type="text/javascript" src="/ErrorStyles/countUp.js"></script>
+                    <script type="text/javascript" src="/ErrorStyles/wow.js"></script>
+
+                    <!--Initiating the CountUp Script-->
+                    <script type="text/javascript">
+                        "use strict";
+                        var count = new countUp("error", 0, 404, 0, 1);
+
+                        window.onload = function () {
+                            // fire animation
+                            count.start();
+                        }
+                    </script>
+
+                    <!--Initiating the Wow Script-->
+                    <script>
+                        "use strict";
+                        var wow = new WOW(
+                        {
+                            animateClass: 'animated',
+                            offset: 100
+                        }
+                    );
+                        wow.init();
+                    </script>
+                
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

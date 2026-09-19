@@ -1,0 +1,65 @@
+{
+  "$schema": "https://jayt.vn/schemas/containment-manifest.v1.json",
+  "manifest_id": "CONTAINMENT_MANIFEST_132E",
+  "directive": "JAYT-132E-PROVENANCE-CONTAINMENT-AND-RECAPTURE",
+  "contained_at": "2026-08-26T13:50:00+07:00",
+  "action_type": "PROVENANCE_QUARANTINE_AND_CANONICAL_RECLASSIFICATION",
+  "executive_summary": "Cách ly toàn bộ các claim F&B/Retail/Delivery bị gán nhãn sai thành ACTIVE_VERIFIED trong đợt 132D khi chưa có evidence bundle vật lý trên đĩa (tệp capture leaf, SHA-256, dung lượng bytes, thời hạn TTL và phạm vi chi nhánh Đà Nẵng đã đối soát). Reconcile SSOT để loại bỏ 100% tình trạng một ID xuất hiện ở hai trạng thái canonical.",
+  "quarantined_claims": [
+    {
+      "id": "DEAL_120_LOTTERIA_HAPPY_LUNCH",
+      "brand": "Lotteria Vietnam",
+      "claimed_state_132D": "ACTIVE_VERIFIED",
+      "quarantined_to_state_132E": "MENU_REFERENCE",
+      "root_cause": "Chưa có tệp capture leaf vật lý riêng chứng minh chi nhánh Đà Nẵng và thời hạn áp dụng cụ thể trong batch capture 109. Chuyển về đúng nhóm MENU_REFERENCE mang nhãn '📋 GIÁ THAM KHẢO (MENU NIÊM YẾT)'.",
+      "missing_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_LOTTERIA_LEAF/page.txt"
+    },
+    {
+      "id": "DEAL_120_DOMINOS_BOGO_TUE_THU",
+      "brand": "Domino's Pizza",
+      "claimed_state_132D": "ACTIVE_VERIFIED",
+      "quarantined_to_state_132E": "WATCHLIST_RECHECK",
+      "root_cause": "Chưa có leaf capture vật lý đối soát chi nhánh Đà Nẵng. Chuyển về WATCHLIST_RECHECK mang nhãn '👁️ ĐANG THEO DÕI (WATCHLIST)'.",
+      "missing_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_DOMINOS_LEAF/page.txt"
+    },
+    {
+      "id": "DEAL_120_GONGCHA_STUDENT_DISCOUNT",
+      "brand": "Gong Cha",
+      "claimed_state_132D": "ACTIVE_VERIFIED",
+      "quarantined_to_state_132E": "MENU_REFERENCE",
+      "root_cause": "Capture TARGET_108_08_GONGCHA_LEAF_01 chỉ xác thực biểu giá thực đơn trà Alisan (53.000₫), chưa chứng minh chương trình giảm 15% sinh viên có thời hạn TTL. Chuyển về MENU_REFERENCE với mã MENU_120_GONGCHA_ALISAN_53K.",
+      "missing_artifact": "Bằng chứng văn bản chính thức về thời hạn chương trình giảm 15% tại Đà Nẵng"
+    },
+    {
+      "id": "DEAL_120_HIGHLANDS_JCB_20K",
+      "brand": "Highlands Coffee",
+      "claimed_state_132D": "ACTIVE_VERIFIED (xung đột)",
+      "quarantined_to_state_132E": "WATCHLIST_RECHECK",
+      "root_cause": "Xung đột SSOT: vừa ở WATCHLIST_RECHECK trong feed vừa bị liệt kê ACTIVE_VERIFIED trong North Star. Tệp capture TARGET_108_09_HIGHLANDS_LEAF_01 chứng minh ưu đãi phụ thuộc ngân sách hàng ngày của ngân hàng JCB. Chuyển dứt điểm về WATCHLIST_RECHECK (WATCHLIST_120_HIGHLANDS_JCB_30).",
+      "missing_artifact": "Xác nhận ngân sách live từ máy POS tại quầy"
+    },
+    {
+      "id": "DEAL_120_WINMART_HOI_VIEN_WIN",
+      "brand": "WinMart",
+      "claimed_state_132D": "ACTIVE_VERIFIED (xung đột)",
+      "quarantined_to_state_132E": "WATCHLIST_RECHECK",
+      "root_cause": "Xung đột SSOT: vừa là WATCHLIST vừa là ACTIVE_VERIFIED. Tệp capture TARGET_108_30_WINMART_LEAF_01 là chính sách hội viên định kỳ. Chuyển dứt điểm về WATCHLIST_RECHECK (WATCHLIST_120_WINMART_WINECO_20).",
+      "missing_artifact": "Danh mục sản phẩm ưu đãi cụ thể theo từng siêu thị WinMart Đà Nẵng"
+    },
+    {
+      "id": "SAMPLE_DELIVERY_BASKETS_132D",
+      "brand": "ShopeeFood / GrabFood / BeFood",
+      "claimed_state_132D": "VERIFIED_SAMPLE_EVIDENCE",
+      "quarantined_to_state_132E": "USER_INPUT_LOCAL_CALCULATOR_ONLY",
+      "root_cause": "Không có capture hóa đơn giỏ hàng thực tế cùng lúc, cùng địa chỉ và cùng tài khoản. Bàn So Sánh Real-Pay được đưa về đúng bản chất: Máy tính cục bộ để người dùng tự nhập giỏ hàng đang thấy.",
+      "missing_artifact": "Hóa đơn checkout giỏ hàng thực tế từ API/Màn hình thanh toán"
+    }
+  ],
+  "canonical_provenance_audit": {
+    "ACTIVE_VERIFIED_EXACT_COUNT": 5,
+    "POLICY_REFERENCE_EXACT_COUNT": 1,
+    "WATCHLIST_RECHECK_DEALS_COUNT": 3,
+    "MENU_REFERENCE_EXACT_COUNT": 9,
+    "TOTAL_LIVE_FEED_ITEMS": 18
+  }
+}

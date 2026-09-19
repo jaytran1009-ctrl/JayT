@@ -1,0 +1,192 @@
+[
+  {
+    "deal_id": "DNG-GALAXY-HAPPY-DAY-WEEKLY-TUESDAY-061F",
+    "title": "Galaxy Cinema — Happy Day (Thứ Ba Hàng Tuần)",
+    "merchant": "Galaxy Cinema",
+    "category": "LOCAL_CINEMA",
+    "schedule": "Thứ Ba hàng tuần",
+    "day_of_week": "TUESDAY",
+    "pricing_tiers": [
+      {
+        "cinema_name": "Galaxy Đà Nẵng",
+        "price_vnd": 50000,
+        "price_display": "50.000đ",
+        "format": "Vé 2D tiêu chuẩn",
+        "address_observed": null
+      },
+      {
+        "cinema_name": "Galaxy CineX AEON Mall Thanh Khê",
+        "price_vnd": 70000,
+        "price_display": "70.000đ",
+        "format": "Vé 2D tiêu chuẩn",
+        "address_observed": null
+      }
+    ],
+    "eligibility": "Tất cả khách hàng",
+    "mandatory_membership": false,
+    "purchase_channel": "AT_COUNTER",
+    "captured_at": "2026-08-23T06:12:38.659Z",
+    "recheck_due_at": "2026-08-30T06:12:38.659Z",
+    "ttl_rule": "NO_FIXED_END_DATE_IN_SOURCE — AUTO_EXPIRE_FROM_STAGING_AND_LIVE_IF_NOT_REFRESHED_BY_NEW_CAPTURE_WITHIN_7_DAYS",
+    "conditions": [
+      "Áp dụng Thứ Ba hàng tuần cho tất cả khách hàng.",
+      "Giá vé Happy Day không áp dụng vào các ngày Lễ/Tết (giá vé Lễ Tết sẽ áp dụng theo bảng giá niêm yết của từng rạp), suất chiếu đặc biệt và định dạng IMAX Laser, phòng chiếu đặc biệt.",
+      "Giá vé Happy Day không áp dụng cho các chương trình giảm giá khác.",
+      "Trong mọi trường hợp, quyết định của Galaxy Cinema là quyết định cuối cùng."
+    ],
+    "watermark_badge": "STAGING · Nguồn chính thức đã capture · Chờ kiểm toán độc lập CEO (061F)",
+    "security_and_privacy": {
+      "outbound_links_allowed": false,
+      "outbound_url": null,
+      "affiliate_tracking_enabled": false,
+      "telemetry_enabled": false,
+      "public_deployment_allowed": false
+    },
+    "provenance": {
+      "work_order": "JAYT-STAGING-LINEAGE-REPAIR-061F",
+      "incident_remediation_ref": "07_QUALITY_ASSURANCE/runtime_evidence/INCIDENT_MUTATION_DISCLOSURE_RECEIPT_061F.json",
+      "incident_remediation_sha256": "97d13daa45a8290b619d16660d37a1c46b816ddaebff086c58779b72babc9acd",
+      "correction_receipt_ref": "07_QUALITY_ASSURANCE/runtime_evidence/correction_receipt_061f_galaxy_happy_day.json",
+      "correction_receipt_sha256": "a4ee48e84c8592ca1e25a3a581640c5bdf8e390ac11d0247f8f34f7d41faf4ac",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/happy-day---ve-chi-tu-45k/",
+      "discovered_from_url": "https://www.galaxycine.vn/khuyen-mai/",
+      "artifacts": {
+        "html": {
+          "file": "07_QUALITY_ASSURANCE/runtime_evidence/sweep_061c_artifacts/capture_061c_galaxy_deep_12.html",
+          "sha256": "3d91aefe542d268b864eaf3d22db07a2d2c414a29709a6ccf87c517e53e2a69c"
+        },
+        "text": {
+          "file": "07_QUALITY_ASSURANCE/runtime_evidence/sweep_061c_artifacts/capture_061c_galaxy_deep_12.txt",
+          "sha256": "5783d3031fae22ba0734f212b99dd3115bd17e4df8ca2a58b1b1e045bca58ef7"
+        },
+        "png": {
+          "file": "07_QUALITY_ASSURANCE/runtime_evidence/sweep_061c_artifacts/capture_061c_galaxy_deep_12.png",
+          "sha256": "12598d7a8cc8b5aa4e7217401a96447c99399a7972701346070c175f76707bd4"
+        }
+      }
+    }
+  },
+  {
+    "deal_id": "DNG-METIZ-SUPER-MONDAY-2026",
+    "title": "Metiz Cinema — Super Monday Đồng Giá 55K (Thứ Hai)",
+    "merchant": "Metiz Cinema Đà Nẵng",
+    "category": "LOCAL_CINEMA",
+    "schedule": "Thứ Hai hàng tuần",
+    "day_of_week": "MONDAY",
+    "pricing_tiers": [
+      {
+        "cinema_name": "Metiz Cinema Đà Nẵng (Helio Center)",
+        "price_vnd": 55000,
+        "price_display": "55.000đ",
+        "format": "Vé 2D tiêu chuẩn (Ghế thường/VIP/đôi)",
+        "address_observed": "Tầng 1 Helio Center, Đường 2/9, Hải Châu, Đà Nẵng"
+      }
+    ],
+    "eligibility": "Thành viên Metiz Cinema (xuất trình thẻ tại quầy)",
+    "mandatory_membership": true,
+    "purchase_channel": "AT_COUNTER",
+    "captured_at": "2026-08-24T05:22:15.000Z",
+    "expires_at": "2026-12-31T23:59:59+07:00",
+    "recheck_due_at": "2026-12-31T23:59:59+07:00",
+    "ttl_rule": "ANNUAL_OFFICIAL_CAMPAIGN — VALID_THROUGH_2026_12_31",
+    "conditions": [
+      "Áp dụng vào ngày Thứ Hai hàng tuần.",
+      "Áp dụng cho khách hàng là thành viên của Metiz Cinema.",
+      "Áp dụng cho các loại ghế (ghế thường, ghế VIP, ghế đôi).",
+      "Không áp dụng vào các ngày Lễ, Tết.",
+      "Chỉ áp dụng khi mua vé trực tiếp tại quầy Metiz Cinema."
+    ],
+    "watermark_badge": "STAGING · CEO Approved Batch 070B · Nguồn Metiz Official 2026",
+    "security_and_privacy": {
+      "outbound_links_allowed": false,
+      "outbound_url": null,
+      "affiliate_tracking_enabled": false,
+      "telemetry_enabled": false,
+      "public_deployment_allowed": false
+    },
+    "provenance": {
+      "work_order": "JAYT-070B",
+      "candidate_id": "CAND-DNG-METIZ-SUPER-MONDAY-2026",
+      "candidate_sha256": "246ad1bae523ca67741ad600751e2ec5461a276b17405253a07cb6b517b93a98",
+      "ceo_batch_receipt_ref": "07_QUALITY_ASSURANCE/runtime_evidence/CEO_BATCH_DECISION_RECEIPT_070B.json",
+      "source_url": "https://metiz.vn/promotion/super-monday-thu-hai-sieu-hang-2.html",
+      "discovered_from_url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "artifacts": {
+        "html": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_super_monday_official_promo_raw.html",
+          "sha256": "63f82fc4fc86358c2c199859f518e388147d33d99d6d84aee6587c69dd4437a3"
+        },
+        "text": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_super_monday_official_promo_text.txt",
+          "sha256": "3da56291a27c73ff052c1e405a2e557161bca7f79430c52bb7747761005a25c6"
+        },
+        "png": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_super_monday_official_promo_capture.png",
+          "sha256": "e305e54d7ffab0604b901cbceca4b1c8f495bf41c0e3526ae7eb0567fbf97dd0"
+        }
+      }
+    }
+  },
+  {
+    "deal_id": "DNG-METIZ-U22-2026",
+    "title": "Metiz Cinema — Khuyến Mãi Giá Vé U22 Đồng Giá 55K (T3–T5)",
+    "merchant": "Metiz Cinema Đà Nẵng",
+    "category": "LOCAL_CINEMA",
+    "schedule": "Thứ Ba, Thứ Tư, Thứ Năm hàng tuần",
+    "day_of_week": "TUESDAY_TO_THURSDAY",
+    "days_of_week": [2, 3, 4],
+    "pricing_tiers": [
+      {
+        "cinema_name": "Metiz Cinema Đà Nẵng (Helio Center)",
+        "price_vnd": 55000,
+        "price_display": "55.000đ",
+        "format": "Vé 2D tiêu chuẩn (Ghế thường/VIP)",
+        "address_observed": "Tầng 1 Helio Center, Đường 2/9, Hải Châu, Đà Nẵng"
+      }
+    ],
+    "eligibility": "Thành viên Metiz Cinema từ 22 tuổi trở xuống (xuất trình thẻ thành viên và CCCD tại quầy)",
+    "mandatory_membership": true,
+    "purchase_channel": "AT_COUNTER",
+    "captured_at": "2026-08-24T05:22:15.000Z",
+    "expires_at": "2026-12-31T23:59:59+07:00",
+    "recheck_due_at": "2026-12-31T23:59:59+07:00",
+    "ttl_rule": "ANNUAL_OFFICIAL_CAMPAIGN — VALID_THROUGH_2026_12_31",
+    "conditions": [
+      "Áp dụng từ Thứ Ba đến Thứ Năm hàng tuần.",
+      "Áp dụng cho khách hàng thành viên từ 22 tuổi trở xuống.",
+      "Xuất trình thẻ thành viên và giấy tờ tùy thân (CCCD/thẻ HSSV) khi mua vé tại quầy.",
+      "Không áp dụng vào các ngày Lễ, Tết.",
+      "Chỉ áp dụng khi mua vé trực tiếp tại quầy Metiz Cinema."
+    ],
+    "watermark_badge": "STAGING · CEO Approved Batch 070B · Nguồn Metiz Official 2026",
+    "security_and_privacy": {
+      "outbound_links_allowed": false,
+      "outbound_url": null,
+      "affiliate_tracking_enabled": false,
+      "telemetry_enabled": false,
+      "public_deployment_allowed": false
+    },
+    "provenance": {
+      "work_order": "JAYT-070B",
+      "candidate_id": "CAND-DNG-METIZ-U22-2026",
+      "candidate_sha256": "f6e1b460c47d4d27ae60c66fd37a76e1f7044862d58d1dade869a89d1f8e835d",
+      "ceo_batch_receipt_ref": "07_QUALITY_ASSURANCE/runtime_evidence/CEO_BATCH_DECISION_RECEIPT_070B.json",
+      "source_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "discovered_from_url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "artifacts": {
+        "html": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_u22_official_promo_raw.html",
+          "sha256": "fc52fa5aa7174db93b7b80a153b6cb65fbf8dd4e7a83d7aaebc7a4d538e1215b"
+        },
+        "text": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_u22_official_promo_text.txt",
+          "sha256": "a35d72f91dbf3df09e13a968bfdf19503487313baec5d6bb3699c264259be2ce"
+        },
+        "png": {
+          "file": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/metiz_u22_official_promo_capture.png",
+          "sha256": "63f8ef036f0148da366395ec5bca120756784d16853fc7d4f7f6f1c42289c8fa"
+        }
+      }
+    }
+  }
+]

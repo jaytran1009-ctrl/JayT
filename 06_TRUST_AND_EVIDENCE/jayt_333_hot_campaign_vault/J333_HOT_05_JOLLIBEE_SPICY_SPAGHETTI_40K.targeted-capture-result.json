@@ -1,0 +1,44 @@
+{
+  "report_name": "JAYT_333_HOT_CAMPAIGN_CAPTURE_RESULT",
+  "generated_at_utc": "2026-09-07T07:05:53.714Z",
+  "capture_method": "CONTROLLED_ONE_SHOT_UNAUTHENTICATED_GET",
+  "results": [
+    {
+      "candidate_id": "J333_HOT_05_JOLLIBEE_SPICY_SPAGHETTI_40K",
+      "requested_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+      "final_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_05_JOLLIBEE_SPICY_SPAGHETTI_40K.leaf.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_05_JOLLIBEE_SPICY_SPAGHETTI_40K.leaf.headers.json",
+      "raw_sha256": "653d84a0a2ab5c455478dae56ef7bc5a94a576bee981a0d9463f4a687576d14b",
+      "raw_bytes": 216325,
+      "evidence": [
+        {
+          "declared": "Nhanh tay đặt tại App Jollibee chỉ với 40.000đ nhé!",
+          "found": "Nhanh tay đặt tại App Jollibee chỉ với 40.000đ nhé!",
+          "byte_offset_utf8": 77337
+        },
+        {
+          "declared": "có mặt tại các cửa hàng Jollibee trên toàn quốc",
+          "found": "có mặt tại các cửa hàng Jollibee trên toàn quốc",
+          "byte_offset_utf8": 77119
+        }
+      ],
+      "all_declared_spans_found": true,
+      "commercial_duplicate_blocked": false,
+      "verdict": "EVIDENCE_COMPLETE__AWAITING_ITEM_LEVEL_APPROVAL"
+    }
+  ],
+  "metrics": {
+    "targets": 1,
+    "evidence_complete": 1,
+    "awaiting_approval": 1,
+    "dedup_blocked": 0,
+    "quarantined": 0
+  },
+  "safeguards": {
+    "synthetic_bytes_created": false,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

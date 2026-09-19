@@ -1,0 +1,56 @@
+{
+  "work_order_id": "JAYT-351-OPS",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "status": "DISPATCHED__POST_LAUNCH_OBSERVABILITY_ACTIVE",
+  "objective": "Monitor the ratified v3.426.0 Production baseline without mutating Production or immutable release evidence.",
+  "production": {
+    "url": "https://jayt-production-v3420.vercel.app",
+    "version": "v3.426.0",
+    "deployment_id": "dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3",
+    "expected_total_entities": 76,
+    "expected_civic_entities": 24,
+    "expected_commercial_entities": 52,
+    "expected_voucher_vault_items": 37,
+    "expected_value_radar_items": 15
+  },
+  "schedule": {
+    "interval": "HOURLY",
+    "quiet_when_healthy": true,
+    "notify_on_failure_only": true
+  },
+  "gates": {
+    "endpoints": ["/", "/registry.json", "/deals_feed.json"],
+    "expected_http_status": 200,
+    "expected_deals_feed": [],
+    "viewports": [1440, 768, 390],
+    "expected_console_errors": 0,
+    "expected_runtime_errors": 0,
+    "expected_horizontal_overflow": false,
+    "expected_affiliate_or_tracking_violations": 0,
+    "excluded_ids": [
+      "B16_CGV_01",
+      "B16_LOTTE_01",
+      "B16_HIGHLANDS_01",
+      "B16_JOLLIBEE_2840004_DUP",
+      "B16_JOLLIBEE_4000935_DUP",
+      "B16_JOLLIBEE_1810060_DUP"
+    ]
+  },
+  "evidence_rules": {
+    "rolling_receipt_pattern": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_351_V3426_ROLLING_MONITOR_<RUN_ID>.json",
+    "append_only": true,
+    "immutable_release_receipts_may_be_modified": false
+  },
+  "failure_action": {
+    "severity": "P0",
+    "automatic_production_mutation_authorized": false,
+    "required_output": "Write a fail-closed incident receipt with the failed gates and notify the CEO/Gatekeeper for a rollback decision."
+  },
+  "rollback_standby": {
+    "version": "v3.425.0-sprint-b-r1",
+    "deployment_id": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o",
+    "entity_count": 51,
+    "status": "STANDBY_READY"
+  }
+}

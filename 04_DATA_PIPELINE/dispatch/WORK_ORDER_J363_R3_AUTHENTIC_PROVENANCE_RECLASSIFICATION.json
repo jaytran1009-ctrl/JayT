@@ -1,0 +1,22 @@
+{
+  "work_order_id": "J363_R3_AUTHENTIC_PROVENANCE_RECLASSIFICATION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "CONTENT_REMEDIATION_REQUIRED",
+  "staging_mutation_authorized": true,
+  "production_deployment_authorized": false,
+  "affiliate_live_activation_authorized": false,
+  "findings": [
+    "The claimed official source artifacts are locally authored documents with self-identifying official-capture comments, not captured source bytes.",
+    "Their hashes and sidecars prove local file integrity only and cannot substantiate factual benefits, prices, terms, eligibility or locations.",
+    "The Preview project has public retrieval enabled through disabled SSO protection; its access setting must be disclosed and limited to the staging project."
+  ],
+  "required_actions": [
+    "Preserve every generated artifact. Rename or annotate each as SELF_AUTHORED_TEST_FIXTURE__NOT_SOURCE_CAPTURE, update the matrix and receipt, and remove all FACTUAL_VERIFIED/FIELD_VERIFIED/Official Capture classifications derived from them.",
+    "Reclassify DanaBus, GitHub, Notion, Spotify and all cinema content to SIMULATION_BENCHMARK or AWAITING_FIELD_VERIFICATION unless a pre-existing authentic source capture is found and linked. Render the same status prominently in UI and never show a factual price or eligibility as verified based on a fixture.",
+    "Keep all ten meal slots awaiting verification unless a real capture exists. Do not fabricate new source artifacts, screenshots, field observations, dates, addresses, prices, terms or hashes.",
+    "A future authentic capture must include requested/final URL, acquisition method, capture time, unmodified raw response or rendered screenshot, computed hash and sidecar, reviewed claim span, source domain and locality/validity assessment. The runner must verify hash parity and reject artifacts marked self-authored fixtures.",
+    "Split technical staging acceptance from factual-content acceptance. The former may report Preview byte binding, accessibility and empirical performance; the latter must remain FAIL/PENDING until authentic evidence exists.",
+    "Record current Preview visibility/protection state and restore a restricted Preview access policy after byte verification if public access is no longer required. Do not alter Production."
+  ],
+  "acceptance": "CEO verifies that no self-authored fixture supports a factual public claim and that every active factual claim has authentic, replayable provenance. Gemini review may begin only after this factual-content gate passes."
+}

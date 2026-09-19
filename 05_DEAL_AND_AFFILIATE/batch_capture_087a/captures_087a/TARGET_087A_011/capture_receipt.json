@@ -1,0 +1,35 @@
+{
+  "target_id": "TARGET_087A_011",
+  "brand": "Lotte Cinema",
+  "sector": "CINEMA",
+  "requested_url": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+  "final_url": "https://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+  "http_status": 200,
+  "captured_at": "2026-08-25T05:23:26.445Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+    "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+    "literal_href": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+    "link_offset": 23354,
+    "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+    "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23354 trong parent DOM"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "bcd0fe84174abecf8b73c2575ef484d70b4f063a81cb0bcd9edf6348c5b029df",
+      "size": 302337
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "e66a58054db8df1a3211fbaa26f859ebc3f30ae9868d9387dcc6da0096dc40ad",
+      "size": 101334
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "dee7a500e1368abc3e4452a5141b82fa0bce04d2e4fd9328d8295f120ad4dec3",
+      "size": 2548
+    }
+  }
+}

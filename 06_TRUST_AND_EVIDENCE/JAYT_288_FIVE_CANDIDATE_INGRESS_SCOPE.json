@@ -1,0 +1,58 @@
+{
+  "scope_id": "JAYT-288-FIVE-CANDIDATE-OPERATOR-INGRESS",
+  "issued_at_utc": "2026-09-04T00:00:00Z",
+  "authority": "CEO execution of JAYT-288",
+  "mode": "OPERATOR_VERIFIED_READ_ONLY_RAW_CAPTURE",
+  "timebox_minutes": 45,
+  "source_catalogue": "JAYT_LEAF_PAGE_CANDIDATES_2026.json",
+  "vault": "06_TRUST_AND_EVIDENCE/batch_03b_micro_capture_vault/jayt_288/",
+  "allowed_targets": [
+    {
+      "id": "J287-HK-STUDENT-POLICY-UED-20260903",
+      "url": "https://ued.udn.vn/2026/09/03/huong-dan-thuc-hien-thu-tuc-cac-che-do-chinh-sach-3/",
+      "classification": "T2_PROGRAM",
+      "allowed_card_fact": "UED publishes procedures for student policy categories.",
+      "prohibited_inference": ["individual eligibility", "application window", "payment amount", "commercial claim"]
+    },
+    {
+      "id": "J287-HK-STUDENT-SCHOLARSHIP-DUT-20260707",
+      "url": "https://dut.udn.vn/Tintuc/Thongbao/id/12104",
+      "classification": "T2_PROGRAM",
+      "allowed_card_fact": "DUT published a Vallet scholarship notice for academic year 2026-2027.",
+      "prohibited_inference": ["application window without raw proof", "individual eligibility", "payment amount", "commercial claim"]
+    },
+    {
+      "id": "J287-HK-TRANSIT-CROSSCITY-DANABUS-20260520",
+      "url": "https://www.danangbus.vn/news/news/tuyen-buyt-xuyen-tam-hanh-trinh-ket-noi-tri-thuc-do-thi-va-nhip-song-da-nang-5682.html",
+      "classification": "T3_PLACE",
+      "allowed_card_fact": "DanaBus published a 2026 transit-information article.",
+      "prohibited_inference": ["R16A route identity", "timetable", "fare", "vehicle availability", "commercial claim"]
+    },
+    {
+      "id": "J287-AT-COASTAL-TRANSIT-8-11-12-DANABUS-20260417",
+      "url": "https://www.danangbus.vn/news/news/lien-ket-tuyen-buyt-8--11--12-nen-tang-hinh-thanh-mang-luoi-giao-thong-cong-cong-hieu-qua-tai-da-nang-5625.html",
+      "classification": "T3_PLACE",
+      "allowed_card_fact": "DanaBus describes network connections involving the coastal area.",
+      "prohibited_inference": ["An Thuong stop", "timetable", "fare", "service status", "commercial claim"]
+    },
+    {
+      "id": "J287-AT-TOURISM-CONNECTIVITY-DANABUS-2026",
+      "url": "https://www.danangbus.vn/news/news/da-nang-dinh-hinh-cac-tuyen-buyt-trong-diem-tang-ket-noi-du-lich-va-lien-vung-5611.html",
+      "classification": "T3_PLACE",
+      "allowed_card_fact": "DanaBus published a route-network connectivity article in 2026.",
+      "prohibited_inference": ["exact publication date until raw verified", "An Thuong stop", "timetable", "fare", "commercial claim"]
+    }
+  ],
+  "attachment_contract": {
+    "raw_body_filename": "<TARGET_ID>.operator.raw.html",
+    "metadata_filename": "<TARGET_ID>.operator.metadata.json",
+    "required_metadata": ["captured_at_utc", "http_status", "final_url", "sanitized_response_headers", "raw_body_sha256", "supporting_text_span", "supporting_text_offset_utf8"],
+    "http_status_required": 200,
+    "redirect_policy": "Record final_url; do not approve if the final host is outside the JAYT-287 allowlist.",
+    "prohibited_header_pattern": "cookie|token|authorization|set-cookie",
+    "required_checks": ["SHA-256 matches raw bytes", "supporting span exists at supplied UTF-8 byte offset", "source date is 2025 or 2026", "item-level CEO public approval"]
+  },
+  "hard_stops": ["no retry beyond this scope without a new CEO authorization", "no feed mutation", "no affiliate or tracking URL", "no commercial claim", "no production deployment", "no public render before validator and item-level CEO approval"],
+  "public_approved_count": 0,
+  "render_permitted_count": 0
+}

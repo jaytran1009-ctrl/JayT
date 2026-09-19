@@ -1,0 +1,16 @@
+{
+  "scope_id": "JAYT-319-B07-01-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "retry_authorized": false,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "target": {
+    "slot_id": "B07_01",
+    "url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-dieu-chinh-phuong-tien-khai-thac-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-03-09-va-14-5760.html",
+    "expected_text_span": "Thông báo về việc điều chỉnh phương tiện khai thác trên các tuyến xe buýt không trợ giá số 03, 09 và 14",
+    "required_notice": "Thông tin chuyển đổi phương tiện xe buýt điện Tuyến 03, 09, 14 (Tra cứu lộ trình, biểu đồ giờ và tần suất chi tiết tại cổng Danabus).",
+    "prohibited": ["fare claim", "price", "discount", "voucher", "schedule inference", "frequency inference", "ticketing", "affiliate", "tracking"]
+  }
+}

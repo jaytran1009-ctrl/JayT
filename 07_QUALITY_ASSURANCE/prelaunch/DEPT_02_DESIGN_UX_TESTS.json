@@ -1,0 +1,44 @@
+{
+  "department_code": "DESIGN_UX",
+  "department_name": "Phòng Thiết Kế & Trải Nghiệm Người Dùng (Design & UX)",
+  "role_responsible": "Lead Product Designer",
+  "test_cases": [
+    {
+      "test_case_id": "UX-01",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng cầm điện thoại 1 tay (Mobile 390px Viewport)",
+      "objective": "Xác nhận Mobile Bottom Navigation hiển thị cố định, các nút bấm có kích thước chạm tối thiểu 44px",
+      "actions_step_by_step": [
+        "Thiết lập Viewport 390x844 (iPhone 14 / Android)",
+        "Đo kích thước các nút CTA chính và thanh điều hướng dưới đáy",
+        "Thao tác bấm chuyển tab"
+      ],
+      "expected_outcome": "Thanh điều hướng dưới đáy hiển thị đầy đủ, nút 'Săn Deal' và tab bar đạt >= 44px chiều cao, không bị tràn màn hình ngang",
+      "verification_type": "AUTOMATED_CDP_VIEWPORT_AUDIT"
+    },
+    {
+      "test_case_id": "UX-02",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng lướt nhanh trên máy tính bảng (Tablet 768px Viewport)",
+      "objective": "Xác nhận hệ thống Grid 2 cột tự co giãn mượt mà, thông tin giá và mức tiết kiệm dễ quét mắt",
+      "actions_step_by_step": [
+        "Thiết lập Viewport 768x1024",
+        "Kiểm tra bố cục danh sách deal"
+      ],
+      "expected_outcome": "Feed tự động chuyển sang bố cục 2 cột cân đối, huy hiệu tiết kiệm nổi bật trên nền Obsidian Pine Gold",
+      "verification_type": "AUTOMATED_CDP_VIEWPORT_AUDIT"
+    },
+    {
+      "test_case_id": "UX-03",
+      "priority": "P0",
+      "target_user_perspective": "Dân văn phòng mở trên màn hình lớn (Desktop 1440px Viewport)",
+      "objective": "Xác nhận Sidebar điều khiển cố định bên trái, vùng làm việc chính hiển thị lưới 3 cột tối ưu thị giác",
+      "actions_step_by_step": [
+        "Thiết lập Viewport 1440x900",
+        "Kiểm tra vị trí Sidebar và Workspace"
+      ],
+      "expected_outcome": "Sidebar cố định bên trái, khu vực hiển thị deal chiếm 3 cột, độ tương phản chuẩn WCAG 2.1 AA",
+      "verification_type": "AUTOMATED_CDP_VIEWPORT_AUDIT"
+    }
+  ]
+}

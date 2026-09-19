@@ -1,0 +1,73 @@
+{
+  "work_order_id": "JAYT-351",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "authority": "Chairman JAYT-351 Executive Production Release Decree",
+  "status": "DISPATCHED__DEPLOYMENT_AUTHORIZED",
+  "release": {
+    "version": "v3.426.0",
+    "candidate_root": "08_RELEASE_VAULT/candidates/v3.426.0/",
+    "target_domain": "https://jayt-production-v3420.vercel.app",
+    "entity_count": 76,
+    "civic_count": 24,
+    "commercial_count": 52,
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true
+  },
+  "sealed_inputs": {
+    "candidate_manifest_sha256": "03b946be5166122c81da0f7c26496271e5e8ae02a83c41ad2620385d922b02cb",
+    "technical_receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350-R1.json",
+    "technical_receipt_sha256": "4e2bd2039d16fcf63435fe1dea6b9727de8ac08ce5600c7b540b7471d547ead5",
+    "zero_mutation_required": true,
+    "mismatch_action": "ABORT_BEFORE_DEPLOY__REPORT_FINGERPRINT_MISMATCH"
+  },
+  "execution": {
+    "preflight": [
+      "Verify the candidate manifest SHA-256 before any deployment action.",
+      "Verify every artifact and referenced receipt against the candidate manifest.",
+      "Verify the rollback deployment is reachable and the rollback artifact is complete.",
+      "Record the pre-deploy live alias target."
+    ],
+    "deploy": "Deploy the sealed candidate directory without modifying any candidate byte, wait for READY, then assign the Production alias.",
+    "post_deploy_audit": {
+      "endpoints": ["/", "/registry.json", "/deals_feed.json"],
+      "expected_http_status": 200,
+      "expected_entity_count": 76,
+      "expected_civic_count": 24,
+      "expected_commercial_count": 52,
+      "viewports": [1440, 768, 390],
+      "expected_console_errors": 0,
+      "expected_runtime_errors": 0,
+      "expected_horizontal_overflow": false,
+      "expected_affiliate_or_tracking_violations": 0,
+      "expected_deals_feed": [],
+      "required_modules": ["Voucher Vault", "Smart Value Radar", "Split Bill", "7-Day Savings Calendar"],
+      "excluded_ids": [
+        "B16_CGV_01",
+        "B16_LOTTE_01",
+        "B16_HIGHLANDS_01",
+        "B16_JOLLIBEE_2840004_DUP",
+        "B16_JOLLIBEE_4000935_DUP",
+        "B16_JOLLIBEE_1810060_DUP"
+      ]
+    }
+  },
+  "rollback": {
+    "trigger": "Any failed post-deploy gate",
+    "version": "v3.425.0-sprint-b-r1",
+    "entity_count": 51,
+    "deployment_id": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o",
+    "artifact_root": "08_RELEASE_VAULT/candidates/sprint_b_r1/",
+    "required_action": "Restore the Production alias immediately, rerun the live audit against the rollback baseline and record the incident without overwriting evidence."
+  },
+  "delivery": {
+    "deployment_receipt": "08_RELEASE_VAULT/JAYT_351_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+    "deployment_receipt_sha256_sidecar": "08_RELEASE_VAULT/JAYT_351_PRODUCTION_DEPLOYMENT_RECEIPT.json.sha256",
+    "live_audit_receipt_pattern": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_351_V3426_LIVE_POST_DEPLOY_AUDIT_<RUN_ID>.json",
+    "project_memory_transaction": "TX_<UTC_DATE>_JAYT_351_V3426_PRODUCTION_GO_LIVE",
+    "receipt_mode": "APPEND_ONLY__NO_OVERWRITE",
+    "success_state": "SUCCESS__LIVE_VERIFIED__V3426_BASELINE_PROMOTED",
+    "failure_state": "FAILED__ROLLBACK_EXECUTED__V3425_BASELINE_RESTORED"
+  }
+}

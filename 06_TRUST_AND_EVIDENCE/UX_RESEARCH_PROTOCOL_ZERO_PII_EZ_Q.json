@@ -1,0 +1,50 @@
+{
+  "protocol_id": "UX_RESEARCH_PROTOCOL_ZERO_PII_EZ_Q",
+  "version": "1.0.0-ez.q",
+  "governance_directive": "JAYT-245 Section EZ-Q (Lines 4358-4383)",
+  "participant_recruitment_status": "NO_RECRUITMENT_AUTHORIZED_ZERO_PII",
+  "data_collection_policy": {
+    "collect_real_user_answers": false,
+    "collect_nps_or_csat": false,
+    "collect_quotes_or_reviews": false,
+    "collect_pii_emails_phones": false,
+    "methodology": "INSTRUMENT_FREE_COGNITIVE_WALKTHROUGH_AND_DOM_VERIFICATION"
+  },
+  "evaluation_tasks": [
+    {
+      "task_id": "TASK_01_RECOGNIZE_DOCUMENTATION_NATURE",
+      "name": "Nhận diện bản chất tài liệu chương trình (không phải voucher)",
+      "scenario": "Người dùng tiếp cận card thí điểm T2 trên Staging.",
+      "intended_outcome": "Người dùng hiểu rõ đây là tài liệu thông tin đăng ký GitHub Education toàn cầu, không phải mã giảm giá hay voucher tại Đà Nẵng.",
+      "pass_criteria": "Card hiển thị nhãn T2 TÀI LIỆU CHƯƠNG TRÌNH CHÍNH THỨC, câu văn gốc có caveat 'không xác nhận voucher, giá hay ưu đãi tại Đà Nẵng'."
+    },
+    {
+      "task_id": "TASK_02_OPEN_CANONICAL_DOCUMENTATION",
+      "name": "Mở tài liệu chính thức an toàn",
+      "scenario": "Người dùng muốn xem tài liệu gốc trên trang GitHub Docs.",
+      "intended_outcome": "Link mở tab mới an toàn với rel='noopener noreferrer nofollow', không qua trung gian tracking.",
+      "pass_criteria": "URL đích là https://docs.github.com/en/education/...; rel attribute có đủ 3 giá trị bảo vệ."
+    },
+    {
+      "task_id": "TASK_03_LOCAL_FIRST_SAVINGS_CALCULATION",
+      "name": "Tự tính toán chi phí thực trả và reset giá trị",
+      "scenario": "Người dùng nhập giá gốc 120.000, voucher 20.000, giảm 10% sinh viên, phí ship 15.000 và chia 2 người.",
+      "intended_outcome": "Kết quả tính toán hiển thị tức thì: Tiết kiệm 32.000 VNĐ, Thực trả 103.000 VNĐ, Mỗi người 51.500 VNĐ. Nút đặt lại xóa sạch giá trị.",
+      "pass_criteria": "Tính toán 100% tại client, 0 network requests, 0 cookies/localStorage."
+    },
+    {
+      "task_id": "TASK_04_UNDERSTAND_TRANSPARENT_ZERO_STATE",
+      "name": "Thấu hiểu trạng thái kiểm định nguồn (Zero-State)",
+      "scenario": "Người dùng tìm kiếm thêm các nguồn hoặc ưu đãi khác trên hệ thống.",
+      "intended_outcome": "Người dùng nhận biết rõ ràng hệ thống đang kiểm định từng nguồn độc lập và hiện chưa có nguồn mới đạt chuẩn công bố.",
+      "pass_criteria": "Không hiển thị card giả hay catalog rỗng không có giải thích; có nút dẫn tới Bảng tính thực trả và GitHub Pilot."
+    },
+    {
+      "task_id": "TASK_05_AUDIT_REPORT_SOURCE_FLOW",
+      "name": "Mở/Đóng hướng dẫn Báo nguồn an toàn",
+      "scenario": "Người dùng bấm nút '+ Báo nguồn' trên header.",
+      "intended_outcome": "Hộp thoại hướng dẫn mở ra, nêu rõ nguyên tắc không thu thập PII và trạng thái chưa mở cổng gửi trực tuyến.",
+      "pass_criteria": "0 trường nhập liệu, 0 nút submit ngầm, đóng an toàn bằng nút Đóng hoặc phím Escape."
+    }
+  ]
+}

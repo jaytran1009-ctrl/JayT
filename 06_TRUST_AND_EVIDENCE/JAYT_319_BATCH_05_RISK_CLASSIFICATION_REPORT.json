@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "report_id": "JAYT_319_BATCH_05_RISK_CLASSIFICATION_REPORT",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_BATCH_05_RISK_CLASSIFICATION_WORK_ORDER.md",
+  "generated_at": "2026-09-04T15:25:00+07:00",
+  "governance_mode": "FAIL_CLOSED__RISK_CLASSIFICATION_BEFORE_SCOPE",
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 7,
+    "production_card_count": 3
+  },
+  "evaluations": {
+    "B05_01": {
+      "candidate_id": "B05_01_LICH_TIEM_CHUNG_THAI_KY_CDC_DANANG",
+      "service_name": "Cẩm nang hướng dẫn lịch tiêm chủng cho phụ nữ chuẩn bị mang thai và trong thai kỳ",
+      "official_leaf_url": "https://ksbtdanang.vn/cam-nang-vac-xin/lich-tiem-chung-cho-tre-em-11/lich-tiem-chung-cho-phu-nu-mang-thai-va-trong-thai-ky-18.html",
+      "mandated_check": "classify B05_01 for pregnancy-health safety/disclaimer",
+      "risk_analysis": "The candidate delivers maternal immunization guidance published by the municipal public health authority (CDC Đà Nẵng). Because pregnancy represents a medically sensitive physiological state, health guidance must strictly avoid individualized clinical assertions, diagnostic protocols, or patient-specific recommendations. Inspection of the leaf page demonstrates that the content is general prophylactic education concerning standard preventive immunization timelines (Rubella, Sởi, Quai bị, Thủy đậu, Uốn ván, Cúm, Viêm gan B). It contains zero clinical dosage regimes, zero prescription claims, zero pharmaceutical sales, and zero appointment booking solicitation.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA approve B05_01 subject to three mandatory structural card safeguards: (1) Card Tag: 'Y tế dự phòng / Sức khỏe thai kỳ'; (2) Mandatory Explicit Obstetric Disclaimer: 'Tài liệu phổ biến kiến thức y tế dự phòng của CDC Đà Nẵng; phụ nữ chuẩn bị mang thai hoặc đang mang thai cần tham vấn bác sĩ chuyên khoa phụ sản trước khi thực hiện tiêm chủng.'; (3) Action CTA: 'Xem cẩm nang tiêm chủng thai kỳ' linking strictly outbound to official ksbtdanang.vn portal with zero consultation or booking intake forms. These locks guarantee purely educational, non-diagnostic public utility.",
+      "disclaimer_text": "Tài liệu phổ biến kiến thức y tế dự phòng của CDC Đà Nẵng; phụ nữ chuẩn bị mang thai hoặc đang mang thai cần tham vấn bác sĩ chuyên khoa phụ sản trước khi thực hiện tiêm chủng.",
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    },
+    "B05_02": {
+      "candidate_id": "B05_02_TRAO_DOI_SINH_VIEN_QUOC_TE_UED_EDUHK",
+      "service_name": "Chương trình thỏa thuận hợp tác trao đổi sinh viên quốc tế UED và Đại học Giáo dục Hồng Kông (EdUHK)",
+      "official_leaf_url": "https://ued.udn.vn/2026/08/24/truong-dai-hoc-su-pham-dai-hoc-da-nang-ky-ket-thoa-thuan-trao-doi-sinh-vien-voi-dai-hoc-giao-duc-hong-kong/",
+      "mandated_check": "classify B05_02 for continuing public utility versus institutional announcement",
+      "risk_analysis": "Detailed inspection of the leaf URL demonstrates that the text is primarily a news report covering an institutional ceremony held on 24/08/2026 ('Ngày 24/8/2026, trong khuôn khổ buổi làm việc và ký kết hợp tác... Trường Đại học Sư phạm – Đại học Đà Nẵng đã ký kết Biên bản thỏa thuận hợp tác (MOA)...'). While the MOA establishes an institutional quota of 2-4 exchange students annually, the article lacks an actionable student application intake portal, specific admissions deadlines, selection criteria, or direct submission instructions. Furthermore, paragraph 6 discusses tuition mechanics ('đóng học phí tại trường chủ quản và được miễn học phí tại trường đối tác'), introducing financial reciprocity details without an operational onboarding desk. On JayT, public utilities must provide actionable services rather than institutional ceremonial news.",
+      "risk_level": "HIGH_INSTITUTIONAL_ANNOUNCEMENT_AMBIGUITY",
+      "resolution_in_writing": "UNRESOLVED UNDER CURRENT LEAF URL. As an institutional news article reporting an MOA signing ceremony, this source does not provide an actionable, continuing student enrollment utility. To qualify as a direct public utility on JayT, the university would need to publish an official student exchange application bulletin ('Thông báo tuyển sinh chương trình trao đổi sinh viên') containing direct application procedures and an active admissions portal. Under fail-closed governance, institutional ceremonial announcements are held from capture scope.",
+      "classification_verdict": "HELD__INSTITUTIONAL_SIGNING_ANNOUNCEMENT",
+      "eligible_for_one_shot_scope": false
+    },
+    "B05_03": {
+      "candidate_id": "B05_03_DANABUS_TUYEN_05_HOA_HIEP_NAM_BIEN_DONG",
+      "service_name": "Hướng dẫn tiện ích di chuyển xanh bằng xe buýt điện Tuyến 05: KCC Hòa Hiệp Nam – Công viên Biển Đông",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/len-tuyen-05-vi-vu-da-nang-tu-tay-bac-den-bien-dong-5758.html",
+      "mandated_check": "classify B05_03 for current transit-operation evidence without fare/schedule inference",
+      "risk_analysis": "Inspection of the official Danabus leaf page (dated 08/07/2026) verifies the operational corridor of Route 05 connecting KCC Hòa Hiệp Nam and Công viên Biển Đông via major urban thoroughfares (Nguyễn Tất Thành, Tôn Đức Thắng, Quang Trung, Lê Duẩn, Cầu Sông Hàn) using electric buses. However, the body text does not provide a timetable matrix (exact operating hours/frequencies) nor ticket fare pricing. If rendered carelessly, there is a risk of inferring or fabricating departure times or fare values. Under JayT governance, zero inference is permitted.",
+      "risk_level": "LOW_MANAGEABLE_VIA_COMPLIANCE_LOCKS",
+      "resolution_in_writing": "RESOLVED IN WRITING. Compliance and QA establish strict structural locks preventing any fare or timetable hallucination: (1) Card Tag: 'Giao thông công cộng / Xe buýt điện Đà Nẵng'; (2) Content Scope: Restricted strictly to the route corridor and urban transit connectivity; (3) Zero Fare Claim: Explicit prohibition against stating ticket prices, discounts, or '0 đồng' claims; (4) Zero Schedule Inference: Strictly avoids claiming departure hours or headway frequencies; mandates the note 'Lộ trình kết nối đô thị (Tra cứu lịch chạy và điểm dừng chi tiết tại cổng Danabus)'; (5) CTA Lock: Outbound action button linking directly to official Danabus portal with zero ticketing cart or booking form.",
+      "operational_locks": {
+        "tag": "Giao thông công cộng / Xe buýt điện Đà Nẵng",
+        "corridor": "KCC Hòa Hiệp Nam – Công viên Biển Đông qua Nguyễn Tất Thành, Tôn Đức Thắng, Quang Trung, Lê Duẩn, Cầu Sông Hàn",
+        "fare_claim_prohibited": true,
+        "schedule_inference_prohibited": true,
+        "mandated_guidance_note": "Lộ trình kết nối đô thị (Tra cứu lịch chạy và điểm dừng chi tiết tại cổng Danabus)"
+      },
+      "classification_verdict": "RESOLVED_IN_WRITING__RECOMMENDED_FOR_ONE_SHOT_SCOPE",
+      "eligible_for_one_shot_scope": true
+    }
+  },
+  "council_recommendation": {
+    "eligible_candidates": [
+      "B05_01_LICH_TIEM_CHUNG_THAI_KY_CDC_DANANG",
+      "B05_03_DANABUS_TUYEN_05_HOA_HIEP_NAM_BIEN_DONG"
+    ],
+    "held_candidates": [
+      "B05_02_TRAO_DOI_SINH_VIEN_QUOC_TE_UED_EDUHK"
+    ],
+    "recommended_action": "Submit B05_01 and B05_03 to CEO for sequential item-specific One-Shot Capture Scope Work Orders, with B05_01 recommended as next immediate priority (N+1) due to clean single-domain parity with CDC Đà Nẵng standards, while holding B05_02 due to institutional ceremony news nature lacking direct student enrollment portal."
+  }
+}

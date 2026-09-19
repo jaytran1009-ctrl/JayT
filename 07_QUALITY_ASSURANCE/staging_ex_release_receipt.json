@@ -1,0 +1,70 @@
+{
+  "receipt_id": "STAGING_EX_RELEASE_RECEIPT_20260830",
+  "version": "v3.477.0-staging.ex",
+  "generated_at_utc": "2026-08-30T14:30:10.000Z",
+  "governing_directive": "JAYT-245 Section EX (Lines 3817-3846)",
+  "production_governance": {
+    "locked_version": "v3.419.0",
+    "live_url": "https://deploy-ten-xi-48.vercel.app/",
+    "go_live_status": "LOCKED_PRE_GO_LIVE",
+    "p0_eq_lifecycle_state": "OPEN",
+    "deployment_action": "NO_PRODUCTION_DEPLOY_BEFORE_INDEPENDENT_CEO_AUDIT"
+  },
+  "staging_deployment": {
+    "port": 4173,
+    "health_status": "UP",
+    "local_url": "http://127.0.0.1:4173/",
+    "single_source_of_truth_js": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ex.js",
+    "staging_deploy_dir": "staging_deploy_ex"
+  },
+  "quarantine_and_fail_closed_status": {
+    "status": "FAIL_CLOSED_T4_RADAR_ENFORCED",
+    "50_item_quarantine_matrix_file": "07_QUALITY_ASSURANCE/staging_ex_50_item_quarantine_matrix.json",
+    "total_candidates_in_quarantine": 50,
+    "derived_locality_and_maps_stripped": true,
+    "false_joins_banned": true,
+    "t1_verified_vouchers": 0,
+    "t2_verified_programs": 0,
+    "t3_local_amenities": 0,
+    "t4_monitored_radar_sources": 50
+  },
+  "deal_discovery_engine": {
+    "status": "INTERACTIVE_DOM_VERIFIED",
+    "action_chips_rendered": [
+      { "id": "AN_GI_GAN_DAY", "label": "🍔 Ăn gần đây", "count": 11 },
+      { "id": "DI_CHOI_TOI_NAY", "label": "🎬 Đi chơi tối nay", "count": 14 },
+      { "id": "DI_CHUYEN_TIET_KIEM", "label": "🚌 Di chuyển tiết kiệm", "count": 13 },
+      { "id": "DO_KTX_HOC_TAP", "label": "🎓 Đồ KTX & học tập", "count": 12 }
+    ],
+    "time_filters": ["ALL", "SANG", "TRUA", "CHIEU", "TOI"],
+    "campus_filters": ["ALL", "HOA_KHANH", "NGU_HANH_SON", "HAI_CHAU", "THANH_KHE", "SON_TRA"],
+    "clear_filters_button_verified": true,
+    "empty_state_clean_fallback": true
+  },
+  "local_first_decision_calculator": {
+    "status": "INTERACTIVE_VERIFIED",
+    "math_verification": "160.000 + 20.000 - 30.000 = 150.000 đ; chia 3 = 50.000 đ / người",
+    "negative_number_validation": true,
+    "division_by_zero_validation": true,
+    "reset_button": true,
+    "zero_pii": true,
+    "non_promise_disclaimer": "⚠️ Lưu ý: Đây là công cụ tính toán do bạn tự nhập số liệu. JayT không tự khẳng định hay cam kết giá từ bất kỳ ứng dụng nào."
+  },
+  "accesstrade_research_to_revenue": {
+    "survey_status": "HYPOTHESIS_OFFLINE",
+    "unbacked_price_claims": 0,
+    "active_affiliate_links": 0,
+    "go_isclix_occurrences": 0
+  },
+  "browser_e2e_evidence": {
+    "test_runner": "Chrome Browser E2E Runner (Puppeteer Engine)",
+    "viewport_matrices": [
+      { "name": "Desktop", "width": 1440, "height": 900, "screenshots": 11 },
+      { "name": "Tablet", "width": 768, "height": 1024, "screenshots": 3 },
+      { "name": "Mobile", "width": 390, "height": 844, "screenshots": 2 }
+    ],
+    "total_screenshots": 16,
+    "output_directory": "07_QUALITY_ASSURANCE/browser_pack_ex",
+    "overall_result": "ALL_16_E2E_ACTIONS_PASS"
+  }
+}

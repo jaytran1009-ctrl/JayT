@@ -1,0 +1,65 @@
+{
+  "work_order_id": "WORK_ORDER_J392_R3_RELATIONAL_SCOPE_EVIDENCE",
+  "authority": "CEO evidence gate following JAYT-392 R2",
+  "purpose": "Collect candidate first-party evidence only. This order authorizes no production, affiliate, alias, or destructive mutation.",
+  "status": "AUTHORIZED_FOR_CANDIDATE_CAPTURE_ONLY",
+  "shared_pre_write_gates": {
+    "http_status_must_equal": 200,
+    "final_origin_must_match_requested_first_party_origin": true,
+    "reject_waf_challenge_or_consent_wall": true,
+    "no_waf_bypass_or_sandbox_downgrade": true,
+    "no_artifact_write_before_all_gates_pass": true
+  },
+  "galaxy_happy_day": {
+    "source_url": "https://www.galaxycine.vn/khuyen-mai/happy-day---ve-chi-tu-45k/",
+    "container_selector": "div.content__data__full",
+    "requirements": [
+      "Capture rendered HTML and PNG in one browser session under one capture_id.",
+      "Use UTF-8 Buffer byte offsets, not JavaScript character indices.",
+      "Determine the exact UTF-8 byte span of the selected container in the captured full HTML.",
+      "Each of offer, validity, Da Nang scope, and terms must have an exact UTF-8 quote wholly inside that container byte span.",
+      "The receipt must identify the selected container without fallback to an unrelated first candidate.",
+      "Write files, reread both HTML and PNG, and bind post-write sizes and SHA-256 hashes."
+    ],
+    "candidate_quotes": {
+      "offer": "Vào thứ 3 hàng tuần – Happy Day, giá vé CHỈ TỪ 45K",
+      "validity": "Vào thứ 3 hàng tuần",
+      "scope": "Galaxy Đà Nẵng",
+      "terms": "Giá vé Happy Day không áp dụng vào các ngày Lễ/Tết"
+    }
+  },
+  "metiz_relational_scope": {
+    "brand_id": "METIZ_CINEMA",
+    "offer_artifact": {
+      "url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "required_container": "A uniquely identified promotion detail container containing the U22 offer and eligibility terms."
+    },
+    "validity_artifact": {
+      "url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "required_container": "The exact U22 promotion card whose link resolves to the captured offer artifact.",
+      "required_quote": "An explicit date range covering 2026-09-11, or an unambiguous current-active statement for that exact linked U22 promotion."
+    },
+    "venue_artifact": {
+      "url_candidates": ["https://metiz.vn/lien-he.html", "https://metiz.vn/about.html"],
+      "required_quote": "An explicit official statement that identifies Metiz Cinema at Helio Center, Da Nang. A telephone area code, legal-jurisdiction clause, or inference is not sufficient."
+    },
+    "binding_requirements": [
+      "All three artifacts must be captured from the metiz.vn first-party origin in one collector run and have individual capture IDs, timestamps, byte hashes, and screenshots.",
+      "The validity card must contain the exact offer URL or an exact canonical identifier linking it to the offer artifact.",
+      "The relational receipt must record the actual URL relation, hashes of all three artifacts, brand_id METIZ_CINEMA, and all container byte spans.",
+      "No generic footer, hotline, legal clause, or separate unrelated page may substitute for an explicit venue quote.",
+      "No field may be labelled PASS or VERIFIED; use SUBMITTED_CANDIDATE_FOR_CEO_AUDIT."
+    ]
+  },
+  "submission": {
+    "required_receipt_fields": ["capture_id", "requested_url", "final_url", "http_status", "response_headers", "container_byte_span", "quote_byte_offsets", "post_write_html_sha256", "post_write_png_sha256"],
+    "required_status": "SUBMITTED_CANDIDATE_FOR_CEO_AUDIT"
+  },
+  "governance": {
+    "is_approved": false,
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false,
+    "destructive_deletion_authorized": false
+  }
+}

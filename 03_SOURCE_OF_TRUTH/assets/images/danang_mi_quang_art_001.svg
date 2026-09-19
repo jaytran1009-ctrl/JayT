@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+      <defs>
+        <linearGradient id="warm-food-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fffbeb"/>
+          <stop offset="40%" stop-color="#fef3c7"/>
+          <stop offset="100%" stop-color="#fed7aa"/>
+        </linearGradient>
+        <linearGradient id="bowl-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ea580c"/>
+          <stop offset="50%" stop-color="#c2410c"/>
+          <stop offset="100%" stop-color="#9a3412"/>
+        </linearGradient>
+        <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#7c2d12" flood-opacity="0.18"/>
+        </filter>
+      </defs>
+      
+      <!-- Warm Background -->
+      <rect width="960" height="540" fill="url(#warm-food-bg)"/>
+      
+      <!-- Artistic Background Circles & Glow -->
+      <circle cx="480" cy="270" r="220" fill="#f97316" opacity="0.1"/>
+      <circle cx="820" cy="120" r="140" fill="#fbbf24" opacity="0.15"/>
+      <circle cx="140" cy="420" r="160" fill="#ea580c" opacity="0.08"/>
+      
+      <!-- Floating Street Badge -->
+      <g transform="translate(300, 36)" filter="url(#soft-shadow)">
+        <rect width="360" height="48" rx="24" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+        <text x="180" y="30" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="800" fill="#9a3412" text-anchor="middle" letter-spacing="1">🍜 PHỐ ĐIỂM TÂM HUỲNH THÚC KHÁNG</text>
+      </g>
+      
+      <!-- Gourmet Noodle Bowl Composition -->
+      <g transform="translate(480, 290)" filter="url(#soft-shadow)">
+        <!-- Bowl Base -->
+        <path d="M -180 -40 C -180 140 180 140 180 -40 Z" fill="url(#bowl-gold)"/>
+        <!-- Bowl Rim -->
+        <ellipse cx="0" cy="-40" rx="180" ry="32" fill="#fb923c"/>
+        <ellipse cx="0" cy="-40" rx="164" ry="24" fill="#fef3c7"/>
+        
+        <!-- Rich Broth & Golden Turmeric Noodles -->
+        <ellipse cx="0" cy="-38" rx="150" ry="18" fill="#f59e0b"/>
+        <path d="M -120 -44 Q 0 -90 120 -44" stroke="#d97706" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <path d="M -90 -40 Q 20 -80 100 -36" stroke="#b45309" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <path d="M -110 -34 Q -10 -65 80 -42" stroke="#d97706" stroke-width="7" stroke-linecap="round" fill="none"/>
+        
+        <!-- Shrimps, Pork & Fresh Herbs -->
+        <ellipse cx="-50" cy="-52" rx="28" ry="16" fill="#f43f5e" transform="rotate(-15 -50 -52)"/>
+        <ellipse cx="40" cy="-56" rx="26" ry="15" fill="#f43f5e" transform="rotate(20 40 -56)"/>
+        <circle cx="-10" cy="-45" r="18" fill="#15803d"/>
+        <circle cx="80" cy="-44" r="14" fill="#16a34a"/>
+        <circle cx="-80" cy="-40" r="16" fill="#15803d"/>
+        <!-- Toasted Peanuts -->
+        <circle cx="-25" cy="-62" r="5" fill="#78350f"/>
+        <circle cx="15" cy="-60" r="6" fill="#78350f"/>
+        <circle cx="60" cy="-48" r="5" fill="#78350f"/>
+      </g>
+      
+      <!-- Atmospheric Bottom Narrative -->
+      <text x="480" y="495" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#7c2d12" text-anchor="middle">
+        Mì Quảng tôm thịt đậm đà &#8226; Bún chả cá gia truyền Hải Châu
+      </text>
+    </svg>

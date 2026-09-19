@@ -1,0 +1,96 @@
+{
+  "id": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "authority": "JAYT-392 — directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T06:15:00Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini safety review for a final dual-key seal",
+  "deadline_local": "2026-09-11T20:00:00+07:00",
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "new_remote_previews": false
+  },
+  "authorization": {
+    "wave_1_and_radar_candidate_build": true,
+    "production_alias_mutation": "CONDITIONAL_AFTER_CEO_REVIEW_OF_LIVE_EVIDENCE_AND_CANDIDATE",
+    "os_scheduler_registration": "AUTHORIZED_ONLY_ON_USER_OWNED_EXECUTOR_HOST_WITH_LEAST_PRIVILEGE",
+    "staging_alias_drill": "CONDITIONAL_ON_EXISTING_OR_EXPLICITLY_AUTHORIZED_NON_PRODUCTION_ALIAS",
+    "prohibitions": [
+      "Do not bypass or evade WAF, CAPTCHA, login, authentication, rate limits, robots directives, geo restrictions, provider terms or access controls.",
+      "Do not make or edit a screenshot, HTML record, date, price, stock, promotion code, merchant/media identity or attribution record to fill an evidence gap.",
+      "Do not deploy to canonical production, enable affiliate, or claim Gemini/CEO approval without the applicable independent gate."
+    ]
+  },
+  "workstreams": [
+    {
+      "id": "WAVE_1_LIVE_FOOD_CINEMA",
+      "required_count": 5,
+      "tasks": [
+        "Acquire current first-party evidence for September 2026 from legitimately accessible Metiz Helio and/or Galaxy Da Nang sources. A screenshot is admissible only with original image bytes, capture timestamp, canonical source URL, SHA-256, viewport/browser metadata and a separately retained source response or first-party page binding.",
+        "For each candidate card, bind source bytes and byte-locatable quotations for a unique offer, current effective period or explicit current-status statement, Da Nang branch/scope, and eligibility/terms. A recurring weekly rule is not current proof unless the source confirms it is presently active.",
+        "Deduplicate Galaxy records by exact benefit and redemption route. If materially distinct entitlement cannot be proved, retain one record and exclude the other.",
+        "Generate 06_TRUST_AND_EVIDENCE/j392/WAVE_1_LIVE_EVIDENCE_INDEX.json and a validator that checks artifact hash, timestamp, quote offsets, uniqueness, current date window, Da Nang scope and CTA semantics.",
+        "Only source-visible public code may expose Copy Code. Otherwise render App/Counter/Official Schedule action and preserve a non-sensitive Zalo Pass option."
+      ],
+      "release_gate": [
+        "Exactly five unique cards must independently pass every predicate to claim five live deals. A smaller verified count may be reviewed, but it must be displayed and reported exactly.",
+        "CEO compares candidate card text/CTA against retained evidence and served bytes before authorizing a production deployment."
+      ]
+    },
+    {
+      "id": "KTX_TOP_10_VERIFIED_RADAR",
+      "required_count": 10,
+      "tasks": [
+        "Select up to ten core KTX products only where a provider-authorized feed, legitimately accessible official product page or documented manufacturer/Mall source supports identity, price observation and destination URL.",
+        "Store one rights-documented, correctly matched PNG/WebP photo for each included SKU at 03_SOURCE_OF_TRUTH/assets/products/. Record source URL, capture time, MIME, dimensions, on-disk bytes and SHA-256; manually inspect 1:1 product/variant match.",
+        "Every displayed card binds item ID, product/variant, observed-price timestamp, official Mall URL and local asset hash. It must use the disclosure 'Sản phẩm khảo sát chính hãng — đã đối soát' only if all bindings pass; otherwise retain neutral/unverified state and do not show the card as verified.",
+        "Remove black/placeholder cards from the verified Radar presentation. Do not replace them with generated, generic or mismatched imagery. Affiliate remains disabled unless provider-issued replayable attribution proof separately passes."
+      ],
+      "release_gate": [
+        "A Radar release counts only fully verified records; a 10-item target does not authorize padding with placeholders or uncertain prices.",
+        "Run ID/URL/photo/hash/price mutation tests, decode every asset, and verify outbound host allowlist before release review."
+      ]
+    },
+    {
+      "id": "REAL_SCHEDULER_AND_NON_PRODUCTION_ROLLBACK",
+      "tasks": [
+        "Register a real four-hour OS scheduled task/service on the authorized executor host with fixed item-ID input, least privilege, no secrets outside the scheduler account and no automatic factual publication.",
+        "Retain scheduler registration export/query, executable and config hashes, account permission boundary, PID/process evidence, system timestamps and an append-only audit-log entry from a schedule-triggered run. Do not count a manually launched process as a scheduled run.",
+        "Perform one reversible alias swap only on a non-production drill alias that is confirmed to exist and is authorized for the drill. Retain Vercel command/API execution evidence, alias state before/after, multi-location or repeated CDN probes, final restoration and measured RTO.",
+        "If no authorized host or drill alias exists, report this as a blocker; do not create credentials, aliases or tasks outside approved scope."
+      ],
+      "release_gate": [
+        "An OS scheduler receipt must be evidence-backed by registration plus scheduled-run artifacts. A plan, generated JSON or simulation fails this gate.",
+        "A rollback RTO exists only after actual test-alias swap and restoration; canonical production must remain untouched."
+      ]
+    },
+    {
+      "id": "PIPELINE_DUAL_KEY_SEAL",
+      "tasks": [
+        "Refresh PIPELINE_SEAL_MANIFEST.json only after candidate artifacts are reviewed; list all sealed collectors, validators, schemas, scheduler assets and their hashes.",
+        "Keep seal status PENDING_DUAL_KEY unless it contains a real Chairman written-approval reference and an actual Gemini safety-review reference. A local hash manifest cannot itself make code immutable.",
+        "Provide a drift verifier and preservation runbook. Restrict writes operationally; do not represent this as a technical prevention of every filesystem edit."
+      ]
+    }
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j392/WAVE_1_LIVE_EVIDENCE_INDEX.json",
+    "06_TRUST_AND_EVIDENCE/j392/ktx_top_10_evidence_index.json",
+    "07_QUALITY_ASSURANCE/JAYT_392_WAVE_1_LIVE_EVIDENCE_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_392_KTX_MEDIA_IDENTITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_392_SCHEDULER_OPERATIONAL_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_392_NON_PRODUCTION_ROLLBACK_RECEIPT.json",
+    "08_RELEASE_VAULT/PIPELINE_SEAL_MANIFEST.json",
+    "08_RELEASE_VAULT/JAYT_392_RELEASE_REVIEW_RECEIPT.json"
+  ],
+  "reporting": {
+    "wave_1": "Report per-deal evidence source, unique-benefit proof, current date proof, scope, terms and final verified count.",
+    "radar": "Report each of ten or fewer SKU ID, image/source/hash, observation time, price, official host and any missing requirement.",
+    "operations": "Attach task/service registration and scheduled-run artifacts; attach actual non-production alias before/after/restoration probe evidence. State blockers or simulations explicitly.",
+    "completion": "No executor self-approval. CEO makes the release decision only after independent artifact and live-byte review."
+  }
+}

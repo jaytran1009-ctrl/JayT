@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-36-JOLLIBEE",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_36",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-DNG-JOLLIBEE-LUNCH-SAVINGS-REAL"
+  },
+  "target": {
+    "brand_id": "JOLLIBEE",
+    "category": "LOCAL_FASTFOOD",
+    "requested_url": "https://jollibee.com.vn/khuyen-mai",
+    "final_url": "https://jollibee.com.vn/khuyen-mai",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Jollibee Việt Nam có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Jollibee Combo Trưa Tiết Kiệm 45.000đ (Cơm Gà Giòn + Pepsi T2–T6)",
+    "conditions_snippet": "Áp dụng khung giờ 10:00 – 14:00 từ Thứ Hai đến Thứ Sáu"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_jollibee_cand-dng-jollibee-lunch-savings-real.png",
+      "sha256": "f15238e69f67d2d0bf93b886393bdca5cc230a3fe735c095f2152f9e8bb62c4d",
+      "bytes": 139914,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_jollibee_cand-dng-jollibee-lunch-savings-real.html",
+      "sha256": "7666105ddb3af68ec76dc57ea1207c7a99250f425397aa89803b9e1122950f02",
+      "bytes": 1026
+    },
+    "text_dump": {
+      "file": "capture_047_jollibee_cand-dng-jollibee-lunch-savings-real.txt",
+      "sha256": "7b5f1e23b614aa6b4917ff12631be2caf0050376f9fd7f59990d0a1d768bc9b4",
+      "bytes": 657
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

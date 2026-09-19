@@ -1,0 +1,189 @@
+{
+  "matrix_version": "2.0",
+  "batch_id": "BATCH_13",
+  "scope": "STAGING_ONLY — STORE LOCATOR HARVEST MATRIX",
+  "updated_at_utc": "2026-09-06T06:30:00.000Z",
+  "target_region": "Thành phố Đà Nẵng",
+  "target_brands_count": 10,
+  "brands": [
+    {
+      "brand_id": "phuclong",
+      "brand_name": "Phúc Long Heritage",
+      "locator_url": "https://api-crownx.winmart.vn/mt/api/plg/v1/store?activeCall=true&orderByDesc=true&pageNumber=1&pageSize=100&reCall=1",
+      "discovery_source": "Trang find-store Phúc Long (Next.js chunk _app-183ba04e33350e0d.js)",
+      "source_type": "JSON_API",
+      "parser": "crownx_store_api_parser",
+      "pagination": {
+        "enabled": true,
+        "page_param": "pageNumber",
+        "size_param": "pageSize",
+        "page_size": 100,
+        "max_pages": 2
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "locator_url": "https://jollibee.com.vn/cua-hang",
+      "discovery_source": "Trang chủ jollibee.com.vn (Thanh điều hướng /cua-hang)",
+      "source_type": "HTML_EMBEDDED_JSON",
+      "parser": "jollibee_inline_json_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "phi_long",
+      "brand_name": "Phi Long Technology",
+      "locator_url": "https://philong.com.vn",
+      "discovery_source": "Trang chủ philong.com.vn (Mục Showroom Đà Nẵng chân trang & header)",
+      "source_type": "HTML",
+      "parser": "philong_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "lotte_cinema",
+      "brand_name": "Lotte Cinema Vietnam",
+      "locator_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=6&cinemaID=8007",
+      "discovery_source": "Trang chủ lottecinemavn.com (Cây menu rạp khu vực Đà Nẵng cinemaID=8007)",
+      "source_type": "HTML",
+      "parser": "lotte_cinema_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B13_LOTTE_CINEMA_MEMBER",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "metiz_cinema",
+      "brand_name": "Metiz Cinema",
+      "locator_url": "https://metiz.vn/about.html",
+      "discovery_source": "Trang chủ metiz.vn (Liên kết giới thiệu doanh nghiệp và liên hệ)",
+      "source_type": "HTML",
+      "parser": "metiz_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_03_METIZ_U22",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "locator_url": "https://www.cgv.vn/default/cinox/site/",
+      "discovery_source": "Trang chủ cgv.vn (Menu 'RẠP CGV' -> 'Tất Cả Các Rạp' -> Tab Đà Nẵng #cgv_city_5)",
+      "source_type": "HTML_MULTI_LEAF",
+      "leaf_urls": [
+        "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+        "https://www.cgv.vn/default/cinox/site/cgv-mm-da-nang"
+      ],
+      "parser": "cgv_cinemas_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B13_CGV_U22",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "galaxy_cinema",
+      "brand_name": "Galaxy Cinema",
+      "locator_url": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "discovery_source": "Trang chủ galaxycine.vn (Menu 'Rạp / Giá Vé' -> Rạp Đà Nẵng /rap-gia-ve/galaxy-da-nang/)",
+      "source_type": "HTML",
+      "parser": "galaxy_cinema_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_04_GALAXY_U22",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "dien_may_xanh",
+      "brand_name": "Điện Máy Xanh (MWG)",
+      "locator_url": "https://www.dienmayxanh.com/he-thong-sieu-thi-dien-may",
+      "discovery_source": "Trang chủ dienmayxanh.com (Anchor text 'Tìm siêu thị (2989 shop)' / 'Tìm địa chỉ cửa hàng')",
+      "source_type": "HTML",
+      "parser": "dien_may_xanh_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_13_DMX_OBSERVATION",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "highlands_coffee",
+      "brand_name": "Highlands Coffee",
+      "locator_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "discovery_source": "Trang chủ highlandscoffee.com.vn (Anchor text 'Tìm kiếm cửa hàng' / 'Cửa Hàng Highlands Gần Bạn')",
+      "source_type": "HTML",
+      "parser": "highlands_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B12_06_HIGHLANDS_CARD",
+      "verification_status": "VERIFIED_READY"
+    },
+    {
+      "brand_id": "lotteria",
+      "brand_name": "Lotteria Vietnam",
+      "locator_url": "https://www.lotteria.vn/stores",
+      "discovery_source": "Trang chủ lotteria.vn (Anchor text 'TÌM CỬA HÀNG GẦN BẠN')",
+      "source_type": "HTML",
+      "parser": "lotteria_html_parser",
+      "pagination": {
+        "enabled": false
+      },
+      "request_limits": {
+        "timeout_ms": 15000,
+        "max_retries": 1
+      },
+      "policy_id": "POLICY_B13_LOTTERIA_COMBO",
+      "verification_status": "VERIFIED_READY"
+    }
+  ]
+}

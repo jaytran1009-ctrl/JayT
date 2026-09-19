@@ -1,0 +1,49 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_AO",
+  "expectedVersion": "v3.483.0-staging.ao",
+  "version": "v3.483.0-staging.ao",
+  "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+  "timestamp": "2026-09-01T07:22:58.365Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "build_manifest_ref": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "directive_ref": "JAYT-245 Section EZ-AO (Lines 5018-5040)",
+  "artifact_hash_audit": {
+    "js_sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da",
+    "html_sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71",
+    "all_artifacts_match_manifest": true
+  },
+  "external_dependency_audit": {
+    "third_party_fonts": "REMOVED_COMPLETELY",
+    "third_party_scripts": "NONE",
+    "font_stack": "SYSTEM_FONT_STACK",
+    "external_network_requests_on_load": 0
+  },
+  "cohort_semantics": {
+    "cohort_id": "COHORT_CINEMA_TRANSIT_15_CANDIDATES_LEDGER_EZ_AM",
+    "total_candidates": 15,
+    "open_evaluating_count": 14,
+    "intake_failed_no_raw_count": 1,
+    "tier_verdicts_rendered": 0,
+    "pre_sla_tier_labels": "REMOVED_COMPLETELY"
+  },
+  "fast_lane_status": "OPEN_EVALUATING_SLA_ACTIVE_UNTIL_2026-09-01T08:28:00Z",
+  "fast_lane_candidates_active": 2,
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    }
+  }
+}

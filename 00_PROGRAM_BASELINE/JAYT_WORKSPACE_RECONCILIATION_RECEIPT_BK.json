@@ -1,0 +1,76 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BK_20260829",
+  "schema_version": "3.7.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BK)",
+  "verified_at": "2026-08-29T06:35:22.761Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BJ.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_LOCAL_DOCUMENTARY_COMMERCE_BK",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bk": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "local_documentary_commerce_bk": {
+    "local_visual_library_file": "00_PROGRAM_BASELINE/LOCAL_VISUAL_LIBRARY_BK.json",
+    "local_visual_library_sha256": "533eafbe8c20c18b931b360e71a62edefb4ce406cff282a38b115b85b28558ce",
+    "local_visual_rights_matrix_file": "00_PROGRAM_BASELINE/LOCAL_VISUAL_RIGHTS_MATRIX_BK.json",
+    "local_visual_rights_matrix_sha256": "b8aa7fcf6bf4b62c60eab8e638efddf6b8e4b36ea98baba9e31dff56d7142b4f",
+    "total_documentary_assets": 12,
+    "hero_documentary_photo": true,
+    "three_journey_real_photos": true,
+    "spotlight_documentary_truth": true
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "043cd4bbf0ebf5b20c9bdaf46a92838105aef5ac85063fc245528c475e2f6f62",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "8b01836f5f5669636355926e079112d1f647066b9a4b582d318c5778752eebd3",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "b3f3261b2cadead7c8a5f1a90c48066708832344ced50570ae18dc7b95494b35"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bk.js",
+      "description": "Storefront BK candidate with Local Documentary Commerce and real image elements",
+      "sha256": "23b2949b4a63c27982c418cfbdb38d082baa1ceeba33a47ff7468c46e2dd2ebf"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/LOCAL_VISUAL_LIBRARY_BK.json",
+      "description": "Local Visual Library BK (12 documentary assets with rights)",
+      "sha256": "533eafbe8c20c18b931b360e71a62edefb4ce406cff282a38b115b85b28558ce"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/LOCAL_VISUAL_RIGHTS_MATRIX_BK.json",
+      "description": "Local Visual Rights Matrix BK",
+      "sha256": "b8aa7fcf6bf4b62c60eab8e638efddf6b8e4b36ea98baba9e31dff56d7142b4f"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34230_staging_bk.json",
+      "description": "Release receipt for Staging BK deployment with Local Documentary Commerce verified",
+      "sha256": "c85a01c59b274690531da4a64e8bc365e79d61c59a6e97171884d662a8e5ee78"
+    }
+  ],
+  "verifier_audit_passed": true
+}

@@ -1,0 +1,24 @@
+{
+  "work_order_id": "J360_R1_RUNTIME_AND_PROVENANCE_REMEDIATION",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_REMEDIATION_ONLY",
+  "production_deployment_authorized": false,
+  "release_v3430_authorized": false,
+  "inputs": {
+    "live_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_360_LIVE_RUNTIME_AUDIT_RECEIPT.json",
+    "ceo_gate": "01_EXECUTIVE_COUNCIL/JAYT_360_CEO_R1_HOTFIX_ACCEPTANCE_AND_GO_LIVE_REJECTION.md"
+  },
+  "required_remediations": [
+    "For SPPGALAXY09, provide immutable first-party source evidence, exact terms, validity, Da Nang applicability and a field-level binding to the exact served offer. Add the code to the canonical feed only if all evidence passes. Otherwise remove the Copy control; never add an unsupported code field.",
+    "Remove payer/free-text transfer information from Zalo Pass generation and clipboard export. Keep calculation data local and verify synthetic payer text is absent from preview, clipboard, localStorage, sessionStorage, network requests and geolocation calls at 1440/768/390.",
+    "Reconcile the 26th priced Split Bill control to its stable offer ID. Either make the baseline explicitly 26 with a new sealed test roster, or remove it through an approved data change. Test all roster prices and boundary people counts 2 through 8.",
+    "Recheck the two failing Phi Long outbound URLs with fresh source captures. Only retain an HTTP-200 action link if the current target returns 200; otherwise mark unavailable or replace only with an official, evidence-bound 200 URL. Re-run all 15 links.",
+    "Do not change Batch 19 status, registry count, public offer count, production alias, or staging feed while executing this work order."
+  ],
+  "deliverables": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_360_R1_RUNTIME_REMEDIATION_RECEIPT.json",
+    "06_TRUST_AND_EVIDENCE/j360_r1_copy_code_provenance/",
+    "a sealed Split Bill roster with source IDs and expected calculations"
+  ],
+  "acceptance": "CEO reruns independent production audit; all runtime checks must pass without reducing required checks or masking unavailable links."
+}

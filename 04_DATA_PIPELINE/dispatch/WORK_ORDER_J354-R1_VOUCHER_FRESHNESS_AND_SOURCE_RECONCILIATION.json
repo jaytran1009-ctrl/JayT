@@ -1,0 +1,35 @@
+{
+  "work_order_id": "JAYT-354-R1",
+  "issued_at": "2026-09-08T00:00:00+07:00",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external technical engine",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "purpose": "Remediate Voucher Vault freshness and source-binding findings before any subsequent release review.",
+  "input_artifacts": [
+    "staging_preview_sprint_b/deals_feed.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J354_CORE_MODULES.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_354_SCOPE_RECONCILIATION_AND_DISCREPANCY_MATRIX.md"
+  ],
+  "required_actions": [
+    "Classify every record with an expired or unverified current validity window as HELD__EXPIRED_OR_UNVERIFIED_CURRENT_VALIDITY and exclude it from actionable Voucher Vault rendering.",
+    "Hold the PAYDAY code and remove/disable its copy affordance unless an official current raw leaf-page capture proves exact validity, conditions, and source binding.",
+    "For each displayed product-specific offer, verify that the declared official source directly supports that exact product/offer. Otherwise hold it or render it only as a clearly labelled non-promotional price observation.",
+    "Preserve original raw evidence, capture timestamps, hashes, headers, and locality evidence; do not alter historical artifacts.",
+    "Run the full Staging regression suite across 1440px, 768px, and 390px, including keyboard navigation, copy-button guard, duplicate IDs, console/runtime errors, overflow, direct-link inspection, and affiliate/tracking inspection."
+  ],
+  "acceptance_criteria": {
+    "expired_or_unverified_actionable_offers": 0,
+    "synthetic_codes": 0,
+    "copy_buttons_for_held_records": 0,
+    "affiliate_or_tracking_parameters": 0,
+    "console_or_runtime_errors": 0,
+    "horizontal_overflow": 0,
+    "production_mutations": 0
+  },
+  "required_outputs": [
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J354-R1_VOUCHER_FRESHNESS_AND_SOURCE_RECONCILIATION.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J354-R1_VOUCHER_FRESHNESS_AND_SOURCE_RECONCILIATION.json.sha256"
+  ],
+  "production_deployment_authorized": false,
+  "release_scope": "HELD_PENDING_CEO_REVIEW"
+}

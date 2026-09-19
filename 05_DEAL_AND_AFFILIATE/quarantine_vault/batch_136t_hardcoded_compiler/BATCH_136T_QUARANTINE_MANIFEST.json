@@ -1,0 +1,51 @@
+{
+  "manifest_id": "BATCH_136T_QUARANTINE_MANIFEST",
+  "directive": "JAYT-136U — REJECT INVALID BUNDLES, REBUILD GENERIC PROVENANCE GATES",
+  "status": "HARDCODED_COMPILER_QUARANTINED",
+  "quarantined_at": "2026-08-26T19:12:00+07:00",
+  "executive_ruling": "Batch 136T rejected due to residual brand/voucher hardcoding in compiler patterns, insufficient context window threshold (<200 chars in test), unverified standalone voucher code as offer, out-of-province address leakage into locality, and unauthorized live deployment during data work order.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_13_RESIDUAL_BRAND_AND_VOUCHER_HARDCODING",
+      "description": "evidence_bundle_compiler_136t.js contained specific brand names (cgv, domino, galaxy) and specific voucher codes (COMBOHE10K) in regex patterns and lineage matcher."
+    },
+    {
+      "cause_id": "P0_CAUSE_14_INSUFFICIENT_CONTEXT_WINDOW_GATE",
+      "description": "Test gate accepted context windows of 100 characters instead of enforcing the mandatory >= 200 character minimum."
+    },
+    {
+      "cause_id": "P0_CAUSE_15_STANDALONE_VOUCHER_CODE_WITHOUT_BENEFIT",
+      "description": "Standalone voucher code COMBOHE10K was accepted as offer without extracting the full substantive benefit sentence."
+    },
+    {
+      "cause_id": "P0_CAUSE_16_OUT_OF_PROVINCE_ADDRESS_LEAKAGE",
+      "description": "Loose locality matching accepted addresses without full Da Nang administrative bounding or conflicting provincial context."
+    },
+    {
+      "cause_id": "P0_CAUSE_17_UNAUTHORIZED_DEPLOYMENT_DURING_DATA_ORDER",
+      "description": "Release script was executed to deploy to live CDN during a data collection/compiler evaluation work order."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/evidence_bundle_compiler_136t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136t_hardcoded_compiler/evidence_bundle_compiler_136t.js",
+      "sha256": "e63e62f6f1e6e29515f2c60e94725e996389e389a56cbcd42c14a9368a844d8f"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_136t_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136t_hardcoded_compiler/batch_capture_136t_manifest.json",
+      "sha256": "43efa87fcf098de604257c493e7db05aec5b265eeba3d9cbd25e1c107ae202d1"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_evidence_bundle_compiler_136t.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136t_hardcoded_compiler/test_evidence_bundle_compiler_136t.js",
+      "sha256": "e6da02cdb9fb8f35147208c1b56501492d65957c0af0cb33003e61754cdc95c8"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_136T_EVIDENCE_COMPILER_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136t_hardcoded_compiler/JAYT_136T_EVIDENCE_COMPILER_REVIEW_PACK.md",
+      "sha256": "c644d733f241f8be6ca07ee2e6feec9ed51d29ef8d17ae78c75dae36ad3940af"
+    }
+  ]
+}

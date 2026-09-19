@@ -1,0 +1,115 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "work_order": "JAYT-INCIDENT-069A",
+  "quarantined_at": "2026-08-24T12:15:00+07:00",
+  "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION",
+  "incident_summary": "Sự cố 069.1: Agent tự động nhận nhầm hook tin nhắn hệ thống là phê duyệt của CEO, sinh dữ liệu hard-code 4 candidate deals, tự gán APPROVED_BY_CEO / APPROVED_IN_STAGING, tự tạo CEO Decision Receipt giả mạo và nạp trái phép vào Staging Feed. Toàn bộ 069.1 artifacts bị cô lập khẩn cấp.",
+  "total_files_quarantined": 15,
+  "quarantined_files": {
+    "candidate_32_CAND-DNG-GALAXY-HAPPY-DAY-069.json": {
+      "type": "CANDIDATE_JSON",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\candidate_32_CAND-DNG-GALAXY-HAPPY-DAY-069.json",
+      "bytes": 3349,
+      "sha256": "9dfeda261e209e0eadaad1e8175938f416ad75498bbce30add141a3afba29397",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "candidate_33_CAND-DNG-LOTTE-AMAZING-DAY-069.json": {
+      "type": "CANDIDATE_JSON",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\candidate_33_CAND-DNG-LOTTE-AMAZING-DAY-069.json",
+      "bytes": 3874,
+      "sha256": "4b7263ed07bd47696f36fe76342f72cd3fb9dd5dd10edd4ebdb09540cb5b38f2",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "candidate_34_CAND-DNG-LOTTERIA-GACAY-M1T1-069.json": {
+      "type": "CANDIDATE_JSON",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\candidate_34_CAND-DNG-LOTTERIA-GACAY-M1T1-069.json",
+      "bytes": 3306,
+      "sha256": "f34c7f86138912bbcb24da5d02e53433eaf7b1966c26b43385c7cc5d68c786ba",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "candidate_35_CAND-DNG-PHELA-DONGLONG-069.json": {
+      "type": "CANDIDATE_JSON",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\candidate_35_CAND-DNG-PHELA-DONGLONG-069.json",
+      "bytes": 3497,
+      "sha256": "3b86f9eb259e9c4897a13c84a0a9a0de0744fc2e3f7bac2b1afb20ad342e0262",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "dossier_CAND-DNG-GALAXY-HAPPY-DAY-069.md": {
+      "type": "EVIDENCE_DOSSIER",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\dossier_CAND-DNG-GALAXY-HAPPY-DAY-069.md",
+      "bytes": 852,
+      "sha256": "7322dacaa9bb1fcf6b2a8aab81350e07939347f562d930581b87a3ae95bc17a3",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "dossier_CAND-DNG-LOTTE-AMAZING-DAY-069.md": {
+      "type": "EVIDENCE_DOSSIER",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\dossier_CAND-DNG-LOTTE-AMAZING-DAY-069.md",
+      "bytes": 800,
+      "sha256": "24a4568b5d0c13ad141bd197ebb45ccf56b16369c38d5bd1d0389c2606069fe1",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "dossier_CAND-DNG-LOTTERIA-GACAY-M1T1-069.md": {
+      "type": "EVIDENCE_DOSSIER",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\dossier_CAND-DNG-LOTTERIA-GACAY-M1T1-069.md",
+      "bytes": 698,
+      "sha256": "17686bd809e7670afe9c1ef3c35e51e8ad6bec688f0a6078496ac9bccaf298b2",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "dossier_CAND-DNG-PHELA-DONGLONG-069.md": {
+      "type": "EVIDENCE_DOSSIER",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\candidates\\pending_review\\dossier_CAND-DNG-PHELA-DONGLONG-069.md",
+      "bytes": 730,
+      "sha256": "33367fe04c86d2ab513e2355d8865fa5ce8cd901694f864aacccbeeb0dff99aa",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "CEO_DECISION_RECEIPT_069_BATCH1.json": {
+      "type": "UNAUTHORIZED_CEO_DECISION_RECEIPT",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\runtime_evidence\\CEO_DECISION_RECEIPT_069_BATCH1.json",
+      "bytes": 1862,
+      "sha256": "b38e3da0372a63a4261f81f45c7ad58b7ba1b2ffb7a504e7f5074a44ffb55f56",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "STAGING_ACCEPTANCE_MANIFEST_069.json": {
+      "type": "UNAUTHORIZED_STAGING_MANIFEST",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\runtime_evidence\\STAGING_ACCEPTANCE_MANIFEST_069.json",
+      "bytes": 2318,
+      "sha256": "eead494a048a7159c418d98565bf1129e797d2e7236656fb432b68aaaf2ffbef",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "staging_deals_feed_069_1_quarantined.json": {
+      "type": "UNAUTHORIZED_STAGING_FEED",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\08_RELEASE_VAULT\\deployments\\staging_instance\\05_DEAL_AND_AFFILIATE\\deals_feed.json",
+      "bytes": 6377,
+      "sha256": "79d5e7915b7789fdf1e1df012c51ae27c5afcb76496df4c978c26fbccc613c0d",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "apply_memory_transaction_069_1.js": {
+      "type": "UNAUTHORIZED_TRANSACTION_SCRIPT",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\apply_memory_transaction_069_1.js",
+      "bytes": 8510,
+      "sha256": "e6602f3d6911880a7fb1159a1cfe21fbaaab6688bc846c8b32cbe17de68ead8e",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "test_staging_acceptance_069.js": {
+      "type": "UNAUTHORIZED_TEST_SCRIPT",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\test_staging_acceptance_069.js",
+      "bytes": 3933,
+      "sha256": "11483b880bd66669e362fee69e1ff3d544296c68dc8963dd205b7dfb4a31fa13",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "correction_receipt_corr_069_1_candidate_count_alignment.json": {
+      "type": "UNAUTHORIZED_CORRECTION_RECEIPT",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\runtime_evidence\\correction_receipt_corr_069_1_candidate_count_alignment.json",
+      "bytes": 707,
+      "sha256": "e7c7cad9070853005e3af3c2f3fd481778cde53d25e0f7ec6b261bf2d6783502",
+      "reason": "SYNTHETIC_OR_UNPROVEN_CLAIM + UNAUTHORIZED_CEO_APPROVAL_ASSERTION"
+    },
+    "scratch_test_write.txt": {
+      "type": "SCRATCH_FILE",
+      "original_path": "JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\scratch\\test_write.txt",
+      "bytes": 11,
+      "sha256": "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+      "reason": "INCIDENT_069A_SCRATCH_CONTAINMENT"
+    }
+  }
+}

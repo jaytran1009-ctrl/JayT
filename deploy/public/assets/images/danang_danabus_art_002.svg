@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+      <defs>
+        <linearGradient id="emerald-bus-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f0fdf4"/>
+          <stop offset="50%" stop-color="#dcfce7"/>
+          <stop offset="100%" stop-color="#a7f3d0"/>
+        </linearGradient>
+        <linearGradient id="bus-body-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#15803d"/>
+          <stop offset="50%" stop-color="#16a34a"/>
+          <stop offset="100%" stop-color="#22c55e"/>
+        </linearGradient>
+        <filter id="bus-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#064e3b" flood-opacity="0.16"/>
+        </filter>
+      </defs>
+      
+      <!-- Emerald Background -->
+      <rect width="960" height="540" fill="url(#emerald-bus-bg)"/>
+      
+      <circle cx="480" cy="270" r="210" fill="#10b981" opacity="0.12"/>
+      <circle cx="180" cy="140" r="120" fill="#059669" opacity="0.08"/>
+      <circle cx="800" cy="400" r="160" fill="#34d399" opacity="0.14"/>
+      
+      <!-- Top Badge -->
+      <g transform="translate(260, 36)" filter="url(#bus-shadow)">
+        <rect width="440" height="48" rx="24" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+        <text x="220" y="30" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="800" fill="#166534" text-anchor="middle" letter-spacing="1">🚌 GIAO THÔNG XANH &#8226; DANABUS TRỢ GIÁ TP</text>
+      </g>
+      
+      <!-- Modern Eco Bus Composition -->
+      <g transform="translate(240, 160)" filter="url(#bus-shadow)">
+        <!-- Main Chassis -->
+        <rect x="0" y="0" width="480" height="210" rx="36" fill="url(#bus-body-grad)"/>
+        <!-- Window Strip -->
+        <rect x="24" y="24" width="432" height="96" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+        <!-- Window Panes -->
+        <line x1="168" y1="24" x2="168" y2="120" stroke="#15803d" stroke-width="6"/>
+        <line x1="312" y1="24" x2="312" y2="120" stroke="#15803d" stroke-width="6"/>
+        <!-- Front Windshield Passenger View -->
+        <path d="M 410 24 L 456 24 C 456 24 456 120 420 120 L 410 120 Z" fill="#bae6fd"/>
+        <!-- Eco Leaf Badge on Body -->
+        <circle cx="80" cy="160" r="22" fill="#ffffff" opacity="0.9"/>
+        <path d="M 72 165 C 72 152 88 148 88 148 C 88 148 88 165 72 165 Z" fill="#15803d"/>
+        <!-- LED Route Destination Board -->
+        <rect x="180" y="34" width="120" height="24" rx="6" fill="#0f172a"/>
+        <text x="240" y="51" font-family="monospace" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle">R16 SÂN BAY</text>
+        <!-- Wheels -->
+        <circle cx="120" cy="210" r="42" fill="#1e293b"/>
+        <circle cx="120" cy="210" r="20" fill="#94a3b8"/>
+        <circle cx="360" cy="210" r="42" fill="#1e293b"/>
+        <circle cx="360" cy="210" r="20" fill="#94a3b8"/>
+        <!-- Headlights -->
+        <rect x="466" y="145" width="14" height="30" rx="6" fill="#fef08a"/>
+      </g>
+      
+      <!-- Atmospheric Bottom Narrative -->
+      <text x="480" y="495" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#14532d" text-anchor="middle">
+        Tuyến R16: Sân Bay &#8596; Bến Xe &#8226; Tuyến R04: Cầu Rồng &#8596; Mỹ Khê (Vé chỉ 6.000đ/lượt)
+      </text>
+    </svg>

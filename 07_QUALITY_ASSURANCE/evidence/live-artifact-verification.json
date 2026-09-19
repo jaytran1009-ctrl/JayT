@@ -1,0 +1,34 @@
+{
+  "report_name": "LIVE_ARTIFACT_PARITY_VERIFICATION_REPORT",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_452_AND_EXECUTE_RESEAL_V2 (JAYT-453 / J452-05)",
+  "timestamp": "2026-09-19T09:04:36.934Z",
+  "local_sot": {
+    "path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "bytes": 1103674,
+    "sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca"
+  },
+  "live_verifications": [
+    {
+      "target": "CANONICAL_PRODUCTION",
+      "url": "https://jayt-production-v3420.vercel.app/jayt_apex_interface.js",
+      "http_status": 200,
+      "live_bytes": 1103674,
+      "live_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
+      "expected_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
+      "expected_bytes": 1103674,
+      "is_bit_identical": true
+    },
+    {
+      "target": "DEPLOYMENT_MIRROR",
+      "url": "https://deploy-ten-xi-48.vercel.app/jayt_apex_interface.js",
+      "http_status": 200,
+      "live_bytes": 379236,
+      "live_sha256": "909a03d475e14e9653df2b565a4c76636dcbf799a772a8dd7c434bb777c13efe",
+      "expected_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
+      "expected_bytes": 1103674,
+      "is_bit_identical": false
+    }
+  ],
+  "canonical_match": true,
+  "verdict": "PASS"
+}

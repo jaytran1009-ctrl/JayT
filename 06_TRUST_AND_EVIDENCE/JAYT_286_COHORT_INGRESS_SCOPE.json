@@ -1,0 +1,30 @@
+{
+  "scope_id": "JAYT-286-COHORT-INGRESS-SCOPE",
+  "issued_at_utc": "2026-09-04T00:00:00.000Z",
+  "authority": "CEO JAYT under JAYT-286",
+  "mode": "OPERATOR_VERIFIED_LEAF_PAGE_DISCOVERY_THEN_INGRESS",
+  "vault": "06_TRUST_AND_EVIDENCE/batch_03b_micro_capture_vault/",
+  "capture_precondition": "A current official leaf-page URL and verbatim supporting span must be recorded before any raw capture.",
+  "cohorts": [
+    {
+      "id": "COHORT_1_HOA_KHANH", "targets": ["BATCH03_HK_01", "BATCH03_HK_02", "BATCH03_HK_03", "BATCH03_HK_05", "BATCH03_HK_06"]
+    },
+    {
+      "id": "COHORT_2_AN_THUONG", "targets": ["BATCH03_AT_01", "BATCH03_AT_02", "BATCH03_AT_03", "BATCH03_AT_04", "BATCH03_AT_05"]
+    }
+  ],
+  "expired_replacements": [
+    {
+      "retired_target": "BATCH03_HK_04",
+      "required_subject": "Current 2026 student support or scholarship notice with an open application window",
+      "research_state": "AWAITING_OFFICIAL_LEAF_PAGE"
+    },
+    {
+      "retired_target": "BATCH03_HC_07",
+      "required_subject": "Current Dragon Bridge weekend water/fire schedule from an official Da Nang source",
+      "research_state": "AWAITING_OFFICIAL_LEAF_PAGE"
+    }
+  ],
+  "prohibitions": ["public render before CEO item approval", "commercial claims", "affiliate or tracking links", "feed mutation", "production deployment"],
+  "public_approved": 0
+}

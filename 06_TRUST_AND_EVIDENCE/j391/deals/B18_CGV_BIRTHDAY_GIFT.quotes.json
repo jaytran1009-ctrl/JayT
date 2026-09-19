@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 6,
+  "offer_id": "B18_CGV_BIRTHDAY_GIFT",
+  "brand": "CGV Cinemas Đà Nẵng",
+  "category": "CINEMA",
+  "title": "Quà Tặng Sinh Nhật Thành Viên CGV (Bắp Nước Miễn Phí)",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_06_cgv_birthday.html",
+    "file_sha256": "b507208ba1d5315f1ee53e64611f370021171fcf1a145570f8e6e7f1fbe214c0",
+    "file_bytes": 60543,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://www.cgv.vn/default/newsoffer/birthday-promo/",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_REGIONAL",
+  "wave_1_eligible": false,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": false,
+    "terms_proven": true,
+    "all_four_predicates_proven": false,
+    "finding": "Offer, validity (01.09.2026 - 30.09.2026), and membership terms proven verbatim in HTML. Program is nationwide across CGV chain with no Da Nang branch token in source bytes. Classified VERIFIED_REGIONAL and excluded from Wave 1 Da Nang count."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "MIỄN PHÍ 1 CGV Birthday Combo (1 Bắp ngọt + 2 Nước) cho tất cả thành viên có SINH NHẬT TRONG THÁNG 9",
+      "byte_offset_start": 43501,
+      "byte_offset_end": 43621,
+      "byte_length": 120,
+      "selector": ".postContent p strong",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "1. Thời hạn nhận quà:</strong>&nbsp;01.09.2026 - 30.09.2026",
+      "byte_offset_start": 44002,
+      "byte_offset_end": 44068,
+      "byte_length": 66,
+      "selector": ".postContent p",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "CGV Cinemas Vietnam",
+      "byte_offset_start": 1102,
+      "byte_offset_end": 1121,
+      "byte_length": 19,
+      "selector": "meta[name=\"author\"]",
+      "proven": true,
+      "danang_specific": false
+    },
+    "terms_quote": {
+      "text": "CGV Birthday Combo sẽ được hiển thị sẵn trong tài khoản thành viên có sinh nhật trong tháng.",
+      "byte_offset_start": 45821,
+      "byte_offset_end": 45934,
+      "byte_length": 113,
+      "selector": ".postContent p",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "APP_MEMBER_LOYALTY",
+    "button_label": "Đổi Quà Trên App CGV",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": false
+  }
+}

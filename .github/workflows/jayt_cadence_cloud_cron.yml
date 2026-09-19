@@ -1,0 +1,163 @@
+name: JayT 24/7 Autonomous Cloud Cadence & CI/CD Gatekeeper
+
+on:
+  schedule:
+    # 4 Khung Giờ Vàng Săn Deal Đà Nẵng (Asia/Ho_Chi_Minh = UTC+7) - JAYT-453 Section VI
+    # 00:07 ICT = 17:07 UTC (ngày hôm trước): Reset Voucher & Săn Deal Đêm
+    - cron: '7 17 * * *'
+    # 11:37 ICT = 04:37 UTC: Cơm Trưa NVVP & Sinh Viên Đà Nẵng
+    - cron: '37 4 * * *'
+    # 16:37 ICT = 09:37 UTC: Trà Sữa Chiều & Lịch Kèo Rạp Phim Tối
+    - cron: '37 9 * * *'
+    # 20:07 ICT = 13:07 UTC: Prime-Time Flash Sale Đáy Sàn & Sắm KTX
+    - cron: '7 13 * * *'
+  workflow_dispatch:
+    inputs:
+      scheduled_slot:
+        description: 'Khung giờ vàng ICT cần xác minh (00:07, 11:37, 16:37, 20:07)'
+        required: true
+        default: '00:07 ICT'
+        type: choice
+        options:
+          - '00:07 ICT'
+          - '11:37 ICT'
+          - '16:37 ICT'
+          - '20:07 ICT'
+      cycle:
+        description: 'Chu kỳ quét giờ vàng cần kích hoạt thủ công'
+        required: false
+        default: 'AUTO_GOLDEN_HOUR'
+        type: choice
+        options:
+          - AUTO_GOLDEN_HOUR
+          - GOLDEN_HOUR_0007
+          - GOLDEN_HOUR_1137
+          - GOLDEN_HOUR_1637
+          - GOLDEN_HOUR_2007
+          - FORCE_FULL_AUDIT
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  cloud_sweep_and_zqa:
+    name: 8-Source Da Nang Sweep & 5-Gate ZQA Pre-Flight
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js Runtime (LTS 20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Project Dependencies
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci --prefer-offline --no-audit || npm install --no-audit
+          else
+            npm install --no-audit
+          fi
+
+      - name: Execute 100% Cloud Cadence Sweeper (8 Đà Nẵng Sources)
+        env:
+          TZ: 'Asia/Ho_Chi_Minh'
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '@DealsIphoneHot' }}
+          SCHEDULED_SLOT: ${{ github.event.inputs.scheduled_slot }}
+        run: |
+          CYCLE="${{ github.event.inputs.cycle || 'AUTO_GOLDEN_HOUR' }}"
+          SLOT="${{ github.event.inputs.scheduled_slot || '' }}"
+          echo "=================================================================="
+          echo "  RUNNING CLOUD CADENCE SWEEPER ON GITHUB ACTIONS: $CYCLE [Slot: $SLOT]"
+          echo "=================================================================="
+          node scripts/cloud_danang_cadence_sweeper.cjs --cycle="$CYCLE" --slot="$SLOT"
+
+      - name: Execute CI/CD Verification Gates (BUILD BREAK ON FAILURE)
+        env:
+          CI: 'true'
+          TZ: 'Asia/Ho_Chi_Minh'
+        run: |
+          echo "--- GATE 1: MEDIA ASSETS VERIFICATION ---"
+          node scripts/verify_media_assets.cjs
+
+          echo "--- GATE 2: LINK HEALTH & PDP DIRECT ROUTING ---"
+          node scripts/verify_link_health.cjs
+
+          echo "--- GATE 3: 24/24 STATIC PIPELINE SEAL ---"
+          node scripts/verify_pipeline_seal.cjs
+
+          echo "--- GATE 4: 5/5 W8 FEED TOOLCHAIN SEAL ---"
+          node scripts/verify_w8_feed_toolchain.cjs
+
+          echo "--- GATE 5: 7/7 AUTONOMOUS SYSTEM GATES ---"
+          node scripts/verify_autonomous_gates.cjs
+
+          echo "--- GATE 6: 5/5 ZQA PRE-DEPLOY GATES (JAYT-447) ---"
+          node 07_QUALITY_ASSURANCE/test_autonomous_opc_gates.cjs
+
+      - name: Upload Cadence & ZQA Evidence Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jayt-cloud-cadence-evidence
+          path: |
+            07_QUALITY_ASSURANCE/runtime_evidence/JAYT_CADENCE_CLOUD_SWEEP_RECEIPT.json
+            07_QUALITY_ASSURANCE/runtime_evidence/*.json
+          retention-days: 14
+
+  cloud_deploy:
+    name: Production Deployment to Vercel (Guarded)
+    needs: [cloud_sweep_and_zqa]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'schedule'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel Production
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod --yes'
+          working-directory: ./deploy
+
+  telegram_notification:
+    name: Dispatch Operational Status to Telegram
+    needs: [cloud_sweep_and_zqa, cloud_deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Summary to Telegram Bot (@DealsIphoneHot)
+        env:
+          SWEEP_STATUS: ${{ needs.cloud_sweep_and_zqa.result }}
+          DEPLOY_STATUS: ${{ needs.cloud_deploy.result }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '@DealsIphoneHot' }}
+        run: |
+          if [ -n "$TELEGRAM_BOT_TOKEN" ]; then
+            MESSAGE="🤖 <b>[JAYT GITHUB ACTIONS CLOUD RUN COMPLETE]</b>%0A%0A"
+            MESSAGE="${MESSAGE}📍 <b>Sự kiện:</b> ${{ github.event_name }}%0A"
+            MESSAGE="${MESSAGE}🛡 <b>ZQA CI/CD Gate:</b> $SWEEP_STATUS%0A"
+            MESSAGE="${MESSAGE}🚀 <b>Vercel Production Deploy:</b> $DEPLOY_STATUS%0A"
+            MESSAGE="${MESSAGE}🔗 <b>Target:</b> https://jayt-production-v3420.vercel.app%0A"
+            MESSAGE="${MESSAGE}💻 <b>Trạng thái Máy Chủ tịch:</b> 100% ĐỘC LẬP & TỰ ĐỘNG HÓA TRÊN CLOUD"
+            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -d "chat_id=${TELEGRAM_CHAT_ID}&text=${MESSAGE}&parse_mode=HTML&disable_web_page_preview=true" || true
+          else
+            echo "TELEGRAM_BOT_TOKEN not provided in secrets; skipped live dispatch."
+          fi

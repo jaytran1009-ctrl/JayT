@@ -1,0 +1,43 @@
+{
+  "ledger_id": "JAYT_FREEZE_STATE_SUPERSESSION_LEDGER",
+  "governing_directive": "JAYT-245 Section JAYT-263-CORRECTION-2 (Lines 5760-5774)",
+  "created_at_utc": "2026-09-03T04:39:08.031Z",
+  "ceo_directive_id": "JAYT-263-CORRECTION-2",
+  "audit_verdict": "SUPERSESSION_CHAIN_RESTORED_AND_VERIFIED",
+  "supersession_chain": [
+    {
+      "entry_index": 1,
+      "record_version": "v1.0",
+      "file_path": "00_PROGRAM_BASELINE/HISTORICAL/JAYT_CONTAMINATION_FREEZE_STATE_V1.json",
+      "file_bytes_sha256": "97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a",
+      "self_declared_hash_field": "aee7e71bb09503cf4dafb58040d44678ce64c472f0924a9bd407881f60855960",
+      "status": "SUPERSEDED",
+      "audit_classification": "FREEZE_ENFORCEMENT_ACTIVE__INTEGRITY_UNVERIFIED",
+      "audit_addendum_path": "06_TRUST_AND_EVIDENCE/AUDIT_ADDENDUM_FREEZE_STATE_V1_INTEGRITY.json",
+      "restoration_source": {
+        "locator": "scratch/write_jayt_263_freeze_state.js @ step_index 5214 in transcript_full.jsonl",
+        "verified_utc": "2026-09-02T08:58:46.402Z"
+      }
+    },
+    {
+      "entry_index": 2,
+      "record_version": "v2.0",
+      "file_path": "00_PROGRAM_BASELINE/JAYT_CONTAMINATION_FREEZE_STATE_V2.json",
+      "file_bytes_sha256": "54663260b0d58449fa036e8ab48b2e25ff6f41feef83b03a7854df515b95d197",
+      "canonical_payload_sha256": "c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d",
+      "canonical_payload_contract": "RECURSIVE_SORTED_KEYS_JSON",
+      "status": "ACTIVE_ENFORCING",
+      "supersedes_target": {
+        "previous_path": "00_PROGRAM_BASELINE/HISTORICAL/JAYT_CONTAMINATION_FREEZE_STATE_V1.json",
+        "previous_file_bytes_sha256": "97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a"
+      }
+    }
+  ],
+  "chain_integrity_checks": {
+    "previous_record_exists": true,
+    "previous_record_bytes_hash_matches": true,
+    "v2_canonical_payload_digest_valid": true,
+    "v2_previous_pointer_not_self_referencing": true,
+    "fail_closed_contract_active": true
+  }
+}

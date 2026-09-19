@@ -1,0 +1,45 @@
+{
+  "manifest_title": "JAYT PRE-LAUNCH TAMPER-EVIDENT RUN MANIFEST",
+  "work_order": "JAYT-PRELAUNCH-ALL-DEPARTMENTS-007",
+  "run_id": "P007_20260820T145359Z_7db8dd90",
+  "sealed_at": "2026-08-20T14:54:20.164994+00:00",
+  "integrity_classification": "TAMPER_EVIDENT_LOCALLY_READ_ONLY",
+  "source_and_test_scripts_hashes": {
+    "test_prelaunch_gateway_blocking.py": "fef97f33012f32fa814434a06149b9f4511906c157c3064d78c373078b493414",
+    "run_all_department_tests.py": "45f38cf70c68b0da76d78a6f980260d950c9edc6e6f299dd66a549b7541060d9",
+    "jayt_production_server.py": "86d4527cc9aee6ea7c8385416674ad6dcb0644d681f9dc28bf191e33827cf6ae",
+    "rollback.ps1": "7b22287008426eab27e7379f9b59c62135423c8fe786f84ea428d4d6e41f2f06"
+  },
+  "staging_pointer_pre_and_post_hashes": {
+    "pre_test_sha256": "2ebe23faf72edcbd635304581e18653ca9652ebee01c116e9ee01de12624a854",
+    "post_test_sha256": "2ebe23faf72edcbd635304581e18653ca9652ebee01c116e9ee01de12624a854",
+    "byte_for_byte_match": true
+  },
+  "timeline_hash": "918016547ed2ec28175c8db07a9573265aa6c3967b73b5f8075775b633e1e4f9",
+  "stdout_stderr_hash": "bcb3a7ed2ee9cdb626320dba409389abfa27f4de119d96579c140d29b5478152",
+  "test_result_hash": "86a0283562d7e31d03bb745c1dc721fe141d8144d8cf249fe323405b22b7544e",
+  "evidence_record_hash": "e8bf8271c6f391de0ae5ea7a63a7340e2f3df8784c0a33d42d13c19e679ff739",
+  "files_count": 4,
+  "files": [
+    {
+      "filename": "P007_EVIDENCE_RECORD.json",
+      "sha256": "e8bf8271c6f391de0ae5ea7a63a7340e2f3df8784c0a33d42d13c19e679ff739",
+      "byte_size": 854
+    },
+    {
+      "filename": "P007_EXECUTION_STDOUT_STDERR.log",
+      "sha256": "bcb3a7ed2ee9cdb626320dba409389abfa27f4de119d96579c140d29b5478152",
+      "byte_size": 1036
+    },
+    {
+      "filename": "P007_REPORT.json",
+      "sha256": "86a0283562d7e31d03bb745c1dc721fe141d8144d8cf249fe323405b22b7544e",
+      "byte_size": 21185
+    },
+    {
+      "filename": "P007_SANDBOX_NEGATIVE_ROLLBACK_TIMELINE.json",
+      "sha256": "918016547ed2ec28175c8db07a9573265aa6c3967b73b5f8075775b633e1e4f9",
+      "byte_size": 36564
+    }
+  ]
+}

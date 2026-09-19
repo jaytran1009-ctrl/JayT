@@ -1,0 +1,85 @@
+{
+  "work_order_id": "J363_MAXIMUM_EXPERIENCE",
+  "authority": "Chairman JAYT-363",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity",
+  "issued_at_utc": "2026-09-09T07:19:45Z",
+  "status": "READY_FOR_EXECUTION",
+  "target_version": "v3.431.0",
+  "baseline": "v3.430.0-j361 / dpl_72b2G579GhCPSS7A6AoLHrypQa91",
+  "staging_url": "http://127.0.0.1:4176",
+  "staging_and_candidate_implementation_authorized": true,
+  "production_deployment_authorized": false,
+  "preview_due_at_utc": "2026-09-10T07:19:45Z",
+  "deadline_note": "24-hour execution target measured from this dispatch; executor must record actual start, completion and any shortfall.",
+  "workstreams": {
+    "bento_hub": {
+      "timezone": "Asia/Ho_Chi_Minh",
+      "heading": "Hôm nay ăn gì — đi đâu?",
+      "time_windows": [
+        {"start": "07:00", "end": "11:00", "theme": "Điểm tâm sáng & cà phê tiết kiệm"},
+        {"start": "11:00", "end": "14:00", "theme": "Cơm trưa cứu đói", "maximum_payable_price_vnd": 35000},
+        {"start": "14:00", "end": "18:00", "theme": "Cà phê học bài & xe buýt"},
+        {"start": "18:00", "end": "23:00", "theme": "Phim tối & ăn nhóm bạn"}
+      ],
+      "outside_windows": "Show tomorrow planning and genuinely available late options; do not imply closed businesses are open.",
+      "campus_filters": ["Tất cả", "Bách Khoa", "Sư Phạm", "Kinh Tế DUE", "Duy Tân", "Ngoại Ngữ"],
+      "campus_note": "Five clusters split Bách Khoa and Sư Phạm; multi-campus universities need explicit campus addresses in the mapping. No GPS permission required.",
+      "requirements": [
+        "Place time-aware Bento and campus controls in the first viewport at 390px and desktop; maintain readable touch targets and keyboard access.",
+        "Use explicit local campus/location mappings with documented proximity criteria. A city-wide chain record does not automatically mean near every campus.",
+        "Only mark power outlets, study suitability, opening hours, meals <=35K or DanaBus 6K where supported. Capture route/fare eligibility for bus claims. Missing local supply gets an honest empty state plus nearby/city-wide options.",
+        "Update time window on boundary and tab resume; test with an injected clock including 07:00, 11:00, 14:00, 18:00, 23:00 and midnight."
+      ],
+      "filter_performance": "Target <20ms from handler start to DOM update for loaded data. Record median, p95 and maximum over at least 30 interactions per viewport with hardware/browser context; also measure next-frame visual feedback separately. No unmeasured latency claim."
+    },
+    "voucher_vault": {
+      "minimum_current_actionable_offers": 30,
+      "scope": "F&B and cinema offers from Batch 18 and Batch 19 plus supported additions, exposed prominently on HOME with access to full Vault.",
+      "cta_types": {
+        "real_code": "Sao chép mã — exact supported code; announce success only after clipboard resolves and provide fallback on denial.",
+        "counter_combo": "Xem điều kiện áp dụng ↗ — show Đến quầy nhận ngay only when terms permit counter redemption; preserve delivery/member/channel restrictions.",
+        "app_wallet": "Mở App nhận deal ↗ — official deep-link or working official web fallback."
+      },
+      "counting": "Deduplicate by stable offer ID. Lack of a code never hides a valid counter deal. Discovery, expired deals and ordinary observed-price cards do not count toward the minimum 30 hot offers. Derive counts from data and disclose shortfall.",
+      "baseline_note": "Previous 42 rendered Vault cards included two discovery records; 42 is not a count of verified hot offers. Reassess current eligibility rather than inheriting the headline."
+    },
+    "ktx_radar": {
+      "minimum_distinct_products": 30,
+      "categories": ["Ấm đun", "Quạt mini", "Đèn học", "Chuột máy tính", "USB", "Sách giáo trình"],
+      "label": "Giá khảo sát thực tế — Kiểm tra tồn kho tại sàn",
+      "requirements": [
+        "Expand the existing 15 records into at least 30 distinct product listings across the requested categories. Broad campaigns do not count as individual products.",
+        "Store product ID/model, merchant, exact product URL, observed price, currency, capture time, source and availability caveats. Do not invent prices, stock or seller official status.",
+        "Use Shopee/Tiki official shops or verified retailer product pages; label direct retailer websites accurately. Validate final destinations, not HTTP 200 alone.",
+        "Use authorized affiliate links and publisher identifiers when supplied or already configured. Disclose commission links. If none exists, ship direct links and mark monetization pending account configuration; do not claim commission revenue or create accounts/agreements."
+      ]
+    },
+    "zalo_pass": {
+      "button": "🍿 Xuất Vé Kèo Rủ Bạn (Zalo Pass) ↗",
+      "implementation": "Provide a local Canvas PNG boarding pass with amount/person and group count plus a copyable message including https://jayt-production-v3420.vercel.app. Feature-detect native sharing and fall back to PNG download/message copy.",
+      "privacy": "Generate locally; omit payer identity and arbitrary free text from exported defaults. Do not request contacts or GPS. Sharing is initiated by the user; never auto-send messages.",
+      "arithmetic": "Integer VND only; preserve total with explicit remainder allocation. Test the actual UI calculator and exported values for divisible/non-divisible totals, invalid inputs and group sizes 2..8."
+    }
+  },
+  "evidence": {
+    "methods": "Official detail HTML/API or rendered screenshot plus reviewed terms and raw artifact hashes; SPA is acceptable and no static-selector allowlist is required.",
+    "fields": ["stable_id", "source_url", "final_url", "captured_at_utc", "raw_sha256", "terms", "channel", "locality", "validity_or_recurrence", "price_semantics"],
+    "rules": "Retain prior archives. Separate confirmed claims from discovery. Show restrictions beside CTAs; a branch address alone is not proof of offer participation."
+  },
+  "deliverables": {
+    "candidate": "08_RELEASE_VAULT/candidates/v3.431.0-j363/",
+    "evidence_directory": "06_TRUST_AND_EVIDENCE/j363_maximum_experience/",
+    "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_363_STAGING_ACCEPTANCE_RECEIPT.json",
+    "runner": "07_QUALITY_ASSURANCE/runners/run_j363_staging_audit.cjs",
+    "handoff": "01_EXECUTIVE_COUNCIL/JAYT_363_STAGING_HANDOFF.md"
+  },
+  "acceptance": [
+    "Serve candidate on :4176. Record served file hashes and runner hash in the receipt; preserve J361/J362 production evidence.",
+    "Test 1440/768/390px: first viewport Bento, each campus/time filter, exact visible IDs, CTA destinations, keyboard interaction, no console/runtime errors or overflow.",
+    "Derive supply counts from unique eligible records and cross-check HOME, Vault, Radar and feed. Report held/discovery separately.",
+    "Exercise actual copy/share/download paths, clipboard denial and privacy network/storage checks; test real exported image/message values.",
+    "Provide measured filter latency and functional seven-day timeline results; do not infer these from card counts.",
+    "Gemini experiences the staging product and records retention feedback. Chairman approval is required for subsequent v3.431.0 production release."
+  ]
+}

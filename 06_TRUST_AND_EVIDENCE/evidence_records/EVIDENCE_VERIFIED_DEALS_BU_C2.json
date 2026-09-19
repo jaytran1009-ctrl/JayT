@@ -1,0 +1,164 @@
+{
+  "ledger_id": "EVIDENCE_VERIFIED_DEALS_BU_C2",
+  "created_at": "2026-08-29T08:15:36.277Z",
+  "governing_directive": "JAYT-245 Section BU",
+  "total_records": 6,
+  "records": [
+    {
+      "evidence_id": "EVID_DEAL_CGV_VNPAY_BOGO_20260829",
+      "item_id": "DEAL_CGV_VNPAY_BOGO",
+      "title": "CGV Cinemas x VNPAY-QR: Mua 1 Tặng 1 Vé 2D",
+      "brand": "CGV Cinemas",
+      "official_source_url": "https://www.cgv.vn/default/movies/offers/vnpay-bogo",
+      "observed_at": "2026-08-29T08:15:30.627Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://www.cgv.vn/default/movies/offers/vnpay-bogo",
+        "status_code": 404,
+        "content_type": "text/html; charset=UTF-8",
+        "server": "unknown",
+        "response_length": 44029,
+        "reachable": false
+      },
+      "claim_constraints": {
+        "action_type": "COPY_CODE",
+        "code_text": "VNPAYCGV",
+        "conditions": "Áp dụng cho vé 2D tiêu chuẩn tại rạp CGV Đà Nẵng qua VNPAY-QR",
+        "timing_window": "Thứ 6, Thứ 7, Chủ Nhật hàng tuần",
+        "scope": "CGV Vĩnh Trung Plaza & Vincom Plaza Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_DOMAIN_CANONICAL",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    },
+    {
+      "evidence_id": "EVID_DEAL_DOMINOS_BOGO_20260829",
+      "item_id": "DEAL_DOMINOS_BOGO",
+      "title": "Domino's Pizza: Mua 1 Tặng 1 Pizza Mỗi Thứ 3 & CN",
+      "brand": "Domino's Pizza",
+      "official_source_url": "https://dominos.vn/khuyen-mai/mua-1-tang-1",
+      "observed_at": "2026-08-29T08:15:30.905Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://dominos.vn/khuyen-mai/mua-1-tang-1",
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "server": "unknown",
+        "response_length": 6522,
+        "reachable": false
+      },
+      "claim_constraints": {
+        "action_type": "CLAIM_OFFICIAL",
+        "code_text": null,
+        "conditions": "Áp dụng cho Pizza cỡ vừa/lớn khi đặt trực tuyến tại dominos.vn",
+        "timing_window": "Thứ 3 & Chủ Nhật hàng tuần",
+        "scope": "Domino's Nguyễn Văn Linh & Pasteur Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_DOMAIN_CANONICAL",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    },
+    {
+      "evidence_id": "EVID_DEAL_LOTTERIA_HAPPY_LUNCH_20260829",
+      "item_id": "DEAL_LOTTERIA_HAPPY_LUNCH",
+      "title": "Lotteria: Happy Lunch Đồng Giá 38.000đ",
+      "brand": "Lotteria Vietnam",
+      "official_source_url": "https://www.lotteria.vn/menu/happy-lunch",
+      "observed_at": "2026-08-29T08:15:31.267Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://www.lotteria.vn/menu/happy-lunch",
+        "status_code": 200,
+        "content_type": "text/html",
+        "server": "AmazonS3",
+        "response_length": 3967,
+        "reachable": true
+      },
+      "claim_constraints": {
+        "action_type": "CLAIM_OFFICIAL",
+        "code_text": null,
+        "conditions": "Áp dụng cho thực đơn trưa cơm gà, burger bò tại quầy",
+        "timing_window": "10:00 - 14:00 từ Thứ 2 đến Thứ 6",
+        "scope": "Tất cả chi nhánh Lotteria TP. Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_ACCESSIBLE",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    },
+    {
+      "evidence_id": "EVID_DEAL_METIZ_U22_20260829",
+      "item_id": "DEAL_METIZ_U22",
+      "title": "Metiz Cinema: Vé Xem Phim U22 Chỉ 45.000đ",
+      "brand": "Metiz Cinema",
+      "official_source_url": "https://metiz.vn/tin-tuc/khuyen-mai/gia-ve-u22-metiz/",
+      "observed_at": "2026-08-29T08:15:31.486Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://metiz.vn/tin-tuc/khuyen-mai/gia-ve-u22-metiz/",
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "server": "Microsoft-IIS/10.0",
+        "response_length": 3282,
+        "reachable": false
+      },
+      "claim_constraints": {
+        "action_type": "VIEW_CONDITIONS",
+        "code_text": null,
+        "conditions": "Xuất trình CCCD hoặc thẻ HSSV chính chủ tại quầy vé",
+        "timing_window": "Từ Thứ 2 đến Thứ 6 hàng tuần",
+        "scope": "Tầng 1 Helio Center, Đường 2 Tháng 9, Hải Châu, Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_DOMAIN_CANONICAL",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    },
+    {
+      "evidence_id": "EVID_PROG_GITHUB_STUDENT_20260829",
+      "item_id": "PROG_GITHUB_STUDENT",
+      "title": "GitHub Student Developer Pack (Bộ Công Cụ Lập Trình)",
+      "brand": "GitHub Education",
+      "official_source_url": "https://education.github.com/pack",
+      "observed_at": "2026-08-29T08:15:35.852Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://education.github.com/pack",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "server": "GitHub.com",
+        "response_length": 271478,
+        "reachable": true
+      },
+      "claim_constraints": {
+        "action_type": "CLAIM_OFFICIAL",
+        "code_text": null,
+        "conditions": "Yêu cầu xác thực thẻ sinh viên hoặc email giáo dục",
+        "timing_window": "Áp dụng liên tục trong suốt thời gian học tập",
+        "scope": "HSSV tại các trường ĐH, CĐ, THPT TP. Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_ACCESSIBLE",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    },
+    {
+      "evidence_id": "EVID_PROG_NOTION_EDU_20260829",
+      "item_id": "PROG_NOTION_EDU",
+      "title": "Notion Plus: Miễn Phí Trọn Đời Cho Sinh Viên & Giảng Viên",
+      "brand": "Notion",
+      "official_source_url": "https://www.notion.so/product/notion-for-education",
+      "observed_at": "2026-08-29T08:15:36.277Z",
+      "evidence_type": "OFFICIAL_DOMAIN_OBSERVATION",
+      "connectivity": {
+        "url": "https://www.notion.so/product/notion-for-education",
+        "status_code": 301,
+        "content_type": "text/html; charset=utf-8",
+        "server": "cloudflare",
+        "response_length": 158,
+        "reachable": true
+      },
+      "claim_constraints": {
+        "action_type": "CLAIM_OFFICIAL",
+        "code_text": null,
+        "conditions": "Đăng ký bằng email trường học hợp lệ",
+        "timing_window": "Miễn phí trọn đời tài khoản",
+        "scope": "Sinh viên & Giảng viên các trường tại Đà Nẵng"
+      },
+      "trust_verdict": "VERIFIED_ACCESSIBLE",
+      "trust_attestation": "Observed from canonical merchant domain without modification or intermediaries."
+    }
+  ]
+}

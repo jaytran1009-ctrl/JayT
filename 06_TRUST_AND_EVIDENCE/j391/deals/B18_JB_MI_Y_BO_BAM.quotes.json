@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 12,
+  "offer_id": "B18_JB_MI_Y_BO_BAM",
+  "brand": "Jollibee",
+  "category": "FOOD",
+  "title": "Mì Ý Jolly Sốt Bò Bằm",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_12_jollibee_mi_y_bo_bam.html",
+    "file_sha256": "6cd572ec5d9643fe74fc0f7ceb35c63c5122579d023ca85d6774f1840fde43e7",
+    "file_bytes": 270146,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "SOURCE_INSUFFICIENT",
+  "wave_1_eligible": false,
+  "predicate_evaluation": {
+    "offer_proven": false,
+    "validity_proven": false,
+    "danang_scope_proven": false,
+    "terms_proven": false,
+    "all_four_predicates_proven": false,
+    "finding": "Category navigation label only; specific product item price box not rendered in static HTML artifact. Insufficient predicate proof in bytes; excluded from Wave 1."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "Mì Ý Jolly",
+      "byte_offset_start": 147807,
+      "byte_offset_end": 147819,
+      "byte_length": 12,
+      "selector": ".category-item a span",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "byte_length": 0,
+      "selector": null,
+      "proven": false,
+      "danang_specific": false,
+      "finding": "NOT_LOCATABLE_IN_SOURCE_HTML_BYTES"
+    },
+    "scope_quote": {
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "byte_length": 0,
+      "selector": null,
+      "proven": false,
+      "danang_specific": false,
+      "finding": "NOT_LOCATABLE_IN_SOURCE_HTML_BYTES"
+    },
+    "terms_quote": {
+      "text": null,
+      "byte_offset_start": null,
+      "byte_offset_end": null,
+      "byte_length": 0,
+      "selector": null,
+      "proven": false,
+      "danang_specific": false,
+      "finding": "NOT_LOCATABLE_IN_SOURCE_HTML_BYTES"
+    }
+  },
+  "cta_semantics": {
+    "action_type": "ORDER_ON_OFFICIAL_APP",
+    "button_label": "Đặt Món Tại Jollibee",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "receipt_id": "STAGING_RELEASE_RECEIPT_v34225_STAGING_BF_20260829",
+  "environment": "STAGING_REVIEW_BF",
+  "version": "v3.422.5-staging.bf",
+  "deployment_id": "dpl_EPzvmfBy2PYTNFkkU2gbZ7FG9bQU",
+  "deployment_url": "https://jayt-storefront-staging-bf.vercel.app",
+  "inspection_url": "https://vercel.com/kuntran777-6857s-projects/jayt-storefront-staging-bf/EPzvmfBy2PYTNFkkU2gbZ7FG9bQU",
+  "deployed_at": "2026-08-29T05:57:53.875Z",
+  "target": "staging_candidate",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BF)",
+  "locked_production_baseline": "v3.419.0",
+  "information_architecture_refinement": {
+    "desktop_primary_destinations_count": 3,
+    "desktop_primary_destinations": [
+      "HOME (Hôm nay)",
+      "EXPLORE (Khám phá)",
+      "SAVED (Đã lưu)"
+    ],
+    "mobile_primary_destinations_count": 3,
+    "mobile_primary_destinations": [
+      "HOME (Hôm nay)",
+      "EXPLORE (Khám phá)",
+      "SAVED (Đã lưu)"
+    ],
+    "contextual_destinations": [
+      "BUY_DECISION",
+      "VOUCHERS"
+    ],
+    "three_journeys_verified": [
+      "JOURNEY_1_FOOD",
+      "JOURNEY_2_PLACES",
+      "JOURNEY_3_TOOLS_STUDENT"
+    ]
+  },
+  "package_integrity": {
+    "entrypoint_html": {
+      "file": "index.html",
+      "size_bytes": 1198,
+      "sha256": "8b1bed9b66aa8314edc85697a8572a628c16450f12233657587b5ecb12471b21"
+    },
+    "storefront_js": {
+      "file": "jayt_storefront_staging_bf.js",
+      "size_bytes": 81282,
+      "sha256": "5faf3e97c33645254c243add4d0b95607ea04b2f4777301acfbbb74121ec6df6"
+    },
+    "stylesheet_css": {
+      "file": "styles.css",
+      "size_bytes": 22188,
+      "sha256": "6d681bba51e617a2a32afc9b14934a2a97e821ee86107a98547d80737a1c8672"
+    }
+  },
+  "live_journey_and_a11y_verification": {
+    "target_url": "https://jayt-storefront-staging-bf.vercel.app",
+    "escape_key_modal_dismissal_verified": true,
+    "dark_mode_toggle_verified": true,
+    "screenshots": {
+      "desktop_home": "07_QUALITY_ASSURANCE/screenshots/staging_bf_desktop_home.png",
+      "journey1_food": "07_QUALITY_ASSURANCE/screenshots/staging_bf_journey1_food.png",
+      "journey2_places": "07_QUALITY_ASSURANCE/screenshots/staging_bf_journey2_places.png",
+      "journey3_student": "07_QUALITY_ASSURANCE/screenshots/staging_bf_journey3_student.png",
+      "modal_detail": "07_QUALITY_ASSURANCE/screenshots/staging_bf_modal_detail.png",
+      "saved_view": "07_QUALITY_ASSURANCE/screenshots/staging_bf_saved_view.png",
+      "buy_decision": "07_QUALITY_ASSURANCE/screenshots/staging_bf_buy_decision.png",
+      "voucher_hub": "07_QUALITY_ASSURANCE/screenshots/staging_bf_voucher_hub.png",
+      "dark_mode": "07_QUALITY_ASSURANCE/screenshots/staging_bf_dark_mode.png",
+      "mobile_390px": "07_QUALITY_ASSURANCE/screenshots/staging_bf_mobile_390px.png"
+    }
+  },
+  "state_truth_summary": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "field_level_render_gate_enforced": true
+  }
+}

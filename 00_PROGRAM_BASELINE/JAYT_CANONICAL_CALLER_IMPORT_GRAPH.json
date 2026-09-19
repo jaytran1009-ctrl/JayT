@@ -1,0 +1,170 @@
+{
+  "graph_id": "JAYT_CANONICAL_CALLER_IMPORT_GRAPH",
+  "governing_directive": "JAYT-245 Section JAYT-260-CORRECTION-4 (Lines 5488-5501)",
+  "generated_at_utc": "2026-09-03T06:03:54.867Z",
+  "canonical_gateway_module": "00_PROGRAM_BASELINE/jayt_canonical_admission_gateway.js",
+  "generator_type": "AST_IMPORT_GRAPH_STATIC_ANALYSIS",
+  "summary": {
+    "total_js_files_scanned": 1491,
+    "verified_caller_entrypoints_count": 14,
+    "all_4_pillars_covered": true,
+    "bypass_check_status": "ZERO_UNAUTHORIZED_DIRECT_EVIDENCE_READS"
+  },
+  "pillars": {
+    "INTAKE": {
+      "pillar_name": "INTAKE",
+      "verified_callers": [
+        "06_TRUST_AND_EVIDENCE/jayt_intake_admission_entrypoint.js",
+        "06_TRUST_AND_EVIDENCE/run_batch_02_intake_worker.js"
+      ],
+      "mandatory_entrypoint": "06_TRUST_AND_EVIDENCE/jayt_intake_admission_entrypoint.js"
+    },
+    "VALIDATION": {
+      "pillar_name": "VALIDATION",
+      "verified_callers": [
+        "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js"
+      ],
+      "mandatory_entrypoint": "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js"
+    },
+    "RENDERING": {
+      "pillar_name": "RENDERING",
+      "verified_callers": [
+        "03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+        "03_SOURCE_OF_TRUTH/jayt_catalog_render_entrypoint.js",
+        "03_SOURCE_OF_TRUTH/jayt_dynamic_catalog_renderer.js",
+        "07_QUALITY_ASSURANCE/test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js"
+      ],
+      "mandatory_entrypoint": "03_SOURCE_OF_TRUTH/jayt_catalog_render_entrypoint.js"
+    },
+    "QUALITY_ASSURANCE": {
+      "pillar_name": "QUALITY_ASSURANCE",
+      "verified_callers": [
+        "00_PROGRAM_BASELINE/generate_caller_import_graph.js",
+        "00_PROGRAM_BASELINE/verify_ast_direct_evidence_reads.js",
+        "00_PROGRAM_BASELINE/verify_heuristic_direct_evidence_reads.js",
+        "00_PROGRAM_BASELINE/verify_zero_direct_evidence_reads.js",
+        "07_QUALITY_ASSURANCE/jayt_qa_evidence_loader_entrypoint.js",
+        "07_QUALITY_ASSURANCE/test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+        "07_QUALITY_ASSURANCE/test_jayt_264_cohort_15_retirement_and_dossier_amendment_qa.js"
+      ],
+      "mandatory_entrypoint": "07_QUALITY_ASSURANCE/jayt_qa_evidence_loader_entrypoint.js"
+    }
+  },
+  "callers": [
+    {
+      "file_path": "00_PROGRAM_BASELINE/generate_caller_import_graph.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [
+        "readEvidenceFile",
+        "loadAndValidateLedger",
+        "verifyCandidateAdmission",
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "00_PROGRAM_BASELINE/verify_ast_direct_evidence_reads.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "00_PROGRAM_BASELINE/verify_heuristic_direct_evidence_reads.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "00_PROGRAM_BASELINE/verify_zero_direct_evidence_reads.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+      "assigned_pillar": "RENDERING",
+      "imported_methods": [
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "03_SOURCE_OF_TRUTH/jayt_catalog_render_entrypoint.js",
+      "assigned_pillar": "RENDERING",
+      "imported_methods": [
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "03_SOURCE_OF_TRUTH/jayt_dynamic_catalog_renderer.js",
+      "assigned_pillar": "RENDERING",
+      "imported_methods": [
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "06_TRUST_AND_EVIDENCE/jayt_intake_admission_entrypoint.js",
+      "assigned_pillar": "INTAKE",
+      "imported_methods": [
+        "readEvidenceFile",
+        "verifyCandidateAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "06_TRUST_AND_EVIDENCE/run_batch_02_intake_worker.js",
+      "assigned_pillar": "INTAKE",
+      "imported_methods": [
+        "readEvidenceFile",
+        "verifyCandidateAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+      "assigned_pillar": "VALIDATION",
+      "imported_methods": [
+        "readEvidenceFile",
+        "loadAndValidateLedger"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "07_QUALITY_ASSURANCE/jayt_qa_evidence_loader_entrypoint.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [
+        "readEvidenceFile",
+        "loadAndValidateLedger"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "07_QUALITY_ASSURANCE/test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [
+        "readEvidenceFile",
+        "loadAndValidateLedger",
+        "verifyCandidateAdmission",
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "07_QUALITY_ASSURANCE/test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js",
+      "assigned_pillar": "RENDERING",
+      "imported_methods": [],
+      "import_statement_verified": true
+    },
+    {
+      "file_path": "07_QUALITY_ASSURANCE/test_jayt_264_cohort_15_retirement_and_dossier_amendment_qa.js",
+      "assigned_pillar": "QUALITY_ASSURANCE",
+      "imported_methods": [
+        "verifyCandidateAdmission",
+        "renderCatalogWithAdmission"
+      ],
+      "import_statement_verified": true
+    }
+  ]
+}

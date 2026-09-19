@@ -1,0 +1,73 @@
+{
+  "document_name": "JAYT_330_R5_EXECUTIVE_AUDIT_CORRECTION",
+  "issued_at_utc": "2026-09-07T05:35:13.7507482Z",
+  "authority": "CEO_EXECUTIVE_REVIEW_GATE",
+  "reviewed_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/STAGING_BATCH_14_R5_EVIDENCE_CLOSEOUT_RECEIPT.json",
+  "verdict": "R5_PARTIAL_ACCEPTANCE__EXIT_GATE_OPEN",
+  "corrected_summary": {
+    "total_gates": 15,
+    "pass": 11,
+    "partial": 1,
+    "not_tested_or_not_verified": 3,
+    "fail": 0
+  },
+  "pass_gates": [
+    "GATE_01_CONTENT_AND_TOKEN_FREEZE",
+    "GATE_03A_FRESHNESS_BY_CAPTURE_AGE",
+    "GATE_04A_DOM_SEMANTICS_AUTOMATED",
+    "GATE_05_LINK_PURPOSE_AND_NEW_TAB_DISCLOSURE",
+    "GATE_06_DOM_LANDMARKS_AND_HEADING_HIERARCHY",
+    "GATE_07B_NARROW_VIEWPORT_REFLOW_320PX",
+    "GATE_08_SEQUENTIAL_KEYBOARD_OPERABILITY",
+    "GATE_09_INTERACTIVE_COMPONENT_STATES",
+    "GATE_10_STATIC_TOKEN_CONTRAST_MATRIX",
+    "GATE_11_ZERO_CONSOLE_AND_RUNTIME_ERRORS",
+    "GATE_12_PRODUCTION_BOUNDARY_ISOLATION"
+  ],
+  "partial_gates": [
+    {
+      "gate": "GATE_03B_SOURCE_PROBE_REACHABILITY",
+      "status": "OBSERVATION_COMPLETE__REACHABILITY_PARTIAL",
+      "evidence": "17 HTTP 200; 5 HTTP 403 SOURCE_PROBE_BLOCKED",
+      "reason": "Correct classification is accepted, but a reachability gate cannot be recorded as an unqualified PASS when five sources are blocked."
+    }
+  ],
+  "open_gates": [
+    {
+      "gate": "GATE_02_COMMERCIAL_FRESHNESS_POLICY_SIGNOFF",
+      "status": "NOT_VERIFIED",
+      "reason": "The JSON contains role labels and booleans but no independently attributable signer identity, approval event, digital signature, or separate departmental source record. It was generated as part of the same execution chain being audited."
+    },
+    {
+      "gate": "GATE_04B_REAL_ASSISTIVE_TECHNOLOGY",
+      "status": "NOT_TESTED",
+      "reason": "Correctly disclosed by the R5 receipt; a human must operate and listen to a real screen reader."
+    },
+    {
+      "gate": "GATE_07A_ACTUAL_BROWSER_ZOOM_200_PERCENT",
+      "status": "NOT_TESTED",
+      "reason": "CDP Emulation.setPageScaleFactor is an experimental page-scale emulation. The test did not operate the browser zoom control or prove a 200 percent browser-zoom state; DOM geometry assertions therefore do not establish WCAG 1.4.4 browser-zoom behavior."
+    }
+  ],
+  "retained_results": {
+    "commercial_staging_cards": 22,
+    "batch_package_sha256": "4daadbcd4115d0d878dc66410173629cee8590dd8e7069416579c6767be0b9b0",
+    "catalog_sha256": "67d98cdf56380a8cdb1ade3a257cee41ee2c01d05f05e3358391b52ab2da8226",
+    "capture_age_fresh_count": 22,
+    "source_http_200_count": 17,
+    "source_probe_blocked_403_count": 5
+  },
+  "prohibited_claims": [
+    "R5_EVIDENCE_CLOSEOUT_COMPLETE",
+    "14_PASS_1_NOT_TESTED",
+    "ACTUAL_BROWSER_ZOOM_200_PASS",
+    "DUAL_DEPARTMENTAL_SIGNOFF_CERTIFIED",
+    "WCAG_2_1_AA_CERTIFIED"
+  ],
+  "production": {
+    "baseline": "v3.422.0",
+    "deployment_authorized": false,
+    "commercial_promotion_authorized": false
+  },
+  "next_work_order": "01_EXECUTIVE_COUNCIL/JAYT_330_R6_HUMAN_ACCESSIBILITY_AND_GOVERNANCE_SIGNOFF_WORK_ORDER.md"
+}

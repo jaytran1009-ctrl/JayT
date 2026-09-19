@@ -1,0 +1,88 @@
+{
+  "report_id": "JAYT_319_BATCH_09_TARGETED_INGRESS_REPORT",
+  "scope_id": "JAYT-319-BATCH-09-TARGETED-ONE-SHOT-INGRESS-20260904",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_BATCH_09_TARGETED_INGRESS_WORK_ORDER.md",
+  "audited_at_utc": "2026-09-04T13:53:05.489Z",
+  "target_results": [
+    {
+      "slot_id": "B09_01",
+      "candidate_id": "B09_01_DANABUS_TUYEN_11_XUAN_DIEU_BEN_XE_TIEN_SA",
+      "http_status": 200,
+      "raw_size_bytes": 97230,
+      "raw_sha256": "1aaf5dc34ad89117198a00ccf2c3818905f750f934c1d6bdd214d883cc4097c9",
+      "span_byte_offset_utf8": 55814,
+      "span_occurrences": 1,
+      "source_date": "2026-07-08",
+      "source_date_verified": true,
+      "headers_sanitized": true,
+      "required_disclaimer": "Lộ trình kết nối đô thị (Tra cứu lịch chạy và điểm dừng chi tiết tại cổng Danabus).",
+      "prohibitions_enforced": [
+        "fare_claim",
+        "schedule_or_frequency_claim",
+        "ticket_sales",
+        "affiliate",
+        "tracking"
+      ],
+      "audit_status": "PASSED_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "slot_id": "B09_02",
+      "candidate_id": "B09_02_TRO_LY_SO_DANANG_AI_PHO_BIEN_PHAP_LUAT_1022",
+      "http_status": 200,
+      "raw_size_bytes": 222739,
+      "raw_sha256": "eb8f6dea9f0511aac95144a05d0fa2a8c18fa776456c8ba820018f157b41b52e",
+      "span_byte_offset_utf8": 102704,
+      "span_occurrences": 1,
+      "source_date": "2026-09-04",
+      "source_date_verified": true,
+      "headers_sanitized": true,
+      "required_disclaimer": "Thông tin giới thiệu hoạt động phổ biến pháp luật số theo bài đăng của Cổng 1022 Đà Nẵng; không phải tư vấn pháp lý cá nhân hay cam kết kết quả thủ tục/tố tụng.",
+      "prohibitions_enforced": [
+        "legal_advice",
+        "case_intake",
+        "outcome_guarantee",
+        "personal_data_collection",
+        "paid_legal_service",
+        "affiliate",
+        "tracking"
+      ],
+      "audit_status": "PASSED_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "slot_id": "B09_03",
+      "candidate_id": "B09_03_CHIEN_DICH_BAO_VE_DANH_TINH_SO_MA_SO_THUE_1022",
+      "http_status": 200,
+      "raw_size_bytes": 233539,
+      "raw_sha256": "b15c4903ba26822a35f8acbb3db120bddaf11cadd3f13e65b79f6d75fa688bdc",
+      "span_byte_offset_utf8": 115124,
+      "span_occurrences": 1,
+      "source_date": "2026-09-04",
+      "source_date_verified": true,
+      "headers_sanitized": true,
+      "required_disclaimer": "Thông tin phổ biến an toàn danh tính số theo bài đăng của Cổng 1022 Đà Nẵng; không tiếp nhận hồ sơ thuế, mã số thuế, tài khoản ngân hàng, chữ ký số, mật khẩu hoặc thông tin định danh cá nhân.",
+      "prohibitions_enforced": [
+        "tax_advice",
+        "financial_advice",
+        "personal_data_collection",
+        "tax_identifier_collection",
+        "bank_account_collection",
+        "digital_signature_collection",
+        "password_collection",
+        "case_intake",
+        "affiliate",
+        "tracking"
+      ],
+      "audit_status": "PASSED_INDEPENDENT_VERIFICATION"
+    }
+  ],
+  "system_invariants": {
+    "staging_registry_cards": 17,
+    "staging_registry_mutated": false,
+    "deals_feed_length": 0,
+    "deals_feed_mutated": false,
+    "production_isolated": true,
+    "production_version": "v3.420.0",
+    "production_cards": 3
+  },
+  "executive_verdict": "INGRESS_VERIFIED__READY_FOR_CEO_ITEM_LEVEL_REVIEW_GATE"
+}

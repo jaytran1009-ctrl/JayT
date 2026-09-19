@@ -1,0 +1,75 @@
+{
+  "$schema": "https://jayt.vn/schemas/student-office-need-map.v1.json",
+  "version": "1.0.0",
+  "target_audiences": [
+    "Sinh viên các trường ĐH/CĐ Đà Nẵng",
+    "Nhân viên văn phòng trẻ tại Đà Nẵng"
+  ],
+  "need_clusters": {
+    "DORM_LIVING_KTX": {
+      "cluster_name": "Đồ Dùng Ký Túc Xá & Phòng Trọ (≤50K / Giá Rẻ)",
+      "description": "Vật dụng thiết yếu, nhỏ gọn, giá rẻ cho cuộc sống KTX và phòng trọ sinh viên.",
+      "item_types": [
+        "Móc treo quần áo đa năng",
+        "Ổ cắm điện có công tắc",
+        "Hộp đựng đồ chia ngăn",
+        "Đèn học để bàn LED",
+        "Bình giữ nhiệt mini",
+        "Bộ dụng cụ ăn trưa cá nhân"
+      ],
+      "price_ceiling_vnd": 65000,
+      "priority_weight": 9.5
+    },
+    "STUDY_AND_TECH_ACCESSORIES": {
+      "cluster_name": "Phụ Kiện Học Tập & Công Nghệ Sinh Viên",
+      "description": "Dụng cụ học tập, phụ kiện máy tính, điện thoại hỗ trợ việc học và làm việc.",
+      "item_types": [
+        "Chuột không dây công thái học",
+        "Bàn phím cơ mini",
+        "Giá đỡ laptop tản nhiệt",
+        "Cáp sạc nhanh Type-C/Lightning",
+        "Tai nghe chống ồn giá sinh viên",
+        "Sổ tay ghi chép Kế hoạch học tập"
+      ],
+      "price_ceiling_vnd": 250000,
+      "priority_weight": 9
+    },
+    "SMALL_HOME_APPLIANCES": {
+      "cluster_name": "Gia Dụng Nhỏ & Tiện Ích Phòng Trọ",
+      "description": "Thiết bị nhỏ tiết kiệm điện và không gian cho sinh viên tự nấu ăn.",
+      "item_types": [
+        "Nồi lẩu mini đa năng",
+        "Ấm đun nước siêu tốc mini",
+        "Quạt sạc tích điện mini",
+        "Máy sấy tóc gấp gọn",
+        "Bàn ủi hơi nước cầm tay"
+      ],
+      "price_ceiling_vnd": 199000,
+      "priority_weight": 8.5
+    },
+    "CAMPUS_LUNCH_AND_FOOD": {
+      "cluster_name": "Bữa Ăn Sinh Viên & Cà Phê Học Bài",
+      "description": "Voucher giảm giá đồ ăn, cơm trưa và cà phê học nhóm quanh các trường đại học.",
+      "item_types": [
+        "Voucher ShopeeFood Đà Nẵng",
+        "Voucher GrabFood học sinh sinh viên",
+        "Combo gà rán",
+        "Voucher đồ uống Phúc Long/Highlands"
+      ],
+      "price_ceiling_vnd": 50000,
+      "priority_weight": 9.2
+    },
+    "TRANSIT_AND_COMMUTE": {
+      "cluster_name": "Di Chuyển & Đi Lại Tiết Kiệm",
+      "description": "Phương tiện di chuyển công cộng, xe đạp đô thị và mã giảm giá cuốc xe.",
+      "item_types": [
+        "Vé tháng DanaBus",
+        "Thẻ TNGo xe đạp công cộng",
+        "Mã giảm giá GrabBike sinh viên",
+        "Mã BeBike giờ cao điểm"
+      ],
+      "price_ceiling_vnd": 65000,
+      "priority_weight": 8.8
+    }
+  }
+}

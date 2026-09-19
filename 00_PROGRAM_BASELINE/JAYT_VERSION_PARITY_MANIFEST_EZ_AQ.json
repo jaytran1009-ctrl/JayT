@@ -1,0 +1,65 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_AQ",
+  "expectedVersion": "v3.483.0-staging.ao",
+  "version": "v3.483.0-staging.ao",
+  "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+  "timestamp": "2026-09-01T12:01:19Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "build_manifest_ref": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "directive_ref": "JAYT-245 Section EZ-AK Mandate 2 & Section EZ-AP",
+  "fast_lane_closure": {
+    "status": "CLOSED_SLA_COMPLETED",
+    "closure_timestamp_utc": "2026-09-01T12:01:19Z",
+    "sla_close_utc": "2026-09-01T08:28:00Z",
+    "clock_guard_passed": true,
+    "candidates": [
+      {
+        "candidate_id": "FAST_LANE_RERUN_01_JETBRAINS_STUDENT",
+        "verdict": "T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+        "missing": [
+          "action_url"
+        ],
+        "public_eligible": false
+      },
+      {
+        "candidate_id": "FAST_LANE_RERUN_02_FIGMA_EDUCATION",
+        "verdict": "T2_DOCUMENTATION_HELD_INTERNAL",
+        "missing": [],
+        "public_eligible": false
+      }
+    ]
+  },
+  "commercial_containment": {
+    "production_locked": true,
+    "production_version": "v3.419.0",
+    "p0_eq": "OPEN",
+    "t1_deals_approved": 0,
+    "public_cards_created": 0,
+    "affiliate_activation": false
+  },
+  "cohort_semantics": {
+    "cohort_id": "COHORT_CINEMA_TRANSIT_15_CANDIDATES_LEDGER_EZ_AM",
+    "total_candidates": 15,
+    "open_evaluating_count": 14,
+    "intake_failed_no_raw_count": 1,
+    "tier_verdicts_rendered": 0
+  },
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    }
+  }
+}

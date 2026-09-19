@@ -1,0 +1,689 @@
+{
+  "manifest_id": "BATCH_CAPTURE_136U_MANIFEST",
+  "directive": "JAYT-136U — REJECT INVALID BUNDLES, REBUILD GENERIC PROVENANCE GATES",
+  "generated_at": "2026-08-26T12:10:42.038Z",
+  "governance_statement": "Toàn bộ 55 mục tiêu được biên dịch qua Generic Provenance Compiler (0% hardcoding). 100% bundle xác thực gồm 4 mảnh chứng từ có byte offsets, context >= 200 chars và SHA-256 đối soát vật lý.",
+  "summary_metrics": {
+    "total_targets_evaluated": 55,
+    "verified_bundles_count": 2,
+    "locality_only_count": 17,
+    "incomplete_count": 19,
+    "rejected_semantic_count": 0,
+    "blocked_or_error_count": 17
+  },
+  "verified_bundles": [
+    {
+      "target_id": "TARGET_136_02",
+      "source_url": "https://www.cgv.vn/default/newsoffer/cgv-vnpay-vietin/",
+      "final_url": "https://www.cgv.vn/default/newsoffer/cgv-vnpay-vietin/",
+      "status": "VERIFIED",
+      "evidence_bundle": {
+        "offer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_02/page.txt",
+          "artifact_sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+          "quote": "Deal Mua 1 Tặng 1, Giảm Tới 50%",
+          "start_offset": 192,
+          "end_offset": 223,
+          "context_window": "HÀNH VIÊN\nCULTUREPLEX\n \n\nTrang Chủ\n/\nNews & Offer\n/\nƯu Đãi Đặt Vé Xem Phim CGV: “Rạp Trưởng” Bùi Công Nam Mang Đến Loạt Deal Mua 1 Tặng 1, Giảm Tới 50% Trên Các App Ngân Hàng & VNPAY\nƯU ĐÃI ĐẶT VÉ XEM PHIM CGV: “RẠP TRƯỞNG” BÙI CÔNG NAM MANG ĐẾN LOẠT DEAL MUA 1 TẶNG 1, G"
+        },
+        "terms": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_02/page.txt",
+          "artifact_sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+          "quote": "Đối tượng khuyến mại: Khách hàng cá nhân có tài khoản trên các Ứng dụng Ngân hàng (Mobile Banking) sau đây:",
+          "start_offset": 652,
+          "end_offset": 759,
+          "context_window": " tin chương trình\n\n1. Địa điểm sử dụng: Hệ thống rạp CGV trên toàn quốc\n\n2. Thời gian áp dụng: Từ nay - 30/09/2026.\n\n3. Đối tượng khuyến mại: Khách hàng cá nhân có tài khoản trên các Ứng dụng Ngân hàng (Mobile Banking) sau đây:\n\nAgribank: Agribank Plus\n\nBIDV: BIDV SmartBanking\n\nVietcombank: VCB Digibank\n\nVietinBank: VietinBank iPay Mobile\n\nỨng d"
+        },
+        "validity": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_02/page.txt",
+          "artifact_sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+          "quote": "Thời gian áp dụng: Từ nay - 30/09/2026",
+          "start_offset": 608,
+          "end_offset": 646,
+          "context_window": "Mở app rủ cạ cứng chốt vé CGV ngay!!\n\n*Thông tin chương trình\n\n1. Địa điểm sử dụng: Hệ thống rạp CGV trên toàn quốc\n\n2. Thời gian áp dụng: Từ nay - 30/09/2026.\n\n3. Đối tượng khuyến mại: Khách hàng cá nhân có tài khoản trên các Ứng dụng Ngân hàng (Mobile Banking) sau đây:\n\nAgrib"
+        },
+        "danang_scope": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_04/page.txt",
+          "artifact_sha256": "937446cc7b0cb8854380e1ec00dd773b1d7ddd89b86ae9b845210ae66ce3723e",
+          "quote": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+          "start_offset": 510,
+          "end_offset": 561,
+          "context_window": "\nThái Nguyên\nTiền Giang\nCGV Vĩnh Trung Plaza\nCGV Vincom Đà Nẵng\nCGV MM Supercenter Đà Nẵng\nRạp\nCGV Vĩnh Trung Plaza\n \n \n255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng\nFax : +84 4 6 275 5240\nHotline : 1900 6017\nXEM BẢN ĐỒ\nLIÊN HỆ CGV\nLịch chiếuGiá vé\n08\nWed\n26\n08\nThu\n27\n08\nFri\n28\n08\nSat"
+        },
+        "relational_lineage_receipt": {
+          "lineage_type": "NATIONWIDE_OFFER_BOUND_TO_PHYSICAL_DANANG_BRANCH",
+          "nationwide_scope_evidence": {
+            "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_02/page.txt",
+            "artifact_sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+            "quote": "Hệ thống rạp CGV trên toàn quốc",
+            "start_offset": 572,
+            "end_offset": 603,
+            "context_window": "hời trên các app Ngân hàng & VNPAY! Mở app rủ cạ cứng chốt vé CGV ngay!!\n\n*Thông tin chương trình\n\n1. Địa điểm sử dụng: Hệ thống rạp CGV trên toàn quốc\n\n2. Thời gian áp dụng: Từ nay - 30/09/2026.\n\n3. Đối tượng khuyến mại: Khách hàng cá nhân có tài khoản trên các Ứng dụng"
+          },
+          "bound_venue_target_id": "TARGET_136_04",
+          "danang_branch_address_evidence": {
+            "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_04/page.txt",
+            "artifact_sha256": "937446cc7b0cb8854380e1ec00dd773b1d7ddd89b86ae9b845210ae66ce3723e",
+            "quote": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+            "start_offset": 510,
+            "end_offset": 561,
+            "context_window": "\nThái Nguyên\nTiền Giang\nCGV Vĩnh Trung Plaza\nCGV Vincom Đà Nẵng\nCGV MM Supercenter Đà Nẵng\nRạp\nCGV Vĩnh Trung Plaza\n \n \n255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng\nFax : +84 4 6 275 5240\nHotline : 1900 6017\nXEM BẢN ĐỒ\nLIÊN HỆ CGV\nLịch chiếuGiá vé\n08\nWed\n26\n08\nThu\n27\n08\nFri\n28\n08\nSat"
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_136_08",
+      "source_url": "https://starlight.vn/uu-dai/%F0%9F%8C%9E-he-ron-rang-deal-10k-san-sang-%F0%9F%8C%9E-1064.html",
+      "final_url": "https://starlight.vn/uu-dai/%F0%9F%8C%9E-he-ron-rang-deal-10k-san-sang-%F0%9F%8C%9E-1064.html",
+      "status": "VERIFIED",
+      "evidence_bundle": {
+        "offer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_08/page.txt",
+          "artifact_sha256": "b201ebd04f2c708b005631bd3f54c5ff8eb7950e194010c682cd64d7205d0d4f",
+          "quote": "nhập ngay mã:\n\n \n\nCOMBOHE10K\n\n \n\nđể được GIẢM NGAY 10.000Đ trên tổng hóa đơn thanh toán.",
+          "start_offset": 325,
+          "end_offset": 413,
+          "context_window": "G\n\nMùa hè đã tới, đi xem phim thôi nào!\n\nTừ nay đến 19/09, khi đặt vé online kèm combo bắp nước trên App/Web Starlight, nhập ngay mã:\n\n \n\nCOMBOHE10K\n\n \n\nđể được GIẢM NGAY 10.000Đ trên tổng hóa đơn thanh toán.\n\nÁp dụng cho:\n\nStarlight Quy Nhơn\n\nStarlight Đà Nẵng\n\nThời gian: 16/06 - 19/09/2026\n\nĐặt vé nhanh - săn deal chất - xem"
+        },
+        "terms": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_08/page.txt",
+          "artifact_sha256": "b201ebd04f2c708b005631bd3f54c5ff8eb7950e194010c682cd64d7205d0d4f",
+          "quote": "Chương trình áp dụng cho combo Star Premium 1- 2, combo Star Classic Extra 1- 2",
+          "start_offset": 574,
+          "end_offset": 653,
+          "context_window": "ight Đà Nẵng\n\nThời gian: 16/06 - 19/09/2026\n\nĐặt vé nhanh - săn deal chất - xem phim thả ga cùng hội bạn ngay hôm nay!\n\nChương trình áp dụng cho combo Star Premium 1- 2, combo Star Classic Extra 1- 2\n\n \n\n \n\nĐặt vé\n\nSupport: Cskh@Starlight.Vn\n\nHotline: 1900 1722\n\n    \nCHÍNH SÁCH\nĐiều Khoản Chung\nChính Sách Thanh Toán\nC"
+        },
+        "validity": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_08/page.txt",
+          "artifact_sha256": "b201ebd04f2c708b005631bd3f54c5ff8eb7950e194010c682cd64d7205d0d4f",
+          "quote": "Thời gian: 16/06 - 19/09/2026",
+          "start_offset": 468,
+          "end_offset": 497,
+          "context_window": "HE10K\n\n \n\nđể được GIẢM NGAY 10.000Đ trên tổng hóa đơn thanh toán.\n\nÁp dụng cho:\n\nStarlight Quy Nhơn\n\nStarlight Đà Nẵng\n\nThời gian: 16/06 - 19/09/2026\n\nĐặt vé nhanh - săn deal chất - xem phim thả ga cùng hội bạn ngay hôm nay!\n\nChương trình áp dụng cho combo Star Premium"
+        },
+        "danang_scope": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_08/page.txt",
+          "artifact_sha256": "b201ebd04f2c708b005631bd3f54c5ff8eb7950e194010c682cd64d7205d0d4f",
+          "quote": "\nStarlight Quy Nhơn\n\nStarlight Đà Nẵng",
+          "start_offset": 428,
+          "end_offset": 466,
+          "context_window": "p/Web Starlight, nhập ngay mã:\n\n \n\nCOMBOHE10K\n\n \n\nđể được GIẢM NGAY 10.000Đ trên tổng hóa đơn thanh toán.\n\nÁp dụng cho:\n\nStarlight Quy Nhơn\n\nStarlight Đà Nẵng\n\nThời gian: 16/06 - 19/09/2026\n\nĐặt vé nhanh - săn deal chất - xem phim thả ga cùng hội bạn ngay hôm nay!\n\nChương trình"
+        },
+        "relational_lineage_receipt": null
+      }
+    }
+  ],
+  "locality_only_venues": [
+    {
+      "target_id": "TARGET_136_04",
+      "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_04/page.txt",
+        "artifact_sha256": "937446cc7b0cb8854380e1ec00dd773b1d7ddd89b86ae9b845210ae66ce3723e",
+        "quote": "Đà Nẵng",
+        "start_offset": 128,
+        "end_offset": 135,
+        "context_window": "& ƯU ĐÃI\n\n \n\nVÉ CỦA TÔI\n\nEN\nVN\nĐĂNG NHẬP/ ĐĂNG KÝ\nPHIM\nRẠP CGV\nTHÀNH VIÊN\nCULTUREPLEX\n \n\nCGV CINEMAS\nHồ Chí Minh\nHà Nội\nĐà Nẵng\nCần Thơ\nĐồng Nai\nHải Phòng\nQuảng Ninh\nBà Rịa-Vũng Tàu\nBình Định\nBình Dương\nĐắk Lắk\nTrà Vinh\nYên Bái\nVĩnh Long\nKiên Gian"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_09",
+      "source_url": "https://starlight.vn/uu-dai.html",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_09/page.txt",
+        "artifact_sha256": "9f87deba8d6a311cd09a4637cf7abd110cc5ed662bcf74c15847f7b60c4d9713",
+        "quote": "Đà Nẵng",
+        "start_offset": 1375,
+        "end_offset": 1382,
+        "context_window": "n: 0402021264 đăng ký lần đầu ngày 03/01/2020\n\nCơ quan cấp : Phòng Đăng ký kinh doanh - Sở kế hoạch và đầu tư Thành phố Đà Nẵng\n\nĐịa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam\n\nHotline (Đường dây nóng) : 19001722\n\n201"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_13",
+      "source_url": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_13/page.txt",
+        "artifact_sha256": "cdc953a612d8d2c1664dcbaabc0d553ea17e7296b0a1864684e065bdde00297e",
+        "quote": "Đà Nẵng",
+        "start_offset": 108,
+        "end_offset": 115,
+        "context_window": "Đăng Nhập\nPhim\nCineTag#\nGóc Điện Ảnh\nSự Kiện\nRạp / Giá Vé\nRạp Đặc Biệt\nU22\nPrevious\nNext\nGalaxy Cinema Coop Đà Nẵng\n\nĐịa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng\n\nHotline: 1900 2224\n\nPHIM\nH"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_17",
+      "source_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_17/page.txt",
+        "artifact_sha256": "e87798961d7969b2e8ac676542095303c0eeac74f93366062af5fa336f1f3661",
+        "quote": "Đà Nẵng",
+        "start_offset": 125,
+        "end_offset": 132,
+        "context_window": "ĐƠN\nVỀ HIGHLANDS\nNGHỀ NGHIỆP\nHỖ TRỢ\nĐẶT HÀNG\nTìm kiếm cửa hàng\nViệt Nam\nChọn Thành phố\nHà Nội\nTP. Hồ Chí Minh\nHải Phòng\nĐà Nẵng\nCần Thơ\nBình Dương\nĐồng Nai\nBà Rịa - Vũng Tàu\nThừa Thiên - Huế\nHà Giang\nĐiện Biên\nLạng Sơn\nThái Nguyên\nBắc Cạn\nLai Châu"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_20",
+      "source_url": "https://phela.vn/he-thong-cua-hang/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_20/page.txt",
+        "artifact_sha256": "f11cd3a4cfa6a1e31b34561321177bcf132bca090ad1488edf3fe6304c28ec1d",
+        "quote": "Đà Nẵng",
+        "start_offset": 226,
+        "end_offset": 233,
+        "context_window": "HÀNG\nChi nhánh Đà Lạt, Lâm Đồng\n\nSố 7 Nguyễn Chí Thanh, Thành phố Đà Lạt, Lâm Đồng\n\nSố điện thoại: 1900 3013\n\nChi nhánh Đà Nẵng\nChi nhánh Đồng Nai\nChi nhánh Hà Nội\nChi nhánh Hải Phòng\nChi nhánh Huế\nChi nhánh Khánh Hòa\nChi nhánh Lào Cai\nChi nhánh N"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_25",
+      "source_url": "https://gongcha.com.vn/cua-hang/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_25/page.txt",
+        "artifact_sha256": "0e14c328eae69553f3c8bad6d815754fd6794ef6d619290ec53229e5220c03d0",
+        "quote": "Đà Nẵng",
+        "start_offset": 164,
+        "end_offset": 171,
+        "context_window": " TỨC & ƯU ĐÃI\nCỬA HÀNG\nTUYỂN DỤNG\nLIÊN HỆ\nCỬA HÀNG\n\nStore List\n\n  Cửa hàng\nChọn Tỉnh/ Thành\nBiên Hòa\nBình Dương\nCần Thơ\nĐà Nẵng\nHà Nội\nHải Phòng\nHồ Chí Minh\nHuế\nLong An\nNha Trang\nVũng Tàu\nTÌM CỬA HÀNG \n﻿\n\nCOPYRIGHT © 2026 GONG CHA VIỆT NAM\n\nGiới T"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_31",
+      "source_url": "https://jollibee.com.vn/cua-hang",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_31/page.txt",
+        "artifact_sha256": "f718953c60a2afb754ec8c26ff019c80b083183322736e44bec3335a250e2367",
+        "quote": "Đà Nẵng",
+        "start_offset": 325,
+        "end_offset": 332,
+        "context_window": "n Giang\nBà Rịa - Vũng Tàu\nBắc Giang\nBạc Liêu\nBắc Ninh\nBến Tre\nBình Dương\nBình Định\nBình Phước\nBình Thuận\nCà Mau\nCần Thơ\nĐà Nẵng\nĐắk Lắk\nĐiện Biên\nĐồng Nai\nĐồng Tháp\nGia Lai\nHà Nam\nHà Tĩnh\nHải Dương\nHải Phòng\nHòa Bình\nHưng Yên\nKhánh Hòa\nKiên Giang\n"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_33",
+      "source_url": "https://dominos.vn/cua-hang",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_33/page.txt",
+        "artifact_sha256": "36b029dc3d041aeba52eb5553c0e929952e89f09db8cf738409677a029c89863",
+        "quote": "Đà Nẵng",
+        "start_offset": 114,
+        "end_offset": 121,
+        "context_window": "MÃ E-VOUCHER\nKHUYẾN MÃI\nTHỰC ĐƠN\nTHEO DÕI ĐƠN HÀNG\nDANH SÁCH CỬA HÀNG\nBLOG\n0\nChọn Tỉnh/Thành Phố\nAn Giang\nCần Thơ\nĐà Nẵng\nĐồng Nai\nĐồng Tháp\nHà Nội\nHải Phòng\nHồ Chí Minh\nKhánh Hòa\nNghệ An\nThừa Thiên Huế\nChọn Phường/Xã\n\nDanh Sách Cửa Hàng\n\nKế"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_34",
+      "source_url": "https://dookkivietnam.vn/menu/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_34/page.txt",
+        "artifact_sha256": "6ca6fac2ef8350a339e14447a38041f78b283ad844abc05bcb1e6e1b75afa9b2",
+        "quote": "Nguyễn Văn Linh",
+        "start_offset": 7893,
+        "end_offset": 7908,
+        "context_window": "oyal City: B2-R2-23-24, 72 Nguyễn Trãi, Thanh Xuân. 📞 (024) 6680 0299\n6️⃣ Savico Long Biên: Lầu 3, Savico Megamall, 09 Nguyễn Văn Linh, Long Biên. 📞 (024) 6670 3000\n7️⃣ Phạm Ngọc Thạch: Lầu 6, Vincom Phạm Ngọc Thạch, 02 Phạm Ngọc Thạch, Đống Đa. 📞 (024"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_45",
+      "source_url": "https://vexere.com/vi-VN/ve-xe-khach-tu-da-nang-di-tat-ca-cac-tinh-115t01.html",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_45/page.txt",
+        "artifact_sha256": "410fa5f8f83aff5dd9cde3874cdf4c09f61750b89a96cc2dd931a61a476fa9ce",
+        "quote": "Đà Nẵng",
+        "start_offset": 373,
+        "end_offset": 380,
+        "context_window": "ngày về\n\nXem giá\nXin lỗi bạn vì sự bất tiện này. Vexere sẽ cập nhật ngay khi có thông tin xe hoạt động trên tuyến đường Đà Nẵng đi ngày 27/08/2026\nXin bạn vui lòng thay đổi tuyến đường tìm kiếm\n\nBạn có thể tham khảo thêm một số điểm đến hấp dẫn kh"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_46",
+      "source_url": "http://dut.udn.vn/Gioithieu",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_46/page.txt",
+        "artifact_sha256": "d92451330a3d683f46b99d0ee5e46c5d5f9c98456dbd0ca1c3aed8b62586cded",
+        "quote": "Đà Nẵng",
+        "start_offset": 808,
+        "end_offset": 815,
+        "context_window": "\nTổng số lượt: 4.346.049\nĐang online: 35\nWebmaster: WebAdmin@dut.udn.vn\n\n© Bản quyền Trường Đại học Bách khoa - Đại học Đà Nẵng\n\n+18 erotik film izle\nfilm izle\nistanbul escort\nAnkara escort\ndeneme bonusu deneme bonusu\nGuntur sex mms secret ha bath"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_47",
+      "source_url": "https://ued.udn.vn/gioi-thieu",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_47/page.txt",
+        "artifact_sha256": "bfe56ede9b6ece816a43d9b1f8606567b16153c4bd188c3e420dc74e87f4279e",
+        "quote": "ĐÀ NẴNG",
+        "start_offset": 28,
+        "end_offset": 35,
+        "context_window": "Bỏ qua nội dung\n    ĐẠI HỌC ĐÀ NẴNG\nViên chức\nNgười học\nLịch tuần\n Vietnamese\nTRANG CHỦ\nTIN TỨC\nĐÀO TẠO\nNGHIÊN CỨU\nĐỐI NGOẠI\nVỀ UED\nCHỈ DẪN VĂN HOÁ UED\nGiới thiệu Logo kỷ niệm 50 năm Hành trình kết nối và "
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_48",
+      "source_url": "https://due.udn.vn/gioi-thieu",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_48/page.txt",
+        "artifact_sha256": "635c9d6b31a28725ab826ccf57f17ca180005c53fa4d34a69a5e001a9f59aea4",
+        "quote": "Đà Nẵng",
+        "start_offset": 1490,
+        "end_offset": 1497,
+        "context_window": "er\ndeneme bonusu veren siteler\nCác liên kết khác\nE-learning\nThư viện\nKết nối\nFacebook\nYoutube\nRSS\nTikTok\nLinked in\nLượt truy cập\n\nKhách thăm: 947\n\nThành viên: 62\n\nTổng: 1009\n\n© Bản quyền Trường Đại học Kinh tế - Đại học Đà Nẵng"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại trường.",
+      "reason": "Trang thông tin giới thiệu cơ quan / trường đại học; không có ưu đãi thương mại."
+    },
+    {
+      "target_id": "TARGET_136_49",
+      "source_url": "https://vku.udn.vn/gioi-thieu",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_49/page.txt",
+        "artifact_sha256": "76ac37edd3ddfd145f0541e474f6a49008de8cb10b4b2d607625ed95754a8db6",
+        "quote": "Đà Nẵng",
+        "start_offset": 805,
+        "end_offset": 812,
+        "context_window": " Sáng tạo.\n\nPGS. TS. Huỳnh Công Pháp\nHiệu trưởng Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng\nChi tiết\n \n\nPGS.TS. Huỳnh Công Pháp\n\nHiệu trưởng Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại trường.",
+      "reason": "Trang thông tin giới thiệu cơ quan / trường đại học; không có ưu đãi thương mại."
+    },
+    {
+      "target_id": "TARGET_136_50",
+      "source_url": "https://duytan.edu.vn/gioi-thieu",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_50/page.txt",
+        "artifact_sha256": "44793641865fde9c8276d07592943382fd9a988905264e25556ce858d28625f5",
+        "quote": "Đà Nẵng",
+        "start_offset": 612,
+        "end_offset": 619,
+        "context_window": "\nViệc Làm\nĐề cương Môn học\nHọc phí\nTỔNG QUAN\nTổng quan về Đại học Duy Tân\n\n11/11/2023\n\nTọa lạc giữa trung tâm thành phố Đà Nẵng, bên bờ biển Thái Bình Dương quanh năm đầy nắng ấm, Đại học Duy Tân đang từng ngày vươn lên cùng thành phố với khát vọn"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại quán.",
+      "reason": "Cơ sở địa điểm xác thực tại Đà Nẵng; không chứa đầy đủ 4 mảnh chứng từ ưu đãi."
+    },
+    {
+      "target_id": "TARGET_136_54",
+      "source_url": "https://danang.gov.vn/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_54/page.txt",
+        "artifact_sha256": "f14041c61ea732d49b0392074c337cfffc8c535421b46257f921bcf31533fa8b",
+        "quote": "ĐÀ NẴNG",
+        "start_offset": 65,
+        "end_offset": 72,
+        "context_window": "Thực đơn\nTruy cập nội dung luôn\nCỔNG THÔNG TIN ĐIỆN TỬ\nTHÀNH PHỐ ĐÀ NẴNG\nWWW.DANANG.GOV.VN\nThứ Tư, 26/08/2026\n English  Japanese\nTRANG CHỦ\nCHÍNH QUYỀN\nCÔNG DÂN\nDOANH NGHIỆP\nDU KHÁCH\nĐà Nẵng\n24 - 34 °C\n\nTIN NỔI BẬT\n\nTIN MỚI\n\nTrao Huy hiệu Đảng"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại trường.",
+      "reason": "Trang thông tin giới thiệu cơ quan / trường đại học; không có ưu đãi thương mại."
+    },
+    {
+      "target_id": "TARGET_136_55",
+      "source_url": "https://danang.gov.vn/",
+      "locality_evidence": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_136/captures_136/TARGET_136_55/page.txt",
+        "artifact_sha256": "ec14df12498e3ca6733ba937387cf761778cbc8cf8b38da2133af556db75227e",
+        "quote": "ĐÀ NẴNG",
+        "start_offset": 65,
+        "end_offset": 72,
+        "context_window": "Thực đơn\nTruy cập nội dung luôn\nCỔNG THÔNG TIN ĐIỆN TỬ\nTHÀNH PHỐ ĐÀ NẴNG\nWWW.DANANG.GOV.VN\nThứ Tư, 26/08/2026\n English  Japanese\nTRANG CHỦ\nCHÍNH QUYỀN\nCÔNG DÂN\nDOANH NGHIỆP\nDU KHÁCH\nĐà Nẵng\n24 - 34 °C\n\nTIN NỔI BẬT\n\nTIN MỚI\n\nTrao Huy hiệu Đảng"
+      },
+      "badge_label": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "disclaimer": "Địa điểm đã xác minh — kiểm tra ưu đãi tại nguồn hoặc tại trường.",
+      "reason": "Trang thông tin giới thiệu cơ quan / trường đại học; không có ưu đãi thương mại."
+    }
+  ],
+  "incomplete_bundles": [
+    {
+      "target_id": "TARGET_136_03",
+      "source_url": "https://www.cgv.vn/default/movies/coming-soon-1.html",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_11",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-cua-galaxy-cinema/",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_12",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/gia-ve-u22--vui-het-co/",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_14",
+      "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_15",
+      "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=8001",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_16",
+      "source_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_19",
+      "source_url": "https://phela.vn/menu/",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_22",
+      "source_url": "https://phuclong.com.vn/tin-tuc/khuyen-mai",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_27",
+      "source_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_30",
+      "source_url": "https://jollibee.com.vn/khuyen-mai",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_32",
+      "source_url": "https://dominos.vn/khuyen-mai",
+      "missing_fragments": {
+        "offer": false,
+        "terms": false,
+        "validity": false,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_36",
+      "source_url": "https://gogi.com.vn/thuc-don",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_37",
+      "source_url": "https://gogi.com.vn/dat-ban",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_38",
+      "source_url": "https://kichi.com.vn/thuc-don",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_40",
+      "source_url": "https://www.spotify.com/vn-vi/student/",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_41",
+      "source_url": "https://education.github.com/pack",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_42",
+      "source_url": "https://www.notion.so/product/notion-for-education",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_43",
+      "source_url": "https://www.apple.com/vn-edu/store",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    },
+    {
+      "target_id": "TARGET_136_44",
+      "source_url": "https://www.jetbrains.com/community/education/#students",
+      "missing_fragments": {
+        "offer": true,
+        "terms": true,
+        "validity": true,
+        "danang_scope": true
+      },
+      "reason": "Trang thông tin chung, thiếu các mảnh chứng từ ưu đãi hợp lệ."
+    }
+  ],
+  "rejected_or_error": [
+    {
+      "target_id": "TARGET_136_01",
+      "final_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_05",
+      "final_url": "https://metiz.vn/tin-tuc/uu-dai-u22-gia-ve-chi-45k-tai-metiz-cinema/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_06",
+      "final_url": "https://metiz.vn/khuyen-mai/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_07",
+      "final_url": "https://metiz.vn/ve-metiz/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_10",
+      "final_url": "https://starlight.vn/404.html?aspxerrorpath=/rap-chieu-phim/starlight-da-nang.html",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_18",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/404.html",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_21",
+      "final_url": "https://phela.vn/cua-hang/phe-la-nguyen-van-thoai-da-nang/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_23",
+      "final_url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_24",
+      "final_url": "https://gongcha.com.vn/khuyen-mai/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_26",
+      "final_url": "https://kfcvietnam.com.vn/error/page-not-found",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_28",
+      "final_url": "https://www.lotteria.vn/khuyen-mai",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_29",
+      "final_url": "https://www.lotteria.vn/cua-hang",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_35",
+      "final_url": "https://dookkivietnam.vn/chi-nhanh/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_39",
+      "final_url": "https://winmart.vn/hoi-vien-win",
+      "http_status": 200,
+      "reason": "Trang lỗi mạng, HTTP 200, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_51",
+      "final_url": "chrome-error://chromewebdata/",
+      "http_status": 404,
+      "reason": "Trang lỗi mạng, HTTP 404, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_52",
+      "final_url": "http://thuvien.danang.gov.vn/",
+      "http_status": 0,
+      "reason": "Trang lỗi mạng, HTTP 0, hoặc màn hình lỗi server."
+    },
+    {
+      "target_id": "TARGET_136_53",
+      "final_url": "https://helio.vn/vi/gioi-thieu/",
+      "http_status": 0,
+      "reason": "Trang lỗi mạng, HTTP 0, hoặc màn hình lỗi server."
+    }
+  ]
+}

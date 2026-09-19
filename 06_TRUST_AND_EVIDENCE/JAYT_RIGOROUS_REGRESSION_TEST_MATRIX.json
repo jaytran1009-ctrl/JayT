@@ -1,0 +1,343 @@
+{
+  "matrix_id": "JAYT_RIGOROUS_REGRESSION_TEST_MATRIX_V11",
+  "governing_directive": "JAYT-245 Section JAYT-268 (Lines 5847-5855)",
+  "generated_at_utc": "2026-09-03T06:02:46.518Z",
+  "summary": {
+    "total_suites_in_repository": 30,
+    "active_suites_count": 29,
+    "active_suites_passing_count": 19,
+    "active_suites_failing_count": 10,
+    "historical_suites_expected_failure_count": 1,
+    "total_unit_tests_passed_across_active_suites": 417,
+    "all_active_suites_passed": false,
+    "runtime_freeze_active": true,
+    "governing_freeze_id": "JAYT-263-CORRECTION-2",
+    "lane_a_status": "WITHIN_TIMEBOX_COMPLIANT (4-hour SLA satisfied, zero P0 breach)",
+    "lane_b_status": "READINESS_PRE_REVIEWED (28 proposals, 7/7/7/7, 0 business I/O)",
+    "council_recommendation_status": "COUNCIL_RISK_RECOMMENDATION_SCOPED_UNFREEZE_DOSSIER compiled",
+    "monitoring_cadence": "2-hour automated monitoring cycle active",
+    "audit_note": "Per JAYT-268, Lane A 4-hour timebox verified with factual trace and byte hash. Lane B pre-review approved by all 7 departments. Scoped unfreeze risk recommendation compiled for CEO review."
+  },
+  "active_suites": [
+    {
+      "suite_index": 1,
+      "suite_file": "test_jayt_268_timebox_and_batch_03_pre_review_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_268_timebox_and_batch_03_pre_review_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3361,
+      "executed_at_utc": "2026-09-03T06:02:46.520Z",
+      "status": "PASS",
+      "tests_passed": 25
+    },
+    {
+      "suite_index": 2,
+      "suite_file": "test_jayt_267_dual_lane_deliverables_and_batch_03_ledger_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_267_dual_lane_deliverables_and_batch_03_ledger_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3570,
+      "executed_at_utc": "2026-09-03T06:02:49.881Z",
+      "status": "PASS",
+      "tests_passed": 24
+    },
+    {
+      "suite_index": 3,
+      "suite_file": "test_jayt_266_strategic_pivot_and_readiness_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_266_strategic_pivot_and_readiness_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3470,
+      "executed_at_utc": "2026-09-03T06:02:53.452Z",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite_index": 4,
+      "suite_file": "test_jayt_265_runtime_freeze_trace_evidence_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_265_runtime_freeze_trace_evidence_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3653,
+      "executed_at_utc": "2026-09-03T06:02:56.922Z",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite_index": 5,
+      "suite_file": "test_jayt_264_cohort_15_retirement_and_dossier_amendment_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_264_cohort_15_retirement_and_dossier_amendment_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3514,
+      "executed_at_utc": "2026-09-03T06:03:00.575Z",
+      "status": "PASS",
+      "tests_passed": 25
+    },
+    {
+      "suite_index": 6,
+      "suite_file": "test_jayt_263_correction_2_restoration_and_recursive_canonicalization_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_263_correction_2_restoration_and_recursive_canonicalization_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3604,
+      "executed_at_utc": "2026-09-03T06:03:04.089Z",
+      "status": "PASS",
+      "tests_passed": 26
+    },
+    {
+      "suite_index": 7,
+      "suite_file": "test_jayt_263_hard_circuit_breaker_and_impact_audit_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_263_hard_circuit_breaker_and_impact_audit_qa.js",
+      "exit_code": 1,
+      "duration_ms": 311,
+      "executed_at_utc": "2026-09-03T06:03:07.693Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ASSERTION",
+      "tests_passed": 0,
+      "error_summary": "  ✕ JAYT_CONTAMINATION_FREEZE_STATE.json exists and declares record_version=v2.0 under JAYT-263-CORRECTION-1: Expected values to be strictly equal:; + actual - expected; "
+    },
+    {
+      "suite_index": 8,
+      "suite_file": "test_jayt_262_correction_6_runtime_freeze_enforcement_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_6_runtime_freeze_enforcement_qa.js",
+      "exit_code": 1,
+      "duration_ms": 347,
+      "executed_at_utc": "2026-09-03T06:03:08.004Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ASSERTION",
+      "tests_passed": 0,
+      "error_summary": "  ✕ JAYT_CONTAMINATION_FREEZE_STATE.json exists and declares freeze_active=true: Expected values to be strictly equal:; + actual - expected; "
+    },
+    {
+      "suite_index": 9,
+      "suite_file": "test_jayt_262_correction_5_full_denylist_and_contamination_guard_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_5_full_denylist_and_contamination_guard_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3349,
+      "executed_at_utc": "2026-09-03T06:03:08.351Z",
+      "status": "PASS",
+      "tests_passed": 33
+    },
+    {
+      "suite_index": 10,
+      "suite_file": "test_jayt_262_correction_4_ephemeral_build_to_serve_trace_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_4_ephemeral_build_to_serve_trace_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3508,
+      "executed_at_utc": "2026-09-03T06:03:11.700Z",
+      "status": "PASS",
+      "tests_passed": 18
+    },
+    {
+      "suite_index": 11,
+      "suite_file": "test_jayt_262_correction_3_closed_loop_staging_trace_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_3_closed_loop_staging_trace_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3589,
+      "executed_at_utc": "2026-09-03T06:03:15.208Z",
+      "status": "PASS",
+      "tests_passed": 18
+    },
+    {
+      "suite_index": 12,
+      "suite_file": "test_jayt_262_correction_2_runtime_enforcement_and_baseline_recovery_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_2_runtime_enforcement_and_baseline_recovery_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3460,
+      "executed_at_utc": "2026-09-03T06:03:18.797Z",
+      "status": "PASS",
+      "tests_passed": 19
+    },
+    {
+      "suite_index": 13,
+      "suite_file": "test_jayt_262_correction_1_quarantine_and_clock_guard_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_correction_1_quarantine_and_clock_guard_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3703,
+      "executed_at_utc": "2026-09-03T06:03:22.258Z",
+      "status": "PASS",
+      "tests_passed": 34
+    },
+    {
+      "suite_index": 14,
+      "suite_file": "test_jayt_260_correction_10_authority_gate_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_10_authority_gate_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3542,
+      "executed_at_utc": "2026-09-03T06:03:25.961Z",
+      "status": "PASS",
+      "tests_passed": 20
+    },
+    {
+      "suite_index": 15,
+      "suite_file": "test_jayt_260_correction_9_capture_envelope_and_registry_pinning_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_9_capture_envelope_and_registry_pinning_qa.js",
+      "exit_code": 1,
+      "duration_ms": 560,
+      "executed_at_utc": "2026-09-03T06:03:29.503Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_COLLISION_UNDER_CONTAMINATION_FREEZE",
+      "tests_passed": 3,
+      "error_summary": "  ✕ [Negative Process Execution] Catalog build step exits 1 on arbitrary unapproved input path with ERR_UNAPPROVED_CATALOG_INPUT: The expression evaluated to a falsy value:; ;   assert.ok(child.stderr.includes('ERR_UNAPPROVED_CATALOG_INPUT'))"
+    },
+    {
+      "suite_index": 16,
+      "suite_file": "test_jayt_260_correction_8_raw_first_worker_and_catalog_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_8_raw_first_worker_and_catalog_qa.js",
+      "exit_code": 1,
+      "duration_ms": 435,
+      "executed_at_utc": "2026-09-03T06:03:30.063Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ASSERTION",
+      "tests_passed": 1,
+      "error_summary": "  ✕ [Negative Process Execution] Catalog build step process exits 1 on unapproved input: The expression evaluated to a falsy value:; ;   assert.ok(child.stderr.includes('ERR_UNAPPROVED_CATALOG_INPUT'))"
+    },
+    {
+      "suite_index": 17,
+      "suite_file": "test_jayt_260_correction_7_process_trace_integration_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_7_process_trace_integration_qa.js",
+      "exit_code": 1,
+      "duration_ms": 496,
+      "executed_at_utc": "2026-09-03T06:03:30.498Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ASSERTION",
+      "tests_passed": 2,
+      "error_summary": "  ✕ [Negative Process Execution] Catalog build step process exits 1 on unapproved input: Stderr must contain ERR_UNAPPROVED_CATALOG_INPUT; ; Fatal Runner Error: AssertionError [ERR_ASSERTION]: Stderr must contain ERR_UNAPPROVED_CATALOG_INPUT"
+    },
+    {
+      "suite_index": 18,
+      "suite_file": "test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_6_dynamic_renderer_and_ast_verifier_qa.js",
+      "exit_code": 0,
+      "duration_ms": 9167,
+      "executed_at_utc": "2026-09-03T06:03:30.994Z",
+      "status": "PASS",
+      "tests_passed": 22
+    },
+    {
+      "suite_index": 19,
+      "suite_file": "test_jayt_260_correction_5_live_trace_and_fail_closed_verifier_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_5_live_trace_and_fail_closed_verifier_qa.js",
+      "exit_code": 0,
+      "duration_ms": 9114,
+      "executed_at_utc": "2026-09-03T06:03:40.161Z",
+      "status": "PASS",
+      "tests_passed": 21
+    },
+    {
+      "suite_index": 20,
+      "suite_file": "test_jayt_260_correction_4_real_runtime_caller_graph_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_4_real_runtime_caller_graph_qa.js",
+      "exit_code": 1,
+      "duration_ms": 5608,
+      "executed_at_utc": "2026-09-03T06:03:49.275Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ACTIVE_RUNTIME_FREEZE_BLOCK",
+      "tests_passed": 3,
+      "error_summary": "  ✕ [Pillar 2: VALIDATION Entrypoint] runOperationalCohort15Closure returns valid closure status through gateway: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2. Reason: Hard circuit breaker contamination containment freeze under recursive deterministic canonical integrity contract.; ; Fatal Runner Error: Error: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2. Reason: Hard circuit breaker contamination containment freeze under recursive deterministic canonical integrity contract."
+    },
+    {
+      "suite_index": 21,
+      "suite_file": "test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+      "exit_code": 1,
+      "duration_ms": 323,
+      "executed_at_utc": "2026-09-03T06:03:54.883Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_COLLISION_UNDER_CONTAMINATION_FREEZE",
+      "tests_passed": 7,
+      "error_summary": "  ✕ loadAndValidateLedger loads active Cohort 15 closure ledger cleanly through gateway: QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact.; ; Fatal Runner Error: Error: QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact."
+    },
+    {
+      "suite_index": 22,
+      "suite_file": "test_jayt_260_correction_2_vault_quarantine_and_denylist_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_2_vault_quarantine_and_denylist_qa.js",
+      "exit_code": 1,
+      "duration_ms": 3681,
+      "executed_at_utc": "2026-09-03T06:03:55.206Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_COLLISION_UNDER_CONTAMINATION_FREEZE",
+      "tests_passed": 21,
+      "error_summary": "  ✕ Active operational closure ledger JAYT_COHORT_15_SLA_CLOSURE_LEDGER.json exists and is valid: QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact.; ; Fatal Runner Error: Error: QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact."
+    },
+    {
+      "suite_index": 23,
+      "suite_file": "test_jayt_260_correction_1_batch_quarantine_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_260_correction_1_batch_quarantine_qa.js",
+      "exit_code": 1,
+      "duration_ms": 3420,
+      "executed_at_utc": "2026-09-03T06:03:58.888Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ACTIVE_RUNTIME_FREEZE_BLOCK",
+      "tests_passed": 18,
+      "error_summary": "  ✕ JAYT-258 Watchdog heartbeat is fresh within 90s staleness threshold: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2. Reason: Hard circuit breaker contamination containment freeze under recursive deterministic canonical integrity contract.; ; Fatal Runner Error: Error: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2. Reason: Hard circuit breaker contamination containment freeze under recursive deterministic canonical integrity contract."
+    },
+    {
+      "suite_index": 24,
+      "suite_file": "test_jayt_258_correction_4_sole_watchdog_writer_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_258_correction_4_sole_watchdog_writer_qa.js",
+      "exit_code": 1,
+      "duration_ms": 309,
+      "executed_at_utc": "2026-09-03T06:04:02.308Z",
+      "status": "FAIL",
+      "failure_type": "FAIL_ASSERTION",
+      "tests_passed": 1,
+      "error_summary": "  ✕ Watchdog heartbeat is fresh and within the 90-second health staleness threshold: Watchdog event must be fresh or recorded clean post-SLA closure; ; Fatal Runner Error: AssertionError [ERR_ASSERTION]: Watchdog event must be fresh or recorded clean post-SLA closure"
+    },
+    {
+      "suite_index": 25,
+      "suite_file": "test_jayt_256_correction_2_runtime_truth_and_viewports_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_256_correction_2_runtime_truth_and_viewports_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3457,
+      "executed_at_utc": "2026-09-03T06:04:02.617Z",
+      "status": "PASS",
+      "tests_passed": 24
+    },
+    {
+      "suite_index": 26,
+      "suite_file": "test_jayt_256_correction_1_p0_semantics_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_256_correction_1_p0_semantics_qa.js",
+      "exit_code": 0,
+      "duration_ms": 1765,
+      "executed_at_utc": "2026-09-03T06:04:06.074Z",
+      "status": "PASS",
+      "tests_passed": 18
+    },
+    {
+      "suite_index": 27,
+      "suite_file": "test_ez_ar_post_sla_decision_and_governance_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_ez_ar_post_sla_decision_and_governance_qa.js",
+      "exit_code": 0,
+      "duration_ms": 1631,
+      "executed_at_utc": "2026-09-03T06:04:07.839Z",
+      "status": "PASS",
+      "tests_passed": 10
+    },
+    {
+      "suite_index": 28,
+      "suite_file": "test_ez_aq_post_sla_closure_and_council_checkpoint_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_ez_aq_post_sla_closure_and_council_checkpoint_qa.js",
+      "exit_code": 0,
+      "duration_ms": 1814,
+      "executed_at_utc": "2026-09-03T06:04:09.470Z",
+      "status": "PASS",
+      "tests_passed": 17
+    },
+    {
+      "suite_index": 29,
+      "suite_file": "test_ez_ao_build_immutability_and_manifest_parity_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_ez_ao_build_immutability_and_manifest_parity_qa.js",
+      "exit_code": 0,
+      "duration_ms": 3986,
+      "executed_at_utc": "2026-09-03T06:04:11.284Z",
+      "status": "PASS",
+      "tests_passed": 21
+    }
+  ],
+  "historical_suites": [
+    {
+      "suite_file": "test_jayt_262_micro_batch_02_human_reviewed_intake_qa.js",
+      "command": "node 07_QUALITY_ASSURANCE/test_jayt_262_micro_batch_02_human_reviewed_intake_qa.js",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "status": "EXPECTED_FAILURE_AFTER_QUARANTINE",
+      "reason": "Historical baseline written prior to JAYT-262-CORRECTION-1. Asserts active presence of Batch 02 vault and intake files which were quarantined under executive directive."
+    }
+  ]
+}

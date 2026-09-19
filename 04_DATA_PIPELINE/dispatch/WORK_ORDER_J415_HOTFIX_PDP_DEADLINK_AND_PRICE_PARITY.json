@@ -1,0 +1,51 @@
+{
+  "work_order_id": "WORK_ORDER_J415_HOTFIX_PDP_DEADLINK_AND_PRICE_PARITY",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260917_HOTFIX_PDP_DEADLINK_AND_PRICE_PARITY",
+  "authority": "CHAIRMAN_AND_CEO_CODEX_DIRECTIVE",
+  "issued_at_utc": "2026-09-17T08:25:00Z",
+  "target_version": "v3.497.0-j415-pdp-hotfix",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "objective": "Khắc phục triệt để 3 sai phạm kỹ thuật: Quét sạch link chết Lazada/TikTok, căn chỉnh đối soát giá sàn thực tế (TopGia 103.750₫, Ugreen 202.500₫) kèm disclaimer minh bạch, và kích hoạt cơ chế Webview Breakout cho Messenger/Zalo.",
+  "scope_of_work": {
+    "pillar_1_deadlink_elimination": {
+      "mandate": "Loại bỏ hoàn toàn các ID giả lập regex (i...-s...) trên Lazada và mã số ngẫu nhiên trên TikTok Shop. Khi chưa có Mall PDP chính ngạch, khóa cứng nút và hiển thị nhãn minh bạch.",
+      "implementation": {
+        "lazada": "10/10 SKU Triplet đặt available: false, url: null, statusLabel: 'Chưa có gian hàng chính hãng trên Lazada', nút bấm: '🔒 Chưa Có Link Chính Hãng' (disabled).",
+        "tiktok": "4/4 SKU Triplet đặt available: false, url: null, statusLabel: 'Chưa có gian hàng chính hãng trên TikTok Shop', nút bấm: '🔒 Chưa Có Link Chính Hãng' (disabled)."
+      },
+      "rule": "THẬT 100% HOẶC KHÔNG HIỂN THỊ"
+    },
+    "pillar_2_price_parity": {
+      "mandate": "Khắc phục lệch giá hiển thị so với giá sàn thực tế, bổ sung ghi chú minh bạch điều kiện giảm giá.",
+      "sku_updates": [
+        {
+          "sku_id": "DORM_SKU_FEED_01_23552060269",
+          "name": "Khăn Giấy Treo Tường TopGia",
+          "previous_price": 125000,
+          "reconciled_observed_price": 103750,
+          "price_display": "103.750₫"
+        },
+        {
+          "sku_id": "DORM_SKU_FEED_06_28818204493",
+          "name": "Củ Sạc Nhanh Ugreen GaN 30W",
+          "previous_price": 225000,
+          "reconciled_observed_price": 202500,
+          "price_display": "202.500₫"
+        }
+      ],
+      "disclaimer_note": "💡 Ghi chú từ JayT: Giá thực tế có thể giảm sâu hơn tùy hạng thành viên và khung giờ Flash Sale của sàn."
+    },
+    "pillar_3_webview_breakout": {
+      "mandate": "Khắc phục tình trạng nghẽn App / voucher vô hiệu khi người dùng click liên kết bên trong Messenger hoặc Zalo Webview.",
+      "detection": "Kiểm tra navigator.userAgent với regex FBAN|FBAV|FB_IAB|Zalo|ZaloTheme.",
+      "sticky_banner": "Hiển thị thanh cảnh báo trên cùng nhắc nhở người dùng mở bằng Safari/Chrome.",
+      "modal_breakout": "Khi click nhận ưu đãi, tự động sao chép mã voucher vào clipboard và hiển thị modal hướng dẫn 2 bước mở Safari/Chrome (hỗ trợ Android Chrome Intent intent://)."
+    }
+  },
+  "compliance_guardrails": {
+    "affiliate_enabled": false,
+    "clicks_are_not_revenue": true,
+    "static_pipeline_seal": "24/24 PASS TUYỆT ĐỐI",
+    "dual_workspace_parity": "100% BIT-IDENTICAL"
+  }
+}

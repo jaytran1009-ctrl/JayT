@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+      <defs>
+        <radialGradient id="food-spot-cl" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#fffbeb"/>
+          <stop offset="60%" stop-color="#fef3c7"/>
+          <stop offset="100%" stop-color="#fed7aa"/>
+        </radialGradient>
+        <linearGradient id="ceramic-bowl" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ea580c"/>
+          <stop offset="40%" stop-color="#c2410c"/>
+          <stop offset="100%" stop-color="#7c2d12"/>
+        </linearGradient>
+        <filter id="crisp-shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#7c2d12" flood-opacity="0.22"/>
+        </filter>
+      </defs>
+      
+      <rect width="960" height="540" fill="url(#food-spot-cl)"/>
+      
+      <!-- Background Ambient Texture -->
+      <circle cx="480" cy="270" r="230" fill="#f97316" opacity="0.08"/>
+      <circle cx="850" cy="100" r="160" fill="#ea580c" opacity="0.06"/>
+      <circle cx="120" cy="440" r="180" fill="#f59e0b" opacity="0.08"/>
+      
+      <!-- Top Heritage Pill -->
+      <g transform="translate(300, 36)" filter="url(#crisp-shadow)">
+        <rect width="360" height="46" rx="23" fill="#ffffff" stroke="#fde68a" stroke-width="2"/>
+        <text x="180" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#9a3412" text-anchor="middle" letter-spacing="1">🍜 ẨM THỰC BẢN ĐỊA &#8226; HUỲNH THÚC KHÁNG</text>
+      </g>
+      
+      <!-- Steaming Gourmet Mì Quảng Composition -->
+      <g transform="translate(480, 290)" filter="url(#crisp-shadow)">
+        <!-- Sesame Rice Paper (Bánh tráng mè nướng) Behind -->
+        <ellipse cx="-130" cy="-60" rx="90" ry="60" fill="#d97706" opacity="0.85" transform="rotate(-25 -130 -60)"/>
+        <circle cx="-140" cy="-70" r="3" fill="#451a03"/>
+        <circle cx="-120" cy="-50" r="3" fill="#451a03"/>
+        <circle cx="-160" cy="-60" r="3" fill="#451a03"/>
+        
+        <!-- Ceramic Bowl Base -->
+        <path d="M -200 -40 C -200 160 200 160 200 -40 Z" fill="url(#ceramic-bowl)"/>
+        <!-- Ceramic Rim -->
+        <ellipse cx="0" cy="-40" rx="200" ry="36" fill="#f97316"/>
+        <ellipse cx="0" cy="-40" rx="182" ry="28" fill="#fef3c7"/>
+        
+        <!-- Turmeric Golden Broth & Flat Rice Noodles -->
+        <ellipse cx="0" cy="-38" rx="165" ry="22" fill="#f59e0b"/>
+        <path d="M -130 -45 Q 0 -95 130 -45" stroke="#d97706" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <path d="M -100 -40 Q 20 -85 110 -35" stroke="#b45309" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <path d="M -120 -35 Q -20 -70 90 -40" stroke="#d97706" stroke-width="8" stroke-linecap="round" fill="none"/>
+        
+        <!-- Fresh River Shrimp & Braised Pork -->
+        <g transform="translate(-55, -55) rotate(-15)">
+          <ellipse cx="0" cy="0" rx="30" ry="18" fill="#f43f5e"/>
+          <path d="M 15 -10 Q 35 0 25 15" stroke="#be123c" stroke-width="4" fill="none"/>
+        </g>
+        <g transform="translate(50, -58) rotate(20)">
+          <ellipse cx="0" cy="0" rx="28" ry="16" fill="#f43f5e"/>
+          <path d="M 15 -10 Q 32 0 22 14" stroke="#be123c" stroke-width="4" fill="none"/>
+        </g>
+        
+        <!-- Herbs: Mint, Basil & Banana Blossom -->
+        <circle cx="-10" cy="-48" r="20" fill="#15803d"/>
+        <circle cx="85" cy="-46" r="16" fill="#16a34a"/>
+        <circle cx="-85" cy="-42" r="18" fill="#15803d"/>
+        
+        <!-- Crushed Roasted Peanuts -->
+        <circle cx="-25" cy="-65" r="5" fill="#78350f"/>
+        <circle cx="18" cy="-62" r="6" fill="#78350f"/>
+        <circle cx="65" cy="-50" r="5" fill="#78350f"/>
+        <circle cx="-5" cy="-58" r="4" fill="#78350f"/>
+      </g>
+      
+      <!-- Bottom Context Narrative -->
+      <text x="480" y="495" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700" fill="#7c2d12" text-anchor="middle">
+        Hương vị mì Quảng tôm thịt đậm đà &#8226; Bánh tráng nướng giòn rụm &#8226; Hải Châu, Đà Nẵng
+      </text>
+    </svg>

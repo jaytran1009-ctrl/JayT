@@ -1,0 +1,36 @@
+{
+  "document_id": "W4_TRACK1_SANDBOX_GATING",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W4-STRATEGY",
+  "status": "PREPARED__SANDBOX_ACTIVATION_DENIED_PENDING_PROVIDER_AUTHORIZATION",
+  "runtime_state": {
+    "production_affiliate_enabled": false,
+    "staging_affiliate_enabled": false,
+    "tracking_enabled": false,
+    "external_navigation_enabled": false,
+    "sub_id_insertion_enabled": false
+  },
+  "requested_contract": {
+    "function": "dispatchSmartAffiliate()",
+    "future_parameters": ["sub1=campus", "sub2=cluster", "sub3=timestamp"],
+    "disclosure": "#JayTAffiliate"
+  },
+  "why_not_enabled": [
+    "No written authorization from a provider affiliate program is bound to this workspace.",
+    "No provider-approved destination URL and parameter schema has been audited.",
+    "No privacy and consumer-disclosure approval exists for tracking or attribution."
+  ],
+  "preconditions_for_a_future_internal_sandbox": [
+    "written provider authorization",
+    "approved allowlist and parameter schema for that provider",
+    "explicit user-click test with replayable logs that contain no personal data",
+    "separate CEO technical acceptance"
+  ],
+  "prohibited_until_all_preconditions_pass": [
+    "affiliate_enabled true",
+    "affiliate URL generation",
+    "sub-ID insertion",
+    "redirect dispatch",
+    "attribution or commission claim",
+    "public #JayTAffiliate display"
+  ]
+}

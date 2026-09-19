@@ -1,0 +1,78 @@
+{
+  "target_id": "TGT_C2_01",
+  "cluster": "NGU_HANH_SON_AN_THUONG",
+  "brand": "Galaxy Cinema",
+  "customer_need": "Xem phim sinh viên DUE",
+  "initial_url": "https://www.galaxycine.vn",
+  "final_url": "https://www.galaxycine.vn",
+  "hop_count": 1,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://www.galaxycine.vn",
+      "status_code": 200,
+      "response_headers": {
+        "server": "nginx",
+        "date": "Fri, 28 Aug 2026 15:50:16 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "set-cookie": [
+          "x-session-id=web_3613f707ab39a83a7cf0588d37ed339e; Max-Age=86400; Path=/; Secure; SameSite=Strict",
+          "glx_uuid=c4e14b14-efa7-431c-9cad-5361faa21000; path=/;"
+        ],
+        "x-session-id": "web_3613f707ab39a83a7cf0588d37ed339e",
+        "x-powered-by": "Next.js",
+        "etag": "W/\"oaj1ihurg57as\"",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "vary": "Accept-Encoding",
+        "x-glx-server": "fe1",
+        "timing-allow-origin": "*",
+        "via": "mly inter",
+        "x-mly-id": "69c674ba828473144a47dc2eb655724a",
+        "accept-ranges": "bytes",
+        "x-cache": "MISS from da001.vn06.veloceed.com:443",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, HEAD, OPTIONS, CONNECT,TRACE",
+        "access-control-allow-origin": "*"
+      },
+      "location_header": null,
+      "body_bytes": 105063,
+      "hop_started_at": "2026-08-28T15:50:13.574Z",
+      "hop_finished_at": "2026-08-28T15:50:14.441Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:13.574Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:14.547Z",
+  "duration_ms": 973.36,
+  "final_http_status": 200,
+  "final_headers": {
+    "server": "nginx",
+    "date": "Fri, 28 Aug 2026 15:50:16 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "set-cookie": [
+      "x-session-id=web_3613f707ab39a83a7cf0588d37ed339e; Max-Age=86400; Path=/; Secure; SameSite=Strict",
+      "glx_uuid=c4e14b14-efa7-431c-9cad-5361faa21000; path=/;"
+    ],
+    "x-session-id": "web_3613f707ab39a83a7cf0588d37ed339e",
+    "x-powered-by": "Next.js",
+    "etag": "W/\"oaj1ihurg57as\"",
+    "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "vary": "Accept-Encoding",
+    "x-glx-server": "fe1",
+    "timing-allow-origin": "*",
+    "via": "mly inter",
+    "x-mly-id": "69c674ba828473144a47dc2eb655724a",
+    "accept-ranges": "bytes",
+    "x-cache": "MISS from da001.vn06.veloceed.com:443",
+    "content-encoding": "gzip",
+    "transfer-encoding": "chunked",
+    "access-control-allow-methods": "GET, POST, PUT, DELETE, HEAD, OPTIONS, CONNECT,TRACE",
+    "access-control-allow-origin": "*"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C2_01_FINAL_2026-08-28T15-50-13-574Z.txt",
+  "pre_normalization_sha256": "c3c06e22f3f5343dd1dfeb242d2acdbd72d328c20c0fb4b5857027de03ddecd6",
+  "payload_bytes": 105063,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

@@ -1,0 +1,118 @@
+{
+  "document_id": "JAYT_334_P2_OFFER_SHORTLIST_PRE_AUDIT_VERDICT",
+  "generated_at_utc": "2026-09-07T09:09:42.2799062Z",
+  "governing_work_order": "01_EXECUTIVE_COUNCIL/JAYT_334_P2_OFFER_SHORTLIST_PRE_AUDIT_WORK_ORDER.md",
+  "input_shortlist": "06_TRUST_AND_EVIDENCE/JAYT_334_P2_OFFER_LEAF_DISCOVERY_SHORTLIST.json",
+  "mode": "INDEPENDENT_PRE_AUDIT__NO_RAW_CAPTURE",
+  "production_registry": "08_RELEASE_VAULT/candidates/v3.423.0/registry.json",
+  "summary": {
+    "items_reviewed": 7,
+    "passed_for_strategic_scope_review": 4,
+    "held_fail_closed": 3,
+    "exact_source_url_duplicates": 0,
+    "raw_captures_performed": 0,
+    "render_or_production_mutations": 0
+  },
+  "items": [
+    {
+      "candidate_id": "P2O_CGV_FANC_2026",
+      "source_url": "https://www.cgv.vn/default/newsoffer/cgv-fanc-policy/",
+      "domain_official": true,
+      "leaf_page_declared": true,
+      "ttl_assessment": "DECLARED_EFFECTIVE_FROM_2026_05_21",
+      "direct_pre_audit_observation": "FETCH_TIMEOUT_ON_TWO_DIRECT_OPEN_ATTEMPTS",
+      "dedup_exact_source_url": false,
+      "verdict": "HELD__DIRECT_LEAF_FETCH_TIMEOUT__SEARCH_DISCOVERY_NOT_ACCEPTED_AS_CAPTURE_EVIDENCE"
+    },
+    {
+      "candidate_id": "P2O_GALAXY_MEMBER_2026",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+      "domain_official": true,
+      "leaf_page_verified": true,
+      "ttl_assessment": "ACTIVE_THROUGH_2026_12_31",
+      "verified_condition_spans": [
+        "Năm 2026, Galaxy Cinema tiếp tục duy trì chính sách tích lũy điểm thưởng và sử dụng thanh toán vé/ bắp nước.",
+        "Điểm tích lũy có hạn sử dụng trong suốt năm 2026 (tới hết 31.12.2026)."
+      ],
+      "dedup_exact_source_url": false,
+      "locality_boundary": "GALAXY_DANANG_PRESENCE_ONLY__NO_SEAT_OR_STOCK_INFERENCE",
+      "verdict": "PRE_AUDIT_PASS__READY_FOR_STRATEGIC_TARGETED_INGRESS_SCOPE_REVIEW"
+    },
+    {
+      "candidate_id": "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-galaxy-cinema--tich-xu-doi-qua-tren-zalopay/",
+      "domain_official": true,
+      "leaf_page_declared": true,
+      "ttl_assessment": "DISCOVERY_DECLARED_2026_07_01_TO_2026_09_30",
+      "direct_pre_audit_observation": "CURRENT_PAGE_BODY_EXPOSES_ONLY_COMMON_UPDATING_WITHOUT_OFFER_TITLE_OR_TERMS",
+      "dedup_exact_source_url": false,
+      "verdict": "HELD__CURRENT_DIRECT_PAGE_CONTENT_INCOMPLETE"
+    },
+    {
+      "candidate_id": "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "domain_official": true,
+      "leaf_page_verified": true,
+      "ttl_assessment": "ACTIVE_2026_09_01_TO_2026_09_30_OR_BUDGET_EXHAUSTION",
+      "verified_condition_spans": [
+        "Galaxy Cinema x ShopeePay Giảm Đến 50K từ 01/09/2026 - 30/09/2026",
+        "Khách hàng cần đăng nhập vào App ShopeePay và claim voucher tại mục \"Mã Giảm giá\""
+      ],
+      "dedup_exact_source_url": false,
+      "locality_boundary": "GALAXY_DANANG_PRESENCE_ONLY__OFFICIAL_APP_CLAIM_REQUIRED",
+      "risk_flags": ["BUDGET_LIMITED", "TTL_EXPIRES_2026_09_30", "NO_VOUCHER_CODE_MAY_BE_SYNTHESIZED"],
+      "verdict": "PRE_AUDIT_PASS__READY_FOR_STRATEGIC_TARGETED_INGRESS_SCOPE_REVIEW"
+    },
+    {
+      "candidate_id": "P2O_GALAXY_JCB_WEEKEND_2026Q3",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+      "domain_official": true,
+      "leaf_page_declared": true,
+      "ttl_assessment": "DISCOVERY_DECLARED_2026_07_04_TO_2026_09_30",
+      "direct_pre_audit_observation": "REDIRECT_LOOP_ON_TWO_DIRECT_OPEN_ATTEMPTS",
+      "dedup_exact_source_url": false,
+      "verdict": "HELD__DIRECT_LEAF_REDIRECT_LOOP__SEARCH_DISCOVERY_NOT_ACCEPTED_AS_CAPTURE_EVIDENCE"
+    },
+    {
+      "candidate_id": "P2O_PHILONG_LENOVO_STUDENT_2026",
+      "source_url": "https://philong.com.vn/lap-xin-qua-slay-cung-lenovo.html",
+      "domain_official": true,
+      "leaf_page_verified": true,
+      "ttl_assessment": "ACTIVE_2026_08_26_TO_2026_10_31_OR_GIFT_EXHAUSTION",
+      "verified_condition_spans": [
+        "Thời gian áp dụng: Từ ngày 26/08/2026 đến ngày 31/10/2026(hoặc đến khi hết quà)",
+        "1- 152 Hàm Nghi, Đà Nẵng",
+        "2- 52 Nguyễn Văn Linh, Đà Nẵng"
+      ],
+      "dedup_exact_source_url": false,
+      "locality_boundary": "DIRECT_OFFER_LEAF_NAMES_TWO_DANANG_SHOWROOMS",
+      "risk_flags": ["MODEL_ALLOWLIST_REQUIRED", "GIFT_STOCK_LIMITED"],
+      "verdict": "PRE_AUDIT_PASS__READY_FOR_STRATEGIC_TARGETED_INGRESS_SCOPE_REVIEW"
+    },
+    {
+      "candidate_id": "P2O_PHILONG_HP_BTS_2026",
+      "source_url": "https://philong.com.vn/uu-dai-hp-back-to-school-2026.html",
+      "domain_official": true,
+      "leaf_page_verified": true,
+      "ttl_assessment": "ACTIVE_2026_08_01_TO_2026_10_31",
+      "verified_condition_spans": [
+        "Chương trình áp dụng từ 01/08/2026 đến 31/10/2026",
+        "BỘ QUÀ TẶNG CAO CẤP: HỆ SINH THÁI AI ĐẶC QUYỀN (TRỊ GIÁ 6 TRIỆU ĐỒNG)"
+      ],
+      "dedup_exact_source_url": false,
+      "locality_boundary": "PHI_LONG_LOCALITY_EVIDENCE_READY__ITEM_STOCK_NOT_INFERRED",
+      "risk_flags": ["MODEL_ALLOWLIST_REQUIRED", "THIRD_PARTY_SOFTWARE_TERMS_REQUIRE_DISCLOSURE"],
+      "verdict": "PRE_AUDIT_PASS__READY_FOR_STRATEGIC_TARGETED_INGRESS_SCOPE_REVIEW"
+    }
+  ],
+  "gate": {
+    "capture_authorized": false,
+    "public_approved": false,
+    "render_permitted": false,
+    "production_deploy_permitted": false,
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "overall_verdict": "FOUR_OF_SEVEN_PASS_PRE_AUDIT__STRATEGIC_SCOPE_REVIEW_REQUIRED_BEFORE_ANY_CAPTURE"
+}

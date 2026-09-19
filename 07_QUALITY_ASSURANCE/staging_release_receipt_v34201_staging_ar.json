@@ -1,0 +1,50 @@
+{
+  "receipt_id": "RECEIPT_STAGING_v34201_STAGING_AR_20260829",
+  "environment": "STAGING_REVIEW_AR_ONLY",
+  "staging_url": "https://jayt-storefront-staging-ar.vercel.app",
+  "staging_version": "v3.420.1-staging.ar",
+  "deployed_at": "2026-08-28T18:46:18.936Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AR)",
+  "comparison_baselines": {
+    "production_locked_rollback": {
+      "url": "https://deploy-ten-xi-48.vercel.app",
+      "version": "v3.419.0",
+      "receipt": "07_QUALITY_ASSURANCE/production_release_receipt_v3419.json",
+      "status": "LOCKED_ROLLBACK_BASELINE"
+    },
+    "staging_aq_historical_review": {
+      "url": "https://jayt-storefront-staging.vercel.app",
+      "version": "v3.420.0-staging.ak",
+      "receipt": "07_QUALITY_ASSURANCE/staging_release_receipt_v3420_staging.json",
+      "status": "HISTORICAL_REVIEW_BASELINE"
+    }
+  },
+  "staging_assets": [
+    {
+      "relative_path": "staging_deploy_ar/jayt_storefront_staging_ar.js",
+      "sha256": "bc49f00daa32a32b461df47237ad267d0ebf9aa105fdfe862c79ebb880775785",
+      "size_bytes": 42980
+    },
+    {
+      "relative_path": "staging_deploy_ar/index.html",
+      "sha256": "81d1f3064c483dd94fdf1bd0df10c4dcf5853b65f342c47acf67b38c69b58b96",
+      "size_bytes": 773
+    },
+    {
+      "relative_path": "staging_deploy_ar/styles.css",
+      "sha256": "9fdbddf9aa3c470dcd3e7cd96d6928188bc11b0b6fac8bab28eb2b29787df2da",
+      "size_bytes": 17544
+    }
+  ],
+  "verified_items_count": 9,
+  "radar_items_count": 8,
+  "total_items_displayed": 17,
+  "card_system_upgraded": true,
+  "jt_glyph_removed": true,
+  "unproven_claims_removed": true,
+  "neutral_copy_enforced": true,
+  "affiliate_status": "PORTAL_ACCESS_NOT_VERIFIED",
+  "quarantine_isolation_verified": true,
+  "zero_secret_verified": true,
+  "council_pack": "01_EXECUTIVE_COUNCIL/COUNCIL_DECISION_PACK_AR_STOREFRONT_REVISION_20260829.md"
+}

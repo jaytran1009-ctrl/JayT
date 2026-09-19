@@ -1,0 +1,98 @@
+{
+  "$schema": "https://jayt.vn/schemas/provider-validation-receipt.v1.json",
+  "receipt_id": "JAYT_386_PROVIDER_VALIDATION_RECEIPT",
+  "cycle": "JAYT-386",
+  "mandate": "WORK_ORDER_J386_SECURITY_AND_LEVEL_MAX",
+  "authority": "CHAIRMAN_AND_CEO_J386_DISPATCH",
+  "validated_at_utc": "2026-09-11T01:55:00Z",
+  "validated_at_local": "2026-09-11T08:55:00+07:00",
+  "governing_rules": {
+    "zero_premature_revenue_claims": true,
+    "clicks_are_not_revenue": true,
+    "unauthenticated_providers_retain_official_outbound_links": true,
+    "secret_redaction": "ALL_API_KEYS_AND_CREDENTIALS_REDACTED"
+  },
+  "providers": [
+    {
+      "provider_key": "SHOPEE",
+      "platform_name": "Shopee Vietnam (Shopee Mall)",
+      "validation_status": "AUTHENTICATED_AND_ATTRIBUTION_VERIFIED",
+      "affiliate_status": "ACTIVATED_FOR_VERIFIED_MALL_SKUS",
+      "destination_link_mode": "CANONICAL_MALL_PARTNER_LINK",
+      "test_vector_result": "PASS__URL_DEEP_LINK_CORRECTLY_RESOLVES_TO_MALL_STOREFRONT",
+      "monetization_asserted": "PER_QUALIFIED_TRANSACTION_ONLY__ZERO_CLICK_REVENUE",
+      "disclosure": "Liên kết chính hãng Shopee Mall đã xác thực chứng thực đối tác."
+    },
+    {
+      "provider_key": "LAZADA",
+      "platform_name": "Lazada Vietnam (LazMall)",
+      "validation_status": "AUTHENTICATED_AND_ATTRIBUTION_VERIFIED",
+      "affiliate_status": "ACTIVATED_FOR_VERIFIED_MALL_SKUS",
+      "destination_link_mode": "CANONICAL_LAZMALL_PARTNER_LINK",
+      "test_vector_result": "PASS__URL_ATTRIBUTION_TAGS_VALIDATED",
+      "monetization_asserted": "PER_QUALIFIED_TRANSACTION_ONLY__ZERO_CLICK_REVENUE",
+      "disclosure": "Liên kết chính hãng LazMall có gắn mã chứng thực đối tác."
+    },
+    {
+      "provider_key": "TIKTOK_SHOP",
+      "platform_name": "TikTok Shop Vietnam",
+      "validation_status": "CREDENTIALS_RECORDED__DIRECT_CONTRACT_PENDING",
+      "affiliate_status": "RETAINED_OFFICIAL_DIRECT_LINK_ONLY",
+      "destination_link_mode": "OFFICIAL_OUTBOUND_STORE_URL",
+      "test_vector_result": "PROVISIONALLY_SAFE__AFFILIATE_DISABLED",
+      "monetization_asserted": "NONE__COMMUNITY_SERVICE",
+      "disclosure": "Chưa kích hoạt affiliate; dẫn trực tiếp về gian hàng chính thức TikTok Shop."
+    },
+    {
+      "provider_key": "ACCESSTRADE",
+      "platform_name": "AccessTrade Vietnam Gateway",
+      "validation_status": "INFRASTRUCTURE_VERIFIED",
+      "affiliate_status": "ROUTED_THROUGH_AUDITED_HOST_ONLY",
+      "destination_link_mode": "AUDITED_DEEP_LINK_GATEWAY",
+      "test_vector_result": "PASS__HOST_IN_ALLOWLIST",
+      "monetization_asserted": "PER_QUALIFIED_TRANSACTION_ONLY__ZERO_CLICK_REVENUE",
+      "disclosure": "Cổng kết nối tiếp thị liên kết minh bạch theo mạng lưới phân phối."
+    },
+    {
+      "provider_key": "CGV",
+      "platform_name": "CGV Cinemas Vietnam",
+      "validation_status": "NON_COMMERCIAL_COMMUNITY_PARTNER",
+      "affiliate_status": "ZERO_AFFILIATE__DIRECT_UTILITY_ONLY",
+      "destination_link_mode": "OFFICIAL_TICKETING_SCHEDULE_URL",
+      "test_vector_result": "NOT_APPLICABLE__COMMUNITY_SCHEDULE",
+      "monetization_asserted": "NONE",
+      "disclosure": "Bảng giá và ưu đãi U22 phục vụ phi lợi nhuận cho sinh viên Đà Nẵng."
+    },
+    {
+      "provider_key": "GALAXY",
+      "platform_name": "Galaxy Cinema",
+      "validation_status": "NON_COMMERCIAL_COMMUNITY_PARTNER",
+      "affiliate_status": "ZERO_AFFILIATE__DIRECT_UTILITY_ONLY",
+      "destination_link_mode": "OFFICIAL_TICKETING_SCHEDULE_URL",
+      "test_vector_result": "NOT_APPLICABLE__COMMUNITY_SCHEDULE",
+      "monetization_asserted": "NONE",
+      "disclosure": "Ưu đãi học sinh sinh viên tra cứu trực tiếp tại rạp."
+    },
+    {
+      "provider_key": "METIZ",
+      "platform_name": "Metiz Cinema Da Nang",
+      "validation_status": "LOCAL_COMMUNITY_VENUE",
+      "affiliate_status": "ZERO_AFFILIATE__DIRECT_UTILITY_ONLY",
+      "destination_link_mode": "OFFICIAL_METIZ_SCHEDULE_URL",
+      "test_vector_result": "NOT_APPLICABLE__LOCAL_VENUE",
+      "monetization_asserted": "NONE",
+      "disclosure": "Giá vé Thứ 3 đồng giá và thẻ sinh viên kết nối trực tiếp Metiz Helio."
+    },
+    {
+      "provider_key": "STARLIGHT",
+      "platform_name": "Starlight Cinema Da Nang",
+      "validation_status": "LOCAL_COMMUNITY_VENUE",
+      "affiliate_status": "ZERO_AFFILIATE__DIRECT_UTILITY_ONLY",
+      "destination_link_mode": "OFFICIAL_STARLIGHT_SCHEDULE_URL",
+      "test_vector_result": "NOT_APPLICABLE__LOCAL_VENUE",
+      "monetization_asserted": "NONE",
+      "disclosure": "Lịch chiếu phim Việt và thẻ thành viên U22 tại Nguyễn Kim Đà Nẵng."
+    }
+  ],
+  "audit_conclusion": "Affiliate links are strictly restricted to Shopee Mall and LazMall verified SKUs with passing test vectors. All other providers remain in useful, non-commercial official outbound link mode without tracking or revenue claims."
+}

@@ -1,0 +1,35 @@
+{
+  "addendum_id": "DOSSIER_AMENDMENT_ADDENDUM_ADMISSION_RUNTIME",
+  "governing_directive": "JAYT-245 Section JAYT-264-CORRECTION-1 (Lines 5802-5815)",
+  "created_at_utc": "2026-09-03T05:08:29.307Z",
+  "parent_amendment_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/DOSSIER_AMENDMENT_COHORT_15.json",
+    "bytes_sha256": "00b4871639b2fe0f271e9fbc7e719d8725238f4a4e04be33ef0e6bd9a3f4af50"
+  },
+  "remediation_overlay_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/REMEDIATION_OVERLAY_COHORT_15_RETIREMENT.json",
+    "bytes_sha256": "4d5baeaa9257ce554360f9b896ce70af75233f1795eaf930373b94a852e540e4"
+  },
+  "admission_trace_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/JAYT_264_CORRECTION_1_ADMISSION_CIRCUIT_BREAKER_TRACE.json",
+    "bytes_sha256": "69ff15a83e4fd8fd17a26e933ee4fd33bf378472c1e5a136038fb3d005eaa01a"
+  },
+  "runtime_circuit_breaker_enforcement": {
+    "gateway_source": "00_PROGRAM_BASELINE/jayt_canonical_admission_gateway.js",
+    "entrypoint_source": "06_TRUST_AND_EVIDENCE/jayt_intake_admission_entrypoint.js",
+    "preflight_order": [
+      "1. Dynamic runtime load and SHA-256 integrity verification of REMEDIATION_OVERLAY_COHORT_15_RETIREMENT.json",
+      "2. Identification check: reject missing candidate identity with ERR_RETIREMENT_OVERLAY_INSUFFICIENT_CANDIDATE_IDENTITY",
+      "3. Candidate ID retirement check: reject COHORT_EZ_AM_15 with CLOSED_CONTAMINATION_SHARED_RAW",
+      "4. Raw SHA-256 collision check: reject b34fdd82... with CLOSED_CONTAMINATION_SHARED_RAW",
+      "5. Subsequent denylist and geographic scope checks"
+    ],
+    "verified_cases": {
+      "case_a_candidate_id_rejection": "CLOSED_CONTAMINATION_SHARED_RAW verified on COHORT_EZ_AM_15",
+      "case_b_raw_hash_rejection": "CLOSED_CONTAMINATION_SHARED_RAW verified on new candidate with b34fdd82...",
+      "case_c_control_candidate_gate": "Admitted to evaluation gate, auto-publish prevented (0 items rendered)",
+      "zero_side_effects": "Verified via pre/post directory snapshots (0 additions, 0 modifications, 0 deletions)"
+    }
+  },
+  "compliance_statement": "Preserves original dossier, parent amendment, remediation overlay, and historical ledgers intact without rewriting history."
+}

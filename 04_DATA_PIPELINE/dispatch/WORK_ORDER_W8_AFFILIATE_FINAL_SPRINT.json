@@ -1,0 +1,37 @@
+{
+  "work_order_id": "WORK_ORDER_W8_AFFILIATE_FINAL_SPRINT",
+  "issued_at": "2026-09-13T13:31:33+07:00",
+  "status": "SIN1_AND_BOUNDED_CACHE_DEPLOYED__COMMERCIAL_UNFREEZE_HELD",
+  "completed": {
+    "function_region": "sin1",
+    "cache": {
+      "type": "EPHEMERAL_INSTANCE_MEMORY",
+      "ttl_seconds": 900,
+      "max_entries": 256,
+      "key": "SHA256_OF_NORMALIZED_URL",
+      "eligible_results": "SUCCESSFUL_PUBLIC_ID_RESOLUTION_ONLY",
+      "response_cache_control": "no-store"
+    },
+    "preview_deployment_id": "dpl_5jXYuruSkkGeYL6DnF9HiLN1w8up",
+    "preview_url": "https://jayt-production-v3420-ql7k4eghf-kuntran777-6857s-projects.vercel.app"
+  },
+  "observed": {
+    "execution_route": "hkg1_to_sin1",
+    "cache_sequence": ["MISS", "HIT", "HIT", "HIT"],
+    "latency_seconds": [0.819950, 0.657527, 0.655265, 0.644085],
+    "latency_300ms_gate": "FAIL"
+  },
+  "held": [
+    "affiliate partner identifier activation",
+    "private voucher API access",
+    "hidden voucher claims",
+    "commercial deep links and tracking",
+    "twenty SKU publication without capture-backed current evidence",
+    "Production affiliate_enabled true"
+  ],
+  "production": {
+    "version": "v3.462.0-j411",
+    "affiliate_enabled": false,
+    "alias_mutated": false
+  }
+}

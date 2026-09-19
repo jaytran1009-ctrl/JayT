@@ -1,0 +1,818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html lang="vi-VN" class=" js no-touch cssanimations csstransitions"><head id="Head"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
+	ĐHKT &gt; LienHe
+</title><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2026 by DNN Corp"><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="text/javascript" http-equiv="Content-Script-Type">
+        <meta content="text/css" http-equiv="Content-Style-Type">
+        <meta name="RESOURCE-TYPE" content="DOCUMENT">
+        <meta name="REVISIT-AFTER" content="1 DAYS">
+        <meta name="RATING" content="GENERAL">
+    <link href="/Portals/_default/default.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/DesktopModules/GGContact/module.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/Resources/Search/SearchSkinObjectPreview.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/DesktopModules/GGMenu/module.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/DesktopModules/GGContactUs/module.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/Portals/_default/Skins/DHKT/skin.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/Portals/0/portal.css?cdv=94" media="all" type="text/css" rel="stylesheet"><link href="/DesktopModules/GGContactUs/Resources/css/view.css?cdv=94" media="all" type="text/css" rel="stylesheet"><script src="https://connect.facebook.net/vi_VN/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://stats.g.doubleclick.net/dc.js"></script><script async="" src="//za.zdn.vn/v3/za.js?20691"></script><script src="/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=94" type="text/javascript"></script><script src="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js?cdv=94" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js?cdv=94" type="text/javascript"></script><link id="FontGoogle" rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400&amp;subset=latin,latin-ext,vietnamese">
+	
+	<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head><body id="Body"><nav id="menu-responsive" class="mm-menu mm-horizontal mm-ismenu"><ul class="mm-list mm-panel mm-opened mm-current" id="mm-m0-p0"><li><fieldset class="wd-form-search"><div class="wd-input"><span id="dnn_ctr818_View_ctl00_ctl00_ClassicSearch"><span class="searchInputContainer" style="width: 85%" data-moreresults="See More Results" data-noresult="No Results Found"><input name="dnn$ctr818$View$ctl00$ctl00$txtSearch" maxlength="255" size="20" id="dnn_ctr818_View_ctl00_ctl00_txtSearch" class="txt-search" autocomplete="off" placeholder="Search..." style="width:90%;" type="text"><a class="dnnSearchBoxClearText" style="display: inline !important; right: 0px !important"></a></span><a id="dnn_ctr818_View_ctl00_ctl00_cmdSearch" class="btn-search" href="javascript:__doPostBack(" dnn$ctr818$view$ctl00$ctl00$cmdsearch','')'="">Tìm kiếm thông tin</a></span></div></fieldset></li><li class=""><a class="mm-subopen" href="#mm-m0-p1"></a><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5400">Giới thiệu</a></li><li class=""><a href="/vi-vn/tuvantuyensinh" target="_parent">Tuyển sinh</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p3"></a><a href="https://due.udn.vn/vi-vn/daotao">Đào tạo</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p11"></a><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc">Nghiên cứu khoa học</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p25"></a><a href="https://due.udn.vn/vi-vn/hoptacquocte">Hợp tác quốc tế</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p26"></a><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4884" target="_parent">Đảm bảo chất lượng</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p30"></a><a href="https://due.udn.vn/vi-vn/dichvuhotro">Dịch vụ &amp; hỗ trợ</a></li><li class="mm-subopen"><a class="mm-subopen" href="#mm-m0-p32"></a><a href="#mm-m0-p11">Phòng</a></li><li class="mm-subopen"><a class="mm-subopen" href="#mm-m0-p33"></a><a href="#mm-m0-p12">Khoa</a></li><li class="mm-subopen"><a class="mm-subopen" href="#mm-m0-p34"></a><a href="#mm-m0-p13">Trung tâm</a></li><li class="mm-subopen"><a class="mm-subopen" href="#mm-m0-p35"></a><a href="#mm-m0-p14">Đoàn thể</a></li><li class=""><a href="/gioithieu/gioithieuds/cid/2729" target="_parent">Ba công khai</a></li><li class=""><a href="https://due.udn.vn/vi-vn/lichtuan/cid/466" target="_parent">Lịch tuần</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p1"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Giới thiệu</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5400" target="_parent">Thông điệp Hiệu trưởng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/71">Lịch sử phát triển</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/72">Sứ mạng - tầm nhìn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuchitiet/id/8838/cid/3591" target="_parent">Triết lý giáo dục</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/75">Định hướng chiến lược</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/74">Cơ cấu tổ chức</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/280">Khuôn viên trường</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p2"></a><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5863" target="_parent">Công khai thông tin</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p2"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p1">Công khai thông tin</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuds-3c/cid/5864" target="_parent">Hoạt động giáo dục hàng năm</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuds-3c/cid/5865" target="_parent">Báo cáo thường niên</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/76" target="_parent">Ba công khai</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p3"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Đào tạo</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p4"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/89" target="_parent">Thông tin - Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/3419" target="_parent">Đề án tuyển sinh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5185" target="_parent">Đề án mở ngành đào tạo</a></li><li class=""><a href="/tuvantuyensinh" target="_parent">Thông tin tuyển sinh</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p5"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/14" target="_parent">Chương trình đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/5396" target="_parent">Kế hoạch năm học</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p9"></a><a href="https://due.udn.vn/vi-vn/tracuu_tkb_cq" target="_parent">Tra cứu thời khóa biểu</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p10"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5182" target="_parent">Văn bản - Tài liệu</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5180" target="_parent">Sổ tay sinh viên</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p4"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p3">Thông tin - Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/89" target="_parent">Đại học - Hệ chính quy</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/368" target="_parent">Đại học - Hệ VLVH</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/1884" target="_parent">Sau đại học</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p5"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p3">Chương trình đào tạo</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p6"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2675" target="_parent">Đào tạo đại học</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p7"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/351" target="_parent">Đào tạo Thạc sĩ</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p8"></a><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/474" target="_parent">Đào tạo Tiến sĩ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5862" target="_parent">CTĐT đại học tích luỹ tín chỉ Thạc sĩ</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p6"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p5">Đào tạo đại học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2675" target="_parent">Chương trình đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2676" target="_parent">Lộ trình học</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p7"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p5">Đào tạo Thạc sĩ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2723" target="_parent">Chương trình đào tạo</a></li><li class=""><a href="" target="_parent">Chuẩn đầu ra</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p8"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p5">Đào tạo Tiến sĩ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2725" target="_parent">Chương trình đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2726" target="_parent">Chuẩn đầu ra</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p9"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p3">Tra cứu thời khóa biểu</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_sdh" target="_parent">Hệ sau đại học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_cq" target="_parent">Hệ chính quy</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_vlvh_taitruong" target="_parent">Hệ VLVH tại trường</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_vlvh_tt" target="_parent">Hệ VLVH tại trung tâm</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p10"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p3">Văn bản - Tài liệu</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5181" target="_parent">Văn bản</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/1968" target="_parent">Biểu mẫu đào tạo</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p11"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Nghiên cứu khoa học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/cid/6380" target="_parent">Chiến lược khoa học công nghệ</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p12"></a><a href="" target="_parent">Đề tài khoa học các cấp</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p13"></a><a href="">Hội nghị - Hội thảo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocgioithieu/cid/389">Tạp chí Khoa học Kinh tế</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p15"></a><a href="" target="_parent">Sản phẩm NCKH</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6393">Hoạt động NCKH sinh viên</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/186">Tin tức</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p18"></a><a href="" target="_parent">Thông báo - Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p12"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p11">Đề tài khoa học các cấp</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2458" target="_parent">Cấp Nhà nước</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2464" target="_parent">Cấp Bộ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2466" target="_parent">Cấp ĐHĐN</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2467" target="_parent">Cấp Trường</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2465" target="_parent">Liên kết với địa phương</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p13"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p11">Hội nghị - Hội thảo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2481" target="_parent">Hội nghị - Hội thảo quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2480" target="_parent">Hội nghị - Hội thảo quốc gia</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p14"></a><a href="" target="_parent">Toạ đàm</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p14"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p13">Toạ đàm</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6384" target="_parent">Nhóm đọc</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6385" target="_parent">Seminars</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p15"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p11">Sản phẩm NCKH</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p16"></a><a href="" target="_parent">Công bố khoa học</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p17"></a><a href="" target="_parent">Kiến nghị chính sách</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p16"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p15">Công bố khoa học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6388" target="_parent">Công bố quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6389" target="_parent">Công bố trong nước</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p17"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p15">Kiến nghị chính sách</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6391" target="_parent">Báo cáo thường niên kinh tế Đà Nẵng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6392" target="_parent">Tư vấn chính sách</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p18"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p11">Thông báo - Quy định</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p19"></a><a href="" target="_parent">Chương trình và các đề tài</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p20"></a><a href="" target="_parent">Hướng dẫn hoạt động NCKH</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p21"></a><a href="" target="_parent">Sách - Giáo trình</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p22"></a><a href="" target="_parent">Định mức giờ khoa học</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p23"></a><a href="" target="_parent">Nghiên cứu khoa học sinh viên</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p24"></a><a href="" target="_parent">Hội nghị - Hội thảo, toạ đàm quốc tế và quốc gia</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p19"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Chương trình và các đề tài</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6396">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6397" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p20"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Hướng dẫn hoạt động NCKH</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6399" target="_parent">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6400" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p21"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Sách - Giáo trình</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6402" target="_parent">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6403" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p22"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Định mức giờ khoa học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6405" target="_parent">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6406" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p23"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Nghiên cứu khoa học sinh viên</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6408" target="_parent">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6409" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p24"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p18">Hội nghị - Hội thảo, toạ đàm quốc tế và quốc gia</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6411" target="_parent">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6412" target="_parent">Quy định</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p25"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Hợp tác quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/54">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/55">Tin tức sự kiện</a></li><li class=""><a href="/vi-vn/hoptacquocte/chuongtrinhlienket" target="_parent">Hợp tác đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/56" target="_parent">Học bổng du học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/2740" target="_parent">Hợp tác nghiên cứu và trao đổi</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/4267">Mạng lưới liên kết Quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/147">Văn bản tài liệu</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p26"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Đảm bảo chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4884" target="_parent">Chính sách đảm bảo chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4741" target="_parent">Hệ thống đảm bảo chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3531" target="_parent">Kế hoạch đảm bảo chất lượng</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p27"></a><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/4743" target="_parent">Điều tra - Khảo sát</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p28"></a><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3533" target="_parent">Kiểm định chất lượng trong nước</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p29"></a><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3532" target="_parent">Kiểm định chất lượng quốc tế</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p27"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p26">Điều tra - Khảo sát</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5391" target="_parent">Phiếu khảo sát</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3540" target="_parent">Kết quả KS SV tốt nghiệp</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3541" target="_parent">Kết quả KS về tình trạng việc làm</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5390" target="_parent">Kết quả KS về CSVC và dịch vụ hỗ trợ</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p28"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p26">Kiểm định chất lượng trong nước</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5392" target="_parent">Tài liệu hướng dẫn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5393" target="_parent">Báo cáo tự đánh giá</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5394" target="_parent">Văn bản công nhận</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p29"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p26">Kiểm định chất lượng quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3594" target="_parent">Tài liệu hướng dẫn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3593" target="_parent">Báo cáo tự đánh giá</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3596" target="_parent">Văn bản công nhận</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p30"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Dịch vụ &amp; hỗ trợ</a></li><li class=""><a class="mm-subopen" href="#mm-m0-p31"></a><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/2744" target="_parent">Dịch vụ lưu trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/169">Dịch vụ thể thao</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p31"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p30">Dịch vụ lưu trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/2744" target="_parent">Giới Thiệu KTX DUE</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6123" target="_parent">Quy Định Nội Trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6318" target="_parent">Bảng giá dịch vụ nội trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6319" target="_parent">Liên hệ - Đăng ký</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p32"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Phòng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/tchc/tchcgioithieu/cid/496">Phòng Tổ chức - Hành chính</a></li><li class=""><a href="/vi-vn/phong/phongdaotao" target="_parent">Phòng Đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/ctsv/ctsvgioithieu/cid/531">Phòng Công tác sinh viên, Quan hệ doanh nghiệp và Truyền thông</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khsdh-gioithieu/cid/520">Phòng Khoa học &amp; HTQT</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/khaothi/khaothigioithieu/cid/602">Phòng Quản lý chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/cosovatchat/cosovatchatgioithieu/cid/625">Phòng Cơ sở vật chất</a></li><li class=""><a href="https://due.udn.vn/vi-vn/kehoachtaichinhgt/cid/636">Phòng Kế hoạch -Tài chính</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/tongoaingu/tongoaingugioithieu/cid/647">Tổ Ngoại ngữ chuyên ngành</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p33"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Khoa</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/ke-toan">Kế toán</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/quan-tri-kinh-doanh">Quản trị kinh doanh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/marketing">Marketing</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/du-lich">Du Lịch</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/kinh-doanh-quoc-te">Kinh doanh quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/ngan-hang">Ngân hàng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/tai-chinh">Tài chính</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/thong-ke-tin-hoc">Thống kê - Tin học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoakinhte">Kinh tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/ly-luan-chinh-tri">Lý luận chính trị</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoa/luat">Luật</a></li><li class=""><a href="https://due.udn.vn/vi-vn/khoathuongmaidientu" target="_parent">Thương mại điện tử</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p34"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Trung tâm</a></li><li class=""><a href="http://flic.due.udn.vn/" target="_blank">Ngoại ngữ - Tin học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/phong/thuvien">Số và Học Liệu</a></li><li class=""><a href="/vi-vn/trungtam/daotaoquocte">Đào tạo quốc tế (CIE)</a></li></ul><ul class="mm-list mm-panel" id="mm-m0-p35"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-m0-p0">Đoàn thể</a></li><li class=""><a href="/vi-vn/dangbo/vanphongdanguy/cid/565">Đảng bộ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/congdoan/cid/585">Công đoàn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/thanhnien">Đoàn Thanh niên - Hội SV</a></li></ul></nav><div class="mm-page"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><div id="app" class="zs"></div></div>
+	<script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v20.0"></script>
+	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+     
+        
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-59723323-1']);
+			      _gaq.push(['_trackPageview']);
+			      
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+        
+		  
+
+    
+    <form method="post" action="/vi-vn/lienhe" id="Form" enctype="multipart/form-data" class="mm-page">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="">
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value=";;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en:669ca791-a838-4419-82bc-9fa647338708:ea597d4b:b25378d2">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=21QfkH6CBiucAAFDF_kfnJh78yOxXw6P7gIUNKc6ELdpi-CnmPur4E4p6dOSvp4Bun_SA5qw3r-O_ZT3LqF3s5CVRT41&amp;t=637034373464530774" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"vi-VN","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"₫","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"SA","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402275599999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"dd MMMM yyyy h:mm:ss tt","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"dd MMMM","PMDesignator":"CH","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"h:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["CN","T2","T3","T4","T5","T6","T7"],"ShortestDayNames":["C","H","B","T","N","S","B"],"DayNames":["Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy"],"AbbreviatedMonthNames":["Thg1","Thg2","Thg3","Thg4","Thg5","Thg6","Thg7","Thg8","Thg9","Thg10","Thg11","Thg12",""],"MonthNames":["Tháng Giêng","Tháng Hai","Tháng Ba","Tháng Tư","Tháng Năm","Tháng Sáu","Tháng Bảy","Tháng Tám","Tháng Chín","Tháng Mười","Tháng Mười Một","Tháng Mười Hai",""],"IsReadOnly":false,"NativeCalendarName":"Dương Lịch","AbbreviatedMonthGenitiveNames":["Thg1","Thg2","Thg3","Thg4","Thg5","Thg6","Thg7","Thg8","Thg9","Thg10","Thg11","Thg12",""],"MonthGenitiveNames":["Tháng Giêng","Tháng Hai","Tháng Ba","Tháng Tư","Tháng Năm","Tháng Sáu","Tháng Bảy","Tháng Tám","Tháng Chín","Tháng Mười","Tháng Mười Một","Tháng Mười Hai",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3avi-VN%3a669ca791-a838-4419-82bc-9fa647338708%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+</div><script src="/js/dnn.js?cdv=94" type="text/javascript"></script><script src="/js/Debug/dnn.modalpopup.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/bootstrap.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.transit.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.ba-throttle-debounce.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/common.js?cdv=94" type="text/javascript"></script><script src="/js/Debug/dnn.servicesframework.js?cdv=94" type="text/javascript"></script><script src="/Resources/Search/SearchSkinObjectPreview.js?cdv=94" type="text/javascript"></script><script src="/js/Debug/dnncore.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/HorizontalMenu.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.flexslider-min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.magnific-popup.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/modernizr.custom.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.easytabs.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.mousewheel.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.touchSwipe.min.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.mmenu.js?cdv=94" type="text/javascript"></script><script src="/Portals/_default/Skins/DHKT/js/jquery.carouFredSel.js?cdv=94" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', ['tdnn$ctr818$View$ctl00$UpdatePanel1','dnn_ctr818_View_ctl00_UpdatePanel1'], [], [], 90, '');
+//]]>
+</script>
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
+<div class="wd-wapper">  
+
+        
+    <div class="wd-head-container">
+        <div class="wd-center">
+            <div class="wd-top-header">
+                <div id="dnn_headerTopLeftPane" class="wd-top-left">
+                <div class="DnnModule DnnModule-GGMenu DnnModule-816"><a name="816"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr816_ContentPane"><!-- Start_Module_816 --><div id="dnn_ctr816_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	<span id="dnn_ctr816_View_ctl00_lblMenu"><ul class="wd-list-menu-l "><li class="first "><a href="/vi-vn/TinTuc/TintucDS/bid/455" target="_parent">Tin tức &amp; Sự kiện </a></li><li class=""><a href="/vi-vn/ThongBao/ThongbaoDS/bid/456">Thông báo </a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuds-3c/cid/6191" target="_parent">Báo chí viết về DUE </a></li><li class=""><a href="/vi-vn/phobienkienthucphapluat" target="_parent">Văn bản - Tài liệu pháp luật </a></li><li class=""><a href="https://vps.udn.vn/" target="_blank">Văn phòng số </a></li><li class=""><a href="https://due.udn.vn/vi-vn/lichtuan/cid/466">Lịch tuần </a></li></ul></span>
+</div><!-- End_Module_816 --></div>
+	<div class="clear"></div>
+</div></div></div>
+                 <div class="wd-top-right">
+                    <div class="wd-language">
+                        <div class="language-object">
+
+<span class="Language" title="English (United States)"><a href="https://due.udn.vn/en-us/contact-us"><img src="/images/Flags/en-US.gif" alt="en-US"></a></span><span class="Language selected" title="Tiếng Việt (Việt Nam)"><img src="/images/Flags/vi-VN.gif" alt="vi-VN"></span>
+</div>
+
+
+
+
+<div class="language-object-override">
+ 
+	<span title="English (United States)" class="Language"><a href="https://due.udn.vn/en-us/contact-us"><img src="/images/Flags/en-US.gif" alt=""></a></span>
+	<span title="Tiếng Việt (Việt Nam)" class="Language selected"><img alt="vi-VN" src="/images/Flags/vi-VN.gif"></span>
+
+</div>
+<script type="text/javascript">	$(".language-object-override .Language").find('a:first').attr('href', $(".wd-language .Language").find('a:first').attr('href')); </script>
+                    </div>
+                    <div id="dnn_headerTopRightPane">
+                    <div class="DnnModule DnnModule-GGMenu DnnModule-817"><a name="817"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr817_ContentPane"><!-- Start_Module_817 --><div id="dnn_ctr817_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	<span id="dnn_ctr817_View_ctl00_lblMenu"><ul class="wd-list-menu-r"><li class="wd-list-menu-1 mm-subopen"><a href="#">Phòng</a><ul class="wd-content-list-category-menu"><div class="wd-arrow"></div><li><a class=" " href="https://due.udn.vn/vi-vn/phong/tchc/tchcgioithieu/cid/496">Phòng Tổ chức - Hành chính</a></li><li><a class=" " href="/vi-vn/phong/phongdaotao" target="_parent">Phòng Đào tạo</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/phong/ctsv/ctsvgioithieu/cid/531">Phòng Công tác sinh viên, Quan hệ doanh nghiệp và Truyền thông</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khsdh-gioithieu/cid/520">Phòng Khoa học &amp; HTQT</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/phong/khaothi/khaothigioithieu/cid/602">Phòng Quản lý chất lượng</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/phong/cosovatchat/cosovatchatgioithieu/cid/625">Phòng Cơ sở vật chất</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/kehoachtaichinhgt/cid/636">Phòng Kế hoạch -Tài chính</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/phong/tongoaingu/tongoaingugioithieu/cid/647">Tổ Ngoại ngữ chuyên ngành</a></li></ul></li><li class="wd-list-menu-1 mm-subopen"><a href="#">Khoa</a><ul class="wd-content-list-category-menu"><div class="wd-arrow"></div><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/ke-toan">Kế toán</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/quan-tri-kinh-doanh">Quản trị kinh doanh</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/marketing">Marketing</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/du-lich">Du Lịch</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/kinh-doanh-quoc-te">Kinh doanh quốc tế</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/ngan-hang">Ngân hàng</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/tai-chinh">Tài chính</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/thong-ke-tin-hoc">Thống kê - Tin học</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoakinhte">Kinh tế</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/ly-luan-chinh-tri">Lý luận chính trị</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoa/luat">Luật</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/khoathuongmaidientu" target="_parent">Thương mại điện tử</a></li></ul></li><li class="wd-list-menu-1 mm-subopen"><a href="#">Trung tâm</a><ul class="wd-content-list-category-menu"><div class="wd-arrow"></div><li><a class=" " href="http://flic.due.udn.vn/" target="_blank">Ngoại ngữ - Tin học</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/phong/thuvien">Số và Học Liệu</a></li><li><a class=" " href="/vi-vn/trungtam/daotaoquocte">Đào tạo quốc tế (CIE)</a></li></ul></li><li class="wd-list-menu-1 mm-subopen"><a href="#">Đoàn thể</a><ul class="wd-content-list-category-menu"><div class="wd-arrow"></div><li><a class=" " href="/vi-vn/dangbo/vanphongdanguy/cid/565">Đảng bộ</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/congdoan/cid/585">Công đoàn</a></li><li><a class=" " href="https://due.udn.vn/vi-vn/thanhnien">Đoàn Thanh niên - Hội SV</a></li></ul></li></ul></span>
+</div><!-- End_Module_817 --></div>
+	<div class="clear"></div>
+</div></div></div>
+                </div>
+                <div class="clear"></div>
+            </div>            
+            <div id="dnn_headerContentPane" class="wd-header-content">
+            <div class="DnnModule DnnModule-GGMenu DnnModule-818"><a name="818"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr818_ContentPane"><!-- Start_Module_818 --><div id="dnn_ctr818_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	
+
+<div class="wd-content">
+    <h1 class="wd-logo-wrapper">
+        <a class="wd-logo" href="/">
+            <img src="/portals/_default/skins/dhkt/img/front/logoDUE.png" alt="DHKT"></a>
+        <a class="wd-logo-small" href="/">
+            <img src="/portals/_default/skins/dhkt/img/front/logoDUE.png" alt="DHKT"></a>
+    </h1>
+    
+        <div id="dnn_ctr818_View_ctl00_UpdatePanel1">
+		
+                <div class="wd-content-right">
+                    <!-- Dropdown form Login -->
+                    <div class="wd-container-login">
+                        <div class="dropdown">
+                            <div class="dropdown-toggle wd-new-login" data-toggle="dropdown">
+                                <span id="dnn_ctr818_View_ctl00_lblUsername" class="wd-login-name">Đăng nhập</span>
+                                
+                                <span class="wd-avatar">
+                                    <img id="dnn_ctr818_View_ctl00_imgAvatar" witdh="33" src="/vi-vn/profilepic.ashx?userId=-1&amp;h=32&amp;w=32&amp;cdv=639233885230425949" style="height:33px;">
+                                </span>
+                            </div>
+                            
+                            <div class="wd-info-account dropdown-menu dropdown-menu-right" role="menu">
+                                <div class="wd-input-account">
+                                    <input name="dnn$ctr818$View$ctl00$username" type="text" id="dnn_ctr818_View_ctl00_username" class="user-acc" placeholder="Tên đăng nhập">
+                                </div>
+                                <div class="wd-input-account">
+                                    <input name="dnn$ctr818$View$ctl00$password" type="password" id="dnn_ctr818_View_ctl00_password" class="pass-acc" placeholder="Mật khẩu">
+                                </div>
+                                <div class="wd-remember-account">
+                                    <input name="dnn$ctr818$View$ctl00$rememberPassword" type="checkbox" id="dnn_ctr818_View_ctl00_rememberPassword">
+                                    Ghi nhớ tài khoản
+                                </div>
+                                <div class="wd-submit-account">
+                                    <input type="submit" name="dnn$ctr818$View$ctl00$btnLogin" value="login" id="dnn_ctr818_View_ctl00_btnLogin" class="login-acc">
+                                    
+                                </div>
+                                <span id="dnn_ctr818_View_ctl00_lblLoginFail" style="color:Red;"></span>
+                                <div class="wd-link-forgot-password">
+                                    <a href="#" onclick="return dnnModal.show('/vi-vn/1/ctl/SendPassword?returnurl=%252fvi-vn%252fAdmin%252fSite-Settings&amp;popUp=true',/*showReturn*/true,300,650,true,'')">Quên mật khẩu?</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <fieldset class="wd-form-search">
+                        <div class="wd-input">
+                            
+
+                            <span id="dnn_ctr818_View_ctl00_ctl01_ClassicSearch">
+    
+    
+    <span class="searchInputContainer" style="width: 85%" data-moreresults="Xem thêm" data-noresult="Không tìm thấy kết quả">
+        <input name="dnn$ctr818$View$ctl00$ctl01$txtSearch" type="text" maxlength="255" size="20" id="dnn_ctr818_View_ctl00_ctl01_txtSearch" class="txt-search" autocomplete="off" placeholder="Tìm kiếm..." style="width:90%;">
+        <a class="dnnSearchBoxClearText" style="display: inline !important; right: 0px !important"></a>
+    </span>
+    <a id="dnn_ctr818_View_ctl00_ctl01_cmdSearch" class="btn-search" href="javascript:__doPostBack('dnn$ctr818$View$ctl00$ctl01$cmdSearch','')">Tìm kiếm thông tin</a>
+</span>
+
+
+<script type="text/javascript">
+    $(function() {
+        if (typeof dnn != "undefined" && typeof dnn.searchSkinObject != "undefined") {
+            var searchSkinObject = new dnn.searchSkinObject({
+                delayTriggerAutoSearch : 400,
+                minCharRequiredTriggerAutoSearch : 2,
+                searchType: 'S',
+                enableWildSearch: true,
+                cultureCode: 'vi-VN',
+                portalId: -1
+                }
+            );
+            searchSkinObject.init();
+            
+            
+            // attach classic search
+            var siteBtn = $('#dnn_ctr818_View_ctl00_ctl01_SiteRadioButton');
+            var webBtn = $('#dnn_ctr818_View_ctl00_ctl01_WebRadioButton');
+            var clickHandler = function() {
+                if (siteBtn.is(':checked')) searchSkinObject.settings.searchType = 'S';
+                else searchSkinObject.settings.searchType = 'W';
+            };
+            siteBtn.on('change', clickHandler);
+            webBtn.on('change', clickHandler);
+            
+            
+        }
+    });
+</script>
+
+                        </div>
+                    </fieldset>
+                    <div class="clear"></div>
+                    <div style="text-align: center;">
+                        <span id="dnn_ctr818_View_ctl00_lblMenu"><div class="menu "><ul><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5400" '="">Giới thiệu</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5400" target="_parent" '="">Thông điệp Hiệu trưởng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/71" '="">Lịch sử phát triển</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/72" '="">Sứ mạng - tầm nhìn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuchitiet/id/8838/cid/3591" target="_parent" '="">Triết lý giáo dục</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/75" '="">Định hướng chiến lược</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/74" '="">Cơ cấu tổ chức</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/280" '="">Khuôn viên trường</a></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/5863" target="_parent" '="">Công khai thông tin</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuds-3c/cid/5864" target="_parent" '="">Hoạt động giáo dục hàng năm</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieuds-3c/cid/5865" target="_parent" '="">Báo cáo thường niên</a></li><li class=""><a href="https://due.udn.vn/vi-vn/gioithieu/gioithieugt/cid/76" target="_parent" '="">Ba công khai</a></li></ul></li></ul></li><li class=""><a href="/vi-vn/tuvantuyensinh" target="_parent" '="">Tuyển sinh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao" '="">Đào tạo</a><ul><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/89" target="_parent" '="">Thông tin - Thông báo</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/89" target="_parent" '="">Đại học - Hệ chính quy</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/368" target="_parent" '="">Đại học - Hệ VLVH</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/1884" target="_parent" '="">Sau đại học</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/3419" target="_parent" '="">Đề án tuyển sinh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5185" target="_parent" '="">Đề án mở ngành đào tạo</a></li><li class=""><a href="/tuvantuyensinh" target="_parent" '="">Thông tin tuyển sinh</a></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/14" target="_parent" '="">Chương trình đào tạo</a><ul><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2675" target="_parent" '="">Đào tạo đại học</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2675" target="_parent" '="">Chương trình đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2676" target="_parent" '="">Lộ trình học</a></li></ul></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/351" target="_parent" '="">Đào tạo Thạc sĩ</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2723" target="_parent" '="">Chương trình đào tạo</a></li><li class=""><a href="" target="_parent" '="">Chuẩn đầu ra</a></li></ul></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/474" target="_parent" '="">Đào tạo Tiến sĩ</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2725" target="_parent" '="">Chương trình đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/2726" target="_parent" '="">Chuẩn đầu ra</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5862" target="_parent" '="">CTĐT đại học tích luỹ tín chỉ Thạc sĩ</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaogioithieu/cid/5396" target="_parent" '="">Kế hoạch năm học</a></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/tracuu_tkb_cq" target="_parent" '="">Tra cứu thời khóa biểu</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_sdh" target="_parent" '="">Hệ sau đại học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_cq" target="_parent" '="">Hệ chính quy</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_vlvh_taitruong" target="_parent" '="">Hệ VLVH tại trường</a></li><li class=""><a href="https://due.udn.vn/vi-vn/tracuu_tkb_vlvh_tt" target="_parent" '="">Hệ VLVH tại trung tâm</a></li></ul></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5182" target="_parent" '="">Văn bản - Tài liệu</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5181" target="_parent" '="">Văn bản</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/1968" target="_parent" '="">Biểu mẫu đào tạo</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/5180" target="_parent" '="">Sổ tay sinh viên</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc" '="">Nghiên cứu khoa học</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/cid/6380" target="_parent" '="">Chiến lược khoa học công nghệ</a></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Đề tài khoa học các cấp</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2458" target="_parent" '="">Cấp Nhà nước</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2464" target="_parent" '="">Cấp Bộ</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2466" target="_parent" '="">Cấp ĐHĐN</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2467" target="_parent" '="">Cấp Trường</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2465" target="_parent" '="">Liên kết với địa phương</a></li></ul></li><li class=""><span class="arrow"></span><a href="" '="">Hội nghị - Hội thảo</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2481" target="_parent" '="">Hội nghị - Hội thảo quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/2480" target="_parent" '="">Hội nghị - Hội thảo quốc gia</a></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Toạ đàm</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6384" target="_parent" '="">Nhóm đọc</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6385" target="_parent" '="">Seminars</a></li></ul></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocgioithieu/cid/389" '="">Tạp chí Khoa học Kinh tế</a></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Sản phẩm NCKH</a><ul><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Công bố khoa học</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6388" target="_parent" '="">Công bố quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6389" target="_parent" '="">Công bố trong nước</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Kiến nghị chính sách</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6391" target="_parent" '="">Báo cáo thường niên kinh tế Đà Nẵng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6392" target="_parent" '="">Tư vấn chính sách</a></li></ul></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6393" '="">Hoạt động NCKH sinh viên</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/186" '="">Tin tức</a></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Thông báo - Quy định</a><ul><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Chương trình và các đề tài</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6396" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6397" target="_parent" '="">Quy định</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Hướng dẫn hoạt động NCKH</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6399" target="_parent" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6400" target="_parent" '="">Quy định</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Sách - Giáo trình</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6402" target="_parent" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6403" target="_parent" '="">Quy định</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Định mức giờ khoa học</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6405" target="_parent" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6406" target="_parent" '="">Quy định</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Nghiên cứu khoa học sinh viên</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6408" target="_parent" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6409" target="_parent" '="">Quy định</a></li></ul></li><li class=""><span class="arrow"></span><a href="" target="_parent" '="">Hội nghị - Hội thảo, toạ đàm quốc tế và quốc gia</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6411" target="_parent" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/nghiencuukhoahoc/nghiencuukhoahocds/cid/6412" target="_parent" '="">Quy định</a></li></ul></li></ul></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte" '="">Hợp tác quốc tế</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/54" '="">Thông báo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/55" '="">Tin tức sự kiện</a></li><li class=""><a href="/vi-vn/hoptacquocte/chuongtrinhlienket" target="_parent" '="">Hợp tác đào tạo</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/56" target="_parent" '="">Học bổng du học</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/2740" target="_parent" '="">Hợp tác nghiên cứu và trao đổi</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/4267" '="">Mạng lưới liên kết Quốc tế</a></li><li class=""><a href="https://due.udn.vn/vi-vn/hoptacquocte/hoptacquocteds/cid/147" '="">Văn bản tài liệu</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4884" target="_parent" '="">Đảm bảo chất lượng</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4884" target="_parent" '="">Chính sách đảm bảo chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_gt/cid/4741" target="_parent" '="">Hệ thống đảm bảo chất lượng</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3531" target="_parent" '="">Kế hoạch đảm bảo chất lượng</a></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/4743" target="_parent" '="">Điều tra - Khảo sát</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5391" target="_parent" '="">Phiếu khảo sát</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3540" target="_parent" '="">Kết quả KS SV tốt nghiệp</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3541" target="_parent" '="">Kết quả KS về tình trạng việc làm</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5390" target="_parent" '="">Kết quả KS về CSVC và dịch vụ hỗ trợ</a></li></ul></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3533" target="_parent" '="">Kiểm định chất lượng trong nước</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5392" target="_parent" '="">Tài liệu hướng dẫn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5393" target="_parent" '="">Báo cáo tự đánh giá</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/5394" target="_parent" '="">Văn bản công nhận</a></li></ul></li><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3532" target="_parent" '="">Kiểm định chất lượng quốc tế</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3594" target="_parent" '="">Tài liệu hướng dẫn</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3593" target="_parent" '="">Báo cáo tự đánh giá</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dambaochatluong_ds/cid/3596" target="_parent" '="">Văn bản công nhận</a></li></ul></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro" '="">Dịch vụ &amp; hỗ trợ</a><ul><li class=""><span class="arrow"></span><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/2744" target="_parent" '="">Dịch vụ lưu trú</a><ul><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/2744" target="_parent" '="">Giới Thiệu KTX DUE</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6123" target="_parent" '="">Quy Định Nội Trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6318" target="_parent" '="">Bảng giá dịch vụ nội trú</a></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/6319" target="_parent" '="">Liên hệ - Đăng ký</a></li></ul></li><li class=""><a href="https://due.udn.vn/vi-vn/dichvuhotro/dichvuhotrogioithieu/cid/169" '="">Dịch vụ thể thao</a></li></ul></li></ul></div></span>
+
+                        <div id="dnn_ctr818_View_ctl00_mobilePane" class="wd-menu-responsive">
+                            <a class="wd-menu-btn" href="#menu-responsive"></a>
+                            <span id="dnn_ctr818_View_ctl00_lblMenuResponsive"></span>
+                        </div>
+                        <!--wd-menu-responsive-->
+                        <div class="wd-login-responsive">
+                            <a class="wd-login-btn" href="#login-responsive"></a>
+                            
+                        </div>
+                    </div>
+                    <!--wd-login-responsive-->
+                    <!-- <div class="wd-search-responsive"> <a class="wd-search-btn" href="#search-responsive"></a>
+                          <div id="search-responsive">
+                            <fieldset class="wd-form-search">
+                              <div class="wd-input">
+                                <input class="txt-search" type="text" placeholder="Tìm kiếm thông tin" />
+                                <input class="btn-search" type="submit" value="">
+                              </div>
+                            </fieldset>
+                          </div>
+                        </div> -->
+                    <!--wd-search-responsive-->
+                </div>
+            
+	</div>
+    
+</div>
+
+<style>
+    #menu-responsive ul li .wd-form-search .searchSkinObjectPreview {
+        left: -41px;
+        width: 250px;
+    }
+
+    .no-show {
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //mmenu responsive
+        var pos = 'mm-top mm-right mm-bottom',
+            zpos = 'mm-front mm-next';
+
+        var $html = $('html'),
+            $menu = $('nav#menu-responsive'),
+            $search = $('div#search-responsive'),
+            $login = $('div#login-responsive'),
+            $both = $html.add($menu);
+        $both = $html.add($search);
+
+        var $inp = $('input[name="pos"]'),
+            $inz = $('input[name="zpos"]'),
+            $inb = $inz.filter('[value="back"], [value="next"]'),
+            $inf = $inz.filter('[value="front"]');
+        $menu.mmenu();
+        $search.mmenu();
+        $login.mmenu();
+
+        $(".wd-menu-responsive").removeClass("no-show");
+		
+		$(".wd-head-container .wd-content-right .menu ul ul li").each(function(index) {
+			if($(this).find("ul").length > 0) {
+				//$(this).addClass("menu-parent");
+				$(this).prepend('<span class="arrow"></span>');
+			}
+		});
+    });
+</script>
+
+</div><!-- End_Module_818 --></div>
+	<div class="clear"></div>
+</div></div></div>
+        </div>
+    </div>
+     
+    
+     <div class="wd-content-container wd-content-subpage">
+        <div class="wd-center">
+            <div id="dnn_ContentAdminPane" class="wd-content-container">
+            <div class="DnnModule DnnModule-GGContactUs DnnModule-2925"><a name="2925"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr2925_ContentPane"><!-- Start_Module_2925 --><div id="dnn_ctr2925_ModuleContent" class="DNNModuleContent ModGGContactUsC">
+	
+
+<div class="contactus-module">
+    <div class="header">
+        <span class="contact-label">LIÊN HỆ ĐẾN TRƯỜNG ĐẠI HỌC KINH TẾ</span>
+        <span class="line-top"></span>
+        <div class="clearfix"></div>
+        
+        
+    </div>
+    <div class="contact-form left">
+        <div id="dnn_ctr2925_View_Block_ContactUs_panelNotify">
+		
+            <span id="dnn_ctr2925_View_Block_ContactUs_lblNotify"></span>
+        
+	</div>
+        <ul class="form-list">
+            <li>
+                <span>Họ và tên*</span>
+                <input name="dnn$ctr2925$View$Block_ContactUs$txtNguoiLienHe" type="text" id="dnn_ctr2925_View_Block_ContactUs_txtNguoiLienHe" class="input-text">
+            </li><li>
+                <span>Email*</span>
+                <input name="dnn$ctr2925$View$Block_ContactUs$txtEmail" type="text" id="dnn_ctr2925_View_Block_ContactUs_txtEmail" class="input-text">
+            </li>
+            <li>
+                <span>Số điện thoại</span>
+                <input name="dnn$ctr2925$View$Block_ContactUs$txtSoDienThoai" type="text" id="dnn_ctr2925_View_Block_ContactUs_txtSoDienThoai" class="input-text">
+            </li>
+            <li>
+                <span>Tiêu đề*</span>
+                <input name="dnn$ctr2925$View$Block_ContactUs$txtTieuDe" type="text" id="dnn_ctr2925_View_Block_ContactUs_txtTieuDe" class="input-text">
+            </li>
+            <li>
+                <span>Nội dung*</span>
+                <textarea name="dnn$ctr2925$View$Block_ContactUs$txtNoiDung" rows="2" cols="20" id="dnn_ctr2925_View_Block_ContactUs_txtNoiDung"></textarea>
+            </li>
+            <li>
+                <div class="Normal captcha">
+		<img src="/DesktopModules/GGContactUs/Styles/ImageChallenge.captcha.aspx?captcha=8F2A803404C5142B686E18E4377B2B6A70D1B0546314E2301F9B11982D2D051E9C200A0E579DCC4F185FFD10532040E0CAC879CF05F4E72AF9F1CC6763D4F397CCCAC6D1066EC4556BBFF318D81973A3D2CAA4594E48AA2C244F3AFDC0796EC19789291039891D2EF59F245B608C77F2D84809CBBAE2D377296C990B85A8E3EFC801E6A461509DD9AF96689F1B831CC5501925260E691F8378C688185C79806EA164A445&amp;alias=due.udn.vn/vi-vn" border="0" alt="CAPTCHA image"><div>
+			Nhập đoạn mã trên vào ô bên dưới.
+		</div><input type="text" maxlength="6" name="dnn$ctr2925$View$Block_ContactUs$ctlCaptcha" value="" style="width:">
+	</div>
+            </li>
+            <li>
+                <input type="submit" name="dnn$ctr2925$View$Block_ContactUs$btnSend" value="Gửi" id="dnn_ctr2925_View_Block_ContactUs_btnSend" class="button-submit right">
+            </li>
+        </ul>
+    </div>
+    <div class="info right">
+
+        <div class="contact-map">
+            
+            
+            
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                <div id="gmap_canvas" style="height:370px;width:700px;"></div>
+                <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+        </div>
+        <div class="contact-info">
+            <span id="dnn_ctr2925_View_Block_ContactUs_lblContactInfo">Địa chỉ: 71 Ngũ Hành Sơn, Quận Ngũ Hành Sơn, TP. Đà Nẵng<br>
+Tel: (84.511) 3836169. Fax: (84.511) 3836255<br>
+Email: info@due.edu.vn</span>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    /*.nia-template .nia-module--contact {
+        background: #fefefe;
+        border: 1px solid #d7dadc;
+    }*/
+
+ 
+</style>
+
+<script type="text/javascript">   
+    var Lat = '16.047441' == '' ? 16.047441 : Number('16.047441');
+    var Long = '108.23890800000004' == '' ? 108.23890800000004 : Number('108.23890800000004');
+    var Title = 'Đại học kinh tế Đà Nẵng<br/>71 Ngũ Hành Sơn, Quận Ngũ Hành Sơn, TP. Đà Nẵng<br/> Tel: (84.511) 3836169. Fax: (84.511) 3836255<br/> Email: info@due.edu.vn' == '' ? 'Đại học kinh tế Đà Nẵng' : 'Đại học kinh tế Đà Nẵng<br/>71 Ngũ Hành Sơn, Quận Ngũ Hành Sơn, TP. Đà Nẵng<br/> Tel: (84.511) 3836169. Fax: (84.511) 3836255<br/> Email: info@due.edu.vn';
+
+    //initMap(16.047441, 108.23890800000004, 'Đại học kinh tế đà nẵng', false);
+    initMap(Lat, Long, Title, false);
+    function initMap(float_lat, float_lng, title, permit) {
+        geocoder = new google.maps.Geocoder(); //khoi tao dinh vi
+        var mapOptions;
+        if (permit == false) {
+            mapOptions = {
+                center: new google.maps.LatLng(float_lat, float_lng),
+                zoom: 15,
+                draggable: false,
+                scrollwheel: false,
+                disableDoubleClickZoom: true,
+                zoomControl: false
+            };
+        } else {
+            mapOptions = {
+                center: new google.maps.LatLng(float_lat, float_lng),
+                zoom: 15,
+                draggable: true,
+                scrollwheel: true,
+                disableDoubleClickZoom: false,
+                zoomControl: true
+            };
+        }
+        map = new google.maps.Map(document.getElementById('gmap_canvas'),
+          mapOptions);
+
+        markerdefault = new google.maps.Marker({
+            position: mapOptions.center,
+            map: map,
+            anchorPoint: new google.maps.Point(0, -29),
+            draggable: false,
+            animation: google.maps.Animation.DROP,
+        }); // khoi tao danh dau
+
+        var infowindow_default = new google.maps.InfoWindow(); //Khung thong tin
+        infowindow_default.setContent('<div><strong>' + title + '</strong>'); // set name hien thi ten dia chi cho marker 
+        infowindow_default.open(map, markerdefault);
+        var latlng = new google.maps.LatLng(float_lat, float_lng);
+        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                endaddress = results[0].formatted_address;
+            }
+            else {
+                //alert('No results found');
+            }
+
+        });
+    }
+            </script>
+</div><!-- End_Module_2925 --></div>
+	<div class="clear"></div>
+</div></div></div>
+        </div>
+    </div> 
+    <div id="dnn_ContentPane"><div class="DnnModule DnnModule-DNNCorpRazorHost DnnModule-12451"><a name="12451"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr12451_ContentPane"><!-- Start_Module_12451 --><div id="dnn_ctr12451_ModuleContent" class="DNNModuleContent ModDNNCorpRazorHostC">
+	
+<div class="wd-partners">
+    <div class="wd-section">
+        <h3 class="wd-title"><span class="wd-icon-30 wd-icon-partners"></span>Các đơn vị liên kết</h3>
+        <div class="list-carousel-2 responsive">
+            <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; inset: auto auto auto 10px; z-index: auto; width: 1308px; height: 105px; margin: 0px; overflow: hidden; cursor: move;"><ul id="wd-foo2" style="text-align: left; float: none; position: absolute; inset: 0px auto auto 0px; margin: 0px; width: 14388px; height: 105px;">
+
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/MB.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Mobifone.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Sungroup.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Vietcombank.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Vietinbank.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Sacombank.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/BIDV.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Agribank.png"></a></li>
+                    <li style="width: 186px;"><a href="https://www.saxion.nl/over-saxion/pers/toolkit" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/logoSaxion.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/ACCA.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/BIN.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/BQ.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/DISSC.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/DNtreTP.jpg"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/LotteDutyFree.png"></a></li>
+                    <li style="width: 186px;"><a href="" target="_parent" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/VACPA.png"></a></li>
+                    <li style="width: 186px;"><a href="https://nafosted.gov.vn/don-vi-trong-nuoc/" target="_blank" title="Quỹ phát triển khoa học &amp; công nghệ Quốc gia"><img alt="Image" title="Image" src="/Portals/0/Banner Truong/logo.png"></a></li>
+                    <li style="width: 186px;"><a href="http://www.sunderland.ac.uk" target="_blank" title="University of SunderLand"><img alt="Image" title="Image" src="/Portals/0/sunderland.png"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/ctlk_cn_ucardiffmetropolitan/cid/3178" target="_blank" title="Towson Universtity"><img alt="Image" title="Image" src="/Portals/0/cardiff-logo.png"></a></li>
+                    <li style="width: 186px;"><a href="/vi-vn/tuvantuyensinh2021/gt/cid/4574" target="_blank" title="University of Stirling"><img alt="Image" title="Image" src="/Portals/0/logo_coventry.jpg"></a></li>
+                    <li style="width: 186px;"><a href="/vi-vn/ctlk_chuongtrinhcunhan/ctlk_cn_umiddlesex/cid/3185" target="_blank" title="Keuka University"><img alt="Image" title="Image" src="/Portals/0/Middlesex_University_Logo.png"></a></li>
+                    <li style="width: 186px;"><a href="http://www.cityu.edu" target="_blank" title="CityU of Seatle"><img alt="Image" title="Image" src="/Portals/0/city_u.jpg"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/ctlk_chuongtrinhcunhan/ctlk_cn_uheriotwatt/cid/3192" target="_blank" title="Saxion"><img alt="Image" title="Image" src="/Portals/0/Heriot.png"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/hoptacquocte/chuongtrinhcunhan/uhull/cid/2016" target="_blank" title="University of Stirling"><img alt="Image" title="Image" src="/Portals/0/logo_Hull.jpg"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/ctlk_chuongtrinhcunhan/ctlk_cn_uballstate/cid/3199" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/BallStatelogo.png"></a></li>
+                    <li style="width: 186px;"><a href="https://www.unsw.edu.au/" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/Banner Truong/Logo UNSW.png"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/ctlk_ctcn_ucork/cid/3165" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/logo_CIT.jpg"></a></li>
+                    <li style="width: 186px;"><a href="/vi-vn/hoptacquocte/chuongtrinhcunhan/uqueensland/cid/2037" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/QUT_logo.png"></a></li>
+                    <li style="width: 186px;"><a href="http://due.udn.vn/vi-vn/ctlk_ctcn_unottinghamtrent/cid/3604" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/nottingham_01.jpg"></a></li>
+                    <li style="width: 186px;"><a href="/vi-vn/hoptacquocte/chuongtrinhlienket/ctlk_ctcn_uswinburne/cid/4254" target="_blank" title=""><img alt="Image" title="Image" src="/Portals/0/Swinburne.png"></a></li>
+            </ul></div>
+        </div>
+    </div>
+</div>
+
+
+
+</div><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://fullfilmizle.live/" title="full film izle">full film izle</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.alanam.com/arsiv/turbanli-porno/" title="Turbanli Porno">Turbanli Porno</a>
+<a href="https://www.vitoporno.com/dosyam/lezbiyen-porno-izle/" title="lezbiyen porno">lezbiyen porno</a>
+</div> 
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://dictate.ms/">1xbet</a>
+<a href="https://bettingcodex.com/superbetin-giris/">superbetin</a>
+<a href="http://allfootballgoal.com/">deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://onlinecasinoss.com" title="onlinecasinoss.com">onlinecasinoss.com</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://www.maltepeescort.com/">www.maltepeescort.com</a>
+<a href="http://www.umraniyeescorts.com/">www.umraniyeescorts.com/</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.gulsehir.com/">haber gülşehir</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://voxprima.com/" title="deneme bonusu veren siteler">deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://marklawrence.org" title="deneme bonusu veren siteler 2023" rel="dofollow">deneme bonusu veren siteler 2023</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://casinositeleri.me/">casino siteleri</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://dirtcircle.com" rel="dofollow" target="_blank" title="deneme bonusu">deneme bonusu</a>
+<a href="https://bns.amqsports.com" rel="dofollow" target="_blank" title="deneme bonusu">deneme bonusu</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://thepetsname.com/" title="supertotobet" rel="dofollow" target="_blank">supertotobet</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.fapjunk.com" title="Fapjunk">https://www.fapjunk.com</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a target="_blank" rel="dofollow" href="https://playcasino.biz" title="casino siteleri">casino siteleri</a>
+<a target="_blank" rel="dofollow" href="https://eokul365.com" title="bahis siteleri">bahis siteleri</a>
+</div><!-- End_Module_12451 --></div>
+	<div class="clear"></div>
+</div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-2916"><a name="2916"></a></div><div class="DnnModule DnnModule-GGContact DnnModule-2923"><a name="2923"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr2923_ContentPane"><!-- Start_Module_2923 --><div id="dnn_ctr2923_ModuleContent" class="DNNModuleContent ModGGContactC">
+
+</div><!-- End_Module_2923 --></div>
+	<div class="clear"></div>
+</div></div></div>
+
+    
+    
+    <div id="Footer" class="wd-footer-container">
+        <div class="wd-center">
+            <div class="wd-top-footer">
+                <div id="dnn_footerCol1Pane" class="wd-block-info-company">                
+                <div class="DnnModule DnnModule-GGMenu DnnModule-814"><a name="814"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr814_ContentPane"><!-- Start_Module_814 --><div id="dnn_ctr814_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	<span id="dnn_ctr814_View_ctl00_lblMenu"><h3 class="wd-title-footer ">Tìm hiểu về chúng tôi </h3><ul><li class=""><a href="https://due.udn.vn/vi-vn/tuvantuyensinh">Thông tin tuyển sinh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotao-1/cid/352">Các chương trình đào tạo</a></li></ul></span>
+</div><!-- End_Module_814 --></div>
+	<div class="clear"></div>
+</div></div><div class="DnnModule DnnModule-GGMenu DnnModule-9738"><a name="9738"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr9738_ContentPane"><!-- Start_Module_9738 --><div id="dnn_ctr9738_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	<span id="dnn_ctr9738_View_ctl00_lblMenu"><h3 class="wd-title-footer ">Tìm hiểu về chúng tôi </h3><ul><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotaods/cid/89" target="_parent">Kế hoạch tuyển sinh</a></li><li class=""><a href="https://due.udn.vn/vi-vn/daotao/daotao-1/cid/352" target="_parent">Các chương trình đào tạo</a></li><li class=""><a href="" target="_parent">Điều kiện giảng dạy</a></li><li class=""><a href="/vi-vn/tuvantuyensinh" target="_parent">Tư vấn tuyển sinh</a></li></ul></span>
+</div>
+
+
+
+
+
+
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://fullfilmizle.net/" title="full film izle">full film izle</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.alanam.com/arsiv/turbanli-porno/" title="Turbanli Porno">Turbanli Porno</a>
+<a href="https://www.vitoporno.com/dosyam/lezbiyen-porno-izle/" title="lezbiyen porno">lezbiyen porno</a>
+</div> 
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="http://dictate.ms/">1xbet</a>
+<a href="http://irsuperleague.com/">superbetin</a>
+<a href="http://sportsdd.com/">parimatch</a>
+<a href="http://sportgenio.com/">deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://onlinecasinoss.com" title="onlinecasinoss.com">onlinecasinoss.com</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.gulsehir.com/">haber gülşehir</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://voxprima.com/" title="deneme bonusu veren siteler">deneme bonusu veren siteler</a>
+</div>
+<div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
+<a href="https://www.meboyunlarioyna.com/" title="deneme bonusu veren siteler">deneme bonusu veren siteler</a>
+</div><!-- End_Module_9738 --></div>
+	<div class="clear"></div>
+</div></div></div>
+                <div id="dnn_footerCol2Pane" class="wd-block-info-company">               
+                <div class="DnnModule DnnModule-GGMenu DnnModule-815"><a name="815"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr815_ContentPane"><!-- Start_Module_815 --><div id="dnn_ctr815_ModuleContent" class="DNNModuleContent ModGGMenuC">
+	<span id="dnn_ctr815_View_ctl00_lblMenu"><h3 class="wd-title-footer ">Các liên kết khác </h3><ul><li class=""><a href="https://elearning.due.udn.vn/" target="_blank">E-learning</a></li><li class=""><a href="/phong/thuvien" target="_blank">Thư viện</a></li></ul></span>
+</div><!-- End_Module_815 --></div>
+	<div class="clear"></div>
+</div></div></div>
+                <div id="dnn_footerCol0Pane" class="wd-block-info-company social">
+				<div class="DnnModule DnnModule-DNNCorpRazorHost DnnModule-9745"><a name="9745"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr9745_ContentPane"><!-- Start_Module_9745 --><div id="dnn_ctr9745_ModuleContent" class="DNNModuleContent ModDNNCorpRazorHostC">
+	<h3 class="wd-title-footer">Kết nối</h3>
+<ul class="wd-social">
+    <li><a href="https://www.facebook.com/FaceDue" title="Facebook DUE"><span class="wd-icon-28 wd-icon-facebook"></span>Facebook</a></li>
+	<li><a href="https://www.youtube.com/c/DUETV" title="Youtube DUE"><span class="wd-icon-28 wd-icon-youtube"></span>Youtube</a></li> 
+	<li><a href="/rss" title="RSS"><span class="wd-icon-28 wd-icon-rss"></span>RSS</a></li>
+	<li><a href="https://www.tiktok.com/@due_truongdhkinhte_dhdn" title="TikTok DUE"><span class="wd-icon-28 wd-icon-tiktok"></span>TikTok</a></li> 
+    <li><a href="https://www.linkedin.com/school/ueud" title="Linked in DUE"><span class="wd-icon-28 wd-icon-linkedin"></span>Linked in</a></li>	
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- End_Module_9745 --></div>
+	<div class="clear"></div>
+</div></div></div>
+                    <!-- <h3 class="wd-title-footer"> Kết nối </h3>
+                    <ul class="wd-social">
+                    <li><a href="#" title="Facebook"><span class="wd-icon-28 wd-icon-facebook"></span>Facebook</a></li>
+                    <li><a href="#" title="Google"><span class="wd-icon-28 wd-icon-google"></span>Google Plus</a></li>
+                    <li><a href="#" title="Linkedin"><span class="wd-icon-28 wd-icon-linkedin"></span>Linkedin</a></li>
+                    <li><a href="#" title="Youtube"><span class="wd-icon-28 wd-icon-youtube"></span>Youtube</a></li>
+                    <li><a href="#" title="Twitter"><span class="wd-icon-28 wd-icon-twitter"></span>Twitter</a></li>
+                    <li><a href="/rss" title="RSS"><span class="wd-icon-28 wd-icon-rss"></span>RSS</a></li>
+                    </ul> -->
+                
+                <div id="dnn_footerCol4Pane" class="wd-block-info-company last">
+                    
+                <div class="DnnModule DnnModule-DNN_UsersOnline DnnModule-3305"><a name="3305"></a>
+
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr3305_ContentPane"><!-- Start_Module_3305 --><div id="dnn_ctr3305_ModuleContent" class="DNNModuleContent ModDNNUsersOnlineC">
+	
+
+    <h3 class="wd-title-footer">
+        <span id="dnn_ctr3305_UsersOnline_Label1">Lượt truy cập</span>
+    </h3>
+    <p>
+        <span id="dnn_ctr3305_UsersOnline_VisitorsLabel">Khách thăm:</span>
+        <strong><span id="dnn_ctr3305_UsersOnline_lblGuestCount">698</span></strong>
+    </p>
+	<p>
+        <span id="dnn_ctr3305_UsersOnline_MembersLabel">Thành viên:</span>
+        <strong>
+	        <span id="dnn_ctr3305_UsersOnline_lblMemberCount">36</span>
+        </strong>
+    </p>
+    <p>
+        <span id="dnn_ctr3305_UsersOnline_TotalLabel">Tổng:</span>
+	    <strong><span id="dnn_ctr3305_UsersOnline_lblTotalCount">734</span></strong>
+    </p>
+
+<div style="display:none;">
+    <span id="dnn_ctr3305_UsersOnline_MembershipLabel"><u>Membership:</u></span>
+    <span id="dnn_ctr3305_UsersOnline_LatestUserLabel">Latest:</span>
+    <span id="dnn_ctr3305_UsersOnline_lblLatestUserName" class="NormalBold"></span>
+    <span id="dnn_ctr3305_UsersOnline_NewTodayLabel">Past 24 Hours:</span>
+	<span id="dnn_ctr3305_UsersOnline_lblNewToday" class="NormalBold"></span>
+    <span id="dnn_ctr3305_UsersOnline_NewYesterdayLabel">Prev. 24 Hours:</span>
+	<span id="dnn_ctr3305_UsersOnline_lblNewYesterday" class="NormalBold"></span>
+    <span id="dnn_ctr3305_UsersOnline_OverallLabel">Overall:</span>
+	<span id="dnn_ctr3305_UsersOnline_lblUserCount" class="NormalBold"></span>
+</div>
+<table cellspacing="0" cellpadding="4" width="100%" style="display:none">
+	<tbody><tr class="Normal">
+		<td>
+			
+			<div id="dnn_ctr3305_UsersOnline_pnlUsersOnline">
+		
+				<table cellspacing="0" cellpadding="0" border="0">
+					<tbody><tr>
+						<td align="center" width="25"><img src="/DesktopModules/UsersOnline/Images/uoGroup2.gif" id="dnn_ctr3305_UsersOnline_imgPeopleOnline" height="14" alt="People Online" width="17" align="middle"></td>
+						<td class="NormalBold"></td>
+					</tr>
+					<tr>
+						<td align="center" width="25"><img src="/DesktopModules/UsersOnline/Images/uoVisitors.gif" id="dnn_ctr3305_UsersOnline_imgVisitors" height="14" alt="Visitors" width="17" align="middle"></td>
+						<td class="Normal"></td>
+					</tr>
+					<tr>
+						<td align="center" width="25"><img src="/DesktopModules/UsersOnline/Images/uoMembers.gif" id="dnn_ctr3305_UsersOnline_imgMemberCount" height="14" alt="Members" width="17" align="middle"></td>
+						<td class="Normal"></td>
+					</tr>
+					<tr>
+						<td align="center" width="25"><img src="/DesktopModules/UsersOnline/Images/uoTotal.gif" id="dnn_ctr3305_UsersOnline_imgTotalCount" height="14" alt="Total" width="17" align="middle"></td>
+						<td class="Normal"></td>
+					</tr>
+				</tbody></table>
+				<hr>
+			
+	</div>
+			
+		</td>
+	</tr>
+</tbody></table>
+
+</div><!-- End_Module_3305 --></div>
+	<div class="clear"></div>
+</div></div></div>
+            </div>
+            <div class="clear"></div>
+            <div class="wd-footer">
+            <p class="wd-designby">
+                 
+                    </p> 
+                    <p>© Bản quyền Trường Đại học Kinh tế - Đại học Đà Nẵng </p>
+                
+            </div>
+        </div>
+    </div>
+</div></form>
+        <input name="ScrollTop" type="hidden" id="ScrollTop">
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/vi-vn/`,`sf_tabId`:`783`}">
+        <input name="__RequestVerificationToken" type="hidden" value="-ebEiU-PKzZ7SgVg4yx5_dG9fFv2WNwaMrBZW9ODPXJI130uFn4Jbbp1d7bDmxKvpu96gQ7wIxVndviZNV1KsOXypTT_AwnnJQ7BlIWO4PU9NGGPyt_LwvnGkjDGcaNt5gpC1Q2">
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js"></script>
+    
+    
+
+<div id="mm-blocker"></div></body></html>

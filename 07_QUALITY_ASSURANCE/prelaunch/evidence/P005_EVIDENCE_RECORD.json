@@ -1,0 +1,19 @@
+{
+  "work_order": "JAYT-PRELAUNCH-ALL-DEPARTMENTS-005",
+  "generated_at": "2026-08-20T14:12:08.096304+00:00",
+  "staging_pointer_isolation": {
+    "pre_test_sha256": "f59c3951da8bcd4aced355cf6c587e51167e67b92294099dbb6606ea5e040dbd",
+    "post_test_sha256": "f59c3951da8bcd4aced355cf6c587e51167e67b92294099dbb6606ea5e040dbd",
+    "isolation_intact": true
+  },
+  "negative_tests_results": {
+    "NEG_01_departmental_fault_injection": "PASS",
+    "NEG_02_readyz_secret_tamper_503": "PASS",
+    "NEG_03_sandbox_rollback_continuous_traffic": "PASS",
+    "GATEWAY_CLEAN_21_cases_execution": "PASS"
+  },
+  "production_lock": {
+    "is_approved": false,
+    "status": "LOCKED_PENDING_CEO_FINAL_ORDER"
+  }
+}

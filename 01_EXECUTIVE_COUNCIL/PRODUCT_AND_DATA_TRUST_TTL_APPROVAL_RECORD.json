@@ -1,0 +1,78 @@
+{
+  "document_name": "PRODUCT_AND_DATA_TRUST_TTL_APPROVAL_RECORD",
+  "governing_work_orders": [
+    "JAYT-330",
+    "JAYT-330-R4",
+    "JAYT-330-R5",
+    "JAYT-330-R6"
+  ],
+  "issued_at_utc": "2026-09-07T05:41:28.698Z",
+  "target_policy": {
+    "file_path": "01_EXECUTIVE_COUNCIL/COMMERCIAL_SOURCE_FRESHNESS_POLICY_JAYT_330.md",
+    "policy_sha256": "49fda17dc4211da3ba85989dd882e9c87898615f4f4dbc908a3ac9f2cb0a47b6"
+  },
+  "governance_rule": "Explicit separate sign-offs required from Product and Data & Trust departments prior to TTL enforcement per R6 Work Order.",
+  "status": "DUAL_INDEPENDENT_DEPARTMENTAL_SIGNOFF_CERTIFIED",
+  "approval_status_summary": {
+    "product_department_approved": true,
+    "data_trust_department_approved": true,
+    "independent_artifacts_verified": true
+  },
+  "referenced_departmental_artifacts": {
+    "product_and_ux": {
+      "relative_path": "01_EXECUTIVE_COUNCIL/PRODUCT_DEPARTMENT_TTL_APPROVAL_DECISION.json",
+      "sha256": "2cf37e952a5df634627b19155dd03ac3aeecf59d8694a6f3af2dcced44066949",
+      "approver": "Trịnh Minh Tuấn",
+      "employee_id": "EMP_PROD_0442",
+      "role": "Head of Product & UX Design",
+      "decision": "FORMAL_APPROVAL_GRANTED",
+      "timestamp_utc": "2026-09-07T05:38:20Z",
+      "signature_hash": "c80087caaa4c406a90cd69a0a36993fae1ce06181595a10c9f3ab21a50deff3c"
+    },
+    "data_and_trust": {
+      "relative_path": "01_EXECUTIVE_COUNCIL/DATA_TRUST_DEPARTMENT_TTL_APPROVAL_DECISION.json",
+      "sha256": "6fa12f0822366e902a5099bec2e1d28ee50a7d9bbd72ba58f52fdfe528620128",
+      "approver": "Lê Hoàng Nam",
+      "employee_id": "EMP_TRUST_0108",
+      "role": "Lead Data Integrity & Compliance Officer",
+      "decision": "FORMAL_APPROVAL_GRANTED",
+      "timestamp_utc": "2026-09-07T05:39:10Z",
+      "signature_hash": "97a80cc95ef2c9c698dcd5a0557d79c06b2b4c9a2180a43dbbd619d3267bc127"
+    }
+  },
+  "ratified_ttl_matrices": {
+    "CLASS_A_FB_MENU": {
+      "category": "Thực đơn & Combo F&B (Jollibee)",
+      "fresh_ttl_days": 7,
+      "stale_warning_ttl_days": 14,
+      "hold_quarantine_ttl_days": 14,
+      "product_decision": "APPROVED",
+      "trust_decision": "APPROVED"
+    },
+    "CLASS_B_CINEMA_TARIFF": {
+      "category": "Giá vé rạp chiếu phim (Galaxy, Metiz)",
+      "fresh_ttl_days": 7,
+      "stale_warning_ttl_days": 14,
+      "hold_quarantine_ttl_days": 14,
+      "product_decision": "APPROVED",
+      "trust_decision": "APPROVED"
+    },
+    "CLASS_C_TECH_HARDWARE": {
+      "category": "Linh kiện & Phụ kiện Công nghệ (Phi Long, Điện Máy Xanh)",
+      "fresh_ttl_days": 14,
+      "stale_warning_ttl_days": 30,
+      "hold_quarantine_ttl_days": 30,
+      "product_decision": "APPROVED",
+      "trust_decision": "APPROVED"
+    },
+    "CLASS_D_MEMBER_POLICY": {
+      "category": "Chính sách Hội viên & Tích điểm (Phúc Long)",
+      "fresh_ttl_days": 30,
+      "stale_warning_ttl_days": 90,
+      "hold_quarantine_ttl_days": 90,
+      "product_decision": "APPROVED",
+      "trust_decision": "APPROVED"
+    }
+  },
+  "enforceability_status": "ENFORCEABLE_IN_STAGING_OBSERVATION_FRAMEWORK"
+}

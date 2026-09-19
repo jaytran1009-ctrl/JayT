@@ -1,0 +1,87 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_JAYT_256_CORRECTION_1",
+  "expectedVersion": "v3.483.0-staging.ao",
+  "version": "v3.483.0-staging.ao",
+  "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+  "timestamp": "2026-09-01T13:00:50.236Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "build_manifest_ref": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "directive_ref": "JAYT-245 Section JAYT-256-CORRECTION-1 (Lines 5012-5038)",
+  "schema_2d_corrected": {
+    "schema_contracts_ref": "00_PROGRAM_BASELINE/JAYT_256_SCHEMA_CONTRACTS.json",
+    "mapping_registry_ref": "06_TRUST_AND_EVIDENCE/JAYT_256_DATASET_2D_MAPPING_REGISTRY.json",
+    "matrix_distribution": {
+      "T1_DEAL": {
+        "OPEN_EVALUATING": 0,
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+        "HELD_NEW_COHORT_REQUIRED": 0,
+        "CLOSED": 0,
+        "PUBLIC_APPROVED": 0,
+        "total": 0
+      },
+      "T2_PROGRAM": {
+        "OPEN_EVALUATING": 0,
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": 2,
+        "HELD_NEW_COHORT_REQUIRED": 0,
+        "CLOSED": 0,
+        "PUBLIC_APPROVED": 1,
+        "total": 3
+      },
+      "T3_PLACE": {
+        "OPEN_EVALUATING": 0,
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": 1,
+        "HELD_NEW_COHORT_REQUIRED": 0,
+        "CLOSED": 0,
+        "PUBLIC_APPROVED": 0,
+        "total": 1
+      },
+      "T4_RADAR": {
+        "OPEN_EVALUATING": 0,
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+        "HELD_NEW_COHORT_REQUIRED": 0,
+        "CLOSED": 0,
+        "PUBLIC_APPROVED": 0,
+        "total": 0
+      },
+      "column_totals": {
+        "OPEN_EVALUATING": 0,
+        "EVIDENCE_COMPLETE_INTERNAL_HELD": 3,
+        "HELD_NEW_COHORT_REQUIRED": 0,
+        "CLOSED": 0,
+        "PUBLIC_APPROVED": 1,
+        "grand_total": 4
+      }
+    },
+    "intake_pool_candidates": 15,
+    "content_entities_count": 4
+  },
+  "commercial_containment": {
+    "production_locked": true,
+    "production_version": "v3.419.0",
+    "p0_eq": "OPEN",
+    "t1_deals_approved": 0,
+    "public_approved_count": 1,
+    "public_approved_entities": [
+      "PILOT_01_GITHUB_EDUCATION"
+    ],
+    "affiliate_activation": false
+  },
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "4cec8c6bb30817032a197746653fe65556eac2ba7952713b097a409e062d33da"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "0c763b11adeb46a274d720b3292b929689d48097841bead678c83d731b81eb71"
+    }
+  }
+}

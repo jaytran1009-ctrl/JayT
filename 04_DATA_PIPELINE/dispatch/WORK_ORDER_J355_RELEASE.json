@@ -1,0 +1,35 @@
+{
+  "work_order_id": "J355_RELEASE",
+  "authority": "Chairman decree JAYT-355",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "version": "v3.428.0",
+  "is_approved": true,
+  "deployment_permitted": true,
+  "deployment_authorized": true,
+  "supersedes": "J354 release hold concerning the 91 versus 76 identity count",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "scope": {
+    "canonical_identities": 76,
+    "civic": 24,
+    "commercial": 52,
+    "batch17_radar_updates_within_existing_identities": 15,
+    "modules": ["Smart Value Radar", "Split Bill Pro", "7-Day Savings Timeline", "Remediated Voucher Vault"],
+    "exclude_from_public_render_and_actions": ["Eight B16 Phuc Long August recipient benefits held by J354-R1", "B13_CGV_PAYDAY_30K"],
+    "counting_rule": "Report canonical registry count separately from public visible count after HELD exclusions. Never restore HELD records or invent identities to satisfy a display count."
+  },
+  "instructions": [
+    "Use the accepted J354-R1 Staging artifacts as input; reconcile their actual hashes against the receipt before packaging.",
+    "Package v3.428.0, create a complete SHA-256 manifest and deterministic rollback metadata, and run automated preflight. Existing deployment authority applies to this exact scope; no additional signature round is required when checks pass.",
+    "Exclude the nine held records from all public routes, including any HELD tab, and disable their actions. Preserve historical evidence outside the public bundle.",
+    "Deploy the tested sealed bundle to the authorized Vercel production domain.",
+    "Post-check HTTP 200 for /, /registry.json and /deals_feed.json; verify registry identity counts, visible eligible identities, all fifteen Radar records, held-ID absence from DOM, Split Bill calculations, timeline filtering, zero console/runtime errors and overflow at 1440/768/390px.",
+    "Publish only evidence-backed feed records; distinguish observed menu prices from discounts. Enable copy only for verified public codes. Do not invent affiliate links or tracking markers.",
+    "If a post-deploy gate fails, restore v3.427.0 using the specified rollback deployment and verify recovery. Report failure truthfully.",
+    "Write immutable deployment and test receipts with actual UTC timestamps, deployment IDs and SHA-256 sidecars; append the actual outcome to PROJECT_MEMORY.md."
+  ],
+  "rollback": {"version": "v3.427.0", "deployment_id": "dpl_F7XM5WPhKCD34MEEMkBwai65Vqfy"},
+  "outputs": ["08_RELEASE_VAULT/JAYT_355_PRODUCTION_DEPLOYMENT_RECEIPT.json", "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J355_RELEASE.json"],
+  "next_dispatch": "04_DATA_PIPELINE/dispatch/WORK_ORDER_J355_BATCH18_FOOD_CINEMA.json"
+}

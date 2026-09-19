@@ -1,0 +1,44 @@
+{
+  "report_name": "JAYT_333_HOT_CAMPAIGN_CAPTURE_RESULT",
+  "generated_at_utc": "2026-09-07T07:16:17.876Z",
+  "capture_method": "CONTROLLED_ONE_SHOT_UNAUTHENTICATED_GET",
+  "results": [
+    {
+      "candidate_id": "J333_LOCALITY_DMX_DANANG_2026",
+      "requested_url": "https://www.dienmayxanh.com/he-thong-sieu-thi-dien-may/thanh-pho-da-nang",
+      "final_url": "https://www.dienmayxanh.com/he-thong-sieu-thi-dien-may/thanh-pho-da-nang",
+      "http_status": 500,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_LOCALITY_DMX_DANANG_2026.leaf.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_LOCALITY_DMX_DANANG_2026.leaf.headers.json",
+      "raw_sha256": "32f801ad52cb13f56dfd4451935a1219802470be385f9d335e6c7575019d9b55",
+      "raw_bytes": 814,
+      "evidence": [
+        {
+          "declared": "Có 88 Siêu Thị Tại Thành phố Đà Nẵng",
+          "found": null,
+          "byte_offset_utf8": null
+        },
+        {
+          "declared": "Điện máy Xanh",
+          "found": null,
+          "byte_offset_utf8": null
+        }
+      ],
+      "all_declared_spans_found": false,
+      "commercial_duplicate_blocked": false,
+      "verdict": "QUARANTINE__HTTP_OR_SPAN_MISMATCH"
+    }
+  ],
+  "metrics": {
+    "targets": 1,
+    "evidence_complete": 0,
+    "awaiting_approval": 0,
+    "dedup_blocked": 0,
+    "quarantined": 1
+  },
+  "safeguards": {
+    "synthetic_bytes_created": false,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

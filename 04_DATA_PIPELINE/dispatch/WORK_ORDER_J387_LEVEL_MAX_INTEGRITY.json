@@ -1,0 +1,104 @@
+{
+  "id": "WORK_ORDER_J387_LEVEL_MAX_INTEGRITY",
+  "authority": "JAYT-387 — directive supplied directly by user",
+  "issued_at_utc": "2026-09-11T03:05:24.947Z",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; actual Gemini review on physical phone",
+  "deadline_local": "2026-09-11T22:00:00+07:00",
+  "authorization": {
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true,
+    "production_alias_mutation_authorized": true,
+    "scope": "Repair, test and deploy J387 on named project. Enable affiliate per validated provider/SKU when identity equality AND actual provider attribution verification pass. Approval does not create missing product photos, vouchers or price history."
+  },
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_remote_previews": false
+  },
+  "baseline": {
+    "last_verified": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "version": "v3.440.0-j385-m1",
+    "re_resolve_before_release": true,
+    "deleted_vulnerable_m2": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+    "note": "J386 UI and API improvements may be salvaged after correction; never restore deleted M2 code."
+  },
+  "execution": [
+    {
+      "id": "M0_SINGLE_SKU_SOURCE",
+      "due": "3 hours from actual executor ACK",
+      "tasks": [
+        "Create one authoritative versioned record for each of 30 products. Generate UI cards, product map, worker catalogue and outbound links from it; remove parallel hand-maintained arrays.",
+        "Record immutable itemId, provider, merchant ID/Mall evidence, product ID, variant ID, canonical URL, actual attributed URL, price/observed_at, raw evidence path+hash and media source/rights/hash.",
+        "Build must fail on any missing, extra, duplicate or mismatched ID, merchant, variant, canonical/attributed URL, price or asset binding across generated outputs. Compare all records by ID, never zip by array position.",
+        "Include deliberate mutation fixtures for ID, URL, variant, price and swapped media mapping; each must fail build. Byte/hash equality alone does not prove a photographed object matches the SKU: visually inspect each of 30.",
+        "Acquire real official merchant photos for all 30. No stock illustration, unrelated image or evidence-error screenshot. Preserve original source and legitimate rights basis; report pending photos accurately.",
+        "30-day low and savings percentage require authentic dated coverage with matching variant/conditions and named reference price. If absent, show observed price/date; never backfill synthetic history.",
+        "Validate JayT provider authentication and exact attributed destination with redacted provider response and capture time. A configured partner ID or URL-shaped string is insufficient. Enable affiliate for passing providers immediately, report ready counts and unresolved ones."
+      ]
+    },
+    {
+      "id": "M1_SHOCK_DEALS",
+      "tasks": [
+        "Acquire at least 15 current locally applicable high-value F&B/cinema offers. Targets include Katinat zero-price/gift, Phe La BOGO, Highlands 30K lunch reduction, Metiz U22 55K, Galaxy Tuesday 50K. Treat these as requested acquisition targets until official current evidence confirms them.",
+        "Record official detail URL, raw snapshot/screenshot and extracted terms hash, effective dates, Da Nang branch applicability, eligibility, caps and redemption.",
+        "Render one concise sourced tip, then 'Chép Mã Bí Mật' only for an actual publicly supplied usable code and 'Mở App Áp Mã' only for a verified app redemption route. Counter/member/no-code offers remain visible with matching condition/open-offer CTA.",
+        "Never call a public offer secret in a way that invents exclusive access; no manufactured codes, free-price labels for paid conditions, or expired promotions presented as active."
+      ]
+    },
+    {
+      "id": "M2_CAMPUS_COMPARATOR",
+      "tasks": [
+        "Pin 4 campus clusters below Hero: Bách Khoa / Sư Phạm; Kinh Tế DUE; Duy Tân / Hải Châu; Sơn Trà.",
+        "One tap applies food <=35000 VND and <=1km from documented campus anchors; coffee power-outlet filter requires venue evidence. Unknown coordinates/amenities must not be inferred. Label straight-line distance.",
+        "3 visible columns ShopeeFood, GrabFood, Xanh SM; accessible 25000–150000 VND slider, integer totals and editable delivery/fees/discount eligibility. Highlight cheapest of comparable actual inputs with Emerald plus text.",
+        "Measure input-to-render p50/p95/max against <30ms target on declared environment. Include boundaries, ties, empty results, keyboard and reduced motion."
+      ]
+    },
+    {
+      "id": "M3_ZALO_PASS",
+      "tasks": [
+        "Put 'Lập Kèo Rủ Bạn (Zalo Pass)' directly on every eligible food/cinema card.",
+        "Use explicit participant count and accurate total to allocate integer VND with conserved sum; generate sharp local Canvas PNG with offer name, basis, allocation and canonical link.",
+        "Verify decoded downloaded PNG, cross-origin image safety, download/native-share/text fallback. Sharing requires user gesture; do not send messages automatically."
+      ]
+    },
+    {
+      "id": "M4_SECURITY_CORRECTIONS",
+      "tasks": [
+        "Retain itemId-only public status contract. Reject ALL unknown fields, require own-property catalogue membership, and validate URL/hostname/HTTPS/port against generated audited records.",
+        "Authenticated worker alone triggers outbound probes; public read returns stored observation. Add rate limits/concurrency/time bounds. CORS is not authentication.",
+        "Use canonical IP parsing with IPv4/IPv6 reserved/private rejection and pinned connection. Test mixed DNS, mapped/expanded IPv6, redirects and no outbound calls on rejected inputs.",
+        "3xx and missing/stale observations must be UNKNOWN, never STORED_AVAILABLE with a fabricated checked_at. HTTP200 proves reachability only, not inventory.",
+        "Keep durable SLA explicitly unasserted until scheduled shared persistence is operational and measured."
+      ]
+    }
+  ],
+  "delivery_strategy": "Ship coherent verified UI/security improvements as an incremental release while source acquisition continues. Report remaining targets explicitly. Prefer a focused correction or disabling the faulty action over whole-site rollback for noncritical issues; rollback is reserved for active critical security/startup/payment/data corruption that cannot be contained promptly.",
+  "acceptance": [
+    "Build equality and adversarial security checks pass.",
+    "30 real-image SKU target and 15 verified-deal target reported with exact achieved counts; unmet targets remain open.",
+    "1440/768/390 image correctness, no blank/error cards or overflow, keyboard/CTA/PNG tests and measured interaction latency.",
+    "Resolve alias, bind served asset hashes, check HTTP200 / /registry.json /deals_feed.json and safe API behavior.",
+    "Actual Gemini phone review binds deployment and reviewed artifacts; executor must not impersonate reviewer or manufacture PASS."
+  ],
+  "deliverables": [
+    "03_SOURCE_OF_TRUTH/j387/sku_registry.json",
+    "07_QUALITY_ASSURANCE/JAYT_387_BUILD_EQUALITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_387_SECURITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_387_LIVE_RECEIPT.json",
+    "06_TRUST_AND_EVIDENCE/j387/product_and_offer_evidence.json",
+    "06_TRUST_AND_EVIDENCE/j387/provider_attribution_receipt.json",
+    "08_RELEASE_VAULT/JAYT_387_RELEASE_RECEIPT.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_387_GEMINI_REVIEW_PACKET.md"
+  ],
+  "reporting": {
+    "ack": "Record real executor ACK/start and 3-hour M0 due time; ISSUED is not proof of delivery.",
+    "progress": "Submit M0 result with exact mismatch/photo/provider counts within 3 hours. Continue independent modules while acquisition is pending.",
+    "deadline": "22:00 11/09/2026 local; record actual timestamps and explain missed deadlines without backdating.",
+    "completion": "No self-awarded Gemini attestation, invented 30-day histories or verified-provider claims. Do not close J387 while target work remains."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "manifest_id": "QUARANTINE_MANIFEST_069D",
+  "work_order": "JAYT-069-STEP2D-METIZ-CANDIDATE-INTAKE-REBUILD",
+  "quarantined_at": "2026-08-24T06:39:04.178Z",
+  "reason": "Candidate 42 và 43 không vượt qua validate_candidate_evidence.js do artifact layout không resolve đúng snapshotsDir và claim snippet chứa ellipsis (...) không phải substring nguyên văn.",
+  "quarantined_files": {
+    "candidate_42_CAND-DNG-METIZ-SUPER-MONDAY-REAL.json": {
+      "sha256": "f7890becd8bd3adc4d133082742cf9b31702be69a34b5d6f3c6762bdc8e5c977",
+      "size_bytes": 5846,
+      "original_path": "05_DEAL_AND_AFFILIATE/candidates/pending_review/candidate_42_CAND-DNG-METIZ-SUPER-MONDAY-REAL.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_069d_candidate_intake_incident/candidate_42_CAND-DNG-METIZ-SUPER-MONDAY-REAL.json"
+    },
+    "candidate_43_CAND-DNG-METIZ-U22-REAL.json": {
+      "sha256": "0e1131835cf2f7e52de1f35ec9f9f837f08e22e5ce1b8081b03ca616a5695dca",
+      "size_bytes": 5936,
+      "original_path": "05_DEAL_AND_AFFILIATE/candidates/pending_review/candidate_43_CAND-DNG-METIZ-U22-REAL.json",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_069d_candidate_intake_incident/candidate_43_CAND-DNG-METIZ-U22-REAL.json"
+    },
+    "dossier_CAND-DNG-METIZ-SUPER-MONDAY-REAL.md": {
+      "sha256": "b7970c57afcadf6a50ed081030d3abf5f11be0bb9b5517839c5caa7337dd56b6",
+      "size_bytes": 1936,
+      "original_path": "05_DEAL_AND_AFFILIATE/candidates/pending_review/dossier_CAND-DNG-METIZ-SUPER-MONDAY-REAL.md",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_069d_candidate_intake_incident/dossier_CAND-DNG-METIZ-SUPER-MONDAY-REAL.md"
+    },
+    "dossier_CAND-DNG-METIZ-U22-REAL.md": {
+      "sha256": "236e553e822ca10c13b522cb4c8bbf88a903e3e86e2934e9fafe30d172e5f95b",
+      "size_bytes": 1928,
+      "original_path": "05_DEAL_AND_AFFILIATE/candidates/pending_review/dossier_CAND-DNG-METIZ-U22-REAL.md",
+      "quarantine_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_069d_candidate_intake_incident/dossier_CAND-DNG-METIZ-U22-REAL.md"
+    }
+  },
+  "total_files_quarantined": 4
+}

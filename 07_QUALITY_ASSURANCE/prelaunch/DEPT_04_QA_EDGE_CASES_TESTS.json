@@ -1,0 +1,44 @@
+{
+  "department_code": "QUALITY_ASSURANCE",
+  "department_name": "Phòng Đảm Bảo Chất Lượng (Quality Assurance)",
+  "role_responsible": "QA Director",
+  "test_cases": [
+    {
+      "test_case_id": "QA-01",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng mở tệp HTML trực tiếp từ ổ đĩa (file:// protocol)",
+      "objective": "Xác thực cơ chế Safe Isolation: Chặn đứng fetch mạng cục bộ, hiển thị thẻ thông báo an toàn, không làm hỏng giao diện",
+      "actions_step_by_step": [
+        "Mở index.html qua file:///",
+        "Kiểm tra số lượng deal render và thông báo hiển thị"
+      ],
+      "expected_outcome": "0 deal được tải ngầm, hiển thị thẻ Safe Card thông báo cần kết nối máy chủ Staging/Production",
+      "verification_type": "AUTOMATED_PROTOCOL_ISOLATION_TEST"
+    },
+    {
+      "test_case_id": "QA-02",
+      "priority": "P0",
+      "target_user_perspective": "Người dùng bấm nhầm nút 'Săn Deal' và muốn thoát nhanh",
+      "objective": "Xác thực phím 'Escape' và nút 'Đóng / Hủy' đóng Interstitial Modal ngay lập tức với 0 chuyển hướng",
+      "actions_step_by_step": [
+        "Bấm 'Săn Deal' mở modal",
+        "Nhấn phím ESC trên bàn phím",
+        "Mở lại modal và bấm 'Đóng / Hủy'"
+      ],
+      "expected_outcome": "Modal đóng ngay lập tức, không có bất kỳ request chuyển hướng nào được kích hoạt",
+      "verification_type": "AUTOMATED_KEYBOARD_ACCESSIBILITY_TEST"
+    },
+    {
+      "test_case_id": "QA-03",
+      "priority": "P0",
+      "target_user_perspective": "Máy chủ cấp nguồn dữ liệu bị lỗi giờ hoặc ranh giới phút bị hỏng",
+      "objective": "Xác thực API kích hoạt Fail-Closed (503 Service Unavailable) khi start_minutes >= end_minutes hoặc end_minutes > 1440",
+      "actions_step_by_step": [
+        "Nạp fixture lỗi có start_minutes = 900, end_minutes = 800",
+        "Gọi /api/deals"
+      ],
+      "expected_outcome": "Máy chủ từ chối phục vụ (503), không bao giờ hiển thị dữ liệu sai lệch cho người dùng",
+      "verification_type": "AUTOMATED_FAIL_CLOSED_BOUNDARY_TEST"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "WORK_ORDER_J390_AUTONOMOUS_GOLIVE",
+  "authority": "JAYT-390 — directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T05:00:00Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini only after independent review",
+  "deadline_plan": {
+    "T_plus_12h": "Physical provenance harvest and byte/hash validation",
+    "T_plus_36h": "Retention suite runtime verification",
+    "T_plus_72h": "Autonomous monitoring readiness and conditional commercial release review"
+  },
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_remote_previews": false
+  },
+  "baseline": {
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "version": "v3.444.0-j388",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "require_predeploy_recheck": true
+  },
+  "authorization": {
+    "approved_work": "Evidence collection using legitimately accessible public sources, client-side retention tools, and read-only monitoring implementation.",
+    "production_deployment": "CONDITIONAL_AFTER_CEO_RELEASE_GATE",
+    "affiliate_enabled": "CONDITIONAL_PER_PROVIDER_AFTER_REPLAYABLE_PROVIDER_ISSUED_ATTRIBUTION_PROOF",
+    "prohibited": [
+      "Do not bypass or evade WAF, CAPTCHA, login, paywall, geo restriction, rate limit, robots directive, API access control or provider terms.",
+      "Do not claim 100% uptime, current price, stock, commission or attribution without measured and retained evidence.",
+      "Do not automatically hide a card based solely on one transient response; use conservative UNKNOWN status and retain the observation for review."
+    ]
+  },
+  "phases": [
+    {
+      "id": "T12_PHYSICAL_PROVENANCE",
+      "tasks": [
+        "Continue J389: retain original response bytes for every legitimately accessible exact SKU; declared byte count and SHA-256 must match the physical file. Challenge, blocked, redirect, generic and 404 pages are unverified, not success.",
+        "Acquire and manually verify correctly matched, rights-documented product media. Record source, MIME, dimensions, hash and SKU/variant binding; retain labelled placeholder for unmet records.",
+        "Replace all self-referential deal sources with retained first-party partner artifacts. Each deal must bind terms, validity window, Da Nang applicability and truthful CTA semantics.",
+        "Run immutable registry-to-UI-to-worker-to-leaf equality and mutation gates. Report verified and unverified counts separately."
+      ],
+      "exit_criteria": [
+        "30 original-byte product artifacts with matching on-disk hashes and no challenge/404 status for any record claimed verified.",
+        "30 correctly matched media artifacts or an honest incomplete count.",
+        "15 first-party replayable deal artifacts, not just an index of claims."
+      ]
+    },
+    {
+      "id": "T36_RETENTION_SUITE",
+      "tasks": [
+        "Verify Campus Dock filtering for the four defined campus clusters without inventing distance, venue or offer claims.",
+        "Verify the three-app comparator with 50 non-zero input-to-render samples and disclose all assumptions in its cost model. Keep 3xx status UNKNOWN and the SSRF itemId-only contract intact.",
+        "Verify Split Bill integer-VND arithmetic, Zalo boarding-pass generation and privacy boundary: no payment credentials, account numbers, GPS or personal data are persisted or embedded.",
+        "Verify Voucher Concierge: copy action only for a source-visible public code; app/counter actions must open or describe the actual source-supported route.",
+        "Perform responsive tests at 1440, 768 and 390 pixels; record console errors, overflow and keyboard/touch results."
+      ],
+      "exit_criteria": [
+        "Documented runtime receipt with raw samples, screenshots and no unhandled runtime error.",
+        "No invented coupon, venue, price, affiliate or location assertion."
+      ]
+    },
+    {
+      "id": "T72_AUTONOMOUS_MONITORING_AND_RELEASE_REVIEW",
+      "tasks": [
+        "Design a four-hour monitoring job that uses only fixed audited item IDs and fixed first-party destinations. The job records time, status, latency, redirect state and error class; it must not take arbitrary URL input.",
+        "Treat 200 as an availability observation, 3xx/403/429/timeout as UNKNOWN, and 404/410 as candidate-unavailable. Require repeated observations and a reviewable audit record before suppressing a public card; do not silently alter factual content.",
+        "Set an alert and safe display state within 60 seconds after the job receives a confirmed-unavailable result; do not promise 100% uptime.",
+        "Prepare provider-specific attribution validation. A signed/official provider reporting or test record must replay to the exact provider, SKU and destination before that provider can have affiliate_enabled=true.",
+        "Run a CEO release review of served bytes, artifacts, monitor configuration and rollback plan. Executor cannot declare Gemini or CEO PASS."
+      ],
+      "exit_criteria": [
+        "Scheduler configuration, least-privilege credentials, runbook, audit log schema, alert test and rollback drill are reviewed.",
+        "Affiliate is enabled only for passing provider scopes; all other links remain direct official links with non-affiliate disclosure."
+      ]
+    }
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j390/sku_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j390/deal_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j390/provider_attribution_validation.json",
+    "07_QUALITY_ASSURANCE/JAYT_390_PROVENANCE_GATE_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_390_RETENTION_RUNTIME_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_390_MONITORING_READINESS_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_390_RELEASE_REVIEW_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_390_ROLLBACK_DRILL_RECEIPT.json"
+  ],
+  "reporting": {
+    "progress": "At each phase, give counts of physically verified SKU bytes, verified product photos, first-party deals and attribution-ready providers; list blockers exactly.",
+    "completion": "Commercial Go-Live requires actual CEO acceptance after every relevant exit criterion. Missing evidence is reported as missing, never inferred."
+  }
+}

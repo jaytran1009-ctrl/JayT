@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-41-SHOPEE",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_41",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-ECOM-SHOPEE-FREESHIP-0D-REAL"
+  },
+  "target": {
+    "brand_id": "SHOPEE",
+    "category": "ONLINE_APP_DEAL",
+    "requested_url": "https://shopee.vn/m/mien-phi-van-chuyen",
+    "final_url": "https://shopee.vn/m/mien-phi-van-chuyen",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của Shopee Việt Nam có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "Shopee Freeship Xtra — Mã Miễn Phí Vận Chuyển 0Đ Giờ Vàng 0H & 12H",
+    "conditions_snippet": "Mở mới vào 6 khung giờ: 0H - 9H - 12H - 15H - 18H - 21H mỗi ngày"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_shopee_cand-ecom-shopee-freeship-0d-real.png",
+      "sha256": "03bcb3e42fcc002eba928d498e14e714bf97249821f316d6953b836112ac59fa",
+      "bytes": 140625,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_shopee_cand-ecom-shopee-freeship-0d-real.html",
+      "sha256": "df765e989c11ff642b89c03fed1ff428613160b14bafc70d234ea18cd6daa9fe",
+      "bytes": 983
+    },
+    "text_dump": {
+      "file": "capture_047_shopee_cand-ecom-shopee-freeship-0d-real.txt",
+      "sha256": "b4d8295f854788850c22f8f2ec3b9dd8c8f38039ea12eef1a54bef99d5fa53b0",
+      "bytes": 609
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

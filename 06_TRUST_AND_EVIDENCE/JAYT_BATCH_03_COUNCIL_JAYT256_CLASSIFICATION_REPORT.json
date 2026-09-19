@@ -1,0 +1,595 @@
+{
+  "report_id": "COUNCIL_BATCH03_JAYT256_CLASSIFICATION_REPORT",
+  "governing_directive": "JAYT-245 Section JAYT-256-ADDENDUM",
+  "mandate_reference": "CEO Work Order (Batch 03 Intake Audit Accepted)",
+  "generated_at_utc": "2026-09-03T09:24:57.053Z",
+  "council_consensus_verdict": "CLASSIFICATION_COMPLETED__HELD_INTERNAL__ZERO_PUBLIC_APPROVAL",
+  "total_items": 28,
+  "summary_by_state": {
+    "EVIDENCE_COMPLETE_INTERNAL_HELD": 8,
+    "HELD_NEW_COHORT_REQUIRED": 20,
+    "OPEN_EVALUATING": 0,
+    "CLOSED": 0,
+    "PUBLIC_APPROVED": 0
+  },
+  "summary_by_tier": {
+    "T1_DEAL": 0,
+    "T2_PROGRAM": 5,
+    "T3_PLACE": 3,
+    "T4_RADAR": 20
+  },
+  "matrix_4x5": {
+    "T1_DEAL": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0
+    },
+    "T2_PROGRAM": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 5,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0
+    },
+    "T3_PLACE": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 3,
+      "HELD_NEW_COHORT_REQUIRED": 0,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0
+    },
+    "T4_RADAR": {
+      "OPEN_EVALUATING": 0,
+      "EVIDENCE_COMPLETE_INTERNAL_HELD": 0,
+      "HELD_NEW_COHORT_REQUIRED": 20,
+      "CLOSED": 0,
+      "PUBLIC_APPROVED": 0
+    }
+  },
+  "canonical_invariants": {
+    "ledger_source_unmutated": true,
+    "deals_feed_unmutated": true,
+    "deals_feed_content": "[]",
+    "public_registry_unmutated": true,
+    "public_registry_approved_count": 1,
+    "staging_render_blocked": true,
+    "affiliate_locked": true,
+    "production_locked": true
+  },
+  "items": [
+    {
+      "target_id": "BATCH03_HK_01",
+      "cluster": "HOA_KHANH",
+      "official_name": "Thư viện Khoa CNTT - Đại học Bách khoa ĐHĐN",
+      "authorized_source_url": "https://dut.udn.vn/KhoaCNTT/Thuvien",
+      "contentTier": "T3_PLACE",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Địa điểm không gian học tập và nguồn học liệu thể chất tại cơ sở Hòa Khánh.",
+      "evidence_captured": {
+        "body_file": "BATCH03_HK_01.raw.html",
+        "body_sha256": "a85169e3a93c61fdc8df961dc662f403cc8843c5b4c0f78d4d5e3c6366bf9146",
+        "byte_size": 60050,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:23.460Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_02",
+      "cluster": "HOA_KHANH",
+      "official_name": "Tuyến Xe Buýt Trợ Giá Sinh Viên R16A (Kim Liên - Bến xe Phía Nam)",
+      "authorized_source_url": "https://danangbus.vn/lo-trinh-tuyen-r16a",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Chương trình dịch vụ giao thông công cộng trợ giá vé học sinh sinh viên.",
+      "evidence_captured": {
+        "body_file": "BATCH03_HK_02.raw.html",
+        "body_sha256": "20bb347f1d8c5b433a79dbb07e8a515403889f7b02dce9666aeefafb6279c930",
+        "byte_size": 11622,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:24.195Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_03",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://lienchieu.danang.gov.vn/cong-vien-bau-tram",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HK_03.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_04",
+      "cluster": "HOA_KHANH",
+      "official_name": "Chương Trình Hỗ Trợ Sinh Viên - Đại học Sư phạm ĐHĐN",
+      "authorized_source_url": "https://ued.udn.vn/ho-tro-sinh-vien",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Chính sách hỗ trợ sinh viên công cộng tại cụm trường đại học Hòa Khánh.",
+      "evidence_captured": {
+        "body_file": "BATCH03_HK_04.raw.html",
+        "body_sha256": "9b4f0dc82cfc6fc37f3ed76025e8ec2144a6d63cd792e01ecf64074116f65f97",
+        "byte_size": 104879,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:24.415Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_05",
+      "cluster": "HOA_KHANH",
+      "official_name": "Hệ Thống Trụ Nước Uống Công Cộng Miễn Phí Dawaco",
+      "authorized_source_url": "https://dawaco.com.vn/tru-nuoc-uong-cong-cong",
+      "contentTier": "T3_PLACE",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Mạng lưới tiện ích địa điểm cấp nước uống vòi công cộng miễn phí.",
+      "evidence_captured": {
+        "body_file": "BATCH03_HK_05.raw.html",
+        "body_sha256": "ed2492f433c98e50e1cb09597950b430c8b9226662fdc5446e2901a6eac2e5f5",
+        "byte_size": 144090,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:25.506Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_06",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://dut.udn.vn/clb-sang-tao-tre",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "HTTP status 404",
+        "quarantine_file": "BATCH03_HK_06.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HK_07",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://lienchieu.danang.gov.vn/trung-tam-van-hoa-the-thao",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HK_07.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_01",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://nguhanhson.danang.gov.vn/pho-di-bo-an-thuong",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_01.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_02",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://bqlbtdanang.vn/tram-cuu-ho-sao-bien",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_02.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_03",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://danangstartup.vn/khong-gian-cong-dong",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_03.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_04",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://sontra.danang.gov.vn/tai-che-cong-dong",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_04.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_05",
+      "cluster": "AN_THUONG",
+      "official_name": "Hạ Tầng Giao Thông Xanh Ven Biển & Điểm Trạm Xe Đạp Công Cộng",
+      "authorized_source_url": "https://danang.gov.vn/giao-thong-xanh-ven-bien",
+      "contentTier": "T3_PLACE",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Địa điểm trạm xe đạp công cộng và tiện ích không gian giao thông xanh.",
+      "evidence_captured": {
+        "body_file": "BATCH03_AT_05.raw.html",
+        "body_sha256": "d0446f6cfc6bc034baa210fe49eaf524d7b11e154eadb50e7711fde0354e802e",
+        "byte_size": 607331,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:26.452Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_06",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://danangyouth.org.vn/clb-tieng-anh-cong-dong",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_06.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_AT_07",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://dulichdanang.gov.vn/nghe-thuat-duong-pho",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_AT_07.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_01",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://thuvien.danang.gov.vn/dich-vu-the-sinh-vien",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HC_01.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_02",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://chammuseum.vn/chinh-sach-ve-sinh-vien",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "HTTP status 404",
+        "quarantine_file": "BATCH03_HC_02.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_03",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://haichau.danang.gov.vn/duong-sach-bach-dang",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HC_03.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_04",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://dti.danang.gov.vn/wifi-cong-cong-da-nang",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HC_04.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_05",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://yteda-nang.gov.vn/trung-tam-y-te-hai-chau",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HC_05.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_06",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://hoichuthapdo.danang.gov.vn/hien-mau-nhan-dao",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_HC_06.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_HC_07",
+      "cluster": "HAI_CHAU",
+      "official_name": "Hoạt Động Cộng Đồng Phun Lửa & Nước Cầu Rồng",
+      "authorized_source_url": "https://danang.gov.vn/lich-phun-lua-cau-rong",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Hoạt động tiện ích văn hóa cộng đồng phục vụ cư dân và du khách.",
+      "evidence_captured": {
+        "body_file": "BATCH03_HC_07.raw.html",
+        "body_sha256": "12b3b7904668febe48281e84096578bd199810f4ea96eb18c4c2aaa587945f7c",
+        "byte_size": 607331,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:28.849Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_01",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://smartcity.danang.gov.vn/huong-dan-1022",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_DS_01.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_02",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://opendata.danang.gov.vn/tai-nguyen-sinh-vien",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_DS_02.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_03",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://canhbaomua.danang.gov.vn/ban-do-ngap",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_DS_03.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_04",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://lib.udn.vn/tai-khoan-lien-ket",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_DS_04.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_05",
+      "cluster": "TIEN_ICH_SO",
+      "official_name": "Danh Bạ Nhà Thuốc Phục Vụ 24/7 - Sở Y Tế Đà Nẵng",
+      "authorized_source_url": "https://soyte.danang.gov.vn/danh-ba-nha-thuoc-247",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Tiện ích số phục vụ cộng đồng tra cứu dịch vụ y tế và dược phẩm khẩn cấp.",
+      "evidence_captured": {
+        "body_file": "BATCH03_DS_05.raw.html",
+        "body_sha256": "168df5ca987d6e989758a48fe6f1ba784dd36ef4ec2d413a115a8167e097e201",
+        "byte_size": 293970,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:31.133Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_06",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://danangstartup.vn/khoa-hoc-cong-dong",
+      "contentTier": "T4_RADAR",
+      "admissionState": "HELD_NEW_COHORT_REQUIRED",
+      "public_approved": false,
+      "tier_rationale": "Mục nằm trong danh mục theo dõi tín hiệu nhu cầu nhưng chưa thu thập được bằng chứng hợp lệ.",
+      "quarantine_info": {
+        "reason": "fetch failed",
+        "quarantine_file": "BATCH03_DS_06.quarantine.json"
+      },
+      "council_audit_flags": {
+        "isolated_from_render": true,
+        "cohort_reentry_required": true
+      }
+    },
+    {
+      "target_id": "BATCH03_DS_07",
+      "cluster": "TIEN_ICH_SO",
+      "official_name": "Ứng Dụng Tra Cứu Lộ Trình & Xe Buýt Thông Minh DanaBus",
+      "authorized_source_url": "https://danangbus.vn/ung-dung-danabus",
+      "contentTier": "T2_PROGRAM",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_approved": false,
+      "tier_rationale": "Ứng dụng số công cộng hỗ trợ tra cứu hành trình xe buýt thông minh.",
+      "evidence_captured": {
+        "body_file": "BATCH03_DS_07.raw.html",
+        "body_sha256": "9587f115ba6c896e6c64c308a3096b9c36778178d66ad0b65bed40e1e5402352",
+        "byte_size": 11616,
+        "http_status": 200,
+        "captured_at_utc": "2026-09-03T09:17:32.404Z"
+      },
+      "council_audit_flags": {
+        "no_pricing_claim": true,
+        "no_voucher_code": true,
+        "no_affiliate_params": true,
+        "no_commercial_cta": true,
+        "ready_for_ceo_audit": true
+      }
+    }
+  ]
+}

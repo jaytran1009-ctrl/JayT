@@ -1,0 +1,34 @@
+{
+  "work_order_id": "J354_RELEASE",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "authority": "Chairman decree JAYT-354 in conversation",
+  "canonical_workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "secondary_hyphenated_workspace": "Do not synchronize or use as source of truth for this work order.",
+  "target_version": "v3.428.0",
+  "target_url": "https://jayt-production-v3420.vercel.app",
+  "is_approved": true,
+  "deployment_permitted": true,
+  "deployment_authorized": true,
+  "baseline": {
+    "version": "v3.427.0",
+    "entities": 76,
+    "deployment_id": "dpl_F7XM5WPhKCD34MEEMkBwai65Vqfy"
+  },
+  "batch17_receipt": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J353-R3_BATCH17_STAGING_HYDRATION.json",
+    "sha256": "186c19c0b911d3be9c2a47f6fdca3183a7297bc0b9020bb45f183d23f12f7974"
+  },
+  "execution": [
+    "Read existing project instructions and verify baseline and receipt fingerprints before building.",
+    "Reconcile the 76 baseline entities with all 15 Batch 17 records by canonical identity, merchant/SKU or campaign, source URL and lineage. Record ADD, UPDATE_EXISTING or DUPLICATE for each. New IDs do not make existing products new entities. Preserve existing canonical IDs for updates.",
+    "The Chairman authorizes 91 unique entities. If deduplication does not yield exactly 91, produce the actual-count release proposal and discrepancy matrix; do not fabricate records or deploy a different scope. Continue the separately authorized core-module staging work immediately.",
+    "For a scope-conforming package, build and seal the candidate with SHA-256 for every served asset, registry, deals feed, preflight receipt and rollback manifest. Preserve historical receipts. Resolve inventory assertions in R3: showroom presence does not prove SKU stock at that showroom; use neutral availability wording unless independently evidenced.",
+    "Run whole-storefront regression and DOM audit at 1440/768/390, canonical registry-to-rendered parity, Split Bill arithmetic and sharing, calendar eligibility, copy behavior, console/runtime, overflow and outbound validation. Do not count a Radar-only view as the entire storefront.",
+    "Deploy the sealed package only after all preflight gates and authorized scope match. Verify live /, /registry.json and /deals_feed.json return HTTP 200 with the sealed bytes; verify the full 91-entity scope across routes and viewports, Split Bill and zero runtime/console errors and overflow.",
+    "If a post-deploy gate fails, restore v3.427.0 deployment dpl_F7XM5WPhKCD34MEEMkBwai65Vqfy, verify restoration and report the failed gate without changing tests to manufacture PASS.",
+    "Write immutable release and runtime receipts with run IDs, UTC times and sidecars. Append the actual outcome to PROJECT_MEMORY.md, preserving its existing bytes. Update the existing external monitor to the accepted baseline only after successful release; do not create a duplicate scheduler."
+  ],
+  "deployment_receipt": "08_RELEASE_VAULT/JAYT_354_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+  "handoff_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J354_RELEASE.json"
+}

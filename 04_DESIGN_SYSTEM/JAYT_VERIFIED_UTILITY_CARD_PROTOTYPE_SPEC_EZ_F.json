@@ -1,0 +1,51 @@
+{
+  "spec_id": "JAYT_VERIFIED_UTILITY_CARD_PROTOTYPE_SPEC_EZ_F",
+  "version": "1.0.0-ez.f",
+  "description": "Design specification for Verified Utility Card prototype (Mandate EZ-F.4)",
+  "governance_status": "PROTOTYPE_ONLY_NOT_PUBLICLY_MOUNTED",
+  "card_components": {
+    "header": {
+      "verified_badge": "🛡️ TIỆN ÍCH ĐÃ KIỂM",
+      "tier_badge_style": {
+        "T2": {
+          "label": "CHƯƠNG TRÌNH CHÍNH THỨC",
+          "bg": "rgba(2, 132, 199, 0.1)",
+          "color": "#0284c7"
+        },
+        "T3": {
+          "label": "TIỆN ÍCH CÔNG ĐÔ THỊ",
+          "bg": "rgba(16, 185, 129, 0.1)",
+          "color": "#10b981"
+        }
+      }
+    },
+    "body": {
+      "title": "Tên tiện ích / Chương trình",
+      "substantive_fact": "Nội dung thực chất đã được trích xuất từ raw bytes",
+      "scope_provenance": "Phạm vi áp dụng chính xác được source khẳng định",
+      "freshness_indicator": {
+        "label": "Định kỳ đối soát: 30 ngày",
+        "icon": "🔄"
+      }
+    },
+    "action": {
+      "cta_button": {
+        "label": "Mở Kênh Chính Thức ↗",
+        "type": "OUTBOUND_CANONICAL_LINK",
+        "rel": "noopener noreferrer nofollow",
+        "target": "_blank"
+      }
+    }
+  },
+  "accessibility_compliance": {
+    "touch_target_min_height": "44px",
+    "contrast_ratio_text": "16.5:1 (AAA)",
+    "contrast_ratio_badge": "4.62:1 (AA)",
+    "aria_labels": "Đầy đủ aria-label cho CTA và nhãn phân tầng"
+  },
+  "public_surface_isolation": {
+    "is_mounted_on_public_storefront": false,
+    "current_public_storefront_state": "ZERO_STATE_RADAR_DIRECTORY",
+    "public_eligible_count": 0
+  }
+}

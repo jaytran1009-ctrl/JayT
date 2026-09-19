@@ -1,0 +1,131 @@
+{
+  "receipt_id": "RECEIPT_SECTION_ER_20260830",
+  "version": "v3.472.0-staging.er",
+  "timestamp_utc": "2026-08-30T13:49:35.142Z",
+  "server_runtime": {
+    "port": 4173,
+    "url": "http://127.0.0.1:4173",
+    "status": "ONLINE",
+    "http_code": 200,
+    "health_endpoint": "http://127.0.0.1:4173/health",
+    "health_payload": {
+      "status": "UP",
+      "version": "v3.472.0-staging.er",
+      "ledger_sha256": "d2e80730814b2b82960d492ccc07ee11f44bd511ef15a89a2f6b9214faba9c15",
+      "port": 4173,
+      "static_dir": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\staging_deploy_er",
+      "start_time_utc": "2026-08-30T13:49:23.221Z",
+      "uptime_seconds": 11,
+      "discovery_dossiers_count": 6,
+      "captured_artifacts_with_receipt_count": 1,
+      "evaluated_citation_facts_count": 2,
+      "github_capture_receipt_valid": true,
+      "valid_subject_attempts_count": 0,
+      "field_facts_verified_count": 0,
+      "tier_1_deals_count": 0,
+      "vouchers_count": 0,
+      "quarantined_jpegs_in_runtime": 0
+    }
+  },
+  "ledger_fingerprint": {
+    "ledgerVersion": "v3.472.0-staging.er",
+    "ledgerSha256": "d2e80730814b2b82960d492ccc07ee11f44bd511ef15a89a2f6b9214faba9c15",
+    "countAnGi": "11",
+    "countDiDau": "14",
+    "countTienIch": "13",
+    "countMuaSam": "12",
+    "countTotal": "50",
+    "countVouchers": "0"
+  },
+  "deal_discovery_engine": {
+    "situational_routes": [
+      "Ăn gần đây",
+      "Đi chơi tối nay",
+      "Di chuyển tiết kiệm",
+      "Đồ KTX & học tập"
+    ],
+    "campus_zone_filters": [
+      "Hòa Khánh",
+      "Ngũ Hành Sơn",
+      "Hải Châu",
+      "Thanh Khê",
+      "Sơn Trà"
+    ],
+    "time_slot_chips": [
+      "Sáng",
+      "Trưa",
+      "Chiều",
+      "Tối"
+    ],
+    "empty_state_handling": "OFFICIAL_SOURCES_WITHOUT_FAKE_PRICES"
+  },
+  "three_lane_wallet": {
+    "lane_a_public_verified": 0,
+    "lane_b_app_checkout_personalized": 10,
+    "lane_c_radar_monitoring": 3,
+    "voucher_state_machine_enforced": true,
+    "account_dependent_capped": true
+  },
+  "user_input_decision_tools": {
+    "total_cost_calculator": "LOCAL_FIRST_USER_INPUT_ONLY",
+    "split_bill_pro": "LOCAL_FIRST_USER_INPUT_ONLY",
+    "zero_pii_captured": true,
+    "buy_decision_default": "DEFAULT_NO_DATA_AWAITING_HISTORY"
+  },
+  "accesstrade_isolation": {
+    "portal_access_state": "PORTAL_ACCESS_NOT_VERIFIED",
+    "legacy_cards_denylisted": true,
+    "legacy_deeplinks_denylisted": true,
+    "active_affiliate_links": 0
+  },
+  "checks": {
+    "github_capture_receipt_attached_and_valid": true,
+    "twelve_point_fact_schema_enforced": true,
+    "unbacked_dynamic_narratives_cleaned": true,
+    "twelve_jpegs_quarantined_and_isolated": true,
+    "zero_jpegs_in_runtime_dom": true,
+    "zero_photographer_cc_strings_in_dom": true,
+    "asset_ownership_record_verified": true,
+    "runtime_asset_table_verified": true,
+    "fact_ledger_verified_facts_count": 0,
+    "identity_roster_50_items_verified": true,
+    "single_voucher_nav_instance_verified": true,
+    "voucher_button_count_in_desktop_nav": 1,
+    "voucher_hub_noncommercial_state_verified": true,
+    "zero_fake_vouchers_displayed": true,
+    "zero_affiliate_deeplinks": true,
+    "no_write_security_contract_verified": true,
+    "accesstrade_unverified_status_enforced": true,
+    "runtime_fingerprint_verified": true,
+    "mathematical_disjoint_partition_verified": true,
+    "disjoint_partitions_sum_equals_50": true,
+    "pairwise_intersections_zero": true,
+    "four_routes_cardinality_verified": true,
+    "journey_counts": {
+      "an_gi": 11,
+      "di_dau": 14,
+      "tien_ich": 13,
+      "mua_sam_hoc_tap": 12,
+      "total": 50
+    },
+    "public_count_ledger_er_verified": true,
+    "unified_public_count_contract_enforced": true,
+    "console_errors_count": 1,
+    "console_warnings_count": 0,
+    "browser_captures_count": 16,
+    "unique_sha256_count": 8,
+    "responsive_viewports_measured": [
+      "1440x900",
+      "768x1024",
+      "390x844"
+    ],
+    "themes_tested": [
+      "light",
+      "dark"
+    ],
+    "reduced_motion_tested": true,
+    "zero_pii_intact": true,
+    "production_lock_enforced": true
+  },
+  "governance_status": "PENDING_CEO_LIVE_REVIEW"
+}

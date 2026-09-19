@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 1,
+  "offer_id": "B14_METIZ_U22_2D",
+  "brand": "Metiz Cinema Đà Nẵng",
+  "category": "CINEMA",
+  "title": "Khuyến Mãi Giá Vé U22 (2D chỉ 55.000đ)",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_01_metiz_u22.html",
+    "file_sha256": "6735f1376d757eed814c7d402dc86e10998924a5d944060fbda73a561439aea8",
+    "file_bytes": 82451,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://metiz.vn",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_REGIONAL",
+  "wave_1_eligible": false,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": false,
+    "terms_proven": true,
+    "all_four_predicates_proven": false,
+    "finding": "Offer, validity, and terms verified from source bytes. Metiz Cinema is single-city Da Nang brand but raw HTML bytes do not contain explicit \"Đà Nẵng\" token. Classified VERIFIED_REGIONAL per J391 mandate, excluded from Wave 1 Da Nang count."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "&Aacute;p dụng gi&aacute; v&eacute; 2D chỉ 55.000đ cho th&agrave;nh vi&ecirc;n Metiz Cinema từ 22 tuổi trở xuống, đối với mọi suất chiếu tại Metiz Cinema.",
+      "byte_offset_start": 11833,
+      "byte_offset_end": 12013,
+      "byte_length": 180,
+      "selector": ".detail-blog-item .mb-20 p span",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "tất cả c&aacute;c ng&agrave;y trong tuần từ thứ ",
+      "byte_offset_start": 12382,
+      "byte_offset_end": 12440,
+      "byte_length": 58,
+      "selector": ".detail-blog-item .mb-20 p span",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "đối với mọi suất chiếu tại Metiz Cinema.",
+      "byte_offset_start": 11960,
+      "byte_offset_end": 12013,
+      "byte_length": 53,
+      "selector": ".detail-blog-item .mb-20 p span",
+      "proven": true,
+      "danang_specific": false
+    },
+    "terms_quote": {
+      "text": "1. Chương tr&igrave;nh chỉ &aacute;p dụng cho th&agrave;nh vi&ecirc;n Metiz Cinema, dưới 22 tuổi trở xuống. Vui l&ograve;ng xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n &amp; căn cước c&ocirc;ng d&acirc;n trước khi mua v&eacute; để được gi&aacute; ưu đ&atilde;i &amp; t&iacute;ch lũy điểm thưởng.",
+      "byte_offset_start": 13969,
+      "byte_offset_end": 14308,
+      "byte_length": 339,
+      "selector": ".detail-blog-item .mb-20 p span",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "SHOW_STUDENT_ID_AT_COUNTER",
+    "button_label": "Xuất Trình Thẻ HSSV / CCCD Tại Quầy",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": false
+  }
+}

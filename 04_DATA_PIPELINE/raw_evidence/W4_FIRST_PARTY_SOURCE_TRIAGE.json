@@ -1,0 +1,50 @@
+{
+  "triage_id": "W4_FIRST_PARTY_SOURCE_TRIAGE",
+  "reviewed_on": "2026-09-11",
+  "status": "DISCOVERY_ONLY__NO_NEW_CAPTURE_OR_OFFER_APPROVAL",
+  "candidates": [
+    {
+      "target_id": "W4_METIZ_U22_REVALIDATION",
+      "ingress_target_id": "W4_SRC_01_METIZ",
+      "official_url": "https://metiz.vn/tin-va-khuyen-mai.html",
+      "current_public_signal": "The official promotions index lists a U22 ticket promotion with a 2026 date range.",
+      "capture_requirement": "Use Assisted Raw Capture Ingress from a public logged-out session, then perform fresh scope, price, terms, and validity audit.",
+      "status": "PENDING_ASSISTED_CAPTURE"
+    },
+    {
+      "target_id": "W4_CGV_CULTURE_DAY_SCOPE_CHECK",
+      "ingress_target_id": "W4_SRC_02_CGV_DN",
+      "official_url": "https://www.cgv.vn/default/newsoffer/cgv-culture-day",
+      "current_public_signal": "The official Culture Day page was located, but local Da Nang applicability and any claimed price were not established in this discovery pass.",
+      "capture_requirement": "Capture a public page plus a separate official Da Nang venue/scope artifact; do not publish a price until both are audited.",
+      "status": "PENDING_ASSISTED_CAPTURE_AND_RELATIONAL_SCOPE"
+    },
+    {
+      "target_id": "W4_DUT_STUDENT_PROCEDURE",
+      "official_url": "https://fce.dut.udn.vn/wp-content/uploads/2021/08/08.04.05-CE-student-handbook.pdf",
+      "current_public_signal": "The document describes a student-confirmation procedure; its dated publication does not establish a current commercial benefit.",
+      "capture_requirement": "Obtain a current official page that states eligibility and validity before public use.",
+      "status": "HELD_STALE_OR_PROCEDURAL_SOURCE"
+    },
+    {
+      "target_id": "W4_DUE_STUDENT_PROCEDURE",
+      "official_url": "https://daotao.due.udn.vn/tin-tuc/?act=NewsDetail&cat_=2&key_=395",
+      "current_public_signal": "The located material is historical and does not establish a current student benefit.",
+      "capture_requirement": "Obtain a current official DUE page before public use.",
+      "status": "HELD_STALE_OR_PROCEDURAL_SOURCE"
+    },
+    {
+      "target_id": "W4_SUPERMARKET_DANANG",
+      "ingress_target_ids": ["W4_SRC_03_LOTTE_DN", "W4_SRC_04_COOP_DN"],
+      "official_url": null,
+      "current_public_signal": "No exact official promotion-detail URL was supplied or accepted in this pass.",
+      "capture_requirement": "Require a current official Lotte Mart, GO!, or Co.opmart promotion-detail URL and capture it through the same gate.",
+      "status": "PENDING_EXACT_OFFICIAL_URL"
+    }
+  ],
+  "publication_boundary": {
+    "approved_new_offers": 0,
+    "affiliate_enabled": false,
+    "production_authorized": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "receipt_id": "CEO-DECISION-069-BATCH1-1787546000000",
+  "work_order": "JAYT-REAL-DATA-TO-LAUNCH-069",
+  "decision_type": "BATCH_APPROVAL_FOR_STAGING",
+  "approved_by": "CEO_JAY_TRAN",
+  "approved_at": "2026-08-24T11:45:00+07:00",
+  "decision_status": "AUTHORIZED_FOR_STAGING_DEPLOYMENT",
+  "candidates_approved": [
+    {
+      "candidate_id": "CAND-DNG-GALAXY-HAPPY-DAY-069",
+      "deal_id": "DNG-GALAXY-HAPPY-DAY-WEEKLY-TUESDAY-069",
+      "merchant": "Galaxy Cinema Đà Nẵng",
+      "offer": "Vé 2D từ 45K-50K / Thứ 3 hàng tuần",
+      "category": "LOCAL_CINEMA",
+      "evidence_grade": "A-"
+    },
+    {
+      "candidate_id": "CAND-DNG-LOTTE-AMAZING-DAY-069",
+      "deal_id": "DNG-LOTTE-AMAZING-DAY-WEEKLY-TUESDAY-069",
+      "merchant": "Lotte Cinema Đà Nẵng",
+      "offer": "Vé 65K qua ZaloPay/VNPAY/MoMo / Thứ 3 hàng tuần (04/08-29/12/2026)",
+      "category": "LOCAL_CINEMA",
+      "evidence_grade": "B+"
+    },
+    {
+      "candidate_id": "CAND-DNG-LOTTERIA-GACAY-M1T1-069",
+      "deal_id": "DNG-LOTTERIA-GACAY-M1T1-FLASH-069",
+      "merchant": "Lotteria Đà Nẵng",
+      "offer": "37K / 2 miếng Gà Giòn Vị Cay (M1T1) (24/08-30/08/2026)",
+      "category": "LOCAL_F_AND_B",
+      "evidence_grade": "B"
+    },
+    {
+      "candidate_id": "CAND-DNG-PHELA-DONGLONG-069",
+      "deal_id": "DNG-PHELA-DONGLONG-FREE-DRINK-069",
+      "merchant": "Phê La Đà Nẵng",
+      "offer": "FREE 1 ly Đặc Sản <=54K (Mã DONGLONGDICHILL) (đến 31/08/2026)",
+      "category": "LOCAL_COFFEE_TEA",
+      "evidence_grade": "B+"
+    }
+  ],
+  "governance_rules": {
+    "staging_scope": "STAGING_INTERNAL_ONLY",
+    "production_feed_locked": "deals_feed.json: [], is_approved: false",
+    "recheck_cadence_enforced": true,
+    "total_approved_staged_deals": 4,
+    "value_clusters_count": 3,
+    "days_covered_count": 5
+  }
+}

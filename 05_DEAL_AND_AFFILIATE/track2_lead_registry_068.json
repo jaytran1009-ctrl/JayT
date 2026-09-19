@@ -1,0 +1,444 @@
+{
+  "$schema": "https://jayt.vn/schemas/track2-lead-registry.v1.json",
+  "registry_id": "TRACK2-EVIDENCE-BUNDLE-068",
+  "work_order": "JAYT-TRACK2-EVIDENCE-BUNDLE-068",
+  "correction_id": "JAYT-TRACK2-REGISTRY-TRUTH-CORRECTION-068R",
+  "correction_applied_at": "2026-08-23T23:39:00+07:00",
+  "correction_reason": "CEO phát hiện 2 lỗi ngữ nghĩa: (1) Galaxy ghi known_promotion_program='Galaxy Happy Day Thứ Ba hàng tuần' là claim vượt evidence khi candidate nguồn chỉ có GENERIC_MARKETING; (2) Registry lẫn lộn candidate lịch sử NEEDS_RECHECK, staging decision lịch sử và Evidence Bundle hiện tại. Correction tách ba trạng thái độc lập, xóa mọi claim không có Evidence Bundle hiện hành, đánh dấu dữ liệu time-bound đã hết hạn.",
+  "created_at": "2026-08-23T23:30:00+07:00",
+  "created_by": "ANTIGRAVITY_AGENT",
+  "track": "TRACK_2_EVIDENCE_BUNDLE_INTAKE",
+  "batch_verdict": "BATCH_CLEAN_ZERO_NEW_CANDIDATE",
+  "total_leads": 10,
+  "total_new_candidates_created": 0,
+  "total_leads_pending_ceo_review": 0,
+  "evidence_bundle_requirements": [
+    "pricing_and_terms: Giá cụ thể + điều kiện áp dụng (verbatim từ nguồn công khai hiện hành)",
+    "validity_window: Thời hạn / lịch áp dụng (ngày cụ thể hoặc lịch tuần — phải còn hiệu lực)",
+    "danang_locality_scope: Phạm vi Đà Nẵng (địa chỉ chi nhánh cụ thể xác thực)",
+    "relational_lineage: Lineage chứng minh các mảnh thuộc cùng một chính sách khuyến mãi",
+    "checked_at_recheck_at: Hash SHA-256 nguồn + thời điểm kiểm tra + lịch recheck"
+  ],
+  "lead_status_rule": "LEAD_ONLY_NO_CLAIM không được chứa giá, lịch, ưu đãi hoặc chi nhánh chưa có Evidence Bundle hiện hành. Mọi known_promotion_program phải là null trừ khi có bundle 5 điểm hiện hành chứng minh.",
+  "intake_rules": {
+    "allowed_sources": [
+      "Tài liệu công khai chính thức (website, fanpage)",
+      "Tài liệu do CEO/merchant chủ động nộp"
+    ],
+    "prohibited_actions": [
+      "Chủ động liên hệ merchant",
+      "Login/CAPTCHA bypass",
+      "Gọi API Track 1 (web scraping)",
+      "Tự tạo giá/ngày/điều kiện/chi nhánh/ảnh chứng cứ"
+    ]
+  },
+  "leads": [
+    {
+      "lead_id": "LEAD-068-01-GALAXY",
+      "merchant_name": "Galaxy Cinema Đà Nẵng",
+      "category": "CINEMA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": true,
+          "source": "SSR metadata <title> + <meta description>",
+          "value": "Vé chỉ từ 45.000đ (2D). Giá tùy cụm rạp (45K-75K). Không áp dụng IMAX, phòng đặc biệt, Lễ/Tết. Không kết hợp KM khác.",
+          "cross_verified_by": "site:galaxycine.vn search grounding"
+        },
+        "validity_window": {
+          "available": true,
+          "source": "SSR metadata + search grounding",
+          "value": "Thứ 3 hàng tuần — chương trình dài hạn (ongoing)",
+          "cross_verified_by": "site:galaxycine.vn search (2 nguồn consistent)"
+        },
+        "danang_locality_scope": {
+          "available": true,
+          "source": "Web search cross-reference",
+          "value": "Galaxy Đà Nẵng = Tầng 3, Co.opmart, 478 Điện Biên Phủ, Q. Thanh Khê"
+        },
+        "relational_lineage": {
+          "available": true,
+          "source": "Canonical URL from SSR HTML",
+          "value": "galaxycine.vn/khuyen-mai/happy-day---ve-chi-tu-45k/",
+          "og_image": "https://cdn.galaxycine.vn/media/2026/1/12/1200_1768184267400.jpg"
+        },
+        "checked_at_recheck_at": {
+          "available": true,
+          "checked_at": "2026-08-24T11:35:43+07:00",
+          "sha256": "6F74811552140864C37E47DCA36A1863BEDE311276C4EF8ED204593BE27AA10E",
+          "artifact_path": ".system_generated/steps/22874/content.md"
+        }
+      },
+      "evidence_grade": "A-",
+      "evidence_note": "SSR metadata chính thức xác nhận title + description + og:image. Body text render bởi React SPA — không capture được nội dung chi tiết terms.",
+      "historical_candidate_reference": {
+        "file": "candidate_22_CAND-DNG-GALAXY-HAPPY-DAY-REAL.json",
+        "evidence_status": "SUPERSEDED_BY_069_CAPTURE",
+        "content_class": "PROMOTION_DETAIL_SSR_METADATA",
+        "note": "Candidate lịch sử từ sweep trước. Nay đã có capture 069 với SSR metadata chính thức."
+      },
+      "historical_staging_decision_reference": {
+        "work_order": "JAYT-GALAXY-STAGING-CEO-DECISION-061G",
+        "decision": "ACCEPTED BY CEO (1/10 DEAL · 1/3 CỤM · 1/5 NGÀY)",
+        "deal_in_staging": "DNG-GALAXY-HAPPY-DAY-WEEKLY-TUESDAY-061F",
+        "staging_ttl": "recheck_due_at: 2026-08-30T06:12:38.659Z",
+        "note": "Quyết định staging lịch sử. Capture 069 củng cố bằng chứng — SSR metadata nhất quán với staging deal."
+      },
+      "action_required": "CEO review Evidence Bundle 069 artifact. Nếu approve → promote to CANDIDATE."
+    },
+    {
+      "lead_id": "LEAD-068-02-METIZ",
+      "merchant_name": "Metiz Cinema Đà Nẵng",
+      "category": "CINEMA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "URL gốc trả về 404. Không có giá công khai."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không có thông tin."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Chưa xác nhận chi nhánh Đà Nẵng."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Không có artifact nguồn chứa thông tin khuyến mãi."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "URL 404 — cần nguồn thay thế."
+        }
+      },
+      "historical_candidate_reference": {
+        "file": "candidate_18_CAND-DNG-METIZ-U22-REAL.json",
+        "evidence_status": "NEEDS_RECHECK",
+        "content_class": "NO_PUBLIC_PROMO",
+        "note": "Candidate lịch sử. URL trả về 404. Không đủ cơ sở."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "CEO/merchant nộp tài liệu khuyến mãi Metiz Đà Nẵng (nếu có)."
+    },
+    {
+      "lead_id": "LEAD-068-03-CGV",
+      "merchant_name": "CGV Cinema Đà Nẵng (Vĩnh Trung Plaza)",
+      "category": "CINEMA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Evidence lịch sử ghi 58.000đ (Culture Day) nhưng đây là dữ liệu time-bound cho ngày 24/08/2026 — chưa được recheck sau ngày đó."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Culture Day áp dụng ngày cụ thể (24/08/2026). Ngày đã qua hoặc sắp qua — cần recheck hiệu lực cho kỳ tiếp theo."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Location provenance lịch sử (Vĩnh Trung Plaza) từ capture trước, nhưng bundle hiện tại chưa được recheck."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Artifacts lịch sử tồn tại nhưng chỉ chứng minh bundle tại thời điểm capture, không phải hiện tại."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "checked_at: 2026-08-22. Dữ liệu time-bound cho 24/08 — cần recheck sau ngày hiệu lực."
+        }
+      },
+      "time_bound_data": {
+        "effective_date": "2026-08-24",
+        "expiry_state": "EXPIRED_OR_NEEDS_RECHECK",
+        "note": "Culture Day là chương trình theo ngày cụ thể. Cần recheck xem CGV có Culture Day kỳ tiếp theo không."
+      },
+      "historical_candidate_reference": {
+        "file": "candidate_21_CAND-DNG-CGV-CULTURE-DAY-REAL.json",
+        "evidence_status": "READY_FOR_CEO_REVIEW",
+        "content_class": "PROMOTION_DETAIL",
+        "note": "Candidate lịch sử có evidence đầy đủ cho ngày 24/08/2026. Không tự động áp dụng cho kỳ tiếp theo."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "Cần recheck: CGV có Culture Day kỳ tiếp theo không? Nếu có, CEO nộp tài liệu xác nhận ngày/giá mới. Nếu không, lead giữ LEAD_ONLY_NO_CLAIM."
+    },
+    {
+      "lead_id": "LEAD-068-04-LOTTE",
+      "merchant_name": "Lotte Cinema Đà Nẵng",
+      "category": "CINEMA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Chỉ thị CEO: Không sử dụng nguồn lottecinemavn.com (chặn programmatic access, anti-bot / Incapsula)."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không sử dụng nguồn lottecinemavn.com theo chỉ thị CEO."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Chờ xác nhận địa chỉ chi nhánh qua tài liệu trực tiếp từ quầy/merchant Lotte Cinema Đà Nẵng (Tầng 5-6, Lotte Mart, 06 Nại Nam, Hải Châu)."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Nguồn lottecinemavn.com bị loại trừ hoàn toàn theo chỉ đạo của CEO."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "Nguồn lottecinemavn.com bị cấm; chờ tài liệu xác thực trực tiếp tại quầy hoặc từ merchant."
+        }
+      },
+      "evidence_grade": "UNVERIFIED_SOURCE_DISALLOWED",
+      "evidence_note": "Nguồn lottecinemavn.com bị loại trừ theo chỉ thị của CEO. Không sử dụng dữ liệu từ nguồn này.",
+      "historical_candidate_reference": null,
+      "historical_staging_decision_reference": null,
+      "action_required": "Chỉ thị CEO: Không dùng nguồn lottecinemavn.com. Chờ tài liệu trực tiếp từ quầy hoặc merchant Lotte Cinema Đà Nẵng (nếu có)."
+    },
+    {
+      "lead_id": "LEAD-068-05-STARLIGHT",
+      "merchant_name": "Starlight Cinema Đà Nẵng",
+      "category": "CINEMA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Chưa có bất kỳ tài liệu nào."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không có thông tin."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Chưa xác nhận chi nhánh Đà Nẵng."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Không có artifact nguồn."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "Lead mới — chưa kiểm tra."
+        }
+      },
+      "historical_candidate_reference": null,
+      "historical_staging_decision_reference": null,
+      "action_required": "CEO/merchant nộp tài liệu khuyến mãi Starlight Đà Nẵng."
+    },
+    {
+      "lead_id": "LEAD-068-06-JOLLIBEE",
+      "merchant_name": "Jollibee Đà Nẵng",
+      "category": "F_AND_B",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Trang chỉ có marketing tổng quát, không có giá combo cụ thể."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không xác nhận được thời hạn."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Trang web toàn quốc, không phân biệt chi nhánh Đà Nẵng."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Capture chỉ có marketing tổng quát."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "Capture trước (2026-08-22) chỉ thu GENERIC_MARKETING — không đủ cơ sở."
+        }
+      },
+      "historical_candidate_reference": {
+        "file": "candidate_23_CAND-DNG-JOLLIBEE-LUNCH.json",
+        "evidence_status": "NEEDS_RECHECK",
+        "content_class": "GENERIC_MARKETING",
+        "note": "Candidate lịch sử. Không có giá hoặc deal cụ thể."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "CEO/merchant nộp bảng giá combo khuyến mãi Jollibee tại chi nhánh Đà Nẵng."
+    },
+    {
+      "lead_id": "LEAD-068-07-LOTTERIA",
+      "merchant_name": "Lotteria Đà Nẵng",
+      "category": "F_AND_B",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": true,
+          "source": "Facebook post chính thức (3 nguồn grounding)",
+          "value": "37.000đ cho 2 miếng Gà Giòn Vị Cay (M1T1). Quét QR App tại POS hoặc đặt đơn ≥80K trên App/Web nhận voucher. Max 3 coupon/ngày."
+        },
+        "validity_window": {
+          "available": true,
+          "source": "Facebook + search (3 nguồn consistent)",
+          "value": "24/08/2026 → 30/08/2026 (7 ngày flash deal)"
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Chương trình Membership toàn quốc — ĐN có chi nhánh nhưng chưa xác nhận cụ thể deal này áp dụng.",
+          "inference": "Chuỗi toàn quốc, rất có khả năng áp dụng tại ĐN"
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Nguồn Facebook post, website lotteria.vn trả SPA shell. Không có HTML artifact chính thức."
+        },
+        "checked_at_recheck_at": {
+          "available": true,
+          "checked_at": "2026-08-24T11:32:58+07:00",
+          "note": "3 nguồn Facebook grounding nhất quán."
+        }
+      },
+      "evidence_grade": "B",
+      "evidence_note": "Flash deal 3 nguồn FB nhất quán. Thiếu ĐN-specific confirmation + HTML capture. URGENT: hết hạn 30/08.",
+      "historical_candidate_reference": {
+        "file": "candidate_24_CAND-DNG-LOTTERIA-CRAZY-DAY.json",
+        "evidence_status": "SUPERSEDED_BY_069_CAPTURE",
+        "content_class": "FLASH_DEAL_FACEBOOK_GROUNDING",
+        "note": "Candidate lịch sử (Crazy Day). Nay capture 069 tìm thấy deal mới: Gà Cay M1T1."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "⚠️ URGENT: CEO review Evidence Bundle 069. Deal hết hạn 30/08/2026."
+    },
+    {
+      "lead_id": "LEAD-068-08-HIGHLANDS",
+      "merchant_name": "Highlands Coffee Đà Nẵng",
+      "category": "COFFEE_TEA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Website bị Cloudflare challenge — không thu thập được nội dung."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không truy cập được."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Không xác nhận được."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Capture bị chặn bởi anti-bot."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "Capture bị chặn (2026-08-22) — không có nội dung hợp lệ."
+        }
+      },
+      "historical_candidate_reference": {
+        "file": "candidate_19_CAND-DNG-HIGHLANDS-RECHECK.json",
+        "evidence_status": "NEEDS_RECHECK",
+        "content_class": "ANTI_BOT_OR_CHALLENGE",
+        "note": "Candidate lịch sử. Bị chặn anti-bot."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "Website bị chặn anti-bot. CEO nộp ảnh chụp/PDF trang khuyến mãi Highlands Đà Nẵng hoặc tài liệu từ merchant."
+    },
+    {
+      "lead_id": "LEAD-068-09-THE-COFFEE-HOUSE",
+      "merchant_name": "The Coffee House Đà Nẵng",
+      "category": "COFFEE_TEA",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": false,
+          "gap": "Chưa có bất kỳ tài liệu nào."
+        },
+        "validity_window": {
+          "available": false,
+          "gap": "Không có thông tin."
+        },
+        "danang_locality_scope": {
+          "available": false,
+          "gap": "Chưa xác nhận chi nhánh Đà Nẵng."
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Không có artifact nguồn."
+        },
+        "checked_at_recheck_at": {
+          "available": false,
+          "gap": "Lead mới — chưa kiểm tra."
+        }
+      },
+      "historical_candidate_reference": null,
+      "historical_staging_decision_reference": null,
+      "action_required": "CEO/merchant nộp tài liệu khuyến mãi The Coffee House Đà Nẵng."
+    },
+    {
+      "lead_id": "LEAD-068-10-PHELA",
+      "merchant_name": "Phê La (Thương hiệu địa phương Việt Nam) — Đà Nẵng",
+      "category": "COFFEE_TEA_LOCAL",
+      "status": "LEAD_ONLY_NO_CLAIM",
+      "known_promotion_program": null,
+      "current_claim_status": "NONE",
+      "current_evidence_bundle_status": {
+        "pricing_and_terms": {
+          "available": true,
+          "source": "Facebook post chính thức (5 nguồn grounding)",
+          "value": "FREE 1 thức uống đặc sản (Trà sữa/Cà phê, ≤54.000đ). Nhập mã DONGLONGDICHILL trên App Phê La. Số lượng có hạn."
+        },
+        "validity_window": {
+          "available": true,
+          "source": "Facebook (4 nguồn consistent)",
+          "value": "→ 31/08/2026 (nhân dịp lễ 2/9)"
+        },
+        "danang_locality_scope": {
+          "available": true,
+          "source": "phela.vn + foody.vn + danang360.net (3 nguồn độc lập)",
+          "value": "35-41 Nguyễn Văn Linh + 36-38 Bạch Đằng, Hải Châu, ĐN"
+        },
+        "relational_lineage": {
+          "available": false,
+          "gap": "Nguồn Facebook post, website phela.vn/khuyen-mai trả 404."
+        },
+        "checked_at_recheck_at": {
+          "available": true,
+          "checked_at": "2026-08-24T11:35:56+07:00",
+          "note": "5 nguồn Facebook grounding nhất quán. Địa chỉ ĐN từ 3 nguồn độc lập."
+        }
+      },
+      "evidence_grade": "B+",
+      "evidence_note": "5 FB sources cross-verified. FREE deal = high viral potential. Địa chỉ ĐN từ 3 nguồn độc lập. URGENT: hạn 31/08 + số lượng có hạn.",
+      "historical_candidate_reference": {
+        "file": "candidate_28_CAND-DNG-PHELA-RECHECK.json",
+        "evidence_status": "SUPERSEDED_BY_069_CAPTURE",
+        "content_class": "PROMO_FACEBOOK_GROUNDING",
+        "note": "Candidate lịch sử. Nay capture 069 tìm thấy deal mới: DONGLONGDICHILL free drink."
+      },
+      "historical_staging_decision_reference": null,
+      "action_required": "⚠️ URGENT: CEO review Evidence Bundle 069. Deal hết hạn 31/08/2026 + số lượng có hạn."
+    }
+  ],
+  "incident_remediation": {
+    "incident_id": "JAYT-INCIDENT-069A",
+    "remediated_at": "2026-08-24T05:17:44.940Z",
+    "action": "CONTAINMENT_AND_QUARANTINE_069_BATCH1",
+    "note": "Toàn bộ 4 candidate và staging deploy của 069.1 bị từ chối và cô lập vào quarantine_vault/batch_069a_incident/. Khôi phục trạng thái LEAD_ONLY_NO_CLAIM trung thực."
+  }
+}

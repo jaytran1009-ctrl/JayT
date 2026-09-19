@@ -1,0 +1,26 @@
+{
+  "work_order_id": "WORK_ORDER_W8_ON_THE_SPOT_COMMERCIAL",
+  "issued_at": "2026-09-13T10:45:00+07:00",
+  "execution_scope": "STAGING_PREVIEW_ONLY",
+  "production_baseline": "v3.456.0-w7",
+  "tasks": {
+    "on_the_spot_os": "PRESERVE_AND_VERIFY",
+    "safe_link_inspector": "EXTEND_PUBLIC_URL_PARSING_TO_LAZADA",
+    "voucher_stack": "USER_ENTERED_VALUES_ONLY",
+    "affiliate_sandbox": "VISIBLE_DISCLOSURE__NON_DISPATCHING_SIMULATION"
+  },
+  "rejected_claims": [
+    "hidden voucher scraping without an authorized partner API",
+    "fabricated preset voucher codes for 20 products",
+    "fixed discount percentages without first-party evidence",
+    "affiliate redirects without provider credentials and written authorization"
+  ],
+  "invariants": {
+    "canonical_production_mutation": false,
+    "production_affiliate_enabled": false,
+    "sandbox_affiliate_ui_flag": true,
+    "sandbox_dispatch_performed": false,
+    "zero_pii": true,
+    "zero_hidden_tracking": true
+  }
+}

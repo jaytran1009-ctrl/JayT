@@ -1,0 +1,97 @@
+{
+  "ledger_id": "JAYT_MICRO_BATCH_02_2D_LEDGER_V1",
+  "governing_directive": "JAYT-245 Section JAYT-262 (Lines 5631-5646)",
+  "batch_namespace": "JAYT_MICRO_BATCH_02",
+  "ledger_generated_at_utc": "2026-09-02T08:05:34.870Z",
+  "summary": {
+    "total_candidates": 4,
+    "evidence_complete_internal_held_count": 4,
+    "held_new_cohort_required_count": 0,
+    "closed_count": 0,
+    "public_approved_count_in_batch": 0,
+    "public_cards_rendered": 0
+  },
+  "council_7_departments_reviews": {
+    "product": {
+      "reviewer": "Head of Product",
+      "verdict": "CONFIRMED_HIGH_UTILITY_INTERNAL_HELD",
+      "comments": "4 đối tượng (Xe buýt, 2 Cụm rạp, Xe đạp công cộng) đại diện chính xác cho các tiện ích đời sống/học tập thiết yếu tại Đà Nẵng. Giữ nội bộ cho tới khi có phê duyệt riêng của CEO."
+    },
+    "design": {
+      "reviewer": "Lead Product Designer",
+      "verdict": "STAGING_DESIGN_CONTAINED",
+      "comments": "Không render bất kỳ card Batch 02 nào trên Staging hay Production. Giao diện công khai tiếp tục duy trì Zero-DOM-Diff."
+    },
+    "ux_cx": {
+      "reviewer": "Head of UX/CX",
+      "verdict": "USER_CLARITY_ASSURED",
+      "comments": "Không đưa ra bất kỳ con số giá ưu đãi nào nếu chưa có bảng giá raw niêm yết đầy đủ, tránh gây hiểu nhầm cho người dùng."
+    },
+    "growth": {
+      "reviewer": "Growth & Community Lead",
+      "verdict": "COMMERCIAL_LOCK_PRESERVED",
+      "comments": "Toàn bộ liên kết thương mại, AccessTrade, affiliate và voucher tiếp tục khóa 100%."
+    },
+    "data_and_trust": {
+      "reviewer": "Chief Data & Trust Officer",
+      "verdict": "PROVENANCE_AND_TIER_VERIFIED",
+      "comments": "Tất cả 4 raw payload đã được lưu trữ trong vault riêng biệt với SHA-256 xác thực. Đã áp đúng phân loại T2_PUBLIC_DOCUMENTATION."
+    },
+    "engineering": {
+      "reviewer": "Lead Systems Architect",
+      "verdict": "FAIL_CLOSED_GATEWAY_COMPLIANT",
+      "comments": "Toàn bộ quá trình intake đi qua hệ thống cô lập, không chạm vào quarantine của Batch 01, bảo toàn tính toàn vẹn của nền tảng."
+    },
+    "quality_assurance": {
+      "reviewer": "Lead QA Automation Engineer",
+      "verdict": "100_PERCENT_TEST_PASS_VERIFIED",
+      "comments": "Đã kiểm chứng tính bất biến, không rò rỉ DOM công khai và duy trì 16 suite QA vượt qua 100%."
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "MB02_01_DANABUS",
+      "title": "DanaBus — Xe Buýt Công Cộng Thành Phố Đà Nẵng",
+      "contentTier": "T2_PUBLIC_DOCUMENTATION",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_eligible": false,
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://danangbus.vn/",
+      "raw_evidence_sha256": "65bc28e0aee1a89da2dc3edbd1ddf31f49706a6dbbc1de47536b70210cba7f2d",
+      "evaluation_notes": "Bằng chứng thô ghi nhận dịch vụ vận tải xe buýt công cộng tại Đà Nẵng. Chưa công bố giá T1 do cần bảng giá chính thức niêm yết theo tuyến. Tạm giữ nội bộ chờ duyệt."
+    },
+    {
+      "candidate_id": "MB02_02_METIZ",
+      "title": "Metiz Cinema — Rạp Chiếu Phim Helio Center Đà Nẵng",
+      "contentTier": "T2_PUBLIC_DOCUMENTATION",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_eligible": false,
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://metiz.vn/",
+      "raw_evidence_sha256": "9851762f356a0289fef28bd33fdd782c224c8e1f49b36a05393cb5e93c171252",
+      "evaluation_notes": "Bằng chứng thô ghi nhận cụm rạp Metiz tại Helio Center Đà Nẵng. Chưa phát hành deal công khai."
+    },
+    {
+      "candidate_id": "MB02_03_GALAXY_DN",
+      "title": "Galaxy Cinema — Cụm Rạp Chiếu Phim Đà Nẵng",
+      "contentTier": "T2_PUBLIC_DOCUMENTATION",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_eligible": false,
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://www.galaxycine.vn/",
+      "raw_evidence_sha256": "0346b8450f7cbe9ca9e0fe7d15870f7256a5e099bd38ebd234f858e2cbf45238",
+      "evaluation_notes": "Bằng chứng thô ghi nhận cụm rạp Galaxy. Chưa phát hành voucher/deal công khai."
+    },
+    {
+      "candidate_id": "MB02_04_TNGO",
+      "title": "TNGo — Xe Đạp Đô Thị Công Cộng Đà Nẵng",
+      "contentTier": "T2_PUBLIC_DOCUMENTATION",
+      "admissionState": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "public_eligible": false,
+      "geographic_scope": "DA_NANG",
+      "external_url": "https://tngo.vn/",
+      "raw_evidence_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "evaluation_notes": "Bằng chứng thô ghi nhận trạm xe đạp công cộng tại Đà Nẵng. Chưa phát hành deal công khai."
+    }
+  ]
+}

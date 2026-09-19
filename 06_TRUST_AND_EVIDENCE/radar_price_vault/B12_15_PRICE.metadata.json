@@ -1,0 +1,67 @@
+{
+  "sku_id": "B12_15",
+  "product_name_observed": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+  "retailer": "Phi Long Technology (Đà Nẵng)",
+  "retailer_url": "https://philong.com.vn/hdd-usb-kingston-64gb-datatraveler-exodia-dtx64gb-usb-3.2.html",
+  "provenance": {
+    "raw_file": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE.raw.html",
+    "raw_bytes": 329525,
+    "raw_sha256": "846c49b6067f84161c0f700d9f8e4380a99858752b3642ca4e45a6565f34f09b",
+    "http_status": 200,
+    "file_created_on_disk_utc": "2026-09-06T04:57:31.497Z",
+    "metadata_audited_at_utc": "2026-09-06T05:11:00.000Z",
+    "server_response_headers_provenance": "THIẾU_PROVENANCE_RESPONSE_HEADERS (Lượt curl -o lưu body không kèm headers đồng thời; tuyệt đối không dùng timestamp tạo tệp hoặc audit để mạo danh response time máy chủ)",
+    "response_headers": null
+  },
+  "spans_observed": {
+    "product_name_title_tag": {
+      "tag": "<title>",
+      "span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "offset_utf8": 213,
+      "tag_offset_utf8": 206
+    },
+    "product_name_h1_tag": {
+      "tag": "<h1>",
+      "span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "offset_utf8": 237197,
+      "tag_offset_utf8": 237193
+    },
+    "part_number": {
+      "span": "DTX/64GB",
+      "offset_in_title_utf8": 255,
+      "offset_in_h1_utf8": 237239,
+      "verified_in_h1_and_title": true
+    },
+    "present_price": {
+      "span": "<span class=\"p-price\">Giá Bán:\n        <span>290.000đ</span>",
+      "offset_utf8": 243472,
+      "parsed_value": "290.000 VNĐ"
+    },
+    "showroom_address": {
+      "span": "152 Hàm Nghi, Thanh Khê, TP. Đà Nẵng",
+      "offset_utf8": 249535
+    }
+  },
+  "unverified_fields": {
+    "vat_status": "UNVERIFIED (Payload không có nhãn văn bản xác nhận \"đã bao gồm VAT\")",
+    "ham_nghi_warehouse_stock": "UNVERIFIED (Địa chỉ showroom 152 Hàm Nghi không chứng minh tồn kho tại kho Hàm Nghi)"
+  },
+  "public_approved": false,
+  "render_permitted": false,
+  "status": "INTERNAL_REVIEW",
+  "corrigendum": {
+    "corrigendum_date_utc": "2026-09-06T05:16:00.000Z",
+    "issue": "Offset trước đây tính bằng UTF-16 String.indexOf thay vì UTF-8 byte offset của Buffer.",
+    "correction": {
+      "h1_tag_byte_offset": 241182,
+      "h1_content_byte_offset": 241186,
+      "h1_content_span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+      "pn_in_h1_byte_offset": 241228,
+      "title_tag_byte_offset": 206,
+      "title_content_byte_offset": 213,
+      "pn_in_title_byte_offset": 255,
+      "price_290k_byte_offset": 243519,
+      "showroom_address_byte_offset": 249504
+    }
+  }
+}

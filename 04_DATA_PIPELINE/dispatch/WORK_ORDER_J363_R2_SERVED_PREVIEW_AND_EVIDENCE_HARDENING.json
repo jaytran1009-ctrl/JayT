@@ -1,0 +1,22 @@
+{
+  "work_order_id": "J363_R2_SERVED_PREVIEW_AND_EVIDENCE_HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "REMEDIATION_REQUIRED",
+  "staging_mutation_authorized": true,
+  "production_deployment_authorized": false,
+  "blocking_findings": [
+    "The direct Preview JavaScript SHA-256 is 905deac3cad50515c69acc28ff0db8ecd516fdbdbaee5873e5ad04571013bbe6, not canonical 62738c87c9519e152c67d4b72b5438674b4cd4d3921c0661f6da7a00015c7e21.",
+    "Claim-matrix integrity is self-referential; individual evidence artifacts and hashes are not verified.",
+    "The performance gate does not enforce a frame-budget threshold; observed maximum frame duration reaches 41.7ms.",
+    "Accessibility tests do not cover hover, focus-visible, disabled and modal states."
+  ],
+  "required_actions": [
+    "Deploy from the exact isolated staging directory. Fetch every served static artifact from the final Preview URL with byte-preserving tooling, hash the returned bytes, compare against the deployment manifest, and fail the runner on any mismatch. Record response headers and content encoding; if an intermediary transforms text bytes, define and test one canonical representation before sealing.",
+    "Add Preview, rather than only localhost :4176, as a mandatory browser-test target. Its receipt must bind final URL, deployment ID, all served hashes and test timestamp.",
+    "For every FACTUAL_VERIFIED claim, require a local immutable artifact file and sidecar whose computed hash equals the matrix value, a first-party or field-capture provenance note, capture timestamp, and a direct source URL. The runner must fail for missing files, hash mismatch, placeholder/test hashes, unsupported locality, or expired/unknown validity. Reclassify unsupported listings as AWAITING_FIELD_VERIFICATION.",
+    "Use a documented threshold for interaction responsiveness. Report per interaction sample count, p50, p95, max and count of frames above 16.7ms. The 60-FPS claim may pass only if the agreed threshold is met; otherwise report measured performance without the claim.",
+    "Exercise and measure default, hover, focus-visible, disabled and modal states for AA contrast and target geometry across 1440, 768 and 390. Fail the runner on any state that violates its applicable criterion.",
+    "Preserve all truthful simulation labels and dry-run affiliate behavior. Do not deploy, activate affiliate tracking or alter Production during remediation."
+  ],
+  "acceptance": "CEO independently verifies Preview served-byte binding, replayable artifact-backed provenance, enforced performance results and full-state accessibility before any Gemini experience review."
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "work_order": "WORK_ORDER_J391_DECOUPLED_EXECUTION",
+  "deal_index": 4,
+  "offer_id": "B19_STARLIGHT_THU_3_PHIM_VIET",
+  "brand": "Starlight Cinema",
+  "category": "CINEMA",
+  "title": "Thứ 3 Phim Việt — Đồng giá 45k",
+  "source_artifact": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j391/deals/deal_04_starlight_thu_3.html",
+    "file_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+    "file_bytes": 17477,
+    "captured_timestamp_utc": "2026-09-11T04:50:00Z",
+    "official_source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+    "extraction_method": "DIRECT_RAW_HTML_BYTE_OFFSET"
+  },
+  "classification": "VERIFIED_DANANG",
+  "wave_1_eligible": true,
+  "predicate_evaluation": {
+    "offer_proven": true,
+    "validity_proven": true,
+    "danang_scope_proven": true,
+    "terms_proven": true,
+    "all_four_predicates_proven": true,
+    "finding": "All four predicates verified verbatim in source HTML bytes. Tuesday flat 45k ticket price and Da Nang headquarters/branch verified in article text and footer. Wave 1 eligible."
+  },
+  "quotes": {
+    "offer_quote": {
+      "text": "-&Aacute;p dụng gi&aacute; : 45 k cho tất cả c&aacute;c phim Việt v&agrave;o ng&agrave;y thứ 3 h&agrave;ng tuần.",
+      "byte_offset_start": 8444,
+      "byte_offset_end": 8568,
+      "byte_length": 124,
+      "selector": ".post-content div",
+      "proven": true,
+      "danang_specific": null
+    },
+    "validity_quote": {
+      "text": "&ldquo;Thứ 3 : Ng&agrave;y phim Việt&rdquo; : &Aacute;p dụng từ ng&agrave;y 20/01/2022",
+      "byte_offset_start": 8328,
+      "byte_offset_end": 8422,
+      "byte_length": 94,
+      "selector": ".post-content div",
+      "proven": true,
+      "danang_specific": null
+    },
+    "scope_quote": {
+      "text": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam",
+      "byte_offset_start": 13814,
+      "byte_offset_end": 13913,
+      "byte_length": 99,
+      "selector": "footer .footer-content p",
+      "proven": true,
+      "danang_specific": true
+    },
+    "terms_quote": {
+      "text": "-Chương tr&igrave;nh kh&ocirc;ng &aacute;p dụng đồng thời c&ugrave;ng c&aacute;c CTKM kh&aacute;c, kh&ocirc;ng &aacute;p dụng cho Suất chiếu đặc biệt (Sneak Show), Kh&ocirc;ng &aacute;p dụng v&agrave;o ng&agrave;y lễ tết.",
+      "byte_offset_start": 8730,
+      "byte_offset_end": 8977,
+      "byte_length": 247,
+      "selector": ".post-content div",
+      "proven": true,
+      "danang_specific": null
+    }
+  },
+  "cta_semantics": {
+    "action_type": "VIEW_OFFICIAL_SCHEDULE",
+    "button_label": "Xem Lịch Chiếu Thứ 3",
+    "has_public_promo_code": false,
+    "public_promo_code": null,
+    "code_display_allowed": false,
+    "zalo_pass_allowed": true
+  }
+}

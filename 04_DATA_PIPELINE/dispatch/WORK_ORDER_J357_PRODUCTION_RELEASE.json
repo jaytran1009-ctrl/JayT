@@ -1,0 +1,41 @@
+{
+  "work_order_id": "J357_PRODUCTION_RELEASE",
+  "authority": "Chairman Grand Production Release Decree JAYT-357",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "target_version": "v3.429.0",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "is_approved": true,
+  "deployment_permitted": true,
+  "deployment_authorized": true,
+  "sealed_fingerprints": {
+    "candidate_manifest": "541bfdae77c43f0c2cd974245e276cdf184d0d135a49fab94b0802f89c674b10",
+    "j356_r1_receipt": "fbf5fc1e75aeef2cda96c0dadec80f471954c8de43329d8ee897ed94493bf220",
+    "registry": "817cb9d4c66e3afaf84f1c55db97ee6e22cd72f8d82a6083b01d5c99b38f860b",
+    "deals_feed": "df0ccbab9aef23615e445a0bae6f3a16dbe1dab0face24f4fa5fe8bf6110ed94",
+    "rollback_manifest": "ac07926cd7068d7765222953d813664e0b8f566939afee28e40b5addb8b75597"
+  },
+  "candidate_root": "08_RELEASE_VAULT/candidates/v3.429.0/",
+  "pre_deploy": [
+    "Hash each sealed artifact immediately before deployment. Abort and publish a failure receipt on any mismatch; do not repair or rewrite the candidate after the comparison.",
+    "Confirm registry accounting is 87 canonical identities (24 civic and 63 commercial), and all eleven HELD record IDs are absent from public feed/action data."
+  ],
+  "deploy": [
+    "Deploy the exact sealed candidate to Vercel Production and assign the authorized production domain.",
+    "Do not add, remove, rewrite or synthesize registry, feed, links, codes or module content during deployment."
+  ],
+  "post_deploy": [
+    "Verify HTTP 200 for /, /registry.json and /deals_feed.json, plus sealed public artifact fingerprint matches.",
+    "Verify the registry reports 87 canonical identities. Separately report actual public DOM composition from the sealed candidate: it specifies 24 civic, 29 active Vault and 15 Radar cards, for 68 visible cards. The remaining canonical identities must be accounted for by the released registry/visibility model; do not claim 87 rendered cards unless the immutable candidate actually renders 87.",
+    "Verify every one of the eleven HELD IDs is absent from public DOM and action feed, no unauthorized copy control appears, and link hygiene contains no affiliate/tracking marker.",
+    "Run the exact sealed Split Bill tests on 25 priced cards, voucher clipboard success/failure and two-second feedback behavior where applicable, calendar interaction, keyboard operation, console/runtime and overflow checks at 1440/768/390px.",
+    "If any release gate fails, restore v3.428.0 deployment dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL, prove recovery, and publish the failure and rollback outcome."
+  ],
+  "rollback": {"version": "v3.428.0", "deployment_id": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL"},
+  "outputs": [
+    "08_RELEASE_VAULT/JAYT_357_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J357_PRODUCTION_RELEASE.json"
+  ],
+  "ledger": "Append the actual deployment outcome to PROJECT_MEMORY.md after the immutable receipts are sealed."
+}

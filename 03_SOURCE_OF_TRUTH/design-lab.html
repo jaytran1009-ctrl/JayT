@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JayT Private Design Lab — 3 Art Direction Boards (Council & CEO Review)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .lab-container { max-width: 1380px; margin: 0 auto; padding: 32px 24px; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .lab-header { margin-bottom: 32px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; }
+    .lab-title { font-size: 2rem; font-weight: 800; color: #0f172a; }
+    .lab-badge { display: inline-block; background: #0284c7; color: #fff; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 8px; }
+    .board-comparison-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .board-card { border: 1px solid #cbd5e1; border-radius: 16px; overflow: hidden; background: #ffffff; box-shadow: 0 10px 25px rgba(15,23,42,0.06); display: flex; flex-direction: column; }
+    .board-card-header { padding: 18px 20px; border-bottom: 1px solid #e2e8f0; }
+    .board-card-header.ba { background: #0f172a; color: #f8fafc; }
+    .board-card-header.bb { background: #0284c7; color: #ffffff; }
+    .board-card-header.bc { background: #15803d; color: #ffffff; }
+    .board-name { font-size: 1.25rem; font-weight: 800; }
+    .board-vibe { font-size: 0.82rem; opacity: 0.9; margin-top: 4px; }
+    .board-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; gap: 14px; }
+    .board-preview-stage { width: 100%; height: 200px; border-radius: 10px; overflow: hidden; background: #f1f5f9; border: 1px solid #e2e8f0; }
+    .board-preview-img { width: 100%; height: 100%; object-fit: cover; }
+    .board-metrics { font-size: 0.84rem; color: #475569; line-height: 1.5; background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px dashed #cbd5e1; }
+    .board-footer { padding: 16px 20px; border-top: 1px solid #e2e8f0; background: #f8fafc; }
+    .btn-select-board { width: 100%; padding: 10px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; }
+    .btn-select-board.ba { background: #f59e0b; color: #0f172a; }
+    .btn-select-board.bb { background: #0284c7; color: #ffffff; }
+    .btn-select-board.bc { background: #10b981; color: #ffffff; }
+    @media (max-width: 1024px) { .board-comparison-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body style="background: #f1f5f9;">
+  <div class="lab-container">
+    <div class="lab-header">
+      <span class="lab-badge">🔬 PRIVATE DESIGN LAB &bull; SECTION CL</span>
+      <h1 class="lab-title">Studio So Sánh 3 Board Art-Direction Độc Lập</h1>
+      <p style="color: #475569; margin-top: 6px;">
+        Khu vực đối soát nội bộ phục vụ Hội đồng và CEO đánh giá trước khi chuyển hóa thành Storefront chính thức.
+      </p>
+    </div>
+
+    <div class="board-comparison-grid">
+      <!-- Board A -->
+      <div class="board-card">
+        <div class="board-card-header ba">
+          <div class="board-name">Board A: Sông Hàn Afterglow</div>
+          <div class="board-vibe">Cinematic Night &bull; Deep Blue / Amber &bull; After-Hours Culture</div>
+        </div>
+        <div class="board-body">
+          <div class="board-preview-stage">
+            <img src="assets/images/board_a_afterglow_hero.svg" class="board-preview-img" alt="Board A Preview">
+          </div>
+          <div class="board-metrics">
+            <strong>Đặc trưng:</strong> Ánh hoàng hôn & đèn đêm Sông Hàn, Cầu Rồng rực rỡ, cảm xúc lắng đọng sau giờ học/làm.<br>
+            <strong>Tông màu:</strong> Xanh thẳm (#0a1931), Vàng Hổ Phách (#f59e0b).<br>
+            <strong>Cảm xúc 2s:</strong> Lôi cuốn, điện ảnh, đậm chất đêm Đà Nẵng.
+          </div>
+        </div>
+        <div class="board-footer">
+          <button class="btn-select-board ba" onclick="alert('Đã ghi nhận đề xuất Board A')">Đề Xuất Hướng Board A</button>
+        </div>
+      </div>
+
+      <!-- Board B -->
+      <div class="board-card">
+        <div class="board-card-header bb">
+          <div class="board-name">Board B: Đà Nẵng Mở Cửa</div>
+          <div class="board-vibe">Airy Coastal &bull; Warm Sand / Coral / Ocean &bull; City Magazine</div>
+        </div>
+        <div class="board-body">
+          <div class="board-preview-stage">
+            <img src="assets/images/board_b_coastal_hero.svg" class="board-preview-img" alt="Board B Preview">
+          </div>
+          <div class="board-metrics">
+            <strong>Đặc trưng:</strong> Thành phố biển phóng khoáng, chợ truyền thống, điểm tâm sáng Huỳnh Thúc Kháng, nắng vàng ấm áp.<br>
+            <strong>Tông màu:</strong> Xanh Cyan (#0284c7), Cát Ấm (#fef3c7), San Hô (#f43f5e).<br>
+            <strong>Cảm xúc 2s:</strong> Tươi sáng, thân thiện, tràn đầy năng lượng.
+          </div>
+        </div>
+        <div class="board-footer">
+          <button class="btn-select-board bb" onclick="alert('Đã ghi nhận đề xuất Board B')">Đề Xuất Hướng Board B</button>
+        </div>
+      </div>
+
+      <!-- Board C -->
+      <div class="board-card">
+        <div class="board-card-header bc">
+          <div class="board-name">Board C: Một Ngày Trong Thành Phố</div>
+          <div class="board-vibe">Bold Urban Journey &bull; Sáng-Trưa-Chiều-Tối &bull; Route-First</div>
+        </div>
+        <div class="board-body">
+          <div class="board-preview-stage">
+            <img src="assets/images/board_c_urban_hero.svg" class="board-preview-img" alt="Board C Preview">
+          </div>
+          <div class="board-metrics">
+            <strong>Đặc trưng:</strong> Dòng chảy đô thị 24h, mạng lưới xe buýt xanh DanaBus, trạm xe đạp TNGO kết nối thông minh.<br>
+            <strong>Tông màu:</strong> Xám Đô Thị (#0f172a), Xanh Bus Sinh Thái (#10b981).<br>
+            <strong>Cảm xúc 2s:</strong> Nhanh nhạy, chính xác, tiện lợi.
+          </div>
+        </div>
+        <div class="board-footer">
+          <button class="btn-select-board bc" onclick="alert('Đã ghi nhận đề xuất Board C')">Đề Xuất Hướng Board C</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

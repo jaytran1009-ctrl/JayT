@@ -1,0 +1,39 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_AM",
+  "expectedVersion": "v3.482.0-staging.ez",
+  "version": "v3.482.0-staging.ez",
+  "timestamp": "2026-09-01T07:04:49.238Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "build_manifest_ref": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "directive_ref": "JAYT-245 Section EZ-AM (Lines 4988-5015)",
+  "fast_lane_status": "OPEN_EVALUATING_SLA_ACTIVE_UNTIL_2026-09-01T08:28:00Z",
+  "fast_lane_candidates_active": 2,
+  "cohort_supply": {
+    "cohort_id": "COHORT_CINEMA_TRANSIT_15_CANDIDATES_LEDGER_EZ_AM",
+    "total_candidates": 15,
+    "cinema_candidates": 7,
+    "transit_candidates": 8,
+    "raw_captured_success": 14,
+    "fail_closed_held": 1,
+    "public_eligible_count": 0,
+    "public_cards_rendered": 0
+  },
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "2de8b41242f0d7182f7596e06816d85722f4a71a96673c400178e61af55039fc"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "2de8b41242f0d7182f7596e06816d85722f4a71a96673c400178e61af55039fc"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "0da2091311849797cb0e2c0cc7f60f0674d4d859d936d14cc0bba74af14b1310"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "0da2091311849797cb0e2c0cc7f60f0674d4d859d936d14cc0bba74af14b1310"
+    }
+  }
+}

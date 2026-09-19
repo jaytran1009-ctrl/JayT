@@ -1,0 +1,87 @@
+{
+  "test_suite": "PLAYWRIGHT_CROSS_BROWSER_GATE",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_450_R1_AND_AUTHORIZE_EXECUTION",
+  "directive_code": "JAYT-451",
+  "timestamp": "2026-09-19T08:16:19.871Z",
+  "governance_note": "Safari/WebKit simulation conducted via exact WebKit/Safari device emulation profile per Section XIII specification.",
+  "matrix_profiles_tested": 4,
+  "metrics": {
+    "uncaught_product_exception": 0,
+    "wrong_destination": 0,
+    "dead_CTA": 0,
+    "state_leakage": 0,
+    "review_math_failure": 0,
+    "P0_P1_functional_regression": 0
+  },
+  "verdict": "APPROVED",
+  "profiles": [
+    {
+      "profile": "CHROMIUM_DESKTOP",
+      "name": "Chromium Desktop",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "MOBILE_CHROME",
+      "name": "Mobile Chrome (Pixel 7)",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 393,
+        "clientWidth": 393
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "WEBKIT_DESKTOP",
+      "name": "WebKit Desktop Profile",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    },
+    {
+      "profile": "MOBILE_SAFARI_DEVICE_PROFILE_WEBKIT",
+      "name": "Mobile Safari Device Profile / WebKit (iPhone 14)",
+      "status": "PASS",
+      "console_errors_count": 0,
+      "page_errors_count": 0,
+      "overflow_check": {
+        "hasNoHorizontalOverflow": true,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "interaction_audit": {
+        "modal_open_close": true,
+        "review_modal_absa": true,
+        "state_isolation": true
+      }
+    }
+  ]
+}

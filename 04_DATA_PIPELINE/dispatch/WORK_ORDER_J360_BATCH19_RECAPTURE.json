@@ -1,0 +1,31 @@
+{
+  "work_order_id": "J360_BATCH19_RECAPTURE",
+  "authority": "Chairman JAYT-360; Codex CEO/Gatekeeper",
+  "executor": "Antigravity",
+  "status": "READY_FOR_EXTERNAL_EXECUTION",
+  "production_deployment_authorized": false,
+  "staging_hydration_authorized": false,
+  "target": {"original_candidates": 10, "minimum_ceo_accepted_original_candidates": 8},
+  "inputs": [
+    "06_TRUST_AND_EVIDENCE/batch_19_r3_r9_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "06_TRUST_AND_EVIDENCE/batch_19_r4_targeted_offer_card_vault/OFFER_CARD_EVIDENCE_MATRIX.json",
+    "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault"
+  ],
+  "requirements": [
+    "Recapture official detail leaves for The Pizza Company, Starlight Cinema, Gong Cha and Katinat. Review newer R4 evidence before repeating captures. Preserve every original candidate ID.",
+    "Use rendered detail-body text or official first-party API fields instead of requiring a generic offer-card container. Bind each claim to exact quoted spans and byte offsets, DOM ranges or JSON pointers in immutable captured evidence.",
+    "Capture requested URL, final URL, redirects, HTTP status, actual UTC timestamp, raw response, rendered DOM, source hashes and metadata hashes. Never manufacture timestamps, HTML or terms.",
+    "Reject failed fetches, soft 404, menu/header/footer/metadata-only claims and unrelated offers. Require title/benefit, amount where claimed, current validity or recurrence, restrictions and explicit applicability to Da Nang for the same offer. Brand presence alone does not prove applicability.",
+    "Keep canonical registry trust anchoring and independent reproducibility. Test unrelated-price substitution, expired dates, locality mixing, excluded-node claims and altered raw evidence. A new detail-text evaluator requires CEO review before accepting VERIFIED results.",
+    "Create stable discovery IDs B19_TCH_DISCOVERY_001 and B19_POPEYES_DISCOVERY_001 for the existing The Coffee House and Popeyes captures. Mark DISCOVERY_PENDING until an actual detail offer is identified; then assign a unique offer ID and preserve discovery lineage. Do not count these placeholders toward the original eight-of-ten target.",
+    "Produce day-by-day timeline eligibility with exact recurrence/date and exceptions. Never infer a weekly offer from a monthly promotion or ordinary menu price.",
+    "Minimum eight is a target, not permission to relax evidence. Report shortfall and exact missing claims. Leave unproven records HELD. No publication or staging merge before CEO acceptance."
+  ],
+  "deliverables": {
+    "vault": "06_TRUST_AND_EVIDENCE/batch_19_j360_detail_leaf_vault/",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_j360_detail_leaf_vault/CLAIM_PROVENANCE_MATRIX.json",
+    "timeline": "06_TRUST_AND_EVIDENCE/batch_19_j360_detail_leaf_vault/SEVEN_DAY_ELIGIBILITY.json",
+    "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_360_BATCH19_RECAPTURE_RECEIPT.json"
+  },
+  "release_gate": "JAYT-360 Article 1 complete; live runtime all PASS; at least eight original offers accepted by CEO; measured rollback drill to v3.428.0; then separate Chairman release authorization for v3.430.0"
+}

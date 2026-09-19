@@ -1,0 +1,65 @@
+{
+  "document_name": "PRODUCT_DEPARTMENT_TTL_APPROVAL_DECISION",
+  "authority_department": "Product & UX Directorate (04_PRODUCT_AND_UX)",
+  "governing_work_orders": [
+    "JAYT-330",
+    "JAYT-330-R4",
+    "JAYT-330-R5",
+    "JAYT-330-R6"
+  ],
+  "approver": {
+    "name": "Trịnh Minh Tuấn",
+    "employee_id": "EMP_PROD_0442",
+    "role": "Head of Product & UX Design",
+    "email": "tuan.tm@jayt.community.vn"
+  },
+  "decision_timestamp_utc": "2026-09-07T05:38:20Z",
+  "target_policy": {
+    "file_path": "01_EXECUTIVE_COUNCIL/COMMERCIAL_SOURCE_FRESHNESS_POLICY_JAYT_330.md",
+    "policy_sha256": "49fda17dc4211da3ba85989dd882e9c87898615f4f4dbc908a3ac9f2cb0a47b6"
+  },
+  "decision_status": "FORMAL_APPROVAL_GRANTED",
+  "itemized_matrix_assessment": [
+    {
+      "class_id": "CLASS_A_FB_MENU",
+      "name": "Thực đơn & Combo F&B (Jollibee)",
+      "fresh_ttl_days": 7,
+      "stale_warning_ttl_days": 14,
+      "verdict": "APPROVED",
+      "ux_rationale": "F&B combo pricing is subject to rapid promotional turnarounds. 7-day fresh window ensures user trust; 8-14 days warning prevents deceptive promotion claims."
+    },
+    {
+      "class_id": "CLASS_B_CINEMA_TARIFF",
+      "name": "Giá vé rạp chiếu phim (Galaxy, Metiz)",
+      "fresh_ttl_days": 7,
+      "stale_warning_ttl_days": 14,
+      "verdict": "APPROVED",
+      "ux_rationale": "Cinema ticket tariffs rotate on weekly theatrical release cycles (Friday to Thursday). 7 days aligns with consumer schedule expectations."
+    },
+    {
+      "class_id": "CLASS_C_TECH_HARDWARE",
+      "name": "Linh kiện & Phụ kiện Công nghệ (Phi Long, Điện Máy Xanh)",
+      "fresh_ttl_days": 14,
+      "stale_warning_ttl_days": 30,
+      "verdict": "APPROVED",
+      "ux_rationale": "Retail computer accessories have 2-week promotion runs. 14 days fresh / 30 days hold is consistent with consumer hardware shopping patterns."
+    },
+    {
+      "class_id": "CLASS_D_MEMBER_POLICY",
+      "name": "Chính sách Hội viên & Tích điểm (Phúc Long)",
+      "fresh_ttl_days": 30,
+      "stale_warning_ttl_days": 90,
+      "verdict": "APPROVED",
+      "ux_rationale": "Loyalty point accrual and redemption policies are quarterly program rules. 30 days fresh / 90 days warning matches quarterly audit cadence."
+    }
+  ],
+  "ux_contract_verifications": {
+    "verbatim_http_date_display": "APPROVED — Ensures total transparency regarding observation recency",
+    "stale_warning_badge_visuals": "APPROVED — High-contrast amber badge (#fbbf24 on #451a03) provides clear non-deceptive cue",
+    "fail_closed_hold_behavior": "APPROVED — Automatic quarantine when data exceeds hold TTL protects customer decision integrity"
+  },
+  "attributable_signature": {
+    "signer": "Trịnh Minh Tuấn (EMP_PROD_0442)",
+    "signature_hash": "c80087caaa4c406a90cd69a0a36993fae1ce06181595a10c9f3ab21a50deff3c"
+  }
+}

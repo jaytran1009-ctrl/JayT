@@ -1,0 +1,130 @@
+{
+  "addendum_id": "W8_EVIDENCE_EQUIVALENCE_ADDENDUM",
+  "schema_version": "1.1.0",
+  "created_at_utc": "2026-09-14T15:58:05.665Z",
+  "reconciled_at_utc": "2026-09-15T05:28:00.000Z",
+  "governing_directive": "CHAIRMAN-MANDATE-2026-0914-PRODUCT-FEED-AND-EVIDENCE-EQUIVALENCE",
+  "status": "RECONCILED_WITH_VIETNAM_EXPORT_SCHEMA__AWAITING_EXECUTIVE_RATIFICATION",
+  "purpose": "Xác định khung tương đương pháp lý và kỹ thuật giữa 7 trường evidence hợp đồng W8 cũ (HTML/PNG crawling) và dữ liệu trích xuất từ Product Offer Feed / Lấy link hàng loạt chính thức của Shopee Affiliate Portal Việt Nam.",
+  "regulatory_basis": [
+    {
+      "document": "Shopee Product Feed Guide",
+      "uri": "https://help.shopee.sg/portal/10/article/171184",
+      "relevance": "Hướng dẫn cấu trúc dữ liệu Product Offer Feed chính thức."
+    },
+    {
+      "document": "Shopee VN Custom Link CSV / Bulk Link Generator",
+      "uri": "https://help.shopee.vn/portal/4/article/91992",
+      "relevance": "Quy chuẩn xuất/nhập tệp CSV liên kết tùy chỉnh hàng loạt tại thị trường Việt Nam (Lấy link hàng loạt)."
+    },
+    {
+      "document": "Shopee Affiliate Program Terms & Anti-Bot Policy",
+      "uri": "https://help.shopee.sg/portal/4/article/77189",
+      "relevance": "Nghiêm cấm hành vi truy vấn tự động (crawling/bots) và click giả lập (automated replay click)."
+    }
+  ],
+  "ingressed_feed_reference": {
+    "source_file": "shopee_product_offer_export_17372870594.csv",
+    "file_sha256": "54b493fd21a3ae2c96128c796a10d08526e7945a4c25cb1179bb6da68af93b98",
+    "file_size_bytes": 5233,
+    "sidecar_sha256_verified": true,
+    "provenance_ledger_block": 0,
+    "ledger_record_sha256": "9fb08c793d91a666e49019c067c70764dcc8621728affa74622d172a7fa6ba3f",
+    "record_count": 20,
+    "operator_account_id": "17372870594",
+    "account_verified": false,
+    "portal_mechanism": "affiliate.shopee.vn -> Hoa hồng Sản phẩm -> Lấy link hàng loạt -> Xuất CSV",
+    "feed_evidence_register": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/W8_FEED_EVIDENCE_REGISTER.json"
+  },
+  "field_equivalence_mapping_table": [
+    {
+      "legacy_contract_field": "canonical_url",
+      "feed_equivalent_field": "Link sản phẩm (shopee.vn/product/{shop_id}/{item_id})",
+      "observed_column_name": "Link sản phẩm",
+      "verification_rule": "URL sản phẩm sạch chuẩn sàn, chứa đúng shop_id và item_id từ dữ liệu chính thức của Shopee.",
+      "equivalence_verdict": "EQUIVALENT__RECONCILED_WITH_PORTAL_EXPORT"
+    },
+    {
+      "legacy_contract_field": "affiliate_shortlink",
+      "feed_equivalent_field": "Link ưu đãi (s.shopee.vn/{hash})",
+      "observed_column_name": "Link ưu đãi",
+      "verification_rule": "Khớp shortlink do Cổng Tiếp thị sinh ra thuộc tài khoản 17372870594.",
+      "equivalence_verdict": "EQUIVALENT__RECONCILED_WITH_PORTAL_EXPORT"
+    },
+    {
+      "legacy_contract_field": "raw_html_logged_out & html_sha256",
+      "feed_equivalent_field": "Mã sản phẩm, Tên sản phẩm, Tên cửa hàng từ Feed",
+      "observed_column_names": [
+        "Mã sản phẩm",
+        "Tên sản phẩm",
+        "Tên cửa hàng"
+      ],
+      "verification_rule": "Có mặt trong tệp Product Offer Feed gốc được băm SHA-256 toàn vẹn, neo tại Block #0 Provenance Ledger.",
+      "equivalence_verdict": "EQUIVALENT__FIRST_PARTY_STRUCTURED_DATA_SUPERSEDES_SCRAPED_HTML"
+    },
+    {
+      "legacy_contract_field": "price_and_voucher_terms_quotes",
+      "feed_equivalent_field": "Giá, Doanh thu, Tỉ lệ hoa hồng, Hoa hồng từ Feed",
+      "observed_column_names": [
+        "Giá",
+        "Doanh thu",
+        "Tỉ lệ hoa hồng",
+        "Hoa hồng"
+      ],
+      "verification_rule": "Cột giá thực tế và tỷ lệ hoa hồng xuất hiện trong tệp xuất; tuyệt đối không tự nội suy hoặc bù trừ số liệu giả định.",
+      "equivalence_verdict": "EQUIVALENT__RECONCILED_WITH_PORTAL_EXPORT"
+    },
+    {
+      "legacy_contract_field": "captured_at_utc",
+      "feed_equivalent_field": "Ledger Ingress Timestamp UTC (2026-09-15T05:24:01.909Z)",
+      "verification_rule": "Thời điểm tiếp nhận và niêm phong tệp xuất gốc vào Provenance Ledger có đối soát mã băm.",
+      "equivalence_verdict": "EQUIVALENT__RECONCILED_WITH_PORTAL_EXPORT"
+    },
+    {
+      "legacy_contract_field": "full_page_png & png_sha256",
+      "feed_equivalent_field": "Official Merchant Product Image URL / Vector Schematic",
+      "verification_rule": "URL ảnh sản phẩm chính thức do sàn cung cấp hoặc Vector Schematic; không dùng ảnh cào màn hình giả lập.",
+      "equivalence_verdict": "NON_EQUIVALENT_CONDITIONAL_EXCEPTION_REQUIRED",
+      "caveat": "URL ảnh sản phẩm không chứng minh giao diện thực tế hiển thị trên trình duyệt người dùng."
+    },
+    {
+      "legacy_contract_field": "http_status_200",
+      "feed_equivalent_field": "Item Active Status trong Offer Feed",
+      "verification_rule": "Trạng thái sản phẩm có mặt trong danh sách ưu đãi còn hiệu lực của sàn.",
+      "equivalence_verdict": "NON_EQUIVALENT_CONDITIONAL_EXCEPTION_REQUIRED",
+      "caveat": "Sự hiện diện trong Feed sàn không phải kiểm thử HTTP 200 thời gian thực. Bắt buộc kiểm tra reachability hoặc xác nhận bằng Validated Conversion Report chính thức."
+    }
+  ],
+  "equivalence_governance_rules": [
+    "1. Tệp xuất gốc phải được lưu nguyên trạng vào raw_portal_exports/ kèm mã băm SHA-256.",
+    "2. Chỉ các cột thực sự hiện diện trong tệp mới được ghi nhận vào Feed Evidence Register.",
+    "3. Hợp đồng 20/20 ACCEPTED cũ của W8 không bị ghi đè cho đến khi Phụ lục này và báo cáo conversion được Ban Giám Đốc ký duyệt song song.",
+    "4. Tuyệt đối không phát sinh click tự động (Puppeteer/bot) để kiểm thử attribution; chỉ đối soát qua Validated Conversion Report của sàn."
+  ],
+  "ratification_signatures": {
+    "key_1_chairman_approval": {
+      "signatory": "Chủ tịch Tập đoàn",
+      "status": "AWAITING_CHAIRMAN_DUAL_KEY_RATIFICATION",
+      "signed_at": null
+    },
+    "key_2_compliance_approval": {
+      "signatory": "CEO Codex / Ban Cố Vấn",
+      "status": "AWAITING_ADVISORY_COUNCIL_DUAL_KEY_RATIFICATION",
+      "signed_at": null
+    }
+  },
+  "unresolved_equivalence_gaps": [
+    {
+      "gap_id": "GAP_01_IMAGE_URL_VS_PNG_VIEWPORT",
+      "field": "full_page_png & png_sha256",
+      "analysis": "URL ảnh sản phẩm trong feed của Merchant KHÔNG PHẢI ảnh chụp màn hình thực tế (PNG viewport snapshot) của người dùng logged-out. Đây không phải tương đương tuyệt đối.",
+      "resolution_required": "Yêu cầu Hội đồng Điều hành xem xét quyết định miễn trừ hoặc thẩm định ảnh riêng biệt trước khi phê chuẩn."
+    },
+    {
+      "gap_id": "GAP_02_ACTIVE_STATUS_VS_HTTP_200",
+      "field": "http_status_200",
+      "analysis": "Trạng thái ACTIVE trong feed chỉ là cờ cơ sở dữ liệu nội bộ của sàn; KHÔNG PHẢI chứng cứ mạng HTTP 200 tại thời điểm người dùng thực tế truy cập.",
+      "resolution_required": "Yêu cầu kiểm tra reachability hoặc xác nhận bằng Validated Conversion Report chính thức từ sàn."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "document_id": "JAYT_335_BATCH_15_P2_STRATEGIC_PROMOTION_REVIEW_PACKAGE",
+  "generated_at_utc": "2026-09-07T09:34:50.188Z",
+  "review_gate": "STRATEGIC_ADVISOR_BATCH_15_P2_PROMOTION_REVIEW",
+  "production_baseline": "v3.423.0",
+  "production_card_count": 47,
+  "commercial_staging_card_count": 28,
+  "source_artifacts": {
+    "ingress_receipt": {
+      "path": "06_TRUST_AND_EVIDENCE/JAYT_335_BATCH_15_P2_INGRESS_RECEIPT.json",
+      "sha256": "20e51a1b465853ca2804058ed2962bc88506710f51f7e45555f54b7497a0454b"
+    },
+    "hydration_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/STAGING_BATCH_15_P2_HYDRATION_RECEIPT.json",
+      "sha256": "5a92718cbc1783fdaaa7aba298bc58c1cca5466b8319230f7932905e0e4f4405"
+    },
+    "staging_catalog": {
+      "path": "staging_workspace_j328/approved_commercial_cards.json",
+      "sha256": "2703ce5e999afa24b9d7434531b7a694a7c49a64016571d03419f5d4f45ea8bf"
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "P2O_GALAXY_MEMBER_2026",
+      "raw_sha256": "730168e05b69286624195aefae03d13383f1ab159767852a1f652312c99bff8b",
+      "ttl_end": "2026-12-31",
+      "promotion_review_status": "READY_FOR_STRATEGIC_REVIEW",
+      "mandatory_disclosures": [
+        "Membership account required",
+        "Point redemption and birthday benefits remain subject to official conditions"
+      ],
+      "next_freshness_review_on": "2026-10-01"
+    },
+    {
+      "candidate_id": "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+      "raw_sha256": "9037998cc5093d17bce4fa3b173b8f1129e9a72454185f99036b7413182b3966",
+      "ttl_end": "2026-09-30_OR_BUDGET_EXHAUSTION",
+      "promotion_review_status": "CONDITIONAL__SHORT_TTL_AND_BUDGET_LIMIT",
+      "mandatory_disclosures": [
+        "User must claim the voucher in the official ShopeePay app",
+        "Offer can end early when budget is exhausted",
+        "JayT does not publish or synthesize a voucher code"
+      ],
+      "next_freshness_review_on": "2026-09-14"
+    },
+    {
+      "candidate_id": "P2O_PHILONG_LENOVO_STUDENT_2026",
+      "raw_sha256": "b4475c7d43592284e31ea2992bcb1ac50a45589704566bd7429981946adbf070",
+      "ttl_end": "2026-10-31_OR_GIFT_EXHAUSTION",
+      "promotion_review_status": "CONDITIONAL__MODEL_ALLOWLIST_AND_GIFT_STOCK",
+      "mandatory_disclosures": [
+        "Only Lenovo models listed by the official source qualify",
+        "Gift tier varies by model and can end when gifts are exhausted",
+        "No local stock guarantee"
+      ],
+      "next_freshness_review_on": "2026-09-21"
+    },
+    {
+      "candidate_id": "P2O_PHILONG_HP_BTS_2026",
+      "raw_sha256": "7e9a01faa73b42bd4012e939b315d037d74a4c9e45dd5c08c509d0a12ad81696",
+      "ttl_end": "2026-10-31",
+      "promotion_review_status": "CONDITIONAL__MODEL_ALLOWLIST_AND_THIRD_PARTY_TERMS",
+      "mandatory_disclosures": [
+        "Only HP models listed by the official source qualify",
+        "Third-party software activation terms remain controlled by their providers",
+        "No local stock guarantee"
+      ],
+      "next_freshness_review_on": "2026-09-21"
+    }
+  ],
+  "held_candidates": [
+    "P2O_CGV_FANC_2026",
+    "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+    "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+  ],
+  "qa_summary": {
+    "four_authorized_cards_present": true,
+    "three_held_cards_absent": true,
+    "zero_console_or_runtime_errors": true,
+    "responsive_1440_768_390": true,
+    "minimum_touch_target_44px": true,
+    "affiliate_or_tracking_present": false
+  },
+  "decision_requested": "ITEM_LEVEL_PROMOTION_SCOPE_DECISION_WITH_TTL_CONDITIONS",
+  "gate": {
+    "strategic_advisor_approved": false,
+    "chairman_release_decree_present": false,
+    "production_deploy_permitted": false,
+    "affiliate_enabled": false,
+    "tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false
+  },
+  "overall_status": "APPRAISAL_PACKAGE_COMPLETE__AWAITING_STRATEGIC_ADVISOR_DECISION"
+}

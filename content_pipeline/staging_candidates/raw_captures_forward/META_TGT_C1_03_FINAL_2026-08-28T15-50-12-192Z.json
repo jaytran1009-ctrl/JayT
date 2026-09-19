@@ -1,0 +1,75 @@
+{
+  "target_id": "TGT_C1_03",
+  "cluster": "HOA_KHANH_LIEN_CHIEU",
+  "brand": "DanaBus",
+  "customer_need": "Xe buýt công cộng sinh viên",
+  "initial_url": "https://danangbus.vn",
+  "final_url": "https://www.danangbus.vn/",
+  "hop_count": 2,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://danangbus.vn",
+      "status_code": 301,
+      "response_headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "location": "https://www.danangbus.vn/",
+        "vary": "Accept-Encoding",
+        "server": "Microsoft-IIS/10.0",
+        "x-powered-by-plesk": "PleskWin",
+        "access-control-allow-origin": "https://static.danangbus.vn",
+        "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+        "content-length": "148"
+      },
+      "location_header": "https://www.danangbus.vn/",
+      "body_bytes": 148,
+      "hop_started_at": "2026-08-28T15:50:12.192Z",
+      "hop_finished_at": "2026-08-28T15:50:12.294Z"
+    },
+    {
+      "hop_index": 2,
+      "requested_url": "https://www.danangbus.vn/",
+      "status_code": 200,
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding",
+        "server": "Microsoft-IIS/10.0",
+        "set-cookie": [
+          "ASP.NET_SessionId=5k2sgk15qpvj3veokz1iwyj0; path=/; HttpOnly; SameSite=Lax"
+        ],
+        "x-aspnet-version": "4.0.30319",
+        "x-powered-by-plesk": "PleskWin",
+        "access-control-allow-origin": "https://static.danangbus.vn",
+        "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+        "content-length": "115281"
+      },
+      "location_header": null,
+      "body_bytes": 115281,
+      "hop_started_at": "2026-08-28T15:50:12.294Z",
+      "hop_finished_at": "2026-08-28T15:50:12.608Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:12.192Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:12.652Z",
+  "duration_ms": 459.75,
+  "final_http_status": 200,
+  "final_headers": {
+    "content-type": "text/html; charset=utf-8",
+    "vary": "Accept-Encoding",
+    "server": "Microsoft-IIS/10.0",
+    "set-cookie": [
+      "ASP.NET_SessionId=5k2sgk15qpvj3veokz1iwyj0; path=/; HttpOnly; SameSite=Lax"
+    ],
+    "x-aspnet-version": "4.0.30319",
+    "x-powered-by-plesk": "PleskWin",
+    "access-control-allow-origin": "https://static.danangbus.vn",
+    "date": "Fri, 28 Aug 2026 15:53:38 GMT",
+    "content-length": "115281"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_03_FINAL_2026-08-28T15-50-12-192Z.txt",
+  "pre_normalization_sha256": "8995ec9a9f479c625869bc5b578605f72b279fffbe9f006146a079590d6295e3",
+  "payload_bytes": 115281,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

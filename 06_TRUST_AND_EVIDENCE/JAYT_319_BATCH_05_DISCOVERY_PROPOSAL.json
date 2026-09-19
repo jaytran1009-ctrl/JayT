@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dossier_id": "JAYT_319_BATCH_05_DISCOVERY_PROPOSAL",
+  "work_order": "JAYT_319_BATCH_05_DISCOVERY_WORK_ORDER.md",
+  "generated_at": "2026-09-04T15:20:00+07:00",
+  "governance_mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_HYDRATION",
+  "council_verdict_baseline": {
+    "B04_01": "INTAKE_FAILED__QUARANTINE",
+    "B04_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 4)",
+    "B04_03": "CONTENT_SPAN_MISMATCH__QUARANTINE",
+    "B04_04": "EVIDENCE_COMPLETE_INTERNAL_HELD (Vault only, zero render)",
+    "B04_05": "INTAKE_FAILED__QUARANTINE",
+    "B04_06": "PUBLIC_APPROVED_STAGING_ONLY (Card 6)",
+    "B04_07": "PUBLIC_APPROVED_STAGING_ONLY (Card 5)",
+    "B04_08": "SCOPE_DENIED__EXPIRED_EVENT_SOURCE",
+    "B04_09": "HELD__PENDING_PRICE_CLAIM_REMEDIATION",
+    "B04_10": "PUBLIC_APPROVED_STAGING_ONLY (Card 7)",
+    "B04_11": "REJECTED__TEMPORARY_EVENT_EXPIRING"
+  },
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 7,
+    "production_card_count": 3
+  },
+  "candidates": [
+    {
+      "candidate_id": "B05_01_LICH_TIEM_CHUNG_THAI_KY_CDC_DANANG",
+      "service_name": "Cẩm nang hướng dẫn lịch tiêm chủng cho phụ nữ chuẩn bị mang thai và trong thai kỳ",
+      "official_leaf_url": "https://ksbtdanang.vn/cam-nang-vac-xin/lich-tiem-chung-cho-tre-em-11/lich-tiem-chung-cho-phu-nu-mang-thai-va-trong-thai-ky-18.html",
+      "publisher": "Trung tâm Kiểm soát bệnh tật thành phố Đà Nẵng (CDC Đà Nẵng)",
+      "publication_date": "08/07/2026",
+      "effective_window": "Thường xuyên / Y tế dự phòng cộng đồng liên tục",
+      "recency_proof": "Đăng tải chính thức ngày 08/07/2026 15:58 trên cổng thông tin ksbtdanang.vn",
+      "pre_declared_span": "Mang thai là giai đoạn cơ thể người phụ nữ có nhiều thay đổi về sinh lý và miễn dịch",
+      "verified_span_offset": 26364,
+      "commercial_intent": "NONE",
+      "fee_tier": "MIỄN PHÍ",
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tài liệu phổ biến kiến thức y tế dự phòng; không có phát ngôn phác đồ cá nhân hóa, không đặt lịch khám, không bảng giá thương mại. Bắt buộc disclaimer y tế nếu được cấp phép."
+    },
+    {
+      "candidate_id": "B05_02_TRAO_DOI_SINH_VIEN_QUOC_TE_UED_EDUHK",
+      "service_name": "Chương trình thỏa thuận hợp tác trao đổi sinh viên quốc tế UED và Đại học Giáo dục Hồng Kông (EdUHK)",
+      "official_leaf_url": "https://ued.udn.vn/2026/08/24/truong-dai-hoc-su-pham-dai-hoc-da-nang-ky-ket-thoa-thuan-trao-doi-sinh-vien-voi-dai-hoc-giao-duc-hong-kong/",
+      "publisher": "Trường Đại học Sư phạm – Đại học Đà Nẵng (UED)",
+      "publication_date": "24/08/2026",
+      "effective_window": "Thỏa thuận MOA hợp tác giáo dục dài hạn (ký kết ngày 24/08/2026)",
+      "recency_proof": "Đăng tải ngày 24/08/2026 trên cổng thông tin trường đại học công lập ued.udn.vn",
+      "pre_declared_span": "ký kết Biên bản thỏa thuận hợp tác (MOA) về chương trình trao đổi sinh viên với Đại học Giáo dục Hồng Kông (EdUHK)",
+      "verified_span_offset": 59336,
+      "commercial_intent": "NONE",
+      "fee_tier": "MIỄN PHÍ DÀNH CHO NGƯỜI HỌC THEO KHUÔN KHỔ THỎA THUẬN MOA",
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Thỏa thuận hợp tác trao đổi sinh viên công lập; không bán khóa học thương mại, không có thời hạn hết hạn ngắn ngày."
+    },
+    {
+      "candidate_id": "B05_03_DANABUS_TUYEN_05_HOA_HIEP_NAM_BIEN_DONG",
+      "service_name": "Hướng dẫn tiện ích di chuyển xanh bằng xe buýt điện Tuyến 05: KCC Hòa Hiệp Nam – Công viên Biển Đông",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/len-tuyen-05-vi-vu-da-nang-tu-tay-bac-den-bien-dong-5758.html",
+      "publisher": "Trung tâm Quản lý và Điều hành Giao thông công cộng thành phố Đà Nẵng (Danabus)",
+      "publication_date": "08/07/2026",
+      "effective_window": "Thường xuyên / Tuyến xe buýt đô thị vận hành thường nhật liên tục",
+      "recency_proof": "Đăng tải ngày 08/07/2026 trên cổng thông tin chính thức danangbus.vn",
+      "pre_declared_span": "Đặc biệt, tuyến được vận hành bằng xe buýt điện hiện đại, mang đến hành trình êm ái, thoải mái và thân thiện với môi trường.",
+      "verified_span_offset": 51185,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH CÔNG CỘNG (KHÔNG QUẢNG CÁO GIÁ VÉ/KHÔNG CLAIM 0 ĐỒNG)",
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Không chứa thông tin giá vé hoặc khuyến mãi thương mại, không claim voucher, là thông tin hướng dẫn mạng lưới giao thông công cộng thuần túy phục vụ cộng đồng học sinh, sinh viên và người dân."
+    }
+  ]
+}

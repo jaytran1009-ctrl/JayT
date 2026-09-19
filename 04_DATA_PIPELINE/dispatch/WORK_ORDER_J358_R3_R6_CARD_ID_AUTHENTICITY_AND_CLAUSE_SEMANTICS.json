@@ -1,0 +1,32 @@
+{
+  "work_order_id": "J358-R3-R6-CARD-ID-AUTHENTICITY-AND-CLAUSE-SEMANTICS",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Close schema-only card-ID and weak clause-semantics promotion paths.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r5_card_scoped_evidence_validator.cjs",
+    "runner": "04_DATA_PIPELINE/run_jayt_358_r3_r5_reproducible_replay.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R5_PARTIAL_ACCEPTANCE_AND_CLAUSE_SEMANTICS_GATE.md"
+  },
+  "requirements": [
+    "Unconditionally reject known broad/page shells (post-content, entry-content, main/content/catalog/layout shells) regardless of class markers or ID attributes. A nested actual card may qualify independently.",
+    "Replace schema-only stable ID acceptance with authenticity proof: ID must be present in sealed capture metadata/manifest mapping for the selected source, or have a documented cryptographically bound equivalent. Record the mapping key and digest.",
+    "Require directed locality semantics: an offer-binding predicate must govern the claimed locality target; reject a clause that binds an offer to another city, contains conflicting localities, or merely co-locates a target city with a generic promotion phrase.",
+    "Require validity semantics: the validity/recurrent predicate and target year must be in a clause that asserts offer applicability/effectiveness. A branding, planning, copyright or unrelated sentence containing 2026 is insufficient.",
+    "Add a mandatory regression using div.post-content deal-card data-offer-id=deal-abc, a Da Nang travel mention, a Hanoi promotion clause, and a branding-2026 recurrence clause. It must be HELD.",
+    "Add positive controls for a metadata-authenticated card ID and directed Da Nang locality/2026 validity, plus negative controls for pattern-valid but unauthenticated ID, conflicting city locality, and generic 2026 co-occurrence.",
+    "Keep verify-existing default and non-mutating; --generate must be explicit. Evaluate only sealed R3 bytes, preserve 0 VERIFIED / 10 HELD unless all checks pass, and perform no hydrate/package/deploy/scheduler/alias/rollback mutation."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r6_authenticated_card_semantics_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r6_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r6_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R6_CARD_ID_AUTHENTICITY_AND_CLAUSE_SEMANTICS_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R6_CARD_ID_AUTHENTICITY_AND_CLAUSE_SEMANTICS.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO verify-existing replay and code review required; no automatic promotion"
+}

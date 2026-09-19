@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:18:20.902Z",
+  "target_id": "TARGET_102_KATINAT_HOME",
+  "venue_name": "Katinat Saigon Kafe Home",
+  "source_url": "https://katinat.vn/",
+  "district": "UNSPECIFIED",
+  "sector": "COFFEE_TEA",
+  "http_response": {
+    "status": 200,
+    "url": "https://katinat.vn/",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.html",
+      "size_bytes": 150676,
+      "sha256": "f972c4826c59e17823fc6b497d70f3b932f6ca1aa66e2d0f5e3574237afc852c"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.txt",
+      "size_bytes": 4136,
+      "sha256": "4839c29df02e32c844b3ee0866bee78f1107cd876686563edf141a2e7c92eac0"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.png",
+      "size_bytes": 1218463,
+      "sha256": "c5af4c1272537637c8ec7c4f54f9fbf0f47b2be6998160d21a2f36721ce0970d"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

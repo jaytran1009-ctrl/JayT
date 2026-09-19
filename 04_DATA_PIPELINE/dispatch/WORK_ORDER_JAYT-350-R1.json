@@ -1,0 +1,66 @@
+{
+  "work_order_id": "JAYT-350-R1",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "status": "DISPATCHED__RECEIPT_CORRECTION_REQUIRED",
+  "input_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350.json",
+  "input_receipt_reported_sha256": "dbd2ac8f00d10e1e5abc4b3f95e1e2c9bad102876a67d6417e07dca812b12900",
+  "candidate_root": "08_RELEASE_VAULT/candidates/v3.426.0/",
+  "required_actions": [
+    {
+      "action": "REALIGN_ROLLBACK",
+      "target_version": "v3.425.0-sprint-b-r1",
+      "target_cards": 51,
+      "target_deployment_id": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o",
+      "require_deployable_artifact_root": true
+    },
+    {
+      "action": "CLARIFY_VERSION_FIELDS",
+      "production_release_baseline": "v3.425.0-sprint-b-r1",
+      "runtime_ledger_version": "v3.424.0",
+      "rule": "Keep these as separate fields; do not present them as two concurrent production baselines."
+    },
+    {
+      "action": "EMIT_ITEM_LEVEL_SUMMARY",
+      "required_new_verified_count": 25,
+      "required_held_count": 6,
+      "required_registry_total": 76,
+      "required_registry_breakdown": {
+        "civic": 24,
+        "commercial": 52
+      },
+      "require_unique_ids": true,
+      "require_dedup_against_v3425": true
+    },
+    {
+      "action": "RESEAL_CANDIDATE_AND_RECEIPTS",
+      "required_hashes": [
+        "candidate_manifest_sha256",
+        "registry_sha256",
+        "deals_feed_sha256",
+        "storefront_bundle_sha256",
+        "staging_audit_receipt_sha256",
+        "rollback_manifest_sha256",
+        "rollback_artifact_fingerprint"
+      ],
+      "receipt_mode": "APPEND_ONLY_RUN_SPECIFIC"
+    }
+  ],
+  "classification_rules": {
+    "voucher_code": "Only when the captured official source contains a public redeemable code.",
+    "app_voucher": "Use when the benefit must be claimed in an app and no public code exists.",
+    "counter_deal": "Use for an offer redeemed at a counter or store.",
+    "observed_price": "Use for a listed menu or combo price without proven discount semantics.",
+    "member_benefit": "Use for a documented membership entitlement.",
+    "seasonal_program": "Use for a time-bound official campaign with its published validity."
+  },
+  "production_permissions": {
+    "production_deployment_authorized": false,
+    "production_mutation_authorized": false
+  },
+  "delivery": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350-R1.json",
+    "receipt_sha256_sidecar": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350-R1.json.sha256",
+    "required_final_state": "AUDIT_READY__PENDING_STRATEGIC_ADVISOR_AND_CHAIRMAN_REVIEW"
+  }
+}

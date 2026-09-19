@@ -1,0 +1,34 @@
+{
+  "manifest_id": "JAYT_VERSION_PARITY_MANIFEST_EZ_N",
+  "version": "v3.480.0-staging.ez",
+  "timestamp": "2026-08-31T07:01:33.601Z",
+  "parity_status": "PERFECT_MATCH_ZERO_DRIFT",
+  "containment_status": "P0_FALSE_PROVENANCE_CONTAINED",
+  "artifacts": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "d697ae7a76057283eb6e1260baa880956fc758cc64061a14df97d9fe38cb2b1e"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "d697ae7a76057283eb6e1260baa880956fc758cc64061a14df97d9fe38cb2b1e"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "9d5eb26d98887b618793a8784f6bb8f876a1c527ea2f20db7fd9ea3aa095e452"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "9d5eb26d98887b618793a8784f6bb8f876a1c527ea2f20db7fd9ea3aa095e452"
+    }
+  },
+  "runtime_health_endpoint": {
+    "url": "http://127.0.0.1:4173/health",
+    "expected_version": "v3.480.0-staging.ez",
+    "status": "UP"
+  },
+  "signoff": {
+    "engineering_lead": "VERIFIED_ZERO_DEPLOY_DRIFT",
+    "qa_lead": "VERIFIED_LIVE_HTTP_AND_E2E"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "WORK_ORDER_J389_PROVENANCE_HARVEST",
+  "authority": "JAYT-389 — directive supplied directly by user",
+  "status": "ISSUED_AWAITING_EXECUTOR_ACK",
+  "issued_at_utc": "2026-09-11T04:45:00Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini only after an actual independent artifact review",
+  "deadline_local": "2026-09-11T23:00:00+07:00",
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "new_remote_previews": false
+  },
+  "baseline": {
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "version": "v3.444.0-j388",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "require_predeploy_recheck": true
+  },
+  "authorization": {
+    "evidence_collection_permitted": true,
+    "safe_technical_remediation_permitted": true,
+    "production_deployment_permitted": "CONDITIONAL_AFTER_CEO_RELEASE_GATE",
+    "affiliate_enabled": "CONDITIONAL_PER_PROVIDER_AFTER_REPLAYABLE_PROVIDER_ISSUED_PROOF",
+    "prohibitions": [
+      "Do not bypass CAPTCHA, WAF, authentication, rate limits, geo restrictions, robots controls, paywalls or provider terms.",
+      "Do not manufacture, edit, truncate or reconstruct source bytes, terms, screenshots, prices, stock, media, promotion codes or provider attribution records.",
+      "A challenge, login, generic catalogue, search result, redirect, HTTP 404 or blocked capture is missing evidence, not verified product/deal evidence."
+    ]
+  },
+  "workstreams": [
+    {
+      "id": "SKU_RAW_BYTES_30",
+      "required_count": 30,
+      "tasks": [
+        "Use a compliant browser/session to capture each exact SKU detail-page response only where access is legitimately granted.",
+        "Persist original response bytes as 06_TRUST_AND_EVIDENCE/j389/raw_snapshots/sku_raw_<itemId>.<html|json|webarchive>. Do not store merely metadata or a preview.",
+        "Each leaf must bind relative file path, physical byte size, SHA-256 from the saved byte file, final URL, response status, capture timestamp, source-extracted product/variant, merchant, price, availability and delivery terms.",
+        "Validator must require physical file byte size to equal declared body_length_bytes and hash to equal declared raw_content_sha256; it must reject challenge/blocked/redirect/404 status for verification.",
+        "If a SKU cannot be obtained compliantly, keep it unverified and count it openly."
+      ]
+    },
+    {
+      "id": "SKU_MEDIA_30",
+      "required_count": 30,
+      "tasks": [
+        "Acquire one correctly matched product photograph per verified SKU only from an official merchant/manufacturer source with documented right/basis for the storefront use.",
+        "Save a non-hotlinked WebP or PNG under 03_SOURCE_OF_TRUTH/assets/products/; record source URL, source relation to SKU/variant, capture time, MIME type, dimensions, bytes and SHA-256 in the leaf.",
+        "Set VERIFIED_MERCHANT_MEDIA only after manual 1:1 visual verification. Any unavailable media stays LABELED_NEUTRAL_PLACEHOLDER and is excluded from the verified count.",
+        "Build must decode each claimed photo and reject reuse, generic imagery, mismatched SKU/variant, SVG placeholder, absent source record or hash mismatch."
+      ]
+    },
+    {
+      "id": "DANANG_DEALS_15",
+      "required_count": 15,
+      "tasks": [
+        "Remove all jayt.vn self-referential source URLs from the evidence set.",
+        "Store one retained first-party partner artifact per deal at 06_TRUST_AND_EVIDENCE/j389/deals/, with path, byte size, SHA-256, capture time and first-party source URL in the index.",
+        "Each record must prove the exact offer, effective date, eligibility, local Da Nang applicability and redemption route. Copy-code CTA requires a visible real public code; app/counter CTA must exactly match the source.",
+        "Metiz, CGV, Starlight, Phe La, Katinat and Highlands are acquisition targets, not pre-approved factual claims. Do not publish an ordinary price, expired campaign or generic membership benefit as a deal."
+      ]
+    },
+    {
+      "id": "COMMERCIAL_ATTRIBUTION",
+      "tasks": [
+        "For each provider, retain a redacted provider-issued and replayable attribution validation that binds provider, SKU, attributed destination and accepted test/reporting record.",
+        "Partner ID, affiliate query parameter, redirect construction, click count or executor-authored JSON alone never proves attribution or revenue.",
+        "Enable affiliate_enabled only for the verified provider/SKU scope. All others remain direct official-link mode, with a clear non-affiliate disclosure and no revenue claim."
+      ]
+    }
+  ],
+  "release_gate": [
+    "Run equality validation across source registry, UI cards, worker catalogue, SKU leaves and physical artifacts. Include mutation tests for ID, URL, product/variant, price, media, declared bytes/hash, challenge status and missing file.",
+    "Require 30/30 compliant raw-byte artifacts and 30/30 verified, rights-documented media before claiming completion of the SKU workstream.",
+    "Require 15/15 retained first-party deal artifacts before claiming a qualified local-deal set.",
+    "Re-run SSRF, itemId-only, mixed-DNS and HTTP-status tests; 3xx must remain UNKNOWN. Verify 1440/768/390 with no console errors or overflow.",
+    "CEO must independently inspect artifacts and served bytes. No production commercial activation, no is_approved=true claim, and no affiliate provider flag until every relevant gate passes."
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j389/raw_snapshots/",
+    "06_TRUST_AND_EVIDENCE/j389/sku_leaves/",
+    "06_TRUST_AND_EVIDENCE/j389/sku_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j389/deals/",
+    "06_TRUST_AND_EVIDENCE/j389/deal_evidence_index.json",
+    "06_TRUST_AND_EVIDENCE/j389/provider_attribution_validation.json",
+    "07_QUALITY_ASSURANCE/JAYT_389_PHYSICAL_PROVENANCE_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_389_MEDIA_IDENTITY_RECEIPT.json",
+    "07_QUALITY_ASSURANCE/JAYT_389_DEALS_PROVENANCE_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_389_RELEASE_RECEIPT.json"
+  ],
+  "reporting": {
+    "ack": "Record actual acknowledgement and start time.",
+    "progress": "Report verified raw-byte count, challenge/blocked count, verified photo count, verified deal count and attribution-ready provider count, plus exact blockers.",
+    "completion": "Never report a target count as complete when a required byte artifact, photo, first-party source or provider proof is missing."
+  }
+}

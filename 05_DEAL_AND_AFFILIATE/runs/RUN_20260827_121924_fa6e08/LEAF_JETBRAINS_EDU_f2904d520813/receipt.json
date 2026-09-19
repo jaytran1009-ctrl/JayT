@@ -1,0 +1,39 @@
+{
+  "capture_run_id": "RUN_20260827_121924_fa6e08",
+  "receipt_id": "RECEIPT_LEAF_JETBRAINS_EDU_f2904d520813_1787808356411",
+  "brand_id": "JETBRAINS_EDU",
+  "brand_name": "JetBrains Student Pack",
+  "cohort": "COHORT_B_OFFERS",
+  "target_type": "REAL_VALUE_OFFER_LEAF",
+  "requested_url": "https://www.jetbrains.com/shop/eform/students",
+  "final_url": "https://www.jetbrains.com/shop/eform/v2/students",
+  "navigation_response_observed": true,
+  "http_status": 200,
+  "redirect_chain": [
+    {
+      "url": "https://www.jetbrains.com/shop/eform/students",
+      "http_status": 302
+    },
+    {
+      "url": "https://www.jetbrains.com/shop/eform/v2/students",
+      "http_status": 200
+    },
+    {
+      "url": "https://sgtm.jetbrains.com/_/service_worker/68d0/sw_iframe.html?origin=https%3A%2F%2Fwww.jetbrains.com&1p=1",
+      "http_status": 200
+    }
+  ],
+  "captured_at": "2026-08-27T05:25:56.348Z",
+  "browser_version": "Chrome/152.0.7977.42",
+  "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "network_error": null,
+  "fresh_hashes": {
+    "html_sha256": "96270d2f91a583e086079a0609391890f25e547f6a435b90b14773842baca681",
+    "text_sha256": "0c785b1ca526fa2289c6a845bf59fed018d4d98c13464d51385df9105dab3136",
+    "screenshot_sha256": "3609b9ee31dd5954c133059abcc9a90f9c3dc57b6f1019ee71de903fd457cab6"
+  }
+}

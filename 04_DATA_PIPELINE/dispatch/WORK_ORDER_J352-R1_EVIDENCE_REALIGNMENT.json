@@ -1,0 +1,45 @@
+{
+  "work_order_id": "J352-R1_EVIDENCE_REALIGNMENT",
+  "directive": "JAYT-352",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "purpose": "Correct schedule evidence provenance and reseal the v3.427.0 staging candidate without any Production mutation.",
+  "permissions": {
+    "staging_code_changes_authorized": true,
+    "candidate_reseal_authorized": true,
+    "production_deploy_authorized": false,
+    "production_alias_change_authorized": false,
+    "registry_mutation_authorized": false,
+    "deals_feed_mutation_authorized": false
+  },
+  "required_actions": [
+    {
+      "id": "R1-01",
+      "action": "Remove or withhold every calendar item backed by P2M_METIZ_U22_RATE until a real raw artifact, source URL, UTC capture time, exact span, and computed SHA-256 are present on disk. A placeholder-like fingerprint is never evidence. Use an honest empty state for affected days while held."
+    },
+    {
+      "id": "R1-02",
+      "action": "For Galaxy Happy Day and Galaxy U22, prove each recurring claim separately. If one raw artifact supports both, record both exact spans and conditions; otherwise bind separate raw artifacts. Do not infer recurrence from price observations or member policy."
+    },
+    {
+      "id": "R1-03",
+      "action": "Reseal candidate_manifest.json so audit_receipts.work_order_receipt includes the exact SHA-256 of RECEIPT_J352_FEATURE_SPRINT_R1.json. If screenshots remain evidence, add a separately hashed screenshot manifest."
+    },
+    {
+      "id": "R1-04",
+      "action": "Run the J352 regression and provenance tests again across 1440, 768, and 390 px. Preserve Split Bill privacy guarantees and retain zero copy buttons in the real catalog unless a public, real voucher code is evidenced."
+    },
+    {
+      "id": "R1-05",
+      "action": "Write RECEIPT_J352_FEATURE_SPRINT_R1.json and its .sha256 sidecar. The receipt must list every scheduled item, its source path, raw SHA-256, exact span, recurrence/expiry condition, and a decision of VERIFIED or HELD. Reseal the candidate and report its new manifest SHA-256."
+    }
+  ],
+  "acceptance_conditions": [
+    "No placeholder, invented, or unverifiable SHA-256 value appears in a rendered recurring offer.",
+    "Every rendered day-specific offer has traceable evidence for its price, condition, and recurrence.",
+    "The candidate manifest cryptographically binds the final receipt.",
+    "Production v3.426.0 remains unchanged."
+  ],
+  "expected_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J352_FEATURE_SPRINT_R1.json",
+  "candidate_root": "08_RELEASE_VAULT/candidates/v3.427.0/"
+}

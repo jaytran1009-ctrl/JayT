@@ -1,0 +1,314 @@
+{
+  "receipt_name": "SPAN_VERIFICATION_RECEIPT",
+  "generated_at_utc": "2026-09-07T04:38:15.085Z",
+  "matrix_name": "BRAND_POLICY_AUDIT_MATRIX",
+  "matrix_version": "3.0",
+  "matrix_sha256": "e3c6fb81ac51a16d0e73feda36fe027b5970a43583303cc00749b79d2b6ea1db",
+  "total_policies": 6,
+  "total_spans_checked": 21,
+  "total_spans_passed": 21,
+  "total_spans_failed": 0,
+  "all_passed": true,
+  "policy_results": [
+    {
+      "policy_id": "POLICY_CGV_CULTURE_DAY",
+      "brand_id": "cgv_cinemas",
+      "raw_source_path": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/cgv_culture_day_official_promo_raw.html",
+      "raw_sha256_expected": "f8f1fe1922c945bf9b84e0860fd498f68a37e33e9e86be5784234d498a75e3eb",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [
+        {
+          "term_key": "policy_title",
+          "text_span": "CGV CULTURE DAY - THỨ HAI CUỐI CÙNG CỦA THÁNG ĐÃ TRỞ LẠI !!!",
+          "declared_offset": 263,
+          "actual_offset": 263,
+          "span_bytes": 74,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "validity_historical_date",
+          "text_span": "Thứ Hai – 24/08/2026",
+          "declared_offset": 42019,
+          "actual_offset": 42019,
+          "span_bytes": 24,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "advertorial_phrase",
+          "text_span": "nha cả nhà ơiiiii",
+          "declared_offset": 42098,
+          "actual_offset": 42098,
+          "span_bytes": 21,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "standard_2d_price",
+          "text_span": "58.000đ",
+          "declared_offset": 42527,
+          "actual_offset": 42527,
+          "span_bytes": 8,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "designated_danang_theater",
+          "text_span": "CGV Vĩnh Trung Plaza",
+          "declared_offset": 43133,
+          "actual_offset": 43133,
+          "span_bytes": 21,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "applicable_channels",
+          "text_span": "Áp dụng cho khách hàng đặt vé trực tuyến (online) hoặc tại quầy.",
+          "declared_offset": 46259,
+          "actual_offset": 46259,
+          "span_bytes": 83,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "seating_types",
+          "text_span": "Áp dụng cho mọi loại ghế (bao gồm ghế Sweetbox).",
+          "declared_offset": 46368,
+          "actual_offset": 46368,
+          "span_bytes": 61,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "group_sales_exception",
+          "text_span": "Không áp dụng cho mua vé nhóm (Group Sales), Suất Chiếu Đặc Biệt.",
+          "declared_offset": 46656,
+          "actual_offset": 46656,
+          "span_bytes": 80,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "special_room_exceptions",
+          "text_span": "Không áp dụng cho phòng chiếu IMAX, SCREENX, 4DX, ULTRA 4DX.",
+          "declared_offset": 46780,
+          "actual_offset": 46780,
+          "span_bytes": 67,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "promo_stacking_exception",
+          "text_span": "Không áp dụng chung với chương trình khuyến mãi khác của CGV và đối tác.",
+          "declared_offset": 46887,
+          "actual_offset": 46887,
+          "span_bytes": 92,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "holiday_exceptions",
+          "text_span": "Không áp dụng cho các ngày Lễ, Tết.",
+          "declared_offset": 47012,
+          "actual_offset": 47012,
+          "span_bytes": 45,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "combo_snack_offer",
+          "text_span": "CGV Combo (bao gồm 02 nước + 01 bắp)",
+          "declared_offset": 45981,
+          "actual_offset": 45981,
+          "span_bytes": 43,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "combo_counter_only",
+          "text_span": "Giá CGV Combo chỉ áp dụng mua tại quầy.",
+          "declared_offset": 46462,
+          "actual_offset": 46462,
+          "span_bytes": 49,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        }
+      ],
+      "raw_sha256_actual": "f8f1fe1922c945bf9b84e0860fd498f68a37e33e9e86be5784234d498a75e3eb",
+      "raw_bytes": 55213
+    },
+    {
+      "policy_id": "POLICY_CGV_U22",
+      "brand_id": "cgv_cinemas",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.raw.html",
+      "raw_sha256_expected": "5ef9bdd04da5fa7af28a119303ec38cf9ddfc5022973a6b76f2d1f1a239d77b6",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [],
+      "raw_sha256_actual": "5ef9bdd04da5fa7af28a119303ec38cf9ddfc5022973a6b76f2d1f1a239d77b6",
+      "raw_bytes": 5390
+    },
+    {
+      "policy_id": "POLICY_B12_04_GALAXY_U22",
+      "brand_id": "galaxy_cinema",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.raw.html",
+      "raw_sha256_expected": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [],
+      "raw_sha256_actual": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "raw_bytes": 138
+    },
+    {
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "brand_id": "jollibee",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+      "raw_sha256_expected": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [],
+      "raw_sha256_actual": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+      "raw_bytes": 264495
+    },
+    {
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "brand_id": "phuclong",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_05.raw.html",
+      "raw_sha256_expected": "9c4eadd1660bc043c3a6c685fd98589ead6bb4dbe5eb498ced669fbc46c938c4",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [
+        {
+          "term_key": "earning_ratio",
+          "text_span": "Tỷ lệ quy đổi điểm khả dụng (Điểm đổi quà) và điểm tích lũy: 10.000 đồng = 1 điểm",
+          "declared_offset": 47548,
+          "actual_offset": 47548,
+          "span_bytes": 116,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "point_validity",
+          "text_span": "Điểm đổi quà có hạn sử dụng là 1 năm kể từ ngày tích điểm đó.",
+          "declared_offset": 47961,
+          "actual_offset": 47961,
+          "span_bytes": 89,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "store_earning_scope",
+          "text_span": "Chỉ áp dụng tích lũy điểm khi khách hàng thực hiện giao dịch tại website Phúc Long và trực tiếp tại hệ thống cửa hàng Phúc Long trên toàn quốc (ngoại trừ cửa hàng tại Sân Bay, Winmart, Winmart+, WiN, Preminum)",
+          "declared_offset": 48205,
+          "actual_offset": 48205,
+          "span_bytes": 259,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "redemption_exclusions",
+          "text_span": "(ngoại trừ Phúc Long Sân Bay Tân Sơn Nhất, Winmart, Winmart+, WiN, Phúc Long Premium Xuân Thủy)",
+          "declared_offset": 48944,
+          "actual_offset": 48944,
+          "span_bytes": 109,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "drink_redemption_rule",
+          "text_span": "Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)",
+          "declared_offset": 55875,
+          "actual_offset": 55875,
+          "span_bytes": 104,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "non_combinable",
+          "text_span": "Điểm khả dụng (Điểm đổi quà) hay Điểm tích lũy KHÔNG ĐƯỢC ÁP DỤNG chung với các hình thức phi tiền mặt như voucher, e-voucher, coupon, e-coupon, phiếu quà tặng… và các chương trình khuyến mãi khác.",
+          "declared_offset": 49101,
+          "actual_offset": 49101,
+          "span_bytes": 252,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        }
+      ],
+      "raw_sha256_actual": "9c4eadd1660bc043c3a6c685fd98589ead6bb4dbe5eb498ced669fbc46c938c4",
+      "raw_bytes": 124655
+    },
+    {
+      "policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+      "brand_id": "phi_long",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.raw.html",
+      "raw_sha256_expected": "108a8554e25c93ac97ccb7da249a019da6069ce17df63626a72cd5843b9ed993",
+      "raw_file_exists": true,
+      "raw_sha256_match": true,
+      "spans_checked": [
+        {
+          "term_key": "product_title",
+          "text_span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+          "declared_offset": 213,
+          "actual_offset": 213,
+          "span_bytes": 60,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        },
+        {
+          "term_key": "observed_price",
+          "text_span": "290.000",
+          "declared_offset": 243519,
+          "actual_offset": 243519,
+          "span_bytes": 7,
+          "has_valid_span": true,
+          "has_valid_offset": true,
+          "has_matching_raw_sha": true,
+          "matches": true
+        }
+      ],
+      "raw_sha256_actual": "108a8554e25c93ac97ccb7da249a019da6069ce17df63626a72cd5843b9ed993",
+      "raw_bytes": 329524
+    }
+  ]
+}

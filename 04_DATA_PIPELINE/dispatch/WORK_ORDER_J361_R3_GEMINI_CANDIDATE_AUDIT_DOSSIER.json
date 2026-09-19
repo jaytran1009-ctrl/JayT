@@ -1,0 +1,22 @@
+{
+  "work_order_id": "J361_R3_GEMINI_CANDIDATE_AUDIT_DOSSIER",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "GEMINI_AUDIT_AUTHORIZED",
+  "candidate_target": "08_RELEASE_VAULT/candidates/v3.430.0-j361",
+  "production_deployment_authorized": false,
+  "vercel_alias_mutation_authorized": false,
+  "gemini_review_scope": [
+    "Verify source applicability, current terms and Da Nang scope for the eleven derived verified offers.",
+    "Verify that held and discovery records are not represented as verified offers.",
+    "Verify candidate integrity using candidate_manifest.json, its sidecar, the matrix sidecar and JAYT_361_CANDIDATE_AUDIT_RECEIPT.json.",
+    "Review all runtime contract results and release-boundary statements."
+  ],
+  "required_dossier_files": [
+    "01_EXECUTIVE_COUNCIL/JAYT_361_CEO_R3_CANDIDATE_ACCEPTANCE_AND_GEMINI_AUDIT_AUTHORIZATION.md",
+    "08_RELEASE_VAULT/candidates/v3.430.0-j361/candidate_manifest.json",
+    "08_RELEASE_VAULT/candidates/v3.430.0-j361/CANDIDATE_RELEASE_REQUEST_J361.md",
+    "06_TRUST_AND_EVIDENCE/batch_19_j361_visual_leaf_vault/CLAIM_PROVENANCE_MATRIX.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_361_CANDIDATE_AUDIT_RECEIPT.json"
+  ],
+  "next_gate": "Only a documented Gemini PASS may be submitted to the Chairman for a separate Go-Live signature. This work order confers no deployment authority."
+}

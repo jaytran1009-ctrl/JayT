@@ -1,0 +1,44 @@
+{
+  "report_name": "JAYT_333_HOT_CAMPAIGN_CAPTURE_RESULT",
+  "generated_at_utc": "2026-09-07T06:51:42.765Z",
+  "capture_method": "CONTROLLED_ONE_SHOT_UNAUTHENTICATED_GET",
+  "results": [
+    {
+      "candidate_id": "J333_HOT_03_METIZ_U22_2026",
+      "requested_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "final_url": "https://metiz.vn/promotion/khuyen-mai-gia-ve-u22-21.html",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_03_METIZ_U22_2026.leaf.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_03_METIZ_U22_2026.leaf.headers.json",
+      "raw_sha256": "6735f1376d757eed814c7d402dc86e10998924a5d944060fbda73a561439aea8",
+      "raw_bytes": 82451,
+      "evidence": [
+        {
+          "declared": "KHUYẾN MÃI GIÁ VÉ U22",
+          "found": "KHUYẾN MÃI GIÁ VÉ U22",
+          "byte_offset_utf8": 446
+        },
+        {
+          "declared": "01/01/2026 - 31/12/2026",
+          "found": null,
+          "byte_offset_utf8": null
+        }
+      ],
+      "all_declared_spans_found": false,
+      "commercial_duplicate_blocked": false,
+      "verdict": "QUARANTINE__HTTP_OR_SPAN_MISMATCH"
+    }
+  ],
+  "metrics": {
+    "targets": 1,
+    "evidence_complete": 0,
+    "awaiting_approval": 0,
+    "dedup_blocked": 0,
+    "quarantined": 1
+  },
+  "safeguards": {
+    "synthetic_bytes_created": false,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "pipeline_id": "VOUCHER_EVIDENCE_PIPELINE_SCHEMA_EZ_V",
+  "version": "1.0.0-ez.v",
+  "governing_directive": "JAYT-245 Section EZ-V (Lines 4475-4539)",
+  "core_principles": [
+    "RAW_FIRST_EVIDENCE_GATE",
+    "FAIL_CLOSED_TIERING",
+    "NO_SYNTHETIC_OR_HIDDEN_VOUCHER_CREATION",
+    "NO_COMMERCIAL_PREFILLS",
+    "DEFAULT_T1_DEAL_COUNT_EQUALS_ZERO"
+  ],
+  "required_voucher_evidence_fields": [
+    "raw_receipt_id",
+    "canonical_voucher_url",
+    "exact_citation_excerpt",
+    "byte_start_offset",
+    "byte_end_offset",
+    "capture_timestamp",
+    "eligibility_clause",
+    "scope_clause",
+    "validity_start_date",
+    "validity_end_date",
+    "proven_operating_body",
+    "fail_closed_tier_classification"
+  ],
+  "tier_classification_rules": {
+    "T1_VERIFIED_DEAL": "All 12 fields proven with direct active voucher code/terms and zero ambiguity.",
+    "T2_OFFICIAL_PROGRAM_DOCUMENTATION": "Official policy/terms documentation proven without voucher code (e.g. GitHub Education pilot).",
+    "T3_LOCATION_OR_REFERENCE": "Verified physical location or general information without active promo.",
+    "T4_SOURCE_TO_WATCH": "Hypothesis source under observation, unverified raw bytes.",
+    "HELD_INTERNAL": "Captured document with incomplete fields or expired date; strictly held internal."
+  },
+  "personalized_voucher_ux_guideline": "Voucher cá nhân hóa hoặc mã trong ứng dụng chỉ được mô tả bằng thông báo trung tính: 'Kiểm tra tại ứng dụng hoặc giỏ hàng chính thức của đơn vị bán'. Tuyệt đối không hứa hẹn có sẵn mã."
+}

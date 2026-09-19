@@ -1,0 +1,100 @@
+{
+  "ledger_id": "FAST_LANE_BATCH_PILOT_2_CANDIDATES_SLA_LEDGER_EZ_AE",
+  "version": "1.0.0-ez.ae",
+  "governing_directive": "JAYT-245 Section EZ-AE (Lines 4770-4798)",
+  "timestamp": "2026-08-31T08:28:51.146Z",
+  "batch_parameters": {
+    "max_concurrent_candidates": 2,
+    "sla_window_hours": 24,
+    "early_verdict_rule": "EARLY_VERDICT_ONLY_ON_FULL_CORE_FIELDS_OR_P0_PROVENANCE_FAIL",
+    "default_state_during_sla": "OPEN_EVALUATING"
+  },
+  "candidates": [
+    {
+      "candidate_id": "FAST_LANE_RERUN_01_JETBRAINS_STUDENT",
+      "jtbd_category": "DEVELOPER_EDUCATION_PROGRAM_DOCUMENTATION",
+      "hypothesis": "HYPOTHESIS_DEVELOPER_IDE_STUDENT_LICENSE_DOCUMENTATION",
+      "owner": "Data & Trust / Engineering",
+      "sla_open_utc": "2026-08-31T08:28:00Z",
+      "sla_close_utc": "2026-09-01T08:28:00Z",
+      "raw_capture_metadata": {
+        "request_url": "https://www.jetbrains.com/community/education/#students",
+        "final_url": "https://www.jetbrains.com/academy/student-pack/#students",
+        "capture_timestamp_utc": "2026-08-31T08:28:15Z",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ae/candidate_ez_ae_01_jetbrains_student_raw_bytes.bin",
+        "byte_length": 494398,
+        "sha256": "355d9e1e6d07125c0dfedda229b1880a78a54f86044a5c183c4b8b780637dceb",
+        "http_status": 200
+      },
+      "sla_status": "CLOSED_SLA_COMPLETED_T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "current_notes": "Restored to OPEN_EVALUATING per Directive EZ-AL. Raw bytes preserved (494.398 B, SHA 355d9e1e...). Closure allowed ONLY when real runtime UTC >= 2026-09-01T08:28:00Z.",
+      "closure_timestamp_utc": "2026-09-01T12:01:19Z",
+      "verdict_tier": "T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+      "verdict_ref": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_JETBRAINS_POST_SLA_EZ_AQ.json",
+      "missing_fields": [
+        "action_url"
+      ]
+    },
+    {
+      "candidate_id": "FAST_LANE_RERUN_02_FIGMA_EDUCATION",
+      "jtbd_category": "DESIGN_EDUCATION_PROGRAM_DOCUMENTATION",
+      "hypothesis": "HYPOTHESIS_DESIGN_TOOL_STUDENT_EDUCATION_PLAN_DOCUMENTATION",
+      "owner": "Data & Trust / QA",
+      "sla_open_utc": "2026-08-31T08:28:00Z",
+      "sla_close_utc": "2026-09-01T08:28:00Z",
+      "raw_capture_metadata": {
+        "request_url": "https://www.figma.com/education/",
+        "final_url": "https://www.figma.com/education/",
+        "capture_timestamp_utc": "2026-08-31T08:28:18Z",
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_ez_ae/candidate_ez_ae_02_figma_education_raw_bytes.bin",
+        "byte_length": 1658429,
+        "sha256": "090801961331bd51a6ca07ee0b16527a18854b77f51cf26f26382064cc9d7892",
+        "http_status": 200
+      },
+      "sla_status": "CLOSED_SLA_COMPLETED_T2_DOCUMENTATION_HELD_INTERNAL",
+      "early_verdict_triggered": false,
+      "public_eligible": false,
+      "current_notes": "Restored to OPEN_EVALUATING per Directive EZ-AL. Raw bytes preserved (1.658.429 B, SHA 09080196...). Closure allowed ONLY when real runtime UTC >= 2026-09-01T08:28:00Z.",
+      "closure_timestamp_utc": "2026-09-01T12:01:19Z",
+      "verdict_tier": "T2_DOCUMENTATION_HELD_INTERNAL",
+      "verdict_ref": "06_TRUST_AND_EVIDENCE/SLA_CLOSURE_VERDICT_FIGMA_POST_SLA_EZ_AQ.json",
+      "missing_fields": []
+    }
+  ],
+  "batch_summary": {
+    "total_candidates_active": 2,
+    "sla_open_active_count": 0,
+    "early_verdicts_rendered": 0,
+    "t1_deals_approved": 0,
+    "t2_programs_approved": 0,
+    "public_actions": {
+      "new_public_cards": 0,
+      "new_public_links": 0,
+      "new_public_labels": 0
+    },
+    "ez_ai_correction": {
+      "timestamp": "2026-09-01T05:22:01.040Z",
+      "action": "RESTORED_OPEN_EVALUATING_FROM_QUARANTINED_PREMATURE_VERDICT",
+      "directive": "JAYT-245 Section EZ-AI Mandate 3"
+    },
+    "ez_al_containment": {
+      "quarantined_event": "QUARANTINED_FUTURE_DATED_PRE_SLA_CLOSURE",
+      "restoration_timestamp_utc": "2026-09-01T06:53:55.371Z",
+      "directive": "JAYT-245 Section EZ-AL (Lines 4960-4985)",
+      "enforcement": "Both candidates restored to OPEN_EVALUATING. Closure forbidden until runtime clock >= 2026-09-01T08:28:00Z."
+    },
+    "sla_closed_count": 2,
+    "t2_programs_held_internal": 1,
+    "t4_descriptive_held_internal": 1,
+    "ez_aq_closure": {
+      "closure_timestamp_utc": "2026-09-01T12:01:19Z",
+      "closure_governing_directive": "JAYT-245 Section EZ-AK Mandate 2 & Section EZ-AP",
+      "clock_guard_verified": true,
+      "runtime_utc": "2026-09-01T12:01:19Z",
+      "sla_close_utc": "2026-09-01T08:28:00Z",
+      "status": "FAIL_CLOSED_SLA_CLOSURE_COMPLETED"
+    }
+  }
+}

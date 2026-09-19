@@ -1,0 +1,84 @@
+{
+  "roadmap_id": "JAYT-311-BATCH-04-INGRESS-ROADMAP",
+  "baseline": "Production v3.420.0 — three non-commercial information cards",
+  "mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_RENDER__NO_PUBLIC_APPROVAL",
+  "entry_contract": {
+    "required_source": "official 2025–2026 leaf page or dated official document",
+    "required_text_span": "a verbatim span that directly supports the exact public utility claim",
+    "required_raw_evidence": "operator-provided immutable body, redacted response headers, UTC capture time, SHA-256 and UTF-8 offset check",
+    "prohibited": ["homepage-as-evidence", "expired notice", "pricing", "voucher", "affiliate", "tracking", "inferred availability"]
+  },
+  "tracks": [
+    {
+      "slot_id": "B04_DIGITAL_01",
+      "theme": "Hỗ trợ dịch vụ công trực tuyến",
+      "official_leaf_url": "https://thangphu.danang.gov.vn/chi-tiet-tin/group/160/nid/327/da-nang-mo-rong-mo-hinh-dai-ly-dich-vu-cong-truc-tuyen-tai-25-diem-giao-dich-bidv",
+      "expected_text_span": "hỗ trợ người dân và doanh nghiệp tiếp cận, thực hiện các thủ tục hành chính trực tuyến",
+      "source_status": "DATED_OFFICIAL_CANDIDATE__AWAITING_CEO_INGRESS_SCOPE",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_DIGITAL_02",
+      "theme": "Ký số toàn dân cho dịch vụ công và y tế",
+      "official_leaf_url": "https://sdttg.danang.gov.vn/chi-tiet-tin/group/167/nid/4819/trien-khai-phan-he-ky-so-toan-dan-tai-da-nang-buoc-tien-moi-trong-dich-vu-cong-va-y-te",
+      "expected_text_span": "triển khai ký số toàn dân và áp dụng cho các dịch vụ y tế",
+      "source_status": "DATED_OFFICIAL_CANDIDATE__AWAITING_CEO_INGRESS_SCOPE",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_DIGITAL_03",
+      "theme": "Tiện ích tra cứu hồ sơ dịch vụ công",
+      "official_leaf_url": "https://egov.danang.gov.vn/tienich",
+      "expected_text_span": "Tình trạng về hồ sơ dịch vụ công sẽ thông tin TỰ ĐỘNG",
+      "source_status": "OFFICIAL_UTILITY_PAGE__RECENCY_REQUIRES_RAW_VERIFICATION",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_CITIZEN_01",
+      "theme": "Cổng góp ý và phản ánh đô thị MyPortal",
+      "official_leaf_url": "https://myportal.danang.gov.vn/",
+      "expected_text_span": "Chính quyền sẽ tiếp nhận, xử lý và phản hồi",
+      "source_status": "PORTAL_ONLY__LEAF_PAGE_REQUIRED",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_HEALTH_01",
+      "theme": "Hướng dẫn thủ tục hành chính y tế",
+      "official_leaf_url": "https://soyte.danang.gov.vn/",
+      "expected_text_span": "thủ tục hành chính/ DVC trực tuyến",
+      "source_status": "PORTAL_ONLY__CURRENT_LEAF_PAGE_REQUIRED",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_EDUCATION_01",
+      "theme": "Dịch vụ sinh viên trường đại học thành viên ĐH Đà Nẵng",
+      "official_leaf_url": null,
+      "expected_text_span": "thông báo hoặc hướng dẫn còn hiệu lực trực tiếp cho sinh viên năm học 2026–2027",
+      "source_status": "DISCOVERY_REQUIRED__OFFICIAL_UED_DUT_DUE_LEAF_PAGE_ONLY",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_GREEN_01",
+      "theme": "Không gian xanh hoặc công viên công cộng Đà Nẵng",
+      "official_leaf_url": null,
+      "expected_text_span": "tên địa điểm, địa chỉ hoặc thông tin vận hành hiện hành do cơ quan công lập công bố",
+      "source_status": "DISCOVERY_REQUIRED__NO_CURRENT_LEAF_PAGE_VERIFIED",
+      "capture_authorized": false
+    },
+    {
+      "slot_id": "B04_HEALTH_02",
+      "theme": "Thông tin hỗ trợ y tế cộng đồng không thương mại",
+      "official_leaf_url": null,
+      "expected_text_span": "tên dịch vụ công cộng, cơ quan phụ trách và hướng dẫn sử dụng hiện hành",
+      "source_status": "DISCOVERY_REQUIRED__NO_CURRENT_LEAF_PAGE_VERIFIED",
+      "capture_authorized": false
+    }
+  ],
+  "governance": {
+    "public_approved": 0,
+    "render_permitted": false,
+    "deals_feed_mutation_permitted": false,
+    "production_mutation_permitted": false,
+    "next_gate": "CEO_TARGET_SPECIFIC_INGRESS_AUTHORIZATION"
+  }
+}

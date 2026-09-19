@@ -1,0 +1,16 @@
+[Unit]
+Description=JayT Continuous Content Coverage Worker
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/jayt
+Environment=TZ=Asia/Ho_Chi_Minh
+ExecStart=/usr/bin/node 07_QUALITY_ASSURANCE/scheduler_tasks/cron_cloud_runner.js --cycle=DAILY_MORNING_0800
+StandardOutput=append:/var/log/jayt/scheduler.log
+StandardError=append:/var/log/jayt/scheduler_error.log
+User=jayt
+Group=jayt
+
+[Install]
+WantedBy=multi-user.target

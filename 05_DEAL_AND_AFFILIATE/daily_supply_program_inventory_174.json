@@ -1,0 +1,1549 @@
+{
+  "program_name": "JAYT_DAILY_SUPPLY_ACCELERATION_PROGRAM_174",
+  "launch_timestamp": "2026-08-27T07:42:10.183Z",
+  "north_star": "Daily Deal Operating System của Đà Nẵng — Giúp người dùng tìm nhanh 30–50 cơ hội tiết kiệm thật mỗi ngày",
+  "display_hierarchy": {
+    "tier_1_verified_deal": {
+      "label_web": "Ưu đãi đang dùng được",
+      "color": "🟢",
+      "counts_in_kpi": true,
+      "current_count": 0
+    },
+    "tier_2_verified_venue": {
+      "label_web": "Điểm hẹn tiết kiệm",
+      "color": "🔵",
+      "counts_in_kpi": false,
+      "current_count": 100
+    },
+    "tier_3_tracked_source": {
+      "label_web": "Theo dõi ưu đãi tại nguồn",
+      "color": "🟣",
+      "counts_in_kpi": false,
+      "current_count": 24
+    }
+  },
+  "clusters": [
+    {
+      "id": "CLUSTER_1_HOA_KHANH",
+      "name": "Hòa Khánh (ĐH Bách Khoa / ĐH Sư Phạm / KTX)",
+      "hub_weight": "HIGH"
+    },
+    {
+      "id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+      "name": "Bắc Mỹ An — Hòa Quý (ĐH Kinh Tế DUE / VKU / FPT)",
+      "hub_weight": "HIGH"
+    },
+    {
+      "id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+      "name": "Hải Châu — Thanh Khê (Trung Tâm / ĐH Duy Tân / CĐ TM)",
+      "hub_weight": "HIGH"
+    },
+    {
+      "id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+      "name": "Khu Công Nghệ Cao / CV Phần Mềm (Quang Trung / IT)",
+      "hub_weight": "MEDIUM"
+    },
+    {
+      "id": "CLUSTER_5_SON_TRA",
+      "name": "Sơn Trà (Du Lịch / Sinh Hoạt Ven Biển)",
+      "hub_weight": "MEDIUM"
+    }
+  ],
+  "lane_a_deal_candidates": {
+    "target_count": 60,
+    "current_pool_count": 60,
+    "status": "CANDIDATE_BACKLOG_AWAITING_PHYSICAL_EVIDENCE",
+    "candidates": [
+      {
+        "candidate_id": "CAND_FB_01",
+        "brand": "Highlands Coffee",
+        "type": "FNB_COMBO",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official website banner / App screenshot with date",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_FB_02",
+        "brand": "Phúc Long Coffee",
+        "type": "MEMBER_DAY",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official member policy banner",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_FB_03",
+        "brand": "Gong Cha Vietnam",
+        "type": "STUDENT_DISCOUNT",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Store counter poster / Official fanpage verified post",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_04",
+        "brand": "The Coffee House",
+        "type": "HAPPY_HOUR",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "In-app promo terms / counter receipt",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      },
+      {
+        "candidate_id": "CAND_FB_05",
+        "brand": "Lotteria Vietnam",
+        "type": "STUDENT_LUNCH",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official menu / verified leaflet",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_06",
+        "brand": "Jollibee Vietnam",
+        "type": "STUDENT_COMBO",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official menu scan",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_FB_07",
+        "brand": "KFC Vietnam",
+        "type": "WEEKDAY_DEAL",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official campaign page capture",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_FB_08",
+        "brand": "McDonalds Da Nang",
+        "type": "APP_COUPON",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official app screenshot",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_FB_09",
+        "brand": "TocoToco Tea",
+        "type": "BUY_1_GET_1",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Dated counter photo by Campus Scout",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      },
+      {
+        "candidate_id": "CAND_FB_10",
+        "brand": "Mixue Ice Cream",
+        "type": "BUDGET_SAVING",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official printed menu photo",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_11",
+        "brand": "Cơm Thố Bách Khoa",
+        "type": "LOCAL_STUDENT_DEAL",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Physical receipt with date and student combo line",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_12",
+        "brand": "Quán Cơm Sinh Viên Cô Ba",
+        "type": "LOCAL_BUDGET_LUNCH",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Scout photo of board menu & price",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_13",
+        "brand": "Mì Cay Sasin Ngũ Hành Sơn",
+        "type": "COMBO_GROUP",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Store verified promotion bill",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      },
+      {
+        "candidate_id": "CAND_FB_14",
+        "brand": "Bún Đậu Mắm Tôm Hòa Khánh",
+        "type": "STUDENT_SET",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Dated menu capture",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_FB_15",
+        "brand": "Canteen CV Phần Mềm Quang Trung",
+        "type": "IT_LUNCH_SET",
+        "hub_id": "HUB_1_FOOD_AND_DINING",
+        "required_evidence": "Official notice board photo",
+        "target_cluster": "CLUSTER_4_HI_TECH_SOFTWARE_PARK"
+      },
+      {
+        "candidate_id": "CAND_CIN_01",
+        "brand": "CGV Cinemas Da Nang",
+        "type": "U22_STUDENT_TICKET",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "CGV official website U22 terms page capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_02",
+        "brand": "CGV Cinemas Da Nang",
+        "type": "CULTURE_DAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official CGV monthly event calendar",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_03",
+        "brand": "Galaxy Cinema Da Nang",
+        "type": "HAPPY_DAY_TUESDAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Galaxy official member rules capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_04",
+        "brand": "Galaxy Cinema Da Nang",
+        "type": "U22_STUDENT_PRICE",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official student ticket rate sheet",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_05",
+        "brand": "Starlight Cinema Da Nang",
+        "type": "MEMBER_DAY_WEDNESDAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Starlight official promo banner",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_06",
+        "brand": "Starlight Cinema Da Nang",
+        "type": "STUDENT_RATE_MONDAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official rate card at counter",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_07",
+        "brand": "Lotte Cinema Da Nang",
+        "type": "MOVIE_DAY_TUESDAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Lotte Cinema official policy capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_08",
+        "brand": "Lotte Cinema Da Nang",
+        "type": "STUDENT_PASS_U22",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official rate card capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_09",
+        "brand": "Metiz Cinema Helio",
+        "type": "METIZ_DAY_TUESDAY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Metiz website ticket price table capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_10",
+        "brand": "Metiz Cinema Helio",
+        "type": "STUDENT_U22_PROMO",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Metiz official counter poster capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_11",
+        "brand": "Helio Center Da Nang",
+        "type": "NIGHT_MARKET_VOUCHER",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official event guide capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_CIN_12",
+        "brand": "Bảo Tàng Điêu Khắc Chăm",
+        "type": "STUDENT_ENTRY_POLICY",
+        "hub_id": "HUB_3_CINEMA_AND_WEEKEND",
+        "required_evidence": "Official ticketing policy board photo",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_TRA_01",
+        "brand": "DanaBus Da Nang",
+        "type": "MONTHLY_STUDENT_PASS",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "DanaBus official fare chart screenshot",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_TRA_02",
+        "brand": "DanaBus Da Nang",
+        "type": "SUBSIDIZED_SINGLE_TICKET",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official public transit decree document",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_TRA_03",
+        "brand": "Đường Sắt Việt Nam (DSVN)",
+        "type": "STUDENT_TRAIN_DISCOUNT",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "DSVN official website fare policy capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_TRA_04",
+        "brand": "Grab Vietnam",
+        "type": "HOURLY_COMMUTE_VOUCHER",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Authorized promo feed / App campaign terms",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_TRA_05",
+        "brand": "Be Group Vietnam",
+        "type": "STUDENT_BIKE_VOUCHER",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Authorized promo feed / App campaign terms",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_TRA_06",
+        "brand": "Xanh SM Da Nang",
+        "type": "BIKE_SUBSCRIPTION_PASS",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official Xanh SM app campaign terms",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_TRA_07",
+        "brand": "DanaBus Route R16",
+        "type": "UNIVERSITY_EXPRESS_ROUTE",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official route map & schedule capture",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_TRA_08",
+        "brand": "DanaBus Route R6A",
+        "type": "WEST_DORM_CONNECT",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official route map & schedule capture",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_TRA_09",
+        "brand": "DanaBus Route R01",
+        "type": "VKU_DUE_CONNECT",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official route map & schedule capture",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      },
+      {
+        "candidate_id": "CAND_TRA_10",
+        "brand": "DanaBus Route R14",
+        "type": "HI_TECH_PARK_COMMUTE",
+        "hub_id": "HUB_4_TRANSIT_AND_COMMUTE",
+        "required_evidence": "Official route map & schedule capture",
+        "target_cluster": "CLUSTER_4_HI_TECH_SOFTWARE_PARK"
+      },
+      {
+        "candidate_id": "CAND_STU_01",
+        "brand": "GitHub Education",
+        "type": "STUDENT_DEV_PACK",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of education.github.com/pack with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_02",
+        "brand": "JetBrains",
+        "type": "ALL_PRODUCTS_EDU_LICENSE",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of jetbrains.com/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_03",
+        "brand": "Spotify Vietnam",
+        "type": "PREMIUM_STUDENT_PLAN",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of spotify.com/vn-vi/student with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_04",
+        "brand": "Notion",
+        "type": "NOTION_FOR_EDUCATION_PLUS",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of notion.so/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_05",
+        "brand": "Canva",
+        "type": "CANVA_FOR_EDUCATION",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of canva.com/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_06",
+        "brand": "YouTube Premium",
+        "type": "YOUTUBE_PREMIUM_STUDENT",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of youtube.com/premium/student with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_07",
+        "brand": "Microsoft Office 365",
+        "type": "O365_EDUCATION_A1",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of microsoft.com/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_08",
+        "brand": "Autodesk Education",
+        "type": "STUDENT_CAD_LICENSE",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of autodesk.com/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_09",
+        "brand": "Figma Education",
+        "type": "FIGMA_PRO_STUDENT",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of figma.com/education with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_STU_10",
+        "brand": "Apple Education",
+        "type": "APPLE_STUDENT_PRICING",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Physical raw HTML capture of apple.com/vn-edu/shop with hash",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_01",
+        "brand": "Shopee Vietnam",
+        "type": "AFFILIATE_CAMPAIGN_FEED",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Authorized AccessTrade / Open API data feed export",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_02",
+        "brand": "Lazada Vietnam",
+        "type": "AFFILIATE_CAMPAIGN_FEED",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Authorized AccessTrade / Open API data feed export",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_03",
+        "brand": "Tiki Vietnam",
+        "type": "STUDENT_BOOK_VOUCHER",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Authorized campaign feed export",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_04",
+        "brand": "TikTok Shop Vietnam",
+        "type": "DORM_ESSENTIALS_FLASH",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Authorized campaign export with expiry timestamp",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_05",
+        "brand": "WinMart+ Da Nang",
+        "type": "MEMBER_FRESH_DEAL",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official weekly leaflet scan",
+        "target_cluster": "ALL"
+      },
+      {
+        "candidate_id": "CAND_DORM_06",
+        "brand": "Co.opmart Da Nang",
+        "type": "WEEKEND_SAVINGS_LEAFLET",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official Co.opmart promotional leaflet scan",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_DORM_07",
+        "brand": "GO! Da Nang (Big C)",
+        "type": "STUDENT_GROCERY_DISCOUNT",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official GO! Vietnam promotional catalog scan",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_DORM_08",
+        "brand": "GS25 Vietnam Da Nang",
+        "type": "STUDENT_COMBO_VOUCHER",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official GS25 app promo capture",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_DORM_09",
+        "brand": "Circle K Da Nang",
+        "type": "MIDNIGHT_SAVING_COMBO",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official in-store promo capture",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      },
+      {
+        "candidate_id": "CAND_DORM_10",
+        "brand": "Nhà Sách Phương Nam",
+        "type": "BOOK_STATIONERY_DISCOUNT",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official store campaign poster capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_DORM_11",
+        "brand": "FAHASA Da Nang",
+        "type": "BACK_TO_SCHOOL_SALE",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Official FAHASA promotional banner capture",
+        "target_cluster": "CLUSTER_3_HAI_CHAU_THANH_KHE"
+      },
+      {
+        "candidate_id": "CAND_DORM_12",
+        "brand": "Tiệm In Ấn Bách Khoa",
+        "type": "STUDENT_PRINTING_PASS",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Dated Scout photo of price chart",
+        "target_cluster": "CLUSTER_1_HOA_KHANH"
+      },
+      {
+        "candidate_id": "CAND_DORM_13",
+        "brand": "Tiệm Giặt Sấy Tự Động BMA",
+        "type": "STUDENT_LAUNDRY_COMBO",
+        "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+        "required_evidence": "Dated Scout photo of price chart",
+        "target_cluster": "CLUSTER_2_BAC_MY_AN_HOA_QUY"
+      }
+    ]
+  },
+  "lane_b_verified_locations": {
+    "target_count": 100,
+    "current_count": 100,
+    "mandate_label": "ĐỊA ĐIỂM XÁC MINH — kiểm tra giá và ưu đãi tại nguồn",
+    "by_cluster": {
+      "CLUSTER_1_HOA_KHANH": 25,
+      "CLUSTER_2_BAC_MY_AN_HOA_QUY": 25,
+      "CLUSTER_3_HAI_CHAU_THANH_KHE": 25,
+      "CLUSTER_4_HI_TECH_SOFTWARE_PARK": 12,
+      "CLUSTER_5_SON_TRA": 13
+    },
+    "locations": [
+      {
+        "id": "VEN_HK_01",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Trà Sữa Gong Cha Hòa Khánh",
+        "address": "225 Nguyễn Lương Bằng, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://gongcha.com.vn/"
+      },
+      {
+        "id": "VEN_HK_02",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "The Alley Hòa Khánh",
+        "address": "315 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://thealley.vn/"
+      },
+      {
+        "id": "VEN_HK_03",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Highlands Coffee Bách Khoa",
+        "address": "54 Nguyễn Lương Bằng, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://highlandscoffee.com.vn/"
+      },
+      {
+        "id": "VEN_HK_04",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Phúc Long Kiosk Hòa Khánh",
+        "address": "WinMart+ 48 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://phuclong.com.vn/"
+      },
+      {
+        "id": "VEN_HK_05",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Quán Cà Phê Học Bài 24h The Local",
+        "address": "12 Âu Cơ, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_06",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Cơm Thố Bách Khoa",
+        "address": "72 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_07",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Quán Cơm Sinh Viên Cô Ba",
+        "address": "110 Đoàn Phú Tứ, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_08",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Bánh Mì Chảo Bách Khoa",
+        "address": "45 Đồng Kè, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_09",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Bún Đậu Mắm Tôm Hòa Khánh",
+        "address": "18 Phạm Như Xương, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_10",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Mì Cay Seoul Liên Chiểu",
+        "address": "58 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_11",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Lotteria CoopMart Đà Nẵng",
+        "address": "478 Điện Biên Phủ (Tuyến buýt HK)",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://lotteria.vn/"
+      },
+      {
+        "id": "VEN_HK_12",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Jollibee Hòa Khánh",
+        "address": "15 Nguyễn Lương Bằng, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://jollibee.com.vn/"
+      },
+      {
+        "id": "VEN_HK_13",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Cửa Hàng Tiện Lợi GS25 KTX Bách Khoa",
+        "address": "Tòa nhà KTX Bách Khoa, Liên Chiểu",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://gs25.com.vn/"
+      },
+      {
+        "id": "VEN_HK_14",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Cửa Hàng WinMart+ Ngô Thì Nhậm",
+        "address": "88 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://winmart.vn/"
+      },
+      {
+        "id": "VEN_HK_15",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Hiệu Sách Sinh Viên Hòa Khánh",
+        "address": "142 Nguyễn Lương Bằng, Liên Chiểu",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_16",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Tiệm In Ấn & Photo Giáo Trình BK",
+        "address": "28 Đồng Kè, Liên Chiểu",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_17",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Điểm Đón Xe Buýt DanaBus R16 Bách Khoa",
+        "address": "Trạm ĐH Bách Khoa, Nguyễn Lương Bằng",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_HK_18",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Điểm Đón Xe Buýt DanaBus R6A KTX Phía Tây",
+        "address": "Trạm KTX Sinh Viên Phía Tây, Liên Chiểu",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_HK_19",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Sân Cầu Lông Sinh Viên Bách Khoa",
+        "address": "Khu Thể Thao ĐH Bách Khoa, Liên Chiểu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://dut.udn.vn/"
+      },
+      {
+        "id": "VEN_HK_20",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Quán Trà Chanh Chém Gió Sinh Viên",
+        "address": "33 Tôn Đức Thắng, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_21",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Quán Bánh Canh Ruộng Cầu Vồng",
+        "address": "84 Tôn Đức Thắng, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_22",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Tiệm Trà Sữa Đô Đô Hòa Khánh",
+        "address": "102 Ngô Thì Nhậm, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://dodotrasua.vn/"
+      },
+      {
+        "id": "VEN_HK_23",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Cơm Tấm Sài Gòn Hòa Khánh",
+        "address": "168 Nguyễn Lương Bằng, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_24",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Quán Nem Lụi & Bánh Xèo Bà Dưỡng Cơ Sở 2",
+        "address": "22 Âu Cơ, Liên Chiểu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HK_25",
+        "cluster_id": "CLUSTER_1_HOA_KHANH",
+        "name": "Khu Tự Học Thư Viện ĐH Sư Phạm",
+        "address": "459 Tôn Đức Thắng, Liên Chiểu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://ued.udn.vn/"
+      },
+      {
+        "id": "VEN_BMA_01",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Phúc Long Coffee & Tea Châu Thị Vĩnh Tế",
+        "address": "88 Châu Thị Vĩnh Tế, Ngũ Hành Sơn",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://phuclong.com.vn/"
+      },
+      {
+        "id": "VEN_BMA_02",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Highlands Coffee DUE Ngũ Hành Sơn",
+        "address": "71 Ngũ Hành Sơn, Ngũ Hành Sơn",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://highlandscoffee.com.vn/"
+      },
+      {
+        "id": "VEN_BMA_03",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "The Coffee House Châu Thị Vĩnh Tế",
+        "address": "80 Châu Thị Vĩnh Tế, Ngũ Hành Sơn",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://thecoffeehouse.com/"
+      },
+      {
+        "id": "VEN_BMA_04",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Trà Sữa TocoToco DUE",
+        "address": "95 Châu Thị Vĩnh Tế, Ngũ Hành Sơn",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://tocotocotea.com/"
+      },
+      {
+        "id": "VEN_BMA_05",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Mì Cay Sasin Ngũ Hành Sơn",
+        "address": "124 Châu Thị Vĩnh Tế, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://sasin.vn/"
+      },
+      {
+        "id": "VEN_BMA_06",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Quán Cơm Thố DUE",
+        "address": "42 Phan Tứ, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_07",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Quán Cơm Sinh Viên Bà Lan Phan Tứ",
+        "address": "68 Phan Tứ, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_08",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Bánh Mì Nướng Muối Ớt Phan Tứ",
+        "address": "15 Phan Tứ, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_09",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Ốc Hút Chợ Bắc Mỹ An",
+        "address": "Chợ Bắc Mỹ An, Nguyễn Bá Lân, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_10",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Kem Bơ Cô Vân Chợ Bắc Mỹ An",
+        "address": "Kiot 12 Chợ Bắc Mỹ An, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_11",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Cửa Hàng Circle K Châu Thị Vĩnh Tế",
+        "address": "62 Châu Thị Vĩnh Tế, Ngũ Hành Sơn",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://circlek.com.vn/"
+      },
+      {
+        "id": "VEN_BMA_12",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "WinMart+ Phan Tứ",
+        "address": "50 Phan Tứ, Ngũ Hành Sơn",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://winmart.vn/"
+      },
+      {
+        "id": "VEN_BMA_13",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Căn Tin KTX ĐH Công Nghệ Thông Tin VKU",
+        "address": "Khu Đô Thị ĐH Đà Nẵng, Nam Kỳ Khởi Nghĩa, Hòa Quý",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://vku.udn.vn/"
+      },
+      {
+        "id": "VEN_BMA_14",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Không Gian Tự Học Thư Viện VKU",
+        "address": "Tòa nhà Thư Viện VKU, Hòa Quý",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://vku.udn.vn/"
+      },
+      {
+        "id": "VEN_BMA_15",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "FPT University Canteen & Coffee",
+        "address": "Khu Đô Thị Công Nghệ FPT City, Hòa Hải",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://dnuni.fpt.edu.vn/"
+      },
+      {
+        "id": "VEN_BMA_16",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Trạm Xe Buýt DanaBus R16 Đại Học Kinh Tế",
+        "address": "71 Ngũ Hành Sơn, Ngũ Hành Sơn",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_BMA_17",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Trạm Xe Buýt DanaBus R01 Làng Đại Học VKU",
+        "address": "Nam Kỳ Khởi Nghĩa, Hòa Quý",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_BMA_18",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Tiệm Bánh Tráng Kẹp Dì Hoàng",
+        "address": "142/46/09 Điện Biên Phủ (BMA Express)",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_19",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Quán Trà Sữa Mixue Phan Tứ",
+        "address": "28 Phan Tứ, Ngũ Hành Sơn",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://mxbc.vn/"
+      },
+      {
+        "id": "VEN_BMA_20",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Tiệm Giặt Sấy Tự Động Sinh Viên BMA",
+        "address": "112 An Dương Vương, Ngũ Hành Sơn",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_21",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Quán Bún Chả Cá Bà Phiến Cơ Sở 2",
+        "address": "48 Lê Văn Hiến, Ngũ Hành Sơn",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_22",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Quán Cafe Sách Mộc Nam Kỳ Khởi Nghĩa",
+        "address": "24 Nam Kỳ Khởi Nghĩa, Hòa Quý",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_23",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Hiệu Sách & Văn Phòng Phẩm DUE",
+        "address": "18 Bà Huyện Thanh Quan, Ngũ Hành Sơn",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_24",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Phòng Gym & Thể Thao Sinh Viên Ngũ Hành Sơn",
+        "address": "30 Hồ Xuân Hương, Ngũ Hành Sơn",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_BMA_25",
+        "cluster_id": "CLUSTER_2_BAC_MY_AN_HOA_QUY",
+        "name": "Khu Tự Học Sinh Viên KTX Ngũ Hành Sơn",
+        "address": "23 Nam Kỳ Khởi Nghĩa, Hòa Quý",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://udn.vn/"
+      },
+      {
+        "id": "VEN_HCTK_01",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Rạp Chiếu Phim CGV Vĩnh Trung Plaza",
+        "address": "255-257 Hùng Vương, Thanh Khê",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://cgv.vn/"
+      },
+      {
+        "id": "VEN_HCTK_02",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Rạp Chiếu Phim Galaxy Cinema CoopMart",
+        "address": "478 Điện Biên Phủ, Thanh Khê",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://galaxycine.vn/"
+      },
+      {
+        "id": "VEN_HCTK_03",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Rạp Chiếu Phim Starlight Nguyễn Kim",
+        "address": "Tầng 4 Nguyễn Kim, 46 Điện Biên Phủ, Thanh Khê",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://starlight.vn/"
+      },
+      {
+        "id": "VEN_HCTK_04",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Rạp Chiếu Phim Lotte Cinema Đà Nẵng",
+        "address": "Tầng 5 Lotte Mart, 06 Nại Nam, Hải Châu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://lottecinemavn.com/"
+      },
+      {
+        "id": "VEN_HCTK_05",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Rạp Chiếu Phim Metiz Cinema Helio",
+        "address": "Tầng 1 Helio Center, 01 Đường 2/9, Hải Châu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://metiz.vn/"
+      },
+      {
+        "id": "VEN_HCTK_06",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Highlands Coffee Nhà Hát Trưng Vương",
+        "address": "86 Hùng Vương, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://highlandscoffee.com.vn/"
+      },
+      {
+        "id": "VEN_HCTK_07",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Phúc Long Coffee & Tea Nguyễn Văn Linh",
+        "address": "61 Nguyễn Văn Linh, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://phuclong.com.vn/"
+      },
+      {
+        "id": "VEN_HCTK_08",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "The Coffee House Nguyễn Văn Linh",
+        "address": "435 Nguyễn Văn Linh, Thanh Khê",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://thecoffeehouse.com/"
+      },
+      {
+        "id": "VEN_HCTK_09",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Starbucks Indochina Riverside",
+        "address": "74 Bạch Đằng, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://starbucks.vn/"
+      },
+      {
+        "id": "VEN_HCTK_10",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Cà Phê Sách Nhã Nam Pasteur",
+        "address": "19 Pasteur, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://nhanam.vn/"
+      },
+      {
+        "id": "VEN_HCTK_11",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Thư Viện Khoa Học Tổng Hợp Đà Nẵng",
+        "address": "46 Bạch Đằng, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://thuvien.danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_12",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Quán Bún Chả Cá Hờn",
+        "address": "113/03 Nguyễn Chí Thanh, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_13",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Quán Mì Quảng Bà Mua",
+        "address": "95A Nguyễn Tri Phương, Thanh Khê",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_14",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Quán Bánh Tráng Cuốn Thịt Heo Đại Lộc",
+        "address": "97 Trưng Nữ Vương, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_15",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Chợ Cồn Đà Nẵng (Khu Ẩm Thực)",
+        "address": "Góc Hùng Vương — Ông Ích Khiêm, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_16",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Chợ Hàn Đà Nẵng",
+        "address": "119 Trần Phú, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_17",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Ga Đà Nẵng (Đường Sắt Việt Nam)",
+        "address": "200 Hải Phòng, Tam Thuận, Thanh Khê",
+        "category": "TRANSIT",
+        "verified_source": "https://dsvn.vn/"
+      },
+      {
+        "id": "VEN_HCTK_18",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Trạm Xe Buýt Trung Tâm Công Viên 29/3",
+        "address": "Điện Biên Phủ, Thanh Khê",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_HCTK_19",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Nhà Sách Phương Nam Lê Duẩn",
+        "address": "252 Lê Duẩn, Thanh Khê",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://nhasachphuongnam.com/"
+      },
+      {
+        "id": "VEN_HCTK_20",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Nhà Sách FAHASA Đà Nẵng",
+        "address": "300-302 Lê Duẩn, Thanh Khê",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://fahasa.com/"
+      },
+      {
+        "id": "VEN_HCTK_21",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Siêu Thị Co.opmart Đà Nẵng",
+        "address": "478 Điện Biên Phủ, Thanh Khê",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://co-opmart.com.vn/"
+      },
+      {
+        "id": "VEN_HCTK_22",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Siêu Thị GO! Đà Nẵng (Big C Cũ)",
+        "address": "255-257 Hùng Vương, Thanh Khê",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://go-vietnam.vn/"
+      },
+      {
+        "id": "VEN_HCTK_23",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Bảo Tàng Điêu Khắc Chăm Đà Nẵng",
+        "address": "Số 02 Đường 2/9, Hải Châu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://chammuseum.danang.vn/"
+      },
+      {
+        "id": "VEN_HCTK_24",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Công Viên APEC Đà Nẵng",
+        "address": "Bình Hiên, Hải Châu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_HCTK_25",
+        "cluster_id": "CLUSTER_3_HAI_CHAU_THANH_KHE",
+        "name": "Sân Vận Động Chi Lăng",
+        "address": "Hùng Vương, Hải Châu",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_01",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Công Viên Phần Mềm Đà Nẵng Số 1",
+        "address": "02 Quang Trung, Thạch Thang, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://dsp.vn/"
+      },
+      {
+        "id": "VEN_CNC_02",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Công Viên Phần Mềm Số 2 (Tòa Nhà ICT)",
+        "address": "Đường Như Nguyệt, Thuận Phước, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_03",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Ban Quản Lý Khu Công Nghệ Cao Đà Nẵng",
+        "address": "Xã Hòa Liên, Huyện Hòa Vang",
+        "category": "TRANSIT",
+        "verified_source": "https://dseza.danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_04",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "FPT Complex Đà Nẵng",
+        "address": "Khu Đô Thị Công Nghệ FPT, Hòa Hải",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://fptsoftware.com/"
+      },
+      {
+        "id": "VEN_CNC_05",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Canteen Tòa Nhà VNPT Đà Nẵng",
+        "address": "346 Đường 2/9, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://vnptdanang.vn/"
+      },
+      {
+        "id": "VEN_CNC_06",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Highlands Coffee CV Phần Mềm Quang Trung",
+        "address": "02 Quang Trung, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://highlandscoffee.com.vn/"
+      },
+      {
+        "id": "VEN_CNC_07",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Cơm Văn Phòng & IT Lunch Box Quang Trung",
+        "address": "18 Quang Trung, Hải Châu",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_08",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Trạm Tuyến Buýt Trợ Giá R14 Khu Công Nghệ Cao",
+        "address": "Trạm BQL Khu CNC, Hòa Liên",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_CNC_09",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Cà Phê Không Gian Sáng Tạo DNC Innovation Hub",
+        "address": "31 Trần Phú, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_10",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Khu Ươm Tạo Doanh Nghiệp CNTT Đà Nẵng",
+        "address": "02 Quang Trung, Tầng 5, Hải Châu",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://dBI.danang.gov.vn/"
+      },
+      {
+        "id": "VEN_CNC_11",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Phòng Tập Gym IT Worker FPT Complex",
+        "address": "Tầng 1 FPT Complex, Ngũ Hành Sơn",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://fpt.com.vn/"
+      },
+      {
+        "id": "VEN_CNC_12",
+        "cluster_id": "CLUSTER_4_HI_TECH_SOFTWARE_PARK",
+        "name": "Cửa Hàng 7-Eleven / GS25 Tòa Nhà Viettel",
+        "address": "Viettel Complex, Nguyễn Văn Linh",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://viettel.vn/"
+      },
+      {
+        "id": "VEN_ST_01",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Highlands Coffee Cầu Rồng Sơn Trà",
+        "address": "01 Võ Văn Kiệt, Sơn Trà",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://highlandscoffee.com.vn/"
+      },
+      {
+        "id": "VEN_ST_02",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "The Coffee House Phạm Văn Đồng",
+        "address": "A4-2 Phạm Văn Đồng, Sơn Trà",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://thecoffeehouse.com/"
+      },
+      {
+        "id": "VEN_ST_03",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Phúc Long Kiosk Ngô Quyền",
+        "address": "Vincom Plaza Đà Nẵng, 910A Ngô Quyền, Sơn Trà",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://phuclong.com.vn/"
+      },
+      {
+        "id": "VEN_ST_04",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Rạp Chiếu Phim CGV Vincom Plaza Đà Nẵng",
+        "address": "Tầng 4 Vincom Plaza, 910A Ngô Quyền, Sơn Trà",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://cgv.vn/"
+      },
+      {
+        "id": "VEN_ST_05",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Chợ Đêm Sơn Trà (Khu Ẩm Thực Sinh Viên & Khách)",
+        "address": "Đường Mai Hắc Đế, An Hải Tây, Sơn Trà",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_ST_06",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Quán Bún Chả Cá Bà Lữ Sơn Trà",
+        "address": "319 Hùng Vương nối dài, Sơn Trà",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_ST_07",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Quán Bánh Xèo Tôm Nhảy Năm Hiền",
+        "address": "46 Phan Thanh Tài (ST Express)",
+        "category": "FOOD_AND_DINING",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_ST_08",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Trạm Xe Buýt DanaBus R05 Cầu Sông Hàn",
+        "address": "Trần Hưng Đạo, An Hải Bắc, Sơn Trà",
+        "category": "TRANSIT",
+        "verified_source": "https://danabus.vn/"
+      },
+      {
+        "id": "VEN_ST_09",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Vincom Plaza Ngô Quyền",
+        "address": "910A Ngô Quyền, Sơn Trà",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://vincom.com.vn/"
+      },
+      {
+        "id": "VEN_ST_10",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "WinMart+ Ngô Quyền Sơn Trà",
+        "address": "450 Ngô Quyền, Sơn Trà",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://winmart.vn/"
+      },
+      {
+        "id": "VEN_ST_11",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Công Viên Biển Đông Đà Nẵng",
+        "address": "Đường Võ Nguyên Giáp, Phước Mỹ, Sơn Trà",
+        "category": "ENTERTAINMENT",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_ST_12",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Cà Phê Trực Thăng Sơn Trà Marina",
+        "address": "Bán Đảo Sơn Trà, Thọ Quang, Sơn Trà",
+        "category": "CAFE_STUDY",
+        "verified_source": "https://danang.gov.vn/"
+      },
+      {
+        "id": "VEN_ST_13",
+        "cluster_id": "CLUSTER_5_SON_TRA",
+        "name": "Cửa Hàng Tiện Lợi K-Market Phạm Văn Đồng",
+        "address": "Lô B3-1 Phạm Văn Đồng, Sơn Trà",
+        "category": "DORM_SUPPLIES",
+        "verified_source": "https://k-market.vn/"
+      }
+    ]
+  },
+  "lane_c_tracking_portals": {
+    "target_count": 24,
+    "current_count": 24,
+    "portals": [
+      {
+        "id": "PORT_01",
+        "partner": "AccessTrade Vietnam",
+        "type": "AFFILIATE_NETWORK",
+        "portal_url": "https://accesstrade.vn/",
+        "status": "PENDING_HUMAN_EXPORT"
+      },
+      {
+        "id": "PORT_02",
+        "partner": "Shopee Open Platform",
+        "type": "OPEN_API",
+        "portal_url": "https://open.shopee.com/",
+        "status": "PENDING_PROVIDER_AUTH"
+      },
+      {
+        "id": "PORT_03",
+        "partner": "Lazada Open Platform",
+        "type": "OPEN_API",
+        "portal_url": "https://open.lazada.com/",
+        "status": "PENDING_PROVIDER_AUTH"
+      },
+      {
+        "id": "PORT_04",
+        "partner": "TikTok Shop Partner",
+        "type": "COMMERCE_PARTNER",
+        "portal_url": "https://partner.tiktokshop.com/",
+        "status": "PENDING_PROVIDER_AUTH"
+      },
+      {
+        "id": "PORT_05",
+        "partner": "Klook Vietnam",
+        "type": "TRAVEL_EXPERIENCE",
+        "portal_url": "https://www.klook.com/vi/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_06",
+        "partner": "DanaBus Da Nang",
+        "type": "PUBLIC_TRANSIT",
+        "portal_url": "https://danabus.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_07",
+        "partner": "Đường Sắt Việt Nam",
+        "type": "RAILWAY_TRANSIT",
+        "portal_url": "https://dsvn.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_08",
+        "partner": "CGV Cinemas Vietnam",
+        "type": "CINEMA_CHAIN",
+        "portal_url": "https://www.cgv.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_09",
+        "partner": "Galaxy Cinema Vietnam",
+        "type": "CINEMA_CHAIN",
+        "portal_url": "https://www.galaxycine.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_10",
+        "partner": "Starlight Cinema Da Nang",
+        "type": "CINEMA_LOCAL",
+        "portal_url": "https://starlight.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_11",
+        "partner": "Lotte Cinema Vietnam",
+        "type": "CINEMA_CHAIN",
+        "portal_url": "https://lottecinemavn.com/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_12",
+        "partner": "Metiz Cinema Da Nang",
+        "type": "CINEMA_LOCAL",
+        "portal_url": "https://metiz.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_13",
+        "partner": "GitHub Education",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://education.github.com/pack",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_14",
+        "partner": "JetBrains Education",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://www.jetbrains.com/community/education/#students",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_15",
+        "partner": "Spotify Student",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://www.spotify.com/vn-vi/student/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_16",
+        "partner": "Notion Education",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://www.notion.so/product/notion-for-education",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_17",
+        "partner": "Canva Education",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://www.canva.com/education/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_18",
+        "partner": "YouTube Premium Student",
+        "type": "STUDENT_PORTAL",
+        "portal_url": "https://www.youtube.com/premium/student",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_19",
+        "partner": "Highlands Coffee Vietnam",
+        "type": "FNB_CHAIN",
+        "portal_url": "https://www.highlandscoffee.com.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_20",
+        "partner": "Phúc Long Coffee & Tea",
+        "type": "FNB_CHAIN",
+        "portal_url": "https://phuclong.com.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_21",
+        "partner": "The Coffee House",
+        "type": "FNB_CHAIN",
+        "portal_url": "https://thecoffeehouse.com/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_22",
+        "partner": "Gong Cha Vietnam",
+        "type": "FNB_CHAIN",
+        "portal_url": "https://gongcha.com.vn/",
+        "status": "TRACKED_PUBLIC_PORTAL"
+      },
+      {
+        "id": "PORT_23",
+        "partner": "Campus Scout Intake Pipeline",
+        "type": "COMMUNITY_PROOF",
+        "portal_url": "INTERNAL_SCOUT_QUEUE",
+        "status": "ACTIVE_INTAKE_QUEUE"
+      },
+      {
+        "id": "PORT_24",
+        "partner": "JayT Community Signal Queue",
+        "type": "COMMUNITY_SIGNAL",
+        "portal_url": "INTERNAL_SIGNAL_QUEUE",
+        "status": "ACTIVE_INTAKE_QUEUE"
+      }
+    ]
+  },
+  "milestone_schedule": {
+    "day_0": {
+      "date": "2026-08-27",
+      "label": "Program Launch & Architecture Formalization",
+      "status": "INITIALIZED"
+    },
+    "day_3": {
+      "date": "2026-08-30",
+      "label": "Coverage Map & Source Backlog (5 Clusters)",
+      "status": "SCHEDULED"
+    },
+    "day_7": {
+      "date": "2026-09-03",
+      "label": "Supply Batch Report & Evidence Compliance & External Blockers",
+      "status": "SCHEDULED"
+    },
+    "day_14": {
+      "date": "2026-09-10",
+      "label": "Single Review Pack (Counts 🟢, 🔵, 🟣, Freshness, Release Batch Proposal)",
+      "status": "SCHEDULED"
+    }
+  }
+}

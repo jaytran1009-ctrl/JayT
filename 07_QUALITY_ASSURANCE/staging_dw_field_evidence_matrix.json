@@ -1,0 +1,63 @@
+{
+  "version": "v3.451.0-staging.dw",
+  "run_id": "RUN_20260830_DW_RECONCILE_1788078304196",
+  "artifact_generated_at": "2026-08-30T08:25:04.225Z",
+  "signed_at": "2026-08-30T08:25:04.325Z",
+  "governing_directive": "JAYT-245 Section DW",
+  "matrix": [
+    {
+      "candidate_id": "CAND_BUS_R16A",
+      "entity_name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "entity_category": "PUBLIC_TRANSIT",
+      "canonical_domain": "danangbus.vn",
+      "canonical_portal_url": "https://www.danangbus.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dw/artifact_cand_bus_r16a_transit_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_ds",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "fields": [
+        {
+          "field_name": "transit_network_portal_accessibility",
+          "display_label": "Cổng thông tin mạng lưới xe buýt",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>Xe Buýt Đà Nẵng & Bản Đồ Xe Bus Đà Nẵng - Danangbus.vn</title>",
+          "captured_at_utc": "2026-08-30T07:08:10.372Z",
+          "lineage": "REUSED_ARTIFACT_ORIGIN_DS",
+          "freshness_window_days": 30,
+          "claim_scope": "Cổng tra cứu hệ thống xe buýt trợ giá Đà Nẵng chính thức"
+        },
+        {
+          "field_name": "route_timetable_r16a_2026",
+          "display_label": "Biểu đồ giờ chạy chi tiết tuyến R16A",
+          "status": "UNKNOWN_AWAITING_CAPTURE",
+          "locator": null,
+          "captured_at_utc": null,
+          "lineage": null,
+          "freshness_window_days": 30,
+          "claim_scope": "Chưa có capture bảng giờ xuất bến từng chuyến năm 2026; mở danangbus.vn tra cứu trực tiếp"
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND_TNGO_BIKE",
+      "entity_name": "TNGo - Xe Đạp Công Nghệ Số Đà Nẵng",
+      "entity_category": "PUBLIC_TRANSIT",
+      "canonical_domain": "tngo.vn",
+      "canonical_portal_url": "https://tngo.vn/",
+      "artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_dw/artifact_cand_tngo_bike_portal.html",
+      "origin_vault": "07_QUALITY_ASSURANCE/evidence_vault_dw",
+      "pipeline_stage": "CANONICAL_SOURCE_FOUND",
+      "fields": [
+        {
+          "field_name": "service_portal_accessibility",
+          "display_label": "Cổng thông tin dịch vụ xe đạp TNGo",
+          "status": "VERIFIED_FROM_SOURCE",
+          "locator": "<title>TNGo - Xe đạp công nghệ số</title>",
+          "captured_at_utc": "2026-08-30T08:14:56.678Z",
+          "lineage": "DIRECT_LIVE_CAPTURE_SECTION_DV",
+          "freshness_window_days": 30,
+          "claim_scope": "Dịch vụ thuê xe đạp công cộng tại các trạm công cộng TP Đà Nẵng"
+        }
+      ]
+    }
+  ]
+}

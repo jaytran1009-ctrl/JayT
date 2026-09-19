@@ -1,0 +1,39 @@
+{
+  "receipt_type": "AUTHENTIC_BROWSER_CAPTURE_RECEIPT",
+  "status": "CAPTURE_AUTHENTICATED",
+  "captured_at": "2026-08-25T09:18:57.481Z",
+  "target_id": "TARGET_102_JOLLIBEE_STORES",
+  "venue_name": "Jollibee Danh Sách Cửa Hàng",
+  "source_url": "https://jollibee.com.vn/cua-hang",
+  "district": "UNSPECIFIED",
+  "sector": "FNB_FASTFOOD",
+  "http_response": {
+    "status": 200,
+    "url": "https://jollibee.com.vn/cua-hang",
+    "ok": true
+  },
+  "artifacts": {
+    "page_html": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.html",
+      "size_bytes": 792029,
+      "sha256": "0c79f65e4c99882ee9820cbc8fedd9c28b18d4c4d63be4a5fcd6f035ebe8197e"
+    },
+    "page_txt": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+      "size_bytes": 68406,
+      "sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+    },
+    "page_png": {
+      "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.png",
+      "size_bytes": 1036728,
+      "sha256": "615eb2c7e3a99f7c5e170f8a475b42abcae3d81650193471f4c64e6164cd9e95"
+    }
+  },
+  "invariants_verified": {
+    "authentic_http_response": true,
+    "non_empty_dom": true,
+    "non_empty_text": true,
+    "authentic_screenshot": true,
+    "zero_synthetic_fallback_injection": true
+  }
+}

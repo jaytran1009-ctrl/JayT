@@ -1,0 +1,238 @@
+{
+  "version": "v3.450.0-staging.dv",
+  "run_id": "RUN_20260830_DV_SPRINT_1788077696400",
+  "runner": "JayT Evidence Acquisition Engine v1.0.0 (Node.js/UTC)",
+  "generated_at": "2026-08-30T08:15:02.482Z",
+  "signed_at": "2026-08-30T08:15:02.583Z",
+  "governing_directive": "JAYT-245 Section DV",
+  "total_candidates": 30,
+  "categories_breakdown": {
+    "1_AN_TRUA_SINH_VIEN": 5,
+    "2_RAP_CHIEU_PHIM_GIAI_TRI": 5,
+    "3_TRANSIT_GIAO_THONG": 5,
+    "4_KTX_KHONG_GIAN_TU_HOC": 5,
+    "5_HOC_TAP_BAN_QUYEN_CONG_CU": 5,
+    "6_TIEN_ICH_DO_THI": 5
+  },
+  "pipeline_stages_summary": {
+    "DISCOVERY_LEAD": 1,
+    "CAPTURE_RETRY_REQUIRED": 1,
+    "CANONICAL_SOURCE_FOUND": 4,
+    "CAPTURE_PENDING": 8,
+    "EVIDENCE_COMPLETE": 0,
+    "PUBLIC_TOTAL_ACTIVE": 50,
+    "T1_DEAL_ELIGIBLE": 0
+  },
+  "candidates": [
+    {
+      "id": "CAND_DOMINOS_PIZZA",
+      "name": "Domino's Pizza Đà Nẵng",
+      "category": "AN_TRUA_SINH_VIEN",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://dominos.vn/"
+    },
+    {
+      "id": "CAND_LOTTERIA_VN",
+      "name": "Lotteria Việt Nam Đà Nẵng",
+      "category": "AN_TRUA_SINH_VIEN",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.lotteria.vn/"
+    },
+    {
+      "id": "CAND_HIGHLANDS_COFFEE",
+      "name": "Highlands Coffee Đà Nẵng",
+      "category": "AN_TRUA_SINH_VIEN",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://www.highlandscoffee.com.vn/"
+    },
+    {
+      "id": "CAND_COM_GA_A_HAI",
+      "name": "Cơm Gà A Hải",
+      "category": "AN_TRUA_SINH_VIEN",
+      "stage": "CAPTURE_RETRY_REQUIRED",
+      "canonical_url": "https://www.facebook.com/comgaahaidanang/"
+    },
+    {
+      "id": "CAND_BUN_CHA_CA_109",
+      "name": "Bún Chả Cá 109 Nguyễn Chí Thanh",
+      "category": "AN_TRUA_SINH_VIEN",
+      "stage": "DISCOVERY_LEAD",
+      "canonical_url": null
+    },
+    {
+      "id": "CAND_METIZ_CINEMA",
+      "name": "Metiz Cinema Đà Nẵng",
+      "category": "RAP_CHIEU_PHIM_GIAI_TRI",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://metiz.vn/"
+    },
+    {
+      "id": "CAND_STARLIGHT_CINEMA",
+      "name": "Starlight Cinema Đà Nẵng",
+      "category": "RAP_CHIEU_PHIM_GIAI_TRI",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://starlight.vn/"
+    },
+    {
+      "id": "CAND_CGV_CINEMA",
+      "name": "CGV Vincom Đà Nẵng",
+      "category": "RAP_CHIEU_PHIM_GIAI_TRI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.cgv.vn/"
+    },
+    {
+      "id": "CAND_HELIO_CENTER",
+      "name": "Khu Vui Chơi Helio Center",
+      "category": "RAP_CHIEU_PHIM_GIAI_TRI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://helio.vn/"
+    },
+    {
+      "id": "CAND_DANA_BEACH",
+      "name": "Công Viên Biển Dana Beach",
+      "category": "RAP_CHIEU_PHIM_GIAI_TRI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    },
+    {
+      "id": "CAND_BUS_R16A",
+      "name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "category": "TRANSIT_GIAO_THONG",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.danangbus.vn/"
+    },
+    {
+      "id": "CAND_BUS_R6A",
+      "name": "Tuyến Buýt Trợ Giá R6A (Bến xe TT - Khu CN Hòa Khánh)",
+      "category": "TRANSIT_GIAO_THONG",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.danangbus.vn/"
+    },
+    {
+      "id": "CAND_BUS_R4A",
+      "name": "Tuyến Buýt Trợ Giá R4A (Cảng Sông Hàn - Hòa Tiến)",
+      "category": "TRANSIT_GIAO_THONG",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.danangbus.vn/"
+    },
+    {
+      "id": "CAND_TNGO_BIKE",
+      "name": "TNGo - Xe Đạp Công Nghệ Số",
+      "category": "TRANSIT_GIAO_THONG",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://tngo.vn/"
+    },
+    {
+      "id": "CAND_GRAB_STUDENT_RADAR",
+      "name": "Grab Sinh Viên Đà Nẵng (Radar)",
+      "category": "TRANSIT_GIAO_THONG",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.grab.com/vn/"
+    },
+    {
+      "id": "CAND_THU_VIEN_DUT",
+      "name": "Trung Tâm Học Liệu ĐH Bách Khoa ĐN",
+      "category": "KTX_KHONG_GIAN_TU_HOC",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "http://lib.dut.udn.vn/"
+    },
+    {
+      "id": "CAND_THU_VIEN_DUND",
+      "name": "Trung Tâm Học Liệu Đại Học Đà Nẵng",
+      "category": "KTX_KHONG_GIAN_TU_HOC",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.udn.vn/"
+    },
+    {
+      "id": "CAND_THU_VIEN_TP_DANANG",
+      "name": "Thư Viện Tổng Hợp TP Đà Nẵng",
+      "category": "KTX_KHONG_GIAN_TU_HOC",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "http://thuvien.danang.gov.vn/"
+    },
+    {
+      "id": "CAND_THU_VIEN_UED",
+      "name": "Thư Viện ĐH Sư Phạm Đà Nẵng",
+      "category": "KTX_KHONG_GIAN_TU_HOC",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://ued.udn.vn/"
+    },
+    {
+      "id": "CAND_KTX_TAY_DANANG",
+      "name": "Khu KTX Tập Trung Phía Tây Đà Nẵng",
+      "category": "KTX_KHONG_GIAN_TU_HOC",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    },
+    {
+      "id": "CAND_GITHUB_STUDENT_PACK",
+      "name": "GitHub Student Developer Pack",
+      "category": "HOC_TAP_BAN_QUYEN_CONG_CU",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://education.github.com/pack"
+    },
+    {
+      "id": "CAND_NOTION_EDU",
+      "name": "Notion for Education",
+      "category": "HOC_TAP_BAN_QUYEN_CONG_CU",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.notion.so/product/notion-for-education"
+    },
+    {
+      "id": "CAND_CANVA_EDU",
+      "name": "Canva for Education",
+      "category": "HOC_TAP_BAN_QUYEN_CONG_CU",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.canva.com/education/"
+    },
+    {
+      "id": "CAND_JETBRAINS_STUDENT_PACK",
+      "name": "JetBrains Free Student License",
+      "category": "HOC_TAP_BAN_QUYEN_CONG_CU",
+      "stage": "CANONICAL_SOURCE_FOUND",
+      "canonical_url": "https://www.jetbrains.com/community/education/"
+    },
+    {
+      "id": "CAND_MS365_EDU",
+      "name": "Microsoft 365 Education Student",
+      "category": "HOC_TAP_BAN_QUYEN_CONG_CU",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://www.microsoft.com/vi-vn/education/products/office"
+    },
+    {
+      "id": "CAND_PARK_CAU_RONG",
+      "name": "Công Viên Bờ Đông Cầu Rồng",
+      "category": "TIEN_ICH_DO_THI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    },
+    {
+      "id": "CAND_PARK_BIEN_DONG",
+      "name": "Công Viên Biển Đông Đà Nẵng",
+      "category": "TIEN_ICH_DO_THI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    },
+    {
+      "id": "CAND_BAO_TANG_CHAM",
+      "name": "Bảo Tàng Điêu Khắc Chăm",
+      "category": "TIEN_ICH_DO_THI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "http://chammuseum.vn/"
+    },
+    {
+      "id": "CAND_CUNG_THIEU_NHI",
+      "name": "Cung Văn Hóa Thiếu Nhi Đà Nẵng",
+      "category": "TIEN_ICH_DO_THI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    },
+    {
+      "id": "CAND_PHO_DI_BO_BACH_DANG",
+      "name": "Phố Đi Bộ Bạch Đằng Ven Sông Hàn",
+      "category": "TIEN_ICH_DO_THI",
+      "stage": "CAPTURE_PENDING",
+      "canonical_url": "https://danang.gov.vn"
+    }
+  ]
+}

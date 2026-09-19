@@ -1,0 +1,108 @@
+{
+  "manifest_id": "BROWSER_REVIEW_EVIDENCE_MANIFEST_EZ_AH",
+  "timestamp": "2026-08-31T08:52:27.424Z",
+  "governing_directive": "JAYT-245 Section EZ-AH Mandate 1 (Lines 4860-4868)",
+  "staging_version": "v3.481.0-staging.ez",
+  "purpose": "Technical evidence pack for CEO direct browser review of Savings Lab v2. This pack does NOT constitute UX acceptance — only CEO browser review can set UX_ACCEPTED.",
+  "acceptance_status": "UX_ACCEPTANCE_PENDING_CEO_BROWSER_REVIEW",
+  "viewports_tested": [
+    {
+      "name": "Desktop 1440",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "Mobile 390",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "interaction_flows_captured": [
+    "HOME → Savings Lab navigation",
+    "Solo preset → Price input → Formula breakdown → Result",
+    "Group preset → People split → Per-person calculation",
+    "Voucher exceeds total → Non-negative clamping",
+    "Reset → Return to defaults",
+    "Keyboard Enter → Triggers calculation",
+    "aria-live=\"polite\" screen reader landmark verification"
+  ],
+  "screenshots": [
+    {
+      "file": "desktop_1440_01_home.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_01_home.png"
+    },
+    {
+      "file": "desktop_1440_02_savings_lab_empty.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_02_savings_lab_empty.png"
+    },
+    {
+      "file": "desktop_1440_03_solo_filled.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_03_solo_filled.png"
+    },
+    {
+      "file": "desktop_1440_04_group_split.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_04_group_split.png"
+    },
+    {
+      "file": "desktop_1440_05_negative_clamped.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_05_negative_clamped.png"
+    },
+    {
+      "file": "desktop_1440_06_after_reset.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_06_after_reset.png"
+    },
+    {
+      "file": "desktop_1440_07_keyboard_enter.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/desktop_1440_07_keyboard_enter.png"
+    },
+    {
+      "file": "mobile_390_01_home.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_01_home.png"
+    },
+    {
+      "file": "mobile_390_02_savings_lab_empty.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_02_savings_lab_empty.png"
+    },
+    {
+      "file": "mobile_390_03_solo_filled.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_03_solo_filled.png"
+    },
+    {
+      "file": "mobile_390_04_group_split.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_04_group_split.png"
+    },
+    {
+      "file": "mobile_390_05_negative_clamped.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_05_negative_clamped.png"
+    },
+    {
+      "file": "mobile_390_06_after_reset.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_06_after_reset.png"
+    },
+    {
+      "file": "mobile_390_07_keyboard_enter.png",
+      "path": "06_TRUST_AND_EVIDENCE/BROWSER_REVIEW_EVIDENCE_PACK_SAVINGS_LAB_V2_EZ_AH/mobile_390_07_keyboard_enter.png"
+    }
+  ],
+  "network_logs": [
+    {
+      "file": "network_log_desktop_1440.json",
+      "conclusion": "ZERO_EXTERNAL_NETWORK_REQUESTS_FROM_SAVINGS_LAB"
+    },
+    {
+      "file": "network_log_mobile_390.json",
+      "conclusion": "ZERO_EXTERNAL_NETWORK_REQUESTS_FROM_SAVINGS_LAB"
+    }
+  ],
+  "aria_live_verification": {
+    "desktop_1440": {
+      "found": true,
+      "textContent": "\n            📊 Kết Quả Tính Toán Thực Trả\n            \n              \n                Tổng số tiền tiết kiệm:\n                0 VNĐ\n              \n              \n                Tổng số tiền thực trả"
+    },
+    "mobile_390": {
+      "found": true,
+      "textContent": "\n            📊 Kết Quả Tính Toán Thực Trả\n            \n              \n                Tổng số tiền tiết kiệm:\n                0 VNĐ\n              \n              \n                Tổng số tiền thực trả"
+    }
+  },
+  "disclaimer_file": "disclaimer_and_non_pii_fields.json"
+}

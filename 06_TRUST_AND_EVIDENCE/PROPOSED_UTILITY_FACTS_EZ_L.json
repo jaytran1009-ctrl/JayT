@@ -1,0 +1,162 @@
+{
+  "registry_id": "JAYT_SOURCE_INTAKE_AND_V3_EVIDENCE_REGISTRY_EZ_L",
+  "version": "v8.0.0-ez.l",
+  "governance_mode": "INTAKE_QUEUE_AND_V3_FAIL_CLOSED",
+  "timestamp": "2026-08-31T06:48:34.904Z",
+  "approved_staging_t2_pilot_count": 1,
+  "approved_staging_t2_pilot_id": "FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY",
+  "public_eligible_count": 1,
+  "t1_voucher_verified_count": 0,
+  "new_candidates_public_count": 0,
+  "cohort_closure_notice": "NOTION_CANVA_COHORT_CLOSED_FOR_30_DAYS_UNTIL_20260930",
+  "intake_queue_evaluated_items": [
+    {
+      "candidate_id": "CANDIDATE_EZ_L_01_DANANG_LIBRARY",
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "name": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "final_url": "https://thuvien.danang.gov.vn/",
+      "byte_length": 63331,
+      "sha256": "c031788ecdcd0686859d3e3a5d3ccb8948d5806e1a57865fcfe9340e8dc19ec2",
+      "extracted_title": "Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG",
+      "transcript_file": "candidate_ez_l_01_danang_library_transcript.json",
+      "bin_file": "candidate_ez_l_01_danang_library_raw_bytes.bin",
+      "contract_v3": {
+        "contract_id": "CONTRACT_V3_EZ_L_CANDIDATE_EZ_L_01_DANANG_LIBRARY",
+        "version": "v3.0.0-ez.k",
+        "subject_name": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+        "canonical_document_url": "https://thuvien.danang.gov.vn/",
+        "raw_response_sha256": "c031788ecdcd0686859d3e3a5d3ccb8948d5806e1a57865fcfe9340e8dc19ec2",
+        "raw_bytes_length": 63331,
+        "decoding_encoding": "utf-8",
+        "claim_class": "IDENTITY_ONLY",
+        "sentence_level_raw_excerpts": [
+          {
+            "excerpt_id": "EXCERPT_01_PAGE_TITLE",
+            "byte_start": 288,
+            "byte_end": 321,
+            "length": 33,
+            "source_language_verbatim_text": "Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG",
+            "claim_class": "IDENTITY_ONLY"
+          }
+        ],
+        "clause_by_clause_translation_mapping": [
+          {
+            "clause_index": 1,
+            "source_excerpt_ref": "EXCERPT_01_PAGE_TITLE",
+            "source_clause_text": "Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG",
+            "faithful_vietnamese_clause": "Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG",
+            "entailment_status": "STRICT_ENTAILMENT"
+          }
+        ],
+        "source_scope": {
+          "provenance_basis": "Cổng thông tin chính thức của cơ quan nhà nước TP Đà Nẵng.",
+          "is_explicitly_stated_global": false,
+          "raw_basis_excerpt": "Trang ch&#x1EE7; THƯ VIỆN ĐÀ NẴNG"
+        },
+        "jayt_local_scope": {
+          "applies_to_da_nang": false,
+          "local_evidence_present": false,
+          "caveat_required": "Chỉ chứng minh sự tồn tại của cổng thông tin, chưa chứng minh thủ tục hay quyền lợi cụ thể."
+        },
+        "explicit_caveats_and_exclusions": [
+          "Trang chủ chỉ xác nhận danh tính cổng thông tin chính thức, chưa chứng minh lịch phục vụ, điều kiện thẻ mượn sách hay thủ tục hành chính cụ thể.",
+          "Không có quyền lợi kinh tế hay giảm giá thương mại."
+        ],
+        "allowed_customer_facing_sentence": "Trang thông tin chính thức của Thư viện Khoa học Tổng hợp Đà Nẵng.",
+        "disallowed_extrapolated_claims": [
+          "Mượn sách miễn phí không giới hạn",
+          "Ưu đãi thủ tục hành chính cho sinh viên",
+          "Voucher giảm giá dịch vụ công"
+        ],
+        "entailment_gate_verification": {
+          "isolated_token_heuristic_rejected": true,
+          "all_clauses_strictly_entailed": true,
+          "no_unproven_eligibility_inferred": true,
+          "no_unproven_scope_inferred": true,
+          "publishable_status": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL"
+        },
+        "reviewer_decision": {
+          "reviewer": "DATA_AND_TRUST_COUNCIL_EZ_L",
+          "decision": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+          "timestamp": "2026-08-31T06:48:34.829Z"
+        }
+      },
+      "public_eligible": false,
+      "governance_status": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD"
+    },
+    {
+      "candidate_id": "CANDIDATE_EZ_L_02_DANANG_DICHVUCONG",
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "name": "Cổng Dịch vụ công Trực tuyến TP Đà Nẵng",
+      "final_url": "https://dichvucong.danang.gov.vn/",
+      "byte_length": 5464,
+      "sha256": "51c7e55d0fbf67536dc0d6c50c5a04721243cb5bab26145970c5be5a546cb2fd",
+      "extracted_title": "Cổng Dịch vụ công",
+      "transcript_file": "candidate_ez_l_02_danang_dichvucong_transcript.json",
+      "bin_file": "candidate_ez_l_02_danang_dichvucong_raw_bytes.bin",
+      "contract_v3": {
+        "contract_id": "CONTRACT_V3_EZ_L_CANDIDATE_EZ_L_02_DANANG_DICHVUCONG",
+        "version": "v3.0.0-ez.k",
+        "subject_name": "Cổng Dịch vụ công Trực tuyến TP Đà Nẵng",
+        "canonical_document_url": "https://dichvucong.danang.gov.vn/",
+        "raw_response_sha256": "51c7e55d0fbf67536dc0d6c50c5a04721243cb5bab26145970c5be5a546cb2fd",
+        "raw_bytes_length": 5464,
+        "decoding_encoding": "utf-8",
+        "claim_class": "IDENTITY_ONLY",
+        "sentence_level_raw_excerpts": [
+          {
+            "excerpt_id": "EXCERPT_01_PAGE_TITLE",
+            "byte_start": 105,
+            "byte_end": 122,
+            "length": 17,
+            "source_language_verbatim_text": "Cổng Dịch vụ công",
+            "claim_class": "IDENTITY_ONLY"
+          }
+        ],
+        "clause_by_clause_translation_mapping": [
+          {
+            "clause_index": 1,
+            "source_excerpt_ref": "EXCERPT_01_PAGE_TITLE",
+            "source_clause_text": "Cổng Dịch vụ công",
+            "faithful_vietnamese_clause": "Cổng Dịch vụ công",
+            "entailment_status": "STRICT_ENTAILMENT"
+          }
+        ],
+        "source_scope": {
+          "provenance_basis": "Cổng thông tin chính thức của cơ quan nhà nước TP Đà Nẵng.",
+          "is_explicitly_stated_global": false,
+          "raw_basis_excerpt": "Cổng Dịch vụ công"
+        },
+        "jayt_local_scope": {
+          "applies_to_da_nang": false,
+          "local_evidence_present": false,
+          "caveat_required": "Chỉ chứng minh sự tồn tại của cổng thông tin, chưa chứng minh thủ tục hay quyền lợi cụ thể."
+        },
+        "explicit_caveats_and_exclusions": [
+          "Trang chủ chỉ xác nhận danh tính cổng thông tin chính thức, chưa chứng minh lịch phục vụ, điều kiện thẻ mượn sách hay thủ tục hành chính cụ thể.",
+          "Không có quyền lợi kinh tế hay giảm giá thương mại."
+        ],
+        "allowed_customer_facing_sentence": "Trang thông tin chính thức của Cổng Dịch vụ công Trực tuyến TP Đà Nẵng.",
+        "disallowed_extrapolated_claims": [
+          "Mượn sách miễn phí không giới hạn",
+          "Ưu đãi thủ tục hành chính cho sinh viên",
+          "Voucher giảm giá dịch vụ công"
+        ],
+        "entailment_gate_verification": {
+          "isolated_token_heuristic_rejected": true,
+          "all_clauses_strictly_entailed": true,
+          "no_unproven_eligibility_inferred": true,
+          "no_unproven_scope_inferred": true,
+          "publishable_status": "NO_PUBLISHABLE_FACT_DESCRIPTIVE_ONLY_HELD_INTERNAL"
+        },
+        "reviewer_decision": {
+          "reviewer": "DATA_AND_TRUST_COUNCIL_EZ_L",
+          "decision": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD",
+          "timestamp": "2026-08-31T06:48:34.903Z"
+        }
+      },
+      "public_eligible": false,
+      "governance_status": "IDENTITY_CONFIRMED_HELD_INTERNAL_NO_PUBLIC_CARD"
+    }
+  ]
+}

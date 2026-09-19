@@ -1,0 +1,164 @@
+{
+  "contract_name": "JAYT_ZQA_GOVERNANCE_CONTRACT_MAP",
+  "directive": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_452_AND_EXECUTE_RESEAL_V2",
+  "directive_code": "JAYT-453",
+  "contract_version": "2.0.0",
+  "remediation_id": "J452-01",
+  "created_at": "2026-09-19T08:30:00.000Z",
+  "canonical_gates": [
+    {
+      "gate_id": "ZQA-01",
+      "canonical_definition": "Dead / 404 Destination: Audits 100% destination URLs, numeric shopId enforcement, zero 'shopee_store_' prefix, zero 404/410/500 errors",
+      "test_function": "verifyDead404Destination",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-02",
+      "canonical_definition": "Wrong-Product Redirect: Validates strict identity match between offer contract and destination PDP",
+      "test_function": "verifyWrongProductRedirect",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-03",
+      "canonical_definition": "Duplicate Asset SHA-256: Asserts 0 duplicate asset SHA-256 fingerprints across image catalog",
+      "test_function": "verifyDuplicateAssetSha256",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/image-integrity-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-04",
+      "canonical_definition": "Fake Evidence / Emoji Substitution: Asserts zero emoji or synthetic mockups substituted as physical evidence",
+      "test_function": "verifyFakeEvidenceEmojiSubstitution",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/image-integrity-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-05",
+      "canonical_definition": "State Contamination: Asserts zero cross-product/cross-platform state leakage across modals and views",
+      "test_function": "verifyStateContamination",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/modal-state-stress-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-06",
+      "canonical_definition": "Missing claim_evidence_id: Asserts 100% of claims cite valid, traceable claim_evidence_id",
+      "test_function": "verifyMissingClaimEvidenceId",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/review-math-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-07",
+      "canonical_definition": "Stale Offer: Verifies offer freshness SLA threshold (< 7 days) and valid validity_range",
+      "test_function": "verifyStaleOfferFreshness",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-08",
+      "canonical_definition": "Savings / Calculation Integrity: Deterministic currency calculation and claim accuracy normalized to evidence contract",
+      "test_function": "verifySavingsCalculationIntegrity",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-09",
+      "canonical_definition": "Affiliate Disclosure: Asserts transparent commercial disclosure rendered on all user surfaces",
+      "test_function": "verifyAffiliateDisclosure",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-10",
+      "canonical_definition": "Secret / Config Leakage: Asserts zero private API secrets or credentials exposed to client; fail-closed affiliate lock",
+      "test_function": "verifySecretConfigLeakage",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-11",
+      "canonical_definition": "PII Leakage: Asserts zero personal identifiable information collected, stored, or transmitted",
+      "test_function": "verifyPiiLeakage",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/zqa-result.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "ZQA-12",
+      "canonical_definition": "Release Parity: Asserts 100% bit-identical SHA-256 match across all production distribution points",
+      "test_function": "verifyReleaseParity",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/parity-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    }
+  ],
+  "supplementary_feature1_gates": [
+    {
+      "gate_id": "REVIEW-MATH-01",
+      "canonical_definition": "Review Math Consistency: Asserts positive + negative == classified and proRate + conRate == 100%",
+      "test_function": "verifyReviewMathConsistency",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/review-math-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-CADENCE-01",
+      "canonical_definition": "Cloud Cadence Independence: Asserts 4 ICT Golden Hours (00:07, 11:37, 16:37, 20:07) with zero workstation dependency",
+      "test_function": "verifyCloudCadenceIndependence",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/cadence-cloud-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-WATCHDOG-01",
+      "canonical_definition": "Watchdog Active Drill: Asserts missed cadence detection, automatic catch-up trigger, and freshness recovery",
+      "test_function": "verifyWatchdogActiveDrill",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/watchdog-drill-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-DUALTIER-01",
+      "canonical_definition": "Dual-Tier Route Invariance: Asserts display_offer_id == route_offer_id across both Tier 1 Brand Mall and Tier 2 Generic Value",
+      "test_function": "verifyDualTierRouteInvariance",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/route-matrix.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-PLAYWRIGHT-01",
+      "canonical_definition": "Real Playwright Cross-Browser Gate: Asserts 4/4 profiles (Chromium Desktop, Mobile Chrome, WebKit Desktop, Mobile Safari on WebKit) on real browser engines",
+      "test_function": "verifyPlaywrightRealCrossBrowser",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/cross-browser-runtime.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-ROUTE-IDENTITY-01",
+      "canonical_definition": "Route Identity Matrix: Asserts destination product_id_observed == product_id_expected and platform_observed == platform_expected",
+      "test_function": "verifyRouteIdentityMatrix",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/route-matrix.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    },
+    {
+      "gate_id": "F1-IMAGE-PROVENANCE-01",
+      "canonical_definition": "Image Provenance & Honest Display: Differentiates asset_reachable from asset_provenance_verified; enforces neutral source copy when unproven",
+      "test_function": "verifyImageProvenanceClassification",
+      "evidence_file": "07_QUALITY_ASSURANCE/evidence/image-provenance-report.json",
+      "mandatory": true,
+      "contract_version": "2.0.0"
+    }
+  ]
+}

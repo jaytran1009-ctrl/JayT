@@ -1,0 +1,170 @@
+{
+  "run_id": "RUN_20260827_114344_3efade",
+  "worker_identifier": "JAYT_THREE_COHORT_SUPPLY_WORKER_151",
+  "directive": "JAYT-151: THREE-COHORT REAL-SUPPLY RECOVERY",
+  "execution_mode": "THREE_COHORT_MANUAL_BATCH",
+  "execution_origin": "MANUAL_TRIGGERED",
+  "host_scheduler_status": "SCHEDULER_BLOCKED_ON_THIS_HOST",
+  "executed_at": "2026-08-27T04:44:03.606Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade",
+  "project_memory_verified": {
+    "version": "3.262.0",
+    "sha256": "d5f95b8c9ec412e49de831bda3b626cd8f13bdf04edaab6d1b9da7a27c98b64b",
+    "is_valid": true
+  },
+  "reconciliation": {
+    "registry_initial_count": 101,
+    "new_valid_discovered_count": 0,
+    "rejected_filtered_count": 3,
+    "registry_final_count": 101,
+    "invariance_formula": "101 + 0 = 101",
+    "is_reconciled": true
+  },
+  "cohort_summary": {
+    "COHORT_A_CINEMA_ENTERTAINMENT": 0,
+    "COHORT_B_FNB_COFFEE": 7,
+    "COHORT_C_TRANSIT_STUDENT": 0
+  },
+  "summary": {
+    "items_processed": 7,
+    "trusted_receipts": 6,
+    "unproven_receipts": 1,
+    "new_leaf_urls_discovered": 0,
+    "rejected_candidates_filtered": 3,
+    "total_registered_targets_now": 101,
+    "total_stale_sources_in_registry": 20,
+    "classification_breakdown": {
+      "EVIDENCE_COMPLETE_FOR_REVIEW": 0,
+      "INCOMPLETE_OFFER_EVIDENCE": 0,
+      "SCOPE_UNPROVEN": 0,
+      "NON_OFFER_PAGE_OR_SHELL": 4,
+      "ERROR_OR_BLOCKED_SOURCE": 3
+    }
+  },
+  "automated_staging_gate_evaluation": {
+    "decision_verdict": "CONTINUE_ACQUISITION",
+    "progress_milestone": "0/10",
+    "evidence_complete_count": 0,
+    "threshold_required": 10
+  },
+  "captures": [
+    {
+      "item_id": "CAP_144_A_06",
+      "brand_name": "KFC Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "final_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "c8fe0ee361299440e9946549f0b45412708851970a57fbf048ca36a37dbe63fb",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_06"
+    },
+    {
+      "item_id": "CAP_144_A_08",
+      "brand_name": "Lotteria Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://www.lotteria.vn/store-locator",
+      "final_url": "https://www.lotteria.vn/store-locator",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "c8b319e8db1ec52902665bc0ddd33768cb59a25c8338fcf357e30d3a64dc355d",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_08"
+    },
+    {
+      "item_id": "CAP_144_A_09",
+      "brand_name": "Pizza Hut Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://pizzahut.vn/store-locator",
+      "final_url": "https://pizzahut.vn/store-locator",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 404,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "ERROR_OR_BLOCKED_SOURCE",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "620a6da05ea64dbd6e83453b8a07a32d85e6b5dbba5e5593617a14386772b960",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_09"
+    },
+    {
+      "item_id": "CAP_144_A_10",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://dominos.vn/store-locator",
+      "final_url": "https://dominos.vn/store-locator",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 404,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "ERROR_OR_BLOCKED_SOURCE",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "a90ffe940f951e4748b7175ce0b916460713dd3d6b4e032dd5db9ff3e1b3b298",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_10"
+    },
+    {
+      "item_id": "CAP_144_A_11",
+      "brand_name": "Texas Chicken Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://texaschicken.vn/he-thong-nha-hang/",
+      "final_url": "FINAL_URL_UNPROVEN",
+      "receipt_status": "CAPTURE_RECEIPT_INVALID",
+      "http_status": "HTTP_STATUS_UNPROVEN",
+      "is_trusted": false,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_FRESH_RECEIPT_CERTIFICATION",
+      "classification": "ERROR_OR_BLOCKED_SOURCE",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "8b7fb85de88039a76340d010daaf92c0e55078fcd36eb45036b9222ad26e36b6",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_11"
+    },
+    {
+      "item_id": "CAP_144_A_12",
+      "brand_name": "Popeyes Vietnam",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://popeyes.vn/he-thong-cua-hang",
+      "final_url": "https://popeyes.vn/he-thong-cua-hang",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "16bda60971a3031e4cc7d031826a7b119ca29c13ddddede0e9adac8a1c6e6d67",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_12"
+    },
+    {
+      "item_id": "CAP_144_A_13",
+      "brand_name": "Kichi-Kichi Hotpot",
+      "cohort_151": "COHORT_B_FNB_COFFEE",
+      "requested_url": "https://kichi.com.vn/vi/he-thong-nha-hang",
+      "final_url": "https://kichi.com.vn/",
+      "receipt_status": "CAPTURE_RECEIPT_VALID",
+      "http_status": 200,
+      "is_trusted": true,
+      "has_content_root": false,
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "classification": "NON_OFFER_PAGE_OR_SHELL",
+      "new_links_discovered_from_this_item": 0,
+      "html_sha256": "61ec8959168b6854e5a119df7cad52b217466d6c153dbd994bcfa6619f996870",
+      "artifact_folder": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\05_DEAL_AND_AFFILIATE\\runs\\RUN_20260827_114344_3efade\\CAP_144_A_13"
+    }
+  ],
+  "governance_lock": {
+    "is_approved": false,
+    "production_feed": "deals_feed.json: []",
+    "status": "PRODUCTION_LOCKED_PENDING_CEO_APPROVAL"
+  },
+  "exit_code": 0
+}

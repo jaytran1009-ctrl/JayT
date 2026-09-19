@@ -1,0 +1,41 @@
+{
+  "record_version": "v2.0",
+  "directive_id": "JAYT-263-CORRECTION-2",
+  "state": "ACTIVE",
+  "activated_utc": "2026-09-02T09:08:40.000Z",
+  "reason": "Hard circuit breaker contamination containment freeze under recursive deterministic canonical integrity contract.",
+  "scope": [
+    "COHORT_15_RUNNER",
+    "CATALOG_BUILD"
+  ],
+  "supersedes": {
+    "previous_record_path": "00_PROGRAM_BASELINE/HISTORICAL/JAYT_CONTAMINATION_FREEZE_STATE_V1.json",
+    "previous_record_file_bytes_sha256": "97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a",
+    "audit_verdict": "FREEZE_ENFORCEMENT_ACTIVE__INTEGRITY_UNVERIFIED",
+    "audit_addendum_ref": "06_TRUST_AND_EVIDENCE/AUDIT_ADDENDUM_FREEZE_STATE_V1_INTEGRITY.json",
+    "supersession_ledger_ref": "06_TRUST_AND_EVIDENCE/JAYT_FREEZE_STATE_SUPERSESSION_LEDGER.json"
+  },
+  "enforcement_contract": {
+    "fail_closed_error_code": "CONTAMINATION_FREEZE_ACTIVE",
+    "integrity_mismatch_error_code": "FREEZE_STATE_INTEGRITY_MISMATCH",
+    "state_unavailable_error_code": "FREEZE_STATE_UNAVAILABLE",
+    "preflight_check_mandated": true,
+    "block_before_io": true,
+    "bypass_mechanisms_prohibited": [
+      "ENVIRONMENT_VARIABLES",
+      "TEST_FIXTURES",
+      "CLI_FLAGS",
+      "DIRECT_FUNCTION_INVOCATION"
+    ],
+    "unlock_authority": "CEO_DIRECTIVE_ONLY"
+  },
+  "canonical_payload_contract": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8",
+    "field_exclusion": [
+      "canonical_payload_sha256"
+    ],
+    "deterministic_ordering": "RECURSIVE_SORTED_KEYS_JSON"
+  },
+  "canonical_payload_sha256": "c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d"
+}

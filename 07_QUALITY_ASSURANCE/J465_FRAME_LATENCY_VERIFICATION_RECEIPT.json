@@ -1,0 +1,160 @@
+{
+  "receipt_id": "J465_FRAME_LATENCY_VERIFICATION_RECEIPT",
+  "schema_version": "2.1.0-release-grade-provenance-sealed",
+  "evaluated_at_utc": "2026-09-14T13:54:29.150Z",
+  "local_timestamp": "2026-09-14T20:56:00+07:00",
+  "authority": "QA_DIRECTORATE_INDEPENDENT_AUDIT",
+  "candidate_version": "v3.496.0-j465-monolithic-surface",
+  "governing_directive": "CHAIRMAN-SUPREME-DIRECTIVE-2026-0914-OFFICIAL-AFFILIATE-GO-LIVE",
+  "task_ref": "TASK_3_INDEPENDENT_HUD_LATENCY_TELEMETRY",
+  "audit_verdict": "RELEASE_GRADE_PROVENANCE_ESTABLISHED__HUD_LATENCY_PASS",
+  "cryptographic_provenance": {
+    "benchmark_runner_script": "07_QUALITY_ASSURANCE/run_j465_hud_telemetry_benchmark.cjs",
+    "benchmark_runner_sha256": "dac34071599120f6a2387cb26c37ce1a00404e9c44d7d216d706b958f6aeaf81",
+    "source_interface_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "source_interface_sha256": "23ae760669702c47dfd5e15afff8f08402c19bc58135b96e44c588032d40ae11",
+    "deploy_interface_file": "deploy/jayt_apex_interface.js",
+    "deploy_interface_sha256": "23ae760669702c47dfd5e15afff8f08402c19bc58135b96e44c588032d40ae11",
+    "parity_check": "BIT_IDENTICAL_PASS",
+    "published_manifest_sha256": "1be720b2d180f147d6c5de0b9b37767e6ffd3e2369b3f9a5ee1ade326a906af0",
+    "html_template_sha256": "7c50eaf32c058e147e1753b45ebb5a6f69f7aba5d2f7e74d5bb13342cb35c598"
+  },
+  "test_environment": {
+    "node_version": "v24.18.0",
+    "v8_version": "13.6.233.17-node.50",
+    "puppeteer_version": "25.8.0",
+    "browser_engine": "Chromium (HeadlessChrome)",
+    "user_agent_emulation": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "os_platform": "win32",
+    "os_release": "10.0.26200",
+    "cpu_architecture": "x64",
+    "cpu_cores": 16
+  },
+  "viewport_specification": {
+    "width": 390,
+    "height": 844,
+    "device_scale_factor": 1,
+    "is_mobile": true,
+    "has_touch": true
+  },
+  "sample_count": 10,
+  "statistical_distribution": {
+    "metric": "pointerdown_to_visible_ms",
+    "unit": "milliseconds",
+    "min_ms": 6.5,
+    "max_ms": 25.7,
+    "mean_ms": 10.54,
+    "median_ms": 8.55,
+    "p90_linear_interpolation_ms": 10.57,
+    "p90_nearest_rank_ms": 12.1,
+    "p95_quantiles": {
+      "method_r7_linear_interpolation_ms": 19.58,
+      "method_nearest_rank_ms": 25.7,
+      "description": "Formula R-7 (NIST/NumPy/Excel default) computes h = (10-1)*0.95 = 8.55, yielding 12.10 + 0.55*(25.70-12.10) = 19.58ms. Nearest-rank computes ceil(10*0.95)=10th item, yielding 25.70ms."
+    },
+    "sla_compliance": {
+      "sla_threshold_ms": 30,
+      "p95_r7_under_sla": true,
+      "p95_nearest_rank_under_sla": true,
+      "max_under_sla": true,
+      "verdict": "STRICT_PASS_ACROSS_ALL_QUANTILE_DEFINITIONS"
+    }
+  },
+  "raw_samples": [
+    {
+      "iteration": 1,
+      "pointerdown_to_visible_ms": 25.7,
+      "click_to_visible_ms": 0,
+      "pointerdown_to_click_delay_ms": 25.7,
+      "note": "Cold cache / initial layout cycle"
+    },
+    {
+      "iteration": 2,
+      "pointerdown_to_visible_ms": 6.5,
+      "click_to_visible_ms": 0,
+      "pointerdown_to_click_delay_ms": 6.5,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 3,
+      "pointerdown_to_visible_ms": 10.4,
+      "click_to_visible_ms": 0,
+      "pointerdown_to_click_delay_ms": 10.4,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 4,
+      "pointerdown_to_visible_ms": 12.1,
+      "click_to_visible_ms": 0,
+      "pointerdown_to_click_delay_ms": 12.1,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 5,
+      "pointerdown_to_visible_ms": 7.8,
+      "click_to_visible_ms": -0.1,
+      "pointerdown_to_click_delay_ms": 7.9,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 6,
+      "pointerdown_to_visible_ms": 9.1,
+      "click_to_visible_ms": -0.1,
+      "pointerdown_to_click_delay_ms": 9.2,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 7,
+      "pointerdown_to_visible_ms": 8.5,
+      "click_to_visible_ms": 0,
+      "pointerdown_to_click_delay_ms": 8.5,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 8,
+      "pointerdown_to_visible_ms": 8.6,
+      "click_to_visible_ms": -0.1,
+      "pointerdown_to_click_delay_ms": 8.7,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 9,
+      "pointerdown_to_visible_ms": 8.5,
+      "click_to_visible_ms": -0.1,
+      "pointerdown_to_click_delay_ms": 8.6,
+      "note": "Warm cache"
+    },
+    {
+      "iteration": 10,
+      "pointerdown_to_visible_ms": 8.2,
+      "click_to_visible_ms": -0.1,
+      "pointerdown_to_click_delay_ms": 8.3,
+      "note": "Warm cache"
+    }
+  ],
+  "double_tap_delay_forensics": {
+    "mean_delay_pointerdown_to_click_ms": 10.54,
+    "max_delay_ms": 25.7,
+    "double_tap_delay_detected": false,
+    "finding": "Zero 300ms double-tap gesture delay observed. Viewport meta width=device-width, initial-scale=1.0 reliably informs Chromium to emit synthetic click immediately after touch sequence without waiting for double-tap."
+  },
+  "functional_dom_checks": {
+    "modal_id": "counter-3sec-modal",
+    "role_dialog_present": true,
+    "title_text": "Metiz Cinema Helio",
+    "computed_display": "block",
+    "computed_opacity": "1",
+    "console_errors": 0,
+    "horizontal_overflow_px": 0
+  },
+  "governance_and_release_boundary": {
+    "hud_sla_status": "VERIFIED_PASS_RELEASE_GRADE",
+    "curated_campaign_records_present": false,
+    "attribution_replay_test_receipt_present": false,
+    "dual_key_release_manifest_signed": false,
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_enabled": false,
+    "active_production_canonical": "https://jayt-production-v3420.vercel.app/ (J460)"
+  }
+}

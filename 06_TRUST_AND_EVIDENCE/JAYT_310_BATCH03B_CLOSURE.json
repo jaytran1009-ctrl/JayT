@@ -1,0 +1,25 @@
+{
+  "closure_id": "JAYT-310-BATCH03B-CLOSURE-20260904",
+  "closed_at_utc": "2026-09-04T00:00:00.000Z",
+  "purpose": "Close the JAYT-302 emergency intake cycle and move its six slots to evidence backlog.",
+  "source_scope": "06_TRUST_AND_EVIDENCE/JAYT_302_DIRECT_INGRESS_SCOPE.json",
+  "source_receipt": "06_TRUST_AND_EVIDENCE/batch_03_full_ingress_vault/JAYT_302_DIRECT_INGRESS_RECEIPT.json",
+  "disposition": "CLOSED__QUARANTINED_IN_BACKLOG",
+  "scope_consumed": true,
+  "retry_authorized": false,
+  "targets_closed": [
+    "SLOT_01_LIB",
+    "SLOT_02_DATA",
+    "SLOT_03_1022",
+    "SLOT_04_BIKE",
+    "SLOT_05_MED",
+    "SLOT_06_DUT"
+  ],
+  "outcome": {
+    "real_raw_body_written": 0,
+    "evidence_complete_internal_held": 0,
+    "public_approved": 0,
+    "rendered": 0
+  },
+  "reopen_rule": "A future append-only CEO authorization must name a new scope, a new capture window, and a new operator-evidence protocol. This closure does not assert that any underlying service is unavailable."
+}

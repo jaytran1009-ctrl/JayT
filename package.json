@@ -1,0 +1,18 @@
+{
+  "name": "opc-jayt",
+  "version": "3.422.0",
+  "private": true,
+  "scripts": {
+    "harvest:locators": "node 04_DATA_PIPELINE/harvest_danang_locations.js",
+    "test:locator-resilience": "node 07_QUALITY_ASSURANCE/test_locator_runner_resilience.cjs",
+    "commercial:unlock": "node 04_DATA_PIPELINE/apply_jayt_333_inherited_locality.cjs && node 07_QUALITY_ASSURANCE/validate_jayt_333_commercial_pilot.cjs",
+    "commercial:audit-dom": "node 07_QUALITY_ASSURANCE/audit_jayt_333_commercial_dom.cjs",
+    "commercial:capture-hot": "node 04_DATA_PIPELINE/capture_jayt_333_hot_campaigns.cjs"
+  },
+  "dependencies": {
+    "puppeteer": "^25.8.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

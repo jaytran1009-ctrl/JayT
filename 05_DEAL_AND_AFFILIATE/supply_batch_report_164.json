@@ -1,0 +1,240 @@
+{
+  "batch_id": "SUPPLY_BATCH_1_JAYT_164",
+  "directive": "JAYT-164: DUAL-TRACK VALUE RELEASE — NHIỀU DEAL THẬT + UX PREMIUM",
+  "evaluated_at": "2026-08-27T06:23:16.915Z",
+  "total_candidates_evaluated": 15,
+  "evidence_breakdown": {
+    "tier_1_verified_proof_deals": 0,
+    "tier_2_verified_physical_venues": 2,
+    "tier_3_verified_student_portals": 6,
+    "tier_3_tracked_sources_pending_scout": 7
+  },
+  "completeness_metrics": {
+    "complete_evidence_count": 8,
+    "incomplete_pending_human_count": 7,
+    "completion_ratio": "8/15"
+  },
+  "missing_sources_backlog_for_human_operators": [
+    {
+      "brand": "CGV Cinemas Đà Nẵng",
+      "missing": "Chụp ảnh menu/bảng giá vé U22 tại quầy rạp Vĩnh Trung Plaza"
+    },
+    {
+      "brand": "Galaxy Cinema Đà Nẵng",
+      "missing": "Chụp ảnh bảng giá Happy Day tại quầy CoopMart Đà Nẵng"
+    },
+    {
+      "brand": "Xe Buýt DanaBus",
+      "missing": "Chụp bảng lộ trình và giá vé trợ giá học sinh/sinh viên tại trạm"
+    },
+    {
+      "brand": "Ga Đà Nẵng (DSVN)",
+      "missing": "Đối soát chính sách giảm giá vé thẻ sinh viên tại phòng vé"
+    },
+    {
+      "brand": "The Coffee House Đà Nẵng",
+      "missing": "Chụp ảnh không gian bàn học và bảng giá combo tại cơ sở"
+    },
+    {
+      "brand": "Highlands Coffee Đà Nẵng",
+      "missing": "Xác thực địa chỉ cơ sở và ưu đãi thẻ thành viên"
+    },
+    {
+      "brand": "ShopeeFood / GrabFood",
+      "missing": "Cần API credential chính thức từ nhà cung cấp để ingest deal"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND_001_CGV_U22",
+      "pipeline": "A1_WEEKLY_SAVINGS",
+      "brand_name": "CGV Cinemas Vietnam",
+      "category": "CINEMA",
+      "policy_target": "Chính sách vé U22 & Thứ 4 Vui Vẻ",
+      "official_url": "https://www.cgv.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_002_GALAXY_MEMBER",
+      "pipeline": "A1_WEEKLY_SAVINGS",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "category": "CINEMA",
+      "policy_target": "Ngày Tri Ân Happy Day",
+      "official_url": "https://www.galaxycine.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_003_STARLIGHT_DANANG",
+      "pipeline": "A1_WEEKLY_SAVINGS",
+      "brand_name": "Starlight Cinema Đà Nẵng",
+      "category": "CINEMA",
+      "policy_target": "Cơ sở Tòa nhà Nguyễn Kim, Thanh Khê",
+      "official_url": "https://starlight.vn/",
+      "has_locator_evidence": true,
+      "locator_receipt_sha256": "7698dae419f634ee11a7780f774a015e50c0f3cd87ed4a55118406260e02f2f0",
+      "has_current_physical_capture": true,
+      "evidence_status": "VENUE_EVIDENCE_COMPLETE",
+      "assigned_tier": "TIER_2_VERIFIED_VENUE_LISTING",
+      "action_cta": "Kiểm Tra Tại Nguồn ↗"
+    },
+    {
+      "candidate_id": "CAND_004_DANABUS_PUBLIC",
+      "pipeline": "A1_WEEKLY_SAVINGS",
+      "brand_name": "Xe Buýt Đà Nẵng DanaBus",
+      "category": "MOBILITY",
+      "policy_target": "Mạng lưới xe buýt trợ giá nội thành Đà Nẵng",
+      "official_url": "https://www.danangbus.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_005_DSVN_STUDENT",
+      "pipeline": "A1_WEEKLY_SAVINGS",
+      "brand_name": "Đường Sắt Việt Nam (Ga Đà Nẵng)",
+      "category": "MOBILITY",
+      "policy_target": "Chính sách giảm giá vé tàu hỏa sinh viên",
+      "official_url": "https://dsvn.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_006_STU_GITHUB",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "GitHub Student Developer Pack",
+      "provider": "GitHub Education",
+      "official_url": "https://education.github.com/pack",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng GitHub Education ↗"
+    },
+    {
+      "candidate_id": "CAND_007_STU_JETBRAINS",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "JetBrains Free Educational License",
+      "provider": "JetBrains",
+      "official_url": "https://www.jetbrains.com/community/education/#students",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng JetBrains ↗"
+    },
+    {
+      "candidate_id": "CAND_008_STU_SPOTIFY",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "Spotify Premium Student",
+      "provider": "Spotify Vietnam",
+      "official_url": "https://www.spotify.com/vn-vi/student/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng Spotify SheerID ↗"
+    },
+    {
+      "candidate_id": "CAND_009_STU_NOTION",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "Notion for Education",
+      "provider": "Notion",
+      "official_url": "https://www.notion.so/product/notion-for-education",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng Notion ↗"
+    },
+    {
+      "candidate_id": "CAND_010_STU_CANVA",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "Canva for Education",
+      "provider": "Canva",
+      "official_url": "https://www.canva.com/education/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng Canva ↗"
+    },
+    {
+      "candidate_id": "CAND_011_STU_YOUTUBE",
+      "pipeline": "A2_ONLINE_STUDENT_PORTALS",
+      "brand_name": "YouTube Premium Student",
+      "provider": "Google / YouTube",
+      "official_url": "https://www.youtube.com/premium/student",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "PORTAL_VERIFIED_READY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Cổng YouTube ↗"
+    },
+    {
+      "candidate_id": "CAND_012_GONGCHA_DANANG",
+      "pipeline": "A3_COMMUNITY_LOCAL_PROOF",
+      "brand_name": "Gong Cha Nguyễn Văn Linh",
+      "category": "COFFEE_TEA",
+      "policy_target": "Cơ sở 25-29 Nguyễn Văn Linh, Hải Châu",
+      "official_url": "https://gongcha.com.vn/",
+      "has_locator_evidence": true,
+      "locator_receipt_sha256": "9d380e227ab377cbff8f1807d91db9aa5c4dfae8c5c76db3158c3db0a46370ba",
+      "has_current_physical_capture": true,
+      "evidence_status": "VENUE_EVIDENCE_COMPLETE",
+      "assigned_tier": "TIER_2_VERIFIED_VENUE_LISTING",
+      "action_cta": "Kiểm Tra Tại Nguồn ↗"
+    },
+    {
+      "candidate_id": "CAND_013_HIGHLANDS_DANANG",
+      "pipeline": "A3_COMMUNITY_LOCAL_PROOF",
+      "brand_name": "Highlands Coffee Đà Nẵng",
+      "category": "COFFEE_TEA",
+      "policy_target": "Chuỗi cà phê học bài Đà Nẵng",
+      "official_url": "https://www.highlandscoffee.com.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_014_THECOFFEEHOUSE_DANANG",
+      "pipeline": "A3_COMMUNITY_LOCAL_PROOF",
+      "brand_name": "The Coffee House Đà Nẵng",
+      "category": "COFFEE_TEA",
+      "policy_target": "Không gian học bài & làm việc",
+      "official_url": "https://thecoffeehouse.com/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "EVIDENCE_INCOMPLETE_PENDING_SCOUT",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    },
+    {
+      "candidate_id": "CAND_015_SHOPEEFOOD_AFF",
+      "pipeline": "A4_AFFILIATE_API_READINESS",
+      "brand_name": "ShopeeFood Vietnam",
+      "category": "FOOD_DELIVERY",
+      "policy_target": "Kênh đặt món trực tuyến Đà Nẵng",
+      "official_url": "https://shopeefood.vn/",
+      "has_locator_evidence": false,
+      "has_current_physical_capture": true,
+      "evidence_status": "UNAUTHORIZED_TRACKED_SOURCE_ONLY",
+      "assigned_tier": "TIER_3_TRACKED_SOURCE_SIGNAL",
+      "action_cta": "Mở Trang Chính Thức ↗"
+    }
+  ]
+}

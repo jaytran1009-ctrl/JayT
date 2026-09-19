@@ -1,0 +1,51 @@
+{
+  "contract_id": "CONTRACT_V3_CANDIDATE_EZ_T_01_DANANG_LIBRARY_CARD_POLICY",
+  "version": "3.0.0-ez.t",
+  "governing_directive": "JAYT-245 Section EZ-T (Lines 4432-4454)",
+  "target_url": "https://thuvien.danang.gov.vn/News/ReadNews/1408",
+  "capture_metadata": {
+    "byte_length": 49293,
+    "sha256": "57ff87a63afab5b6cfb029075bb073bbd11eedfc9d94cccd0680df2353903b16",
+    "content_type": "text/html; charset=utf-8",
+    "capture_timestamp": "2026-08-31T07:31:35.130Z",
+    "parent_seed_url": "http://thuvien.danang.gov.vn/"
+  },
+  "sentence_level_raw_excerpts": [
+    {
+      "clause_id": "CLAUSE_01_TITLE",
+      "raw_string": "Thủ tục cấp thẻ",
+      "byte_start": 9520,
+      "byte_end": 9543,
+      "claim_class": "DESCRIPTIVE_TITLE"
+    },
+    {
+      "clause_id": "CLAUSE_02_SUPERIOR_BODY",
+      "raw_string": "SỞ VĂN HO&Aacute; &amp; THỂ THAO TP. Đ&Agrave; NẴNG",
+      "byte_start": 14181,
+      "byte_end": 14240,
+      "claim_class": "GOVERNING_BODY_STATEMENT"
+    },
+    {
+      "clause_id": "CLAUSE_03_OPERATING_BODY",
+      "raw_string": "THƯ VIỆN KHOA HỌC TỔNG HỢP",
+      "byte_start": 14502,
+      "byte_end": 14537,
+      "claim_class": "OPERATING_BODY_STATEMENT"
+    },
+    {
+      "clause_id": "CLAUSE_04_DATE_FRESHNESS",
+      "raw_string": "11/03/2016",
+      "byte_start": 12242,
+      "byte_end": 12252,
+      "claim_class": "FRESHNESS_METADATA"
+    }
+  ],
+  "entailment_and_provenance_verdict": {
+    "operating_body_proven": true,
+    "operating_body_name": "Thư viện Khoa học Tổng hợp Đà Nẵng (thuộc Sở Văn hóa & Thể thao TP. Đà Nẵng)",
+    "freshness_evaluation": "DOCUMENT_IS_HISTORICAL_PUBLISHED_2016",
+    "public_eligible": false,
+    "verdict": "IDENTITY_AND_OPERATING_BODY_OBSERVED_BUT_POLICY_REQUIRES_FRESHNESS_CONFIRMATION_HELD_INTERNAL",
+    "rationale": "Văn bản chứa thông tin cơ quan chủ quản và cơ quan vận hành rõ ràng, nhưng ngày đăng ký từ 2016 (cũ). Theo quy tắc an toàn fail-closed, tài liệu được giữ nội bộ để đối soát hiệu lực hiện hành trước khi xem xét công bố."
+  }
+}

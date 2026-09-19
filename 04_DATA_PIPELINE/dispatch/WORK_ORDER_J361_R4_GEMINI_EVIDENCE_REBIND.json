@@ -1,0 +1,16 @@
+{
+  "work_order_id": "J361_R4_GEMINI_EVIDENCE_REBIND",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DOCUMENT_BINDING_REMEDIATION_REQUIRED",
+  "production_deployment_authorized": false,
+  "vercel_alias_mutation_authorized": false,
+  "candidate_content_mutation_authorized": false,
+  "blocking_finding": "The Gemini dossier and its receipt cite QA receipt SHA-256 45e0dc367236576bb85fc24ccd2809646acb16000eaa58fe653aa02549ed1ccb, while the active cited receipt after CEO replay is be04006f1a5d9690a69878aeac743a896f382d054cf8d124d893688a8d9bb0e4.",
+  "required_actions": [
+    "Choose one evidence strategy: preserve the prior QA receipt at a hash-named immutable archival path and cite that path, or regenerate both Gemini documents against the current QA receipt.",
+    "Record the exact evidence path and SHA-256 in both the dossier and JSON receipt. Verify its sidecar before resealing.",
+    "Regenerate SHA-256 sidecars for every changed Gemini document and provide a concise binding table of candidate manifest, matrix, QA receipt and CEO replay receipt.",
+    "Do not modify candidate source, feed, registry, provenance matrix, Vercel project, deployment, or alias as part of this documentary correction."
+  ],
+  "acceptance": "CEO verifies every cited path and hash exists and matches. Only then can the Gemini-PASS dossier be placed before the Chairman; deployment remains unauthorized pending a separate Chairman signature."
+}

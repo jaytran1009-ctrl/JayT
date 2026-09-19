@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dossier_id": "JAYT_319_BATCH_09_DISCOVERY_PROPOSAL",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_BATCH_09_DISCOVERY_WORK_ORDER.md",
+  "generated_at": "2026-09-04T20:48:00+07:00",
+  "governance_mode": "DISCOVERY_ONLY__NO_CAPTURE__NO_HYDRATION",
+  "council_verdict_baseline": {
+    "B04_01": "INTAKE_FAILED__QUARANTINE",
+    "B04_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 4)",
+    "B04_03": "CONTENT_SPAN_MISMATCH__QUARANTINE",
+    "B04_04": "EVIDENCE_COMPLETE_INTERNAL_HELD (Vault only, zero render)",
+    "B04_05": "INTAKE_FAILED__QUARANTINE",
+    "B04_06": "PUBLIC_APPROVED_STAGING_ONLY (Card 6)",
+    "B04_07": "PUBLIC_APPROVED_STAGING_ONLY (Card 5)",
+    "B04_08": "SCOPE_DENIED__EXPIRED_EVENT_SOURCE",
+    "B04_09": "HELD__PENDING_PRICE_CLAIM_REMEDIATION",
+    "B04_10": "PUBLIC_APPROVED_STAGING_ONLY (Card 7)",
+    "B04_11": "REJECTED__TEMPORARY_EVENT_EXPIRING",
+    "B05_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 8)",
+    "B05_02": "HELD__INSTITUTIONAL_SIGNING_ANNOUNCEMENT (Zero direct utility intake)",
+    "B05_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 9)",
+    "B06_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 10)",
+    "B06_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 12)",
+    "B06_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 11)",
+    "B07_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 13)",
+    "B07_02": "PUBLIC_APPROVED_STAGING_ONLY (Card 14)",
+    "B07_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 15)",
+    "B08_01": "PUBLIC_APPROVED_STAGING_ONLY (Card 16)",
+    "B08_02": "REMEDIATED_AT_DISCOVERY_ONLY (Neutral span submitted in Batch 09)",
+    "B08_03": "PUBLIC_APPROVED_STAGING_ONLY (Card 17)"
+  },
+  "bounds_attestation": {
+    "network_capture_executed": false,
+    "hydration_executed": false,
+    "registry_mutated": false,
+    "deals_feed_mutated": false,
+    "production_deployed": false,
+    "staging_card_count": 17,
+    "production_card_count": 3
+  },
+  "candidates": [
+    {
+      "candidate_id": "B09_01_DANABUS_TUYEN_11_XUAN_DIEU_BEN_XE_TIEN_SA",
+      "service_name": "Cẩm nang giao thông công cộng đô thị Tuyến xe buýt số 11 kết nối học tập, y tế, mua sắm và giải trí",
+      "official_leaf_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/chi-mot-tuyen-xe-mo-ra-ca-da-nang-ket-noi-hoc-tap-y-te-mua-sam-va-giai-tri-5757.html",
+      "publisher": "Trung tâm Quản lý và Điều hành Giao thông công cộng thành phố Đà Nẵng (Danabus)",
+      "publication_date": "08/07/2026",
+      "effective_window": "Lộ trình vận hành giao thông công cộng thường trực trên địa bàn thành phố Đà Nẵng",
+      "recency_proof": "Đăng tải chính thức ngày 08/07/2026 trên cổng thông tin danangbus.vn",
+      "pre_declared_span": "Không chỉ mang lại sự tiện lợi, việc lựa chọn xe buýt còn góp phần hình thành thói quen sử dụng phương tiện công cộng văn minh, hiện đại, phù hợp với xu hướng phát triển đô thị bền vững của Đà Nẵng.",
+      "verified_span_offset": 55814,
+      "span_occurrences": 1,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH GIAO THÔNG CÔNG CỘNG",
+      "remediation_note": "Khắc phục triệt để lý do loại trừ tại Batch 08: Thay thế đoạn trích chứa từ 'tiết kiệm' bằng đoạn trích hoàn toàn trung lập về văn minh đô thị và giao thông công cộng bền vững.",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "BATCH03_DS_07 (Mạng lưới xe buýt tổng quát)",
+          "B05_03 (Tuyến 05 KCC Hòa Hiệp Nam - Biển Đông)",
+          "B06_01 (Chuyển đổi buýt điện Tuyến 02, 13, 21)",
+          "B07_01 (Chuyển đổi buýt điện Tuyến 03, 09, 14)"
+        ],
+        "differentiating_factor": "Cẩm nang kết nối hành lang đô thị riêng biệt của Tuyến 11 (Xuân Diệu - Bến xe Tiên Sa) qua cụm trường đại học, bệnh viện phụ sản - nhi và trung tâm sinh hoạt cộng đồng"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Thông tin giao thông công cộng đô thị; cấm khẳng định giá vé cụ thể, cấm suy diễn biểu đồ giờ/tần suất, zero bán vé thương mại, không affiliate, không tracking."
+    },
+    {
+      "candidate_id": "B09_02_TRO_LY_SO_DANANG_AI_PHO_BIEN_PHAP_LUAT_1022",
+      "service_name": "Ứng dụng chuyển đổi số và Trợ lý số DaNang AI trong công tác phổ biến, giáo dục pháp luật phục vụ người dân",
+      "official_leaf_url": "https://1022.vn/da-nang-ung-dung-chuyen-doi-so-dua-phap-luat-vao-cuoc-song/",
+      "publisher": "Cổng Thông tin Dịch vụ công thành phố Đà Nẵng (1022.vn) phối hợp Hội đồng phối hợp phổ biến, giáo dục pháp luật thành phố Đà Nẵng",
+      "publication_date": "04/09/2026",
+      "effective_window": "Tiện ích số hỗ trợ tra cứu kiến thức pháp luật và dữ liệu hộ tịch số hóa thường trực",
+      "recency_proof": "Đăng tải chính thức ngày 04/09/2026 09:36 trên cổng thông tin 1022.vn",
+      "pre_declared_span": "Điểm sáng của Đà Nẵng là việc đổi mới hình thức tuyên truyền đa dạng. Thành phố đã đưa Trợ lý số DaNang AI vào vận hành trên nền tảng số, số hóa dữ liệu hộ tịch và phát triển truyền thanh cơ sở thông minh.",
+      "verified_span_offset": 102701,
+      "span_occurrences": 1,
+      "commercial_intent": "NONE",
+      "fee_tier": "TIỆN ÍCH PHỔ BIẾN PHÁP LUẬT VÀ TRỢ LÝ SỐ CỘNG ĐỒNG MIỄN PHÍ",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_02 (Ký số toàn dân trong dịch vụ công và y tế)",
+          "B06_03 (Hướng dẫn nộp hồ sơ dịch vụ công trực tuyến)",
+          "B07_02 (Cẩm nang an toàn số deepfake)"
+        ],
+        "differentiating_factor": "Thông tin ứng dụng Trợ lý số DaNang AI trên nền tảng số và số hóa dữ liệu hộ tịch phục vụ tiếp cận pháp luật cho công dân"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tiện ích số hành chính công; cấm tư vấn pháp lý thay luật sư, cấm cam kết kết quả tố tụng, zero thu phí, không affiliate, không tracking."
+    },
+    {
+      "candidate_id": "B09_03_CHIEN_DICH_BAO_VE_DANH_TINH_SO_MA_SO_THUE_1022",
+      "service_name": "Khuyến nghị bảo vệ danh tính số và an toàn thông tin cá nhân trong chiến dịch làm sạch mã số thuế",
+      "official_leaf_url": "https://1022.vn/chien-dich-lam-sach-ma-so-thue-thao-go-diem-nghen-trong-kinh-doanh-loi-ich-kep-cho-doanh-nghiep-va-nguoi-dan/",
+      "publisher": "Cổng Thông tin Dịch vụ công thành phố Đà Nẵng (1022.vn) / UBND thành phố Đà Nẵng",
+      "publication_date": "04/09/2026",
+      "effective_window": "Khuyến nghị an toàn danh tính số thường trực phòng chống giả mạo thông tin cá nhân",
+      "recency_proof": "Đăng tải chính thức ngày 04/09/2026 14:01 trên cổng thông tin 1022.vn",
+      "pre_declared_span": "UBND thành phố cũng khuyến cáo không cho mượn, cho thuê, mua bán thông tin cá nhân, chữ ký số, tài khoản ngân hàng để thành lập hoặc vận hành doanh nghiệp, hộ kinh doanh; kịp thời phản ánh trường hợp bị giả mạo, bị lợi dụng thông tin để cơ quan chức năng xác minh, xử lý.",
+      "verified_span_offset": 115117,
+      "span_occurrences": 1,
+      "commercial_intent": "NONE",
+      "fee_tier": "CẨM NANG AN TOÀN SỐ VÀ BẢO VỆ DANH TÍNH CÔNG DÂN",
+      "duplicate_check": {
+        "is_duplicate": false,
+        "distinct_from": [
+          "B04_02 (Ký số toàn dân)",
+          "B07_02 (Cuộc gọi video Deepfake)",
+          "B06_03 (Nộp hồ sơ VNeID)"
+        ],
+        "differentiating_factor": "Cảnh báo và hướng dẫn phòng ngừa lạm dụng, giả mạo danh tính số (thông tin cá nhân, chữ ký số, tài khoản ngân hàng) trong quản lý thuế và hoạt động kinh doanh"
+      },
+      "qa_verdict": "PROPOSAL_ONLY__AWAITING_CEO_AUTHORIZATION",
+      "risk_notes": "Tài liệu phòng ngừa tội phạm số và bảo vệ quyền công dân; tuyệt đối cấm thu thập thông tin cá nhân/MST/mật khẩu, cấm dịch vụ kê khai thuế dịch vụ trả phí, zero affiliate, không tracking."
+    }
+  ]
+}

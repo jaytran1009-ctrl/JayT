@@ -1,0 +1,33 @@
+{
+  "scope_id": "JAYT-319-BATCH-08-TARGETED-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "capture_authorized": true,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "targets": [
+    {
+      "slot_id": "B08_01",
+      "candidate_id": "B08_01_BAN_DO_SO_UNG_PHO_LU_LUT_HOA_XUAN_1022",
+      "url": "https://1022.vn/xay-dung-ban-do-so-phuc-vu-ung-pho-lu-lut/",
+      "expected_text_span": "Bằng cách quét mã QR trên tấm biển này qua điện thoại thông minh, người dùng có thể dễ dàng truy cập thông tin, hình ảnh, video về các điểm ngập khác cũng như diện tích ngập lụt trực quan trên bản đồ số.",
+      "source_date": "2026-09-04",
+      "required_disclaimer": "Thông tin giới thiệu bản đồ số và biển vết lũ theo bài đăng của Cổng 1022 Đà Nẵng; không phải cảnh báo thời tiết, dự báo ngập lụt hay cam kết an toàn theo thời gian thực. Khi có tình huống khẩn cấp, hãy theo dõi hướng dẫn chính thức của cơ quan chức năng.",
+      "prohibited": ["weather_forecast", "real_time_flood_claim", "safety_guarantee", "rescue_equipment_sales", "affiliate", "tracking"]
+    },
+    {
+      "slot_id": "B08_03",
+      "candidate_id": "B08_03_TIEN_ICH_SO_CONG_DONG_WIFI_AN_HAI_1022",
+      "url": "https://1022.vn/an-hai-day-manh-chuyen-doi-so-phuc-vu-nguoi-dan-doanh-nghiep/",
+      "expected_text_span": "Cùng với đó, phường đã lắp đặt wifi miễn phí tại 23 nhà sinh hoạt cộng đồng, đưa 31 bộ dữ liệu mở lên Cổng dữ liệu thành phố và hoàn thành cập nhật 14 bộ dữ liệu đăng ký lên hệ thống cơ sở dữ liệu xã, phường.",
+      "source_date": "2026-09-03",
+      "required_disclaimer": "Thông tin ghi nhận theo bài đăng của Cổng 1022 Đà Nẵng về hạ tầng số tại phường An Hải; phạm vi, khả dụng và chất lượng kết nối có thể thay đổi. Người dùng cần kiểm tra trực tiếp tại địa điểm hoặc qua kênh chính thức.",
+      "prohibited": ["network_availability_guarantee", "speed_claim", "credential_collection", "paid_wifi_offer", "affiliate", "tracking"]
+    }
+  ],
+  "excluded_candidate": {
+    "slot_id": "B08_02",
+    "reason": "Pre-declared span contains an affordability claim; retained at discovery-only pending a neutral direct span."
+  }
+}

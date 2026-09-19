@@ -1,0 +1,46 @@
+{
+  "manifest_id": "LOCAL_EDITORIAL_COMMERCE_BL_20260829",
+  "schema_version": "1.0.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BL)",
+  "central_customer_question": "Tối nay / gần tôi / ngân sách của tôi có lựa chọn gì đáng đi hoặc đáng mua?",
+  "created_at": "2026-08-29T06:39:00.531Z",
+  "render_first_rules": {
+    "zero_broken_images": "Tất cả các khu vực giao diện phải render mượt mà, không được có bất kỳ broken image icon hay alt text lộ nào.",
+    "intentional_editorial_layout": "Sử dụng typography editorial cao cấp, thẻ thông tin có màu sắc và nhận diện đặc trưng, microcopy tiếng Việt tự nhiên.",
+    "no_raw_jargon": "Cấm tuyệt đối các từ ngữ: undefined, tiêu chuẩn AU, đang rà soát theo field, raw state."
+  },
+  "semantic_action_ctas": {
+    "cinema_deals": "Xem lịch chiếu & điều kiện",
+    "food_dining": "Xem thực đơn & địa điểm",
+    "transit_mobility": "Xem lộ trình xe buýt",
+    "bike_sharing": "Xem vị trí trạm xe",
+    "public_library": "Xem giờ mở cửa & phòng đọc",
+    "student_tools": "Xem điều kiện sinh viên",
+    "civic_services": "Mở cổng dịch vụ công",
+    "radar_monitoring": "Theo dõi kênh chính thức"
+  },
+  "decision_matrix": {
+    "localities": [
+      "Tất cả Đà Nẵng",
+      "Hải Châu",
+      "Thanh Khê",
+      "Sơn Trà",
+      "Ngũ Hành Sơn",
+      "Liên Chiểu",
+      "Cẩm Lệ"
+    ],
+    "time_windows": [
+      "Tối nay (Sau 18h)",
+      "Chiều nay (14h - 18h)",
+      "Trưa nay (11h - 14h)",
+      "Sáng nay (06h - 11h)"
+    ],
+    "budget_ranges": [
+      "Tất cả mức giá",
+      "Dưới 50.000đ",
+      "50.000đ - 100.000đ",
+      "100.000đ - 200.000đ",
+      "Miễn phí / Tiện ích công"
+    ]
+  }
+}

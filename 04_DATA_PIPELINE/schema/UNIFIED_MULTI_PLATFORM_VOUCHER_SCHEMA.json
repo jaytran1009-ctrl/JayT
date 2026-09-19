@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifiedMultiPlatformVoucherRecord",
+  "description": "Chuẩn hóa schema chung cho hệ thống tổng hợp ưu đãi & voucher đa sàn JayT (Magiamgia Pro Staging Engine)",
+  "type": "object",
+  "required": [
+    "provider",
+    "offer_id",
+    "canonical_url",
+    "voucher_code",
+    "conditions",
+    "validity",
+    "pricing",
+    "observed_at",
+    "provenance",
+    "sha256"
+  ],
+  "properties": {
+    "provider": {
+      "type": "string",
+      "enum": [
+        "SHOPEE_PORTAL_EXPORT",
+        "ACCESSTRADE_DATAFEED_API",
+        "TIKTOK_SHOP_AFFILIATE_API",
+        "LAZADA_PUBLISHER_API"
+      ],
+      "description": "Nguồn cấp dữ liệu ưu đãi chính thức được ủy quyền"
+    },
+    "offer_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{6,64}$",
+      "description": "Mã định danh duy nhất của ưu đãi/voucher trên toàn hệ thống"
+    },
+    "canonical_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Đường dẫn chuẩn sàn (Canonical URL), tuyệt đối không gắn query tracking hoặc Partner ID"
+    },
+    "voucher_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Ký tự mã giảm giá nếu có; null nếu là ưu đãi tự động áp dụng tại quầy/giỏ hàng"
+    },
+    "conditions": {
+      "type": "object",
+      "required": [
+        "min_spend",
+        "terms_description"
+      ],
+      "properties": {
+        "min_spend": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Giá trị đơn hàng tối thiểu (VND)"
+        },
+        "max_discount_cap": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Mức giảm tối đa (VND) nếu là mã giảm theo %"
+        },
+        "eligible_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Ngành hàng hoặc phạm vi áp dụng"
+        },
+        "terms_description": {
+          "type": "string",
+          "description": "Mô tả điều kiện nguyên văn từ sàn đối tác, không suy diễn"
+        }
+      }
+    },
+    "validity": {
+      "type": "object",
+      "required": [
+        "valid_from_utc",
+        "valid_to_utc",
+        "is_currently_active"
+      ],
+      "properties": {
+        "valid_from_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "valid_to_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "is_currently_active": {
+          "type": "boolean"
+        },
+        "display_period_tz7": {
+          "type": "string",
+          "description": "Chuỗi thời gian hiển thị theo múi giờ Việt Nam (Asia/Ho_Chi_Minh)"
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": [
+        "original_price",
+        "discount_price"
+      ],
+      "properties": {
+        "original_price": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Giá niêm yết ban đầu (VND)"
+        },
+        "discount_price": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Giá thực trả sau khi thỏa mãn điều kiện ưu đãi (VND)"
+        },
+        "discount_amount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Số tiền tiết kiệm thực tế (VND)"
+        },
+        "discount_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Tỷ lệ chiết khấu (%)"
+        }
+      }
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Thời điểm đối soát dữ liệu ghi nhận từ feed/API (ISO-8601 UTC)"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_mechanism",
+        "source_reference_file_or_endpoint",
+        "adapter_authorization_status"
+      ],
+      "properties": {
+        "source_mechanism": {
+          "type": "string",
+          "enum": [
+            "PORTAL_VERIFIED_EXPORT_CSV",
+            "OFFICIAL_REST_DATAFEED_API",
+            "OAUTH_SCOPED_AFFILIATE_API",
+            "SELLER_VOUCHER_API_INADMISSIBLE"
+          ]
+        },
+        "source_reference_file_or_endpoint": {
+          "type": "string",
+          "description": "Tên file lưu chứng từ gốc hoặc URI endpoint API"
+        },
+        "operator_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "adapter_authorization_status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE_PORTAL_VERIFIED",
+            "ACTIVE_API_TOKEN_VERIFIED",
+            "DISABLED_PENDING_APP_AUTHORIZATION",
+            "RESTRICTED_PENDING_PUBLISHER_APP_KEY"
+          ]
+        }
+      }
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Mã băm SHA-256 của bản ghi thô gốc từ Provider"
+    }
+  },
+  "additionalProperties": false
+}

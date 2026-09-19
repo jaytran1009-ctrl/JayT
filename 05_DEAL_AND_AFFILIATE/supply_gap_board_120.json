@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "board_version": "120.0.0",
+  "release_directive": "JAYT-120-EMOTIONAL-UTILITY-AND-REAL-RETENTION",
+  "updated_at": "2026-08-25T16:43:35.766Z",
+  "matrix_dimensions": {
+    "slots": [
+      {
+        "id": "SLOT_0730",
+        "label": "07:30 (Sáng)",
+        "intent": "Cà phê, học bài, ăn sáng & xe buýt đi làm/đi học"
+      },
+      {
+        "id": "SLOT_1115",
+        "label": "11:15 (Trưa)",
+        "intent": "Bữa trưa nhanh văn phòng, sinh viên & vé phim trưa Zalopay"
+      },
+      {
+        "id": "SLOT_1415",
+        "label": "14:15 (Chiều)",
+        "intent": "Trà chiều, cà phê làm việc & học nhóm"
+      },
+      {
+        "id": "SLOT_1730",
+        "label": "17:30 (Tan ca)",
+        "intent": "Di chuyển về, mua sắm siêu thị & combo gà nhóm tan ca"
+      },
+      {
+        "id": "SLOT_2000",
+        "label": "20:00 (Tối)",
+        "intent": "Rạp phim, kèo khuya, buffet nướng & xe về đêm"
+      }
+    ],
+    "sectors": [
+      {
+        "id": "CINEMA",
+        "label": "Rạp phim",
+        "icon": "🎬"
+      },
+      {
+        "id": "COFFEE",
+        "label": "Cà phê & Trà",
+        "icon": "☕"
+      },
+      {
+        "id": "LUNCH",
+        "label": "Cơm trưa & Fastfood",
+        "icon": "🍱"
+      },
+      {
+        "id": "SHOPPING",
+        "label": "Siêu thị & Tiện ích",
+        "icon": "🛒"
+      },
+      {
+        "id": "MOBILITY",
+        "label": "Di chuyển & Gọi xe",
+        "icon": "🚗"
+      }
+    ]
+  },
+  "summary_metrics": {
+    "total_matrix_cells": 25,
+    "verified_deals_count": 5,
+    "watchlist_recheck_count": 2,
+    "planning_menu_pricing_count": 7,
+    "public_utility_savings_count": 1,
+    "actionable_coverage_cells": 10,
+    "actionable_coverage_rate_percent": 40,
+    "high_priority_gaps_count": 3
+  },
+  "high_priority_target_gaps": [
+    {
+      "gap_id": "GAP_120_01_LUNCH_MOBILITY",
+      "slot": "SLOT_1115",
+      "sector": "MOBILITY",
+      "priority": "HIGH",
+      "target_brands": [
+        "GrabFood",
+        "BeFood",
+        "ShopeeFood"
+      ],
+      "action_plan": "Khai thác batch quét tiếp theo cho voucher di chuyển & freeship ăn trưa tại Đà Nẵng"
+    },
+    {
+      "gap_id": "GAP_120_02_LATE_NIGHT_RIDE",
+      "slot": "SLOT_2000",
+      "sector": "MOBILITY",
+      "priority": "HIGH",
+      "target_brands": [
+        "Xanh SM",
+        "Be",
+        "Grab"
+      ],
+      "action_plan": "Rà soát mã cuốc xe di chuyển sau suất chiếu phim hoặc ăn tối"
+    },
+    {
+      "gap_id": "GAP_120_03_AFTERNOON_SNACK",
+      "slot": "SLOT_1415",
+      "sector": "LUNCH",
+      "priority": "HIGH",
+      "target_brands": [
+        "Bánh mì Bà Lan",
+        "Chè Liên",
+        "Cơm gà Đà Nẵng"
+      ],
+      "action_plan": "Bổ sung menu niêm yết các món ăn xế nổi bật cho sinh viên/văn phòng"
+    }
+  ],
+  "matrix_cells": [
+    {
+      "slot": "SLOT_0730",
+      "sector": "CINEMA",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Rạp chưa mở suất sáng sớm"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "COFFEE",
+      "status": "COVERED",
+      "coverage_type": "WATCHLIST_AND_MENU",
+      "items": [
+        "WATCHLIST_120_HIGHLANDS_JCB_30",
+        "MENU_120_PHELA_SPECIALTY"
+      ],
+      "note": "Highlands JCB + Phê La Bạch Đằng"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "LUNCH",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có ưu đãi điểm tâm sáng"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "SHOPPING",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Chưa có ưu đãi tiện ích sáng"
+    },
+    {
+      "slot": "SLOT_0730",
+      "sector": "MOBILITY",
+      "status": "COVERED",
+      "coverage_type": "PUBLIC_UTILITY",
+      "items": [
+        "UTILITY_120_DANABUS_TRANSIT"
+      ],
+      "note": "DanaBus xe buýt trợ giá 6k/8k kết nối trường & văn phòng"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "CINEMA",
+      "status": "COVERED",
+      "coverage_type": "LIMITED_TIME_DEAL",
+      "items": [
+        "DEAL_120_CGV_ZALOPAY_50K"
+      ],
+      "note": "Deal CGV Zalopay 50% suất trưa 12h-13h"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "COFFEE",
+      "status": "COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        "MENU_120_PHUCLONG_TEA_BAKERY"
+      ],
+      "note": "Phúc Long Tea & Bakery giá niêm yết"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "LUNCH",
+      "status": "COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        "MENU_120_KFC_DZUT_DEAL_88K",
+        "MENU_120_JOLLIBEE_COMBO_73K"
+      ],
+      "note": "KFC 88k & Jollibee 73k giá combo niêm yết"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "SHOPPING",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Bữa trưa sơ chế siêu thị"
+    },
+    {
+      "slot": "SLOT_1115",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "GAP CAO: Thiếu voucher xe đi ăn trưa"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "CINEMA",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Vé sinh viên ngày trong tuần"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "COFFEE",
+      "status": "COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        "MENU_120_GONGCHA_ALISAN",
+        "MENU_120_PHELA_SPECIALTY",
+        "MENU_120_PHUCLONG_TEA_BAKERY"
+      ],
+      "note": "Gong Cha Alisan, Phê La, Phúc Long"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "LUNCH",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "GAP CAO: Thiếu ăn xế trà chiều"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "SHOPPING",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Mỹ phẩm, nhà sách"
+    },
+    {
+      "slot": "SLOT_1415",
+      "sector": "MOBILITY",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Di chuyển học nhóm"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "CINEMA",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Suất chiếu sau giờ làm"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "COFFEE",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Happy Hour trà chiều"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "LUNCH",
+      "status": "COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        "MENU_120_KFC_XO_HOP_CA_189K"
+      ],
+      "note": "KFC Xô Hợp Cạ 189k combo nhóm chiều tối"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "SHOPPING",
+      "status": "COVERED",
+      "coverage_type": "WATCHLIST_RECHECK",
+      "items": [
+        "WATCHLIST_120_WINMART_WINECO_20"
+      ],
+      "note": "WinMart WinLife -20% rau củ"
+    },
+    {
+      "slot": "SLOT_1730",
+      "sector": "MOBILITY",
+      "status": "COVERED",
+      "coverage_type": "PUBLIC_UTILITY",
+      "items": [
+        "UTILITY_120_DANABUS_TRANSIT"
+      ],
+      "note": "DanaBus lộ trình tan sở kết nối Hải Châu - Sơn Trà - Thanh Khê"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "CINEMA",
+      "status": "COVERED",
+      "coverage_type": "LIMITED_TIME_DEAL",
+      "items": [
+        "DEAL_120_CGV_PAYDAY_30K",
+        "DEAL_120_CGV_MUA1TANG1",
+        "DEAL_120_STARLIGHT_COMBO_10K",
+        "DEAL_120_METIZ_U22_AND_SUPER_MONDAY"
+      ],
+      "note": "4 deal rạp phim xác minh có hạn"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "COFFEE",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Cà phê gặp gỡ buổi tối"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "LUNCH",
+      "status": "COVERED",
+      "coverage_type": "PLANNING_MENU",
+      "items": [
+        "MENU_120_GOGI_HOUSE_SIGNATURE"
+      ],
+      "note": "GoGi House Combo & Buffet nướng chuẩn giá"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "SHOPPING",
+      "status": "MEDIUM_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "Sự kiện mua sắm TTTM"
+    },
+    {
+      "slot": "SLOT_2000",
+      "sector": "MOBILITY",
+      "status": "HIGH_GAP",
+      "coverage_type": "NONE",
+      "items": [],
+      "note": "GAP CAO: Thiếu mã gọi xe về khuya"
+    }
+  ]
+}

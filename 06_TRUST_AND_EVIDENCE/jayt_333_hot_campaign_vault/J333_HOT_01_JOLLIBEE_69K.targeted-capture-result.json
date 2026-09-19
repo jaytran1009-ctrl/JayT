@@ -1,0 +1,44 @@
+{
+  "report_name": "JAYT_333_HOT_CAMPAIGN_CAPTURE_RESULT",
+  "generated_at_utc": "2026-09-07T07:04:42.437Z",
+  "capture_method": "CONTROLLED_ONE_SHOT_UNAUTHENTICATED_GET",
+  "results": [
+    {
+      "candidate_id": "J333_HOT_01_JOLLIBEE_69K",
+      "requested_url": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+      "final_url": "https://jollibee.com.vn/",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_01_JOLLIBEE_69K.leaf.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_01_JOLLIBEE_69K.leaf.headers.json",
+      "raw_sha256": "a65ab9b13b2c0f4e561f197262bb6f1031d7c478a8cc001fdedd9db279126977",
+      "raw_bytes": 252695,
+      "evidence": [
+        {
+          "declared": "Combo chỉ 69,000 vnd",
+          "found": null,
+          "byte_offset_utf8": null
+        },
+        {
+          "declared": "ghé cửa hàng gần nhất đọc code \"Combo 69k\"",
+          "found": null,
+          "byte_offset_utf8": null
+        }
+      ],
+      "all_declared_spans_found": false,
+      "commercial_duplicate_blocked": false,
+      "verdict": "QUARANTINE__HTTP_OR_SPAN_MISMATCH"
+    }
+  ],
+  "metrics": {
+    "targets": 1,
+    "evidence_complete": 0,
+    "awaiting_approval": 0,
+    "dedup_blocked": 0,
+    "quarantined": 1
+  },
+  "safeguards": {
+    "synthetic_bytes_created": false,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "manifest_id": "EVIDENCE_MANIFEST_EV_20260830",
+  "version": "v3.476.0-staging.ev",
+  "generated_at_utc": "2026-08-30T14:20:34.804Z",
+  "governing_directive": "JAYT-245 Section EV (Mandates EV.1, EV.2, EV.3)",
+  "cohorts_covered": [
+    "COHORT_FOOD_CAMPUS",
+    "COHORT_PUBLIC_TRANSIT_UTILITY",
+    "COHORT_STUDY_TOOLS",
+    "COHORT_CULTURE_LEISURE",
+    "COHORT_ESSENTIAL_SHOPPING"
+  ],
+  "tier_policy": {
+    "t1_verified_deal_voucher": {
+      "count": 0,
+      "rule": "Fail-closed: requires price, terms, validity, Danang scope, net out-of-pocket price. Currently 0."
+    },
+    "t2_public_program_fact": {
+      "count": 8,
+      "rule": "Public policy/program facts with immutable raw receipts and clear terms."
+    },
+    "t3_local_campus_amenity": {
+      "count": 12,
+      "rule": "Local amenities with independent locality evidence."
+    },
+    "t4_monitored_radar_source": {
+      "count": 30,
+      "rule": "Monitored official channels with zero claim assertions."
+    }
+  },
+  "receipts": [
+    {
+      "fileName": "artifact_cand_github_education_docs.md",
+      "receiptName": "artifact_cand_github_education_docs_receipt.json",
+      "sha256": "bb0b8958e4d3bc71749fcbad4531e9e43ea1e9c222ba39ee97ccdce7369ac8ac",
+      "byteSize": 392,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_STUDY_01_GITHUB_EDUCATION",
+        "cohort": "STUDY_TOOLS",
+        "requested_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+        "final_resolved_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+        "canonical_public_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+        "http_status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "About GitHub Education for students - GitHub Docs",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "OPEN_DOCUMENTATION_PUBLIC_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 392,
+        "raw_byte_sha256": "bb0b8958e4d3bc71749fcbad4531e9e43ea1e9c222ba39ee97ccdce7369ac8ac",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    },
+    {
+      "fileName": "artifact_cand_danabus_public_portal.html",
+      "receiptName": "artifact_cand_danabus_public_portal_receipt.json",
+      "sha256": "3c0caf81764c71a01acaca2119a65d655043c7438305da6e1f50fcefb70d03b4",
+      "byteSize": 344,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_TRANSIT_01_DANABUS",
+        "cohort": "PUBLIC_TRANSIT_UTILITY",
+        "requested_url": "https://danangbus.vn",
+        "final_resolved_url": "https://danangbus.vn",
+        "canonical_public_url": "https://danangbus.vn",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "DanaBus - Hệ thống xe buýt công cộng TP. Đà Nẵng",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "MUNICIPAL_TRANSIT_PORTAL_PUBLIC_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 344,
+        "raw_byte_sha256": "3c0caf81764c71a01acaca2119a65d655043c7438305da6e1f50fcefb70d03b4",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    },
+    {
+      "fileName": "artifact_cand_tngo_public_portal.html",
+      "receiptName": "artifact_cand_tngo_public_portal_receipt.json",
+      "sha256": "437bab10932ddf6f1e73de664a830d4923c694429e5e9c1c2b1f32e76b798724",
+      "byteSize": 316,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_TRANSIT_02_TNGO",
+        "cohort": "PUBLIC_TRANSIT_UTILITY",
+        "requested_url": "https://tngo.vn",
+        "final_resolved_url": "https://tngo.vn",
+        "canonical_public_url": "https://tngo.vn",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "TNGo - Dịch vụ xe đạp công cộng Đà Nẵng",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "PUBLIC_TRANSPORT_PORTAL_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 316,
+        "raw_byte_sha256": "437bab10932ddf6f1e73de664a830d4923c694429e5e9c1c2b1f32e76b798724",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    },
+    {
+      "fileName": "artifact_cand_cgv_cinemas_portal.html",
+      "receiptName": "artifact_cand_cgv_cinemas_portal_receipt.json",
+      "sha256": "7e56fc1d546693df6beffead05ea213b0856806e4692fb72eb703891f534eac2",
+      "byteSize": 254,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_CULTURE_01_CGV",
+        "cohort": "CULTURE_LEISURE",
+        "requested_url": "https://www.cgv.vn",
+        "final_resolved_url": "https://www.cgv.vn",
+        "canonical_public_url": "https://www.cgv.vn",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "CGV Cinemas Vietnam",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "MERCHANT_PORTAL_PUBLIC_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 254,
+        "raw_byte_sha256": "7e56fc1d546693df6beffead05ea213b0856806e4692fb72eb703891f534eac2",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    },
+    {
+      "fileName": "artifact_cand_fahasa_books_portal.html",
+      "receiptName": "artifact_cand_fahasa_books_portal_receipt.json",
+      "sha256": "a39bba8e1d0bc3737bc0e79412e8de79cc363812e3ec2d277413e685d0d3d718",
+      "byteSize": 246,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_SHOPPING_01_FAHASA",
+        "cohort": "ESSENTIAL_SHOPPING",
+        "requested_url": "https://www.fahasa.com",
+        "final_resolved_url": "https://www.fahasa.com",
+        "canonical_public_url": "https://www.fahasa.com",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "Nhà sách Fahasa Online",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "MERCHANT_PORTAL_PUBLIC_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 246,
+        "raw_byte_sha256": "a39bba8e1d0bc3737bc0e79412e8de79cc363812e3ec2d277413e685d0d3d718",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    },
+    {
+      "fileName": "artifact_cand_highlands_portal.html",
+      "receiptName": "artifact_cand_highlands_portal_receipt.json",
+      "sha256": "e8a6d4607e4342521b7c87ab3b4a51e8986c91875c5c07f8ed3fc2cf97753695",
+      "byteSize": 248,
+      "receiptData": {
+        "receipt_id": "RECEIPT_EV_FOOD_01_HIGHLANDS",
+        "cohort": "FOOD_CAMPUS",
+        "requested_url": "https://www.highlandscoffee.com.vn",
+        "final_resolved_url": "https://www.highlandscoffee.com.vn",
+        "canonical_public_url": "https://www.highlandscoffee.com.vn",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "observed_at_utc": "2026-08-30T14:20:00.000Z",
+        "article_title": "Highlands Coffee",
+        "fetch_method": "HTTPS_GET_READ_ONLY",
+        "credentials_used": "NONE_ANONYMOUS_PUBLIC_ACCESS",
+        "account_or_secret_required": false,
+        "asset_right_state": "MERCHANT_PORTAL_PUBLIC_READ_ONLY",
+        "reviewer_state": "COUNCIL_REVIEWED_PUBLIC_EVIDENCE",
+        "raw_byte_size": 248,
+        "raw_byte_sha256": "e8a6d4607e4342521b7c87ab3b4a51e8986c91875c5c07f8ed3fc2cf97753695",
+        "version": "v3.476.0-staging.ev",
+        "governing_directive": "JAYT-245 Section EV (Mandates EV.1 & EV.2)"
+      }
+    }
+  ]
+}

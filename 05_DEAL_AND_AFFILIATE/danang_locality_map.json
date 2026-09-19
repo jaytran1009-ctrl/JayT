@@ -1,0 +1,118 @@
+{
+  "locality_map_version": "1.1.0",
+  "scope": "DA_NANG_LOCAL_VALUE_MAP",
+  "status": "CANONICAL_SPECIFICATION",
+  "integrity_rules": {
+    "no_auto_gps": true,
+    "no_fabricated_deals": true,
+    "no_coordinate_inference": true,
+    "unverified_locations_tagged": "LOCATION_UNVERIFIED",
+    "coordinate_verification_contract": "MANDATORY_EVIDENCE_REF_FOR_COORDINATES"
+  },
+  "layer_1_clusters_and_personas": {
+    "STUDENT": {
+      "name": "Sinh viên & Học sinh",
+      "target_zones": [
+        {
+          "zone_id": "ZONE_HOA_KHANH",
+          "name": "Hòa Khánh / Bách Khoa / Sư Phạm",
+          "district": "Liên Chiểu",
+          "frequent_needs": ["cơm_trưa_bình_dân", "ăn_nhanh", "cà_phê_học_bài", "trà_sữa", "vé_phim_u22"]
+        },
+        {
+          "zone_id": "ZONE_NGU_HANH_SON_DUE",
+          "name": "Ngũ Hành Sơn / ĐH Kinh Tế (DUE) / Làng Đại Học",
+          "district": "Ngũ Hành Sơn",
+          "frequent_needs": ["cơm_sinh_viên", "trà_sữa_tụ_tập", "cà_phê_chạy_deadline", "ăn_vặt_chợ_đêm"]
+        }
+      ]
+    },
+    "OFFICE_TECH": {
+      "name": "Văn phòng, Công sở & Tech / IT",
+      "target_zones": [
+        {
+          "zone_id": "ZONE_HAI_CHAU_CENTER",
+          "name": "Trung tâm Hải Châu / Nguyễn Văn Linh / 2 Tháng 9",
+          "district": "Hải Châu",
+          "frequent_needs": ["cơm_trưa_văn_phòng", "cà_phê_họp_đối_tác", "đặt_đơn_nhóm", "tụ_tập_sau_giờ_làm"]
+        },
+        {
+          "zone_id": "ZONE_SON_TRA_TECH",
+          "name": "Sơn Trà / Cầu Rồng / Khu Văn phòng",
+          "district": "Sơn Trà",
+          "frequent_needs": ["cơm_trưa", "cà_phê_deadline", "hẹn_hò_chiều_tối"]
+        },
+        {
+          "zone_id": "ZONE_FPT_COMPLEX",
+          "name": "FPT Complex / Khu Đô Thị Nam Hòa Xuân",
+          "district": "Ngũ Hành Sơn",
+          "frequent_needs": ["cơm_trưa_công_nghệ", "cà_phê_code", "giao_hàng_tận_nơi"]
+        }
+      ]
+    }
+  },
+  "layer_2_temporal_lifestyle_triggers": [
+    {
+      "trigger_id": "TRIG_1105_LUNCH",
+      "time_label": "11:05",
+      "name": "Cứu đói trưa",
+      "category_focus": ["cơm_trưa_văn_phòng", "cơm_bình_dân", "đơn_nhóm_trưa"],
+      "action_context": "Tìm quán cơm trưa hoặc gom đơn freeship"
+    },
+    {
+      "trigger_id": "TRIG_1430_DEADLINE_COFFEE",
+      "time_label": "14:30",
+      "name": "Cà phê & Trà sữa deadline",
+      "category_focus": ["cà_phê_làm_việc", "trà_sữa_chiều", "mã_giảm_app_chuỗi"],
+      "action_context": "Nạp caffeine hoặc giải khát chiều"
+    },
+    {
+      "trigger_id": "TRIG_1730_AFTER_WORK_SCHOOL",
+      "time_label": "17:30",
+      "name": "Tan học, tan ca, ăn tối, phim, hẹn bạn",
+      "category_focus": ["vé_phim_rạp", "gà_rán_ăn_tối", "trà_sữa_hẹn_bạn", "quán_nhậu_sau_giờ_làm"],
+      "action_context": "Xả stress hoặc lên lịch đi chơi cùng bạn bè"
+    },
+    {
+      "trigger_id": "TRIG_2100_NIGHT_OUT",
+      "time_label": "21:00",
+      "name": "Đi chơi tối, di chuyển, ăn khuya",
+      "category_focus": ["cà_phê_đêm", "ăn_khuya", "mã_di_chuyển_grab_be"],
+      "action_context": "Tụ tập tối muộn hoặc đặt xe an toàn về nhà"
+    }
+  ],
+  "layer_3_locations_registry": [
+    {
+      "location_id": "LOC_METIZ_HELIO",
+      "name": "Metiz Cinema (Helio Center)",
+      "district": "Hải Châu",
+      "reference_area": "Khu vực Helio Center / Đường 2 Tháng 9",
+      "verification_status": "LOCATION_UNVERIFIED",
+      "coordinates": null
+    },
+    {
+      "location_id": "LOC_DUE_SURROUNDINGS",
+      "name": "Khu ẩm thực & cà phê quanh ĐH Kinh Tế",
+      "district": "Ngũ Hành Sơn",
+      "reference_area": "Khu vực đường Ngũ Hành Sơn / Nam Kỳ Khởi Nghĩa",
+      "verification_status": "LOCATION_UNVERIFIED",
+      "coordinates": null
+    },
+    {
+      "location_id": "LOC_HOA_KHANH_HUB",
+      "name": "Khu vực ẩm thực sinh viên Hòa Khánh",
+      "district": "Liên Chiểu",
+      "reference_area": "Khu vực Ngô Sĩ Liên / Nguyễn Lương Bằng",
+      "verification_status": "LOCATION_UNVERIFIED",
+      "coordinates": null
+    },
+    {
+      "location_id": "LOC_NGUYEN_VAN_LINH_OFFICE",
+      "name": "Tuyến phố tài chính & văn phòng Nguyễn Văn Linh",
+      "district": "Hải Châu",
+      "reference_area": "Tuyến đường Nguyễn Văn Linh",
+      "verification_status": "LOCATION_UNVERIFIED",
+      "coordinates": null
+    }
+  ]
+}

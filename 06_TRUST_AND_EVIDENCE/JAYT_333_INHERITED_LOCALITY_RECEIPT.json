@@ -1,0 +1,35 @@
+{
+  "receipt_name": "JAYT_333_INHERITED_LOCALITY_RECEIPT",
+  "generated_at_utc": "2026-09-07T07:07:30.001Z",
+  "scope": "COMMERCIAL_STAGING_ONLY",
+  "source_catalog": "staging_workspace_j328/approved_commercial_cards.json",
+  "source_catalog_sha256": "e085287d1567c4fb6f793386605467d597a8fac900a8cdedb5f80265005b91b1",
+  "output_catalog": "staging_workspace_j328/JAYT_333_COMMERCIAL_PILOT_CATALOG.json",
+  "output_catalog_sha256": "c75ef55896620521025c8eb959209e1399b690aa6958e1914f5d35cabdf83d83",
+  "locator_run": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe",
+  "locator_locations_sha256": "5461df21cd5f42aa930b3498ac9346ea56c8999c247acccac0720a17fe2d672c",
+  "metrics": {
+    "total_renderable_cards": 23,
+    "locality_qualified_cards": 21,
+    "inherited_locality_cards": 20,
+    "counter_deal_cards": 8,
+    "brand_program_cards": 1,
+    "value_radar_cards": 14,
+    "real_voucher_codes_published": 0,
+    "affiliate_links_published": 0
+  },
+  "assertions": {
+    "minimum_20_locality_qualified": true,
+    "all_inherited_have_facility_evidence": true,
+    "no_local_stock_inferred": true,
+    "no_affiliate_or_tracking": true,
+    "no_synthetic_voucher_codes": true,
+    "original_catalog_untouched": true
+  },
+  "production": {
+    "deployment_authorized": false,
+    "baseline_frozen": "v3.422.0",
+    "rollback_standby": "v3.421.0"
+  },
+  "all_passed": true
+}

@@ -1,0 +1,47 @@
+{
+  "manifest_id": "BATCH_136R_QUARANTINE_MANIFEST",
+  "directive": "JAYT-136S — CLAIM-SEMANTIC SEPARATION & RELATIONAL-LINEAGE GATE",
+  "status": "FAILED_CLASSIFICATION_LAYER_QUARANTINED",
+  "quarantined_at": "2026-08-26T19:01:00+07:00",
+  "executive_ruling": "136R classification layer rejected due to hardcoded target_id branching, reusing identical single words for all 4 claim fields, absence of relational lineage for nationwide offers, and superficial offset testing.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_09_HARDCODED_TARGET_ID_BRANCHING",
+      "description": "claim_binding_engine_136r.js contained explicit if (targetId === \"TARGET_136_XX\") branching instead of general semantic parsing."
+    },
+    {
+      "cause_id": "P0_CAUSE_10_IDENTICAL_CLAIM_RECYCLING",
+      "description": "The exact same string (e.g. MUA1TANG1, sinh viên, Student Developer Pack) was recycled across offer, terms, validity, and locality fields."
+    },
+    {
+      "cause_id": "P0_CAUSE_11_MISSING_RELATIONAL_LINEAGE",
+      "description": "Nationwide offers lacked formal relational receipts binding the nationwide promotion to official Da Nang physical venue captures."
+    },
+    {
+      "cause_id": "P0_CAUSE_12_SHALLOW_OFFSET_VERIFICATION",
+      "description": "Test suite only verified substring existence for offer/terms without enforcing semantic differentiation, disjoint offsets, or context windows."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/claim_binding_engine_136r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136r_failed_classification/claim_binding_engine_136r.js",
+      "sha256": "c9395c407296ad22b85e5b19a402e4873165b9923c80c11d858aa40cc6faa1a6"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_136r_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136r_failed_classification/batch_capture_136r_manifest.json",
+      "sha256": "4215fb8988481bdd9cc74899ea4a51b635a843df1423e9ae579dd55e9c0bea2e"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_claim_binding_engine_136r.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136r_failed_classification/test_claim_binding_engine_136r.js",
+      "sha256": "718d031449b723ee9929ba910dbf3f4e42017bd998989fd67c03e6eae356fed5"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_136R_CLAIM_BINDING_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136r_failed_classification/JAYT_136R_CLAIM_BINDING_REVIEW_PACK.md",
+      "sha256": "2512a7f505339df958570536c5cb06f70105825fc1b730d727dacc396e2edaf0"
+    }
+  ]
+}

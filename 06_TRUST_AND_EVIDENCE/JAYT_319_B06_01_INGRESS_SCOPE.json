@@ -1,0 +1,16 @@
+{
+  "scope_id": "JAYT-319-B06-01-ONE-SHOT-INGRESS-20260904",
+  "mode": "ONE_SHOT_READ_ONLY_CAPTURE",
+  "fail_closed": true,
+  "retry_authorized": false,
+  "public_approval": false,
+  "render_permitted": false,
+  "production_mutation_permitted": false,
+  "target": {
+    "slot_id": "B06_01",
+    "url": "https://www.danangbus.vn/tin-tuc/tin-tuc/thong-bao-ve-viec-chuyen-doi-xe-buyt-su-dung-dien-tren-cac-tuyen-xe-buyt-khong-tro-gia-so-02-13-va-21-5761.html",
+    "expected_text_span": "Nhằm thực hiện chủ trương chuyển đổi phương tiện sử dụng năng lượng xanh trong hoạt động vận tải hành khách công cộng bằng xe buýt trên địa bàn thành phố Đà Nẵng",
+    "required_notice": "Thông tin chuyển đổi phương tiện xe buýt điện (Tra cứu lịch trình và tần suất chi tiết tại cổng Danabus).",
+    "prohibited": ["fare claim", "price", "discount", "voucher", "schedule inference", "frequency inference", "ticketing", "affiliate", "tracking"]
+  }
+}

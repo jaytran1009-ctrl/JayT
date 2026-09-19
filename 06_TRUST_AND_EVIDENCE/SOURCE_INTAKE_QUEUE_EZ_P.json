@@ -1,0 +1,101 @@
+{
+  "queue_id": "SOURCE_INTAKE_QUEUE_EZ_P",
+  "version": "4.0.0-ez.p",
+  "governance_directive": "JAYT-245 Section EZ-P (Lines 4330-4355)",
+  "taxonomy_rules": {
+    "claimed_source_owner_classification": "CLAIMED_UNVERIFIED_PRIOR_TO_IDENTITY_PROOF",
+    "candidate_url_classification": "CANDIDATE_URL_UNVERIFIED_PRIOR_TO_DOCUMENT_PROOF",
+    "cohort_classification": "PLANNING_HYPOTHESIS_NOT_USER_FACT",
+    "narrow_intake_rule": "MAX_2_CANDIDATES_PER_ROUND_PROOFABILITY_FIRST",
+    "domain_heuristic_prohibition": "STRICT_PROHIBITION_AGAINST_INFERRING_OWNER_OR_LOCATION_FROM_DOMAIN_NAME"
+  },
+  "cohort_closure_notice": {
+    "notion_canva_education_status": "COHORT_CLOSED_FOR_30_DAYS_UNTIL_20260930",
+    "reason": "Recapture and rewrite blocked to prevent forced card creation."
+  },
+  "total_queued_candidates": 10,
+  "queue_items": [
+    {
+      "intake_id": "INTAKE_01_DANANG_BUS_PORTAL",
+      "jtbd_category_hypothesis": "DI_CHUYEN_CONG_CONG",
+      "claimed_source_owner_unverified": "Trung tâm Điều hành Đèn tín hiệu giao thông & Vận tải công cộng Đà Nẵng (Datramac)",
+      "candidate_url_unverified": "https://www.danangbus.vn/",
+      "planning_cohort_hypothesis": "COHORT_2_DI_CHUYEN",
+      "identity_proof_status": "UNFETCHED"
+    },
+    {
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "jtbd_category_hypothesis": "KHONG_GIAN_CONG_CONG_HOC_TAP",
+      "claimed_source_owner_unverified": "Thư viện Khoa học Tổng hợp Đà Nẵng",
+      "candidate_url_unverified": "http://thuvien.danang.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_1_HOC_TAP",
+      "identity_proof_status": "EVALUATED_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "jtbd_category_hypothesis": "TIEN_ICH_HANH_CHINH_CONG",
+      "claimed_source_owner_unverified": "Cổng Dịch vụ công Trực tuyến TP Đà Nẵng",
+      "candidate_url_unverified": "https://dichvucong.danang.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_3_DICH_VU_CONG",
+      "identity_proof_status": "EVALUATED_GENERIC_TITLE_OBSERVED_LOCATION_UNPROVEN_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_04_DANANG_MUSEUM_PORTAL",
+      "jtbd_category_hypothesis": "LICH_VAN_HOA_DI_TICH",
+      "claimed_source_owner_unverified": "Bảo tàng Đà Nẵng",
+      "candidate_url_unverified": "https://baotangdanang.vn/",
+      "planning_cohort_hypothesis": "COHORT_4_VAN_HOA",
+      "selection_rationale": "Khảo sát tài liệu di tích lịch sử và văn hóa công cộng theo JTBD Văn hóa - Di tích.",
+      "identity_proof_status": "EVALUATED_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_05_NATIONAL_LIBRARY_OF_VIETNAM",
+      "jtbd_category_hypothesis": "KHONG_GIAN_CONG_CONG_HOC_TAP",
+      "claimed_source_owner_unverified": "Thư viện Quốc gia Việt Nam",
+      "candidate_url_unverified": "http://nlv.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_1_HOC_TAP",
+      "selection_rationale": "Khảo sát cổng tra cứu thư mục và học thuật quốc gia theo JTBD Không gian công cộng học tập.",
+      "identity_proof_status": "EVALUATED_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_06_DANANG_OPEN_DATA_PORTAL",
+      "jtbd_category_hypothesis": "DU_LIEU_MO_DO_THI",
+      "claimed_source_owner_unverified": "Cổng Dữ liệu Mở TP Đà Nẵng",
+      "candidate_url_unverified": "https://opendata.danang.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_3_DICH_VU_CONG",
+      "identity_proof_status": "UNFETCHED"
+    },
+    {
+      "intake_id": "INTAKE_07_VIETNAM_RAILWAY_OFFICIAL",
+      "jtbd_category_hypothesis": "DI_CHUYEN_CONG_CONG",
+      "claimed_source_owner_unverified": "Tổng công ty Đường sắt Việt Nam",
+      "candidate_url_unverified": "https://dsvn.vn/",
+      "planning_cohort_hypothesis": "COHORT_2_DI_CHUYEN",
+      "identity_proof_status": "EVALUATED_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_08_DANANG_DEPARTMENT_OF_INDUSTRY_TRADE",
+      "jtbd_category_hypothesis": "TIEU_DUNG_THIET_YEU",
+      "claimed_source_owner_unverified": "Sở Công Thương TP Đà Nẵng",
+      "candidate_url_unverified": "https://socongthuong.danang.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_5_TIEU_DUNG",
+      "identity_proof_status": "UNFETCHED"
+    },
+    {
+      "intake_id": "INTAKE_09_VIETNAM_POST_PUBLIC_SERVICES",
+      "jtbd_category_hypothesis": "TIEN_ICH_BUU_CHINH_CONG",
+      "claimed_source_owner_unverified": "Bưu điện Việt Nam (VNPost)",
+      "candidate_url_unverified": "https://vnpost.vn/",
+      "planning_cohort_hypothesis": "COHORT_3_DICH_VU_CONG",
+      "identity_proof_status": "EVALUATED_IDENTITY_TITLE_OBSERVED_HELD_INTERNAL"
+    },
+    {
+      "intake_id": "INTAKE_10_DANANG_CENTER_FOR_DISEASE_CONTROL",
+      "jtbd_category_hypothesis": "Y_TE_CONG_CONG",
+      "claimed_source_owner_unverified": "Trung tâm Kiểm soát Bệnh tật TP Đà Nẵng (CDC)",
+      "candidate_url_unverified": "https://cdc.danang.gov.vn/",
+      "planning_cohort_hypothesis": "COHORT_6_Y_TE",
+      "identity_proof_status": "UNFETCHED"
+    }
+  ]
+}

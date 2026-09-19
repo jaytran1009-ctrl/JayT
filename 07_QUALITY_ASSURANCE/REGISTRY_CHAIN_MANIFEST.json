@@ -1,0 +1,107 @@
+{
+  "$schema": "https://jayt.vn/schemas/registry-chain-manifest.v1.json",
+  "manifest_version": "1.0.0",
+  "directive": "JAYT-LINK-FORMAT-067A",
+  "published_at": "2026-08-23T19:08:00+07:00",
+  "governance_mode": "TAMPER_EVIDENT_LOCALLY_READ_ONLY",
+  "local_trust_anchor_reference": {
+    "anchor_type": "RELEASE_VAULT_CEO_APPROVAL_RECORD",
+    "anchor_file": "08_RELEASE_VAULT/RELEASE_MANIFEST.json",
+    "anchor_sha256": "66897818029f218d9a8bc6dba44ec9de09367ae52aeef6ef657be22fb56610e3",
+    "external_offsite_status": "UNANCHORED_LOCALLY_SECURED_PENDING_OFFSITE_BACKUP",
+    "disclaimer": "Local cryptographic hash-chain provides tamper-evidence within current workspace; external offsite immutability is strictly pending offsite backup setup drill."
+  },
+  "latest_revision_id": "REV-067A-LINK-FORMAT-STANDARDIZATION",
+  "latest_revision_file": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_067a.json",
+  "latest_revision_sha256": "003eb3c816c687791aa92b89bb2dfc75f66478f44a5f3af1d6a1ac7d5e89c82d",
+  "revisions": [
+    {
+      "revision_id": "REV-063B-GENESIS",
+      "directive": "JAYT-LESSONS-REGRESSION-INTEGRITY-063B",
+      "published_at": "2026-08-23T17:20:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_063b_genesis.json",
+      "previous_revision_sha256": null,
+      "snapshot_sha256": "ce34f99043be2996643a6179c77537eae4a8baba09789e96e338ad1971355af4"
+    },
+    {
+      "revision_id": "REV-063C-POLICY-BINDING",
+      "directive": "JAYT-GOVERNANCE-POLICY-BINDING-063C",
+      "published_at": "2026-08-23T17:25:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_063c.json",
+      "previous_revision_sha256": "ce34f99043be2996643a6179c77537eae4a8baba09789e96e338ad1971355af4",
+      "snapshot_sha256": "b7a5f39e3122edcfa5bfa500e56911505f39add86e2416d96424a309dab1bd90"
+    },
+    {
+      "revision_id": "REV-063D-END-TO-END-BINDING",
+      "directive": "JAYT-END-TO-END-GOVERNANCE-BINDING-063D",
+      "published_at": "2026-08-23T17:35:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_063d.json",
+      "previous_revision_sha256": "b7a5f39e3122edcfa5bfa500e56911505f39add86e2416d96424a309dab1bd90",
+      "snapshot_sha256": "40ccd3050fdc15a09b865b273041ed731db68d130f42bcd0e74d86f1e73cf340"
+    },
+    {
+      "revision_id": "REV-063E-GOVERNANCE-CLOSURE",
+      "directive": "JAYT-END-TO-END-GOVERNANCE-CLOSURE-063E",
+      "published_at": "2026-08-23T17:40:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_063e.json",
+      "previous_revision_sha256": "40ccd3050fdc15a09b865b273041ed731db68d130f42bcd0e74d86f1e73cf340",
+      "snapshot_sha256": "42c16f035db22516253cc17466696fd134714f2f7d2773fbb34f83ae09b29099"
+    },
+    {
+      "revision_id": "REV-063F-FAIL-CLOSED-REMEDIATION",
+      "directive": "JAYT-CLAIM-AND-MULTI-ARTIFACT-FAIL-CLOSED-063F",
+      "published_at": "2026-08-23T17:45:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_063f.json",
+      "previous_revision_sha256": "42c16f035db22516253cc17466696fd134714f2f7d2773fbb34f83ae09b29099",
+      "snapshot_sha256": "b690774629feeb065049bc64a9894244a2c8193078947a49af504f156e9b366e"
+    },
+    {
+      "revision_id": "REV-064B-DEEP-LINK-INTEGRITY",
+      "directive": "JAYT-ACQUISITION-QUALITY-064B",
+      "published_at": "2026-08-23T18:20:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_064b.json",
+      "previous_revision_sha256": "b690774629feeb065049bc64a9894244a2c8193078947a49af504f156e9b366e",
+      "snapshot_sha256": "ea4c2c49f6b611d7cda10ad548475422091adc3d73bad8fd08a0ad670a9bbc50"
+    },
+    {
+      "revision_id": "REV-064C-EXACT-HOST-AND-LEAD-TAXONOMY",
+      "directive": "JAYT-ACQUISITION-QUALITY-064C",
+      "published_at": "2026-08-23T18:27:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_064c.json",
+      "previous_revision_sha256": "ea4c2c49f6b611d7cda10ad548475422091adc3d73bad8fd08a0ad670a9bbc50",
+      "snapshot_sha256": "122702ba084cee591067e9a896ba3b4a6949b7faf736e1d9599eac6d64906e9a"
+    },
+    {
+      "revision_id": "REV-065-BATCH-GATE-CONSOLIDATION",
+      "directive": "JAYT-ACQUISITION-BATCH-GATE-065",
+      "published_at": "2026-08-23T18:32:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_065.json",
+      "previous_revision_sha256": "122702ba084cee591067e9a896ba3b4a6949b7faf736e1d9599eac6d64906e9a",
+      "snapshot_sha256": "0d6b6dda96cdb4c7520888ac39d15a34dedf4669d2aeb4b1d11a282707792b5b"
+    },
+    {
+      "revision_id": "REV-066-REPORTING-AND-HANDOVER-MANDATE",
+      "directive": "JAYT-PROJECT-MEMORY-REPORTING-066",
+      "published_at": "2026-08-23T18:42:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_066.json",
+      "previous_revision_sha256": "0d6b6dda96cdb4c7520888ac39d15a34dedf4669d2aeb4b1d11a282707792b5b",
+      "snapshot_sha256": "655378a46e555be1723fd8e799fe3519872fad119406a39b7789c4f563e8804c"
+    },
+    {
+      "revision_id": "REV-067-MEMORY-TRANSACTION-FINAL-GATE",
+      "directive": "JAYT-MEMORY-TRANSACTION-FINAL-GATE-067",
+      "published_at": "2026-08-23T18:51:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_067.json",
+      "previous_revision_sha256": "655378a46e555be1723fd8e799fe3519872fad119406a39b7789c4f563e8804c",
+      "snapshot_sha256": "798a8d16d08e826e1b78b67b995c494d77d05e9200556c31c9dbd0447dcac407"
+    },
+    {
+      "revision_id": "REV-067A-LINK-FORMAT-STANDARDIZATION",
+      "directive": "JAYT-LINK-FORMAT-067A",
+      "published_at": "2026-08-23T19:08:00+07:00",
+      "file_path": "07_QUALITY_ASSURANCE/registry_snapshots/registry_revision_067a.json",
+      "previous_revision_sha256": "798a8d16d08e826e1b78b67b995c494d77d05e9200556c31c9dbd0447dcac407",
+      "snapshot_sha256": "003eb3c816c687791aa92b89bb2dfc75f66478f44a5f3af1d6a1ac7d5e89c82d"
+    }
+  ]
+}

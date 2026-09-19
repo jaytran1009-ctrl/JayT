@@ -1,0 +1,45 @@
+{
+  "receipt_id": "JAYT_310_BUILD_MANIFEST_RECONCILIATION_RECEIPT",
+  "directive": "JAYT-310 Condition 2 — Build Manifest & Zero Drift Reconciliation",
+  "timestamp_utc": "2026-09-04T05:00:00.000Z",
+  "governing_spec": "01_EXECUTIVE_COUNCIL/JAYT_310_GO_LIVE_V3420_PROPOSAL.md",
+  "manifest_path": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+  "artifact_parity": {
+    "sot_js": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_ey.js",
+      "sha256": "bbf2b82ee6942634bf6fb405bf2f31519bb28e39b51d9ceb3f6e972f70abaee4"
+    },
+    "served_js": {
+      "path": "staging_deploy_ey/jayt_storefront_staging_ey.js",
+      "sha256": "bbf2b82ee6942634bf6fb405bf2f31519bb28e39b51d9ceb3f6e972f70abaee4"
+    },
+    "sot_html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "sha256": "9e6cedb6e8094ac397924335b5108425e7094d0adf95507240b87136d6f4b1b7"
+    },
+    "served_html": {
+      "path": "staging_deploy_ey/index.html",
+      "sha256": "9e6cedb6e8094ac397924335b5108425e7094d0adf95507240b87136d6f4b1b7"
+    }
+  },
+  "drift_audit": {
+    "js_parity": "PERFECT_MATCH_ZERO_DRIFT",
+    "html_parity": "PERFECT_MATCH_ZERO_DRIFT",
+    "manifest_match": true
+  },
+  "health_endpoint_verification": {
+    "endpoint": "http://127.0.0.1:4173/health",
+    "status": "UP",
+    "version": "v3.483.0-staging.ao",
+    "build_id": "BUILD_JAYT_STAGING_v3.483.0-staging.ao",
+    "parity": "PERFECT_MATCH_ZERO_DRIFT",
+    "manifestMatch": true
+  },
+  "qa_suite_verification": {
+    "suite": "07_QUALITY_ASSURANCE/test_ez_ao_build_immutability_and_manifest_parity_qa.js",
+    "passed": 20,
+    "total": 20,
+    "verdict": "PASS"
+  },
+  "final_verdict": "ZERO_DRIFT_CERTIFIED"
+}

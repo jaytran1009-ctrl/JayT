@@ -1,0 +1,150 @@
+{
+  "batch_id": "COHORT_JAYT_260_MICRO_BATCH_01",
+  "governing_directive": "JAYT-245 Section JAYT-260 (Lines 5401-5430)",
+  "batch_focus": "STUDENT_CAMPUS_RADAR_CLUSTER_5_ZONES",
+  "batch_size": 4,
+  "batch_sla_window_hours": 5,
+  "captured_at_utc": "2026-09-01T15:05:00.000Z",
+  "sla_close_utc": "2026-09-01T20:05:00.000Z",
+  "intake_summary": {
+    "total_candidates": 4,
+    "raw_captured_count": 4,
+    "intake_failed_count": 0,
+    "open_evaluating_count": 4,
+    "content_tier_assigned_count": 0,
+    "public_eligible_count": 0
+  },
+  "t4_radar_contract_standards": {
+    "required_fields": [
+      "target_id",
+      "demand_category",
+      "tracking_rationale",
+      "candidate_source_url",
+      "recheck_due_at",
+      "caveat"
+    ],
+    "prohibited_fields": [
+      "price",
+      "total_cost",
+      "discount_code",
+      "voucher_code",
+      "commercial_cta",
+      "affiliate_link",
+      "rating_score"
+    ]
+  },
+  "commercial_containment": {
+    "production_locked": true,
+    "production_version": "v3.419.0",
+    "p0_eq_status": "OPEN",
+    "t1_public_deals": 0,
+    "public_vouchers": 0,
+    "affiliate_activation": false
+  },
+  "candidates": [
+    {
+      "candidate_id": "MB01_01_VNPT_EDU_SIM",
+      "cluster": "TOAN_QUOC_5_CUM_TRUONG",
+      "title": "VNPT — Chính sách sim và gói cước data ưu đãi học sinh/sinh viên",
+      "candidate_source_url": "https://vnpt.com.vn/ho-tro/chinh-sach-sim-sinh-vien",
+      "demand_category": "CONNECTIVITY_CAMPUS_DATA",
+      "tracking_rationale": "Theo dõi điều kiện xác thực thẻ sinh viên và hạn duy trì gói cước data học tập hàng tháng.",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_vnpt_edu_sim_20260901.html",
+      "raw_sha256": "8df6e8d2e314a92cbf928627accbf4bb2363cbe558291372199aad1d57b89ce0",
+      "raw_bytes_length": 1000,
+      "captured_at_utc": "2026-09-01T15:05:00.000Z",
+      "sla_open_utc": "2026-09-01T15:05:00.000Z",
+      "sla_close_utc": "2026-09-01T20:05:00.000Z",
+      "intakeStatus": "RAW_CAPTURED",
+      "admissionState": "OPEN_EVALUATING",
+      "contentTier": null,
+      "public_eligible": false,
+      "field_contracts": {
+        "target_id": "MB01_01_VNPT_EDU_SIM",
+        "demand_category": "CONNECTIVITY_CAMPUS_DATA",
+        "tracking_rationale": "Theo dõi điều kiện xác thực thẻ sinh viên và hạn duy trì gói cước data học tập hàng tháng.",
+        "candidate_source_url": "https://vnpt.com.vn/ho-tro/chinh-sach-sim-sinh-vien",
+        "recheck_due_at": "2026-09-01T20:05:00.000Z",
+        "caveat": "Thông tin đang trong giai đoạn theo dõi nội bộ; không cấu thành khuyến nghị mua sắm hoặc ưu đãi thương mại."
+      }
+    },
+    {
+      "candidate_id": "MB01_02_BUS_HANOI_STUDENT_PASS",
+      "cluster": "CUM_DAI_HOC_HA_NOI",
+      "title": "Transerco — Quy trình và điều kiện làm vé tháng xe buýt ưu tiên sinh viên Hà Nội",
+      "candidate_source_url": "https://timbus.vn/huong-dan-lam-ve-thang-sinh-vien",
+      "demand_category": "TRANSIT_CAMPUS_BUS",
+      "tracking_rationale": "Theo dõi mẫu đơn xác nhận của nhà trường và thủ tục dán tem vé tháng xe buýt sinh viên liên tuyến.",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_transerco_bus_hanoi_student_20260901.html",
+      "raw_sha256": "cffa629af12c3bd199867018c41f1a4466d1e0915e44d10fb88991d8611e122d",
+      "raw_bytes_length": 1106,
+      "captured_at_utc": "2026-09-01T15:05:00.000Z",
+      "sla_open_utc": "2026-09-01T15:05:00.000Z",
+      "sla_close_utc": "2026-09-01T20:05:00.000Z",
+      "intakeStatus": "RAW_CAPTURED",
+      "admissionState": "OPEN_EVALUATING",
+      "contentTier": null,
+      "public_eligible": false,
+      "field_contracts": {
+        "target_id": "MB01_02_BUS_HANOI_STUDENT_PASS",
+        "demand_category": "TRANSIT_CAMPUS_BUS",
+        "tracking_rationale": "Theo dõi mẫu đơn xác nhận của nhà trường và thủ tục dán tem vé tháng xe buýt sinh viên liên tuyến.",
+        "candidate_source_url": "https://timbus.vn/huong-dan-lam-ve-thang-sinh-vien",
+        "recheck_due_at": "2026-09-01T20:05:00.000Z",
+        "caveat": "Thông tin đang trong giai đoạn theo dõi nội bộ; không cấu thành khuyến nghị mua sắm hoặc ưu đãi thương mại."
+      }
+    },
+    {
+      "candidate_id": "MB01_03_HCMC_METRO1_STUDENT_POLICY",
+      "cluster": "CUM_LANG_DAI_HOC_THU_DUC_TPHCM",
+      "title": "MAUR HCMC — Kế hoạch vận hành và chính sách vé phương tiện công cộng Metro Tuyến 1",
+      "candidate_source_url": "https://maur.hochiminhcity.gov.vn/chinh-sach-ve-metro-so-1",
+      "demand_category": "TRANSIT_METRO_COMMUTE",
+      "tracking_rationale": "Theo dõi các thông báo chính thức về biểu giá và diện miễn giảm học sinh/sinh viên trên tuyến Bến Thành - Suối Tiên.",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_maur_metro1_student_policy_20260901.html",
+      "raw_sha256": "75b8813f305f8f5c0d403be099087a13ed7e73dfe7b45fe2d96dd54f96414287",
+      "raw_bytes_length": 1117,
+      "captured_at_utc": "2026-09-01T15:05:00.000Z",
+      "sla_open_utc": "2026-09-01T15:05:00.000Z",
+      "sla_close_utc": "2026-09-01T20:05:00.000Z",
+      "intakeStatus": "RAW_CAPTURED",
+      "admissionState": "OPEN_EVALUATING",
+      "contentTier": null,
+      "public_eligible": false,
+      "field_contracts": {
+        "target_id": "MB01_03_HCMC_METRO1_STUDENT_POLICY",
+        "demand_category": "TRANSIT_METRO_COMMUTE",
+        "tracking_rationale": "Theo dõi các thông báo chính thức về biểu giá và diện miễn giảm học sinh/sinh viên trên tuyến Bến Thành - Suối Tiên.",
+        "candidate_source_url": "https://maur.hochiminhcity.gov.vn/chinh-sach-ve-metro-so-1",
+        "recheck_due_at": "2026-09-01T20:05:00.000Z",
+        "caveat": "Thông tin đang trong giai đoạn theo dõi nội bộ; không cấu thành khuyến nghị mua sắm hoặc ưu đãi thương mại."
+      }
+    },
+    {
+      "candidate_id": "MB01_04_CANVA_EDUCATION_STUDENT",
+      "cluster": "TOAN_QUOC_5_CUM_TRUONG",
+      "title": "Canva for Education — Quy định truy cập và xác thực tài khoản giáo dục",
+      "candidate_source_url": "https://www.canva.com/vi_vn/giao-duc/dieu-khoan-sinh-vien",
+      "demand_category": "ACADEMIC_CREATIVE_TOOLING",
+      "tracking_rationale": "Theo dõi tiêu chuẩn xác thực tên miền .edu.vn và điều kiện lớp học để tiếp cận tính năng giáo dục chính thức.",
+      "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_canva_education_student_20260901.html",
+      "raw_sha256": "45ff1e59b016595044cf91794eec7c2599daa999679a7f0691fb540dde2c32da",
+      "raw_bytes_length": 947,
+      "captured_at_utc": "2026-09-01T15:05:00.000Z",
+      "sla_open_utc": "2026-09-01T15:05:00.000Z",
+      "sla_close_utc": "2026-09-01T20:05:00.000Z",
+      "intakeStatus": "RAW_CAPTURED",
+      "admissionState": "OPEN_EVALUATING",
+      "contentTier": null,
+      "public_eligible": false,
+      "field_contracts": {
+        "target_id": "MB01_04_CANVA_EDUCATION_STUDENT",
+        "demand_category": "ACADEMIC_CREATIVE_TOOLING",
+        "tracking_rationale": "Theo dõi tiêu chuẩn xác thực tên miền .edu.vn và điều kiện lớp học để tiếp cận tính năng giáo dục chính thức.",
+        "candidate_source_url": "https://www.canva.com/vi_vn/giao-duc/dieu-khoan-sinh-vien",
+        "recheck_due_at": "2026-09-01T20:05:00.000Z",
+        "caveat": "Thông tin đang trong giai đoạn theo dõi nội bộ; không cấu thành khuyến nghị mua sắm hoặc ưu đãi thương mại."
+      }
+    }
+  ]
+}

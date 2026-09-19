@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="vi"><head id="Head">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <title>TNGo - Xe đạp công nghệ số</title>
+    <meta id="MetaDescription" name="description" content="Một dịch vụ chia sẻ xe đạp chỉ cần mở khóa xe đạp thông qua điện thoại di động là có thể thực hiện các chuyến đi ngắn trong thành phố mọi lúc mọi nơi. TNGo đem lại nhiều lợi ích như tăng cường mạng lưới kết nối giao thông công cộng, bảo vệ môi trường, giảm ùn tắc trong đô thị và tăng cường sức khỏe cho người dân.">
+    <meta name="keywords" value="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Common -->
+    <link rel="stylesheet" href="/lib/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fonts/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Common -->
+    <!-- OwlCarousel2 -->
+    <link rel="stylesheet" href="/lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!-- OwlCarousel2 -->
+
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <style>
+        .avatar-box {
+            padding: 2px;
+            border: 2px solid #5bd360;
+            border-radius: 50%;
+        }
+
+            .avatar-box img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+        .navbar a:hover {
+            background-color: #def4ff;
+        }
+
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 55px;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .nav-dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .nav-dropdown-content a:hover {
+                    background-color: #c0ebff;
+                }
+
+        .nav-dropdown:hover .nav-dropdown-content {
+            display: block;
+        }
+        .formadmin:hover{
+            border: 5px dashed orange;
+        }
+        .formadmin .edit-icon-admin {
+            position: absolute;
+            z-index: 1000;
+        }
+        .formadmin .edit-icon-admin i {
+            background: #a9a9aa;
+            padding: 10px;
+            color: white;
+            border-radius: 50%;
+            display: none;
+        }
+    </style>
+
+    
+    <link href="/lib/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <style>
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            transition: .5s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+            .slide-overlay .caption {
+                width: 46%;
+                color: #fff;
+            }
+
+            .slide-overlay h5 {
+                line-height: 1.8;
+            }
+
+        .first-caption {
+            position: absolute;
+            top: 82%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+        }
+
+        .second-caption {
+            position: absolute;
+            bottom: 5%;
+            left: 15%;
+        }
+
+        .third-caption {
+            position: absolute;
+            bottom: 10%;
+            left: 15%;
+        }
+
+        .ticket-discount {
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+
+<body id="Body">
+
+    <div class="body">
+        <!-- HEADER -->
+        <section id="Header">
+            <div class="container-fluid">
+
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="ps-5">
+                        <a title="Xe đạp công cộng TNGo" href="/" class="logo-avatar">
+                            <img class="imglogo" src="/Data/logo-vn.jpg" alt="TN-GO">
+                        </a>
+                    </div>
+
+                    <style> .Table { width: 100%; } .Table tr td { border: 1px solid #C2C2C2; padding: 5px; } </style><div class="flex-fill d-none d-sm-block navbar"><div class="d-flex flex-row flex-wrap justify-content-end align-items-center fs-5 menu-bar main-menu-bar"><div class="h-100"><a class="nav-dropbtn h-100 py-3 px-2 px-md-4 menu-item" role="button" href="/usermanual">Hướng dẫn sử dụng</a></div><div class=""><a class="nav-dropbtn py-3 px-2 px-md-4 menu-item" role="button" href="/price">Bảng giá</a></div><div class="nav-dropdown"><a class="nav-dropbtn nav-dropdown py-3 px-2 px-md-4 menu-item" role="button" href="#">Dịch vụ</a><div class="nav-dropdown-content fs-6"><a href="/rank">Bảng xếp hạng</a><a href="/tapgo">Thẻ trả trước TapGo</a><a href="/rfid">Thẻ RFID</a><a href="/rentBike">Dịch vụ - sự kiện</a></div></div><div class=""><a class="nav-dropbtn py-3 px-2 px-md-4 menu-item" role="button" href="/station">Danh sách trạm</a></div><div class=""><a class="nav-dropbtn py-3 px-2 px-md-4 menu-item" role="button" href="/news">Tin tức</a></div><div class=""><a class="nav-dropbtn py-3 px-2 px-md-4 menu-item" role="button" href="/contact">Liên hệ</a></div><div class=""><a class="nav-dropbtn py-3 px-2 px-md-4 menu-item" role="button" href="/privacyPolicy">Chính sách bảo mật</a></div>
+        <div class="px-2 px-md-4 fs-6">
+                <button class="btn btn-outline-primary rounded" id="btn-modal-login" data-action="login">Đăng nhập</button>
+        </div>
+            <div class="px-2 fs-6">
+                <div class="dropdown">
+                    <img src="/Content/Admin/images/vi.png" type="button" data-bs-toggle="dropdown" aria-expanded="false" alt="avatar language" style="height: 35px;">
+                    <ul class="dropdown-menu" style="right: 0 !important; left:unset">
+                            <li><a class="dropdown-item" href="/vi"><img src="/Content/Admin/images/vi.png" alt="avatar language"> Tiếng Việt</a></li>
+                            <li><a class="dropdown-item" href="/en"><img src="/Content/Admin/images/en.png" alt="avatar language"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div></div>
+
+                    <div class="d-block d-sm-none text-primary">
+
+                            <button class="btn btn-light btn-lg" id="btn-modal-login" data-action="login">
+                                <span style="color: Dodgerblue;"><i class="fa fa-user"></i></span>
+                            </button>
+
+                        <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#menumore">
+                            <span style="color: Dodgerblue;"><i class="fa fa-bars"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        
+<!-- Slide banner -->
+<section><div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="true"><div class="carousel-inner"><div class="carousel-item active" data-bs-interval="3000"><img src="/Data/thu%20tuong%20anh%20bia.jpg" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Thủ tướng Việt Nam và Thủ tướng Hà Lan đạp xe TNGo trên phố Hà Nội</h1><h5>TNGo vinh dự được đồng hành giới thiệu văn hóa, đất nước, con người Việt Nam thân thiện mến khách trong chuyến thăm hữu nghị giữa hai nước</h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/thu-tuong-viet-nam-va-thu-tuong-ha-lan-dap-xe-tngo-tren-pho-ha-noi.html">Chúc cho tình hữu nghĩ giữa hai dân tộc mãi mãi bền chặt🤝</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/%E2%80%9CV%C3%A9%20th%C3%A1ng%20m%E1%BB%9Bi%E2%80%9D%20(4).png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>"HOT NEWS" </h1><h5></h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/unbox-ve-thang-moi-sieu-hoi.html">Ngập tràn tiện ích - Thỏa sức ngao du</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/TNGo%20v%C3%A9%2020k.png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Dừng dịch vụ "Vé Tháng 20K" </h1><h5></h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/dung-ve-thang-20000vnd.html">Dừng dịch vụ "Vé Tháng 20K"</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/2%20nam%20Banner%20WEB.png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Cảm ơn Quý khách 2 năm qua đã lựa chọn di chuyển Xanh cùng TNGo</h1><h5>Chương trình Giải thưởng lên đến 50 triệu đồng</h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/cam-on-quy-khach-2-nam-qua-da-lua-chon-di-chuyen-xanh-cung-tngo.html">Hơn 1,3 triệu lượt khách hàng</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/Banner-TNGo-2024-011.jpg" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Chúc mừng năm mới 2024</h1><h5>Kính chúc quý khách một năm mới suôn sẻ, may mắn và gặt hái nhiều thành công</h5><a class="btn btn-lg btn-primary rounded-pill" href="#"></a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/%C4%90i%E1%BB%81u%20ch%E1%BB%89nh%20gi%C3%A1%20(1440%20x%20634%20px).png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>THÔNG BÁO: CẬP NHẬT CHÍNH SÁCH GÓI DỊCH VỤ</h1><h5>TNGo luôn sẵn sàng phục vụ bạn 24/7</h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/thong-bao-cap-nhat-chinh-sach-goi-dich-vu---ap-dung-tu-ngay-05122023.html">Áp dụng từ ngày 05/12/2023 - Nhấn để biết thêm chi tiết</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/Web%20-%20%C4%90%E1%BA%B7c%20quy%E1%BB%81n%20%20(1).png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Đặc quyền Ưu tiên</h1><h5>Săn deal độc quyền, thỏa mãn cơn nghiền đạp xe cả tháng🔥 </h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/vi/news/sieu-hoi-thanh-vien---dac-quyen-uu-tien.html">Đăng kí ngay, cơ hội có 1️⃣0️⃣2️⃣</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/H%E1%BA%A2I%20PH%C3%92NG%20(5).png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Khoe ảnh "Trạm Xanh" - Rinh nhanh quà hot</h1><h5>TNGo đồng hành cùng cùng Thành đoàn Hải Phòng</h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/news/hai-phong-oi-khoe-anh-tram-xanh-rinh-nhanh-qua-hot.html">Cuộc thi ảnh Check-in hot nhất Hải Phòng lúc này</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/All%20in%20App%20(1440%20x%20634%20px).png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>🎯TNGo - di chuyển xanh tới tất cả các điểm đến mà bạn cần!!</h1><h5>👉Chỉ cần cài đặt app, mở xe và di chuyển tới nơi bạn muốn đến</h5><a class="btn btn-lg btn-primary rounded-pill" href="/station"> 🚲 Hôm nay bạn đã sử dụng #TNGo chưa!!</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/20.10.2023.png" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Chúc mừng ngày Phụ nữ Việt Nam 20/10</h1><h5>Chúc các bà, các mẹ và tất cả chị em phụ nữ luôn xinh đẹp và rạng rỡ hơn cả những bông hoa. Bởi bạn sẽ đẹp nhất khi bạn cười ❤</h5><a class="btn btn-lg btn-primary rounded-pill" href="https://tngo.vn/usermanual">😍Tối giản cho hạnh phúc tối ưu. Với #TNGo, bạn chỉ cần Quét &amp; Đi🚲</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/Data/Khai%20tr%C6%B0%C6%A1ng%20H%C3%A0%20N%E1%BB%99i%20(banner).jpg" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Khai trương Hà Nội 24/08/2023 TNGo chính thức có mặt tại 6 tỉnh/thành phố</h1><h5></h5><a class="btn btn-lg btn-primary rounded-pill" href="#"></a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/image/tngo-bg-hd3.jpg" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Xe đạp công cộng, Kết nối giao thông</h1><h5>Chúng tôi mang đến giải pháp di chuyển linh hoạt trong đô thị với mức chi phí tiết kiệm, thân thiện với môi trường, tốt cho sức khỏe.</h5><a class="btn btn-lg btn-primary rounded-pill" href="http://onelink.to/tngo">Tải ứng dụng</a></div></div></div><div class="carousel-item " data-bs-interval="3000"><img src="/image/tngo-bg-hd4.jpg" class="d-block w-100" alt="..."><div class="slide-overlay"><div class="caption first-caption d-none d-md-block"><h1>Văn minh và Tiện lợi</h1><h5>TNGo lan tỏa hình thức đi xe đạp tại Thành phố như một phong trào hiện đại, văn minh.</h5><a class="btn btn-lg btn-primary rounded-pill" href="/usermanual">Cách sử dụng</a></div></div></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div></section>
+
+<!-- Giới thiệu -->
+<!-- Giới thiệu --><div class="container"><div class="row"><div class="col-sm-5"><div class="dlappl"><h2><strong>Giới thiệu về TNGo</strong></h2><p>Dịch vụ xe đạp công cộng TNGo (TN-Go) đem đến một hình thức giao thông đô thị mới văn minh, tiện lợi, tốt cho sức khỏe và thân thiện với môi trường. Chỉ với vài thao tác đơn giản trên ứng dụng di động, người tham gia giao thông có thể dễ dàng thuê xe, di chuyển và trả xe tại các trạm xe đạp TNGo bất kỳ trên địa bàn thành phố. TNGo sẽ giúp kết nối các hệ thống giao thông công cộng khác như xe buýt, tàu điện... giúp việc di chuyển trong đô thị trở nên linh hoạt và thuận tiện hơn.</p><p>Dịch vụ xe đạp công cộng TNGo hiện đã có mặt tại:&nbsp;<strong>TP. Hà Nội, Hồ Chí Minh, Vũng Tàu.</strong></p></div></div><div class="col-sm-7"><div><div id="fb-root">&nbsp;</div><!-- Your embedded video player code --><div class="fb-video"><blockquote>&nbsp;</blockquote></div></div></div></div><div class="row" style="margin-top:30px"><div class="col-sm-5 mb-4"><div class="dlappr"><img alt="" src="/image/dapp.jpg"></div></div><div class="col-sm-7 dlappl mb-4"><div class="px-4 py-5"><div class="row"><div class="col-12 col-sm-6 mb-4"><div class="d-block mx-auto" style="background-color:lightpink; border-radius:12px; height:200px; width:200px"><img alt="" src="/image/onlink_to_tngo.svg" width="150"></div></div><div class="align-items-center col-12 col-sm-6 d-flex flex-column justify-content-center mb-2"><a href="https://apps.apple.com/vn/app/tngo/id1552166916" target="_blank"><img alt="ios store" src="/image/app-ios.png"></a><a href="https://play.google.com/store/apps/details?id=com.tngo" target="_blank"><img alt="google store" src="/image/app-android.png"></a></div></div><div class="row"><div class="col-12 col-sm-6 text-center"><ul><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li></ul><strong>Hơn 20K lượt đánh giá tích cực, đạt 4.8/5 sao trên các kho ứng dụng iOS và Android</strong></div><div class="col-12 col-sm-6 text-center"><h3>4,6 triệu +</h3><strong>Số Km khách hàng đã đi</strong></div></div></div></div></div></div> 
+
+<!-- HDSD -->
+<section id="HDSD" class="manuals"><div class="container"><div class="col-sm-12"><header><h2><b>Cách sử dụng</b></h2><h3>Sau khi <span style="color:#0094fb">Đăng kí</span>, sử dụng dễ dàng với 3 bước: <span style="color:#0094fb">Mở khóa - Đi xe - Trả xe</span></h3></header></div><div class="col-sm-12"><div class="owl-carousel owl-theme owl-loaded owl-drag" id="manualsct"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2232px, 0px, 0px); transition: all; width: 7812px;"><div class="owl-item cloned" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;2&lt;/button&gt;&lt;h2&gt;Đi xe&lt;/h2&gt;&lt;p&gt;Tận hưởng chuyến đi, nên đội mũ bảo hiểm và tuân thủ luật giao thông. Trong quá trình sử dụng bạn có thể khóa xe tạm thời và mở lại bất kì lúc nào bằng ứng dụng di động.&lt;/p&gt;"><img src="/image/use-2.png" alt=""></div></div><div class="owl-item cloned" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;3&lt;/button&gt;&lt;h2&gt;Trả xe&lt;/h2&gt;&lt;p&gt;Trả xe đạp về trạm TNGo bất kỳ. Thực hiện đóng khóa xe và xác nhận kết thúc chuyến đi trên ứng dụng TNGo.&lt;/p&gt;"><img src="/image/use-3.png" alt=""></div></div><div class="owl-item active" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;1&lt;/button&gt;&lt;h2&gt;Mở khóa&lt;/h2&gt;&lt;p&gt;Chạm vào nút ''Mở khóa'' và quét mã QR trên xe đạp/khóa xe để tự động mở khóa.&lt;/p&gt;"><img src="/image/use-1.png" alt=""></div></div><div class="owl-item" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;2&lt;/button&gt;&lt;h2&gt;Đi xe&lt;/h2&gt;&lt;p&gt;Tận hưởng chuyến đi, nên đội mũ bảo hiểm và tuân thủ luật giao thông. Trong quá trình sử dụng bạn có thể khóa xe tạm thời và mở lại bất kì lúc nào bằng ứng dụng di động.&lt;/p&gt;"><img src="/image/use-2.png" alt=""></div></div><div class="owl-item" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;3&lt;/button&gt;&lt;h2&gt;Trả xe&lt;/h2&gt;&lt;p&gt;Trả xe đạp về trạm TNGo bất kỳ. Thực hiện đóng khóa xe và xác nhận kết thúc chuyến đi trên ứng dụng TNGo.&lt;/p&gt;"><img src="/image/use-3.png" alt=""></div></div><div class="owl-item cloned" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;1&lt;/button&gt;&lt;h2&gt;Mở khóa&lt;/h2&gt;&lt;p&gt;Chạm vào nút ''Mở khóa'' và quét mã QR trên xe đạp/khóa xe để tự động mở khóa.&lt;/p&gt;"><img src="/image/use-1.png" alt=""></div></div><div class="owl-item cloned" style="width: 1116px;"><div class="item" data-dot="&lt;button&gt;2&lt;/button&gt;&lt;h2&gt;Đi xe&lt;/h2&gt;&lt;p&gt;Tận hưởng chuyến đi, nên đội mũ bảo hiểm và tuân thủ luật giao thông. Trong quá trình sử dụng bạn có thể khóa xe tạm thời và mở lại bất kì lúc nào bằng ứng dụng di động.&lt;/p&gt;"><img src="/image/use-2.png" alt=""></div></div></div></div><div class="owl-nav disabled"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots"><div class="owl-dot active"><button>1</button><h2>Mở khóa</h2><p>Chạm vào nút ''Mở khóa'' và quét mã QR trên xe đạp/khóa xe để tự động mở khóa.</p></div><div class="owl-dot"><button>2</button><h2>Đi xe</h2><p>Tận hưởng chuyến đi, nên đội mũ bảo hiểm và tuân thủ luật giao thông. Trong quá trình sử dụng bạn có thể khóa xe tạm thời và mở lại bất kì lúc nào bằng ứng dụng di động.</p></div><div class="owl-dot"><button>3</button><h2>Trả xe</h2><p>Trả xe đạp về trạm TNGo bất kỳ. Thực hiện đóng khóa xe và xác nhận kết thúc chuyến đi trên ứng dụng TNGo.</p></div></div></div></div></div></section>
+
+<!-- Bảng giá -->
+<style> .tab { overflow: hidden; display: flex; justify-content: center; justify-items: center; gap: 20px; margin: 70px 0; } h3 { margin-top: 20px } .tab button { border: 1px solid #056aca; color: #056aca; outline: none; cursor: pointer; padding: 14px 16px; font-size: 17px; width: 150px; border-radius: 30px; } .btn-container{ margin: 20px 0 } .tab button:hover { background-color: #ddd; } .tab button.active { background-color: #056aca; color: white } .tabcontent { display: none; padding: 6px 12px; } .ticket-item { box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; } @media only screen and (max-width: 600px) { .tabcontent .col-3 { width: 100%; padding: 0 10px 20px 10px; border-radius: 10px; } .tab { overflow: hidden; display: flex; justify-content: center; justify-items: center; gap: 20px; margin: 0 !important; } .btn-container { display: none; } } </style><h2 style="font-size: 40px; font-weight: 700; text-align: center; margin: 35px; color: #056aca">Bảng giá dịch vụ</h2><div class="tab"><button class="tablinks active" onclick="openCity(event, 'Xedapco')">Xe đạp cơ</button><button class="tablinks" onclick="openCity(event, 'Xedapdien')">Xe đạp điện trợ lực</button></div><div id="Xedapco" class="row tabcontent" style="gap: 30px 120px; justify-content: center; justify-items: center; margin: 20px 0px; display: flex;"><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca;">Vé lượt</h3><div style="text-align: center; margin: 20px 0 20px 0"><span style="color: #056aca; font-size: 32px; font-weight: 600">10.000</span> điểm TNGo/lượt</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: 60 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 60 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút</div><div><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Lưu ý: Bạn phải có số dư tối thiểu 20.000 điểm TNGo</div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button></div></div><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca ">Vé ngày</h3><div style="text-align: center; margin: 20px 0 20px 0"><span style="color: #056aca; font-size: 32px; font-weight: 600">50.000</span> điểm TNGo/ngày</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: 450 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 24h ngày đăng kí</div><div style="margin-bottom: 73px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút</div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button></div></div><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca">Vé tháng</h3><div style="text-align: center; margin: 20px 0 20px 0"><span id="monthly-price" style="color: #056aca; font-size: 32px; font-weight: 600">79.000</span> điểm TNGo/tháng </div><div id="monthly-details"><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Miễn phí tất cả chuyến đi dưới 45 phút </div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div><div style="margin-bottom: 47px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút </div></div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button></div><div style="text-align: center; margin-bottom: 10px; display:none;"><button id="prev-price" style="background: none; border: none; font-size: 24px; cursor: pointer;" disabled="">←</button><button id="next-price" style="background: none; border: none; font-size: 24px; cursor: pointer;">→</button></div></div><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca">Vé tháng</h3><div style="text-align: center; margin: 20px 0 20px 0"><span id="monthly-price" style="color: #056aca; font-size: 32px; font-weight: 600">300.000</span> điểm TNGo/tháng </div><div id="monthly-details"><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Miễn phí các chuyến đi trong tháng, mỗi chuyến không quá 720 phút trong ngày </div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div><div style="margin-bottom: 23px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút </div></div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button></div></div><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca">Vé tháng</h3><div style="text-align: center; margin: 20px 0 20px 0"><span id="monthly-price" style="color: #056aca; font-size: 32px; font-weight: 600">500.000</span> điểm TNGo/tháng </div><div id="monthly-details"><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Không giới hạn số chuyến đi trong tháng, thời gian đi không vượt quá 00h00 cùng ngày. </div><div style="margin-bottom: 76px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div></div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button></div></div></div><div id="Xedapdien" class="row tabcontent" style="gap:30px 120px; justify-content: center; justify-items: center; margin: 20px 0"><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca ">Vé lượt</h3><div style="text-align: center; margin: 20px 0 20px 0"><span style="color: #056aca; font-size: 32px; font-weight: 600">20.000</span> điểm TNGo/lượt</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: 60 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 60 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 6.000 điểm/15 phút</div><div><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Lưu ý: Bạn phải có số dư tối thiểu 40.000 điểm TNGo</div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button><div class="text-danger" style="font-size: 15px;text-align: center;margin-top: 9px;font-weight: 600;">(Áp dụng với xe đạp điện trợ lực)</div></div></div><div class="col-3 ticket-item"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca ">Vé ngày</h3><div style="text-align: center; margin: 20px 0 20px 0"><span style="color: #056aca; font-size: 32px; font-weight: 600">100.000</span> điểm TNGo/ngày</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: 450 phút</div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 24h ngày đăng kí</div><div style="margin-bottom: 73px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 6.000 điểm/15 phút</div><div class="btn-container"><a href="/Price/BuyTicket" class="btn btn-primary w-100 mx-auto rounded btn-buynow d-none">Mua ngay</a><button id="btn-modal-login" style="background: #056aca" class="btn btn-primary btn-lg w-100 mx-auto rounded btn-login-tobuy d-none" data-action="login">Đăng nhập để mua vé</button><div class="text-danger" style="font-size: 15px;text-align: center;margin-top: 9px;font-weight: 600;">(Áp dụng với xe đạp điện trợ lực)</div></div></div><div class="col-3 ticket-item" style="display: grid"><h3 style="text-align: center; font-weight: 600; font-size: 32px; color: #056aca;">Vé tháng</h3><div style="text-align: center; color: red"><i class="fa-solid fa-exclamation"></i> Chưa áp dụng</div></div></div><script id="facebook-jssdk" src="https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js"></script><script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "flex"; evt.currentTarget.className += " active"; } document.getElementById("Xedapco").style.display = "flex"; const priceDetails = [ { price: "79.000", details: ` <div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Miễn phí tất cả chuyến đi dưới 45 phút </div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div><div style="margin-bottom: 47px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút </div> ` }, { price: "300.000", details: ` <div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Miễn phí các chuyến đi trong tháng, mỗi chuyến không quá 720 phút trong ngày </div><div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div><div style="margin-bottom: 23px"><i class="fa-regular fa-credit-card" style="color: #036cce;"></i> Cước phi quá thời lượng: 3.000 điểm/15 phút </div> ` }, { price: "500.000", details: ` <div style="margin-bottom: 5px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời lượng: Không giới hạn số chuyến đi trong tháng, thời gian đi không vượt quá 00h00 cùng ngày. </div><div style="margin-bottom: 76px;"><i class="fa-regular fa-clock" style="color: #036cce;"></i> Thời hạn: 30 ngày kể từ ngày đăng kí </div> ` } ]; let currentIndex = 0; const priceElement = document.getElementById("monthly-price"); const detailsElement = document.getElementById("monthly-details"); const prevButton = document.getElementById("prev-price"); const nextButton = document.getElementById("next-price"); function updateContent() { priceElement.textContent = priceDetails[currentIndex].price; detailsElement.innerHTML = priceDetails[currentIndex].details; prevButton.disabled = currentIndex === 0; nextButton.disabled = currentIndex === priceDetails.length - 1; } prevButton.addEventListener("click", () => { if (currentIndex > 0) { currentIndex--; updateContent(); } }); nextButton.addEventListener("click", () => { if (currentIndex < priceDetails.length - 1) { currentIndex++; updateContent(); } }); // Khởi tạo nội dung ban đầu updateContent(); </script>
+
+<!-- Con số biết nói-->
+<section class="py-5 mb-5"><div class="container"><h2 class="price-title text-center mb-4">Những con số biết nói</h2><div class="row"><div class="col-sm-4 mb-3"><div class="statistic-number">06</div><div class="statistic-label">Tỉnh/Thành phố</div></div><div class="col-sm-4 mb-3"><div class="statistic-number">3500+</div><div class="statistic-label">Xe đạp trên toàn quốc</div></div><div class="col-sm-4 mb-3"><div class="statistic-number">6 triệu+</div><div class="statistic-label">Số Km khách hàng đã đi</div></div></div></div></section> 
+
+<!-- Tin tức-->
+
+<section class="py-5 mb-5" style="background: #F4F4FA;">
+    <div class="container">
+        <h2 class="price-title text-center mb-5">Báo chí nói gì về chúng tôi</h2>
+        <div class="row news-grid"><div class="col-sm-3"><img src="/Data/Logo-NhanDan%20(3).png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/edit-16-16941651063501736088332.png" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://nhandan.vn/som-nhan-rong-mo-hinh-xe-dap-cong-cong-post767915.html">Sớm nhân rộng mô hình xe đạp công cộng</a></div></div></div><div class="col-sm-3"><img src="/Data/Vietnam_Television_logo_from_2013.svg.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/edit-dsc9573-16941650235121652833945.png" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://vtv.vn/xa-hoi/dich-vu-xe-dap-cong-cong-bat-dau-duoc-trien-khai-tai-ha-noi-20230814145143205.htm">Dịch vụ xe đạp công cộng bắt đầu được triển khai tại Hà Nội</a></div></div></div><div class="col-sm-3"><img src="/Data/quoc-huy2.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/img5981-16989010362041891008993.jpg" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://baochinhphu.vn/thu-tuong-pham-minh-chinh-va-thu-tuong-ha-lan-cung-dap-xe-dao-pho-ha-noi-102231102121145119.htm">Thủ tướng Phạm Minh Chính và Thủ tướng Hà Lan cùng đạp xe TNGo dạo phố Hà Nội</a></div></div></div><div class="col-sm-3"><img src="/Data/Logo-bao-tuoi-tre.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/Gioi%20tre%20.jpg" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://baodanang.vn/channel/5433/202304/gioi-tre-hao-huc-trai-nghiem-dich-vu-dap-xe-cong-cong-3942094/">Giới trẻ háo hức trải nghiệm dịch vụ đạp xe công cộng</a></div></div></div><div class="col-sm-3"><img src="/Data/15.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/w-xe-dap1-1-1081.jpg" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://vietnamnet.vn/chiec-xe-dap-thu-tuong-ha-lan-di-tren-pho-ha-noi-co-gi-dac-biet-2210668.html">Chiếc xe đạp Thủ tướng Hà Lan đi trên phố Hà Nội có gì đặc biệt</a></div></div></div><div class="col-sm-3"><img src="/Data/Logoantv.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/anh-bai-nho-trang-7-xe-dap-dien.jpeg" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://antv.gov.vn/xa-hoi-4/xe-dap-cong-cong-tang-kha-nang-ket-noi-va-thu-hut-nguoi-dan-den-voi-vtcc-293EF3CFF.html">Xe đạp công cộng tăng khả năng kết nối phụ trợ cho giao thông</a></div></div></div><div class="col-sm-3"><img src="/Data/Logo_VOV.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/Anh%20VOV.png" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://vov.vn/xa-hoi/dich-vu-cho-thue-xe-dap-duoc-gioi-tre-ha-noi-yeu-thich-post1040932.vov">Dịch vụ cho thuê xe đạp được giới trẻ Hà Nội yêu thích </a></div></div></div><div class="col-sm-3"><img src="/Data/logo%20cong%20thuong.png" class="mx-auto d-block mb-3" style="height:40px;width:auto"><img src="/Data/121023.a5.jpg" class="img-fluid w-100"><div class="pt-2 pb-4"><div class="fw-semibold text-break"><a target="_blank" href="https://congthuong.vn/xe-dap-cong-cong-tai-ha-noi-va-bai-toan-dam-cuoi-trong-he-thong-giao-thong-266720.html">Xe đạp công cộng tại Hà Nội và bài toán "dặm cuối" trong hệ thống giao thông</a></div></div></div></div>
+    </div>
+</section>
+
+<!-- Thư viện ảnh-->
+<section class="gallery py-5 mb-5"><div class="container"><h2 class="price-title text-center mb-5">Khoảnh khắc TNGo</h2><div class="row"><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/%E1%BA%A2nh%20xe%20%C4%91%E1%BA%A1p%201.jpg" data-caption="Ảnh 7"><img src="/Data/%E1%BA%A2nh%20xe%20%C4%91%E1%BA%A1p%201.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/%E1%BA%A2nh%20xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%201.jpg" data-caption="Ảnh 17"><img src="/Data/%E1%BA%A2nh%20xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%201.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/k14-36.jpg" data-caption="Ảnh 13"><img src="/Data/k14-36.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%201.jpg" data-caption="Ảnh 18"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%201.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/605288935_1161442792698358_2634433513591493428_n.jpg" data-caption="Ảnh 10"><img src="/Data/605288935_1161442792698358_2634433513591493428_n.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%201.jpg" data-caption="Ảnh 14"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%201.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/image/Rectangle%20628.jpg" data-caption="Ảnh 1"><img src="/image/Rectangle%20628.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo%201.jpg" data-caption="Ảnh 15"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo%201.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%202.jpg" data-caption="Ảnh 11"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%202.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%202.jpg" data-caption="Ảnh 12"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%202.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo%202.jpg" data-caption="Ảnh 5"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo%202.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%203.jpg" data-caption="Ảnh 16"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNgo-HCM%203.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%203.jpg" data-caption="Ảnh 2"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%203.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo%204.jpg" data-caption="Ảnh 6"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo%204.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo-HCM%205.jpeg" data-caption="Ảnh 19"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo-HCM%205.jpeg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%204.jpg" data-caption="Ảnh 8"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20c%C6%A1%204.jpg" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/_MG_1259.JPG" data-caption="Ảnh 9"><img src="/Data/_MG_1259.JPG" class="img-fluid"></a></div><div class="col-sm-4"><a data-fancybox="gallery" data-src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo-HCM4.jpg" data-caption="Ảnh 20"><img src="/Data/Xe%20%C4%91%E1%BA%A1p%20%C4%91i%E1%BB%87n%20TNGo-HCM4.jpg" class="img-fluid"></a></div></div></div></section>
+
+
+
+        <!-- FOOTER -->
+        <div class="footter hidden-login">
+            <div class="tngoft">
+                <div class="container">
+                    <div class="text-center text-white mb-3">© 2024 Xe đạp công cộng TNGo - Một sản phẩm của <a class="text-white" href="#" target="_blank" style="text-decoration:underline">Công ty cổ phần dịch vụ vận tải số Trí Nam</a></div>
+                    <div class="d-flex flex-row justify-content-between flex-wrap">
+                        
+                        <div class="flex-fill text-white"><img alt="" class="mb-2" src="/image/logoft.png" style="width:12rem"><div class=" mb-4" style="width:20rem;text-align: justify;">Xe đạp công cộng - Một loại hình giao thông đô thị mới văn minh, tiện lợi, tốt cho sức khỏe và thân thiện với môi trường.</div><a target="_blank" href="http://online.gov.vn/Home/WebDetails/84227"><img src="/image/logoSaleNoti.png" style="width:10rem"></a></div>
+                        <div class="flex-fill text-white footer-contact"><h2>Liên hệ</h2><div class="mb-3"><i class="fa-solid fa-phone"></i><a class="text-white" href="tel:1900633548">1900 633 548</a></div><div class="mb-3"><i class="fa-regular fa-envelope"></i><a class="text-white" href="mailto:info@vantaiso.com.vn">info@vantaiso.com.vn</a></div><div class="mb-3"><i class="fa-brands fa-facebook-f"></i><a class="text-white" href="https://www.facebook.com/tngo.vn" target="_blank">tngo.vn</a></div></div>
+                        
+                        <div class="flex-fill text-white mb-5">
+                            <h2>Liên kết nhanh</h2>
+                            <div class="row">
+                                 <div class="col-6"><div class="mb-3"><a class="text-white" href="/usermanual">Hướng dẫn sử dụng</a></div><div class="mb-3"><a class="text-white" href="/station">Danh sách trạm</a></div><div class="mb-3"><a class="text-white" href="/news">Tin tức</a></div><div class="mb-3"><a class="text-white" href="/contact">Liên hệ</a></div></div>
+                                <div class="col-6"><div class="mb-3"><a class="text-white" href="/price">Bảng giá</a></div><div class="mb-3"><a class="text-white" href="/tapgo">Thẻ trả trước TapGo</a></div><div class="mb-3"><a class="text-white" href="/rfid">Thẻ RFID</a></div><div class="mb-3"><a class="text-white" href="/rank">Bảng xếp hạng</a></div></div>
+                            </div>
+                        </div>
+                        <div class="flex-fill text-white"><h2>Tải ứng dụng</h2><div class="d-flex flex-column justify-content-between"><div class="mb-2"><a href="https://apps.apple.com/vn/app/tngo/id1552166916" target="_blank"><img alt="" src="/image/app-ios.png" style="width:8rem"></a></div><a href="https://play.google.com/store/apps/details?id=com.tngo" target="_blank"><img alt="" src="/image/app-android.png" style="width:8rem"></a></div></div>
+                    </div>
+                        <div class="d-flex flex-row justify-content-between flex-wrap d-xl-none mt-5">
+                            <div class="row">
+                                <div class="col-6 text-white">
+                                    Chọn ngôn ngữ
+                                </div>
+                                <div class="col-6">
+                                    <select class="form-select" onchange="selectLanguage(this)">
+                                            <option value="vi" selected="">vi</option>
+                                            <option value="en">en</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MODAL MENU -->
+        <div class="modal fade" id="menumore" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">TNGo - Xe đạp công nghệ số</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="menuall">
+                            <ul><li><a href="/">Trang chủ</a></li><li><a href="/usermanual">Hướng dẫn sử dụng</a></li><li><a href="/price">Bảng giá</a></li><li><a href="/station">Danh sách trạm</a></li><li><a href="/rank">Bảng xếp hạng</a></li><li><a href="/tapgo">Thẻ trả trước TapGo</a></li><li><a href="/rfid">Thẻ RFID</a></li><li><a href="/rentBike">Dịch vụ sự kiện</a></li><li><a href="/tripCare">Bảo hiểm Trip Care</a></li><li><a href="/news">Tin tức</a></li><li><a href="/contact">Liên hệ</a></li></ul>
+                            <div>
+                                <a href=""><img alt="" src="/image/logoft.png"></a>
+                                <p> <a class="text-white" href="tel:1900633548"><i class="fa fa-phone fa2" aria-hidden="true"></i>&nbsp;&nbsp;1900 633 548</a></p>
+                                <p><a class="text-white" href="mailto:info@vantaiso.com.vn"><i class="fa fa-envelope fa4" aria-hidden="true"></i>&nbsp;&nbsp;info@vantaiso.com.vn</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL LOGIN-->
+        <div class="modal fade" id="modal-login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-login-menu d-none">
+        <div class="px-2 px-md-4 fs-6">
+                <button class="btn btn-outline-primary rounded" id="btn-modal-login" data-action="login">Đăng nhập</button>
+        </div>
+            <div class="px-2 fs-6">
+                <div class="dropdown">
+                    <img src="/Content/Admin/images/vi.png" type="button" data-bs-toggle="dropdown" aria-expanded="false" alt="avatar language" style="height: 35px;">
+                    <ul class="dropdown-menu" style="right: 0 !important; left:unset">
+                            <li><a class="dropdown-item" href="/vi"><img src="/Content/Admin/images/vi.png" alt="avatar language"> Tiếng Việt</a></li>
+                            <li><a class="dropdown-item" href="/en"><img src="/Content/Admin/images/en.png" alt="avatar language"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+    <!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat" page_id="137103531850759" attribution="biz_inbox">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "137103531850759");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v15.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <!-- Scroll top -->
+    <div id="scroll-top" style="display: none;">
+        <a href="#Body" tabindex="0">
+            <div class="btn btn-success rounded-circle btn-lg">
+                <i class="fa fa-chevron-up"></i>
+            </div>
+        </a>
+    </div>
+
+    <input name="ScrollTop" type="hidden" id="ScrollTop">
+    <input name="CurrentLanguage" type="hidden" value="vi" id="currentLanguage">
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Portals/_default/Skins/TN/resource/bootstrap.js?v=5.5.9"></script>
+    <script src="/Portals/_default/Skins/TN/resource/owlcarousel/owl.carousel.min.js?v=5.5.9"></script>
+    <script src="/js/site.js?v=1.0"></script>
+
+    <script>
+        $(document).ready(
+            function () {
+                let owl = $('#manualsct');
+                owl.owlCarousel({
+                    margin: 0,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    nav: false,
+                    loop: true,
+                    dots: true,
+                    dotsData: true,
+                    pagination: false,
+                    margin: 0,
+                    responsive: {
+                        0: { items: 1 },
+                        600: { items: 1 },
+                        1000: { items: 1 }
+                    }
+                })
+            }
+        )
+    </script>
+
+    <script>
+        $(function () {
+            let star = '.star',
+                selected = '.selected';
+
+            $(star).on('click', function () {
+                $(selected).each(function () {
+                    $(this).removeClass('selected');
+                });
+                $(this).addClass('selected');
+            });
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function () {
+            var top = $("#ControlBar").height();
+            if (top != null) {
+                top = top;
+            } else { top = 0; };
+            jQuery("#scroll-top").hide();
+            jQuery(function () {
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > 163) {
+                        $(".vmenu").attr("style", "position:fixed;top:" + top + "px;padding-right:1px;")
+                    } else { $(".vmenu").attr("style", "position:relative;top:0px;padding-right:0px;") }
+
+                    if (jQuery(this).scrollTop() > 0) {
+                        jQuery('#scroll-top').fadeIn();
+                    } else {
+                        jQuery('#scroll-top').fadeOut();
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).on("click", "#btn-modal-login,#RegisterPartial,#ForgotPasswordPartial", function () {
+            const language = $('#currentLanguage').val();
+            var url = "/" + language + "/AccountWeb/" + $(this).data("action");
+            $.ajax({
+                url: url,
+                success: function (data) {
+                    $("#modal-login .modal-content").html(data);
+                    $("#modal-login").modal("show");
+                }
+            });
+        });
+
+        $(document).on("click", "#btn-login", function () {
+            $.ajax({
+                url: "/AccountWeb/Login",
+                method: 'post',
+                data: $("#form-login").serialize(),
+                success: function (data) {
+                    $("#modal-login .modal-content").html(data);
+                }
+            });
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <!-- Google analytic -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TWRTC5649K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TWRTC5649K');
+    </script>
+
+    
+    <script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+
+
+
+
+</body></html>

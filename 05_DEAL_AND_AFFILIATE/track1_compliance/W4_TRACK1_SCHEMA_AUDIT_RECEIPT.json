@@ -1,0 +1,26 @@
+{
+  "receipt_id": "W4_TRACK1_SCHEMA_AUDIT_RECEIPT",
+  "audited_at_utc": "2026-09-11T16:16:14.318Z",
+  "source": {
+    "file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "sha256": "a3bb1b0b7c35ad0f31ae4ea00e625e7f1ce206bd30597837604c4b07b0265e63"
+  },
+  "contract": {
+    "file": "05_DEAL_AND_AFFILIATE/track1_compliance/W4_TRACK1_SUB_ID_SCHEMA_CONTRACT.json",
+    "sha256": "4f9d2df3bf2b84df68bb5f8f7639ce13c123edee48a2ff60b45eeb632d293fc2"
+  },
+  "checks": {
+    "router_declared": true,
+    "router_pending_partner_authentication": true,
+    "affiliate_disabled": true,
+    "dispatch_not_performed": true,
+    "destination_null": true,
+    "tracking_null": true,
+    "contract_runtime_disabled": true,
+    "schema_values_bounded": true,
+    "disclosure_has_no_lowest_price_claim": true
+  },
+  "audit_status": "PASS__NON_DISPATCHING_SCHEMA_CONTRACT__AFFILIATE_REMAINS_DISABLED",
+  "production_affiliate_enabled": false,
+  "public_disclosure_displayed": false
+}

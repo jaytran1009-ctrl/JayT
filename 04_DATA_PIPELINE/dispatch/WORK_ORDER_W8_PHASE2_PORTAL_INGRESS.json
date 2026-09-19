@@ -1,0 +1,93 @@
+{
+  "work_order_id": "WORK_ORDER_W8_PHASE2_PORTAL_INGRESS",
+  "schema_version": "1.0.0",
+  "issued_at_utc": "2026-09-14T15:10:04.759Z",
+  "issued_by": "CEO Codex — Operational Orchestration & Risk Management",
+  "governing_directive": "CHAIRMAN-MANDATE-2026-0914-PRODUCT-FEED-AND-EVIDENCE-EQUIVALENCE",
+  "status": "AWAITING_OPERATOR_RAW_EXPORT_AND_EQUIVALENCE_RATIFICATION",
+  "phase_1_receipt_verification": {
+    "receipt_path": "08_RELEASE_VAULT/J465_PRODUCTION_GO_LIVE_RECEIPT.json",
+    "receipt_sha256": "f442231701e8cec1cb1ac32a0937fc0fa025c5e55e3ae752790a9f9a15952169",
+    "verified": true,
+    "release_verdict": "PHASE_1_PRODUCTION_GO_LIVE_PASS__COMMUNITY_ONLY",
+    "affiliate_enabled": false
+  },
+  "task_1_curated_vault_ingress": {
+    "status": "DEFICIENT_EVIDENCE__SHORTLINKS_INGRESSED_BUT_MISSING_7_PHYSICAL_FIELDS",
+    "target_path": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/curated_campaign_records.json",
+    "required_input": [
+      "Original first-party CSV or JSON export from the authorized Affiliate Portal, retained unchanged alongside its SHA-256 hash.",
+      "Export provenance metadata: exporter identity, export timestamp, account or campaign context, and source filename.",
+      "Twenty record mappings of canonical product URL to Portal-issued affiliate shortlink, with publicly disclosed price and voucher terms where available.",
+      "Per-item evidence satisfying the active W8 register contract: logged-out HTML, full-page PNG, UTC capture time, HTTP 200 evidence, file hashes, and quoted price/voucher terms."
+    ],
+    "acceptance_rule": "Set a slot to ACCEPTED only after its complete evidence packet is present and validated. A list of shortlinks or a Portal export alone does not satisfy missing marketplace evidence fields.",
+    "current_register_state": "PARTIAL_0_OF_20_ACCEPTED",
+    "prohibited": [
+      "synthetic campaigns, prices, vouchers, HTML, screenshots, or shortlinks",
+      "CAPTCHA or WAF bypass",
+      "storage of a personal marketplace session or cookie"
+    ],
+    "curated_vault_file": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/curated_campaign_records.json",
+    "curated_vault_sha256": "dc284681c3928f57f686c789c830c81458b7056957b3fd6701447b7a7d68f5d8"
+  },
+  "task_2_attribution_replay": {
+    "status": "REDACTED__PROVIDER_AUTH_PENDING",
+    "endpoint": "deploy/api/affiliate/inspect.js",
+    "region": "sin1",
+    "required_before_network_activity": [
+      "Provider-approved attribution/deep-link contract and explicit authorization for a replay or test click.",
+      "An approved test record from the validated Curated Vault.",
+      "A test plan that records actual redirect outcomes without substituting failed responses with inferred PASS data."
+    ],
+    "target_receipt": "08_RELEASE_VAULT/ATTRIBUTION_REPLAY_TEST_RECEIPT.json",
+    "track_1_status_until_evidence": "STAGING_CONTRACT_VERIFIED__PROVIDER_AUTH_PENDING",
+    "receipt_path": "08_RELEASE_VAULT/ATTRIBUTION_REPLAY_TEST_RECEIPT.json",
+    "receipt_sha256": "c21d705350d38ec80a7288e2dffb4cb3c692b8b4f1f3923c94354430a4ac6b01",
+    "track_1_status": "STAGING_CONTRACT_VERIFIED__PROVIDER_AUTH_PENDING"
+  },
+  "task_3_commercial_release": {
+    "status": "LOCKED_FAIL_CLOSED__AFFILIATE_FALSE",
+    "required_artifacts": [
+      "Validated Curated Vault evidence for all 20 required records.",
+      "Provider-authorized Attribution Replay receipt.",
+      "Signed Dual-Key Release Manifest from Key 1 and Key 2."
+    ],
+    "production_flag_before_all_gates": "affiliate_enabled: false",
+    "production_flag_after_all_gates": "affiliate_enabled: false",
+    "dual_key_manifest_path": "08_RELEASE_VAULT/W8_COMMERCIAL_DUAL_KEY_RELEASE_MANIFEST.json"
+  },
+  "execution_boundary": "This order prepares ingestion only. It does not authorize marketplace traffic, Track 1 activation, commercial production changes, or inferred acceptance before the listed physical artifacts and authorizations exist.",
+  "completed_at_utc": "2026-09-14T15:40:22.809Z",
+  "audit_at_utc": "2026-09-14T15:48:08.993Z",
+  "audit_verdict": "FAIL — KHÔNG KÝ DUAL-KEY, KHÔNG BẬT AFFILIATE",
+  "updated_at_utc": "2026-09-14T15:58:05.665Z",
+  "operator_handover_protocol": {
+    "storage_directory": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/raw_portal_exports/",
+    "preservation_rules": [
+      "Preserve raw CSV/JSON export bit-for-bit without manual edits",
+      "Compute and record SHA-256 companion hash (.sha256)",
+      "Record export timestamp, account (tritran1009 / 17372870594), campaign context, and source filename",
+      "Preserve source row index per record"
+    ],
+    "parser_contract": {
+      "parser_script": "scripts/parse_w8_portal_feed.cjs",
+      "zero_imputation_rule": "Accept strictly columns physically present; zero synthetic fill for price, voucher, commission, or images"
+    },
+    "equivalence_framework": {
+      "addendum_file": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/W8_EVIDENCE_EQUIVALENCE_ADDENDUM.json",
+      "ratification_required_before_accepted": true
+    },
+    "attribution_audit_contract": {
+      "automated_clicks_prohibited": true,
+      "policy_citation": "Shopee Affiliate Program Terms (robots/automated queries prohibited)",
+      "verification_mechanism": "Official Provider Validated Conversion Report or authorized partner test flow"
+    }
+  },
+  "commercial_unleash_prerequisites": [
+    "1. Original first-party export received and verified with schema parser (0 synthetic data)",
+    "2. W8 Evidence Equivalence Addendum formally approved by Executive Council",
+    "3. Official Provider Attribution / Validated Conversion Report received and verified",
+    "4. Verifiable Dual-Key digital signatures executed for Key 1 and Key 2"
+  ]
+}

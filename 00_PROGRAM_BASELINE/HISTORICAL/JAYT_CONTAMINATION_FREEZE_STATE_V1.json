@@ -1,0 +1,25 @@
+{
+  "freeze_record_id": "JAYT_CONTAMINATION_FREEZE_STATE_JAYT_263",
+  "governing_directive": "JAYT-245 Section JAYT-263 (Lines 5733-5745)",
+  "state": "ACTIVE",
+  "directive_id": "JAYT-263",
+  "activated_utc": "2026-09-02T08:58:46.402Z",
+  "reason": "Hard circuit breaker freeze following byte-identical SHA-256 raw HTML collision between Cohort 15 and Micro-Batch 02 (hash b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb). Active until independent CEO audit.",
+  "scope": [
+    "COHORT_15_RUNNER",
+    "CATALOG_BUILD"
+  ],
+  "enforcement_contract": {
+    "fail_closed_error_code": "CONTAMINATION_FREEZE_ACTIVE",
+    "preflight_check_mandated": true,
+    "block_before_io": true,
+    "bypass_mechanisms_prohibited": [
+      "ENVIRONMENT_VARIABLES",
+      "TEST_FIXTURES",
+      "CLI_FLAGS",
+      "DIRECT_FUNCTION_INVOCATION"
+    ],
+    "unlock_authority": "CEO_DIRECTIVE_ONLY"
+  },
+  "record_sha256": "aee7e71bb09503cf4dafb58040d44678ce64c472f0924a9bd407881f60855960"
+}

@@ -1,0 +1,58 @@
+{
+  "manifest_id": "BATCH_140_QUARANTINE_MANIFEST",
+  "directive": "JAYT-140R — OPERATING-LOOP PROVENANCE RECOVERY & NO-SYNTHETIC-INPUT ENFORCEMENT",
+  "status": "SYNTHETIC_LOOP_PROVENANCE_QUARANTINED",
+  "quarantined_at": "2026-08-27T01:00:00+07:00",
+  "executive_ruling": "CEO audit rejected Batch 140 output: pattern/placeholder hashes in fresh registry, seeded synthetic community signals with simulated user descriptions, and compiler reading historic 139 corpus instead of authentic fresh loop run.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_24_SYNTHETIC_HASH_PATTERNS_IN_REGISTRY",
+      "description": "Fresh source registry contained repeated hex pattern hashes instead of hashes calculated from authentic physical capture artifacts on disk."
+    },
+    {
+      "cause_id": "P0_CAUSE_25_SEEDED_MOCK_COMMUNITY_SIGNALS",
+      "description": "Community signal queue contained pre-seeded mock submissions with simulated submitters, timestamps, and deal descriptions without authentic physical intake receipts."
+    },
+    {
+      "cause_id": "P0_CAUSE_26_HISTORIC_CORPUS_CONFUSION",
+      "description": "Compiler evaluated historic 139 corpus instead of executing an authentic fresh capture differential run."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/fresh_source_registry_140.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/fresh_source_registry_140.json",
+      "sha256": "9732b0b3c379c9663e4403cec7610ebdc1f51e0cf7ac28a39f95bce03c29d6b8"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/community_signal_queue_140.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/community_signal_queue_140.json",
+      "sha256": "aee591a3ed6f1f7d40c27b525c3fa43819cb80d94cdb34c1a6a9e07b793db008"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/inbound_evidence_intake_140.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/inbound_evidence_intake_140.json",
+      "sha256": "04a379fd87c9601809a2a5ad944d3898b731c7a9f24999048e701ad54ff48b9b"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_140.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/generic_compiler_140.js",
+      "sha256": "e26da5656d65b8b3484dba24eb45491a2cb153d73c2b67bacf6d14e550877001"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_140_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/batch_capture_140_manifest.json",
+      "sha256": "04438e0a8bef3db9cf11c41e16daf4d69b6433f63df42f6fe934a81d22378baf"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_generic_compiler_140.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/test_generic_compiler_140.js",
+      "sha256": "9e211cbdf5f5977ea8c2d31e790472efbbbac1595b29595cf71539d8615c28e0"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_140_FRESH_SUPPLY_REVIEW_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/JAYT_140_FRESH_SUPPLY_REVIEW_PACK.md",
+      "sha256": "e494f1971b10693e6197709d8835208546d5d2ad5ad5e70aa6cd4ead81cb4c0e"
+    }
+  ]
+}

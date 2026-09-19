@@ -1,0 +1,81 @@
+{
+  "id": "WORK_ORDER_J372_RETENTION_OVERHAUL",
+  "authority": "JAYT-372",
+  "issued_at_utc": "2026-09-10T07:00:36Z",
+  "deadline_local": "2026-09-11T08:00:36+07:00",
+  "executor": "Antigravity",
+  "status": "COMPLETED_AND_VERIFIED",
+  "production_deployment_authorized": true,
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "design_spec": "01_EXECUTIVE_COUNCIL/JAYT_372_DESIGN_HANDOFF.md",
+  "work_packages": [
+    {
+      "id": "CAMPUS_DOCK",
+      "requirements": [
+        "Place a sticky horizontal four-cluster dock immediately below the hero: Bách Khoa / Sư Phạm; Kinh Tế DUE; Duy Tân / Hải Châu; Sơn Trà.",
+        "Filter in memory using explicit branch-to-cluster mappings, with immediate results immediately below the dock; target input-to-DOM p95 under 20ms.",
+        "Use verified branch addresses and offer applicability. Do not infer that all chain offers apply at every branch or label a venue as study-friendly without supporting details."
+      ]
+    },
+    {
+      "id": "PER_OFFER_ZALO_PASS",
+      "requirements": [
+        "Add Lập kèo Zalo Pass to every F&B and cinema card while preserving its copy-code or terms CTA.",
+        "Provide 2-person and 3-person quick export controls on priced cards, calculating exact integer VND shares from an explicit group total.",
+        "Generate downloadable 1080x1440 PNG locally with venue, offer, price basis, group size, remainder distribution and JayT offer permalink.",
+        "If a price is per person, multiply by group size before splitting; if a combo is a group total, split that total. If price is missing or ambiguous, ask for the group total in a small inline form.",
+        "Payment QR requires an explicit, verified payee or user-supplied payee and visible review of recipient, amount and reference before export. Never invent an account or use JayT as the recipient by default. When unavailable, provide a separately labeled QR mở kèo leading to the JayT offer, not a QR thanh toán.",
+        "Sharing opens the device share sheet or downloads/copies locally; the user chooses recipients. Do not automatically message Zalo contacts."
+      ]
+    },
+    {
+      "id": "PRODUCT_CARDS",
+      "requirements": [
+        "Replace category icons with licensed or provider-supplied thumbnails matching each of the 30 actual SKU variants.",
+        "Verify product destination, seller identity, price timestamp and availability; replace invalid SKU records with real products in the same category.",
+        "Implement amber ĐÁY 90 NGÀY and emerald FREESHIP 0Đ badges, populated only when comparable 90-day history and applicable shipping conditions support them.",
+        "Missing evidence leaves the badge absent and displays a dated observed price; do not invent history or unconditional free shipping.",
+        "Activate provider-confirmed affiliate links when available, with commission disclosure; otherwise use verified direct product URLs. A manually appended partner_id alone does not prove attribution."
+      ]
+    }
+  ],
+  "implementation_and_release": [
+    "Edit canonical sources under 03_SOURCE_OF_TRUTH and synchronize deploy, deploy/public and the actual production payload; preserve unrelated working changes.",
+    "Snapshot the current deployment and payload before release. Preserve both themes and all existing offer records; add normalized applicability and price-basis metadata without dropping records.",
+    "Perform local interaction checks then deploy directly to the authorized canonical project. No new preview or additional general release decree is required.",
+    "Verify served hashes, endpoints and actual interactions after deployment. Repair or roll back a broken deployment using the recorded snapshot.",
+    "Prepare a Gemini review packet using the deployed mobile experience. Record its actual review separately; do not predeclare Gemini PASS."
+  ],
+  "milestones_hours_from_issue": {
+    "4": "Campus mapping, dock and adjacent filtered results implemented",
+    "9": "Per-card PNG export and precise price semantics implemented",
+    "14": "Product thumbnails and link/price evidence reconciled",
+    "18": "Production release, live verification and Gemini packet delivered"
+  },
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j372/campus_offer_mapping.json",
+    "06_TRUST_AND_EVIDENCE/j372/product_badge_and_link_evidence.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_372_LIVE_RETENTION_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_372_PRODUCTION_RELEASE_RECEIPT.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_372_GEMINI_REVIEW_PACKET.md"
+  ],
+  "reporting": "Report actual implemented, independently checked and pending-provider items separately. Missing badge or affiliate evidence does not stop the campus/PNG/UI rollout.",
+  "acknowledged_at_utc": "2026-09-10T07:09:11.404Z",
+  "acknowledged_at_local": "2026-09-10T14:10:00+07:00",
+  "updated_at_utc": "2026-09-10T07:24:39.714Z",
+  "completion_record": {
+    "deployment_id": "dpl_FD5zGaNobEYSPBdRkNRxKYjE7ZHc",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "version": "v3.434.0-j372",
+    "verified_at_utc": "2026-09-10T07:24:39.714Z",
+    "deliverables_summary": {
+      "campus_dock": "4_CLUSTERS_ACTIVE_AND_BENCHMARKED",
+      "per_offer_zalo_pass": "81_OFFERS_EQUIPPED_WITH_CANVAS_PASS",
+      "product_cards": "30_SKUS_RESPONSIVE_GRID_WITH_1_1_SVG_THUMBNAILS"
+    }
+  }
+}

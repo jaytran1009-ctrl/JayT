@@ -1,0 +1,110 @@
+{
+  "specification_id": "TRACK1_AFFILIATE_DEEP_LINK_SPECIFICATION",
+  "version": "1.1-provider-auth-gated",
+  "status": "STAGING_CONTRACT_VERIFIED__PROVIDER_AUTH_PENDING",
+  "execution_boundary": "SERVER_ONLY",
+  "activation": {
+    "staging": true,
+    "production": false,
+    "affiliate_enabled": false
+  },
+  "request_contract": {
+    "method": "POST",
+    "content_type": "application/json",
+    "fields": {
+      "url": "required allowlisted HTTPS marketplace URL, maximum 2048 UTF-8 bytes",
+      "sub1": "optional enum campus_code",
+      "sub2": "optional enum cluster_group"
+    },
+    "sub3": "server-generated epoch seconds after an explicit user click",
+    "pii_allowed": false
+  },
+  "destination_policy": {
+    "exact_or_subdomain_allowlist": [
+      "shopee.vn",
+      "lazada.vn",
+      "lazada.com.vn",
+      "tiktok.com"
+    ],
+    "https_only": true,
+    "credentials_in_url": false,
+    "redirect_hops_max": 4,
+    "private_ip_destinations": false
+  },
+  "server_environment_names": {
+    "shopee_partner_identifier": "SHOPEE_AFFILIATE_PARTNER_ID",
+    "shopee_signing_secret": "SHOPEE_API_KEY",
+    "lazada_member_identifier": "LAZADA_AFFILIATE_MEMBER_ID",
+    "values_must_never_be_serialized_to_client": true
+  },
+  "provider_adapters": {
+    "shopee": {
+      "status": "DECLARED_PENDING_AUTHENTICATION",
+      "partner_id": "17372870594",
+      "active": false
+    },
+    "lazada": {
+      "status": "UNSUPPORTED_PENDING_PROVIDER_DOCS",
+      "member_id": "262501305",
+      "active": false
+    },
+    "tiktok": {
+      "status": "BLOCKED_PENDING_PROGRAM_AUTHORIZATION_AND_DOCUMENTATION",
+      "affiliate_url": null
+    }
+  },
+  "attribution_schema": {
+    "sub1": {
+      "source": "explicit UI campus selection",
+      "allowed": [
+        "dut",
+        "due",
+        "dtu",
+        "ued",
+        "danang_all"
+      ]
+    },
+    "sub2": {
+      "source": "explicit UI cluster selection",
+      "allowed": [
+        "hoa_khanh",
+        "ngu_hanh_son",
+        "hai_chau",
+        "danang_all"
+      ]
+    },
+    "sub3": {
+      "source": "server clock",
+      "format": "epoch_seconds"
+    },
+    "emission_condition": "explicit click plus authorized provider adapter only"
+  },
+  "disclosure": {
+    "required_text": "#JayTAffiliate — JayT có thể nhận hoa hồng nếu bạn mua qua liên kết này; giá và điều kiện do sàn quyết định.",
+    "placement": "immediately adjacent to every commercial CTA",
+    "unsupported_text_rejected": "giá bạn trả luôn là giá đáy thấp nhất"
+  },
+  "response_contract": {
+    "inspection_fields": [
+      "platform",
+      "shop_id",
+      "item_id",
+      "final_url",
+      "redirect_hops"
+    ],
+    "commercial_fields_before_authorization": {
+      "affiliate_url": null,
+      "voucher_data": null,
+      "price_history": null
+    }
+  },
+  "release_gates": [
+    "provider agreement or dashboard evidence proving account authorization",
+    "official API/deep-link documentation and signature examples",
+    "secret provisioning review without value disclosure",
+    "negative SSRF and open-redirect tests",
+    "explicit-click attribution replay test",
+    "consumer disclosure approval",
+    "Dual-Key Production authorization"
+  ]
+}

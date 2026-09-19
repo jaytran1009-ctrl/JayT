@@ -1,0 +1,791 @@
+{
+  "batch_id": "BATCH_13",
+  "run_mode": "OFFLINE_REPLAY",
+  "run_timestamp_utc": "2026-09-06T07:01:18.230Z",
+  "run_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_140118_17beaa",
+  "matrix_version": "2.0",
+  "anti_synthesis_enforced": true,
+  "brands_total_configured": 10,
+  "brands_processed_count": 5,
+  "brands_rejected_or_unresolved_count": 5,
+  "locations_raw_count": 22,
+  "duplicates_removed_count": 0,
+  "locations_strictly_traceable_count": 22,
+  "brand_completeness_matrix": {
+    "phuclong": {
+      "brand_id": "phuclong",
+      "status": "COMPLETE_PAGINATION",
+      "checked_this_run": false,
+      "observed_status": "OFFLINE_REPLAY_SUCCESS",
+      "server_date": "2026-09-06T05:52:52.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:51.129Z",
+      "observed_at": "2026-09-06T05:52:52.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_05_STORES_PAGE1.raw.json",
+      "completeness": "COMPLETE",
+      "total_pages_detected": 2,
+      "pages_harvested": 2,
+      "max_pages_limit": 2,
+      "missing_pages": [],
+      "pagination_warning": null,
+      "locations_count": 7
+    },
+    "jollibee": {
+      "brand_id": "jollibee",
+      "status": "HARVESTED_SUCCESS",
+      "checked_this_run": false,
+      "observed_status": "OFFLINE_REPLAY_SUCCESS",
+      "server_date": "2026-09-06T05:52:53.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:52.185Z",
+      "observed_at": "2026-09-06T05:52:53.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\jollibee.raw.html",
+      "completeness": "COMPLETE_SINGLE_SOURCE",
+      "locations_count": 9
+    },
+    "phi_long": {
+      "brand_id": "phi_long",
+      "status": "HARVESTED_SUCCESS",
+      "checked_this_run": false,
+      "observed_status": "OFFLINE_REPLAY_SUCCESS",
+      "server_date": "2026-09-06T05:52:53.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:52.576Z",
+      "observed_at": "2026-09-06T05:52:53.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\phi_long.raw.html",
+      "completeness": "COMPLETE_SINGLE_SOURCE",
+      "locations_count": 2
+    },
+    "lotte_cinema": {
+      "brand_id": "lotte_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": "2026-09-06T05:52:55.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:54.272Z",
+      "observed_at": "2026-09-06T05:52:55.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotte_cinema.raw.html",
+      "completeness": "REJECTED",
+      "locations_count": 0
+    },
+    "metiz_cinema": {
+      "brand_id": "metiz_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": "2026-09-06T05:52:55.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:54.493Z",
+      "observed_at": "2026-09-06T05:52:55.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\metiz_cinema.raw.html",
+      "completeness": "REJECTED",
+      "locations_count": 0
+    },
+    "cgv_cinemas": {
+      "brand_id": "cgv_cinemas",
+      "status": "HARVESTED_SUCCESS",
+      "checked_this_run": false,
+      "observed_status": "OFFLINE_REPLAY_SUCCESS",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": "2026-09-06T06:29:07.488Z",
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\cgv_*.raw.html",
+      "completeness": "COMPLETE_SCOPED_MULTI_LEAF",
+      "scope_definition": "3 rạp CGV trong phạm vi khảo sát Đà Nẵng (Vĩnh Trung, Vincom, MM Mega Market)",
+      "locations_count": 3
+    },
+    "galaxy_cinema": {
+      "brand_id": "galaxy_cinema",
+      "status": "HARVESTED_SUCCESS",
+      "checked_this_run": false,
+      "observed_status": "OFFLINE_REPLAY_SUCCESS",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": "2026-09-06T06:29:09.353Z",
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\galaxy_da_nang.raw.html",
+      "completeness": "COMPLETE_SINGLE_SOURCE",
+      "locations_count": 1
+    },
+    "dien_may_xanh": {
+      "brand_id": "dien_may_xanh",
+      "status": "NOT_CHECKED_THIS_RUN",
+      "checked_this_run": false,
+      "observed_status": "HISTORICAL_PROBE__SERVER_ERROR_500",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": null,
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "historical_observation_unverified",
+      "completeness": "FAILED",
+      "locations_count": 0
+    },
+    "highlands_coffee": {
+      "brand_id": "highlands_coffee",
+      "status": "NOT_CHECKED_THIS_RUN",
+      "checked_this_run": false,
+      "observed_status": "HISTORICAL_PROBE__BLOCKED_403_WAF",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": null,
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "historical_observation_unverified",
+      "completeness": "BLOCKED",
+      "locations_count": 0
+    },
+    "lotteria": {
+      "brand_id": "lotteria",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": "2026-09-06T06:29:09.694Z",
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotteria.raw.html",
+      "completeness": "REJECTED",
+      "locations_count": 0
+    }
+  },
+  "stats_by_brand": {
+    "phuclong": 7,
+    "jollibee": 9,
+    "phi_long": 2,
+    "cgv_cinemas": 3,
+    "galaxy_cinema": 1
+  },
+  "stats_by_policy_status": {
+    "ELIGIBLE": 6,
+    "EXCLUDED": 1,
+    "UNVERIFIED": 15
+  },
+  "brand_errors_and_rejections": [
+    {
+      "brand_id": "lotte_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": "2026-09-06T05:52:55.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:54.272Z",
+      "observed_at": "2026-09-06T05:52:55.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotte_cinema.raw.html",
+      "reason": "Raw HTML contains cinemaID=8007 navigation menu item but lacks physical facility address. Per anti-synthesis rule, address is NOT synthesized."
+    },
+    {
+      "brand_id": "metiz_cinema",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": "2026-09-06T05:52:55.000Z",
+      "captured_at": null,
+      "file_mtime": "2026-09-06T05:52:54.493Z",
+      "observed_at": "2026-09-06T05:52:55.000Z",
+      "historical_observation_unverified": false,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\metiz_cinema.raw.html",
+      "reason": "Raw HTML contains business registration 0400668112 but lacks physical facility address string. Per anti-synthesis rule, address is NOT hardcoded."
+    },
+    {
+      "brand_id": "dien_may_xanh",
+      "status": "NOT_CHECKED_THIS_RUN",
+      "checked_this_run": false,
+      "observed_status": "HISTORICAL_PROBE__SERVER_ERROR_500",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": null,
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "historical_observation_unverified",
+      "reason": "Offline replay: network probe was not executed in this run. No verified historical probe receipt exists on disk. Status and timestamp remain unverified (historical_observation_unverified). Per anti-synthesis rule, 0 locations emitted."
+    },
+    {
+      "brand_id": "highlands_coffee",
+      "status": "NOT_CHECKED_THIS_RUN",
+      "checked_this_run": false,
+      "observed_status": "HISTORICAL_PROBE__BLOCKED_403_WAF",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": null,
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "historical_observation_unverified",
+      "reason": "Offline replay: network probe was not executed in this run. No verified historical probe receipt exists on disk. Status and timestamp remain unverified (historical_observation_unverified). Per anti-synthesis rule, 0 locations emitted."
+    },
+    {
+      "brand_id": "lotteria",
+      "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "checked_this_run": false,
+      "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+      "server_date": null,
+      "captured_at": null,
+      "file_mtime": "2026-09-06T06:29:09.694Z",
+      "observed_at": null,
+      "historical_observation_unverified": true,
+      "evidence_reference": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_13_locator_vault\\run_20260906_125250\\lotteria.raw.html",
+      "reason": "Static DOM contains only corporate headquarters in HCMC. Dynamic store list requires client-side Firebase App Check attestation which rejects automated agents (403). Per anti-synthesis rule, 0 locations emitted."
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "phuclong_2005",
+      "brand_id": "phuclong",
+      "store_code": "2005",
+      "name": "DNG-CH Lotte Số 6 Đại Nam P.HCB",
+      "verbatim_address": "Tầng 1, 1F-09 tại Lotte Mart Đà Nẵng, Số 06 đường Nại Nam   TP. Đà Nẵng",
+      "district": null,
+      "phone": "02363688555",
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/4",
+        "source_page": 1,
+        "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      "is_facility_verified": true,
+      "display_address": "Tầng 1, 1F-09 tại Lotte Mart Đà Nẵng, Số 06 đường Nại Nam   TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": null,
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "phuclong_2006",
+      "brand_id": "phuclong",
+      "store_code": "2006",
+      "name": "DNG-CH 59-61 Nguyen Van Linh P.PN",
+      "verbatim_address": "59-61 Nguyễn Văn Linh   TP. Đà Nẵng",
+      "district": null,
+      "phone": "02363750000",
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/5",
+        "source_page": 1,
+        "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      "is_facility_verified": true,
+      "display_address": "59-61 Nguyễn Văn Linh   TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": null,
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "phuclong_2116",
+      "brand_id": "phuclong",
+      "store_code": "2116",
+      "name": "DNG - 511 Trần Hưng Đạo",
+      "verbatim_address": "511 Trần Hưng Đạo   TP. Đà Nẵng",
+      "district": null,
+      "phone": "(028) 7100 1968 (Ext.21168)",
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/69",
+        "source_page": 1,
+        "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      "is_facility_verified": true,
+      "display_address": "511 Trần Hưng Đạo   TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": null,
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "phuclong_2129",
+      "brand_id": "phuclong",
+      "store_code": "2129",
+      "name": "DNG - Sân bay Đà Nẵng",
+      "verbatim_address": "DV-03 Cảng hàng không quốc tế Đà Nẵng   TP. Đà Nẵng",
+      "district": null,
+      "phone": "(028) 7100 1968 (Ext.21298)",
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/78",
+        "source_page": 1,
+        "raw_sha256": "1d04bf590d388e7ba967534a662a8ddb9b223257e02531da6eef4085c9723eea"
+      },
+      "is_facility_verified": true,
+      "display_address": "DV-03 Cảng hàng không quốc tế Đà Nẵng   TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "EXCLUDED",
+        "earning_reason": "Ngoại lệ minh thị: Cửa hàng tại sân bay không áp dụng tích điểm (offset 48205)",
+        "redemption_status": "UNVERIFIED",
+        "redemption_reason": "Chưa xác nhận từ nguồn: nguồn không nêu sân bay Đà Nẵng, không suy đoán quyền đổi quà",
+        "regional_note": null,
+        "overall_status": "EXCLUDED"
+      }
+    },
+    {
+      "location_id": "phuclong_2176",
+      "brand_id": "phuclong",
+      "store_code": "2176",
+      "name": "DNG - Xô Viết Nghệ Tĩnh",
+      "verbatim_address": "114 - 116 Xô Viết Nghệ Tĩnh   TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/15",
+        "source_page": 2,
+        "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a"
+      },
+      "is_facility_verified": true,
+      "display_address": "114 - 116 Xô Viết Nghệ Tĩnh   TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": null,
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "phuclong_2217",
+      "brand_id": "phuclong",
+      "store_code": "2217",
+      "name": "DNG - Mega Market",
+      "verbatim_address": "167 Nguyễn Sinh Sắc Phía Đông Nam ký túc xá sinh viên Phường Hòa Khánh TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/44",
+        "source_page": 2,
+        "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a"
+      },
+      "is_facility_verified": true,
+      "display_address": "167 Nguyễn Sinh Sắc Phía Đông Nam ký túc xá sinh viên Phường Hòa Khánh TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": null,
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "phuclong_2237",
+      "brand_id": "phuclong",
+      "store_code": "2237",
+      "name": "DNG - 111 Trần Hưng Đạo",
+      "verbatim_address": "Số 111 Trần Hưng Đạo Số 111 Trần Hưng Đạo Phường Hội An TP. Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "provenance": {
+        "source_type": "JSON_API",
+        "source_pointer": "/data/52",
+        "source_page": 2,
+        "raw_sha256": "910a909dda93cdc43492f8f5e8e78b52290fdb3adfc0efcb74c79f76947f765a"
+      },
+      "is_facility_verified": true,
+      "display_address": "Số 111 Trần Hưng Đạo Số 111 Trần Hưng Đạo Phường Hội An TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+        "earning_status": "ELIGIBLE",
+        "earning_reason": "Cửa hàng tiêu chuẩn đủ điều kiện tích lũy điểm hội viên",
+        "redemption_status": "ELIGIBLE",
+        "redemption_reason": "Cửa hàng tiêu chuẩn đủ điều kiện đổi ly nước miễn phí (offset 55875)",
+        "regional_note": "Nằm ngoài địa giới hành chính TP. Đà Nẵng",
+        "overall_status": "ELIGIBLE"
+      }
+    },
+    {
+      "location_id": "jollibee_59",
+      "brand_id": "jollibee",
+      "store_code": "59",
+      "name": "Jollibee Vincom Đà Nẵng",
+      "verbatim_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+      "district": null,
+      "phone": "(0236)393-8000",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=59]",
+        "byte_offset": 226790,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_106",
+      "brand_id": "jollibee",
+      "store_code": "106",
+      "name": "Jollibee Tiểu La - Đà Nẵng",
+      "verbatim_address": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "(0236)355-6996",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=106]",
+        "byte_offset": 261788,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_121",
+      "brand_id": "jollibee",
+      "store_code": "121",
+      "name": "Jollibee Nguyễn Đức Trung - Đà Nẵng",
+      "verbatim_address": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "(0236)379-9989",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=121]",
+        "byte_offset": 273556,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_132",
+      "brand_id": "jollibee",
+      "store_code": "132",
+      "name": "Jollibee Phan Đăng Lưu - Đà Nẵng",
+      "verbatim_address": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "(0236)362-6979",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=132]",
+        "byte_offset": 281917,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_135",
+      "brand_id": "jollibee",
+      "store_code": "135",
+      "name": "Jollibee Phạm Như Xương - Đà Nẵng",
+      "verbatim_address": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "(0236)362-2979",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=135]",
+        "byte_offset": 284512,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_139",
+      "brand_id": "jollibee",
+      "store_code": "139",
+      "name": "Jollibee Lý Thái Tổ - Đà Nẵng",
+      "verbatim_address": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "(023)6381-9789",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=139]",
+        "byte_offset": 287395,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_156",
+      "brand_id": "jollibee",
+      "store_code": "156",
+      "name": "Jollibee Đống Đa - Đà Nẵng",
+      "verbatim_address": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "02363913579",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=156]",
+        "byte_offset": 299008,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_158",
+      "brand_id": "jollibee",
+      "store_code": "158",
+      "name": "Jollibee Ngô Văn Sở - Đà Nẵng",
+      "verbatim_address": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "02363573368",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=158]",
+        "byte_offset": 300442,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "jollibee_252",
+      "brand_id": "jollibee",
+      "store_code": "252",
+      "name": "Jollibee MM Mega Market - Đà Nẵng",
+      "verbatim_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "district": null,
+      "phone": "02363667799",
+      "provenance": {
+        "source_type": "HTML_EMBEDDED_JSON",
+        "source_pointer": "window.storeIframes[id=252]",
+        "byte_offset": 368139,
+        "raw_sha256": "c4700db7cab4efafa71db672a691bfb2b36290e809042f44e0a0004898813244"
+      },
+      "is_facility_verified": true,
+      "display_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách ưu đãi đang chờ thẩm định lá menu combo tiết kiệm B12_09."
+      }
+    },
+    {
+      "location_id": "phi_long_ham_nghi",
+      "brand_id": "phi_long",
+      "store_code": null,
+      "name": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+      "verbatim_address": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "provenance": {
+        "source_type": "HTML_SPAN",
+        "source_pointer": "DOM::li.s-item::span",
+        "byte_offset": 306366,
+        "byte_length": 39,
+        "raw_sha256": "62284fd74922e459b48cb157a59de9d46cfc0d8c772db1b371aa3970da1edd75"
+      },
+      "is_facility_verified": true,
+      "display_address": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+        "earning_status": "NOT_APPLICABLE",
+        "redemption_status": "NOT_APPLICABLE",
+        "overall_status": "UNVERIFIED",
+        "reason": "Phi Long chưa công bố chính sách ưu đãi thành viên toàn chuỗi. Hồ sơ giá B12_15 là khảo sát đơn lẻ một sản phẩm, không phải chính sách chuỗi."
+      }
+    },
+    {
+      "location_id": "phi_long_nguyen_van_linh",
+      "brand_id": "phi_long",
+      "store_code": null,
+      "name": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+      "verbatim_address": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+      "district": null,
+      "phone": null,
+      "provenance": {
+        "source_type": "HTML_SPAN",
+        "source_pointer": "DOM::li.s-item::span",
+        "byte_offset": 306665,
+        "byte_length": 43,
+        "raw_sha256": "62284fd74922e459b48cb157a59de9d46cfc0d8c772db1b371aa3970da1edd75"
+      },
+      "is_facility_verified": true,
+      "display_address": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+        "earning_status": "NOT_APPLICABLE",
+        "redemption_status": "NOT_APPLICABLE",
+        "overall_status": "UNVERIFIED",
+        "reason": "Phi Long chưa công bố chính sách ưu đãi thành viên toàn chuỗi. Hồ sơ giá B12_15 là khảo sát đơn lẻ một sản phẩm, không phải chính sách chuỗi."
+      }
+    },
+    {
+      "location_id": "cgv_cgv_vinh_trung_plaza",
+      "brand_id": "cgv_cinemas",
+      "store_code": "cgv_vinh_trung_plaza",
+      "name": "CGV Vĩnh Trung Plaza",
+      "verbatim_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+      "display_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+      "district": "Thanh Khê",
+      "phone": "1900 6017",
+      "provenance": {
+        "source_type": "HTML_LEAF",
+        "source_pointer": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "byte_offset": 59524,
+        "byte_length": 65,
+        "raw_sha256": "715c517c08381d1f0aeeaaf929d624118c8ddedbabe5713c7cdea087b4e6fc2e"
+      },
+      "is_facility_verified": true,
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B13_CGV_U22",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách giá học sinh/sinh viên U22 cần thẩm định lá ưu đãi riêng."
+      }
+    },
+    {
+      "location_id": "cgv_cgv_vincom_da_nang",
+      "brand_id": "cgv_cinemas",
+      "store_code": "cgv_vincom_da_nang",
+      "name": "CGV Vincom Đà Nẵng",
+      "verbatim_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng",
+      "display_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng",
+      "district": "Sơn Trà",
+      "phone": "1900 6017",
+      "provenance": {
+        "source_type": "HTML_LEAF",
+        "source_pointer": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+        "byte_offset": 59473,
+        "byte_length": 105,
+        "raw_sha256": "0c24777b63f29457d01f0d3084a21ac09e949a65656e81d023e69366b2d70a52"
+      },
+      "is_facility_verified": true,
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B13_CGV_U22",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách giá học sinh/sinh viên U22 cần thẩm định lá ưu đãi riêng."
+      }
+    },
+    {
+      "location_id": "cgv_cgv_mm_da_nang",
+      "brand_id": "cgv_cinemas",
+      "store_code": "cgv_mm_da_nang",
+      "name": "CGV MM Supercenter Đà Nẵng",
+      "verbatim_address": "Tầng 3, Trung tâm thương mại MM Supercenter Đà Nẵng,Tầng 3, Trung Tâm Thương Mại MM Mega Market Đà Nẵng, 167 Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+      "display_address": "Tầng 3, TTTM MM Mega Market Đà Nẵng, 167 Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, TP. Đà Nẵng",
+      "district": null,
+      "phone": "1900 6017",
+      "provenance": {
+        "source_type": "HTML_LEAF",
+        "source_pointer": "https://www.cgv.vn/default/cinox/site/cgv-mm-da-nang",
+        "byte_offset": 59456,
+        "byte_length": 209,
+        "raw_sha256": "f66ec56e2fc30dffe3c5e48d6fda7db58acca9a0bedce534ec2d079e90b11bb0"
+      },
+      "is_facility_verified": true,
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B13_CGV_U22",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách giá học sinh/sinh viên U22 cần thẩm định lá ưu đãi riêng."
+      }
+    },
+    {
+      "location_id": "galaxy_cinema_da_nang",
+      "brand_id": "galaxy_cinema",
+      "store_code": "galaxy_coop_da_nang",
+      "name": "Galaxy Cinema Coop Đà Nẵng",
+      "verbatim_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+      "district": null,
+      "phone": "1900 2224",
+      "provenance": {
+        "source_type": "HTML_LEAF",
+        "source_pointer": "https://www.galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+        "byte_offset": 56739,
+        "byte_length": 101,
+        "raw_sha256": "8de892a4834a403c8361b375133d2c5306a9bfeee5be9c5cb8db3495c6dd348c"
+      },
+      "is_facility_verified": true,
+      "display_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+      "policy_audit": {
+        "brand_policy_id": "POLICY_B12_04_GALAXY_U22",
+        "earning_status": "UNVERIFIED",
+        "redemption_status": "UNVERIFIED",
+        "overall_status": "UNVERIFIED",
+        "reason": "Địa điểm cơ sở đã đối soát từ nguồn; chính sách U22 đang chờ thẩm định bằng chứng năm 2026."
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "WORK_ORDER_J374_VISUAL_FIRST_RETENTION",
+  "authority": "JAYT-374 Chairman decree",
+  "issued_at_utc": "2026-09-10T09:31:51Z",
+  "status": "COMPLETED_DEPLOYED_AND_ATTESTED",
+  "executor": "Antigravity",
+  "deadline_local": "2026-09-11T16:31:51+07:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "completed_at_utc": "2026-09-10T09:56:00Z",
+  "completed_at_local": "2026-09-10T16:56:00+07:00",
+  "authorization": {
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true,
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true,
+    "scope": "Release J373 with payment-copy fallback and implement/deploy J374 visual-first suite under this decree; no additional Chairman permission needed within this scope.",
+    "affiliate_enabled": false
+  },
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "release_sequence": [
+    {
+      "id": "M1_J373_RELEASE",
+      "version": "v3.437.0",
+      "candidate": "08_RELEASE_VAULT/candidates/v3.437.0-j373",
+      "status": "COMPLETED_DEPLOYED",
+      "deployment_id": "dpl_2RbJN7YfKv2hufy3Vb6jMW8RDtpT",
+      "approved_storefront_sha256": "354f11de35259360cda77608804982ab5908d12a34468b2e733eaa4484cf958d",
+      "receipt_path": "08_RELEASE_VAULT/JAYT_374_J373_PRODUCTION_RELEASE_RECEIPT.json"
+    },
+    {
+      "id": "M2_VISUAL_FIRST",
+      "version": "v3.438.0-j374",
+      "candidate_tag": "j374-visual-first",
+      "status": "COMPLETED_DEPLOYED_AND_ATTESTED",
+      "deployment_id": "dpl_8pSCfxWXzEMteFTV6E9YkVQARrA8",
+      "candidate_manifest": "08_RELEASE_VAULT/candidates/j374-visual-first/candidate_manifest.json",
+      "production_receipt": "08_RELEASE_VAULT/JAYT_374_VISUAL_FIRST_PRODUCTION_RELEASE_RECEIPT.json",
+      "live_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_374_VISUAL_FIRST_LIVE_RECEIPT.json",
+      "gemini_packet": "01_EXECUTIVE_COUNCIL/JAYT_374_GEMINI_VISUAL_REVIEW_PACKET.md",
+      "gemini_attestation": "01_EXECUTIVE_COUNCIL/JAYT_374_GEMINI_INDEPENDENT_VISUAL_ATTESTATION.md",
+      "attestation_verdict": "GEMINI_INDEPENDENT_VISUAL_ATTESTATION_ESTABLISHED__PRODUCTION_VISUAL_FIRST_VERIFIED_PASS__QR_OPTICAL_SCAN_CONFIRMED_NOT_TESTED__RELEASE_AUTHORIZED"
+    }
+  ],
+  "verification": [
+    "HTTP200 / /registry.json /deals_feed.json and all required JS/CSS/image assets; hash manifest matches served bytes.",
+    "1440/768/390 both themes: no page overflow, keyboard drawer focus/Escape/return, >=44px targets, AA contrast, no console/page errors.",
+    "Before/after screenshots: first viewport, representative food/cinema card, drawer, share output, transfer-copy fallback.",
+    "Validate image entity match and licensed usage; no fake saving badge or unsupported 90-day/freeship claim.",
+    "Exercise all schedule boundaries including 23:00 and 07:00, timezone mismatch, tab resume, manual override and empty category.",
+    "Verify every eligible offer reachable after pagination/filtering; compare eligible count with rendered/accessible count.",
+    "QR fallback clipboard-denied test, leading-zero account copy, amount matching selected participant; recipient edit invalidates QR; arithmetic conservation.",
+    "Regression: J372 held exclusions, 30 SKU reference catalog, J373 UNKNOWN utilities and no sensitive data leakage."
+  ],
+  "deliverables": [
+    "01_EXECUTIVE_COUNCIL/JAYT_374_DESIGN_HANDOFF.md",
+    "06_TRUST_AND_EVIDENCE/j374/visual_asset_manifest.json",
+    "08_RELEASE_VAULT/JAYT_374_J373_PRODUCTION_RELEASE_RECEIPT.json",
+    "08_RELEASE_VAULT/candidates/j374-visual-first/candidate_manifest.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_374_VISUAL_FIRST_LIVE_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_374_VISUAL_FIRST_PRODUCTION_RELEASE_RECEIPT.json",
+    "01_EXECUTIVE_COUNCIL/JAYT_374_GEMINI_VISUAL_REVIEW_PACKET.md",
+    "01_EXECUTIVE_COUNCIL/JAYT_374_GEMINI_INDEPENDENT_VISUAL_ATTESTATION.md"
+  ],
+  "rollback": {
+    "trigger": "Critical runtime, recipient/amount mismatch, data containment regression or missing core assets",
+    "action": "Restore immediately preceding verified deployment to canonical alias and record observed recovery time; verify target ID before mutation.",
+    "active_rollback_target": "dpl_2RbJN7YfKv2hufy3Vb6jMW8RDtpT"
+  },
+  "handoff_note": "J374 completed, deployed to Vercel production canonical alias, verified live via Puppeteer, and independently attested by Gemini Auditor.",
+  "acknowledged_at_utc": "2026-09-10T09:39:00Z",
+  "acknowledged_at_local": "2026-09-10T16:39:00+07:00",
+  "executor_ack": {
+    "acknowledged_by": "Antigravity",
+    "acknowledged_at_utc": "2026-09-10T09:39:00Z",
+    "status": "COMPLETED_DEPLOYED_AND_ATTESTED",
+    "implementation_plan_ref": "implementation_plan.md",
+    "rollback_baseline_verified": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+    "note": "Antigravity has fully deployed J374 Visual-First suite (v3.438.0-j374) to Production canonical alias https://jayt-production-v3420.vercel.app with complete Gemini independent attestation and 100% SHA-256 hash match."
+  }
+}

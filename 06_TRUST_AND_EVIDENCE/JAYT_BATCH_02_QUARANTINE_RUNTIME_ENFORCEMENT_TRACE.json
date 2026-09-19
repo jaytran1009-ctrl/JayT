@@ -1,0 +1,112 @@
+{
+  "trace_record_id": "JAYT_BATCH_02_QUARANTINE_RUNTIME_ENFORCEMENT_TRACE_V1",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-2 (Lines 5665-5677)",
+  "generated_at_utc": "2026-09-02T08:16:52.939Z",
+  "status": "QUARANTINE_ENFORCEMENT_RUNTIME_VERIFIED",
+  "total_execution_steps": 3,
+  "steps": [
+    {
+      "step_id": "BUILD_ENTRYPOINT_QUARANTINED_INPUT_PATH",
+      "process": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+      "command_args": [
+        "--input",
+        "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json",
+        "--output",
+        "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\fixtures_TMP_BUILD_QUARANTINE_TEST.html"
+      ],
+      "input_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json",
+      "input_sha256": "46ad4caaadc8c288d751fb681ca1bc889ec3c8d89635775c39888d35aaa5cbf7",
+      "exit_code": 1,
+      "stderr_snippet": "CATALOG_BUILD_ERROR: ERR_UNAPPROVED_CATALOG_INPUT: Arbitrary input path \"06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json\" is forbidden. Catalog build only accepts canonical registry: 00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+      "fail_closed_verified": true,
+      "output_file_created": false
+    },
+    {
+      "step_id": "BUILD_ENTRYPOINT_CANONICAL_REGISTRY_CONTROL",
+      "process": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js",
+      "command_args": [
+        "--input",
+        "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\00_PROGRAM_BASELINE\\JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+        "--output",
+        "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\fixtures_TMP_BUILD_CANONICAL_TEST.html"
+      ],
+      "input_path": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+      "exit_code": 0,
+      "stdout_summary": {
+        "status": "BUILD_SUCCESS",
+        "ceo_approval_id": "CEO_DECISION_EZ_AR_GITHUB_PILOT_ONLY",
+        "input_file": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\00_PROGRAM_BASELINE\\JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+        "output_file": "d:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\fixtures_TMP_BUILD_CANONICAL_TEST.html",
+        "input_sha256": "bc3aab79585e50ca1d652e63649ca79bb7d7c57880fcf8bec7e3eab564724b63",
+        "output_sha256": "8fba4fbc21479b1709926a30f046b65aa56fe3001a43fc216ac95561c9664e31",
+        "admitted_count": 1,
+        "admitted_ids": [
+          "GITHUB_EDUCATION_PILOT_T2"
+        ]
+      },
+      "build_success": true,
+      "output_file_created": true
+    },
+    {
+      "step_id": "GATEWAY_DIRECT_EVIDENCE_LOADER_CHECK",
+      "artifacts_tested": 6,
+      "all_rejected_fail_closed": true,
+      "results": [
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/JAYT_MICRO_BATCH_02_INTAKE_PACK.json",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_INTAKE_PACK.json",
+          "sha256": "46ad4caaadc8c288d751fb681ca1bc889ec3c8d89635775c39888d35aaa5cbf7",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/JAYT_MICRO_BATCH_02_INTAKE_PACK.json\" references a quarantined artifact."
+        },
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/JAYT_MICRO_BATCH_02_2D_LEDGER.json",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/JAYT_MICRO_BATCH_02_2D_LEDGER.json",
+          "sha256": "b0b6de4b4a13d269aeefad6eec0272dd977495f660a0621d3cef247b4500a0c5",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/JAYT_MICRO_BATCH_02_2D_LEDGER.json\" references a quarantined artifact."
+        },
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_01_DANABUS_RAW_CAPTURE.html",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_01_DANABUS_RAW_CAPTURE.html",
+          "sha256": "65bc28e0aee1a89da2dc3edbd1ddf31f49706a6dbbc1de47536b70210cba7f2d",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_01_DANABUS_RAW_CAPTURE.html\" references a quarantined artifact."
+        },
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_02_METIZ_RAW_CAPTURE.html",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_02_METIZ_RAW_CAPTURE.html",
+          "sha256": "9851762f356a0289fef28bd33fdd782c224c8e1f49b36a05393cb5e93c171252",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_02_METIZ_RAW_CAPTURE.html\" references a quarantined artifact."
+        },
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_03_GALAXY_DN_RAW_CAPTURE.html",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_03_GALAXY_DN_RAW_CAPTURE.html",
+          "sha256": "0346b8450f7cbe9ca9e0fe7d15870f7256a5e099bd38ebd234f858e2cbf45238",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_03_GALAXY_DN_RAW_CAPTURE.html\" references a quarantined artifact."
+        },
+        {
+          "artifact": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_04_TNGO_RAW_CAPTURE.html",
+          "quarantined_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_MICRO_BATCH_02/MB02_04_TNGO_RAW_CAPTURE.html",
+          "sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+          "guard_invoked": "assertArtifactNotQuarantined",
+          "fail_closed_rejection": true,
+          "error_message": "QUARANTINED_ARTIFACT_REFERENCE: File path \"06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_04_TNGO_RAW_CAPTURE.html\" references a quarantined artifact."
+        }
+      ]
+    }
+  ],
+  "verdict_summary": {
+    "build_entrypoint_protected": true,
+    "canonical_registry_verified": true,
+    "gateway_loader_protected": true,
+    "overall_status": "QUARANTINE_ENFORCEMENT_RUNTIME_VERIFIED"
+  }
+}

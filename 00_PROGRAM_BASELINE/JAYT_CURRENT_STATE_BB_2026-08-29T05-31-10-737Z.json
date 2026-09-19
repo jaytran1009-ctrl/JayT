@@ -1,0 +1,104 @@
+{
+  "epoch_id": "EPOCH_BB_2026-08-29T05-31-10-737Z",
+  "timestamp": "2026-08-29T05:31:10.738Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BB)",
+  "previous_epoch_pointer": {
+    "active_epoch_file": "00_PROGRAM_BASELINE/JAYT_CURRENT_STATE_BA_2026-08-28T19-36-46-244Z.json",
+    "active_epoch_sha256": "0e4e2745a64700e1ff660a2ed5fc62b1f195c26f26f536542ab29172a3443d06",
+    "previous_pointer_receipt": {
+      "active_epoch_file": "00_PROGRAM_BASELINE/JAYT_CURRENT_STATE_AZ_2026-08-28T19-32-28-028Z.json",
+      "active_epoch_sha256": "ba6be1e433e3d025422d1bdf2cca402ff734327c4326767a75fa9558f07de013",
+      "last_updated": "2026-08-28T19:32:28.032Z",
+      "current_production_version": "v3.419.0",
+      "current_candidate_version": "v3.422.0-staging.ay",
+      "current_candidate_url": "https://jayt-storefront-staging-ay.vercel.app",
+      "status": "POINTER_ACTIVE_VALIDATED"
+    },
+    "last_updated": "2026-08-28T19:36:46.248Z",
+    "current_production_version": "v3.419.0",
+    "current_candidate_version": "v3.422.0-staging.ay",
+    "current_candidate_url": "https://jayt-storefront-staging-ay.vercel.app",
+    "status": "POINTER_BA_ACTIVE_VALIDATED"
+  },
+  "production_state": {
+    "url": "https://deploy-ten-xi-48.vercel.app",
+    "version": "v3.419.0",
+    "status": "LOCKED_ROLLBACK_BASELINE",
+    "ceo_verdict": "LOCKED_MAINTAINED"
+  },
+  "current_design_candidate": {
+    "version": "v3.422.1-staging.bb",
+    "staging_url": "https://jayt-storefront-staging-bb.vercel.app",
+    "source_file": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bb.js",
+    "stylesheet_file": "03_SOURCE_OF_TRUTH/styles_ay.css",
+    "release_receipt": "07_QUALITY_ASSURANCE/staging_release_receipt_v34221_staging_bb.json",
+    "status": "ACTIVE_REVIEW_DESIGN_CANDIDATE"
+  },
+  "staging_environments_lineage": [
+    {
+      "id": "STAGING_BB",
+      "version": "v3.422.1-staging.bb",
+      "url": "https://jayt-storefront-staging-bb.vercel.app",
+      "description": "JayT Daily Guide with State Truth Trust-Layer (Current Review Target)",
+      "status": "ACTIVE_REVIEW"
+    },
+    {
+      "id": "STAGING_AY",
+      "version": "v3.422.0-staging.ay",
+      "url": "https://jayt-storefront-staging-ay.vercel.app",
+      "description": "JayT Daily Guide Initial Redesign",
+      "status": "HISTORICAL_AUDIT_ONLY_FALSE_PROVENANCE_ISOLATED"
+    },
+    {
+      "id": "STAGING_AX",
+      "version": "v3.421.0-staging.ax",
+      "url": "https://jayt-storefront-staging-ax.vercel.app",
+      "description": "JAYT-242 Product Surface & Workstreams Restoration",
+      "status": "HISTORICAL_COMPARISON"
+    },
+    {
+      "id": "STAGING_AT",
+      "version": "v3.420.3-staging.at",
+      "url": "https://jayt-storefront-staging-at.vercel.app",
+      "description": "Field-Level Evidence Certified Baseline & False Provenance Containment",
+      "status": "HISTORICAL_COMPARISON"
+    }
+  ],
+  "data_lifecycle_accounting_state_truth": {
+    "public_displayable_by_tier": 33,
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 32,
+    "candidate_awaiting_evidence": 0,
+    "quarantined_isolated": 1,
+    "quarantined_details": [
+      {
+        "item_id": "DEAL_120_CGV_ZALOPAY_12H",
+        "reason": "NO_FIELD_LEVEL_EVIDENCE",
+        "containment_record": "06_TRUST_AND_EVIDENCE/containment_records/CONTAINMENT_RECORD_CGV_ZALOPAY_AT.json"
+      }
+    ]
+  },
+  "workspace_inventory_reconciliation": {
+    "receipt_file": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BB.json",
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "missing_assets": 0,
+    "quarantined_assets": 1152,
+    "coverage_verdict": "FULL_INVENTORY_VERIFIED_100_PERCENT"
+  },
+  "affiliate_portal_state": {
+    "network": "AccessTrade Vietnam",
+    "status": "PORTAL_ACCESS_NOT_VERIFIED",
+    "active_commercial_links": 0,
+    "active_campaigns": 0,
+    "operational_policy": "READ_ONLY_RESEARCH_ONLY"
+  },
+  "active_operational_invariants": [
+    "Upgrade-only protocol: Zero source overwrite without migration record",
+    "Fail-closed buy decision hub & voucher hub: 'Chưa đủ dữ liệu để kết luận Mua/Chờ'",
+    "Production release block: Locked at v3.419.0 pending CEO direct review",
+    "Single consolidated Vietnamese daily report rule (Directive JAYT-245 Section F)"
+  ],
+  "self_sha256": "c5fc1487820902f3b7cdf0a6f03d183116e5ef9729dbba29af19c51fb5024357"
+}

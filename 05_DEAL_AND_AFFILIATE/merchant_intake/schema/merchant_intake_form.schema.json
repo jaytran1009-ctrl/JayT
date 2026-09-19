@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Direct Local Merchant Intake Schema",
+  "description": "Standard intake form for local merchants in Da Nang submitting verified promotional schedules",
+  "type": "object",
+  "required": [
+    "intake_id",
+    "merchant_name",
+    "brand_id",
+    "danang_branches",
+    "contact_person",
+    "written_proof",
+    "deal_name",
+    "base_price",
+    "promotional_price",
+    "applicable_surcharges",
+    "transparent_conditions",
+    "valid_from",
+    "valid_to",
+    "channel_type",
+    "no_affiliate",
+    "intake_status"
+  ],
+  "properties": {
+    "intake_id": {
+      "type": "string",
+      "pattern": "^INTAKE_[A-Z0-9_]+$"
+    },
+    "merchant_name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "brand_id": {
+      "type": "string",
+      "minLength": 2
+    },
+    "danang_branches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "branch_name",
+          "street_address",
+          "district"
+        ],
+        "properties": {
+          "branch_name": {
+            "type": "string"
+          },
+          "street_address": {
+            "type": "string"
+          },
+          "district": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "contact_person": {
+      "type": "object",
+      "required": [
+        "full_name",
+        "role",
+        "email_or_phone"
+      ],
+      "properties": {
+        "full_name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "email_or_phone": {
+          "type": "string"
+        }
+      }
+    },
+    "written_proof": {
+      "type": "object",
+      "required": [
+        "proof_type",
+        "document_title",
+        "document_sha256",
+        "signed_date"
+      ],
+      "properties": {
+        "proof_type": {
+          "type": "string",
+          "enum": [
+            "SIGNED_PARTNERSHIP_FORM",
+            "OFFICIAL_PRESS_RELEASE",
+            "BRANCH_MANAGER_CONFIRMATION"
+          ]
+        },
+        "document_title": {
+          "type": "string"
+        },
+        "document_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "signed_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "deal_name": {
+      "type": "string",
+      "minLength": 5
+    },
+    "base_price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "promotional_price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "applicable_surcharges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fee_name",
+          "amount",
+          "condition"
+        ],
+        "properties": {
+          "fee_name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "condition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "transparent_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "valid_from": {
+      "type": "string",
+      "format": "date"
+    },
+    "valid_to": {
+      "type": "string",
+      "format": "date"
+    },
+    "channel_type": {
+      "type": "string",
+      "enum": [
+        "DIRECT_DEAL"
+      ]
+    },
+    "no_affiliate": {
+      "type": "boolean",
+      "const": true
+    },
+    "intake_status": {
+      "type": "string",
+      "enum": [
+        "PENDING_INTERNAL_REVIEW",
+        "READY_FOR_CANDIDATE_GATE",
+        "REJECTED_INCOMPLETE"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

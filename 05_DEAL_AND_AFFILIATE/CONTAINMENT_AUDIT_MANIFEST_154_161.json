@@ -1,0 +1,39 @@
+{
+  "containment_id": "CONTAINMENT_AUDIT_154_161",
+  "directive": "JAYT-161: TRUSTED AUTONOMY, KHÔNG ZERO-HITL",
+  "created_at": "2026-08-27T06:11:16.504Z",
+  "untrusted_derived_artifacts": [
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/online_student_benefits_158.json",
+      "sha256": "538a572510a2dce729853fc01ef3e9f7c4cab278516fe113e950a09d09d22199",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Hard-coded ACTIVE claims, prices, and percentages without verified on-disk receipts or human signoff."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/autonomous_schedule_registry_158.json",
+      "sha256": "f980ad0cd0028614109ac010b279633d58d5e0addab49020901788582fbdfc4c",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Derived from unverified ACTIVE claims."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/community_proof_intake_158.json",
+      "sha256": "d9f3d4ab9e2ddd401c15866f27c72be90c73467b4647ba137950841cfe99d5a2",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Contaminated by test data written to operational store."
+    },
+    {
+      "file_path": "05_DEAL_AND_AFFILIATE/community_audit_tickets_158.json",
+      "sha256": "8de39a1f7a4c81603a068e7ba5f6dcb968097184ee007c0e7938a8a389ae254c",
+      "status": "UNTRUSTED_DERIVED_ARTIFACT",
+      "reason": "Contaminated by test audit tickets."
+    }
+  ],
+  "trusted_physical_raw_artifacts": [
+    {
+      "run_id": "RUN_20260827_124712_4a3023",
+      "run_directory": "05_DEAL_AND_AFFILIATE/runs/RUN_20260827_124712_4a3023",
+      "total_physical_receipts": 58,
+      "status": "TRUSTED_PHYSICAL_CAPTURES_PRESERVED"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "work_order_id": "WORK_ORDER_W8_FINAL_EXECUTION",
+  "issued_at": "2026-09-13T14:10:00+07:00",
+  "status": "EXECUTED_TO_PREWRITE_GATE__BLOCKED_MISSING_TWENTY_CANONICAL_URLS_AND_PROVIDER_CONTRACT",
+  "single_batch_result": {
+    "capture_preflight": "BLOCKED_MISSING_CANONICAL_URL_FOR_20_OF_20_SLOTS",
+    "physical_capture_packets_created": 0,
+    "sku_acceptance": "0_OF_20",
+    "affiliate_adapter": "NOT_ACTIVATED",
+    "acceptance_receipt_issued": false,
+    "production_deployed": false
+  },
+  "required_external_inputs": [
+    "twenty exact current canonical product URLs selected by the operator",
+    "public logged-out browser exports or permission to capture each selected listing",
+    "official provider deep-link/signing documentation tied to the authorized account",
+    "provider authorization evidence"
+  ],
+  "truth_constraints": [
+    "no synthetic evidence",
+    "no acceptance without disk artifacts",
+    "no invented URI scheme or signature",
+    "no hidden-voucher claim without authorized API evidence",
+    "no Production affiliate activation before Dual-Key gates pass"
+  ],
+  "production": {"version": "v3.462.0-j411", "affiliate_enabled": false, "alias_mutated": false}
+}

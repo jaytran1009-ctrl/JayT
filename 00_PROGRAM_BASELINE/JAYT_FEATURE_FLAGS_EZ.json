@@ -1,0 +1,58 @@
+{
+  "manifest_id": "JAYT_FEATURE_FLAGS_EZ",
+  "version": "v3.478.0-staging.ey",
+  "target_environment": "STAGING_ONLY",
+  "production_locked": true,
+  "flags": {
+    "AFFILIATE_ACTIVATION": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "Monetization and affiliate links permanently disabled until independent authority gate."
+    },
+    "ECONOMIC_CLAIMS_PUBLIC": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "Public price/discount/voucher claims locked to 0 until proven by 12-field evidence schema."
+    },
+    "DEEP_LINKS": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "No deep-linking or app router without receipt evidence."
+    },
+    "LOGIN_AUTH_INTEGRATION": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "JayT is strictly public read-only with zero user sessions, accounts, or PII collection."
+    },
+    "AUTOGOM_VOUCHER": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "No automated voucher hoarding or fake inventory scraping."
+    },
+    "COMMISSION_TRACKING": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "No CPA/commission metrics; value engine is user-first."
+    },
+    "CAMPAIGN_REGISTRY": {
+      "enabled": false,
+      "authority_required": "CEO_EXPLICIT_SIGN_OFF",
+      "reason": "No public campaign publishing without proof."
+    },
+    "LOCAL_FIRST_CALCULATOR": {
+      "enabled": true,
+      "authority_required": "APPROVED_BY_DIRECTIVE_EZ",
+      "reason": "Pure client-side calculator for users to compute true cost and split bills."
+    },
+    "SAVINGS_LAB_HUB": {
+      "enabled": true,
+      "authority_required": "APPROVED_BY_DIRECTIVE_EZ",
+      "reason": "Safe discovery hub for self-checking official sources."
+    },
+    "RADAR_CHANNEL_TRACKING": {
+      "enabled": true,
+      "authority_required": "APPROVED_BY_DIRECTIVE_EZ",
+      "reason": "Neutral official portal links with fail-closed copy."
+    }
+  }
+}

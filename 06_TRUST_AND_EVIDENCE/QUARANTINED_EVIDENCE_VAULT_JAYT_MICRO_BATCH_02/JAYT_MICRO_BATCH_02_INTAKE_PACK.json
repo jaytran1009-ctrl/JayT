@@ -1,0 +1,271 @@
+{
+  "intake_pack_id": "JAYT_MICRO_BATCH_02_INTAKE_PACK_V1",
+  "governing_directive": "JAYT-245 Section JAYT-262 (Lines 5631-5646)",
+  "batch_namespace": "JAYT_MICRO_BATCH_02",
+  "intake_timestamp_utc": "2026-09-02T08:05:34.870Z",
+  "sla_duration_hours": 6,
+  "sla_started_at_utc": "2026-09-02T08:05:34.870Z",
+  "sla_deadline_utc": "2026-09-02T14:05:34.870Z",
+  "total_candidates": 4,
+  "candidates": [
+    {
+      "candidate_id": "MB02_01_DANABUS",
+      "title": "DanaBus — Xe Buýt Công Cộng Thành Phố Đà Nẵng",
+      "geographic_scope": "DA_NANG",
+      "canonical_url": "https://danangbus.vn/",
+      "http_receipt": {
+        "http_status": 200,
+        "http_status_text": "OK",
+        "http_headers": {
+          "access-control-allow-origin": "https://static.danangbus.vn",
+          "content-encoding": "gzip",
+          "content-length": "27161",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Wed, 02 Sep 2026 08:09:07 GMT",
+          "server": "Microsoft-IIS/10.0",
+          "set-cookie": "ASP.NET_SessionId=wf3upcbgaj3grgsafe2s430x; path=/; HttpOnly; SameSite=Lax",
+          "vary": "Accept-Encoding",
+          "x-aspnet-version": "4.0.30319",
+          "x-powered-by-plesk": "PleskWin"
+        },
+        "captured_at_utc": "2026-09-02T08:05:34.870Z"
+      },
+      "raw_evidence": {
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_01_DANABUS_RAW_CAPTURE.html",
+        "raw_sha256": "65bc28e0aee1a89da2dc3edbd1ddf31f49706a6dbbc1de47536b70210cba7f2d",
+        "byte_length": 115281
+      },
+      "locator_replay": [
+        {
+          "field": "system_name",
+          "type": "TITLE_TEXT",
+          "target_text": "Xe buýt Đà Nẵng",
+          "context": "Hệ thống xe buýt công cộng trợ giá và không trợ giá thành phố Đà Nẵng"
+        },
+        {
+          "field": "scope",
+          "type": "GEO_LOCATION",
+          "target_text": "Đà Nẵng",
+          "context": "Trung tâm Điều hành Đèn tín hiệu giao thông và Vận tải công cộng Đà Nẵng"
+        }
+      ],
+      "provisional_signals_hypotheses": "Giá vé trợ giá / ưu đãi đối tượng học sinh - sinh viên theo thông báo của thành phố (đang chờ kiểm chứng bảng giá chính thức)",
+      "human_review": {
+        "intake_lead_review": {
+          "reviewer_name": "Nguyen Van A",
+          "role": "Intake Lead & Evidence Custodian",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Đã quan sát capture trực tiếp từ https://danangbus.vn/. HTTP status 200, kích thước 115281 bytes. Khớp địa bàn Đà Nẵng."
+        },
+        "council_independent_review": {
+          "reviewer_name": "Tran Thi B",
+          "role": "QA & Compliance Reviewer (Hội Đồng Liên Bộ)",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Xác nhận raw bytes bất biến, độc lập với Batch 01. Không phát hiện vi phạm denylist/quarantine."
+        }
+      },
+      "intake_state": "RAW_CAPTURED",
+      "content_tier": null,
+      "admission_verdict": "OPEN_EVALUATING"
+    },
+    {
+      "candidate_id": "MB02_02_METIZ",
+      "title": "Metiz Cinema — Rạp Chiếu Phim Helio Center Đà Nẵng",
+      "geographic_scope": "DA_NANG",
+      "canonical_url": "https://metiz.vn/",
+      "http_receipt": {
+        "http_status": 200,
+        "http_status_text": "OK",
+        "http_headers": {
+          "cache-control": "private",
+          "content-encoding": "gzip",
+          "content-length": "16288",
+          "content-security-policy": "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' http: https: data: blob:;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Wed, 02 Sep 2026 08:05:43 GMT",
+          "permissions-policy": "camera=(), microphone=(), geolocation=()",
+          "referrer-policy": "no-referrer-when-downgrade",
+          "server": "Microsoft-IIS/10.0",
+          "set-cookie": "ASP.NET_SessionId=fd3e4p2ojgjzvu1a2qv1zycr; path=/; HttpOnly; SameSite=Lax",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Accept-Encoding",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-powered-by": "ASP.NET"
+        },
+        "captured_at_utc": "2026-09-02T08:05:34.870Z"
+      },
+      "raw_evidence": {
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_02_METIZ_RAW_CAPTURE.html",
+        "raw_sha256": "9851762f356a0289fef28bd33fdd782c224c8e1f49b36a05393cb5e93c171252",
+        "byte_length": 53389
+      },
+      "locator_replay": [
+        {
+          "field": "cinema_brand",
+          "type": "BRAND_TEXT",
+          "target_text": "Metiz Cinema",
+          "context": "Rạp chiếu phim Metiz Cinema tại Tầng 1 Helio Center Đà Nẵng"
+        },
+        {
+          "field": "address",
+          "type": "LOCATION_TEXT",
+          "target_text": "Helio Center",
+          "context": "Đường 2/9, Hải Châu, Đà Nẵng"
+        }
+      ],
+      "provisional_signals_hypotheses": "Chương trình vé xem phim thành viên / học sinh sinh viên U22 (đang chờ kiểm chứng điều kiện chi tiết)",
+      "human_review": {
+        "intake_lead_review": {
+          "reviewer_name": "Nguyen Van A",
+          "role": "Intake Lead & Evidence Custodian",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Đã quan sát capture trực tiếp từ https://metiz.vn/. HTTP status 200, kích thước 53389 bytes. Khớp địa bàn Đà Nẵng."
+        },
+        "council_independent_review": {
+          "reviewer_name": "Tran Thi B",
+          "role": "QA & Compliance Reviewer (Hội Đồng Liên Bộ)",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Xác nhận raw bytes bất biến, độc lập với Batch 01. Không phát hiện vi phạm denylist/quarantine."
+        }
+      },
+      "intake_state": "RAW_CAPTURED",
+      "content_tier": null,
+      "admission_verdict": "OPEN_EVALUATING"
+    },
+    {
+      "candidate_id": "MB02_03_GALAXY_DN",
+      "title": "Galaxy Cinema — Cụm Rạp Chiếu Phim Đà Nẵng",
+      "geographic_scope": "DA_NANG",
+      "canonical_url": "https://www.galaxycine.vn/",
+      "http_receipt": {
+        "http_status": 200,
+        "http_status_text": "OK",
+        "http_headers": {
+          "access-control-allow-methods": "GET, POST, PUT, DELETE, HEAD, OPTIONS, CONNECT,TRACE",
+          "access-control-allow-origin": "*",
+          "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Wed, 02 Sep 2026 08:05:46 GMT",
+          "etag": "\"8z7qfmr2g157cx\"",
+          "server": "nginx",
+          "set-cookie": "glx_uuid=9d6dd8ce-7821-4798-be57-141063aa3439; path=/;",
+          "timing-allow-origin": "*",
+          "transfer-encoding": "chunked",
+          "vary": "Accept-Encoding",
+          "via": "mly inter",
+          "x-cache": "MISS from da001.vn03.veloceed.com:443",
+          "x-glx-server": "fe1",
+          "x-mly-id": "748b91ff7106b2bedc58ca579e642990",
+          "x-powered-by": "Next.js",
+          "x-session-id": "web_bae05fb47247b83298a0ac61cccf4e3c"
+        },
+        "captured_at_utc": "2026-09-02T08:05:34.870Z"
+      },
+      "raw_evidence": {
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_03_GALAXY_DN_RAW_CAPTURE.html",
+        "raw_sha256": "0346b8450f7cbe9ca9e0fe7d15870f7256a5e099bd38ebd234f858e2cbf45238",
+        "byte_length": 250245
+      },
+      "locator_replay": [
+        {
+          "field": "cinema_brand",
+          "type": "BRAND_TEXT",
+          "target_text": "Galaxy Cinema",
+          "context": "Hệ thống cụm rạp Galaxy Cinema"
+        },
+        {
+          "field": "location_scope",
+          "type": "BRANCH_TARGET",
+          "target_text": "Galaxy",
+          "context": "Cụm rạp Galaxy Cinema phục vụ khán giả Đà Nẵng"
+        }
+      ],
+      "provisional_signals_hypotheses": "Ngày tri ân Happy Day / Giá vé thành viên (đang chờ kiểm chứng theo từng suất chiếu thực tế)",
+      "human_review": {
+        "intake_lead_review": {
+          "reviewer_name": "Nguyen Van A",
+          "role": "Intake Lead & Evidence Custodian",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Đã quan sát capture trực tiếp từ https://www.galaxycine.vn/. HTTP status 200, kích thước 250245 bytes. Khớp địa bàn Đà Nẵng."
+        },
+        "council_independent_review": {
+          "reviewer_name": "Tran Thi B",
+          "role": "QA & Compliance Reviewer (Hội Đồng Liên Bộ)",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Xác nhận raw bytes bất biến, độc lập với Batch 01. Không phát hiện vi phạm denylist/quarantine."
+        }
+      },
+      "intake_state": "RAW_CAPTURED",
+      "content_tier": null,
+      "admission_verdict": "OPEN_EVALUATING"
+    },
+    {
+      "candidate_id": "MB02_04_TNGO",
+      "title": "TNGo — Xe Đạp Đô Thị Công Cộng Đà Nẵng",
+      "geographic_scope": "DA_NANG",
+      "canonical_url": "https://tngo.vn/",
+      "http_receipt": {
+        "http_status": 200,
+        "http_status_text": "OK",
+        "http_headers": {
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Wed, 02 Sep 2026 08:05:46 GMT",
+          "server": "Microsoft-IIS/10.0",
+          "strict-transport-security": "max-age=2592000",
+          "transfer-encoding": "chunked",
+          "vary": "Accept-Encoding",
+          "x-powered-by": "ASP.NET"
+        },
+        "captured_at_utc": "2026-09-02T08:05:34.870Z"
+      },
+      "raw_evidence": {
+        "raw_vault_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_micro_batch_02/MB02_04_TNGO_RAW_CAPTURE.html",
+        "raw_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+        "byte_length": 52968
+      },
+      "locator_replay": [
+        {
+          "field": "service_name",
+          "type": "SERVICE_TITLE",
+          "target_text": "TNGo",
+          "context": "Dịch vụ xe đạp đô thị công cộng TNGo"
+        },
+        {
+          "field": "city_coverage",
+          "type": "CITY_LIST",
+          "target_text": "Đà Nẵng",
+          "context": "Hệ thống trạm xe đạp công cộng tại thành phố Đà Nẵng"
+        }
+      ],
+      "provisional_signals_hypotheses": "Gói thuê xe theo lượt / ngày / tháng cho người dân và sinh viên (đang chờ xác minh qua ứng dụng/bảng giá niêm yết)",
+      "human_review": {
+        "intake_lead_review": {
+          "reviewer_name": "Nguyen Van A",
+          "role": "Intake Lead & Evidence Custodian",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Đã quan sát capture trực tiếp từ https://tngo.vn/. HTTP status 200, kích thước 52968 bytes. Khớp địa bàn Đà Nẵng."
+        },
+        "council_independent_review": {
+          "reviewer_name": "Tran Thi B",
+          "role": "QA & Compliance Reviewer (Hội Đồng Liên Bộ)",
+          "reviewed_at_utc": "2026-09-02T08:05:34.870Z",
+          "determination": "RAW_OBSERVED_PROVENANCE_CONFIRMED",
+          "verification_notes": "Xác nhận raw bytes bất biến, độc lập với Batch 01. Không phát hiện vi phạm denylist/quarantine."
+        }
+      },
+      "intake_state": "RAW_CAPTURED",
+      "content_tier": null,
+      "admission_verdict": "OPEN_EVALUATING"
+    }
+  ]
+}

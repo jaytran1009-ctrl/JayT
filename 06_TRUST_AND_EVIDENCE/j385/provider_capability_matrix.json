@@ -1,0 +1,270 @@
+{
+  "$schema": "https://jayt.vn/schemas/provider-capability-matrix.v1.json",
+  "document_id": "JAYT_385_M2_PROVIDER_CAPABILITY_MATRIX",
+  "cycle": "JAYT-385",
+  "milestone": "M2_AFFILIATE_AND_HEALTH",
+  "mandate": "WORK_ORDER_J385_SUPREME_CONSTITUTION",
+  "authority": "CHAIRMAN_DIRECTIVE__CEO_R3_GATE",
+  "created_at_utc": "2026-09-10T16:50:00Z",
+  "created_at_local": "2026-09-10T23:50:00+07:00",
+  "commercial_boundaries": {
+    "global_affiliate_enabled": false,
+    "revenue_assertion_policy": "PROVIDER_CONFIRMED_CONVERSIONS_ONLY__ZERO_CLICK_REVENUE_CLAIMS",
+    "secret_redaction_policy": "STRICT_ZERO_PLAINTEXT_SECRETS_COMMITTED",
+    "optical_qr_scanning_status": "NOT_TESTED",
+    "price_history_integrity_policy": "NO_SYNTHETIC_HISTORY__OBSERVATION_SERIES_OR_CURRENT_ONLY"
+  },
+  "providers": [
+    {
+      "provider_key": "SHOPEE_VIETNAM",
+      "ecosystem": "dorm",
+      "display_name": "Shopee Vietnam / Shopee Mall",
+      "contract_id": "JAYT_CONTRACT_SHOPEE_TRACK1_053C",
+      "partner_id": "17372870594",
+      "credentials_inventory": {
+        "partner_id_configured": true,
+        "api_key_configured": true,
+        "api_secret_configured": true,
+        "api_endpoint_configured": true,
+        "env_var_prefix": "SHOPEE"
+      },
+      "contract_status": "AUTHENTICATION_CREDENTIALS_PRESENT__GATE_PENDING_OFFICIAL_TEST_VECTORS",
+      "network_fallback": {
+        "network": "AccessTrade Vietnam",
+        "campaign_id": "AT_SHOPEE_KOL_01",
+        "deep_link_base": "https://go.isclix.com/deep_link/v6/5849887756184988775/shopee?url=",
+        "cookie_duration_days": 7,
+        "status": "APPROVED_RUNNING"
+      },
+      "capabilities": {
+        "direct_api_query": "SUPPORTED_VIA_GRAPHQL_ENDPOINT",
+        "exact_sku_deep_linking": "SUPPORTED_MALL_UNIVERSAL_LINK",
+        "minute_level_stock_signal": "RESTRICTED_BY_RATE_LIMIT",
+        "conversion_attribution": "ORDER_CONFIRMATION_CALLBACK"
+      },
+      "affiliate_activation_status": "MUTED_ON_STOREFRONT__AWAITING_PROVIDER_VALIDATION_RECEIPT",
+      "public_destination_mode": "VERIFIED_CANONICAL_MALL_URL"
+    },
+    {
+      "provider_key": "TIKTOK_SHOP_VIETNAM",
+      "ecosystem": "dorm",
+      "display_name": "TikTok Shop Vietnam / TikTok Shop Mall",
+      "contract_id": "JAYT_CONTRACT_TIKTOK_TRACK1_053C",
+      "partner_id": "VNVNLCB6LYL3",
+      "credentials_inventory": {
+        "partner_id_configured": true,
+        "api_key_configured": true,
+        "api_secret_configured": true,
+        "api_endpoint_configured": true,
+        "env_var_prefix": "TIKTOK"
+      },
+      "contract_status": "AUTHENTICATION_CREDENTIALS_PRESENT__GATE_PENDING_OFFICIAL_TEST_VECTORS",
+      "network_fallback": {
+        "network": "AccessTrade Vietnam",
+        "campaign_id": "AT_TIKTOK_SHOP_02",
+        "deep_link_base": "https://go.isclix.com/deep_link/v6/5849887756184988775/tiktokshop?url=",
+        "cookie_duration_days": 3,
+        "status": "APPROVED_RUNNING"
+      },
+      "capabilities": {
+        "direct_api_query": "REST_API_GLOBAL_SHOP",
+        "exact_sku_deep_linking": "SUPPORTED_CREATOR_PRODUCT_LINK",
+        "minute_level_stock_signal": "RESTRICTED_BY_CREATOR_PORTAL_SLA",
+        "conversion_attribution": "POSTBACK_CONVERSION"
+      },
+      "affiliate_activation_status": "MUTED_ON_STOREFRONT__AWAITING_PROVIDER_VALIDATION_RECEIPT",
+      "public_destination_mode": "VERIFIED_CANONICAL_MALL_URL"
+    },
+    {
+      "provider_key": "LAZADA_VIETNAM",
+      "ecosystem": "dorm",
+      "display_name": "Lazada Vietnam / LazMall",
+      "contract_id": "JAYT_CONTRACT_LAZADA_TRACK1_053C",
+      "partner_id": "262501305",
+      "credentials_inventory": {
+        "member_id_configured": true,
+        "api_key_configured": true,
+        "api_secret_configured": true,
+        "api_endpoint_configured": true,
+        "env_var_prefix": "LAZADA"
+      },
+      "contract_status": "AUTHENTICATION_CREDENTIALS_PRESENT__GATE_PENDING_OFFICIAL_TEST_VECTORS",
+      "network_fallback": {
+        "network": "AccessTrade Vietnam",
+        "campaign_id": "AT_LAZADA_VN_03",
+        "deep_link_base": "https://go.isclix.com/deep_link/v6/5849887756184988775/lazada?url=",
+        "cookie_duration_days": 30,
+        "status": "APPROVED_RUNNING"
+      },
+      "capabilities": {
+        "direct_api_query": "REST_API_LAZADA_OPEN_PLATFORM",
+        "exact_sku_deep_linking": "SUPPORTED_LAZMALL_LINK",
+        "minute_level_stock_signal": "RATE_LIMITED_REST_CALL",
+        "conversion_attribution": "TRANSACTION_LOG_SYNC"
+      },
+      "affiliate_activation_status": "MUTED_ON_STOREFRONT__AWAITING_PROVIDER_VALIDATION_RECEIPT",
+      "public_destination_mode": "VERIFIED_CANONICAL_MALL_URL"
+    },
+    {
+      "provider_key": "KLOOK_VIETNAM",
+      "ecosystem": "experiences",
+      "display_name": "Klook Vietnam Travel Technology",
+      "contract_id": "JAYT_CONTRACT_KLOOK_PARTNER_061",
+      "partner_id": "KLOOK_VN_ACCESSTRADE_DIRECT",
+      "credentials_inventory": {
+        "partner_id_configured": true,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "KLOOK"
+      },
+      "contract_status": "COMMUNITY_AFFILIATE_PROGRAM_APPROVED",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_EXPERIENCE_LEAF_URL",
+        "minute_level_stock_signal": "UNAVAILABLE",
+        "conversion_attribution": "POSTBACK"
+      },
+      "affiliate_activation_status": "MUTED_ON_STOREFRONT",
+      "public_destination_mode": "VERIFIED_CANONICAL_EXPERIENCE_URL"
+    },
+    {
+      "provider_key": "TRAVELOKA_VIETNAM",
+      "ecosystem": "experiences",
+      "display_name": "Traveloka Vietnam",
+      "contract_id": "JAYT_CONTRACT_TRAVELOKA_061",
+      "partner_id": "TRAVELOKA_AFF_COMMUNITY",
+      "credentials_inventory": {
+        "partner_id_configured": true,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "TRAVELOKA"
+      },
+      "contract_status": "COMMUNITY_AFFILIATE_PROGRAM_ACTIVE",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_ACTIVITY_URL",
+        "minute_level_stock_signal": "UNAVAILABLE",
+        "conversion_attribution": "POSTBACK"
+      },
+      "affiliate_activation_status": "MUTED_ON_STOREFRONT",
+      "public_destination_mode": "VERIFIED_CANONICAL_EXPERIENCE_URL"
+    },
+    {
+      "provider_key": "SHOPEEFOOD",
+      "ecosystem": "food",
+      "display_name": "ShopeeFood Da Nang",
+      "contract_id": "JAYT_DIRECT_MERCHANT_DISCOVERY_FOOD",
+      "partner_id": "SHOPEEFOOD_DN_PARTNER_OBSERVED",
+      "credentials_inventory": {
+        "partner_id_configured": false,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "SHOPEEFOOD"
+      },
+      "contract_status": "PUBLIC_SURFACE_OBSERVATION_ONLY",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_APP_AND_WEB_STORE_URL",
+        "minute_level_stock_signal": "UNAVAILABLE__CLIENT_PROMPT_CALCULATOR_MODE",
+        "conversion_attribution": "NONE"
+      },
+      "affiliate_activation_status": "OFF__ESTIMATION_AND_OBSERVATION_ONLY",
+      "public_destination_mode": "CANONICAL_APP_OR_STORE_URL"
+    },
+    {
+      "provider_key": "GRABFOOD",
+      "ecosystem": "food",
+      "display_name": "GrabFood Da Nang",
+      "contract_id": "JAYT_DIRECT_MERCHANT_DISCOVERY_GRAB",
+      "partner_id": "GRAB_DN_PARTNER_OBSERVED",
+      "credentials_inventory": {
+        "partner_id_configured": false,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "GRAB"
+      },
+      "contract_status": "PUBLIC_SURFACE_OBSERVATION_ONLY",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_STORE_URL",
+        "minute_level_stock_signal": "UNAVAILABLE__CLIENT_PROMPT_CALCULATOR_MODE",
+        "conversion_attribution": "NONE"
+      },
+      "affiliate_activation_status": "OFF__ESTIMATION_AND_OBSERVATION_ONLY",
+      "public_destination_mode": "CANONICAL_APP_OR_STORE_URL"
+    },
+    {
+      "provider_key": "XANH_SM",
+      "ecosystem": "food",
+      "display_name": "Xanh SM Ngon / Delivery Da Nang",
+      "contract_id": "JAYT_DIRECT_MERCHANT_DISCOVERY_XANHSM",
+      "partner_id": "XANHSM_DN_OBSERVED",
+      "credentials_inventory": {
+        "partner_id_configured": false,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "XANHSM"
+      },
+      "contract_status": "PUBLIC_SURFACE_OBSERVATION_ONLY",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_APP_DEEP_LINK",
+        "minute_level_stock_signal": "UNAVAILABLE__CLIENT_PROMPT_CALCULATOR_MODE",
+        "conversion_attribution": "NONE"
+      },
+      "affiliate_activation_status": "OFF__ESTIMATION_AND_OBSERVATION_ONLY",
+      "public_destination_mode": "CANONICAL_APP_STORE_URL"
+    },
+    {
+      "provider_key": "CINEMA_CLUSTERS",
+      "ecosystem": "experiences",
+      "display_name": "Cinema Chains Da Nang (CGV, Galaxy, Metiz, Starlight)",
+      "contract_id": "JAYT_CINEMA_SCHEDULE_RADAR_DN",
+      "partner_id": "CINEMA_LOCAL_DN",
+      "credentials_inventory": {
+        "partner_id_configured": false,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "CINEMA"
+      },
+      "contract_status": "FACTUAL_SCHEDULE_SOURCED_DIRECTLY",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_OFFICIAL_BOOKING_PORTALS",
+        "minute_level_stock_signal": "AT_COUNTER_ID_STUDENT_CARD_VERIFICATION",
+        "conversion_attribution": "NONE"
+      },
+      "affiliate_activation_status": "OFF__COMMUNITY_BENEFIT_ONLY",
+      "public_destination_mode": "CANONICAL_CINEMA_PORTAL_URL"
+    },
+    {
+      "provider_key": "WALLET_PROVIDERS",
+      "ecosystem": "wallets",
+      "display_name": "E-Wallets (MoMo, ZaloPay, Viettel Money)",
+      "contract_id": "JAYT_WALLET_PUBLIC_PROMOTION_MATRIX",
+      "partner_id": "WALLETS_VN_PUBLIC",
+      "credentials_inventory": {
+        "partner_id_configured": false,
+        "api_key_configured": false,
+        "api_secret_configured": false,
+        "api_endpoint_configured": false,
+        "env_var_prefix": "WALLETS"
+      },
+      "contract_status": "PUBLIC_PROMOTION_RADAR_ONLY",
+      "capabilities": {
+        "direct_api_query": "UNAVAILABLE",
+        "exact_sku_deep_linking": "SUPPORTED_WALLET_APP_SCHEMES",
+        "minute_level_stock_signal": "DYNAMIC_VOUCHER_POOL",
+        "conversion_attribution": "NONE"
+      },
+      "affiliate_activation_status": "OFF__STUDENT_SAVINGS_GUIDANCE_ONLY",
+      "public_destination_mode": "VERIFIED_APP_DEEP_LINK"
+    }
+  ]
+}

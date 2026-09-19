@@ -1,0 +1,70 @@
+{
+  "trace_id": "JAYT_263_CORRECTION_1_THREE_CASE_FREEZE_INTEGRITY_TRACE",
+  "governing_directive": "JAYT-245 Section JAYT-263-CORRECTION-1 (Lines 5746-5759)",
+  "execution_timestamp_utc": "2026-09-03T04:39:24.554Z",
+  "canonical_active_record": {
+    "file_path": "00_PROGRAM_BASELINE/JAYT_CONTAMINATION_FREEZE_STATE.json",
+    "record_version": "v2.0",
+    "directive_id": "JAYT-263-CORRECTION-2",
+    "state": "ACTIVE",
+    "canonical_payload_sha256": "c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d",
+    "file_bytes_sha256": "54663260b0d58449fa036e8ab48b2e25ff6f41feef83b03a7854df515b95d197"
+  },
+  "three_case_telemetry": [
+    {
+      "case_id": "CASE_A_VALID_ACTIVE_RECORD",
+      "scenario": "Valid active record with matching canonical payload digest",
+      "tested_components": [
+        {
+          "component_name": "COHORT_15_OPERATIONAL_RUNNER",
+          "command": "node 06_TRUST_AND_EVIDENCE/run_cohort_15_sla_closure_operational.js",
+          "exit_code": 1,
+          "expected_exit_code": 1,
+          "result_code": "CONTAMINATION_FREEZE_ACTIVE",
+          "preflight_blocked": true,
+          "io_prevented": true
+        },
+        {
+          "component_name": "STOREFRONT_CATALOG_BUILDER",
+          "command": "node 03_SOURCE_OF_TRUTH/build_storefront_catalog.js --input ... --output ...",
+          "exit_code": 1,
+          "expected_exit_code": 1,
+          "result_code": "CONTAMINATION_FREEZE_ACTIVE",
+          "preflight_blocked": true,
+          "output_prevented": true,
+          "io_prevented": true
+        }
+      ],
+      "verdict": "PASS_FAIL_CLOSED_CONFIRMED"
+    },
+    {
+      "case_id": "CASE_B_TAMPERED_MISMATCHED_RECORD",
+      "scenario": "Tampered record with payload modification causing canonical digest mismatch",
+      "isolated_test_path": "scratch/isolated_tampered_freeze_state.json",
+      "result_code": "FREEZE_STATE_INTEGRITY_MISMATCH",
+      "error_message_snippet": "FREEZE_STATE_INTEGRITY_MISMATCH: Freeze state record integrity verification failed. Declared digest: c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d, Computed digest: 7740f8d3ade79f69d91d74707658c1d8863a5d0cd620613d59edc7d1e1534d81",
+      "fail_closed_verified": true,
+      "verdict": "PASS_FAIL_CLOSED_CONFIRMED"
+    },
+    {
+      "case_id": "CASE_C_UNAVAILABLE_OR_MALFORMED_RECORD",
+      "scenario_c1_missing_file": {
+        "isolated_test_path": "scratch/non_existent_freeze_state.json",
+        "result_code": "FREEZE_STATE_UNAVAILABLE",
+        "fail_closed_verified": true
+      },
+      "scenario_c2_malformed_json": {
+        "isolated_test_path": "scratch/isolated_malformed_freeze_state.json",
+        "result_code": "ERR_INVALID_FREEZE_STATE_JSON",
+        "fail_closed_verified": true
+      },
+      "verdict": "PASS_FAIL_CLOSED_CONFIRMED"
+    }
+  ],
+  "final_audit_summary": {
+    "canonical_hash_contract_active": true,
+    "fail_open_possible": false,
+    "all_three_cases_fail_closed": true,
+    "active_record_integrity_intact": true
+  }
+}

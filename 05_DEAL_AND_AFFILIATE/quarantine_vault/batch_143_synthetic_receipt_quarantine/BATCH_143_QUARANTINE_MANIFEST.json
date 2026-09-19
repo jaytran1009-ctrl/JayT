@@ -1,0 +1,74 @@
+{
+  "manifest_id": "BATCH_143_QUARANTINE_MANIFEST",
+  "directive": "JAYT-143R: CAPTURE-PROVENANCE INCIDENT, HARNESS CERTIFICATION & SCHEDULER FREEZE",
+  "status": "REJECTED_FOR_SYNTHETIC_RECEIPT_FALLBACKS",
+  "quarantined_at": "2026-08-26T19:09:36.116Z",
+  "executive_ruling": "CEO audit revealed that browser_capture_harness_143.js contained synthetic fallbacks (defaulting to HTTP 200 or 504 on missing response, synthesizing redirect_chain arrays, and launching with insecure flags --disable-web-security and --ignore-certificate-errors). Quarantining derived 143 files. Freezing autonomous scheduler pending local harness certification.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_40_SYNTHETIC_RECEIPT_STATUS_AND_REDIRECT_FALLBACK",
+      "description": "Permitted ternary fallbacks (resolvedStatus = ... ? ... : (networkError ? 504 : 200); redirect_chain = ... ? actual : [{ finalUrl, resolvedStatus }]) synthesizing receipt fields when no browser network event was observed."
+    },
+    {
+      "cause_id": "P0_CAUSE_41_INSECURE_BROWSER_LAUNCH_FLAGS",
+      "description": "Used --disable-web-security and --ignore-certificate-errors flags during browser launch."
+    }
+  ],
+  "quarantined_artifacts": [
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/browser_capture_harness_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/browser_capture_harness_143.js",
+      "sha256": "20b762cf5992b2086150126686bd26520ebe250946588737eb57020a573b3ede"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/strict_receipt_truth_verifier_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/strict_receipt_truth_verifier_143.js",
+      "sha256": "83830eb7081967c2e861018ba24a1fa462fffc5892776e4d1367e8fdac6a0218"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/strict_semantic_root_dom_parser_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/strict_semantic_root_dom_parser_143.js",
+      "sha256": "ab046517c2dab9248965a00e21efa0c63114eb96bb2065823caca85ce3026c38"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/address_unit_locality_verifier_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/address_unit_locality_verifier_143.js",
+      "sha256": "ab8896e97b462705e261830ddd5cc0b9c5f086b1dc1a0e229b9be1904c6ce45f"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/process_batch_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/process_batch_143.js",
+      "sha256": "cb8202b6a287c4708d7174040937ab90065632655037ff48b2aa3c5ec020e5cb"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/generic_compiler_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/generic_compiler_143.js",
+      "sha256": "daef175147eca4b920d8370207e83469e984710632dd31eb02e19ceaa0684f65"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/brand_locality_registry_143.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/brand_locality_registry_143.json",
+      "sha256": "f314d5bbf375876fb6233c0bf5917d4912776a480b334610714c8297617ab588"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_143_table.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/batch_capture_143_table.json",
+      "sha256": "9540f46ae2f68da7679c26463d1543f0593de1a4157e35f626fdc3e4676a1d81"
+    },
+    {
+      "original_path": "05_DEAL_AND_AFFILIATE/batch_capture_143_manifest.json",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/batch_capture_143_manifest.json",
+      "sha256": "f8a717ddf3095bcc983e436a5842e7db6466e23f5a3473e1810053422d316176"
+    },
+    {
+      "original_path": "07_QUALITY_ASSURANCE/test_fresh_capture_143.js",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/test_fresh_capture_143.js",
+      "sha256": "801c7e7fd40657bdd1f99fbd3e8f711a2c7b874e1e4ab08fe5cdeb296adf1d6d"
+    },
+    {
+      "original_path": "08_RELEASE_VAULT/JAYT_143_FRESH_CAPTURE_PACK.md",
+      "quarantined_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/JAYT_143_FRESH_CAPTURE_PACK.md",
+      "sha256": "3ade68d424bf5290054161da98d22abd45c6463a43774667b2d30983b2726a17"
+    }
+  ]
+}

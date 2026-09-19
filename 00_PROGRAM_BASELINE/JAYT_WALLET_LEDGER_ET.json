@@ -1,0 +1,301 @@
+{
+  "ledger_id": "JAYT_WALLET_LEDGER_ET_20260830",
+  "version": "v3.474.0-staging.et",
+  "generated_at_utc": "2026-08-30T14:07:21.439Z",
+  "governing_directive": "JAYT-245 Section ET (Mandates ET.1, ET.2, ET.3)",
+  "governance_summary": {
+    "lane_a_verified_vouchers": 0,
+    "lane_b_claim_free_instructions": 10,
+    "lane_c_radar_sources": 3,
+    "unbacked_claims_contained": 10,
+    "claim_lexicon_clean": true
+  },
+  "wallet_three_lanes": {
+    "lane_a_public_verified": {
+      "lane_id": "LANE_A_PUBLIC_VERIFIED",
+      "title": "Dùng ngay — Public Verified",
+      "active_count": 0,
+      "state": "FAIL_CLOSED_ZERO",
+      "required_5_fields": [
+        "offer_description",
+        "terms_conditions",
+        "validity_expiry",
+        "danang_locality_scope",
+        "net_out_of_pocket_price"
+      ],
+      "public_statement": "Hiện tại chưa có mã giảm giá công khai nào đạt đủ 5 tiêu chí đối soát thực tế. JayT kiên quyết giữ 0 để bảo vệ quyền lợi người dùng."
+    },
+    "lane_b_app_checkout_personalized": {
+      "lane_id": "LANE_B_APP_CHECKOUT_PERSONALIZED",
+      "title": "Kiểm tra trong app / giỏ hàng",
+      "active_count": 10,
+      "state": "INSTRUCTION_ONLY_CLAIM_FREE",
+      "governing_rule": "Chỉ hiển thị hướng dẫn tự kiểm tra trung thực; cấm hoàn toàn copy quảng bá như Mua 1 Tặng 1, Happy Lunch, U22, Ngày Tri Ân, mã giảm...",
+      "standard_allowed_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán.",
+      "required_contract_fields": [
+        "merchant_subject",
+        "canonical_action_url",
+        "action_type",
+        "account_dependent",
+        "source_identity_observed_at",
+        "identity_freshness",
+        "evidence_state"
+      ],
+      "records": [
+        {
+          "merchant_subject": "ShopeeFood Đà Nẵng",
+          "category": "Ẩm thực giao tận nơi",
+          "canonical_action_url": "https://shopeefood.vn",
+          "scope": "TP. Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "GrabFood Đà Nẵng",
+          "category": "Ẩm thực giao tận nơi",
+          "canonical_action_url": "https://food.grab.com",
+          "scope": "TP. Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Domino's Pizza",
+          "category": "Chuỗi Pizza",
+          "canonical_action_url": "https://dominos.vn",
+          "scope": "Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Lotteria Vietnam",
+          "category": "Thức ăn nhanh",
+          "canonical_action_url": "https://www.lotteria.vn",
+          "scope": "Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "CGV Cinemas",
+          "category": "Rạp chiếu phim",
+          "canonical_action_url": "https://www.cgv.vn",
+          "scope": "CGV Vĩnh Trung & Vincom Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Galaxy Cinema",
+          "category": "Rạp chiếu phim",
+          "canonical_action_url": "https://www.galaxycine.vn",
+          "scope": "Coopmart Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Metiz Cinema",
+          "category": "Rạp chiếu phim",
+          "canonical_action_url": "https://metiz.vn",
+          "scope": "Helio Center Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Highlands Coffee",
+          "category": "Cà phê & Không gian học tập",
+          "canonical_action_url": "https://www.highlandscoffee.com.vn",
+          "scope": "Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Fahasa Đà Nẵng",
+          "category": "Nhà sách & Văn phòng phẩm",
+          "canonical_action_url": "https://www.fahasa.com",
+          "scope": "Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        },
+        {
+          "merchant_subject": "Tiki Books",
+          "category": "Sách & Đồ dùng học tập",
+          "canonical_action_url": "https://tiki.vn",
+          "scope": "Toàn quốc / Đà Nẵng",
+          "action_type": "CHECK_IN_OFFICIAL_APP_OR_CHECKOUT",
+          "account_dependent": true,
+          "source_identity_observed_at": "2026-08-30T14:00:00Z",
+          "identity_freshness": "VERIFIED_ACTIVE_MERCHANT_IDENTITY",
+          "evidence_state": "PORTAL_IDENTITY_ONLY",
+          "instruction_copy": "Ưu đãi, nếu có, do tài khoản và giỏ hàng quyết định. Mở kênh chính thức để tự kiểm tra trước khi thanh toán."
+        }
+      ]
+    },
+    "lane_c_radar_monitoring": {
+      "lane_id": "LANE_C_RADAR_MONITORING",
+      "title": "Radar theo dõi",
+      "active_count": 3,
+      "state": "RADAR_NO_OFFER_CLAIM",
+      "governing_rule": "Chỉ theo dõi nguồn tin chính thức; tuyệt đối không hứa hẹn trước ưu đãi.",
+      "standard_allowed_copy": "JayT đang theo dõi nguồn chính thức; chưa xác nhận ưu đãi.",
+      "required_contract_fields": [
+        "source_to_follow",
+        "canonical_action_url",
+        "last_observed_at",
+        "next_review_due",
+        "radar_state",
+        "evidence_state"
+      ],
+      "records": [
+        {
+          "source_to_follow": "DanaBus Đà Nẵng",
+          "category": "Xe buýt trợ giá đô thị",
+          "canonical_action_url": "https://danangbus.vn",
+          "scope": "Mạng lưới buýt trợ giá TP. Đà Nẵng",
+          "last_observed_at": "2026-08-30T14:00:00Z",
+          "next_review_due": "2026-09-15T00:00:00Z",
+          "radar_state": "RADAR_NO_OFFER_CLAIM",
+          "evidence_state": "PUBLIC_TRANSIT_OR_COMMUNITY_PORTAL",
+          "instruction_copy": "JayT đang theo dõi nguồn chính thức; chưa xác nhận ưu đãi."
+        },
+        {
+          "source_to_follow": "TNGo Đà Nẵng",
+          "category": "Xe đạp công cộng",
+          "canonical_action_url": "https://tngo.vn",
+          "scope": "TP. Đà Nẵng",
+          "last_observed_at": "2026-08-30T14:00:00Z",
+          "next_review_due": "2026-09-15T00:00:00Z",
+          "radar_state": "RADAR_NO_OFFER_CLAIM",
+          "evidence_state": "PUBLIC_TRANSIT_OR_COMMUNITY_PORTAL",
+          "instruction_copy": "JayT đang theo dõi nguồn chính thức; chưa xác nhận ưu đãi."
+        },
+        {
+          "source_to_follow": "GitHub Education",
+          "category": "Chính sách học đường",
+          "canonical_action_url": "https://education.github.com/pack",
+          "scope": "Học sinh, sinh viên Đà Nẵng",
+          "last_observed_at": "2026-08-30T14:00:00Z",
+          "next_review_due": "2026-09-15T00:00:00Z",
+          "radar_state": "RADAR_NO_OFFER_CLAIM",
+          "evidence_state": "PUBLIC_TRANSIT_OR_COMMUNITY_PORTAL",
+          "instruction_copy": "JayT đang theo dõi nguồn chính thức; chưa xác nhận ưu đãi."
+        }
+      ]
+    },
+    "quarantined_unbacked_copies": [
+      {
+        "id": "Q_DOMINOS_01",
+        "merchant": "Domino's Pizza",
+        "copy": "Chương trình Mua 1 Tặng 1 theo ngày và combo ưu đãi tự động kích hoạt trên website dominos.vn.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_LOTTERIA_01",
+        "merchant": "Lotteria Vietnam",
+        "copy": "Thực đơn Happy Lunch và phiếu ưu đãi thành viên trên cổng lotteria.vn.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_CGV_01",
+        "merchant": "CGV Cinemas",
+        "copy": "Giá vé thành viên U22 và mã quà tặng áp dụng khi đăng nhập tài khoản CGV.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_GALAXY_01",
+        "merchant": "Galaxy Cinema",
+        "copy": "Chương trình Ngày Tri Ân và vé sinh viên áp dụng trực tiếp tại quầy hoặc app Galaxy.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_METIZ_01",
+        "merchant": "Metiz Cinema",
+        "copy": "Chính sách giá vé khán giả trẻ U22 niêm yết tại quầy vé Metiz Helio Center.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_HIGHLANDS_01",
+        "merchant": "Highlands Coffee",
+        "copy": "Ưu đãi tích điểm thành viên và voucher đổi thưởng trong ứng dụng Highlands Coffee.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_FAHASA_01",
+        "merchant": "Fahasa Đà Nẵng",
+        "copy": "Mã giảm giá sách học tập và dụng cụ học đường khi thanh toán trên fahasa.com.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_TIKI_01",
+        "merchant": "Tiki Books",
+        "copy": "Mã giảm giá sách giáo trình và dụng cụ học sinh hiển thị trực tiếp trong giỏ hàng Tiki.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Unverified promotion claim without receipt capture"
+      },
+      {
+        "id": "Q_SHOPEEFOOD_01",
+        "merchant": "ShopeeFood Đà Nẵng",
+        "copy": "Mã giảm giá cá nhân hóa & giỏ hàng áp dụng trực tiếp tại bước checkout trên app Shopee.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Replaced with standard claim-free copy"
+      },
+      {
+        "id": "Q_GRABFOOD_01",
+        "merchant": "GrabFood Đà Nẵng",
+        "copy": "Ưu đãi hội viên & mã theo tài khoản hiển thị trong mục \"Ưu đãi\" khi chọn món trên Grab.",
+        "status": "UNBACKED_ACCOUNT_DEPENDENT_COPY",
+        "quarantined_at": "2026-08-30T14:00:00Z",
+        "reason": "Replaced with standard claim-free copy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2091 @@
+{
+  "batch_id": "BATCH_CAPTURE_143_TABLE",
+  "directive": "JAYT-143: FRESH-CAPTURE RESET & AUTONOMOUS VERIFIED-SUPPLY LOOP",
+  "generated_at": "2026-08-26T19:06:53.364Z",
+  "total_urls_queued": 51,
+  "total_locators_audited": 21,
+  "total_leaves_and_utilities_evaluated": 30,
+  "state_distribution": {
+    "EVIDENCE_COMPLETE_FOR_REVIEW": 0,
+    "INCOMPLETE_OFFER_EVIDENCE": 5,
+    "SCOPE_UNPROVEN": 1,
+    "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG": 0,
+    "NON_OFFER_PAGE_OR_SHELL": 23,
+    "CAPTURE_RECEIPT_INVALID": 0,
+    "CAPTURE_IDENTITY_COLLISION": 1
+  },
+  "conservation_check": 30,
+  "governance_statement": "Capture mới hoàn toàn 143 với receipt ghi trực tiếp từ browser network events, chuẩn hóa address units và áp dụng đúng 5 bước phân loại. Zero candidate staging hay live deploy.",
+  "items": [
+    {
+      "capture_id": "CAP_143_B_01",
+      "brand_id": "BRAND_GALAXY",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/t2-vui-ve-ngap-tran-uu-dai/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_01_1787771121172",
+        "brand_id": "BRAND_GALAXY",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.galaxycine.vn/khuyen-mai/t2-vui-ve-ngap-tran-uu-dai/",
+        "final_url": "https://www.galaxycine.vn/khuyen-mai/t2-vui-ve-ngap-tran-uu-dai/",
+        "redirect_chain": [
+          {
+            "url": "https://www.galaxycine.vn/khuyen-mai/t2-vui-ve-ngap-tran-uu-dai/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdcAoooAAAAAG_mEMqjE0iohHPmQ7FmsXVLtYO5&co=aHR0cHM6Ly93d3cuZ2FsYXh5Y2luZS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=e0tvgcb4cuyr",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:21.009Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "612e289de3cc967e5dffcbd7a0c8090bd8d1512fd983353151dc69c05ada4afb",
+          "text_sha256": "0ba144b16fb22f73a9975e6a9616781970a4b76438e9f7eca559758f1dc59044",
+          "screenshot_sha256": "8dfdefec78e97c66d6709a28139d624545f7765721e7facde687cd3862762ff9"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_02",
+      "brand_id": "BRAND_GALAXY",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-thanh-vien--ngay-hoi-bap-nuoc/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_02_1787771123444",
+        "brand_id": "BRAND_GALAXY",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-thanh-vien--ngay-hoi-bap-nuoc/",
+        "final_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-thanh-vien--ngay-hoi-bap-nuoc/",
+        "redirect_chain": [
+          {
+            "url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-thanh-vien--ngay-hoi-bap-nuoc/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdcAoooAAAAAG_mEMqjE0iohHPmQ7FmsXVLtYO5&co=aHR0cHM6Ly93d3cuZ2FsYXh5Y2luZS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=3o87uats0k80",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:23.294Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "8981987589985b32324b9f78c2617ae32abe9f3737c7c6766a59862cbab43658",
+          "text_sha256": "0ba144b16fb22f73a9975e6a9616781970a4b76438e9f7eca559758f1dc59044",
+          "screenshot_sha256": "8dfdefec78e97c66d6709a28139d624545f7765721e7facde687cd3862762ff9"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_03",
+      "brand_id": "BRAND_GALAXY",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/u22-vui-ve--gia-ve-sieu-hat-de/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_03_1787771125412",
+        "brand_id": "BRAND_GALAXY",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.galaxycine.vn/khuyen-mai/u22-vui-ve--gia-ve-sieu-hat-de/",
+        "final_url": "https://www.galaxycine.vn/khuyen-mai/u22-vui-ve--gia-ve-sieu-hat-de/",
+        "redirect_chain": [
+          {
+            "url": "https://www.galaxycine.vn/khuyen-mai/u22-vui-ve--gia-ve-sieu-hat-de/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdcAoooAAAAAG_mEMqjE0iohHPmQ7FmsXVLtYO5&co=aHR0cHM6Ly93d3cuZ2FsYXh5Y2luZS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=rj0gv7k0wezp",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:25.256Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "d95c152cb4bb77b65b7d99716bafbc32b3b2920c664e9826625639ba66e503df",
+          "text_sha256": "0ba144b16fb22f73a9975e6a9616781970a4b76438e9f7eca559758f1dc59044",
+          "screenshot_sha256": "8dfdefec78e97c66d6709a28139d624545f7765721e7facde687cd3862762ff9"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_04",
+      "brand_id": "BRAND_GALAXY",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinema-ra-mat-phim-hay-thang-8/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_04_1787771127498",
+        "brand_id": "BRAND_GALAXY",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinema-ra-mat-phim-hay-thang-8/",
+        "final_url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinema-ra-mat-phim-hay-thang-8/",
+        "redirect_chain": [
+          {
+            "url": "https://www.galaxycine.vn/khuyen-mai/galaxy-cinema-ra-mat-phim-hay-thang-8/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdcAoooAAAAAG_mEMqjE0iohHPmQ7FmsXVLtYO5&co=aHR0cHM6Ly93d3cuZ2FsYXh5Y2luZS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=k2cy6rabr2aq",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:27.350Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "d315aa12cb134ab8ce4ef8ed9e9b512bf7057293bf691c7af849fea79e6f6de3",
+          "text_sha256": "0ba144b16fb22f73a9975e6a9616781970a4b76438e9f7eca559758f1dc59044",
+          "screenshot_sha256": "8dfdefec78e97c66d6709a28139d624545f7765721e7facde687cd3862762ff9"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_05",
+      "brand_id": "BRAND_CGV",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.cgv.vn/default/culture-day",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_05_1787771129595",
+        "brand_id": "BRAND_CGV",
+        "brand_name": "CGV Cinemas Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.cgv.vn/default/culture-day",
+        "final_url": "https://www.cgv.vn/default/culture-day",
+        "redirect_chain": [
+          {
+            "url": "https://www.cgv.vn/default/culture-day",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:29.504Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "049bfba38bde688f30bd8ea6be1c77d72ec21a4178b5bb7aa4f9a6fc974c6fc0",
+          "text_sha256": "8528714afb7d0c8da9dc70b8610e47689640c01ec8015af21a95712db64347b6",
+          "screenshot_sha256": "082adf2afabe04f1cc75b6769e97040f865ba4fcc4ae2aacad017e45f94cdbc7"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_06",
+      "brand_id": "BRAND_CGV",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.cgv.vn/default/u22-vn",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_06_1787771131302",
+        "brand_id": "BRAND_CGV",
+        "brand_name": "CGV Cinemas Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.cgv.vn/default/u22-vn",
+        "final_url": "https://www.cgv.vn/default/u22-vn",
+        "redirect_chain": [
+          {
+            "url": "https://www.cgv.vn/default/u22-vn",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:31.217Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "66beafe47614e23457063b4ed48664962d897424a3d76f482b995c8bb98f3178",
+          "text_sha256": "8528714afb7d0c8da9dc70b8610e47689640c01ec8015af21a95712db64347b6",
+          "screenshot_sha256": "224c7d986ad43d305b2daa9c4f9804fcd11dc5ceceef9d3310674b8c758efc1a"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_07",
+      "brand_id": "BRAND_CGV",
+      "brand_name": "CGV Cinemas Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.cgv.vn/default/happy-wednesday",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_07_1787771133137",
+        "brand_id": "BRAND_CGV",
+        "brand_name": "CGV Cinemas Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.cgv.vn/default/happy-wednesday",
+        "final_url": "https://www.cgv.vn/default/happy-wednesday",
+        "redirect_chain": [
+          {
+            "url": "https://www.cgv.vn/default/happy-wednesday",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:33.049Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "b0066a1013bdbfd61edf2bb5088c61ce90c2f86c68b3227ab5a2bca4069ac396",
+          "text_sha256": "8528714afb7d0c8da9dc70b8610e47689640c01ec8015af21a95712db64347b6",
+          "screenshot_sha256": "3018a4c9b2d9d2a494a49667688a3211cf814ad9e603cbdc1cbd19c2dd17f3e0"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_08",
+      "brand_id": "BRAND_LOTTE_CINEMA",
+      "brand_name": "Lotte Cinema Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_08_1787771136390",
+        "brand_id": "BRAND_LOTTE_CINEMA",
+        "brand_name": "Lotte Cinema Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+        "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+        "redirect_chain": [
+          {
+            "url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:36.234Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "aca85d1389d3560b0779517287bda3004b5d8ff5199f018a8ad0261b6a03cd22",
+          "text_sha256": "61d0380f0614db9b440d06fab1ef4bad0354958d1942206475373567fa698279",
+          "screenshot_sha256": "fc7335898a32c92aa80ed49cbcb57f23976c3577510b7cca3075736f3d9857f6"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_09",
+      "brand_id": "BRAND_METIZ",
+      "brand_name": "Metiz Cinema Da Nang",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://metiz.vn/khuyen-mai/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_09_1787771137135",
+        "brand_id": "BRAND_METIZ",
+        "brand_name": "Metiz Cinema Da Nang",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://metiz.vn/khuyen-mai/",
+        "final_url": "https://metiz.vn/khuyen-mai/",
+        "redirect_chain": [
+          {
+            "url": "https://metiz.vn/khuyen-mai/",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:37.056Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "96c618a43f043c779e46133831854f2f260f39f0d9e7c6f1979d62a1956a5b35",
+          "text_sha256": "9b312de357664529c1289dc63fbac613983bc297d77de067d0a5b7957a65b3fb",
+          "screenshot_sha256": "2cad9109a8da20a84b0c17e95d4720391247c997e8184e24b2c6356713212b42"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_10",
+      "brand_id": "BRAND_STARLIGHT",
+      "brand_name": "Starlight Cinema Da Nang",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://starlight.vn/khuyen-mai.html",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_VERIFIED_DA_NANG",
+        "distinct_normalized_address_units_count": 2
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_10_1787771138137",
+        "brand_id": "BRAND_STARLIGHT",
+        "brand_name": "Starlight Cinema Da Nang",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://starlight.vn/khuyen-mai.html",
+        "final_url": "https://starlight.vn/404.html?aspxerrorpath=/khuyen-mai.html",
+        "redirect_chain": [
+          {
+            "url": "https://starlight.vn/khuyen-mai.html",
+            "http_status": 302
+          },
+          {
+            "url": "https://starlight.vn/404.html?aspxerrorpath=/khuyen-mai.html",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:37.998Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "706f524572dd30c2552eb3bd362080e2411c4b2a230817989de722935a97f944",
+          "text_sha256": "e21c768506f9f850ecf1453805bee308b6251158cfbdf5f8e1fcfd0cae05c492",
+          "screenshot_sha256": "5059d19e6ad60cc05808734bce79d9eb32f16517d883d65777f7704aadf682de"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_11",
+      "brand_id": "BRAND_KFC",
+      "brand_name": "KFC Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://kfcvietnam.com.vn/khuyen-mai",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "body > app-root > app-page-layout > section.wrapper > main",
+        "outer_html_sha256": "8d0fc80acd6b0a09f18ef82e48c24f5e7b63dd738ba21da09f22adc99f463aff"
+      },
+      "extracted_fields_in_root": {
+        "title": "RẤT TIẾC! CHÚNG TÔI XIN LỖI",
+        "title_provenance": {
+          "value": "RẤT TIẾC! CHÚNG TÔI XIN LỖI",
+          "source_url_final": "https://kfcvietnam.com.vn/error/page-not-found",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_11_1787771140499",
+          "dom_selector": "body > app-root > app-page-layout > section.wrapper > main > app-page-not-found > section.container > div.error-page > h3",
+          "node_outer_html_sha256": "ac44a0d922f0c2613e4cd35d4f93ce5a2dfee09f4be7433c4231809a1fb14115",
+          "raw_html_sha256": "08771d27d53efd068e4e7076fbe63648bb4cebfbd0f4d15eda1a1a3f6f4e65bc",
+          "screenshot_sha256": "44e09afab06947e486310414511bf8fd3ab0e69e6799a9cb77b46634ea773254",
+          "captured_at": "2026-08-26T19:05:40.406Z"
+        },
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_11_1787771140499",
+        "brand_id": "BRAND_KFC",
+        "brand_name": "KFC Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://kfcvietnam.com.vn/khuyen-mai",
+        "final_url": "https://kfcvietnam.com.vn/error/page-not-found",
+        "redirect_chain": [
+          {
+            "url": "https://kfcvietnam.com.vn/khuyen-mai",
+            "http_status": 200
+          },
+          {
+            "url": "https://page.widget.zalo.me/?position=null&oaid=1089872550377351285&welcomemessage=R%E1%BA%A5t%20vui%20khi%20%C4%91%C6%B0%E1%BB%A3c%20h%E1%BB%97%20tr%E1%BB%A3%20b%E1%BA%A1n!&autopopup=0&leftside=false&width=440&height=813&style=2&id=2065e99e-84c4-4956-9a79-abc12c72c3c3&domain=kfcvietnam.com.vn&android=false&ios=false",
+            "http_status": 200
+          },
+          {
+            "url": "https://15417501.fls.doubleclick.net/activityi;src=15417501;type=pagev0;cat=kfc-p0;rcb=1;ord=4680893011219;npa=0;auiddc=94549754.1787771052;uaa=;uab=;uafvl=;uamb=0;uam=;uap=;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68o1h1v9220201839z8852269846za200zd9220201839xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~117776795~118897920~118897930~119259605~119367802~119367810~120213116~120385423;epver=2;dc_random=1787771138_u8SQOW6pqJRjLdTYWENC5mJF1jKXwlDAKA;_dc_test=1;~oref=https%3A%2F%2Fkfcvietnam.com.vn%2Ferror%2Fpage-not-found?",
+            "http_status": 302
+          },
+          {
+            "url": "https://15417501.fls.doubleclick.net/activityi;dc_pre=CLWm_MD-vpYDFSqfrwEd8nUqrQ;src=15417501;type=pagev0;cat=kfc-p0;rcb=1;ord=4680893011219;npa=0;auiddc=94549754.1787771052;uaa=;uab=;uafvl=;uamb=0;uam=;uap=;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68o1h1v9220201839z8852269846za200zd9220201839xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~117776795~118897920~118897930~119259605~119367802~119367810~120213116~120385423;epver=2;dc_random=1787771138_u8SQOW6pqJRjLdTYWENC5mJF1jKXwlDAKA;_dc_test=1;~oref=https%3A%2F%2Fkfcvietnam.com.vn%2Ferror%2Fpage-not-found?",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:40.406Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "08771d27d53efd068e4e7076fbe63648bb4cebfbd0f4d15eda1a1a3f6f4e65bc",
+          "text_sha256": "4e4c29e6e3b4b6a6792e99a2e0958bb8c0378a0f94eb9f87d892a974c76a59db",
+          "screenshot_sha256": "44e09afab06947e486310414511bf8fd3ab0e69e6799a9cb77b46634ea773254"
+        }
+      },
+      "terminal_state": "INCOMPLETE_OFFER_EVIDENCE",
+      "classification_reason": "Semantic content root found but lacks explicit numeric price or discount percentage node."
+    },
+    {
+      "capture_id": "CAP_143_B_12",
+      "brand_id": "BRAND_JOLLIBEE",
+      "brand_name": "Jollibee Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://jollibee.com.vn/khuyen-mai",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "#maincontent",
+        "outer_html_sha256": "8f56d75d107c93ce7652ba318374417bfc72c0f123c895c46223a94b1aff226d"
+      },
+      "extracted_fields_in_root": {
+        "title": "Khuyến mãi",
+        "title_provenance": {
+          "value": "Khuyến mãi",
+          "source_url_final": "https://jollibee.com.vn/khuyen-mai",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_12_1787771143876",
+          "dom_selector": "body.pl-thm-jollibee > div.page-wrapper:nth-of-type(3) > main.page-main > div.columns:nth-of-type(2) > div.column > div:nth-of-type(3) > div.banner_general > div.group_content_banner > div.pop > h1.heading",
+          "node_outer_html_sha256": "15a456db6253db9ab39e0398ae4590857d2eec7256a2a7e6185a1091a67bfe84",
+          "raw_html_sha256": "38aa4866da480924ee45736765493f3ebcba77d2b1d195b3632b91be19b27231",
+          "screenshot_sha256": "3a4003be736503e083f9149e0c8158727b93180a8c2be089832d6e194c6f5b6c",
+          "captured_at": "2026-08-26T19:05:43.600Z"
+        },
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_12_1787771143876",
+        "brand_id": "BRAND_JOLLIBEE",
+        "brand_name": "Jollibee Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://jollibee.com.vn/khuyen-mai",
+        "final_url": "https://jollibee.com.vn/khuyen-mai",
+        "redirect_chain": [
+          {
+            "url": "https://jollibee.com.vn/khuyen-mai",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:43.600Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "38aa4866da480924ee45736765493f3ebcba77d2b1d195b3632b91be19b27231",
+          "text_sha256": "0f3959240fcb3493ab27021f4ad8f43e06fe8595b9a5418b4f565ae025698442",
+          "screenshot_sha256": "3a4003be736503e083f9149e0c8158727b93180a8c2be089832d6e194c6f5b6c"
+        }
+      },
+      "terminal_state": "INCOMPLETE_OFFER_EVIDENCE",
+      "classification_reason": "Semantic content root found but lacks explicit numeric price or discount percentage node."
+    },
+    {
+      "capture_id": "CAP_143_B_13",
+      "brand_id": "BRAND_LOTTERIA",
+      "brand_name": "Lotteria Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.lotteria.vn/promotions",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_13_1787771147159",
+        "brand_id": "BRAND_LOTTERIA",
+        "brand_name": "Lotteria Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.lotteria.vn/promotions",
+        "final_url": "https://www.lotteria.vn/promotions",
+        "redirect_chain": [
+          {
+            "url": "https://www.lotteria.vn/promotions",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcZcjUsAAAAAIFXvDz4-1HsPUxtqnvySi9WQbpF&co=aHR0cHM6Ly93d3cubG90dGVyaWEudm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=wbfkowgr89b9",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcZcjUsAAAAAIFXvDz4-1HsPUxtqnvySi9WQbpF&co=aHR0cHM6Ly93d3cubG90dGVyaWEudm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=gztqgsll5drn",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:47.068Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "a7deceb3063b56bfbac37a62ad67925969f08468953d1d7470a050a09ad49f80",
+          "text_sha256": "1b1b0edef31ab3e67dcad4037253c87375db39a70538ecc262473fb3e0c415aa",
+          "screenshot_sha256": "14d79514b237554b44067e8e4f1fbfe9699112ff8336bf89ac1e3adaeadf8272"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_14",
+      "brand_id": "BRAND_HIGHLANDS",
+      "brand_name": "Highlands Coffee",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-khuyen-mai.html",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_14_1787771149577",
+        "brand_id": "BRAND_HIGHLANDS",
+        "brand_name": "Highlands Coffee",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-khuyen-mai.html",
+        "final_url": "https://www.highlandscoffee.com.vn/vn/404.html",
+        "redirect_chain": [
+          {
+            "url": "https://www.highlandscoffee.com.vn/vn/tin-tuc-khuyen-mai.html",
+            "http_status": 302
+          },
+          {
+            "url": "https://www.highlandscoffee.com.vn/vn/404.html",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:49.502Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "5dfe7f8c99077426ee2f4f4c8ec248835f84f7f69382bc800b9d411e327d6d43",
+          "text_sha256": "bae8dab1e66ea4c791b066302ea2610ed0ba0346058f0f494b69c3e8c7ffffd1",
+          "screenshot_sha256": "15fa16fb66e8d713ba564880a992c17d255fbf4071cb60b6ebbc64385c10d3f7"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_15",
+      "brand_id": "BRAND_PHUCLONG",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://phuclong.com.vn/khuyen-mai",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_15_1787771151733",
+        "brand_id": "BRAND_PHUCLONG",
+        "brand_name": "Phúc Long Coffee & Tea",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://phuclong.com.vn/khuyen-mai",
+        "final_url": "https://phuclong.com.vn/khuyen-mai",
+        "redirect_chain": [
+          {
+            "url": "https://phuclong.com.vn/khuyen-mai",
+            "http_status": 200
+          },
+          {
+            "url": "https://zc2ab2c71.webengage.co/storage-frame-1.18.htm?cdn=y&cbf=webengage-engagement-callback-frame&lc=~c2ab2c71",
+            "http_status": 200
+          },
+          {
+            "url": "https://page.widget.zalo.me/?position=null&oaid=3547667082335355338&welcomemessage=R%E1%BA%A5t%20vui%20khi%20%C4%91%C6%B0%E1%BB%A3c%20h%E1%BB%97%20tr%E1%BB%A3%20b%E1%BA%A1n!&autopopup=1&leftside=false&width=440&height=813&style=2&id=cb6a1fcb-0b72-42e5-8d46-e21cee4cccd0&domain=phuclong.com.vn&android=false&ios=false",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:51.564Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "821603a9265dc3df85ff7078ea44d163d14be849881b9854b0f6671b9ca04918",
+          "text_sha256": "9721ed6245697c4b9b3780c3eed27ec72766c79d3bb08adfc827a92c5e18c60a",
+          "screenshot_sha256": "741e8ca59326bee95215c45b90e43ae5e448377e5209e7b2716adce01bf0d418"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_16",
+      "brand_id": "BRAND_THECOFFEEHOUSE",
+      "brand_name": "The Coffee House",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://thecoffeehouse.com/pages/khuyen-mai",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "body > div:nth-of-type(1) > div > div > main.position-relative",
+        "outer_html_sha256": "4e12a8e1d39434084b8ca8d5d071ccd338289d4b1fd43d800e570e91f275d8ca"
+      },
+      "extracted_fields_in_root": {
+        "title": "Chọn thương hiệu để bắt đầu",
+        "title_provenance": {
+          "value": "Chọn thương hiệu để bắt đầu",
+          "source_url_final": "https://thecoffeehouse.com/",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_16_1787771154301",
+          "dom_selector": "body > div:nth-of-type(1) > div > div > main.position-relative > div.tch--app > div > section.tch--brands:nth-of-type(2) > div.tch--brands__header:nth-of-type(1)",
+          "node_outer_html_sha256": "fae33c3ed5d6ca0bdb854d7e8efc6e33049db25ed060f66481eb93bad45c2f70",
+          "raw_html_sha256": "68be3dcb0e51c1e1acf7b931c91c058ec3bc09ef07286d0aa33ae8032bda48e0",
+          "screenshot_sha256": "bc506b5131bd21269fdc62047edef5be69314af36056592e9fe0990708e5b38b",
+          "captured_at": "2026-08-26T19:05:54.135Z"
+        },
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": "Nụ cười là hương vị ngọt ngào nhất trong mỗi ngày mới.",
+        "weekly_schedule_provenance": {
+          "value": "Nụ cười là hương vị ngọt ngào nhất trong mỗi ngày mới.",
+          "source_url_final": "https://thecoffeehouse.com/",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_16_1787771154301",
+          "dom_selector": "body > div:nth-of-type(1) > div > div > main.position-relative > div.tch--app > div > section.tch--brands:nth-of-type(2) > div.tch--brands__list:nth-of-type(2) > div.tch--brand-card:nth-of-type(1) > div.tch--brand-card__content:nth-of-type(2) > p.tch--brand-card__description",
+          "node_outer_html_sha256": "b524cf1cc06b4bfbe038a1683e405e14e25cf129a7ada6be77d651135f9401c3",
+          "raw_html_sha256": "68be3dcb0e51c1e1acf7b931c91c058ec3bc09ef07286d0aa33ae8032bda48e0",
+          "screenshot_sha256": "bc506b5131bd21269fdc62047edef5be69314af36056592e9fe0990708e5b38b",
+          "captured_at": "2026-08-26T19:05:54.135Z"
+        },
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_16_1787771154301",
+        "brand_id": "BRAND_THECOFFEEHOUSE",
+        "brand_name": "The Coffee House",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://thecoffeehouse.com/pages/khuyen-mai",
+        "final_url": "https://thecoffeehouse.com/",
+        "redirect_chain": [
+          {
+            "url": "https://thecoffeehouse.com/pages/khuyen-mai",
+            "http_status": 302
+          },
+          {
+            "url": "https://thecoffeehouse.com/",
+            "http_status": 304
+          },
+          {
+            "url": "https://www.googletagmanager.com/ns.html?id=GTM-KDLPP3HX",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfQTPkqAAAAAPrbpvVp4y-ios51qBv3NMU3wGLn&co=aHR0cHM6Ly90aGVjb2ZmZWVob3VzZS5jb206NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=i5brozmhpx67",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:54.135Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "68be3dcb0e51c1e1acf7b931c91c058ec3bc09ef07286d0aa33ae8032bda48e0",
+          "text_sha256": "31b5f5f508fa20dbd118059859a45191717a5c1a7f73c37e540c3e64b6901f32",
+          "screenshot_sha256": "bc506b5131bd21269fdc62047edef5be69314af36056592e9fe0990708e5b38b"
+        }
+      },
+      "terminal_state": "INCOMPLETE_OFFER_EVIDENCE",
+      "classification_reason": "Semantic content root found but lacks explicit numeric price or discount percentage node."
+    },
+    {
+      "capture_id": "CAP_143_B_17",
+      "brand_id": "BRAND_PIZZAHUT",
+      "brand_name": "Pizza Hut Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://pizzahut.vn/promotions",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_17_1787771156501",
+        "brand_id": "BRAND_PIZZAHUT",
+        "brand_name": "Pizza Hut Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://pizzahut.vn/promotions",
+        "final_url": "https://pizzahut.vn/promotions",
+        "redirect_chain": [
+          {
+            "url": "https://pizzahut.vn/promotions",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:05:56.410Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "5f9d07985957ae27244ce7f2aa0dfca680f69e624a1e7aeace0d6a14f6bca03c",
+          "text_sha256": "52811578be238cb7dd4573bed1178cbec6b49244b2c1ddc261a57dd1bc771af9",
+          "screenshot_sha256": "3dc9911b8f95f9f5ab5d4fddb67618d3fb40dd6831df0e0a6a879c17c20da1e6"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_18",
+      "brand_id": "BRAND_DOMINOS",
+      "brand_name": "Domino's Pizza Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://dominos.vn/khuyen-mai",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark",
+        "outer_html_sha256": "c1b2d141317259eb7d2b386d3601191dcb843521ef658539dcab5f8519ea63df"
+      },
+      "extracted_fields_in_root": {
+        "title": "Thứ 5 Mua 1 Tặng 1 Pizza",
+        "title_provenance": {
+          "value": "Thứ 5 Mua 1 Tặng 1 Pizza",
+          "source_url_final": "https://dominos.vn/promotion-listing",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+          "dom_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > a > h2.card-title",
+          "node_outer_html_sha256": "1c5d21ea4b0e6ec6400836d596c5b727fddac06753b8d30957bdfc4e8236ec4d",
+          "raw_html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f",
+          "captured_at": "2026-08-26T19:05:59.459Z"
+        },
+        "price_claim": "163.000VND",
+        "price_provenance": {
+          "value": "163.000VND",
+          "source_url_final": "https://dominos.vn/promotion-listing",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+          "dom_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(4) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+          "node_outer_html_sha256": "71e711cb0a34b3c62547d2e08a463011af96432d01171e2e20400eac5bd7b5e5",
+          "raw_html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f",
+          "captured_at": "2026-08-26T19:05:59.459Z"
+        },
+        "discount_percentage": "giảm 70%",
+        "discount_provenance": {
+          "value": "giảm 70%",
+          "source_url_final": "https://dominos.vn/promotion-listing",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+          "dom_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(3) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+          "node_outer_html_sha256": "507c2c70384dff6238fa2c9f5acca188ddd0d2c0ba8aa8b7518038d9cf7a95e8",
+          "raw_html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f",
+          "captured_at": "2026-08-26T19:05:59.459Z"
+        },
+        "weekly_schedule": "* Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất.",
+        "weekly_schedule_provenance": {
+          "value": "* Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất.",
+          "source_url_final": "https://dominos.vn/promotion-listing",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+          "dom_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(2) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(1)",
+          "node_outer_html_sha256": "d5f8abea6f85775217da2d19481b0fa1591a01a561fd9e2f8b40cf772b961283",
+          "raw_html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f",
+          "captured_at": "2026-08-26T19:05:59.459Z"
+        },
+        "program_validity_span": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng.",
+        "validity_provenance": {
+          "value": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng.",
+          "source_url_final": "https://dominos.vn/promotion-listing",
+          "capture_receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+          "dom_selector": "body > div > div.page-transition-enter-done > div.org-body > div > main.bg-dark > section.py-4 > div.container > div.py-2:nth-of-type(5) > div.card > div.row > div.col-md-9:nth-of-type(2) > div.card-body > div.wrapper:nth-of-type(2) > div.nomal:nth-of-type(1) > p:nth-of-type(2)",
+          "node_outer_html_sha256": "5bbce534574de5803671f4bb0c13791d87901ae7aab39796399a7cdcfa349ad5",
+          "raw_html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f",
+          "captured_at": "2026-08-26T19:05:59.459Z"
+        },
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_18_1787771159693",
+        "brand_id": "BRAND_DOMINOS",
+        "brand_name": "Domino's Pizza Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://dominos.vn/khuyen-mai",
+        "final_url": "https://dominos.vn/promotion-listing",
+        "redirect_chain": [
+          {
+            "url": "https://dominos.vn/khuyen-mai",
+            "http_status": 308
+          },
+          {
+            "url": "https://dominos.vn/promotion-listing",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:05:59.459Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "156ba704362e9a615d0c3b9ca9fbfc80e5c8cd15b9ed1db06b3883d787a9822b",
+          "text_sha256": "5960e4a481d1a329a3d8fa00ecda2fdb43a7ada61b1b9b6a3f5bfc555310d436",
+          "screenshot_sha256": "108936fb3bda37f3066889f086255b106fd2d77774156a17ceab3e88cb8b673f"
+        }
+      },
+      "terminal_state": "SCOPE_UNPROVEN",
+      "classification_reason": "Brand store locator lacks proven Da Nang address units."
+    },
+    {
+      "capture_id": "CAP_143_B_19",
+      "brand_id": "BRAND_GONGCHA",
+      "brand_name": "Gong Cha Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://gongcha.com.vn/tin-tuc-khuyen-mai/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_VERIFIED_DA_NANG",
+        "distinct_normalized_address_units_count": 2
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_19_1787771161739",
+        "brand_id": "BRAND_GONGCHA",
+        "brand_name": "Gong Cha Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://gongcha.com.vn/tin-tuc-khuyen-mai/",
+        "final_url": "https://gongcha.com.vn/tin-tuc-khuyen-mai/",
+        "redirect_chain": [
+          {
+            "url": "https://gongcha.com.vn/tin-tuc-khuyen-mai/",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:06:01.681Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "77eb721105cbcae339cad494ca9882a9cc3f467431bdace4b70f6a3d94dee76e",
+          "text_sha256": "b87abaea7e88b0bd9015707de835b5055fb50f2d63f3529b5ea111c0895ac89e",
+          "screenshot_sha256": "e445b1e1996c1f022273e3384acc4a92c1a0cf2cb64fed9919a63ac5db0414de"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 404)."
+    },
+    {
+      "capture_id": "CAP_143_B_20",
+      "brand_id": "BRAND_KOITHE",
+      "brand_name": "KOI Thé Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://www.koithe.com/en/news",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_20_1787771162582",
+        "brand_id": "BRAND_KOITHE",
+        "brand_name": "KOI Thé Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://www.koithe.com/en/news",
+        "final_url": "https://www.koithe.com/en/news",
+        "redirect_chain": [
+          {
+            "url": "https://www.koithe.com/en/news",
+            "http_status": 404
+          }
+        ],
+        "http_status": 404,
+        "captured_at": "2026-08-26T19:06:02.535Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "fa62161ce5128cb2e9dfe69fb8acc304fcc2167a31bacd85f3f095c65e53df86",
+          "text_sha256": "f332372ff61e7db9571c5906cab3494f5948ba0e47ef6a0a9604e2063a03ae34",
+          "screenshot_sha256": "d127972e06fbb1a994ac90149032e6761c6448bd7dd22fb385d8cf37c04ecfee"
+        }
+      },
+      "terminal_state": "CAPTURE_IDENTITY_COLLISION",
+      "classification_reason": "Raw capture HTML hash is identical to another URL in the batch (redirect/fallback duplicate)."
+    },
+    {
+      "capture_id": "CAP_143_B_21",
+      "brand_id": "BRAND_KICHIKICHI",
+      "brand_name": "Kichi-Kichi Hotpot",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://kichi.com.vn/vi/uu-dai",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_21_1787771165193",
+        "brand_id": "BRAND_KICHIKICHI",
+        "brand_name": "Kichi-Kichi Hotpot",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://kichi.com.vn/vi/uu-dai",
+        "final_url": "https://kichi.com.vn/",
+        "redirect_chain": [
+          {
+            "url": "https://kichi.com.vn/vi/uu-dai",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdhAycrAAAAAP1GiixlPp_wRGO57iZBWH9JYUTI&co=aHR0cHM6Ly9raWNoaS5jb20udm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=kktjzrcgb547",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:04.983Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "1f44fc9a9b3e530f263d7acd271fd8adb5a1268a769dbd1ed0e9aca88d1915ed",
+          "text_sha256": "833003fa5424879e87f0ff7a59494767287e9beac8309523f04e589e53de9b02",
+          "screenshot_sha256": "3f4e90c5bf68e1e8efda8afe4cae7447b1b9e8161091decbbdea91790727bdce"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_22",
+      "brand_id": "BRAND_GOGI",
+      "brand_name": "Gogi House Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://gogi.com.vn/vi/uu-dai",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_22_1787771168252",
+        "brand_id": "BRAND_GOGI",
+        "brand_name": "Gogi House Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://gogi.com.vn/vi/uu-dai",
+        "final_url": "https://gogi.com.vn/",
+        "redirect_chain": [
+          {
+            "url": "https://gogi.com.vn/vi/uu-dai",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdhAycrAAAAAP1GiixlPp_wRGO57iZBWH9JYUTI&co=aHR0cHM6Ly9nb2dpLmNvbS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=mc69zgsjv81y",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:07.998Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "c184bf4f6ebdb972e0b8d2a4802082e49df310b02d5851155e565d123f787062",
+          "text_sha256": "2f071bbfc889f9ddc41e7aed80e3a52fd1f2fc9c951d98253d121ec1591bafd2",
+          "screenshot_sha256": "d4579f0d22d31dd8e6c8ea0c9024bb82444dd2c518eabd4a3110e48ee42941bf"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_23",
+      "brand_id": "BRAND_TEXAS_CHICKEN",
+      "brand_name": "Texas Chicken Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://texaschicken.vn/khuyen-mai/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_23_1787771169034",
+        "brand_id": "BRAND_TEXAS_CHICKEN",
+        "brand_name": "Texas Chicken Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://texaschicken.vn/khuyen-mai/",
+        "final_url": "chrome-error://chromewebdata/",
+        "redirect_chain": [
+          {
+            "url": "chrome-error://chromewebdata/",
+            "http_status": 504
+          }
+        ],
+        "http_status": 504,
+        "captured_at": "2026-08-26T19:06:08.963Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "0c7842e45e71ed5ea007edd112fd72a323f46b3e167dcfe2f891fc793c0ee0c4",
+          "text_sha256": "8e1d6c2ebb73bd2cda913f0cb680b345bf50993d1e60a179cc1d454204ad7f71",
+          "screenshot_sha256": "53ff74385d630fc5bab91b8694675d27d573bfb69cef4f0b4ee383f36056bcdb"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "HTTP Error / App Wall / Cloudflare block encountered (Status 504)."
+    },
+    {
+      "capture_id": "CAP_143_B_24",
+      "brand_id": "BRAND_POPEYES",
+      "brand_name": "Popeyes Vietnam",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://popeyes.vn/khuyen-mai",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_24_1787771171311",
+        "brand_id": "BRAND_POPEYES",
+        "brand_name": "Popeyes Vietnam",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://popeyes.vn/khuyen-mai",
+        "final_url": "https://popeyes.vn/khuyen-mai",
+        "redirect_chain": [
+          {
+            "url": "https://popeyes.vn/khuyen-mai",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcCUXEqAAAAAFq4o1q70jhsQ6_HGLkBbuPbj4Tf&co=aHR0cHM6Ly9wb3BleWVzLnZuOjQ0Mw..&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=y572ye8i8h3",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:11.193Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "4e48e7a5a9925fedc37fa92dcca6a011b8a6d512549ff8313cf41ce3e071e6ca",
+          "text_sha256": "64d82cae1c13fa46522c52a6850fc26b75f6a8588186eb299390e14b9365111c",
+          "screenshot_sha256": "4de75f73bde1d31de24d7009fdd796a4cabb11b4dcb4d6d1165f68dd83fe117c"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_B_25",
+      "brand_id": "BRAND_VINWONDERS",
+      "brand_name": "VinWonders Da Nang",
+      "cohort": "COHORT_B_OFFER_LEAVES",
+      "target_type": "OFFER_LEAF",
+      "canonical_url": "https://vinwonders.com/vi/uu-dai/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_B_25_1787771174241",
+        "brand_id": "BRAND_VINWONDERS",
+        "brand_name": "VinWonders Da Nang",
+        "cohort": "COHORT_B_OFFER_LEAVES",
+        "target_type": "OFFER_LEAF",
+        "requested_url": "https://vinwonders.com/vi/uu-dai/",
+        "final_url": "https://vinwonders.com/vi/uu-dai/uu-dai-cho-thanh-vien-thang-7-cua-pearl-club-chao-hoi-vien-trao-qua-hap-dan/",
+        "redirect_chain": [
+          {
+            "url": "https://vinwonders.com/vi/uu-dai/",
+            "http_status": 301
+          },
+          {
+            "url": "https://vinwonders.com/vi/uu-dai/uu-dai-cho-thanh-vien-thang-7-cua-pearl-club-chao-hoi-vien-trao-qua-hap-dan/",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:14.079Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "d81c24c6a6513391b2787ca6c9a942f6dcac8526bed1d57898bd6d7ed464b3c4",
+          "text_sha256": "019b715fe7b7d1e28dcc8eeab73c4b157cb0b5c840e53dd34760682574f06886",
+          "screenshot_sha256": "196f20ced083cd8258c3dd6b3c29abf5dd6c624367ba01fc3c8bd6a7303d20ac"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_C_01",
+      "brand_id": "BRAND_DANABUS",
+      "brand_name": "DanaBus Da Nang",
+      "cohort": "COHORT_C_UTILITIES_STUDENTS",
+      "target_type": "PUBLIC_UTILITY",
+      "canonical_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_C_01_1787771176675",
+        "brand_id": "BRAND_DANABUS",
+        "brand_name": "DanaBus Da Nang",
+        "cohort": "COHORT_C_UTILITIES_STUDENTS",
+        "target_type": "PUBLIC_UTILITY",
+        "requested_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+        "final_url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+        "redirect_chain": [
+          {
+            "url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+            "http_status": 301
+          },
+          {
+            "url": "https://www.danangbus.vn/lo-trinh-cac-tuyen.html",
+            "http_status": 302
+          },
+          {
+            "url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:16.600Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "2b9420b58ed8dd2c8cd9bd4978ea4594cd9834a3bc5583acdef72c262d36cbb1",
+          "text_sha256": "f368f93274420c178f3c2d58539c70e61d22812adad4bd1b0db69027d31f23aa",
+          "screenshot_sha256": "03fbfb1fd1442fe6d81ce2f769b344663227de145bd73f9e77da07bb7de9be17"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_C_02",
+      "brand_id": "BRAND_DSVN",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "cohort": "COHORT_C_UTILITIES_STUDENTS",
+      "target_type": "PUBLIC_UTILITY",
+      "canonical_url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_C_02_1787771179954",
+        "brand_id": "BRAND_DSVN",
+        "brand_name": "Đường Sắt Việt Nam (DSVN)",
+        "cohort": "COHORT_C_UTILITIES_STUDENTS",
+        "target_type": "PUBLIC_UTILITY",
+        "requested_url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+        "final_url": "https://dsvn.vn/#/",
+        "redirect_chain": [
+          {
+            "url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+            "http_status": 200
+          },
+          {
+            "url": "https://chatbot.84soft.vn/dist/index.html?token=jKUOK9ZFR3f0OhtSs%2FK6enMmBcX1bhvq85%2BBrCTfMIEqvnWXttHQzQ%3D%3D",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:19.862Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "61d779b923f6383d620f6537750f8e25d83afb0d16430df43fa25116904ca968",
+          "text_sha256": "362bb7c6096650315c0b6337846496a02a13eb707c05b3682179c3d3bbd34601",
+          "screenshot_sha256": "883ab64858948aa6db8712dd1c27b25a84315f6df79bb4c023a974aa4f70fb1e"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_C_03",
+      "brand_id": "BRAND_GITHUB",
+      "brand_name": "GitHub Education",
+      "cohort": "COHORT_C_UTILITIES_STUDENTS",
+      "target_type": "STUDENT_SERVICE",
+      "canonical_url": "https://education.github.com/pack",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "body._pack > div.flex-auto:nth-of-type(1) > main",
+        "outer_html_sha256": "13e1a8bf79509cf69558b692cb917fff88ee30ccc0006e3c5e2c823fc8db1863"
+      },
+      "extracted_fields_in_root": {
+        "title": "GitHub Student Developer Pack",
+        "title_provenance": {
+          "value": "GitHub Student Developer Pack",
+          "source_url_final": "https://education.github.com/pack",
+          "capture_receipt_id": "RECEIPT_CAP_143_C_03_1787771190180",
+          "dom_selector": "body._pack > div.flex-auto:nth-of-type(1) > main > div.tan-gradient:nth-of-type(1) > div.container-xl > div.d-flex:nth-of-type(1) > h1.f0-mktg",
+          "node_outer_html_sha256": "089ca46a1562beef424eff6a80bd2d60b5b995215eeb0b161f66f6cbeab31faa",
+          "raw_html_sha256": "12e42e234089d399e90f1641dd3465ed6694f15a2a6e4c357aa3191108441840",
+          "screenshot_sha256": "19755a95b7f97d18648719fece29bed1450f77e90085bd1acfaac5fd5dbb63c7",
+          "captured_at": "2026-08-26T19:06:30.083Z"
+        },
+        "price_claim": "50K",
+        "price_provenance": {
+          "value": "50K",
+          "source_url_final": "https://education.github.com/pack",
+          "capture_receipt_id": "RECEIPT_CAP_143_C_03_1787771190180",
+          "dom_selector": "body._pack > div.flex-auto:nth-of-type(1) > main > div.container-xl:nth-of-type(2) > div.f5:nth-of-type(3) > div.pack-offer-card:nth-of-type(33) > div.d-flex:nth-of-type(2) > div.color-bg-subtle > p",
+          "node_outer_html_sha256": "278308a690688c650b3df50c17b013bde078c2e54d9f20431c60fd630fc8364f",
+          "raw_html_sha256": "12e42e234089d399e90f1641dd3465ed6694f15a2a6e4c357aa3191108441840",
+          "screenshot_sha256": "19755a95b7f97d18648719fece29bed1450f77e90085bd1acfaac5fd5dbb63c7",
+          "captured_at": "2026-08-26T19:06:30.083Z"
+        },
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_C_03_1787771190180",
+        "brand_id": "BRAND_GITHUB",
+        "brand_name": "GitHub Education",
+        "cohort": "COHORT_C_UTILITIES_STUDENTS",
+        "target_type": "STUDENT_SERVICE",
+        "requested_url": "https://education.github.com/pack",
+        "final_url": "https://education.github.com/pack",
+        "redirect_chain": [
+          {
+            "url": "https://education.github.com/pack",
+            "http_status": 200
+          },
+          {
+            "url": "https://platform.twitter.com/widgets/widget_iframe.1227a5674072e080ffb1ba14ac0c1079.html?origin=https%3A%2F%2Feducation.github.com",
+            "http_status": 200
+          },
+          {
+            "url": "https://platform.twitter.com/widgets/tweet_button.1227a5674072e080ffb1ba14ac0c1079.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=https%3A%2F%2Feducation.github.com%2Fpack&size=l&text=The%20best%20developer%20tools%2C%20free%20for%20students%3A&time=1787771189058&type=share&url=https%3A%2F%2Feducation.github.com%2Fpack&via=githubeducation",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:30.083Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "12e42e234089d399e90f1641dd3465ed6694f15a2a6e4c357aa3191108441840",
+          "text_sha256": "299895a41864f7f981c2a512488049a3760cba91769c68f6dd16f2364faa02c0",
+          "screenshot_sha256": "19755a95b7f97d18648719fece29bed1450f77e90085bd1acfaac5fd5dbb63c7"
+        }
+      },
+      "terminal_state": "INCOMPLETE_OFFER_EVIDENCE",
+      "classification_reason": "Offer found in content root but lacks explicit expiration date or weekly recurring schedule."
+    },
+    {
+      "capture_id": "CAP_143_C_04",
+      "brand_id": "BRAND_SPOTIFY",
+      "brand_name": "Spotify Vietnam Student",
+      "cohort": "COHORT_C_UTILITIES_STUDENTS",
+      "target_type": "STUDENT_SERVICE",
+      "canonical_url": "https://www.spotify.com/vn-vi/student/",
+      "has_content_root": false,
+      "content_root_provenance": null,
+      "extracted_fields_in_root": {
+        "title": null,
+        "title_provenance": null,
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_C_04_1787771193007",
+        "brand_id": "BRAND_SPOTIFY",
+        "brand_name": "Spotify Vietnam Student",
+        "cohort": "COHORT_C_UTILITIES_STUDENTS",
+        "target_type": "STUDENT_SERVICE",
+        "requested_url": "https://www.spotify.com/vn-vi/student/",
+        "final_url": "https://www.spotify.com/vn-vi/student/",
+        "redirect_chain": [
+          {
+            "url": "https://www.spotify.com/vn-vi/student/",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:32.900Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "8a33ca045ffcce9eb5e8d2e95693098ad166878c0c7624b1a049f5eec5c1f60e",
+          "text_sha256": "777ec17ae617541729c42320979d65509af22cb62299dadcf865fd94aa2377d9",
+          "screenshot_sha256": "71f9d5b1e71837ea77d08e3a0b4b7cf9f427e41cf4ccae6d2baa27653beb8428"
+        }
+      },
+      "terminal_state": "NON_OFFER_PAGE_OR_SHELL",
+      "classification_reason": "Page lacks an isolated semantic article/content root (e.g. empty shell, catalog index, login modal, or non-article structure)."
+    },
+    {
+      "capture_id": "CAP_143_C_05",
+      "brand_id": "BRAND_NOTION",
+      "brand_name": "Notion Education",
+      "cohort": "COHORT_C_UTILITIES_STUDENTS",
+      "target_type": "STUDENT_SERVICE",
+      "canonical_url": "https://www.notion.so/product/notion-for-education",
+      "has_content_root": true,
+      "content_root_provenance": {
+        "tag": "main",
+        "selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase",
+        "outer_html_sha256": "ff8935694c3473fb9d0cdbeca1dcee873cd487b334b7ce21de0c95deb362c355"
+      },
+      "extracted_fields_in_root": {
+        "title": "Student planner",
+        "title_provenance": {
+          "value": "Student planner",
+          "source_url_final": "https://www.notion.com/product/notion-for-education",
+          "capture_receipt_id": "RECEIPT_CAP_143_C_05_1787771197215",
+          "dom_selector": "body > div:nth-of-type(1) > div.base-module-scss-module__QPCBRq__theme > main.layout-module-scss-module__sf3SsW__layoutBase > div.KombiBlockCarousel-module-scss-module__CzfLAq__root:nth-of-type(2) > div.KombiBlock-module-scss-module__-3nyQW__kombiBlocks > div.base-module-scss-module__QPCBRq__theme:nth-of-type(1) > div.KombiBlock-module-scss-module__-3nyQW__kombiBlock > div.KombiBlock-module-scss-module__-3nyQW__header:nth-of-type(1)",
+          "node_outer_html_sha256": "f6c70e059b40387d3240dc258dec730902d0b5ef32e6df3c73d91450e04330a1",
+          "raw_html_sha256": "6754cf3804dc63703138b959bb593d03cc6035beb23403accd28ae63ca711684",
+          "screenshot_sha256": "d6b2ae746c2b8c0cdd374b1ff66cad19d149f590bb8baf0c2c6ea2dbff2dcc74",
+          "captured_at": "2026-08-26T19:06:36.932Z"
+        },
+        "price_claim": null,
+        "price_provenance": null,
+        "discount_percentage": null,
+        "discount_provenance": null,
+        "weekly_schedule": null,
+        "weekly_schedule_provenance": null,
+        "program_validity_span": null,
+        "validity_provenance": null,
+        "leaf_scope_stated": null,
+        "leaf_scope_provenance": null
+      },
+      "locality_evaluation": {
+        "brand_locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+        "distinct_normalized_address_units_count": 0
+      },
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143_1787771035193",
+        "receipt_id": "RECEIPT_CAP_143_C_05_1787771197215",
+        "brand_id": "BRAND_NOTION",
+        "brand_name": "Notion Education",
+        "cohort": "COHORT_C_UTILITIES_STUDENTS",
+        "target_type": "STUDENT_SERVICE",
+        "requested_url": "https://www.notion.so/product/notion-for-education",
+        "final_url": "https://www.notion.com/product/notion-for-education",
+        "redirect_chain": [
+          {
+            "url": "https://www.notion.so/product/notion-for-education",
+            "http_status": 301
+          },
+          {
+            "url": "https://www.notion.com/product/notion-for-education",
+            "http_status": 200
+          }
+        ],
+        "http_status": 200,
+        "captured_at": "2026-08-26T19:06:36.932Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_NETWORK_EVENT_HARNESS",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh_hashes": {
+          "html_sha256": "6754cf3804dc63703138b959bb593d03cc6035beb23403accd28ae63ca711684",
+          "text_sha256": "49cfc384d18dff835500ac551e9202297ec6321bd5b52f2c93f41bebde844593",
+          "screenshot_sha256": "d6b2ae746c2b8c0cdd374b1ff66cad19d149f590bb8baf0c2c6ea2dbff2dcc74"
+        }
+      },
+      "terminal_state": "INCOMPLETE_OFFER_EVIDENCE",
+      "classification_reason": "Semantic content root found but lacks explicit numeric price or discount percentage node."
+    }
+  ]
+}

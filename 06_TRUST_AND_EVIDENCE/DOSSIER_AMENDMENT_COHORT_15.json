@@ -1,0 +1,165 @@
+{
+  "amendment_id": "DOSSIER_AMENDMENT_COHORT_15_JAYT_264",
+  "governing_directive": "JAYT-245 Section JAYT-264 (Lines 5792-5801)",
+  "generated_at_utc": "2026-09-03T04:56:25.024Z",
+  "status": "ACTIVE_AMENDMENT",
+  "original_dossier_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/JAYT_263_CONTAMINATION_IMPACT_AUDIT_DOSSIER.json",
+    "bytes_sha256": "0f66e090622a8ac4b4a9da2c071cd8b71efde1fc70e97c3c8686b4cd662b1fb6",
+    "superseded_census_note": "Original dossier stated 18 PASS / 3 FAIL / 1 historical based on pre-freeze execution. Stale census superseded by this runtime census of 14 PASS / 10 FAIL / 1 HISTORICAL ARCHIVE."
+  },
+  "remediation_overlay_reference": {
+    "path": "06_TRUST_AND_EVIDENCE/REMEDIATION_OVERLAY_COHORT_15_RETIREMENT.json",
+    "bytes_sha256": "4d5baeaa9257ce554360f9b896ce70af75233f1795eaf930373b94a852e540e4",
+    "candidate_id": "COHORT_EZ_AM_15",
+    "new_state": "CLOSED_CONTAMINATION_SHARED_RAW"
+  },
+  "freeze_v2_supersession_status": {
+    "governing_directive": "JAYT-263-CORRECTION-2",
+    "record_version": "v2.0",
+    "state": "ACTIVE",
+    "canonical_payload_sha256": "c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d",
+    "v2_file_bytes_sha256": "54663260b0d58449fa036e8ab48b2e25ff6f41feef83b03a7854df515b95d197",
+    "historical_v1_path": "00_PROGRAM_BASELINE/HISTORICAL/JAYT_CONTAMINATION_FREEZE_STATE_V1.json",
+    "historical_v1_bytes_sha256": "97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a",
+    "supersession_ledger_path": "06_TRUST_AND_EVIDENCE/JAYT_FREEZE_STATE_SUPERSESSION_LEDGER.json",
+    "audit_classification": "FREEZE_INTEGRITY_RECOVERED__CONTAMINATION_IMPACT_OPEN"
+  },
+  "census_summary": {
+    "total_suites_in_repository": 25,
+    "active_suites_count": 24,
+    "active_suites_passing_count": 14,
+    "active_suites_failing_count": 10,
+    "historical_suites_expected_failure_count": 1,
+    "total_unit_tests_passed": 284,
+    "runtime_freeze_active": true
+  },
+  "failure_census_breakdown": [
+    {
+      "index": 1,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_9_capture_envelope_and_registry_pinning_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "Error: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite attempts to execute operational runner CLI. The preflight circuit breaker in jayt_freeze_state_guard.js blocks execution before any file I/O occurs.",
+      "exit_code": 1
+    },
+    {
+      "index": 2,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_8_raw_first_worker_and_catalog_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "CATALOG_BUILD_ERROR: CONTAMINATION_FREEZE_ACTIVE: Component \"STOREFRONT_CATALOG_BUILDER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite attempts to execute build_storefront_catalog.js CLI. Blocked preflight by freeze guard; 0 output bytes written.",
+      "exit_code": 1
+    },
+    {
+      "index": 3,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_7_process_trace_integration_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "Error: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite executes runner integration process; halted preflight by active contamination freeze.",
+      "exit_code": 1
+    },
+    {
+      "index": 4,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_4_real_runtime_caller_graph_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "Error: CONTAMINATION_FREEZE_ACTIVE: Component \"COHORT_15_OPERATIONAL_RUNNER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite analyzes caller graph by launching runner process; blocked preflight by freeze guard.",
+      "exit_code": 1
+    },
+    {
+      "index": 5,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_1_batch_quarantine_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "CATALOG_BUILD_ERROR: CONTAMINATION_FREEZE_ACTIVE: Component \"STOREFRONT_CATALOG_BUILDER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite runs catalog builder to test quarantine exclusion; preflight circuit breaker halts execution immediately.",
+      "exit_code": 1
+    },
+    {
+      "index": 6,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_258_correction_4_sole_watchdog_writer_qa.js",
+      "category": "FREEZE_PREFLIGHT_CIRCUIT_BREAKER_ACTIVE",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_freeze_state_guard.js",
+      "guard_outcome": "CATALOG_BUILD_ERROR: CONTAMINATION_FREEZE_ACTIVE: Component \"STOREFRONT_CATALOG_BUILDER\" is strictly FROZEN under JAYT-263-CORRECTION-2.",
+      "evidence_analysis": "Suite invokes catalog builder to test sole watchdog writer constraints; blocked preflight by active freeze.",
+      "exit_code": 1
+    },
+    {
+      "index": 7,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_3_canonical_admission_gateway_qa.js",
+      "category": "QUARANTINE_DENYLIST_COLLISION",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_artifact_loader_guard.js",
+      "guard_outcome": "QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact.",
+      "evidence_analysis": "Suite tests candidate admission. When examining candidate COHORT_EZ_AM_15, the raw HTML hash b34fdd82... matches the full denylist from quarantined Batch 02 TNGo, triggering intentional fail-closed rejection.",
+      "exit_code": 1
+    },
+    {
+      "index": 8,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_260_correction_2_vault_quarantine_and_denylist_qa.js",
+      "category": "QUARANTINE_DENYLIST_COLLISION",
+      "guard_module": "00_PROGRAM_BASELINE/jayt_artifact_loader_guard.js",
+      "guard_outcome": "QUARANTINED_ARTIFACT_REFERENCE: SHA-256 hash \"b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb\" matches a quarantined synthetic artifact.",
+      "evidence_analysis": "Suite verifies denylist enforcement on candidate cohort files. Rejected intentionally by assertArtifactNotQuarantined.",
+      "exit_code": 1
+    },
+    {
+      "index": 9,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_263_hard_circuit_breaker_and_impact_audit_qa.js",
+      "category": "ASSERTION_DIRECTIVE_ID_SUPERSEDED",
+      "guard_module": "07_QUALITY_ASSURANCE/test_jayt_263_hard_circuit_breaker_and_impact_audit_qa.js",
+      "guard_outcome": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: actual: 'JAYT-263-CORRECTION-2', expected: 'JAYT-263-CORRECTION-1'.",
+      "evidence_analysis": "Historical QA test written for JAYT-263-CORRECTION-1 asserted directive_id === 'JAYT-263-CORRECTION-1'. The freeze record was superseded by JAYT-263-CORRECTION-2, causing expected assertion mismatch without altering code.",
+      "exit_code": 1
+    },
+    {
+      "index": 10,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_262_correction_6_runtime_freeze_enforcement_qa.js",
+      "category": "ASSERTION_DIRECTIVE_ID_SUPERSEDED",
+      "guard_module": "07_QUALITY_ASSURANCE/test_jayt_262_correction_6_runtime_freeze_enforcement_qa.js",
+      "guard_outcome": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: actual: 'JAYT-263-CORRECTION-2', expected: 'JAYT-262-CORRECTION-6'.",
+      "evidence_analysis": "Historical QA test written for JAYT-262-CORRECTION-6 asserted directive_id === 'JAYT-262-CORRECTION-6'. Superseded by subsequent CEO directives; recorded honestly.",
+      "exit_code": 1
+    },
+    {
+      "index": 11,
+      "suite_file": "07_QUALITY_ASSURANCE/test_jayt_262_micro_batch_02_human_reviewed_intake_qa.js",
+      "category": "HISTORICAL_BASELINE_QUARANTINED",
+      "guard_module": "Historical QA Baseline",
+      "guard_outcome": "EXPECTED_FAILURE_AFTER_QUARANTINE (Exit: 1)",
+      "evidence_analysis": "Baseline suite written prior to quarantine asserts active presence of Batch 02 vault on disk. Quarantined under JAYT-262-CORRECTION-1; failure is expected and permanent.",
+      "exit_code": 1
+    }
+  ],
+  "epistemic_provenance_distinction": {
+    "ceo_verified_facts": [
+      "Historical v1 bytes SHA-256 strictly equals 97464c8f0151e141f21239893632b909471f4527c1f64c9f8ac47b8cf7c3371a.",
+      "V2 file bytes SHA-256 strictly equals 54663260b0d58449fa036e8ab48b2e25ff6f41feef83b03a7854df515b95d197.",
+      "Canonical payload digest c3333e8656e7cfdc92e69bf6baa0ae053c951dffec09a15c8798f5ba0d5bad0d matches recomputation.",
+      "Supersession ledger points to historical v1 path without self-reference.",
+      "Hard circuit breaker exits with code 1 and CONTAMINATION_FREEZE_ACTIVE on runner and builder.",
+      "System state classified as FREEZE_INTEGRITY_RECOVERED__CONTAMINATION_IMPACT_OPEN under JAYT-263-CORRECTION-2."
+    ],
+    "self_executed_runtime_results": [
+      "Rigorous regression suite census: 14 PASS / 10 FAIL / 1 HISTORICAL ARCHIVE.",
+      "Staging preview on port 4173 serves 1 approved pilot card (GitHub) with 0 Batch 02 cards and 0 console errors.",
+      "Full denylist in jayt_artifact_loader_guard.js rejects all 6 quarantined Batch 02 SHA-256 hashes.",
+      "Remediation overlay permanently transitions candidate COHORT_EZ_AM_15 to CLOSED_CONTAMINATION_SHARED_RAW."
+    ]
+  },
+  "impact_of_remediation_overlay": {
+    "candidate_id": "COHORT_EZ_AM_15",
+    "disallowed_hash": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+    "status": "CLOSED_CONTAMINATION_SHARED_RAW",
+    "admission_policy": "PERMANENTLY_BARRED",
+    "future_cohort_eligibility": false,
+    "public_dom_impact": "ZERO_EXPOSURE",
+    "pricing_impact": "ZERO_IMPACT",
+    "voucher_impact": "ZERO_IMPACT",
+    "affiliate_impact": "ZERO_IMPACT"
+  }
+}

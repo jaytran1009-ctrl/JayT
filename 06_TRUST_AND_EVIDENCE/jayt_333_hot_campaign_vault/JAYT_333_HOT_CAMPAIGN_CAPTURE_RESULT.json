@@ -1,0 +1,95 @@
+{
+  "report_name": "JAYT_333_HOT_CAMPAIGN_CAPTURE_RESULT",
+  "generated_at_utc": "2026-09-07T06:48:39.983Z",
+  "capture_method": "CONTROLLED_ONE_SHOT_UNAUTHENTICATED_GET",
+  "results": [
+    {
+      "candidate_id": "J333_HOT_01_JOLLIBEE_69K",
+      "requested_url": "https://jollibee.com.vn/blog/category/khuyen-mai",
+      "final_url": "https://jollibee.com.vn/blog/category/khuyen-mai",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_01_JOLLIBEE_69K.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_01_JOLLIBEE_69K.headers.json",
+      "raw_sha256": "49c2be96af560ca48d8769efebacfc733132ea950658087cc8ca230d64cc4373",
+      "raw_bytes": 214709,
+      "evidence": [
+        {
+          "declared": "Combo chỉ 69,000 vnd",
+          "found": null,
+          "byte_offset_utf8": null
+        },
+        {
+          "declared": "ghé cửa hàng gần nhất đọc code \"Combo 69k\"",
+          "found": null,
+          "byte_offset_utf8": null
+        }
+      ],
+      "all_declared_spans_found": false,
+      "commercial_duplicate_blocked": false,
+      "verdict": "QUARANTINE__HTTP_OR_SPAN_MISMATCH"
+    },
+    {
+      "candidate_id": "J333_HOT_02_GALAXY_U22",
+      "requested_url": "https://www.galaxycine.vn/u22/",
+      "verdict": "QUARANTINE__CAPTURE_FAILED",
+      "error": "fetch failed"
+    },
+    {
+      "candidate_id": "J333_HOT_03_METIZ_U22_2026",
+      "requested_url": "https://metiz.vn/news-promotion.html",
+      "final_url": "https://metiz.vn/news-promotion.html",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_03_METIZ_U22_2026.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_03_METIZ_U22_2026.headers.json",
+      "raw_sha256": "cffc424c38070d480b79a1ee4e6be08959eb923bda09c451f2cb94f9c13ca327",
+      "raw_bytes": 60256,
+      "evidence": [
+        {
+          "declared": "KHUYẾN MÃI GIÁ VÉ U22",
+          "found": null,
+          "byte_offset_utf8": null
+        },
+        {
+          "declared": "01/01/2026 - 31/12/2026",
+          "found": "01/01/2026 - 31/12/2026",
+          "byte_offset_utf8": 11776
+        }
+      ],
+      "all_declared_spans_found": false,
+      "commercial_duplicate_blocked": false,
+      "verdict": "QUARANTINE__HTTP_OR_SPAN_MISMATCH"
+    },
+    {
+      "candidate_id": "J333_HOT_04_DANABUS_QR_MONTHLY",
+      "requested_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/gioi-thieu-va-huong-dan-su-dung-tinh-nang-mua-ve-thang-qrcode-qua-ung-dung-danabus-5595.html",
+      "final_url": "https://www.danangbus.vn/tin-tuc/tin-tuc/gioi-thieu-va-huong-dan-su-dung-tinh-nang-mua-ve-thang-qrcode-qua-ung-dung-danabus-5595.html",
+      "http_status": 200,
+      "raw_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_04_DANABUS_QR_MONTHLY.raw.html",
+      "headers_file": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_HOT_04_DANABUS_QR_MONTHLY.headers.json",
+      "raw_sha256": "96cf0e0b4b11280539dcd9e7fb757dd082e1b82cff84abdc3f1c02ff63050751",
+      "raw_bytes": 97192,
+      "evidence": [
+        {
+          "declared": "Tính năng mua vé tháng QRcode",
+          "found": "Tính năng mua vé tháng QRcode",
+          "byte_offset_utf8": 54784
+        }
+      ],
+      "all_declared_spans_found": true,
+      "commercial_duplicate_blocked": true,
+      "verdict": "EVIDENCE_COMPLETE__DEDUP_BLOCKED"
+    }
+  ],
+  "metrics": {
+    "targets": 4,
+    "evidence_complete": 1,
+    "awaiting_approval": 0,
+    "dedup_blocked": 1,
+    "quarantined": 3
+  },
+  "safeguards": {
+    "synthetic_bytes_created": false,
+    "affiliate_links_activated": 0,
+    "production_mutated": false
+  }
+}

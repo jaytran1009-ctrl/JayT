@@ -1,0 +1,496 @@
+{
+  "matrix_name": "BRAND_POLICY_AUDIT_MATRIX",
+  "version": "3.0",
+  "scope": "STAGING_INTERNAL_AUDIT — BATCH_13_POLICY_EVALUATION",
+  "updated_at_utc": "2026-09-06T08:00:00.000Z",
+  "audit_principles": {
+    "anti_synthesis": "Chính sách toàn chuỗi phải đối soát trực tiếp từ raw HTTP response có SHA-256 xác thực; tuyệt đối không suy diễn từ sự tồn tại của cơ sở vật lý.",
+    "policy_independence": "Tách bạch độc lập từng chính sách thương hiệu (CGV Culture Day tách riêng CGV U22). Không gộp điều kiện của hai chương trình khác nhau.",
+    "span_level_verification": "Mỗi điều khoản phải có text_span, byte_offset và raw_sha256 được kiểm thử tự động bằng raw bytes. Thiếu bằng chứng phải giữ UNVERIFIED; không lưu suy đoán như dữ kiện.",
+    "internal_research_boundary": "Tài liệu tổng hợp nội bộ (như art_cgv_u22_policy.txt) chỉ là đầu mối nghiên cứu (RESEARCH_CLUE_ONLY), không có giá trị chứng cứ gốc.",
+    "no_advertorial_deduction": "Không suy diễn đối tượng thụ hưởng hay độ tuổi từ lời quảng bá (ví dụ 'nha cả nhà ơiiiii'). Khi thiếu điều khoản độ tuổi minh thị, đối tượng bắt buộc gán UNVERIFIED.",
+    "historical_event_boundary": "Sự kiện có ngày diễn ra trong quá khứ (như 24/08/2026) được ghi nhận là tham chiếu lịch sử, chưa xác minh hiệu lực hiện hành (HISTORICAL_REFERENCE__CURRENT_VALIDITY_UNVERIFIED). Không gán quyền hưởng ưu đãi hiện hành.",
+    "policy_inheritance_rule": "Không bắt buộc tìm trang riêng từng cơ sở nếu nguồn chính thức chứng minh áp dụng toàn hệ thống. Nhưng nếu nguồn giới hạn danh sách chi nhánh thì cơ sở ngoài danh mục phải giữ UNVERIFIED.",
+    "immutable_production_boundary": "Ma trận phục vụ phân loại dữ liệu nội bộ. Staging duy trì 3 thẻ (B12_13, B12_15, B12_05), 0 affiliate, Production đóng băng v3.422.0."
+  },
+  "policies": [
+    {
+      "policy_id": "POLICY_CGV_CULTURE_DAY",
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "policy_name": "Chương trình Ưu đãi CGV Culture Day 2026 (Tham chiếu lịch sử)",
+      "source_url": "https://www.cgv.vn/default/newsoffer/cgv-culture-day-2026/",
+      "raw_source_path": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/cgv_culture_day_official_promo_raw.html",
+      "raw_sha256": "f8f1fe1922c945bf9b84e0860fd498f68a37e33e9e86be5784234d498a75e3eb",
+      "raw_bytes": 55213,
+      "captured_at_utc": "2026-08-22T07:25:39.476Z",
+      "capture_receipt": "05_DEAL_AND_AFFILIATE/candidates/evidence_snapshots/capture_receipt_CGV_CULTURE_DAY.json",
+      "terms": {
+        "policy_title": {
+          "text_span": "CGV CULTURE DAY - THỨ HAI CUỐI CÙNG CỦA THÁNG ĐÃ TRỞ LẠI !!!",
+          "byte_offset": 263,
+          "status": "VERIFIED"
+        },
+        "validity_historical_date": {
+          "text_span": "Thứ Hai – 24/08/2026",
+          "byte_offset": 42019,
+          "status": "VERIFIED",
+          "content_audit": "Nguồn chứng minh sự kiện diễn ra ngày Thứ Hai 24/08/2026. Tại thời điểm kiểm toán (tháng 9/2026), ngày này đã qua. Ghi nhận là đợt áp dụng lịch sử, CHƯA XÁC MINH HIỆU LỰC HIỆN HÀNH."
+        },
+        "advertorial_phrase": {
+          "text_span": "nha cả nhà ơiiiii",
+          "byte_offset": 42098,
+          "status": "VERIFIED",
+          "content_audit": "Đây là câu cảm thán quảng bá (advertorial phrase), KHÔNG CHỨNG MINH chính sách không giới hạn độ tuổi. Không dùng để suy diễn đối tượng."
+        },
+        "target_audience_eligibility": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Nguồn raw không chứa điều khoản minh thị quy định điều kiện độ tuổi hoặc tiêu chuẩn hội viên cho Culture Day. Bắt buộc giữ UNVERIFIED."
+        },
+        "standard_2d_price": {
+          "text_span": "58.000đ",
+          "byte_offset": 42527,
+          "status": "VERIFIED"
+        },
+        "designated_danang_theater": {
+          "text_span": "CGV Vĩnh Trung Plaza",
+          "byte_offset": 43133,
+          "status": "VERIFIED",
+          "content_audit": "Cụm rạp duy nhất tại Đà Nẵng được liệt kê trong danh sách áp dụng giá 58.000đ của đợt 24/08/2026."
+        },
+        "applicable_channels": {
+          "text_span": "Áp dụng cho khách hàng đặt vé trực tuyến (online) hoặc tại quầy.",
+          "byte_offset": 46259,
+          "status": "VERIFIED"
+        },
+        "seating_types": {
+          "text_span": "Áp dụng cho mọi loại ghế (bao gồm ghế Sweetbox).",
+          "byte_offset": 46368,
+          "status": "VERIFIED"
+        },
+        "group_sales_exception": {
+          "text_span": "Không áp dụng cho mua vé nhóm (Group Sales), Suất Chiếu Đặc Biệt.",
+          "byte_offset": 46656,
+          "status": "VERIFIED"
+        },
+        "special_room_exceptions": {
+          "text_span": "Không áp dụng cho phòng chiếu IMAX, SCREENX, 4DX, ULTRA 4DX.",
+          "byte_offset": 46780,
+          "status": "VERIFIED"
+        },
+        "promo_stacking_exception": {
+          "text_span": "Không áp dụng chung với chương trình khuyến mãi khác của CGV và đối tác.",
+          "byte_offset": 46887,
+          "status": "VERIFIED"
+        },
+        "holiday_exceptions": {
+          "text_span": "Không áp dụng cho các ngày Lễ, Tết.",
+          "byte_offset": 47012,
+          "status": "VERIFIED"
+        },
+        "combo_snack_offer": {
+          "text_span": "CGV Combo (bao gồm 02 nước + 01 bắp)",
+          "byte_offset": 45981,
+          "status": "VERIFIED"
+        },
+        "combo_counter_only": {
+          "text_span": "Giá CGV Combo chỉ áp dụng mua tại quầy.",
+          "byte_offset": 46462,
+          "status": "VERIFIED"
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "cgv_cgv_vinh_trung_plaza",
+          "name": "CGV Vĩnh Trung Plaza",
+          "verbatim_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+          "district": "Thanh Khê",
+          "facility_eligibility": "HISTORICAL_REFERENCE_ONLY",
+          "reason": "Nguồn raw liệt kê đích danh trong danh sách 58.000đ ngày 24/08/2026; hiệu lực hiện hành chưa xác minh, giữ UNVERIFIED cho quyền hưởng ưu đãi hiện tại."
+        },
+        {
+          "location_id": "cgv_cgv_vincom_da_nang",
+          "name": "CGV Vincom Đà Nẵng",
+          "verbatim_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng",
+          "district": "Sơn Trà",
+          "facility_eligibility": "UNVERIFIED",
+          "reason": "Nguồn raw cgv_culture_day_official_promo_raw.html KHÔNG liệt kê cụm rạp này trong danh sách áp dụng (58k hoặc 68k). Không tự suy đoán."
+        },
+        {
+          "location_id": "cgv_cgv_mm_da_nang",
+          "name": "CGV MM Supercenter Đà Nẵng",
+          "verbatim_address": "Tầng 3, Trung tâm thương mại MM Supercenter Đà Nẵng,Tầng 3, Trung Tâm Thương Mại MM Mega Market Đà Nẵng, 167 Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+          "district": null,
+          "facility_eligibility": "UNVERIFIED",
+          "reason": "Nguồn raw cgv_culture_day_official_promo_raw.html KHÔNG liệt kê cụm rạp này trong danh sách áp dụng. Không tự suy đoán."
+        }
+      ],
+      "overall_policy_verdict": "HISTORICAL_REFERENCE__CURRENT_VALIDITY_UNVERIFIED",
+      "commercial_card_status": "NOT_PUBLISHED",
+      "audit_rationale": "Toàn bộ 13 text-span và byte offset đã được kiểm thử tự động khớp 100% với raw HTML. Ngày áp dụng 24/08/2026 là tham chiếu lịch sử; đối tượng thụ hưởng và hiệu lực hiện hành chưa xác minh. Không phát hành thẻ thương mại."
+    },
+    {
+      "policy_id": "POLICY_CGV_U22",
+      "brand_id": "cgv_cinemas",
+      "brand_name": "CGV Cinemas Vietnam",
+      "policy_name": "Chính sách Giá Vé Thành viên U22 (Học sinh - Sinh viên)",
+      "verified_official_url": "https://www.cgv.vn/default/cgv-membership",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.raw.html",
+      "raw_sha256": "5ef9bdd04da5fa7af28a119303ec38cf9ddfc5022973a6b76f2d1f1a239d77b6",
+      "raw_bytes": 5390,
+      "research_artifact": "05_DEAL_AND_AFFILIATE/candidates/artifacts/art_cgv_u22_policy.txt",
+      "research_artifact_role": "RESEARCH_CLUE_ONLY",
+      "terms": {
+        "target_audience": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Chưa có HTTP raw snapshot; không thể khẳng định độ tuổi học sinh/sinh viên hay 12-22 tuổi nếu chỉ dựa vào văn bản tổng hợp nội bộ."
+        },
+        "ticket_price": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Văn bản nội bộ ghi 55.000 - 65.000 VND nhưng chưa có text-span từ raw HTTP response."
+        },
+        "validity_period": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Văn bản nội bộ ghi hạn 365 ngày nhưng thiếu chứng từ nguồn."
+        },
+        "applicable_channels": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "special_room_exceptions": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "branch_scope_and_exceptions": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "cgv_cgv_vinh_trung_plaza",
+          "name": "CGV Vĩnh Trung Plaza",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "cgv_cgv_vincom_da_nang",
+          "name": "CGV Vincom Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "cgv_cgv_mm_da_nang",
+          "name": "CGV MM Supercenter Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        }
+      ],
+      "overall_policy_verdict": "UNVERIFIED",
+      "commercial_card_status": "NOT_PUBLISHED",
+      "verified_next_ingress_scope": {
+        "target_url": "https://www.cgv.vn/default/cgv-membership",
+        "required_evidence": "Thân trang HTML HTTP 200 chứa định nghĩa các hạng thành viên CGV và quyền lợi U22; trích xuất byte offset cho độ tuổi, biểu giá vé và thời hạn."
+      },
+      "audit_rationale": "Đã thực hiện thu nạp nội bộ một lượt theo lệnh Hội đồng. Phản hồi thực tế là HTTP 200 F5 WAF JavaScript Anti-bot Challenge (TS015ef8cd, 5.390 bytes). Không chứa nội dung HTML trang quyền lợi thành viên hay bảng giá U22. Tuân thủ ranh giới kiểm toán, không bypass/retry. Toàn bộ điều khoản U22 giữ UNVERIFIED.",
+      "source_url": "https://www.cgv.vn/default/cgv-membership",
+      "captured_at_utc": "2026-09-06T07:57:12.584Z",
+      "capture_receipt": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/cgv_cinemas.receipt.json"
+    },
+    {
+      "policy_id": "POLICY_B12_04_GALAXY_U22",
+      "brand_id": "galaxy_cinema",
+      "brand_name": "Galaxy Cinema",
+      "policy_name": "Chính sách Giá Vé U22 Galaxy Cinema",
+      "source_url": "https://www.galaxycine.vn/u22/",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.raw.html",
+      "raw_sha256": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "raw_bytes": 138,
+      "terms": {
+        "target_audience": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Tệp raw B12_04 chỉ là phản hồi HTTP 302 Found (nginx redirect), hoàn toàn không chứa thân trang HTML. Tuyệt đối không suy đoán độ tuổi hội viên Stars."
+        },
+        "ticket_price": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "validity_period": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "applicable_channels": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "branch_scope_and_exceptions": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "galaxy_cinema_da_nang",
+          "name": "Galaxy Cinema Coop Đà Nẵng",
+          "verbatim_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        }
+      ],
+      "overall_policy_verdict": "UNVERIFIED",
+      "commercial_card_status": "NOT_PUBLISHED",
+      "verified_next_ingress_scope": {
+        "target_url": "https://www.galaxycine.vn/khuyen-mai/gia-ve-u22/",
+        "required_evidence": "Thân trang HTML HTTP 200 (trang đích sau redirect) chứa bảng giá vé U22 theo ngày và điều kiện độ tuổi thẻ Stars tại rạp Co.opmart Đà Nẵng."
+      },
+      "audit_rationale": "Đã thực hiện thu nạp nội bộ một lượt theo lệnh Hội đồng. Phản hồi thực tế là HTTP 302 Found (nginx redirect) tới Location: https://www.galaxycine.vn/u22/ (138 bytes). Tuân thủ nghiêm ngặt chỉ đạo Hội đồng: lưu phản hồi và Location, không tự mở rộng sang URL ngoài scope. Thân phản hồi không chứa nội dung trang hay điều khoản U22. Toàn bộ điều khoản giữ UNVERIFIED.",
+      "captured_at_utc": "2026-09-06T07:57:12.913Z",
+      "capture_receipt": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/galaxy_cinema.receipt.json"
+    },
+    {
+      "policy_id": "POLICY_B12_09_JOLLIBEE_COMBO",
+      "brand_id": "jollibee",
+      "brand_name": "Jollibee Vietnam",
+      "policy_name": "Chương trình Combo Tiết Kiệm Jollibee",
+      "source_url": "https://jollibee.com.vn/mon-moi-mon-ngon.html",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.raw.html",
+      "raw_sha256": "131ae8fcc4a8ed0c66470be43614c448c542ec7b047147a71598531e570b2a33",
+      "raw_bytes": 264495,
+      "terms": {
+        "target_audience": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "combo_price_sheet": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED",
+          "content_audit": "Tệp raw là trang blog tin tức tổng hợp (/blog/category/khuyen-mai), thiếu biểu giá combo trang lá."
+        },
+        "validity_period": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "applicable_channels": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        },
+        "branch_scope_and_exceptions": {
+          "text_span": null,
+          "byte_offset": null,
+          "status": "UNVERIFIED"
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "jollibee_59",
+          "name": "Jollibee Vincom Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_106",
+          "name": "Jollibee Tiểu La - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_121",
+          "name": "Jollibee Nguyễn Đức Trung - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_132",
+          "name": "Jollibee Phan Đăng Lưu - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_135",
+          "name": "Jollibee Phạm Như Xương - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_139",
+          "name": "Jollibee Lý Thái Tổ - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_156",
+          "name": "Jollibee Đống Đa - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_158",
+          "name": "Jollibee Ngô Văn Sở - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "jollibee_252",
+          "name": "Jollibee MM Mega Market - Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        }
+      ],
+      "overall_policy_verdict": "UNVERIFIED",
+      "commercial_card_status": "NOT_PUBLISHED",
+      "verified_next_ingress_scope": {
+        "target_url": "https://jollibee.com.vn/thuc-don/combo-tiet-kiem",
+        "required_evidence": "Thân trang HTML thực đơn combo tiết kiệm với biểu giá chi tiết từng combo và điều kiện áp dụng tại các cửa hàng Đà Nẵng."
+      },
+      "audit_rationale": "Đã thực hiện thu nạp nội bộ một lượt theo lệnh Hội đồng cho URL /mon-moi-mon-ngon.html (HTTP 200, 264.495 bytes). Dữ liệu eCommerce GA4 chứa danh mục 5 combo tiêu chuẩn và biểu giá niêm yết (73k-185k). Tuân thủ nghiêm ngặt chỉ đạo Hội đồng: (1) Giá thực đơn niêm yết KHÔNG mặc định là giá khuyến mãi/ưu đãi (không có điều khoản giảm giá so với giá gốc); (2) Từ khóa 'Đà Nẵng' xuất hiện 0 lần, phạm vi áp dụng tại cửa hàng Đà Nẵng giữ UNVERIFIED; (3) Không có điều khoản đối tượng học sinh/sinh viên hay giới hạn thời hạn. Toàn bộ chính sách ưu đãi giữ UNVERIFIED.",
+      "captured_at_utc": "2026-09-06T07:57:14.681Z",
+      "capture_receipt": "06_TRUST_AND_EVIDENCE/batch_13_policy_ingress_vault/run_20260906_075712_2aaec7/jollibee.receipt.json"
+    },
+    {
+      "policy_id": "POLICY_B12_05_PHUCLONG_MEMBER",
+      "brand_id": "phuclong",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "policy_name": "Chương Trình Hội Viên Phúc Long: Tích Điểm & Đổi Quà",
+      "source_url": "https://phuclong.com.vn/hoi-vien/dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_05.raw.html",
+      "raw_sha256": "9c4eadd1660bc043c3a6c685fd98589ead6bb4dbe5eb498ced669fbc46c938c4",
+      "raw_bytes": 124655,
+      "dossier_path": "06_TRUST_AND_EVIDENCE/batch_12_ingress_vault/B12_05_PHUCLONG_MEMBER_BENEFIT_DOSSIER.json",
+      "dossier_sha256": "791180d61b712eebf2d9bd4f75210c5745901895c0b14c216012b8950843d2cb",
+      "terms": {
+        "earning_ratio": {
+          "text_span": "Tỷ lệ quy đổi điểm khả dụng (Điểm đổi quà) và điểm tích lũy: 10.000 đồng = 1 điểm",
+          "byte_offset": 47548,
+          "status": "VERIFIED"
+        },
+        "point_validity": {
+          "text_span": "Điểm đổi quà có hạn sử dụng là 1 năm kể từ ngày tích điểm đó.",
+          "byte_offset": 47961,
+          "status": "VERIFIED"
+        },
+        "store_earning_scope": {
+          "text_span": "Chỉ áp dụng tích lũy điểm khi khách hàng thực hiện giao dịch tại website Phúc Long và trực tiếp tại hệ thống cửa hàng Phúc Long trên toàn quốc (ngoại trừ cửa hàng tại Sân Bay, Winmart, Winmart+, WiN, Preminum)",
+          "byte_offset": 48205,
+          "status": "VERIFIED"
+        },
+        "redemption_exclusions": {
+          "text_span": "(ngoại trừ Phúc Long Sân Bay Tân Sơn Nhất, Winmart, Winmart+, WiN, Phúc Long Premium Xuân Thủy)",
+          "byte_offset": 48944,
+          "status": "VERIFIED",
+          "content_audit": "Ngoại lệ đổi quà chỉ loại trừ Tân Sơn Nhất; Sân bay Đà Nẵng không nêu tên -> Đổi quà giữ UNVERIFIED, không gộp với tích điểm."
+        },
+        "drink_redemption_rule": {
+          "text_span": "Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)",
+          "byte_offset": 55875,
+          "status": "VERIFIED"
+        },
+        "non_combinable": {
+          "text_span": "Điểm khả dụng (Điểm đổi quà) hay Điểm tích lũy KHÔNG ĐƯỢC ÁP DỤNG chung với các hình thức phi tiền mặt như voucher, e-voucher, coupon, e-coupon, phiếu quà tặng… và các chương trình khuyến mãi khác.",
+          "byte_offset": 49101,
+          "status": "VERIFIED"
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "phuclong_2005",
+          "name": "DNG-CH Lotte Số 6 Đại Nam P.HCB",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        },
+        {
+          "location_id": "phuclong_2006",
+          "name": "DNG-CH 59-61 Nguyen Van Linh P.PN",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        },
+        {
+          "location_id": "phuclong_2116",
+          "name": "DNG - 511 Trần Hưng Đạo",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        },
+        {
+          "location_id": "phuclong_2129",
+          "name": "DNG - Sân bay Đà Nẵng",
+          "earning": "EXCLUDED",
+          "redemption": "UNVERIFIED",
+          "overall": "EXCLUDED"
+        },
+        {
+          "location_id": "phuclong_2176",
+          "name": "DNG - Xô Viết Nghệ Tĩnh",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        },
+        {
+          "location_id": "phuclong_2217",
+          "name": "DNG - Mega Market",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        },
+        {
+          "location_id": "phuclong_2237",
+          "name": "DNG - 111 Trần Hưng Đạo",
+          "earning": "ELIGIBLE",
+          "redemption": "ELIGIBLE",
+          "overall": "ELIGIBLE"
+        }
+      ],
+      "overall_policy_verdict": "AUDITED_STAGING_ONLY",
+      "commercial_card_status": "STAGING_MOUNTED (Card B12_05 v2)",
+      "audit_rationale": "Đã qua kiểm toán chi tiết 6 điều khoản tại Verification Gate. Triển khai thẻ B12_05 khu vực Staging-only; chưa phê duyệt Production."
+    },
+    {
+      "policy_id": "POLICY_B12_15_PHILONG_RETAIL",
+      "brand_id": "phi_long",
+      "brand_name": "Phi Long Technology",
+      "policy_name": "Khảo sát Đơn lẻ Giá Bán lẻ Sản phẩm B12_15 (USB Kingston 64GB)",
+      "source_url": "https://philong.com.vn",
+      "raw_source_path": "06_TRUST_AND_EVIDENCE/radar_price_vault/B12_15_PRICE_v2.raw.html",
+      "raw_sha256": "108a8554e25c93ac97ccb7da249a019da6069ce17df63626a72cd5843b9ed993",
+      "raw_bytes": 329524,
+      "terms": {
+        "product_title": {
+          "text_span": "HDD USB Kingston 64GB DataTraveler Exodia DTX/64GB (USB 3.2)",
+          "byte_offset": 213,
+          "status": "VERIFIED",
+          "content_audit": "Sản phẩm khảo sát chính xác là USB Kingston DataTraveler Exodia 64GB (không phải chuột)."
+        },
+        "observed_price": {
+          "text_span": "290.000",
+          "byte_offset": 243519,
+          "status": "VERIFIED",
+          "content_audit": "Mức giá bán lẻ quan sát 290.000 VNĐ tại thời điểm khảo sát Sun, 06 Sep 2026 05:14:48 GMT."
+        }
+      },
+      "linked_facility_locations": [
+        {
+          "location_id": "phi_long_ham_nghi",
+          "name": "Phi Long 152-158 Hàm Nghi, Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        },
+        {
+          "location_id": "phi_long_nguyen_van_linh",
+          "name": "Phi Long 52 Nguyễn Văn Linh, Đà Nẵng",
+          "facility_eligibility": "UNVERIFIED"
+        }
+      ],
+      "overall_policy_verdict": "NOT_APPLICABLE",
+      "commercial_card_status": "STAGING_MOUNTED (Card B12_15 v2 - Product Observation Only)",
+      "audit_rationale": "Khảo sát giá bán lẻ đơn lẻ của sản phẩm USB Kingston Exodia 64GB không cấu thành chính sách ưu đãi thành viên toàn chuỗi. Hai showroom giữ UNVERIFIED."
+    }
+  ]
+}

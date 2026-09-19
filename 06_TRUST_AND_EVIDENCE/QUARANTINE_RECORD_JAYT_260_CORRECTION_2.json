@@ -1,0 +1,66 @@
+{
+  "quarantine_id": "QUARANTINE_RECORD_JAYT_260_CORRECTION_2",
+  "verdict": "JAYT_260_MICRO_BATCH_01_RAW_VAULT_PERMANENTLY_QUARANTINED",
+  "governing_directive": "JAYT-245 Section JAYT-260-CORRECTION-2 (Lines 5453-5467)",
+  "quarantined_at_utc": "2026-09-02T06:55:37.357Z",
+  "quarantine_vault_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/",
+  "active_vault_status": "PHYSICALLY_REMOVED_ZERO_RESIDUAL_ACTIVE_SYNTHETIC_PAYLOADS",
+  "quarantined_files": [
+    {
+      "file_name": "raw_canva_education_student_20260901.html",
+      "source_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_canva_education_student_20260901.html",
+      "quarantined_destination_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_canva_education_student_20260901.html",
+      "sha256": "45ff1e59b016595044cf91794eec7c2599daa999679a7f0691fb540dde2c32da",
+      "byte_length": 947,
+      "quarantine_reason": "Synthetic raw HTML payload lacking HTTP response receipt metadata and containing out-of-scope geographic markers."
+    },
+    {
+      "file_name": "raw_maur_metro1_student_policy_20260901.html",
+      "source_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_maur_metro1_student_policy_20260901.html",
+      "quarantined_destination_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_maur_metro1_student_policy_20260901.html",
+      "sha256": "75b8813f305f8f5c0d403be099087a13ed7e73dfe7b45fe2d96dd54f96414287",
+      "byte_length": 1117,
+      "quarantine_reason": "Synthetic raw HTML payload lacking HTTP response receipt metadata and containing out-of-scope geographic markers."
+    },
+    {
+      "file_name": "raw_transerco_bus_hanoi_student_20260901.html",
+      "source_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_transerco_bus_hanoi_student_20260901.html",
+      "quarantined_destination_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_transerco_bus_hanoi_student_20260901.html",
+      "sha256": "cffa629af12c3bd199867018c41f1a4466d1e0915e44d10fb88991d8611e122d",
+      "byte_length": 1106,
+      "quarantine_reason": "Synthetic raw HTML payload lacking HTTP response receipt metadata and containing out-of-scope geographic markers."
+    },
+    {
+      "file_name": "raw_vnpt_edu_sim_20260901.html",
+      "source_path": "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_vnpt_edu_sim_20260901.html",
+      "quarantined_destination_path": "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_vnpt_edu_sim_20260901.html",
+      "sha256": "8df6e8d2e314a92cbf928627accbf4bb2363cbe558291372199aad1d57b89ce0",
+      "byte_length": 1000,
+      "quarantine_reason": "Synthetic raw HTML payload lacking HTTP response receipt metadata and containing out-of-scope geographic markers."
+    }
+  ],
+  "denylist_enforcement_contract": {
+    "denylisted_sha256_hashes": [
+      "45ff1e59b016595044cf91794eec7c2599daa999679a7f0691fb540dde2c32da",
+      "75b8813f305f8f5c0d403be099087a13ed7e73dfe7b45fe2d96dd54f96414287",
+      "cffa629af12c3bd199867018c41f1a4466d1e0915e44d10fb88991d8611e122d",
+      "8df6e8d2e314a92cbf928627accbf4bb2363cbe558291372199aad1d57b89ce0"
+    ],
+    "denylisted_file_paths": [
+      "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_canva_education_student_20260901.html",
+      "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_canva_education_student_20260901.html",
+      "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_maur_metro1_student_policy_20260901.html",
+      "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_maur_metro1_student_policy_20260901.html",
+      "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_transerco_bus_hanoi_student_20260901.html",
+      "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_transerco_bus_hanoi_student_20260901.html",
+      "06_TRUST_AND_EVIDENCE/evidence_vault_jayt_260/raw_vnpt_edu_sim_20260901.html",
+      "06_TRUST_AND_EVIDENCE/QUARANTINED_EVIDENCE_VAULT_JAYT_260_SYNTHETIC/raw_vnpt_edu_sim_20260901.html"
+    ],
+    "loader_enforcement_rule": "Any loader attempting to access, parse, or evaluate artifacts matching these hashes or paths MUST immediately fail with error QUARANTINED_ARTIFACT_REFERENCE."
+  },
+  "audit_summary": {
+    "total_files_quarantined": 4,
+    "active_synthetic_payloads_remaining": 0,
+    "batch_02_permission_status": "BLOCKED_PENDING_INDEPENDENT_CEO_AUDIT"
+  }
+}

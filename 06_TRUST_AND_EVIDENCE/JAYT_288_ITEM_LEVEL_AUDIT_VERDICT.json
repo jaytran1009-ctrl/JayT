@@ -1,0 +1,41 @@
+{
+  "verdict_id": "JAYT-288-CEO-ITEM-LEVEL-AUDIT",
+  "issued_at_utc": "2026-09-04T03:40:00Z",
+  "scope_id": "JAYT-288-FIVE-CANDIDATE-OPERATOR-INGRESS",
+  "public_approved_count": 1,
+  "items": [
+    {
+      "target_id": "J287-HK-STUDENT-POLICY-UED-20260903",
+      "raw_body_sha256": "a39319d72e83cc876597820ad7205710cdb8048e4c8eca4dd00cc59298ed0d58",
+      "validator_state": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "ceo_verdict": "PUBLIC_APPROVED_STAGING_ONLY__NON_COMMERCIAL_INFORMATION",
+      "approved_title": "UED — Hướng dẫn chế độ chính sách sinh viên",
+      "approved_copy": "UED hướng dẫn thủ tục cho các nhóm chế độ chính sách của sinh viên, gồm miễn giảm học phí, hỗ trợ chi phí học tập, trợ cấp xã hội và hỗ trợ học tập.",
+      "scope_caveat": "Thông tin thủ tục theo bài đăng UED ngày 03/09/2026. Điều kiện cá nhân, hồ sơ và thời hạn do UED công bố; JayT không xác nhận quyền lợi hay thời điểm tiếp nhận của từng người.",
+      "approval_limits": ["no pricing", "no voucher", "no affiliate", "no tracking", "no eligibility inference", "staging only"]
+    },
+    {
+      "target_id": "J287-HK-STUDENT-SCHOLARSHIP-DUT-20260707",
+      "raw_body_sha256": "0fc262bcf5df5f7391f7810d47b8399cc8140978fc2dc92a4a72aab6832c1485",
+      "validator_state": "EVIDENCE_COMPLETE_INTERNAL_HELD",
+      "ceo_verdict": "PUBLIC_APPROVAL_DENIED__EXPIRED_APPLICATION_WINDOW",
+      "reason": "The raw source states an application-submission time of 09:00–11:00 on 24/07/2026, which is expired on the audit date."
+    },
+    {
+      "target_id": "J287-HK-TRANSIT-CROSSCITY-DANABUS-20260520",
+      "validator_state": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "ceo_verdict": "PUBLIC_APPROVAL_DENIED__NO_RAW_SPAN_MATCH"
+    },
+    {
+      "target_id": "J287-AT-COASTAL-TRANSIT-8-11-12-DANABUS-20260417",
+      "validator_state": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "ceo_verdict": "PUBLIC_APPROVAL_DENIED__NO_RAW_SPAN_MATCH"
+    },
+    {
+      "target_id": "J287-AT-TOURISM-CONNECTIVITY-DANABUS-2026",
+      "validator_state": "QUARANTINE_CAPTURE_INCOMPLETE",
+      "ceo_verdict": "PUBLIC_APPROVAL_DENIED__NO_RAW_SPAN_MATCH"
+    }
+  ],
+  "invariants": { "deals_feed_mutated": false, "affiliate_enabled": false, "voucher_enabled": false, "production_mutated": false }
+}

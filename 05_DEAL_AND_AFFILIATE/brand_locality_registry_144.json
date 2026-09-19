@@ -1,0 +1,1574 @@
+{
+  "registry_id": "BRAND_LOCALITY_REGISTRY_144",
+  "directive": "JAYT-144: SCHEDULER THẬT, QUÉT ĐA NGUỒN VÀ VÒNG LẶP CUNG ỨNG TỰ VẬN HÀNH",
+  "generated_at": "2026-08-26T19:23:11.442Z",
+  "total_brands_audited": 32,
+  "locality_distribution": {
+    "LOCALITY_VERIFIED_DA_NANG": 2,
+    "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG": 7,
+    "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION": 21,
+    "LOCALITY_PENDING_FRESH_RECEIPT_CERTIFICATION": 2
+  },
+  "receipt_trust_audit": {
+    "capture_receipt_valid": 30,
+    "capture_receipt_invalid": 2
+  },
+  "brands": [
+    {
+      "capture_id": "CAP_144_A_01",
+      "brand_id": "GALAXY_CINEMA",
+      "brand_name": "Galaxy Cinema Vietnam",
+      "category": "CINEMA",
+      "locator_url": "https://www.galaxycine.vn/rap-gia-ve",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_01_1787771921313",
+        "brand_id": "GALAXY_CINEMA",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.galaxycine.vn/rap-gia-ve",
+        "final_url": "https://www.galaxycine.vn/rap-gia-ve/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.galaxycine.vn/rap-gia-ve",
+            "http_status": 302
+          },
+          {
+            "url": "https://www.galaxycine.vn/rap-gia-ve",
+            "http_status": 308
+          },
+          {
+            "url": "https://www.galaxycine.vn/rap-gia-ve/",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdcAoooAAAAAG_mEMqjE0iohHPmQ7FmsXVLtYO5&co=aHR0cHM6Ly93d3cuZ2FsYXh5Y2luZS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=fbgtu6e9tf4m",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:41.022Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "b2cbad221c1249c67d0ffd46d738f4e3428a576277b1aaa1b800bd0a2a41d958",
+          "text_sha256": "d71fcb626c66403bbd9f874602e87eae7f694c12c77b6378519879ad57acbad9",
+          "screenshot_sha256": "c59e9b6a8df02577319c2277a7c52cf80113dc1316b6d7e3dfc2a7b32af71579"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_02",
+      "brand_id": "CGV_CINEMAS",
+      "brand_name": "CGV Cinemas Vietnam",
+      "category": "CINEMA",
+      "locator_url": "https://www.cgv.vn/default/cinox/site/",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_02_1787771923157",
+        "brand_id": "CGV_CINEMAS",
+        "brand_name": "CGV Cinemas Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.cgv.vn/default/cinox/site/",
+        "final_url": "https://www.cgv.vn/default/cinox/site/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.cgv.vn/default/cinox/site/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.cgv.vn/default/cinox/site/",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:43.037Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "6b963b55a60ff2188968b05f557dbab9040336a3c807d2a20a0af62338cca322",
+          "text_sha256": "05dcf6e7141081b0e6e15b88b5c75c005c9dca5788ca668fbbaa317cd4941963",
+          "screenshot_sha256": "1eedf7a8b70f036d581c809d64de9613db3269350fb7cdbfc476b79224597a3a"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_03",
+      "brand_id": "LOTTE_CINEMA",
+      "brand_name": "Lotte Cinema Vietnam",
+      "category": "CINEMA",
+      "locator_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=5&cinemaID=5001",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_03_1787771926101",
+        "brand_id": "LOTTE_CINEMA",
+        "brand_name": "Lotte Cinema Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=5&cinemaID=5001",
+        "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=5&cinemaID=5001",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=5&cinemaID=5001",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:45.984Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "e316a9854fdd7b49d4a94900443d9d74bc07ec5e23cfd32eec47e6f3a93212cd",
+          "text_sha256": "fa2f6acefd18ceec8a98bb88d5251c0fb9d44a8db02d75ac793de104d9209545",
+          "screenshot_sha256": "7544b3e53979e92766d7609e8f75005d11672ddd9da221c7c948fc5de50fbb1d"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_04",
+      "brand_id": "METIZ_CINEMA",
+      "brand_name": "Metiz Cinema Da Nang",
+      "category": "CINEMA",
+      "locator_url": "https://metiz.vn/rap-va-gia-ve/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_04_1787771926979",
+        "brand_id": "METIZ_CINEMA",
+        "brand_name": "Metiz Cinema Da Nang",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://metiz.vn/rap-va-gia-ve/",
+        "final_url": "https://metiz.vn/rap-va-gia-ve/",
+        "navigation_response_observed": true,
+        "http_status": 404,
+        "redirect_chain": [
+          {
+            "url": "https://metiz.vn/rap-va-gia-ve/",
+            "http_status": 404
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:46.930Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "1980d235bb427ec05ffdf069cd2f0b19419a152babe14afe4b2c06ccb661bfe7",
+          "text_sha256": "ee4946fa5c8fd93b8d24460fc37d5461c9085dd5d982963279fe14c443560b01",
+          "screenshot_sha256": "36978314c61429d047604c1435817acd0960584e2a74fea48b7a155147532e55"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_05",
+      "brand_id": "STARLIGHT_CINEMA",
+      "brand_name": "Starlight Cinema Da Nang",
+      "category": "CINEMA",
+      "locator_url": "https://starlight.vn/cum-rap.html",
+      "locality_status": "LOCALITY_VERIFIED_DA_NANG",
+      "verdict_reason": "Verified 2 distinct normalized address units with certified native capture receipt.",
+      "distinct_normalized_address_units_count": 2,
+      "address_units": [
+        {
+          "dom_tag": "div",
+          "dom_selector": "body > section.filmoja-blog-page:nth-of-type(1) > div.container > div.row > div.col-lg-12 > div.blog-page-list > div.single-news-item:nth-of-type(2)",
+          "node_outer_html_sha256": "8fe420d850ec7282108ed756a215faac186f2390abcdc887c33385c5838de2fd",
+          "normalized_address_text": "STARLIGHT ĐÀ NẴNG Tầng 4 Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng Hotline: 1900 1722"
+        },
+        {
+          "dom_tag": "p",
+          "dom_selector": "body > section.filmoja-blog-page:nth-of-type(1) > div.container > div.row > div.col-lg-12 > div.blog-page-list > div.single-news-item:nth-of-type(2) > a > div.news-image > div > p:nth-of-type(2)",
+          "node_outer_html_sha256": "15d2ac48774b90cd20100b8902e3d9934b468551616fc5362446dcd7b9926244",
+          "normalized_address_text": "Tầng 4 Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng"
+        }
+      ],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_05_1787771929325",
+        "brand_id": "STARLIGHT_CINEMA",
+        "brand_name": "Starlight Cinema Da Nang",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://starlight.vn/cum-rap.html",
+        "final_url": "https://starlight.vn/cum-rap.html",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://starlight.vn/cum-rap.html",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:49.077Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "7698dae419f634ee11a7780f774a015e50c0f3cd87ed4a55118406260e02f2f0",
+          "text_sha256": "45bd7f8f0a73cf5c6e293c4d27dd0d251392d938e3c43fedc1ff315984b4c3eb",
+          "screenshot_sha256": "8cb747f1005162c8deada94ebad8ec958c0ca6ab10003505ecfa6a05344f49ce"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_06",
+      "brand_id": "KFC_VN",
+      "brand_name": "KFC Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_06_1787771932261",
+        "brand_id": "KFC_VN",
+        "brand_name": "KFC Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+        "final_url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+            "http_status": 200
+          },
+          {
+            "url": "https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+            "http_status": 200
+          },
+          {
+            "url": "https://page.widget.zalo.me/?position=null&oaid=1089872550377351285&welcomemessage=R%E1%BA%A5t%20vui%20khi%20%C4%91%C6%B0%E1%BB%A3c%20h%E1%BB%97%20tr%E1%BB%A3%20b%E1%BA%A1n!&autopopup=0&leftside=false&width=440&height=813&style=2&id=fd656561-33be-4063-9a6c-bd83a85eb24a&domain=kfcvietnam.com.vn&android=false&ios=false",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcrhmYhAAAAANEfppRIQPcU_EF2bPvxHAIbL93g&co=aHR0cHM6Ly9rZmN2aWV0bmFtLmNvbS52bjo0NDM.&hl=vi&v=GY0lZUzQQgeA0wDxVI-SQEZw&size=invisible&anchor-ms=20000&execute-ms=30000&cb=xg2mi37o351c",
+            "http_status": 200
+          },
+          {
+            "url": "https://15417501.fls.doubleclick.net/activityi;src=15417501;type=pagev0;cat=kfc-p0;rcb=14;ord=594739599155;npa=0;auiddc=1519652278.1787771931;uaa=;uab=;uafvl=;uamb=0;uam=;uap=;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68p0h1v9220201839z8852269846za200zd9220201839xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118897920~118897930~119259606~119367802~119367810~120213116~120385423;epver=2;dc_random=1787771931_2tdIyAGEq-on_nxwlXI20z1JjuasFXEDaw;_dc_test=1;~oref=https%3A%2F%2Fkfcvietnam.com.vn%2Fhe-thong-nha-hang-kfc?",
+            "http_status": 302
+          },
+          {
+            "url": "https://15417501.fls.doubleclick.net/activityi;dc_pre=CIPyhLuBv5YDFe2WfQQdTEopLw;src=15417501;type=pagev0;cat=kfc-p0;rcb=14;ord=594739599155;npa=0;auiddc=1519652278.1787771931;uaa=;uab=;uafvl=;uamb=0;uam=;uap=;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68p0h1v9220201839z8852269846za200zd9220201839xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118897920~118897930~119259606~119367802~119367810~120213116~120385423;epver=2;dc_random=1787771931_2tdIyAGEq-on_nxwlXI20z1JjuasFXEDaw;_dc_test=1;~oref=https%3A%2F%2Fkfcvietnam.com.vn%2Fhe-thong-nha-hang-kfc?",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:52.082Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "65864d21e50dc0de8bdcfabe0f8e7b37090c8f93e7422438bb3920b61685c690",
+          "text_sha256": "29f90890e9b29a1262fd402a70d2087e430055f0fb6a8c9a3572452bf0173319",
+          "screenshot_sha256": "f99d9095411e16fda39bcbb82edc8ab8d688e7443b6376a0f5a09ecec7713e6f"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_07",
+      "brand_id": "JOLLIBEE_VN",
+      "brand_name": "Jollibee Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://jollibee.com.vn/cua-hang",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_07_1787771935647",
+        "brand_id": "JOLLIBEE_VN",
+        "brand_name": "Jollibee Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://jollibee.com.vn/cua-hang",
+        "final_url": "https://jollibee.com.vn/cua-hang",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://jollibee.com.vn/cua-hang",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/maps/embed/v1/place?key=AIzaSyCK3k3WZ5-xHZm93h8ZCbzx8ie0ZnKVIN4&q=V%E1%BB%8B%20tr%C3%AD%2012%2C%20T%E1%BA%A7ng%20tr%E1%BB%87t%20Coopmart%20Xa%20L%E1%BB%99%20H%C3%A0%20N%E1%BB%99i%2C%20S%E1%BB%91%20191%20Quang%20Trung%2C%20Ph%C6%B0%E1%BB%9Dng%20T%C4%83ng%20Nh%C6%A1n%20Ph%C3%BA%2C%20Th%C3%A0nh%20Ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:55.168Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "2e2a679b7ed944e8c28f5214b33d6ea82978860e0ef958131cdc9908741178ce",
+          "text_sha256": "0e9c71b8267b68a1de6e5cf543c2e4f321db443803e546865fc46a34c1a9cde7",
+          "screenshot_sha256": "a9a9c6bd3fec4b55d76e62b9963ddfdad6953c78811a6f6c5866b7e123d01936"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_08",
+      "brand_id": "LOTTERIA_VN",
+      "brand_name": "Lotteria Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://www.lotteria.vn/store-locator",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_08_1787771938383",
+        "brand_id": "LOTTERIA_VN",
+        "brand_name": "Lotteria Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.lotteria.vn/store-locator",
+        "final_url": "https://www.lotteria.vn/store-locator",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.lotteria.vn/store-locator",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcZcjUsAAAAAIFXvDz4-1HsPUxtqnvySi9WQbpF&co=aHR0cHM6Ly93d3cubG90dGVyaWEudm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ea820wav0y1n",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcZcjUsAAAAAIFXvDz4-1HsPUxtqnvySi9WQbpF&co=aHR0cHM6Ly93d3cubG90dGVyaWEudm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=l01jz2rx1r2r",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:18:58.248Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "b290830b2b27e8346cc4d9b7fda41b7f7055e1dae046ea4202d76831b9d3334d",
+          "text_sha256": "1b1b0edef31ab3e67dcad4037253c87375db39a70538ecc262473fb3e0c415aa",
+          "screenshot_sha256": "43e06d890ef48ce4ea29327fcb63791409459b32840229af56b53ca25eecdda7"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_09",
+      "brand_id": "PIZZA_HUT_VN",
+      "brand_name": "Pizza Hut Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://pizzahut.vn/store-locator",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_09_1787771940849",
+        "brand_id": "PIZZA_HUT_VN",
+        "brand_name": "Pizza Hut Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://pizzahut.vn/store-locator",
+        "final_url": "https://pizzahut.vn/store-locator",
+        "navigation_response_observed": true,
+        "http_status": 404,
+        "redirect_chain": [
+          {
+            "url": "https://pizzahut.vn/store-locator",
+            "http_status": 404
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:00.765Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "250cf3264c4e67e054878d98090deb0d8844eb311566056062b563720273a08f",
+          "text_sha256": "52811578be238cb7dd4573bed1178cbec6b49244b2c1ddc261a57dd1bc771af9",
+          "screenshot_sha256": "3dc9911b8f95f9f5ab5d4fddb67618d3fb40dd6831df0e0a6a879c17c20da1e6"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_10",
+      "brand_id": "DOMINOS_PIZZA_VN",
+      "brand_name": "Domino's Pizza Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://dominos.vn/store-locator",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_10_1787771942764",
+        "brand_id": "DOMINOS_PIZZA_VN",
+        "brand_name": "Domino's Pizza Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://dominos.vn/store-locator",
+        "final_url": "https://dominos.vn/store-locator",
+        "navigation_response_observed": true,
+        "http_status": 404,
+        "redirect_chain": [
+          {
+            "url": "https://dominos.vn/store-locator",
+            "http_status": 404
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:02.703Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "cd1a039c6eb35d6738a6ccb56d354b04e87997db9db1810c223c47d0e39b82fd",
+          "text_sha256": "88698869f164ce4d8730e3fb3acf509dbf14c5f427e9889313ed02e3bec93ee6",
+          "screenshot_sha256": "7aa3aec85d6d7543d74095022c3e969c06327bfbda5f3067084e4857d2c0eb2f"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_11",
+      "brand_id": "TEXAS_CHICKEN_VN",
+      "brand_name": "Texas Chicken Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://texaschicken.vn/he-thong-nha-hang/",
+      "locality_status": "LOCALITY_PENDING_FRESH_RECEIPT_CERTIFICATION",
+      "verdict_reason": "Underlying raw capture receipt is unproven/invalid.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_INVALID",
+        "is_receipt_trusted": false,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_11_1787771942980",
+        "brand_id": "TEXAS_CHICKEN_VN",
+        "brand_name": "Texas Chicken Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://texaschicken.vn/he-thong-nha-hang/",
+        "final_url": "FINAL_URL_UNPROVEN",
+        "navigation_response_observed": false,
+        "http_status": "HTTP_STATUS_UNPROVEN",
+        "redirect_chain": "REDIRECT_CHAIN_UNPROVEN",
+        "captured_at": "2026-08-26T19:19:02.959Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": "net::ERR_CONNECTION_RESET at https://texaschicken.vn/he-thong-nha-hang/",
+        "fresh_hashes": {
+          "html_sha256": "8b7fb85de88039a76340d010daaf92c0e55078fcd36eb45036b9222ad26e36b6",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "screenshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_12",
+      "brand_id": "POPEYES_VN",
+      "brand_name": "Popeyes Vietnam",
+      "category": "FNB_FASTFOOD",
+      "locator_url": "https://popeyes.vn/he-thong-cua-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_12_1787771945715",
+        "brand_id": "POPEYES_VN",
+        "brand_name": "Popeyes Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://popeyes.vn/he-thong-cua-hang",
+        "final_url": "https://popeyes.vn/he-thong-cua-hang",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://popeyes.vn/he-thong-cua-hang",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcCUXEqAAAAAFq4o1q70jhsQ6_HGLkBbuPbj4Tf&co=aHR0cHM6Ly9wb3BleWVzLnZuOjQ0Mw..&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=l1vqr6s3dtmo",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:05.592Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "1f534ee949fa6ae2c50ddd04f8cf6266cd628b0e6f43f28d8248e0050d41624e",
+          "text_sha256": "64d82cae1c13fa46522c52a6850fc26b75f6a8588186eb299390e14b9365111c",
+          "screenshot_sha256": "c47b89e340dda955a7d5a1b441ab4513550c80c5e97b44f64cb0b04c3dbe3621"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_13",
+      "brand_id": "KICHI_KICHI",
+      "brand_name": "Kichi-Kichi Hotpot",
+      "category": "FNB_RESTAURANT",
+      "locator_url": "https://kichi.com.vn/vi/he-thong-nha-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_13_1787771948065",
+        "brand_id": "KICHI_KICHI",
+        "brand_name": "Kichi-Kichi Hotpot",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://kichi.com.vn/vi/he-thong-nha-hang",
+        "final_url": "https://kichi.com.vn/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://kichi.com.vn/vi/he-thong-nha-hang",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdhAycrAAAAAP1GiixlPp_wRGO57iZBWH9JYUTI&co=aHR0cHM6Ly9raWNoaS5jb20udm46NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=80jojvrd9i2m",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:07.764Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "3e2260fa0a973305d6ddb6be4777f21f9974457a3e97321bb6e32c00793246b7",
+          "text_sha256": "833003fa5424879e87f0ff7a59494767287e9beac8309523f04e589e53de9b02",
+          "screenshot_sha256": "003018bda708ae29e215e101551abfbb0b3b806566bdd5169da25313d62224d8"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_14",
+      "brand_id": "GOGI_HOUSE",
+      "brand_name": "Gogi House Vietnam",
+      "category": "FNB_RESTAURANT",
+      "locator_url": "https://gogi.com.vn/vi/he-thong-nha-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_14_1787771950595",
+        "brand_id": "GOGI_HOUSE",
+        "brand_name": "Gogi House Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://gogi.com.vn/vi/he-thong-nha-hang",
+        "final_url": "https://gogi.com.vn/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://gogi.com.vn/vi/he-thong-nha-hang",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdhAycrAAAAAP1GiixlPp_wRGO57iZBWH9JYUTI&co=aHR0cHM6Ly9nb2dpLmNvbS52bjo0NDM.&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=xs5ji9u7q3oa",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:10.329Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "aac62199a897b9d64df2bb78c209f889233f713d6808246953ba6877939578d4",
+          "text_sha256": "2f071bbfc889f9ddc41e7aed80e3a52fd1f2fc9c951d98253d121ec1591bafd2",
+          "screenshot_sha256": "b19f8a410d268232f6bfd7adecf856178bb56d4d691c5b07b5f375ff1f759ef7"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_15",
+      "brand_id": "HIGHLANDS_COFFEE",
+      "brand_name": "Highlands Coffee",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_15_1787771954008",
+        "brand_id": "HIGHLANDS_COFFEE",
+        "brand_name": "Highlands Coffee",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "final_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:13.882Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "7de565074d51d5cff18722fe8a3bbce97d446461ffe70a7b814e6d8529c7f0a9",
+          "text_sha256": "2a9b0f45d3717a3de6005338751078956398e1a3291ac8d1bba122c54cc06c70",
+          "screenshot_sha256": "3f58a451480be9157ab515319a0ec221dd2f6c8ef190488b229cd2e842245b94"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_16",
+      "brand_id": "PHUC_LONG",
+      "brand_name": "Phúc Long Coffee & Tea",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_16_1787771956587",
+        "brand_id": "PHUC_LONG",
+        "brand_name": "Phúc Long Coffee & Tea",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+        "final_url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://phuclong.com.vn/he-thong-cua-hang-phuc-long",
+            "http_status": 404
+          },
+          {
+            "url": "https://page.widget.zalo.me/?position=null&oaid=3547667082335355338&welcomemessage=R%E1%BA%A5t%20vui%20khi%20%C4%91%C6%B0%E1%BB%A3c%20h%E1%BB%97%20tr%E1%BB%A3%20b%E1%BA%A1n!&autopopup=1&leftside=false&width=440&height=813&style=2&id=436625e2-6989-4171-a0ee-54d408d6c507&domain=phuclong.com.vn&android=false&ios=false",
+            "http_status": 200
+          },
+          {
+            "url": "https://zc2ab2c71.webengage.co/storage-frame-1.18.htm?cdn=y&cbf=webengage-engagement-callback-frame&lc=~c2ab2c71",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:16.515Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "37c1053891aa6377b553456145ca8ca44cd158e546684cc5683239bfd221438e",
+          "text_sha256": "457109485d56d6f0a3fcd7b366224b5b7f80abbcea2ac703418fd2b58856e6d7",
+          "screenshot_sha256": "2cebd174fcc31ac11e8f44fc53f97a16fd14d5b93ae251b06b03820d45bfa171"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_17",
+      "brand_id": "THE_COFFEE_HOUSE",
+      "brand_name": "The Coffee House",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_17_1787771959169",
+        "brand_id": "THE_COFFEE_HOUSE",
+        "brand_name": "The Coffee House",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+        "final_url": "https://thecoffeehouse.com/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+            "http_status": 302
+          },
+          {
+            "url": "https://thecoffeehouse.com/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfQTPkqAAAAAPrbpvVp4y-ios51qBv3NMU3wGLn&co=aHR0cHM6Ly90aGVjb2ZmZWVob3VzZS5jb206NDQz&hl=vi&v=xg_pWYS8-HRESiV6Rdg4aY_R&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ob0mxnxmn1ax",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.googletagmanager.com/ns.html?id=GTM-KDLPP3HX",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:19.020Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "6dfbcfc1abe2338d5eb39c932e653ccdbf5bcf5525a99d81e6dbad2c59f2619f",
+          "text_sha256": "31b5f5f508fa20dbd118059859a45191717a5c1a7f73c37e540c3e64b6901f32",
+          "screenshot_sha256": "bc506b5131bd21269fdc62047edef5be69314af36056592e9fe0990708e5b38b"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_18",
+      "brand_id": "GONG_CHA_VN",
+      "brand_name": "Gong Cha Vietnam",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://gongcha.com.vn/cua-hang/",
+      "locality_status": "LOCALITY_VERIFIED_DA_NANG",
+      "verdict_reason": "Verified 2 distinct normalized address units with certified native capture receipt.",
+      "distinct_normalized_address_units_count": 2,
+      "address_units": [
+        {
+          "dom_tag": "div",
+          "dom_selector": "body.page-template > div:nth-of-type(2) > main.has-pd > div.container:nth-of-type(2) > div.row > div.col-sm-12:nth-of-type(1) > div > div.location-item:nth-of-type(10)",
+          "node_outer_html_sha256": "239ec654f8c04a2ee9cc1b77b7b18b1611fe4ae840d9c9ad5d52bd862f2a1622",
+          "normalized_address_text": "Gong Cha Đà Nẵng (Nguyễn Văn Linh) 01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng. Điện thoại: 093 185 8535 Giờ mở cửa: Thứ 2 - Chủ Nhật: 8h00 – 23h00"
+        },
+        {
+          "dom_tag": "p",
+          "dom_selector": "body.page-template > div:nth-of-type(2) > main.has-pd > div.container:nth-of-type(2) > div.row > div.col-sm-12:nth-of-type(1) > div > div.location-item:nth-of-type(10) > p:nth-of-type(2)",
+          "node_outer_html_sha256": "3dd5ca237eacc50f28f1b69ed57bd37e74dfb50613685fe3009cdf17fa7b3640",
+          "normalized_address_text": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng."
+        }
+      ],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_18_1787771963639",
+        "brand_id": "GONG_CHA_VN",
+        "brand_name": "Gong Cha Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://gongcha.com.vn/cua-hang/",
+        "final_url": "https://gongcha.com.vn/cua-hang/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://gongcha.com.vn/cua-hang/",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:23.518Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "9ad20f9f28018e1ff8bd928fdfa51fffa4cc3f618ce764f77ea0d327c96967d1",
+          "text_sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86",
+          "screenshot_sha256": "bdb7295c3c8cf56a742821c6e2b631017326c89fed96d6fbb26f4b00b396a69d"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_19",
+      "brand_id": "KOI_THE_VN",
+      "brand_name": "KOI Thé Vietnam",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://www.koithe.com/en/global/koi-vietnam",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_19_1787771965199",
+        "brand_id": "KOI_THE_VN",
+        "brand_name": "KOI Thé Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.koithe.com/en/global/koi-vietnam",
+        "final_url": "https://www.koithe.com/en/global/koi-vietnam",
+        "navigation_response_observed": true,
+        "http_status": 404,
+        "redirect_chain": [
+          {
+            "url": "https://www.koithe.com/en/global/koi-vietnam",
+            "http_status": 404
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:25.152Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "fa62161ce5128cb2e9dfe69fb8acc304fcc2167a31bacd85f3f095c65e53df86",
+          "text_sha256": "f332372ff61e7db9571c5906cab3494f5948ba0e47ef6a0a9604e2063a03ae34",
+          "screenshot_sha256": "d127972e06fbb1a994ac90149032e6761c6448bd7dd22fb385d8cf37c04ecfee"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_20",
+      "brand_id": "BASKIN_ROBBINS_VN",
+      "brand_name": "Baskin Robbins Vietnam",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://baskinrobbins.vn/vn/he-thong-cua-hang",
+      "locality_status": "LOCALITY_PENDING_FRESH_RECEIPT_CERTIFICATION",
+      "verdict_reason": "Underlying raw capture receipt is unproven/invalid.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_INVALID",
+        "is_receipt_trusted": false,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_20_1787771980259",
+        "brand_id": "BASKIN_ROBBINS_VN",
+        "brand_name": "Baskin Robbins Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://baskinrobbins.vn/vn/he-thong-cua-hang",
+        "final_url": "FINAL_URL_UNPROVEN",
+        "navigation_response_observed": false,
+        "http_status": "HTTP_STATUS_UNPROVEN",
+        "redirect_chain": "REDIRECT_CHAIN_UNPROVEN",
+        "captured_at": "2026-08-26T19:19:40.247Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": "Navigation timeout of 15000 ms exceeded",
+        "fresh_hashes": {
+          "html_sha256": "a9a4e3cc154ef4b16e31cd28da12e31f5071559615d0886246706eff8e180be7",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "screenshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_21",
+      "brand_id": "TRUNG_NGUYEN_LEGEND",
+      "brand_name": "Trung Nguyên Legend",
+      "category": "COFFEE_TEA",
+      "locator_url": "https://trungnguyenlegend.com/khong-gian-trung-nguyen-legend-cafe/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_21_1787771984507",
+        "brand_id": "TRUNG_NGUYEN_LEGEND",
+        "brand_name": "Trung Nguyên Legend",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://trungnguyenlegend.com/khong-gian-trung-nguyen-legend-cafe/",
+        "final_url": "https://trungnguyenlegend.com/khong-gian-trung-nguyen-legend-cafe/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://trungnguyenlegend.com/khong-gian-trung-nguyen-legend-cafe/",
+            "http_status": 200
+          },
+          {
+            "url": "https://www.google.com/maps/d/embed?mid=1tx64ETAsBFZhZJKdH4v1aVwiC88iucxg&z=14",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:44.387Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "91f3abaf2e675bdada703e0ec82a934dbe5ca0a55fc4509292c0a288f81c53a0",
+          "text_sha256": "69ca657e13f012761a20098fc4d2b6e26e8de24e0defcdf12d2dfb608386a29f",
+          "screenshot_sha256": "1749f01f39288bf8eeb87876176e556e37428d252fc278dab93316c284f5f0fa"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_22",
+      "brand_id": "MIXUE_VN",
+      "brand_name": "Mixue Vietnam",
+      "category": "COFFEE_TEA",
+      "locator_url": "http://www.mxbc.vn/store/index.html",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_22_1787771985354",
+        "brand_id": "MIXUE_VN",
+        "brand_name": "Mixue Vietnam",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "http://www.mxbc.vn/store/index.html",
+        "final_url": "chrome-error://chromewebdata/",
+        "navigation_response_observed": true,
+        "http_status": 307,
+        "redirect_chain": [
+          {
+            "url": "http://www.mxbc.vn/store/index.html",
+            "http_status": 307
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:45.292Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": "net::ERR_NAME_NOT_RESOLVED at http://www.mxbc.vn/store/index.html",
+        "fresh_hashes": {
+          "html_sha256": "980bacd449c2c4a589deda40d485789edc02359e2533c21363d6ccefba3eac9c",
+          "text_sha256": "1698d8ac3a7e1f267fc23fc3f3e38d71d34781bf5e6179ae34278801e9c695b0",
+          "screenshot_sha256": "7340399b591f78f9b08b0ff0ae8f6c44316a0034659d4e336d224f7dfe98a361"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_23",
+      "brand_id": "VINWONDERS_DN",
+      "brand_name": "VinWonders Nam Hội An",
+      "category": "ENTERTAINMENT",
+      "locator_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_23_1787771987335",
+        "brand_id": "VINWONDERS_DN",
+        "brand_name": "VinWonders Nam Hội An",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+        "final_url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://vinwonders.com/vi/vinwonders-nam-hoi-an/",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:47.223Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "bb124a50194a2c64ebbae211423ef76b13819fd5d2062d87498e96acf12eb32c",
+          "text_sha256": "f62c6f9d00420d4f22188f21160e4c763b10398c02859700d5fd76ba9d2183e1",
+          "screenshot_sha256": "8cbe27a1442856463c11e7394e76308c3822d81dcf086873820c1dc320201099"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_24",
+      "brand_id": "SUNWORLD_BANA",
+      "brand_name": "Sun World Ba Na Hills",
+      "category": "ENTERTAINMENT",
+      "locator_url": "https://banahills.sunworld.vn/thong-tin-ve",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_24_1787771990369",
+        "brand_id": "SUNWORLD_BANA",
+        "brand_name": "Sun World Ba Na Hills",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://banahills.sunworld.vn/thong-tin-ve",
+        "final_url": "https://sunworld.vn/thong-tin-ve",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://banahills.sunworld.vn/thong-tin-ve",
+            "http_status": 301
+          },
+          {
+            "url": "https://sunworld.vn/thong-tin-ve",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LelNEcrAAAAAB4tdv7JRgmLR5jUPVYOLUcHqkek&co=aHR0cHM6Ly9zdW53b3JsZC52bjo0NDM.&hl=vi&v=GY0lZUzQQgeA0wDxVI-SQEZw&size=invisible&anchor-ms=20000&execute-ms=30000&cb=gcpclzc3ly68",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:50.212Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "20da068a92ec32637034717ea7e53c42b6e43b6b35505ecb9b12e5edbb127568",
+          "text_sha256": "499dac852433d258ba69dbbd41a0512741a9ac2c46969ad55e27dae0f5353bbc",
+          "screenshot_sha256": "8f9ff0cb685428e33ee2a547821a24ee3ef5dd86e31cfca669c72952d46653c0"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_25",
+      "brand_id": "DANABUS_DN",
+      "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+      "category": "TRANSPORTATION",
+      "locator_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_25_1787771991910",
+        "brand_id": "DANABUS_DN",
+        "brand_name": "DanaBus (Xe Buýt Đà Nẵng)",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+        "final_url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://danangbus.vn/lo-trinh-cac-tuyen.html",
+            "http_status": 301
+          },
+          {
+            "url": "https://www.danangbus.vn/lo-trinh-cac-tuyen.html",
+            "http_status": 302
+          },
+          {
+            "url": "https://www.danangbus.vn/Error.aspx?aspxerrorpath=/lo-trinh-cac-tuyen.html",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:51.823Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "2b9420b58ed8dd2c8cd9bd4978ea4594cd9834a3bc5583acdef72c262d36cbb1",
+          "text_sha256": "0a8c5345d8f46994915e9111e3d7501dcc82f8b9a8aea07627dc13863f02d4ee",
+          "screenshot_sha256": "5f26a20ed02fb01189a6d88d733751f74e82531e5c1acb8c94f8b0c25df73a51"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_26",
+      "brand_id": "DSVN_RAILWAYS",
+      "brand_name": "Đường Sắt Việt Nam (DSVN)",
+      "category": "TRANSPORTATION",
+      "locator_url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_26_1787771994443",
+        "brand_id": "DSVN_RAILWAYS",
+        "brand_name": "Đường Sắt Việt Nam (DSVN)",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+        "final_url": "https://dsvn.vn/#/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://dsvn.vn/#/thongtindichvu/tintuc/Ch%C3%ADnh%20s%C3%A1ch%20gi%E1%BA%A3m%20gi%C3%A1%20v%C3%A9%20cho%20sinh%20vi%C3%AAn",
+            "http_status": 200
+          },
+          {
+            "url": "https://chatbot.84soft.vn/dist/index.html?token=jKUOK9ZFR3f0OhtSs%2FK6enMmBcX1bhvq85%2BBrCTfMIEqvnWXttHQzQ%3D%3D",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:54.348Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "2e1634976b90ab6e44c6d6c5414eb49811d661543167de7712ecd11f0d4feda8",
+          "text_sha256": "72c6c622a5606a83084301e4badaaf356afbca6ad45ca7ca22d87fc7f8733269",
+          "screenshot_sha256": "df9eb3794006afa89fd2e60ceedf995658208a41d938cbcbf0581eab24ae9b19"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_27",
+      "brand_id": "GA_DA_NANG",
+      "brand_name": "Ga Đà Nẵng",
+      "category": "TRANSPORTATION",
+      "locator_url": "http://gadanang.vn/gio-tau-gia-ve",
+      "locality_status": "LOCALITY_PENDING_ADDRESS_UNIT_VALIDATION",
+      "verdict_reason": "Raw locator capture contains zero structured address units matching Da Nang districts/streets.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_27_1787771995198",
+        "brand_id": "GA_DA_NANG",
+        "brand_name": "Ga Đà Nẵng",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "http://gadanang.vn/gio-tau-gia-ve",
+        "final_url": "chrome-error://chromewebdata/",
+        "navigation_response_observed": true,
+        "http_status": 307,
+        "redirect_chain": [
+          {
+            "url": "http://gadanang.vn/gio-tau-gia-ve",
+            "http_status": 307
+          }
+        ],
+        "captured_at": "2026-08-26T19:19:55.135Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": "net::ERR_NAME_NOT_RESOLVED at http://gadanang.vn/gio-tau-gia-ve",
+        "fresh_hashes": {
+          "html_sha256": "9103d2175cc40775e1bd2e077de4369c463ad8e3e1e1ecd5a6d662b183729757",
+          "text_sha256": "9dd9471ecc3784d700def3507c8f73d9a2900e5a40b5c04769a5d44ac1e5b14b",
+          "screenshot_sha256": "95a532ac9a7c482932b6468f7d99e7bbced915cce1ec47df6007a7bb54fe55dd"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_28",
+      "brand_id": "GITHUB_EDU",
+      "brand_name": "GitHub Education",
+      "category": "STUDENT_UTILITIES",
+      "locator_url": "https://education.github.com/pack",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_28_1787772002307",
+        "brand_id": "GITHUB_EDU",
+        "brand_name": "GitHub Education",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://education.github.com/pack",
+        "final_url": "https://education.github.com/pack",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://education.github.com/pack",
+            "http_status": 200
+          },
+          {
+            "url": "https://platform.twitter.com/widgets/widget_iframe.1227a5674072e080ffb1ba14ac0c1079.html?origin=https%3A%2F%2Feducation.github.com",
+            "http_status": 200
+          },
+          {
+            "url": "https://platform.twitter.com/widgets/tweet_button.1227a5674072e080ffb1ba14ac0c1079.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=https%3A%2F%2Feducation.github.com%2Fpack&size=l&text=The%20best%20developer%20tools%2C%20free%20for%20students%3A&time=1787772001756&type=share&url=https%3A%2F%2Feducation.github.com%2Fpack&via=githubeducation",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:20:02.209Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "5f2eb0922f79b8527b60d3a041cfa3f64b0c97d9c2abdda9d625c3b0a2a43110",
+          "text_sha256": "268664f40206c6ada00fd779beecdf1ef2afb6b607679e7858155be64ddcaa50",
+          "screenshot_sha256": "19755a95b7f97d18648719fece29bed1450f77e90085bd1acfaac5fd5dbb63c7"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_29",
+      "brand_id": "SPOTIFY_STUDENT",
+      "brand_name": "Spotify Vietnam Student",
+      "category": "STUDENT_UTILITIES",
+      "locator_url": "https://www.spotify.com/vn-vi/student/",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_29_1787772004775",
+        "brand_id": "SPOTIFY_STUDENT",
+        "brand_name": "Spotify Vietnam Student",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.spotify.com/vn-vi/student/",
+        "final_url": "https://www.spotify.com/vn-vi/student/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.spotify.com/vn-vi/student/",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:20:04.655Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "9276bfad92a1347c7f5f842c7d524dc9b2d5ba98c0170bbd1051115469635872",
+          "text_sha256": "777ec17ae617541729c42320979d65509af22cb62299dadcf865fd94aa2377d9",
+          "screenshot_sha256": "195995e223d94186b454953c7556df90b9d1f5a6e60ba4a2ce405168e16757f6"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_30",
+      "brand_id": "NOTION_EDU",
+      "brand_name": "Notion Education",
+      "category": "STUDENT_UTILITIES",
+      "locator_url": "https://www.notion.so/product/notion-for-education",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_30_1787772008498",
+        "brand_id": "NOTION_EDU",
+        "brand_name": "Notion Education",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.notion.so/product/notion-for-education",
+        "final_url": "https://www.notion.com/product/notion-for-education",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.notion.so/product/notion-for-education",
+            "http_status": 301
+          },
+          {
+            "url": "https://www.notion.com/product/notion-for-education",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:20:08.371Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "e4aa1b00b6f4bcb182a8f416a51dc792997024ae8cf66b6392a8c5a4fc3aed0c",
+          "text_sha256": "49cfc384d18dff835500ac551e9202297ec6321bd5b52f2c93f41bebde844593",
+          "screenshot_sha256": "9426ca767880d0a4125943c1ca9ac61cd507883a909dbc16a4d134d8d5757ada"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_31",
+      "brand_id": "JETBRAINS_EDU",
+      "brand_name": "JetBrains Student Pack",
+      "category": "STUDENT_UTILITIES",
+      "locator_url": "https://www.jetbrains.com/community/education/#students",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_31_1787772011681",
+        "brand_id": "JETBRAINS_EDU",
+        "brand_name": "JetBrains Student Pack",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.jetbrains.com/community/education/#students",
+        "final_url": "https://www.jetbrains.com/academy/student-pack/#students",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.jetbrains.com/community/education/#students",
+            "http_status": 301
+          },
+          {
+            "url": "https://www.jetbrains.com/academy/student-pack/#students",
+            "http_status": 200
+          },
+          {
+            "url": "https://a26669750187.cdn.optimizely.com/client_storage/a26669750187.html",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:20:11.435Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "ab16127e3617256e284af62b96015c895b4fa2c31350f259ce9035d8fbc81497",
+          "text_sha256": "c98c4bf00302ad6e480fed3835558f227d32a3c77473f9ee4f71c0afa27868ee",
+          "screenshot_sha256": "35a39fa574f51076485f6627f7818e25f511d98c4fb84472e695ceba56b9a76e"
+        }
+      }
+    },
+    {
+      "capture_id": "CAP_144_A_32",
+      "brand_id": "CANVA_EDU",
+      "brand_name": "Canva for Education",
+      "category": "STUDENT_UTILITIES",
+      "locator_url": "https://www.canva.com/education/",
+      "locality_status": "ONLINE_ELIGIBILITY_UNPROVEN_FOR_DANANG",
+      "verdict_reason": "Global/national online service; lacks physical Da Nang campus enrollment receipt.",
+      "distinct_normalized_address_units_count": 0,
+      "address_units": [],
+      "raw_receipt_truth": {
+        "status": "CAPTURE_RECEIPT_VALID",
+        "is_receipt_trusted": true,
+        "capture_run_id": "RUN_143R_1787771918417",
+        "receipt_id": "RECEIPT_CAP_144_A_32_1787772015473",
+        "brand_id": "CANVA_EDU",
+        "brand_name": "Canva for Education",
+        "cohort": "COHORT_A_LOCALITY",
+        "target_type": "STORE_LOCATOR",
+        "requested_url": "https://www.canva.com/education/",
+        "final_url": "https://www.canva.com/education/",
+        "navigation_response_observed": true,
+        "http_status": 200,
+        "redirect_chain": [
+          {
+            "url": "https://www.canva.com/education/",
+            "http_status": 200
+          },
+          {
+            "url": "https://sidebar.bugherd.com/sidebar/embed_html?apikey=zvggsxrnsui0tw9cxwspkq",
+            "http_status": 200
+          },
+          {
+            "url": "https://ct.canva.com/_/service_worker/68j0/sw_iframe.html?origin=https%3A%2F%2Fwww.canva.com&1p=1",
+            "http_status": 200
+          }
+        ],
+        "captured_at": "2026-08-26T19:20:15.285Z",
+        "browser_version": "Chrome/152.0.7977.42",
+        "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "network_error": null,
+        "fresh_hashes": {
+          "html_sha256": "ab27a7219389a89e50b82fe1101d4ed800e24aaa1bb462f68d44221e78d2c959",
+          "text_sha256": "baca48a3ee5a77741102bceeabee1f5c665a8de5dff1b880b266c8d8fb4d867b",
+          "screenshot_sha256": "a3ef872751b7bc0261eda6fe03dbc1ef847a396fdaae46ae50dfa8d5de02c290"
+        }
+      }
+    }
+  ]
+}

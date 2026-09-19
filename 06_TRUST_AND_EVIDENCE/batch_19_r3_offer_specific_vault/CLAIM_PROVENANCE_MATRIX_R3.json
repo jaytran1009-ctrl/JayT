@@ -1,0 +1,620 @@
+{
+  "matrix_id": "CLAIM_PROVENANCE_MATRIX_R3",
+  "work_order_id": "J358-R3-OFFER-SPECIFIC-SOURCE-ACQUISITION",
+  "executed_at_utc": "2026-09-08T11:39:19.176Z",
+  "authority": "Quyết định cổng CEO JAYT-358-R2 & Dispatch J358-R3",
+  "purpose": "Acquire offer-specific official evidence for the 10 Batch 19 HELD candidates without weakening the R2 provenance gate.",
+  "vault_directory": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\06_TRUST_AND_EVIDENCE\\batch_19_r3_offer_specific_vault",
+  "summary": {
+    "total_candidates_evaluated": 10,
+    "provenance_verified_count": 0,
+    "provenance_held_count": 10,
+    "shortfall_policy_enforced": true,
+    "truthful_outcome_rule": "Zero VERIFIED is an acceptable truthful outcome; no inferences permitted."
+  },
+  "items": [
+    {
+      "b19_id": "B19_STARLIGHT_U22_WEEKDAY",
+      "brand": "Starlight Cinema",
+      "leaf_id": "r3_starlight_u22_program",
+      "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+      "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+      "http_status": 200,
+      "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+      "source_raw_bytes": 18822,
+      "captured_at_utc": "2026-09-08T11:39:11.798Z",
+      "locality_nature": "FOOTER_COMPANY_REGISTRATION",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__LOCALITY_FOOTER_ONLY: Da Nang appears only in corporate legal footer registration (Req 18); missing Da Nang offer binding",
+      "dimensions": {
+        "title": {
+          "raw_substring": "CT U22 RẠP STARLIGHT",
+          "normalized_text": "CT U22 RẠP STARLIGHT",
+          "start_byte_offset": 291,
+          "end_byte_offset": 313,
+          "byte_length": 22,
+          "occurrence_count": 6,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "Đồng gi&aacute; v&eacute; 45k/v&eacute; khi mua tại quầy từ thứ 2 đến thứ 5!",
+          "normalized_text": "Đồng giá vé 45k/vé khi mua tại quầy từ thứ 2 đến thứ 5!",
+          "start_byte_offset": 9474,
+          "end_byte_offset": 9566,
+          "byte_length": 92,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "Độ tuổi dưới 22",
+          "normalized_text": "Độ tuổi dưới 22",
+          "start_byte_offset": 9118,
+          "end_byte_offset": 9141,
+          "byte_length": 23,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": "từ thứ 2 đến thứ 5!",
+          "normalized_text": "từ thứ 2 đến thứ 5!",
+          "start_byte_offset": 9538,
+          "end_byte_offset": 9566,
+          "byte_length": 28,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_STARLIGHT_U22_WEEKEND",
+      "brand": "Starlight Cinema",
+      "leaf_id": "r3_starlight_u22_program",
+      "source_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+      "final_url": "https://starlight.vn/uu-dai/ct-u22-rap-starlight-1047.html",
+      "http_status": 200,
+      "source_raw_sha256": "e4d846b05969609d89f0e293c312566b65bb93966bffbf87458deb566bf04869",
+      "source_raw_bytes": 18822,
+      "captured_at_utc": "2026-09-08T11:39:11.798Z",
+      "locality_nature": "EXPLICIT_BODY_OFFER_CLAUSE",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__VALIDITY_CALENDAR_YEAR_UNPROVEN: Source leaf published 11/03/2025 lacks asserted 2026 calendar validity span",
+      "dimensions": {
+        "title": {
+          "raw_substring": "CT U22 RẠP STARLIGHT",
+          "normalized_text": "CT U22 RẠP STARLIGHT",
+          "start_byte_offset": 291,
+          "end_byte_offset": 313,
+          "byte_length": 22,
+          "occurrence_count": 6,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "&Aacute;p dụng tại c&aacute;c rạp Quy Nhơn, Đ&agrave; Nẵng d&agrave;nh cho kh&aacute;ch h&agrave;ng U22 l&agrave; 55k/v&eacute;",
+          "normalized_text": "Áp dụng tại các rạp Quy Nhơn, Đà Nẵng dành cho khách hàng U22 là 55k/vé",
+          "start_byte_offset": 9811,
+          "end_byte_offset": 9948,
+          "byte_length": 137,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "Độ tuổi dưới 22",
+          "normalized_text": "Độ tuổi dưới 22",
+          "start_byte_offset": 9118,
+          "end_byte_offset": 9141,
+          "byte_length": 23,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": "Đ&agrave; Nẵng",
+          "normalized_text": "Đà Nẵng",
+          "start_byte_offset": 9862,
+          "end_byte_offset": 9879,
+          "byte_length": 17,
+          "occurrence_count": 1,
+          "is_proven": true
+        }
+      }
+    },
+    {
+      "b19_id": "B19_STARLIGHT_THU_3_PHIM_VIET",
+      "brand": "Starlight Cinema",
+      "leaf_id": "r3_starlight_thu_3_phim_viet",
+      "source_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+      "final_url": "https://starlight.vn/uu-dai/thu-3-phim-viet-1046.html",
+      "http_status": 200,
+      "source_raw_sha256": "f7024ada17c1c9d68791cee6a5beaf870b9536383eb46a9a6a7af8fb9628760d",
+      "source_raw_bytes": 17477,
+      "captured_at_utc": "2026-09-08T11:39:11.937Z",
+      "locality_nature": "FOOTER_COMPANY_REGISTRATION",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__LOCALITY_FOOTER_ONLY: Da Nang appears only in corporate legal footer registration (Req 18); missing Da Nang offer binding",
+      "dimensions": {
+        "title": {
+          "raw_substring": "THỨ 3 PHIM VIỆT",
+          "normalized_text": "THỨ 3 PHIM VIỆT",
+          "start_byte_offset": 291,
+          "end_byte_offset": 310,
+          "byte_length": 19,
+          "occurrence_count": 6,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "-&Aacute;p dụng gi&aacute; : 45 k cho tất cả c&aacute;c phim Việt v&agrave;o ng&agrave;y thứ 3 h&agrave;ng tuần.",
+          "normalized_text": "-Áp dụng giá : 45 k cho tất cả các phim Việt vào ngày thứ 3 hàng tuần.",
+          "start_byte_offset": 8444,
+          "end_byte_offset": 8568,
+          "byte_length": 124,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "mua v&eacute; c&aacute;c phim Việt Nam",
+          "normalized_text": "mua vé các phim Việt Nam",
+          "start_byte_offset": 8673,
+          "end_byte_offset": 8713,
+          "byte_length": 40,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": "v&agrave;o ng&agrave;y thứ 3 h&agrave;ng tuần",
+          "normalized_text": "vào ngày thứ 3 hàng tuần",
+          "start_byte_offset": 8518,
+          "end_byte_offset": 8567,
+          "byte_length": 49,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_VU_LAN_315K",
+      "brand": "The Pizza Company",
+      "leaf_id": "r3_tpc_combo_vu_lan_22662",
+      "source_url": "https://thepizzacompany.vn/combo-vu-lan-an-lanh-22662",
+      "final_url": "https://thepizzacompany.vn/combo-vu-lan-an-lanh-22662",
+      "http_status": 200,
+      "source_raw_sha256": "e5a8c2454dd24be942d9332eec300e2e765a68b4198061bf84c0cdd89f132e90",
+      "source_raw_bytes": 172079,
+      "captured_at_utc": "2026-09-08T11:39:11.985Z",
+      "locality_nature": "STORE_LOCATOR_DROPDOWN_REJECTED",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__STORE_LOCATOR_NOT_OFFER_BINDING: Listing Da Nang in store selector does not state offer applies there (Req 25); missing promotional validity span (Req 26)",
+      "dimensions": {
+        "title": {
+          "raw_substring": "Combo Vu Lan An L&#xE0;nh",
+          "normalized_text": "Combo Vu Lan An Lành",
+          "start_byte_offset": 104,
+          "end_byte_offset": 129,
+          "byte_length": 25,
+          "occurrence_count": 7,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "315.000đ",
+          "normalized_text": "315.000đ",
+          "start_byte_offset": 65685,
+          "end_byte_offset": 65694,
+          "byte_length": 9,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "01 Pizza Rau Củ/ Phô Mai",
+          "normalized_text": "01 Pizza Rau Củ/ Phô Mai",
+          "start_byte_offset": 46779,
+          "end_byte_offset": 46806,
+          "byte_length": 27,
+          "occurrence_count": 2,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_COT_MAM_KEO_479K",
+      "brand": "The Pizza Company",
+      "leaf_id": "r3_tpc_combo_cot_mam_keo",
+      "source_url": "https://thepizzacompany.vn/combo-cot-mam-keo",
+      "final_url": "https://thepizzacompany.vn/combo-cot-mam-keo",
+      "http_status": 200,
+      "source_raw_sha256": "2c805a7cdd1aabf9d90ecc80118a468280ca737ba10fd7eda2fc59856ecf1f71",
+      "source_raw_bytes": 181841,
+      "captured_at_utc": "2026-09-08T11:39:12.222Z",
+      "locality_nature": "STORE_LOCATOR_DROPDOWN_REJECTED",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__STORE_LOCATOR_NOT_OFFER_BINDING: Listing Da Nang in store selector does not state offer applies there (Req 25); missing promotional validity span (Req 26)",
+      "dimensions": {
+        "title": {
+          "raw_substring": "Combo &quot;C&#x1ED1;t&quot; M&#x1EAF;m K&#x1EB9;o",
+          "normalized_text": "Combo \"Cốt\" Mắm Kẹo",
+          "start_byte_offset": 104,
+          "end_byte_offset": 154,
+          "byte_length": 50,
+          "occurrence_count": 7,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "479.000đ",
+          "normalized_text": "479.000đ",
+          "start_byte_offset": 75048,
+          "end_byte_offset": 75057,
+          "byte_length": 9,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "1 Pizza Hải Sản Calamari Xốt Nước Mắm",
+          "normalized_text": "1 Pizza Hải Sản Calamari Xốt Nước Mắm",
+          "start_byte_offset": 45790,
+          "end_byte_offset": 45838,
+          "byte_length": 48,
+          "occurrence_count": 2,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_COMBO_COT_MAI_MAN_599K",
+      "brand": "The Pizza Company",
+      "leaf_id": "r3_tpc_combo_cot_mai_man",
+      "source_url": "https://thepizzacompany.vn/combo-cot-mai-man",
+      "final_url": "https://thepizzacompany.vn/combo-cot-mai-man",
+      "http_status": 200,
+      "source_raw_sha256": "e7cf65237e89056279891590fe2edc46c706b2ab9530546dcb848d31e18636a5",
+      "source_raw_bytes": 190575,
+      "captured_at_utc": "2026-09-08T11:39:12.385Z",
+      "locality_nature": "STORE_LOCATOR_DROPDOWN_REJECTED",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__STORE_LOCATOR_NOT_OFFER_BINDING: Listing Da Nang in store selector does not state offer applies there (Req 25); missing promotional validity span (Req 26)",
+      "dimensions": {
+        "title": {
+          "raw_substring": "Combo &quot;C&#x1ED1;t&quot; M&#xE3;i M&#x1EB7;n",
+          "normalized_text": "Combo \"Cốt\" Mãi Mặn",
+          "start_byte_offset": 104,
+          "end_byte_offset": 152,
+          "byte_length": 48,
+          "occurrence_count": 7,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "599.000đ",
+          "normalized_text": "599.000đ",
+          "start_byte_offset": 82560,
+          "end_byte_offset": 82569,
+          "byte_length": 9,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "1 Pizza Hải Sản Calamari Xốt Nước Mắm",
+          "normalized_text": "1 Pizza Hải Sản Calamari Xốt Nước Mắm",
+          "start_byte_offset": 46308,
+          "end_byte_offset": 46356,
+          "byte_length": 48,
+          "occurrence_count": 2,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_BOGO_PEPSI_15L",
+      "brand": "The Pizza Company",
+      "leaf_id": "r3_tpc_mua_1_tang_1_nuoc",
+      "source_url": "https://thepizzacompany.vn/mua-1-tang-1-nuoc",
+      "final_url": "https://thepizzacompany.vn/mua-1-tang-1-nuoc",
+      "http_status": 200,
+      "source_raw_sha256": "32076d30e9ec4dacd98cb3620a25162a3a1937daeda0c66f2c7933ea3648bd93",
+      "source_raw_bytes": 156376,
+      "captured_at_utc": "2026-09-08T11:39:12.560Z",
+      "locality_nature": "STORE_LOCATOR_DROPDOWN_REJECTED",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__STORE_LOCATOR_NOT_OFFER_BINDING: Listing Da Nang in store selector does not state offer applies there (Req 25); missing promotional validity span (Req 26)",
+      "dimensions": {
+        "title": {
+          "raw_substring": "Mua 1 T&#x1EB7;ng 1 N&#x1B0;&#x1EDB;c",
+          "normalized_text": "Mua 1 Tặng 1 Nư&#x1EDB;c",
+          "start_byte_offset": 104,
+          "end_byte_offset": 141,
+          "byte_length": 37,
+          "occurrence_count": 7,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "50.000đ",
+          "normalized_text": "50.000đ",
+          "start_byte_offset": 50287,
+          "end_byte_offset": 50295,
+          "byte_length": 8,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "Tặng 1 Chai Pepsi PET 1.5L",
+          "normalized_text": "Tặng 1 Chai Pepsi PET 1.5L",
+          "start_byte_offset": 44365,
+          "end_byte_offset": 44393,
+          "byte_length": 28,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_TPC_BO_DOI_NHU_Y_169K",
+      "brand": "The Pizza Company",
+      "leaf_id": "r3_tpc_bo_doi_nhu_y_combo_1",
+      "source_url": "https://thepizzacompany.vn/bo-doi-nhu-y-combo-1-21386",
+      "final_url": "https://thepizzacompany.vn/bo-doi-nhu-y-combo-1-21386",
+      "http_status": 200,
+      "source_raw_sha256": "80ae302aebf2ea327bf33a7417d29067066ab9c8637bc2bab70a24eb8410d1ed",
+      "source_raw_bytes": 199593,
+      "captured_at_utc": "2026-09-08T11:39:12.724Z",
+      "locality_nature": "STORE_LOCATOR_DROPDOWN_REJECTED",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__STORE_LOCATOR_NOT_OFFER_BINDING: Listing Da Nang in store selector does not state offer applies there (Req 25); missing promotional validity span (Req 26)",
+      "dimensions": {
+        "title": {
+          "raw_substring": "B&#x1ED9; &#x110;&#xF4;i Nh&#x1B0; &quot;Y&#x301;&quot; Combo 1",
+          "normalized_text": "Bộ Đôi Như \"Ý\" Combo 1",
+          "start_byte_offset": 104,
+          "end_byte_offset": 167,
+          "byte_length": 63,
+          "occurrence_count": 7,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "169.000đ",
+          "normalized_text": "169.000đ",
+          "start_byte_offset": 91837,
+          "end_byte_offset": 91846,
+          "byte_length": 9,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "01 Pizza Truyền Thống, Cỡ Nhỏ",
+          "normalized_text": "01 Pizza Truyền Thống, Cỡ Nhỏ",
+          "start_byte_offset": 46062,
+          "end_byte_offset": 46099,
+          "byte_length": 37,
+          "occurrence_count": 2,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_GONGCHA_MEMBER_POLICY",
+      "brand": "Gong Cha",
+      "leaf_id": "r3_gongcha_member_policy",
+      "source_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+      "final_url": "https://gongcha.com.vn/chinh-sach-thanh-vien/",
+      "http_status": 200,
+      "source_raw_sha256": "cf94c11068f7493b52bf5baaf22bf5e7cba12c3fad408634200f9cb8b77074f9",
+      "source_raw_bytes": 61735,
+      "captured_at_utc": "2026-09-08T11:39:12.873Z",
+      "locality_nature": "ABSENT_IN_SOURCE",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__LOCALITY_ABSENT_IN_SOURCE: Zero occurrences of Da Nang in source page",
+      "dimensions": {
+        "title": {
+          "raw_substring": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "normalized_text": "CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG GONG CHA VN",
+          "start_byte_offset": 1911,
+          "end_byte_offset": 1961,
+          "byte_length": 50,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "10,000 vnđ = 1 Lá trà",
+          "normalized_text": "10,000 vnđ = 1 Lá trà",
+          "start_byte_offset": 38618,
+          "end_byte_offset": 38642,
+          "byte_length": 24,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "Nhận voucher miễn phí 1 thức uống size M trên menu vào ngày sinh nhật",
+          "normalized_text": "Nhận voucher miễn phí 1 thức uống size M trên menu vào ngày sinh nhật",
+          "start_byte_offset": 43130,
+          "end_byte_offset": 43213,
+          "byte_length": 83,
+          "occurrence_count": 3,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    },
+    {
+      "b19_id": "B19_KATINAT_APP_LOYALTY",
+      "brand": "Katinat Saigon Kafe",
+      "leaf_id": "r3_katinat_app_loyalty",
+      "source_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+      "final_url": "https://katinat.vn/katinat-chinh-thuc-ra-mat-ung-dung-kung-thanh-vien-khong-gioi-han/",
+      "http_status": 200,
+      "source_raw_sha256": "fc0f317206a4f798b3c5e1900a67fa9da045e0e3e916d3c6c51f5432cca9bec2",
+      "source_raw_bytes": 74206,
+      "captured_at_utc": "2026-09-08T11:39:14.905Z",
+      "locality_nature": "ABSENT_IN_SOURCE",
+      "all_dimensions_proven": false,
+      "provenance_status": "HELD",
+      "held_reason": "HELD__TERMS_EXPIRED_IN_SOURCE: Campaign validity span expired in May 2024",
+      "dimensions": {
+        "title": {
+          "raw_substring": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG",
+          "normalized_text": "KATINAT CHÍNH THỨC RA MẮT ỨNG DỤNG",
+          "start_byte_offset": 417,
+          "end_byte_offset": 460,
+          "byte_length": 43,
+          "occurrence_count": 3,
+          "is_proven": true
+        },
+        "price": {
+          "raw_substring": "Nhận Voucher ưu đãi 30k cho đơn tối thiểu 60k (từ 25/04 &#8211; 09/05)",
+          "normalized_text": "Nhận Voucher ưu đãi 30k cho đơn tối thiểu 60k (từ 25/04 &#8211; 09/05)",
+          "start_byte_offset": 50109,
+          "end_byte_offset": 50192,
+          "byte_length": 83,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "conditions": {
+          "raw_substring": "ứng dụng thành viên &amp; đặt món dành riêng cho Katies",
+          "normalized_text": "ứng dụng thành viên & đặt món dành riêng cho Katies",
+          "start_byte_offset": 49011,
+          "end_byte_offset": 49078,
+          "byte_length": 67,
+          "occurrence_count": 1,
+          "is_proven": true
+        },
+        "validity_or_recurrence": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        },
+        "da_nang_locality": {
+          "raw_substring": null,
+          "normalized_text": null,
+          "start_byte_offset": null,
+          "end_byte_offset": null,
+          "is_proven": false,
+          "reason": "Lacks verbatim UTF-8 raw span in offer-specific source leaf"
+        }
+      }
+    }
+  ]
+}

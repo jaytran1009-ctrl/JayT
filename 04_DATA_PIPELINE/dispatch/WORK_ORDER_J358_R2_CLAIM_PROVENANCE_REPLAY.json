@@ -1,0 +1,33 @@
+{
+  "work_order_id": "J358-R2-CLAIM-PROVENANCE-REPLAY",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Turn authentic page bytes into independently verifiable offer claims; no catalog hydration in this work order.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "input": {
+    "candidate_summary": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R1_BATCH19_HARVEST_SUMMARY.json",
+    "vault": "06_TRUST_AND_EVIDENCE/batch_19_remediation_vault",
+    "scope": ["B19_STARLIGHT_U22_WEEKDAY", "B19_STARLIGHT_U22_WEEKEND", "B19_STARLIGHT_THU_3_PHIM_VIET", "B19_TPC_COMBO_VU_LAN_315K", "B19_TPC_COMBO_COT_MAM_KEO_479K", "B19_TPC_COMBO_COT_MAI_MAN_599K", "B19_TPC_BOGO_PEPSI_15L", "B19_TPC_BO_DOI_NHU_Y_169K", "B19_GONGCHA_MEMBER_POLICY", "B19_KATINAT_APP_LOYALTY"]
+  },
+  "requirements": [
+    "Do not use fixed candidate objects as a verification authority. Implement extraction or validation that fails closed unless every published claim is supported by the recorded raw bytes.",
+    "For every field that will be displayed (title, price/benefit, conditions, validity/recurrence, locality), record a verbatim UTF-8 span plus byte offsets, occurrence count, source raw SHA-256, URL, final URL and capture timestamp.",
+    "Normalize HTML entities before matching but retain raw byte offsets and the exact raw substring. A claim may not be marked VERIFIED when its exact value or an unambiguous equivalent does not occur in the source.",
+    "Treat branch locality as separate evidence unless the exact same source explicitly ties the offer to Da Nang. Do not infer branch applicability from nationwide branding or historic address data.",
+    "Treat validity as UNKNOWN/HELD if no source span specifies it. Do not infer 2026, month-end, recurring days, exclusions, membership eligibility or app redemption from a title or a general landing page.",
+    "Run negative tests that mutate a price, a locality, an expiry and a source SHA; each must fail verification. Test duplicate spans and entity-encoded VND values.",
+    "Keep prior R1 forensic snapshot and receipt immutable. Place R2 output in a new run directory and issue superseding status only; do not edit historic records.",
+    "Return actual verified count and HELD count. Target numbers are not acceptance criteria and must not be filled with menu prices or generic membership statements.",
+    "No staging hydrate, candidate packaging, production deployment, alias, scheduler changes or rollback."
+  ],
+  "deliverables": {
+    "claim_matrix": "06_TRUST_AND_EVIDENCE/batch_19_r2_claim_provenance/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R2_CLAIM_PROVENANCE_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R2_CLAIM_PROVENANCE_REPLAY.json",
+    "sha256_sidecar_required": true
+  },
+  "acceptance_gate": "CEO review required; no automatic promotion"
+}

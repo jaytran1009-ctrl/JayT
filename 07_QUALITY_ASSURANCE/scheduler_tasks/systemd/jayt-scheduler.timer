@@ -1,0 +1,12 @@
+[Unit]
+Description=JayT Scheduled Triggers (08:00, 16:30, Mon 06:00, Month 1st 00:00)
+
+[Timer]
+OnCalendar=*-*-* 08:00:00 Asia/Ho_Chi_Minh
+OnCalendar=*-*-* 16:30:00 Asia/Ho_Chi_Minh
+OnCalendar=Mon *-*-* 06:00:00 Asia/Ho_Chi_Minh
+OnCalendar=*-*-01 00:00:00 Asia/Ho_Chi_Minh
+Persistent=true
+
+[Install]
+WantedBy=timers.target

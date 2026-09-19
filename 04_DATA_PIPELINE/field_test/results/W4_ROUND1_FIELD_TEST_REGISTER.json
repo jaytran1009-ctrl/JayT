@@ -1,0 +1,54 @@
+{
+  "register_id": "W4_ROUND1_FIELD_TEST_REGISTER",
+  "status": "COMPLETED__6_CONSENTED_SESSIONS_RECORDED",
+  "protocol": "../W4_FIELD_TEST_PROTOCOL.md",
+  "observation_template": "../W4_FIELD_TEST_ANONYMOUS_OBSERVATION_TEMPLATE.json",
+  "sessions": [
+    {
+      "session_code": "W4-S-01",
+      "segment": "student_dut",
+      "status": "COMPLETED"
+    },
+    {
+      "session_code": "W4-S-02",
+      "segment": "student_dut",
+      "status": "COMPLETED"
+    },
+    {
+      "session_code": "W4-S-03",
+      "segment": "student_due",
+      "status": "COMPLETED"
+    },
+    {
+      "session_code": "W4-O-01",
+      "segment": "office_worker_nguyen_van_linh_or_bach_dang",
+      "status": "COMPLETED"
+    },
+    {
+      "session_code": "W4-O-02",
+      "segment": "office_worker_nguyen_van_linh_or_bach_dang",
+      "status": "COMPLETED"
+    },
+    {
+      "session_code": "W4-O-03",
+      "segment": "office_worker_nguyen_van_linh_or_bach_dang",
+      "status": "COMPLETED"
+    }
+  ],
+  "tasks": [
+    "user_entered_lunch_calculator",
+    "ktx_stack_simulation",
+    "spotify_sheerid_and_danabus_procedure"
+  ],
+  "prohibited_data": [
+    "name",
+    "phone",
+    "email",
+    "bank_data",
+    "GPS",
+    "purchase_history",
+    "personal_app_screen",
+    "audio_video_photo"
+  ],
+  "promotion_boundary": "Field findings may not enable affiliate tracking, redirect, or production mutation."
+}

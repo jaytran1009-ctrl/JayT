@@ -1,0 +1,2088 @@
+{
+  "batch_id": "BATCH_087A_TARGET_LINEAGE_REPLAY",
+  "captured_at": "2026-08-25T05:22:51.312Z",
+  "collector": "PUPPETEER_CHROME_CDP_ANONYMOUS",
+  "total_targets": 40,
+  "results": [
+    {
+      "target_id": "TARGET_087A_001",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://metiz.vn/lich-chieu-phim.html",
+      "final_url": "https://metiz.vn/lich-chieu-phim.html",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+        "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+        "literal_href": "/lich-chieu-phim.html",
+        "link_offset": 31957,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 31957 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_001",
+        "brand": "Metiz Cinema",
+        "sector": "CINEMA",
+        "requested_url": "https://metiz.vn/lich-chieu-phim.html",
+        "final_url": "https://metiz.vn/lich-chieu-phim.html",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:22:56.252Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+          "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+          "literal_href": "/lich-chieu-phim.html",
+          "link_offset": 31957,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 31957 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "dda9003f82989f1e93b580d56c75675783924b9a3601953d09c8a96012464d18",
+            "size": 685234
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "5325e1141d3ca43a9fd050d7055c00b836df5f0c2e4e4b4252901278a2bae2a6",
+            "size": 175825
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "03dc1359327e8de772ca30a28685c0f3cd4a26e35017fdbd3325be4a86b47747",
+            "size": 2291
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_010",
+      "brand": "Lotte Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+      "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+        "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+        "literal_href": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+        "link_offset": 20024,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 20024 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_010",
+        "brand": "Lotte Cinema",
+        "sector": "CINEMA",
+        "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+        "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:02.412Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+          "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+          "literal_href": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+          "link_offset": 20024,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 20024 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "1398994a972b23f17bc38e083b37c03bbb3c09b3eeab271e53f8252a84a6d918",
+            "size": 765443
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "7b9cd9eed7ce9ae334eedf0962a0c48fc785075ccf9f05fc0a9f7875761f52bc",
+            "size": 101795
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "ddea672d6eafe39ec5851c9853475e7757589552b923d48019e6e1433dae021f",
+            "size": 2884
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_070",
+      "brand": "BHD Star Cineplex",
+      "sector": "CINEMA",
+      "requested_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+      "final_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+        "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+        "literal_href": "https://www.bhdstar.vn/lich-chieu-rap/",
+        "link_offset": 49699,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49699 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_070",
+        "brand": "BHD Star Cineplex",
+        "sector": "CINEMA",
+        "requested_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+        "final_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:06.313Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+          "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+          "literal_href": "https://www.bhdstar.vn/lich-chieu-rap/",
+          "link_offset": 49699,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49699 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "8b74adaeaf1b79fbecf049c2dbd2fd20d5c19df0042839aee136a2c3950b7db1",
+            "size": 232836
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "f5a99746cb58607545f2b996641cfa771b56a54f159c2708afb7bb0c3708a315",
+            "size": 90200
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "26ee35d403bbeb8c73913fed3824a5b6ca0af1af6d98e8e3a513ceda54afd2fe",
+            "size": 1254
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_075",
+      "brand": "Galaxy Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://galaxycine.vn/phim-dang-chieu/",
+      "final_url": "https://www.galaxycine.vn/phim-dang-chieu/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/galaxycine.vn/page.html",
+        "parent_artifact_sha256": "fab0add4415d29b05723f4ef491f42e6b90b9048bc4335e13f54c9a82b4243b2",
+        "literal_href": "/phim-dang-chieu/",
+        "link_offset": 35981,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 35981 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_075",
+        "brand": "Galaxy Cinema",
+        "sector": "CINEMA",
+        "requested_url": "https://galaxycine.vn/phim-dang-chieu/",
+        "final_url": "https://www.galaxycine.vn/phim-dang-chieu/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:12.158Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/galaxycine.vn/page.html",
+          "parent_artifact_sha256": "fab0add4415d29b05723f4ef491f42e6b90b9048bc4335e13f54c9a82b4243b2",
+          "literal_href": "/phim-dang-chieu/",
+          "link_offset": 35981,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 35981 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "1275a6754e1d47825ce22b473ecd294018ec691a0d9e113fa78bfcdfdafaecb1",
+            "size": 1073722
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "f52102a594d27eb80efa25eece4773e9aea04e9708df59e335045dccc3f55de5",
+            "size": 263771
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "b90a818951b06511547280cd9d9e2821b89ca4ab05be0ca856bdcca384ffeed2",
+            "size": 8770
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_134",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "requested_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "final_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/cgv.vn/page.html",
+        "parent_artifact_sha256": "6faccbbbc1b824cf709d2909bbdb8c2959c60d663b86d8e4c61f0cf8a7b8e31e",
+        "literal_href": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+        "link_offset": 15013,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15013 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_134",
+        "brand": "CGV Cinemas",
+        "sector": "CINEMA",
+        "requested_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+        "final_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:17.866Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/cgv.vn/page.html",
+          "parent_artifact_sha256": "6faccbbbc1b824cf709d2909bbdb8c2959c60d663b86d8e4c61f0cf8a7b8e31e",
+          "literal_href": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+          "link_offset": 15013,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15013 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "83ec009518e4242c33322d1da5f91aac70f4efaeb7b13d034f4456323887f157",
+            "size": 446893
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "50dd530dfcaffbab512fab0957aa068d3ec0aa9311fda876b8a02ee5d2ab9c68",
+            "size": 55278
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1",
+            "size": 3199
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_002",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://metiz.vn/phim.html",
+      "final_url": "https://metiz.vn/phim.html",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+        "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+        "literal_href": "/phim.html",
+        "link_offset": 32079,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 32079 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_002",
+        "brand": "Metiz Cinema",
+        "sector": "CINEMA",
+        "requested_url": "https://metiz.vn/phim.html",
+        "final_url": "https://metiz.vn/phim.html",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:21.355Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+          "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+          "literal_href": "/phim.html",
+          "link_offset": 32079,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 32079 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "3a5faf368c8dd6a932f6aeb3cc176db8d05d778297ce1e6eecdaa27c7f5dd1a0",
+            "size": 735430
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "d698e0671e6c6f8b6ad922f8b830e78a955659b2f7ff70b907296d16644f1ae7",
+            "size": 210107
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "d9fb8985b8f8352fcc94989016286684f2ce7304d722d112168c1fcc3dd33793",
+            "size": 2266
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_011",
+      "brand": "Lotte Cinema",
+      "sector": "CINEMA",
+      "requested_url": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+      "final_url": "https://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+        "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+        "literal_href": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+        "link_offset": 23354,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23354 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_011",
+        "brand": "Lotte Cinema",
+        "sector": "CINEMA",
+        "requested_url": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+        "final_url": "https://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:26.445Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+          "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+          "literal_href": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+          "link_offset": 23354,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23354 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "bcd0fe84174abecf8b73c2575ef484d70b4f063a81cb0bcd9edf6348c5b029df",
+            "size": 302337
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "e66a58054db8df1a3211fbaa26f859ebc3f30ae9868d9387dcc6da0096dc40ad",
+            "size": 101334
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "dee7a500e1368abc3e4452a5141b82fa0bce04d2e4fd9328d8295f120ad4dec3",
+            "size": 2548
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_071",
+      "brand": "BHD Star Cineplex",
+      "sector": "CINEMA",
+      "requested_url": "https://www.bhdstar.vn/cua-hang/",
+      "final_url": "https://www.bhdstar.vn/cua-hang/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+        "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+        "literal_href": "https://www.bhdstar.vn/cua-hang/",
+        "link_offset": 49915,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49915 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_071",
+        "brand": "BHD Star Cineplex",
+        "sector": "CINEMA",
+        "requested_url": "https://www.bhdstar.vn/cua-hang/",
+        "final_url": "https://www.bhdstar.vn/cua-hang/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:31.277Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+          "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+          "literal_href": "https://www.bhdstar.vn/cua-hang/",
+          "link_offset": 49915,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49915 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "3e496f4c05f7579fd1fcb401b29532b8b97828be3a6fc91cbbd0a5af2411c223",
+            "size": 540308
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "87b3fbd5c481781e204e46efecfc7e3fade4989df74f28b93f4d2f6163906423",
+            "size": 116039
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "88126bd76331e03c0f050f6907a2a3451fd5624f6484a84aa8b0917b119c8956",
+            "size": 3459
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_140",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/khuyen-mai",
+      "final_url": "https://jollibee.com.vn/khuyen-mai",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/khuyen-mai",
+        "link_offset": 185326,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185326 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_140",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/khuyen-mai",
+        "final_url": "https://jollibee.com.vn/khuyen-mai",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:38.082Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/khuyen-mai",
+          "link_offset": 185326,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185326 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "f8bcb65d1b929c235c7c486f5041fad8aab45904d21783bd1909ed226b8ada49",
+            "size": 793225
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "2886df3d3544e7f7a6bdba15d32defdfe48f8e9a20a385a481120e1efd3832e7",
+            "size": 280813
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "d718e4f992968148bc2909fc72e08a0a65328d4fc9f17a6e344e63744f7bbb27",
+            "size": 1550
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_147",
+      "brand": "Domino's Pizza",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://dominos.vn/blogs",
+      "final_url": "https://dominos.vn/blogs",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+        "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+        "literal_href": "/blogs",
+        "link_offset": 26182,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 26182 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_147",
+        "brand": "Domino's Pizza",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://dominos.vn/blogs",
+        "final_url": "https://dominos.vn/blogs",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:42.847Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+          "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+          "literal_href": "/blogs",
+          "link_offset": 26182,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 26182 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "0fe290a4da878aa1124334218ed69c9e7f0dbcc9b1e0762202b244285c635b13",
+            "size": 706147
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "bc29c08a0b77330111d003435a53e895412ca385b00b3e0ddbe003e4bbdb3399",
+            "size": 64988
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "accb15cc3b818df1507f62578a8d4ba08b7fce1a560d4d96c45242cede520a42",
+            "size": 1627
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_141",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/dich-vu",
+      "final_url": "https://jollibee.com.vn/dich-vu",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/dich-vu",
+        "link_offset": 185418,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185418 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_141",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/dich-vu",
+        "final_url": "https://jollibee.com.vn/dich-vu",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:48.503Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/dich-vu",
+          "link_offset": 185418,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185418 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "1c0f5bc3237b0450793e3cf8abcd9de698d7cf3272c17fb1806f5b4816c6c67d",
+            "size": 1016830
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "cb37dd745ddcff90fa08b0c6471f7047e2c636d32bde54ec34273580fbb3b647",
+            "size": 283219
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "102fafc7a8c221c1df61a7468bf3b1fd73612be7e4eb2b2e7e61b4a927be3c90",
+            "size": 2416
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_148",
+      "brand": "Domino's Pizza",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://dominos.vn/promotion-listing/family-combo",
+      "final_url": "https://dominos.vn/promotion-listing/family-combo",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+        "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+        "literal_href": "/promotion-listing/family-combo",
+        "link_offset": 38908,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 38908 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_148",
+        "brand": "Domino's Pizza",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://dominos.vn/promotion-listing/family-combo",
+        "final_url": "https://dominos.vn/promotion-listing/family-combo",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:52.298Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+          "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+          "literal_href": "/promotion-listing/family-combo",
+          "link_offset": 38908,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 38908 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "6073c61889d1ea2bfbfb81480ab72e24b177c00b568ad91edbe381462726914f",
+            "size": 234123
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "3ea3a3a369ef781cf26681d6447313959aabff03c2be5a17d3d7636c67186582",
+            "size": 62545
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "bb67617d67d91b9e7c093f48d3bec197f5154f659974cfc8a6bb9354e6647157",
+            "size": 1457
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_142",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/tin-tuc",
+      "final_url": "https://jollibee.com.vn/tin-tuc",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/tin-tuc",
+        "link_offset": 185501,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185501 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_142",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/tin-tuc",
+        "final_url": "https://jollibee.com.vn/tin-tuc",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:23:57.850Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/tin-tuc",
+          "link_offset": 185501,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185501 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "5357e0a16621e98257ed7de594c4707f83676038a2f9f1d7bf7b68f87c7034fe",
+            "size": 1067468
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "b51a9289cb084f6887053f883c851ee2fa53abf0a38d0eccf632453ffd0a1396",
+            "size": 291175
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "e854bbf5888224a1741d7a9eb8fcd3bf9717ad7252dccabc70014a36b2de39c9",
+            "size": 3657
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_143",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/cua-hang",
+      "final_url": "https://jollibee.com.vn/cua-hang",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/cua-hang",
+        "link_offset": 185585,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185585 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_143",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/cua-hang",
+        "final_url": "https://jollibee.com.vn/cua-hang",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:03.355Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/cua-hang",
+          "link_offset": 185585,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185585 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "1c26d7822605b4637d6b3cc619974754cc393e32ce6fde0e73a35d21ddb44d2c",
+            "size": 761855
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "dd661dc1466f45e9b640fa2d0032964f12eaa0214fee746423cc9636d126157f",
+            "size": 790462
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "b4b501cb097e9a7d60226ae183424d6995a6728b572f220c661133c5f340fb75",
+            "size": 68155
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_144",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+      "final_url": "https://jollibee.com.vn/blog/post/sinh-nh%E1%BA%ADt-r%E1%BB%99n-ra-ti%E1%BB%87c-vui-c%E1%BB%B1c-da-2",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+        "link_offset": 209802,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 209802 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_144",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+        "final_url": "https://jollibee.com.vn/blog/post/sinh-nh%E1%BA%ADt-r%E1%BB%99n-ra-ti%E1%BB%87c-vui-c%E1%BB%B1c-da-2",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:08.915Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+          "link_offset": 209802,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 209802 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "47cf91d334d939f0dca1699a67c6313a81778867366a0214f15ba3b2393b6e19",
+            "size": 245915
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "725c186520c82e73f040b68f1464caa9fb0278b37bdcd8fb3cdfe9d735a7ce27",
+            "size": 285210
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "2a1c5dfcbc6ecab57b05b2f67476662147fc3b9d9d63f362441c4cad8e3de518",
+            "size": 1955
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_145",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+      "final_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+        "link_offset": 211040,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 211040 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_145",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "requested_url": "https://jollibee.com.vn/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+        "final_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:14.285Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+          "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+          "literal_href": "/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+          "link_offset": 211040,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 211040 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "e073f17ece3807fdf05d04ba4cd97aa93fb2e74dbf310b462293e02792787e67",
+            "size": 149946
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "886221e829cea0f181734eda0c0035b0ed3d9730c1694fe805615fdd4d03bbf8",
+            "size": 288486
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "9576374cf9a7b3e776159384299fedf422794e04572b52ca5cad59ae796b570d",
+            "size": 2134
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_149",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://phela.vn/san-pham-phela/",
+      "final_url": "https://phela.vn/san-pham-phela/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+        "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+        "literal_href": "https://phela.vn/san-pham-phela/",
+        "link_offset": 43299,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43299 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_149",
+        "brand": "Phê La",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://phela.vn/san-pham-phela/",
+        "final_url": "https://phela.vn/san-pham-phela/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:28.568Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+          "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+          "literal_href": "https://phela.vn/san-pham-phela/",
+          "link_offset": 43299,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43299 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "4e6956c166701087a24f4b40147300ebf45aa4f06629d2f1b259f94c1bf4f325",
+            "size": 484618
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "bfc3638028e98c0b222427b85bd5a49be6f7aa678566640214c6c13b44b5ef8e",
+            "size": 265913
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "d520808d5ca965168bf91ea960319bb5d98ddc3b73220c7d21fc02658e84a7c7",
+            "size": 4387
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_161",
+      "brand": "Highlands Coffee",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+        "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+        "literal_href": "/vn/san-pham.html",
+        "link_offset": 9116,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 9116 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_161",
+        "brand": "Highlands Coffee",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+        "final_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:34.893Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+          "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+          "literal_href": "/vn/san-pham.html",
+          "link_offset": 9116,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 9116 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "060ef8b6c939118530148ca33574e05f13f5b335f0fbaad3b8e684b014f0cf4c",
+            "size": 691648
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "b70ae347c4d070408f33246e2377a18e43824be93255230b761a994a19d7007b",
+            "size": 30307
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "4d9e66e71e4d3ecb47bef1b7c70c3489f2d98fe61a06810839ac69fd965912ed",
+            "size": 1934
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_164",
+      "brand": "Katinat Saigon Kafe",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://katinat.vn/menu/",
+      "final_url": "https://katinat.vn/menu/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+        "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+        "literal_href": "https://katinat.vn/menu/",
+        "link_offset": 30672,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30672 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_164",
+        "brand": "Katinat Saigon Kafe",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://katinat.vn/menu/",
+        "final_url": "https://katinat.vn/menu/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:44.646Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+          "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+          "literal_href": "https://katinat.vn/menu/",
+          "link_offset": 30672,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30672 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "e7054aedbf01a35c008a17cbacd12146d28207470e144b59808b37796af303a6",
+            "size": 448209
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "5154cffdc3e59f2cdba3c142ff1c41aaaacf3db6ce3bf5c81fa22f8ea3a79a23",
+            "size": 90654
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "af78b4e4e20534343f9a96ba3ffceb2fd40b7a39ddc2d3d51bb98646d9995d17",
+            "size": 1843
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_172",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+      "final_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+        "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+        "literal_href": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+        "link_offset": 29590,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 29590 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_172",
+        "brand": "Gong Cha Vietnam",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+        "final_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:54.886Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+          "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+          "literal_href": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+          "link_offset": 29590,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 29590 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "21402881fbcf0fdf30c72cc3eae5ad9c16f89ca44d4b908b676ebbc01aa8865f",
+            "size": 590395
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "3c4ac94bbf018303fe6187a801ef4592691ad08a1204229440feba3199165b06",
+            "size": 115086
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "61867881a9f544c1497171dbfb0356ab71cbb8eacdb4fdb58600901d8e2aeb5c",
+            "size": 2143
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_150",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://phela.vn/category/tin-tuc/",
+      "final_url": "https://phela.vn/category/tin-tuc/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+        "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+        "literal_href": "https://phela.vn/category/tin-tuc/",
+        "link_offset": 44525,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 44525 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_150",
+        "brand": "Phê La",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://phela.vn/category/tin-tuc/",
+        "final_url": "https://phela.vn/category/tin-tuc/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:24:59.233Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+          "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+          "literal_href": "https://phela.vn/category/tin-tuc/",
+          "link_offset": 44525,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 44525 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "f509c4a16968be8d786691032cdaeb5fba1c8575a2c8eb9d43bc1e35fafdcb36",
+            "size": 523130
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "5dc82917d233b633f6efb585e122ad07ec98af654cf9fa151b2aa5e627d391b1",
+            "size": 107719
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "401736023df9822131869b123d972858cea0770ea1014edf04695c5c87230ed2",
+            "size": 6799
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_162",
+      "brand": "Highlands Coffee",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+        "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+        "literal_href": "/vn/he-thong-cua-hang.html",
+        "link_offset": 12121,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 12121 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_162",
+        "brand": "Highlands Coffee",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "final_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:04.606Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+          "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+          "literal_href": "/vn/he-thong-cua-hang.html",
+          "link_offset": 12121,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 12121 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "6fc25a16ded2bc66010b0b1bdb6abfdd10e323f95c2ecf7542ac66299268fbfa",
+            "size": 479322
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "7a8dcc16fc6dd25061b77f437a7a715ad16700c61c24742291ad751d5ff48211",
+            "size": 118785
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "2a9b0f45d3717a3de6005338751078956398e1a3291ac8d1bba122c54cc06c70",
+            "size": 9669
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_165",
+      "brand": "Katinat Saigon Kafe",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://katinat.vn/cua-hang-2/",
+      "final_url": "https://katinat.vn/cua-hang-2/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+        "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+        "literal_href": "https://katinat.vn/cua-hang-2/",
+        "link_offset": 30855,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30855 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_165",
+        "brand": "Katinat Saigon Kafe",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://katinat.vn/cua-hang-2/",
+        "final_url": "https://katinat.vn/cua-hang-2/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:12.657Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+          "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+          "literal_href": "https://katinat.vn/cua-hang-2/",
+          "link_offset": 30855,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30855 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "608c9ab065ab3d5aaba4afb8c01b22ad887c81104e13381258ff28131d53409b",
+            "size": 219036
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "cc285c57f65cb931e9d239397eb5980331c915f86fb3d37007320b1ce2c881d7",
+            "size": 139431
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "972a97a456aa89e72edf248ff6ee9209cfda3325066e12a179643fd34972aa5d",
+            "size": 1572
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_173",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "final_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+        "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+        "literal_href": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+        "link_offset": 30982,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30982 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_173",
+        "brand": "Gong Cha Vietnam",
+        "sector": "COFFEE_TEA",
+        "requested_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+        "final_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:18.428Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+          "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+          "literal_href": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+          "link_offset": 30982,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30982 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "0348ed3f243b542e063194c5ebc181e1a83a5df33b4b990d873e37df7340d873",
+            "size": 539913
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "a6da7070fc614977a4eb511060ce50f85471a645da3c03bfadfc8eea815e6105",
+            "size": 78958
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "0ea23405198e712b72083fe5dbfd61a58edf4917856066881714e5e3a0fd7624",
+            "size": 2214
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_177",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+        "link_offset": 23396,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23396 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_177",
+        "brand": "Be Group",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+        "final_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:22.339Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+          "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+          "literal_href": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+          "link_offset": 23396,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23396 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "d94a267a4e8ab8196711c46f40fdc39dce9146f6f8446711a9d5de8880859c1d",
+            "size": 287219
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "fb6b2f355d540d963c87adc3639aa1ade122dfc603f6dd1184f7a222f2972901",
+            "size": 63180
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "fd87098d8910c6483fe33f8b76bacb63f2681b275437a8df9f0bc11cc2462489",
+            "size": 3511
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_191",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://grab.com/vn/blog/",
+      "final_url": "https://www.grab.com/vn/blog/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "/vn/blog/",
+        "link_offset": 136452,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 136452 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_191",
+        "brand": "Grab Vietnam",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://grab.com/vn/blog/",
+        "final_url": "https://www.grab.com/vn/blog/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:26.808Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+          "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+          "literal_href": "/vn/blog/",
+          "link_offset": 136452,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 136452 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "13d2dfae6350dd11eca133db84f0bc6115b3007505b6aee507ba8816005d1af5",
+            "size": 317377
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "ef4cbafc375f74aff5d9123a42ad37cf62e12f2d446214e975b650c0c9901457",
+            "size": 274028
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "32851868325dc5a11134661082862fb6abd33803f90c12de399967fcb19836d7",
+            "size": 5990
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_178",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+        "link_offset": 23521,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23521 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_178",
+        "brand": "Be Group",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+        "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:30.786Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+          "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+          "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+          "link_offset": 23521,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23521 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "1a506f12bd59038fa2d977f632a242eb2b2dff0d0dd242ad52f4d662d3404ae9",
+            "size": 573647
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "63c7ab95f2ab3e4f6faf3ac911bb02bc6aafe72f5d32e1605648450d2c294445",
+            "size": 1231643
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "c563ca16ec73161be0b94a6a1125633b17ce5c10da1dfa329b48dbe303128b2d",
+            "size": 45106
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_192",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://grab.com/vn/blog/driver/",
+      "final_url": "https://www.grab.com/vn/blog/driver/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "/vn/blog/driver/",
+        "link_offset": 141898,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 141898 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_192",
+        "brand": "Grab Vietnam",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://grab.com/vn/blog/driver/",
+        "final_url": "https://www.grab.com/vn/blog/driver/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:36.867Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+          "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+          "literal_href": "/vn/blog/driver/",
+          "link_offset": 141898,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 141898 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "8657aa046bc0600aba1dcfce27d02dcc5dbeff5fff6e8589a7c5b3b20ad9cf2e",
+            "size": 318505
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "57fc9ce792a6de1a101d1b22db7ef97b5fbf76a06114e7413035ef27dddcccd6",
+            "size": 296748
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "202dcc573b2e3223e86c1915da2ff98f77950d7b4320a24d3b7b7a620349cb51",
+            "size": 6224
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_179",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+        "link_offset": 23633,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23633 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_179",
+        "brand": "Be Group",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+        "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:41.044Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+          "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+          "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+          "link_offset": 23633,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23633 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "d25b5065b7331dfd05373868b9783f3379397682b3fddcbdd22386583f82e415",
+            "size": 550968
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "2ed805899500ea8db1b3648151ccb1b8297aaac34dc4bfdca910d84acdda1348",
+            "size": 146972
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "3c0c3e81f98283ce02100e4da7e7ebcc8ccd4ce94a5521d3eba158b376145816",
+            "size": 7264
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_193",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://merchant.grab.com/vn-vn/blog/",
+      "final_url": "https://merchant.grab.com/vn-vn/blog",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "https://merchant.grab.com/vn-vn/blog/",
+        "link_offset": 149014,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 149014 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_193",
+        "brand": "Grab Vietnam",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://merchant.grab.com/vn-vn/blog/",
+        "final_url": "https://merchant.grab.com/vn-vn/blog",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:45.584Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+          "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+          "literal_href": "https://merchant.grab.com/vn-vn/blog/",
+          "link_offset": 149014,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 149014 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "3b0a15712c417572175adce78d3c4ce319c1755af5863536c9ac88655f0b4760",
+            "size": 291748
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "30cbd3f669cbe8337449eb5bd68040e445dff57610d3849ecf5c40d91fb64f1c",
+            "size": 3584427
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "1c9f98eab4ffec301ed3dbd85cc3cad4d6853a91abac8a918748db258c70c51c",
+            "size": 3159
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_180",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+      "final_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+        "link_offset": 24504,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 24504 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_180",
+        "brand": "Be Group",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+        "final_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:49.029Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+          "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+          "literal_href": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+          "link_offset": 24504,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 24504 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "24d41c26179d67eaf58d5987d4fda6132f6b4549dfc45597daf65d815dbcb86f",
+            "size": 222427
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "fe4d5946d1a2023f3c7939dd0bb461029bb976f21dfce4a18701235f6f0b5fb4",
+            "size": 61459
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "5001daa9d66280037f9fc578c370691beb0fb4407b7a0fa4002c80733124269b",
+            "size": 3685
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_194",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+      "final_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+        "link_offset": 179690,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 179690 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_194",
+        "brand": "Grab Vietnam",
+        "sector": "FOOD_AND_RIDE",
+        "requested_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+        "final_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:25:54.109Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+          "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+          "literal_href": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+          "link_offset": 179690,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 179690 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "2b822ef1fc50d138f4a3b26ae19f39126681bc2720f5d00958e1eee6cdc6a356",
+            "size": 105524
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "a1d66ac41bab2b4a7d2bb82073b6c303aeb0c6ddbf96bbee3516a05c4b7a7094",
+            "size": 300282
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "b05dca2ac7f80b9328051fa6c6446c4f9eba129db0621628b883de1436ca5bc3",
+            "size": 4983
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_209",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc",
+      "final_url": "https://www.momo.vn/tin-tuc",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc",
+        "link_offset": 41742,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 41742 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_209",
+        "brand": "Ví MoMo",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://momo.vn/tin-tuc",
+        "final_url": "https://www.momo.vn/tin-tuc",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:00.170Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+          "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+          "literal_href": "/tin-tuc",
+          "link_offset": 41742,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 41742 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "fa8b37e14eb65f84cdb663648ef19a4ca74b1d6425f949ef589ea56de3c32c5f",
+            "size": 455267
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "56140f11605a70cbb2ab5ed2d849d9f10fdac4ac7887577733f9871bc620bd43",
+            "size": 139534
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "262ddcccf02c7cb63e67257fb9f866a376f53327f53a5e46e80e6f4d632b2064",
+            "size": 4173
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_228",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/tin-tuc",
+      "final_url": "https://zalopay.vn/tin-tuc",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/tin-tuc",
+        "link_offset": 15264,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15264 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_228",
+        "brand": "Ví ZaloPay",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://zalopay.vn/tin-tuc",
+        "final_url": "https://zalopay.vn/tin-tuc",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:05.381Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+          "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+          "literal_href": "/tin-tuc",
+          "link_offset": 15264,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15264 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "c4c534eca580244414b6b9eb71cb3ad0a226372e53151a55c4c384bd5bd1ac26",
+            "size": 417675
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "9218bd1cf467082a875d534f2dc29561acd6ecb94fdfda243ce2682a5f891e83",
+            "size": 329575
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "797735b84c5933082cb4e29a1bb0b170936972597af33101a81ae0510dec2bd7",
+            "size": 8570
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_273",
+      "brand": "VNPAY",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://vnpay.vn/tin-tuc",
+      "final_url": "https://vnpay.vn/tin-tuc",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+        "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+        "literal_href": "/tin-tuc",
+        "link_offset": 157336,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 157336 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_273",
+        "brand": "VNPAY",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://vnpay.vn/tin-tuc",
+        "final_url": "https://vnpay.vn/tin-tuc",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:09.639Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+          "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+          "literal_href": "/tin-tuc",
+          "link_offset": 157336,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 157336 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "f86bb23afe4d413c83a4bded205f9e9c5c8bf3cb7f1c820adb8977973ef9f43a",
+            "size": 666710
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "8e80a79e15e29464c0527ac47c54e8458c35117f59e5c159c413a4413b2c1c28",
+            "size": 212683
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "5a281a7f7d6b683661b5a3043bb429a41b2fe11873aafeb855860323efd9b669",
+            "size": 2628
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_210",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc/khuyen-mai",
+      "final_url": "https://www.momo.vn/tin-tuc/khuyen-mai",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc/khuyen-mai",
+        "link_offset": 42566,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 42566 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_210",
+        "brand": "Ví MoMo",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://momo.vn/tin-tuc/khuyen-mai",
+        "final_url": "https://www.momo.vn/tin-tuc/khuyen-mai",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:14.650Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+          "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+          "literal_href": "/tin-tuc/khuyen-mai",
+          "link_offset": 42566,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 42566 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "c4269cd2be687d4d9f379774128d2813ab1b76edd799bead370a72e2b4a23019",
+            "size": 423774
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "a4d7fb42d87e90c6e391d5458aa75d7e5494c7669be1c2caebacc3b1aac30991",
+            "size": 137254
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "649c48d788a92ef16cdd5b924f8c66a47ec9b510127e99192b8997a3cb456d20",
+            "size": 3803
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_229",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/khuyen-mai",
+      "final_url": "https://zalopay.vn/khuyen-mai",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/khuyen-mai",
+        "link_offset": 16465,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 16465 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_229",
+        "brand": "Ví ZaloPay",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://zalopay.vn/khuyen-mai",
+        "final_url": "https://zalopay.vn/khuyen-mai",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:18.514Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+          "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+          "literal_href": "/khuyen-mai",
+          "link_offset": 16465,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 16465 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "f59752144ac94e99bde105db7ed8665341b45b31bd5c13da80768b316067e809",
+            "size": 622926
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "58e1f6dc7fa4566693447c5e8c738809e499764d912e9bc857f66ec06288ee15",
+            "size": 225931
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "0909ea14ac059f51942bf1adee7dc6a0ddec452e5f5faa7d75d1ff314f54d73e",
+            "size": 2966
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_274",
+      "brand": "VNPAY",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+      "final_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+        "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+        "literal_href": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+        "link_offset": 165222,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 165222 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_274",
+        "brand": "VNPAY",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+        "final_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:23.250Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+          "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+          "literal_href": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+          "link_offset": 165222,
+          "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 165222 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "e3cacec518a71d4909c1d2dc3f81466ba7b1e0ee65c5c33291114cdf81142f4b",
+            "size": 221463
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "25645aa8cd59d3c38ef856dcc24b4b939c5a4aec4cd8fc4b46e291c8f3803f04",
+            "size": 224911
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "2301f4befe12970a39d220276ea6fe04f599adcf8008603d70fa1ef56bc839b7",
+            "size": 4861
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_211",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc/tin-tuc-su-kien",
+      "final_url": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc/tin-tuc-su-kien",
+        "link_offset": 43379,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43379 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_211",
+        "brand": "Ví MoMo",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://momo.vn/tin-tuc/tin-tuc-su-kien",
+        "final_url": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:27.648Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+          "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+          "literal_href": "/tin-tuc/tin-tuc-su-kien",
+          "link_offset": 43379,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43379 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "6dcffae07affdd603c2ef284a0402a594c07060e44ef05834a05f1e2bedd040d",
+            "size": 516489
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "3b9158a799afd8d547a1a6b02a105b0bed70d08a5a36ec86e2596236c6fdacae",
+            "size": 136168
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "0ee94a319a96dacb9aea07586599772567b2e8476a9b9ecc8f5c7a8267809296",
+            "size": 3547
+          }
+        }
+      }
+    },
+    {
+      "target_id": "TARGET_087A_230",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/blog",
+      "final_url": "https://zalopay.vn/blog",
+      "http_status": 200,
+      "status": "SUCCESS",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/blog",
+        "link_offset": 17305,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 17305 trong parent DOM"
+      },
+      "receipt": {
+        "target_id": "TARGET_087A_230",
+        "brand": "Ví ZaloPay",
+        "sector": "ECOMMERCE_WALLETS",
+        "requested_url": "https://zalopay.vn/blog",
+        "final_url": "https://zalopay.vn/blog",
+        "http_status": 200,
+        "captured_at": "2026-08-25T05:26:31.224Z",
+        "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+        "target_lineage": {
+          "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+          "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+          "literal_href": "/blog",
+          "link_offset": 17305,
+          "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+          "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 17305 trong parent DOM"
+        },
+        "files": {
+          "screenshot_png": {
+            "path": "page.png",
+            "sha256": "d82dcfa9c0d38026685ccc7239ea5de79e178f9ee83b32a1ebff4102c094834f",
+            "size": 675673
+          },
+          "raw_html": {
+            "path": "page.html",
+            "sha256": "6e976dba7a3d5dd35927df7c644e14c2ce3a5ee823ea49f3d64492120ac24fa0",
+            "size": 353984
+          },
+          "text_extract": {
+            "path": "page.txt",
+            "sha256": "98983d8754377cf2970c4c1bd4436ff16d34ca515bd925e8a4179a8b35884f7c",
+            "size": 9397
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "generatedAt": "2026-09-14T07:38:08.028Z",
+  "servedRoot": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\deploy",
+  "url": "http://127.0.0.1:51747/",
+  "expectedVersion": "v3.496.0-j465-monolithic-surface",
+  "canonicalExpected": "J460",
+  "checks": {
+    "exactJ465Version": {
+      "actual": "v3.496.0-j465-monolithic-surface",
+      "pass": true
+    },
+    "canonicalRemainsJ460": {
+      "canonicalUrl": "https://jayt-production-v3420.vercel.app",
+      "status": 200,
+      "containsJ460": true,
+      "containsJ465": false,
+      "pass": true,
+      "note": "The remote canonical is verified separately from the HTTP-served local non-production J465 package."
+    },
+    "oneRuntimeStyleTag": {
+      "actual": [
+        [
+          {
+            "id": "j465-monolithic-production-styles",
+            "bytes": 146586
+          }
+        ],
+        [
+          {
+            "id": "j465-monolithic-production-styles",
+            "bytes": 146586
+          }
+        ]
+      ],
+      "pass": true
+    },
+    "dragonBridgeHeroLoaded": {
+      "actual": [
+        {
+          "found": true,
+          "selector": "div.j406-hero",
+          "backgroundImage": "linear-gradient(rgba(7, 13, 9, 0.22) 0%, rgba(7, 13, 9, 0.86) 50%, rgb(7, 13, 9) 100%), url(\"http://127.0.0.1:51747/assets/images/dragon_bridge_hero_sunset_fire.jpg\")"
+        },
+        {
+          "found": true,
+          "selector": "div.j406-hero",
+          "backgroundImage": "linear-gradient(90deg, rgba(7, 13, 9, 0.96) 0%, rgba(7, 13, 9, 0.88) 42%, rgba(7, 13, 9, 0.24) 60%, rgba(0, 0, 0, 0) 76%), url(\"http://127.0.0.1:51747/assets/images/dragon_bridge_hero_sunset_fire.jpg\")"
+        }
+      ],
+      "pass": true
+    },
+    "thirtySku": {
+      "actual": [
+        30,
+        30
+      ],
+      "pass": true
+    },
+    "nameCardAbsent": {
+      "actual": [
+        0,
+        0
+      ],
+      "pass": true
+    },
+    "coreModuleIds": {
+      "actual": [
+        {
+          "core": {
+            "j406-private-concierge": true,
+            "campus-dock-section": true,
+            "deals-vault-module": true,
+            "lunch-arbitrage-module": true,
+            "split-bill-module": true,
+            "dorm-shopping-module": true
+          },
+          "cinema": {
+            "found": true,
+            "selector": "#jayt-app-root"
+          }
+        },
+        {
+          "core": {
+            "j406-private-concierge": true,
+            "campus-dock-section": true,
+            "deals-vault-module": true,
+            "lunch-arbitrage-module": true,
+            "split-bill-module": true,
+            "dorm-shopping-module": true
+          },
+          "cinema": {
+            "found": true,
+            "selector": "#jayt-app-root"
+          }
+        }
+      ],
+      "pass": true
+    },
+    "mobileDockAndHud": {
+      "actual": [
+        {
+          "found": true,
+          "visible": true,
+          "selector": "#counter-quick-dock",
+          "hudMs": 1.8000000044703484,
+          "hudOpened": true
+        },
+        {
+          "found": true,
+          "visible": false,
+          "selector": "#counter-quick-dock",
+          "hudMs": null,
+          "hudOpened": false
+        }
+      ],
+      "pass": true
+    },
+    "zeroErrors": {
+      "actual": [
+        {
+          "page": [],
+          "console": []
+        },
+        {
+          "page": [],
+          "console": []
+        }
+      ],
+      "pass": true
+    },
+    "zeroOverflow": {
+      "actual": [
+        {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "overflowX": false
+        },
+        {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "overflowX": false
+        }
+      ],
+      "pass": true
+    },
+    "noVisibleNearWhiteCream": {
+      "actual": [
+        [],
+        []
+      ],
+      "pass": true
+    }
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "location": "http://127.0.0.1:51747/",
+      "styleTags": [
+        {
+          "id": "j465-monolithic-production-styles",
+          "bytes": 146586
+        }
+      ],
+      "runtimeTags": [
+        {
+          "id": "j465-monolithic-production-styles",
+          "bytes": 146586
+        }
+      ],
+      "hero": {
+        "found": true,
+        "selector": "div.j406-hero",
+        "backgroundImage": "linear-gradient(rgba(7, 13, 9, 0.22) 0%, rgba(7, 13, 9, 0.86) 50%, rgb(7, 13, 9) 100%), url(\"http://127.0.0.1:51747/assets/images/dragon_bridge_hero_sunset_fire.jpg\")"
+      },
+      "skuCount": 30,
+      "nameCardOccurrences": 0,
+      "coreModules": {
+        "j406-private-concierge": true,
+        "campus-dock-section": true,
+        "deals-vault-module": true,
+        "lunch-arbitrage-module": true,
+        "split-bill-module": true,
+        "dorm-shopping-module": true
+      },
+      "cinemaPowerHub": {
+        "found": true,
+        "selector": "#jayt-app-root"
+      },
+      "mobileDock": {
+        "found": true,
+        "visible": true,
+        "selector": "#counter-quick-dock",
+        "hudMs": 1.8000000044703484,
+        "hudOpened": true
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowX": false
+      },
+      "nearWhiteVisibleComponents": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "screenshot": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\j465_http\\WS1_deploy_http_390x844_full.png"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "location": "http://127.0.0.1:51747/",
+      "styleTags": [
+        {
+          "id": "j465-monolithic-production-styles",
+          "bytes": 146586
+        }
+      ],
+      "runtimeTags": [
+        {
+          "id": "j465-monolithic-production-styles",
+          "bytes": 146586
+        }
+      ],
+      "hero": {
+        "found": true,
+        "selector": "div.j406-hero",
+        "backgroundImage": "linear-gradient(90deg, rgba(7, 13, 9, 0.96) 0%, rgba(7, 13, 9, 0.88) 42%, rgba(7, 13, 9, 0.24) 60%, rgba(0, 0, 0, 0) 76%), url(\"http://127.0.0.1:51747/assets/images/dragon_bridge_hero_sunset_fire.jpg\")"
+      },
+      "skuCount": 30,
+      "nameCardOccurrences": 0,
+      "coreModules": {
+        "j406-private-concierge": true,
+        "campus-dock-section": true,
+        "deals-vault-module": true,
+        "lunch-arbitrage-module": true,
+        "split-bill-module": true,
+        "dorm-shopping-module": true
+      },
+      "cinemaPowerHub": {
+        "found": true,
+        "selector": "#jayt-app-root"
+      },
+      "mobileDock": {
+        "found": true,
+        "visible": false,
+        "selector": "#counter-quick-dock",
+        "hudMs": null,
+        "hudOpened": false
+      },
+      "overflow": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": false
+      },
+      "nearWhiteVisibleComponents": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "screenshot": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\07_QUALITY_ASSURANCE\\j465_http\\WS1_deploy_http_1440x1000_full.png"
+    }
+  ],
+  "pass": true
+}

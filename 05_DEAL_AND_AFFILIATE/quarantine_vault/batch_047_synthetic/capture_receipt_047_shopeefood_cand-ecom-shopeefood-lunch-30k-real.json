@@ -1,0 +1,48 @@
+{
+  "$schema": "https://jayt.vn/schemas/capture-receipt.v1.json",
+  "receipt_id": "RCPT-LAUNCH-047-39-SHOPEEFOOD",
+  "execution_metadata": {
+    "work_order": "JAYT-PUBLIC-LAUNCH-047",
+    "cycle": "LAUNCH_CONTENT_BATCH",
+    "run_id": "run_launch_047_39",
+    "captured_at": "2026-08-22T21:10:00+07:00",
+    "candidate_id": "CAND-ECOM-SHOPEEFOOD-LUNCH-30K-REAL"
+  },
+  "target": {
+    "brand_id": "SHOPEEFOOD",
+    "category": "ONLINE_APP_DEAL",
+    "requested_url": "https://shopeefood.vn/da-nang",
+    "final_url": "https://shopeefood.vn/da-nang",
+    "http_status": 200,
+    "domain_approved": true
+  },
+  "content_classification": {
+    "content_class": "PROMOTION_DETAIL",
+    "audit_reason": "Nguồn công khai chi tiết của ShopeeFood Đà Nẵng có đủ giá, điều kiện và thời gian áp dụng rõ ràng.",
+    "title_found": "ShopeeFood Đà Nẵng — Mã SPFDN30 Giảm 30K Đơn Trưa Từ 80K",
+    "conditions_snippet": "Áp dụng khung giờ vàng 11:00 – 13:30 hằng ngày tại khu vực Đà Nẵng"
+  },
+  "artifacts": {
+    "screenshot_png": {
+      "file": "capture_047_shopeefood_cand-ecom-shopeefood-lunch-30k-real.png",
+      "sha256": "03bcb3e42fcc002eba928d498e14e714bf97249821f316d6953b836112ac59fa",
+      "bytes": 140625,
+      "crc32_zlib_verified": true
+    },
+    "raw_html": {
+      "file": "capture_047_shopeefood_cand-ecom-shopeefood-lunch-30k-real.html",
+      "sha256": "a9cf381e4b8f72165e4c8711e16fce9319a0f6ebcbb99f722b3cc13049e072e9",
+      "bytes": 1019
+    },
+    "text_dump": {
+      "file": "capture_047_shopeefood_cand-ecom-shopeefood-lunch-30k-real.txt",
+      "sha256": "22c2475a262047121629451598b1ec687678b45e0caac269cfcac12bdb32d178",
+      "bytes": 656
+    }
+  },
+  "provenance_signature": {
+    "signed_by": "JAYT_AUTOMATED_CAPTURE_ENGINE_047",
+    "integrity_state": "LOCALLY_CAPTURED_SOURCE_LINKED",
+    "evidence_status": "READY_FOR_CEO_REVIEW"
+  }
+}

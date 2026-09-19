@@ -1,0 +1,106 @@
+{
+  "dataset_name": "JAYT_AUTHENTIC_REVIEW_BENCHMARK_DATASET_V1",
+  "dataset_version": "v1.0.0-j457-authenticity-gate",
+  "created_at": "2026-09-19T09:16:33.036Z",
+  "author": "JayT Quality Assurance & Governance Authority",
+  "mandate": "JAYT-457 Section VII (AUTH-05)",
+  "description": "Standalone, immutable machine-readable benchmark for ABSA review seeding filter. Contains exactly 5 attack-vector seeds and 5 genuine buyer reviews.",
+  "samples_count": 10,
+  "ground_truth_summary": {
+    "total": 10,
+    "seeding_count": 5,
+    "legitimate_count": 5
+  },
+  "samples": [
+    {
+      "sample_id": "SEED_01_INCENTIVIZED",
+      "text": "cho 5 sao nhận xu nha shop ơi quà tặng siêu to khổng lồ",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "ground_truth_reason": "BANNED_INCENTIVIZED_KEYWORD (\"nhận xu\")",
+      "attack_vector": "INCENTIVIZED_REVIEW_SPAM",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "SEED_02_SHORT_CONTENT",
+      "text": "đẹp lắm nha",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "ground_truth_reason": "LENGTH_BELOW_15_CHARS (len=11 < 15)",
+      "attack_vector": "SUPERFICIAL_LOW_EFFORT_REVIEW",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "SEED_03_EMOJI_ONLY",
+      "text": "👍👍👍❤️❤️❤️⭐⭐⭐⭐⭐",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "ground_truth_reason": "EMOJI_ONLY_STRIPPED_CHARS_LESS_THAN_5 (len=0 < 5)",
+      "attack_vector": "EMOJI_SPAM_NO_TEXTUAL_CONTENT",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "SEED_04_UNVERIFIED_BUYER",
+      "text": "Hàng xài cực thích nha mn, mua ủng hộ shop nhiệt tình",
+      "is_verified_buyer": false,
+      "ground_truth_label": "SEEDING",
+      "ground_truth_reason": "UNVERIFIED_PURCHASE_ACCOUNT (isVerifiedBuyer === false)",
+      "attack_vector": "NON_BUYER_SEEDING_ATTACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "SEED_05_SPAM_LYRICS",
+      "text": "lời bài hát anh muốn đưa em về không phải vì trời mưa mà vì...",
+      "is_verified_buyer": true,
+      "ground_truth_label": "SEEDING",
+      "ground_truth_reason": "BANNED_KEYWORD_LYRICS_SPAM (\"lời bài hát\")",
+      "attack_vector": "IRRELEVANT_TEXT_COPY_PASTE",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "LEGIT_01_EMA_PILLOW",
+      "text": "Gối nằm êm ái, nâng đỡ cổ vai gáy rất tốt sau 2 tuần sử dụng, không còn đau mỏi.",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_DETAILED_PRODUCT_EXPERIENCE",
+      "attack_vector": "NONE_GENUINE_FEEDBACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "LEGIT_02_SHIN_CASE",
+      "text": "Ốp lưng cầm chắc chắn viền gợn sóng bảo vệ góc máy tốt, hoàn thiện sắc nét.",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_PRODUCT_ATTRIBUTES_FEEDBACK",
+      "attack_vector": "NONE_GENUINE_FEEDBACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "LEGIT_03_MAGSAFE_CHARGER",
+      "text": "Đế sạc MagSafe lực hút nam châm rất mạnh, sạc không bị quá nhiệt, đóng gói cẩn thận.",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_TECHNICAL_PERFORMANCE_REVIEW",
+      "attack_vector": "NONE_GENUINE_FEEDBACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "LEGIT_04_THERMOS_BOTTLE",
+      "text": "Bình giữ nhiệt giữ đá lạnh được hơn 12 tiếng, sơn nhám cầm bám tay không bám vân tay.",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_LONG_TERM_DURABILITY_REVIEW",
+      "attack_vector": "NONE_GENUINE_FEEDBACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    },
+    {
+      "sample_id": "LEGIT_05_BRAIDED_CABLE",
+      "text": "Dây sạc bọc dù chống đứt gãy tốt, sạc nhanh chuẩn PD 20W đúng như cam kết shop mô tả.",
+      "is_verified_buyer": true,
+      "ground_truth_label": "LEGITIMATE",
+      "ground_truth_reason": "AUTHENTIC_VERIFIED_PURCHASE_SPECIFICATION_CONFORMANCE",
+      "attack_vector": "NONE_GENUINE_FEEDBACK",
+      "dataset_version": "v1.0.0-j457-authenticity-gate"
+    }
+  ]
+}

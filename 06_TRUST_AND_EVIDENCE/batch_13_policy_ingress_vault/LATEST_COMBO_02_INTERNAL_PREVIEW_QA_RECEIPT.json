@@ -1,0 +1,208 @@
+{
+  "receipt_name": "COMBO_02_INTERNAL_PREVIEW_QA_RECEIPT",
+  "generated_at_utc": "2026-09-07T04:38:08.901Z",
+  "candidate_id": "PROD_JOLLIBEE_COMBO_02",
+  "item_name": "MỘT MÌNH HÍT HÀ",
+  "preview_file": "staging_workspace_j328/internal_preview_jollibee_combo_02.html",
+  "all_passed": true,
+  "total_tests": 19,
+  "passed_tests": 19,
+  "failed_tests": 0,
+  "guards": {
+    "public_approved": false,
+    "render_permitted": false,
+    "staging_4_cards_admitted_jayt330": true,
+    "da_nang_scope_status": "UNVERIFIED",
+    "marketing_claims_forbidden": true,
+    "ecommerce_actions_forbidden": true
+  },
+  "tests": [
+    {
+      "id": "QA_1.1",
+      "description": "Raw file exists and matches expected SHA-256",
+      "passed": true,
+      "details": {
+        "actualSha": "6c9aff91c21ea0d0d4162562a87bb4429562052da1397298696e2bf67b4e2e92"
+      }
+    },
+    {
+      "id": "QA_1.2",
+      "description": "Dossier Product ID parsed via AST/JSON is 679",
+      "passed": true,
+      "details": {
+        "bundle_id": {
+          "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/bundleId",
+          "value": "679",
+          "verified_integer": 679
+        }
+      }
+    },
+    {
+      "id": "QA_1.3",
+      "description": "Dossier Base Price parsed from root bundle is 80000 VND",
+      "passed": true,
+      "details": {
+        "base_price": {
+          "json_pointer": "/#product_addtocart_form/priceBundle/optionConfig/prices/basePrice/amount",
+          "value": 80000,
+          "currency": "VND",
+          "audit_note": "Trích xuất trực tiếp từ nhánh prices.basePrice của root bundle bằng parser JSON, tách biệt hoàn toàn với giá của từng tùy chọn con (selection prices)."
+        }
+      }
+    },
+    {
+      "id": "QA_1.4",
+      "description": "Dossier SKU is 70144 and verified in form span",
+      "passed": true,
+      "details": {
+        "sku_span": {
+          "primary_form": {
+            "text_span": "data-product-sku=\"70144\"",
+            "byte_offset": 109383,
+            "byte_length": 24
+          },
+          "secondary_handle": {
+            "text_span": "catalog_product_view_sku_70144",
+            "byte_offset": 156235,
+            "byte_length": 30
+          },
+          "tertiary_script": {
+            "text_span": "'sku': \"70144\"",
+            "byte_offset": 146680,
+            "byte_length": 14
+          }
+        }
+      }
+    },
+    {
+      "id": "QA_1.5",
+      "description": "Dossier default ingredients match overview text span",
+      "passed": true,
+      "details": {
+        "ingredients_span": {
+          "inner_text": {
+            "text_span": "1 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Nước ngọt",
+            "byte_offset": 109224,
+            "byte_length": 61
+          },
+          "full_container": {
+            "text_span": "<div class=\"product attribute overview\">\n        <div class=\"value\" itemprop=\"description\"><p>1 Mì ý sốt cay vừa + 1 Gà Sốt cay + 1 Nước ngọt</p></div>\n</div>",
+            "byte_offset": 109130,
+            "byte_length": 172
+          }
+        }
+      }
+    },
+    {
+      "id": "QA_2.1",
+      "description": "Preview HTML contains product title \"MỘT MÌNH HÍT HÀ\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_2.2",
+      "description": "Preview HTML contains observed base price \"80.000 ₫\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_2.3",
+      "description": "Preview HTML contains mandatory disclaimer 1: \"Thực đơn / giá quan sát tại thời điểm thu thập\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_2.4",
+      "description": "Preview HTML contains mandatory disclaimer 2: \"Chưa xác minh áp dụng tại Đà Nẵng\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_2.5",
+      "description": "Preview HTML contains mandatory disclaimer 3: \"Giá có thể thay đổi theo tùy chọn; không phải cam kết giá thanh toán\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_3.1",
+      "description": "Preview HTML contains ZERO \"giảm giá\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_3.2",
+      "description": "Preview HTML contains ZERO \"tiết kiệm\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_3.3",
+      "description": "Preview HTML contains ZERO \"miễn phí giao hàng\"",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_3.4",
+      "description": "Preview HTML contains ZERO cart / buy actions (\"thêm vào giỏ\", \"đặt mua\", \"mua ngay\")",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "id": "QA_3.5",
+      "description": "Preview HTML contains ZERO affiliate link parameters in any href",
+      "passed": true,
+      "details": {
+        "hrefs": [
+          "data:,",
+          "https://jollibee.com.vn/m-t-minh-hit-ha.html"
+        ]
+      }
+    },
+    {
+      "id": "QA_4.1",
+      "description": "Approved cards list on Staging contains exactly 4 cards under JAYT-330",
+      "passed": true,
+      "details": {
+        "actualCount": 4,
+        "ids": [
+          "B12_13",
+          "B12_15",
+          "B12_05",
+          "PROD_JOLLIBEE_COMBO_02"
+        ]
+      }
+    },
+    {
+      "id": "QA_4.2",
+      "description": "Approved cards list matches strictly [B12_13, B12_15, B12_05, PROD_JOLLIBEE_COMBO_02]",
+      "passed": true,
+      "details": {
+        "approvedIds": [
+          "B12_13",
+          "B12_15",
+          "B12_05",
+          "PROD_JOLLIBEE_COMBO_02"
+        ]
+      }
+    },
+    {
+      "id": "QA_4.3",
+      "description": "Approved card PROD_JOLLIBEE_COMBO_02 contains mandatory disclaimers and STAGING_ONLY scope",
+      "passed": true,
+      "details": {
+        "approvedIds": [
+          "B12_13",
+          "B12_15",
+          "B12_05",
+          "PROD_JOLLIBEE_COMBO_02"
+        ]
+      }
+    },
+    {
+      "id": "QA_4.4",
+      "description": "Internal preview maintains public_approved: false and render_permitted: false",
+      "passed": true,
+      "details": {}
+    }
+  ]
+}

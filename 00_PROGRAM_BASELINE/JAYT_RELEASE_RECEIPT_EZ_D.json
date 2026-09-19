@@ -1,0 +1,71 @@
+{
+  "receipt_id": "JAYT-245-SECTION-EZ-D",
+  "version": "v3.480.0-staging.ez",
+  "governing_directive": "JAYT-245 Section EZ-D (Lines 4005-4033)",
+  "timestamp": "2026-08-31T05:41:06.934Z",
+  "governance_state": "PENDING_INDEPENDENT_CEO_REVIEW",
+  "production_locked": true,
+  "production_version": "v3.419.0",
+  "p0_eq_status": "OPEN",
+  "voucher_verified_t1_count": 0,
+  "affiliate_activation": false,
+  "economic_claims_public": false,
+  "evidence_production_lab": {
+    "real_raw_captures_count": 2,
+    "quarantined_legacy_subjects_count": 10,
+    "public_eligible_count": 0,
+    "state": "REAL_RAW_BYTES_FAIL_CLOSED"
+  },
+  "gate_assertions": {
+    "maps_href_count": 0,
+    "derived_locality_count": 0,
+    "public_candidate_count_labels": 0,
+    "forbidden_promo_count": 0,
+    "unverified_t2_t3_badges": 0,
+    "affiliate_tracking_calls": 0,
+    "savings_lab_customer_e2e_pass": "30/30",
+    "real_raw_evidence_qa_pass": "23/23",
+    "calculator_unit_tests_pass": "10/10",
+    "parity": "PERFECT_MATCH_ZERO_DRIFT"
+  },
+  "hashes": {
+    "sot_js_sha256": "143f625a51858e16520b7b154e174599880d089ba1c5b526e95a996fa8db8151",
+    "served_js_sha256": "143f625a51858e16520b7b154e174599880d089ba1c5b526e95a996fa8db8151",
+    "sot_html_sha256": "4c71d39e7108f0c95ac31d0bda964ce145022e49df770cc3e6645c992e6b1a0a",
+    "served_html_sha256": "4c71d39e7108f0c95ac31d0bda964ce145022e49df770cc3e6645c992e6b1a0a"
+  },
+  "real_captures": [
+    {
+      "capture_id": "RAW_EZ_D_01_GITHUB_EDUCATION",
+      "url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+      "byte_length": 135348,
+      "sha256": "f21354b988f6db93e5066929949bb2d2e1fe1a35ae7db1450a89d0b67fc19b94",
+      "content_type": "text/html; charset=utf-8",
+      "status": 200,
+      "public_eligible": false
+    },
+    {
+      "capture_id": "RAW_EZ_D_02_DANABUS_PUBLIC",
+      "url": "https://danabus.vn",
+      "byte_length": 1316,
+      "sha256": "9282040e863590076a086b4a2bf17a80b06b6eb7df12519bfb8e5c26b472e35f",
+      "content_type": "text/html",
+      "status": 200,
+      "public_eligible": false
+    }
+  ],
+  "artifacts_included": [
+    "01_EXECUTIVE_COUNCIL/COUNCIL_REVIEW_PACK_EZ_D_RAW_EVIDENCE_PRODUCTION_20260831.md",
+    "00_PROGRAM_BASELINE/JAYT_VERSION_PARITY_MANIFEST_EZ_D.json",
+    "00_PROGRAM_BASELINE/JAYT_RELEASE_RECEIPT_EZ_D.json",
+    "06_TRUST_AND_EVIDENCE/evidence_desk_ez_d/REAL_RAW_EVIDENCE_REGISTRY_EZ_D.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_d/raw_ez_d_01_github_education_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_d/raw_ez_d_01_github_education_transcript.json",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_d/raw_ez_d_02_danabus_public_raw_bytes.bin",
+    "06_TRUST_AND_EVIDENCE/evidence_vault_ez_d/raw_ez_d_02_danabus_public_transcript.json",
+    "07_QUALITY_ASSURANCE/test_real_raw_capture_replay_ez_d.js",
+    "07_QUALITY_ASSURANCE/test_ez_b_customer_behavior_e2e.js",
+    "07_QUALITY_ASSURANCE/test_ez_review_pack_assertions.js",
+    "07_QUALITY_ASSURANCE/test_calculator_unit_ez.js"
+  ]
+}

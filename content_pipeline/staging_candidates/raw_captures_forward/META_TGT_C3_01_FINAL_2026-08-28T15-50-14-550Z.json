@@ -1,0 +1,50 @@
+{
+  "target_id": "TGT_C3_01",
+  "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+  "brand": "Domino's Pizza",
+  "customer_need": "Bữa ăn nhóm bạn",
+  "initial_url": "https://dominos.vn",
+  "final_url": "https://dominos.vn",
+  "hop_count": 1,
+  "redirect_chain": [
+    {
+      "hop_index": 1,
+      "requested_url": "https://dominos.vn",
+      "status_code": 200,
+      "response_headers": {
+        "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "51512",
+        "connection": "keep-alive",
+        "x-powered-by": "Next.js",
+        "etag": "\"c938-FariQHQ2O8pf06X4qF5VR8Tcr4A\"",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "vary": "Accept-Encoding"
+      },
+      "location_header": null,
+      "body_bytes": 51512,
+      "hop_started_at": "2026-08-28T15:50:14.550Z",
+      "hop_finished_at": "2026-08-28T15:50:15.007Z"
+    }
+  ],
+  "capture_started_at_iso": "2026-08-28T15:50:14.550Z",
+  "capture_finished_at_iso": "2026-08-28T15:50:15.070Z",
+  "duration_ms": 519.99,
+  "final_http_status": 200,
+  "final_headers": {
+    "date": "Fri, 28 Aug 2026 15:50:17 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "content-length": "51512",
+    "connection": "keep-alive",
+    "x-powered-by": "Next.js",
+    "etag": "\"c938-FariQHQ2O8pf06X4qF5VR8Tcr4A\"",
+    "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "vary": "Accept-Encoding"
+  },
+  "final_raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_01_FINAL_2026-08-28T15-50-14-550Z.txt",
+  "pre_normalization_sha256": "9f78d30d6740ee6358f3c6440a9a50d5d89d081f4ebd1401293d2f4ba899ea14",
+  "payload_bytes": 51512,
+  "capture_success": true,
+  "collector_version": "v2.1_FAIL_CLOSED_REDIRECT_TRACKING",
+  "assessment_status": "RAW_RESPONSE_CAPTURED — NO_CLAIM"
+}

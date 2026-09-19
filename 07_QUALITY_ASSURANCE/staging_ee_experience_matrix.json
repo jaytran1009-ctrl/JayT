@@ -1,0 +1,35 @@
+{
+  "version": "v3.459.0-staging.ee",
+  "generated_at_utc": "2026-08-30T18:44:00.000Z",
+  "governing_directive": "JAYT-245 Section EE (Lines 3271-3272)",
+  "three_pragmatic_entryways": [
+    {
+      "entryway_id": "ENTRYWAY_1_DUNG_HOM_NAY",
+      "label": "Dùng Hôm Nay",
+      "navigation_target": "HOME",
+      "purpose": "Khám phá các tiện ích, địa điểm văn hóa và ẩm thực bản địa hữu ích tức thì.",
+      "active_items_count": 50,
+      "safety_rules": "Không hiển thị mã giảm giá giả hay phần trăm ảo. Tất cả card pending nêu rõ nguồn và phạm vi."
+    },
+    {
+      "entryway_id": "ENTRYWAY_2_CHUONG_TRINH_CHINH_THUC",
+      "label": "Chương Trình Chính Thức",
+      "navigation_target": "WALLET",
+      "purpose": "Truy cập trực tiếp 13 cổng chính sách học đường và kênh theo dõi chính thức.",
+      "active_items_count": 13,
+      "lane_breakdown": {
+        "LANE_CONG_CHINH_THUC": 10,
+        "LANE_THEO_DOI": 3
+      },
+      "safety_rules": "Chỉ mở liên kết đến cổng chính thức của đơn vị vận hành; không chèn affiliate tracking link."
+    },
+    {
+      "entryway_id": "ENTRYWAY_3_KIEM_TRA_TRUOC_KHI_MUA",
+      "label": "Kiểm Tra Trước Khi Mua",
+      "navigation_target": "BUY_DECISION",
+      "purpose": "Công cụ kiểm chứng độc lập giúp người dùng thẩm định ưu đãi và quyền lợi trước khi chi tiêu.",
+      "decision_tool_status": "ACTIVE_INDEPENDENT_EVALUATOR",
+      "safety_rules": "Chỉ đưa ra phân tích khách quan; không chứa quảng cáo hay CTA mua hàng tiếp thị liên kết."
+    }
+  ]
+}

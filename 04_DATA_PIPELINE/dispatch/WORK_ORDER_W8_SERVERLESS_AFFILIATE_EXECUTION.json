@@ -1,0 +1,44 @@
+{
+  "work_order_id": "WORK_ORDER_W8_SERVERLESS_AFFILIATE_EXECUTION",
+  "issued_at": "2026-09-13T13:25:00+07:00",
+  "status": "SAFE_PREVIEW_DEPLOYED__COMMERCIAL_FEATURES_HELD",
+  "preview": {
+    "version": "v3.463.0-w8-serverless-preview",
+    "deployment_id": "dpl_5pXAh9tm41idf1sGjBhCUPBGTpQq",
+    "url": "https://jayt-production-v3420-e5r2wz8vk-kuntran777-6857s-projects.vercel.app",
+    "vercel_scope": "kuntran777-6857s-projects"
+  },
+  "completed": [
+    "allowlisted HTTPS link intake",
+    "public shop_id and item_id extraction",
+    "safe server-side redirect resolution",
+    "client integration for unresolved short links",
+    "user-entered calculateDynamicStack",
+    "visible sandbox disclosure"
+  ],
+  "held": [
+    "private voucher API queries",
+    "hidden Live or Video voucher claims",
+    "price history claims",
+    "affiliate partner identifier injection",
+    "commercial deep-link generation",
+    "twenty products without capture-backed current price and voucher evidence",
+    "Production affiliate_enabled true"
+  ],
+  "acceptance_gate": {
+    "http_200": "PASS",
+    "endpoint_contract": "PASS",
+    "secret_leakage": "NONE_OBSERVED__NO_CREDENTIAL_LOADED",
+    "observed_api_latency_seconds": [0.883684, 0.630901, 0.812806, 0.781946],
+    "latency_target_300ms": "FAIL_FROM_CURRENT_TEST_LOCATION",
+    "production_alias_mutated": false
+  },
+  "required_before_commercial_unfreeze": [
+    "official partner API and deep-link specification",
+    "documented account authorization for requested voucher and attribution operations",
+    "server-side credential provisioning reviewed without exposing values",
+    "capture-backed evidence for each published SKU price and voucher",
+    "passing security and latency audit",
+    "explicit Dual-Key Production release"
+  ]
+}

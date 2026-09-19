@@ -1,0 +1,141 @@
+{
+  "receipt_id": "JAYT_392_FINAL_WAVE_1_RECEIPT",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "dispatch_sha256": "af3da365f03da160953a0253ebdb51293a36eae41421a597eeef7f52e1db2bd3",
+  "verified_at_utc": "2026-09-11T07:21:07.779Z",
+  "target_cluster": "DANANG_CINEMA_WAVE_1",
+  "minimum_required_count": 2,
+  "verified_count": 5,
+  "core_two_scope": "Metiz Cinema Helio and Galaxy Cinema Da Nang",
+  "core_two_verified": true,
+  "verdict": "JAYT_392_FINAL_WAVE_1_ALL_PREDICATES_VERIFIED_PASS",
+  "deduplication_audit": {
+    "galaxy_records_input": 2,
+    "galaxy_records_retained": 1,
+    "retained_galaxy_offer_id": "J333_HOT_02_GALAXY_U22",
+    "excluded_duplicate_galaxy_tariff": "B14_GALAXY_DANANG_TARIFF",
+    "deduplication_finding": "Galaxy Da Nang Tariff excluded as redundant duplicate of Galaxy U22. Retained Galaxy record proves unique U22 benefit. Replaced duplicate with independent Metiz Super Monday deal to achieve 5 materially distinct offers."
+  },
+  "audit_findings": [
+    {
+      "offer_id": "B14_METIZ_U22_2D",
+      "brand": "Metiz Cinema",
+      "title": "Vé U22 Metiz Cinema — Đồng Giá 55.000đ (Thứ Ba Đến Thứ Năm)",
+      "checks": {
+        "html_exists": true,
+        "html_sha_match": true,
+        "screenshot_exists": true,
+        "screenshot_sha_match": true,
+        "quotes_exists": true,
+        "quotes_sha_match": true,
+        "quotes_byte_binding": true,
+        "quote_details": {
+          "offer_quote": true,
+          "validity_quote": true,
+          "scope_quote": true,
+          "terms_quote": true
+        },
+        "danang_scope_verified": true,
+        "zero_jayt_vn_leak": true,
+        "cta_valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "offer_id": "B14_METIZ_SUPER_MONDAY",
+      "brand": "Metiz Cinema",
+      "title": "Super Monday Metiz Cinema — Thứ Hai Siêu Hạng 55.000đ Mọi Thành Viên",
+      "checks": {
+        "html_exists": true,
+        "html_sha_match": true,
+        "screenshot_exists": true,
+        "screenshot_sha_match": true,
+        "quotes_exists": true,
+        "quotes_sha_match": true,
+        "quotes_byte_binding": true,
+        "quote_details": {
+          "offer_quote": true,
+          "validity_quote": true,
+          "scope_quote": true,
+          "terms_quote": true
+        },
+        "danang_scope_verified": true,
+        "zero_jayt_vn_leak": true,
+        "cta_valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "offer_id": "B18_CGV_CULTURE_DAY_DNG",
+      "brand": "CGV Cinemas",
+      "title": "CGV Culture Day — Đồng Giá 58.000đ CGV Vĩnh Trung Plaza Đà Nẵng",
+      "checks": {
+        "html_exists": true,
+        "html_sha_match": true,
+        "screenshot_exists": true,
+        "screenshot_sha_match": true,
+        "quotes_exists": true,
+        "quotes_sha_match": true,
+        "quotes_byte_binding": true,
+        "quote_details": {
+          "offer_quote": true,
+          "validity_quote": true,
+          "scope_quote": true,
+          "terms_quote": true
+        },
+        "danang_scope_verified": true,
+        "zero_jayt_vn_leak": true,
+        "cta_valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "offer_id": "J333_HOT_02_GALAXY_U22",
+      "brand": "Galaxy Cinema",
+      "title": "Vé U22 Galaxy Cinema — Từ 45.000đ Galaxy Co.opmart Đà Nẵng",
+      "checks": {
+        "html_exists": true,
+        "html_sha_match": true,
+        "screenshot_exists": true,
+        "screenshot_sha_match": true,
+        "quotes_exists": true,
+        "quotes_sha_match": true,
+        "quotes_byte_binding": true,
+        "quote_details": {
+          "offer_quote": true,
+          "validity_quote": true,
+          "scope_quote": true,
+          "terms_quote": true
+        },
+        "danang_scope_verified": true,
+        "zero_jayt_vn_leak": true,
+        "cta_valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "offer_id": "B19_STARLIGHT_U22_WEEKDAY",
+      "brand": "Starlight Cinema",
+      "title": "Vé U22 Starlight Cinema Đà Nẵng — Đồng Giá 45.000đ (Thứ Hai Đến Thứ Năm)",
+      "checks": {
+        "html_exists": true,
+        "html_sha_match": true,
+        "screenshot_exists": true,
+        "screenshot_sha_match": true,
+        "quotes_exists": true,
+        "quotes_sha_match": true,
+        "quotes_byte_binding": true,
+        "quote_details": {
+          "offer_quote": true,
+          "validity_quote": true,
+          "scope_quote": true,
+          "terms_quote": true
+        },
+        "danang_scope_verified": true,
+        "zero_jayt_vn_leak": true,
+        "cta_valid": true
+      },
+      "status": "PASS"
+    }
+  ]
+}

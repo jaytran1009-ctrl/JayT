@@ -1,0 +1,36 @@
+{
+  "document_id": "JAYT_333_R3_DMX_LOCALITY_VERDICT",
+  "issued_at_utc": "2026-09-07T07:18:00.000Z",
+  "target_card": "B14_DMX_M170_DEN",
+  "purpose": "BRAND_PRESENCE_LOCALITY_ONLY__NOT_ITEM_STOCK_OR_LOCAL_PRICE",
+  "attempts": [
+    {
+      "candidate_id": "J333_LOCALITY_DMX_DANANG_2026",
+      "url": "https://www.dienmayxanh.com/he-thong-sieu-thi-dien-may/thanh-pho-da-nang",
+      "http_status": 500,
+      "raw_sha256": "32f801ad52cb13f56dfd4451935a1219802470be385f9d335e6c7575019d9b55",
+      "raw_bytes": 814,
+      "required_spans_found": false,
+      "verdict": "QUARANTINE__SERVER_ERROR_BODY"
+    },
+    {
+      "candidate_id": "J333_LOCALITY_DMX_DANANG_2025_ARTICLE",
+      "url": "https://www.dienmayxanh.com/kinh-nghiem-hay/danh-sach-sieu-thi-dien-may-xanh-tai-thanh-pho-da-nang-1581848",
+      "http_status": 500,
+      "raw_sha256": "32f801ad52cb13f56dfd4451935a1219802470be385f9d335e6c7575019d9b55",
+      "raw_bytes": 814,
+      "required_spans_found": false,
+      "verdict": "QUARANTINE__SERVER_ERROR_BODY"
+    }
+  ],
+  "discovery_observation": "Official search discovery indicates a Da Nang store-listing page, but discovery text is not substituted for captured raw evidence.",
+  "decision": "KEEP_UNVERIFIED__NO_LOCALITY_INHERITANCE_AUTHORIZED",
+  "card_mutated": false,
+  "production_mutated": false,
+  "safeguards": {
+    "search_snippet_used_as_provenance": false,
+    "stock_inferred": false,
+    "local_price_inferred": false,
+    "affiliate_or_tracking_activated": false
+  }
+}

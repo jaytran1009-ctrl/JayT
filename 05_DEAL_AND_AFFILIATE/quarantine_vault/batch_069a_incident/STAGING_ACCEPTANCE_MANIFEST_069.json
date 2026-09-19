@@ -1,0 +1,63 @@
+{
+  "$schema": "https://jayt.vn/schemas/staging-acceptance-manifest.v3.json",
+  "schema_version": "3.0.0",
+  "work_order": "JAYT-REAL-DATA-TO-LAUNCH-069",
+  "status": "STAGING_ACTIVE_CEO_APPROVED",
+  "submitted_by": "Antigravity Lead Engineer",
+  "decision_ref": "CEO_DECISION_RECEIPT_069_BATCH1.json",
+  "decision_receipt_sha256": "b38e3da0372a63a4261f81f45c7ad58b7ba1b2ffb7a504e7f5074a44ffb55f56",
+  "generated_at": "2026-08-24T11:45:00+07:00",
+  "production_lock": {
+    "is_approved": false,
+    "deals_feed_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "public_go_live": "BLOCKED"
+  },
+  "staging_scope": {
+    "environment": "STAGING_INTERNAL_ONLY",
+    "total_approved_staging_deals": 4,
+    "deal_ids": [
+      "DNG-GALAXY-HAPPY-DAY-WEEKLY-TUESDAY-069",
+      "DNG-LOTTE-AMAZING-DAY-WEEKLY-TUESDAY-069",
+      "DNG-LOTTERIA-GACAY-M1T1-FLASH-069",
+      "DNG-PHELA-DONGLONG-FREE-DRINK-069"
+    ],
+    "value_clusters_represented": 3,
+    "value_clusters": [
+      "CINEMA",
+      "F_AND_B",
+      "COFFEE_TEA"
+    ],
+    "days_covered": 5,
+    "staged_deals_summary": [
+      {
+        "deal_id": "DNG-GALAXY-HAPPY-DAY-WEEKLY-TUESDAY-069",
+        "merchant": "Galaxy Cinema Đà Nẵng",
+        "schedule": "Thứ Ba hàng tuần",
+        "recheck_due_at": "2026-08-31T00:00:00+07:00",
+        "status": "ACTIVE_IN_STAGING"
+      },
+      {
+        "deal_id": "DNG-LOTTE-AMAZING-DAY-WEEKLY-TUESDAY-069",
+        "merchant": "Lotte Cinema Đà Nẵng",
+        "schedule": "Thứ Ba hàng tuần (04/08/2026 – 29/12/2026)",
+        "recheck_due_at": "2026-08-31T00:00:00+07:00",
+        "status": "ACTIVE_IN_STAGING"
+      },
+      {
+        "deal_id": "DNG-LOTTERIA-GACAY-M1T1-FLASH-069",
+        "merchant": "Lotteria Đà Nẵng",
+        "schedule": "Hàng ngày (24/08/2026 – 30/08/2026)",
+        "recheck_due_at": "2026-08-30T23:59:59+07:00",
+        "status": "ACTIVE_IN_STAGING"
+      },
+      {
+        "deal_id": "DNG-PHELA-DONGLONG-FREE-DRINK-069",
+        "merchant": "Phê La Đà Nẵng",
+        "schedule": "Hàng ngày (Đến hết 31/08/2026)",
+        "recheck_due_at": "2026-08-31T23:59:59+07:00",
+        "status": "ACTIVE_IN_STAGING"
+      }
+    ]
+  },
+  "staging_feed_sha256": "79d5e7915b7789fdf1e1df012c51ae27c5afcb76496df4c978c26fbccc613c0d"
+}

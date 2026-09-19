@@ -1,0 +1,48 @@
+{
+  "receipt_id": "JAYT_392_FINAL_OS_SCHEDULER_RECEIPT",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "dispatch_sha256": "af3da365f03da160953a0253ebdb51293a36eae41421a597eeef7f52e1db2bd3",
+  "issued_at_utc": "2026-09-11T06:38:52.937Z",
+  "executor": "Antigravity",
+  "task_identity": {
+    "task_name": "JayT_Autonomous_Catalog_Monitor_4H",
+    "task_path": "\\\\JayT_Autonomous_Catalog_Monitor_4H",
+    "registered_host": "JAY",
+    "author": "JAY\\\\tritr",
+    "run_as_user": "tritr",
+    "logon_mode": "Interactive only",
+    "least_privilege_enforced": true,
+    "auto_publication_disabled": true
+  },
+  "task_cadence": {
+    "schedule_type": "Hourly",
+    "modifier": 4,
+    "iso_cadence": "PT4H",
+    "next_run_local": "2026-09-11 17:23:00",
+    "state": "Enabled",
+    "status": "Ready"
+  },
+  "execution_evidence": {
+    "engine": "Windows Task Scheduler (svchost.exe engine)",
+    "scheduler_ppid": 3320,
+    "latest_run_pid": 1224,
+    "previous_run_pid": 18172,
+    "exit_code": 0,
+    "assets_monitored_count": 10,
+    "assets_verified_healthy": 10,
+    "status": "HEALTHY"
+  },
+  "audit_artifacts": {
+    "registration_xml": {
+      "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/jayt_scheduler_task_export.xml",
+      "file_bytes": 2902,
+      "file_sha256": "732814e3a2c35c40bdb4e272f1331b82840ec793ca0d4f71f624645196408286"
+    },
+    "durable_log": {
+      "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log",
+      "file_bytes": 1583,
+      "file_sha256": "4d8d3e8f4497f0d4e9f97716206b6d2374b8d42eca01ddf50ff8bfbf3c758cc8"
+    }
+  },
+  "verdict": "JAYT_392_FINAL_OS_SCHEDULER_VERIFIED_PASS"
+}

@@ -1,0 +1,76 @@
+{
+  "receipt_id": "JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BG_20260829",
+  "schema_version": "3.4.0",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section BG)",
+  "verified_at": "2026-08-29T06:04:46.797Z",
+  "chain_lineage": {
+    "immutable_base_epoch": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "base_snapshot_id": "EPOCH_AN_FULL_BYTE_BASELINE_20260828",
+    "previous_epoch_pointer_receipt": "00_PROGRAM_BASELINE/JAYT_WORKSPACE_RECONCILIATION_RECEIPT_BF.json"
+  },
+  "inventory_coverage_summary": {
+    "total_registered_assets": 15973,
+    "total_workspace_assets_checked": 15973,
+    "tracked_present_on_disk": 15973,
+    "quarantined_isolated_assets": 1152,
+    "unknown_unregistered_assets": 0,
+    "missing_assets": 0,
+    "reconciliation_status": "RECONCILED_100_PERCENT_WITH_VISUAL_SYSTEM_BG",
+    "coverage_ratio": "15973/15973"
+  },
+  "canonical_public_accounting_bg": {
+    "canonical_ledger_file": "00_PROGRAM_BASELINE/CANONICAL_PUBLIC_ITEM_LEDGER_BD.json",
+    "canonical_ledger_sha256": "52faecd5aec8d36c800745527d54a89f5a94f7517f1154f6c8a568ab8fd31a3e",
+    "field_certified_deals": 1,
+    "pending_field_certification_au": 19,
+    "radar_tracking_sources": 13,
+    "total_public_displayable": 33,
+    "quarantined_items": 1,
+    "accounting_formula": "1 Field-Certified Deal + 19 Pending Field-Certification + 13 Radar Sources = 33 Public Displayable (+ 1 Quarantined = 34 Total)"
+  },
+  "visual_asset_system_verification_bg": {
+    "visual_manifest_file": "00_PROGRAM_BASELINE/JAYT_VISUAL_ASSET_MANIFEST_BG.json",
+    "visual_manifest_sha256": "478baafbe0b124d3add383bb4769deb74c3340624951746e18c93e9b8f147252",
+    "four_time_slot_hero_visuals": [
+      "SLOT_MORNING",
+      "SLOT_LUNCH",
+      "SLOT_AFTERNOON",
+      "SLOT_EVENING"
+    ],
+    "three_gateway_covers": [
+      "cover-food",
+      "cover-places",
+      "cover-tools"
+    ],
+    "decorative_isolation_enforced": true
+  },
+  "runtime_snapshot_hashes": {
+    "registry_an_file": "00_PROGRAM_BASELINE/JAYT_245_PLATFORM_REGISTRY_AN.json",
+    "registry_an_sha256": "f1970f911f2bf59f2d700937e5c406f519a90e1e6003bf886e6f1c095ce0e5e3",
+    "core_manifest_an_file": "00_PROGRAM_BASELINE/CORE_BASELINE_MANIFEST_AN.json",
+    "core_manifest_an_sha256": "df500f24d91291959eef7d73ac9b7e442c57092a14063966655fc12293b222af",
+    "memory_snapshot_file": "PROJECT_MEMORY.md",
+    "memory_snapshot_sha256": "b194854c46725f9dccc1e4396876d5947f2e330a4254f704d483a0759baf5199"
+  },
+  "delta_manifest_since_base_an": [
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_bg.js",
+      "description": "Storefront BG candidate with dynamic 4 time-slot hero visuals and gateway covers",
+      "sha256": "33232ee430e77a11caaf291ce668c16373239e542f820561ba02d8597a0d18ff"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "00_PROGRAM_BASELINE/JAYT_VISUAL_ASSET_MANIFEST_BG.json",
+      "description": "Visual Asset Manifest & Rights Governance BG",
+      "sha256": "478baafbe0b124d3add383bb4769deb74c3340624951746e18c93e9b8f147252"
+    },
+    {
+      "action": "NEW_UPGRADE_ONLY_MODULE",
+      "path": "07_QUALITY_ASSURANCE/staging_release_receipt_v34226_staging_bg.json",
+      "description": "Release receipt for Staging BG deployment with visual storytelling verified",
+      "sha256": "47958d120a03e031f2b648222cde7ea8b1f16408f5b991f2ddfdce8d3244c49b"
+    }
+  ],
+  "verifier_audit_passed": true
+}

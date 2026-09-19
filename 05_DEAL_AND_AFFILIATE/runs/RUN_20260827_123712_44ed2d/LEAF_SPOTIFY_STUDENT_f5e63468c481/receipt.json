@@ -1,0 +1,43 @@
+{
+  "capture_run_id": "RUN_20260827_123712_44ed2d",
+  "receipt_id": "RECEIPT_LEAF_SPOTIFY_STUDENT_f5e63468c481_1787809336105",
+  "brand_id": "SPOTIFY_STUDENT",
+  "brand_name": "Spotify Vietnam Student",
+  "cohort": "COHORT_B_OFFERS",
+  "target_type": "HIGH_SIGNAL_DANANG_OFFER_LEAF",
+  "requested_url": "https://www.spotify.com/vn-vi/student/verification/",
+  "final_url": "https://accounts.spotify.com/vi/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+  "navigation_response_observed": true,
+  "http_status": 200,
+  "redirect_chain": [
+    {
+      "url": "https://www.spotify.com/vn-vi/student/verification/",
+      "http_status": 302
+    },
+    {
+      "url": "https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+      "http_status": 307
+    },
+    {
+      "url": "https://accounts.spotify.com/vi/login?continue=https%3A%2F%2Fwww.spotify.com%2Fvn-vi%2Fstudent%2Fverification%2F",
+      "http_status": 200
+    },
+    {
+      "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfCVLAUAAAAALFwwRnnCJ12DalriUGbj8FW_J39&co=aHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbTo0NDM.&hl=vi&v=GY0lZUzQQgeA0wDxVI-SQEZw&size=invisible&anchor-ms=20000&execute-ms=30000&cb=a8e17gugw08",
+      "http_status": 200
+    }
+  ],
+  "captured_at": "2026-08-27T05:42:16.050Z",
+  "browser_version": "Chrome/152.0.7977.42",
+  "capture_method": "PUPPETEER_NATIVE_EVENT_ONLY",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "network_error": null,
+  "fresh_hashes": {
+    "html_sha256": "2c0d5584ccb50ee86bd65fa70d72d875b775bcaab6306aee56e51d9e2a9038d3",
+    "text_sha256": "5784574f04642f6de7bc22ac6b8a9d44b517e82e239f0f83698af051df28484b",
+    "screenshot_sha256": "7a9f9443d33577d90275f826916cbc59e3e3371a00ee448a90f7c7c2234a7b30"
+  }
+}

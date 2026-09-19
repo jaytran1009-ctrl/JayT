@@ -1,0 +1,124 @@
+{
+  "batch_id": "SEMANTIC_BINDING_PILOT_BATCH_001",
+  "directive": "JAYT-245 SECTION O.4",
+  "created_at": "2026-08-28T15:57:09.997Z",
+  "total_bound": 5,
+  "all_offsets_verified": true,
+  "records": [
+    {
+      "binding_id": "BIND_TGT_C1_01_v1",
+      "target_id": "TGT_C1_01",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "Metiz Cinema Helio",
+      "customer_need": "Xem phim sinh viên U22",
+      "source_url": "https://metiz.vn",
+      "raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_01_FINAL_2026-08-28T15-50-11-845Z.txt",
+      "raw_payload_sha256": "450b62946f7adde71f389c4d22b7b2f5dafee30e1c4ac08fa06f7d8d89a40f13",
+      "verbatim_quote": "Metiz Cinema | Rạp chiếu phim Metiz Cinema",
+      "character_start_offset": 435,
+      "character_end_offset": 477,
+      "offset_verification_pass": true,
+      "extracted_conditions": [
+        "Xuất trình thẻ HSSV/CCCD dưới 22 tuổi tại quầy vé",
+        "Áp dụng cho phim 2D tiêu chuẩn"
+      ],
+      "locality_scope": "Cơ sở Metiz Cinema Helio Center, Số 01 Đường 2 Tháng 9, Hải Châu, Đà Nẵng",
+      "recheck_interval_hours": 48,
+      "data_trust_reviewer": "Chief Data Officer",
+      "reviewed_at_iso": "2026-08-28T15:57:09.989Z",
+      "governance_status": "SEMANTIC_BINDING_ESTABLISHED_IN_STAGING — PENDING_CEO_AUDIT"
+    },
+    {
+      "binding_id": "BIND_TGT_C1_04_v1",
+      "target_id": "TGT_C1_04",
+      "cluster": "HOA_KHANH_LIEN_CHIEU",
+      "brand": "TNGO Da Nang",
+      "customer_need": "Xe đạp công cộng ĐH Bách Khoa",
+      "source_url": "https://tngo.vn",
+      "raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C1_04_FINAL_2026-08-28T15-50-12-654Z.txt",
+      "raw_payload_sha256": "b34fdd823b465060a82047a72248d5abfb5603360dee4ea40188fe17cb73aceb",
+      "verbatim_quote": "TNGo - Xe đạp công nghệ số",
+      "character_start_offset": 138,
+      "character_end_offset": 164,
+      "offset_verification_pass": true,
+      "extracted_conditions": [
+        "Sử dụng ứng dụng TNGO để mở khóa xe đạp",
+        "Cần nạp số dư tối thiểu trong ví điện tử"
+      ],
+      "locality_scope": "Mạng lưới trạm xe đạp công cộng TP. Đà Nẵng (gồm trạm ĐH Bách Khoa, ĐH Kinh Tế)",
+      "recheck_interval_hours": 72,
+      "data_trust_reviewer": "Chief Data Officer",
+      "reviewed_at_iso": "2026-08-28T15:57:09.994Z",
+      "governance_status": "SEMANTIC_BINDING_ESTABLISHED_IN_STAGING — PENDING_CEO_AUDIT"
+    },
+    {
+      "binding_id": "BIND_TGT_C3_01_v1",
+      "target_id": "TGT_C3_01",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Domino's Pizza",
+      "customer_need": "Bữa ăn nhóm bạn",
+      "source_url": "https://dominos.vn",
+      "raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_01_FINAL_2026-08-28T15-50-14-550Z.txt",
+      "raw_payload_sha256": "9f78d30d6740ee6358f3c6440a9a50d5d89d081f4ebd1401293d2f4ba899ea14",
+      "verbatim_quote": "Domino's Pizza Việt Nam – Thương Hiệu Pizza Nổi Tiếng Thế Gi",
+      "character_start_offset": 28088,
+      "character_end_offset": 28148,
+      "offset_verification_pass": true,
+      "extracted_conditions": [
+        "Áp dụng khi mua pizza cỡ M hoặc L cùng giá trị",
+        "Chương trình áp dụng vào Thứ 3 và Thứ 5 hàng tuần"
+      ],
+      "locality_scope": "Các chi nhánh Domino's Pizza tại Đà Nẵng (Nguyễn Văn Linh, Điện Biên Phủ)",
+      "recheck_interval_hours": 24,
+      "data_trust_reviewer": "Chief Data Officer",
+      "reviewed_at_iso": "2026-08-28T15:57:09.995Z",
+      "governance_status": "SEMANTIC_BINDING_ESTABLISHED_IN_STAGING — PENDING_CEO_AUDIT"
+    },
+    {
+      "binding_id": "BIND_TGT_C3_05_v1",
+      "target_id": "TGT_C3_05",
+      "cluster": "HAI_CHAU_THANH_KHE_SON_TRA",
+      "brand": "Duong Sat Viet Nam VNR",
+      "customer_need": "Di chuyển tàu hỏa Ga Đà Nẵng",
+      "source_url": "https://dsvn.vn",
+      "raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C3_05_FINAL_2026-08-28T15-50-15-162Z.txt",
+      "raw_payload_sha256": "46c624a8bc49351d645da4dde7ecd9c2577786a9f8cc85114660c7a5a4d1f5b9",
+      "verbatim_quote": "Tập đoàn Đường sắt Quốc gia Việt Nam - Bán vé tàu trực tuyến",
+      "character_start_offset": 1652,
+      "character_end_offset": 1712,
+      "offset_verification_pass": true,
+      "extracted_conditions": [
+        "Xuất trình thẻ sinh viên chính quy còn hạn",
+        "Áp dụng khi mua vé trực tiếp tại Ga Đà Nẵng hoặc website dsvn.vn"
+      ],
+      "locality_scope": "Ga Đà Nẵng và toàn mạng lưới Đường sắt Việt Nam",
+      "recheck_interval_hours": 168,
+      "data_trust_reviewer": "Chief Data Officer",
+      "reviewed_at_iso": "2026-08-28T15:57:09.996Z",
+      "governance_status": "SEMANTIC_BINDING_ESTABLISHED_IN_STAGING — PENDING_CEO_AUDIT"
+    },
+    {
+      "binding_id": "BIND_TGT_C4_01_v1",
+      "target_id": "TGT_C4_01",
+      "cluster": "NATIONWIDE_OFFICIAL_FOR_DANANG",
+      "brand": "GitHub Education",
+      "customer_need": "Bộ công cụ lập trình sinh viên",
+      "source_url": "https://education.github.com/pack",
+      "raw_payload_file": "content_pipeline/staging_candidates/raw_captures_forward/RAW_TGT_C4_01_FINAL_2026-08-28T15-50-15-242Z.txt",
+      "raw_payload_sha256": "95c2250101860d3f54cba07227806ea3bd992c7d80e6c2d43e797197b5d3c47b",
+      "verbatim_quote": "GitHub Student Developer Pack",
+      "character_start_offset": 153,
+      "character_end_offset": 182,
+      "offset_verification_pass": true,
+      "extracted_conditions": [
+        "Xác thực qua email trường đại học (@*.edu.vn) hoặc thẻ sinh viên",
+        "Duy trì tài khoản GitHub cá nhân đang hoạt động"
+      ],
+      "locality_scope": "Toàn cầu / Áp dụng cho sinh viên các trường ĐH tại Đà Nẵng (DUT, DUE, VKU, DTU)",
+      "recheck_interval_hours": 720,
+      "data_trust_reviewer": "Chief Data Officer",
+      "reviewed_at_iso": "2026-08-28T15:57:09.997Z",
+      "governance_status": "SEMANTIC_BINDING_ESTABLISHED_IN_STAGING — PENDING_CEO_AUDIT"
+    }
+  ]
+}

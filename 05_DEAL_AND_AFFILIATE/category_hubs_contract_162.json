@@ -1,0 +1,71 @@
+{
+  "contract_id": "CATEGORY_HUBS_CONTRACT_162",
+  "directive": "JAYT-162: 5 CATEGORY HUBS, TRUSTED-AUTOMATION ONLY",
+  "version": "1.0.0",
+  "created_at": "2026-08-27T13:13:00.000Z",
+  "brand_positioning": "Lịch tiết kiệm hằng ngày đáng tin cậy cho người Đà Nẵng: biết hôm nay có gì, tính được mình trả bao nhiêu, rồi rủ đúng người đi cùng.",
+  "hubs": [
+    {
+      "hub_id": "HUB_1_FOOD_AND_DINING",
+      "name": "Ăn uống tiết kiệm",
+      "description": "Bữa ăn sinh viên, cơm bình dân, món cứu đói và hàng quán tiết kiệm quanh trường học và khu văn phòng.",
+      "unlock_criteria": "FIELD_PROOF_KIT_OR_AUTHORIZED_SOURCE"
+    },
+    {
+      "hub_id": "HUB_2_STUDY_SPACES",
+      "name": "Không gian học bài",
+      "description": "Quán cà phê học bài, thư viện, không gian làm việc chung yên tĩnh có cắm điện và wifi ổn định.",
+      "unlock_criteria": "FIELD_PROOF_KIT_OR_AUTHORIZED_SOURCE"
+    },
+    {
+      "hub_id": "HUB_3_CINEMA_ENTERTAINMENT",
+      "name": "Phim và giải trí",
+      "description": "Lịch chiếu phim, ưu đãi rạp và các hoạt động giải trí cuối tuần tại Đà Nẵng.",
+      "unlock_criteria": "ACTIVE_POLICY_PAGE_PLUS_SCOPE_PLUS_LOCALITY"
+    },
+    {
+      "hub_id": "HUB_4_PUBLIC_TRANSIT",
+      "name": "Di chuyển",
+      "description": "Xe buýt trợ giá DanaBus, tàu hỏa sinh viên DSVN và các giải pháp đi lại tiết kiệm tại Đà Nẵng.",
+      "unlock_criteria": "ACTIVE_POLICY_PAGE_PLUS_SCOPE_PLUS_LOCALITY"
+    },
+    {
+      "hub_id": "HUB_5_DORM_AND_STUDY_SUPPLIES",
+      "name": "Đồ KTX và học tập",
+      "description": "Dụng cụ học tập, phần mềm sinh viên trực tuyến, đồ dùng phòng trọ và tiện ích ký túc xá.",
+      "unlock_criteria": "OFFICIAL_API_FEED_OR_PORTAL_EXPORT"
+    }
+  ],
+  "display_matrix_4_tiers": {
+    "TIER_1_VERIFIED_PROOF_DEAL": {
+      "badge": "🟢 Đã đối soát",
+      "code": "VERIFIED_PROOF_DEAL",
+      "allowed_content": "Giá/ưu đãi/điều kiện có evidence pack còn hạn đã được Human/Authorized sign-off",
+      "forbidden_content": "Dữ liệu OCR đơn lẻ hoặc tín hiệu crawler chưa qua vòng xác minh thứ 2"
+    },
+    "TIER_2_VERIFIED_VENUE_LISTING": {
+      "badge": "🔵 Địa điểm thực tế",
+      "code": "VERIFIED_VENUE_LISTING",
+      "allowed_content": "Địa chỉ đã có nguồn, ngày kiểm tra, nút Kiểm tra tại nguồn ↗",
+      "forbidden_content": "Cam kết giá, giờ mở, voucher hoặc deep link thương mại"
+    },
+    "TIER_3_TRACKED_SOURCE_SIGNAL": {
+      "badge": "🟣 Nguồn đang theo dõi",
+      "code": "TRACKED_SOURCE_SIGNAL",
+      "allowed_content": "Thương hiệu/danh mục và nguồn website chính thức",
+      "forbidden_content": "Giá tiền, phần trăm giảm, mã giảm, nút mua hàng"
+    },
+    "TIER_4_UNRESOLVED_NEEDS_BACKLOG": {
+      "badge": "⚪ Chưa có dữ liệu",
+      "code": "UNRESOLVED_NEEDS_BACKLOG",
+      "allowed_content": "Nhu cầu theo cụm và nút Báo nguồn vừa thấy",
+      "forbidden_content": "Filler data, địa điểm giả, deal giả"
+    }
+  },
+  "freshness_lifecycle_rules": {
+    "on_ttl_expiry": "RECHECK_REQUIRED",
+    "on_single_closed_report": "POSSIBLY_CLOSED",
+    "on_confirmed_closure": "CLOSED_CONFIRMED",
+    "auto_delete_history_rule": "STRICTLY_PROHIBITED_ZERO_DATA_DELETION"
+  }
+}

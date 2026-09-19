@@ -1,0 +1,32 @@
+{
+  "work_order_id": "J358-R3-R5-STABLE-IDENTIFIER-AND-NODE-RELATION-HARDENING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "DISPATCHED_FOR_EXTERNAL_EXECUTION",
+  "purpose": "Close weak stable-ID and same-broad-ancestor promotion paths while preserving reproducible evidence.",
+  "production_deployment_authorized": false,
+  "production_mutation_permitted": false,
+  "staging_hydration_authorized": false,
+  "inputs": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r4_strict_offer_card_validator.cjs",
+    "runner": "04_DATA_PIPELINE/run_jayt_358_r3_r4_reproducible_replay.cjs",
+    "gate": "01_EXECUTIVE_COUNCIL/JAYT_358_CEO_R3_R4_PARTIAL_ACCEPTANCE_AND_STABLE_IDENTIFIER_GATE.md"
+  },
+  "requirements": [
+    "Do not treat a non-empty data-offer-id or arbitrary id as stable. Define and enforce an auditable card-scoped identifier schema, or validate it against a sealed metadata mapping; record the proof in output.",
+    "Banned page/broad containers (including post-content, entry-content, main and section shells) remain ineligible even when they contain an identifier, unless a structural card marker and card-scoped identifier are both present.",
+    "Prove locality binding phrase plus locality target in the same semantic text node, or in a tightly specified sibling relation belonging to the selected card. Prove validity/recurrent claim and target year similarly; container-wide text search is forbidden.",
+    "Add a mandatory regression: post-content data-offer-id=x containing an offer title/price, unrelated Hanoi promotion clause, unrelated Da Nang travel text, unrelated 2026 branding text, and recurrence. It must return HELD.",
+    "Add attacks for arbitrary data-offer-id, generic id, nested broad shell with a child card, and multiple unrelated semantic paragraphs inside one accepted card. Include a positive control exercising the accepted identifier schema.",
+    "Add a non-mutating verify-existing replay mode. It must calculate expected artifacts in memory and fail on any difference from current matrix, test report, receipt or sidecars; generation mode must be explicit and never overwrite sealed evidence by default.",
+    "Evaluate only existing R3 vault bytes. Preserve 0 VERIFIED / 10 HELD unless every requirement independently passes. Do not hydrate, package, deploy, mutate scheduler/alias or rollback."
+  ],
+  "deliverables": {
+    "validator": "04_DATA_PIPELINE/j358_r3_r5_card_scoped_evidence_validator.cjs",
+    "replay_runner": "04_DATA_PIPELINE/run_jayt_358_r3_r5_reproducible_replay.cjs",
+    "matrix": "06_TRUST_AND_EVIDENCE/batch_19_r3_r5_replay/CLAIM_PROVENANCE_MATRIX.json",
+    "test_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/J358_R3_R5_STABLE_IDENTIFIER_AND_NODE_RELATION_TESTS.json",
+    "consolidated_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_R3_R5_STABLE_IDENTIFIER_AND_NODE_RELATION.json",
+    "sha256_sidecars_required": true
+  },
+  "acceptance_gate": "CEO verify-existing replay and code review required; no automatic promotion"
+}

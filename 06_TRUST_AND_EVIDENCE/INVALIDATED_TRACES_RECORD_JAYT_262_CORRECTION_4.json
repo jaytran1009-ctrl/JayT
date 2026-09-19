@@ -1,0 +1,21 @@
+{
+  "invalidation_record_id": "INVALIDATED_TRACES_RECORD_JAYT_262_CORRECTION_4",
+  "governing_directive": "JAYT-245 Section JAYT-262-CORRECTION-4 (Lines 5691-5704)",
+  "invalidated_at_utc": "2026-09-02T08:27:20.699Z",
+  "invalidation_reason": "Trace hash divergence between build output and served HTTP 4173 port, and regression matrix count off-by-one.",
+  "status": "INVALIDATED_SUPERSEDED_BY_CORRECTION_4",
+  "invalidated_artifacts": [
+    {
+      "file_path": "06_TRUST_AND_EVIDENCE/JAYT_CLOSED_LOOP_STAGING_SERVE_CHAIN_TRACE.json",
+      "byte_length": 2861,
+      "sha256": "a849d5ce027696247c4224b1377d54a10ad8c97564f5dad93a685c663dd55de2",
+      "reason_for_invalidation": "JAYT-262-CORRECTION-4: Discrepancy between build catalog hash and running 4173 served hash; and matrix summary count discrepancy (18 vs 19)."
+    },
+    {
+      "file_path": "06_TRUST_AND_EVIDENCE/JAYT_REGRESSION_TEST_MATRIX.json",
+      "byte_length": 3556,
+      "sha256": "4ab3b54d0b3cac45a29cd92bbc382d38fae4656cb2ca58d5c81a2204e39a992f",
+      "reason_for_invalidation": "JAYT-262-CORRECTION-4: Discrepancy between build catalog hash and running 4173 served hash; and matrix summary count discrepancy (18 vs 19)."
+    }
+  ]
+}

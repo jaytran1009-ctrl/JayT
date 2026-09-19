@@ -1,0 +1,56 @@
+{
+  "protocol_id": "UX_RESEARCH_PROTOCOL_ZERO_PII_EZ_R",
+  "version": "2.0.0-ez.r",
+  "governance_directive": "JAYT-245 Section EZ-R (Lines 4386-4410)",
+  "participant_recruitment_status": "NO_RECRUITMENT_AUTHORIZED_ZERO_PII",
+  "data_collection_policy": {
+    "collect_real_user_answers": false,
+    "collect_nps_or_csat": false,
+    "collect_quotes_or_reviews": false,
+    "collect_pii_emails_phones": false,
+    "methodology": "AUTOMATED_AFFORDANCE_VERIFICATION_AND_DOM_INVARIANTS",
+    "placeholder_rule": "NEUTRAL_PLACEHOLDERS_ONLY_NO_COMMERCIAL_SAMPLE_DATA"
+  },
+  "evaluation_tasks": [
+    {
+      "task_id": "TASK_01_RECOGNIZE_DOCUMENTATION_NATURE",
+      "name": "Nhận diện bản chất tài liệu chương trình (không phải voucher)",
+      "scenario": "Kiểm thử DOM affordance tại card thí điểm T2 trên Staging.",
+      "intended_outcome": "Giao diện hiển thị rõ ràng nhãn T2 TÀI LIỆU CHƯƠNG TRÌNH CHÍNH THỨC, câu văn gốc và caveat loại trừ voucher/địa phương.",
+      "pass_criteria": "Card hiển thị đúng câu văn đã được CEO phê duyệt, có caveat không xác nhận voucher hay giá.",
+      "task_status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "task_id": "TASK_02_OPEN_CANONICAL_DOCUMENTATION",
+      "name": "Mở tài liệu chính thức an toàn",
+      "scenario": "Kiểm thử link ra tài liệu gốc trên trang GitHub Docs.",
+      "intended_outcome": "Link ngoài duy nhất có thuộc tính rel='noopener noreferrer nofollow' và target='_blank'.",
+      "pass_criteria": "URL đích là https://docs.github.com/en/education/...; rel attribute có đủ 3 giá trị bảo vệ an toàn.",
+      "task_status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "task_id": "TASK_03_LOCAL_FIRST_SAVINGS_CALCULATION",
+      "name": "Tự tính toán chi phí thực trả và đặt lại giá trị",
+      "scenario": "Kiểm thử nhập [số do người kiểm thử tự chọn] vào các ô tính toán tại client.",
+      "intended_outcome": "Thuật toán tính toán tức thì tại trình duyệt, 0 network call, 0 cookies/localStorage; nút Đặt lại giá trị trả toàn bộ về 0.",
+      "pass_criteria": "Không có prefilled data, tính toán toán học chính xác theo công thức local-first.",
+      "task_status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "task_id": "TASK_04_UNDERSTAND_TRANSPARENT_ZERO_STATE",
+      "name": "Khu vực kiểm định nguồn minh bạch (Zero-State)",
+      "scenario": "Kiểm thử DOM affordance tại khu vực zero-state.",
+      "intended_outcome": "Thông báo trung tính nêu rõ hệ thống đang kiểm định nguồn và chưa có nguồn mới đạt chuẩn công bố.",
+      "pass_criteria": "0 logo/brand, 0 card giả, có nút điều hướng tới Bảng tính thực trả và GitHub Pilot.",
+      "task_status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    },
+    {
+      "task_id": "TASK_05_AUDIT_REPORT_SOURCE_FLOW",
+      "name": "Mở/Đóng hướng dẫn Báo nguồn an toàn",
+      "scenario": "Kiểm thử nút '+ Báo nguồn' trên header.",
+      "intended_outcome": "Hộp thoại mở ra chỉ chứa thông tin hướng dẫn, 0 ô input PII, đóng an toàn qua Escape hoặc nút Đóng.",
+      "pass_criteria": "0 trường input/textarea/select, 0 submit control, 0 tracking ngầm.",
+      "task_status": "AUTOMATED_AFFORDANCE_VERIFIED"
+    }
+  ]
+}

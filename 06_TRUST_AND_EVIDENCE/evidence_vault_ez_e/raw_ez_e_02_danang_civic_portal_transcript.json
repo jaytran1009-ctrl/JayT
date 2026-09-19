@@ -1,0 +1,48 @@
+{
+  "capture_id": "RAW_EZ_E_02_DANANG_CIVIC_PORTAL",
+  "name": "Cổng Thông Tin Chính Quyền Đô Thị (Đà Nẵng)",
+  "cohort": "COHORT_2_TIEN_ICH_CONG",
+  "classification": "MUNICIPAL_CIVIC_PORTAL_CANDIDATE",
+  "request_url": "https://danang.gov.vn/web/guest/chinh-quyen",
+  "final_url": "https://danang.gov.vn/web/dng/gioi-thieu",
+  "redirect_chain": [
+    {
+      "from": "https://danang.gov.vn/web/guest/chinh-quyen",
+      "to": "https://danang.gov.vn/web/dng/gioi-thieu",
+      "status": 301
+    }
+  ],
+  "http_status": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "selected_headers": {
+    "server": "nginx",
+    "date": "Mon, 31 Aug 2026 05:47:43 GMT",
+    "content-type": "text/html;charset=UTF-8",
+    "content-length": "160022",
+    "etag": null,
+    "strict-transport-security": null
+  },
+  "captured_at_iso": "2026-08-31T05:47:37.062Z",
+  "raw_bytes_length": 160022,
+  "raw_bytes_sha256": "3ac7e2a40dee37ab7ac45ea001eb9ef61e3a89923cee2942a316e3c9120adab9",
+  "raw_bytes_filename": "raw_ez_e_02_danang_civic_portal_raw_bytes.bin",
+  "locator_path": "Cổng thông tin điện tử danang.gov.vn giới thiệu cơ cấu và tin tức chỉ đạo điều hành.",
+  "scope_provenance": "Cổng thông tin hành chính công đô thị (Không chứng minh địa điểm cụ thể hay ưu đãi thương mại).",
+  "is_synthetic_markdown": false,
+  "is_real_network_response": true,
+  "public_eligible": false,
+  "tier_classification": "T4_RADAR_ONLY_PENDING_INDEPENDENT_CEO_GATE",
+  "evidence_graph_v2": {
+    "has_source_identity_node": true,
+    "has_subject_fact_node": true,
+    "has_local_scope_node": false,
+    "has_economic_fact_node": false,
+    "has_asset_right_node": false
+  },
+  "governance_note": "Source identity and subject document proven; LocalScope and EconomicFact are strictly NOT proven (T1 = 0).",
+  "reviewer_decision": {
+    "reviewer": "DATA_AND_TRUST_COUNCIL_EZ_E",
+    "decision": "CAPTURED_REAL_RAW_BYTES_HELD_IN_LAB_FAIL_CLOSED",
+    "timestamp": "2026-08-31T05:47:37.062Z"
+  }
+}

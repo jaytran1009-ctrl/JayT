@@ -1,0 +1,61 @@
+{
+  "id": "WORK_ORDER_J372_R1_DATA_ASSERTION_REMEDIATION",
+  "authority": "JAYT-372 CEO R1",
+  "issued_at_utc": "2026-09-10T07:31:00Z",
+  "executor": "Antigravity",
+  "status": "COMPLETED_AND_VERIFIED",
+  "production_deployment_permitted": true,
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app"
+  },
+  "required_changes": [
+    {
+      "id": "CAMPUS_01",
+      "requirement": "Remove held, expired, discontinued and pending-active-terms offers from all cluster applicability lists and rendered cluster results. Preserve those records in the main archive/feed only if their current UI status clearly reflects that they are unavailable; do not call them applicable."
+    },
+    {
+      "id": "CAMPUS_02",
+      "requirement": "For each remaining cluster-to-offer mapping, store branch ID/address, offer ID, applicability scope, source URL/capture reference, observed timestamp and validity state. Recalculate every displayed count from the eligible mapping."
+    },
+    {
+      "id": "PRODUCT_03",
+      "requirement": "For all 30 SKU cards, change seller_verified and Mall/Trading claims to UNVERIFIED unless each record includes a real source URL, retrieval timestamp, screenshot/raw artifact or provider response, seller identity and variant match. Do not manufacture evidence."
+    },
+    {
+      "id": "PRODUCT_04",
+      "requirement": "Remove each Freeship badge that lacks SKU-specific active terms. Retain conditional badge only with linked condition evidence. Keep 90-day-low absent until comparable history is present."
+    },
+    {
+      "id": "VOUCHER_05",
+      "requirement": "Remove JAYT370 and every other fallback placeholder code. A Copy action must be emitted only for a nonempty source-backed code."
+    }
+  ],
+  "preserve": [
+    "Campus Dock interaction, two themes, Zalo Pass PNG, QR mở kèo behavior, and integer allocation.",
+    "No payment QR without reviewed explicit payee data; no claim of active affiliate attribution without provider confirmation."
+  ],
+  "verification": [
+    "Live check at 1440, 768 and 390px: selected cluster count equals eligible rendered cards and no held offer IDs appear in cluster results.",
+    "Search served JS for fallback JAYT370 and prove zero matches.",
+    "For each product card, check badge/rendered seller wording against its evidence record; count verified, conditional and unverified items separately.",
+    "Record endpoint hashes, UI screenshots, console/page errors, and a receipt that distinguishes observed from asserted data."
+  ],
+  "deliverables": [
+    "06_TRUST_AND_EVIDENCE/j372/campus_offer_mapping.json",
+    "06_TRUST_AND_EVIDENCE/j372/product_badge_and_link_evidence.json",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_372_R1_DATA_ASSERTION_RECEIPT.json",
+    "08_RELEASE_VAULT/JAYT_372_R1_DATA_ASSERTION_RELEASE_RECEIPT.json"
+  ],
+  "completed_at_utc": "2026-09-10T07:47:07.199Z",
+  "completion_summary": {
+    "version": "v3.435.0-j372-r1",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "campus_clusters_cleaned": true,
+    "zero_held_offers_in_clusters": true,
+    "all_30_skus_demoted_to_unverified": true,
+    "freeship_badges_removed": true,
+    "fallback_jayt370_zero_matches": true
+  }
+}

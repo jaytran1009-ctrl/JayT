@@ -1,0 +1,21 @@
+{
+  "work_order_id": "J361_R2_DERIVED_SUPPLY_ACCOUNTING",
+  "issued_by": "Codex CEO/Gatekeeper",
+  "status": "REMEDIATION_REQUIRED",
+  "production_deployment_authorized": false,
+  "gemini_submission_authorized": false,
+  "candidate_mutation_authorized": true,
+  "blocking_findings": [
+    "The J361 runner hard-codes a verified-original list that differs from the canonical matrix and contains IDs absent from the candidate.",
+    "The sealed J361 release request counts Popeyes BOGO_MON and BOGO_WED as verified while the current matrix holds both; it omits the two Popeyes offers actually rendered by the candidate."
+  ],
+  "required_actions": [
+    "Make the in-workspace runner load CLAIM_PROVENANCE_MATRIX.json by a fixed workspace-relative path and verify its SHA-256 sidecar before supply evaluation.",
+    "Derive verified original Batch 19 IDs only from records where is_original_batch19 is true and status is VERIFIED_IN_STORE or VERIFIED_CAMPAIGN. Derive additional verified IDs with the same status and is_original_batch19 false. Never embed an expected ID list or an asserted count as the audit result.",
+    "Cross-check each derived verified ID against deals_feed.json and the storefront candidate source. Fail the runner if any matrix ID is absent, if a candidate card status differs, or if a held/discovery record is counted.",
+    "Record the complete derived ID lists, source-matrix hash, candidate feed hash, and discrepancies array in the receipt. A non-empty discrepancy array must make overall_status FAIL.",
+    "Regenerate CANDIDATE_RELEASE_REQUEST_J361.md from the same derived result. It must name the eight canonical original IDs and the three actual Popeyes IDs, or disclose a shortfall. It must not count B19_POPEYES_BOGO_MON or B19_POPEYES_BOGO_WED while their matrix status remains HELD_PENDING_ACTIVE_TERMS.",
+    "Re-seal the release request, candidate manifest where its counts are stated, and their SHA-256 sidecars after correction. Re-run the runner with direct network access and retain the new receipt plus sidecar."
+  ],
+  "acceptance": "CEO independently verifies all sidecars, replays the runner, confirms no accounting discrepancy and confirms the release request, matrix and candidate have identical supply identity and counts. Only then may a Gemini audit dossier be requested; deployment remains separately unauthorized."
+}

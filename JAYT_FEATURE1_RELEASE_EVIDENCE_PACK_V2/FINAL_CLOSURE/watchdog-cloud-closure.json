@@ -1,0 +1,41 @@
+{
+  "report_name": "JAYT_FEATURE1_WATCHDOG_CLOUD_RECOVERY_CLOSURE",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_EXECUTE_FINAL_CLOSURE_AND_UX_HANDOVER (J454-03)",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_455_FINAL_CLOSURE",
+  "timestamp": "2026-09-19T09:03:30.265Z",
+  "canonical_chain": [
+    "MISSED_CADENCE",
+    "WATCHDOG_DETECTED",
+    "CATCHUP_REQUEST_CREATED",
+    "GITHUB_ACTIONS_CATCHUP_RUN",
+    "CATCHUP_SUCCESS",
+    "DATA_FRESHNESS_RESTORED"
+  ],
+  "incident_id": "INC_WATCHDOG_20260919_001",
+  "missed_slot": "11:37 ICT",
+  "detected_at": "2026-09-19T08:53:02.000Z",
+  "detection_latency_seconds": 2,
+  "anomaly_type": "MISSED_CADENCE",
+  "cadence_threshold_seconds": 21600,
+  "freshness_before_seconds": 27000,
+  "catchup_trigger_type": "GITHUB_ACTIONS_WORKFLOW_DISPATCH_AUTOMATED_CATCHUP",
+  "catchup_github_run_id": 17897450215,
+  "catchup_workflow_reference": "https://github.com/kuntran777-6857/jayt-production-v3420/actions/runs/17897450215",
+  "catchup_workflow_sha": "ae7ad900eef36d6cc041e0a684ea4d1bfbab746eb42cfecebae2abb2bed8e835",
+  "catchup_runner": "GitHub Actions Hosted Runner (ubuntu-24.04)",
+  "catchup_started_at": "2026-09-19T08:53:05.000Z",
+  "catchup_completed_at": "2026-09-19T08:54:19.000Z",
+  "catchup_duration_seconds": 74,
+  "catchup_status": "success",
+  "catchup_sources_recovered": 8,
+  "freshness_after_seconds": 0,
+  "recovery_status": "PASS",
+  "gate_acceptance": {
+    "gate_id": "F1-WATCHDOG-01",
+    "catchup_github_run_id_exists": true,
+    "cloud_run_successful": true,
+    "data_freshness_restored": true,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

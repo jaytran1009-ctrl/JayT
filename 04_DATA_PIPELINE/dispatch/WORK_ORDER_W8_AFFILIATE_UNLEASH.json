@@ -1,0 +1,31 @@
+{
+  "work_order_id": "WORK_ORDER_W8_AFFILIATE_UNLEASH",
+  "issued_at": "2026-09-13T13:40:00+07:00",
+  "status": "WAN_SLA_ACCEPTED__EVIDENCE_AND_PARTNER_CONTRACT_GATES_OPEN",
+  "preview": {
+    "deployment_id": "dpl_5jXYuruSkkGeYL6DnF9HiLN1w8up",
+    "url": "https://jayt-production-v3420-ql7k4eghf-kuntran777-6857s-projects.vercel.app",
+    "function_region": "sin1",
+    "wan_sla_ms": 850,
+    "observed_max_ms": 819.950,
+    "wan_sla_result": "PASS_FOR_RECORDED_SAMPLE"
+  },
+  "evidence_ingress": {
+    "requested_sku_count": 20,
+    "accepted_sku_count": 0,
+    "status": "AWAITING_VALID_OPERATOR_CAPTURE_PACKETS",
+    "required_per_sku": ["canonical product URL", "logged-out raw HTML", "full-page PNG", "captured_at_utc", "HTTP status", "disk SHA-256", "current price quote", "voucher terms quote"],
+    "fail_closed_markers": ["captcha", "challenge", "login_required", "HTTP_403", "HTTP_429"]
+  },
+  "affiliate_router": {
+    "status": "HELD_PENDING_OFFICIAL_PARTNER_CONTRACT",
+    "partner_ids_are_not_secrets": true,
+    "partner_ids_alone_are_sufficient_authorization": false,
+    "required": ["official deep-link API specification", "account authorization evidence", "signature algorithm and required fields", "approved redirect domains", "attribution and disclosure terms", "server environment provisioning without value disclosure"]
+  },
+  "production": {
+    "version": "v3.462.0-j411",
+    "affiliate_enabled": false,
+    "alias_mutation_authorized": false
+  }
+}

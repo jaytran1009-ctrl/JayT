@@ -1,0 +1,74 @@
+{
+  "id": "WORK_ORDER_J414_FIX_COMPARISON_BUTTON_AND_FULL_GO_LIVE",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260917_FIX_COMPARISON_BUTTON_AND_FULL_GO_LIVE",
+  "authority": "Chairman of the Board of JayT Corp & CEO Codex",
+  "status": "RATIFIED_COMPARISON_BUTTON_FIXED_FULL_GO_LIVE_ACTIVE",
+  "executor": "Khối Kỹ Thuật Hệ Thống Antigravity & Đội Ngũ Tăng Trưởng Thực Địa Đà Nẵng",
+  "reviewer": "CEO Codex; Gemini Independent Review Auditor; Chairman of JayT Corp",
+  "ratified_at_local": "2026-09-17T15:00:00+07:00",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_BFAjGC5z7xVb4KwrL59sDzczhEq4",
+  "bundle": {
+    "file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "size_bytes": 837506,
+    "sha256": "1e6d3ee2626c80a853f83e27bf47c3d3e31a35f5e79e73d8fc8102079413a35d"
+  },
+  "comparison_button_fix_summary": {
+    "root_cause_1_addressed": "openSkuCrossPlatformRadar lacked direct mapping between shelf SKU IDs (DORM_SKU_FEED_xx) and CROSS_PLATFORM_SKU_TRIPLETS.matchKeys.",
+    "root_cause_2_addressed": "openSkuCrossPlatformRadar previously opened an unstyled secondary modal (#jayt-sku-cross-radar-modal) lacking high z-index and body scroll locking.",
+    "root_cause_3_addressed": "Parameter naming mismatch between caller and computeCrossPlatformRadar caused drop into generic fallback.",
+    "remediation_deliverables": {
+      "shelf_sku_to_triplet_map": "Implemented O(1) hash map covering all 20 shelf products (DORM_SKU_FEED_01..20) and legacy dorm IDs.",
+      "expanded_match_keys": "All 10 triplets enriched with exact shelf SKU IDs, variant IDs, and merchant identifiers.",
+      "button_signature": "onclick='triggerJaytSensoryFeedback(event); openSkuCrossPlatformRadar(\"SKU_ID\", \"TITLE\", PRICE, \"PLATFORM\")' with safe fallback arguments.",
+      "touch_target": "Enforced min-height: 44px; min-width: 44px; across all shelf CTA buttons.",
+      "modal_styling": "Styled #jayt-voucher-scanner-modal with z-index: 99999 !important; display: flex !important; and document.body.style.overflow = 'hidden'.",
+      "close_mechanisms": "closeVoucherScannerModal restores document.body.style.overflow = '' and attaches listeners to Escape key, backdrop click, and ✕ button.",
+      "transparency_rule": "Strict enforcement of 'Thật 100% hoặc Không hiển thị' (🔒 Chưa Có Link Chính Hãng when competitor lacks Mall PDP; zero search redirect spam)."
+    }
+  },
+  "verification_audit_summary": {
+    "pipeline_seal": "24/24 PASS TUYỆT ĐỐI (scripts/verify_pipeline_seal.cjs)",
+    "toolchain_seal": "5/5 PASS_TOOLCHAIN_SEAL (scripts/verify_w8_feed_toolchain.cjs)",
+    "four_pillars_audit": "4/4 PILLARS PASS (07_QUALITY_ASSURANCE/test_feature_01_deep_audit_four_pillars.cjs)",
+    "triplet_contract_test": "6/6 PASS (07_QUALITY_ASSURANCE/test_sku_triplet_contract.cjs)",
+    "comparison_button_audit": "5/5 PASS (07_QUALITY_ASSURANCE/test_j414_comparison_button_modal.cjs)",
+    "receipt_file": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_414_COMPARISON_BUTTON_MODAL_AUDIT_RECEIPT.json"
+  },
+  "target_clusters_danang_go_live": [
+    {
+      "cluster_id": "CLUSTER_04_HOA_KHANH_INDUSTRIAL_EDU",
+      "name": "Cụm ĐH Bách Khoa Tây Bắc Hòa Khánh (DUT, UED)",
+      "target_users": 45000,
+      "phase": "PHASE_1_PRIMARY_LAUNCH (Thứ Hai - Thứ Tư)",
+      "focus": "Kệ KTX giá đáy <=49k, nút So Giá 3 Sàn bóc tách voucher Live 50%, cẩm nang DanaBus 130k"
+    },
+    {
+      "cluster_id": "CLUSTER_01_NVL_OFFICE",
+      "name": "Trục Văn Phòng & Tài Chính Nguyễn Văn Linh",
+      "target_users": 200000,
+      "phase": "PHASE_2_COMMERCIAL_SCALE (Thứ Năm - Thứ Sáu)",
+      "focus": "So sánh giá sạc GaN, chuột silent 3 sàn, trọng tài Pick-up cơm trưa rẻ hơn 20k-30k"
+    },
+    {
+      "cluster_id": "CLUSTER_02_HAI_CHAU_CAMPUS",
+      "name": "Cụm ĐH Trung Tâm & Du Lịch Hải Châu (DTU, UFL)",
+      "target_users": 40000,
+      "phase": "CONTINUOUS",
+      "focus": "Lịch Kèo Rạp 7 Ngày (Metiz 45K, Galaxy 50K), kho mã TikTok Live 50k"
+    },
+    {
+      "cluster_id": "CLUSTER_03_NGU_HANH_SON_TECH",
+      "name": "Cụm ĐH Kinh Tế & Công Nghệ Ngũ Hành Sơn (DUE, VKU)",
+      "target_users": 35000,
+      "phase": "CONTINUOUS",
+      "focus": "Mã xe ôm Xanh SM Bike 50%, F&B Giờ Vàng, mở thẻ Cake nhận 50k"
+    }
+  ],
+  "safety_and_commercial_governance": {
+    "affiliate_enabled": false,
+    "fail_closed_policy": true,
+    "dual_workspace_bit_parity": true,
+    "zero_fake_pdp_search_redirects": true
+  }
+}

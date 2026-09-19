@@ -1,0 +1,82 @@
+{
+  "receipt_id": "STAGING_ES_RELEASE_RECEIPT_20260830",
+  "version": "v3.473.0-staging.es",
+  "generated_at_utc": "2026-08-30T13:58:45.000Z",
+  "governing_directive": "JAYT-245 Section ES (Lines 3690-3718)",
+  "production_lock_state": {
+    "status": "LOCKED_PRE_GO_LIVE",
+    "production_version": "v3.419.0",
+    "live_url": "https://deploy-ten-xi-48.vercel.app/",
+    "deployment_action": "NO_PROD_DEPLOY_BEFORE_CEO_SIGN_OFF"
+  },
+  "staging_deployment": {
+    "port": 4173,
+    "health_status": "UP",
+    "local_url": "http://127.0.0.1:4173/",
+    "single_source_of_truth_js": "03_SOURCE_OF_TRUTH/jayt_storefront_staging_es.js",
+    "staging_deploy_dir": "staging_deploy_es"
+  },
+  "deal_discovery_engine": {
+    "status": "INTERACTIVE_DOM_VERIFIED",
+    "action_chips_rendered": [
+      { "id": "AN_GI_GAN_DAY", "label": "🍔 Ăn gần đây", "count": 11 },
+      { "id": "DI_CHOI_TOI_NAY", "label": "🎬 Đi chơi tối nay", "count": 14 },
+      { "id": "DI_CHUYEN_TIET_KIEM", "label": "🚌 Di chuyển tiết kiệm", "count": 13 },
+      { "id": "DO_KTX_HOC_TAP", "label": "🎓 Đồ KTX & học tập", "count": 12 }
+    ],
+    "time_filters": ["ALL", "SANG", "TRUA", "CHIEU", "TOI"],
+    "campus_filters": ["ALL", "HOA_KHANH", "NGU_HANH_SON", "HAI_CHAU", "THANH_KHE", "SON_TRA"],
+    "clear_filters_button_verified": true,
+    "empty_state_clean_fallback": true
+  },
+  "three_lane_voucher_wallet": {
+    "status": "THREE_LANES_RENDERED_IN_DOM",
+    "lane_a_public_verified": {
+      "count": 0,
+      "state": "FAIL_CLOSED_ZERO",
+      "required_criteria": ["offer_description", "terms_conditions", "validity_expiry", "danang_locality_scope", "net_out_of_pocket_price"]
+    },
+    "lane_b_in_app_checkout_personalized": {
+      "count": 10,
+      "state": "INSTRUCTION_ONLY_NO_FAKE_CODES",
+      "merchants": ["ShopeeFood", "GrabFood", "Domino's Pizza", "Lotteria", "CGV Cinemas", "Galaxy Cinema", "Metiz Cinema", "Highlands Coffee", "Fahasa", "Tiki Books"],
+      "fake_voucher_codes": 0,
+      "fake_countdown_timers": 0
+    },
+    "lane_c_radar_monitoring": {
+      "count": 3,
+      "state": "RADAR_MONITORING",
+      "programs": ["DanaBus Đà Nẵng", "TNGo Đà Nẵng", "GitHub Education"]
+    }
+  },
+  "local_first_decision_calculator": {
+    "status": "INTERACTIVE_VERIFIED",
+    "item_price_input": true,
+    "shipping_fee_input": true,
+    "discount_input": true,
+    "split_count_input": true,
+    "realtime_formula": "total = price + shipping - discount; per_person = total / split_count",
+    "negative_number_validation": true,
+    "division_by_zero_validation": true,
+    "reset_button": true,
+    "zero_pii": true,
+    "non_promise_disclaimer": "⚠️ Lưu ý: Đây là công cụ tính toán do bạn tự nhập số liệu. JayT không tự khẳng định hay cam kết giá từ bất kỳ ứng dụng nào."
+  },
+  "accesstrade_research_to_revenue": {
+    "survey_status": "HYPOTHESIS_OFFLINE",
+    "unbacked_price_claims": 0,
+    "active_affiliate_links": 0,
+    "go_isclix_occurrences": 0
+  },
+  "browser_e2e_evidence": {
+    "test_runner": "Chrome Browser E2E Runner (Puppeteer Engine)",
+    "viewport_matrices": [
+      { "name": "Desktop", "width": 1440, "height": 900, "screenshots": 11 },
+      { "name": "Tablet", "width": 768, "height": 1024, "screenshots": 3 },
+      { "name": "Mobile", "width": 390, "height": 844, "screenshots": 2 }
+    ],
+    "total_screenshots": 16,
+    "output_directory": "07_QUALITY_ASSURANCE/browser_pack_es",
+    "overall_result": "ALL_16_E2E_ACTIONS_PASS"
+  }
+}

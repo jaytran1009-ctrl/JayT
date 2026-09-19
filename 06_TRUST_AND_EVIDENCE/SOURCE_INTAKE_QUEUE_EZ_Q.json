@@ -1,0 +1,89 @@
+{
+  "queue_id": "SOURCE_INTAKE_QUEUE_EZ_Q",
+  "version": "5.0.0-ez.q",
+  "governance_directive": "JAYT-245 Section EZ-Q (Lines 4358-4383)",
+  "taxonomy_rules": {
+    "claimed_source_owner_classification": "CLAIMED_UNVERIFIED_PRIOR_TO_IDENTITY_PROOF",
+    "candidate_url_classification": "CANDIDATE_URL_UNVERIFIED_PRIOR_TO_DOCUMENT_PROOF",
+    "cohort_classification": "PLANNING_HYPOTHESIS_NOT_USER_FACT",
+    "narrow_intake_rule": "FREEZE_GENERIC_HOMEPAGE_CAPTURE_REQUIRE_SPECIFIC_DOCUMENT_PATH",
+    "domain_heuristic_prohibition": "STRICT_PROHIBITION_AGAINST_INFERRING_OWNER_OR_LOCATION_FROM_DOMAIN_NAME"
+  },
+  "cohort_closure_notice": {
+    "notion_canva_education_status": "COHORT_CLOSED_FOR_30_DAYS_UNTIL_20260930",
+    "reason": "Recapture and rewrite blocked to prevent forced card creation."
+  },
+  "total_queued_candidates": 10,
+  "queue_items": [
+    {
+      "intake_id": "INTAKE_01_DANANG_BUS_PORTAL",
+      "candidate_url": "https://www.danangbus.vn/",
+      "rubric_score": 55,
+      "rubric_verdict": "BELOW_THRESHOLD_GENERIC_PORTAL_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_02_DANANG_GENERAL_SCIENCE_LIBRARY",
+      "candidate_url": "http://thuvien.danang.gov.vn/",
+      "rubric_score": 60,
+      "rubric_verdict": "BELOW_THRESHOLD_HOMEPAGE_IDENTITY_ONLY_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_03_DANANG_PUBLIC_SERVICE_PORTAL",
+      "candidate_url": "https://dichvucong.danang.gov.vn/",
+      "rubric_score": 50,
+      "rubric_verdict": "BELOW_THRESHOLD_LOCATION_UNPROVEN_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_04_DANANG_MUSEUM_PORTAL",
+      "candidate_url": "https://baotangdanang.vn/",
+      "rubric_score": 60,
+      "rubric_verdict": "BELOW_THRESHOLD_HOMEPAGE_IDENTITY_ONLY_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_05_NATIONAL_LIBRARY_OF_VIETNAM",
+      "candidate_url": "http://nlv.gov.vn/",
+      "rubric_score": 60,
+      "rubric_verdict": "BELOW_THRESHOLD_HOMEPAGE_IDENTITY_ONLY_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_06_DANANG_OPEN_DATA_PORTAL",
+      "candidate_url": "https://opendata.danang.gov.vn/",
+      "rubric_score": 50,
+      "rubric_verdict": "BELOW_THRESHOLD_GENERIC_CATALOG_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_07_VIETNAM_RAILWAY_OFFICIAL",
+      "candidate_url": "https://dsvn.vn/",
+      "rubric_score": 55,
+      "rubric_verdict": "BELOW_THRESHOLD_HOMEPAGE_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_08_DANANG_DEPARTMENT_OF_INDUSTRY_TRADE",
+      "candidate_url": "https://socongthuong.danang.gov.vn/",
+      "rubric_score": 50,
+      "rubric_verdict": "BELOW_THRESHOLD_PORTAL_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_09_VIETNAM_POST_PUBLIC_SERVICES",
+      "candidate_url": "https://vnpost.vn/",
+      "rubric_score": 60,
+      "rubric_verdict": "BELOW_THRESHOLD_HOMEPAGE_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    },
+    {
+      "intake_id": "INTAKE_10_DANANG_CENTER_FOR_DISEASE_CONTROL",
+      "candidate_url": "https://cdc.danang.gov.vn/",
+      "rubric_score": 50,
+      "rubric_verdict": "BELOW_THRESHOLD_PORTAL_HOLD_CAPTURE",
+      "capture_state": "CAPTURE_FROZEN_PENDING_SPECIFIC_POLICY_DOCUMENT_PATH"
+    }
+  ]
+}

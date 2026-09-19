@@ -1,0 +1,36 @@
+{
+  "target_id": "TARGET_088D_096",
+  "brand": "Domino's Pizza",
+  "sector": "FNB_FASTFOOD",
+  "target_type": "BRANCH_LOCATOR",
+  "requested_url": "https://dominos.vn/store-locations",
+  "final_url": "https://dominos.vn/store-locations",
+  "http_status": 200,
+  "captured_at": "2026-08-25T06:23:03.239Z",
+  "provenance_method": "PUPPETEER_CHROME_CDP_HEADLESS",
+  "target_lineage": {
+    "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_087a/captures_087a/TARGET_087A_147/page.html",
+    "parent_artifact_sha256": "bc29c08a0b77330111d003435a53e895412ca385b00b3e0ddbe003e4bbdb3399",
+    "literal_href": "/store-locations",
+    "link_offset": 26273,
+    "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+    "selection_reason": "Trích xuất từ thẻ <a href=\"...\"> tại offset 26273 trong DOM của TARGET_087A_147"
+  },
+  "files": {
+    "screenshot_png": {
+      "path": "page.png",
+      "sha256": "e308a7bfb10708f5e8b6f830536af2b35bf10568fa4b96230eac1bdedb94458e",
+      "size": 370092
+    },
+    "raw_html": {
+      "path": "page.html",
+      "sha256": "cd25e82bd2a1d546940c1155c9322c90212cef4345ccb1257a108c51c767b392",
+      "size": 125614
+    },
+    "text_extract": {
+      "path": "page.txt",
+      "sha256": "7eb0cb171f5d5bf4e180f89e37e4a6c30aef1c5d467fda274f86b24459c9712f",
+      "size": 696
+    }
+  }
+}

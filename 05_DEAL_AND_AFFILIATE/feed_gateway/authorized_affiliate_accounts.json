@@ -1,0 +1,45 @@
+{
+  "$schema": "https://jayt.vn/schemas/authorized-affiliate-accounts.v1.json",
+  "audit_notice": "OFFICIAL_AUTHORIZED_AFFILIATE_REGISTRY — ZERO PLAIN-TEXT SECRETS OR TOKENS IN REPO",
+  "directive": "JAYT-PROVIDER-EVIDENCE-GATE-053C",
+  "timestamp": "2026-08-23T01:58:00+07:00",
+  "platforms": {
+    "SHOPEE_AFFILIATE": {
+      "platform_name": "Shopee Vietnam Affiliate",
+      "partner_id": "17372870594",
+      "deep_link_base": "https://s.shopee.vn/universal?partner_id=17372870594",
+      "api_endpoint": "https://open-api.affiliate.shopee.vn/graphql",
+      "status": "DECLARED_PENDING_AUTHENTICATION",
+      "env_key_prefix": "SHOPEE",
+      "last_auth_probe": {
+        "timestamp": "2026-08-25T12:35:00.367Z",
+        "auth_status": "DECLARED_PENDING_AUTHENTICATION",
+        "http_status": null,
+        "request_id": null,
+        "identity_verified": false
+      }
+    },
+    "LAZADA_AFFILIATE": {
+      "platform_name": "Lazada Vietnam Affiliate",
+      "partner_id": "262501305",
+      "deep_link_base": "https://s.lazada.vn/s.aff?partner_id=262501305",
+      "api_endpoint": "https://api.lazada.vn/rest",
+      "status": "UNSUPPORTED_PENDING_PROVIDER_DOCS",
+      "env_key_prefix": "LAZADA"
+    },
+    "TIKTOK_AFFILIATE": {
+      "platform_name": "TikTok Shop Vietnam Affiliate",
+      "partner_id": "VNVNLCB6LYL3",
+      "deep_link_base": "https://vt.tiktok.com/aff?partner_id=VNVNLCB6LYL3",
+      "api_endpoint": "https://open-api.tiktokglobalshop.com",
+      "status": "UNSUPPORTED_PENDING_PROVIDER_DOCS",
+      "env_key_prefix": "TIKTOK"
+    }
+  },
+  "control_plane": {
+    "telegram_bot_username": "@affos_deal_hot_bot",
+    "telegram_channel_username": "@DealsIphoneHot",
+    "env_token_var": "TELEGRAM_BOT_TOKEN",
+    "env_chat_id_var": "TELEGRAM_CEO_CHAT_ID"
+  }
+}

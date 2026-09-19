@@ -1,0 +1,918 @@
+{
+  "report_id": "RESOLUTION_REPORT_102_LOCALITY_AND_SUPPLY",
+  "generated_at": "2026-08-25T09:19:41.875Z",
+  "inputs": [
+    "05_DEAL_AND_AFFILIATE/batch_capture_101",
+    "05_DEAL_AND_AFFILIATE/batch_capture_102"
+  ],
+  "summary_metrics": {
+    "total_targets_analyzed": 30,
+    "authenticated_sources": 21,
+    "failed_sources": 9,
+    "verified_locations_cobalt": 7,
+    "official_sources_no_locality_amber": 14,
+    "proven_promotions_count": 0,
+    "unproven_promotions_count": 21
+  },
+  "cobalt_candidates_audited": [
+    {
+      "target_id": "TARGET_101_GALAXY_DANANG_OFFICIAL",
+      "venue_name": "Galaxy Cinema Đà Nẵng",
+      "source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:10:09.812Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GALAXY_DANANG_OFFICIAL/page.html",
+          "size_bytes": 214592,
+          "sha256": "7265fb4ca68ac3a5109da0490480a39b652a9c963b3ed906d859251fb39dafbc"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GALAXY_DANANG_OFFICIAL/page.txt",
+          "size_bytes": 2290,
+          "sha256": "99f1d47f15fc2f48df13c25c0a7099636db5a0e1af66895382f01a99a93d1b03"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GALAXY_DANANG_OFFICIAL/page.png",
+          "size_bytes": 788482,
+          "sha256": "32b41fecdef5048a04befc4812b851f760eeff0a40b53e0282ac856383f87533"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 13,
+          "char_offset": 115,
+          "snippet": "Địa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+          "snippet_sha256": "11740704c47dc49fc1da102334aba7541ee01cc74850bd9ebe235571aa1fcb8b"
+        },
+        {
+          "line_number": 55,
+          "char_offset": 1284,
+          "snippet": "Rạp phim đáng xem Galaxy Cinema Coop Đà Nẵng đã đến với Đà Nẵng – thành phố đáng sống rồi đây, hãy cùng đồng hành nhé các bạn!",
+          "snippet_sha256": "3aa3a9bfa3cfb64a3df7f9efa56168e77b8f09d7eb39a32e00a4f5f1fdfb4efd"
+        }
+      ],
+      "locality_count": 2,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_101_PHELA_OFFICIAL",
+      "venue_name": "Phê La Vietnam",
+      "source_url": "https://phela.vn/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:10:20.541Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_PHELA_OFFICIAL/page.html",
+          "size_bytes": 233933,
+          "sha256": "232a5617a218efa46ac7018863453099106c9e7afe84c77102754fda60950c65"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_PHELA_OFFICIAL/page.txt",
+          "size_bytes": 13545,
+          "sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_PHELA_OFFICIAL/page.png",
+          "size_bytes": 1560937,
+          "sha256": "e90f574302c258a9d5d8316bf4b13e4b8392ef2807650fdfa1259e0897b1bd51"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 88,
+          "char_offset": 2789,
+          "snippet": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+          "snippet_sha256": "477790b9c32ff05dd24ba41aa1ed8c8f647c8d5576bc79fe05b4d7fb8cc577fc"
+        },
+        {
+          "line_number": 92,
+          "char_offset": 2872,
+          "snippet": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+          "snippet_sha256": "2b7af8d32bcbca0263dc70f855f3d427f288e5af5384ea2d000000152acf8c56"
+        }
+      ],
+      "locality_count": 2,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_CGV_VINH_TRUNG",
+      "venue_name": "CGV Vĩnh Trung Plaza",
+      "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:16:35.947Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.html",
+          "size_bytes": 101887,
+          "sha256": "5dd136014b5822f7a16a16690441acfd0eda7d83ea5842523ab61c5a316d1856"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.txt",
+          "size_bytes": 2615,
+          "sha256": "3b9396c1a592f3b4b8f801262aed3a081d73ac7e6bfd6229694acb3db7482d0e"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.png",
+          "size_bytes": 309490,
+          "sha256": "ba67c90fd4f6656824b72229b5c0c22dd0be939af1e2cb7ea5644884cde17978"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 53,
+          "char_offset": 443,
+          "snippet": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+          "snippet_sha256": "574801c0aa319c0b887373634360a726eb5d40c647ba0ab3dd3104e4c1a99ad1"
+        }
+      ],
+      "locality_count": 1,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_GALAXY_DANANG",
+      "venue_name": "Galaxy Cinema Đà Nẵng",
+      "source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:16:48.237Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.html",
+          "size_bytes": 213273,
+          "sha256": "128c722f9be59935b4eb094a9999d1f81cbefe59b5943b59b7ae2c1dce0dbd49"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.txt",
+          "size_bytes": 2290,
+          "sha256": "54bdf0f4d15206b25d17e938a45c83f69ada94435d63a895b4bdc6d6422c1370"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GALAXY_DANANG/page.png",
+          "size_bytes": 787351,
+          "sha256": "d4e74fcc22ab08a48aa0f89eb159268c0475389e8f90f5bb7bd518d16a9d5f08"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 13,
+          "char_offset": 115,
+          "snippet": "Địa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+          "snippet_sha256": "11740704c47dc49fc1da102334aba7541ee01cc74850bd9ebe235571aa1fcb8b"
+        },
+        {
+          "line_number": 55,
+          "char_offset": 1284,
+          "snippet": "Rạp phim đáng xem Galaxy Cinema Coop Đà Nẵng đã đến với Đà Nẵng – thành phố đáng sống rồi đây, hãy cùng đồng hành nhé các bạn!",
+          "snippet_sha256": "3aa3a9bfa3cfb64a3df7f9efa56168e77b8f09d7eb39a32e00a4f5f1fdfb4efd"
+        }
+      ],
+      "locality_count": 2,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_GONGCHA_STORES",
+      "venue_name": "Gong Cha Cửa Hàng",
+      "source_url": "https://gongcha.com.vn/cua-hang/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:35.404Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.html",
+          "size_bytes": 76921,
+          "sha256": "a2b70358930677e150e33673319ab2e8f5dbfbe332cbed15e2c3b7ce443834c8"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.txt",
+          "size_bytes": 11649,
+          "sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.png",
+          "size_bytes": 423360,
+          "sha256": "527a78e9f83f0b41544c431ed6d39c9494a20368d064758106a9c4beb22ec6e5"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 78,
+          "char_offset": 1277,
+          "snippet": "Gong Cha Đà Nẵng (Nguyễn Văn Linh)",
+          "snippet_sha256": "42372da88fbaa24ab674e195301cccf0916a417c31f145fd8300e894a4cab302"
+        },
+        {
+          "line_number": 80,
+          "char_offset": 1313,
+          "snippet": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng.",
+          "snippet_sha256": "9752f3ff4d5283863d45c7feebf4b8c0679a99f49ea8a106285687c43f40fec8"
+        }
+      ],
+      "locality_count": 2,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_JOLLIBEE_STORES",
+      "venue_name": "Jollibee Danh Sách Cửa Hàng",
+      "source_url": "https://jollibee.com.vn/cua-hang",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:18:57.481Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.html",
+          "size_bytes": 792029,
+          "sha256": "0c79f65e4c99882ee9820cbc8fedd9c28b18d4c4d63be4a5fcd6f035ebe8197e"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "size_bytes": 68406,
+          "sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.png",
+          "size_bytes": 1036728,
+          "sha256": "615eb2c7e3a99f7c5e170f8a475b42abcae3d81650193471f4c64e6164cd9e95"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 189,
+          "char_offset": 5505,
+          "snippet": "Tầng hầm, Coop-Mart Tam Kỳ, Số 7 Phan Chu Trinh, Phường Tam Kỳ, Thành phố Đà Nẵng, Việt Nam",
+          "snippet_sha256": "d76678e94171e9aa4f2f35a45d230e4e0c63f04d3c0ccdf8f490514bcb514099"
+        },
+        {
+          "line_number": 375,
+          "char_offset": 12219,
+          "snippet": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+          "snippet_sha256": "172e03d7363b00f7b549ce78ee1c5f7ed51b123912667e12381fa1e4841e1ec9"
+        },
+        {
+          "line_number": 376,
+          "char_offset": 12292,
+          "snippet": "Tầng 4 Vincom Đà Nẵng, 910A Ngô Quyền, Phường An Hải Bắc, Quận Sơn Trà, Thành Phố Đà Nẵng (cũ)",
+          "snippet_sha256": "062ade203216549891985c82b4df1a8a879c98d996cfdbe2e346fe71c61a268d"
+        },
+        {
+          "line_number": 627,
+          "char_offset": 22349,
+          "snippet": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng",
+          "snippet_sha256": "c94615bcca81ae59d0cf588009af7c59a6be5208247432da032ad2c825172a72"
+        },
+        {
+          "line_number": 628,
+          "char_offset": 22396,
+          "snippet": "32 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu, Thành Phố Đà Nẵng (cũ)",
+          "snippet_sha256": "cbea1db20cdbc3c7a19449ef9a70bc77fb8965118da52e429db7eb6041fc934d"
+        },
+        {
+          "line_number": 645,
+          "char_offset": 23090,
+          "snippet": "187 Huỳnh Thúc kháng , Phường Tam Kỳ, Thành phố Đà Nẵng",
+          "snippet_sha256": "b9f6fdfedcf5bd647bac6e88606c4676685919fb712d058946f2313370b3e7c0"
+        },
+        {
+          "line_number": 711,
+          "char_offset": 25812,
+          "snippet": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng",
+          "snippet_sha256": "4d59b0ca1e5a29ab646e1618f2d712dd1b93e213227d07ccdd16840a0f899ecc"
+        },
+        {
+          "line_number": 712,
+          "char_offset": 25869,
+          "snippet": "47 Nguyễn Đức Trung, Hòa Khê, Thanh Khê, Đà Nẵng, Việt Nam (cũ)",
+          "snippet_sha256": "c6e96ad867a11a4eeda5fe47655b60b8e201b0fe8b83341cb3055f697537cc80"
+        },
+        {
+          "line_number": 771,
+          "char_offset": 28249,
+          "snippet": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng",
+          "snippet_sha256": "fc122314f5f848574a68d4344994ffc8c70c29f5a44083d7bfe7d50a481a9dcd"
+        },
+        {
+          "line_number": 772,
+          "char_offset": 28304,
+          "snippet": "126 Phan Đăng Lưu, Phường Hòa Cường Bắc, Quận Hải Châu, Thành Phố Đà nẵng (cũ)",
+          "snippet_sha256": "63648aa56cc492c625ff7631a68a656a4f434e77cf436492b660cf8bbc70cb4b"
+        },
+        {
+          "line_number": 789,
+          "char_offset": 29012,
+          "snippet": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng",
+          "snippet_sha256": "786552257882851bb664722e75212527ad58c22c826c8c96ddd4adff311e2765"
+        },
+        {
+          "line_number": 790,
+          "char_offset": 29067,
+          "snippet": "10 Phạm Như Xương , Phường Hòa Khánh Nam , Quận Liên Chiểu, Thành phố Đà Nẵng (cũ)",
+          "snippet_sha256": "35a69d0a02b9f80763983920729a5c63eed72801eb4a61dcfb398a9cf02ae052"
+        },
+        {
+          "line_number": 813,
+          "char_offset": 29786,
+          "snippet": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng",
+          "snippet_sha256": "9049947a59b03b69ac622d67a1c30ca54a39daf2eac5a723ffa1b56aa08038a4"
+        },
+        {
+          "line_number": 814,
+          "char_offset": 29837,
+          "snippet": "99 Lý Thái Tổ, Phường Thạc Gián, Quận Thanh Khê, Thành Phố Đà Nẵng (cũ)",
+          "snippet_sha256": "64e8bb0ee29f524a91964e0a5c8a451c11f19b803e35d7ed858ec5db1092e195"
+        },
+        {
+          "line_number": 903,
+          "char_offset": 32996,
+          "snippet": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng",
+          "snippet_sha256": "e766770b2b1dbc73f780b1f01302276b8b242dced10466c0a99d98cf483967f9"
+        },
+        {
+          "line_number": 904,
+          "char_offset": 33044,
+          "snippet": "254 Đống Đa , P, Thuận Phước , Q. Hải Châu , Tp. Đà Nẵng (cũ)",
+          "snippet_sha256": "d81758e1fe40477c52cd1fd6a633cf72cc9d8937f8a5abc7bd9e432a79f9d00f"
+        },
+        {
+          "line_number": 914,
+          "char_offset": 33368,
+          "snippet": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng",
+          "snippet_sha256": "cccfac917b69e775b0a2d9c7ce1b961cb5d5cbc48935342bda1546182c6fef2e"
+        },
+        {
+          "line_number": 915,
+          "char_offset": 33420,
+          "snippet": "02 Ngô Văn Sở, Phường Hòa Khánh Bắc, Quận Liên Chiểu, Thành phố Đà Nẵng (cũ)",
+          "snippet_sha256": "1d01a0c44c0dd58186767dcd1d9017d9c16887caaf130d7d22acfafaf4fd533c"
+        },
+        {
+          "line_number": 1438,
+          "char_offset": 52305,
+          "snippet": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+          "snippet_sha256": "8af82d37334bd067447d447a9db3842c0b36a354343d25cba0a502adbc0489d5"
+        },
+        {
+          "line_number": 1439,
+          "char_offset": 52411,
+          "snippet": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng (cũ)",
+          "snippet_sha256": "e14095abf651253db5717e9caeea57a2258cce92ce71011ea97cc87c79766a58"
+        },
+        {
+          "line_number": 1455,
+          "char_offset": 52970,
+          "snippet": "Jollibee Phố Đà Nẵng - Hải Phòng",
+          "snippet_sha256": "7385a02811f5278b23333fffc652266725615cb0cb58e8a00fb4801f7ea79055"
+        },
+        {
+          "line_number": 1456,
+          "char_offset": 53003,
+          "snippet": "207A phố Đà Nẵng, Phường Ngô Quyền, Thành Phố Hải Phòng",
+          "snippet_sha256": "9f61df7e05ed96c08b98bf153ad5c25f93a4a919d3863e026ca0613748baae79"
+        },
+        {
+          "line_number": 1457,
+          "char_offset": 53059,
+          "snippet": "207A phố Đà Nẵng, Phường Ngô Quyền, Thành Phố Hải Phòng (cũ)",
+          "snippet_sha256": "40fe2a516722aa61ba3e89c29988f9e830fe03a8f39b2c670b108679371035d7"
+        }
+      ],
+      "locality_count": 23,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_PHELA_HOME",
+      "venue_name": "Phê La Vietnam",
+      "source_url": "https://phela.vn/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:18.816Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.html",
+          "size_bytes": 233827,
+          "sha256": "ad72448cce6b9055d0a78ff0494225ad94e1b83bb1056a5580b8e77dd582863c"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.txt",
+          "size_bytes": 13545,
+          "sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_PHELA_HOME/page.png",
+          "size_bytes": 1560937,
+          "sha256": "e90f574302c258a9d5d8316bf4b13e4b8392ef2807650fdfa1259e0897b1bd51"
+        }
+      },
+      "extracted_addresses": [
+        {
+          "line_number": 88,
+          "char_offset": 2789,
+          "snippet": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+          "snippet_sha256": "477790b9c32ff05dd24ba41aa1ed8c8f647c8d5576bc79fe05b4d7fb8cc577fc"
+        },
+        {
+          "line_number": 92,
+          "char_offset": 2872,
+          "snippet": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+          "snippet_sha256": "2b7af8d32bcbca0263dc70f855f3d427f288e5af5384ea2d000000152acf8c56"
+        }
+      ],
+      "locality_count": 2,
+      "classification": "VERIFIED_LOCATION",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    }
+  ],
+  "amber_sources_audited": [
+    {
+      "target_id": "TARGET_101_GONGCHA_OFFICIAL",
+      "venue_name": "Gong Cha Vietnam",
+      "source_url": "https://gongcha.com.vn/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:10:27.854Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.html",
+          "size_bytes": 78766,
+          "sha256": "d530f4edc2d11933fadc03031ddfeea1f068c1b5fd1b582be647ea5c64b93ea4"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.txt",
+          "size_bytes": 1567,
+          "sha256": "db9be8c4a007a7a416f914522ee4d9ebdf318ff485026f0b8dae6a062b97b2d1"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GONGCHA_OFFICIAL/page.png",
+          "size_bytes": 1343741,
+          "sha256": "fb9f2dc8d419bc29a8b1dc2608c6a84a14df7955ae0e7e7f180b551c26dfa983"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_101_JOLLIBEE_OFFICIAL",
+      "venue_name": "Jollibee Vietnam",
+      "source_url": "https://jollibee.com.vn/",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:10:38.751Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.html",
+          "size_bytes": 321489,
+          "sha256": "ca0615e71c54eb0c120c67b095a6e580e5a8640679b3a915ab268a045a34e6f2"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.txt",
+          "size_bytes": 5843,
+          "sha256": "7256eb6e5379d794f0dbd2cea614e7b4519b6d11b29c88c6236b6aea72cb5d33"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_JOLLIBEE_OFFICIAL/page.png",
+          "size_bytes": 1113667,
+          "sha256": "eed9b4c5e80ae4983c690f1b67b241fc9a8c509deed7ff4d4201be6dd20115dd"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_101_METIZ_OFFICIAL",
+      "venue_name": "Metiz Cinema Đà Nẵng",
+      "source_url": "https://metiz.vn/",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:10:03.428Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.html",
+          "size_bytes": 136295,
+          "sha256": "baf2a6f419c547dbfcd2cc3fa86f657b8252fa7f797fe130f1cf0f467fa79e9a"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.txt",
+          "size_bytes": 2007,
+          "sha256": "bb84fefcd9b9301bd3d05fa555500ca062f69814bfca27c9ca61eeea16bf8724"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_METIZ_OFFICIAL/page.png",
+          "size_bytes": 969121,
+          "sha256": "5c3674bc0f4bd03b221b1d65bdb9dfddad64c2d0634e682c76c33ed40df8289e"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_COOPMART_DANANG",
+      "venue_name": "Co.opmart Đà Nẵng",
+      "source_url": "https://co-opmart.com.vn/he-thong-coop-mart/",
+      "sector": "RETAIL",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:19:24.579Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.html",
+          "size_bytes": 102367,
+          "sha256": "9426e57e4ae79e4eaf8b19365614fe9fbddfd499c17e95543a8e1d9d5bdd1ad1"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.txt",
+          "size_bytes": 1176,
+          "sha256": "107dc8b2a7bcc987182389c0499854737f71408076d50f0223022cedeb884fe7"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_COOPMART_DANANG/page.png",
+          "size_bytes": 503986,
+          "sha256": "af70f7099b627d0d260361dcd01332c43b5a4bff3d8f33770f182f1ab35c5157"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_DOMINOS_HOME",
+      "venue_name": "Domino's Pizza Vietnam",
+      "source_url": "https://dominos.vn/",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:19:05.326Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.html",
+          "size_bytes": 76085,
+          "sha256": "33bc8189f388a4124b4454e4ac155b66baf37bc2102ef038a8d735693b5fac9a"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.txt",
+          "size_bytes": 809,
+          "sha256": "98c46ecb89d719279935ad0de920a96718ba04aa0b3d657859103effd3a31a71"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_HOME/page.png",
+          "size_bytes": 1672516,
+          "sha256": "43052c881b8afa30ce444e00c0e8bfe63172bf29554acd42a833779f02f1a737"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_DOMINOS_STORES",
+      "venue_name": "Domino's Cửa Hàng",
+      "source_url": "https://dominos.vn/cua-hang",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:19:11.322Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.html",
+          "size_bytes": 124566,
+          "sha256": "ce19104a41bb3f997f4c2a587d1a9b5176d74cfd45c373202fa378d0c9665fef"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.txt",
+          "size_bytes": 696,
+          "sha256": "7eb0cb171f5d5bf4e180f89e37e4a6c30aef1c5d467fda274f86b24459c9712f"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_DOMINOS_STORES/page.png",
+          "size_bytes": 421472,
+          "sha256": "49ea17cca4aa0042fa8354ba71ce62ab36a85fa43f1428462f62c99f0ec287e7"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_GONGCHA_HOME",
+      "venue_name": "Gong Cha Vietnam",
+      "source_url": "https://gongcha.com.vn/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:24.809Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.html",
+          "size_bytes": 78872,
+          "sha256": "cefaf78be2fb6f87ab0dab4661928dbcc07eff771249f840e57b8bc220e40fa3"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.txt",
+          "size_bytes": 1567,
+          "sha256": "db9be8c4a007a7a416f914522ee4d9ebdf318ff485026f0b8dae6a062b97b2d1"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_HOME/page.png",
+          "size_bytes": 1343741,
+          "sha256": "fb9f2dc8d419bc29a8b1dc2608c6a84a14df7955ae0e7e7f180b551c26dfa983"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_JOLLIBEE_HOME",
+      "venue_name": "Jollibee Vietnam Home",
+      "source_url": "https://jollibee.com.vn/",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:18:39.418Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.html",
+          "size_bytes": 332495,
+          "sha256": "6c7192843a44d917e8390dc7388c179c25cb05f82b2870d2cd62db6967907594"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.txt",
+          "size_bytes": 5855,
+          "sha256": "2f4d15c2e178d5f1ce07685cfcc2df1bd36b5aa7c9fb2fa46cd220ca495e6562"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_HOME/page.png",
+          "size_bytes": 921816,
+          "sha256": "628e976753685c1a316afaa770836b8990826e6c85b86dbed2e85f91b1ad828b"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_KATINAT_HOME",
+      "venue_name": "Katinat Saigon Kafe Home",
+      "source_url": "https://katinat.vn/",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:18:20.902Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.html",
+          "size_bytes": 150676,
+          "sha256": "f972c4826c59e17823fc6b497d70f3b932f6ca1aa66e2d0f5e3574237afc852c"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.txt",
+          "size_bytes": 4136,
+          "sha256": "4839c29df02e32c844b3ee0866bee78f1107cd876686563edf141a2e7c92eac0"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_KATINAT_HOME/page.png",
+          "size_bytes": 1218463,
+          "sha256": "c5af4c1272537637c8ec7c4f54f9fbf0f47b2be6998160d21a2f36721ce0970d"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_LOTTERIA_STORES",
+      "venue_name": "Lotteria Cửa Hàng",
+      "source_url": "https://www.lotteria.vn/store/",
+      "sector": "FNB_FASTFOOD",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:19:18.694Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.html",
+          "size_bytes": 58228,
+          "sha256": "558727a508c6d2e6dc4b6286b52f5ce63f555429a985e6b05f476ceb63a2f2bc"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.txt",
+          "size_bytes": 534,
+          "sha256": "6af0d17958d9c81bbd951ffcc1072d6d2011da4a993ad6b039f1d3cf5bacb7ba"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTERIA_STORES/page.png",
+          "size_bytes": 128673,
+          "sha256": "387e5da205722d608a93247c7861f41121945de8e989532f88587d8a9b00017b"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_LOTTE_CINEMA_DNG",
+      "venue_name": "Lotte Cinema Đà Nẵng",
+      "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=5001",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:11.501Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.html",
+          "size_bytes": 90238,
+          "sha256": "1701cc0108d2e0b1cf62f8a35566151839d2a8880cde183a292fc035b5162897"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.txt",
+          "size_bytes": 1613,
+          "sha256": "fa2f6acefd18ceec8a98bb88d5251c0fb9d44a8db02d75ac793de104d9209545"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_LOTTE_CINEMA_DNG/page.png",
+          "size_bytes": 206722,
+          "sha256": "9252ed73a5d87853116808be7f2e34d437fb43ad491c09d7257e0dbad31f1fbd"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_METIZ_HOME",
+      "venue_name": "Metiz Cinema Đà Nẵng Home",
+      "source_url": "https://metiz.vn/",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:05.506Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.html",
+          "size_bytes": 136293,
+          "sha256": "328dd347d34075690d59e0d69a3ed15a7eb77cefb72e848b3c2b4fc33759c01a"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.txt",
+          "size_bytes": 2007,
+          "sha256": "bb84fefcd9b9301bd3d05fa555500ca062f69814bfca27c9ca61eeea16bf8724"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_HOME/page.png",
+          "size_bytes": 1201806,
+          "sha256": "e5496a4d883ad9ed4312ac2c84a15e65e6214a01fe2180a62245eba73e8d1988"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_METIZ_POLICY",
+      "venue_name": "Metiz Cinema Member Policy",
+      "source_url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html",
+      "sector": "CINEMA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:16:58.931Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.html",
+          "size_bytes": 88523,
+          "sha256": "def09022ecc0d0cd165fd7a1fd7d59f9012bab380d50bbf0cf17791ab9cd6cd9"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.txt",
+          "size_bytes": 3710,
+          "sha256": "d7b416d03fa54e971b7119c9190f16d6d4e5811baa86b2379d4a437b23ca54fb"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_METIZ_POLICY/page.png",
+          "size_bytes": 92923,
+          "sha256": "c054b57f1600a6b1c466e31f4604d4ca6f91827d4e070c9ab31e2f41be5c11da"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    },
+    {
+      "target_id": "TARGET_102_THECOFFEEHOUSE_STORES",
+      "venue_name": "The Coffee House Danh Sách",
+      "source_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+      "sector": "COFFEE_TEA",
+      "http_status": 200,
+      "captured_at": "2026-08-25T09:17:59.579Z",
+      "artifacts": {
+        "page_html": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.html",
+          "size_bytes": 433046,
+          "sha256": "c4df35dedd1fd75e7f3ac5e6cc218fc24e4e3b4b990731890a7c9f1e704134d8"
+        },
+        "page_txt": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.txt",
+          "size_bytes": 592,
+          "sha256": "31b5f5f508fa20dbd118059859a45191717a5c1a7f73c37e540c3e64b6901f32"
+        },
+        "page_png": {
+          "path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_THECOFFEEHOUSE_STORES/page.png",
+          "size_bytes": 148294,
+          "sha256": "b1b53c10afca9dd08d7cf17b30c0ea19526f95f6c85a1e531bbedff6ce44eabd"
+        }
+      },
+      "extracted_addresses": [],
+      "locality_count": 0,
+      "classification": "OFFICIAL_SOURCE_NO_LOCALITY",
+      "promotion_status": "PROMOTION_UNPROVEN",
+      "promotion_disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+    }
+  ],
+  "failed_sources_audited": [
+    {
+      "target_id": "TARGET_102_CGV_MEMBERSHIP",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://www.cgv.vn/default/membership",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_CGV_VINCOM_DNG",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_EMPTY_TEXT: Page text is empty or trivial (< 20 chars) for https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_GALAXY_POLICY",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://galaxycine.vn/chinh-sach-thanh-vien-2026",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_HIGHLANDS_HOME",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_HIGHLANDS_STORES",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_KFC_STORES",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 403 for https://kfcvietnam.com.vn/he-thong-nha-hang-kfc",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_MIXUE_HOME",
+      "status": "FAILED_CAPTURE",
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://www.mxbc.vn/",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_PHUCLONG_STORES",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://phuclong.com.vn/he-thong-cua-hang",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    },
+    {
+      "target_id": "TARGET_102_TOCOTOCO_STORES",
+      "status": "FAILED_CAPTURE",
+      "error": "FAIL_CLOSED_HTTP_ERROR: Server returned HTTP 404 for https://tocotocotea.com/danh-sach-cua-hang/",
+      "classification": "UNRESOLVED_FAILED_CAPTURE"
+    }
+  ]
+}

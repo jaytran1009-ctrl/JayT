@@ -1,0 +1,469 @@
+{
+  "scope_id": "JAYT-272-BATCH03-SCOPED-INTAKE",
+  "execution_state": "INTAKE_AUTHORIZED__NOT_CANDIDATE__NOT_PUBLIC",
+  "governing_directive": "JAYT-272",
+  "created_at_utc": "2026-09-03T09:15:23.037Z",
+  "closes_at_utc": "2026-09-03T17:15:23.037Z",
+  "source_ledger_path": "JAYT_BATCH_03_READINESS_LEDGER.json",
+  "source_ledger_sha256": "a4cdd41bbade1fe9230996613d4067cfaa92976ed24e194bb563889beef7e60e",
+  "immutable_rules": {
+    "mutate_source_ledger": false,
+    "public_approved": 0,
+    "render": false,
+    "feed_mutation": false,
+    "affiliate": false,
+    "production_deploy": false,
+    "on_failure": "INTAKE_FAILED__QUARANTINE"
+  },
+  "vault_path": "06_TRUST_AND_EVIDENCE/batch_03_intake_vault/",
+  "targets": [
+    {
+      "target_id": "BATCH03_HK_01",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://dut.udn.vn/KhoaCNTT/Thuvien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_02",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://danangbus.vn/lo-trinh-tuyen-r16a",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_03",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://lienchieu.danang.gov.vn/cong-vien-bau-tram",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_04",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://ued.udn.vn/ho-tro-sinh-vien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_05",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://dawaco.com.vn/tru-nuoc-uong-cong-cong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_06",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://dut.udn.vn/clb-sang-tao-tre",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HK_07",
+      "cluster": "HOA_KHANH",
+      "authorized_source_url": "https://lienchieu.danang.gov.vn/trung-tam-van-hoa-the-thao",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_01",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://nguhanhson.danang.gov.vn/pho-di-bo-an-thuong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_02",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://bqlbtdanang.vn/tram-cuu-ho-sao-bien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_03",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://danangstartup.vn/khong-gian-cong-dong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_04",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://sontra.danang.gov.vn/tai-che-cong-dong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_05",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://danang.gov.vn/giao-thong-xanh-ven-bien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_06",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://danangyouth.org.vn/clb-tieng-anh-cong-dong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_AT_07",
+      "cluster": "AN_THUONG",
+      "authorized_source_url": "https://dulichdanang.gov.vn/nghe-thuat-duong-pho",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_01",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://thuvien.danang.gov.vn/dich-vu-the-sinh-vien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_02",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://chammuseum.vn/chinh-sach-ve-sinh-vien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_03",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://haichau.danang.gov.vn/duong-sach-bach-dang",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_04",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://dti.danang.gov.vn/wifi-cong-cong-da-nang",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_05",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://yteda-nang.gov.vn/trung-tam-y-te-hai-chau",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_06",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://hoichuthapdo.danang.gov.vn/hien-mau-nhan-dao",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_HC_07",
+      "cluster": "HAI_CHAU",
+      "authorized_source_url": "https://danang.gov.vn/lich-phun-lua-cau-rong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_01",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://smartcity.danang.gov.vn/huong-dan-1022",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_02",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://opendata.danang.gov.vn/tai-nguyen-sinh-vien",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_03",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://canhbaomua.danang.gov.vn/ban-do-ngap",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_04",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://lib.udn.vn/tai-khoan-lien-ket",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_05",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://soyte.danang.gov.vn/danh-ba-nha-thuoc-247",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_06",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://danangstartup.vn/khoa-hoc-cong-dong",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    },
+    {
+      "target_id": "BATCH03_DS_07",
+      "cluster": "TIEN_ICH_SO",
+      "authorized_source_url": "https://danangbus.vn/ung-dung-danabus",
+      "evidence_field_contract": [
+        "entity_official_name",
+        "physical_address_or_portal_url",
+        "operating_schedule_hours",
+        "public_utility_benefit_description",
+        "verification_provenance_url",
+        "last_verified_system_utc"
+      ],
+      "intake_status": "AUTHORIZED_FOR_READ_ONLY_CAPTURE_ONLY",
+      "candidate_status": "NOT_A_CANDIDATE",
+      "public_approved": false
+    }
+  ]
+}

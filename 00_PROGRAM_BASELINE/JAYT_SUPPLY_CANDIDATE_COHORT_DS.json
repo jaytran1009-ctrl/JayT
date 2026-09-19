@@ -1,0 +1,91 @@
+{
+  "version": "v3.447.0-staging.ds",
+  "run_id": "RUN_20260830_DS_VAULT_1788073686428",
+  "runner": "JayT Evidence Artifact Engine v1.0.0 (Node.js/UTC)",
+  "artifact_generated_at": "2026-08-30T07:08:10.758Z",
+  "signed_at": "2026-08-30T07:08:10.858Z",
+  "governing_directive": "JAYT-245 Section DS",
+  "time_integrity_contract": {
+    "rule": "checked_at <= artifact_generated_at <= signed_at",
+    "status": "CHRONOLOGY_VERIFIED_PASS"
+  },
+  "scorecard": {
+    "DISCOVERY_LEAD": 1,
+    "CAPTURE_RETRY_REQUIRED": 1,
+    "CANONICAL_SOURCE_FOUND": 0,
+    "CAPTURE_PENDING": 3,
+    "EVIDENCE_COMPLETE": 0,
+    "PUBLIC_T2_PROGRAMME": 20,
+    "PUBLIC_T3_UTILITY": 14,
+    "PUBLIC_T4_RADAR": 16,
+    "PUBLIC_TOTAL_ACTIVE": 50,
+    "T1_DEAL_ELIGIBLE": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "CAND_BUN_CHA_CA_109",
+      "name": "Bún Chả Cá 109 Nguyễn Chí Thanh",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": null,
+      "probe_type": "CITY_PORTAL_ROOT",
+      "pipeline_stage": "DISCOVERY_LEAD",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T07:08:06.430Z",
+      "evidence_artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ds/artifact_cand_bun_cha_ca_109_city_portal_root.html",
+      "evidence_sha256": "dd18d5d46d5fbe0a9cc8f29323b043147d315150c1a248a26b5bedcfcff302fd",
+      "notes": "QUARANTINED BY DS/DR/DQ: Cổng thông tin thành phố không phải là canonical source của quán ăn. Không được tính là supply/evidence."
+    },
+    {
+      "candidate_id": "CAND_COM_GA_A_HAI",
+      "name": "Cơm Gà A Hải",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": "https://www.facebook.com/comgaahaidanang/",
+      "probe_type": "SOCIAL_PROFILE_SHELL",
+      "pipeline_stage": "CAPTURE_RETRY_REQUIRED",
+      "subject_match_verified": false,
+      "checked_at": "2026-08-30T07:08:09.223Z",
+      "evidence_artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ds/artifact_cand_com_ga_a_hai_facebook_shell.html",
+      "evidence_sha256": "d89fff9b319c7a71c402d33843bfcd403bf575e5dd0bdfa627cda2a6273b5fcd",
+      "notes": "QUARANTINED BY DS/DR: Fanpage Facebook bị chặn bới dynamic script/login wall. Không thể trích xuất menu/giá niêm yết."
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUT",
+      "name": "Trung Tâm Học Liệu & Truyền Thông ĐH Bách Khoa ĐN",
+      "locality": "Quận Liên Chiểu",
+      "canonical_source_url": "http://lib.dut.udn.vn/primo-explore/search?vid=dut",
+      "probe_type": "CAMPUS_PORTAL",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "subject_match_verified": true,
+      "checked_at": "2026-08-30T07:08:09.592Z",
+      "evidence_artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ds/artifact_cand_thu_vien_dut_catalog.html",
+      "evidence_sha256": "4cb75cbe95a5705f8e20fdd3bb5f9c737d0403a58d13b8d0c5f4461c8af115ac",
+      "notes": "Đã lưu artifact raw OPAC ĐHBK. Cần bổ sung capture văn bản quy chế mở cửa cho sinh viên ngoài trường."
+    },
+    {
+      "candidate_id": "CAND_THU_VIEN_DUND",
+      "name": "Trung Tâm Học Liệu Đại Học Đà Nẵng",
+      "locality": "Quận Hải Châu",
+      "canonical_source_url": "https://www.udn.vn/",
+      "probe_type": "CAMPUS_PORTAL",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "subject_match_verified": true,
+      "checked_at": "2026-08-30T07:08:09.886Z",
+      "evidence_artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ds/artifact_cand_thu_vien_dund_portal.html",
+      "evidence_sha256": "876f6967a9ac696c4a8cec93d6cc2ab9477d43faa21650cd43132356a5100e1d",
+      "notes": "Đã lưu artifact cổng ĐHĐN. Cần đối soát quy định thẻ thư viện liên trường."
+    },
+    {
+      "candidate_id": "CAND_BUS_R16A",
+      "name": "Tuyến Buýt Trợ Giá R16A (Bến xe TT - Kim Liên)",
+      "locality": "Liên Chiểu - Cẩm Lệ",
+      "canonical_source_url": "https://www.danangbus.vn/",
+      "probe_type": "TRANSIT_PORTAL",
+      "pipeline_stage": "CAPTURE_PENDING",
+      "subject_match_verified": true,
+      "checked_at": "2026-08-30T07:08:10.372Z",
+      "evidence_artifact_ref": "07_QUALITY_ASSURANCE/evidence_vault_ds/artifact_cand_bus_r16a_transit_portal.html",
+      "evidence_sha256": "db237f074590e2d8ac299ff0522b8bc35b4ce9bd43738e3fcdf7289321660109",
+      "notes": "Đã lưu artifact trang chủ DanangBus. Cần capture biểu đồ giờ chạy tuyến R16A năm 2026."
+    }
+  ]
+}

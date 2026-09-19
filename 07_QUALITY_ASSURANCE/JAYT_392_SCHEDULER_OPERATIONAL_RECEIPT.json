@@ -1,0 +1,64 @@
+{
+  "$schema": "https://jayt.vn/schemas/j392-scheduler-operational-receipt.v1.json",
+  "receipt_id": "JAYT_392_SCHEDULER_OPERATIONAL_RECEIPT",
+  "work_order": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "issued_at_utc": "2026-09-11T06:24:12.520Z",
+  "target_host": {
+    "hostname": "JAY",
+    "platform": "win32",
+    "os_version": "Windows 11 Home Single Language (10.0.26100)",
+    "execution_account": "tritr",
+    "privilege_level": "STANDARD_USER_INTERACTIVE_TOKEN"
+  },
+  "scheduled_task": {
+    "task_name": "JayT_Autonomous_Catalog_Monitor_4H",
+    "task_path": "\\",
+    "task_state": "Ready",
+    "recurrence_interval": "PT4H (Every 4 Hours)",
+    "start_boundary_local": "2026-09-11 13:23:00",
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "arguments": "\"D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\scripts\\j392_scheduler_runner.cjs\"",
+    "last_run_time_local": "2026-09-11 13:23:12",
+    "last_task_result_code": 0,
+    "last_task_result_status": "SUCCESS"
+  },
+  "registered_artifacts": {
+    "runner_script": {
+      "relative_path": "scripts/j392_scheduler_runner.cjs",
+      "sha256": "d10d465ac875cac4ba3b71a16cc728892ba2763446fcc0baae96ca9062babd2b",
+      "bytes": 2415
+    },
+    "task_registration_xml": {
+      "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/jayt_scheduler_task_export.xml",
+      "sha256": "5041b5e14b7195a01cd45dfb708767bee0e4362ab5340f3d9511b7e8ac9d3857",
+      "bytes": 1418
+    },
+    "append_only_audit_log": {
+      "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log",
+      "sha256": "72542aab3f64a07889b7f8bb1de71d0b72a381dc39a459e7f33234b013954cdb",
+      "bytes": 1056
+    }
+  },
+  "scheduled_run_evidence": {
+    "trigger_method": "WINDOWS_SCHEDULED_TASK_ENGINE_TRIGGERED",
+    "execution_pid": 18172,
+    "parent_pid": 3320,
+    "start_utc": "2026-09-11T06:23:12.542Z",
+    "end_utc": "2026-09-11T06:23:12.547Z",
+    "duration_ms": 5,
+    "fixed_input_item_count": 10,
+    "assets_verified_count": 10,
+    "status": "HEALTHY",
+    "exit_code": 0
+  },
+  "compliance_assertions": {
+    "autonomous_registration_verified": true,
+    "scheduled_task_engine_dispatched": true,
+    "manual_launch_simulation_rejected": true,
+    "least_privilege_enforced": true,
+    "zero_secrets_outside_account": true,
+    "zero_automatic_factual_publication": true,
+    "append_only_audit_log_persisted": true
+  },
+  "verdict": "JAYT_392_OS_SCHEDULER_OPERATIONAL_VERIFIED_PASS"
+}

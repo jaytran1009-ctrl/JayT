@@ -1,0 +1,1375 @@
+{
+  "manifest_id": "BATCH_CAPTURE_141T_MANIFEST",
+  "directive": "JAYT-141T — SEMANTIC INTEGRITY REPAIR BEFORE AUTONOMOUS ACTIVATION",
+  "generated_at": "2026-08-26T18:16:16.830Z",
+  "governance_statement": "Áp dụng Bounded Semantic Normalizer bảo toàn 100% banner ưu đãi và giờ hoạt động (HH:MM:SS). Structured Snapshot: 1 UNCHANGED_IDENTICAL, 10 UNCHANGED_RENDER_VARIATION, 3 SEMANTIC_CHANGED_REVIEW_REQUIRED, 0 OFFER_RELEVANT_DELTA, 1 HTTP_ERROR_BACKOFF. Zero deal gán VERIFIED. Production locked.",
+  "streams_summary": {
+    "fresh_sources_monitored": 15,
+    "community_signals_queued": 0,
+    "inbound_submissions": 0
+  },
+  "semantic_integrity_summary": {
+    "total_sources_in_registry": 15,
+    "unchanged_identical_count": 1,
+    "unchanged_render_variation_count": 10,
+    "semantic_changed_review_count": 3,
+    "offer_relevant_delta_count": 0,
+    "http_error_backoff_count": 1,
+    "metric_conservation_check": 15
+  },
+  "summary_metrics": {
+    "total_targets_evaluated": 15,
+    "evidence_bundle_candidates_count": 0,
+    "discovery_only_listing_count": 5,
+    "incomplete_count": 9,
+    "blocked_or_error_count": 1,
+    "metric_conservation_check": 15,
+    "automated_staging_gate_evaluation": {
+      "min_candidates_met": false,
+      "min_cohorts_met": false,
+      "min_days_met": false,
+      "decision_verdict": "CONTINUE_ACQUISITION"
+    }
+  },
+  "safe_community_feed": {
+    "layer_1_verified_deals": {
+      "badge": "🟢 ĐÃ ĐỐI SOÁT",
+      "count": 0,
+      "bundles": []
+    },
+    "layer_2_monitored_sources": {
+      "badge": "🟣 NGUỒN ĐANG THEO DÕI",
+      "count": 15,
+      "sources": [
+        {
+          "source_id": "SRC_141_01",
+          "brand_name": "CGV Cinemas Vietnam",
+          "canonical_url": "https://www.cgv.vn/default/newsoffer/",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "82f50b8da5b170da42c8cdcce25b5646350cfb947757c8e2bbb7e2490d8c94a9",
+          "semantic_content_sha256": "2872f026d3616c8bde124741038aa54271f8c1a3d1a3a10bff0f991b742670fc",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_02",
+          "brand_name": "Starlight Cinema Vietnam",
+          "canonical_url": "https://starlight.vn/uu-dai.html",
+          "state": "UNCHANGED_IDENTICAL",
+          "raw_html_sha256": "40463cf5087117930ddb792deab0cdede014bb7c68912eed4008feb7fd2b45e1",
+          "semantic_content_sha256": "328844b3dd70dd17cb2881708d10867e086156dec83e43a96708739183260329",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_03",
+          "brand_name": "Galaxy Cinema Vietnam",
+          "canonical_url": "https://www.galaxycine.vn/khuyen-mai/",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "8aebca84ec00b68ea5b72f52feac69eaa8654ec3f71c9396142529cbd93b3c65",
+          "semantic_content_sha256": "441d437e72150690f301a526016c88c3c1f64bddc30d40da6f553fc420faedc1",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_04",
+          "brand_name": "Metiz Cinema Da Nang",
+          "canonical_url": "https://metiz.vn/khuyen-mai/",
+          "state": "HTTP_ERROR_BACKOFF",
+          "raw_html_sha256": "96c618a43f043c779e46133831854f2f260f39f0d9e7c6f1979d62a1956a5b35",
+          "semantic_content_sha256": null,
+          "next_check_due": "2026-09-02T17:58:20.788Z",
+          "normalizer_version": "N/A",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_05",
+          "brand_name": "Lotte Cinema Vietnam",
+          "canonical_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "0a4f6b7148ccc120e29b608887faf044f80f2090ab93004ab58cd2500a9ce2b8",
+          "semantic_content_sha256": "42ff2f4e7acf0ef29d76d2a56693a58c06b512d9b948d30c3d0e0e86713745b9",
+          "next_check_due": "2026-08-27T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_06",
+          "brand_name": "KFC Vietnam",
+          "canonical_url": "https://kfcvietnam.com.vn/khuyen-mai",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "977a598782fddae3e045f4f7fdd937b3731650d88ea8cebe4fd7b4d5c02b6670",
+          "semantic_content_sha256": "4182297a836374208040d5e63574ff5422cad8eebc0fcf2799618c0c82c480b4",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_07",
+          "brand_name": "Jollibee Vietnam",
+          "canonical_url": "https://jollibee.com.vn/khuyen-mai",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "264c2175a9fde9731e23924be7d66c755d2267a4c87c01614b914346bbc1b34a",
+          "semantic_content_sha256": "08f68575d13384884b52fe2f1b889f8485c0341a91bc7cf89992af7d8cd62cac",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_08",
+          "brand_name": "Lotteria Vietnam",
+          "canonical_url": "https://www.lotteria.vn/khuyen-mai",
+          "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+          "raw_html_sha256": "699ec12576d5a5aaeb79dda94df009cfa5cbf13654403bb1e719dc4b5d1b9742",
+          "semantic_content_sha256": "e03a8d609aac7602beb37e05c9b25d4be27112beea5dbba6d15656f208d58cb0",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_09",
+          "brand_name": "Domino's Pizza Vietnam",
+          "canonical_url": "https://dominos.vn/khuyen-mai",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "eacbff06174b34f7f1e991cf79ad18582b679809b460f4ecf7d56eb2ffeb95ea",
+          "semantic_content_sha256": "ed8ddfad723955f606f0eb9adb1ff8cc4265cbdc967b42269a25743af85acfa2",
+          "next_check_due": "2026-08-27T06:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_10",
+          "brand_name": "Highlands Coffee",
+          "canonical_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "13141ee072a4f3db4e6b78d1afaad8176b3973554abe09a7240c4f80ec4c684d",
+          "semantic_content_sha256": "8b3ef93db8eceac4ea8926101abdc2cdcf3096e4b972e8c3d2d55215b500a32d",
+          "next_check_due": "2026-08-27T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_11",
+          "brand_name": "DanaBus Da Nang",
+          "canonical_url": "https://danangbus.vn/bieu-gia-ve.html",
+          "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+          "raw_html_sha256": "682649cce8e0734407eae62550a49c658fd587f45134249a61fb3774d0f4bd4f",
+          "semantic_content_sha256": "80fc6396740ac84920529f3cdb78a422069f74583675551a04fa14206a9b1a21",
+          "next_check_due": "2026-08-28T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_12",
+          "brand_name": "Đường Sắt Việt Nam (DSVN)",
+          "canonical_url": "https://dsvn.vn/",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "c9f2825b72c01fdb395007282116fdb5c3be851fb03ea5cd186a39faaf53ae89",
+          "semantic_content_sha256": "7003de5129e044426d1d2642021531727ae1a2c1c9f082bed6b532b7c1c08152",
+          "next_check_due": "2026-08-28T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_13",
+          "brand_name": "GitHub Education",
+          "canonical_url": "https://education.github.com/pack",
+          "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+          "raw_html_sha256": "c8130e1d4786089435f315edb3582dfc4424ad996ead6fb3c990d4238479422a",
+          "semantic_content_sha256": "badf2a1bf0a6115a7321eb111c43a3ea3f6ea4e67abf4cbaa8f513df604eca78",
+          "next_check_due": "2026-08-29T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_14",
+          "brand_name": "Spotify Vietnam Student",
+          "canonical_url": "https://www.spotify.com/vn-vi/student/",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "3b78370098dd78f677ad01f144a3e4518d2bda3938e5622301bc19596eb83df5",
+          "semantic_content_sha256": "171232d745645646de2b555a36646109dab97e0250e9705fa2ba8927a38625a3",
+          "next_check_due": "2026-08-29T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        },
+        {
+          "source_id": "SRC_141_15",
+          "brand_name": "Notion Education",
+          "canonical_url": "https://www.notion.so/product/notion-for-education",
+          "state": "UNCHANGED_RENDER_VARIATION",
+          "raw_html_sha256": "82797884ffef55f11307d23d989e37191a44712c9700ef00fecd4c3c3eb8a880",
+          "semantic_content_sha256": "588434cf12626a08b4c6e72b244bc773b811546d47a5dd8b8f01ddfb19c0a36d",
+          "next_check_due": "2026-08-29T18:06:11.959Z",
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "disclaimer": "Nguồn chính thức đang được theo dõi định kỳ qua Bounded Semantic Normalizer."
+        }
+      ]
+    },
+    "layer_3_verified_venues": {
+      "badge": "🔵 ĐỊA ĐIỂM XÁC MINH",
+      "count": 12,
+      "disclaimer": "Địa chỉ cơ sở kinh doanh đã xác minh tại Đà Nẵng; không hiển thị giá, mã hoặc nút đặt hàng giả định."
+    }
+  },
+  "state_categorization": {
+    "unchanged_identical": [
+      {
+        "source_id": "SRC_141_02",
+        "cohort": "COHORT_1_CINEMA_DANANG",
+        "brand_name": "Starlight Cinema Vietnam",
+        "canonical_url": "https://starlight.vn/uu-dai.html",
+        "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_IDENTICAL",
+        "diff_reason": "Both raw HTML and semantic snapshot are 100% byte-for-byte identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "40463cf5087117930ddb792deab0cdede014bb7c68912eed4008feb7fd2b45e1",
+          "raw_html_current_sha256": "40463cf5087117930ddb792deab0cdede014bb7c68912eed4008feb7fd2b45e1",
+          "semantic_content_baseline_sha256": "328844b3dd70dd17cb2881708d10867e086156dec83e43a96708739183260329",
+          "semantic_content_current_sha256": "328844b3dd70dd17cb2881708d10867e086156dec83e43a96708739183260329"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "328844b3dd70dd17cb2881708d10867e086156dec83e43a96708739183260329",
+          "visible_text_length": 1873,
+          "canonical_offer_links_count": 17,
+          "offer_blocks_count": 5,
+          "visible_text_sample": "Các Ưu Đãi Khi Xem Phim Tại Rạp Phim Starlight\nFAQ's\nĐăng nhập\nĐăng ký\nMENU\nTrang chủ\nLịch chiếu\nPhim\n►\nPhim Đang Chiếu\nPhim Sắp Chiếu\nKhuyến Mãi\nĐiện Ảnh\nLiên hệ\nTuyển dụng\nTrang chủ\nLịch chiếu\nPhim\nPhim Đang Chiếu\nPhim Sắp Chiếu\nKhuyến Mãi\nĐiện Ảnh\nLiên hệ\nTuyển dụng\nBắp Vui Mê Ly – Quà Minions Ma",
+          "canonical_offer_links": [
+            "/uu-dai.html",
+            "/uu-dai/bang-gia-rap-gold-1033.html",
+            "/uu-dai/bang-gia-ve-ap-dung-hien-hanh-cac-rap-starlight-cinema-1043.html",
+            "/uu-dai/bang-gia-ve-starlight-kid-18.html",
+            "/uu-dai/bap-vui-me-ly-–-qua-minions-mang-di-1065.html",
+            "/uu-dai/chuong-trinh-thanh-vien-starlight-17.html",
+            "/uu-dai/ct-u22-rap-starlight-1047.html",
+            "/uu-dai/dia-chi-rap-1034.html",
+            "/uu-dai/happy-family-kids-day-1053.html",
+            "/uu-dai/hop-bap-2-ngan-16.html",
+            "/uu-dai/ket-qua-quay-so-1062.html",
+            "/uu-dai/ngay-thu-2-truyen-thong-giam-den-50-tai-starlight-3.html",
+            "/uu-dai/thong-bao-tien-hanh-reset-diem-theo-thong-le-nam-2024-1044.html",
+            "/uu-dai/thu-3-phim-viet-1046.html",
+            "/uu-dai/thu-5-thanh-vien-2.html",
+            "/uu-dai/uu-dai-combo-sieu-tiet-kiem-26.html",
+            "/uu-dai/🌞-he-ron-rang-deal-10k-san-sang-🌞-1064.html"
+          ],
+          "offer_blocks": [
+            {
+              "title": "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+              "price": "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "THỨ 3 PHIM VIỆT",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 3 PHIM VIỆT",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI COMBO SIÊU TIẾT KIỆM",
+              "price": null,
+              "terms": null,
+              "validity": "NGÀY THỨ 2 TRUYỀN THỐNG GIẢM ĐẾN 50% TẠI STARLIGHT",
+              "scope": null
+            },
+            {
+              "title": "THỨ 5 THÀNH VIÊN",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 5 THÀNH VIÊN",
+              "scope": "Cơ quan cấp : Phòng Đăng ký kinh doanh - Sở kế hoạch và đầu tư Thành phố Đà Nẵng"
+            },
+            {
+              "title": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam",
+              "price": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam",
+              "terms": null,
+              "validity": null,
+              "scope": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam"
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "328844b3dd70dd17cb2881708d10867e086156dec83e43a96708739183260329",
+          "visible_text_length": 1873,
+          "canonical_offer_links_count": 17,
+          "offer_blocks_count": 5,
+          "visible_text_sample": "Các Ưu Đãi Khi Xem Phim Tại Rạp Phim Starlight\nFAQ's\nĐăng nhập\nĐăng ký\nMENU\nTrang chủ\nLịch chiếu\nPhim\n►\nPhim Đang Chiếu\nPhim Sắp Chiếu\nKhuyến Mãi\nĐiện Ảnh\nLiên hệ\nTuyển dụng\nTrang chủ\nLịch chiếu\nPhim\nPhim Đang Chiếu\nPhim Sắp Chiếu\nKhuyến Mãi\nĐiện Ảnh\nLiên hệ\nTuyển dụng\nBắp Vui Mê Ly – Quà Minions Ma",
+          "canonical_offer_links": [
+            "/uu-dai.html",
+            "/uu-dai/bang-gia-rap-gold-1033.html",
+            "/uu-dai/bang-gia-ve-ap-dung-hien-hanh-cac-rap-starlight-cinema-1043.html",
+            "/uu-dai/bang-gia-ve-starlight-kid-18.html",
+            "/uu-dai/bap-vui-me-ly-–-qua-minions-mang-di-1065.html",
+            "/uu-dai/chuong-trinh-thanh-vien-starlight-17.html",
+            "/uu-dai/ct-u22-rap-starlight-1047.html",
+            "/uu-dai/dia-chi-rap-1034.html",
+            "/uu-dai/happy-family-kids-day-1053.html",
+            "/uu-dai/hop-bap-2-ngan-16.html",
+            "/uu-dai/ket-qua-quay-so-1062.html",
+            "/uu-dai/ngay-thu-2-truyen-thong-giam-den-50-tai-starlight-3.html",
+            "/uu-dai/thong-bao-tien-hanh-reset-diem-theo-thong-le-nam-2024-1044.html",
+            "/uu-dai/thu-3-phim-viet-1046.html",
+            "/uu-dai/thu-5-thanh-vien-2.html",
+            "/uu-dai/uu-dai-combo-sieu-tiet-kiem-26.html",
+            "/uu-dai/🌞-he-ron-rang-deal-10k-san-sang-🌞-1064.html"
+          ],
+          "offer_blocks": [
+            {
+              "title": "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+              "price": "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "THỨ 3 PHIM VIỆT",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 3 PHIM VIỆT",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI COMBO SIÊU TIẾT KIỆM",
+              "price": null,
+              "terms": null,
+              "validity": "NGÀY THỨ 2 TRUYỀN THỐNG GIẢM ĐẾN 50% TẠI STARLIGHT",
+              "scope": null
+            },
+            {
+              "title": "THỨ 5 THÀNH VIÊN",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 5 THÀNH VIÊN",
+              "scope": "Cơ quan cấp : Phòng Đăng ký kinh doanh - Sở kế hoạch và đầu tư Thành phố Đà Nẵng"
+            },
+            {
+              "title": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam",
+              "price": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam",
+              "terms": null,
+              "validity": null,
+              "scope": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam"
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/fresh_captures_140r/receipts/RECEIPT_SRC_140R_02_1787767079632.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_02_1787767574473.json"
+        }
+      }
+    ],
+    "unchanged_render_variation": [
+      {
+        "source_id": "SRC_141_01",
+        "cohort": "COHORT_1_CINEMA_DANANG",
+        "brand_name": "CGV Cinemas Vietnam",
+        "canonical_url": "https://www.cgv.vn/default/newsoffer/",
+        "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "1b2be73471d753bbaa2d07b4acc74743dd6dafd90d9e1439ea2aa4a86b8e71e8",
+          "raw_html_current_sha256": "82f50b8da5b170da42c8cdcce25b5646350cfb947757c8e2bbb7e2490d8c94a9",
+          "semantic_content_baseline_sha256": "2872f026d3616c8bde124741038aa54271f8c1a3d1a3a10bff0f991b742670fc",
+          "semantic_content_current_sha256": "2872f026d3616c8bde124741038aa54271f8c1a3d1a3a10bff0f991b742670fc"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "2872f026d3616c8bde124741038aa54271f8c1a3d1a3a10bff0f991b742670fc",
+          "visible_text_length": 2935,
+          "canonical_offer_links_count": 1,
+          "offer_blocks_count": 3,
+          "visible_text_sample": "Tin Khuyến Mãi Và Ưu Đãi Hấp Dẫn Tại CGV Cinemas Việt Nam\nTin mới & Ưu đãi\nVé Của Tôi\nEN\nVN\nĐăng nhập/ Đăng ký\nMenu\nĐăng nhập/ Đăng ký\nPhim\nPhim Đang Chiếu\nPhim Sắp Chiếu\nRạp CGV\nTất Cả Các Rạp\nRạp Đặc Biệt\nRạp 3D\nThành viên\nTài khoản CGV\nQuyền lợi\nCultureplex\nQuầy Online\nThuê Rạp & Vé Nhóm\nCGV eGif",
+          "canonical_offer_links": [
+            "https://www.cgv.vn/default/newsoffer/uu-dai-online/"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Vé Của Tôi",
+              "price": null,
+              "terms": null,
+              "validity": "02/09/2026",
+              "scope": null
+            },
+            {
+              "title": "Thứ 2 Cuối Cùng Mỗi Tháng",
+              "price": null,
+              "terms": null,
+              "validity": "Thứ 2 Cuối Cùng Mỗi Tháng",
+              "scope": null
+            },
+            {
+              "title": "THỨ 4 VUI VẺ",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 4 VUI VẺ",
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "2872f026d3616c8bde124741038aa54271f8c1a3d1a3a10bff0f991b742670fc",
+          "visible_text_length": 2935,
+          "canonical_offer_links_count": 1,
+          "offer_blocks_count": 3,
+          "visible_text_sample": "Tin Khuyến Mãi Và Ưu Đãi Hấp Dẫn Tại CGV Cinemas Việt Nam\nTin mới & Ưu đãi\nVé Của Tôi\nEN\nVN\nĐăng nhập/ Đăng ký\nMenu\nĐăng nhập/ Đăng ký\nPhim\nPhim Đang Chiếu\nPhim Sắp Chiếu\nRạp CGV\nTất Cả Các Rạp\nRạp Đặc Biệt\nRạp 3D\nThành viên\nTài khoản CGV\nQuyền lợi\nCultureplex\nQuầy Online\nThuê Rạp & Vé Nhóm\nCGV eGif",
+          "canonical_offer_links": [
+            "https://www.cgv.vn/default/newsoffer/uu-dai-online/"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Vé Của Tôi",
+              "price": null,
+              "terms": null,
+              "validity": "02/09/2026",
+              "scope": null
+            },
+            {
+              "title": "Thứ 2 Cuối Cùng Mỗi Tháng",
+              "price": null,
+              "terms": null,
+              "validity": "Thứ 2 Cuối Cùng Mỗi Tháng",
+              "scope": null
+            },
+            {
+              "title": "THỨ 4 VUI VẺ",
+              "price": null,
+              "terms": null,
+              "validity": "THỨ 4 VUI VẺ",
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_01_1787767575864.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_01_1787767575864.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_03",
+        "cohort": "COHORT_1_CINEMA_DANANG",
+        "brand_name": "Galaxy Cinema Vietnam",
+        "canonical_url": "https://www.galaxycine.vn/khuyen-mai/",
+        "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "fbe954d41146b7d958fabd400f26874c5ffdb187883a8d778cd1c9b7e3a2826a",
+          "raw_html_current_sha256": "8aebca84ec00b68ea5b72f52feac69eaa8654ec3f71c9396142529cbd93b3c65",
+          "semantic_content_baseline_sha256": "441d437e72150690f301a526016c88c3c1f64bddc30d40da6f553fc420faedc1",
+          "semantic_content_current_sha256": "441d437e72150690f301a526016c88c3c1f64bddc30d40da6f553fc420faedc1"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "441d437e72150690f301a526016c88c3c1f64bddc30d40da6f553fc420faedc1",
+          "visible_text_length": 4450,
+          "canonical_offer_links_count": 18,
+          "offer_blocks_count": 5,
+          "visible_text_sample": "Khuyến mãi mới nhất\nPhim\nPhim đang chiếu\nMua vé\n9\nT13\nHộ Linh Tráng Sĩ - Bí Ẩn Mộ Vua Đinh\nMua vé\n8.8\nT16\nQuỷ Quyệt: Ranh Giới Vô Định\nMua vé\n9.6\nChiikawa: Bí Mật Đảo Người Cá\nMua vé\n9.5\nT13\nNgười Nhện: Khởi Đầu Mới\nPhim sắp chiếu\nMua vé\n8.7\nK\nQuý Tử Vượt Giàu\nMua vé\n8.3\nSiêu Chó Đạp Gió Đón Lễ",
+          "canonical_offer_links": [
+            "/khuyen-mai/",
+            "/khuyen-mai/bap-ngot-vi-com--huong-vi-mua-thu-ha-noi-giua-long-rap-chieu/",
+            "/khuyen-mai/cine-chao-summer--dam-minh-trong-sac-mau-mua-he/",
+            "/khuyen-mai/dat-ve-phim-tren-zalopay-giam-50--tich-xu-doi-qua-doc-quyen/",
+            "/khuyen-mai/galaxy-cinema-x-kfc-tang-den-100k/",
+            "/khuyen-mai/galaxy-cinex---hanoi-centre-man-nhan-voi-khong-gian-man-vi-voi-menu-tiec-khai-truong-dang-cap/",
+            "/khuyen-mai/galaxy-cinex-aeon-mall-thanh-khe-rap-moi---phim-hay---qua-da-tay/",
+            "/khuyen-mai/giam-30k-khi-thanh-toan-bang-ung-dung-vpbank-neo-tai-galaxy-cinema/",
+            "/khuyen-mai/hai-combo-conan-mung-tham-tu-lung-danh-tro-lai/",
+            "/khuyen-mai/happy-day---ve-chi-tu-45k/",
+            "/khuyen-mai/mien-phi-ve-xem-phim-tai-galaxy-cineo-vincom-dan-phuong/",
+            "/khuyen-mai/mung-chuoi-vang-tro-lai-san-lien-minions/",
+            "/khuyen-mai/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang/",
+            "/khuyen-mai/qua-tang-mung-quoc-khanh-29--tu-hao-viet-nam/",
+            "/khuyen-mai/tin-do-so-co-la-bat-song-vi-ngot-ovaltine-nang-tam-trai-nghiem-xem-phim-tai-galaxy/",
+            "/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+            "/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+            "/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Ưu đãi",
+              "price": null,
+              "terms": null,
+              "validity": "Quà Tặng Mừng Quốc Khánh 2/9 – Tự Hào Việt Nam",
+              "scope": null
+            },
+            {
+              "title": "Galaxy Cinema x KFC Tặng Đến 100K",
+              "price": "Galaxy Cinema x KFC Tặng Đến 100K",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+              "price": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Happy Day - Vé Chỉ Từ 45K",
+              "price": "Happy Day - Vé Chỉ Từ 45K",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+              "price": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+              "terms": null,
+              "validity": "3/9 Võ Văn Tần, Phường Xuân Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "441d437e72150690f301a526016c88c3c1f64bddc30d40da6f553fc420faedc1",
+          "visible_text_length": 4450,
+          "canonical_offer_links_count": 18,
+          "offer_blocks_count": 5,
+          "visible_text_sample": "Khuyến mãi mới nhất\nPhim\nPhim đang chiếu\nMua vé\n9\nT13\nHộ Linh Tráng Sĩ - Bí Ẩn Mộ Vua Đinh\nMua vé\n8.8\nT16\nQuỷ Quyệt: Ranh Giới Vô Định\nMua vé\n9.6\nChiikawa: Bí Mật Đảo Người Cá\nMua vé\n9.5\nT13\nNgười Nhện: Khởi Đầu Mới\nPhim sắp chiếu\nMua vé\n8.7\nK\nQuý Tử Vượt Giàu\nMua vé\n8.3\nSiêu Chó Đạp Gió Đón Lễ",
+          "canonical_offer_links": [
+            "/khuyen-mai/",
+            "/khuyen-mai/bap-ngot-vi-com--huong-vi-mua-thu-ha-noi-giua-long-rap-chieu/",
+            "/khuyen-mai/cine-chao-summer--dam-minh-trong-sac-mau-mua-he/",
+            "/khuyen-mai/dat-ve-phim-tren-zalopay-giam-50--tich-xu-doi-qua-doc-quyen/",
+            "/khuyen-mai/galaxy-cinema-x-kfc-tang-den-100k/",
+            "/khuyen-mai/galaxy-cinex---hanoi-centre-man-nhan-voi-khong-gian-man-vi-voi-menu-tiec-khai-truong-dang-cap/",
+            "/khuyen-mai/galaxy-cinex-aeon-mall-thanh-khe-rap-moi---phim-hay---qua-da-tay/",
+            "/khuyen-mai/giam-30k-khi-thanh-toan-bang-ung-dung-vpbank-neo-tai-galaxy-cinema/",
+            "/khuyen-mai/hai-combo-conan-mung-tham-tu-lung-danh-tro-lai/",
+            "/khuyen-mai/happy-day---ve-chi-tu-45k/",
+            "/khuyen-mai/mien-phi-ve-xem-phim-tai-galaxy-cineo-vincom-dan-phuong/",
+            "/khuyen-mai/mung-chuoi-vang-tro-lai-san-lien-minions/",
+            "/khuyen-mai/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang/",
+            "/khuyen-mai/qua-tang-mung-quoc-khanh-29--tu-hao-viet-nam/",
+            "/khuyen-mai/tin-do-so-co-la-bat-song-vi-ngot-ovaltine-nang-tam-trai-nghiem-xem-phim-tai-galaxy/",
+            "/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+            "/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+            "/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Ưu đãi",
+              "price": null,
+              "terms": null,
+              "validity": "Quà Tặng Mừng Quốc Khánh 2/9 – Tự Hào Việt Nam",
+              "scope": null
+            },
+            {
+              "title": "Galaxy Cinema x KFC Tặng Đến 100K",
+              "price": "Galaxy Cinema x KFC Tặng Đến 100K",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+              "price": "Voucher ShopeePay Giảm Đến 50K Dành Tặng Các Stars!",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Happy Day - Vé Chỉ Từ 45K",
+              "price": "Happy Day - Vé Chỉ Từ 45K",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+              "price": "Giảm 30k Khi Thanh Toán Bằng Ứng Dụng VPBank NEO Tại Galaxy Cinema",
+              "terms": null,
+              "validity": "3/9 Võ Văn Tần, Phường Xuân Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_03_1787767575029.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_03_1787767575029.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_05",
+        "cohort": "COHORT_1_CINEMA_DANANG",
+        "brand_name": "Lotte Cinema Vietnam",
+        "canonical_url": "https://www.lottecinemavn.com/LCHS/Contents/Event/Event-List.aspx",
+        "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+        "check_interval_hours": 24,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "f5f571bc7aa241a9999401ef360d2a093886bf262f00bea23b4bb53769c08d26",
+          "raw_html_current_sha256": "0a4f6b7148ccc120e29b608887faf044f80f2090ab93004ab58cd2500a9ce2b8",
+          "semantic_content_baseline_sha256": "42ff2f4e7acf0ef29d76d2a56693a58c06b512d9b948d30c3d0e0e86713745b9",
+          "semantic_content_current_sha256": "42ff2f4e7acf0ef29d76d2a56693a58c06b512d9b948d30c3d0e0e86713745b9"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "42ff2f4e7acf0ef29d76d2a56693a58c06b512d9b948d30c3d0e0e86713745b9",
+          "visible_text_length": 1951,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Khuyến Mãi | Tặng Quà | Free | Promotion | Giảm Giá | Lotte Cinema\nChuyển đến phần thân\nLotte Cinema APP\nLotte Cinema Facebook\nTin tức mới nhất, sự kiện xem trước!\nĐăng nhập\nThẻ thành viên\nHỗ trợ khách hàng\nENGLISH\nTrước khi đăng nhập\nMUA VÉ\nMUA VÉ XEM PHIM\nLỊCH CHIẾU PHIM\nMOVIE TALK\nPHIM HOT TẠI RẠ",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Khuyến Mãi | Tặng Quà | Free | Promotion | Giảm Giá | Lotte Cinema",
+              "price": null,
+              "terms": null,
+              "validity": "16/08/2026 ~ 17/09/2026",
+              "scope": "Đà Nẵng"
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "42ff2f4e7acf0ef29d76d2a56693a58c06b512d9b948d30c3d0e0e86713745b9",
+          "visible_text_length": 1951,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Khuyến Mãi | Tặng Quà | Free | Promotion | Giảm Giá | Lotte Cinema\nChuyển đến phần thân\nLotte Cinema APP\nLotte Cinema Facebook\nTin tức mới nhất, sự kiện xem trước!\nĐăng nhập\nThẻ thành viên\nHỗ trợ khách hàng\nENGLISH\nTrước khi đăng nhập\nMUA VÉ\nMUA VÉ XEM PHIM\nLỊCH CHIẾU PHIM\nMOVIE TALK\nPHIM HOT TẠI RẠ",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Khuyến Mãi | Tặng Quà | Free | Promotion | Giảm Giá | Lotte Cinema",
+              "price": null,
+              "terms": null,
+              "validity": "16/08/2026 ~ 17/09/2026",
+              "scope": "Đà Nẵng"
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_05_1787767580629.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_05_1787767580629.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_06",
+        "cohort": "COHORT_2_FNB_DANANG",
+        "brand_name": "KFC Vietnam",
+        "canonical_url": "https://kfcvietnam.com.vn/khuyen-mai",
+        "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "e739cfd186123ec17122db8ee38d31b06c0b96a52ff8ee89f466952f93a956a5",
+          "raw_html_current_sha256": "977a598782fddae3e045f4f7fdd937b3731650d88ea8cebe4fd7b4d5c02b6670",
+          "semantic_content_baseline_sha256": "4182297a836374208040d5e63574ff5422cad8eebc0fcf2799618c0c82c480b4",
+          "semantic_content_current_sha256": "4182297a836374208040d5e63574ff5422cad8eebc0fcf2799618c0c82c480b4"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "4182297a836374208040d5e63574ff5422cad8eebc0fcf2799618c0c82c480b4",
+          "visible_text_length": 198,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Đặt Hàng Món Gà Rán KFC | KFC Việt Nam\nKFC\nRẤT TIẾC! CHÚNG TÔI XIN LỖI\nTrang bạn đang truy cập có thể đã bị xóa, đã thay đổi tên hoặc tạm thời không có. Bắt đầu đặt hàng\nCopyright © 2023 KFC Vietnam",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "4182297a836374208040d5e63574ff5422cad8eebc0fcf2799618c0c82c480b4",
+          "visible_text_length": 198,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Đặt Hàng Món Gà Rán KFC | KFC Việt Nam\nKFC\nRẤT TIẾC! CHÚNG TÔI XIN LỖI\nTrang bạn đang truy cập có thể đã bị xóa, đã thay đổi tên hoặc tạm thời không có. Bắt đầu đặt hàng\nCopyright © 2023 KFC Vietnam",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_06_1787767578461.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_06_1787767578461.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_07",
+        "cohort": "COHORT_2_FNB_DANANG",
+        "brand_name": "Jollibee Vietnam",
+        "canonical_url": "https://jollibee.com.vn/khuyen-mai",
+        "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "27237c48551414502e1211ffcf299b06b47efa6193cb446260296728bf733a7f",
+          "raw_html_current_sha256": "264c2175a9fde9731e23924be7d66c755d2267a4c87c01614b914346bbc1b34a",
+          "semantic_content_baseline_sha256": "08f68575d13384884b52fe2f1b889f8485c0341a91bc7cf89992af7d8cd62cac",
+          "semantic_content_current_sha256": "08f68575d13384884b52fe2f1b889f8485c0341a91bc7cf89992af7d8cd62cac"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "08f68575d13384884b52fe2f1b889f8485c0341a91bc7cf89992af7d8cd62cac",
+          "visible_text_length": 2517,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Khuyến mãi\nThe store will not work correctly in the case when cookies are disabled.\nSkip to Content\nLanguage\nVN\nEN\nĐăng ký\nĐăng nhập\nToggle Nav\nMenu\nLanguage\nVN\nEN\nTrang Chủ\nVề Jollibee\nThực đơn\nCombo Bán Chạy\nGà Giòn Vui Vẻ\nMì Ý Jolly\nGà Sốt Cay\nBurger/Cơm\nPhần Ăn Phụ\nMón Tráng Miệng\nThức Uống\nKhuy",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 152 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
+              "price": "Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 152 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
+              "terms": null,
+              "validity": "Ngày cấp: 15/07/2008 – Nơi cấp: Cục Thuế Hồ Chí Minh",
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "08f68575d13384884b52fe2f1b889f8485c0341a91bc7cf89992af7d8cd62cac",
+          "visible_text_length": 2517,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Khuyến mãi\nThe store will not work correctly in the case when cookies are disabled.\nSkip to Content\nLanguage\nVN\nEN\nĐăng ký\nĐăng nhập\nToggle Nav\nMenu\nLanguage\nVN\nEN\nTrang Chủ\nVề Jollibee\nThực đơn\nCombo Bán Chạy\nGà Giòn Vui Vẻ\nMì Ý Jolly\nGà Sốt Cay\nBurger/Cơm\nPhần Ăn Phụ\nMón Tráng Miệng\nThức Uống\nKhuy",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 152 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
+              "price": "Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 152 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
+              "terms": null,
+              "validity": "Ngày cấp: 15/07/2008 – Nơi cấp: Cục Thuế Hồ Chí Minh",
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_07_1787767578924.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_07_1787767578924.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_09",
+        "cohort": "COHORT_2_FNB_DANANG",
+        "brand_name": "Domino's Pizza Vietnam",
+        "canonical_url": "https://dominos.vn/khuyen-mai",
+        "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+        "check_interval_hours": 12,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "1855de77cb7f4f6943f062e800198c21f077905f8c8921aa674d8f75acebcc5f",
+          "raw_html_current_sha256": "eacbff06174b34f7f1e991cf79ad18582b679809b460f4ecf7d56eb2ffeb95ea",
+          "semantic_content_baseline_sha256": "ed8ddfad723955f606f0eb9adb1ff8cc4265cbdc967b42269a25743af85acfa2",
+          "semantic_content_current_sha256": "ed8ddfad723955f606f0eb9adb1ff8cc4265cbdc967b42269a25743af85acfa2"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "ed8ddfad723955f606f0eb9adb1ff8cc4265cbdc967b42269a25743af85acfa2",
+          "visible_text_length": 4010,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 7,
+          "visible_text_sample": "Khuyến Mãi Hấp Dẫn Mỗi Ngày | Domino’s Pizza\nMã E-voucher\nKhuyến Mãi\nThực Đơn\nTheo Dõi Đơn Hàng\nDanh Sách Cửa Hàng\nBlog\n0\nKhuyến Mãi\nThứ 5 Mua 1 Tặng 1 Pizza\n* Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất.\n*",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Thứ 5 Mua 1 Tặng 1 Pizza",
+              "price": null,
+              "terms": null,
+              "validity": "Thứ 5 Mua 1 Tặng 1 Pizza",
+              "scope": null
+            },
+            {
+              "title": "Tặng lên đến 163.000VND với 4 lựa chọn:",
+              "price": "Tặng lên đến 163.000VND với 4 lựa chọn:",
+              "terms": null,
+              "validity": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng .",
+              "scope": null
+            },
+            {
+              "title": "Pizza Đồng Giá 99.000VND",
+              "price": "Pizza Đồng Giá 99.000VND",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "+ Thêm 60.000VND/ Pizza để nâng cấp lên dòng Đại Tiệc Hải Sản, Truyền Thống & Thịt Thập Cẩm.",
+              "price": "+ Thêm 60.000VND/ Pizza để nâng cấp lên dòng Đại Tiệc Hải Sản, Truyền Thống & Thịt Thập Cẩm.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "+ Thêm 80.000VND/ Pizza để nâng cấp lên Bơ Gơ Bò Mỹ Xốt Phô Mai.",
+              "price": "+ Thêm 80.000VND/ Pizza để nâng cấp lên Bơ Gơ Bò Mỹ Xốt Phô Mai.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+              "price": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "COMBO 279.000VND COMBO 299.000VND COMBO 339.000VND COMBO 359.000VND COMBO 429.000VND COMBO 449.000VND",
+              "price": "COMBO 279.000VND COMBO 299.000VND COMBO 339.000VND COMBO 359.000VND COMBO 429.000VND COMBO 449.000VND",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "ed8ddfad723955f606f0eb9adb1ff8cc4265cbdc967b42269a25743af85acfa2",
+          "visible_text_length": 4010,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 7,
+          "visible_text_sample": "Khuyến Mãi Hấp Dẫn Mỗi Ngày | Domino’s Pizza\nMã E-voucher\nKhuyến Mãi\nThực Đơn\nTheo Dõi Đơn Hàng\nDanh Sách Cửa Hàng\nBlog\n0\nKhuyến Mãi\nThứ 5 Mua 1 Tặng 1 Pizza\n* Mua 1 Pizza size M/L kèm thức uống lớn bất kỳ hoặc 2 thức uống nhỏ, tặng 1 Pizza thứ 2 cùng size có giá bằng hoặc thấp hơn Pizza thứ nhất.\n*",
+          "canonical_offer_links": [],
+          "offer_blocks": [
+            {
+              "title": "Thứ 5 Mua 1 Tặng 1 Pizza",
+              "price": null,
+              "terms": null,
+              "validity": "Thứ 5 Mua 1 Tặng 1 Pizza",
+              "scope": null
+            },
+            {
+              "title": "Tặng lên đến 163.000VND với 4 lựa chọn:",
+              "price": "Tặng lên đến 163.000VND với 4 lựa chọn:",
+              "terms": null,
+              "validity": "* Áp dụng từ 12/08 đến 10/09/2026 & định kỳ vào ngày 1, 14, 15, 30 Âm lịch mỗi tháng .",
+              "scope": null
+            },
+            {
+              "title": "Pizza Đồng Giá 99.000VND",
+              "price": "Pizza Đồng Giá 99.000VND",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "+ Thêm 60.000VND/ Pizza để nâng cấp lên dòng Đại Tiệc Hải Sản, Truyền Thống & Thịt Thập Cẩm.",
+              "price": "+ Thêm 60.000VND/ Pizza để nâng cấp lên dòng Đại Tiệc Hải Sản, Truyền Thống & Thịt Thập Cẩm.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "+ Thêm 80.000VND/ Pizza để nâng cấp lên Bơ Gơ Bò Mỹ Xốt Phô Mai.",
+              "price": "+ Thêm 80.000VND/ Pizza để nâng cấp lên Bơ Gơ Bò Mỹ Xốt Phô Mai.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+              "price": "Vui Tiệc Cả Nhà Chỉ Từ 86.000VND/ Người",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            },
+            {
+              "title": "COMBO 279.000VND COMBO 299.000VND COMBO 339.000VND COMBO 359.000VND COMBO 429.000VND COMBO 449.000VND",
+              "price": "COMBO 279.000VND COMBO 299.000VND COMBO 339.000VND COMBO 359.000VND COMBO 429.000VND COMBO 449.000VND",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_09_1787767583520.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_09_1787767583520.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_10",
+        "cohort": "COHORT_2_FNB_DANANG",
+        "brand_name": "Highlands Coffee",
+        "canonical_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc.html",
+        "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+        "check_interval_hours": 24,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-27T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "71dec6e16104804dda4abdbfb28b16a09c66017446871febcbe528cf9fbd32cf",
+          "raw_html_current_sha256": "13141ee072a4f3db4e6b78d1afaad8176b3973554abe09a7240c4f80ec4c684d",
+          "semantic_content_baseline_sha256": "8b3ef93db8eceac4ea8926101abdc2cdcf3096e4b972e8c3d2d55215b500a32d",
+          "semantic_content_current_sha256": "8b3ef93db8eceac4ea8926101abdc2cdcf3096e4b972e8c3d2d55215b500a32d"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "8b3ef93db8eceac4ea8926101abdc2cdcf3096e4b972e8c3d2d55215b500a32d",
+          "visible_text_length": 1531,
+          "canonical_offer_links_count": 3,
+          "offer_blocks_count": 4,
+          "visible_text_sample": "Tin tức | Highlands Coffee\nThực Đơn\nCÀ PHÊ\nCà Phê Truyền Thống\nPhinĐI\nTRÀ\nFREEZE\nKHÁC\nCà Phê Đóng Gói\nBánh Mì Que\nBánh Ngọt\nThức Uống Khác\nVề Highlands\nNGHỀ NGHIỆP\nHỖ TRỢ\nĐẶT HÀNG\nTìm kiếm cửa hàng\nTin tức\nƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB\n13/08/2026, 15:06\nƯU",
+          "canonical_offer_links": [
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html",
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html",
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html"
+          ],
+          "offer_blocks": [
+            {
+              "title": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+              "price": null,
+              "terms": null,
+              "validity": "13/08/2026, 15:06",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’",
+              "price": null,
+              "terms": null,
+              "validity": "07/08/2026, 09:00",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+              "price": null,
+              "terms": null,
+              "validity": "01/07/2026, 09:41",
+              "scope": null
+            },
+            {
+              "title": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO",
+              "price": null,
+              "terms": null,
+              "validity": "22/05/2026, 10:11",
+              "scope": "Hệ thống cửa hàng"
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "8b3ef93db8eceac4ea8926101abdc2cdcf3096e4b972e8c3d2d55215b500a32d",
+          "visible_text_length": 1531,
+          "canonical_offer_links_count": 3,
+          "offer_blocks_count": 4,
+          "visible_text_sample": "Tin tức | Highlands Coffee\nThực Đơn\nCÀ PHÊ\nCà Phê Truyền Thống\nPhinĐI\nTRÀ\nFREEZE\nKHÁC\nCà Phê Đóng Gói\nBánh Mì Que\nBánh Ngọt\nThức Uống Khác\nVề Highlands\nNGHỀ NGHIỆP\nHỖ TRỢ\nĐẶT HÀNG\nTìm kiếm cửa hàng\nTin tức\nƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB\n13/08/2026, 15:06\nƯU",
+          "canonical_offer_links": [
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-30-khi-thanh-toan-qua-apple-pay-bang-the-tin-dung-vietcombank-jcb.html",
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-50-khi-thanh-toan-bang-the-tin-dung-vietcombank-jcb.html",
+            "https://www.highlandscoffee.com.vn/vn/uu-dai-qua-tang-trung-thu-bst-danh-thuc-vi-thu-.html"
+          ],
+          "offer_blocks": [
+            {
+              "title": "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+              "price": null,
+              "terms": null,
+              "validity": "13/08/2026, 15:06",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI QUÀ TẶNG TRUNG THU - BST ‘ĐÁNH THỨC VỊ THU’",
+              "price": null,
+              "terms": null,
+              "validity": "07/08/2026, 09:00",
+              "scope": null
+            },
+            {
+              "title": "ƯU ĐÃI 50% KHI THANH TOÁN BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+              "price": null,
+              "terms": null,
+              "validity": "01/07/2026, 09:41",
+              "scope": null
+            },
+            {
+              "title": "MUA 1 TẶNG 1 PHIN SỮA ĐÁ KHI THANH TOÁN QUA VÍ TRẢ SAU MOMO",
+              "price": null,
+              "terms": null,
+              "validity": "22/05/2026, 10:11",
+              "scope": "Hệ thống cửa hàng"
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_10_1787767582868.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_10_1787767582868.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_12",
+        "cohort": "COHORT_3_TRANSIT_UTILITIES",
+        "brand_name": "Đường Sắt Việt Nam (DSVN)",
+        "canonical_url": "https://dsvn.vn/",
+        "source_type": "OFFICIAL_PUBLIC_PRICING_PAGE",
+        "check_interval_hours": 48,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-28T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "02c931205ba5028fd728cb7a20f6ef0efd32a02a341a2d7d1ab1aaab2fd4c6e8",
+          "raw_html_current_sha256": "c9f2825b72c01fdb395007282116fdb5c3be851fb03ea5cd186a39faaf53ae89",
+          "semantic_content_baseline_sha256": "7003de5129e044426d1d2642021531727ae1a2c1c9f082bed6b532b7c1c08152",
+          "semantic_content_current_sha256": "7003de5129e044426d1d2642021531727ae1a2c1c9f082bed6b532b7c1c08152"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "7003de5129e044426d1d2642021531727ae1a2c1c9f082bed6b532b7c1c08152",
+          "visible_text_length": 6443,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Tập đoàn Đường sắt Quốc gia Việt Nam - Bán vé tàu trực tuyến\nTập đoàn Đường sắt Quốc gia Việt Nam\nThứ năm, 27/08/2026\n0\nĐường sắt Việt Nam sẽ chính thức mở bán vé tàu Tết Đinh Dậu 2017\nvào lúc 08:00 ngày 1 tháng 10 năm 2017\nHệ thống sẽ mở bán trong:\n00\nNgày\n00\nGiờ\n00\nPhút\n00\nGiây\nTổng công ty Đường ",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "7003de5129e044426d1d2642021531727ae1a2c1c9f082bed6b532b7c1c08152",
+          "visible_text_length": 6443,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Tập đoàn Đường sắt Quốc gia Việt Nam - Bán vé tàu trực tuyến\nTập đoàn Đường sắt Quốc gia Việt Nam\nThứ năm, 27/08/2026\n0\nĐường sắt Việt Nam sẽ chính thức mở bán vé tàu Tết Đinh Dậu 2017\nvào lúc 08:00 ngày 1 tháng 10 năm 2017\nHệ thống sẽ mở bán trong:\n00\nNgày\n00\nGiờ\n00\nPhút\n00\nGiây\nTổng công ty Đường ",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_12_1787767585999.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_12_1787767585999.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_14",
+        "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+        "brand_name": "Spotify Vietnam Student",
+        "canonical_url": "https://www.spotify.com/vn-vi/student/",
+        "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+        "check_interval_hours": 72,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-29T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "54248c5ddc9fd0761e01fbc6bb665a084f356110f0d84ffe8d1cd75995d4a40d",
+          "raw_html_current_sha256": "3b78370098dd78f677ad01f144a3e4518d2bda3938e5622301bc19596eb83df5",
+          "semantic_content_baseline_sha256": "171232d745645646de2b555a36646109dab97e0250e9705fa2ba8927a38625a3",
+          "semantic_content_current_sha256": "171232d745645646de2b555a36646109dab97e0250e9705fa2ba8927a38625a3"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "171232d745645646de2b555a36646109dab97e0250e9705fa2ba8927a38625a3",
+          "visible_text_length": 2775,
+          "canonical_offer_links_count": 4,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Premium dành cho Sinh viên - Spotify (VN)\nVietnam (English) ✕ Close\nChuyển đến nội dung\nSpotify – Trang chủ\nCác gói Premium\nPremium Individual 1 tài khoản – Cho một người.\nPremium Student 1 tài khoản – Giảm giá cho sinh viên đủ điều kiện.\nHỗ trợ\nTải xuống\nĐăng ký\nĐăng nhập\nMenu\nSinh viên nhận 2 thán",
+          "canonical_offer_links": [
+            "/vn-vi/student/verification/",
+            "https://www.spotify.com/vn-en/student/",
+            "https://www.spotify.com/vn-vi/student/#ref=spotifycom_footer_premium_student",
+            "https://www.spotify.com/vn-vi/student/#ref=spotifycom_header_premium_student"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Ưu đãi chỉ dành cho sinh viên tại các trường cao đẳng và đại học được công nhận. Áp dụng điều khoản và điều kiện .",
+              "price": null,
+              "terms": null,
+              "validity": "Bạn sẽ tiếp tục được sử dụng gói Premium Student trong tối đa 12 tháng kể từ ngày bạn đăng ký hoặc xác minh lại lần gần đây nhất, khi gói này vẫn còn hiệu lực. Nếu không còn là sinh viên vào cuối giai đoạn đó, bạn sẽ không còn đủ điều kiện dùng Premium Student. Gói đăng ký của bạn sẽ tự động chuyển sang gói Premium Individual với mức giá 65.000 ₫/tháng.",
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "171232d745645646de2b555a36646109dab97e0250e9705fa2ba8927a38625a3",
+          "visible_text_length": 2775,
+          "canonical_offer_links_count": 4,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "Premium dành cho Sinh viên - Spotify (VN)\nVietnam (English) ✕ Close\nChuyển đến nội dung\nSpotify – Trang chủ\nCác gói Premium\nPremium Individual 1 tài khoản – Cho một người.\nPremium Student 1 tài khoản – Giảm giá cho sinh viên đủ điều kiện.\nHỗ trợ\nTải xuống\nĐăng ký\nĐăng nhập\nMenu\nSinh viên nhận 2 thán",
+          "canonical_offer_links": [
+            "/vn-vi/student/verification/",
+            "https://www.spotify.com/vn-en/student/",
+            "https://www.spotify.com/vn-vi/student/#ref=spotifycom_footer_premium_student",
+            "https://www.spotify.com/vn-vi/student/#ref=spotifycom_header_premium_student"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Ưu đãi chỉ dành cho sinh viên tại các trường cao đẳng và đại học được công nhận. Áp dụng điều khoản và điều kiện .",
+              "price": null,
+              "terms": null,
+              "validity": "Bạn sẽ tiếp tục được sử dụng gói Premium Student trong tối đa 12 tháng kể từ ngày bạn đăng ký hoặc xác minh lại lần gần đây nhất, khi gói này vẫn còn hiệu lực. Nếu không còn là sinh viên vào cuối giai đoạn đó, bạn sẽ không còn đủ điều kiện dùng Premium Student. Gói đăng ký của bạn sẽ tự động chuyển sang gói Premium Individual với mức giá 65.000 ₫/tháng.",
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_14_1787767593161.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_14_1787767593161.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_15",
+        "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+        "brand_name": "Notion Education",
+        "canonical_url": "https://www.notion.so/product/notion-for-education",
+        "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+        "check_interval_hours": 72,
+        "state": "UNCHANGED_RENDER_VARIATION",
+        "diff_reason": "Raw HTML changed due to DOM/nonce/cookie jitter, but structured semantic snapshot is 100% identical.",
+        "next_check_due": "2026-08-29T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "c697f1ebccd5b576a1e7722f4b3019a9504d7dd23fcc9db5797350861b13fecb",
+          "raw_html_current_sha256": "82797884ffef55f11307d23d989e37191a44712c9700ef00fecd4c3c3eb8a880",
+          "semantic_content_baseline_sha256": "588434cf12626a08b4c6e72b244bc773b811546d47a5dd8b8f01ddfb19c0a36d",
+          "semantic_content_current_sha256": "588434cf12626a08b4c6e72b244bc773b811546d47a5dd8b8f01ddfb19c0a36d"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "588434cf12626a08b4c6e72b244bc773b811546d47a5dd8b8f01ddfb19c0a36d",
+          "visible_text_length": 8290,
+          "canonical_offer_links_count": 1,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Notion for Education\nXem trang này trong ngôn ngữ ưa thích của bạn. Chuyển sang Tiếng Việt →\nProduct\nFeatures See all features →\nCapture\nBring everything into one system of record.\nFind\nGet answers, instantly—with citations.\nAutomate\nKeep work moving 24/7 with agents.\nDeveloper Portal and new develo",
+          "canonical_offer_links": [
+            "/templates/student-starter-pack"
+          ],
+          "offer_blocks": []
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "588434cf12626a08b4c6e72b244bc773b811546d47a5dd8b8f01ddfb19c0a36d",
+          "visible_text_length": 8290,
+          "canonical_offer_links_count": 1,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Notion for Education\nXem trang này trong ngôn ngữ ưa thích của bạn. Chuyển sang Tiếng Việt →\nProduct\nFeatures See all features →\nCapture\nBring everything into one system of record.\nFind\nGet answers, instantly—with citations.\nAutomate\nKeep work moving 24/7 with agents.\nDeveloper Portal and new develo",
+          "canonical_offer_links": [
+            "/templates/student-starter-pack"
+          ],
+          "offer_blocks": []
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_15_1787767594810.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_15_1787767594810.json"
+        }
+      }
+    ],
+    "semantic_changed_review_required": [
+      {
+        "source_id": "SRC_141_08",
+        "cohort": "COHORT_2_FNB_DANANG",
+        "brand_name": "Lotteria Vietnam",
+        "canonical_url": "https://www.lotteria.vn/khuyen-mai",
+        "source_type": "OFFICIAL_CAMPAIGN_PAGE",
+        "check_interval_hours": 12,
+        "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+        "diff_reason": "General page text changed (e.g. footer/policy/news copy), but no new offer links or offer block variance detected.",
+        "next_check_due": "2026-08-27T06:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "d248411a70f92ad86b5f42437d3fbfc55a6ea4b6c3e41ff5526982da7a6ba7b5",
+          "raw_html_current_sha256": "699ec12576d5a5aaeb79dda94df009cfa5cbf13654403bb1e719dc4b5d1b9742",
+          "semantic_content_baseline_sha256": "533661e4bdd7db2f359747efb401948244505e00fb3844fca534d8ee0c2644de",
+          "semantic_content_current_sha256": "e03a8d609aac7602beb37e05c9b25d4be27112beea5dbba6d15656f208d58cb0"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "533661e4bdd7db2f359747efb401948244505e00fb3844fca534d8ee0c2644de",
+          "visible_text_length": 529,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Lotteria Việt Nam\nĐặt hàng\nNhượng quyền\nCửa hàng\nVỀ LOTTERIA\nDOWNLOAD APP\nVN\nTiếng Việt English\nĐặt hàng\nNhượng quyền\nCửa hàng\nVỀ LOTTERIA\nVN\nTiếng Việt English\nDownload App\n0\n0\nTrang này không thể được tìm thấy. Vui lòng thử lại\nĐăng ký nhận thông tin khuyến mãi\nGửi ngay →\nThông tin\nTin tức\nKhuyến ",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "e03a8d609aac7602beb37e05c9b25d4be27112beea5dbba6d15656f208d58cb0",
+          "visible_text_length": 477,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Lotteria Việt Nam\nĐặt hàng\nNhượng quyền\nCửa hàng\nVỀ LOTTERIA\nDOWNLOAD APP\nVN\nTiếng Việt English\nĐặt hàng\nNhượng quyền\nCửa hàng\nVỀ LOTTERIA\nVN\nTiếng Việt English\nDownload App\n0\n0\nĐăng ký nhận thông tin khuyến mãi\nGửi ngay →\nThông tin\nTin tức\nKhuyến mãi\nTuyển dụng\nNhượng quyền\nĐăng ký chào hàng\nHỗ trợ",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_08_1787767583641.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_08_1787767583641.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_11",
+        "cohort": "COHORT_3_TRANSIT_UTILITIES",
+        "brand_name": "DanaBus Da Nang",
+        "canonical_url": "https://danangbus.vn/bieu-gia-ve.html",
+        "source_type": "OFFICIAL_PUBLIC_PRICING_PAGE",
+        "check_interval_hours": 48,
+        "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+        "diff_reason": "General page text changed (e.g. footer/policy/news copy), but no new offer links or offer block variance detected.",
+        "next_check_due": "2026-08-28T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "915ace36793174b00a7c1790683f405efb76bc95233b267fde54321a13c2025f",
+          "raw_html_current_sha256": "682649cce8e0734407eae62550a49c658fd587f45134249a61fb3774d0f4bd4f",
+          "semantic_content_baseline_sha256": "35211e09acf763efaf590feea606c6f51515b2f9dd5e0de4af98e37a5437f76a",
+          "semantic_content_current_sha256": "80fc6396740ac84920529f3cdb78a422069f74583675551a04fa14206a9b1a21"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "35211e09acf763efaf590feea606c6f51515b2f9dd5e0de4af98e37a5437f76a",
+          "visible_text_length": 85,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Error Styles\n277\nKHÔNG TÌM THẤY TRANG\nXin lỗi ! Trang web bạn tìm kiếm không tồn tại.",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "80fc6396740ac84920529f3cdb78a422069f74583675551a04fa14206a9b1a21",
+          "visible_text_length": 83,
+          "canonical_offer_links_count": 0,
+          "offer_blocks_count": 0,
+          "visible_text_sample": "Error Styles\n0\nKHÔNG TÌM THẤY TRANG\nXin lỗi ! Trang web bạn tìm kiếm không tồn tại.",
+          "canonical_offer_links": [],
+          "offer_blocks": []
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_11_1787767585477.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_11_1787767585477.json"
+        }
+      },
+      {
+        "source_id": "SRC_141_13",
+        "cohort": "COHORT_4_DIGITAL_STUDENT_DEALS",
+        "brand_name": "GitHub Education",
+        "canonical_url": "https://education.github.com/pack",
+        "source_type": "OFFICIAL_STUDENT_BENEFIT_PAGE",
+        "check_interval_hours": 72,
+        "state": "SEMANTIC_CHANGED_REVIEW_REQUIRED",
+        "diff_reason": "General page text changed (e.g. footer/policy/news copy), but no new offer links or offer block variance detected.",
+        "next_check_due": "2026-08-29T18:06:11.959Z",
+        "hashes": {
+          "raw_html_baseline_sha256": "d1339072845da629508a5fc303e5ddd92d9b242270e9591e9327e298289e8586",
+          "raw_html_current_sha256": "c8130e1d4786089435f315edb3582dfc4424ad996ead6fb3c990d4238479422a",
+          "semantic_content_baseline_sha256": "4de4c8d0eaa70dd7568b26aafa46ee752476f58b2b768ad75b279cf78fca29d6",
+          "semantic_content_current_sha256": "badf2a1bf0a6115a7321eb111c43a3ea3f6ea4e67abf4cbaa8f513df604eca78"
+        },
+        "baseline_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "4de4c8d0eaa70dd7568b26aafa46ee752476f58b2b768ad75b279cf78fca29d6",
+          "visible_text_length": 32282,
+          "canonical_offer_links_count": 21,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "GitHub Student Developer Pack - GitHub Education\nSkip to content\nGitHub.com\nEducation\nStudents\nExplore Student Programs\nGet Your Student Developer Pack\nBecome a Campus Expert\nTeachers\nExplore Teacher Programs\nLearn About GitHub Classroom\nSchools\nEvents\nSign in\nGitHub Student Developer Pack\nLearn to ",
+          "canonical_offer_links": [
+            "/pack",
+            "/pack?sort=az",
+            "/pack?sort=newest",
+            "/pack?sort=popularity",
+            "/pack?sort=popularity&amp;tag=All",
+            "/pack?sort=popularity&amp;tag=Cloud",
+            "/pack?sort=popularity&amp;tag=Design",
+            "/pack?sort=popularity&amp;tag=Developer+tools",
+            "/pack?sort=popularity&amp;tag=Domains",
+            "/pack?sort=popularity&amp;tag=Game+development",
+            "/pack?sort=popularity&amp;tag=Infrastructure+%26+APIs",
+            "/pack?sort=popularity&amp;tag=Internet+of+Things",
+            "/pack?sort=popularity&amp;tag=Learn",
+            "/pack?sort=popularity&amp;tag=Marketing",
+            "/pack?sort=popularity&amp;tag=Mobile",
+            "/pack?sort=popularity&amp;tag=Productivity",
+            "/pack?sort=popularity&amp;tag=Security+%26+analytics",
+            "/pack?sort=popularity&amp;tag=Virtual+Events",
+            "/students",
+            "https://carto.com/help/getting-started/student-accounts",
+            "https://www.mongodb.com/community/forums/c/academia/students/42"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Starter plan free for one year, including 100k page views per month.",
+              "price": "Starter plan free for one year, including 100k page views per month.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          ]
+        },
+        "current_snapshot": {
+          "normalizer_version": "v141t_bounded_dom_v1",
+          "semantic_content_sha256": "badf2a1bf0a6115a7321eb111c43a3ea3f6ea4e67abf4cbaa8f513df604eca78",
+          "visible_text_length": 32276,
+          "canonical_offer_links_count": 21,
+          "offer_blocks_count": 1,
+          "visible_text_sample": "GitHub Student Developer Pack - GitHub Education\nSkip to content\nGitHub.com\nEducation\nStudents\nExplore Student Programs\nGet Your Student Developer Pack\nBecome a Campus Expert\nTeachers\nExplore Teacher Programs\nLearn About GitHub Classroom\nSchools\nEvents\nSign in\nGitHub Student Developer Pack\nLearn to ",
+          "canonical_offer_links": [
+            "/pack",
+            "/pack?sort=az",
+            "/pack?sort=newest",
+            "/pack?sort=popularity",
+            "/pack?sort=popularity&amp;tag=All",
+            "/pack?sort=popularity&amp;tag=Cloud",
+            "/pack?sort=popularity&amp;tag=Design",
+            "/pack?sort=popularity&amp;tag=Developer+tools",
+            "/pack?sort=popularity&amp;tag=Domains",
+            "/pack?sort=popularity&amp;tag=Game+development",
+            "/pack?sort=popularity&amp;tag=Infrastructure+%26+APIs",
+            "/pack?sort=popularity&amp;tag=Internet+of+Things",
+            "/pack?sort=popularity&amp;tag=Learn",
+            "/pack?sort=popularity&amp;tag=Marketing",
+            "/pack?sort=popularity&amp;tag=Mobile",
+            "/pack?sort=popularity&amp;tag=Productivity",
+            "/pack?sort=popularity&amp;tag=Security+%26+analytics",
+            "/pack?sort=popularity&amp;tag=Virtual+Events",
+            "/students",
+            "https://carto.com/help/getting-started/student-accounts",
+            "https://www.mongodb.com/community/forums/c/academia/students/42"
+          ],
+          "offer_blocks": [
+            {
+              "title": "Starter plan free for one year, including 100k page views per month.",
+              "price": "Starter plan free for one year, including 100k page views per month.",
+              "terms": null,
+              "validity": null,
+              "scope": null
+            }
+          ]
+        },
+        "receipts": {
+          "baseline_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_13_1787767590496.json",
+          "current_receipt_path": "05_DEAL_AND_AFFILIATE/delta_captures_141r/receipts/RECEIPT_DELTA_SRC_141_13_1787767590496.json"
+        }
+      }
+    ],
+    "offer_relevant_delta": [],
+    "http_error_backoff": [
+      {
+        "source_id": "SRC_141_04",
+        "cohort": "COHORT_1_CINEMA_DANANG",
+        "brand_name": "Metiz Cinema Da Nang",
+        "canonical_url": "https://metiz.vn/khuyen-mai/",
+        "source_type": "OFFICIAL_PROMOTIONS_PAGE",
+        "check_interval_hours": 168,
+        "state": "HTTP_ERROR_BACKOFF",
+        "http_status": 404,
+        "backoff_policy": "7_DAYS_URL_REVIEW_BACKOFF",
+        "next_check_due": "2026-09-02T17:58:20.788Z",
+        "hashes": {
+          "raw_html_sha256": "96c618a43f043c779e46133831854f2f260f39f0d9e7c6f1979d62a1956a5b35",
+          "semantic_content_sha256": null
+        },
+        "baseline_snapshot": null,
+        "current_snapshot": null,
+        "prior_baseline_receipt_path": "05_DEAL_AND_AFFILIATE/fresh_captures_140r/receipts/RECEIPT_SRC_140R_04_1787767082814.json"
+      }
+    ]
+  }
+}

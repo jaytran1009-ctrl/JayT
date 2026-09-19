@@ -1,0 +1,23 @@
+{
+  "quarantine_id": "QUARANTINE_PREMATURE_EARLY_VERDICT_EZ_AI",
+  "timestamp": "2026-09-01T05:22:01.040Z",
+  "governing_directive": "JAYT-245 Section EZ-AI Mandate 3 (Lines 4909-4915)",
+  "reason": "QUARANTINED_PREMATURE_EARLY_VERDICT_CORE_FIELDS_CONTRADICTION",
+  "explanation": "Verdicts rendered at 2026-08-31T08:54Z, ~24 hours before SLA close at 2026-09-01T08:28Z. Rule allows early verdict only when core fields are COMPLETE enough to pass tier. Both candidates were classified as HELD_INTERNAL due to missing fields (JetBrains: missing action_url), contradicting the CORE_FIELDS_COMPLETE justification. CEO correctly identified this self-contradiction.",
+  "quarantined_records": [
+    {
+      "original_verdict_id": "SLA_VERDICT_JETBRAINS_EZ_AH",
+      "original_tier": "T4_DESCRIPTIVE_ONLY_HELD_INTERNAL",
+      "original_verdict_type": "EARLY_VERDICT_CORE_FIELDS_COMPLETE",
+      "original_verdict_timestamp": "2026-08-31T08:54:26.522Z",
+      "quarantine_reason": "Verdict claimed EARLY_VERDICT_CORE_FIELDS_COMPLETE but candidate was classified T4 due to missing action_url — self-contradictory"
+    },
+    {
+      "original_verdict_id": "SLA_VERDICT_FIGMA_EZ_AH",
+      "original_tier": "T2_DOCUMENTATION_HELD_INTERNAL",
+      "original_verdict_type": "EARLY_VERDICT_CORE_FIELDS_COMPLETE",
+      "original_verdict_timestamp": "2026-08-31T08:54:26.522Z",
+      "quarantine_reason": "Verdict rendered before SLA close without P0 failure trigger. Even though Figma had all 4 core fields, the early verdict was rendered as part of a batch operation that included JetBrains which lacked fields — procedural violation"
+    }
+  ]
+}

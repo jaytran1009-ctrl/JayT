@@ -1,0 +1,63 @@
+{
+  "id": "WORK_ORDER_J402_120_MIN_TACTICAL_STRESS_TEST_AND_EXPANSION",
+  "directive_code": "CHAIRMAN_DIRECTIVE_20260916_2_HOUR_STRESS_TEST_AND_EXPANSION_DISPATCH",
+  "authority": "Chairman of the Board of JayT Corp & CEO Codex",
+  "status": "RATIFIED_ACTIVE_TACTICAL_EXECUTION",
+  "executor": "Antigravity Engineering Khối",
+  "reviewer": "Codex; Gemini Independent Auditor",
+  "issued_at_local": "2026-09-16T18:15:00+07:00",
+  "duration_minutes": 120,
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "target_population": "320,000 Danang residents across 4 key zones",
+  "cycles": [
+    {
+      "cycle_id": "CYCLE_01_DEEPLINK_AND_SCHEMES",
+      "window": "00 - 30 minutes",
+      "focus": "100% Deep-link & App Scheme Validation",
+      "tasks": [
+        "Audit 100% deep links for Shopee, Lazada, TikTok Shop on verified SKUs",
+        "Verify exact variant identifiers: modelId, skuId, variant_id",
+        "Verify partner IDs: Shopee 17372870594, Lazada 262501305, TikTok Shop VNVNLCB6LYL3",
+        "Validate clean 1.2s web fallback without popup blocking"
+      ]
+    },
+    {
+      "cycle_id": "CYCLE_02_PRICE_AND_VOUCHER_LIVENESS",
+      "window": "30 - 60 minutes",
+      "focus": "Payable Price Reconciliation & 18 Voucher Liveness",
+      "tasks": [
+        "Reconcile web displayed payable prices vs platform final amounts (deviation <= 1%)",
+        "Verify 13 CLAIMABLE vouchers: direct wallet navigation, zero manual typing requirement",
+        "Verify 5 PROMO_CODE vouchers: clipboard copy latency <= 5ms with actionable toast"
+      ]
+    },
+    {
+      "cycle_id": "CYCLE_03_MOBILE_UX_TOUCH_FEEL",
+      "window": "60 - 90 minutes",
+      "focus": "Mobile 390px Touch Targets & Responsiveness",
+      "tasks": [
+        "Audit mobile viewport 390x844: all touch targets >= 44px",
+        "Verify zero Cumulative Layout Shift (CLS = 0) and zero horizontal overflow",
+        "Verify sensory haptic / WebAudio micro-feedback mechanisms",
+        "Verify modal UX: instant opening and clean Escape / backdrop dismiss"
+      ]
+    },
+    {
+      "cycle_id": "CYCLE_04_REALTIME_STRESS_AND_CLOSING",
+      "window": "90 - 120 minutes",
+      "focus": "Real-time Edge Cases, Seals & Production Receipt",
+      "tasks": [
+        "Test out-of-stock and missing PDP transparency fallback",
+        "Validate 4 Danang Flash Sale golden windows (00:00, 11:30, 19:30, 21:00 Asia/Ho_Chi_Minh)",
+        "Run full QA suites: Pipeline Seal 24/24, W8 Seal 5/5, Triplet 6/6, Liveness 5/5",
+        "Issue sealed production receipt JAYT_402_120MIN_STRESS_TEST_RECEIPT.json"
+      ]
+    }
+  ],
+  "governance": {
+    "affiliate_enabled": false,
+    "production_canonical_deployment_authorized": true,
+    "transparency_fallback_mandatory": true,
+    "dual_workspace_bit_parity_mandatory": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "receipt_id": "RCPT_QUARANTINE_AD_1787938008620",
+  "timestamp": "2026-08-28T17:26:48.620Z",
+  "governing_directive": "02_CEO_DIRECTIVES/JAYT-245_TONG_CHI_THI_CEO_DUY_NHAT_VAN_HANH_JAYT.md (Section AD)",
+  "quarantine_action": "TOTAL_ISOLATION_OF_AC_PROVENANCE_ARTIFACTS",
+  "quarantined_items_count": 12,
+  "quarantined_items": [
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C1_01_METIZ.json",
+      "sha256": "0b3738cb7984765bb3ca7aca126340a5c77198f88ec826e9a611885f91ddef2d",
+      "size_bytes": 362,
+      "mtime": "2026-08-28T17:23:57.266Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C1_03_DANABUS.json",
+      "sha256": "9bfece73f7796fd108e9f4c5d67146e356f0b2ccc6fa03cdac2e554fe8050a5d",
+      "size_bytes": 361,
+      "mtime": "2026-08-28T17:23:57.267Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C1_04_TNGO.json",
+      "sha256": "70d28d58c50f330877b0fe94f0a219809c5c1e7f054524351badcf324cfb87c5",
+      "size_bytes": 354,
+      "mtime": "2026-08-28T17:23:57.268Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C1_08_FAHASA.json",
+      "sha256": "1fc82491126fc707b7eada2145b0173ebe8e11aebd3e492d5d63cb76e7a1dd03",
+      "size_bytes": 341,
+      "mtime": "2026-08-28T17:23:57.269Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C2_01_GALAXY.json",
+      "sha256": "b49a1f58e243a8036c950ce7f10214c9bdec9fca92d000dc56a1b272e5ce11d5",
+      "size_bytes": 341,
+      "mtime": "2026-08-28T17:23:57.270Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C3_01_DOMINOS.json",
+      "sha256": "ed9be8a3f01773b7274d05fd9474aec1f5dd658a6c66db35d3633cf3731b941c",
+      "size_bytes": 341,
+      "mtime": "2026-08-28T17:23:57.271Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C3_04_CGV.json",
+      "sha256": "45bab4c46c5da7083e86a34a196495e0b426e6ed09850fc3e3b4a03d459b4f15",
+      "size_bytes": 336,
+      "mtime": "2026-08-28T17:23:57.272Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C3_05_VNR.json",
+      "sha256": "d3d436f114a86e285631113173707427aaba8175c60b26179c2e527e73b6ffba",
+      "size_bytes": 409,
+      "mtime": "2026-08-28T17:23:57.275Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C4_01_GITHUB_PACK.json",
+      "sha256": "eeba28386a5933e6b113eaecb1eef7bd421a4a81763b978088ddd696108a8b84",
+      "size_bytes": 472,
+      "mtime": "2026-08-28T17:23:57.262Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "raw_evidence_captures/RAW_CAPT_TGT_C4_02_NOTION.json",
+      "sha256": "d2435a356d1134268ad1a045848588318391ec25f0515c1621c947d08e84b2a1",
+      "size_bytes": 389,
+      "mtime": "2026-08-28T17:23:57.277Z",
+      "quarantine_reason": "Synthetic HTML snippet lacking real HTTP headers, redirect chain, and containing future timestamp"
+    },
+    {
+      "file_name": "public_items_field_provenance_manifest.json",
+      "sha256": "7eea334b52db46e0f6d7cb10536d716aa2ccc16f3ccda7ac994add2d6a6058d1",
+      "size_bytes": 20166,
+      "mtime": "2026-08-28T17:23:57.277Z",
+      "quarantine_reason": "Derived from synthetic AC raw captures"
+    },
+    {
+      "file_name": "test_field_level_provenance_and_mutation_gate.js",
+      "sha256": "b18528bd7f2d500c379de94ebf8182fa7d7531e81e22fb6f93123a4847c8e295",
+      "size_bytes": 7521,
+      "mtime": "2026-08-28T17:23:51.699Z",
+      "quarantine_reason": "Tautology mutation test without real validator execution"
+    }
+  ],
+  "audit_findings": [
+    "Raw captures in AC contained future capture timestamps (01:03 AM vs 00:23 AM real time)",
+    "Payloads were truncated HTML snippets lacking raw byte responses, headers, and redirect chains",
+    "Mutation tests verified mutated object fields directly instead of testing validator engine reject behavior"
+  ]
+}

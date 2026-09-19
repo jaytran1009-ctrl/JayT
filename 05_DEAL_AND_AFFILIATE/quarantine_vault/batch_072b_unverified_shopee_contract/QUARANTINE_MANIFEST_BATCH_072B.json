@@ -1,0 +1,39 @@
+{
+  "$schema": "https://jayt.vn/schemas/quarantine-manifest.v1.json",
+  "manifest_id": "QUARANTINE_MANIFEST_BATCH_072B",
+  "work_order": "JAYT-072B-INCIDENT",
+  "quarantine_reason": "UNVERIFIED_PROVIDER_DOCS / NETWORK_CAPABLE_UNAUTHORIZED_PROBE — Web-researched assumptions are not Partner Center evidence; network query probe is disallowed.",
+  "quarantined_at": "2026-08-24T08:04:48.313Z",
+  "snapshot_byte_for_byte_persisted": true,
+  "total_files_quarantined": 4,
+  "items": [
+    {
+      "filename": "shopee_affiliate_open_api_spec.md",
+      "type": "UNVERIFIED_SPEC_DOC",
+      "size_bytes": 2764,
+      "sha256": "be4de07a0513bd9d0d4f2909de38fa9b96f48161212225072984faed47842a83",
+      "quarantine_reason": "UNVERIFIED_PROVIDER_DOCS: Web-researched assumptions without official Partner Center provenance."
+    },
+    {
+      "filename": "shopee_affiliate_contract_072b.js",
+      "type": "UNAUTHORIZED_CONTRACT_MODULE",
+      "size_bytes": 2520,
+      "sha256": "62c80caea6a00089340e726b8e3bf5eb882e24e6008eb3d9a64ed4ec77a459ef",
+      "quarantine_reason": "Self-labeled SUPPORTED_SPEC_VERIFIED without Partner Center official doc evidence."
+    },
+    {
+      "filename": "probe_shopee_affiliate_072b.js",
+      "type": "NETWORK_CAPABLE_UNAUTHORIZED_PROBE",
+      "size_bytes": 4835,
+      "sha256": "e5914746efd21fe14355198e6786b4965dd94441d57fcc7e4d1d25b8324798fd",
+      "quarantine_reason": "Network-capable probe querying shopOfferV2 without approved partner credentials."
+    },
+    {
+      "filename": "test_shopee_affiliate_contract_072b.js",
+      "type": "UNVERIFIED_CONTRACT_TEST_SUITE",
+      "size_bytes": 3039,
+      "sha256": "c40565a62dfc3766fa68a546f81299ee194cf9cea99cf0d6633898548eebc5f8",
+      "quarantine_reason": "Test suite validating code execution on unverified synthetic vector."
+    }
+  ]
+}

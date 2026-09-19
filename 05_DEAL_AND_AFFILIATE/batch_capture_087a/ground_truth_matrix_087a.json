@@ -1,0 +1,1089 @@
+{
+  "batch_id": "BATCH_087A_TARGET_LINEAGE_REPLAY",
+  "evaluated_at": "2026-08-25T05:26:40.024Z",
+  "total_targets": 40,
+  "cohorts": {
+    "CINEMA": {
+      "total": 8,
+      "verified_candidates": 0,
+      "signal_only": 6,
+      "not_confirmed_danang": 2,
+      "failed": 0,
+      "blocked": 0
+    },
+    "FNB_FASTFOOD": {
+      "total": 8,
+      "verified_candidates": 0,
+      "signal_only": 8,
+      "not_confirmed_danang": 0,
+      "failed": 0,
+      "blocked": 0
+    },
+    "COFFEE_TEA": {
+      "total": 8,
+      "verified_candidates": 0,
+      "signal_only": 8,
+      "not_confirmed_danang": 0,
+      "failed": 0,
+      "blocked": 0
+    },
+    "FOOD_AND_RIDE": {
+      "total": 8,
+      "verified_candidates": 0,
+      "signal_only": 8,
+      "not_confirmed_danang": 0,
+      "failed": 0,
+      "blocked": 0
+    },
+    "ECOMMERCE_WALLETS": {
+      "total": 8,
+      "verified_candidates": 0,
+      "signal_only": 8,
+      "not_confirmed_danang": 0,
+      "failed": 0,
+      "blocked": 0
+    }
+  },
+  "items": [
+    {
+      "target_id": "TARGET_087A_001",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://metiz.vn/lich-chieu-phim.html",
+      "final_url": "https://metiz.vn/lich-chieu-phim.html",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+        "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+        "literal_href": "/lich-chieu-phim.html",
+        "link_offset": 31957,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 31957 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "03dc1359327e8de772ca30a28685c0f3cd4a26e35017fdbd3325be4a86b47747"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_010",
+      "brand": "Lotte Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+      "final_url": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+        "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+        "literal_href": "https://www.lottecinemavn.com/LCHS/Contents/Movie/Movie-Detail-View.aspx?movie=12332",
+        "link_offset": 20024,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 20024 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "ddea672d6eafe39ec5851c9853475e7757589552b923d48019e6e1433dae021f"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_070",
+      "brand": "BHD Star Cineplex",
+      "sector": "CINEMA",
+      "requested_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+      "final_url": "https://www.bhdstar.vn/lich-chieu-rap/",
+      "http_status": 200,
+      "classification": "NOT_CONFIRMED_FOR_DANANG",
+      "reasoning": "Trang lịch chiếu/cửa hàng BHD Star Cineplex; chưa xác nhận chi nhánh đang hoạt động tại Đà Nẵng.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+        "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+        "literal_href": "https://www.bhdstar.vn/lich-chieu-rap/",
+        "link_offset": 49699,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49699 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "26ee35d403bbeb8c73913fed3824a5b6ca0af1af6d98e8e3a513ceda54afd2fe"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_075",
+      "brand": "Galaxy Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://galaxycine.vn/phim-dang-chieu/",
+      "final_url": "https://www.galaxycine.vn/phim-dang-chieu/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/galaxycine.vn/page.html",
+        "parent_artifact_sha256": "fab0add4415d29b05723f4ef491f42e6b90b9048bc4335e13f54c9a82b4243b2",
+        "literal_href": "/phim-dang-chieu/",
+        "link_offset": 35981,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 35981 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "b90a818951b06511547280cd9d9e2821b89ca4ab05be0ca856bdcca384ffeed2"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_134",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "requested_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "final_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/cgv.vn/page.html",
+        "parent_artifact_sha256": "6faccbbbc1b824cf709d2909bbdb8c2959c60d663b86d8e4c61f0cf8a7b8e31e",
+        "literal_href": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+        "link_offset": 15013,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15013 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_002",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "requested_url": "https://metiz.vn/phim.html",
+      "final_url": "https://metiz.vn/phim.html",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/metiz.vn/page.html",
+        "parent_artifact_sha256": "c58ccb9e6eae5517961dad4efc74e7ef3d796dc64c0a0dda03e707d29b7345c4",
+        "literal_href": "/phim.html",
+        "link_offset": 32079,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 32079 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "d9fb8985b8f8352fcc94989016286684f2ce7304d722d112168c1fcc3dd33793"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_011",
+      "brand": "Lotte Cinema",
+      "sector": "CINEMA",
+      "requested_url": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+      "final_url": "https://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/lottecinemavn.com/page.html",
+        "parent_artifact_sha256": "3ed61e9faca23915fa33a496dd1eef3d9a8625c7449fb76ea91adf3c540b8e76",
+        "literal_href": "http://www.lottecinemavn.com/LCHS/Contents/ticketing/ticketing.aspx",
+        "link_offset": 23354,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23354 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "dee7a500e1368abc3e4452a5141b82fa0bce04d2e4fd9328d8295f120ad4dec3"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_071",
+      "brand": "BHD Star Cineplex",
+      "sector": "CINEMA",
+      "requested_url": "https://www.bhdstar.vn/cua-hang/",
+      "final_url": "https://www.bhdstar.vn/cua-hang/",
+      "http_status": 200,
+      "classification": "NOT_CONFIRMED_FOR_DANANG",
+      "reasoning": "Trang lịch chiếu/cửa hàng BHD Star Cineplex; chưa xác nhận chi nhánh đang hoạt động tại Đà Nẵng.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/bhdstar.vn/page.html",
+        "parent_artifact_sha256": "62ae46f773bce07c256df4e1037e5b0bf1104e04853729735211cfcae563f574",
+        "literal_href": "https://www.bhdstar.vn/cua-hang/",
+        "link_offset": 49915,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 49915 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "88126bd76331e03c0f050f6907a2a3451fd5624f6484a84aa8b0917b119c8956"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_140",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/khuyen-mai",
+      "final_url": "https://jollibee.com.vn/khuyen-mai",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/khuyen-mai",
+        "link_offset": 185326,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185326 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "d718e4f992968148bc2909fc72e08a0a65328d4fc9f17a6e344e63744f7bbb27"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_147",
+      "brand": "Domino's Pizza",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://dominos.vn/blogs",
+      "final_url": "https://dominos.vn/blogs",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+        "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+        "literal_href": "/blogs",
+        "link_offset": 26182,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 26182 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "accb15cc3b818df1507f62578a8d4ba08b7fce1a560d4d96c45242cede520a42"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_141",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/dich-vu",
+      "final_url": "https://jollibee.com.vn/dich-vu",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/dich-vu",
+        "link_offset": 185418,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185418 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "102fafc7a8c221c1df61a7468bf3b1fd73612be7e4eb2b2e7e61b4a927be3c90"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_148",
+      "brand": "Domino's Pizza",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://dominos.vn/promotion-listing/family-combo",
+      "final_url": "https://dominos.vn/promotion-listing/family-combo",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/dominos.vn/page.html",
+        "parent_artifact_sha256": "2eaf6443dc359f70eac4bbded319b297da52e75a0b53c8411063173eabaf6a4a",
+        "literal_href": "/promotion-listing/family-combo",
+        "link_offset": 38908,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 38908 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "bb67617d67d91b9e7c093f48d3bec197f5154f659974cfc8a6bb9354e6647157"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_142",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/tin-tuc",
+      "final_url": "https://jollibee.com.vn/tin-tuc",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/tin-tuc",
+        "link_offset": 185501,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185501 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "e854bbf5888224a1741d7a9eb8fcd3bf9717ad7252dccabc70014a36b2de39c9"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_143",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/cua-hang",
+      "final_url": "https://jollibee.com.vn/cua-hang",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/cua-hang",
+        "link_offset": 185585,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 185585 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "b4b501cb097e9a7d60226ae183424d6995a6728b572f220c661133c5f340fb75"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_144",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+      "final_url": "https://jollibee.com.vn/blog/post/sinh-nh%E1%BA%ADt-r%E1%BB%99n-ra-ti%E1%BB%87c-vui-c%E1%BB%B1c-da-2",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/blog/post/sinh-nhật-rộn-ra-tiệc-vui-cực-da-2",
+        "link_offset": 209802,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 209802 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "2a1c5dfcbc6ecab57b05b2f67476662147fc3b9d9d63f362441c4cad8e3de518"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_145",
+      "brand": "Jollibee Vietnam",
+      "sector": "FNB_FASTFOOD",
+      "requested_url": "https://jollibee.com.vn/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+      "final_url": "https://jollibee.com.vn/blog/post/m%E1%BB%B3-y-s%E1%BB%91t-cay-m%E1%BB%9Bi-t%E1%BA%A1i-jollibee-b%E1%BA%A1n-da-th%E1%BB%AD-chua",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/jollibee.com.vn/page.html",
+        "parent_artifact_sha256": "213daf2de95f525cfa6e171433c29e32e4819c6eeedaffc0b5d433422f5b53b4",
+        "literal_href": "/blog/post/mỳ-y-sốt-cay-mới-tại-jollibee-bạn-da-thử-chua",
+        "link_offset": 211040,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 211040 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "9576374cf9a7b3e776159384299fedf422794e04572b52ca5cad59ae796b570d"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_149",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://phela.vn/san-pham-phela/",
+      "final_url": "https://phela.vn/san-pham-phela/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+        "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+        "literal_href": "https://phela.vn/san-pham-phela/",
+        "link_offset": 43299,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43299 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "d520808d5ca965168bf91ea960319bb5d98ddc3b73220c7d21fc02658e84a7c7"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_161",
+      "brand": "Highlands Coffee",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/san-pham.html",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+        "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+        "literal_href": "/vn/san-pham.html",
+        "link_offset": 9116,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 9116 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "4d9e66e71e4d3ecb47bef1b7c70c3489f2d98fe61a06810839ac69fd965912ed"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_164",
+      "brand": "Katinat Saigon Kafe",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://katinat.vn/menu/",
+      "final_url": "https://katinat.vn/menu/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+        "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+        "literal_href": "https://katinat.vn/menu/",
+        "link_offset": 30672,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30672 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "af78b4e4e20534343f9a96ba3ffceb2fd40b7a39ddc2d3d51bb98646d9995d17"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_172",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+      "final_url": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+        "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+        "literal_href": "https://gongcha.com.vn/danh-muc/menu-hien-tai/",
+        "link_offset": 29590,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 29590 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "61867881a9f544c1497171dbfb0356ab71cbb8eacdb4fdb58600901d8e2aeb5c"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_150",
+      "brand": "Phê La",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://phela.vn/category/tin-tuc/",
+      "final_url": "https://phela.vn/category/tin-tuc/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/phela.vn/page.html",
+        "parent_artifact_sha256": "55791352f7a79c02b7ec42010d7ec9cbd10418ce3784f40142552eb7a23611e9",
+        "literal_href": "https://phela.vn/category/tin-tuc/",
+        "link_offset": 44525,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 44525 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "401736023df9822131869b123d972858cea0770ea1014edf04695c5c87230ed2"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_162",
+      "brand": "Highlands Coffee",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "final_url": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/highlandscoffee.com.vn/page.html",
+        "parent_artifact_sha256": "97b06b3ceb7a3cfaef9cfbc1257f1ff08ac45dc6a4fee7f052f64706b966fce7",
+        "literal_href": "/vn/he-thong-cua-hang.html",
+        "link_offset": 12121,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 12121 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "2a9b0f45d3717a3de6005338751078956398e1a3291ac8d1bba122c54cc06c70"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_165",
+      "brand": "Katinat Saigon Kafe",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://katinat.vn/cua-hang-2/",
+      "final_url": "https://katinat.vn/cua-hang-2/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/katinat.vn/page.html",
+        "parent_artifact_sha256": "f7170588a07bc8491d1b13133349ba97d660e23d77c0e929d6bc6f5c1d6e5ceb",
+        "literal_href": "https://katinat.vn/cua-hang-2/",
+        "link_offset": 30855,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30855 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "972a97a456aa89e72edf248ff6ee9209cfda3325066e12a179643fd34972aa5d"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_173",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "requested_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "final_url": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/gongcha.com.vn/page.html",
+        "parent_artifact_sha256": "3632dc71a50889048cb8523cd5607b1d9f4b0225a2ede9a7dbc58b12275a2d2e",
+        "literal_href": "https://gongcha.com.vn/tin-tuc-uu-dai/",
+        "link_offset": 30982,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 30982 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "0ea23405198e712b72083fe5dbfd61a58edf4917856066881714e5e3a0fd7624"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_177",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/tin-tuc-bao-chi/",
+        "link_offset": 23396,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23396 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "fd87098d8910c6483fe33f8b76bacb63f2681b275437a8df9f0bc11cc2462489"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_191",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://grab.com/vn/blog/",
+      "final_url": "https://www.grab.com/vn/blog/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "/vn/blog/",
+        "link_offset": 136452,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 136452 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "32851868325dc5a11134661082862fb6abd33803f90c12de399967fcb19836d7"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_178",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-van-chuyen/",
+        "link_offset": 23521,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23521 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "c563ca16ec73161be0b94a6a1125633b17ce5c10da1dfa329b48dbe303128b2d"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_192",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://grab.com/vn/blog/driver/",
+      "final_url": "https://www.grab.com/vn/blog/driver/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "/vn/blog/driver/",
+        "link_offset": 141898,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 141898 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "202dcc573b2e3223e86c1915da2ff98f77950d7b4320a24d3b7b7a620349cb51"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_179",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+      "final_url": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/khach-hang-ca-nhan/dich-vu-giao-hang/",
+        "link_offset": 23633,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 23633 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "3c0c3e81f98283ce02100e4da7e7ebcc8ccd4ce94a5521d3eba158b376145816"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_193",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://merchant.grab.com/vn-vn/blog/",
+      "final_url": "https://merchant.grab.com/vn-vn/blog",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "https://merchant.grab.com/vn-vn/blog/",
+        "link_offset": 149014,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 149014 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "1c9f98eab4ffec301ed3dbd85cc3cad4d6853a91abac8a918748db258c70c51c"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_180",
+      "brand": "Be Group",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+      "final_url": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/be.com.vn/page.html",
+        "parent_artifact_sha256": "25bafe71a22db482707f8f1309cc2fdd9514a3769105e435ffaa8171efba7595",
+        "literal_href": "https://be.com.vn/tin-tuc/uu-dai-cua-cake-danh-cho-khach-hang-be/",
+        "link_offset": 24504,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 24504 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "5001daa9d66280037f9fc578c370691beb0fb4407b7a0fa4002c80733124269b"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_194",
+      "brand": "Grab Vietnam",
+      "sector": "FOOD_AND_RIDE",
+      "requested_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+      "final_url": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/grab.com/page.html",
+        "parent_artifact_sha256": "eefb4db3287ff5ae3751d021b72be33bb211013b0e57e350ff320e4a72436456",
+        "literal_href": "https://www.grab.com/vn/food-blog/promotions/tphcm-ngoi-yen-o-nha-thich-mon-mat-da-co-grabfood/",
+        "link_offset": 179690,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 179690 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "b05dca2ac7f80b9328051fa6c6446c4f9eba129db0621628b883de1436ca5bc3"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_209",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc",
+      "final_url": "https://www.momo.vn/tin-tuc",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc",
+        "link_offset": 41742,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 41742 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "262ddcccf02c7cb63e67257fb9f866a376f53327f53a5e46e80e6f4d632b2064"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_228",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/tin-tuc",
+      "final_url": "https://zalopay.vn/tin-tuc",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/tin-tuc",
+        "link_offset": 15264,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 15264 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "797735b84c5933082cb4e29a1bb0b170936972597af33101a81ae0510dec2bd7"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_273",
+      "brand": "VNPAY",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://vnpay.vn/tin-tuc",
+      "final_url": "https://vnpay.vn/tin-tuc",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+        "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+        "literal_href": "/tin-tuc",
+        "link_offset": 157336,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 157336 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "5a281a7f7d6b683661b5a3043bb429a41b2fe11873aafeb855860323efd9b669"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_210",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc/khuyen-mai",
+      "final_url": "https://www.momo.vn/tin-tuc/khuyen-mai",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc/khuyen-mai",
+        "link_offset": 42566,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 42566 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "649c48d788a92ef16cdd5b924f8c66a47ec9b510127e99192b8997a3cb456d20"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_229",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/khuyen-mai",
+      "final_url": "https://zalopay.vn/khuyen-mai",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/khuyen-mai",
+        "link_offset": 16465,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 16465 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "0909ea14ac059f51942bf1adee7dc6a0ddec452e5f5faa7d75d1ff314f54d73e"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_274",
+      "brand": "VNPAY",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+      "final_url": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/vnpay.vn/page.html",
+        "parent_artifact_sha256": "f80ca83a637ffef71a8f2d14913fd17308b18480f58aa24f27365e531db0a8d4",
+        "literal_href": "https://vnpay.vn/Saigonbank-uu-dai-tien-triu-qua-tang-ngap-tran-01o3a9p01fn6",
+        "link_offset": 165222,
+        "resolution_rule": "ABSOLUTE_URL_PRESERVED",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 165222 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "2301f4befe12970a39d220276ea6fe04f599adcf8008603d70fa1ef56bc839b7"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_211",
+      "brand": "Ví MoMo",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://momo.vn/tin-tuc/tin-tuc-su-kien",
+      "final_url": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/momo.vn/page.html",
+        "parent_artifact_sha256": "baccc4179eb6c19aef77644b0c781a542f12ce2c225ef3cbdb0e69f5512083de",
+        "literal_href": "/tin-tuc/tin-tuc-su-kien",
+        "link_offset": 43379,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 43379 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "0ee94a319a96dacb9aea07586599772567b2e8476a9b9ecc8f5c7a8267809296"
+      }
+    },
+    {
+      "target_id": "TARGET_087A_230",
+      "brand": "Ví ZaloPay",
+      "sector": "ECOMMERCE_WALLETS",
+      "requested_url": "https://zalopay.vn/blog",
+      "final_url": "https://zalopay.vn/blog",
+      "http_status": 200,
+      "classification": "SIGNAL_ONLY",
+      "reasoning": "Trang landing page / tin tức / thực đơn chính thức từ thương hiệu; thông tin ưu đãi/mã giảm phụ thuộc tài khoản ứng dụng hoặc xác nhận tại điểm bán.",
+      "target_lineage": {
+        "parent_artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_086/captures/zalopay.vn/page.html",
+        "parent_artifact_sha256": "2749c40bce643f8005aec088548b758a30e6b81660e1fbc6138e224711e5e516",
+        "literal_href": "/blog",
+        "link_offset": 17305,
+        "resolution_rule": "RELATIVE_ROOT_RESOLVED_AGAINST_BASE_DOMAIN",
+        "selection_reason": "Trích xuất trực tiếp từ thẻ <a href=\"...\"> tại offset 17305 trong parent DOM"
+      },
+      "bundle_6_point": {
+        "price_or_discount": null,
+        "terms_and_conditions": null,
+        "valid_until": null,
+        "locality_danang": null,
+        "redemption_channel": null,
+        "provenance_hash": "98983d8754377cf2970c4c1bd4436ff16d34ca515bd925e8a4179a8b35884f7c"
+      }
+    }
+  ]
+}

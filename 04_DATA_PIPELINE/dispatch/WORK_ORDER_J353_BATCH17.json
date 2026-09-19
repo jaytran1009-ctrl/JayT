@@ -1,0 +1,55 @@
+{
+  "work_order_id": "J353_BATCH17",
+  "directive": "JAYT-353",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "prerequisite": "Begin only after the v3.427.0 post-deploy receipt records every mandatory production gate as PASS.",
+  "scope": {
+    "environment": "commercial staging only: http://127.0.0.1:4176/",
+    "production_deploy_authorized": false,
+    "registry_mutation_authorized": false,
+    "target_groups": [
+      "CGV Cinemas",
+      "Lotte Cinema",
+      "Jollibee",
+      "Lotteria",
+      "Phúc Long",
+      "Highlands Coffee",
+      "student and dormitory essentials"
+    ]
+  },
+  "deliverables": {
+    "minimum_offer_candidates": 10,
+    "minimum_radar_candidates": 15,
+    "required_fields_per_candidate": [
+      "official_leaf_url",
+      "raw_body_path",
+      "sanitized_headers_path",
+      "raw_sha256",
+      "capture_timestamp_utc",
+      "verbatim_offer_or_price_span",
+      "terms_and_expiry_or_validity_status",
+      "Da_Nang_locality_evidence",
+      "outbound_url",
+      "stock_or_availability_warning"
+    ],
+    "expected_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J353_BATCH17_HARVEST.json"
+  },
+  "schedule_integrity": {
+    "rule": "A recurring weekday entry may render only where the official raw source explicitly states that recurrence. Month-specific, member-only, or price-observation data must never be presented as a weekly recurring deal.",
+    "fallback": "HELD__INSUFFICIENT_EVIDENCE with an honest empty state"
+  },
+  "commercial_integrity": {
+    "official_outbound_only": true,
+    "affiliate_tracking_enabled": false,
+    "synthetic_voucher_codes_permitted": false,
+    "price_must_be_observed_from_raw_source": true,
+    "no_inventory_inference": true
+  },
+  "acceptance": [
+    "All candidate evidence hashes verify against raw files on disk.",
+    "No duplicate candidate overlaps existing production entities without an explicit replacement decision.",
+    "No candidate is promoted beyond staging or rendered publicly under this dispatch.",
+    "All held/rejected candidates are separately identified with reasons."
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "brand_id": "lotte_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": true,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": null,
+    "observed_at": "2026-09-07T06:27:28.240Z",
+    "historical_observation_unverified": false,
+    "evidence_reference": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=6&cinemaID=8007",
+    "reason": "Raw HTML contains cinemaID=8007 navigation menu item but lacks physical facility address. Per anti-synthesis rule, address is NOT synthesized."
+  },
+  {
+    "brand_id": "metiz_cinema",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": true,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": null,
+    "observed_at": "2026-09-07T06:27:28.240Z",
+    "historical_observation_unverified": false,
+    "evidence_reference": "https://metiz.vn/about.html",
+    "reason": "Raw HTML contains business registration 0400668112 but lacks physical facility address string. Per anti-synthesis rule, address is NOT hardcoded."
+  },
+  {
+    "brand_id": "galaxy_cinema",
+    "status": "FAILED__CAPTURE_ERROR",
+    "error_message": "HTTP Error: server returned status 302"
+  },
+  {
+    "brand_id": "dien_may_xanh",
+    "status": "FAILED__SERVER_ERROR_500",
+    "checked_this_run": true,
+    "observed_status": "HTTP_500_INTERNAL_ERROR",
+    "observed_at": "2026-09-07T06:27:28.240Z",
+    "evidence_reference": "https://www.dienmayxanh.com/he-thong-sieu-thi-dien-may",
+    "reason": "Live probe failed: HTTP Error: server returned status 500. Per anti-synthesis rule, 0 locations emitted."
+  },
+  {
+    "brand_id": "highlands_coffee",
+    "status": "REJECTED__BLOCKED_403_WAF",
+    "checked_this_run": true,
+    "observed_status": "HTTP_403_FORBIDDEN",
+    "observed_at": "2026-09-07T06:27:28.240Z",
+    "evidence_reference": "https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html",
+    "reason": "Live probe blocked: HTTP Error: server returned status 403. Per anti-synthesis rule, 0 locations emitted."
+  },
+  {
+    "brand_id": "lotteria",
+    "status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "checked_this_run": true,
+    "observed_status": "REJECTED__NO_FACILITY_ADDRESS_IN_SOURCE",
+    "server_date": null,
+    "captured_at": null,
+    "file_mtime": null,
+    "observed_at": "2026-09-07T06:27:28.240Z",
+    "historical_observation_unverified": false,
+    "evidence_reference": "https://www.lotteria.vn/stores",
+    "reason": "Static DOM contains only corporate headquarters in HCMC. Dynamic store list requires client-side Firebase App Check attestation which rejects automated agents (403). Per anti-synthesis rule, 0 locations emitted."
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "report_id": "JAYT-319-B04-04-RECENCY-REMEDIATION-REPORT",
+  "directive": "JAYT-319",
+  "governing_work_order": "01_EXECUTIVE_COUNCIL/JAYT_319_B04_04_RECENCY_REMEDIATION_WORK_ORDER.md",
+  "created_at_utc": "2026-09-04T07:18:00Z",
+  "input_evidence": {
+    "slot_id": "B04_04",
+    "held_raw_body_sha256": "a8454a801d25629a97139469a057f8683287eb59b54fdff139eb76620e1b22c8",
+    "validated_span": "Tình trạng về hồ sơ dịch vụ công sẽ thông tin TỰ ĐỘNG",
+    "current_forensic_status": "EVIDENCE_COMPLETE_INTERNAL_HELD__PUBLIC_APPROVAL_DENIED",
+    "consumed_scope_id": "JAYT-317-B04-04-05-ONE-SHOT-INGRESS-20260904",
+    "reuse_permitted": false
+  },
+  "department_execution": {
+    "data_and_trust": {
+      "action": "DOCUMENTARY_DISCOVERY_PASS_01",
+      "prohibited_action_respected": "Did NOT reuse consumed quota or undated URL https://egov.danang.gov.vn/tienich",
+      "audited_sources": [
+        {
+          "candidate_url": "https://danang.gov.vn/web/dng/chi-tiet?id=32491",
+          "audit_result": "REJECTED_OUTDATED",
+          "finding": "Publication date is 04/08/2020; violates strict 2025–2026 recency mandate."
+        },
+        {
+          "candidate_url": "https://hoian.danang.gov.vn/dvc",
+          "audit_result": "REJECTED_DYNAMIC_SPA",
+          "finding": "Client-side React SPA without server-rendered DOM text; violates static raw payload contract."
+        }
+      ],
+      "active_leaf_candidate": {
+        "candidate_domain": "danang.gov.vn",
+        "description": "Cổng Thông tin điện tử TP Đà Nẵng — Hướng dẫn tra cứu và nhận thông báo tự động tình trạng hồ sơ DVC Một Cửa 2025–2026",
+        "expected_recency_year": 2026,
+        "pre_declared_span_requirement": "thông báo tự động về tình trạng và kết quả giải quyết hồ sơ",
+        "status": "AWAITING_VERIFIED_LEAF_PAGE_CONFIRMATION_BEFORE_SCOPE"
+      }
+    },
+    "qa_and_compliance": {
+      "verdict": "FAIL_CLOSED__NO_PREMATURE_CAPTURE_AUTHORIZATION",
+      "prohibited_action_respected": "Zero network capture executed; zero card render proposed without verified leaf page and CEO scope.",
+      "pre_audit_checklist": {
+        "official_government_domain": true,
+        "leaf_page_structure_verified": false,
+        "server_side_rendered_html_verified": false,
+        "dated_2025_2026_applicability_verified": false,
+        "direct_supporting_span_pre_declared": true
+      }
+    },
+    "engineering": {
+      "staging_baseline": "v3.483.0-staging.ao",
+      "staging_cards_count": 4,
+      "staging_parity": "PERFECT_MATCH_ZERO_DRIFT",
+      "production_baseline": "v3.420.0",
+      "production_cards_count": 3,
+      "production_status": "ISOLATED_HTTP_200",
+      "commercial_locks": {
+        "deals_feed_empty": true,
+        "voucher_count": 0,
+        "affiliate_enabled": false,
+        "tracking_params_count": 0
+      },
+      "mutation_executed": false
+    }
+  },
+  "gate_enforcement": {
+    "status": "DISCOVERY_ONLY__AWAITING_CEO_TARGET_SPECIFIC_SCOPE",
+    "capture_authorized": false,
+    "public_approved": false,
+    "render_permitted": false
+  }
+}

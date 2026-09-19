@@ -1,0 +1,26 @@
+{
+  "work_order_id": "J358_BATCH19_STUDENT_FNB",
+  "authority": "Chairman directive JAYT-358",
+  "issuer": "Codex CEO/Gatekeeper",
+  "executor": "Antigravity external software",
+  "workspace": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "brands": ["Starlight Cinema", "Gong Cha", "The Coffee House", "Katinat", "Popeyes", "The Pizza Company"],
+  "scope_note": "The directive says five chains but explicitly lists six; include all six named brands.",
+  "target": {"verified_distinct_offers": 15, "delivery_hours_from_executor_start": 48, "staging_url": "http://127.0.0.1:4176/", "priority_districts": ["Liên Chiểu", "Hải Châu", "Ngũ Hành Sơn"]},
+  "capture_authorized": true,
+  "staging_hydration_authorized_for_verified_records": true,
+  "production_deployment_authorized": false,
+  "requirements": [
+    "Use one reusable batch runner for official locator discovery, promotion discovery, capture, extraction, validation and Staging output. Record exact resolved official URLs; do not invent campaign leaf paths.",
+    "Treat U22, Wednesday Happy Day, buy-one-get-one and 50-percent-off as discovery targets, not established claims. Verify actual terms before publication.",
+    "Capture original response body, sanitized headers, final URL, HTTP status, real UTC timestamp and binary SHA-256. Preserve failed capture results separately from valid evidence.",
+    "For every offer bind its title, benefit or observed price, student/member eligibility, redemption channel, start/end dates or documented recurrence, holiday exclusions, budget limitations and public code if one exists to official source evidence.",
+    "Verify Da Nang branch addresses and offer applicability. Reuse proven brand-wide locality only when offer terms allow it. No branches in the target districts is a finding, not permission to manufacture locality.",
+    "Deduplicate against the v3.429.0 baseline and within the batch by merchant, product and campaign lineage. Report net-new offers separately from updates. Ordinary menu prices must not count toward the fifteen promotional offers.",
+    "Hold unsupported, expired, locality-unverified or blocked candidates with explicit reasons; report any shortfall truthfully. Enable copy only for source-backed public codes.",
+    "Hydrate passing items on :4176 and verify each eligible ID and source link in DOM, held-action absence, keyboard behavior, clipboard behavior where applicable, console/runtime and overflow at 1440/768/390px.",
+    "Return one immutable batch receipt, SHA-256 sidecar, item-level evidence matrix, actual new/update/held counts and Staging test results. Record execution start and completion times."
+  ],
+  "vault": "06_TRUST_AND_EVIDENCE/batch_19_student_fnb_vault/",
+  "output": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J358_BATCH19_STUDENT_FNB.json"
+}
