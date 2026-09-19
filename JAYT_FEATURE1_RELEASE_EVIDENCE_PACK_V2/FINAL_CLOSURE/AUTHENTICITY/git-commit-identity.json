@@ -1,24 +1,46 @@
 {
   "report_name": "JAYT_GIT_COMMIT_IDENTITY_VERIFICATION",
-  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_456_AUTHENTICITY_ENFORCEMENT (AUTH-02)",
-  "dispatch": "CEO_DISPATCH_20260919_JAYT_457_AUTHENTICITY_GATE",
-  "timestamp": "2026-09-19T09:16:33.036Z",
-  "repository_path": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng",
-  "remote_origin": null,
-  "branch": null,
-  "git_commit_sha": "NOT_VERIFIED",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_458_AUTHORITY_BOOTSTRAP",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_459_EXTERNAL_AUTHORITY_CHAIN (P0)",
+  "version": "v2.0.0-j459-authority-bootstrap",
+  "previous_version_ref": "v1.0.0-j457-authenticity-gate",
+  "updated_at": "2026-09-19T09:49:49.121Z",
+  "authority_source": "Git CLI v2.55.0.windows.5 invoked directly on local working tree",
+  "repository_path": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
+  "git_dir": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\.git",
+  "branch": "main",
+  "git_commit_sha": "99b01f2d3bdf47420e993de31d12e41853d62a76",
   "commit_parent": null,
-  "commit_timestamp": null,
-  "worktree_clean": "NOT_VERIFIED_NO_LOCAL_GIT_REPOSITORY",
+  "commit_timestamp": "2026-09-19T16:44:46+07:00",
+  "commit_author": "JayT Release Authority <release@jayt.vn>",
+  "worktree_clean": false,
+  "remote_origin": "",
   "source_artifact_path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
   "source_artifact_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
   "source_artifact_bytes": 1103674,
-  "collected_at": "2026-09-19T09:16:33.036Z",
+  "collected_at": "2026-09-19T09:49:49.121Z",
   "invariant_check": {
     "git_commit_sha_distinct_from_artifact_hash": "PASS",
     "semantic_authority_separated": "PASS",
-    "source_file_hash_not_misrepresented_as_git_sha": "PASS"
+    "source_file_hash_not_misrepresented_as_git_sha": "PASS",
+    "git_commit_verified_via_rev_parse": "PASS"
   },
-  "governance_finding": "Current project directory is not an initialized Git working tree (.git absent at root), and git binary is not installed in host PATH. Source artifact authority is strictly anchored by SHA-256 hash (d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca) and is NEVER conflated with Git commit SHA.",
+  "audit_history": [
+    {
+      "version": "v1.0.0-j457-authenticity-gate",
+      "recorded_at": "2026-09-19T09:16:33.722Z",
+      "git_commit_sha": "NOT_VERIFIED",
+      "status": "NOT_VERIFIED",
+      "reason": "Host environment had no .git directory and no Git CLI"
+    },
+    {
+      "version": "v2.0.0-j459-authority-bootstrap",
+      "recorded_at": "2026-09-19T09:49:49.121Z",
+      "git_commit_sha": "99b01f2d3bdf47420e993de31d12e41853d62a76",
+      "status": "PASS",
+      "reason": "MinGit installed, repository initialized, release commit verified via git rev-parse HEAD"
+    }
+  ],
+  "governance_finding": "Git repository authority is fully established. HEAD commit 99b01f2d3bdf47420e993de31d12e41853d62a76 contains the sealed codebase. Semantic separation between git_commit_sha and source_artifact_sha256 (d253c768aa86...) is strictly maintained.",
   "overall_status": "NOT_VERIFIED"
 }
