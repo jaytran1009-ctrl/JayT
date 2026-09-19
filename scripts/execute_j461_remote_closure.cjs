@@ -13,10 +13,19 @@ const https = require('https');
 const crypto = require('crypto');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
+const gitExe = 'C:\\Users\\tritr\\AppData\\Local\\Programs\\Git\\cmd\\git.exe';
 const ghExe = 'C:\\Users\\tritr\\AppData\\Local\\Programs\\GitHubCLI\\gh.exe';
 const gitCmd = 'C:\\Users\\tritr\\AppData\\Local\\Programs\\Git\\cmd';
 const repo = 'jaytran1009-ctrl/JayT';
-const FINAL_GIT_COMMIT_SHA = '7edd834f9f104dad27d6d8a6a987ad0d5c2d61ec';
+
+function runGit(args) {
+  const res = spawnSync(gitExe, args, { encoding: 'utf8', cwd: ROOT_DIR });
+  if (res.error) throw res.error;
+  return res.stdout.trim();
+}
+
+const FINAL_GIT_COMMIT_SHA = runGit(['rev-parse', 'HEAD']);
+
 
 const PACK_V2 = path.join(ROOT_DIR, 'JAYT_FEATURE1_RELEASE_EVIDENCE_PACK_V2');
 const FINAL_CLOSURE_DIR = path.join(PACK_V2, 'FINAL_CLOSURE');
