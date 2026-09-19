@@ -203,7 +203,7 @@ async function triggerAndTrackRun(slot, cycle = 'AUTO_GOLDEN_HOUR') {
 
   const canonicalUrl = 'https://jayt-production-v3420.vercel.app/jayt_apex_interface.js';
   const previousCanonicalUrl = 'https://deploy-ten-xi-48.vercel.app/jayt_apex_interface.js';
-  const immutableUrl = 'https://jayt-d-n-gi-tr-c-ng-ng-git-fe-fb6ec9-kuntran777-6857s-projects.vercel.app/jayt_apex_interface.js';
+  const immutableUrl = 'https://jayt-production-v3420-2ea3iaz0f-kuntran777-6857s-projects.vercel.app/jayt_apex_interface.js';
 
   console.log('Fetching live HTTP bytes from endpoints...');
   const probeCanonical = await fetchDetails(canonicalUrl);
@@ -323,8 +323,8 @@ async function triggerAndTrackRun(slot, cycle = 'AUTO_GOLDEN_HOUR') {
     github_release_run_ids: formattedRuns.map(r => r.github_run_id),
     watchdog_run_id: wr.id,
     project_id: 'prj_YzcODtsWLzPWaIVItzd4K6QEWERm',
-    new_deployment_id: 'dpl_4zPWezybXB9p2aWABy2i8wu7b6b6',
-    immutable_deployment_url: 'https://jayt-d-n-gi-tr-c-ng-ng-git-fe-fb6ec9-kuntran777-6857s-projects.vercel.app',
+    new_deployment_id: 'dpl_J5SWyXzAGa9vk4Mv4ZabRvu1xS29',
+    immutable_deployment_url: 'https://jayt-production-v3420-2ea3iaz0f-kuntran777-6857s-projects.vercel.app',
     new_canonical_sha256: probeCanonical.sha256,
     previous_canonical_sha256: probePrevCanonical.sha256,
     rollback_target: 'https://deploy-ten-xi-48.vercel.app/',
@@ -403,7 +403,7 @@ async function triggerAndTrackRun(slot, cycle = 'AUTO_GOLDEN_HOUR') {
       github_remote_authority: { status: 'PASS', repo: repo, default_branch: 'main' },
       github_actions_cloud_runs: { status: 'PASS', runs_count: formattedRuns.length, runs: formattedRuns.map(r => ({ slot: r.scheduled_slot, id: r.github_run_id, conclusion: r.conclusion })) },
       cloud_watchdog_drill: { status: 'PASS', run_id: wr.id, conclusion: wr.conclusion },
-      vercel_deployment_authority: { status: 'PASS', deployment_id: 'dpl_4zPWezybXB9p2aWABy2i8wu7b6b6' },
+      vercel_deployment_authority: { status: 'PASS', deployment_id: 'dpl_J5SWyXzAGa9vk4Mv4ZabRvu1xS29' },
       live_artifact_parity: { status: 'PASS', sha256: ssotSha256, bytes: ssotBytes.length },
       canonical_migration: { status: 'TECHNICALLY_VERIFIED', record_ref: 'CANONICAL-MIGRATION-20260919-001' }
     },
