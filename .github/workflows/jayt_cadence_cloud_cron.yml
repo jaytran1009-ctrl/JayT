@@ -127,15 +127,17 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel Production
-        uses: amondnet/vercel-action@v25
-        continue-on-error: true
+      - name: Setup Node.js Runtime for Deploy
+        uses: actions/setup-node@v4
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          working-directory: ./deploy
+          node-version: '20'
+
+      - name: Deploy to Vercel Production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          echo "Deploying to Vercel Production via official Vercel CLI..."
+          npx vercel deploy --prod --yes --token="$VERCEL_TOKEN" --cwd deploy
 
   telegram_notification:
     name: Dispatch Operational Status to Telegram
