@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Direct-Capture Canary Architecture (2 Sessions Only)",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "governance_rule": "COMMON_RAW_WRITER = 0, AGGREGATION_ONLY FOR COMPILER, 2 SESSIONS STRICTLY",
+  "three_process_separation": {
+    "process_a": {
+      "writer": "scripts/canary_participant_client.cjs",
+      "artifact": "PARTICIPANT_INPUT_CANARY.jsonl",
+      "role": "Participant Client (Client-side manual inputs and actions)"
+    },
+    "process_b": {
+      "writer": "scripts/canary_app_logger.cjs",
+      "artifact": "APPLICATION_EVENTS_CANARY.jsonl",
+      "role": "JayT App Logger (Dynamic nonces, telemetry events, facts)"
+    },
+    "process_c": {
+      "writer": "scripts/canary_observer_surface.cjs",
+      "artifact": "OBSERVER_ATTESTATIONS_CANARY.jsonl",
+      "role": "Observer Surface (Independent supervisor attestations)"
+    }
+  },
+  "raw_writer_count": 3,
+  "common_raw_writer_count": 0
+}

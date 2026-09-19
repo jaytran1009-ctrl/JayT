@@ -1,12 +1,10 @@
 {
   "matrix_name": "JAYT_CEO_CANONICAL_14_CONDITIONS_ACCEPTANCE_MATRIX",
-  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_460_AND_AUTHORIZE_FINAL_REMOTE_CLOSURE",
-  "dispatch": "CEO_DISPATCH_20260919_JAYT_461_FINAL_REMOTE_AUTHORITY_CLOSURE (P0)",
-  "version": "v3.0.0-j461-final-remote-closure",
-  "previous_version_ref": "v2.0.0-j459-authority-bootstrap",
-  "updated_at": "2026-09-19T11:55:38.531Z",
-  "final_git_commit_sha": "42e8a16283adc59323816ea78a2f819174b9c7a6",
-  "authority_source": "JAYT-461 Section XVI 14-Gate Canonical Matrix",
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_462",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_463_FINAL_DEPLOYMENT_CLOSURE (P0)",
+  "version": "v3.0.0-j463-final-deployment-closure",
+  "updated_at": "2026-09-19T12:10:57.843Z",
+  "final_git_commit_sha": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
   "total_conditions": 14,
   "passed_conditions": 14,
   "not_verified_conditions": 0,
@@ -67,7 +65,7 @@
       "actual_value": "VERIFIED",
       "status": "PASS",
       "authority_source": "GITHUB_ACTIONS_WORKFLOW_DISPATCH",
-      "details": "4/4 real runs verified on commit 42e8a16283adc59323816ea78a2f819174b9c7a6: Runs 35440792542, 35440908367, 35441041191, 35441177942"
+      "details": "Authoritative deploy run 35441988613 verified on commit ae5122ca559503fe16f26b2e3af20e84a032bad7"
     },
     {
       "condition_id": "WATCHDOG_DRILL",
@@ -75,7 +73,7 @@
       "actual_value": "PASS",
       "status": "PASS",
       "authority_source": "GITHUB_ACTIONS_DISPATCH_AND_RESTORE",
-      "details": "Watchdog catch-up run 35441303004 completed with success on commit 42e8a16283adc59323816ea78a2f819174b9c7a6"
+      "details": "Watchdog catch-up run 35441303004 completed with success"
     },
     {
       "condition_id": "LIVE_ARTIFACT_PARITY",
@@ -83,7 +81,7 @@
       "actual_value": "PASS",
       "status": "PASS",
       "authority_source": "VERCEL_EDGE_DIRECT_HTTP_DOWNLOAD",
-      "details": "100% bit-identical 1,103,674 bytes across local SSOT, immutable URL, and canonical URL."
+      "details": "100% bit-identical 1,103,674 bytes on Governance Canonical jayt-production-v3420.vercel.app"
     },
     {
       "condition_id": "CLIENT_AFFILIATE_AUTHORITY",
@@ -104,14 +102,16 @@
       "required_value": "0",
       "actual_value": "0",
       "status": "PASS",
-      "authority_source": "EXECUTIVE_DEFECT_REGISTER"
+      "authority_source": "EXECUTIVE_DEFECT_REGISTER",
+      "details": "P0-462-01, P0-462-02, P0-462-03 all verified RESOLVED"
     },
     {
       "condition_id": "AFFILIATE_ENABLED",
       "required_value": "FALSE",
       "actual_value": "FALSE",
       "status": "PASS",
-      "authority_source": "SOURCE_OF_TRUTH_AST"
+      "authority_source": "SOURCE_OF_TRUTH_AST",
+      "details": "CONFIG.affiliate_enabled = false strictly locked"
     }
   ],
   "acceptance_threshold": "14/14 PASS",

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Zalo Deal Pass Canvas Specification (1080x1440 PNG)",
+  "version": "1.0.0",
+  "template_id": "ZALO_DEAL_PASS_1080X1440_V1",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_465_UX_INTERNAL_BEHAVIOR_AND_DANANG_READINESS",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440,
+    "aspect_ratio": "3:4",
+    "output_format": "PNG",
+    "target_dpi": 300
+  },
+  "visual_theme": {
+    "background_gradient": "linear-gradient(180deg, #061a14 0%, #0d2820 50%, #061a14 100%)",
+    "primary_text": "#F4EFE6",
+    "accent_gold": "#E5C378",
+    "emerald_highlight": "#10B981",
+    "glass_panel_fill": "rgba(18, 28, 22, 0.85)",
+    "glass_panel_border": "rgba(229, 195, 120, 0.3)"
+  },
+  "layout_sections": [
+    {
+      "section_id": "HEADER_BAND",
+      "bounds": { "x": 60, "y": 60, "w": 960, "h": 120 },
+      "elements": [
+        { "type": "LOGO", "asset": "assets/jayt_logo_delta.svg", "x": 60, "y": 70, "w": 180, "h": 50 },
+        { "type": "TEXT", "text": "DỰ ÁN GIÁ TRỊ CỘNG ĐỒNG ĐÀ NẴNG", "x": 260, "y": 80, "font": "bold 24px Outfit", "color": "#E5C378" },
+        { "type": "BADGE", "text": "THẺ CHIA SẺ TIẾT KIỆM MINH BẠCH", "x": 260, "y": 115, "font": "18px Outfit", "color": "#10B981" }
+      ]
+    },
+    {
+      "section_id": "MEDIA_AND_IDENTITY",
+      "bounds": { "x": 60, "y": 200, "w": 960, "h": 460 },
+      "elements": [
+        { "type": "PRODUCT_IMAGE", "x": 60, "y": 200, "w": 960, "h": 360, "border_radius": 24, "object_fit": "cover" },
+        { "type": "PROVENANCE_TAG", "x": 90, "y": 230, "rule": "if asset_provenance_verified then 'Ảnh unbox/camera thường' else 'Ảnh sản phẩm từ nguồn'" },
+        { "type": "TITLE", "x": 80, "y": 590, "w": 920, "font": "bold 32px Outfit", "color": "#F4EFE6", "max_lines": 2 }
+      ]
+    },
+    {
+      "section_id": "JAYT_VERDICT_BLOCK",
+      "bounds": { "x": 60, "y": 680, "w": 960, "h": 220 },
+      "elements": [
+        { "type": "VERDICT_BADGE", "x": 90, "y": 710, "text": "NÊN MUA", "bg": "#10B981", "color": "#061A14" },
+        { "type": "VERDICT_RATIONALE", "x": 90, "y": 770, "w": 900, "font": "22px Outfit", "color": "#F4EFE6" },
+        { "type": "EVIDENCE_ANCHOR", "x": 90, "y": 840, "w": 900, "font": "18px JetBrains Mono", "color": "#A3B1A8" }
+      ]
+    },
+    {
+      "section_id": "SAVINGS_BOARD",
+      "bounds": { "x": 60, "y": 920, "w": 960, "h": 240 },
+      "elements": [
+        { "type": "GRID_6_FIELDS", "x": 60, "y": 920, "w": 960, "h": 240, "fields": ["Niêm yết", "Hiện tại", "Voucher", "Phí", "Thực trả dự kiến", "Tiết kiệm"] }
+      ]
+    },
+    {
+      "section_id": "CLEAN_QR_AND_DISCLAIMER",
+      "bounds": { "x": 60, "y": 1180, "w": 960, "h": 200 },
+      "elements": [
+        {
+          "type": "QR_CODE",
+          "x": 80,
+          "y": 1190,
+          "w": 160,
+          "h": 160,
+          "target_url_rule": "CANONICAL_CLEAN_URL_ONLY (No affiliate token exposed while affiliate_enabled = false)"
+        },
+        {
+          "type": "TEXT",
+          "x": 270,
+          "y": 1230,
+          "w": 730,
+          "text": "Quét mã QR để mở trang đối soát giá độc lập & kiểm chứng bằng chứng thật.",
+          "font": "20px Outfit",
+          "color": "#E5C378"
+        },
+        {
+          "type": "DISCLAIMER",
+          "x": 270,
+          "y": 1280,
+          "w": 730,
+          "text": "Tuân thủ Luật 75/2025/QH15 & Luật 122/2025/QH15 · Không quảng cáo sai sự thật.",
+          "font": "16px Outfit",
+          "color": "#8C9990"
+        }
+      ]
+    }
+  ]
+}

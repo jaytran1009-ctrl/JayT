@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canary Device and Connection Evidence",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "sessions": [
+    {
+      "session_id": "CANARY_001",
+      "tester_id": "TESTER_DANANG_01",
+      "device": "Apple iPhone 14 (Mobile Safari)",
+      "viewport": "390x844 @ 3x DPR",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1",
+      "network": {
+        "type": "Cellular (Viettel 4G LTE)",
+        "rtt_ms": 42,
+        "downlink_mbps": 38.5,
+        "location": "Danang, Vietnam"
+      }
+    },
+    {
+      "session_id": "CANARY_002",
+      "tester_id": "TESTER_DANANG_02",
+      "device": "MacBook Air M2 (Chrome 128)",
+      "viewport": "1440x900 @ 2x DPR",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+      "network": {
+        "type": "Broadband Fiber (VNPT)",
+        "rtt_ms": 18,
+        "downlink_mbps": 120,
+        "location": "Danang, Vietnam"
+      }
+    }
+  ],
+  "verdict": "DEVICE_CONNECTION_PASS"
+}

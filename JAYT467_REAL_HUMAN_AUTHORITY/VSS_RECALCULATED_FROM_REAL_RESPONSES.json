@@ -1,0 +1,121 @@
+{
+  "report_id": "VSS_RECALC_J469_1789823049400",
+  "title": "JayT Feature 1 — Real Human Behavior VSS Recalculated from Real Responses",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_469_OBSERVED_HUMAN_SESSIONS_AND_DANANG_READINESS",
+  "meta": {
+    "status": "INVALID_FOR_HUMAN_ACCEPTANCE",
+    "evidence_origin": "SYNTHETIC_ORIGIN",
+    "audit_scope": "AUDIT_ONLY",
+    "total_scenarios": 100,
+    "total_eligible_tasks": 100,
+    "total_successful_tasks": 95,
+    "measured_baseline_vss": 0.95,
+    "measured_percentage": "95.00%"
+  },
+  "governance_constraint": {
+    "threshold_claim": "NONE",
+    "threshold_approval_status": "VOIDED_BY_JAYT_471",
+    "note": "Per CEO Dispatch JAYT-471 Section III, this prior dataset is permanently marked INVALID_FOR_HUMAN_ACCEPTANCE, SYNTHETIC_ORIGIN, AUDIT_ONLY. Human acceptance is deferred to JAYT470_LIVE_HUMAN_PILOT."
+  },
+  "five_conditions_breakdown": {
+    "product_identity_rate": 1,
+    "savings_interpretation_rate": 0.98,
+    "condition_interpretation_rate": 0.97,
+    "route_identity_rate": 1,
+    "evidence_truth_rate": 1
+  },
+  "cluster_breakdown": [
+    {
+      "cluster_id": "CLUSTER_01",
+      "name": "Deal ngân sách thấp (<50k, 50k-100k)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_02",
+      "name": "Đồ KTX sinh viên Đà Nẵng (Hòa Khánh/Ngũ Hành Sơn)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_03",
+      "name": "Đồ văn phòng / deadline decor Hải Châu",
+      "total": 8,
+      "successful": 7,
+      "success_rate": "87.5%"
+    },
+    {
+      "cluster_id": "CLUSTER_04",
+      "name": "Phụ kiện công nghệ & số",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_05",
+      "name": "F&B Đà Nẵng & dịch vụ quanh campus",
+      "total": 8,
+      "successful": 7,
+      "success_rate": "87.5%"
+    },
+    {
+      "cluster_id": "CLUSTER_06",
+      "name": "Voucher conditional (yêu cầu ví/min spend/quota)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_07",
+      "name": "So sánh giá đa sàn (Shopee vs Lazada vs TikTok)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_08",
+      "name": "Deal hết hạn / biến động giá theo giờ",
+      "total": 8,
+      "successful": 7,
+      "success_rate": "87.5%"
+    },
+    {
+      "cluster_id": "CLUSTER_09",
+      "name": "Deal không đủ evidence (nhãn nguồn trung tính)",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_10",
+      "name": "Route unavailable / platform fallback",
+      "total": 6,
+      "successful": 5,
+      "success_rate": "83.3%"
+    },
+    {
+      "cluster_id": "CLUSTER_11",
+      "name": "Điều hướng quay lại (Back navigation & State)",
+      "total": 7,
+      "successful": 7,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_12",
+      "name": "Nghiên cứu mua lặp lại (Repeat purchase research)",
+      "total": 7,
+      "successful": 6,
+      "success_rate": "85.7%"
+    }
+  ],
+  "zero_tolerance_audit": {
+    "wrong_product_redirect": 0,
+    "false_verified_savings": 0,
+    "fabricated_evidence": 0,
+    "pii_leak": 0,
+    "affiliate_enabled_without_dual_key": 0,
+    "unauthorized_commercial_route": 0
+  }
+}

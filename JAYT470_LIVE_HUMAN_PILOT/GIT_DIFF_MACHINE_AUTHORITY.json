@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Machine-Derived Git Diff Authority",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "baseline_commit": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
+  "current_head_reference": "HEAD",
+  "core_invariants_check": {
+    "CONTRACT_TOUCH": 0,
+    "ROUTE_TOUCH": 0,
+    "COMMERCIAL_AUTHORITY_TOUCH": 0,
+    "REVIEW_MATH_TOUCH": 0,
+    "AFFILIATE_LOCK_TOUCH": 0
+  },
+  "git_diff_summary": [
+    "03_SOURCE_OF_TRUTH/jayt_apex_interface.js          | 172 +++++++++++---",
+    " 04_DESIGN_SYSTEM/tokens.json                       |  68 ++++++",
+    " .../evidence/cross-browser-report.json             |   2 +-",
+    " .../evidence/cross-browser-runtime.json            |   2 +-",
+    " .../runtime_evidence/j392_scheduler_run.log        |   1 +",
+    " .../test_playwright_cross_browser.cjs              |  27 +++",
+    " .../CANONICAL_PRODUCTION_MIGRATION_RECORD.json     |  40 ++--",
+    " .../AUTHENTICITY/authenticity-verdict.json         |  65 ++----",
+    " .../AUTHENTICITY/ceo-matrix-canonical.json         |  24 +-",
+    " .../CANONICAL_PRODUCTION_MIGRATION_RECORD.json     |  40 ++--",
+    " .../FINAL_CLOSURE/known-issues-final.json          |  79 +++----",
+    " PROJECT_MEMORY.md                                  |  97 ++++++++",
+    " PROJECT_MEMORY.md.sha256                           |   2 +-",
+    " deploy/jayt_apex_interface.js                      | 172 +++++++++++---",
+    " deploy/public/jayt_apex_interface.js               | 172 +++++++++++---",
+    " deploy/public/styles.css                           | 251 +++++++++++++++++++++",
+    " deploy/styles.css                                  | 251 +++++++++++++++++++++",
+    " scripts/sync_ws2_parity.cjs                        |  45 +++-",
+    " 18 files changed, 1266 insertions(+), 244 deletions(-)"
+  ],
+  "classification": "100% PRESENTATION_ONLY_AND_QA_EVIDENCE",
+  "verdict": "PASS"
+}

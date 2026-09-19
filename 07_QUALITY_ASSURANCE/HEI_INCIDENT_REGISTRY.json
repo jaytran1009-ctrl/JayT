@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Human Evidence Incidents (HEI) Permanent Registry",
+  "version": "1.0.0",
+  "authority": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "governance_rule": "ALL_HEI_INCIDENTS_PRESERVED_FOREVER_WITH_TRACEABLE_REMEDIATION",
+  "incidents": [
+    {
+      "incident_id": "HEI-001",
+      "canonical_title": "PRE-FILLED HUMAN RESULTS IN TEST PLAN",
+      "discovered_at": "2026-09-19T10:30:00Z",
+      "originating_scope": "07_QUALITY_ASSURANCE/100_INTERNAL_SCENARIOS.json",
+      "root_cause": "Pre-filled outcome fields (observed_route, user_interpretation, task_result) were hardcoded inside the scenario specification file.",
+      "classification": "SYNTHETIC_RESULT_CONTAMINATION",
+      "remediation_status": "CLOSED_REMEDIATED",
+      "remediation_details": "100_INTERNAL_SCENARIOS.json decoupled into pure test plan specification. All outcome and result flags purged permanently in JAYT-467.",
+      "historical_preservation": "PRESERVE_FOREVER",
+      "remediation_reference": "07_QUALITY_ASSURANCE/100_INTERNAL_SCENARIOS.json (version 2.0.0)"
+    },
+    {
+      "incident_id": "HEI-002",
+      "canonical_title": "GENERATED OBSERVED HUMAN DATA",
+      "discovered_at": "2026-09-19T13:10:00Z",
+      "originating_scope": "scripts/generate_observed_human_data.cjs & JAYT467_REAL_HUMAN_AUTHORITY/",
+      "root_cause": "Script generated participant responses and receipts algorithmically instead of capturing live human input.",
+      "classification": "PROHIBITED_FOR_HUMAN_EVIDENCE",
+      "remediation_status": "OPEN_REMEDIATION",
+      "remediation_details": "scripts/generate_observed_human_data.cjs permanently prohibited from execution/import/derivation. 100-session dataset tagged INVALID_FOR_HUMAN_ACCEPTANCE, SYNTHETIC_ORIGIN, AUDIT_ONLY. JAYT-471 mandates 10 Live Supervised Sessions under 3-process separation in JAYT470_LIVE_HUMAN_PILOT/.",
+      "historical_preservation": "PRESERVE_FOREVER",
+      "remediation_reference": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION (Section II & III)"
+    },
+    {
+      "incident_id": "HEI-003",
+      "canonical_title": "CENTRAL PILOT PACK BUILDER CONTAMINATION",
+      "discovered_at": "2026-09-19T14:30:00Z",
+      "originating_scope": "scripts/build_jayt470_pilot_pack.cjs & JAYT470_LIVE_HUMAN_PILOT/",
+      "root_cause": "A single script wrote raw evidence streams across Process A, B, and C, violating the COMMON_RAW_WRITER = 0 boundary required for tamper-evident direct capture.",
+      "classification": "CENTRAL_RAW_WRITER_VIOLATION",
+      "remediation_status": "OPEN_REMEDIATION",
+      "remediation_details": "Prohibit build_jayt470_pilot_pack.cjs from writing raw canary evidence (restricted to AGGREGATION_ONLY). Decouple raw evidence writers into three distinct processes: canary_participant_client.cjs (Process A), canary_app_logger.cjs (Process B), and canary_observer_surface.cjs (Process C). Direct-capture canary enforced in JAYT472_DIRECT_CAPTURE_CANARY/ with RAW_WRITER_SEPARATION_AUDIT.json proving zero cross-writes.",
+      "historical_preservation": "PRESERVE_FOREVER",
+      "remediation_reference": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY (Track B)"
+    }
+  ]
+}
+

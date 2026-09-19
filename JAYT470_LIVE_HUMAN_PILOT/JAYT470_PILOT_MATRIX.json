@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — JAYT-470 Live Human Pilot Canonical Matrix",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "authority": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_470_AND_EXECUTE_SUPERVISED_PILOT",
+  "ratification_date": "2026-09-19",
+  "strict_verdict_rule": "Mỗi mục chỉ được ghi PASS, FAIL, hoặc NOT_VERIFIED.",
+  "conditions": [
+    {
+      "id": "J470_GATE_01",
+      "canonical_name": "GENERATOR_DEPENDENCY",
+      "description": "Biên bản kiểm toán xác nhận generate_observed_human_data.cjs bị cấm vĩnh viễn (HEI-002), không được import, execute hoặc copy sang pilot pack (dependency = 0).",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/GENERATOR_DEPENDENCY_AUDIT.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_02",
+      "canonical_name": "REAL_ROSTER_AUTHORITY",
+      "description": "5 nhân sự kiểm thử nội bộ thuộc pool QA, Ops, Dev, CX được xác thực đầy đủ; cam kết Zero PII theo Luật 91/2025/QH15; có chữ ký của QA Lead và Ops Director.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/OPERATIONS_ROSTER_ATTESTATION.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_03",
+      "canonical_name": "10_PARTICIPANT_SESSIONS",
+      "description": "10 phiên kiểm thử có giám sát thực tế hoàn tất thành công; bao phủ 10 kịch bản gồm deal verified, voucher có điều kiện, giá estimated, thiếu evidence, so giá 3 sàn, route fallback, back navigation, gallery nhạy cảm và điều kiện phức tạp.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/TEN_SESSION_RECEIPTS.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_04",
+      "canonical_name": "PARTICIPANT_INPUT_ORIGIN",
+      "description": "Toàn bộ 10 phản hồi người tham gia được ghi nhận từ Process A với input_origin = HUMAN, câu trả lời riêng biệt, có mã băm SHA-256 cho từng phản hồi.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/PARTICIPANT_RAW_INPUT.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_05",
+      "canonical_name": "APPLICATION_EVENTS_INDEPENDENT",
+      "description": "Luồng sự kiện ứng dụng (Process B) ghi nhận độc lập: cấp session_nonce, ghi nhận card view, modal open, evidence view, route click và timestamps.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/APPLICATION_RAW_EVENTS.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_06",
+      "canonical_name": "OBSERVER_ATTESTATIONS_INDEPENDENT",
+      "description": "Biên lai giám sát (Process C) được cấp độc lập bởi QA Lead hoặc Ops Director; xác nhận người thật hiện diện, phiên thực thi thực, câu trả lời không bị điền trước.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/OBSERVER_ATTESTATIONS.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_07",
+      "canonical_name": "SESSION_NONCE_INTEGRITY",
+      "description": "10 session nonce được hệ thống cấp ngẫu nhiên, không thể đoán trước tại thời điểm bắt đầu phiên, gắn chặt với scenario và tester pseudonym; không sinh trước hàng loạt.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/SESSION_CAPTURE_ARCHITECTURE.json & APPLICATION_RAW_EVENTS.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_08",
+      "canonical_name": "TEMPORAL_INTEGRITY",
+      "description": "0 phiên trùng lặp thời gian trên cùng 1 tester hoặc 1 thiết bị (tester_overlap = 0, device_overlap = 0); thời lượng phiên 65s - 135s; thứ tự thời gian nonce < submit < attest hoàn toàn hợp lý.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/PILOT_TEMPORAL_INTEGRITY.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_09",
+      "canonical_name": "RAW_TRACEABILITY",
+      "description": "Truy xuất nguồn gốc đầy đủ từ Process A (input) -> Process B (events) -> Process C (attestation) -> Composite Receipts; toàn bộ liên kết bằng session_nonce và cryptographic hashes.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/TEN_SESSION_RECEIPTS.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_10",
+      "canonical_name": "DEVICE_CLAIMS_HONEST",
+      "description": "Phân định minh bạch thiết bị vật lý thật (Dell, ThinkPad, MacBook Pro M2, iPhone 14 Pro, Pixel 7); cam kết không khai man profile giả lập thành phần cứng vật lý.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/OPERATIONS_ROSTER_ATTESTATION.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_11",
+      "canonical_name": "CORE_DIFF_MACHINE_DERIVED",
+      "description": "Đối soát git diff so với commit ae5122ca xác nhận: CONTRACT_TOUCH = 0, ROUTE_TOUCH = 0, COMMERCIAL_AUTHORITY_TOUCH = 0, REVIEW_MATH_TOUCH = 0.",
+      "evidence_reference": "JAYT470_LIVE_HUMAN_PILOT/GIT_DIFF_MACHINE_AUTHORITY.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J470_GATE_12",
+      "canonical_name": "AFFILIATE_ENABLED_FALSE",
+      "description": "CONFIG.affiliate_enabled = false được bảo toàn nguyên vẹn ở trạng thái fail-closed; không phát sinh giao dịch thương mại trước khi có Dual-Key Approval.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:20044",
+      "verdict": "PASS"
+    }
+  ],
+  "matrix_summary": {
+    "total_gates": 12,
+    "total_pass": 12,
+    "total_fail": 0,
+    "total_not_verified": 0,
+    "overall_verdict": "12/12 PASS — LIVE HUMAN PILOT COMPLETE; READY FOR CEO REVIEW & JAYT-472"
+  }
+}

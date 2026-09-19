@@ -1,0 +1,57 @@
+{
+  "diff_id": "UX_CORE_DIFF_1789821934174",
+  "title": "JayT Feature 1 — UX Core Integrity Diff Report",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_467_REAL_HUMAN_EVIDENCE_EXECUTION",
+  "baseline": {
+    "commit": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
+    "commit_summary": "feat(jayt-463): remove fail-open deploy, bind official vercel cli and prepare final closure",
+    "source_path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "source_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
+    "source_size_bytes": 1103674
+  },
+  "current": {
+    "commit": "WORKING_TREE_MODIFIED",
+    "source_path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "source_sha256": "62c97340fdb5132a56cb0f8f34979764dacb3c63786cf06bf81294182a744c22",
+    "source_size_bytes": 1109449
+  },
+  "classified_diff_count": {
+    "PRESENTATION_ONLY": 3,
+    "CONTRACT_TOUCH": 0,
+    "ROUTE_TOUCH": 0,
+    "COMMERCIAL_AUTHORITY_TOUCH": 0,
+    "REVIEW_MATH_TOUCH": 0
+  },
+  "classified_changes": [
+    {
+      "category": "PRESENTATION_ONLY",
+      "description": "renderJaytVerdictHtml() component added (KẾT LUẬN / LÝ DO / BẰNG CHỨNG 3-layer presentation UI)",
+      "location": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:14343-14373",
+      "contract_impact": "NONE"
+    },
+    {
+      "category": "PRESENTATION_ONLY",
+      "description": "renderSavingsBreakdownHtml() component added (6-field savings grid presentation UI)",
+      "location": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:14375-14424",
+      "contract_impact": "NONE"
+    },
+    {
+      "category": "PRESENTATION_ONLY",
+      "description": "Photo gallery provenance badge discipline in openAuthenticReviewsModal (asset_provenance_verified check)",
+      "location": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:13388",
+      "contract_impact": "NONE"
+    }
+  ],
+  "invariants_verified": {
+    "offer_contract_unmodified": true,
+    "evidence_contract_unmodified": true,
+    "savings_contract_unmodified": true,
+    "route_contract_unmodified": true,
+    "outcome_contract_unmodified": true,
+    "route_resolver_unmodified": true,
+    "review_math_unmodified": true,
+    "commercial_authority_fail_closed": true,
+    "config_affiliate_enabled_false": true
+  },
+  "verdict": "PASS_ZERO_CORE_TOUCH"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Writer Separation Audit",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "evaluated_at": "2026-09-19T13:45:56.152Z",
+  "common_raw_writer": 0,
+  "forbidden_cross_writes": 0,
+  "raw_writers_count": 3,
+  "writers": [
+    {
+      "process": "PROCESS_A",
+      "script": "scripts/canary_participant_client.cjs",
+      "target_file": "JAYT472_DIRECT_CAPTURE_CANARY/PARTICIPANT_INPUT_CANARY.jsonl",
+      "lines_written": 2,
+      "cross_writes": 0,
+      "sha256": "5b57899b7c96d6c31ad885577e2d77be3b612b5a7c95312f512266d0b97d7ba0"
+    },
+    {
+      "process": "PROCESS_B",
+      "script": "scripts/canary_app_logger.cjs",
+      "target_file": "JAYT472_DIRECT_CAPTURE_CANARY/APPLICATION_EVENTS_CANARY.jsonl",
+      "lines_written": 2,
+      "cross_writes": 0,
+      "sha256": "0233ef83d21e1954187632be29ad5f1c9051ac30ae21239b166e04016e80395d"
+    },
+    {
+      "process": "PROCESS_C",
+      "script": "scripts/canary_observer_surface.cjs",
+      "target_file": "JAYT472_DIRECT_CAPTURE_CANARY/OBSERVER_ATTESTATIONS_CANARY.jsonl",
+      "lines_written": 2,
+      "cross_writes": 0,
+      "sha256": "4347c05588d5b484330ede5b71d0e1ad76386bcf46fe3788cdd03db5a37bc566"
+    }
+  ],
+  "compiler_role": "AGGREGATION_ONLY",
+  "hei_003_status": "OPEN_REMEDIATION",
+  "verdict": "SEPARATION_VERIFIED_PASS"
+}

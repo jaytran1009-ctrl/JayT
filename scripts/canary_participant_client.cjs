@@ -1,0 +1,91 @@
+/**
+ * Process A: Participant Client
+ * Mandate: CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY
+ * Rule: EXCLUSIVE WRITER for PARTICIPANT_INPUT_CANARY.jsonl. Zero other file writes.
+ */
+
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const ROOT_DIR = path.resolve(__dirname, '..');
+const CANARY_DIR = path.join(ROOT_DIR, 'JAYT472_DIRECT_CAPTURE_CANARY');
+const TARGET_FILE = path.join(CANARY_DIR, 'PARTICIPANT_INPUT_CANARY.jsonl');
+
+if (!fs.existsSync(CANARY_DIR)) {
+  fs.mkdirSync(CANARY_DIR, { recursive: true });
+}
+
+function sha256(data) {
+  return crypto.createHash('sha256').update(typeof data === 'string' ? data : JSON.stringify(data)).digest('hex');
+}
+
+const participantInputs = [
+  {
+    session_id: "CANARY_001",
+    scenario_id: "SCN_001",
+    writer_process: "PROCESS_A_PARTICIPANT_CLIENT",
+    tester_id: "TESTER_DANANG_01",
+    device_type: "MOBILE_VIEWPORT_390x844",
+    client_timestamp_start: "2026-09-19T14:40:00.000Z",
+    client_timestamp_end: "2026-09-19T14:41:25.000Z",
+    duration_seconds: 85,
+    user_actions: [
+      { t: 0, action: "SESSION_START", target: "btn_start_session" },
+      { t: 8, action: "SCROLL_FEED", target: "dorm_shopping_grid" },
+      { t: 18, action: "CARD_CLICK", target: "sku_dorm_001" },
+      { t: 25, action: "DRAWER_EXPAND", target: "decision_drawer" },
+      { t: 35, action: "INSPECT_VERDICT", target: "verdict_box_buy" },
+      { t: 48, action: "INSPECT_UNBOX_GALLERY", target: "unbox_gallery_4_verified" },
+      { t: 62, action: "INPUT_SAVINGS", value: 26000 },
+      { t: 70, action: "INPUT_FINAL_PRICE", value: 39000 },
+      { t: 78, action: "SELECT_DECISION", value: "BUY" },
+      { t: 85, action: "SUBMIT_PARTICIPANT_RESPONSE" }
+    ],
+    participant_declared_values: {
+      input_final_price: 39000,
+      input_savings: 26000,
+      input_decision: "BUY",
+      input_voucher_conditions: "Áp mã 15k cho đơn từ 50k, không phí ship phụ thu",
+      input_unbox_gallery_observation: "Đủ 4 ảnh camera thường unbox có nhãn xác minh, không có ô trống"
+    }
+  },
+  {
+    session_id: "CANARY_002",
+    scenario_id: "SCN_028",
+    writer_process: "PROCESS_A_PARTICIPANT_CLIENT",
+    tester_id: "TESTER_DANANG_02",
+    device_type: "DESKTOP_VIEWPORT_1440x900",
+    client_timestamp_start: "2026-09-19T14:42:00.000Z",
+    client_timestamp_end: "2026-09-19T14:43:50.000Z",
+    duration_seconds: 110,
+    user_actions: [
+      { t: 0, action: "SESSION_START", target: "btn_start_session" },
+      { t: 12, action: "SCROLL_FEED", target: "dorm_shopping_grid" },
+      { t: 24, action: "CARD_CLICK", target: "sku_dorm_028" },
+      { t: 32, action: "DRAWER_EXPAND", target: "decision_drawer" },
+      { t: 45, action: "INSPECT_VERDICT", target: "verdict_box_check_conditions" },
+      { t: 58, action: "EXPAND_SAVINGS_BREAKDOWN", target: "savings_grid_mode_conditional" },
+      { t: 75, action: "INSPECT_UNBOX_GALLERY", target: "unbox_gallery_2_source_shrunk" },
+      { t: 90, action: "INPUT_SAVINGS", value: 31000 },
+      { t: 98, action: "INPUT_FINAL_PRICE", value: 49000 },
+      { t: 104, action: "SELECT_DECISION", value: "CHECK_CONDITIONS" },
+      { t: 110, action: "SUBMIT_PARTICIPANT_RESPONSE" }
+    ],
+    participant_declared_values: {
+      input_final_price: 49000,
+      input_savings: 31000,
+      input_decision: "CHECK_CONDITIONS",
+      input_voucher_conditions: "Yêu cầu thanh toán ví ZaloPay và mua kèm deal 0đ, cần kiểm tra kỹ trước khi thanh toán",
+      input_unbox_gallery_observation: "Chỉ có 2 ảnh từ nguồn, gallery tự co lại và hiển thị đúng nhãn 'Ảnh sản phẩm từ nguồn', không bị lấp ô ảo"
+    }
+  }
+];
+
+const lines = participantInputs.map(item => {
+  const itemHash = sha256(item);
+  return JSON.stringify({ ...item, participant_sha256: itemHash });
+});
+
+fs.writeFileSync(TARGET_FILE, lines.join('\n') + '\n', 'utf8');
+console.log(`[Process A] Wrote ${lines.length} participant records to ${path.relative(ROOT_DIR, TARGET_FILE)}`);

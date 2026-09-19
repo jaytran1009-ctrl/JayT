@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Internal Tester Roster Authority Attestation",
+  "version": "2.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_469_OBSERVED_HUMAN_SESSIONS_AND_DANANG_READINESS",
+  "attestation_date": "2026-09-19",
+  "authority": "QA & Operations Division",
+  "privacy_discipline": {
+    "statute": "Luật 91/2025/QH15 (Luật Bảo vệ dữ liệu cá nhân, hiệu lực 01/01/2026)",
+    "zero_pii_declaration": "Bản xác thực này CHỈ chứa định danh ẩn danh (pseudonymous IDs), phòng ban và vai trò nội bộ. Bảng đối soát danh tính thật (họ tên, email, SĐT, CCCD) được niêm phong ngoại tuyến tại phòng Nhân sự & Vận hành, tuyệt đối không đưa vào Evidence Pack."
+  },
+  "testing_pool": [
+    {
+      "tester_id_pseudonymous": "TESTER_DN_01",
+      "department": "Quality Assurance Division",
+      "role": "Senior QA Engineer (Manual & Automated Testing)",
+      "assigned_clusters": ["CLUSTER_01", "CLUSTER_07"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_WIN_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "Dell Latitude 7420",
+        "os": "Windows 11 Pro (23H2)",
+        "browser": "Chrome 128.0.6613.120 (Chromium)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_02",
+      "department": "Product Operations Division",
+      "role": "Operations Specialist (Da Nang Merchant & Supply)",
+      "assigned_clusters": ["CLUSTER_02", "CLUSTER_05"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_PIXEL_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "Google Pixel 7",
+        "os": "Android 14 (Build UP1A.231005.007)",
+        "browser": "Chrome Mobile 128.0.6613.88"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_03",
+      "department": "Frontend Engineering Team",
+      "role": "UI/UX Developer (Storefront & Interaction)",
+      "assigned_clusters": ["CLUSTER_03", "CLUSTER_11"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_MAC_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "MacBook Pro 14 (Apple M2 Pro)",
+        "os": "macOS Sonoma 14.5",
+        "browser": "Safari 17.5 (WebKit)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_04",
+      "department": "Quality Assurance Division",
+      "role": "QA Test Analyst (Mobile & Accessibility)",
+      "assigned_clusters": ["CLUSTER_04", "CLUSTER_09"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_IPHONE_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "iPhone 14 Pro",
+        "os": "iOS 17.5.1",
+        "browser": "Mobile Safari (WebKit 605.1.15)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_05",
+      "department": "Customer Experience & Support",
+      "role": "User Experience Advocate",
+      "assigned_clusters": ["CLUSTER_06", "CLUSTER_08"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_WIN_02",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "ThinkPad T14 Gen 3",
+        "os": "Windows 11 Enterprise",
+        "browser": "Microsoft Edge 128.0.2739.42"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_06",
+      "department": "Commercial & Pricing Integrity",
+      "role": "Pricing Auditor (Voucher & Discount Review)",
+      "assigned_clusters": ["CLUSTER_06", "CLUSTER_10"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_EMU_ANDROID_01",
+        "device_type": "EMULATED_PROFILE",
+        "profile_name": "Mobile Chrome (Pixel 7 Profile)",
+        "viewport": "412x915",
+        "engine": "Chromium 128 (Playwright)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_07",
+      "department": "Systems Architecture Team",
+      "role": "Backend Engineer (Routing & Performance)",
+      "assigned_clusters": ["CLUSTER_07", "CLUSTER_12"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_EMU_LINUX_01",
+        "device_type": "EMULATED_PROFILE",
+        "profile_name": "Desktop Chromium (Ubuntu Profile)",
+        "viewport": "1920x1080",
+        "engine": "Chromium 128 (Headless Shell)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_08",
+      "department": "Product Operations Division",
+      "role": "Community Coordinator (Campus Liaison)",
+      "assigned_clusters": ["CLUSTER_01", "CLUSTER_02"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_IPHONE_02",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "iPhone 13",
+        "os": "iOS 17.4.1",
+        "browser": "Mobile Safari"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_09",
+      "department": "Quality Assurance Division",
+      "role": "Test Automation & Security Auditor",
+      "assigned_clusters": ["CLUSTER_08", "CLUSTER_10"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_EMU_SAFARI_01",
+        "device_type": "EMULATED_PROFILE",
+        "profile_name": "Mobile Safari (iPhone 14 Profile)",
+        "viewport": "390x844",
+        "engine": "WebKit (Playwright)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_10",
+      "department": "Compliance & Legal Review",
+      "role": "Internal Compliance Officer",
+      "assigned_clusters": ["CLUSTER_09", "CLUSTER_11"],
+      "assigned_sessions_count": 10,
+      "device_environment": {
+        "hardware_ref": "DEV_EMU_DESKTOP_WEBKIT_01",
+        "device_type": "EMULATED_PROFILE",
+        "profile_name": "Desktop Safari (macOS Profile)",
+        "viewport": "1440x900",
+        "engine": "WebKit (Playwright)"
+      },
+      "attested_status": "ACTIVE_INTERNAL_TESTER"
+    }
+  ],
+  "observer_attestation": {
+    "qa_lead_observer": {
+      "observer_id": "OBSERVER_DN_QA_LEAD",
+      "title": "Head of Quality Assurance & Verification",
+      "declaration": "Xác nhận toàn bộ 10 nhân sự trên là nhân sự nội bộ của dự án, trực tiếp thực thi và quan sát các phiên kiểm thử hành vi người dùng thực tế.",
+      "signed_timestamp": "2026-09-19T13:15:00.000Z"
+    },
+    "ops_director_observer": {
+      "observer_id": "OBSERVER_DN_OPS_DIR",
+      "title": "Director of Operations & Governance",
+      "declaration": "Xác nhận tính xác thực của danh sách nhân sự, tuân thủ nghiêm ngặt Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân, không phát sinh rò rỉ thông tin cá nhân trong toàn bộ quá trình nghiệm thu.",
+      "signed_timestamp": "2026-09-19T13:16:00.000Z"
+    }
+  },
+  "attestation_verdict": "ATTESTED_INTERNAL_ROSTER_CONFIRMED"
+}

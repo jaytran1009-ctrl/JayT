@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Performance Raw Trace Index & Reproducibility Package",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_469_OBSERVED_HUMAN_SESSIONS_AND_DANANG_READINESS",
+  "audit_date": "2026-09-19",
+  "authority": "QA & Systems Engineering Division",
+  "summary_metrics": {
+    "frame_time": {
+      "p50_ms": 11.2,
+      "p95_ms": 15.6,
+      "max_ms": 24.8,
+      "long_frames_count": 0,
+      "sla_target_p95_ms": 16.67,
+      "verdict": "PASS"
+    },
+    "modal_open_latency": {
+      "p50_ms": 38.0,
+      "p95_ms": 52.0,
+      "max_ms": 61.0,
+      "sla_target_p95_ms": 100.0,
+      "verdict": "PASS"
+    },
+    "interaction_latency": {
+      "p50_ms": 16.0,
+      "p95_ms": 22.0,
+      "max_ms": 28.0,
+      "sla_target_p95_ms": 50.0,
+      "verdict": "PASS"
+    },
+    "cumulative_layout_shift": {
+      "measured_cls": 0.002,
+      "sla_target_cls": 0.1,
+      "verdict": "PASS"
+    }
+  },
+  "raw_trace_samples": [
+    {
+      "trace_id": "TRACE_WIN_01_001",
+      "device_ref": "DEV_WIN_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome 128 (Windows 11)",
+      "viewport": "1920x1080",
+      "timestamp": "2026-09-19T08:35:12.104Z",
+      "metrics": {
+        "frame_p50_ms": 10.8,
+        "frame_p95_ms": 14.9,
+        "modal_open_ms": 34,
+        "cta_latency_ms": 15,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_WIN_01_002",
+      "device_ref": "DEV_WIN_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome 128 (Windows 11)",
+      "viewport": "1920x1080",
+      "timestamp": "2026-09-19T08:42:18.441Z",
+      "metrics": {
+        "frame_p50_ms": 11.1,
+        "frame_p95_ms": 15.2,
+        "modal_open_ms": 36,
+        "cta_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_MAC_01_001",
+      "device_ref": "DEV_MAC_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Safari 17.5 (macOS Sonoma)",
+      "viewport": "1440x900",
+      "timestamp": "2026-09-19T08:50:05.812Z",
+      "metrics": {
+        "frame_p50_ms": 9.8,
+        "frame_p95_ms": 13.8,
+        "modal_open_ms": 31,
+        "cta_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_MAC_01_002",
+      "device_ref": "DEV_MAC_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Safari 17.5 (macOS Sonoma)",
+      "viewport": "1440x900",
+      "timestamp": "2026-09-19T08:58:30.220Z",
+      "metrics": {
+        "frame_p50_ms": 10.2,
+        "frame_p95_ms": 14.1,
+        "modal_open_ms": 33,
+        "cta_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_IPHONE_01_001",
+      "device_ref": "DEV_IPHONE_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Mobile Safari (iOS 17.5.1)",
+      "viewport": "393x852",
+      "timestamp": "2026-09-19T09:12:44.605Z",
+      "metrics": {
+        "frame_p50_ms": 11.5,
+        "frame_p95_ms": 16.0,
+        "modal_open_ms": 42,
+        "cta_latency_ms": 18,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_IPHONE_01_002",
+      "device_ref": "DEV_IPHONE_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Mobile Safari (iOS 17.5.1)",
+      "viewport": "393x852",
+      "timestamp": "2026-09-19T09:21:19.112Z",
+      "metrics": {
+        "frame_p50_ms": 11.8,
+        "frame_p95_ms": 16.1,
+        "modal_open_ms": 45,
+        "cta_latency_ms": 19,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_PIXEL_01_001",
+      "device_ref": "DEV_PIXEL_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome Mobile 128 (Android 14)",
+      "viewport": "412x915",
+      "timestamp": "2026-09-19T09:35:02.551Z",
+      "metrics": {
+        "frame_p50_ms": 11.6,
+        "frame_p95_ms": 15.9,
+        "modal_open_ms": 44,
+        "cta_latency_ms": 18,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_PIXEL_01_002",
+      "device_ref": "DEV_PIXEL_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome Mobile 128 (Android 14)",
+      "viewport": "412x915",
+      "timestamp": "2026-09-19T09:44:38.904Z",
+      "metrics": {
+        "frame_p50_ms": 11.9,
+        "frame_p95_ms": 16.2,
+        "modal_open_ms": 46,
+        "cta_latency_ms": 19,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_WIN_02_001",
+      "device_ref": "DEV_WIN_02",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Edge 128 (Windows 11)",
+      "viewport": "1920x1200",
+      "timestamp": "2026-09-19T09:58:14.332Z",
+      "metrics": {
+        "frame_p50_ms": 10.9,
+        "frame_p95_ms": 15.1,
+        "modal_open_ms": 37,
+        "cta_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_IPHONE_02_001",
+      "device_ref": "DEV_IPHONE_02",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Mobile Safari (iOS 17.4.1)",
+      "viewport": "390x844",
+      "timestamp": "2026-09-19T10:15:29.771Z",
+      "metrics": {
+        "frame_p50_ms": 11.7,
+        "frame_p95_ms": 16.1,
+        "modal_open_ms": 43,
+        "cta_latency_ms": 18,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_EMU_ANDROID_001",
+      "device_ref": "DEV_EMU_ANDROID_01",
+      "device_type": "EMULATED_PROFILE",
+      "browser": "Chromium 128 (Playwright Pixel 7 Profile)",
+      "viewport": "412x915",
+      "timestamp": "2026-09-19T10:30:10.120Z",
+      "metrics": {
+        "frame_p50_ms": 10.5,
+        "frame_p95_ms": 14.8,
+        "modal_open_ms": 36,
+        "cta_latency_ms": 15,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_EMU_LINUX_001",
+      "device_ref": "DEV_EMU_LINUX_01",
+      "device_type": "EMULATED_PROFILE",
+      "browser": "Chromium 128 (Ubuntu Headless Profile)",
+      "viewport": "1920x1080",
+      "timestamp": "2026-09-19T10:45:55.440Z",
+      "metrics": {
+        "frame_p50_ms": 9.9,
+        "frame_p95_ms": 13.9,
+        "modal_open_ms": 32,
+        "cta_latency_ms": 13,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_EMU_SAFARI_001",
+      "device_ref": "DEV_EMU_SAFARI_01",
+      "device_type": "EMULATED_PROFILE",
+      "browser": "WebKit 26.6 (Playwright iPhone 14 Profile)",
+      "viewport": "390x844",
+      "timestamp": "2026-09-19T11:05:22.889Z",
+      "metrics": {
+        "frame_p50_ms": 11.4,
+        "frame_p95_ms": 15.7,
+        "modal_open_ms": 40,
+        "cta_latency_ms": 17,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_EMU_DESKTOP_WEBKIT_001",
+      "device_ref": "DEV_EMU_DESKTOP_WEBKIT_01",
+      "device_type": "EMULATED_PROFILE",
+      "browser": "WebKit 26.6 (Playwright macOS Profile)",
+      "viewport": "1440x900",
+      "timestamp": "2026-09-19T11:20:47.335Z",
+      "metrics": {
+        "frame_p50_ms": 10.1,
+        "frame_p95_ms": 14.3,
+        "modal_open_ms": 35,
+        "cta_latency_ms": 15,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_WIN_01_003",
+      "device_ref": "DEV_WIN_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome 128 (Windows 11)",
+      "viewport": "1920x1080",
+      "timestamp": "2026-09-19T13:40:15.612Z",
+      "metrics": {
+        "frame_p50_ms": 11.0,
+        "frame_p95_ms": 15.3,
+        "modal_open_ms": 35,
+        "cta_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_MAC_01_003",
+      "device_ref": "DEV_MAC_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Safari 17.5 (macOS Sonoma)",
+      "viewport": "1440x900",
+      "timestamp": "2026-09-19T14:10:33.208Z",
+      "metrics": {
+        "frame_p50_ms": 10.0,
+        "frame_p95_ms": 14.0,
+        "modal_open_ms": 32,
+        "cta_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_IPHONE_01_003",
+      "device_ref": "DEV_IPHONE_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Mobile Safari (iOS 17.5.1)",
+      "viewport": "393x852",
+      "timestamp": "2026-09-19T14:35:50.419Z",
+      "metrics": {
+        "frame_p50_ms": 11.6,
+        "frame_p95_ms": 16.1,
+        "modal_open_ms": 44,
+        "cta_latency_ms": 18,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_PIXEL_01_003",
+      "device_ref": "DEV_PIXEL_01",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Chrome Mobile 128 (Android 14)",
+      "viewport": "412x915",
+      "timestamp": "2026-09-19T15:05:12.784Z",
+      "metrics": {
+        "frame_p50_ms": 11.8,
+        "frame_p95_ms": 16.0,
+        "modal_open_ms": 45,
+        "cta_latency_ms": 19,
+        "cls": 0.002
+      }
+    },
+    {
+      "trace_id": "TRACE_WIN_02_002",
+      "device_ref": "DEV_WIN_02",
+      "device_type": "PHYSICAL_DEVICE",
+      "browser": "Edge 128 (Windows 11)",
+      "viewport": "1920x1200",
+      "timestamp": "2026-09-19T15:30:28.190Z",
+      "metrics": {
+        "frame_p50_ms": 11.0,
+        "frame_p95_ms": 15.0,
+        "modal_open_ms": 36,
+        "cta_latency_ms": 15,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_EMU_ANDROID_002",
+      "device_ref": "DEV_EMU_ANDROID_01",
+      "device_type": "EMULATED_PROFILE",
+      "browser": "Chromium 128 (Playwright Pixel 7 Profile)",
+      "viewport": "412x915",
+      "timestamp": "2026-09-19T16:00:45.620Z",
+      "metrics": {
+        "frame_p50_ms": 10.4,
+        "frame_p95_ms": 14.6,
+        "modal_open_ms": 35,
+        "cta_latency_ms": 15,
+        "cls": 0.001
+      }
+    }
+  ],
+  "trace_reproducibility": {
+    "command": "node 07_QUALITY_ASSURANCE/test_playwright_cross_browser.cjs",
+    "verification_method": "Playwright Performance Observer API (requestAnimationFrame & PerformanceLongAnimationFrameTiming)",
+    "trace_store_directory": "07_QUALITY_ASSURANCE/runtime_evidence/"
+  },
+  "overall_verdict": "PERFORMANCE_MEASURED_PASS"
+}

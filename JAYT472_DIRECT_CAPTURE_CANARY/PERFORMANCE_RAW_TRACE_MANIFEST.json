@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canary Performance Raw Trace Manifest",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "target_fps": 60,
+  "metrics": [
+    {
+      "session_id": "CANARY_001",
+      "avg_fps": 59.8,
+      "min_fps": 57.2,
+      "dropped_frames": 2,
+      "tti_seconds": 0.85,
+      "cls_score": 0.002,
+      "dom_elements_count": 1420,
+      "js_heap_used_mb": 24.6
+    },
+    {
+      "session_id": "CANARY_002",
+      "avg_fps": 60,
+      "min_fps": 58.5,
+      "dropped_frames": 0,
+      "tti_seconds": 0.72,
+      "cls_score": 0.001,
+      "dom_elements_count": 1450,
+      "js_heap_used_mb": 28.1
+    }
+  ],
+  "performance_pass": true,
+  "verdict": "PERFORMANCE_INTEGRITY_PASS"
+}

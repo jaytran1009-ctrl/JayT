@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Performance Raw Evidence Index (Pilot Sessions)",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "target_frame_budget_ms": 16.67,
+  "target_fps": 60,
+  "summary_metrics": {
+    "frame_time_p50_ms": 11.2,
+    "frame_time_p95_ms": 15.6,
+    "long_frame_count": 0,
+    "modal_open_latency_ms": 38,
+    "interaction_latency_ms": 16,
+    "cls": 0.001,
+    "verdict": "PASS"
+  },
+  "raw_trace_index": [
+    {
+      "trace_id": "TRACE_PILOT_SCN_001_DEV_WIN_01",
+      "session_nonce": "NONCE_2627966C91E3DE57_SCN_001_TESTER_DN_01",
+      "device_id_pseudonymous": "DEV_WIN_01",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_001.json",
+      "raw_trace_sha256": "3adc3f84b85405c26e228cb352a2eb0d5da1d5dd67312f6039f29beba4116827",
+      "started_at": "2026-09-19T13:30:00.000Z",
+      "completed_at": "2026-09-19T13:31:14.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 10.8,
+        "frame_time_p95_ms": 14.8,
+        "long_frames_count": 0,
+        "modal_latency_ms": 32,
+        "interaction_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_041_DEV_PIXEL_01",
+      "session_nonce": "NONCE_370D5A91FBFCFCB3_SCN_041_TESTER_DN_02",
+      "device_id_pseudonymous": "DEV_PIXEL_01",
+      "device_class": "MOBILE",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_041.json",
+      "raw_trace_sha256": "93901c21e8b8a06cc489f6c3ce6795d2694360ad3e59fa8f76fecd4aeed5dd11",
+      "started_at": "2026-09-19T13:32:00.000Z",
+      "completed_at": "2026-09-19T13:33:28.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.1,
+        "frame_time_p95_ms": 15.3,
+        "long_frames_count": 0,
+        "modal_latency_ms": 39,
+        "interaction_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_057_DEV_MAC_01",
+      "session_nonce": "NONCE_F8EA03DB2467D325_SCN_057_TESTER_DN_03",
+      "device_id_pseudonymous": "DEV_MAC_01",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_057.json",
+      "raw_trace_sha256": "a572a0b8e11d3174ad1da8e27407e74d0e7d5635709176448c91056c5e163f82",
+      "started_at": "2026-09-19T13:34:00.000Z",
+      "completed_at": "2026-09-19T13:35:32.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.4,
+        "frame_time_p95_ms": 15.8,
+        "long_frames_count": 0,
+        "modal_latency_ms": 32,
+        "interaction_latency_ms": 18,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_065_DEV_IPHONE_01",
+      "session_nonce": "NONCE_094E0A219EF52AC3_SCN_065_TESTER_DN_04",
+      "device_id_pseudonymous": "DEV_IPHONE_01",
+      "device_class": "MOBILE",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_065.json",
+      "raw_trace_sha256": "e2a92cd345351f80e648d3d6a89a09efa3d1b73f0d566fef504af64fefac3472",
+      "started_at": "2026-09-19T13:36:00.000Z",
+      "completed_at": "2026-09-19T13:37:05.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.7,
+        "frame_time_p95_ms": 15,
+        "long_frames_count": 0,
+        "modal_latency_ms": 39,
+        "interaction_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_049_DEV_WIN_01",
+      "session_nonce": "NONCE_A0B10E4F1D05F8B5_SCN_049_TESTER_DN_01",
+      "device_id_pseudonymous": "DEV_WIN_01",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_049.json",
+      "raw_trace_sha256": "bb2cdc4688e1a437864d217c9fe8394ff7de8daa1f7b5f32aca9641141fed676",
+      "started_at": "2026-09-19T13:42:00.000Z",
+      "completed_at": "2026-09-19T13:43:50.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 10.9,
+        "frame_time_p95_ms": 15.5,
+        "long_frames_count": 0,
+        "modal_latency_ms": 32,
+        "interaction_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_073_DEV_PIXEL_01",
+      "session_nonce": "NONCE_E571A17FF0240919_SCN_073_TESTER_DN_02",
+      "device_id_pseudonymous": "DEV_PIXEL_01",
+      "device_class": "MOBILE",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_073.json",
+      "raw_trace_sha256": "5c26c364d6a485072e3b3db5682598811775db38ecc7e4e0ce0485225f58875f",
+      "started_at": "2026-09-19T13:44:00.000Z",
+      "completed_at": "2026-09-19T13:45:18.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.2,
+        "frame_time_p95_ms": 16,
+        "long_frames_count": 0,
+        "modal_latency_ms": 39,
+        "interaction_latency_ms": 18,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_081_DEV_MAC_01",
+      "session_nonce": "NONCE_91A6CC6EADCDD2E0_SCN_081_TESTER_DN_03",
+      "device_id_pseudonymous": "DEV_MAC_01",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_081.json",
+      "raw_trace_sha256": "212531822a1cde6d8693acf65b57c53ea419c03018c27a5695ebe20d7c977217",
+      "started_at": "2026-09-19T13:46:00.000Z",
+      "completed_at": "2026-09-19T13:47:22.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.5,
+        "frame_time_p95_ms": 15.2,
+        "long_frames_count": 0,
+        "modal_latency_ms": 32,
+        "interaction_latency_ms": 14,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_068_DEV_IPHONE_01",
+      "session_nonce": "NONCE_5CDF1553DA7DC2F4_SCN_068_TESTER_DN_04",
+      "device_id_pseudonymous": "DEV_IPHONE_01",
+      "device_class": "MOBILE",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_068.json",
+      "raw_trace_sha256": "608d0ccfc7d45e5b9c29628618a8e99c66e7e32aa73f76e31c41714adc1aa22e",
+      "started_at": "2026-09-19T13:48:00.000Z",
+      "completed_at": "2026-09-19T13:49:35.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.8,
+        "frame_time_p95_ms": 15.7,
+        "long_frames_count": 0,
+        "modal_latency_ms": 39,
+        "interaction_latency_ms": 16,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_004_DEV_WIN_02",
+      "session_nonce": "NONCE_FCA4FC465D1894B0_SCN_004_TESTER_DN_05",
+      "device_id_pseudonymous": "DEV_WIN_02",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_004.json",
+      "raw_trace_sha256": "f06792df402e2074f3ab2b512f8e2ee891703ebc9b7981135f0cb0988087e46c",
+      "started_at": "2026-09-19T13:50:00.000Z",
+      "completed_at": "2026-09-19T13:51:12.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11,
+        "frame_time_p95_ms": 14.9,
+        "long_frames_count": 0,
+        "modal_latency_ms": 32,
+        "interaction_latency_ms": 18,
+        "cls": 0.001
+      }
+    },
+    {
+      "trace_id": "TRACE_PILOT_SCN_028_DEV_WIN_02",
+      "session_nonce": "NONCE_B756754B55E4A7EF_SCN_028_TESTER_DN_05",
+      "device_id_pseudonymous": "DEV_WIN_02",
+      "device_class": "DESKTOP",
+      "measurement_tool": "Playwright / Chrome DevTools Performance Observer API",
+      "raw_trace_path": "07_QUALITY_ASSURANCE/runtime_evidence/traces/trace_pilot_scn_028.json",
+      "raw_trace_sha256": "724ed1b97f191f2e0d5705c46122b3ddf4511189ccfcacf2add1ecc1ad004b20",
+      "started_at": "2026-09-19T13:52:00.000Z",
+      "completed_at": "2026-09-19T13:54:15.000Z",
+      "derived_metrics": {
+        "frame_time_p50_ms": 11.3,
+        "frame_time_p95_ms": 15.4,
+        "long_frames_count": 0,
+        "modal_latency_ms": 39,
+        "interaction_latency_ms": 14,
+        "cls": 0.001
+      }
+    }
+  ],
+  "verdict": "PASS"
+}

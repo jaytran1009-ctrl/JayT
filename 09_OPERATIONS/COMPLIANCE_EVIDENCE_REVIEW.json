@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Statutory Compliance Evidence Review",
+  "version": "1.0.0",
+  "review_id": "CER_J467_20260919",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_467_REAL_HUMAN_EVIDENCE_EXECUTION",
+  "guidance": {
+    "section_xx_rule": "Mỗi nghĩa vụ phải có: legal_source, obligation_id, obligation_summary, product_surface, technical_control, evidence_ref, owner, status (PASS, FAIL, REVIEW_REQUIRED).",
+    "section_xxi_rule": "LEGAL REVIEW BOUNDARY: Technical QA không được tự kết luận FULL LEGAL COMPLIANCE nếu nội dung cần interpretation pháp lý; cho phép TECHNICAL_CONTROL_VERIFIED hoặc LEGAL_REVIEW_REQUIRED."
+  },
+  "ratified_statutes": [
+    {
+      "statute_code": "Luật 91/2025/QH15",
+      "official_name": "Luật Bảo vệ dữ liệu cá nhân",
+      "effective_date": "2026-01-01"
+    },
+    {
+      "statute_code": "Luật 122/2025/QH15",
+      "official_name": "Luật Thương mại điện tử",
+      "effective_date": "2026-07-01"
+    },
+    {
+      "statute_code": "Luật 75/2025/QH15",
+      "official_name": "Luật sửa đổi, bổ sung một số điều của Luật Quảng cáo",
+      "effective_date": "2026-01-01"
+    }
+  ],
+  "obligations": [
+    {
+      "obligation_id": "OBL_01_DATA_MINIMIZATION",
+      "legal_source": "Luật 91/2025/QH15 (Điều 3 & Điều 9)",
+      "obligation_summary": "Nguyên tắc thu thập tối thiểu và bảo vệ dữ liệu cá nhân trong các phiên thử nghiệm nội bộ.",
+      "product_surface": "Telemetry Engine & Human Execution Logs",
+      "technical_control": "Zero-PII telemetry schema; chỉ thu thập pseudonymous ID (TESTER_DN_xx), event type và timestamp; không ghi nhận IP, họ tên hay cookie định danh cá nhân.",
+      "evidence_ref": "07_QUALITY_ASSURANCE/BEHAVIOR_EVENT_SCHEMA.json & INTERNAL_HUMAN_EXECUTION_LOG.jsonl",
+      "owner": "Data Protection Officer & Head of Architecture",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_02_USER_CONSENT_CLEAR",
+      "legal_source": "Luật 91/2025/QH15 (Điều 11 & Điều 17)",
+      "obligation_summary": "Quyền rút lại sự đồng ý và xóa lịch sử phiên duyệt của người dùng.",
+      "product_surface": "Storefront Client / LocalStorage",
+      "technical_control": "Hỗ trợ xóa sạch session và lịch sử lưu trữ cục bộ trực tiếp tại trình duyệt; không đồng bộ dữ liệu người dùng lên máy chủ khi chưa được kích hoạt.",
+      "evidence_ref": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (localStorage clear handlers)",
+      "owner": "Frontend Engineering Lead",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_03_MERCHANT_DISCLOSURE",
+      "legal_source": "Luật 122/2025/QH15 (Điều 28 & Điều 32)",
+      "obligation_summary": "Minh bạch thông tin thương nhân và phân định rõ vai trò nền tảng trung gian đối soát.",
+      "product_surface": "Product Cards, Radar Grid & Decision Modal",
+      "technical_control": "Hiển thị tên gian hàng (merchantName), phân loại sàn và disclaimer JayT là công cụ đối soát độc lập, không phải người bán hàng trực tiếp.",
+      "evidence_ref": "04_DESIGN_SYSTEM/FEATURE1_UX_SPECIFICATION.md (Section 4 & 9)",
+      "owner": "Product Operations Lead",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_04_PRICE_TRANSPARENCY",
+      "legal_source": "Luật 122/2025/QH15 (Điều 41)",
+      "obligation_summary": "Minh bạch cấu trúc giá thực tế và điều kiện áp dụng khuyến mãi.",
+      "product_surface": "Savings Breakdown Component (6 Chỉ Số)",
+      "technical_control": "Tách bạch 6 chỉ số: Giá niêm yết, Giá hiện tại, Voucher, Phí, Thực trả dự kiến, Tiết kiệm; phân loại rõ ràng VERIFIED, ESTIMATED, CONDITIONAL.",
+      "evidence_ref": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (renderSavingsBreakdownHtml)",
+      "owner": "Head of Commercial & Pricing",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_05_NO_SYNTHETIC_DISCOUNT",
+      "legal_source": "Luật 75/2025/QH15 (Điều 8 sửa đổi)",
+      "obligation_summary": "Cấm thổi phồng giá niêm yết gốc để tạo tỷ lệ giảm giá giả lập.",
+      "product_surface": "Price Chrono History & Savings Contract",
+      "technical_control": "Bắt buộc kiểm chứng giá niêm yết qua Price Chrono History và bằng chứng sàn thực tế (Evidence Contract); cấm tự sinh giá gốc ảo.",
+      "evidence_ref": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (createSavingsContract & validateSavingsContract)",
+      "owner": "Chief Compliance Officer & ZQA Lead",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_06_IMAGE_PROVENANCE",
+      "legal_source": "Luật 75/2025/QH15 (Điều 15a bổ sung)",
+      "obligation_summary": "Quy định về tính xác thực của đánh giá/nhận xét và nguồn gốc hình ảnh.",
+      "product_surface": "Authentic Reviews Modal & Photo Gallery",
+      "technical_control": "Khóa cứng logic: Chỉ hiển thị nhãn 'Ảnh unbox / camera thường' khi asset_provenance_verified = true; mọi trường hợp khác dùng nhãn trung tính 'Ảnh sản phẩm từ nguồn'.",
+      "evidence_ref": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (openAuthenticReviewsModal:13388)",
+      "owner": "Head of Content & Evidence Assurance",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    },
+    {
+      "obligation_id": "OBL_07_AFFILIATE_DISCLOSURE",
+      "legal_source": "Luật 122/2025/QH15 & Luật 75/2025/QH15",
+      "obligation_summary": "Tuân thủ quy định tiếp thị liên kết và quảng cáo có điều kiện.",
+      "product_surface": "Commercial Route Engine",
+      "technical_control": "CONFIG.affiliate_enabled = false được khóa cứng fail-closed; không điều hướng qua link tiếp thị ngoài thẩm quyền; zero commercial tracking.",
+      "evidence_ref": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:20044",
+      "owner": "CEO & Chairman Dual-Key Authority",
+      "status": "TECHNICAL_CONTROL_VERIFIED"
+    }
+  ],
+  "overall_compliance_verdict": "TECHNICAL_CONTROLS_VERIFIED_PENDING_FINAL_EXECUTIVE_RATIFICATION"
+}

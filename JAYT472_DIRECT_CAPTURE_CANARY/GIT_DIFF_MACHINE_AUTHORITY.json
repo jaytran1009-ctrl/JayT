@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Git Diff Machine Authority Audit",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "baseline_commit": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
+  "patch_file": "JAYT472_DIRECT_CAPTURE_CANARY/feature1_ux.patch",
+  "patch_sha256": "94ceaf596a1a2aba273274f604f73018ccc839b73e8050b5abcdc1424eafbbbb",
+  "patch_size_bytes": 104791,
+  "audit_rules": {
+    "zero_contract_modifications": true,
+    "zero_route_modifications": true,
+    "zero_financial_formula_modifications": true,
+    "strictly_feature1_ux_refinement": true,
+    "fail_closed_affiliate_preserved": true
+  },
+  "inspected_files": [
+    "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "04_DESIGN_SYSTEM/tokens.json",
+    "deploy/jayt_apex_interface.js",
+    "deploy/public/jayt_apex_interface.js",
+    "deploy/styles.css",
+    "deploy/public/styles.css"
+  ],
+  "verdict": "GIT_DIFF_MACHINE_AUTHORITY_PASS"
+}

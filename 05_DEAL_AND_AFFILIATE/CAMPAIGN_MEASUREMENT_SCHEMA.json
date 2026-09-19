@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Campaign Measurement Schema (Outcome Contract Aligned)",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_465_UX_INTERNAL_BEHAVIOR_AND_DANANG_READINESS",
+  "invariant_rule": "CLICK != REVENUE",
+  "type": "object",
+  "required": [
+    "campaign_id",
+    "cohort_id",
+    "measurement_period",
+    "stages"
+  ],
+  "properties": {
+    "campaign_id": { "type": "string" },
+    "cohort_id": { "type": "string" },
+    "measurement_period": {
+      "type": "object",
+      "properties": {
+        "start_utc": { "type": "string", "format": "date-time" },
+        "end_utc": { "type": "string", "format": "date-time" }
+      }
+    },
+    "stages": {
+      "type": "object",
+      "properties": {
+        "stage_1_impressions": { "type": "integer", "minimum": 0 },
+        "stage_2_pass_shares": { "type": "integer", "minimum": 0 },
+        "stage_3_route_clicks": { "type": "integer", "minimum": 0 },
+        "stage_4_platform_opens": { "type": "integer", "minimum": 0 },
+        "stage_5_attributed_orders": { "type": "integer", "minimum": 0 },
+        "stage_6_validated_orders": { "type": "integer", "minimum": 0 },
+        "stage_7_commission_pending_vnd": { "type": "number", "minimum": 0 },
+        "stage_8_commission_paid_vnd": { "type": "number", "minimum": 0 }
+      },
+      "required": [
+        "stage_1_impressions",
+        "stage_2_pass_shares",
+        "stage_3_route_clicks",
+        "stage_4_platform_opens",
+        "stage_5_attributed_orders",
+        "stage_6_validated_orders"
+      ]
+    },
+    "audit_discipline": {
+      "type": "object",
+      "properties": {
+        "is_affiliate_fail_closed": { "type": "boolean" },
+        "zero_commission_recognized_before_dual_key": { "type": "boolean" },
+        "natural_order_policy": { "type": "string" }
+      }
+    }
+  }
+}

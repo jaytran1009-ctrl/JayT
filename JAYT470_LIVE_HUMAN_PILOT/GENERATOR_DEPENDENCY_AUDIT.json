@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Generator Dependency Audit (HEI-002 Compliance)",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "prohibited_file": "scripts/generate_observed_human_data.cjs",
+  "prohibited_file_sha256": "f790cac9564bd341609c56f47daa3b8709a029b9f9568d4479a42b155982180d",
+  "classification": "PROHIBITED_FOR_HUMAN_EVIDENCE",
+  "audit_findings": {
+    "prohibition_header_present": true,
+    "executed_in_pilot": false,
+    "imported_in_pilot": false,
+    "output_referenced_in_pilot": false,
+    "dataset_copied_to_pilot": false,
+    "vss_derived_from_generator": false,
+    "generator_dependency_count": 0
+  },
+  "prior_dataset_status": {
+    "scope": "JAYT467_REAL_HUMAN_AUTHORITY/",
+    "tagged_status": "INVALID_FOR_HUMAN_ACCEPTANCE",
+    "evidence_origin": "SYNTHETIC_ORIGIN",
+    "audit_scope": "AUDIT_ONLY",
+    "historical_preservation": "PRESERVED_TRACEABLE"
+  },
+  "verdict": "PASS"
+}

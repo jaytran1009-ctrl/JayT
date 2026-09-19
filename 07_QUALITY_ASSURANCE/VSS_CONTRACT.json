@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Verified Savings Success (VSS) Contract & Specification",
+  "contract_id": "VSS_CONTRACT_20260919_V1",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_465_UX_INTERNAL_BEHAVIOR_AND_DANANG_READINESS",
+  "authority": "CHAIRMAN_DIRECTIVE_20260919_AUTHORIZE_UX_PHASE_AND_DANANG_READINESS",
+  "target_version": "v3.439.0",
+  "formula": {
+    "latex": "VSS = \\frac{successful\\_eligible\\_tasks}{total\\_eligible\\_tasks}",
+    "description": "Verified Savings Success (VSS) đo lường tỷ lệ các phiên mua sắm hợp lệ mà người dùng nội bộ đạt được mục tiêu tiết kiệm một cách chính xác, minh bạch, không gặp bất kỳ lỗi dẫn đường hay ngộ nhận điều kiện nào.",
+    "range": [0.0, 1.0],
+    "target_minimum": 0.85
+  },
+  "five_strict_conditions": {
+    "condition_1_product_identity": {
+      "name": "Định Danh Sản Phẩm Tuyệt Đối (Product Identity Invariant)",
+      "rule": "Sản phẩm người dùng nhìn thấy, quyết định mua và sản phẩm tại trang đích của sàn phải là một. Tuyệt đối không tráo đổi SKU, model hoặc biến thể.",
+      "failure_code": "FAIL_PRODUCT_MISMATCH"
+    },
+    "condition_2_savings_interpretation": {
+      "name": "Nhất Quán Thấu Hiểu Tiết Kiệm (Savings Interpretation Invariant)",
+      "rule": "Số tiền tiết kiệm hiển thị trên giao diện (VND) phải khớp chính xác với số tiền thực tế được giảm trừ khi thanh toán tại sàn (trong phạm vi sai số coupon hợp lệ). Không chấp nhận giá ảo đẩy lên rồi tự nhận giảm sâu.",
+      "failure_code": "FAIL_SAVINGS_MISINTERPRETATION"
+    },
+    "condition_3_condition_interpretation": {
+      "name": "Minh Bạch Điều Kiện Tiên Quyết (Condition Transparency Invariant)",
+      "rule": "Nếu ưu đãi yêu cầu điều kiện (ví dụ: thanh toán ví điện tử, đơn tối thiểu, khung giờ vàng), giao diện phải nêu rõ trước khi người dùng bấm CTA. Người dùng không bị bất ngờ tại bước checkout.",
+      "failure_code": "FAIL_CONDITION_SURPRISE"
+    },
+    "condition_4_route_identity": {
+      "name": "Điều Hướng Đích Thực (Route Identity Invariant)",
+      "rule": "CTA Product phải dẫn thẳng tới PDP hoặc cổng danh mục xác định; cấm dẫn vào trang tìm kiếm từ khóa chung (/search) hoặc gian hàng đối thủ.",
+      "failure_code": "FAIL_ROUTE_DIVERGENCE"
+    },
+    "condition_5_evidence_not_overclaimed": {
+      "name": "Kỷ Luật Bằng Chứng Không Thổi Phồng (Evidence Truth Invariant)",
+      "rule": "Chỉ được gán nhãn 'Ảnh unbox / camera thường' khi asset_provenance_verified = true. Mọi điểm tín nhiệm, đánh giá khen/chê phải trích xuất từ tập dữ liệu thật, không sinh giả lập.",
+      "failure_code": "FAIL_OVERCLAIM_EVIDENCE"
+    }
+  },
+  "anti_gaming_rules": [
+    "Quy tắc 1: Cấm loại bỏ nhiệm vụ (task) sau khi đã chạy xong kịch bản (Không cherry-picking).",
+    "Quy tắc 2: Nếu một task bị loại trừ khỏi tập tính toán, phải có 'exclusion_reason' được định nghĩa trước khi thực thi (ví dụ: mất kết nối internet máy khách, đóng ứng dụng đột ngột từ hệ điều hành).",
+    "Quy tắc 3: Điểm số baseline phải được đo lường thực tế trên 100 kịch bản nội bộ, phản ánh đúng hiện trạng phần mềm.",
+    "Quy tắc 4: Mọi tester tham gia đánh giá phải sử dụng định danh ẩn danh (pseudonymous tester ID), tuân thủ Luật 91/2025/QH15."
+  ],
+  "scoring_engine": {
+    "is_task_eligible": "(task) => Boolean(task.scenario_id && task.purchase_intent && task.platform_context)",
+    "is_task_successful": "(task) => Boolean(task.product_identity_pass && task.savings_interpretation_pass && task.condition_interpretation_pass && task.route_identity_pass && task.evidence_truth_pass)"
+  }
+}

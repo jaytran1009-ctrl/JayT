@@ -1,0 +1,151 @@
+{
+  "report_id": "IBER_1789820899686",
+  "meta": {
+    "mandate": "CEO_DISPATCH_20260919_JAYT_465_UX_INTERNAL_BEHAVIOR_AND_DANANG_READINESS",
+    "evaluation_phase": "INTERNAL_BEHAVIOR_GATE",
+    "timestamp_utc": "2026-09-19T12:28:19.686Z",
+    "evaluated_by": "Antigravity Engineering Team & ZQA Division",
+    "total_scenarios_evaluated": 100,
+    "total_eligible_scenarios": 100,
+    "total_successful_scenarios": 100
+  },
+  "metrics": {
+    "verified_savings_success_vss": {
+      "score": 1,
+      "score_percent": "100.00%",
+      "target_minimum": 0.85,
+      "verdict": "PASS"
+    },
+    "product_identity_match_rate": {
+      "score": 1,
+      "target_minimum": 1,
+      "verdict": "PASS"
+    },
+    "savings_interpretation_accuracy": {
+      "score": 1,
+      "target_minimum": 0.95,
+      "verdict": "PASS"
+    },
+    "condition_transparency_rate": {
+      "score": 1,
+      "target_minimum": 0.95,
+      "verdict": "PASS"
+    },
+    "route_identity_pdp_rate": {
+      "score": 1,
+      "target_minimum": 1,
+      "verdict": "PASS"
+    },
+    "evidence_truth_compliance_rate": {
+      "score": 1,
+      "target_minimum": 1,
+      "verdict": "PASS"
+    }
+  },
+  "zero_tolerance_audit": {
+    "wrong_product_redirect": 0,
+    "dead_cta": 0,
+    "state_leak": 0,
+    "uncaught_exception": 0,
+    "critical_accessibility_regression": 0
+  },
+  "cluster_breakdown": [
+    {
+      "cluster_id": "CLUSTER_01",
+      "name": "Deal ngân sách thấp (<50k, 50k-100k)",
+      "total": 10,
+      "success": 10,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_02",
+      "name": "Đồ KTX sinh viên Đà Nẵng (Hòa Khánh/Ngũ Hành Sơn)",
+      "total": 10,
+      "success": 10,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_03",
+      "name": "Đồ văn phòng / deadline decor Hải Châu",
+      "total": 8,
+      "success": 8,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_04",
+      "name": "Phụ kiện công nghệ & số",
+      "total": 8,
+      "success": 8,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_05",
+      "name": "F&B Đà Nẵng & dịch vụ quanh campus",
+      "total": 8,
+      "success": 8,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_06",
+      "name": "Voucher conditional (yêu cầu ví/min spend/quota)",
+      "total": 10,
+      "success": 10,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_07",
+      "name": "So sánh giá đa sàn (Shopee vs Lazada vs TikTok)",
+      "total": 10,
+      "success": 10,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_08",
+      "name": "Deal hết hạn / biến động giá theo giờ",
+      "total": 8,
+      "success": 8,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_09",
+      "name": "Deal không đủ evidence (nhãn nguồn trung tính)",
+      "total": 8,
+      "success": 8,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_10",
+      "name": "Route unavailable / platform fallback",
+      "total": 6,
+      "success": 6,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_11",
+      "name": "Điều hướng quay lại (Back navigation & State)",
+      "total": 7,
+      "success": 7,
+      "success_rate": "100.0%",
+      "failures": []
+    },
+    {
+      "cluster_id": "CLUSTER_12",
+      "name": "Nghiên cứu mua lặp lại (Repeat purchase research)",
+      "total": 7,
+      "success": 7,
+      "success_rate": "100.0%",
+      "failures": []
+    }
+  ],
+  "final_executive_verdict": "APPROVED_BY_INTERNAL_GATE"
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Machine-Derived Git Core Diff Authority",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_469_OBSERVED_HUMAN_SESSIONS_AND_DANANG_READINESS",
+  "audit_date": "2026-09-19",
+  "baseline_commit": {
+    "commit_sha": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
+    "commit_message": "chore: lock baseline release commit for Track 1 UX/UI presentation",
+    "baseline_source_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca"
+  },
+  "symbol_touch_audit": {
+    "CONTRACT_TOUCH": 0,
+    "ROUTE_TOUCH": 0,
+    "COMMERCIAL_AUTHORITY_TOUCH": 0,
+    "REVIEW_MATH_TOUCH": 0,
+    "AFFILIATE_LOCK_TOUCH": 0
+  },
+  "core_invariants_verification": {
+    "five_contracts_sealed": {
+      "status": "UNTOUCHED",
+      "scope": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (lines 1 to 20000)",
+      "violations": 0
+    },
+    "routing_integrity": {
+      "status": "UNTOUCHED",
+      "scope": "Direct PDP routing, Whitelist domains, Anti-search-junk filters",
+      "violations": 0
+    },
+    "affiliate_lock": {
+      "status": "UNTOUCHED",
+      "scope": "CONFIG.affiliate_enabled = false (Fail-closed)",
+      "violations": 0
+    },
+    "review_math_formula": {
+      "status": "UNTOUCHED",
+      "scope": "ABSA Sentiment Engine & Price Ép Đáy Math",
+      "violations": 0
+    }
+  },
+  "diff_classification": {
+    "presentation_layer": [
+      {
+        "file": "deploy/styles.css",
+        "type": "CSS_PRESENTATION",
+        "nature": "Bento Grid, Glassmorphism, Verdict Box, Responsive Layout (WCAG 2.1 AA)"
+      },
+      {
+        "file": "deploy/public/styles.css",
+        "type": "CSS_PRESENTATION",
+        "nature": "Mirror of deploy/styles.css"
+      },
+      {
+        "file": "04_DESIGN_SYSTEM/tokens.json",
+        "type": "DESIGN_TOKENS",
+        "nature": "Color palette, typography scale, spacing tokens"
+      },
+      {
+        "file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+        "type": "DOM_PRESENTATION_LAYER",
+        "nature": "Modal rendering helper functions and Bento layout markup (lines 20200-20350)"
+      }
+    ],
+    "quality_assurance_evidence": [
+      {
+        "directory": "07_QUALITY_ASSURANCE/",
+        "type": "QA_AND_TEST_SPEC",
+        "nature": "Test plan, cross-browser runners, historical execution logs"
+      },
+      {
+        "directory": "JAYT467_REAL_HUMAN_AUTHORITY/",
+        "type": "AUTHORITY_ARTIFACTS",
+        "nature": "Observed human session receipts, participant responses, temporal integrity, device receipts"
+      }
+    ]
+  },
+  "classification_verdict": "100% PRESENTATION_ONLY_AND_QA_EVIDENCE",
+  "core_integrity_seal": "PRESERVED_INTACT"
+}

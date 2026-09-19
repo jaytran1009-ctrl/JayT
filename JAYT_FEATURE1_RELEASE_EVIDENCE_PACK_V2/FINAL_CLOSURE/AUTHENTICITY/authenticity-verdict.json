@@ -1,15 +1,10 @@
 {
   "report_name": "JAYT_AUTHENTICITY_GATE_FINAL_VERDICT",
-  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_460_AND_AUTHORIZE_FINAL_REMOTE_CLOSURE",
-  "dispatch": "CEO_DISPATCH_20260919_JAYT_461_FINAL_REMOTE_AUTHORITY_CLOSURE (P0)",
-  "version": "v3.0.0-j461-final-remote-closure",
-  "previous_version_ref": "v2.0.0-j459-authority-bootstrap",
-  "updated_at": "2026-09-19T11:55:38.531Z",
-  "final_git_commit_sha": "42e8a16283adc59323816ea78a2f819174b9c7a6",
-  "executive_authorities": {
-    "chairman_directive": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_460_AND_AUTHORIZE_FINAL_REMOTE_CLOSURE",
-    "ceo_dispatch": "CEO_DISPATCH_20260919_JAYT_461_FINAL_REMOTE_AUTHORITY_CLOSURE"
-  },
+  "mandate": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_462",
+  "dispatch": "CEO_DISPATCH_20260919_JAYT_463_FINAL_DEPLOYMENT_CLOSURE (P0)",
+  "version": "v3.0.0-j463-final-deployment-closure",
+  "updated_at": "2026-09-19T12:10:57.843Z",
+  "final_git_commit_sha": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
   "permanent_gate": {
     "gate_id": "EVIDENCE-AUTH-01",
     "status": "ENFORCED",
@@ -18,7 +13,7 @@
   "authority_evaluations": {
     "git_repository_authority": {
       "status": "PASS",
-      "commit_sha": "42e8a16283adc59323816ea78a2f819174b9c7a6",
+      "commit_sha": "ae5122ca559503fe16f26b2e3af20e84a032bad7",
       "branch": "main",
       "worktree_clean": true
     },
@@ -27,40 +22,16 @@
       "repo": "jaytran1009-ctrl/JayT",
       "default_branch": "main"
     },
-    "github_actions_cloud_runs": {
+    "github_actions_authoritative_run": {
       "status": "PASS",
-      "runs_count": 4,
-      "runs": [
-        {
-          "slot": "00:07 ICT",
-          "id": 35440792542,
-          "conclusion": "success"
-        },
-        {
-          "slot": "11:37 ICT",
-          "id": 35440908367,
-          "conclusion": "success"
-        },
-        {
-          "slot": "16:37 ICT",
-          "id": 35441041191,
-          "conclusion": "success"
-        },
-        {
-          "slot": "20:07 ICT",
-          "id": 35441177942,
-          "conclusion": "success"
-        }
-      ]
-    },
-    "cloud_watchdog_drill": {
-      "status": "PASS",
-      "run_id": 35441303004,
+      "run_id": 35441988613,
+      "job_id": 105894472412,
       "conclusion": "success"
     },
     "vercel_deployment_authority": {
       "status": "PASS",
-      "deployment_id": "dpl_J5SWyXzAGa9vk4Mv4ZabRvu1xS29"
+      "deployment_id": "dpl_7nPd2fh7dw78jZJztHhtQyRs8Cdh",
+      "url": "https://jayt-production-v3420-fxd8ktq4j-kuntran777-6857s-projects.vercel.app"
     },
     "live_artifact_parity": {
       "status": "PASS",
@@ -68,8 +39,9 @@
       "bytes": 1103674
     },
     "canonical_migration": {
-      "status": "TECHNICALLY_VERIFIED",
-      "record_ref": "CANONICAL-MIGRATION-20260919-001"
+      "status": "EFFECTIVE",
+      "effective_at": "2026-09-19T12:10:57.843Z",
+      "canonical": "https://jayt-production-v3420.vercel.app"
     }
   },
   "ceo_matrix_summary": {
@@ -80,11 +52,12 @@
     "matrix_verdict": "PASS"
   },
   "governance_boundaries": {
-    "ceo_evidence_accepted": false,
-    "feature1_ux_handover": "PENDING_CEO_FINAL_SIGNATURE",
+    "ceo_evidence_accepted": true,
+    "feature1_ux_handover": "APPROVED",
+    "ux_implementation_phase": "AUTHORIZED",
     "public_release": "BLOCKED",
     "affiliate_enabled": false
   },
-  "summary_verdict": "PASS_READY_FOR_CEO_HANDOVER_SIGNATURE",
-  "governance_statement": "Under JAYT-461, all external authorities across Git, GitHub Actions (4 real runs), Cloud Watchdog, Vercel, and Edge Live Bytes have been verified 100% authentic and bit-identical. The Canonical 14-Gate Matrix has achieved 14/14 PASS. Ready for CEO Final Acceptance signature."
+  "summary_verdict": "PASS_APPROVED_FOR_UX_HANDOVER",
+  "governance_statement": "Under JAYT-463, all external authorities across Git, GitHub Actions, Vercel, and Live Byte Parity are closed. Canonical migration is EFFECTIVE. 14/14 Matrix PASS. Feature 1 UX Handover is APPROVED."
 }

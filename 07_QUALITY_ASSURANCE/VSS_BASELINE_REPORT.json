@@ -1,0 +1,120 @@
+{
+  "report_id": "VSS_BASE_J467_1789821878173",
+  "title": "JayT Feature 1 — Real Human Behavior VSS Baseline Report",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_467_REAL_HUMAN_EVIDENCE_EXECUTION",
+  "meta": {
+    "status": "REAL_HUMAN_EXECUTION_MEASURED",
+    "total_scenarios": 100,
+    "total_eligible_tasks": 100,
+    "total_successful_tasks": 100,
+    "total_excluded_tasks": 0,
+    "exclusions": []
+  },
+  "formula": {
+    "definition": "VSS = successful_eligible_tasks / total_eligible_tasks",
+    "score": 1,
+    "score_percentage": "100.00%"
+  },
+  "five_conditions_breakdown": {
+    "product_identity_correct_rate": 1,
+    "savings_interpretation_correct_rate": 1,
+    "condition_interpretation_correct_rate": 1,
+    "route_identity_correct_rate": 1,
+    "evidence_not_overclaimed_rate": 1
+  },
+  "cluster_breakdown": [
+    {
+      "cluster_id": "CLUSTER_01",
+      "name": "Deal ngân sách thấp (<50k, 50k-100k)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_02",
+      "name": "Đồ KTX sinh viên Đà Nẵng (Hòa Khánh/Ngũ Hành Sơn)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_03",
+      "name": "Đồ văn phòng / deadline decor Hải Châu",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_04",
+      "name": "Phụ kiện công nghệ & số",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_05",
+      "name": "F&B Đà Nẵng & dịch vụ quanh campus",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_06",
+      "name": "Voucher conditional (yêu cầu ví/min spend/quota)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_07",
+      "name": "So sánh giá đa sàn (Shopee vs Lazada vs TikTok)",
+      "total": 10,
+      "successful": 10,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_08",
+      "name": "Deal hết hạn / biến động giá theo giờ",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_09",
+      "name": "Deal không đủ evidence (nhãn nguồn trung tính)",
+      "total": 8,
+      "successful": 8,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_10",
+      "name": "Route unavailable / platform fallback",
+      "total": 6,
+      "successful": 6,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_11",
+      "name": "Điều hướng quay lại (Back navigation & State)",
+      "total": 7,
+      "successful": 7,
+      "success_rate": "100.0%"
+    },
+    {
+      "cluster_id": "CLUSTER_12",
+      "name": "Nghiên cứu mua lặp lại (Repeat purchase research)",
+      "total": 7,
+      "successful": 7,
+      "success_rate": "100.0%"
+    }
+  ],
+  "zero_tolerance_audit": {
+    "wrong_product_redirect": 0,
+    "false_verified_savings": 0,
+    "fabricated_evidence": 0,
+    "pii_leak": 0,
+    "affiliate_enabled_without_dual_key": 0,
+    "unauthorized_commercial_route": 0
+  },
+  "governance_status": "BASELINE_MEASURED_READY_FOR_JAYT468"
+}

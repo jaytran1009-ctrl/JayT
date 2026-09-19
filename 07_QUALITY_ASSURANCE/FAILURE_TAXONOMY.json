@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Internal Behavior Failure Taxonomy",
+  "version": "1.0.0",
+  "taxonomy_id": "FAIL_TAX_20260919",
+  "categories": {
+    "PRODUCT_IDENTITY": {
+      "codes": [
+        {
+          "code": "FAIL_PRODUCT_MISMATCH",
+          "severity": "P0",
+          "description": "Sản phẩm chuyển hướng tới sàn không khớp với sản phẩm người dùng chọn (khác SKU, model, thương hiệu)."
+        },
+        {
+          "code": "FAIL_VARIANT_AMBIGUITY",
+          "severity": "P1",
+          "description": "Người dùng chọn biến thể A (ví dụ: màu trắng, dung tích 4000mAh) nhưng sang sàn lại chọn mặc định biến thể đắt hơn."
+        }
+      ]
+    },
+    "SAVINGS_AND_PRICING": {
+      "codes": [
+        {
+          "code": "FAIL_SAVINGS_MISINTERPRETATION",
+          "severity": "P0",
+          "description": "Số tiền người dùng thực trả tại sàn chênh lệch vượt quá 5% so với giá hiển thị 'Ép đáy JayT'."
+        },
+        {
+          "code": "FAIL_PRICE_INFLATION_OVERCLAIM",
+          "severity": "P0",
+          "description": "Giá niêm yết gốc bị thổi phồng giả tạo để tạo cảm giác giảm giá sâu bất thường."
+        }
+      ]
+    },
+    "CONDITION_AND_TERMS": {
+      "codes": [
+        {
+          "code": "FAIL_CONDITION_SURPRISE",
+          "severity": "P1",
+          "description": "Ưu đãi yêu cầu điều kiện phức tạp (thanh toán qua ví nhất định, thành viên mới) nhưng không được cảnh báo trước khi bấm CTA."
+        },
+        {
+          "code": "FAIL_VOUCHER_EXPIRED",
+          "severity": "P1",
+          "description": "Mã giảm giá đã hết lượt sử dụng tại sàn nhưng hệ thống vẫn gắn mác còn hiệu lực."
+        }
+      ]
+    },
+    "ROUTING_AND_NAVIGATION": {
+      "codes": [
+        {
+          "code": "FAIL_ROUTE_DIVERGENCE",
+          "severity": "P0",
+          "description": "Nút mua dẫn sang trang tìm kiếm chung (/search) thay vì trang chi tiết sản phẩm (PDP)."
+        },
+        {
+          "code": "FAIL_DEAD_CTA",
+          "severity": "P0",
+          "description": "Nút bấm không phản hồi, link bị lỗi 404 hoặc không có hành động khi nhấp."
+        },
+        {
+          "code": "FAIL_STATE_LEAK",
+          "severity": "P0",
+          "description": "Trạng thái sản phẩm hoặc tham số tìm kiếm bị rò rỉ chéo giữa các danh mục hoặc giữa các tab."
+        }
+      ]
+    },
+    "EVIDENCE_AND_PROVENANCE": {
+      "codes": [
+        {
+          "code": "FAIL_OVERCLAIM_EVIDENCE",
+          "severity": "P0",
+          "description": "Gán nhãn 'Ảnh unbox / camera thường' khi chưa có asset_provenance_verified = true."
+        },
+        {
+          "code": "FAIL_SYNTHETIC_REVIEW",
+          "severity": "P0",
+          "description": "Đánh giá hoặc trích dẫn người mua bị tự bịa đặt thay vì bóc tách từ tập dữ liệu thật."
+        }
+      ]
+    },
+    "ACCESSIBILITY_AND_UI": {
+      "codes": [
+        {
+          "code": "FAIL_TOUCH_TARGET_TOO_SMALL",
+          "severity": "P2",
+          "description": "Vùng chạm có kích thước dưới 44px x 44px trên thiết bị di động."
+        },
+        {
+          "code": "FAIL_CONTRAST_INSUFFICIENT",
+          "severity": "P2",
+          "description": "Tỷ lệ tương phản chữ/nền nhỏ hơn 4.5:1."
+        },
+        {
+          "code": "FAIL_FOCUS_TRAP_MISSING",
+          "severity": "P2",
+          "description": "Khi mở modal, con trỏ bàn phím có thể nhảy ra ngoài nội dung modal."
+        }
+      ]
+    }
+  }
+}

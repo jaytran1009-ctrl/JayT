@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Live Human Pilot Session Capture Architecture",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "three_process_separation": {
+    "process_a": {
+      "role": "Human Participant",
+      "artifact": "PARTICIPANT_RAW_INPUT.jsonl",
+      "responsibilities": [
+        "Click START SESSION",
+        "Inspect product details",
+        "Open Decision Modal",
+        "Read ABSA evidence",
+        "Manually enter final price understood",
+        "Manually enter savings understood",
+        "Manually describe voucher conditions",
+        "Enter purchase decision without script assistance"
+      ],
+      "prohibitions": [
+        "Zero script pre-fill",
+        "Zero default YES",
+        "Zero expected-to-observed copy"
+      ]
+    },
+    "process_b": {
+      "role": "JayT Application",
+      "artifact": "APPLICATION_RAW_EVENTS.jsonl",
+      "responsibilities": [
+        "Issue cryptographic session_nonce dynamically at session start",
+        "Log UI interaction events (CARD_VIEW, MODAL_OPEN, EVIDENCE_VIEW)",
+        "Log route interaction and CTA click events",
+        "Log high-resolution timestamps",
+        "Isolate state per session"
+      ],
+      "prohibitions": [
+        "Zero participant answer generation",
+        "Zero preset success verdicts"
+      ]
+    },
+    "process_c": {
+      "role": "QA / Operations Observer",
+      "artifact": "OBSERVER_ATTESTATIONS.jsonl",
+      "responsibilities": [
+        "Certify human presence in real time",
+        "Certify session executed under observation",
+        "Certify responses were not pre-filled",
+        "Certify scenario executed in accordance with test plan"
+      ],
+      "prohibitions": [
+        "Observer cannot be an automated script",
+        "Tester cannot self-attest their own session"
+      ]
+    }
+  },
+  "session_nonce_protocol": {
+    "properties": [
+      "UNIQUE",
+      "UNPREDICTABLE",
+      "ISSUED_AT_SESSION_START",
+      "BOUND_TO_SCENARIO",
+      "BOUND_TO_TESTER_PSEUDONYM"
+    ],
+    "formula": "NONCE_<crypto_hex>_<scenario_id>_<tester_pseudonym>",
+    "prohibition": "Pre-generating nonces in bulk and assigning post-hoc is strictly prohibited"
+  },
+  "composite_receipt_contract": {
+    "artifact": "TEN_SESSION_RECEIPTS.jsonl",
+    "required_bindings": [
+      "session_nonce",
+      "participant_response_hash",
+      "observer_attestation_hash",
+      "start_time",
+      "end_time",
+      "duration_seconds"
+    ]
+  }
+}

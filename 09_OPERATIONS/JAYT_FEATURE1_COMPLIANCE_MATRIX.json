@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — Vietnamese Statutory Compliance Matrix (2026 In-Force Laws)",
+  "version": "1.0.0",
+  "matrix_id": "COMPLIANCE_MATRIX_FEATURE1_20260919",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_465_UX_INTERNAL_BEHAVIOR_AND_DANANG_READINESS",
+  "authority": "CHAIRMAN_DIRECTIVE_20260919_AUTHORIZE_UX_PHASE_AND_DANANG_READINESS",
+  "ratified_statutes": [
+    {
+      "code": "Luật 91/2025/QH15",
+      "official_name": "Luật Bảo vệ dữ liệu cá nhân",
+      "effective_date": "2026-01-01",
+      "status": "IN_FORCE_STATUTE",
+      "summary": "Quy định toàn diện về bảo vệ dữ liệu cá nhân, quyền của chủ thể dữ liệu, nguyên tắc thu thập tối thiểu (data minimization), cấm thu thập và chia sẻ dữ liệu khi chưa có sự đồng ý."
+    },
+    {
+      "code": "Luật 122/2025/QH15",
+      "official_name": "Luật Thương mại điện tử",
+      "effective_date": "2026-07-01",
+      "status": "ENACTED_AND_BINDING",
+      "summary": "Quy định về hoạt động thương mại điện tử, phân định trách nhiệm giữa nền tảng trung gian và người bán, minh bạch thông tin hàng hóa, dịch vụ, giá cả và chương trình khuyến mãi."
+    },
+    {
+      "code": "Luật 75/2025/QH15",
+      "official_name": "Luật sửa đổi, bổ sung một số điều của Luật Quảng cáo",
+      "effective_date": "2026-01-01",
+      "status": "IN_FORCE_STATUTE",
+      "summary": "Quy định về tính trung thực, chính xác trong quảng cáo so sánh giá, cấm tạo dựng khuyến mãi ảo/thổi phồng giá niêm yết, quy định trách nhiệm của người chuyển tải sản phẩm quảng cáo (KOL/KOC/Reviewer)."
+    }
+  ],
+  "matrix_entries": [
+    {
+      "entry_id": "CMP_01_PRIVACY_MINIMIZATION",
+      "legal_source": "Luật 91/2025/QH15",
+      "statutory_clause": "Điều 3 & Điều 9 — Nguyên tắc xử lý dữ liệu cá nhân & Thu thập tối thiểu",
+      "product_surface": "Telemetry Engine & Log Collector",
+      "control_mechanism": "STRICT_ZERO_PII: Hệ thống telemetry chỉ thu thập mã sự kiện, pseudonymous session token và tester ID ẩn danh (ví dụ: TESTER_DN_01). Không lưu IP, cookie định danh cá nhân, số CCCD, số điện thoại hay email.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/BEHAVIOR_EVENT_SCHEMA.json",
+      "owner": "Data Protection Officer & Head of Architecture",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_02_PRIVACY_CONSENT",
+      "legal_source": "Luật 91/2025/QH15",
+      "statutory_clause": "Điều 11 & Điều 17 — Quyền rút lại sự đồng ý & Quyền xóa dữ liệu",
+      "product_surface": "Storefront Client & LocalStorage",
+      "control_mechanism": "Người dùng có thể xóa toàn bộ lịch sử tra cứu và reset session cục bộ bất kỳ lúc nào qua nút 'Xóa dữ liệu phiên'. Không lưu trữ bản ghi người dùng trên server trung tâm khi chưa có sự cho phép rõ ràng.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (localStorage clear handlers)",
+      "owner": "Frontend Engineering Lead",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_03_ECOM_SELLER_TRANSPARENCY",
+      "legal_source": "Luật 122/2025/QH15",
+      "statutory_clause": "Điều 28 & Điều 32 — Nghĩa vụ minh bạch thông tin thương nhân & Phân định vai trò nền tảng trung gian",
+      "product_surface": "Product Cards, Radar Grid & Decision Modal",
+      "control_mechanism": "Giao diện hiển thị rõ ràng tên thương nhân (merchantName), phân loại gian hàng (Shopee Mall / LazMall / Shop Uy Tín), và nêu rõ JayT đóng vai trò công cụ đối soát giá độc lập, không phải người bán hàng trực tiếp.",
+      "evidence_reference": "04_DESIGN_SYSTEM/FEATURE1_UX_SPECIFICATION.md (Section 4 & Section 9)",
+      "owner": "Product Operations Lead",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_04_ECOM_PRICE_ACCURACY",
+      "legal_source": "Luật 122/2025/QH15",
+      "statutory_clause": "Điều 41 — Minh bạch giá bán và điều kiện khuyến mãi",
+      "product_surface": "Savings Breakdown Component (6 Chỉ Số)",
+      "control_mechanism": "Tách bạch 6 chỉ số: Giá niêm yết, Giá hiện tại, Voucher sàn, Phí vận chuyển, Thực trả dự kiến, Tiết kiệm. Phân loại rõ ràng trạng thái VERIFIED, ESTIMATED, CONDITIONAL. Cấm giấu điều kiện min spend.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (renderSavingsBreakdownHtml)",
+      "owner": "Head of Commercial & Pricing",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_05_AD_NO_FAKE_DISCOUNT",
+      "legal_source": "Luật 75/2025/QH15",
+      "statutory_clause": "Điều 8 sửa đổi — Các hành vi bị cấm trong hoạt động quảng cáo (Cấm giảm giá ảo/thổi phồng giá gốc)",
+      "product_surface": "JayT Price Chrono History & Savings Contract",
+      "control_mechanism": "Giá niêm yết gốc phải được đối soát qua lịch sử biến động giá (Price Chrono History) và bằng chứng sàn thực tế (Evidence Contract). Cấm nâng giá gốc ảo trước sự kiện sale để tạo tỷ lệ giảm giá giả lập.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (createSavingsContract & validateSavingsContract)",
+      "owner": "Chief Compliance Officer & ZQA Lead",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_06_AD_REVIEW_PROVENANCE",
+      "legal_source": "Luật 75/2025/QH15",
+      "statutory_clause": "Điều 15a bổ sung — Trách nhiệm của người chuyển tải sản phẩm quảng cáo và tính xác thực của đánh giá/nhận xét",
+      "product_surface": "Authentic Reviews Modal & Photo Gallery",
+      "control_mechanism": "STRICT_PROVENANCE_DISCIPLINE: Chỉ được gắn nhãn 'Ảnh unbox / camera thường' khi asset_provenance_verified = true. Mọi hình ảnh khác bắt buộc dùng nhãn trung tính 'Ảnh sản phẩm từ nguồn'. Điểm đánh giá phải qua ABSA Engine lọc 100% seeding ảo.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (openAuthenticReviewsModal lines 13380-13400)",
+      "owner": "Head of Content & Evidence Assurance",
+      "compliance_status": "COMPLIANT"
+    },
+    {
+      "entry_id": "CMP_07_AFFILIATE_FAIL_CLOSED",
+      "legal_source": "Luật 122/2025/QH15 & Luật 75/2025/QH15",
+      "statutory_clause": "Quy định về liên kết tiếp thị & Quảng cáo có điều kiện",
+      "product_surface": "Route Resolver & Affiliate Attribution Engine",
+      "control_mechanism": "FAIL_CLOSED: Toàn bộ hệ thống duy trì CONFIG.affiliate_enabled = false trong giai đoạn nghiệm thu nội bộ. Mọi link CTA điều hướng trực tiếp không gắn mã tiếp thị liên kết ngoài thẩm quyền; zero tracking thương mại trái phép.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js (line 20044: CONFIG.affiliate_enabled = false)",
+      "owner": "CEO & Chairman Dual-Key Authority",
+      "compliance_status": "COMPLIANT"
+    }
+  ]
+}

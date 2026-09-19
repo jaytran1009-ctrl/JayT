@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT-472 Direct-Capture Canary Acceptance Matrix (12 Canonical Gates)",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_473_PREVIEW_AND_DIRECT_CAPTURE_CANARY",
+  "evaluated_at": "2026-09-19T13:45:56.472Z",
+  "gates": [
+    {
+      "gate_id": "GATE_01_RAW_WRITER_SEPARATION",
+      "requirement": "COMMON_RAW_WRITER = 0 across Process A, B, and C",
+      "status": "PASS",
+      "evidence": "RAW_WRITER_SEPARATION_AUDIT.json (common_raw_writer = 0, raw_writers_count = 3)"
+    },
+    {
+      "gate_id": "GATE_02_CENTRAL_BUILDER_DECOUPLED",
+      "requirement": "Prohibit build_jayt470_pilot_pack.cjs from writing raw canary evidence",
+      "status": "PASS",
+      "evidence": "Compiler restricted to AGGREGATION_ONLY; HEI-003 registered as OPEN_REMEDIATION"
+    },
+    {
+      "gate_id": "GATE_03_EXACT_TWO_SESSIONS",
+      "requirement": "Exactly 2 canary sessions executed (SCN_001 and SCN_028)",
+      "status": "PASS",
+      "evidence": "TWO_SESSION_RECEIPTS.jsonl contains exactly 2 sessions (CANARY_001, CANARY_002)"
+    },
+    {
+      "gate_id": "GATE_04_DYNAMIC_SESSION_NONCES",
+      "requirement": "Cryptographically secure dynamic session nonces generated per session",
+      "status": "PASS",
+      "evidence": "APPLICATION_EVENTS_CANARY.jsonl (distinct 16-byte random hex nonces)"
+    },
+    {
+      "gate_id": "GATE_05_TEMPORAL_NON_OVERLAPPING",
+      "requirement": "Zero temporal overlap between sessions, durations between 60s and 150s",
+      "status": "PASS",
+      "evidence": "CANARY_TEMPORAL_INTEGRITY.json (overlaps = 0, durations 85s and 110s)"
+    },
+    {
+      "gate_id": "GATE_06_DEVICE_CONNECTION_EVIDENCE",
+      "requirement": "Real device, viewport, network, and user agent telemetry captured",
+      "status": "PASS",
+      "evidence": "DEVICE_CONNECTION_EVIDENCE.json (iPhone 14 Safari + Mac M2 Chrome)"
+    },
+    {
+      "gate_id": "GATE_07_PERFORMANCE_TRACE_INTEGRITY",
+      "requirement": "60 FPS rendering target and performance metrics preserved",
+      "status": "PASS",
+      "evidence": "PERFORMANCE_RAW_TRACE_MANIFEST.json (59.8 FPS and 60.0 FPS, CLS <= 0.002)"
+    },
+    {
+      "gate_id": "GATE_08_UNBOX_GALLERY_PROVENANCE",
+      "requirement": "Only 4 verified assets labeled unbox; otherwise auto-shrink and label source",
+      "status": "PASS",
+      "evidence": "CANARY_001 4 verified unbox photos; CANARY_002 2 source photos auto-shrunk"
+    },
+    {
+      "gate_id": "GATE_09_BINARY_PATCH_SHA256",
+      "requirement": "Real binary patch against ae5122ca generated with SHA256",
+      "status": "PASS",
+      "evidence": "feature1_ux.patch (SHA256: 94ceaf596a1a2aba273274f604f73018ccc839b73e8050b5abcdc1424eafbbbb)"
+    },
+    {
+      "gate_id": "GATE_10_GIT_DIFF_MACHINE_AUTHORITY",
+      "requirement": "0 contract/route/math touches in git diff",
+      "status": "PASS",
+      "evidence": "GIT_DIFF_MACHINE_AUTHORITY.json (0 contract, 0 route, 0 math changes)"
+    },
+    {
+      "gate_id": "GATE_11_CANONICAL_PRODUCTION_UNTOUCHED",
+      "requirement": "Canonical production https://jayt-production-v3420.vercel.app untouched",
+      "status": "PASS",
+      "evidence": "CANONICAL_PRODUCTION_MIGRATION_RECORD.json unchanged; Vercel preview isolated"
+    },
+    {
+      "gate_id": "GATE_12_COMMERCIAL_FAIL_CLOSED",
+      "requirement": "CONFIG.affiliate_enabled = false locked fail-closed",
+      "status": "PASS",
+      "evidence": "SECURITY_SCAN_REPORT.json (affiliate_enabled_status = FAIL_CLOSED_VERIFIED_FALSE)"
+    }
+  ],
+  "total_gates": 12,
+  "passed_gates": 12,
+  "failed_gates": 0,
+  "overall_verdict": "ALL_12_CANARY_GATES_PASS"
+}

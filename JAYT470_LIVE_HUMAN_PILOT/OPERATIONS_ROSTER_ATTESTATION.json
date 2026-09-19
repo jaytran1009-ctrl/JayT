@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Operations Roster Attestation — 10-Session Live Supervised Pilot",
+  "version": "1.0.0",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_471_SUPERVISED_PILOT_AND_FEATURE1_FINALIZATION",
+  "attestation_date": "2026-09-19",
+  "privacy_discipline": {
+    "statute": "Luật 91/2025/QH15 (Luật Bảo vệ dữ liệu cá nhân)",
+    "zero_pii_declaration": "Chỉ sử dụng định danh ẩn danh (pseudonymous IDs). Danh tính nhân sự được lưu trữ ngoại tuyến tại phòng Vận hành."
+  },
+  "pilot_testers_pool": [
+    {
+      "tester_id_pseudonymous": "TESTER_DN_01",
+      "department": "Quality Assurance Division",
+      "role": "Senior QA Engineer",
+      "allocated_pilot_sessions": 2,
+      "assigned_pilot_scenarios": [
+        "SCN_001",
+        "SCN_049"
+      ],
+      "device_environment": {
+        "hardware_ref": "DEV_WIN_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "Dell Latitude 7420",
+        "os": "Windows 11 Pro (23H2)",
+        "browser": "Chrome 128.0.6613.120"
+      }
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_02",
+      "department": "Product Operations Division",
+      "role": "Operations Specialist (Da Nang Merchant & Supply)",
+      "allocated_pilot_sessions": 2,
+      "assigned_pilot_scenarios": [
+        "SCN_041",
+        "SCN_073"
+      ],
+      "device_environment": {
+        "hardware_ref": "DEV_PIXEL_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "Google Pixel 7",
+        "os": "Android 14",
+        "browser": "Chrome Mobile 128.0.6613.88"
+      }
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_03",
+      "department": "Frontend Engineering Team",
+      "role": "UI/UX Developer",
+      "allocated_pilot_sessions": 2,
+      "assigned_pilot_scenarios": [
+        "SCN_057",
+        "SCN_081"
+      ],
+      "device_environment": {
+        "hardware_ref": "DEV_MAC_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "MacBook Pro 14 (M2 Pro)",
+        "os": "macOS Sonoma 14.5",
+        "browser": "Safari 17.5"
+      }
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_04",
+      "department": "Quality Assurance Division",
+      "role": "QA Test Analyst (Mobile & Accessibility)",
+      "allocated_pilot_sessions": 2,
+      "assigned_pilot_scenarios": [
+        "SCN_065",
+        "SCN_068"
+      ],
+      "device_environment": {
+        "hardware_ref": "DEV_IPHONE_01",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "iPhone 14 Pro",
+        "os": "iOS 17.5.1",
+        "browser": "Mobile Safari"
+      }
+    },
+    {
+      "tester_id_pseudonymous": "TESTER_DN_05",
+      "department": "Customer Experience & Support",
+      "role": "User Experience Advocate",
+      "allocated_pilot_sessions": 2,
+      "assigned_pilot_scenarios": [
+        "SCN_004",
+        "SCN_028"
+      ],
+      "device_environment": {
+        "hardware_ref": "DEV_WIN_02",
+        "device_type": "PHYSICAL_DEVICE",
+        "model": "ThinkPad T14 Gen 3",
+        "os": "Windows 11 Enterprise",
+        "browser": "Microsoft Edge 128.0.2739.42"
+      }
+    }
+  ],
+  "authorized_observers": [
+    {
+      "observer_id_pseudonymous": "OBSERVER_DN_QA_LEAD",
+      "department": "Quality Assurance Division",
+      "title": "Head of Quality Assurance & Verification"
+    },
+    {
+      "observer_id_pseudonymous": "OBSERVER_DN_OPS_DIR",
+      "department": "Operations & Governance Division",
+      "title": "Director of Operations & Governance"
+    }
+  ],
+  "observer_separation_rule": "Tester tuyệt đối không tự ký xác nhận session của chính mình. Tất cả 10 session đều được giám sát bởi 1 trong 2 observer độc lập.",
+  "verdict": "PASS"
+}

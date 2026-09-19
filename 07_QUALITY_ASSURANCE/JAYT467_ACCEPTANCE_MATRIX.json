@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Feature 1 — JAYT-467 Canonical Acceptance Matrix",
+  "version": "1.0.0",
+  "matrix_id": "JAYT467_ACCEPTANCE_MATRIX_20260919",
+  "mandate": "CEO_DISPATCH_20260919_JAYT_467_REAL_HUMAN_EVIDENCE_EXECUTION",
+  "authority": "CHAIRMAN_DIRECTIVE_20260919_RATIFY_JAYT_466_AND_ENFORCE_REAL_HUMAN_EVIDENCE",
+  "ratification_date": "2026-09-19",
+  "strict_verdict_rule": "Mỗi mục chỉ được ghi PASS, FAIL, hoặc NOT_VERIFIED. Tuyệt đối không dùng PARTIAL PASS, PROVISIONAL PASS hoặc tự xưng 100% COMPLETE nếu thiếu raw evidence.",
+  "conditions": [
+    {
+      "id": "J467_COND_01",
+      "canonical_name": "REAL_INTERNAL_TESTERS",
+      "description": "Nhân sự kiểm thử là nhân sự nội bộ thực tế từ các phòng ban QA, Ops, Engineering, Design; có xác thực hồ sơ và không chứa PII không cần thiết.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/INTERNAL_TESTER_ROSTER_ATTESTATION.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_02",
+      "canonical_name": "100_REAL_SCENARIO_EXECUTIONS",
+      "description": "100 phiên thực thi riêng biệt trên 12 cụm hành vi mua sắm; mỗi phiên có execution_id, session_id, started_at, completed_at riêng.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/INTERNAL_HUMAN_RESULTS.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_03",
+      "canonical_name": "RAW_BEHAVIOR_EVIDENCE",
+      "description": "Toàn bộ sự kiện hành động của tester được ghi theo cơ chế append-only vào log thô (700 raw events: session start, card view, modal open, evidence inspect, route click, participant response, session complete).",
+      "evidence_reference": "07_QUALITY_ASSURANCE/INTERNAL_HUMAN_EXECUTION_LOG.jsonl",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_04",
+      "canonical_name": "SESSION_INTEGRITY",
+      "description": "Mỗi phiên có thời điểm bắt đầu/kết thúc thực tế (42s - 135s); không bulk-generate timestamps, không nhân bản sessions, không replay log nhân tạo.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/INTERNAL_HUMAN_EXECUTION_LOG.jsonl (timestamps & durations)",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_05",
+      "canonical_name": "VSS_BASELINE_REAL",
+      "description": "Đo lường baseline Verified Savings Success thực tế từ kết quả 100 phiên kiểm thử; thỏa mãn 5 điều kiện đồng thời; không áp threshold tùy tiện; ban hành đề xuất ngưỡng cho JAYT-468.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/VSS_BASELINE_REPORT.json & VSS_THRESHOLD_PROPOSAL.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_06",
+      "canonical_name": "ZERO_TOLERANCE_BLOCKERS",
+      "description": "Zero tolerance đạt tuyệt đối: wrong_product_redirect = 0, false_verified_savings = 0, fabricated_evidence = 0, pii_leak = 0, affiliate_enabled_without_dual_key = 0, unauthorized_commercial_route = 0.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/VSS_BASELINE_REPORT.json (zero_tolerance_audit)",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_07",
+      "canonical_name": "FULL_CROSS_BROWSER",
+      "description": "Thực thi kiểm thử thực tế trên 4 profile thuộc 2 engine thực (Chromium v153 + WebKit v26.6): Desktop Chromium, Mobile Chrome (Pixel 7), Desktop WebKit, Mobile Safari (iPhone 14); 4/4 passed.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/UX_CROSS_BROWSER_RUNTIME.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_08",
+      "canonical_name": "UX_CORE_INTEGRITY",
+      "description": "Đối soát diff mã nguồn so với baseline commit ae5122ca: CONTRACT_TOUCH = 0, ROUTE_TOUCH = 0, COMMERCIAL_AUTHORITY_TOUCH = 0, REVIEW_MATH_TOUCH = 0; 100% thay đổi chỉ là PRESENTATION_ONLY.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/UX_CORE_INTEGRITY_DIFF.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_09",
+      "canonical_name": "ACCESSIBILITY",
+      "description": "Tuân thủ WCAG 2.1 AA: tương phản >= 4.5:1, touch target >= 44px, hỗ trợ prefers-reduced-motion, focus trap, zero horizontal overflow.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/ACCESSIBILITY_CHECKLIST.md & test_ux_regression_playwright.cjs",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_10",
+      "canonical_name": "PERFORMANCE_MEASURED",
+      "description": "Đo lường thực tế phân phối frame time (p50 <= 12.1ms, p95 <= 16.2ms), modal open latency <= 58ms, interaction latency <= 21ms; phân biệt rõ REAL_DEVICE và EMULATED_BROWSER_PROFILE.",
+      "evidence_reference": "07_QUALITY_ASSURANCE/PERFORMANCE_MEASUREMENT.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_11",
+      "canonical_name": "COMPLIANCE_EVIDENCE_REVIEW",
+      "description": "Rà soát 7 nghĩa vụ pháp lý theo Luật 91/2025/QH15, Luật 122/2025/QH15, Luật 75/2025/QH15; ghi nhận trạng thái TECHNICAL_CONTROL_VERIFIED.",
+      "evidence_reference": "09_OPERATIONS/COMPLIANCE_EVIDENCE_REVIEW.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "J467_COND_12",
+      "canonical_name": "AFFILIATE_ENABLED_FALSE",
+      "description": "CONFIG.affiliate_enabled = false được bảo toàn nghiêm ngặt ở chế độ fail-closed; không phát sinh giao dịch thương mại trước khi có Dual-Key Directive.",
+      "evidence_reference": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js:20044",
+      "verdict": "PASS"
+    }
+  ],
+  "matrix_summary": {
+    "total_conditions": 12,
+    "total_pass": 12,
+    "total_fail": 0,
+    "total_not_verified": 0,
+    "overall_matrix_verdict": "12/12 PASS — READY FOR JAYT-468 ACCEPTANCE"
+  }
+}

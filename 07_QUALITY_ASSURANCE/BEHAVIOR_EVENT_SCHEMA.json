@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JayT Pseudonymous Telemetry Event Schema",
+  "version": "1.0.0",
+  "legal_statute": "Luật 91/2025/QH15 (Luật Bảo vệ dữ liệu cá nhân, hiệu lực 01/01/2026)",
+  "compliance_rule": "STRICT_ZERO_PII: Cấm thu thập họ tên, số CCCD, địa chỉ cư trú cụ thể, số điện thoại, email, IP cá nhân hoặc dữ liệu định danh trực tiếp.",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "pseudonymous_session_id",
+    "tester_id_pseudonymous",
+    "timestamp_utc",
+    "payload"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^EVT_[0-9A-F]{16}$"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "CARD_IMPRESSION",
+        "VERDICT_VIEW",
+        "SAVINGS_EXPAND",
+        "EVIDENCE_LIGHTBOX_OPEN",
+        "ROUTE_CTA_CLICK",
+        "MODAL_CLOSE",
+        "SEARCH_INPUT_SUBMIT"
+      ]
+    },
+    "pseudonymous_session_id": {
+      "type": "string",
+      "description": "Chuỗi mã hóa ngẫu nhiên được cấp cho phiên thử nghiệm, không gắn với bất kỳ hồ sơ cá nhân nào."
+    },
+    "tester_id_pseudonymous": {
+      "type": "string",
+      "pattern": "^TESTER_DN_[0-9]{2,3}$",
+      "description": "Định danh người kiểm thử nội bộ ẩn danh (ví dụ: TESTER_DN_01)."
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "device_category": {
+      "type": "string",
+      "enum": ["MOBILE", "TABLET", "DESKTOP"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "offer_id": { "type": "string" },
+        "sku_id": { "type": "string" },
+        "platform": { "type": "string" },
+        "target_url": { "type": "string" },
+        "savings_amount_vnd": { "type": "number" },
+        "verdict_state": { "type": "string" },
+        "interaction_duration_ms": { "type": "number" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
