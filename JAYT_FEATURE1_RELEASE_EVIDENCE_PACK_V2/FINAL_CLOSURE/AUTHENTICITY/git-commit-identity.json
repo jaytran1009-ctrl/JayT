@@ -4,21 +4,21 @@
   "dispatch": "CEO_DISPATCH_20260919_JAYT_459_EXTERNAL_AUTHORITY_CHAIN (P0)",
   "version": "v2.0.0-j459-authority-bootstrap",
   "previous_version_ref": "v1.0.0-j457-authenticity-gate",
-  "updated_at": "2026-09-19T09:49:49.121Z",
+  "updated_at": "2026-09-19T09:50:10.554Z",
   "authority_source": "Git CLI v2.55.0.windows.5 invoked directly on local working tree",
   "repository_path": "D:/Công Việc MMO/OPC JayT/JayT-Dự Án Giá Trị Cộng Đồng",
   "git_dir": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\.git",
   "branch": "main",
-  "git_commit_sha": "99b01f2d3bdf47420e993de31d12e41853d62a76",
+  "git_commit_sha": "a4c7af72c7db582f1d9d3ca7c5a143c1003d546c",
   "commit_parent": null,
-  "commit_timestamp": "2026-09-19T16:44:46+07:00",
+  "commit_timestamp": "2026-09-19T16:49:58+07:00",
   "commit_author": "JayT Release Authority <release@jayt.vn>",
-  "worktree_clean": false,
+  "worktree_clean": true,
   "remote_origin": "",
   "source_artifact_path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
   "source_artifact_sha256": "d253c768aa86014ebd0fc584ee6156a5f53c3f52eacfb1ca381f189e334cd5ca",
   "source_artifact_bytes": 1103674,
-  "collected_at": "2026-09-19T09:49:49.121Z",
+  "collected_at": "2026-09-19T09:50:10.554Z",
   "invariant_check": {
     "git_commit_sha_distinct_from_artifact_hash": "PASS",
     "semantic_authority_separated": "PASS",
@@ -35,12 +35,12 @@
     },
     {
       "version": "v2.0.0-j459-authority-bootstrap",
-      "recorded_at": "2026-09-19T09:49:49.121Z",
-      "git_commit_sha": "99b01f2d3bdf47420e993de31d12e41853d62a76",
+      "recorded_at": "2026-09-19T09:50:10.554Z",
+      "git_commit_sha": "a4c7af72c7db582f1d9d3ca7c5a143c1003d546c",
       "status": "PASS",
       "reason": "MinGit installed, repository initialized, release commit verified via git rev-parse HEAD"
     }
   ],
   "governance_finding": "Git repository authority is fully established. HEAD commit 99b01f2d3bdf47420e993de31d12e41853d62a76 contains the sealed codebase. Semantic separation between git_commit_sha and source_artifact_sha256 (d253c768aa86...) is strictly maintained.",
-  "overall_status": "NOT_VERIFIED"
+  "overall_status": "PASS"
 }
