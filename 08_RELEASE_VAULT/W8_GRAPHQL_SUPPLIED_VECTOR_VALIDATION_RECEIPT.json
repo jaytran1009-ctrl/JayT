@@ -1,0 +1,29 @@
+{
+  "receipt_id": "W8_GRAPHQL_SUPPLIED_VECTOR_VALIDATION_RECEIPT",
+  "recorded_at_utc": "2026-09-14T05:52:31.3084058Z",
+  "status": "REJECTED__SIGNATURE_MISMATCH_AND_MISSING_PROVIDER_PROVENANCE",
+  "validation": {
+    "local_secret_present": true,
+    "local_partner_id_present": true,
+    "supplied_signature_matches_canonical_payload": false,
+    "supplied_item_id_equals_partner_id": true,
+    "exact_signed_payload_bytes_defined": false,
+    "official_partner_center_provenance_present": false,
+    "provider_test_vector_accepted": false
+  },
+  "network": {
+    "authenticated_provider_request_sent": false,
+    "reason": "Fail-closed: an unverifiable signature vector is not authority to send a credentialed request."
+  },
+  "security": {
+    "secret_values_emitted_by_verifier": false,
+    "credential_rotation_recommended": true,
+    "reason": "A value described as an API secret appeared in supplied text and must be treated as exposed."
+  },
+  "release": {
+    "affiliate_enabled": false,
+    "production_deployed": false,
+    "dual_key_signed": false
+  },
+  "decision": "KEEP_W8_GQL_01_CLOSED_PENDING_OFFICIAL_PROVIDER_DOCUMENTATION_AND_A_VALID_REPRODUCIBLE_TEST_VECTOR"
+}

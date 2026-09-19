@@ -1,0 +1,47 @@
+{
+  "release_candidate_id": "JAYT_RELEASE_CANDIDATE_094A",
+  "version": "2.4.1",
+  "created_at": "2026-08-25T08:03:34.378Z",
+  "directive": "JAYT-094A-STAGING-CINEMATIC-BENTO-AND-DISCLOSURE",
+  "bundle_type": "CINEMATIC_BENTO_DISCOVERY_STAGING_V4_1",
+  "status": "EMITTED_PENDING_CEO_REVIEW",
+  "incident_disclosure": "08_RELEASE_VAULT/DISCLOSURE_RECORD_094_RE_EMISSION_INTEGRITY_GAP.json",
+  "artifacts": {
+    "index.html": {
+      "sha256": "bad61e77a0362abc93964560f4e7a2f4eec6b117d2171769975d837e9aebadec",
+      "size_bytes": 16667,
+      "verified_at": "2026-08-25T08:03:34.376Z"
+    },
+    "jayt_apex_interface.js": {
+      "sha256": "b4a13d9f3d867cb0c32619968148ad95e3a931615abe0fb0cbe889da708d8766",
+      "size_bytes": 189426,
+      "verified_at": "2026-08-25T08:03:34.377Z"
+    },
+    "four_layer_dataset.json": {
+      "sha256": "d3e41ecabb4db7233766004bf240d7a3054ae941efbfcac0d5145840cc0e5fe2",
+      "size_bytes": 17120,
+      "verified_at": "2026-08-25T08:03:34.377Z"
+    },
+    "visual_hybrid_hub_contract.json": {
+      "sha256": "20734338af09b71e16a50c08247830d0f5839309af1b0715a2b9f491638ea398",
+      "size_bytes": 1894,
+      "verified_at": "2026-08-25T08:03:34.378Z"
+    },
+    "customer_journey_north_star.json": {
+      "sha256": "3d1d8c4e98a6de497b991c686118306f4917fd7b39ef498e7d35e1cc64400241",
+      "size_bytes": 8301,
+      "verified_at": "2026-08-25T08:03:34.378Z"
+    }
+  },
+  "invariants": {
+    "production_feed_empty": true,
+    "production_approval_is_false": true,
+    "client_side_local_storage_only_no_server_transmission": true,
+    "zero_unverified_deals_or_fake_discounts": true,
+    "zero_unverified_pulses": true,
+    "touch_target_min_44px": true,
+    "cinematic_bento_hierarchy_45_30_25": true,
+    "category_dock_scroll_snap": true,
+    "http_staging_evidence_verified": true
+  }
+}

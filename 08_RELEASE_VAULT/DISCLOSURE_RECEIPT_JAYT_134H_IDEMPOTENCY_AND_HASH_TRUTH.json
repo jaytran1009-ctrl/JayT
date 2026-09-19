@@ -1,0 +1,32 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_134H",
+  "directive": "JAYT-134H — CANONICAL STATE, IDEMPOTENCY & HASH-TRUTH REPAIR",
+  "severity": "P0_GOVERNANCE_INTEGRITY_REMEDIATION",
+  "status": "DISCLOSED_AND_CONTAINED",
+  "disclosed_at": "2026-08-26T18:30:10+07:00",
+  "executive_finding": "Independent audit by CEO identified three critical governance blocking errors following JAYT-134G execution:",
+  "governance_errors": [
+    {
+      "error_id": "GOV_ERR_05_DUPLICATE_CONTRADICTORY_CURRENT_HEADERS",
+      "category": "PROJECT_MEMORY_STATE_AMBIGUITY",
+      "description": "PROJECT_MEMORY.md contained two contradictory 'current' status headers: the top header retained 'GOVERNANCE_AND_PROVENANCE_AUDIT_FAILED', while the 134G body recorded 'GOVERNANCE_RECOVERY_PENDING_INDEPENDENT_AUDIT'.",
+      "remediation": "Upgraded applyProjectMemoryTransaction067 to maintain a single canonical Current Truth Header at the top of PROJECT_MEMORY.md recording 'SAFE_UI_CONTAINMENT_PROVISIONAL — GOVERNANCE_RECOVERY_PENDING_INDEPENDENT_AUDIT'."
+    },
+    {
+      "error_id": "GOV_ERR_06_HARDCODED_INACCURATE_HASH_REPORTING",
+      "category": "REVIEW_PACK_PROVENANCE_FAILURE",
+      "description": "Review Pack 134G hardcoded a previous JS hash ('ae4f...a37eef...') instead of dynamically computing the actual physical file hash ('ae4f3376524650a36d623ff79d47b387ae57eb5121f9bfb7c875fddcd3bbac35').",
+      "remediation": "All hashes across review packs and audit scripts must be dynamically computed at report generation time from on-disk buffers."
+    },
+    {
+      "error_id": "GOV_ERR_07_LACK_OF_RUNNER_IDEMPOTENCY",
+      "category": "TRANSACTION_MANAGER_IDEMPOTENCY_FAILURE",
+      "description": "apply_memory_transaction_134g.js lacked idempotency guardrails. When re-executed during CEO independent audit, it created a second transaction receipt and altered the memory hash rather than recognizing the work order as already applied.",
+      "remediation": "Added native idempotency to applyProjectMemoryTransaction067: re-executing an already applied work order returns ALREADY_APPLIED and guarantees byte-for-byte memory hash invariance with zero new receipts."
+    }
+  ],
+  "governance_enforcement": {
+    "transaction_manager": "07_QUALITY_ASSURANCE/memory_transaction_manager_057.js (Idempotent 067 Runner)",
+    "lifecycle_state": "SAFE_UI_CONTAINMENT_PROVISIONAL — GOVERNANCE_RECOVERY_PENDING_INDEPENDENT_AUDIT"
+  }
+}

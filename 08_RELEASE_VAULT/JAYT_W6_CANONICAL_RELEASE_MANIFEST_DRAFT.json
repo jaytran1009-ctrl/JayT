@@ -1,0 +1,42 @@
+{
+  "manifest_id": "JAYT_W6_CANONICAL_RELEASE_MANIFEST_DRAFT",
+  "target_version": "v3.450.0-w6",
+  "generated_at": "2026-09-12T14:50:00+07:00",
+  "status": "DUAL_KEY_SIGNATURE_PENDING",
+  "candidate_deployment": {
+    "deployment_id": "dpl_93FeMQT45GjtooiTPtVJKAVyvmjY",
+    "preview_url": "https://jayt-production-v3420-dl5jzbezw-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "staging_preview"
+  },
+  "target_production": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_live_version": "v3.449.0-j397",
+    "promotion_command": "npx vercel --prod --cwd deploy",
+    "affiliate_enabled": false
+  },
+  "verification_receipts": [
+    {
+      "receipt_id": "JAYT_W6_REMOTE_PREVIEW_VERIFICATION_RECEIPT",
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W6_REMOTE_PREVIEW_VERIFICATION_RECEIPT.json",
+      "verdict": "AUDIT_VERIFIED_PASS__STAGING_SEALED"
+    },
+    {
+      "receipt_id": "JAYT_W6_ON_THE_SPOT_RUNTIME_RECEIPT",
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W6_ON_THE_SPOT_RUNTIME_RECEIPT.json",
+      "verdict": "PASS_ABSOLUTE"
+    }
+  ],
+  "dual_key_authorization": {
+    "key_1_chairman_hđqt": {
+      "role": "CHAIRMAN_OF_THE_BOARD",
+      "mandate": "CHAIRMAN-SUPREME-MANDATE-2026-0912-ON-THE-SPOT-OS-UNLEASH",
+      "status": "APPROVED_FOR_STAGING_SEAL__AWAITING_FINAL_EXECUTION_CALL"
+    },
+    "key_2_strategic_advisor_ceo": {
+      "role": "CODEX_CEO_GATEKEEPER",
+      "report": "01_EXECUTIVE_COUNCIL/JAYT_W6_CEO_R5_ON_THE_SPOT_OS_ACCEPTANCE.md",
+      "status": "RECOMMENDED_PASS_FOR_DUAL_KEY_SIGNATURE"
+    }
+  }
+}

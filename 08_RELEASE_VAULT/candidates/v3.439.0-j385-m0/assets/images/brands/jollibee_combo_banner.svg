@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <circle cx="540" cy="80" r="140" fill="#ffffff" fill-opacity="0.06"/>
+  <circle cx="100" cy="340" r="120" fill="#ffffff" fill-opacity="0.04"/>
+  
+  <g transform="translate(60, 48)">
+    <rect x="0" y="0" width="130" height="28" rx="14" fill="#ffffff" fill-opacity="0.2"/>
+    <text x="65" y="19" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">ẨM THỰC NHANH</text>
+  </g>
+
+  <g transform="translate(320, 190) scale(1.4)" filter="url(#glow)">
+    <g transform="translate(-40, -40)">
+      <circle cx="40" cy="40" r="44" fill="#EF4444"/>
+      <path d="M22 45 C22 30, 32 20, 48 20 C60 20, 68 28, 68 40 C68 55, 52 64, 40 64 C28 64, 22 55, 22 45 Z" fill="#FEF08A"/>
+      <circle cx="34" cy="34" r="4" fill="#991B1B"/>
+      <circle cx="46" cy="34" r="4" fill="#991B1B"/>
+      <path d="M36 46 Q40 52 48 46" stroke="#991B1B" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(60, 310)">
+    <text x="0" y="0" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">Jollibee Đà Nẵng</text>
+    <text x="0" y="32" fill="#E5E7EB" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500">Combo Gà Giòn & Mì Ý Sốt Bò Bằm</text>
+  </g>
+  <rect x="0" y="394" width="640" height="6" fill="#DC2626"/>
+</svg>

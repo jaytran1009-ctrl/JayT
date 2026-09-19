@@ -1,0 +1,54 @@
+{
+  "incident_id": "INCIDENT-JAYT-134E",
+  "directive": "JAYT-134E — P0 Truth Reset & Canonical Renderer Recovery",
+  "severity": "P0_CRITICAL",
+  "current_system_state": "P0_UNCONTAINED_PENDING_CEO_INDEPENDENT_AUDIT",
+  "reported_at": "2026-08-26T18:07:38+07:00",
+  "reset_at": "2026-08-26T18:10:20+07:00",
+  "executive_summary": "Comprehensive truth reset shutting down all super-app hardcoded commercial renderers, delivery arbitrage comparisons, 7-day cinema schedules, promo events, and establishing CanonicalRenderGate bound to on-disk cryptographic evidence.",
+  "quarantined_and_purged_renderers": [
+    {
+      "component": "renderFiveTierDailyDealCanvas",
+      "reason": "Hardcoded 5-tier super-app canvas with delivery price arbitrage and unverified venue claims.",
+      "status": "REPLACED_WITH_CANONICAL_TRUTH_CENTER"
+    },
+    {
+      "component": "getCinemaSchedule",
+      "reason": "Hardcoded 7-day cinema discount schedule.",
+      "status": "PURGED"
+    },
+    {
+      "component": "handleArbitrageSliderChange",
+      "reason": "Synthetic delivery price calculations comparing ShopeeFood, GrabFood, BeFood.",
+      "status": "PURGED"
+    },
+    {
+      "component": "generateBoardingPassTicketCanvas / copyZaloGroupPlanPass",
+      "reason": "Ticket pass generators with hardcoded commercial prices and venues.",
+      "status": "PURGED"
+    }
+  ],
+  "canonical_gate_enforcement": {
+    "gate_name": "CanonicalRenderGate",
+    "strict_fields_required": [
+      "id",
+      "brand",
+      "official_source_url",
+      "artifact_path",
+      "artifact_sha256",
+      "quote",
+      "district"
+    ],
+    "rule": "Missing any single field results in instant render rejection."
+  },
+  "source_hashes": {
+    "jayt_apex_interface_js": {
+      "sha256": "753b1d727764a8b6fea8638996c1ffe1037359f6399832f7d91b203864197457",
+      "bytes": 373152
+    },
+    "index_html": {
+      "sha256": "3d3002006491779d8e96b98d06054e2d407cf52c1ba853457c4ff7e98ff8b740",
+      "bytes": 109664
+    }
+  }
+}

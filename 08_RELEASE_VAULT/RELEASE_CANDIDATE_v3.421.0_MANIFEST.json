@@ -1,0 +1,72 @@
+{
+  "manifest_id": "JAYT_RELEASE_CANDIDATE_V3421",
+  "governing_directive": "JAYT-324",
+  "target_version": "v3.421.0",
+  "status": "APPROVED_FOR_PRODUCTION_RELEASE",
+  "baseline_production_version": "v3.420.0",
+  "candidate_scope": "TWENTY_TWO_NON_COMMERCIAL_STAGING_CARDS_ONLY",
+  "candidate_selection_mode": "AUDIT_INVENTORY_ONLY__NO_PRODUCTION_PROMOTION",
+  "candidate_bundle": {
+    "bundle_root": "08_RELEASE_VAULT/candidates/v3.421.0/",
+    "bundle_manifest": "08_RELEASE_VAULT/candidates/v3.421.0/candidate_manifest.json",
+    "bundle_manifest_sha256": "17c1416a0eab5a23cc485bd02f77328f06a0577e8200874ab98e00cd37d1fe22",
+    "js_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.421.0/jayt_storefront_v3421.js",
+      "sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319"
+    },
+    "html_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.421.0/index.html",
+      "sha256": "1eed5ad19fe62b519774235d19f148fe5d1c57514535306630f7e02608b5d92a"
+    },
+    "css_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.421.0/styles.css",
+      "sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04"
+    }
+  },
+  "candidate_registry": {
+    "registry_path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_REGISTRY.json",
+    "registry_file_sha256": "442b67593ff38c3a7b392135def28c04b4feffedf959a002667b42d63bf6aaf8",
+    "approved_entities_count": 22,
+    "pinned_entities_sha256": "fdcee9d13e55506770a28e057f958336c3e8c992c78059587cf21ce7203bb67b"
+  },
+  "staging_baseline_reference": {
+    "staging_registry_path": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+    "staging_active_cards_count": 24,
+    "staging_registry_pinned_sha256": "7e3658d3b0ea924f0594efa8f82b88eb594425978da4218d4321f43676321612",
+    "staging_build_manifest": "00_PROGRAM_BASELINE/JAYT_BUILD_MANIFEST.json",
+    "staging_sot_js_sha256": "c111ca3c0959cf86b4e251e0434a75a968d3ba45e8f9d212d591c6530ac434d9"
+  },
+  "governance_exclusions": {
+    "b11_01": "EXCLUDED__AWAITING_FUTURE_CHAIRMAN_DECREE",
+    "b11_02": "EXCLUDED__STAGING_ONLY_EVALUATION",
+    "b11_03": "EXCLUDED__PROPOSAL_ONLY",
+    "b10_03": "EXCLUDED__PUBLIC_APPROVAL_DENIED"
+  },
+  "required_pre_release_gates": [
+    "DEDICATED_RC_PREVIEW_PORT_4174_VERIFIED",
+    "22_CARD_REGISTRY_AND_DOM_PARITY",
+    "REGRESSION_AND_DOM_AUDIT_PASS",
+    "PRODUCTION_BASELINE_V3420_QA_RECONCILIATION",
+    "SEPARATE_SIGNED_PRODUCTION_RELEASE_DECREE"
+  ],
+  "commercial_locks_required": {
+    "deals_feed": "[]",
+    "voucher_count": 0,
+    "affiliate": false,
+    "tracking": false
+  },
+  "rollback": {
+    "target_version": "v3.420.0",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "deployment_id": "dpl_7hspKm7GDgur6M8giw3pszztt6NX",
+    "artifact_root": "deploy_personal_v3420/",
+    "artifact_js_sha256": "5c11252bae14c70873972ac0eb256200772b346a281320394ff54d676ea4e9f6",
+    "trigger": "Any post-deploy parity, DOM, commercial-lock, or provenance failure."
+  },
+  "is_approved": true,
+  "deployment_permitted": true,
+  "official_decree": {
+    "path": "01_EXECUTIVE_COUNCIL/JAYT_324_CHAIRMAN_PRODUCTION_RELEASE_DECREE_V3421.md",
+    "sha256": "0a6ee339a89e8d0ba454f09d197dceaf144f087c77fdcbf0d2050e623b724a97"
+  }
+}

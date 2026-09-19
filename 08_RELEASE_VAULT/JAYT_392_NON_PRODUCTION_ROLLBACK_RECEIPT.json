@@ -1,0 +1,39 @@
+{
+  "$schema": "https://jayt.vn/schemas/j392-non-production-rollback-receipt.v1.json",
+  "receipt_id": "JAYT_392_NON_PRODUCTION_ROLLBACK_RECEIPT",
+  "work_order": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "issued_at_utc": "2026-09-11T06:24:00.000Z",
+  "authority": "CHAIRMAN_AND_CEO_J392_MANDATE",
+  "target_production": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+    "active_serving_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "serving_version": "v3.444.0-j388",
+    "canonical_alias_state": "STRICTLY_UNTOUCHED_AND_FROZEN",
+    "production_alias_mutation_authorized": false
+  },
+  "rollback_baseline": {
+    "deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "version": "v3.440.0-j385-m1",
+    "status": "READY_IN_RESERVE"
+  },
+  "drill_environment_audit": {
+    "vercel_cli_installed": false,
+    "cli_probe_error": "CommandNotFoundException: The term 'vercel' is not recognized as the name of a cmdlet, function, script file, or operable program.",
+    "drill_credentials_provisioned": false,
+    "authorized_non_production_alias": null,
+    "drill_execution_status": "BLOCKED_BY_LACK_OF_AUTHORIZED_STAGING_ALIAS_AND_CLI_CREDENTIALS"
+  },
+  "operational_boundary_declaration": {
+    "work_order_clause_line_64": "If no authorized host or drill alias exists, report this as a blocker; do not create credentials, aliases or tasks outside approved scope.",
+    "truthfulness_assertion": "In strict compliance with Chairman martial law directives, zero synthetic simulation or fabricated CLI logs are generated. The lack of a dedicated staging alias and local Vercel CLI is explicitly and candidly reported as an operational infrastructure blocker.",
+    "production_protection_guarantee": "Canonical production alias https://jayt-production-v3420.vercel.app was NOT altered, swapped, or probed destructively. Zero risk of production downtime was introduced."
+  },
+  "prerequisites_to_unblock_drill": [
+    "Provision an authorized dedicated non-production alias (e.g. jayt-drill-stage-j392.vercel.app) isolated from production.",
+    "Provide scoped, temporary Vercel deployment credentials for the drill host.",
+    "Execute actual alias swap between candidate and baseline on the dedicated drill alias, measuring real network RTO."
+  ],
+  "verdict": "NON_PRODUCTION_ROLLBACK_DRILL_BLOCKED_BY_INFRASTRUCTURE_BOUNDARY__CANONICAL_PRODUCTION_INTACT_PASS"
+}

@@ -1,0 +1,54 @@
+{
+  "receipt_id": "JAYT_403_PRODUCTION_GO_LIVE_RECEIPT_20260912",
+  "version": "v3.454.0-j403",
+  "deployment_id": "dpl_2cpTb7hL3f8ghXTTivNhRnKBKboC",
+  "deployment_status": "READY",
+  "deployment_target": "production",
+  "deployment_url": "https://jayt-production-v3420-lom5abclq-kuntran777-6857s-projects.vercel.app",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "canonical_alias_verified": true,
+  "verified_at": "2026-09-12T23:05:58.3052409+07:00",
+  "live_verification": {
+    "home_http_status": 200,
+    "manifest_http_status": 200,
+    "dom_version": "v3.454.0-j403",
+    "required_modules_present": "12/12",
+    "mobile_390": {
+      "status": "PASS",
+      "horizontal_overflow": false,
+      "console_errors": 0,
+      "undefined_text": false,
+      "cashier_hud_latency_ms": 0.6
+    },
+    "desktop_1440": {
+      "status": "PASS",
+      "horizontal_overflow": false,
+      "console_errors": 0,
+      "undefined_text": false,
+      "cashier_hud_latency_ms": 0.7
+    },
+    "jt_gold_monogram_present": true
+  },
+  "artifact_integrity": {
+    "jayt_apex_interface.js": {
+      "bytes": 466558,
+      "sha256": "f361f2d84373d7307539c6067b1334e070b0c235bb82b2ed2ba2b66554bde142"
+    },
+    "index.html": {
+      "bytes": 1675,
+      "sha256": "1df1a3438bb26df5a38d7fd360ab3796790d20e995a1f51a27c44a5d8786a15e"
+    },
+    "published_manifest.json": {
+      "bytes": 2219,
+      "sha256": "5e1fb3515f574af7cdbda2eafc11a323320902fa91a68390a597c61906328b8a"
+    }
+  },
+  "safety_boundaries": {
+    "affiliate_enabled": false,
+    "static_pipeline_seal_ws1": "24/24_PASS",
+    "static_pipeline_seal_ws2": "24/24_PASS",
+    "scheduler_runtime_ws1": "DEGRADED_EXIT_2__STALE_EVIDENCE_PRESERVED",
+    "scheduler_runtime_ws2": "HEALTHY_EXIT_0",
+    "historical_evidence_timestamps_modified": false
+  }
+}

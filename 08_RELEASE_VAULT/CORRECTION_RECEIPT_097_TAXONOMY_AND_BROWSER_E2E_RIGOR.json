@@ -1,0 +1,28 @@
+{
+  "receipt_id": "CORRECTION_RECEIPT_097_TAXONOMY_AND_BROWSER_E2E_RIGOR",
+  "work_order": "JAYT-097-FIELD-VALIDATION-AND-SUPPLY-COHORT",
+  "recorded_at": "2026-08-25T15:41:30+07:00",
+  "recorded_by": "Antigravity (Pair Programming Assistant)",
+  "incident_classification": "TAXONOMY_INTEGRITY_AND_TEST_FIDELITY_CORRECTION",
+  "root_causes": [
+    {
+      "gap_id": "GAP_01_PREMATURE_APPROVED_STATUS_TAXONOMY",
+      "severity": "HIGH_GOVERNANCE_RISK",
+      "description": "memory_transaction_manager_057.js đã tự ý thêm '095' và '096' vào HISTORICAL_CEO_APPROVED_WORK_ORDERS dù cả hai work order này chỉ đang ở trạng thái STAGING REVIEW / IMPLEMENTED_PENDING_CEO_AUDIT.",
+      "remediation_action": "Đã gỡ bỏ hoàn toàn '095' và '096' khỏi HISTORICAL_CEO_APPROVED_WORK_ORDERS. Thiết lập negative test fail-closed chặn tuyệt đối mọi hành vi tự gán ACCEPTED BY CEO hoặc CEO APPROVED cho các mã 094, 094A, 094B, 095, 096, 097."
+    },
+    {
+      "gap_id": "GAP_02_INSUFFICIENT_BROWSER_E2E_TEST_FIDELITY",
+      "severity": "MEDIUM_EVIDENCE_FIDELITY_RISK",
+      "description": "Bộ kiểm thử test_field_validation_and_supply_cohort_097.js ban đầu đã sử dụng test_helper_097.js để kiểm tra hàm logic thay vì thực hiện kiểm thử E2E trực tiếp trên trình duyệt Puppeteer thật với localStorage thật và chặn request mạng thật.",
+      "remediation_action": "Tái cấu trúc test suite test_field_validation_and_supply_cohort_097.js thành bộ kiểm thử Puppeteer Real Browser E2E chạy trên máy chủ HTTP Staging: (1) Click 5 khung giờ và assert DOM; (2) Nhập PII thật (+84, 09xx, email, CCCD), bấm submit và assert localStorage thực tế; (3) Mở Split Bill modal, nhập liệu thật, assert kết quả per person trên DOM và bấm Escape đóng modal; (4) Giám sát mạng chặn 100% outbound traffic ngoài localhost."
+    }
+  ],
+  "governance_invariants": {
+    "release_candidate_emitted": false,
+    "production_lock_enforced": true,
+    "deals_feed_bytes": 0,
+    "is_approved": false,
+    "historical_candidates_frozen": ["094", "094A", "094B"]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "receipt_id": "RECEIPT_JAYT_374_M2_VISUAL_FIRST_PRODUCTION_RELEASE",
+  "milestone": "M2_VISUAL_FIRST",
+  "version": "v3.438.0-j374",
+  "authority": "JAYT-374 Chairman Decree",
+  "issued_at_utc": "2026-09-10T09:52:22.040Z",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment": {
+    "id": "dpl_8pSCfxWXzEMteFTV6E9YkVQARrA8",
+    "url": "https://jayt-production-v3420-n6siv7z00-kuntran777-6857s-projects.vercel.app",
+    "inspector_url": "https://vercel.com/kuntran777-6857s-projects/jayt-production-v3420/8pSCfxWXzEMteFTV6E9YkVQARrA8",
+    "target": "production",
+    "state": "READY",
+    "rollback_baseline_deployment_id": "dpl_2RbJN7YfKv2hufy3Vb6jMW8RDtpT"
+  },
+  "visual_first_verification": {
+    "desktop_1440": {
+      "status": "PASS",
+      "card_count": 12,
+      "media_height_px": 240,
+      "media_ratio_pct": 58,
+      "cta_touch_height_px": 44,
+      "three_primary_facts": "VERIFIED",
+      "evidence_backed_saving_badge": "VERIFIED"
+    },
+    "schedule_rhythm": {
+      "status": "PASS",
+      "slot_count": 5,
+      "asia_hcm_slots": [
+        "07:00–10:30 (Cà phê sáng)",
+        "10:30–14:00 (Ăn trưa gần trường)",
+        "14:00–17:30 (Chiều học nhóm)",
+        "17:30–23:00 (Tối đi cùng bạn)",
+        "23:00–07:00 (Lên kèo ngày mai)"
+      ],
+      "manual_override_with_reset": "VERIFIED",
+      "factual_integrity_no_venue_open_assertions": "VERIFIED"
+    },
+    "detail_drawer": {
+      "status": "PASS",
+      "desktop_slide_out_560px": "VERIFIED",
+      "mobile_bottom_sheet_90dvh": "VERIFIED",
+      "deep_link_hash_navigation": "VERIFIED",
+      "focus_trap_and_keyboard_escape_close": "VERIFIED",
+      "clean_facts_in_drawer": "VERIFIED"
+    },
+    "pagination": {
+      "status": "PASS",
+      "type": "NON_DESTRUCTIVE_APPEND",
+      "initial_mobile_count": 6,
+      "all_offers_reachable": 65,
+      "focus_transfer_to_first_new_card": "VERIFIED"
+    },
+    "group_share_pass": {
+      "status": "PASS",
+      "modal_id": "zalo-pass-modal",
+      "canvas_render": "VERIFIED",
+      "integer_vnd_quotient_remainder_conservation": "VERIFIED",
+      "clean_url_zero_bank_or_gps_leakage": "VERIFIED"
+    },
+    "payment_copy_fallback_preserved": {
+      "status": "PASS",
+      "leading_zero_account": "0123456789",
+      "copy_all_and_subfield_buttons": "VERIFIED",
+      "clipboard_denial_selectable_text_fallback": "VERIFIED",
+      "qr_invalidation_on_edit": "VERIFIED"
+    }
+  },
+  "remote_assets_audit": {
+    "/": {
+      "statusCode": 200,
+      "bytes": 1232,
+      "sha256": "cb394241641afc0c63fa964d843f17cf851d096e63ec5591402cbcaae853d719",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/index.html": {
+      "statusCode": 200,
+      "bytes": 1232,
+      "sha256": "cb394241641afc0c63fa964d843f17cf851d096e63ec5591402cbcaae853d719",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/styles.css": {
+      "statusCode": 200,
+      "bytes": 74527,
+      "sha256": "726a1096f0863824f842b4862a6dab2078307f358ebe39f434f80a664ce5b45a",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/jayt_apex_interface.js": {
+      "statusCode": 200,
+      "bytes": 500019,
+      "sha256": "8bc7b66162573dd3366a47f6ea95e26a4d0f8d7b25d4ecf70d465f0b716199e6",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/search.css": {
+      "statusCode": 200,
+      "bytes": 767,
+      "sha256": "7ce6d73b800433f88d066cd9af14f71e56beca2ca876b1f34589c4f2ae78f100",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/search.js": {
+      "statusCode": 200,
+      "bytes": 2763,
+      "sha256": "ac226ccb75a147e6d069e3a3cf0dec3a44da414c724e4965134d9e749f532bdc",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/deals_feed.json": {
+      "statusCode": 200,
+      "bytes": 114379,
+      "sha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/registry.json": {
+      "statusCode": 200,
+      "bytes": 48314,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/published_manifest.json": {
+      "statusCode": 200,
+      "bytes": 1404,
+      "sha256": "7a8d72217f8ec246d7dbbb62fb77dac6d7144c41152ffdab85808d9405eabc54",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    }
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "affiliate_enabled": false,
+    "commercial_tracking": "NONE",
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  },
+  "rollback_policy": {
+    "action": "npx vercel alias set dpl_2RbJN7YfKv2hufy3Vb6jMW8RDtpT jayt-production-v3420.vercel.app",
+    "trigger": "Critical runtime regression or display failure"
+  }
+}

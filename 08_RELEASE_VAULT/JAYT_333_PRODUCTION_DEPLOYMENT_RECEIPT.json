@@ -1,0 +1,46 @@
+{
+  "receipt_id": "JAYT_333_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "directive": "JAYT-333 — EXECUTIVE PRODUCTION DEPLOYMENT DECREE v3.423.0",
+  "status": "SUCCESS__LIVE_VERIFIED_47_CARDS",
+  "deployed_at_utc": "2026-09-07T08:16:45.494Z",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_url": "https://jayt-production-v3420-pwz5iduvn-kuntran777-6857s-projects.vercel.app",
+  "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+  "vercel_project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+  "version": "v3.423.0",
+  "cards": {
+    "total": 47,
+    "civic": 24,
+    "commercial": 23,
+    "excluded_fail_closed": ["B14_DMX_M170_DEN"]
+  },
+  "sealed_candidate": {
+    "root": "08_RELEASE_VAULT/candidates/v3.423.0/",
+    "manifest_sha256": "29129e135fdbd8d30d3b4f59a0f09e1aa76e190cb5bf7f6b3265047bd9172ae7",
+    "javascript_sha256": "e696e873b533080d1e551c3bbdbb4c987dad7ee3d51dd75696ba57e4aa0ac48b",
+    "html_sha256": "839c8b86fe69b83bb6329236efa23b472fc2d863a6d2192b146609bb7a4c64bf",
+    "css_sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e",
+    "registry_sha256": "b0e3d9eab6ead07a1d6cfd890cf0c44c89709f62495c77519a315e53fd410bfa",
+    "hero_svg_sha256": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+  },
+  "post_deploy_audit": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_V3423_LIVE_POST_DEPLOY_AUDIT.json",
+    "sha256": "d6e92df534f2f0e217d447dac8c9f107981a3aee9d643e0b0799adf9db71bb8d",
+    "verdict": "PASS",
+    "http_status": 200,
+    "viewports": [1440, 768, 390],
+    "console_errors": 0,
+    "runtime_errors": 0,
+    "horizontal_overflow": false,
+    "affiliate_links": 0,
+    "tracking_parameters": 0,
+    "deals_feed_empty": true
+  },
+  "rollback": {
+    "triggered": false,
+    "standby_version": "v3.422.0",
+    "standby_deployment_id": "dpl_E8GNxXFBYHfBoMuLVD3Dv39DTkSo",
+    "standby_artifact_root": "deploy_personal_v3422/",
+    "status": "STANDBY_READY"
+  }
+}

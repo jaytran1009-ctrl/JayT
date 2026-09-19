@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description"  content="Cổng Dịch vụ công"/>
+  <title>Cổng Dịch vụ công</title>
+  <base href="/vi/">  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/src/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://staticv2.vnptigate.vn/icon/quoc-huy.ico" type="image/x-icon"/>
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lora:300,400,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="assets/css/http_stackpath.bootstrapcdn.com_font-awesome_4.7.0_css_font-awesome.css" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet"
+  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+  type="text/css" />
+  <!-- Mapbox CSS-->
+<!--  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />-->
+<!--  <link rel="stylesheet"-->
+<!--    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"-->
+<!--    type="text/css" />-->
+
+<!--    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">-->
+<!--  <script src="https://cdn.ckeditor.com/4.19.1/full-all/ckeditor.js"></script>-->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <script>
+    function removeImgLcp() {
+      document.getElementById("imglcp").remove();
+    }
+    // CSS mini chat bot HGG Start
+    const deploymentVariables = JSON.parse(localStorage.getItem('deploymentVariables'));
+    const chatBotHGG = deploymentVariables?.configuration?.hggMiniChatbot;
+    if (chatBotHGG == true) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://chatbot.teamexp.net/package/mini_chat.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    // CSS mini chat bot HGG End
+  </script>
+<link rel="stylesheet" href="styles.f3ab1154020ec3c268d4.css"></head>
+
+<body class="mat-typography" onload="removeImgLcp()">
+  <h1 hidden>Cổng Dịch vụ công</h1>
+  <img alt="op" src="https://staticv2.vnptigate.vn/img/global/icon.png">
+  <img alt="imglcp" id="imglcp" src="https://staticv2.vnptigate.vn/img/global/imglcp.png" style="position: absolute; z-index: -1">
+  <!-- Mapbox script -->
+<!--  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>-->
+<!--  <script-->
+<!--    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>-->
+  <app-root></app-root>
+  <script type="text/javascript" src="assets/js/vgcaplugin.js"></script>
+  <script type="text/javascript" src="assets/js/vnpt-plugin.js"></script>
+  <script src="assets/js/http_sp.zalo.me_plugins_sdk.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/eSign.api.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/shared.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/simple.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/conversion.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/bulkSign.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/cmsSign.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/hashSign.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/sign-qlvb.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/clientSt.js"></script>
+  <script type="text/javascript" src="assets/js/eSign/sha1.js"></script>
+  <!-- script mini chat bot HGG Start -->
+  <script>
+    if (chatBotHGG === true) {
+      const script = document.createElement('script');
+      script.src = 'https://chatbot.teamexp.net/package/index.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      document.getElementsByTagName('body')[0].appendChild(script);
+      const imgElement = document.getElementById("imglcp");
+      if (imgElement) {
+        imgElement.style.display = "none";
+      }
+      console.log('Đã thêm script chatbot hgg');
+    } else {
+      console.log('chatBotHGG không bật, không thêm script hgg');
+    }
+  </script>
+  <!-- script mini chat bot HGG End -->
+<script src="runtime-es2015.39fc6550d45f3071e66d.js" type="module"></script><script src="runtime-es5.39fc6550d45f3071e66d.js" nomodule defer></script><script src="polyfills-es5.6ed2968d2a2bd74c2580.js" nomodule defer></script><script src="polyfills-es2015.1685d2c81cbe4d16ea2c.js" type="module"></script><script src="scripts.b91cb449b5b01799ef2c.js" defer></script><script src="main-es2015.8095a182ababe908eb9c.js" type="module"></script><script src="main-es5.8095a182ababe908eb9c.js" nomodule defer></script></body>
+
+</html>

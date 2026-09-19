@@ -1,0 +1,58 @@
+{
+  "receipt_id": "JAYT-398-CASHIER-HUD-STAGING-ACCEPTANCE",
+  "timestamp": "2026-09-12T08:51:33.356Z",
+  "directive": "CHAIRMAN-MANDATE-J398-CASHIER-HUD-ERGONOMICS-AND-DESIGN-POLISH",
+  "verdict": "PASS_READY_FOR_STAGING_SIGN_OFF",
+  "production_status": "HOLD_AWAITING_RUNTIME_EVIDENCE_RECOVERY",
+  "evaluated_environment": "STAGING_LOCAL_SERVER_4181",
+  "target_viewport": {
+    "width": 390,
+    "height": 844,
+    "device_scale_factor": 2,
+    "platform": "mobile"
+  },
+  "metrics_verified": {
+    "copy_button": {
+      "selector": ".cashier-copy-btn",
+      "dimensions": "106.4px x 44px",
+      "touch_target_compliant": true,
+      "layout_mode": "dedicated_row_inside_card"
+    },
+    "bottom_cta": {
+      "selector": ".cashier-quick-bottom-close",
+      "label": "Xong",
+      "dimensions": "350px x 48px",
+      "touch_target_compliant": true,
+      "ergonomic_thumb_reach": true
+    },
+    "top_close": {
+      "selector": ".cashier-quick-close",
+      "dimensions": "44px x 44px",
+      "purpose": "rapid_modal_escape"
+    },
+    "brand_badges": {
+      "classification": "CUSTOM_VECTOR_PICTOGRAM",
+      "trademark_risk_neutralized": true
+    },
+    "horizontal_overflow": {
+      "scroll_width": 390,
+      "client_width": 390,
+      "overflow_detected": false
+    },
+    "console_errors_count": 0,
+    "modal_open_latency_ms": 0.4
+  },
+  "artifacts": {
+    "verified_screenshot": "scratch/j398_cashier_hud_390_verified.png",
+    "interface_bytes": 457293,
+    "interface_sha256": "e94cdf8c10cbf438369b708fe372090dd680670992ff37ff4c13722c134a4860",
+    "pipeline_seal_status": "24/24_PASS_STATIC_SEAL"
+  },
+  "production_guardrails": {
+    "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+    "locked_production_version": "v3.449.0-j397",
+    "affiliate_enabled": false,
+    "deployment_mutation_authorized": false,
+    "alias_mutation_authorized": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "receipt_id": "JAYT_W3_STAGING_PREVIEW_RECEIPT",
+  "work_order_id": "WORK_ORDER_W3_MOBILIZATION_STAGING",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0911-W3-MOBILIZATION",
+  "candidate_version": "v3.448.0-w3-staging",
+  "vercel_preview": {
+    "deployment_id": "dpl_E9rnjukTHJzkgKW3rJpBBNp8zra4",
+    "url": "https://jayt-production-v3420-imeykffvj-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "preview"
+  },
+  "vercel_preview_dom_check": {
+    "method": "in-app browser accessibility snapshot",
+    "status": "PASS",
+    "title": "JayT Đà Nẵng — Campus Dock & Tiện Ích Sinh Viên",
+    "confirmed_visible_surfaces": [
+      "three-service user-driven lunch comparison",
+      "Spotify Student VN conditions",
+      "DanaBus HSSV procedure with current-fare hold",
+      "KTX user-input stack simulation"
+    ],
+    "user_input_controls": {
+      "lunch_service_fee_and_voucher_inputs": 6,
+      "ktx_stack_inputs": 5
+    }
+  },
+  "local_runtime_audit": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W3_STAGING_RUNTIME_AUDIT_RECEIPT.json",
+    "decision": "PASS",
+    "viewports_passed": [1440, 768, 390],
+    "console_or_runtime_errors": 0,
+    "horizontal_overflow": false,
+    "source_sha256": "a3bb1b0b7c35ad0f31ae4ea00e625e7f1ce206bd30597837604c4b07b0265e63"
+  },
+  "accepted_staging_scope": {
+    "student_utilities": ["Spotify Student VN conditions", "DanaBus registration procedure and QR guidance"],
+    "user_driven_calculators": [
+      "three-service lunch comparison: user-entered food price + delivery fee - voucher",
+      "KTX three-layer stack simulation: user-entered values only"
+    ],
+    "public_copy": "consumer-facing language; no internal audit vocabulary"
+  },
+  "non_negotiable_boundaries": {
+    "production_mutated": false,
+    "canonical_alias_mutated": false,
+    "production_baseline": {
+      "version": "v3.447.0-w2",
+      "deployment_id": "dpl_BZ9JwJczaLSY45JTQiSsncKJzhVh"
+    },
+    "affiliate_enabled": false,
+    "track_1_router": "NON_DISPATCHING_READINESS_GUARD",
+    "affiliate_tracking_or_partner_urls": false,
+    "automated_shopeefood_capture": "DISABLED_BY_POLICY",
+    "danabus_current_fare_claim": "HELD_STALE_SOURCE"
+  },
+  "release_decision": "W3_STAGING_PREVIEW_READY__NO_PRODUCTION_OR_AFFILIATE_AUTHORIZATION"
+}

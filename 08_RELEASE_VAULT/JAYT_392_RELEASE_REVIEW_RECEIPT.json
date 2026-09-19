@@ -1,0 +1,76 @@
+{
+  "$schema": "https://jayt.vn/schemas/j392-release-review-receipt.v1.json",
+  "receipt_id": "JAYT_392_RELEASE_REVIEW_RECEIPT",
+  "work_order": "WORK_ORDER_J392_RADICAL_BREAKTHROUGH",
+  "dispatch_sha256": "1895204008fee3e9b7b1e15ade8501ac185a994619516dc8c78540498787a748",
+  "reviewed_at_utc": "2026-09-11T06:25:00.000Z",
+  "executor": "Antigravity",
+  "evaluator": "Codex CEO; Gemini safety review for pipeline dual-key seal",
+  "status": "CANDIDATE_PACKET_ASSEMBLED__AWAITING_INDEPENDENT_GATE_DECISION",
+  "workstream_summary": {
+    "workstream_1_wave_1_food_cinema": {
+      "target_count": 5,
+      "verified_count": 5,
+      "deduplication_status": "GALAXY_DEDUPLICATED__RETAINED_1_EXCLUDED_1",
+      "deals_verified": [
+        "B14_METIZ_U22_2D (55k, Th3-Th5, Helio Đà Nẵng, Active Schedule)",
+        "B14_METIZ_SUPER_MONDAY (55k, Thứ 2 hàng tuần, Helio Đà Nẵng, Active Schedule)",
+        "B18_CGV_CULTURE_DAY_DNG (58k, Thứ 2 cuối tháng, CGV Vĩnh Trung Plaza Đà Nẵng)",
+        "J333_HOT_02_GALAXY_U22 (Từ 45k, Co.opmart Đà Nẵng, Continuous Active Policy)",
+        "B19_STARLIGHT_U22_WEEKDAY (45k, Th2-Th5, 46 Điện Biên Phủ, Đà Nẵng)"
+      ],
+      "four_predicates_status": "ALL_FOUR_PREDICATES_VERIFIED_VERBATIM_IN_PHYSICAL_BYTES",
+      "qa_receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_WAVE_1_LIVE_EVIDENCE_RECEIPT.json",
+      "status": "READY_FOR_CEO_EVALUATION"
+    },
+    "workstream_2_ktx_top_10_radar": {
+      "target_count": 10,
+      "verified_count": 10,
+      "placeholders_retained_in_radar": 0,
+      "brand_photos_ingested": 10,
+      "brands_represented": [
+        "Sunhouse", "Rạng Đông", "Bear", "JISULIFE", "Lock&Lock",
+        "Everon", "Philips", "Inochi", "Thiên Long", "Logitech"
+      ],
+      "mandatory_disclosure": "Sản phẩm khảo sát chính hãng — đã đối soát",
+      "affiliate_status": "AFFILIATE_STRICTLY_DISABLED",
+      "qa_receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_KTX_MEDIA_IDENTITY_RECEIPT.json",
+      "status": "READY_FOR_CEO_EVALUATION"
+    },
+    "workstream_3_real_scheduler_and_rollback": {
+      "os_scheduler": {
+        "task_name": "JayT_Autonomous_Catalog_Monitor_4H",
+        "host": "JAY",
+        "state": "Ready",
+        "recurrence": "Every 4 Hours (PT4H)",
+        "execution_evidence": "PID 18172, Exit Code 0, 10/10 Assets Verified",
+        "registration_xml": "07_QUALITY_ASSURANCE/runtime_evidence/jayt_scheduler_task_export.xml",
+        "audit_log": "07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log",
+        "receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_SCHEDULER_OPERATIONAL_RECEIPT.json",
+        "status": "OPERATIONAL_DAEMON_VERIFIED"
+      },
+      "non_production_rollback": {
+        "status": "BLOCKED_BY_INFRASTRUCTURE_BOUNDARY",
+        "boundary_reason": "Host lacks Vercel CLI and scoped staging credentials; no dedicated drill alias exists.",
+        "canonical_production_state": "STRICTLY_UNTOUCHED_AND_FROZEN",
+        "receipt_ref": "08_RELEASE_VAULT/JAYT_392_NON_PRODUCTION_ROLLBACK_RECEIPT.json"
+      }
+    },
+    "workstream_4_pipeline_dual_key_seal": {
+      "manifest_id": "JAYT_392_PIPELINE_SEAL_MANIFEST",
+      "sealed_components_count": 22,
+      "drift_count": 0,
+      "seal_status": "PENDING_DUAL_KEY",
+      "key_1_chairman": "PENDING_WRITTEN_REFERENCE",
+      "key_2_gemini": "PENDING_SAFETY_REVIEW_REFERENCE"
+    }
+  },
+  "serving_environment": {
+    "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+    "active_serving_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "serving_version": "v3.444.0-j388",
+    "production_alias_mutation_authorized": false,
+    "commercial_release_authorized": false
+  },
+  "verdict": "JAYT_392_TECHNICAL_CANDIDATE_VERIFIED_PASS__AWAITING_DUAL_KEY_AND_CEO_RELEASE_GATE"
+}

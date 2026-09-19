@@ -1,0 +1,54 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_099_SYNTHETIC_CAPTURE_CONTAINMENT",
+  "work_order_incident": "JAYT-099-FIVE-CLUSTER-SUPPLY-COHORT-AND-REAL-PROVENANCE",
+  "containment_work_order": "JAYT-099A-PROVENANCE-CONTAINMENT",
+  "disclosed_at": "2026-08-25T16:00:00+07:00",
+  "incident_type": "SYNTHETIC_CAPTURE_RECONSTRUCTION_AND_FALSE_PROVENANCE",
+  "severity": "CRITICAL_GOVERNANCE_AND_TRUTHFULNESS_BREACH",
+  "root_cause_analysis": {
+    "violation_01": "Fallback metadata and text compilation injected into raw artifact (page.txt) when live network navigation timed out/failed.",
+    "violation_02": "Synthetic fallback HTML constructed from placeholder template when document.content() was empty.",
+    "violation_03": "HTTP status defaulted to 200 in capture receipt despite absence of authentic HTTP response from target server.",
+    "violation_04": "Lotte Cinema miscategorized under Ngũ Hành Sơn despite receipt indicating Hải Châu / border.",
+    "violation_05": "Claimed '22 Cobalt locations 100% physically captured on disk' while 4 entries were synthetic reconstructions."
+  },
+  "containment_actions_taken": [
+    {
+      "action": "QUARANTINE_ARTIFACTS",
+      "source_path": "05_DEAL_AND_AFFILIATE/batch_capture_099",
+      "vault_path": "05_DEAL_AND_AFFILIATE/quarantine_vault_099_synthetic_capture_incident/batch_capture_099",
+      "status": "COMPLETED_SEALED"
+    },
+    {
+      "action": "DATASET_DOWNGRADE",
+      "downgraded_targets": [
+        "TARGET_099_LOTTE_CINEMA_DNG",
+        "TARGET_099_HIGHLANDS_MY_AN",
+        "TARGET_099_PHUCLONG_NGUYEN_VAN_THOAI",
+        "TARGET_099_THECOFFEEHOUSE_NGU_HANH_SON"
+      ],
+      "previous_tier": "COBALT_VERIFIED_LOCATION",
+      "new_tier": "BRAND_MONITORED_ONLY",
+      "status": "COMPLETED"
+    },
+    {
+      "action": "METRIC_CORRECTION",
+      "cobalt_verified_count_corrected_from": 22,
+      "cobalt_verified_count_corrected_to": 18,
+      "ngu_hanh_son_cobalt_verified_count": 0,
+      "ngu_hanh_son_status": "WATCHLIST_ONLY_NO_COBALT_EVIDENCE",
+      "status": "COMPLETED"
+    },
+    {
+      "action": "FAIL_CLOSED_COLLECTOR_SPECIFICATION",
+      "rule": "If no live HTTP response, no live DOM, or no real screenshot -> mark FAILED_CAPTURE; throw error/exit non-zero; never inject fallback metadata into raw artifacts; never default HTTP 200.",
+      "status": "ENFORCED"
+    }
+  ],
+  "governance_decision": {
+    "work_order_099_status": "REJECTED",
+    "work_order_099a_status": "IMPLEMENTED_PENDING_CEO_AUDIT",
+    "production_lock_status": "LOCKED (deals_feed.json: [], is_approved: false)",
+    "release_candidate_policy": "NO_RELEASE_CANDIDATE_EMITTED"
+  }
+}

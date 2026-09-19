@@ -1,0 +1,872 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "feed_version": "122.0.0",
+  "directive": "JAYT-122-INTENT-DIVERSITY-AND-PREMIUM-MOMENT",
+  "generated_at": "2026-08-25T17:02:48.073Z",
+  "city": "Đà Nẵng",
+  "currency": "VND",
+  "summary": {
+    "total_items": 15,
+    "limited_time_deals_count": 5,
+    "watchlist_deals_count": 2,
+    "planning_menu_and_utilities_count": 8,
+    "actionable_coverage_pct": "40.0%",
+    "multi_intent_distribution": {
+      "ENTERTAINMENT": 5,
+      "DINING_MEETING": 7,
+      "MOBILITY_SHOPPING": 3
+    }
+  },
+  "limited_time_deals": [
+    {
+      "id": "DEAL_120_CGV_PAYDAY_30K",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+      "benefit": "Giảm trực tiếp 30.000₫ từ 2 vé xem phim",
+      "primary_condition": "Áp dụng đặt vé trên Web/App CGV, nhập mã PAYDAY",
+      "terms": "Áp dụng cho mọi cụm rạp CGV tại Đà Nẵng (CGV Vĩnh Trung Plaza & CGV Vincom Ngô Quyền). Số lượng có hạn theo ngày.",
+      "validity": "Đến 31/08/2026 (Chương trình Payday cuối tháng)",
+      "expiry_date": "2026-08-31",
+      "is_expiring_soon": true,
+      "promo_code": "PAYDAY",
+      "scope": "Cụm rạp CGV Đà Nẵng (Vĩnh Trung Plaza, Vincom Ngô Quyền)",
+      "official_url": "https://www.cgv.vn/default/news/ting-ting-deal-30k/",
+      "discount_numeric": 30000,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_18_CGV_U22_LEAF_01/page.txt",
+        "sha256": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1",
+        "size_bytes": 3199,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "TING TING LƯƠNG VỀ – DEAL GIẢM NGAY 30K!",
+        "25/08 – 31/08/2026",
+        "Giảm ngay 30.000Đ khi mua từ 02 vé trở lên",
+        "PAYDAY"
+      ]
+    },
+    {
+      "id": "DEAL_120_CGV_MUA1TANG1",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Mua 1 Tặng 1 vé xem phim khi thanh toán qua VNPAY / App Ngân hàng",
+      "benefit": "Tặng 1 vé xem phim 2D tiêu chuẩn tương đương",
+      "primary_condition": "Thanh toán quét mã VNPAY-QR tại quầy hoặc Web/App",
+      "terms": "Áp dụng cho các suất chiếu từ Thứ 2 đến Thứ 5 hàng tuần tại các cụm rạp CGV Đà Nẵng.",
+      "validity": "Đến 30/09/2026 (Từ 01/08 – 30/09/2026)",
+      "expiry_date": "2026-09-30",
+      "is_expiring_soon": false,
+      "promo_code": "MUA1TANG1",
+      "scope": "CGV Vĩnh Trung Plaza & CGV Vincom Đà Nẵng",
+      "official_url": "https://www.cgv.vn/default/news/vnpay-bogo/",
+      "discount_numeric": 110000,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_14_CGV_LEAF_02/page.txt",
+        "sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+        "size_bytes": 4984,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "Ưu Đãi Đặt Vé Xem Phim CGV: “Rạp Trưởng” Bùi Công Nam Mang Đến Loạt Deal Mua 1 Tặng 1",
+        "Từ nay - 30/09/2026",
+        "Nhập mã: MUA1TANG1"
+      ]
+    },
+    {
+      "id": "DEAL_120_CGV_ZALOPAY_50K",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Đặt vé phim giảm 50% khung giờ trưa 12h-13h qua Zalopay",
+      "benefit": "Giảm 50% (tối đa 35.000₫ khách mới / 15.000₫ mọi khách)",
+      "primary_condition": "Nhập mã YEUPHIMVIET từ 12:00 – 13:00 hàng ngày",
+      "terms": "Áp dụng đặt vé CGV trên ứng dụng Zalopay, số lượng giới hạn 150 mã/ngày trên toàn quốc.",
+      "validity": "Đến 16/09/2026 (Từ 16/08 – 16/09/2026)",
+      "expiry_date": "2026-09-16",
+      "is_expiring_soon": false,
+      "promo_code": "YEUPHIMVIET",
+      "scope": "Đặt vé trực tuyến CGV Đà Nẵng qua Zalopay",
+      "official_url": "https://www.cgv.vn/default/news/zalopay-50-percent/",
+      "discount_numeric": 35000,
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_18_CGV_U22_LEAF_02/page.txt",
+        "sha256": "47c72ecaa194a079f5121b196bbec5515d2f32ce1b6348fe6421bf789a70748c",
+        "size_bytes": 6457,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "ĐẶT VÉ PHIM GIẢM 50% & TÍCH XU ĐỔI QUÀ ĐỘC QUYỀN",
+        "16/08/2026 - 16/09/2026",
+        "YEUPHIMVIET"
+      ]
+    },
+    {
+      "id": "DEAL_120_STARLIGHT_COMBO_10K",
+      "brand": "Starlight Cinema",
+      "brand_id": "BRAND_STARLIGHT",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Giảm 10.000₫ khi mua bắp nước online trên Web/App",
+      "benefit": "Giảm trực tiếp 10.000₫ combo bắp nước",
+      "primary_condition": "Đặt combo online kèm vé xem phim trên Web/App Starlight",
+      "terms": "Áp dụng cho mọi khách hàng mua vé trực tuyến tại cụm rạp Starlight Đà Nẵng (Tầng 3-4 Tòa nhà Nguyễn Kim, Thanh Khê).",
+      "validity": "Đến 19/09/2026 (Từ 19/08 – 19/09/2026)",
+      "expiry_date": "2026-09-19",
+      "is_expiring_soon": false,
+      "scope": "Starlight Đà Nẵng (46 Điện Biên Phủ, Thanh Khê)",
+      "official_url": "https://starlight.vn/tin-tuc/giam-10k-khi-mua-bap-nuoc-online-tren-web-app-starlight.html",
+      "discount_numeric": 10000,
+      "slot": "SLOT_1415",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_17_STARLIGHT_LEAF_01/page.txt",
+        "sha256": "9f87deba8d6a311cd09a4637cf7abd110cc5ed662bcf74c15847f7b60c4d9713",
+        "size_bytes": 1926,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+        "NGÀY THỨ 2 TRUYỀN THỐNG GIẢM ĐẾN 50% TẠI STARLIGHT"
+      ]
+    },
+    {
+      "id": "DEAL_120_METIZ_U22_AND_SUPER_MONDAY",
+      "brand": "Metiz Cinema",
+      "brand_id": "BRAND_METIZ",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Đồng giá vé 45.000₫ ngày Thứ Hai Siêu Hạng & Giá vé U22",
+      "benefit": "Vé 2D chỉ 45.000₫/vé (Tiết kiệm ~35.000₫ so với giá thường)",
+      "primary_condition": "Xuất trình thẻ HSSV hoặc mua vé vào Thứ Hai đầu tiên mỗi tháng",
+      "terms": "Áp dụng cho học sinh, sinh viên dưới 22 tuổi (có thẻ) hoặc mọi khán giả vào Thứ Hai đầu tiên của mỗi tháng.",
+      "validity": "Đến 31/12/2026 (Chương trình định kỳ hàng tuần/tháng)",
+      "expiry_date": "2026-12-31",
+      "is_expiring_soon": false,
+      "scope": "Metiz Cinema Đà Nẵng (Tổ hợp Helio Center, Hải Châu)",
+      "official_url": "https://metiz.vn/tin-tuc/dong-gia-45k/",
+      "discount_numeric": 35000,
+      "slot": "SLOT_1730",
+      "persona": [
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_15_METIZ_LEAF_01/page.txt",
+        "sha256": "717bce5539da5dbe4cddfef0078673eaed90a661b0728e0f064bcc951950ec59",
+        "size_bytes": 1367,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "SUPER MONDAY (THỨ HAI SIÊU HẠNG)",
+        "KHUYẾN MÃI GIÁ VÉ U22"
+      ]
+    }
+  ],
+  "watchlist_deals": [
+    {
+      "id": "WATCHLIST_120_HIGHLANDS_JCB_30",
+      "brand": "Highlands Coffee",
+      "brand_id": "BRAND_HIGHLANDS",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ CẦN HỎI LẠI TẠI QUÁN",
+      "title": "Giảm 30% tối đa 50.000₫ khi thanh toán bằng thẻ JCB Contactless",
+      "benefit": "Giảm 30% (tối đa 50.000₫) cho hóa đơn từ 100.000₫",
+      "primary_condition": "Thanh toán quẹt thẻ contactless JCB tại quầy",
+      "terms": "Chương trình có ngân sách hữu hạn theo ngày/tháng của tổ chức thẻ JCB. Cần hỏi nhân viên thu ngân trước khi gọi món.",
+      "validity": "Đang diễn ra (Hạn ngân sách ngân hàng)",
+      "scope": "Toàn bộ cửa hàng Highlands Coffee tại Đà Nẵng",
+      "official_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc/jcb-30-percent.html",
+      "discount_numeric": 30000,
+      "slot": "SLOT_0730",
+      "persona": [
+        "OFFICE",
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_09_HIGHLANDS_LEAF_01/page.txt",
+        "sha256": "cfc0b454395bcbebc5c27e11882401441785b4caf0ed015036849ce4f03b43bb",
+        "size_bytes": 1445,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+        "13/08/2026, 15:06"
+      ]
+    },
+    {
+      "id": "WATCHLIST_120_WINMART_WINECO_20",
+      "brand": "WinMart",
+      "brand_id": "BRAND_WINMART",
+      "sector": "SHOPPING",
+      "intent_type": "MOBILITY_SHOPPING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ CẦN HỎI LẠI TẠI QUÁN",
+      "title": "Hội viên WIN tiết kiệm 20% toàn bộ rau củ WinEco & thịt sạch MEATDeli",
+      "benefit": "Tiết kiệm 20% trực tiếp vào hóa đơn siêu thị",
+      "primary_condition": "Đọc số điện thoại hội viên WIN khi thanh toán tại quầy",
+      "terms": "Chương trình áp dụng độc quyền cho khách hàng đã đăng ký số điện thoại hội viên WIN trên toàn hệ thống.",
+      "validity": "Đang áp dụng quanh năm",
+      "scope": "Các siêu thị WinMart & WinMart+ tại Đà Nẵng",
+      "official_url": "https://winmart.vn/tin-tuc/hoi-vien-win-tiet-kiem-20-phan-tram",
+      "discount_numeric": 20000,
+      "slot": "SLOT_1730",
+      "persona": [
+        "FAMILY",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_30_WINMART_LEAF_01/page.txt",
+        "sha256": "98f1106e04bba232e10d0bd6aeaa36db7c90961343ffd09c9fd95d20ca590f9c",
+        "size_bytes": 2281,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "Ưu Đãi Hội Viên",
+        "-20%",
+        "14.800"
+      ]
+    }
+  ],
+  "planning_menu_and_utilities": [
+    {
+      "id": "MENU_120_KFC_DZUT_DEAL_88K",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Dzựt Deal 88.000₫ (1 Burger Zinger + 1 Miếng Gà Rán + 1 Pepsi)",
+      "listed_price_vnd": 88000,
+      "display_price_badge": "88.000₫ / phần",
+      "primary_condition": "Áp dụng ăn tại quán hoặc mang đi tại các chi nhánh KFC Đà Nẵng",
+      "description": "Bữa trưa no bụng, định giá niêm yết rõ ràng, thích hợp cho dân văn phòng và sinh viên.",
+      "source_note": "Giá niêm yết chính thức trên website KFC Vietnam",
+      "scope": "KFC Nguyễn Văn Linh, KFC Big C, KFC Lotte Mart Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/uu-dai/dzut-deal-hu-hon-88k",
+      "slot": "SLOT_1115",
+      "persona": [
+        "OFFICE",
+        "STUDENT"
+      ]
+    },
+    {
+      "id": "MENU_120_KFC_XO_HOP_CA_189K",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Xô Hợp Cạ 189.000₫ (4 Miếng Gà Rán + 1 Burger + 2 Khoai vừa + 2 Pepsi)",
+      "listed_price_vnd": 189000,
+      "display_price_badge": "189.000₫ / combo nhóm (63k/người)",
+      "primary_condition": "Áp dụng ăn tại quán hoặc mang đi cho nhóm tan ca / tối",
+      "description": "Combo tiết kiệm cho nhóm 2-3 người tan làm hoặc học nhóm chiều tối tại Đà Nẵng.",
+      "source_note": "Thực đơn combo nhóm niêm yết chính thức của KFC Vietnam",
+      "scope": "KFC Nguyễn Văn Linh, KFC Lotte Mart, KFC Big C Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/combo-nhom/xo-hop-ca-189k",
+      "slot": "SLOT_1730",
+      "persona": [
+        "OFFICE",
+        "STUDENT",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "MENU_120_JOLLIBEE_COMBO_73K",
+      "brand": "Jollibee Vietnam",
+      "brand_id": "BRAND_JOLLIBEE",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo 1 Miếng Gà Giòn + 1 Mì Ý Sốt Bò Bằm + 1 Nước ngọt",
+      "listed_price_vnd": 73000,
+      "display_price_badge": "73.000₫ / phần",
+      "primary_condition": "Áp dụng tại quầy hoặc ứng dụng Jollibee Đà Nẵng",
+      "description": "Bữa trưa nhanh tiện lợi, giá niêm yết cố định cho sinh viên và gia đình có trẻ nhỏ.",
+      "source_note": "Bảng giá thực đơn niêm yết tại các cửa hàng Jollibee Đà Nẵng",
+      "scope": "Jollibee Vincom Ngô Quyền, Jollibee Coopmart Đà Nẵng",
+      "official_url": "https://jollibee.com.vn/thuc-don/combo-mot-nguoi",
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "MENU_120_PHELA_SPECIALTY",
+      "brand": "Phê La",
+      "brand_id": "BRAND_PHELA",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Ô Long Sữa Đặc Sản / Cà Phê Moka Cắm Trại",
+      "listed_price_vnd": 55000,
+      "display_price_badge": "50.000₫ - 65.000₫ / ly",
+      "primary_condition": "Áp dụng dùng tại không gian cắm trại Phê La Bạch Đằng / Nguyễn Văn Thoại",
+      "description": "Không gian cắm trại bên bờ sông Hàn, phù hợp làm việc ban ngày và ngắm cảnh tối.",
+      "source_note": "Thực đơn đồ uống niêm yết chính thức của Phê La",
+      "scope": "Phê La 35-37-39 Bạch Đằng & Nguyễn Văn Thoại, Đà Nẵng",
+      "official_url": "https://phela.vn/menu/",
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_GONGCHA_ALISAN",
+      "brand": "Gong Cha",
+      "brand_id": "BRAND_GONGCHA",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Sữa Alisan / Trà Xanh Gong Cha Milkfoam",
+      "listed_price_vnd": 53000,
+      "display_price_badge": "49.000₫ - 62.000₫ / ly",
+      "primary_condition": "Áp dụng tại cửa hàng Gong Cha Nguyễn Văn Linh / Yên Bái",
+      "description": "Không gian học nhóm và làm việc yên tĩnh ngay trung tâm quận Hải Châu.",
+      "source_note": "Thực đơn niêm yết chính thức của Gong Cha Vietnam",
+      "scope": "Gong Cha 25-29 Nguyễn Văn Linh & 225 Yên Bái, Hải Châu",
+      "official_url": "https://gongcha.com.vn/thuc-uong/thuc-uong-dac-biet/",
+      "slot": "SLOT_1415",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_PHUCLONG_TEA_BAKERY",
+      "brand": "Phúc Long Coffee & Tea",
+      "brand_id": "BRAND_PHUCLONG",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Đào Cam Sả / Trà Ô Long Mãng Cầu",
+      "listed_price_vnd": 55000,
+      "display_price_badge": "50.000₫ - 70.000₫ / ly",
+      "primary_condition": "Áp dụng học nhóm, làm việc tại Phúc Long Nguyễn Văn Linh / Indochina",
+      "description": "Thức uống đậm vị trà truyền thống, điểm hẹn quen thuộc cho giới trẻ Đà Nẵng.",
+      "source_note": "Bảng giá đồ uống niêm yết tại các cửa hàng Phúc Long Đà Nẵng",
+      "scope": "Phúc Long Nguyễn Văn Linh & Indochina Riverside Bạch Đằng",
+      "official_url": "https://phuclong.com.vn/danh-muc/thuc-uong",
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_GOGI_HOUSE_SIGNATURE",
+      "brand": "GoGi House",
+      "brand_id": "BRAND_GOGI",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+      "listed_price_vnd": 529000,
+      "display_price_badge": "529.000₫ / combo 2-3 người (~176k/người)",
+      "primary_condition": "Áp dụng bàn tiệc 2-4 người tại GoGi House Nguyễn Tri Phương / Vincom",
+      "description": "Giá niêm yết thực đơn combo chuẩn vị nướng Hàn Quốc, minh bạch để chia nhóm dễ dàng.",
+      "source_note": "Bảng giá thực đơn niêm yết chính thức GoGi House Đà Nẵng",
+      "scope": "GoGi House Nguyễn Tri Phương & Vincom Plaza Ngô Quyền, Đà Nẵng",
+      "official_url": "https://gogi.com.vn/thuc-don/combo-gogi-signature",
+      "slot": "SLOT_2000",
+      "persona": [
+        "OFFICE",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "UTILITY_120_DANABUS_TRANSIT",
+      "brand": "DanaBus Đà Nẵng",
+      "brand_id": "BRAND_DANABUS",
+      "sector": "MOBILITY",
+      "intent_type": "MOBILITY_SHOPPING",
+      "feed_category": "DAILY_UTILITY_SAVINGS",
+      "category_badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+      "item_name": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+      "listed_price_vnd": 6000,
+      "display_price_badge": "6.000₫ / vé lượt (Vé tháng HSSV: 65.000₫)",
+      "primary_condition": "Mua vé trực tiếp trên xe buýt hoặc đăng ký thẻ vé tháng online",
+      "description": "Phương tiện giao thông công cộng trợ giá nhà nước, giảm 85% chi phí đi lại so với xe công nghệ.",
+      "source_note": "Biểu giá dịch vụ công cộng niêm yết của Sở GTVT TP Đà Nẵng",
+      "scope": "Toàn mạng lưới tuyến xe buýt nội thành Đà Nẵng",
+      "official_url": "https://www.danangbus.vn/",
+      "slot": "SLOT_0730",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "FAMILY"
+      ]
+    }
+  ],
+  "verified_savings": [
+    {
+      "id": "DEAL_120_CGV_PAYDAY_30K",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+      "benefit": "Giảm trực tiếp 30.000₫ từ 2 vé xem phim",
+      "primary_condition": "Áp dụng đặt vé trên Web/App CGV, nhập mã PAYDAY",
+      "terms": "Áp dụng cho mọi cụm rạp CGV tại Đà Nẵng (CGV Vĩnh Trung Plaza & CGV Vincom Ngô Quyền). Số lượng có hạn theo ngày.",
+      "validity": "Đến 31/08/2026 (Chương trình Payday cuối tháng)",
+      "expiry_date": "2026-08-31",
+      "is_expiring_soon": true,
+      "promo_code": "PAYDAY",
+      "scope": "Cụm rạp CGV Đà Nẵng (Vĩnh Trung Plaza, Vincom Ngô Quyền)",
+      "official_url": "https://www.cgv.vn/default/news/ting-ting-deal-30k/",
+      "discount_numeric": 30000,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_18_CGV_U22_LEAF_01/page.txt",
+        "sha256": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1",
+        "size_bytes": 3199,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "TING TING LƯƠNG VỀ – DEAL GIẢM NGAY 30K!",
+        "25/08 – 31/08/2026",
+        "Giảm ngay 30.000Đ khi mua từ 02 vé trở lên",
+        "PAYDAY"
+      ]
+    },
+    {
+      "id": "DEAL_120_CGV_MUA1TANG1",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Mua 1 Tặng 1 vé xem phim khi thanh toán qua VNPAY / App Ngân hàng",
+      "benefit": "Tặng 1 vé xem phim 2D tiêu chuẩn tương đương",
+      "primary_condition": "Thanh toán quét mã VNPAY-QR tại quầy hoặc Web/App",
+      "terms": "Áp dụng cho các suất chiếu từ Thứ 2 đến Thứ 5 hàng tuần tại các cụm rạp CGV Đà Nẵng.",
+      "validity": "Đến 30/09/2026 (Từ 01/08 – 30/09/2026)",
+      "expiry_date": "2026-09-30",
+      "is_expiring_soon": false,
+      "promo_code": "MUA1TANG1",
+      "scope": "CGV Vĩnh Trung Plaza & CGV Vincom Đà Nẵng",
+      "official_url": "https://www.cgv.vn/default/news/vnpay-bogo/",
+      "discount_numeric": 110000,
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_14_CGV_LEAF_02/page.txt",
+        "sha256": "d6ffb923cd2b4f31cf52665cd33ce4b848789fbfd90cf237ad4ea3ec82e313e1",
+        "size_bytes": 4984,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "Ưu Đãi Đặt Vé Xem Phim CGV: “Rạp Trưởng” Bùi Công Nam Mang Đến Loạt Deal Mua 1 Tặng 1",
+        "Từ nay - 30/09/2026",
+        "Nhập mã: MUA1TANG1"
+      ]
+    },
+    {
+      "id": "DEAL_120_CGV_ZALOPAY_50K",
+      "brand": "CGV Cinemas",
+      "brand_id": "BRAND_CGV",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Đặt vé phim giảm 50% khung giờ trưa 12h-13h qua Zalopay",
+      "benefit": "Giảm 50% (tối đa 35.000₫ khách mới / 15.000₫ mọi khách)",
+      "primary_condition": "Nhập mã YEUPHIMVIET từ 12:00 – 13:00 hàng ngày",
+      "terms": "Áp dụng đặt vé CGV trên ứng dụng Zalopay, số lượng giới hạn 150 mã/ngày trên toàn quốc.",
+      "validity": "Đến 16/09/2026 (Từ 16/08 – 16/09/2026)",
+      "expiry_date": "2026-09-16",
+      "is_expiring_soon": false,
+      "promo_code": "YEUPHIMVIET",
+      "scope": "Đặt vé trực tuyến CGV Đà Nẵng qua Zalopay",
+      "official_url": "https://www.cgv.vn/default/news/zalopay-50-percent/",
+      "discount_numeric": 35000,
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_18_CGV_U22_LEAF_02/page.txt",
+        "sha256": "47c72ecaa194a079f5121b196bbec5515d2f32ce1b6348fe6421bf789a70748c",
+        "size_bytes": 6457,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "ĐẶT VÉ PHIM GIẢM 50% & TÍCH XU ĐỔI QUÀ ĐỘC QUYỀN",
+        "16/08/2026 - 16/09/2026",
+        "YEUPHIMVIET"
+      ]
+    },
+    {
+      "id": "DEAL_120_STARLIGHT_COMBO_10K",
+      "brand": "Starlight Cinema",
+      "brand_id": "BRAND_STARLIGHT",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Giảm 10.000₫ khi mua bắp nước online trên Web/App",
+      "benefit": "Giảm trực tiếp 10.000₫ combo bắp nước",
+      "primary_condition": "Đặt combo online kèm vé xem phim trên Web/App Starlight",
+      "terms": "Áp dụng cho mọi khách hàng mua vé trực tuyến tại cụm rạp Starlight Đà Nẵng (Tầng 3-4 Tòa nhà Nguyễn Kim, Thanh Khê).",
+      "validity": "Đến 19/09/2026 (Từ 19/08 – 19/09/2026)",
+      "expiry_date": "2026-09-19",
+      "is_expiring_soon": false,
+      "scope": "Starlight Đà Nẵng (46 Điện Biên Phủ, Thanh Khê)",
+      "official_url": "https://starlight.vn/tin-tuc/giam-10k-khi-mua-bap-nuoc-online-tren-web-app-starlight.html",
+      "discount_numeric": 10000,
+      "slot": "SLOT_1415",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_17_STARLIGHT_LEAF_01/page.txt",
+        "sha256": "9f87deba8d6a311cd09a4637cf7abd110cc5ed662bcf74c15847f7b60c4d9713",
+        "size_bytes": 1926,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "🌞 HÈ RỘN RÀNG - DEAL 10K SẴN SÀNG 🌞",
+        "NGÀY THỨ 2 TRUYỀN THỐNG GIẢM ĐẾN 50% TẠI STARLIGHT"
+      ]
+    },
+    {
+      "id": "DEAL_120_METIZ_U22_AND_SUPER_MONDAY",
+      "brand": "Metiz Cinema",
+      "brand_id": "BRAND_METIZ",
+      "sector": "CINEMA",
+      "intent_type": "ENTERTAINMENT",
+      "feed_category": "LIMITED_TIME_DEAL",
+      "category_badge": "🟢 ƯU ĐÃI CÓ HẠN",
+      "title": "Đồng giá vé 45.000₫ ngày Thứ Hai Siêu Hạng & Giá vé U22",
+      "benefit": "Vé 2D chỉ 45.000₫/vé (Tiết kiệm ~35.000₫ so với giá thường)",
+      "primary_condition": "Xuất trình thẻ HSSV hoặc mua vé vào Thứ Hai đầu tiên mỗi tháng",
+      "terms": "Áp dụng cho học sinh, sinh viên dưới 22 tuổi (có thẻ) hoặc mọi khán giả vào Thứ Hai đầu tiên của mỗi tháng.",
+      "validity": "Đến 31/12/2026 (Chương trình định kỳ hàng tuần/tháng)",
+      "expiry_date": "2026-12-31",
+      "is_expiring_soon": false,
+      "scope": "Metiz Cinema Đà Nẵng (Tổ hợp Helio Center, Hải Châu)",
+      "official_url": "https://metiz.vn/tin-tuc/dong-gia-45k/",
+      "discount_numeric": 35000,
+      "slot": "SLOT_1730",
+      "persona": [
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_15_METIZ_LEAF_01/page.txt",
+        "sha256": "717bce5539da5dbe4cddfef0078673eaed90a661b0728e0f064bcc951950ec59",
+        "size_bytes": 1367,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "SUPER MONDAY (THỨ HAI SIÊU HẠNG)",
+        "KHUYẾN MÃI GIÁ VÉ U22"
+      ]
+    }
+  ],
+  "needs_recheck_deals": [
+    {
+      "id": "WATCHLIST_120_HIGHLANDS_JCB_30",
+      "brand": "Highlands Coffee",
+      "brand_id": "BRAND_HIGHLANDS",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ CẦN HỎI LẠI TẠI QUÁN",
+      "title": "Giảm 30% tối đa 50.000₫ khi thanh toán bằng thẻ JCB Contactless",
+      "benefit": "Giảm 30% (tối đa 50.000₫) cho hóa đơn từ 100.000₫",
+      "primary_condition": "Thanh toán quẹt thẻ contactless JCB tại quầy",
+      "terms": "Chương trình có ngân sách hữu hạn theo ngày/tháng của tổ chức thẻ JCB. Cần hỏi nhân viên thu ngân trước khi gọi món.",
+      "validity": "Đang diễn ra (Hạn ngân sách ngân hàng)",
+      "scope": "Toàn bộ cửa hàng Highlands Coffee tại Đà Nẵng",
+      "official_url": "https://www.highlandscoffee.com.vn/vn/tin-tuc/jcb-30-percent.html",
+      "discount_numeric": 30000,
+      "slot": "SLOT_0730",
+      "persona": [
+        "OFFICE",
+        "STUDENT"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_09_HIGHLANDS_LEAF_01/page.txt",
+        "sha256": "cfc0b454395bcbebc5c27e11882401441785b4caf0ed015036849ce4f03b43bb",
+        "size_bytes": 1445,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "ƯU ĐÃI 30% KHI THANH TOÁN QUA APPLE PAY BẰNG THẺ TÍN DỤNG VIETCOMBANK JCB",
+        "13/08/2026, 15:06"
+      ]
+    },
+    {
+      "id": "WATCHLIST_120_WINMART_WINECO_20",
+      "brand": "WinMart",
+      "brand_id": "BRAND_WINMART",
+      "sector": "SHOPPING",
+      "intent_type": "MOBILITY_SHOPPING",
+      "feed_category": "WATCHLIST_RECHECK",
+      "category_badge": "⚠️ CẦN HỎI LẠI TẠI QUÁN",
+      "title": "Hội viên WIN tiết kiệm 20% toàn bộ rau củ WinEco & thịt sạch MEATDeli",
+      "benefit": "Tiết kiệm 20% trực tiếp vào hóa đơn siêu thị",
+      "primary_condition": "Đọc số điện thoại hội viên WIN khi thanh toán tại quầy",
+      "terms": "Chương trình áp dụng độc quyền cho khách hàng đã đăng ký số điện thoại hội viên WIN trên toàn hệ thống.",
+      "validity": "Đang áp dụng quanh năm",
+      "scope": "Các siêu thị WinMart & WinMart+ tại Đà Nẵng",
+      "official_url": "https://winmart.vn/tin-tuc/hoi-vien-win-tiet-kiem-20-phan-tram",
+      "discount_numeric": 20000,
+      "slot": "SLOT_1730",
+      "persona": [
+        "FAMILY",
+        "OFFICE"
+      ],
+      "evidence": {
+        "verified_file_path": "05_DEAL_AND_AFFILIATE/batch_capture_109/captures_109/TARGET_108_30_WINMART_LEAF_01/page.txt",
+        "sha256": "98f1106e04bba232e10d0bd6aeaa36db7c90961343ffd09c9fd95d20ca590f9c",
+        "size_bytes": 2281,
+        "verified_at": "2026-08-26T00:03:00+07:00"
+      },
+      "claims_to_verify": [
+        "Ưu Đãi Hội Viên",
+        "-20%",
+        "14.800"
+      ]
+    }
+  ],
+  "public_menu_combos": [
+    {
+      "id": "MENU_120_KFC_DZUT_DEAL_88K",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Dzựt Deal 88.000₫ (1 Burger Zinger + 1 Miếng Gà Rán + 1 Pepsi)",
+      "listed_price_vnd": 88000,
+      "display_price_badge": "88.000₫ / phần",
+      "primary_condition": "Áp dụng ăn tại quán hoặc mang đi tại các chi nhánh KFC Đà Nẵng",
+      "description": "Bữa trưa no bụng, định giá niêm yết rõ ràng, thích hợp cho dân văn phòng và sinh viên.",
+      "source_note": "Giá niêm yết chính thức trên website KFC Vietnam",
+      "scope": "KFC Nguyễn Văn Linh, KFC Big C, KFC Lotte Mart Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/uu-dai/dzut-deal-hu-hon-88k",
+      "slot": "SLOT_1115",
+      "persona": [
+        "OFFICE",
+        "STUDENT"
+      ]
+    },
+    {
+      "id": "MENU_120_KFC_XO_HOP_CA_189K",
+      "brand": "KFC Vietnam",
+      "brand_id": "BRAND_KFC",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Xô Hợp Cạ 189.000₫ (4 Miếng Gà Rán + 1 Burger + 2 Khoai vừa + 2 Pepsi)",
+      "listed_price_vnd": 189000,
+      "display_price_badge": "189.000₫ / combo nhóm (63k/người)",
+      "primary_condition": "Áp dụng ăn tại quán hoặc mang đi cho nhóm tan ca / tối",
+      "description": "Combo tiết kiệm cho nhóm 2-3 người tan làm hoặc học nhóm chiều tối tại Đà Nẵng.",
+      "source_note": "Thực đơn combo nhóm niêm yết chính thức của KFC Vietnam",
+      "scope": "KFC Nguyễn Văn Linh, KFC Lotte Mart, KFC Big C Đà Nẵng",
+      "official_url": "https://kfcvietnam.com.vn/thuc-don/combo-nhom/xo-hop-ca-189k",
+      "slot": "SLOT_1730",
+      "persona": [
+        "OFFICE",
+        "STUDENT",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "MENU_120_JOLLIBEE_COMBO_73K",
+      "brand": "Jollibee Vietnam",
+      "brand_id": "BRAND_JOLLIBEE",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo 1 Miếng Gà Giòn + 1 Mì Ý Sốt Bò Bằm + 1 Nước ngọt",
+      "listed_price_vnd": 73000,
+      "display_price_badge": "73.000₫ / phần",
+      "primary_condition": "Áp dụng tại quầy hoặc ứng dụng Jollibee Đà Nẵng",
+      "description": "Bữa trưa nhanh tiện lợi, giá niêm yết cố định cho sinh viên và gia đình có trẻ nhỏ.",
+      "source_note": "Bảng giá thực đơn niêm yết tại các cửa hàng Jollibee Đà Nẵng",
+      "scope": "Jollibee Vincom Ngô Quyền, Jollibee Coopmart Đà Nẵng",
+      "official_url": "https://jollibee.com.vn/thuc-don/combo-mot-nguoi",
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "MENU_120_PHELA_SPECIALTY",
+      "brand": "Phê La",
+      "brand_id": "BRAND_PHELA",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Ô Long Sữa Đặc Sản / Cà Phê Moka Cắm Trại",
+      "listed_price_vnd": 55000,
+      "display_price_badge": "50.000₫ - 65.000₫ / ly",
+      "primary_condition": "Áp dụng dùng tại không gian cắm trại Phê La Bạch Đằng / Nguyễn Văn Thoại",
+      "description": "Không gian cắm trại bên bờ sông Hàn, phù hợp làm việc ban ngày và ngắm cảnh tối.",
+      "source_note": "Thực đơn đồ uống niêm yết chính thức của Phê La",
+      "scope": "Phê La 35-37-39 Bạch Đằng & Nguyễn Văn Thoại, Đà Nẵng",
+      "official_url": "https://phela.vn/menu/",
+      "slot": "SLOT_1115",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_GONGCHA_ALISAN",
+      "brand": "Gong Cha",
+      "brand_id": "BRAND_GONGCHA",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Sữa Alisan / Trà Xanh Gong Cha Milkfoam",
+      "listed_price_vnd": 53000,
+      "display_price_badge": "49.000₫ - 62.000₫ / ly",
+      "primary_condition": "Áp dụng tại cửa hàng Gong Cha Nguyễn Văn Linh / Yên Bái",
+      "description": "Không gian học nhóm và làm việc yên tĩnh ngay trung tâm quận Hải Châu.",
+      "source_note": "Thực đơn niêm yết chính thức của Gong Cha Vietnam",
+      "scope": "Gong Cha 25-29 Nguyễn Văn Linh & 225 Yên Bái, Hải Châu",
+      "official_url": "https://gongcha.com.vn/thuc-uong/thuc-uong-dac-biet/",
+      "slot": "SLOT_1415",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_PHUCLONG_TEA_BAKERY",
+      "brand": "Phúc Long Coffee & Tea",
+      "brand_id": "BRAND_PHUCLONG",
+      "sector": "COFFEE",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Trà Đào Cam Sả / Trà Ô Long Mãng Cầu",
+      "listed_price_vnd": 55000,
+      "display_price_badge": "50.000₫ - 70.000₫ / ly",
+      "primary_condition": "Áp dụng học nhóm, làm việc tại Phúc Long Nguyễn Văn Linh / Indochina",
+      "description": "Thức uống đậm vị trà truyền thống, điểm hẹn quen thuộc cho giới trẻ Đà Nẵng.",
+      "source_note": "Bảng giá đồ uống niêm yết tại các cửa hàng Phúc Long Đà Nẵng",
+      "scope": "Phúc Long Nguyễn Văn Linh & Indochina Riverside Bạch Đằng",
+      "official_url": "https://phuclong.com.vn/danh-muc/thuc-uong",
+      "slot": "SLOT_2000",
+      "persona": [
+        "STUDENT",
+        "OFFICE"
+      ]
+    },
+    {
+      "id": "MENU_120_GOGI_HOUSE_SIGNATURE",
+      "brand": "GoGi House",
+      "brand_id": "BRAND_GOGI",
+      "sector": "LUNCH",
+      "intent_type": "DINING_MEETING",
+      "feed_category": "PLANNING_MENU_PRICING",
+      "category_badge": "📋 GIÁ THAM KHẢO",
+      "item_name": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+      "listed_price_vnd": 529000,
+      "display_price_badge": "529.000₫ / combo 2-3 người (~176k/người)",
+      "primary_condition": "Áp dụng bàn tiệc 2-4 người tại GoGi House Nguyễn Tri Phương / Vincom",
+      "description": "Giá niêm yết thực đơn combo chuẩn vị nướng Hàn Quốc, minh bạch để chia nhóm dễ dàng.",
+      "source_note": "Bảng giá thực đơn niêm yết chính thức GoGi House Đà Nẵng",
+      "scope": "GoGi House Nguyễn Tri Phương & Vincom Plaza Ngô Quyền, Đà Nẵng",
+      "official_url": "https://gogi.com.vn/thuc-don/combo-gogi-signature",
+      "slot": "SLOT_2000",
+      "persona": [
+        "OFFICE",
+        "FAMILY"
+      ]
+    },
+    {
+      "id": "UTILITY_120_DANABUS_TRANSIT",
+      "brand": "DanaBus Đà Nẵng",
+      "brand_id": "BRAND_DANABUS",
+      "sector": "MOBILITY",
+      "intent_type": "MOBILITY_SHOPPING",
+      "feed_category": "DAILY_UTILITY_SAVINGS",
+      "category_badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+      "item_name": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+      "listed_price_vnd": 6000,
+      "display_price_badge": "6.000₫ / vé lượt (Vé tháng HSSV: 65.000₫)",
+      "primary_condition": "Mua vé trực tiếp trên xe buýt hoặc đăng ký thẻ vé tháng online",
+      "description": "Phương tiện giao thông công cộng trợ giá nhà nước, giảm 85% chi phí đi lại so với xe công nghệ.",
+      "source_note": "Biểu giá dịch vụ công cộng niêm yết của Sở GTVT TP Đà Nẵng",
+      "scope": "Toàn mạng lưới tuyến xe buýt nội thành Đà Nẵng",
+      "official_url": "https://www.danangbus.vn/",
+      "slot": "SLOT_0730",
+      "persona": [
+        "STUDENT",
+        "OFFICE",
+        "FAMILY"
+      ]
+    }
+  ]
+}

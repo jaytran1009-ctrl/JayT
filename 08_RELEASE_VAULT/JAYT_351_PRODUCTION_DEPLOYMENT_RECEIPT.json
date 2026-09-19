@@ -1,0 +1,89 @@
+{
+  "receipt_id": "JAYT_351_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "work_order_id": "JAYT-351",
+  "directive": "JAYT-351 — EXECUTIVE PRODUCTION RELEASE DECREE v3.426.0 (76 ENTITIES)",
+  "issuer": "Codex — CEO/Gatekeeper",
+  "executor": "Antigravity — external software",
+  "status": "SUCCESS__LIVE_VERIFIED__V3426_BASELINE_PROMOTED",
+  "release_version": "v3.426.0",
+  "previous_baseline_version": "v3.425.0-sprint-b-r1",
+  "runtime_ledger_version": "v3.424.0",
+  "deployed_at_utc": "2026-09-08T04:06:55.457Z",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "canonical_alias": "jayt-production-v3420.vercel.app",
+  "deployment": {
+    "id": "dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3",
+    "immutable_url": "https://jayt-production-v3420-8q0jx9l3t-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "production"
+  },
+  "authorization": {
+    "path": "01_EXECUTIVE_COUNCIL/JAYT_351_CEO_PRODUCTION_RELEASE_AUTHORIZATION.md",
+    "decree_title": "JAYT-351 — EXECUTIVE PRODUCTION RELEASE DECREE v3.426.0 (76 ENTITIES)",
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true
+  },
+  "sealed_candidate": {
+    "root": "08_RELEASE_VAULT/candidates/v3.426.0/",
+    "candidate_manifest_sha256": "03b946be5166122c81da0f7c26496271e5e8ae02a83c41ad2620385d922b02cb",
+    "bundle_fingerprints_verified": "6_OF_6_MATCH",
+    "technical_receipt_sha256": "4e2bd2039d16fcf63435fe1dea6b9727de8ac08ce5600c7b540b7471d547ead5",
+    "hot_edit_performed": false
+  },
+  "live_scope": {
+    "total_cards": 76,
+    "civic_cards": 24,
+    "commercial_cards": 52,
+    "voucher_vault_cards": 37,
+    "smart_value_radar_cards": 15,
+    "split_bill_module": true,
+    "seven_day_calendar_module": true
+  },
+  "batch_16_breakdown": {
+    "new_verified_items_count": 25,
+    "observed_price_count": 13,
+    "member_benefit_count": 8,
+    "counter_and_seasonal_deal_count": 4,
+    "held_items_count": 6,
+    "held_items_excluded": true
+  },
+  "post_deploy_audit": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_351_V3426_LIVE_POST_DEPLOY_AUDIT_20260908T040606Z.json",
+    "sha256": "f8ebc4e06e21402ae63480166d5141961e738916019746ad6f59e021f3b11cff",
+    "verdict": "PASS_100_PERCENT",
+    "http_endpoints": "6_OF_6_HTTP_200_AND_HASH_MATCH",
+    "viewports": [
+      1440,
+      768,
+      390
+    ],
+    "console_errors": 0,
+    "runtime_errors": 0,
+    "horizontal_overflow": 0,
+    "affiliate_or_tracking_violations": 0,
+    "copy_code_buttons": 0,
+    "deals_feed_empty_array": true
+  },
+  "excluded_candidates": [
+    "B16_CGV_01",
+    "B16_LOTTE_01",
+    "B16_HIGHLANDS_01",
+    "B16_JOLLIBEE_2840004_DUP",
+    "B16_JOLLIBEE_4000935_DUP",
+    "B16_JOLLIBEE_1810060_DUP",
+    "B14_DMX_M170_DEN",
+    "P2O_CGV_FANC_2026",
+    "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+    "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+  ],
+  "rollback_standby": {
+    "version": "v3.425.0-sprint-b-r1",
+    "cards": 51,
+    "deployment_id": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o",
+    "artifact_root": "08_RELEASE_VAULT/candidates/sprint_b_r1/",
+    "artifact_manifest_sha256": "48fe97c68dc3963c60566b5fb99fe4c36fef96e12b3a3762f58bd2664db15dfe",
+    "status": "STANDBY_READY"
+  },
+  "production_baseline_promoted": "v3.426.0"
+}

@@ -1,0 +1,25 @@
+{
+  "receipt_id": "W8_SESSION_INGRESS_DIRECTIVE_EXECUTION_RECEIPT",
+  "recorded_at_utc": "2026-09-14T05:57:56.9664103Z",
+  "status": "SAFE_SCOPE_ISSUED__PRODUCTION_ACTIVATION_BLOCKED",
+  "findings": {
+    "prior_capture_attempted": 20,
+    "prior_capture_accepted": 0,
+    "marketplace_challenge_or_login": 20,
+    "shopee_account_status": "DECLARED_PENDING_AUTHENTICATION",
+    "lazada_account_status": "UNSUPPORTED_PENDING_PROVIDER_DOCS",
+    "verified_provider_attribution_route": false,
+    "dual_key_signed": false
+  },
+  "decisions": {
+    "supervised_manual_evidence_export_allowed": true,
+    "captcha_bypass_automation_allowed": false,
+    "authenticated_cookie_vaulting_allowed": false,
+    "unverified_universal_deep_link_activation_allowed": false,
+    "affiliate_enabled": false,
+    "production_deployed": false,
+    "canonical_alias_mutated": false
+  },
+  "truth_boundary": "The supplied directive is authorization intent, not evidence that a marketplace accepts the proposed URL template or credits the declared affiliate account.",
+  "next_action": "Obtain official provider documentation/dashboard export and user-exported evidence packets, then execute attribution replay and Dual-Key review."
+}

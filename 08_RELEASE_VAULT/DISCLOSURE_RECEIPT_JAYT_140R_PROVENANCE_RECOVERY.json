@@ -1,0 +1,24 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_140R_PROVENANCE_RECOVERY",
+  "directive": "JAYT-140R — OPERATING-LOOP PROVENANCE RECOVERY & NO-SYNTHETIC-INPUT ENFORCEMENT",
+  "severity": "P0_OPERATING_LOOP_PROVENANCE_DEFICIT",
+  "status": "SYNTHETIC_LOOP_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-27T01:00:00+07:00",
+  "executive_ruling": "Contained all synthetic registry hashes, seeded community signals, and historic corpus confusion. Established authentic fresh differential runner with physical receipts.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_24_SYNTHETIC_HASH_PATTERNS_IN_REGISTRY",
+      "description": "Fresh source registry contained repeated hex pattern hashes instead of hashes calculated from authentic physical capture artifacts on disk."
+    },
+    {
+      "cause_id": "P0_CAUSE_25_SEEDED_MOCK_COMMUNITY_SIGNALS",
+      "description": "Community signal queue contained pre-seeded mock submissions with simulated submitters, timestamps, and deal descriptions without authentic physical intake receipts."
+    },
+    {
+      "cause_id": "P0_CAUSE_26_HISTORIC_CORPUS_CONFUSION",
+      "description": "Compiler evaluated historic 139 corpus instead of executing an authentic fresh capture differential run."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_140_synthetic_loop_provenance/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/run_fresh_source_loop_140r.js & generic_compiler_140r.js"
+}

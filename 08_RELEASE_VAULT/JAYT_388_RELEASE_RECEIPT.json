@@ -1,0 +1,72 @@
+{
+  "$schema": "https://jayt.vn/schemas/release-receipt.v1.json",
+  "receipt_id": "JAYT_388_RELEASE_RECEIPT",
+  "cycle": "JAYT-388",
+  "mandate": "WORK_ORDER_J388_R2_EVIDENCE_EXECUTION",
+  "authority": "CHAIRMAN_AND_CEO_J388_DISPATCH",
+  "released_at_utc": "2026-09-11T03:37:11.340Z",
+  "release_status": "PROD_CANDIDATE_DEPLOYED_AWAITING_CEO_AND_GEMINI_EVIDENCE_GATE",
+  "candidate": {
+    "version": "v3.444.0-j388",
+    "manifest_path": "08_RELEASE_VAULT/candidates/v3.444.0-j388/candidate_manifest.json",
+    "manifest_sha256": "5b89f84ef47a43870f4104d206bb00e15b81a046e4854f7e202debda86eb5247",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "production_deployment_id": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "direct_deployment_url": "https://jayt-production-v3420-1oq202jig-kuntran777-6857s-projects.vercel.app",
+    "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4"
+  },
+  "workstreams_verification": {
+    "R2_SKU_PHYSICAL_EVIDENCE": {
+      "status": "COMPLIANT",
+      "snapshots_on_disk_count": 30,
+      "leaves_on_disk_count": 30,
+      "physical_photographs_claimed": 0,
+      "labeled_neutral_placeholders": 30,
+      "compliance_note": "Zero synthetic photos claimed. All 30 snapshots and leaves exist physically on disk."
+    },
+    "R2_WORKER_AND_BENCHMARK": {
+      "status": "COMPLIANT",
+      "http_3xx_semantics": "UNKNOWN__SUPPRESS_FALSE",
+      "http_200_semantics": "AVAILABLE",
+      "unit_tests_passed": 21,
+      "slider_samples_count": 50,
+      "slider_latency_p50_ms": 16.6,
+      "slider_latency_p95_ms": 16.9,
+      "slider_latency_max_ms": 17.6
+    },
+    "R2_FOOD_CINEMA_EVIDENCE": {
+      "status": "COMPLIANT",
+      "verified_deals_count": 15,
+      "danang_branches_verified": true,
+      "semantic_ctas_enforced": true,
+      "manufactured_codes_count": 0
+    },
+    "R2_COMMERCIAL_ACTIVATION": {
+      "status": "COMPLIANT",
+      "affiliate_enabled_globally": false,
+      "authorized_providers_count": 0,
+      "unresolved_providers_count": 3,
+      "clicks_are_not_revenue_rule": "STRICTLY_ENFORCED"
+    },
+    "R2_BUILD_AND_RELEASE_GATE": {
+      "status": "COMPLIANT",
+      "equality_asserted": "100% (0 diffs)",
+      "mutation_fixtures_tested": 6,
+      "mutation_fixtures_rejected": 6
+    }
+  },
+  "artifact_hashes": {
+    "06_TRUST_AND_EVIDENCE/j388/sku_leaf_evidence_index.json": "d75d2aa393e4bf1e37b645a7b12adab18e46b56584d1790e8901e7fd9535f6b0",
+    "06_TRUST_AND_EVIDENCE/j388/deal_evidence_index.json": "bb2b53dfb58574db988dc325fef80b6fe264a71da597228e924bb49ae3a7283f",
+    "06_TRUST_AND_EVIDENCE/j388/provider_attribution_validation.json": "fda5e2f93edab94a52edc934aabb9c17d3a463df310b3f41ea7acf5f6926ebe4",
+    "07_QUALITY_ASSURANCE/JAYT_388_ARTIFACT_INTEGRITY_RECEIPT.json": "1eefa99e60b94b0e9d27a415bddffc6cef7794cce68013455944ca56da3d05de",
+    "07_QUALITY_ASSURANCE/JAYT_388_SLIDER_BENCHMARK.json": "d7f4288b915e04d5619c33ecfcff9a375d1ecf8856a04db1834940a85189b456",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_388_SECURITY_RECEIPT.json": "2255770278bb0547fdf05a972fd754a8c349c621986f1ae7a1bdba41e0bb15b6",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_388_LIVE_RECEIPT.json": "2022063a54511f1443f99c1d1095476c72406dbaa13d1f78fd72398568a094d3",
+    "03_SOURCE_OF_TRUTH/j387/sku_registry.json": "4e7f7bf01c43789405f57aa2051b3e68e9275e3fac96196a4148eab864717723",
+    "deploy/published_manifest.json": "248c77cffd04e82da325ad3b2155cb64b0f14c22d1d965bb5652ffdbbe22b156",
+    "deploy/index.html": "bc0a868b9a1b8a7cb724f941bee6e8575b6c8c038792d5b6d653044b203377f2",
+    "deploy/jayt_apex_interface.js": "9a146b84b4407c9351bda02a7e62ee296a678cc1ca41061d0a5a2e23b7f400a4",
+    "deploy/api/health-check.js": "12daaa315f031fdc61a31d4002ae5ef40543335fd8108a4a235544263f7a2aa4"
+  }
+}

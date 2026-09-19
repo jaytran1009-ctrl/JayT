@@ -1,0 +1,53 @@
+{
+  "package_id": "JAYT_339_V3424_R1_RESEALED_FINGERPRINTS",
+  "governing_directive": "JAYT-339",
+  "version": "v3.424.0-r1",
+  "generated_at_utc": "2026-09-07T11:39:27.335Z",
+  "status": "AUDIT_READY__AWAITING_CEO_REVIEW",
+  "deployment_authorized": false,
+  "production_deploy_permitted": false,
+  "sealed_candidate_root": "08_RELEASE_VAULT/candidates/v3.424.0-r1/",
+  "fingerprints": {
+    "candidate_manifest": "fa32477934f92af35827f874361c687a830afd0f148f57af927f63f8d187af48",
+    "storefront_bundle": "0c200c4d5e82c746c16286ae459b8f67c4df6154ed7615efe245a397b3d292dc",
+    "html": "4dd5820320bf2e66dfbd456729beebb346504d5788e6fab45bd8d16eb39bca2f",
+    "css": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e",
+    "registry": "bab51db53f5f34934c539968484a2f8055f3fa61786db608b91b9db9349b40c6",
+    "deals_feed": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "hero_svg": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3",
+    "rollback_manifest": "e1cf772d21b987bbc1193e74bbd3f484fac6c0e4500013b99567efcf33a0d6d6",
+    "preflight_receipt": "0abdad5238a7ac49a515c1bb930eb9a81a5ab6e90dac9038cc01ef4cbc51b51a"
+  },
+  "cards": {
+    "total": 51,
+    "civic": 24,
+    "commercial": 27,
+    "excluded": [
+      "B14_DMX_M170_DEN",
+      "P2O_CGV_FANC_2026",
+      "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+      "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+    ]
+  },
+  "http_probes": {
+    "root": {
+      "status": 200,
+      "ok": true
+    },
+    "registry": {
+      "status": 200,
+      "ok": true
+    },
+    "deals_feed": {
+      "status": 200,
+      "text": "[]",
+      "is_empty_array": true,
+      "ok": true
+    }
+  },
+  "rollback_anchor": {
+    "version": "v3.423.0",
+    "cards": 47,
+    "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA"
+  }
+}

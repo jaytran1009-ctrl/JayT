@@ -1,0 +1,26 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_134F",
+  "directive": "JAYT-134F — Governance Recovery & Physical Evidence Binding",
+  "severity": "P0_GOVERNANCE_AND_PROVENANCE_BREACH",
+  "status": "DISCLOSED_AND_CONTAINED",
+  "disclosed_at": "2026-08-26T18:16:30+07:00",
+  "executive_finding": "Independent audit by CEO revealed two critical governance failures during JAYT-134E execution:",
+  "governance_errors": [
+    {
+      "error_id": "GOV_ERR_01_DIRECT_MEMORY_MUTATION",
+      "category": "PROJECT_MEMORY_INTEGRITY_VIOLATION",
+      "description": "Antigravity directly modified PROJECT_MEMORY.md using script file write operations instead of applying changes exclusively through the transactional manager applyProjectMemoryTransaction067.",
+      "remediation": "Immediate prohibition of direct file writes to PROJECT_MEMORY.md; memory transactions reinstated exclusively through applyProjectMemoryTransaction067 with cryptographic lineage verification."
+    },
+    {
+      "error_id": "GOV_ERR_02_MANIFEST_HASH_MISMATCH",
+      "category": "RELEASE_MANIFEST_LINEAGE_MISMATCH",
+      "description": "INCIDENT_MANIFEST_JAYT_134E_RESET.json recorded jayt_apex_interface.js SHA-256 hash as '753b1d727764a8b6...' due to premature manifest generation before the syntax error resolution, whereas actual deployed source was '91f5cdf0ee33faac...'.",
+      "remediation": "Formal append-only disclosure in this receipt; preserving 134E manifest for audit lineage while locking current verified hashes in 134F review pack."
+    }
+  ],
+  "provenance_enforcement": {
+    "canonical_gate_upgrade": "CanonicalRenderGate upgraded from string-length checking to live physical artifact verification (file presence, cryptographic SHA-256 calculation, quote matching, and district consistency).",
+    "physical_evidence_audit": "08_RELEASE_VAULT/PHYSICAL_EVIDENCE_AUDIT_26_LOCATIONS_134F.json (26/26 verified on disk)."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "receipt_id": "JAYT_333_POST_RELEASE_OPERATIONAL_SYNC_RECEIPT",
+  "status": "COMPLETE",
+  "baseline_version": "v3.423.0",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "cards": {
+    "total": 47,
+    "civic": 24,
+    "commercial": 23
+  },
+  "monitoring": {
+    "automation_id": "jayt-production-v3-420-monitoring",
+    "name": "JayT Production v3.423 monitoring",
+    "schedule": "HOURLY",
+    "status": "ACTIVE",
+    "audit_runner": "07_QUALITY_ASSURANCE/audit_jayt_333_live_v3423.js",
+    "rolling_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_V3423_ROLLING_MONITOR_RECEIPT.json",
+    "immutable_release_receipt_protected": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_V3423_LIVE_POST_DEPLOY_AUDIT.json",
+    "quiet_when_healthy": true,
+    "notify_on_drift_or_failure": true
+  },
+  "commercial_safety": {
+    "excluded_card": "B14_DMX_M170_DEN",
+    "affiliate_links": 0,
+    "tracking_parameters": 0,
+    "synthetic_voucher_codes": 0,
+    "deals_feed_empty": true
+  },
+  "rollback_standby": {
+    "version": "v3.422.0",
+    "deployment_id": "dpl_E8GNxXFBYHfBoMuLVD3Dv39DTkSo",
+    "status": "STANDBY_READY"
+  }
+}

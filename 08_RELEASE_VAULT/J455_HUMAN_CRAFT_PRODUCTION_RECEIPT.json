@@ -1,0 +1,36 @@
+{
+  "receipt_id": "J455_HUMAN_CRAFT_PRODUCTION_RECEIPT",
+  "recorded_at_utc": "2026-09-14T06:15:40Z",
+  "status": "READY_AND_ALIASED__LIVE_QA_PASS",
+  "release": {
+    "version": "v3.492.0-j455-human-craft",
+    "deployment_id": "dpl_FxHSfmkfp9JJ3JDtBc7LMxTzzxzS",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "http_status": 200
+  },
+  "live_artifacts": {
+    "index_html": {"bytes": 1750, "sha256": "6a8e9de172a1c0a8ce39bb80df10f0b1ef02c92e2e3b47681306fb56d6af4675"},
+    "jayt_apex_interface_js": {"bytes": 611494, "sha256": "2c4946bb191bf185171de0730ddf9abb6743ca695d17cb1d0c7522989ae97672"},
+    "published_manifest_json": {"bytes": 10209, "sha256": "e5ac562268d0d2fc8a38139f692d805f889edc6fd30d2a4bcb047aca171cc683"}
+  },
+  "live_qa": {
+    "mobile_390": {"visible_surfaces": 12, "dorm_cards": 30, "style_tags": 1, "overflow_px": 0, "console_errors": 0, "hud_ms": 0.6, "pass": true},
+    "desktop_1440": {"visible_surfaces": 12, "dorm_cards": 30, "style_tags": 1, "overflow_px": 0, "console_errors": 0, "hud_ms": 0.7, "pass": true},
+    "undefined_text": false
+  },
+  "design_system": {
+    "runtime_style_tags": 1,
+    "all_twelve_surfaces_visible": true,
+    "context_tabs_are_wayfinding_not_visibility_gates": true,
+    "coastal_day_and_river_night_tokens": true,
+    "cinema_ticket_notches": true,
+    "legacy_style_generators_retained_in_source": true,
+    "note": "Legacy CSS generators remain concatenated in cascade order to avoid unverified computed-style regressions; the rendered application emits one consolidated style tag."
+  },
+  "boundaries": {
+    "affiliate_enabled": false,
+    "name_card_in_hero": false,
+    "fabricated_vouchers_or_lowest_price_claims": false
+  },
+  "pipeline": {"ws1": "24/24_PASS__HEALTHY_EXIT_0", "ws2": "24/24_PASS__HEALTHY_EXIT_0"}
+}

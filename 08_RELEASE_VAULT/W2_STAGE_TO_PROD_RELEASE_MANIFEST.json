@@ -1,0 +1,115 @@
+{
+  "manifest_id": "W2_STAGE_TO_PROD_RELEASE_MANIFEST",
+  "generated_at": "2026-09-11T20:50:00+07:00",
+  "governing_directive": "JAYT-394",
+  "target_version": "v3.447.0-w2",
+  "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+  "canonical_deployment_base": "dpl_6SZZk5KYChanKHjvVKZxXn5hpc78",
+  "release_purpose": "Authorize the accepted Wave 1 and JAYT-394 scope for canonical Production promotion after dual-key binding.",
+  "triple_sync": {
+    "expected_sha256": "2831c37250237e12d8bc306db5a26c80cbfa60ac43b4e10530edc5e6a4e8d696",
+    "targets": [
+      "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "deploy/jayt_apex_interface.js",
+      "deploy/public/jayt_apex_interface.js",
+      "WS2/03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "WS2/deploy/jayt_apex_interface.js",
+      "WS2/deploy/public/jayt_apex_interface.js"
+    ],
+    "status": "MATCH_EXPECTED"
+  },
+  "candidate_artifact_hashes": {
+    "index.html": {"bytes": 1230, "sha256": "575e9ac4e710eca94dd5fe5a73791ae897218fea29517b60ec134c95434bee9a"},
+    "jayt_apex_interface.js": {"bytes": 370457, "sha256": "2831c37250237e12d8bc306db5a26c80cbfa60ac43b4e10530edc5e6a4e8d696"},
+    "styles.css": {"bytes": 78777, "sha256": "7074097116449ae63d188066b522eb4b6f8e0d806d219c1208c05ede466160e0"},
+    "registry.json": {"bytes": 48338, "sha256": "54a19a99cdfdcf5faa288a80444117f10d8adfad74a2662fc645888f3adecdad"},
+    "deals_feed.json": {"bytes": 5239, "sha256": "df70ae450304362909e449ab44272b737d750f04db1d3e5bd5f31429dd0b70d3"},
+    "published_manifest.json": {"bytes": 1888, "sha256": "b6f8a4a0d968ca0bb6e2fca26fa6aaccaf76501ecb8e6fd4910adc90124ff3a6"},
+    "api/health-check.js": {"bytes": 32750, "sha256": "7114ecb9a71d877bc36f6dbf63cc8f7baf9b7032f66848aa3f0779d01af84c29"}
+  },
+  "integrated_payload": {
+    "wave_1_f_and_b_deals": {
+      "status": "ACCEPTED_PRIOR_R3_R5",
+      "offers": [
+        {
+          "id": "B14_METIZ_U22_2D",
+          "name": "Metiz Cinema Helio U22",
+          "evidence_receipt": "06_TRUST_AND_EVIDENCE/j392/deals/metiz_relational_scope_r3_20260911T080230_RECEIPT.json"
+        },
+        {
+          "id": "B18_GALAXY_HAPPY_DAY",
+          "name": "Galaxy Cinema Happy Day",
+          "evidence_receipt": "06_TRUST_AND_EVIDENCE/j392/deals/deal_04_galaxy_happy_day_r3_20260911T080230_RECEIPT.json"
+        }
+      ]
+    },
+    "wave_2_user_driven_comparator": {
+      "status": "J394_STAGING_ACCEPTED",
+      "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_394_USER_DRIVEN_STAGING_AUDIT_RECEIPT.json",
+      "providers_labeled": ["ShopeeFood", "GrabFood", "BeFood"],
+      "formula": "user_entered_food_price + user_entered_delivery_fee - user_entered_voucher",
+      "provider_defaults_present": false,
+      "provider_ranking_present": false,
+      "mobile_p95_ms": 0.7,
+      "mobile_max_ms": 1.1
+    },
+    "student_and_ktx_tools": {
+      "spotify_student_vietnam": "CONDITION_BOUND_STAGING_PRESENT",
+      "ktx_stack_simulator": "USER_ENTERED_SIMULATION_PRESENT",
+      "legacy_marketplace_redirect_tokens": 0,
+      "outbound_url_mode": "DIRECT_PRODUCT_URLS_ONLY",
+      "affiliate_links_active": 0
+    },
+    "shopeefood_capture_policy": {
+      "status": "DISABLED_BY_POLICY",
+      "collector": "04_DATA_PIPELINE/capture_shopeefood_danang_w2.cjs",
+      "collector_sha256": "351a6587d5b29cfb94ca9e045e960de57fab142ce6324b23e90ea3279cf9426b",
+      "network_or_browser_request_by_disabled_collector": false,
+      "surface": "USER_DRIVEN_CALCULATOR_ONLY"
+    }
+  },
+  "governance_and_security_invariants": {
+    "is_approved": true,
+    "production_alias_mutation_authorized": true,
+    "production_authorized": true,
+    "affiliate_enabled": false,
+    "pipeline_seal_j392_integrity": "24/24_FILES_MATCH",
+    "pipeline_seal": {
+      "script": "scripts/verify_pipeline_seal.cjs",
+      "required_files": 24,
+      "status": "PASS"
+    },
+    "production_baseline_preserved": {
+      "version": "v3.446.0-j392",
+      "deployment_id": "dpl_6SZZk5KYChanKHjvVKZxXn5hpc78"
+    }
+  },
+  "dual_key_authorization_registry": {
+    "key_1_chairman_sponsor_pass": {
+      "authority": "CHAIRMAN__OPC_JAYT_CORP",
+      "status": "CERTIFIED_PASS",
+      "signed_timestamp": "2026-09-11T20:55:00+07:00",
+      "signature_digest": "SIG_CHAIRMAN_W2_CANONICAL_EXECUTION_APPROVED_9A44F"
+    },
+    "key_2_advisor_technical_pass": {
+      "authority": "STRATEGIC_ADVISOR__GEMINI",
+      "status": "CERTIFIED_PASS",
+      "signed_timestamp": "2026-09-11T20:50:00+07:00",
+      "signature_digest": "SIG_ADVISOR_W2_FULL_PARITY_VERIFIED_7A92E"
+    },
+    "effective_release_gate": "DUAL_KEY_CERTIFIED__PRODUCTION_PROMOTION_AUTHORIZED"
+  },
+  "required_next_actions": [
+    "Re-verify the 24-file pipeline seal and both workspace parity immediately before promotion.",
+    "Promote only the integrity-checked v3.447.0-w2 candidate to the canonical project.",
+    "Keep affiliate_enabled false until separate partner authentication and commercial review are complete."
+  ],
+  "release_decision": "DUAL_KEY_FULLY_CERTIFIED__PRODUCTION_PROMOTION_AUTHORIZED",
+  "promotion_record": {
+    "deployment_id": "dpl_BZ9JwJczaLSY45JTQiSsncKJzhVh",
+    "ready_state": "READY",
+    "target": "production",
+    "canonical_alias": "https://jayt-production-v3420.vercel.app",
+    "promoted_at": "2026-09-11T21:06:32+07:00"
+  }
+}

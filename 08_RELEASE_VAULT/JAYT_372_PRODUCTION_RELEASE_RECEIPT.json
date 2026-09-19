@@ -1,0 +1,110 @@
+{
+  "receipt_id": "REL_J372_RETENTION_OVERHAUL_1789025079686",
+  "mandate": "JAYT-372 — RETENTION OVERHAUL: CAMPUS DOCK, PER-OFFER ZALO PASS & PRODUCT CARDS",
+  "authority": "WORK_ORDER_J372_RETENTION_OVERHAUL",
+  "design_specification": "01_EXECUTIVE_COUNCIL/JAYT_372_DESIGN_HANDOFF.md",
+  "deployment_id": "dpl_FD5zGaNobEYSPBdRkNRxKYjE7ZHc",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "version": "v3.434.0-j372",
+  "deployed_at_utc": "2026-09-10T07:24:39.686Z",
+  "executor": "Antigravity Lead Agent",
+  "status": "PRODUCTION_DEPLOYED_AND_OBSERVABILITY_VERIFIED",
+  "pillars_delivered": {
+    "campus_dock": {
+      "status": "VERIFIED",
+      "clusters_count": 4,
+      "total_canonical_offers": 81,
+      "cluster_breakdown": {
+        "cluster_bk_sp": {
+          "name": "Bách Khoa / Sư Phạm",
+          "applicable_offers": 44,
+          "branches": 6
+        },
+        "cluster_due": {
+          "name": "Kinh Tế DUE",
+          "applicable_offers": 43,
+          "branches": 5
+        },
+        "cluster_dtu_hc": {
+          "name": "Duy Tân / Hải Châu",
+          "applicable_offers": 70,
+          "branches": 9
+        },
+        "cluster_st": {
+          "name": "Sơn Trà",
+          "applicable_offers": 63,
+          "branches": 7
+        }
+      },
+      "benchmark_100_switches": {
+        "switchesCount": 100,
+        "minMs": 0.8000000007450581,
+        "maxMs": 4.800000000745058,
+        "avgMs": 1.6519999999925494,
+        "p50Ms": 1.5,
+        "p90Ms": 2.199999999254942,
+        "p95Ms": 3.699999999254942,
+        "p99Ms": 4.800000000745058,
+        "frameP95Ms": 31.700000001117587
+      },
+      "in_memory_target_met": true,
+      "mobile_390px_scroll_dock": "VERIFIED_WITH_PEEK_INDICATOR"
+    },
+    "per_offer_zalo_pass": {
+      "status": "VERIFIED",
+      "offers_equipped": 81,
+      "canvas_dimensions": "1080x1440",
+      "split_modes": [
+        "2_PERSON_QUICK",
+        "3_PERSON_QUICK",
+        "CUSTOM_INTEGER_SPLIT"
+      ],
+      "integer_conservation": "100%_EXACT_VND_CONSERVATION",
+      "qr_type": "QR_MO_KEO_ENCODING_OFFER_ANCHOR",
+      "banking_security": "CLIENT_RAM_ONLY__ZERO_ACCOUNT_INVENTION__NEVER_DEFAULT_TO_JAYT",
+      "sample_passes": {
+        "pass_2p": {
+          "offer_id": "B18_JB_CANG_CAY",
+          "title": "Combo Càng Cay Càng Mê",
+          "total_vnd": 157000,
+          "count": 2,
+          "higher_share": 78500,
+          "lower_share": 78500,
+          "integer_conservation_verified": true,
+          "sample_png_path": "C:\\Users\\tritr\\.gemini\\antigravity\\brain\\0fd55bc2-4a92-47b9-9f66-c02b2cf9af3a\\j372_sample_zalo_pass_2p.png"
+        },
+        "pass_3p": {
+          "offer_id": "B18_JB_CANG_CAY",
+          "title": "Combo Càng Cay Càng Mê",
+          "total_vnd": 157000,
+          "count": 3,
+          "higher_share": 52334,
+          "lower_share": 52333,
+          "integer_conservation_verified": true,
+          "sample_png_path": "C:\\Users\\tritr\\.gemini\\antigravity\\brain\\0fd55bc2-4a92-47b9-9f66-c02b2cf9af3a\\j372_sample_zalo_pass_3p.png"
+        }
+      }
+    },
+    "product_cards_overhaul": {
+      "status": "VERIFIED",
+      "total_products": 30,
+      "responsive_grid": {
+        "desktop": "4_COLUMNS",
+        "tablet": "3_COLUMNS",
+        "mobile": "2_COLUMNS_WITH_12PX_GAP"
+      },
+      "thumbnails": "30_AUTHENTIC_1_1_VECTOR_SVGS__NEUTRAL_BACKGROUND__NO_FAKE_AI_PHOTOS",
+      "truth_in_advertising_badges": {
+        "amber_90d_low": "STRICTLY_ABSENT__HISTORY_UNDER_90_DAYS",
+        "emerald_freeship": "CONDITIONAL_EXPLAINED_ON_CLICK",
+        "merchant_authenticity": "DIRECT_VERIFIED_SHOPEE_MALL_AND_TIKI_TRADING"
+      }
+    }
+  },
+  "truth_in_advertising_governance": {
+    "affiliate_commission_claimed": false,
+    "affiliate_status": "DECLARED_PENDING_AUTHENTICATION",
+    "outbound_links_type": "AUTHENTIC_DIRECT_MERCHANT_CATALOG",
+    "ninety_day_low_badge": "ABSENT"
+  }
+}

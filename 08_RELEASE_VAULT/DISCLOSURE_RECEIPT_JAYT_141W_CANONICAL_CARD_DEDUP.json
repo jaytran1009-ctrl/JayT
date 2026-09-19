@@ -1,0 +1,20 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_141W_CANONICAL_CARD_DEDUP",
+  "directive": "JAYT-141W — CANONICAL CARD DEDUPLICATION & DOMINO’S OFFICIAL LEAF BATCH",
+  "severity": "P0_NESTED_CARD_DUPLICATION_AND_PRICE_FALSE_POSITIVE",
+  "status": "CANONICAL_CARD_DEDUPLICATION_ENFORCED",
+  "disclosed_at": "2026-08-27T01:35:00+07:00",
+  "executive_ruling": "Eliminating nested card duplicates (dedup by source_id + canonical_leaf_url), hardening price extraction (rejecting ambiguous \"1 đ\"), and running official live leaf capture on Domino’s leaves.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_32_NESTED_DOM_FRAGMENT_DUPLICATION",
+      "description": "querySelectorAll matched parent cards and nested child wrappers, duplicating single promotions into multiple fragments."
+    },
+    {
+      "cause_id": "P0_CAUSE_33_AMBIGUOUS_PRICE_REGEX_MATCHING",
+      "description": "Generic price regex on card text extracted \"1 đ\" from \"mua 1 tặng 1\" condition copy."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141v_nested_fragment_duplication/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/canonical_card_normalizer_141w.js & fresh_source_registry_141w.json"
+}

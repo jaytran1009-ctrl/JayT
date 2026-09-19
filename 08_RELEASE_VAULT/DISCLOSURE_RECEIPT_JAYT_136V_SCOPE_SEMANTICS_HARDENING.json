@@ -1,0 +1,24 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_136V",
+  "directive": "JAYT-136V — SCOPE SEMANTICS & LOCALITY PROOF HARDENING",
+  "severity": "P0_SCOPE_SEMANTICS_AND_WHITELIST_DEFICIT",
+  "status": "IMPLICIT_WHITELIST_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T19:22:00+07:00",
+  "executive_ruling": "Independent CEO audit revealed implicit venue whitelisting in 136U compiler and scope-appears vs scope-applies confusion in Starlight. Batch 136U rejected and quarantined. Starlight demoted to INCOMPLETE_SCOPE_UNPROVEN, CGV held at EVIDENCE_BUNDLE_CANDIDATE.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_18_IMPLICIT_VENUE_WHITELISTING",
+      "description": "generic_provenance_compiler_136u.js contained specific mall and venue names (vinh trung, helio, co.opmart) in regexes, acting as an implicit whitelist."
+    },
+    {
+      "cause_id": "P0_CAUSE_19_SCOPE_APPEARS_VS_SCOPE_APPLIES_CONFUSION",
+      "description": "Starlight location list (Starlight Quy Nhơn / Starlight Đà Nẵng) was treated as proof of offer application without an enclosing application predicate clause."
+    },
+    {
+      "cause_id": "P0_CAUSE_20_LOOSE_KEYWORD_LOCALITY_MATCHING",
+      "description": "Single keywords (Đà Nẵng, Hải Châu) without full administrative address structure were accepted into LOCALITY_ONLY."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136u_implicit_whitelist/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/scope_semantics_compiler_136v.js (Pure Structural Scope & Administrative Locality Compiler)"
+}

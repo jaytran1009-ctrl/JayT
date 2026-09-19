@@ -1,0 +1,69 @@
+{
+  "request_id": "JAYT_392_FINAL_RELEASE_REQUEST",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "dispatch_sha256": "af3da365f03da160953a0253ebdb51293a36eae41421a597eeef7f52e1db2bd3",
+  "submitted_at_utc": "2026-09-11T06:40:55.877Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini independently reviews the final dual-key seal",
+  "target": {
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_provisional_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4"
+  },
+  "workstreams": {
+    "two_current_unique_local_offers": {
+      "required_scope": "Metiz Cinema Helio and Galaxy Cinema Da Nang",
+      "minimum_count": 2,
+      "actual_count": 5,
+      "core_two_verified": true,
+      "deduplication_audit": "Galaxy redundant tariff excluded; unique U22 benefit proven; independent Metiz Super Monday added.",
+      "status": "VERIFIED_PASS",
+      "receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_WAVE_1_RECEIPT.json"
+    },
+    "radar_visual_sanitization": {
+      "target_item_count": 10,
+      "actual_verified_count": 10,
+      "placeholders_retained": 0,
+      "brand_photos_ingested": 10,
+      "mandatory_disclosure": "Sản phẩm khảo sát chính hãng — đã đối soát",
+      "affiliate_status": "AFFILIATE_STRICTLY_DISABLED",
+      "status": "VERIFIED_PASS",
+      "receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_KTX_RADAR_RECEIPT.json"
+    },
+    "os_scheduler_and_drill_proof": {
+      "os_scheduler": {
+        "task_name": "JayT_Autonomous_Catalog_Monitor_4H",
+        "host": "JAY",
+        "cadence": "PT4H (Every 4 Hours)",
+        "status": "Ready",
+        "execution_evidence": "PID 1224, PPID 3320 (svchost Task Scheduler engine), Exit Code 0, 10/10 assets healthy",
+        "receipt_ref": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_OS_SCHEDULER_RECEIPT.json"
+      },
+      "non_production_drill": {
+        "drill_alias": "https://jayt-rollback-drill.vercel.app",
+        "swap_command_exit_code": 0,
+        "measured_rto_seconds": 8.31,
+        "sla_limit_seconds": 120,
+        "restoration_verified": true,
+        "canonical_production_state": "CANONICAL_PRODUCTION_100_PERCENT_UNTOUCHED_AND_FROZEN",
+        "receipt_ref": "08_RELEASE_VAULT/JAYT_392_FINAL_NONPRODUCTION_DRILL_RECEIPT.json"
+      }
+    },
+    "final_dual_key_seal": {
+      "manifest_ref": "08_RELEASE_VAULT/PIPELINE_SEAL_MANIFEST.json",
+      "seal_status": "PENDING_DUAL_KEY",
+      "key_1_chairman": "PENDING_WRITTEN_REFERENCE",
+      "key_2_gemini": "PENDING_SAFETY_REVIEW_REFERENCE"
+    }
+  },
+  "governance_boundaries": {
+    "production_deployment_authorized": false,
+    "production_alias_mutation_authorized": false,
+    "affiliate_activation_authorized": false,
+    "destructive_deletion_authorized": false,
+    "executor_attestation": "Executor acknowledges that it cannot self-award CEO/Gemini pass or mutate production before the CEO gate."
+  },
+  "request_verdict": "SUBMITTED_FOR_CEO_R2_EVIDENCE_REVIEW_AND_GEMINI_SAFETY_AUDIT"
+}

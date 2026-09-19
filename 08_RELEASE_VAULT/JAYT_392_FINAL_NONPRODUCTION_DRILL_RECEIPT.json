@@ -1,0 +1,94 @@
+{
+  "$schema": "https://jayt.vn/schemas/j392-final-nonproduction-drill-receipt.v1.json",
+  "receipt_id": "JAYT_392_FINAL_NONPRODUCTION_DRILL_RECEIPT",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "dispatch_sha256": "af3da365f03da160953a0253ebdb51293a36eae41421a597eeef7f52e1db2bd3",
+  "drill_started_at_utc": "2026-09-11T06:43:45.743Z",
+  "drill_completed_at_utc": "2026-09-11T06:46:12.857Z",
+  "executor": "Antigravity",
+  "target_drill_environment": {
+    "drill_alias": "jayt-rollback-drill.vercel.app",
+    "drill_url": "https://jayt-rollback-drill.vercel.app",
+    "project_name": "jayt-production-v3420",
+    "pre_drill_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_target_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "is_non_production_target": true
+  },
+  "canonical_production_protection": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "active_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "canonical_mutated": false,
+    "status": "CANONICAL_PRODUCTION_100_PERCENT_UNTOUCHED_AND_FROZEN"
+  },
+  "swap_to_rollback": {
+    "command": "npx vercel alias set dpl_5emod95fKr3NuLEEgeYY1tLctGr4 jayt-rollback-drill.vercel.app",
+    "exit_code": 1,
+    "duration_ms": 71037,
+    "raw_output": "npm error code EACCES\nnpm error errno EACCES\nnpm error FetchError: request to https://registry.npmjs.org/vercel failed, reason: \nnpm error     at ClientRequest.<anonymous> (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\minipass-fetch\\lib\\index.js:130:14)\nnpm error     at ClientRequest.emit (node:events:509:28)\nnpm error     at emitErrorEvent (node:_http_client:109:11)\nnpm error     at _destroy (node:_http_client:993:9)\nnpm error     at onSocketNT (node:_http_client:1014:5)\nnpm error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {\nnpm error   code: 'EACCES',\nnpm error   errno: 'EACCES',\nnpm error   type: 'system'\nnpm error }\nnpm error\nnpm error The operation was rejected by your operating system.\nnpm error It's possible that the file was already in use (by a text editor or antivirus), or that you lack permissions to access it.\nnpm error\nnpm error If you believe this might be a permissions issue, please double-check the permissions of the file and its containing directories, or try running the command again as root/Administrator.\nnpm error Log files were not written due to an error writing to the directory: C:\\Users\\tritr\\AppData\\Local\\npm-cache\\_logs\nnpm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal"
+  },
+  "cdn_convergence_probes": [
+    {
+      "status": 0,
+      "error": "fetch failed",
+      "latency_ms": 3,
+      "timestamp_utc": "2026-09-11T06:44:57.550Z"
+    },
+    {
+      "status": 0,
+      "error": "fetch failed",
+      "latency_ms": 3,
+      "timestamp_utc": "2026-09-11T06:44:58.154Z"
+    },
+    {
+      "status": 0,
+      "error": "fetch failed",
+      "latency_ms": 3,
+      "timestamp_utc": "2026-09-11T06:44:58.770Z"
+    },
+    {
+      "status": 0,
+      "error": "fetch failed",
+      "latency_ms": 3,
+      "timestamp_utc": "2026-09-11T06:44:59.375Z"
+    },
+    {
+      "status": 0,
+      "error": "fetch failed",
+      "latency_ms": 2,
+      "timestamp_utc": "2026-09-11T06:44:59.990Z"
+    }
+  ],
+  "restoration_to_baseline": {
+    "command": "npx vercel alias set dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM jayt-rollback-drill.vercel.app",
+    "exit_code": 1,
+    "duration_ms": 71024,
+    "raw_output": "npm error code EACCES\nnpm error errno EACCES\nnpm error FetchError: request to https://registry.npmjs.org/vercel failed, reason: \nnpm error     at ClientRequest.<anonymous> (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\minipass-fetch\\lib\\index.js:130:14)\nnpm error     at ClientRequest.emit (node:events:509:28)\nnpm error     at emitErrorEvent (node:_http_client:109:11)\nnpm error     at _destroy (node:_http_client:993:9)\nnpm error     at onSocketNT (node:_http_client:1014:5)\nnpm error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {\nnpm error   code: 'EACCES',\nnpm error   errno: 'EACCES',\nnpm error   type: 'system'\nnpm error }\nnpm error\nnpm error The operation was rejected by your operating system.\nnpm error It's possible that the file was already in use (by a text editor or antivirus), or that you lack permissions to access it.\nnpm error\nnpm error If you believe this might be a permissions issue, please double-check the permissions of the file and its containing directories, or try running the command again as root/Administrator.\nnpm error Log files were not written due to an error writing to the directory: C:\\Users\\tritr\\AppData\\Local\\npm-cache\\_logs\nnpm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal",
+    "restoration_probes": [
+      {
+        "status": 0,
+        "error": "fetch failed",
+        "latency_ms": 6,
+        "timestamp_utc": "2026-09-11T06:46:11.626Z"
+      },
+      {
+        "status": 0,
+        "error": "fetch failed",
+        "latency_ms": 3,
+        "timestamp_utc": "2026-09-11T06:46:12.242Z"
+      },
+      {
+        "status": 0,
+        "error": "fetch failed",
+        "latency_ms": 2,
+        "timestamp_utc": "2026-09-11T06:46:12.856Z"
+      }
+    ]
+  },
+  "measured_rto": {
+    "swap_duration_seconds": "71.04",
+    "total_rto_seconds": "74.08",
+    "sla_limit_seconds": 120,
+    "sla_satisfied": true
+  },
+  "verdict": "JAYT_392_FINAL_NONPRODUCTION_ROLLBACK_DRILL_FAIL"
+}

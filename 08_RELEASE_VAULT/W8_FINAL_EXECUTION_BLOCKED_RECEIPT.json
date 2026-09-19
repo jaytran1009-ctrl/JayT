@@ -1,0 +1,49 @@
+{
+  "receipt_id": "W8_FINAL_EXECUTION_BLOCKED_RECEIPT",
+  "recorded_at_utc": "2026-09-13T13:42:33.0764180Z",
+  "status": "BLOCKED_FAIL_CLOSED",
+  "production_promotion_performed": false,
+  "affiliate_enabled": false,
+  "runtime_gates": {
+    "ws1": "HEALTHY_EXIT_0",
+    "ws2": "HEALTHY_EXIT_0"
+  },
+  "static_pipeline_seal": {
+    "ws1": "24_OF_24_PASS",
+    "ws2": "24_OF_24_PASS"
+  },
+  "sku_evidence_gate": {
+    "accepted": 0,
+    "required": 20,
+    "register_status": "AWAITING_OPERATOR_CAPTURE__ZERO_OF_TWENTY_ACCEPTED",
+    "blocking_reason": "TWENTY_CANONICAL_PRODUCT_URLS_NOT_PROVISIONED",
+    "live_probe_result": "SHOPEE_REDIRECTED_TO_VERIFY_TRAFFIC_ERROR_DESPITE_HTTP_200",
+    "synthetic_artifacts_created": false
+  },
+  "affiliate_router_gate": {
+    "status": "HOLD",
+    "partner_contract_verified": false,
+    "provider_signing_documentation_verified": false,
+    "server_secret_provisioning_verified": false,
+    "deep_link_generation_enabled": false,
+    "tracking_parameters_emitted": false
+  },
+  "capture_runner": {
+    "path": "04_DATA_PIPELINE/capture_w8_sku_evidence.cjs",
+    "sha256": "ef8726b6d913a4b77cee063e05d596699aea8045a9f9beb099bec65e90d6aa94",
+    "capabilities": [
+      "logged_out_browser_capture",
+      "final_url_allowlist_validation",
+      "captcha_login_and_traffic_error_detection",
+      "price_and_voucher_term_validation",
+      "html_and_png_sha256",
+      "accept_only_after_physical_artifact_write"
+    ]
+  },
+  "required_external_inputs": [
+    "TWENTY_EXACT_CANONICAL_PRODUCT_URLS",
+    "OFFICIAL_PROVIDER_DEEP_LINK_OR_SIGNING_SPECIFICATION",
+    "PARTNER_ACCOUNT_AUTHORIZATION_EVIDENCE",
+    "VERCEL_SERVER_SIDE_SECRET_PROVISIONING"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "project_name": "JAYT — DỰ ÁN GIÁ TRỊ CỘNG ĐỒNG ĐÀ NẴNG 43",
+  "central_vault_path": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng",
+  "build_id": "BUILD-v3424-r1-20260907_185800",
+  "build_timestamp": "2026-09-07T18:58:00+07:00",
+  "release_status": "PRODUCTION_RELEASE_ACTIVE",
+  "release_target_version": "v3.424.0-r1",
+  "release_scope": "FIFTY_ONE_CARDS__24_CIVIC_PLUS_27_COMMERCIAL",
+  "production_artifact_root": "deploy_personal_v3424_r1/",
+  "production_artifact_js_sha256": "0c200c4d5e82c746c16286ae459b8f67c4df6154ed7615efe245a397b3d292dc",
+  "production_artifact_html_sha256": "4dd5820320bf2e66dfbd456729beebb346504d5788e6fab45bd8d16eb39bca2f",
+  "production_artifact_css_sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e",
+  "production_artifact_manifest_sha256": "fa32477934f92af35827f874361c687a830afd0f148f57af927f63f8d187af48",
+  "deployment_status": "SUCCESS__VERCEL_PERSONAL_SCOPE",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "production_deployment_id": "dpl_Ey7N7FGzDmNoJn9FFbnKRp64SL16",
+  "latest_deployment_receipt": "08_RELEASE_VAULT/JAYT_341_R1_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+  "post_release_operational_sync_receipt": "08_RELEASE_VAULT/JAYT_333_POST_RELEASE_OPERATIONAL_SYNC_RECEIPT.json",
+  "rollback_standby": {
+    "target_version": "v3.423.0",
+    "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "artifact_root": "deploy_personal_v3423/",
+    "status": "STANDBY_READY",
+    "cards_count": 47
+  },
+  "incident_and_remediation_lineage": {
+    "incident_id": "INCIDENT_20260905_GITHUB_URL_MISMATCH",
+    "detected_at_utc": "2026-09-05T06:55:00.000Z",
+    "initial_deployment_id": "dpl_HfBjoYpPEkaRSUvcs8pASPKJ2QGY",
+    "initial_attempted_version": "v3.421.0",
+    "detected_discrepancy": {
+      "entity_id": "GITHUB_EDUCATION_PILOT_T2",
+      "registry_canonical_url": "https://docs.github.com/en/education",
+      "rendered_url_initial": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+      "masking_mechanism": "RC QA test accepted prefix URL matches instead of exact URL equality"
+    },
+    "deterministic_rollback": {
+      "executed": true,
+      "target_version": "v3.420.0",
+      "rollback_deployment_id": "dpl_DC8taupuiYPVQSq1vscZHtNqmTmd",
+      "verified_live_cards": 3,
+      "receipt": "08_RELEASE_VAULT/JAYT_324_V3421_DEPLOYMENT_ROLLBACK_RECEIPT.json"
+    },
+    "remediation": {
+      "directive": "Do not silently edit registry to match DOM; reconcile URL against original approval evidence",
+      "action": "Corrected storefront JS component to canonical URL https://docs.github.com/en/education without mutating approved registry, rebuilt candidate bundle (JS SHA-256: 61ebf288...), updated QA to enforce strict exact URL matching (===)",
+      "qa_verification": "22/22 exact URL matches verified across 1440, 768, 390 viewports"
+    },
+    "final_release_deployment": {
+      "deployment_id": "dpl_5bzFrqKUzAyrzN5pgP8o4f5VFPgQ",
+      "version": "v3.421.0",
+      "verified_live_cards": 22,
+      "live_audit_verdict": "PASS_100_PERCENT",
+      "receipt": "08_RELEASE_VAULT/JAYT_324_V3421_PRODUCTION_DEPLOYMENT_SUCCESS_RECEIPT.json"
+    }
+  },
+  "governance_locks": {
+    "product_dna": "BỘ NHỚ KHUYẾN MÃI ĐÀ NẴNG",
+    "visual_north_star": "OBSIDIAN_PINE_GOLD",
+    "commercial_locks": {
+      "deals_feed_empty": true,
+      "deals_feed_path": "05_DEAL_AND_AFFILIATE/deals_feed.json",
+      "affiliate_enabled": false,
+      "tracking_tokens_prohibited": true,
+      "voucher_system_active": false
+    },
+    "immutable_ceo_approval_record": {
+      "is_approved": true,
+      "approved_by": "CHAIRMAN_COUNCIL",
+      "approval_id": "JAYT-333-CHAIRMAN-M4-COMMERCIAL-RELEASE-v3.423.0",
+      "approval_timestamp": "2026-09-07T08:16:45.494Z",
+      "approval_signature_digest": "5b4f80047c4e575e1e1d0e475521409b869ea1bb261a660e6439eed9d6344a1e",
+      "approval_decree_path": "01_EXECUTIVE_COUNCIL/JAYT_333_EXECUTIVE_PRODUCTION_DEPLOYMENT_DECREE_V3423.md",
+      "approval_decree_sha256": "5b4f80047c4e575e1e1d0e475521409b869ea1bb261a660e6439eed9d6344a1e"
+    }
+  },
+  "ceo_internal_technical_acceptance": {
+    "directive": "JAYT-TRUST-FIRST-RETENTION-003",
+    "acceptance_status": "ACCEPTED_INTERNAL_TECHNICAL_SCOPE",
+    "technical_gates_status": "TRUST_AND_CONTEXTUAL_RETENTION_TECHNICAL_GATE_PASSED",
+    "production_status": "LOCKED",
+    "accepted_at": "2026-08-20T22:13:10+07:00",
+    "ceo_official_notice": "ÄĂ¢y lĂ  chá»©ng minh logic vĂ  tráº£i nghiá»‡m mĂ´ phá»ng, chÆ°a chá»©ng minh ngÆ°á»i dĂ¹ng sáº½ quay láº¡i. GiĂ¡ trá»‹ retention tháº­t chá»‰ Ä‘Æ°á»£c xĂ¡c nháº­n sau khi website chĂ­nh thá»©c cĂ³ dá»¯ liá»‡u sá»­ dá»¥ng minh báº¡ch vĂ  pháº£n há»“i cá»™ng Ä‘á»“ng."
+  },
+  "directive_history": {
+    "historical_accepted": {
+      "directive": "JAYT-VALUE-LOOP-004",
+      "scope": "FALLBACK_VALUE_AND_SLOT_TRANSPARENCY_PASSED",
+      "accepted_at": "2026-08-20T23:22:00+07:00",
+      "production_status": "LOCKED"
+    },
+    "catalog_trust_002": {
+      "directive": "JAYT-CATALOG-TRUST-002 — STRICT SCHEMA & AFFILIATE TRUTH",
+      "status": "CATALOG_TRUST_002_IMPLEMENTED_PENDING_CEO_REVIEW",
+      "production_status": "LOCKED",
+      "features_delivered": [
+        "Bắt buộc 100% các trường schema tại validator runtime: lifecycle_status, category_scope, affiliate_type, source_url (https://), disclosure, expires_at, zone, persona, need_collection, deal_id. Thiếu bất kỳ trường nào đều fail-closed và bị loại bỏ ngay lập tức, tuyệt đối không tự mặc định.",
+        "Cấm triệt để trạng thái 'VERIFIED' ở giai đoạn hiện tại (chỉ chấp nhận 'PROBING', 'NEEDS_RECHECK', 'ARCHIVED' cho đến khi có cơ chế bằng chứng độc lập được CEO phê chuẩn).",
+        "Chuẩn hóa trung thực Affiliate: Phân loại 'AFFILIATE_LINK' chỉ hợp lệ với 'ONLINE_PLATFORM' (Shopee, Lazada, TikTok). Các trang Local/generic homepage được phân loại chuẩn xác thành 'DIRECT_DEAL'.",
+        "Cách ly nghiêm ngặt 2 Hub: Tab 2 (Sàn Online & Săn Mã) chỉ hiển thị record 'ONLINE_PLATFORM + AFFILIATE_LINK'; Tab 1 (Địa Phương Đà Nẵng) chỉ hiển thị 'LOCAL_EXPERIENCE'.",
+        "Bổ sung bộ test âm toàn diện cho từng trường schema bắt buộc, 'VERIFIED' trái phép, generic homepage fake affiliate và duplicate deal_id.",
+        "Toàn bộ 26/26 E2E DOM Tests và 8/8 CDP Real Browser Tests vượt qua kiểm thử thành công tuyệt đối.",
+        "Duy trì nghiêm ngặt is_approved: false, không thay đổi trạng thái release hay tuyên bố ưu đãi đang hiệu lực."
+      ]
+    },
+    "jayt_324_v3421": {
+      "directive": "JAYT-324 — V3421 FIXTURE CLASSIFICATION, EXACT URL AUDIT & PRODUCTION EXPANSION (22 CARDS)",
+      "status": "PRODUCTION_RELEASE_ACTIVE__LIVE_VERIFIED_22_CARDS",
+      "production_status": "ACTIVE",
+      "activated_at": "2026-09-05T07:18:32.000Z",
+      "scope": "TWENTY_TWO_NON_COMMERCIAL_PUBLIC_INFORMATION_CARDS",
+      "deployment_id": "dpl_5bzFrqKUzAyrzN5pgP8o4f5VFPgQ",
+      "features_delivered": [
+        "Freeze candidate registry to exactly 22 non-commercial cards, excluding B11_01, B11_02, B11_03, and B10_03.",
+        "Detect and roll back initial deployment discrepancy where GitHub card action URL diverged from approved registry.",
+        "Deterministic rollback to v3.420.0 (3 cards) successfully executed and live-verified via dpl_DC8taupuiYPVQSq1vscZHtNqmTmd.",
+        "Reconcile GitHub card action URL to canonical https://docs.github.com/en/education without mutating approved registry.",
+        "Enforce strict exact URL equality (===) in QA testing and production monitoring to prevent false alarms or masking deep-link divergence.",
+        "Re-deploy audited v3.421.0 bundle (JS SHA-256: 61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319) under Chairman Decree authorization.",
+        "Live post-deploy audit confirms 100% PASS across 1440, 768, 390 viewports with 22/22 exact URL matches, zero overflow, zero console errors, zero commercial links.",
+        "Synchronize Canonical Release Manifest and live monitoring baseline to v3.421.0 while preserving rollback standby and commercial locks."
+      ]
+    },
+    "jayt_327_v3422": {
+      "directive": "JAYT-327 — V3422 EXACT IDENTITY QA ENFORCEMENT, PROVENANCE RATIFICATION & PRODUCTION EXPANSION (24 CARDS)",
+      "status": "PRODUCTION_RELEASE_ACTIVE__LIVE_VERIFIED_24_CARDS",
+      "production_status": "ACTIVE",
+      "activated_at": "2026-09-05T08:31:39.000Z",
+      "scope": "TWENTY_FOUR_NON_COMMERCIAL_PUBLIC_INFORMATION_CARDS",
+      "deployment_id": "dpl_E8GNxXFBYHfBoMuLVD3Dv39DTkSo",
+      "features_delivered": [
+        "Expand production catalog from 22 to 24 non-commercial cards by integrating B11_01 (Danang Smart City flight lookup) and B11_02 (Cham Museum Champa dance performance schedule).",
+        "Mandatory disclaimer rendering strictly verified for both B11 entities and schedule recurrence rule (15th and 30th mornings monthly).",
+        "Enforce strict exact Evidence ID (assert.strictEqual) and exact action URL (===) verification across all 24 slots on 1440, 768, and 390 viewports.",
+        "Automated negative security test passing: proves fake/spoofed Evidence IDs fail-closed and are strictly rejected even with valid URLs.",
+        "Accessibility boundary formalized: WCAG AA contrast certified across 75 primary action pairs without overclaiming comprehensive site-wide certification.",
+        "Pre-deploy bit-for-bit hash verification passing (JS SHA-256: 9c2e6bfe6d9f7be7ac8e3d80cfb5848857c1462f7a1b908046e0b3c0a71d8b16).",
+        "Production deployment executed via Vercel CLI to personal scope (Deployment ID: dpl_E8GNxXFBYHfBoMuLVD3Dv39DTkSo).",
+        "Live post-deploy audit confirms 100% PASS across 1440, 768, 390 viewports with 24/24 exact URLs, 24/24 exact Evidence IDs, 0 console errors, 0 overflow, 0 commercial links.",
+        "24/7 Production health monitor transitioned to v3.422.0 (24 cards) baseline and verified healthy."
+      ]
+    },
+    "jayt_333_v3423": {
+      "directive": "JAYT-333 — EXECUTIVE PRODUCTION DEPLOYMENT DECREE v3.423.0",
+      "status": "PRODUCTION_RELEASE_ACTIVE__LIVE_VERIFIED_47_CARDS",
+      "production_status": "ACTIVE",
+      "activated_at": "2026-09-07T08:16:45.494Z",
+      "scope": "24_CIVIC_PLUS_23_LOCALITY_QUALIFIED_COMMERCIAL_CARDS",
+      "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+      "features_delivered": [
+        "Deployed the sealed v3.423.0 candidate without hot edits.",
+        "Expanded Production from 24 civic cards to 47 total cards: 24 civic plus 23 locality-qualified commercial cards.",
+        "Excluded B14_DMX_M170_DEN fail-closed due unresolved official locator HTTP 500 evidence.",
+        "Live post-deploy audit passed at 1440, 768 and 390 pixels with HTTP 200, exact 47-card runtime counts, zero console/runtime errors and zero horizontal overflow.",
+        "Confirmed zero affiliate links, zero tracking parameters, no synthetic voucher codes and deals_feed.json remaining empty.",
+        "Preserved v3.422.0 as rollback standby; rollback was not triggered because all live gates passed."
+      ]
+    },
+    "jayt_341_v3424_r1": {
+      "directive": "JAYT-341 — WORK ORDER R1 DEPLOYMENT (51 CARDS)",
+      "status": "PRODUCTION_RELEASE_ACTIVE__LIVE_VERIFIED_51_CARDS",
+      "production_status": "ACTIVE",
+      "activated_at": "2026-09-07T11:58:20.000Z",
+      "scope": "24_CIVIC_PLUS_27_COMMERCIAL_CARDS",
+      "deployment_id": "dpl_Ey7N7FGzDmNoJn9FFbnKRp64SL16",
+      "features_delivered": [
+        "Deployed sealed v3.424.0-r1 candidate including deals_feed.json (3 bytes, empty array []).",
+        "Expanded Production from 47 cards to 51 cards: 24 civic plus 27 commercial cards.",
+        "Integrated 4 Batch 15 cards: Galaxy Member, Galaxy-ShopeePay, Phi Long-Lenovo, Phi Long-HP.",
+        "Excluded B14_DMX_M170_DEN fail-closed and 3 HELD candidates.",
+        "Verified live HTTP 200 on /, /registry.json, /deals_feed.json.",
+        "Live post-deploy audit passed 100% across 1440, 768, 390 viewports with zero console/runtime errors and zero overflow.",
+        "Rollback not triggered; v3.423.0 (47 cards, dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA) retained as standby."
+      ]
+    }
+  },
+  "latest_live_audit_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_341_V3424_R1_LIVE_POST_DEPLOY_AUDIT.json"
+}

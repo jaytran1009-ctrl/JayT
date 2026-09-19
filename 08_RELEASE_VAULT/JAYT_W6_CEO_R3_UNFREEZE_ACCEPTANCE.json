@@ -1,0 +1,72 @@
+{
+  "audit_receipt_id": "RECEIPT_20260912_JAYT_W6_CEO_R3_UNFREEZE_ACCEPTANCE",
+  "mandate": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W6-ON-THE-SPOT-UNLEASH",
+  "timestamp": "2026-09-12T07:21:14Z",
+  "authority": "Codex CEO / Gatekeeper & Antigravity Technical Council",
+  "status": "ACCEPTED_STAGING_PREVIEW__PRODUCTION_SEALED_HOLD",
+  "verified_artifacts": {
+    "jayt_apex_interface_js": {
+      "targets_count": 6,
+      "byte_length": 436362,
+      "sha256": "09841bbead211ea9b635011249360548e3fec4ef3951bcb4654ce6a62aed9817"
+    },
+    "field_test_debrief": {
+      "path": "04_DATA_PIPELINE/field_test/results/W6_FIELD_TEST_QUALITATIVE_DEBRIEF.json",
+      "byte_length": 2970,
+      "sha256": "e9074816fb97bec50647100f8ab64ea15456146b6182151693824e2ea83db053",
+      "status": "DERIVED_FROM_OPERATOR_RECORDS__NOT_INDEPENDENTLY_VERIFIED"
+    },
+    "static_pipeline_seal": {
+      "verifier": "scripts/verify_pipeline_seal.cjs",
+      "sealed_files_count": 24,
+      "status": "24/24_PASS_ABSOLUTE"
+    },
+    "runtime_scheduler_gate": {
+      "log_file": "07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log",
+      "status": "HEALTHY",
+      "exit_code": 0
+    },
+    "puppeteer_mobile_audit": {
+      "receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W6_ON_THE_SPOT_RUNTIME_RECEIPT.json",
+      "viewport": "390x844",
+      "modal_latency_ms_max": 2.2,
+      "console_errors": 0,
+      "horizontal_overflow": false,
+      "neutral_disclaimer_present": true,
+      "verdict": "PASS"
+    }
+  },
+  "subsystem_audit_conclusions": {
+    "j397_fnb_directory_neutralized": {
+      "status": "PASS",
+      "claims_removed": "Fixed price, percentage discount, and combo claims removed from the J397 directory records",
+      "new_format": "Pure venue directory with operating hours, Da Nang addresses, and [📋 Xem menu tại quán] labels"
+    },
+    "w6_at_counter_tips_standardized": {
+      "status": "PASS",
+      "format": "3-step self-check checklist (HSSV card, e-wallet cashback QR, App Pick-up arbitrage)",
+      "disclaimer_banner": "⚠️ MẸO THAM KHẢO: Kiểm tra điều kiện áp dụng với thu ngân trước khi thanh toán."
+    },
+    "table_split_bill_and_vietqr": {
+      "status": "PASS",
+      "features": "Client-side VND integer split and existing QR/share UI remain local-only; this receipt is not merchant or payment evidence"
+    },
+    "supermarket_evidence_isolation": {
+      "status": "HELD",
+      "note": "Lotte Mart and Co.opmart captures remain isolated as RAW_EVIDENCE_ONLY in vault; no public feed injection"
+    },
+    "canonical_production_boundary": {
+      "status": "LOCKED",
+      "target_url": "https://jayt-production-v3420.vercel.app",
+      "live_deployment": "v3.449.0-j397",
+      "affiliate_enabled": false
+    }
+  },
+  "limitations": [
+    "Staging acceptance covers code, local QA, and neutral copy only; it does not verify merchant offers or partner authorization.",
+    "The field-test debrief is derived from operator records and is not independent evidence.",
+    "Supermarket captures remain RAW_EVIDENCE_ONLY pending semantic audit.",
+    "No production deployment, alias mutation, affiliate activation, or outbound tracking is authorized by this receipt."
+  ],
+  "verdict": "W6_UNFREEZE_APPROVED__STAGING_PREVIEW_ONLY__PRODUCTION_HOLD"
+}

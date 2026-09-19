@@ -1,0 +1,38 @@
+{
+  "manifest_id": "W3_PRODUCTION_RELEASE_MANIFEST",
+  "governing_directive": "CHAIRMAN-SUPREME-MANDATE-2026-0911-W3-PROD-AND-AFFILIATE",
+  "target_version": "v3.448.0-w3",
+  "canonical_production_url": "https://jayt-production-v3420.vercel.app",
+  "production_baseline": {"version": "v3.447.0-w2", "deployment_id": "dpl_BZ9JwJczaLSY45JTQiSsncKJzhVh"},
+  "candidate": {
+    "path": "08_RELEASE_VAULT/candidates/v3.448.0-w3",
+    "candidate_manifest": "08_RELEASE_VAULT/candidates/v3.448.0-w3/candidate_manifest.json",
+    "storefront_sha256": "a3bb1b0b7c35ad0f31ae4ea00e625e7f1ce206bd30597837604c4b07b0265e63",
+    "published_manifest_sha256": "00f576d97774389a4f1c9edea8a0c8b768519fc6d27842794636a522e044441b"
+  },
+  "accepted_payload": {
+    "wave_1_cinema_offers": ["B14_METIZ_U22_2D", "B18_GALAXY_HAPPY_DAY"],
+    "spotify_student_vn": "33.000 VND/month with SheerID eligibility and up to four-year term",
+    "danabus": "HSSV monthly-pass procedure and QR guidance only; current fare held as stale source",
+    "lunch_comparator": "client-side user inputs only: food price + delivery fee - voucher",
+    "ktx_stack": "client-side user-input simulation only",
+    "presentation": "Porcelain Clean consumer copy"
+  },
+  "preflight": {
+    "runtime_receipt": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W3_STAGING_RUNTIME_AUDIT_RECEIPT.json",
+    "runtime_receipt_sha256": "b4b61005437c3c73de111a1265e870e62ffed65d279d3363291b239889c60e67",
+    "viewports": [1440, 768, 390],
+    "runtime_errors": 0,
+    "horizontal_overflow": false,
+    "pipeline_seal": "24/24_PASS"
+  },
+  "governance_and_security_invariants": {
+    "is_approved": true,
+    "production_alias_mutation_authorized": true,
+    "production_authorized": true,
+    "affiliate_enabled": false,
+    "affiliate_tracking_enabled": false,
+    "pipeline_seal_j392_integrity": "24/24_FILES_MATCH"
+  },
+  "release_decision": "W3_PRODUCTION_PROMOTION_AUTHORIZED__AFFILIATE_REMAINS_DISABLED"
+}

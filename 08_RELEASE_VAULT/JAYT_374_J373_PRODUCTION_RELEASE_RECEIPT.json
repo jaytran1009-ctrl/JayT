@@ -1,0 +1,94 @@
+{
+  "receipt_id": "RECEIPT_JAYT_374_M1_J373_PRODUCTION_RELEASE",
+  "milestone": "M1_J373_RELEASE",
+  "version": "v3.437.0",
+  "authority": "JAYT-374 Chairman Decree",
+  "issued_at_utc": "2026-09-10T09:42:45.772Z",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment": {
+    "id": "dpl_2RbJN7YfKv2hufy3Vb6jMW8RDtpT",
+    "url": "https://jayt-production-v3420-f9wqtsm1g-kuntran777-6857s-projects.vercel.app",
+    "target": "production",
+    "state": "READY",
+    "rollback_baseline_deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr"
+  },
+  "payment_copy_fallback_verification": {
+    "status": "PASS",
+    "leading_zero_account_preserved": "0123456789",
+    "bank_name_rendered": "Techcombank",
+    "recipient_name_rendered": "JAYT LIVE RECIPIENT",
+    "amount_rendered": "79.001₫",
+    "memo_rendered": "JayT ban (chu ban)",
+    "subfield_copy_buttons": 5,
+    "copy_all_button": true,
+    "fallback_notice_text": "Không quét được? Sao chép thông tin chuyển khoản",
+    "qr_invalidation_on_edit": "VERIFIED",
+    "clipboard_denial_selectable_text_fallback": "VERIFIED"
+  },
+  "remote_assets_audit": {
+    "/": {
+      "statusCode": 200,
+      "bytes": 1227,
+      "sha256": "c1c0eefde3f96441fcd9ecd076cf972b31c3ef63de678b37a4e70ff3a00b2235",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/index.html": {
+      "statusCode": 200,
+      "bytes": 1227,
+      "sha256": "c1c0eefde3f96441fcd9ecd076cf972b31c3ef63de678b37a4e70ff3a00b2235",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/styles.css": {
+      "statusCode": 200,
+      "bytes": 64457,
+      "sha256": "a7145e90db0d44aaadfba29efe7957ad500d1d1b80f90f153160b664008e39d2",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/jayt_apex_interface.js": {
+      "statusCode": 200,
+      "bytes": 477835,
+      "sha256": "7aee5ae07b70f4b1c06b27f3497255212f1b35d5e340c1a6e3cd4e78216c9e3b",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    "/search.css": {
+      "statusCode": 200,
+      "bytes": 767,
+      "sha256": "7ce6d73b800433f88d066cd9af14f71e56beca2ca876b1f34589c4f2ae78f100",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/search.js": {
+      "statusCode": 200,
+      "bytes": 2763,
+      "sha256": "ac226ccb75a147e6d069e3a3cf0dec3a44da414c724e4965134d9e749f532bdc",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/deals_feed.json": {
+      "statusCode": 200,
+      "bytes": 114379,
+      "sha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/registry.json": {
+      "statusCode": 200,
+      "bytes": 48314,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    "/published_manifest.json": {
+      "statusCode": 200,
+      "bytes": 1219,
+      "sha256": "1b540520b2604a853da9a5a75999378f8ba599f7c6dcf2ad2008b89509038ef8",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    }
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "affiliate_enabled": false,
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  },
+  "rollback_policy": {
+    "action": "npx vercel alias set dpl_4f26vjY51Ky54cd4xqymrQKvnSVr jayt-production-v3420.vercel.app",
+    "trigger": "Critical runtime failure, recipient mismatch or RAM data containment failure"
+  }
+}

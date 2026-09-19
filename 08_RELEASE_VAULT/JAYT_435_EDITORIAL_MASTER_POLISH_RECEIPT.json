@@ -1,0 +1,36 @@
+{
+  "release_id": "JAYT-435",
+  "directive": "JAYT-435-NATURAL-FULL-BLEED-AND-REFINED-GEOMETRY",
+  "version": "v3.479.0-j435",
+  "timestamp": "2026-09-13T09:27:39.026Z",
+  "status": "PRODUCTION_TRUE_MASTER_POLISHED__NATURAL_FULL_BLEED__INSET_HEADER__PURGED_LINEN_VOID__SEAL_24_OF_24_PASS",
+  "canonical_url": "https://jayt-production-v3420.vercel.app/",
+  "deployment_id": "dpl_DGcPL56QDFN7WRSZDAfWGQCHf9bp",
+  "artifacts": {
+    "interface": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "bytes": 569745,
+      "sha256": "dfce499d5ad8d6b6269e1592f8bf37e33ed7d3202b63a11eedbc5a45bf001ac6"
+    },
+    "html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "bytes": 1726,
+      "sha256": "18b03f61a2526b789886f907bb2cc084fa5c029520c4b28d596d2c726f730844"
+    },
+    "manifest": {
+      "path": "deploy/published_manifest.json",
+      "bytes": 9933,
+      "sha256": "fb0dde5d100ee6ea1d34afab55aa14eb1c2c34c63956f7209f8815ae874dac90"
+    }
+  },
+  "deliverables": {
+    "natural_full_bleed": "Purged 100vw and negative margins, utilizing natural 100% width of main container with html/body overflow-x: clip; 0px horizontal overflow, 0px black strip on right edge",
+    "lunch_arbitrage_height_compression": "Enforced height: auto and purged all inherited min-heights, compressed header/control/card padding, reducing module height from 804px to ~580px and completely eliminating the empty linen void below the cards",
+    "inset_floating_glass_header": "Converted header into an inset glass capsule (top: 14px, border-radius: 18px, aligned pixel-to-pixel with 1300px hero borders), eliminating harsh edge collisions",
+    "hero_scale_majestic_presence": "Expanded hero radar to 58% width (max-width 680px), increased title to 46px (line-height 1.12), copy to 17px, primary CTA to 52px height (font 15.5px, weight 750)",
+    "calibrated_split_bill_gap": "Tightened Lunch Arbitrage -> Split Bill distance to 48px–60px, resolving the visual isolation of the Split Bill section",
+    "safety_boundaries": "affiliate_enabled: false strictly preserved on Production; QR optical camera scanning confirmed NOT_TESTED"
+  },
+  "pipeline_seal": "24/24 PASS TUYỆT ĐỐI across WS1 and WS2",
+  "runtime_health_gate": "HEALTHY / exit_code 0 across WS1 and WS2"
+}

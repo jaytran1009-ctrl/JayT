@@ -1,0 +1,20 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_141T_SEMANTIC_INTEGRITY",
+  "directive": "JAYT-141T — SEMANTIC INTEGRITY REPAIR BEFORE AUTONOMOUS ACTIVATION",
+  "severity": "P0_NORMALIZER_INTEGRITY_DEFICIT",
+  "status": "GREEDY_NORMALIZER_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-27T01:20:00+07:00",
+  "executive_ruling": "Contained greedy normalizer. Implementing DOM-aware bounded normalizer preserving banners, operational hours, structured semantic snapshots, and true block diffing.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_28_GREEDY_BANNER_AND_TIME_DELETION",
+      "description": "Greedy regex stripped div matching banner/popup and stripped HH:MM:SS operational condition hours."
+    },
+    {
+      "cause_id": "P0_CAUSE_29_MISSING_STRUCTURED_SEMANTIC_BASELINE_SNAPSHOT",
+      "description": "Registry lacked structured semantic snapshot, causing inability to compare structured offer blocks and links."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141s_greedy_normalizer/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/semantic_normalizer_141t.js & fresh_source_registry_141t.json"
+}

@@ -1,0 +1,24 @@
+{
+  "disclosure_id": "DISCLOSURE_092A_RELEASE_LINEAGE_REMEDIATION",
+  "created_at": "2026-08-25T14:16:00+07:00",
+  "directive": "JAYT-092A-RELEASE-LINEAGE-AND-MOBILE-FIRST-REMEDIATION",
+  "incident_summary": "During batch 092 execution, release candidate manifest and deployment receipt were modified during iterative test refinement, violating append-only governance. Additionally, DEPLOYMENT_RECEIPT_092.json erroneously asserted STAGING_READY_FOR_PUBLIC_DEPLOY without verified live CDN attestation.",
+  "frozen_historical_records": {
+    "RELEASE_CANDIDATE_092.json": {
+      "sha256": "789276e783112abd675dc82097c66a85600c896f2b894d265e720e8b77e326d7",
+      "status": "FROZEN_HISTORICAL_RECORD"
+    },
+    "DEPLOYMENT_RECEIPT_092.json": {
+      "sha256": "c63b88e235f1244d59ea16b19463028cc6350ce511d436f56c23ececaea8f488",
+      "status": "RECLASSIFIED_AS_LOCAL_STAGING_ATTESTATION_ONLY"
+    }
+  },
+  "governance_remediation_actions": [
+    "1. Removed --force flag completely from all release candidate emitters; target file collision is strictly fail-closed.",
+    "2. Separated runtime screenshot and evidence generation from test suites; test suites are 100% read-only.",
+    "3. Reclassified all pre-deployment receipts as staging-only attestations; deployment receipts with CDN response hash will only be created post-deploy upon explicit CEO command.",
+    "4. Enforced strict >=44px touch target verification and reduced mobile DOM height from ~7,000px to ~1,200px via compact expandable Watchlist.",
+    "5. Commercial catalog invariants locked: deals_feed.json: [] (is_approved: false)."
+  ],
+  "remediation_status": "IMPLEMENTED_APPEND_ONLY"
+}

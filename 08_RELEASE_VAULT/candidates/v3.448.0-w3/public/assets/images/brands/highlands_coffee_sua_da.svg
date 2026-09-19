@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="bg_sua_da" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="60%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <linearGradient id="can_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="40%" stop-color="#FDE68A"/>
+      <stop offset="70%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg_sua_da)"/>
+  <circle cx="530" cy="90" r="150" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="90" cy="330" r="130" fill="#ffffff" fill-opacity="0.04"/>
+
+  <!-- Branded Badge -->
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="160" height="30" rx="15" fill="#ffffff" fill-opacity="0.2"/>
+    <text x="80" y="20" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">CÀ PHÊ SỮA ĐÁ LON</text>
+  </g>
+
+  <!-- Branded Tag 'Hình minh họa chính hãng' -->
+  <g transform="translate(430, 40)">
+    <rect x="0" y="0" width="160" height="26" rx="6" fill="#000000" fill-opacity="0.45"/>
+    <text x="80" y="17" fill="#E5E7EB" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">HÌNH MINH HỌA CHUẨN</text>
+  </g>
+
+  <!-- Vector Can Graphics (Lốc 6 lon) -->
+  <g transform="translate(320, 205)" filter="url(#shadow)">
+    <!-- Back Can -->
+    <g transform="translate(-80, -90) scale(0.85)">
+      <rect x="0" y="0" width="70" height="130" rx="10" fill="url(#can_grad)"/>
+      <ellipse cx="35" cy="0" rx="35" ry="10" fill="#FDE68A"/>
+      <ellipse cx="35" cy="130" rx="35" ry="10" fill="#78350F"/>
+      <text x="35" y="70" fill="#78350F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" text-anchor="middle">HIGHLANDS</text>
+    </g>
+    <!-- Main Center Can -->
+    <g transform="translate(-40, -80)">
+      <rect x="0" y="0" width="80" height="150" rx="12" fill="url(#can_grad)"/>
+      <ellipse cx="40" cy="0" rx="40" ry="12" fill="#FEF3C7"/>
+      <ellipse cx="40" cy="150" rx="40" ry="12" fill="#78350F"/>
+      <rect x="10" y="35" width="60" height="80" rx="6" fill="#ffffff" fill-opacity="0.9"/>
+      <circle cx="40" cy="62" r="16" fill="#B91C1C"/>
+      <text x="40" y="67" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="800" text-anchor="middle">HL</text>
+      <text x="40" y="94" fill="#78350F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="800" text-anchor="middle">SỮA ĐÁ</text>
+      <text x="40" y="106" fill="#9CA3AF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="600" text-anchor="middle">235ml</text>
+    </g>
+    <!-- Right Can -->
+    <g transform="translate(30, -70) scale(0.9)">
+      <rect x="0" y="0" width="70" height="135" rx="10" fill="url(#can_grad)"/>
+      <ellipse cx="35" cy="0" rx="35" ry="10" fill="#FDE68A"/>
+      <ellipse cx="35" cy="135" rx="35" ry="10" fill="#78350F"/>
+      <text x="35" y="70" fill="#78350F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" text-anchor="middle">HIGHLANDS</text>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(50, 315)">
+    <text x="0" y="0" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">Cà phê Sữa Đá Lon Highlands</text>
+    <text x="0" y="30" fill="#FDE68A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600">Lốc 6 lon 235ml tiện lợi &#8226; 84.000₫ (~14.000₫/lon)</text>
+  </g>
+  <rect x="0" y="394" width="640" height="6" fill="#B91C1C"/>
+</svg>

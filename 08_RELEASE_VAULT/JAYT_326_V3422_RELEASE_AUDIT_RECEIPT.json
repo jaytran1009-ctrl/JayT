@@ -1,0 +1,67 @@
+{
+  "receipt_id": "JAYT_326_V3422_RELEASE_AUDIT_RECEIPT",
+  "governing_directive": "JAYT-326_327",
+  "generated_at_utc": "2026-09-05T07:45:39.570Z",
+  "target_version": "v3.422.0",
+  "baseline_production_version": "v3.421.0",
+  "candidate_scope": "TWENTY_FOUR_NON_COMMERCIAL_ENTITIES",
+  "preview_endpoint": "http://127.0.0.1:4175/",
+  "health_endpoint": "http://127.0.0.1:4175/health",
+  "verification_verdicts": {
+    "candidate_registry_integrity": "PASS__24_UNIQUE_ENTITIES",
+    "candidate_bundle_integrity": "PASS__PARITY_ZERO_DRIFT",
+    "exact_url_reconciliation": "PASS__24_OF_24_EXACT_EQUALITY",
+    "b11_01_disclaimer_compliance": "PASS__VERBATIM_CONFIRMED",
+    "b11_02_disclaimer_compliance": "PASS__VERBATIM_CONFIRMED",
+    "b11_02_schedule_rule_compliance": "PASS__VERBATIM_CONFIRMED",
+    "viewport_compatibility_1440_768_390": "PASS__3_OF_3_CLEAN",
+    "wcag_21_aa_contrast": "PASS__50_OF_50_PAIRS_COMPLIANT",
+    "touch_targets": "PASS__ZERO_UNDERSIZED",
+    "console_and_runtime_hygiene": "PASS__ZERO_ERRORS",
+    "commercial_locks": "PASS__DEALS_EMPTY_ARRAY_VOUCHER_ZERO",
+    "production_release_lock": "ENFORCED__IS_APPROVED_FALSE_DEPLOYMENT_PERMITTED_FALSE",
+    "rollback_standby_verified": "PASS__V3421_VERIFIED_ON_DISK"
+  },
+  "artifacts_verified": {
+    "bundle_root": "08_RELEASE_VAULT/candidates/v3.422.0/",
+    "bundle_manifest": "08_RELEASE_VAULT/candidates/v3.422.0/candidate_manifest.json",
+    "bundle_manifest_sha256": "d462f9a2e2b841540bc74f07f520df5fae4727e7a1fc91502fcf53673e7a4ae6",
+    "js_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/jayt_storefront_v3422.js",
+      "sha256": "9c2e6bfe6d9f7be7ac8e3d80cfb5848857c1462f7a1b908046e0b3c0a71d8b16"
+    },
+    "html_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/index.html",
+      "sha256": "bbc522387901d516bf37bc9d0c7516df913269a2fae166e2c51ce0778bf53f00"
+    },
+    "css_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/styles.css",
+      "sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04"
+    }
+  },
+  "manifest_sha256": "cabd359d75e20087ba004acc06880f1f3c49247beac94f98d3f051df6693cc87",
+  "dom_slot_verification": {
+    "status": "PASS_24_OF_24_SLOTS_MATCHED",
+    "evidence_ids_verified": 24,
+    "action_urls_verified": 24,
+    "exact_equality_enforced": true,
+    "b11_01_disclaimer_rendered": true,
+    "b11_02_disclaimer_rendered": true,
+    "b11_02_schedule_recurrence_rendered": true
+  },
+  "accessibility_boundary": {
+    "measured_action_contrast_pass": true,
+    "measured_pairs_count": 75,
+    "full_wcag_certification_claimed": false,
+    "boundary_note": "Strictly limited to measured primary action button contrast; no sitewide WCAG overclaim."
+  },
+  "draft_decree_sha256": "4eae958d0c0740a411d36e4edaf1602934b45c6af7c5589ae1ee93e5a3047c0a",
+  "qa_receipt_sha256": "f2178ea799ad7e2e63fbd915cdb65a4b663050ad9c75ccca99e3c94d59234fc5",
+  "dom_receipt_sha256": "4fb1e48f82030a825c0e974cd852722f86b8d83010f6ff10a007f04a900813f1",
+  "qa_tests_summary": {
+    "total_tests": 33,
+    "passed_tests": 33,
+    "exact_slot_evidence_id_verification": "PASS_24_OF_24",
+    "negative_security_test": "PASS_FAIL_CLOSED_PROVEN"
+  }
+}

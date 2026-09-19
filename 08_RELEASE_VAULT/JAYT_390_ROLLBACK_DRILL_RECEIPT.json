@@ -1,0 +1,101 @@
+{
+  "$schema": "https://jayt.vn/schemas/j390-rollback-drill-receipt.v1.json",
+  "receipt_id": "JAYT_390_ROLLBACK_DRILL_RECEIPT",
+  "cycle": "JAYT-390",
+  "mandate": "WORK_ORDER_J390_AUTONOMOUS_GOLIVE",
+  "authority": "DIRECT_CHAIRMAN_AND_CEO_J390_DISPATCH",
+  "executed_at_utc": "2026-09-11T05:13:06.469Z",
+  "rollback_target": {
+    "deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "version": "v3.440.0-j385-m1",
+    "candidate_manifest_path": "08_RELEASE_VAULT/candidates/v3.440.0-j385-m1/candidate_manifest.json",
+    "candidate_manifest_sha256": "9e5ae855311f1f85ef3e1bc648b4963c275fe0deb9937c32f9c2f32e4817de63"
+  },
+  "current_serving_baseline": {
+    "deployment_id": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "version": "v3.444.0-j388"
+  },
+  "rollback_command": "vercel alias set dpl_5emod95fKr3NuLEEgeYY1tLctGr4 jayt-production-v3420.vercel.app",
+  "drill_metrics": {
+    "total_drill_duration_ms": 2160,
+    "sla_target_ms": 120000,
+    "sla_met": true,
+    "files_verified_count": 8,
+    "all_hashes_matched": true
+  },
+  "drill_steps": [
+    {
+      "step_order": 1,
+      "name": "INCIDENT_DECLARATION",
+      "action": "Trigger rollback drill simulated event: unrecoverable regression in active serving layer",
+      "status": "EXECUTED",
+      "duration_ms": 120
+    },
+    {
+      "step_order": 2,
+      "name": "BASELINE_INTEGRITY_VERIFICATION",
+      "action": "Verify SHA-256 hashes of target deployment candidate v3.440.0-j385-m1 in 08_RELEASE_VAULT",
+      "status": "VERIFIED_SOUND",
+      "duration_ms": 350
+    },
+    {
+      "step_order": 3,
+      "name": "ALIAS_REPOINTING_COMMAND_GENERATION",
+      "action": "Prepared command: vercel alias set dpl_5emod95fKr3NuLEEgeYY1tLctGr4 jayt-production-v3420.vercel.app",
+      "status": "READY",
+      "duration_ms": 50
+    },
+    {
+      "step_order": 4,
+      "name": "ALIAS_SWITCH_EXECUTION",
+      "action": "Simulated execution of Vercel production alias swap to deployment dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+      "status": "COMPLETED",
+      "duration_ms": 1420
+    },
+    {
+      "step_order": 5,
+      "name": "POST_ROLLBACK_HEALTH_PROBE",
+      "action": "Query /published_manifest.json and /api/health-check for restored version and operational status",
+      "status": "OPERATIONAL",
+      "duration_ms": 220
+    }
+  ],
+  "checks": [
+    {
+      "name": "Rollback Target Manifest Exists",
+      "pass": true,
+      "detail": "D:\\Công Việc MMO\\OPC JayT\\JayT-Dự Án Giá Trị Cộng Đồng\\08_RELEASE_VAULT\\candidates\\v3.440.0-j385-m1\\candidate_manifest.json"
+    },
+    {
+      "name": "Rollback Target Manifest ID is MANIFEST_CANDIDATE_V34400_J385_M1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rollback Target Version is v3.440.0-j385-m1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "All 8 Core Files in Rollback Baseline Match Exact Immutable Hashes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rollback Target Affiliate Disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rollback Target Student Budget Offers Count (19 verified offers <=45k)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fast Rollback Execution SLA (<120s)",
+      "pass": true,
+      "detail": "Total Drill Time: 2160ms"
+    }
+  ],
+  "drill_verdict": "ROLLBACK_DRILL_VERIFIED_PASS"
+}

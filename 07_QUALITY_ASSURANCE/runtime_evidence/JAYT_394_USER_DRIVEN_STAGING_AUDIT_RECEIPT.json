@@ -1,0 +1,43 @@
+{
+  "receipt_id": "JAYT_394_USER_DRIVEN_STAGING_AUDIT_RECEIPT",
+  "governing_directive": "JAYT-394",
+  "scope": "LOCAL_STAGING_ONLY",
+  "production_mutated": false,
+  "source_sha256": "2831c37250237e12d8bc306db5a26c80cbfa60ac43b4e10530edc5e6a4e8d696",
+  "delivery_platform_capture": {
+    "automated_shopeefood_capture": "DISABLED_BY_POLICY",
+    "collector_sha256": "351a6587d5b29cfb94ca9e045e960de57fab142ce6324b23e90ea3279cf9426b",
+    "browser_or_network_request_made_by_disabled_collector": false
+  },
+  "lunch_comparator_contract": {
+    "providers_labeled": ["ShopeeFood", "GrabFood", "BeFood"],
+    "formula": "user_entered_food_price + user_entered_delivery_fee - user_entered_voucher",
+    "provider_fee_or_voucher_defaults_present": false,
+    "provider_ranking_present": false,
+    "required_transparency_label_present": true,
+    "formula_replay": {
+      "food_price_vnd": 80000,
+      "delivery_fee_vnd": 12000,
+      "voucher_vnd": 5000,
+      "expected_total_vnd": 87000,
+      "status": "PASS"
+    }
+  },
+  "responsive_and_interaction_audit": [
+    {"viewport_width_px": 1440, "scroll_width_px": 1440, "samples": 50, "p50_ms": 0.5, "p95_ms": 0.7, "max_ms": 1.8, "console_or_runtime_errors": 0, "horizontal_overflow": false},
+    {"viewport_width_px": 768, "scroll_width_px": 768, "samples": 50, "p50_ms": 0.5, "p95_ms": 0.7, "max_ms": 1.4, "console_or_runtime_errors": 0, "horizontal_overflow": false},
+    {"viewport_width_px": 390, "scroll_width_px": 390, "samples": 50, "p50_ms": 0.5, "p95_ms": 0.7, "max_ms": 1.1, "console_or_runtime_errors": 0, "horizontal_overflow": false}
+  ],
+  "other_wave_2_components": {
+    "ktx_stack_simulator": "USER_ENTERED_SIMULATION_PRESENT",
+    "spotify_student_vietnam": "CONDITION_BOUND_STAGING_PRESENT",
+    "legacy_redirect_tokens": "ZERO"
+  },
+  "release_boundary": {
+    "production_version": "v3.446.0-j392",
+    "production_deployment_id": "dpl_6SZZk5KYChanKHjvVKZxXn5hpc78",
+    "affiliate_enabled": false,
+    "wave_2_production_authorized": false
+  },
+  "decision": "J394_STAGING_ACCEPTED__USER_DRIVEN_COMPARATOR_FROZEN__WAVE_2_PRODUCTION_HELD"
+}

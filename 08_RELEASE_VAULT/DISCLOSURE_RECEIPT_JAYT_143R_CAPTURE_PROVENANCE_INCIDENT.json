@@ -1,0 +1,19 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_143R_CAPTURE_PROVENANCE_INCIDENT",
+  "directive": "JAYT-143R: CAPTURE-PROVENANCE INCIDENT, HARNESS CERTIFICATION & SCHEDULER FREEZE",
+  "severity": "P0_CAPTURE_PROVENANCE_INCIDENT",
+  "status": "HARNESS_CERTIFICATION_MANDATED_SCHEDULER_FROZEN",
+  "disclosed_at": "2026-08-26T19:09:36.117Z",
+  "executive_ruling": "Freezing scheduler, isolating synthetic 143 receipt outputs, building local test-server certification for capture harness, and requiring byte-level provenance verification before re-crawling live targets.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_40_SYNTHETIC_RECEIPT_STATUS_AND_REDIRECT_FALLBACK",
+      "description": "Permitted ternary fallbacks (resolvedStatus = ... ? ... : (networkError ? 504 : 200); redirect_chain = ... ? actual : [{ finalUrl, resolvedStatus }]) synthesizing receipt fields when no browser network event was observed."
+    },
+    {
+      "cause_id": "P0_CAUSE_41_INSECURE_BROWSER_LAUNCH_FLAGS",
+      "description": "Used --disable-web-security and --ignore-certificate-errors flags during browser launch."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_143_synthetic_receipt_quarantine/"
+}

@@ -1,0 +1,36 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_135R",
+  "directive": "JAYT-135R — INVALID CAPTURE CONTAINMENT & EVIDENCE-FIRST REBUILD",
+  "severity": "P0_DATA_COLLECTION_METHODOLOGY_CONTAMINATION",
+  "status": "BATCH_135_REJECTED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T18:48:30+07:00",
+  "executive_ruling": "CEO independent audit discovered that Batch 135 was contaminated by flawed collector and classifier implementations. Entire batch is formally rejected as supply evidence and quarantined.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_01_SYNTHETIC_TIMEOUT_FALLBACK",
+      "category": "SYNTHETIC_FALLBACK_CONTAMINATION",
+      "description": "Collector generated synthetic placeholder text when network timed out ('OFFLINE_CACHE_OR_TIMEOUT') rather than marking status as BLOCKED/INCOMPLETE."
+    },
+    {
+      "cause_id": "P0_CAUSE_02_CLASSIFIER_TARGET_ID_HARDCODING",
+      "category": "HARDCODED_CLASSIFICATION_BIAS",
+      "description": "Classifier assigned ACTIVE_VERIFIED status and terms by matching target_id rather than parsing and extracting verbatim quotes from actual physical DOM."
+    },
+    {
+      "cause_id": "P0_CAUSE_03_UNPROVEN_CLAIMS_IN_ARTIFACTS",
+      "category": "PROVENANCE_LINEAGE_FAILURE",
+      "description": "DanaBus 6.000₫ claim was assigned despite the captured page ending at an error URL (Error.aspx)."
+    },
+    {
+      "cause_id": "P0_CAUSE_04_MISSING_HTML_AND_SCREENSHOT_PROVENANCE",
+      "category": "EVIDENCE_COMPLETENESS_DEFICIT",
+      "description": "Batch lacked full DOM page.html snapshots and viewport screenshot.png visual evidence proofs."
+    }
+  ],
+  "quarantine_reference": {
+    "vault_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/",
+    "manifest_path": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_135_contaminated_supply/BATCH_135_QUARANTINE_MANIFEST.json",
+    "quarantined_files_count": 115
+  },
+  "remediation_directive": "JAYT-136: Real browser evidence supply batch with zero synthetic fallbacks, mandatory page.html/page.txt/screenshot.png, and 100% verbatim quote extraction."
+}

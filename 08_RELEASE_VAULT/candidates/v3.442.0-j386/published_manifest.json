@@ -1,0 +1,23 @@
+{
+  "version": "v3.442.0-j386",
+  "release_scope": "JAYT_386_SECURITY_AND_LEVEL_MAX_RELEASE",
+  "mandate_cycle": "JAYT-386",
+  "governing_directive": "WORK_ORDER_J386_SECURITY_AND_LEVEL_MAX",
+  "authority": "CHAIRMAN_AND_CEO_J386_DISPATCH",
+  "deployed_at_utc": "2026-09-11T02:00:00Z",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+  "features_delivered": {
+    "SSRF_SECURITY_HARDENING": "Eliminated generic URL probing. Enforced strict POST JSON { itemId: string }, DNS resolution IP range denial (RFC 1918, loopback, link-local, multicast, reserved), IP pinning in TLS connection, hop termination, and error sanitization.",
+    "PRODUCT_ASSET_AND_AFFILIATE_MAPPING": "Mapped 30 exact Mall SKUs with transparent asset metadata, dimensions, SHA-256 hashes, truthful observed pricing (OBSERVED_POINT_IN_TIME, no synthetic 30-day floor), and per-provider affiliate validation (Shopee Mall and LazMall activated; others direct official).",
+    "CAMPUS_DOCK_AND_FOOD_FILTER": "Docked immediately below Hero with 4 campus anchors (Bách Khoa/Sư Phạm, Kinh Tế DUE, Duy Tân/Hải Châu, Sơn Trà) and fast food filter (<=35k & <=1000m straight-line distance).",
+    "LUNCH_ARBITRAGE_COMPARATOR": "3-column delivery comparator (ShopeeFood, GrabFood, Xanh SM) with synchronized budget slider (25k-150k) and <30ms input-to-render latency.",
+    "ZALO_PASS_CANVAS_GENERATOR": "Integrated Group Share Pass button on every eligible F&B/cinema card, drawing high-res 1080x1440 Canvas PNG with integer VND conservation."
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "affiliate_enabled_providers": ["SHOPEE", "LAZADA"],
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  }
+}

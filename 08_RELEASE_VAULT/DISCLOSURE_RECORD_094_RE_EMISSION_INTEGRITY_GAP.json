@@ -1,0 +1,17 @@
+{
+  "disclosure_id": "DISCLOSURE_RECORD_094_RE_EMISSION_INTEGRITY_GAP",
+  "work_order": "JAYT-094A-STAGING-CINEMATIC-BENTO-AND-DISCLOSURE",
+  "created_at": "2026-08-25T15:00:10.000Z",
+  "incident_type": "APPEND_ONLY_LINEAGE_GAP_DISCLOSURE",
+  "affected_artifact": "08_RELEASE_VAULT/RELEASE_CANDIDATE_094.json",
+  "incident_summary": "Tệp RELEASE_CANDIDATE_094.json đã bị xóa và sinh lại trong cùng phiên thực thi chỉ thị JAYT-094. Điều này vi phạm nguyên tắc Append-Only bất biến và làm mất chuỗi byte đối chiếu của bản phát hành đầu tiên.",
+  "root_cause_analysis": "Quy trình emitter gặp lỗi thiếu tệp deals_feed.json trong danh sách artifacts của Source of Truth dẫn đến việc phải tái khởi tạo tệp manifest sau khi bổ sung đường dẫn chuẩn.",
+  "remediation_actions": [
+    "1. Đóng băng và cô lập hoàn toàn RELEASE_CANDIDATE_094.json trên đĩa ở trạng thái hiện tại (không chỉnh sửa, không tái dựng).",
+    "2. Ban hành biên lai công bố sự cố append-only DISCLOSURE_RECORD_094_RE_EMISSION_INTEGRITY_GAP.json.",
+    "3. Chuyển toàn bộ các cải tiến giao diện và kiểm thử sang Release Candidate 094A (RELEASE_CANDIDATE_094A.json, version 2.4.1) với mã băm và ID độc lập.",
+    "4. Duy trì khóa sản xuất tuyệt đối: deals_feed.json=[] và is_approved=false."
+  ],
+  "governance_status": "SUPERSEDED_BY_094A",
+  "production_lock_preserved": true
+}

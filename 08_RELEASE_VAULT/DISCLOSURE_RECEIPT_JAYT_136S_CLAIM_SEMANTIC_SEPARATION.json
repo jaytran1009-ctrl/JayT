@@ -1,0 +1,28 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_136S",
+  "directive": "JAYT-136S — CLAIM-SEMANTIC SEPARATION & RELATIONAL-LINEAGE GATE",
+  "severity": "P0_CLASSIFIER_INTEGRITY_AND_SEMANTIC_OVERLAP_DEFICIT",
+  "status": "CLASSIFICATION_LAYER_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T19:01:00+07:00",
+  "executive_ruling": "Independent CEO audit discovered that 136R violated architectural separation by branching on target_id and recycling single words across all 4 claim fields. All 7 offers demoted to UNREVIEWED_RAW_CAPTURE.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_09_HARDCODED_TARGET_ID_BRANCHING",
+      "description": "claim_binding_engine_136r.js contained explicit if (targetId === \"TARGET_136_XX\") branching instead of general semantic parsing."
+    },
+    {
+      "cause_id": "P0_CAUSE_10_IDENTICAL_CLAIM_RECYCLING",
+      "description": "The exact same string (e.g. MUA1TANG1, sinh viên, Student Developer Pack) was recycled across offer, terms, validity, and locality fields."
+    },
+    {
+      "cause_id": "P0_CAUSE_11_MISSING_RELATIONAL_LINEAGE",
+      "description": "Nationwide offers lacked formal relational receipts binding the nationwide promotion to official Da Nang physical venue captures."
+    },
+    {
+      "cause_id": "P0_CAUSE_12_SHALLOW_OFFSET_VERIFICATION",
+      "description": "Test suite only verified substring existence for offer/terms without enforcing semantic differentiation, disjoint offsets, or context windows."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136r_failed_classification/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/claim_semantic_lineage_engine_136s.js (Strict 4-Fragment Disjoint Semantic & Relational Lineage Engine)"
+}

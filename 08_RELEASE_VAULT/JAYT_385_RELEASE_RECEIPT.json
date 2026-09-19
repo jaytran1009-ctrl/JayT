@@ -1,0 +1,59 @@
+{
+  "$schema": "https://jayt.vn/schemas/release-receipt.v1.json",
+  "receipt_id": "JAYT_385_FINAL_RELEASE_RECEIPT",
+  "cycle": "JAYT-385",
+  "authority": "CHAIRMAN_DIRECTIVE__CEO_R3_GATE",
+  "milestone_completed": "M2_AFFILIATE_AND_HEALTH",
+  "status": "COMPLETED_AND_RELEASED",
+  "released_at_utc": "2026-09-10T16:57:32.414Z",
+  "released_at_local": "2026-09-10T23:57:32.416+07:00",
+  "serving_environment": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "active_deployment_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+    "project_name": "jayt-production-v3420",
+    "scope_team": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4"
+  },
+  "release_version": "v3.441.0-j385-m2",
+  "candidate_manifest_sha256": "f2329db6a1c5e15992c0be64ade2d3008545078fad7d86b10ae1752bf9df1ef3",
+  "milestones_summary": {
+    "M0_R1": "Eliminated all error screenshot media and Highlands-to-Mi-Quang fallback. Excluded 479k/599k party combos from student feed. Enforced strict 19 offers under 45k VND.",
+    "M1": "Implemented 5 ecosystem tabs, 3-step guidance with live clipboard copy / in-store action, 11:30 & 17:30 planning reminders, budget slider calculator with 'Thấp nhất trong các mức đã nhập', 7-day cinema schedule.",
+    "M2": "Reconciled partner credentials and capabilities without printing secrets. Delivered 30 exact Mall SKUs with price observations and zero synthetic history. Implemented server-side health worker and /api/health-check with <=60s freshness target. Cleaned up and ledgered preview infrastructure."
+  },
+  "commercial_and_technical_boundaries": {
+    "global_affiliate_enabled": false,
+    "revenue_assertion_policy": "PROVIDER_CONFIRMED_CONVERSIONS_ONLY__ZERO_CLICK_CLAIMS",
+    "secret_redaction_policy": "STRICT_ZERO_PLAINTEXT_SECRETS",
+    "optical_qr_scanning": "NOT_TESTED",
+    "price_history_synthetic_backfill": false,
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  },
+  "deliverables": {
+    "provider_capability_matrix": {
+      "path": "06_TRUST_AND_EVIDENCE/j385/provider_capability_matrix.json",
+      "sha256": "21d0772eac84ac6852cf93d94e56f5b069f9a3259d5c5a7e8d43708e990a7936"
+    },
+    "sku_price_observations": {
+      "path": "06_TRUST_AND_EVIDENCE/j385/sku_price_observations.json",
+      "sha256": "ce5f4e6a07fdab8340e017565fe1de38ab1410e5f1d57f92a084461c1ec43756"
+    },
+    "preview_cleanup_ledger": {
+      "path": "06_TRUST_AND_EVIDENCE/j385/preview_cleanup_ledger.json",
+      "sha256": "01ec0ca406c76dacbf22fb60c27d40ff0c3a3f5072407ab2d2da8fffea5c943a"
+    },
+    "offer_asset_mapping": {
+      "path": "06_TRUST_AND_EVIDENCE/j385/offer_asset_mapping.json",
+      "sha256": "2a2d3b95838dd3db3f55dd0ae08f05d01b3765167ecce2191ab00a470f0bc87e"
+    },
+    "live_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_385_LIVE_RECEIPT.json",
+      "sha256": "66c12ba133a5e3d6dd868300492f2a701dba198ca1214748509a612cfe748c74"
+    },
+    "candidate_manifest": {
+      "path": "08_RELEASE_VAULT/candidates/v3.441.0-j385-m2/candidate_manifest.json",
+      "sha256": "f2329db6a1c5e15992c0be64ade2d3008545078fad7d86b10ae1752bf9df1ef3"
+    }
+  }
+}

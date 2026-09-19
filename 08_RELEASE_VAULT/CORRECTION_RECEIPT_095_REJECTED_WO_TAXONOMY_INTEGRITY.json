@@ -1,0 +1,17 @@
+{
+  "receipt_id": "CORRECTION_RECEIPT_095_REJECTED_WO_TAXONOMY_INTEGRITY",
+  "work_order": "JAYT-095-STAGING-UI-CONVERGENCE-AND-FREEZE",
+  "created_at": "2026-08-25T15:22:00.000Z",
+  "correction_type": "STATUS_TAXONOMY_INTEGRITY_RECTIFICATION",
+  "affected_file": "07_QUALITY_ASSURANCE/memory_transaction_manager_057.js",
+  "incident_summary": "Tệp memory_transaction_manager_057.js từng chứa các mã work order bị từ chối (094, 094A, 094B) trong tập hợp HISTORICAL_CEO_APPROVED_WORK_ORDERS. Điều này mâu thuẫn với các hồ sơ disclosure (DISCLOSURE_RECORD_094_..., DISCLOSURE_RECORD_094A_..., DISCLOSURE_RECORD_094B_...) xác định cả ba đều ở trạng thái REJECTED.",
+  "remediation_actions": [
+    "1. Đã xóa vĩnh viễn '094', '094A', '094B' khỏi HISTORICAL_CEO_APPROVED_WORK_ORDERS trong memory_transaction_manager_057.js.",
+    "2. Thêm bài kiểm thử negative test trong bộ kiểm thử QA xác nhận việc bất kỳ ai gán trạng thái ACCEPTED BY CEO hoặc CEO APPROVED cho 094, 094A, 094B đều bị chặn fail-closed ngay lập tức.",
+    "3. Ban hành biên lai sửa chữa CORRECTION_RECEIPT_095_REJECTED_WO_TAXONOMY_INTEGRITY.json.",
+    "4. Đóng work order 095 ở trạng thái STAGING UI REVIEW ONLY; không phát hành bất kỳ release candidate nào.",
+    "5. Duy trì khóa sản xuất tuyệt đối: deals_feed.json=[] và is_approved=false."
+  ],
+  "governance_verdict": "RECTIFIED_AND_ENFORCED",
+  "production_lock_preserved": true
+}

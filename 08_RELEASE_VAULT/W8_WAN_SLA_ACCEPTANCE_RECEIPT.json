@@ -1,0 +1,21 @@
+{
+  "receipt_id": "W8_WAN_SLA_ACCEPTANCE_RECEIPT",
+  "recorded_at": "2026-09-13T13:40:00+07:00",
+  "status": "WAN_SLA_850MS_PASS_FOR_RECORDED_SAMPLE_ONLY",
+  "preview_deployment_id": "dpl_5jXYuruSkkGeYL6DnF9HiLN1w8up",
+  "function_region": "sin1",
+  "route": "hkg1_to_sin1",
+  "sample_seconds": [0.819950, 0.657527, 0.655265, 0.644085],
+  "sample_count": 4,
+  "threshold_seconds": 0.850,
+  "maximum_observed_seconds": 0.819950,
+  "result": "PASS",
+  "limitations": [
+    "Not a global latency guarantee",
+    "Small sample from one test location",
+    "Short-link upstream resolution may take longer",
+    "Ephemeral instance cache does not guarantee persistence"
+  ],
+  "commercial_release_authorized": false,
+  "production_alias_mutated": false
+}

@@ -1,0 +1,21 @@
+{
+  "version": "v3.437.0",
+  "release_scope": "JAYT_374_M1_J373_PRODUCTION_RELEASE_WITH_PAYMENT_COPY_FALLBACK",
+  "authority": "JAYT-374 Chairman Decree",
+  "deployed_at_utc": "2026-09-10T09:42:03.833Z",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "rollback_baseline_target": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+  "features_delivered": {
+    "ONSITE_01": "3-step at-counter offers and branch search with list-price fidelity",
+    "SPLIT_02": "Itemized split bill with exact integer VND quotient/remainder allocation",
+    "QR_03": "VietQR with explicit recipient confirmation and immediate invalidation on edit",
+    "FALLBACK_04": "Multi-field payment copy fallback (bank, account with leading-zero, name, exact amount, memo), copy-all, and selectable textarea fallback for clipboard denials",
+    "UTILITIES_05": "Strict UNKNOWN for unverified branch utilities (Wi-Fi, DanaBus) and 500m campus proximity",
+    "PACKAGING_06": "Explicit search.css and search.js dependencies packaged for zero root/public precedence discrepancy"
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "affiliate_enabled": false,
+    "production_deployment_authorized": true
+  }
+}

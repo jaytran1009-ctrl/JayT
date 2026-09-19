@@ -1,0 +1,64 @@
+{
+  "incident_id": "INCIDENT-JAYT-134D",
+  "directive": "JAYT-134D — RENDERED-CLAIM ERADICATION",
+  "severity": "P0_CRITICAL",
+  "status": "REJECTED_CONTAINMENT_INCOMPLETE",
+  "reported_at": "2026-08-26T18:02:21+07:00",
+  "eradicated_at": "2026-08-26T18:03:50+07:00",
+  "summary": "Total eradication of all rendered commercial literals, voucher TIKTOKVIP0D, handwritten discount formulas, handwritten roulette places, commercial fallback strings, and unmapped hub labels.",
+  "remediated_surfaces": [
+    {
+      "surface_id": "SURF_01_SYNTHETIC_VOUCHERS",
+      "description": "Voucher TIKTOKVIP0D ('Min spend 0đ') and duplicate voucher vault grids.",
+      "action": "PURGED_AND_REPLACED_WITH_CANONICAL_POLICY_DIRECTORY",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "ERADICATED"
+    },
+    {
+      "surface_id": "SURF_02_HANDWRITTEN_STACK_FORMULA",
+      "description": "Hardcoded discount values: -8.500₫, -15.000₫, -21.000₫, 'Thực Trả Đáy 40.500₫'.",
+      "action": "REPLACED_WITH_NEUTRAL_EDUCATIONAL_EXPLAINER",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "ERADICATED"
+    },
+    {
+      "surface_id": "SURF_03_HANDWRITTEN_ROULETTE_PLACES",
+      "description": "Array of handwritten venues with fake priceNums (25k, 35k), fake tags, and fake distances (0.5km, 0.8km).",
+      "action": "REPLACED_WITH_CANONICAL_26_LOCATIONS_FROM_FOUR_LAYER_DATASET",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "ERADICATED"
+    },
+    {
+      "surface_id": "SURF_04_COMMERCIAL_FALLBACKS",
+      "description": "Fallback string in exportGroupHangoutPass self-assigning 'Metiz Cinema Helio', '45.000₫', 'Số 01 Đường 2/9'.",
+      "action": "NEUTRALIZED_TO_EMPTY_STATE_AND_STRICT_PAYLOAD_VALIDATION",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "ERADICATED"
+    },
+    {
+      "surface_id": "SURF_05_UNMAPPED_HUB_LABELS",
+      "description": "Labels 'Cứu Đói ≤ 25K', 'Đặc Quyền .edu.vn (0đ)', 'Săn Đồ KTX Xếp Mã'.",
+      "action": "NEUTRALIZED_TO_CANONICAL_INFORMATIONAL_LABELS",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "ERADICATED"
+    }
+  ],
+  "source_hashes": {
+    "jayt_apex_interface_js": {
+      "sha256": "0117b86b66926465d307bc5eb582cfaaecca076bebcadb4a136cad2e106f609d"
+    },
+    "index_html": {
+      "sha256": "3d3002006491779d8e96b98d06054e2d407cf52c1ba853457c4ff7e98ff8b740"
+    }
+  },
+  "eradication_invariants": {
+    "zero_fake_vouchers": true,
+    "zero_handwritten_stack_formulas": true,
+    "zero_fake_places_or_distances": true,
+    "zero_commercial_fallbacks": true,
+    "zero_unmapped_hub_labels": true,
+    "canonical_mapping_verified": true
+  },
+  "ceo_rejection_reason": "Audited code still rendered an underground catalog through hardcoded super-app renderers (ShopeeFood 17k, Freeship 18k, 7-day cinema schedule, Jollibee 15, Roulette, fallback prices/addresses).",
+  "superseded_by": "INCIDENT-JAYT-134E"
+}

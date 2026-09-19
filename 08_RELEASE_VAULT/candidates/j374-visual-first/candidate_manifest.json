@@ -1,0 +1,66 @@
+{
+  "manifest_id": "MANIFEST_CANDIDATE_V3438_J374_VISUAL_FIRST",
+  "target_version": "v3.438.0-j374",
+  "parent_candidate": "08_RELEASE_VAULT/candidates/v3.437.0-j373",
+  "parent_candidate_manifest_sha256": "7dcc5f21a9f48f0541c039313cd07559e24492bea086e933d4be312413a7361c",
+  "governing_directive": "WORK_ORDER_J374_VISUAL_FIRST_RETENTION",
+  "design_specification": "01_EXECUTIVE_COUNCIL/JAYT_374_DESIGN_HANDOFF.md",
+  "authority": "JAYT-374 Chairman Decree",
+  "sealed_at_utc": "2026-09-10T09:49:45.339Z",
+  "production_deployment_authorized": true,
+  "production_alias_mutation_authorized": true,
+  "affiliate_enabled": false,
+  "visual_asset_manifest_path": "06_TRUST_AND_EVIDENCE/j374/visual_asset_manifest.json",
+  "files": {
+    "index.html": {
+      "bytes": 1232,
+      "sha256": "cb394241641afc0c63fa964d843f17cf851d096e63ec5591402cbcaae853d719"
+    },
+    "styles.css": {
+      "bytes": 74527,
+      "sha256": "726a1096f0863824f842b4862a6dab2078307f358ebe39f434f80a664ce5b45a"
+    },
+    "jayt_apex_interface.js": {
+      "bytes": 500019,
+      "sha256": "8bc7b66162573dd3366a47f6ea95e26a4d0f8d7b25d4ecf70d465f0b716199e6"
+    },
+    "search.css": {
+      "bytes": 767,
+      "sha256": "7ce6d73b800433f88d066cd9af14f71e56beca2ca876b1f34589c4f2ae78f100"
+    },
+    "search.js": {
+      "bytes": 2763,
+      "sha256": "ac226ccb75a147e6d069e3a3cf0dec3a44da414c724e4965134d9e749f532bdc"
+    },
+    "deals_feed.json": {
+      "bytes": 114379,
+      "sha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60"
+    },
+    "registry.json": {
+      "bytes": 48314,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3"
+    },
+    "published_manifest.json": {
+      "bytes": 1404,
+      "sha256": "7a8d72217f8ec246d7dbbb62fb77dac6d7144c41152ffdab85808d9405eabc54"
+    }
+  },
+  "qa_verification": {
+    "desktop_1440": "PASS",
+    "tablet_768": "PASS",
+    "mobile_390": "PASS",
+    "schedule_rhythm": "PASS",
+    "detail_drawer": "PASS",
+    "pagination_coverage": "PASS (65/65 reachable)",
+    "group_share_pass": "PASS",
+    "evidence_screenshots": [
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_desktop_1440_dark_atf.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_desktop_1440_light_atf.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_tablet_768_light.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_mobile_390_light.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_detail_drawer_open_1440.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_mobile_390_drawer_open.png",
+      "07_QUALITY_ASSURANCE/runtime_evidence/j374_zalo_pass_modal_open.png"
+    ]
+  }
+}

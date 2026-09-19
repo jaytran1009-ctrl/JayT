@@ -1,0 +1,62 @@
+{
+  "$schema": "https://jayt.vn/schemas/release-receipt.v1.json",
+  "receipt_id": "JAYT_386_FINAL_RELEASE_RECEIPT",
+  "cycle": "JAYT-386",
+  "mandate": "WORK_ORDER_J386_SECURITY_AND_LEVEL_MAX",
+  "authority": "CHAIRMAN_AND_CEO_J386_DISPATCH",
+  "status": "COMPLETED_AND_RELEASED",
+  "released_at_utc": "2026-09-11T02:45:00.000Z",
+  "released_at_local": "2026-09-11T09:45:00.000+07:00",
+  "serving_environment": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "active_deployment_id": "dpl_7Ppj2Hys7q6SwNM3TNKPQWoQc1UB",
+    "project_name": "jayt-production-v3420",
+    "scope_team": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "isolated_vulnerable_m2_deployment_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg"
+  },
+  "release_version": "v3.442.0-j386",
+  "candidate_manifest_sha256": "e9f6ace05591748744d981a9269d2c0b72bdd5ace8b8b1e6c444f6c5bbc5f5cd",
+  "milestones_summary": {
+    "SECURITY": "Remediated public SSRF at /api/health-check. Contract strictly restricted to POST JSON { itemId: string }. Implemented 8-hostname allowlist (port 443 only), private/reserved/loopback IP denial, TLS IP pinning against DNS rebinding, redirect hop termination, and sanitized error outputs. Isolated vulnerable M2 deployment dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg in forensic vault while maintaining dpl_5emod95fKr3NuLEEgeYY1tLctGr4 as rollback target. Executed security suite with 12/12 PASS.",
+    "PRODUCT_MEDIA_AND_AFFILIATE": "Delivered 30 authentic Mall SKUs with transparent schematic vector representations awaiting physical studio ingress (zero false claims of photography). Observed real point-in-time pricing with zero synthetic 30-day floor baselines. Activated affiliate attribution links strictly for Shopee Mall and LazMall verified test vectors under clicks_are_not_revenue governance, while retaining direct utility outbound links for cinema schedules and TikTok Shop.",
+    "CAMPUS_AND_COMPARATOR": "Engineered Campus Dock immediately below hero covering 4 key Da Nang student hubs (Bách Khoa / Sư Phạm, Kinh Tế DUE, Duy Tân / Hải Châu, Sơn Trà). Delivered Food Near Campus filter (<=35,000 VND & <=1,000m straight-line distance). Implemented 3-column delivery comparator (ShopeeFood, GrabFood, Xanh SM) with synchronized integer VND slider and transparent partner terms.",
+    "ZALO_PASS": "Added 'Lập Kèo Rủ Bạn (Zalo Pass)' on all eligible F&B and cinema offers. Generated high-resolution 1080x1440 local Canvas PNG passes with exact integer VND quotient/remainder allocation, zero rounding drift, and zero PII/GPS tracking leakage in URLs."
+  },
+  "commercial_and_technical_boundaries": {
+    "affiliate_enabled": true,
+    "affiliate_scope": "AUTHENTICATED_MALL_PARTNERS_ONLY__SHOPEE_AND_LAZADA",
+    "clicks_are_not_revenue": true,
+    "revenue_assertion_policy": "PROVIDER_CONFIRMED_CONVERSIONS_ONLY__ZERO_CLICK_CLAIMS",
+    "optical_qr_scanning": "NOT_TESTED",
+    "price_history_synthetic_backfill": false,
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  },
+  "deliverables": {
+    "security_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_386_SECURITY_RECEIPT.json",
+      "sha256": "9894c27b3e939869ff1e8fc379824a4118dee26b0e166096c91376a84cbaedae"
+    },
+    "live_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_386_LIVE_RECEIPT.json",
+      "sha256": "8b21f073ec8533ad5c3dc6b4f78ffe4892fbc556795c6ef39890e129fc6b40bb"
+    },
+    "product_asset_and_price_mapping": {
+      "path": "06_TRUST_AND_EVIDENCE/j386/product_asset_and_price_mapping.json",
+      "sha256": "e24b38ea5fef94774b78789337b6038aecd1eda2e5bd0e68e253932dcd29d24c"
+    },
+    "provider_validation_receipt": {
+      "path": "06_TRUST_AND_EVIDENCE/j386/provider_validation_receipt.json",
+      "sha256": "d23b740703298a82bdc0e1fd1d867442db567aba1f11bf499f341a0ffad870a2"
+    },
+    "vulnerable_deployment_containment": {
+      "path": "06_TRUST_AND_EVIDENCE/j386/vulnerable_deployment_containment.json",
+      "sha256": "227f7ca2453b9faac839b7fa0ac6ffb5da5e4d9370237342eb8c48895bb3a117"
+    },
+    "candidate_manifest": {
+      "path": "08_RELEASE_VAULT/candidates/v3.442.0-j386/candidate_manifest.json",
+      "sha256": "e9f6ace05591748744d981a9269d2c0b72bdd5ace8b8b1e6c444f6c5bbc5f5cd"
+    }
+  }
+}

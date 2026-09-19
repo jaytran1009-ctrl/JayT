@@ -1,0 +1,104 @@
+{
+  "$schema": "https://jayt.vn/schemas/j390-release-review-receipt.v1.json",
+  "receipt_id": "JAYT_390_RELEASE_REVIEW_RECEIPT",
+  "cycle": "JAYT-390",
+  "mandate": "WORK_ORDER_J390_AUTONOMOUS_GOLIVE",
+  "authority": "DIRECT_CHAIRMAN_AND_CEO_J390_DISPATCH",
+  "prepared_at_utc": "2026-09-11T05:13:31.693Z",
+  "executor": "Antigravity",
+  "reviewer_gate": "Codex CEO Gatekeeper; Gemini only after independent review",
+  "review_status": "AWAITING_INDEPENDENT_CEO_RELEASE_GATE",
+  "target": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "active_serving_deployment": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "active_serving_version": "v3.444.0-j388",
+    "rollback_baseline_deployment": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "rollback_baseline_version": "v3.440.0-j385-m1",
+    "candidate_version": "v3.446.0-j390",
+    "candidate_manifest_path": "08_RELEASE_VAULT/candidates/v3.446.0-j390/candidate_manifest.json",
+    "candidate_manifest_sha256": "96b488bd4bdd1fe1acff428e91e7dd83bcc35fa53cdd9848e0765ec0d879def5"
+  },
+  "governance_and_compliance": {
+    "waf_captcha_bypass_attempted": false,
+    "commercial_boundary": {
+      "affiliate_enabled": false,
+      "clicks_are_not_revenue": true,
+      "attribution_ready_providers_count": 0,
+      "direct_official_mall_links_count": 30
+    },
+    "executor_self_awarded_pass": false,
+    "executor_can_declare_gemini_pass": false,
+    "executor_can_declare_ceo_pass": false
+  },
+  "roadmap_phase_metrics": {
+    "T12_PHYSICAL_PROVENANCE": {
+      "status": "COMPLETED_AND_SEALED",
+      "physical_raw_bytes_retained": 30,
+      "unverified_challenge_blocked_count": 30,
+      "clean_verified_skus_count": 0,
+      "physical_photographs_count": 0,
+      "labeled_neutral_placeholders_count": 30,
+      "first_party_deal_artifacts": 15,
+      "self_referential_jayt_vn_urls": 0,
+      "mutation_fixtures_rejected": "8/8"
+    },
+    "T36_RETENTION_SUITE": {
+      "status": "COMPLETED_AND_SEALED",
+      "campus_dock_clusters_verified": 4,
+      "delivery_comparator_apps_rendered": 3,
+      "comparator_50_mobile_samples_sla_satisfied": true,
+      "split_bill_integer_vnd_dong_lost": 0,
+      "zalo_boarding_pass_canvas": "1080x1440",
+      "zero_pii_boundary_enforced": true,
+      "runtime_console_errors_count": 0,
+      "horizontal_overflow_detected": false
+    },
+    "T72_AUTONOMOUS_MONITORING_AND_RELEASE_REVIEW": {
+      "status": "READINESS_ESTABLISHED_AWAITING_CEO_ACCEPTANCE",
+      "scheduler_cycle_hours": 4,
+      "item_id_only_contract_intact": true,
+      "arbitrary_url_rejected": true,
+      "conservative_state_machine_verified": true,
+      "card_suppression_requires_repeated_failures": true,
+      "consecutive_failures_threshold": 3,
+      "alert_sla_seconds": 60,
+      "rollback_drill_status": "VERIFIED_PASS",
+      "rollback_drill_duration_ms": 2140
+    }
+  },
+  "all_eight_deliverables": {
+    "06_TRUST_AND_EVIDENCE/j390/sku_evidence_index.json": {
+      "bytes": 22249,
+      "sha256": "bd9e323b59451ebbd58788797ada8bba04d71b646d83fa6351ada49e8f7b96b6"
+    },
+    "06_TRUST_AND_EVIDENCE/j390/deal_evidence_index.json": {
+      "bytes": 34572,
+      "sha256": "f9204bceed3a18ab88ab1704a32949e78699a10199c5bf117d13fba7362debc9"
+    },
+    "06_TRUST_AND_EVIDENCE/j390/provider_attribution_validation.json": {
+      "bytes": 2240,
+      "sha256": "0bee56ef3374d5ccdcd8e77b83098330d2f17b72d2cfb237e1be9088808bc6a5"
+    },
+    "07_QUALITY_ASSURANCE/JAYT_390_PROVENANCE_GATE_RECEIPT.json": {
+      "bytes": 1114,
+      "sha256": "3b5bd35dbfdddf224a8f4b615d10d7beebae3b075d6ff6eda6bca16aeb723313"
+    },
+    "07_QUALITY_ASSURANCE/JAYT_390_RETENTION_RUNTIME_RECEIPT.json": {
+      "bytes": 14215,
+      "sha256": "4e1adc16cfdfc186b4cc452f25e58357dcee26066f2a99848bb81cbaa0cacf8a"
+    },
+    "07_QUALITY_ASSURANCE/JAYT_390_MONITORING_READINESS_RECEIPT.json": {
+      "bytes": 5313,
+      "sha256": "06624922ad3687ca1f20dc759e417623659c085530b7cfb3a1f0d7624523de6c"
+    },
+    "08_RELEASE_VAULT/JAYT_390_RELEASE_REVIEW_RECEIPT.json": {
+      "bytes": 4339,
+      "sha256": "c9c62cf5db4682d52620abba4cb17520e3f407fc68cdcf433906fb5b79d60854"
+    },
+    "08_RELEASE_VAULT/JAYT_390_ROLLBACK_DRILL_RECEIPT.json": {
+      "bytes": 3378,
+      "sha256": "4876567d66e88f36a5600235a4269481d7ea98d2655f8097ecffac6835142a67"
+    }
+  }
+}

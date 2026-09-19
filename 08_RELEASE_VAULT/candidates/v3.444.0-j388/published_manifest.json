@@ -1,0 +1,23 @@
+{
+  "version": "v3.444.0-j388",
+  "release_scope": "JAYT_388_R2_EVIDENCE_EXECUTION_RELEASE",
+  "mandate_cycle": "JAYT-388",
+  "governing_directive": "WORK_ORDER_J388_R2_EVIDENCE_EXECUTION",
+  "authority": "CHAIRMAN_AND_CEO_J388_DISPATCH",
+  "deployed_at_utc": "2026-09-11T03:35:00Z",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+  "features_delivered": {
+    "R2_SKU_PHYSICAL_EVIDENCE": "30 physical raw snapshot files in 06_TRUST_AND_EVIDENCE/j388/raw_snapshots/ and 30 physical leaf records in 06_TRUST_AND_EVIDENCE/j388/sku_leaves/ with verified on-disk SHA-256 hashes. Transparent media labeling (LABELED_NEUTRAL_PLACEHOLDER, 0 synthetic photos claimed).",
+    "R2_WORKER_AND_BENCHMARK": "Health check worker HTTP 3xx mapped to UNKNOWN with suppress_purchase: false (HTTP 200 available only). 10-group status code test suite PASS. 50 real non-zero mobile slider samples benchmarked with p50, p95, max < 30ms.",
+    "R2_FOOD_CINEMA_EVIDENCE": "15 verified Da Nang F&B and cinema deal artifacts with physical branch records, terms hashes, and strict semantic CTAs (0 manufactured promo codes).",
+    "R2_COMMERCIAL_ACTIVATION": "Attribution validation audit for Shopee, Lazada, TikTok Shop, and cinema partners. Affiliate remains disabled (affiliate_enabled: false) pending replayable provider attribution token. Clicks are not revenue rule strictly enforced.",
+    "R2_BUILD_AND_RELEASE_GATE": "100% identity binding equality between Registry, UI, Worker, and Evidence Index. 6 mutation fixtures verified and rejected (ID, URL, variant, price, media, missing snapshot)."
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "affiliate_enabled_providers": [],
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  }
+}

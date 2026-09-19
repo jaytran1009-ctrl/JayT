@@ -1,0 +1,28 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_136R",
+  "directive": "JAYT-136R — SEMANTIC FALSE-POSITIVE CONTAINMENT & CLAIM-BINDING REBUILD",
+  "severity": "P0_SEMANTIC_CLASSIFICATION_CONTAMINATION",
+  "status": "SEMANTIC_PARSER_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T18:56:00+07:00",
+  "executive_ruling": "Independent CEO audit revealed that semantic parser 136 falsely promoted 16 items to ACTIVE_VERIFIED based on keyword fragments from headers, legal footers, and synthesized strings. All 16 claims demoted to UNREVIEWED_RAW_CAPTURE.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_05_LOOSE_KEYWORD_REGEX_EXTRACTION",
+      "description": "Parser matched disjoint generic words (ưu đãi, ngày, sinh viên) across headers, footers, and legal disclaimers, falsely promoting general venue and legal pages into ACTIVE_VERIFIED."
+    },
+    {
+      "cause_id": "P0_CAUSE_06_SYNTHETIC_METADATA_STRINGS",
+      "description": "Parser synthesized strings for validity (Chính sách niên khóa) and locality (Cổng sinh viên toàn quốc) that were not present in raw source DOM."
+    },
+    {
+      "cause_id": "P0_CAUSE_07_NON_DANANG_LOCALITY_LEAKAGE",
+      "description": "Parser captured addresses from non-Da Nang branches (e.g. Jollibee Mỹ Tho) as valid locality evidence."
+    },
+    {
+      "cause_id": "P0_CAUSE_08_INCOMPLETE_CONTAINMENT_IN_135",
+      "description": "Active runner run_batch_capture_135.js was left in active directory; now fully quarantined."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136_semantic_false_positive/",
+  "remediation_engine": "05_DEAL_AND_AFFILIATE/claim_binding_engine_136r.js (Strict Offset-Bounded Claim Binding Engine)"
+}

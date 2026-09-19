@@ -1,0 +1,38 @@
+{
+  "receipt_id": "JAYT_405_PRODUCTION_GO_LIVE_RECEIPT",
+  "release_version": "v3.455.0-j405",
+  "deployment_id": "dpl_8iKsXCHN1UVwugqQ2eZM4FDM61ez",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_state": "READY_AND_ALIASED",
+  "live_http_status": 200,
+  "live_manifest_version": "v3.455.0-j405",
+  "interface": {
+    "bytes": 479629,
+    "sha256": "5b1b85175f60ef2e02ca0a214c3db85dc66e36d5217b8eb7753c70649a93dbbb",
+    "six_target_parity": "PASS"
+  },
+  "official_brand_assets": {
+    "name_card_front_sha256": "948c7443768eab9b7575765ee47bc8656b92f564532014859c22a4a64ca2e5ed",
+    "name_card_back_sha256": "ac2fcc33a767dfdfd2c54571fa80ed26a7d80a161ad896046a108adb4cedef2d"
+  },
+  "live_qa": {
+    "viewports": [390, 1440],
+    "twelve_modules_present": true,
+    "console_errors": 0,
+    "horizontal_overflow": false,
+    "legacy_green_tokens": 0,
+    "dashed_or_dotted_ui_borders": 0,
+    "cashier_hud_open_ms_mobile": 0.7,
+    "jayt_pass_flip_and_qr": "PASS"
+  },
+  "pipeline_integrity": {
+    "static_seal_ws1": "24_OF_24_PASS",
+    "static_seal_ws2": "24_OF_24_PASS",
+    "runtime_gate_ws1": "DEGRADED_STALE_EVIDENCE_EXIT_2__NOT_FALSIFIED",
+    "runtime_gate_ws2": "HEALTHY_EXIT_0"
+  },
+  "commercial_boundary": {
+    "affiliate_enabled": false,
+    "tracking_activation": false
+  }
+}

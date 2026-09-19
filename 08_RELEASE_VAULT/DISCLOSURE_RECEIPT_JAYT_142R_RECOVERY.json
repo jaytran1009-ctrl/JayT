@@ -1,0 +1,16 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_142R_RECOVERY",
+  "directive": "JAYT-142R: THU HỒI KẾT LUẬN 142, KHÔI PHỤC BẰNG CHỨNG GỐC VÀ TÁI XỬ LÝ BATCH LỚN",
+  "severity": "P0_STATIC_SEMANTIC_OVERRIDE_REVOCATION",
+  "status": "GENUINE_DOM_PROVENANCE_REPROCESSING_ENFORCED",
+  "disclosed_at": "2026-08-26T18:47:21.694Z",
+  "executive_ruling": "Quarantining all static dictionary outputs from 142. Preserving all physical raw captures. Implementing 100% generic DOM-native parser with full node provenance, collision detection, strict locality proof, and zero static mappings.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_35_STATIC_DICTIONARY_OVERRIDE_IN_PIPELINE",
+      "description": "Used static dictionaries (leafSemanticsMap, expected_da_nang_verified) to inject structured fields and locality verdicts into compiler outputs rather than parsing raw DOM nodes."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142_static_semantics_quarantine/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/generic_leaf_dom_parser_142r.js, locality_verifier_142r.js & fresh_source_registry_142r.json"
+}

@@ -1,0 +1,86 @@
+{
+  "index_id": "JAYT_323_CHAIRMAN_DECREE_READINESS_INDEX",
+  "governing_directive": "JAYT-323",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_323_CHAIRMAN_DECREE_READINESS_AND_PRODUCTION_OBSERVABILITY_WORK_ORDER.md",
+  "assembled_at_utc": "2026-09-04T14:48:20.349Z",
+  "production_observability_audit": {
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "measured_probes": [
+      {
+        "probe": 1,
+        "status": 200,
+        "latency_ms": 225,
+        "ip": "216.198.79.67",
+        "vercel_id": "hkg1::xcps9-1788533273937-d6f9e371eb48"
+      },
+      {
+        "probe": 2,
+        "status": 200,
+        "latency_ms": 73,
+        "ip": "216.198.79.67",
+        "vercel_id": "hkg1::qnzsd-1788533274016-48c007bee345"
+      },
+      {
+        "probe": 3,
+        "status": 200,
+        "latency_ms": 69,
+        "ip": "216.198.79.67",
+        "vercel_id": "hkg1::qnzsd-1788533274088-27cdcd14abad"
+      }
+    ],
+    "signal_classification": "MONITOR_NETWORK_PATH_FAILURE",
+    "genuine_production_incident": false,
+    "operational_state": "HEALTHY_OPERATIONAL_NOMINAL",
+    "live_version_served": "v3.420.0",
+    "live_cards_count": 3,
+    "no_change_evidence": "Production v3.420.0 has not experienced downtime or mutation; edge nodes respond 200 OK within 69-73ms."
+  },
+  "candidate_release_package": {
+    "target_version": "v3.421.0",
+    "manifest_id": "JAYT_RELEASE_CANDIDATE_V3421",
+    "manifest_file": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_MANIFEST.json",
+    "status": "AUDIT_READY__PENDING_CHAIRMAN_DECREE",
+    "is_approved": false,
+    "deployment_permitted": false
+  },
+  "audit_receipt_reference": {
+    "receipt_id": "JAYT_323_V3421_RELEASE_AUDIT_RECEIPT",
+    "receipt_file": "08_RELEASE_VAULT/JAYT_323_V3421_RELEASE_AUDIT_RECEIPT.json",
+    "audit_verdict": "RELEASE_CANDIDATE_AUDIT_PASSED__AWAITING_CHAIRMAN_PRODUCTION_DECREE",
+    "qa_assertions": "66/66 PASS"
+  },
+  "canonical_registry_and_code_hashes": {
+    "canonical_registry_file": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+    "approved_entities_count": 22,
+    "canonical_registry_pinned_sha256": "fdcee9d13e55506770a28e057f958336c3e8c992c78059587cf21ce7203bb67b",
+    "sot_js_sha256": "a84f4910ec69cdfca9bb214e6a8989b1e6bfbb0dfdd29ede1a3fb931a7d8addb",
+    "served_js_sha256": "a84f4910ec69cdfca9bb214e6a8989b1e6bfbb0dfdd29ede1a3fb931a7d8addb",
+    "bit_identical_parity": true
+  },
+  "dom_audit_receipt_reference": {
+    "receipt_file": "07_QUALITY_ASSURANCE/AUTOMATED_DOM_AUDIT_RECEIPT.json",
+    "release_gate_pass": true,
+    "blockers_count": 0,
+    "wcag_aa_certified_primary_buttons": 22
+  },
+  "commercial_lock_proof": {
+    "deals_feed_file": "05_DEAL_AND_AFFILIATE/deals_feed.json",
+    "deals_feed_empty_array": true,
+    "voucher_activation_count": 0,
+    "affiliate_active": false,
+    "tracking_active": false
+  },
+  "rollback_procedure": {
+    "target_version": "v3.420.0",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "trigger": "Any post-deploy parity, DOM, commercial-lock, or provenance failure.",
+    "procedure": "Deterministic redeployment of v3.420.0 immutable build receipt."
+  },
+  "decree_readiness_verdict": "DECREE_READINESS_PACKAGE_ASSEMBLED__AWAITING_CHAIRMAN_SIGNATURE",
+  "absolute_controls_enforced": {
+    "production_deploy_executed": false,
+    "auto_promotion_executed": false,
+    "affiliate_or_voucher_or_feed_changed": false,
+    "release_status_approved": false
+  }
+}

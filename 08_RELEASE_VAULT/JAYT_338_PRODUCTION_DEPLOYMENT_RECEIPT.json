@@ -1,0 +1,51 @@
+{
+  "receipt_id": "JAYT_338_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "directive": "JAYT-338 — EXECUTIVE PRODUCTION DEPLOYMENT DECREE v3.424.0 (51 CARDS)",
+  "recorded_at_utc": "2026-09-07T11:30:14.735Z",
+  "status": "DEPLOYED__POST_DEPLOY_GATE_FAILED__ROLLBACK_SUCCESS",
+  "deployment": {
+    "version": "v3.424.0",
+    "cards": 51,
+    "deployment_id": "dpl_34p9DCu8LZFX7cPmkkVE1DypM5HH",
+    "deployment_url": "https://jayt-production-v3420-7xaqsa4jm-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "production_alias_was_assigned": true
+  },
+  "sealed_fingerprints_verified_before_deploy": {
+    "candidate_manifest": "543d6f7b8c8769f515b9dc88c996e054a8d8b7e27b3ce1718f958f78bfcaadfd",
+    "storefront_bundle": "0c200c4d5e82c746c16286ae459b8f67c4df6154ed7615efe245a397b3d292dc",
+    "registry": "bab51db53f5f34934c539968484a2f8055f3fa61786db608b91b9db9349b40c6",
+    "preflight_receipt": "c991db62504c59dc25a8818c8be301e3500c4ff04bf1b0badf9533048b65aa34",
+    "rollback_manifest": "e1cf772d21b987bbc1193e74bbd3f484fac6c0e4500013b99567efcf33a0d6d6"
+  },
+  "post_deploy_gate": {
+    "verdict": "FAIL",
+    "failed_requirement": "deals_feed.json must return HTTP 200 with []",
+    "observed_http_status": 404,
+    "observed_payload": null,
+    "full_live_dom_audit_completed": false,
+    "disclosure": "The audit stopped at the first mandatory failure; local preflight results were not relabeled as live post-deploy evidence.",
+    "audit_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_338_V3424_LIVE_POST_DEPLOY_AUDIT.json",
+    "audit_sha256": "9ba2b3d34ec4c6b02086485877693f594d1a10a453443276ce05bc0342bb46fb"
+  },
+  "rollback": {
+    "triggered": true,
+    "status": "SUCCESS__LIVE_VERIFIED",
+    "target_version": "v3.423.0",
+    "target_cards": 47,
+    "target_deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "verification": {
+      "http_status": 200,
+      "storefront_version": "v3.423.0",
+      "total_cards": 47,
+      "civic_cards": 24,
+      "commercial_cards": 23
+    }
+  },
+  "baseline_decision": {
+    "v3.424.0_established_as_production_baseline": false,
+    "current_production_baseline": "v3.423.0",
+    "redeployment_requires_new_sealed_bundle_and_authorization": true
+  }
+}

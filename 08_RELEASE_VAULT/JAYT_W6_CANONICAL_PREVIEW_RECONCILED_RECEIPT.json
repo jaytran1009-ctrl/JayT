@@ -1,0 +1,90 @@
+{
+  "receipt_id": "JAYT_W6_CANONICAL_PREVIEW_RECONCILED_RECEIPT",
+  "directive_id": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W6-PREVIEW-RESOLUTION-AND-ON-THE-SPOT",
+  "generated_at_utc": "2026-09-12T07:58:30.889Z",
+  "status": "LOCAL_EVIDENCE_ACCEPTED__REMOTE_QUOTA_LIMITED__PRODUCTION_HOLD",
+  "preview_reconciliation": {
+    "designated_preview": {
+      "deployment_id": "dpl_E53DRiWGF7zbiWFRnZdP4bcPmFAJ",
+      "url": "https://jayt-production-v3420-ez9n5dmvi-kuntran777-6857s-projects.vercel.app",
+      "ready_state": "READY",
+      "target": "preview",
+      "canonical_production_touched": false
+    },
+    "receipt_policy": "Only the designated deployment above is authoritative for this reconciliation.",
+    "other_receipts": [
+      {
+        "path": "08_RELEASE_VAULT/JAYT_W6_REMOTE_PREVIEW_VERIFICATION_RECEIPT.json",
+        "target_url": "https://jayt-production-v3420-imeykffvj-kuntran777-6857s-projects.vercel.app",
+        "disposition": "NOT_ADOPTED_AS_REMOTE_EVIDENCE",
+        "reason": "Remote verification was blocked by the environment; this receipt records NOT_VERIFIED."
+      },
+      {
+        "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_W6_REMOTE_PREVIEW_VERIFICATION_RECEIPT.json",
+        "target_url": "https://jayt-production-v3420-dl5jzbezw-kuntran777-6857s-projects.vercel.app",
+        "disposition": "NOT_ADOPTED_FOR_DESIGNATED_PREVIEW",
+        "reason": "It refers to a different deployment and is not evidence for the designated E53 deployment."
+      }
+    ]
+  },
+  "local_puppeteer_evidence": {
+    "script": "07_QUALITY_ASSURANCE/test_j397_counter_hud.cjs",
+    "server": "http://127.0.0.1:4181",
+    "viewport": "390x844",
+    "http_status": 200,
+    "console_error_count": 0,
+    "horizontal_overflow": false,
+    "scroll_width_px": 390,
+    "client_width_px": 390,
+    "dock": {
+      "height_px": 56,
+      "z_index": 90,
+      "background": "rgba(9,13,20,0.9)",
+      "border_top": "rgb(30,41,59)",
+      "touch_target_heights_px": [44, 44, 44, 44]
+    },
+    "modal_latency_ms": {
+      "metiz": 0.1,
+      "galaxy": 0.1,
+      "lunch_user_driven": 0.3,
+      "quick_split": 0.3,
+      "on_site_hud": 0.9
+    },
+    "functional_checks": {
+      "metiz_price_display": "55.000đ",
+      "galaxy_price_display": "45.000đ",
+      "split_sample": "100001 / 3 => 33.334đ/người",
+      "neutral_disclaimer_present": true,
+      "on_site_hud_present": true
+    },
+    "verdict": "PASS_LOCAL_ONLY"
+  },
+  "source_integrity": {
+    "interface_targets": 6,
+    "interface_byte_length": 437574,
+    "interface_sha256": "b65bbe9e0e795fb9cec2ef0c006c2a934763ed50a4d6aa8687e93911dafb8d98",
+    "legacy_j397_fixed_price_keys_present": false,
+    "neutral_counter_tip_disclaimer_present": true
+  },
+  "pipeline_integrity": {
+    "verifier": "scripts/verify_pipeline_seal.cjs",
+    "workspace_1": "24/24_PASS",
+    "workspace_2": "24/24_PASS",
+    "runtime_log_health": "HEALTHY",
+    "runtime_exit_code": 0
+  },
+  "production_boundary": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_version": "v3.449.0-j397",
+    "current_deployment": "dpl_FwJP784G3382XTajmuWJ9JuYDzjN",
+    "production_authorized": false,
+    "alias_mutation_authorized": false,
+    "affiliate_enabled": false
+  },
+  "limitations": [
+    "Local Puppeteer evidence does not prove edge/remote behavior of the designated Preview URL.",
+    "The designated Preview URL was not independently verified remotely because of environment network/quota limits.",
+    "No merchant, payment, partner, or affiliate authorization is implied by this receipt."
+  ],
+  "next_gate": "Obtain both independent Dual-Key signatures and a separate production promote decision before any alias mutation."
+}

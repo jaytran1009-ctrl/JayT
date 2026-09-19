@@ -1,0 +1,454 @@
+{
+  "receipt_id": "REC_J363_R4_RESEAL_1788943986983",
+  "work_order_id": "J363_R4_SERVED_PREVIEW_RESEAL_AND_ACCESS_HARDENING",
+  "mandate": "CHAIRMAN-SUPREME-MANDATE-2026-0909-GOLIVE-EXECUTION",
+  "governance_gate": "JAYT_363_CEO_R4_SERVED_PREVIEW_DRIFT_AND_RESEAL_GATE",
+  "evaluated_at_utc": "2026-09-09T08:53:06.983Z",
+  "runner_script_sha256": "c1e34d73a7baa42658670799416898d0225d131c9683cc0d3435429588ca43c5",
+  "environment": {
+    "os": "win32 x64",
+    "node_version": "v24.18.0",
+    "puppeteer_version": "25.8.0",
+    "browser_context": "Headless Chromium CDP Emulation (Evaluated on both Local :4176 and Served Vercel Preview)",
+    "viewports_evaluated": [
+      {
+        "name": "Desktop",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      {
+        "name": "Tablet",
+        "width": 768,
+        "height": 1024,
+        "isMobile": false
+      },
+      {
+        "name": "Mobile",
+        "width": 390,
+        "height": 844,
+        "isMobile": true
+      }
+    ]
+  },
+  "deployment": {
+    "vercel_preview_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app",
+    "vercel_deployment_id": "dpl_FYTFCbwsL6RdjtpbzYBDtmsHutGq",
+    "vercel_preview_access_policy": "PUBLIC_AUTOMATION_WINDOW__WILL_RESTORE_RESTRICTED_SSO_UPON_INDEPENDENT_RETRIEVAL",
+    "local_staging_url": "http://127.0.0.1:4176",
+    "production_locked_url": "https://jayt-production-v3420-m2fxvae9d-kuntran777-6857s-projects.vercel.app",
+    "production_locked_deployment": "dpl_72b2G579GhCPSS7A6AoLHrypQa91",
+    "production_mutation_prevented": true
+  },
+  "root_cause_analysis": {
+    "divergence_path": "/index.html",
+    "cause_identified": "PLATFORM_INJECTED_CONTENT__VERCEL_TOOLBAR_FEEDBACK_SCRIPT",
+    "mechanism": "Vercel edge proxy injected feedback.js (163 bytes) on HTML requests matching Accept: */* or text/html when enablePreviewFeedback was true",
+    "remediation_applied": "Disabled enablePreviewFeedback and enableProductionFeedback via Vercel REST API (PATCH /v9/projects/deploy). Redeployed freshly sealed build dpl_FYTFCbwsL6RdjtpbzYBDtmsHutGq",
+    "post_remediation_status": "ZERO_PLATFORM_INJECTION__EXACT_BYTE_FOR_BYTE_MATCH_ACROSS_ALL_AGENTS_AND_CURL"
+  },
+  "served_preview_byte_binding": {
+    "target_preview_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app",
+    "deployment_id": "dpl_FYTFCbwsL6RdjtpbzYBDtmsHutGq",
+    "all_static_assets_match_canonical": true,
+    "assets": [
+      {
+        "path": "/jayt_apex_interface.js",
+        "remote_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app/jayt_apex_interface.js",
+        "retrieval_time_utc": "2026-09-09T08:53:07.357Z",
+        "http_status": 200,
+        "content_type": "application/javascript; charset=utf-8",
+        "content_length": "277338",
+        "etag": "\"f40fdb5583619c15cdc5f4807946bf3e\"",
+        "transfer_encoding": "identity",
+        "x_vercel_cache": "HIT",
+        "byte_length": 277338,
+        "local_byte_length": 277338,
+        "remote_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+        "local_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+        "byte_parity_verified": true
+      },
+      {
+        "path": "/styles.css",
+        "remote_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app/styles.css",
+        "retrieval_time_utc": "2026-09-09T08:53:07.454Z",
+        "http_status": 200,
+        "content_type": "text/css; charset=utf-8",
+        "content_length": "48171",
+        "etag": "\"a8eb132024352554f0b66df10a7b3a03\"",
+        "transfer_encoding": "identity",
+        "x_vercel_cache": "HIT",
+        "byte_length": 48171,
+        "local_byte_length": 48171,
+        "remote_sha256": "5206d185ac64d5b94b77cab27dd49e0cdde92d9e45356a7bfff9c9dc933ecd9a",
+        "local_sha256": "5206d185ac64d5b94b77cab27dd49e0cdde92d9e45356a7bfff9c9dc933ecd9a",
+        "byte_parity_verified": true
+      },
+      {
+        "path": "/deals_feed.json",
+        "remote_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app/deals_feed.json",
+        "retrieval_time_utc": "2026-09-09T08:53:07.550Z",
+        "http_status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "content_length": "3",
+        "etag": "\"58e0494c51d30eb3494f7c9198986bb9\"",
+        "transfer_encoding": "identity",
+        "x_vercel_cache": "HIT",
+        "byte_length": 3,
+        "local_byte_length": 3,
+        "remote_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "local_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "byte_parity_verified": true
+      },
+      {
+        "path": "/index.html",
+        "remote_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app/index.html",
+        "retrieval_time_utc": "2026-09-09T08:53:07.632Z",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_length": "726",
+        "etag": "\"0c99334e562b8755ec5f4b1abfc8cca0\"",
+        "transfer_encoding": "identity",
+        "x_vercel_cache": "HIT",
+        "byte_length": 726,
+        "local_byte_length": 726,
+        "remote_sha256": "85cb698fe11f8388653346c0d177a15d4a0de1f32fba3b1964df899666fe3952",
+        "local_sha256": "85cb698fe11f8388653346c0d177a15d4a0de1f32fba3b1964df899666fe3952",
+        "byte_parity_verified": true
+      }
+    ]
+  },
+  "claim_provenance_and_fixture_quarantine": {
+    "matrix_file": "06_TRUST_AND_EVIDENCE/j363_maximum_experience/J363_CLAIM_PROVENANCE_MATRIX.json",
+    "matrix_sha256": "15a6d754c746fe751b82a91c398e52cc68ea564b98ce0134e2f2b16b55f7f106",
+    "total_claims_cataloged": 19,
+    "factual_verified_count": 0,
+    "explicit_simulation_count": 9,
+    "awaiting_verification_count": 10,
+    "zero_factual_claims_strictly_enforced": true,
+    "all_fixtures_marked_self_authored": true,
+    "no_fixtures_accepted_as_facts": true,
+    "governance_verdict": "PASS__ALL_CLAIMS_HONESTLY_CLASSIFIED_AS_SIMULATION_OR_PENDING"
+  },
+  "hashes_and_parity": {
+    "canonical_apex_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+    "deploy_mirror1_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+    "deploy_mirror2_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+    "secondary_ws_canonical_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+    "triple_parity_verified": true,
+    "deploy_styles_sha256": "5206d185ac64d5b94b77cab27dd49e0cdde92d9e45356a7bfff9c9dc933ecd9a",
+    "styles_parity_verified": true,
+    "staging_deals_feed_empty_check": true
+  },
+  "modules_evaluation": {
+    "module_1_calculateDynamicStack": {
+      "status": "PASS",
+      "non_negative_guarantee": true,
+      "subtotal_150k_test": {
+        "finalPayable": 122500,
+        "totalSaved": 52500
+      }
+    },
+    "module_2_lunchComparison": {
+      "status": "PASS",
+      "peak_windows_accuracy": true,
+      "bridge_surcharge_diff": 5000
+    },
+    "module_3_cinemaCalendar_and_splitBillPro": {
+      "status": "PASS",
+      "integer_conservation_exact": true,
+      "split_4_example": {
+        "baseShare": 52500,
+        "remainder": 0
+      }
+    },
+    "module_4_meals25k_and_studentBenefits": {
+      "status": "PASS",
+      "all_10_slots_awaiting_verification_truth_labeled": true,
+      "student_guides_count": 4,
+      "mode": "STAGING_SIMULATOR_BENCHMARK"
+    },
+    "module_5_dispatchSmartAffiliate": {
+      "status": "PASS",
+      "dry_run_disabled_by_default": true,
+      "revenue_claimed_zero": true
+    }
+  },
+  "ux_and_accessibility": {
+    "viewports": {
+      "desktop_1440": {
+        "viewport": "1440x900",
+        "isMobile": false,
+        "console_errors_count": 0,
+        "page_errors_count": 0,
+        "horizontal_overflow_detected": false,
+        "default_state": {
+          "touch_targets": {
+            "total": 50,
+            "passed": 50,
+            "compliance_rate": 1
+          },
+          "wcag_aa_contrast": {
+            "total": 158,
+            "passed": 158,
+            "compliance_rate": 1
+          }
+        },
+        "hover_state": {
+          "hover_elements_tested": 20,
+          "hover_pass_count": 20,
+          "hover_state_passed": true
+        },
+        "focus_visible_state": {
+          "focus_elements_exercised": 15,
+          "focus_visible_passed": true
+        },
+        "disabled_state": {
+          "disabled_count": 0,
+          "disabled_styling_valid": true
+        },
+        "modal_state": {
+          "modal_rendered": true,
+          "close_button_geometry": {
+            "width": 44,
+            "height": 44
+          },
+          "close_button_touch_pass": true,
+          "cancel_button_touch_pass": true,
+          "modal_state_passed": true
+        },
+        "viewport_verdict": "PASS"
+      },
+      "tablet_768": {
+        "viewport": "768x1024",
+        "isMobile": false,
+        "console_errors_count": 0,
+        "page_errors_count": 0,
+        "horizontal_overflow_detected": false,
+        "default_state": {
+          "touch_targets": {
+            "total": 45,
+            "passed": 45,
+            "compliance_rate": 1
+          },
+          "wcag_aa_contrast": {
+            "total": 162,
+            "passed": 162,
+            "compliance_rate": 1
+          }
+        },
+        "hover_state": {
+          "hover_elements_tested": 20,
+          "hover_pass_count": 20,
+          "hover_state_passed": true
+        },
+        "focus_visible_state": {
+          "focus_elements_exercised": 15,
+          "focus_visible_passed": true
+        },
+        "disabled_state": {
+          "disabled_count": 0,
+          "disabled_styling_valid": true
+        },
+        "modal_state": {
+          "modal_rendered": true,
+          "close_button_geometry": {
+            "width": 44,
+            "height": 44
+          },
+          "close_button_touch_pass": true,
+          "cancel_button_touch_pass": true,
+          "modal_state_passed": true
+        },
+        "viewport_verdict": "PASS"
+      },
+      "mobile_390": {
+        "viewport": "390x844",
+        "isMobile": true,
+        "console_errors_count": 0,
+        "page_errors_count": 0,
+        "horizontal_overflow_detected": false,
+        "default_state": {
+          "touch_targets": {
+            "total": 45,
+            "passed": 45,
+            "compliance_rate": 1
+          },
+          "wcag_aa_contrast": {
+            "total": 162,
+            "passed": 162,
+            "compliance_rate": 1
+          }
+        },
+        "hover_state": {
+          "hover_elements_tested": 20,
+          "hover_pass_count": 20,
+          "hover_state_passed": true
+        },
+        "focus_visible_state": {
+          "focus_elements_exercised": 15,
+          "focus_visible_passed": true
+        },
+        "disabled_state": {
+          "disabled_count": 0,
+          "disabled_styling_valid": true
+        },
+        "modal_state": {
+          "modal_rendered": true,
+          "close_button_geometry": {
+            "width": 44,
+            "height": 44
+          },
+          "close_button_touch_pass": true,
+          "cancel_button_touch_pass": true,
+          "modal_state_passed": true
+        },
+        "viewport_verdict": "PASS"
+      }
+    },
+    "touch_target_mandatory_100pct_all_viewports": true,
+    "wcag_aa_mandatory_100pct_all_viewports": true,
+    "zero_errors_all_viewports": true,
+    "zero_overflow_all_viewports": true,
+    "modal_state_geometry_all_viewports": true,
+    "hover_focus_disabled_states_verified": true
+  },
+  "measured_performance": {
+    "methodology": "Empirical requestAnimationFrame frame distribution + PerformanceObserver layout-shift API",
+    "sixty_fps_claim_status": "DISCLAIMED__REPORTING_EMPIRICAL_MEASUREMENTS_WITHOUT_60_FPS_MARKETING",
+    "stack_calculator": {
+      "action": "1_stack_slider",
+      "sample_count": 28,
+      "p50_frame_duration_ms": 7,
+      "p95_frame_duration_ms": 20.8,
+      "max_frame_duration_ms": 27.8,
+      "frames_above_16_7ms_count": 3,
+      "interaction_layout_shift_cls": 0,
+      "sixty_fps_claimed": false,
+      "responsiveness_rating": "HIGH_RESPONSIVENESS_MEDIAN_SUB_16MS"
+    },
+    "lunch_comparison": {
+      "action": "2_lunch_slider",
+      "sample_count": 19,
+      "p50_frame_duration_ms": 6.9,
+      "p95_frame_duration_ms": 7,
+      "max_frame_duration_ms": 7,
+      "frames_above_16_7ms_count": 0,
+      "interaction_layout_shift_cls": 0,
+      "sixty_fps_claimed": false,
+      "responsiveness_rating": "HIGH_RESPONSIVENESS_MEDIAN_SUB_16MS"
+    },
+    "split_bill_export": {
+      "action": "3_split_export",
+      "sample_count": 19,
+      "p50_frame_duration_ms": 7,
+      "p95_frame_duration_ms": 41.5,
+      "max_frame_duration_ms": 41.5,
+      "frames_above_16_7ms_count": 6,
+      "interaction_layout_shift_cls": 0,
+      "sixty_fps_claimed": false,
+      "responsiveness_rating": "HIGH_RESPONSIVENESS_MEDIAN_SUB_16MS"
+    },
+    "campus_filter": {
+      "action": "4_campus_filter",
+      "sample_count": 17,
+      "p50_frame_duration_ms": 6.9,
+      "p95_frame_duration_ms": 20.9,
+      "max_frame_duration_ms": 20.9,
+      "frames_above_16_7ms_count": 1,
+      "interaction_layout_shift_cls": 0,
+      "sixty_fps_claimed": false,
+      "responsiveness_rating": "HIGH_RESPONSIVENESS_MEDIAN_SUB_16MS"
+    },
+    "affiliate_dry_run_modal": {
+      "action": "5_affiliate_modal",
+      "sample_count": 3,
+      "p50_frame_duration_ms": 13.9,
+      "p95_frame_duration_ms": 13.9,
+      "max_frame_duration_ms": 13.9,
+      "frames_above_16_7ms_count": 0,
+      "interaction_layout_shift_cls": 0,
+      "sixty_fps_claimed": false,
+      "responsiveness_rating": "HIGH_RESPONSIVENESS_MEDIAN_SUB_16MS"
+    },
+    "all_interactions_measured": true,
+    "all_cls_zero_guarantee": true
+  },
+  "user_gestures_and_security": {
+    "canvas_png_download_verified": true,
+    "outbound_links_safe_noopener": true,
+    "zero_pii_no_gps_no_contacts_pass": true
+  },
+  "gate_checks": {
+    "gate_1_served_preview_byte_binding": {
+      "passed": true,
+      "preview_url": "https://deploy-jcwrz6whl-kuntran777-6857s-projects.vercel.app",
+      "deployment_id": "dpl_FYTFCbwsL6RdjtpbzYBDtmsHutGq",
+      "assets_checked": 4,
+      "all_4_assets_exact_bytes_match": true
+    },
+    "gate_2_claim_provenance_and_fixture_quarantine": {
+      "passed": true,
+      "factual_verified_count": 0,
+      "all_fixtures_marked_self_authored": true,
+      "zero_fixtures_as_facts": true
+    },
+    "gate_3_touch_targets_100pct_all_viewports": {
+      "passed": true,
+      "desktop_1440": 1,
+      "tablet_768": 1,
+      "mobile_390": 1
+    },
+    "gate_4_wcag_aa_contrast_100pct_all_viewports": {
+      "passed": true,
+      "desktop_1440": 1,
+      "tablet_768": 1,
+      "mobile_390": 1
+    },
+    "gate_5_full_states_accessibility_hover_focus_modal": {
+      "passed": true,
+      "modal_close_btn_ge44px_all_viewports": true,
+      "hover_focus_disabled_verified": true
+    },
+    "gate_6_three_viewports_coverage_and_zero_errors": {
+      "passed": true,
+      "zero_console_errors": true,
+      "zero_horizontal_overflow": true
+    },
+    "gate_7_empirical_performance_and_cls_zero": {
+      "passed": true,
+      "sixty_fps_disclaimed_for_honesty": true,
+      "all_cls_zero": true,
+      "p50_sub_16ms": true
+    },
+    "gate_8_triple_sync_and_isolated_staging_feed": {
+      "passed": true,
+      "canonical_apex_sha256": "ae61629dd63764c81f04a61eebeae4964d29011ebb1039e33c9ac820e83fdafa",
+      "deploy_styles_sha256": "5206d185ac64d5b94b77cab27dd49e0cdde92d9e45356a7bfff9c9dc933ecd9a",
+      "isolated_feed_empty": true
+    }
+  },
+  "dual_verdict": {
+    "technical_staging_verdict": "TECHNICAL_STAGING_SUITE_PASSED",
+    "factual_content_provenance_verdict": "FACTUAL_CONTENT_GATE_PENDING__ZERO_FIXTURES_AS_FACTS",
+    "overall_verdict": "TECHNICAL_STAGING_PASSED__FACTUAL_PROVENANCE_AWAITING_AUTHENTIC_CAPTURES"
+  },
+  "screenshots": [
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\desktop_1440_01_home_showcase.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\desktop_1440_02_dynamic_stack.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\desktop_1440_02_lunch_compare.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\desktop_1440_02_cinema_split.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\desktop_1440_02_meals_benefits.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\tablet_768_01_home_showcase.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\tablet_768_02_dynamic_stack.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\tablet_768_02_lunch_compare.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\tablet_768_02_cinema_split.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\tablet_768_02_meals_benefits.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\mobile_390_01_home_showcase.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\mobile_390_02_dynamic_stack.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\mobile_390_02_lunch_compare.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\mobile_390_02_cinema_split.png",
+    "07_QUALITY_ASSURANCE\\runtime_evidence\\screenshots\\mobile_390_02_meals_benefits.png"
+  ],
+  "verdict": "TECHNICAL_STAGING_PASSED__FACTUAL_PROVENANCE_AWAITING_AUTHENTIC_CAPTURES"
+}

@@ -1,0 +1,95 @@
+{
+  "receipt_id": "REC_JAYT_FEATURE_01_VISUAL_OVERHAUL_PROD_20260916_R2",
+  "timestamp": "2026-09-16T15:38:00+07:00",
+  "directive": "CHAIRMAN_DIRECTIVE_20260916_FEATURE_01_VISUAL_REFINEMENT_AND_FULL_DANANG_GO_LIVE",
+  "release_status": "SEALED_PRODUCTION_ACTIVE",
+  "environment": "production",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_DmWt57D8SaR261jWzJtRQE4CTf1v",
+  "deployment_url": "https://jayt-production-v3420-c1zv3a5p6-kuntran777-6857s-projects.vercel.app",
+  "target_feature": "Feature 01: Trạm Săn Voucher Ẩn & Ép Giá Đáy Đa Sàn",
+  "core_bundle": {
+    "relative_path": "jayt_apex_interface.js",
+    "size_bytes": 756493,
+    "sha256": "7d5f3a36ad684eaa87a920eb538e5ccdaf97997d9d7e21a4bfca6c45e3d45fa7",
+    "hash_verified_remote_cdn": true
+  },
+  "aesthetic_remediation_summary": {
+    "flaw_01_zero_white_box": {
+      "status": "RESOLVED",
+      "svg_count_processed": 90,
+      "background_fill": "none",
+      "pedestal_glass": "rgba(10, 17, 13, 0.85)",
+      "xml_ampersand_fix": "sku_02_locknlock_glass_kettle.svg (LOCK&amp;LOCK)",
+      "badges": "[-45% ĐÁY 90 NGÀY], [KTX BÁN CHẠY]"
+    },
+    "flaw_02_voucher_tickets": {
+      "status": "RESOLVED",
+      "format": "Perforated VIP Ticket Strip (Dual-Stub with Tear Notches)",
+      "voucher_count": 18,
+      "typography_stub": "Playfair Display Bold",
+      "buttons": "Dual Action [💡 Mẹo] + [⚡ Áp Mã Ẩn ↗]",
+      "mobile_responsive_protection": "min-height: 34px, flex protected, no crushing"
+    },
+    "flaw_03_sku_bento_cards": {
+      "status": "RESOLVED",
+      "height_reduction": "~35% (from ~580px to ~380px)",
+      "price_display": "2-Tier High Contrast (#10B981 22px floor price vs struck-through original)",
+      "buttons": "Dual Action [⚡ Mua Giá Đáy ↗] (Emerald #10B981) + [⚡ So Giá 3 Sàn] (Pop-up Modal) + [📤 Rủ bạn mua]",
+      "sku_count": 22,
+      "cross_radar_buttons_count": 22
+    },
+    "flaw_04_excel_grid_elimination": {
+      "status": "RESOLVED",
+      "theme": "Quiet Luxury Dark Obsidian (#06090E/#0A110D) with Champagne Gold (#E5C378)"
+    },
+    "flaw_05_search_capsule": {
+      "status": "RESOLVED",
+      "shape": "Pill Capsule with Gradient Glowing Border",
+      "features": [
+        "Clipboard Auto-Detect 1-touch",
+        "0.8s Radar Sweep CTA"
+      ]
+    },
+    "multi_channel_sub_tracking": {
+      "status": "INTEGRATED",
+      "parameters": [
+        "sub1 (quan_huyen)",
+        "sub2 (platform)",
+        "sub3 (timestamp)"
+      ]
+    }
+  },
+  "qa_verification": {
+    "pipeline_static_seal": "24/24 PASS (scripts/verify_pipeline_seal.cjs)",
+    "voucher_engine_test": "14/14 PASS (test_feature_01_voucher_engine.cjs)",
+    "storefront_staging_feed": "22/22 PASS (test_storefront_staging_feed_22.cjs)",
+    "w8_feed_toolchain": "5/5 PASS (verify_w8_feed_toolchain.cjs)",
+    "live_cdn_puppeteer_desktop_1440": {
+      "status": "PASS",
+      "console_errors": 0,
+      "page_errors": 0,
+      "horizontal_overflow": false,
+      "voucher_cards_rendered": 18,
+      "sku_cards_rendered": 22,
+      "cross_platform_radar_buttons": 22,
+      "search_capsule_present": true,
+      "screenshot": "feature_01_visual_overhaul_live_desktop_1440.png"
+    },
+    "live_cdn_puppeteer_mobile_390": {
+      "status": "PASS",
+      "console_errors": 0,
+      "page_errors": 0,
+      "horizontal_overflow": false,
+      "cross_platform_radar_buttons": 22,
+      "voucher_cta_width_px": 106.7,
+      "voucher_tip_width_px": 63.3,
+      "screenshot": "feature_01_visual_overhaul_live_mobile_390.png"
+    },
+    "commercial_invariants": {
+      "affiliate_enabled": false,
+      "fail_closed_guaranteed": true,
+      "raw_partner_ids_exposed": false
+    }
+  }
+}

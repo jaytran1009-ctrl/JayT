@@ -1,0 +1,30 @@
+{
+  "receipt_id": "JAYT_324_V3421_DEPLOYMENT_ROLLBACK",
+  "status": "DEPLOYED_THEN_ROLLED_BACK__EXACT_URL_PARITY_FAILED",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "attempted_version": "v3.421.0",
+  "attempted_deployment_id": "dpl_HfBjoYpPEkaRSUvcs8pASPKJ2QGY",
+  "first_attempt": "Not authorized; resolved using explicit scope for the same verified project ID",
+  "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+  "scope": "kuntran777-6857s-projects",
+  "live_audit": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_324_V3421_LIVE_POST_DEPLOY_AUDIT.json",
+  "incident": {
+    "candidate_id": "GITHUB_EDUCATION_PILOT_T2",
+    "registry_url": "https://docs.github.com/en/education",
+    "rendered_url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
+    "cause": "RC QA accepted prefix URL matches instead of exact URL equality",
+    "audit_caveat": "Tablet/mobile HTTP 304 came from browser caching; cache disabled for future live audits. This was not the reason for rollback."
+  },
+  "rollback": {
+    "method": "Redeploy preserved v3.420.0 bundle to the same project with explicit scope",
+    "deployment_id": "dpl_DC8taupuiYPVQSq1vscZHtNqmTmd",
+    "checked_at_utc": "2026-09-05T06:57:03.243Z",
+    "http_status": 200,
+    "dom_version": "v3.420.0",
+    "cards_count": 3,
+    "console_errors": [],
+    "js_sha256": "5c11252bae14c70873972ac0eb256200772b346a281320394ff54d676ea4e9f6"
+  },
+  "automatic_redeployment_permitted": false,
+  "next_action": "Resolve exact GitHub URL scope against existing approval evidence; re-audit corrected RC before any new deployment. Do not silently edit registry to match DOM."
+}

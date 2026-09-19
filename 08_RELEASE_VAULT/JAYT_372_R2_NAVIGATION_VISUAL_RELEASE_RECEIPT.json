@@ -1,0 +1,74 @@
+{
+  "receipt_id": "REL_J372_R2_NAV_VISUAL_1789027696260",
+  "mandate": "WORK_ORDER_J372_R2_NAVIGATION_AND_ABOVE_FOLD_FIX",
+  "authority": "JAYT-372 CEO R2",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "version": "v3.436.0-j372-r2",
+  "released_at_utc": "2026-09-10T08:08:16.260Z",
+  "executor": "Antigravity Lead Agent",
+  "status": "PRODUCTION_DEPLOYED_AND_OBSERVABILITY_VERIFIED",
+  "visual_navigation_summary": {
+    "desktop_header": {
+      "height_px": 64,
+      "layout": "SINGLE_HORIZONTAL_ROW",
+      "logo_position": "LEFT",
+      "nav_position": "CENTER_RIGHT_HORIZONTAL",
+      "theme_switch_position": "FAR_RIGHT",
+      "status": "VERIFIED_ZERO_VERTICAL_STACK"
+    },
+    "mobile_header": {
+      "height_px": 56,
+      "layout": "SINGLE_ROW_WITH_WORDMARK_THEME_MENU_BTN",
+      "drawer_accessible": true,
+      "focus_trap_verified": true,
+      "escape_close_verified": true,
+      "outside_click_close_verified": true,
+      "return_focus_verified": true,
+      "status": "VERIFIED_ACCESSIBLE_DRAWER"
+    },
+    "above_the_fold_390px": {
+      "viewport": "390x844",
+      "header_height_px": 56,
+      "horizontal_overflow": false,
+      "hero_tag_visible": true,
+      "hero_headline_visible": true,
+      "campus_dock_cta_visible": true,
+      "sunset_fire_dragon_bridge_image_after_actions": true,
+      "status": "VERIFIED_ALL_PRIORITY_ELEMENTS_ABOVE_THE_FOLD"
+    },
+    "dynamic_cluster_summary": {
+      "ALL_count": 65,
+      "cluster_bk_sp": 40,
+      "cluster_due": 34,
+      "cluster_dtu_hc": 55,
+      "cluster_st": 52,
+      "held_offers_found": 0,
+      "blanket_81_removed": true,
+      "status": "VERIFIED_BOUND_TO_ELIGIBLE_COUNT"
+    },
+    "preservation_audit": {
+      "r1_held_offers_excluded": 16,
+      "r1_unverified_surveyed_products": 30,
+      "r1_freeship_badges_absent": 30,
+      "r1_90d_badges_absent": 30,
+      "r1_fallback_jayt370_matches": 0,
+      "switch_latency_p95_ms": 0.4,
+      "dual_themes_preserved": true
+    }
+  },
+  "live_receipt_reference": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_372_R2_NAVIGATION_VISUAL_RECEIPT.json",
+    "sha256": "d70fe3f1ea010de195d62c0c71f2d9c1ccbf11399351efdfd0f46269a972dd5a"
+  },
+  "canonical_live_deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+  "superseded_staging_deployment_id": "dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q",
+  "reconciliation_ledger_reference": {
+    "path": "08_RELEASE_VAULT/JAYT_372_VERCEL_DEPLOYMENT_RECONCILIATION_LEDGER.json",
+    "sha256": "6d17cf8a81b4a9bae01ac51773de4aedc0d25397eec46bee9892990c1240ff1d"
+  },
+  "commercial_containment": {
+    "affiliate_enabled": false,
+    "revenue_claims_authorized": false,
+    "catalog_role": "INFORMATIONAL_STUDENT_REFERENCE_ONLY"
+  }
+}

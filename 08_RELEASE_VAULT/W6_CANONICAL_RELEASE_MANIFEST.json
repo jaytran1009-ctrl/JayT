@@ -1,0 +1,62 @@
+{
+  "manifest_id": "W6_CANONICAL_RELEASE_MANIFEST",
+  "directive_id": "CHAIRMAN-SUPREME-MANDATE-2026-0912-W6-PREVIEW-RESOLUTION-AND-ON-THE-SPOT",
+  "generated_at_utc": "2026-09-12T07:58:30.889Z",
+  "status": "PENDING_DUAL_KEY__LOCAL_EVIDENCE_ACCEPTED__REMOTE_PREVIEW_NOT_VERIFIED",
+  "candidate": {
+    "version": "v3.449.0-j397",
+    "source_work_order": "04_DATA_PIPELINE/dispatch/WORK_ORDER_W6_POS_EXPANSION.json",
+    "preview_deployment_id": "dpl_E53DRiWGF7zbiWFRnZdP4bcPmFAJ",
+    "preview_url": "https://jayt-production-v3420-ez9n5dmvi-kuntran777-6857s-projects.vercel.app",
+    "preview_state": "READY",
+    "evidence_receipt": "08_RELEASE_VAULT/JAYT_W6_CANONICAL_PREVIEW_RECONCILED_RECEIPT.json"
+  },
+  "verified_local_artifacts": {
+    "interface_targets": 6,
+    "interface_byte_length": 437574,
+    "interface_sha256": "b65bbe9e0e795fb9cec2ef0c006c2a934763ed50a4d6aa8687e93911dafb8d98",
+    "local_puppeteer_script": "07_QUALITY_ASSURANCE/test_j397_counter_hud.cjs",
+    "local_puppeteer_verdict": "PASS_LOCAL_ONLY",
+    "pipeline_seal_verifier": "scripts/verify_pipeline_seal.cjs",
+    "pipeline_seal_verdict": "24/24_PASS",
+    "runtime_log_verdict": "HEALTHY__EXIT_CODE_0"
+  },
+  "proposed_production": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "current_version": "v3.449.0-j397",
+    "current_deployment_id": "dpl_FwJP784G3382XTajmuWJ9JuYDzjN",
+    "production_authorized": false,
+    "alias_mutation_authorized": false,
+    "affiliate_enabled": false
+  },
+  "dual_key_authorization_registry": {
+    "key_1_chairman_sponsor_pass": {
+      "status": "PENDING_SIGNATURE",
+      "signature": null
+    },
+    "key_2_strategic_advisor_technical_pass": {
+      "status": "PENDING_SIGNATURE",
+      "signature": null
+    }
+  },
+  "release_prerequisites": [
+    "Independent Chairman Sponsor signature",
+    "Independent Strategic Advisor technical signature",
+    "Separate explicit production promote decision",
+    "Re-run remote HTTP/DOM verification when environment quota permits, or record an explicit waiver outside this manifest"
+  ],
+  "safety_invariants": {
+    "affiliate_enabled": false,
+    "no_affiliate_dispatch": true,
+    "no_tracking_tokens": true,
+    "no_external_api_dependency_for_calculators": true,
+    "user_driven_lunch_formula": "food + delivery - voucher",
+    "supermarket_evidence_raw_only": true,
+    "production_unchanged_until_dual_key": true
+  },
+  "limitations": [
+    "Local Puppeteer acceptance is not remote edge evidence.",
+    "This manifest does not authorize alias mutation, deployment, affiliate activation, or outbound tracking.",
+    "No partner or merchant authorization is represented here."
+  ]
+}

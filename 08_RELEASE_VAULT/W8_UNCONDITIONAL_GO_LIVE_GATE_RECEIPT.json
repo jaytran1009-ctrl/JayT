@@ -1,0 +1,32 @@
+{
+  "receipt_id": "W8_UNCONDITIONAL_GO_LIVE_GATE_RECEIPT",
+  "recorded_at": "2026-09-13T14:00:00+07:00",
+  "decision": "REJECTED__FAIL_CLOSED",
+  "disk_audit": {
+    "sku_vault_files_except_register": 0,
+    "sku_register_status": "AWAITING_OPERATOR_CAPTURE__ZERO_OF_TWENTY_ACCEPTED",
+    "accepted_skus": 0,
+    "required_skus": 20
+  },
+  "affiliate_audit": {
+    "specification_status": "DRAFT_LOCKED_FOR_SECURITY_REVIEW__PROVIDER_CONTRACTS_REQUIRED",
+    "shopee_adapter": "BLOCKED_PENDING_OFFICIAL_DEEPLINK_AND_SIGNATURE_DOCUMENTATION",
+    "lazada_adapter": "BLOCKED_PENDING_OFFICIAL_DEEPLINK_AND_SIGNATURE_DOCUMENTATION",
+    "affiliate_enabled": false,
+    "deep_link_generated": false,
+    "tracking_emitted": false,
+    "secret_read_or_exposed": false
+  },
+  "prohibited_shortcuts": [
+    "synthetic HTML or PNG represented as first-party capture",
+    "changing 0/20 to 20/20 without physical artifacts",
+    "inventing provider signing or universal-link formats",
+    "activating commercial redirects without partner authorization",
+    "issuing a success receipt before gates pass"
+  ],
+  "canonical_production": {
+    "version": "v3.462.0-j411",
+    "affiliate_enabled": false,
+    "alias_mutated": false
+  }
+}

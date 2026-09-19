@@ -1,0 +1,37 @@
+{
+  "release_id": "JAYT-434",
+  "directive": "JAYT-434-EDITORIAL-MASTER-POLISH-AND-FULL-BLEED-RHYTHM",
+  "version": "v3.478.0-j434",
+  "timestamp": "2026-09-13T09:20:15.355Z",
+  "status": "PRODUCTION_EDITORIAL_MASTER_POLISHED__FLOATING_HEADER__GRID_3_COL__CINEMA_2_3__FULL_BLEED_BAND__SEAL_24_OF_24_PASS",
+  "canonical_url": "https://jayt-production-v3420.vercel.app/",
+  "deployment_id": "dpl_6Aum5VZ5KdSNebvWwHPYot3JmMKY",
+  "artifacts": {
+    "interface": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "bytes": 562435,
+      "sha256": "679cefbaf0e69c964c19cfd4fe7250f7fc5ff26deac5e66e92621ee0db411b08"
+    },
+    "html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "bytes": 1726,
+      "sha256": "f2a91b17837b0193b359ec4476782db16a11f563f821e48b35eb8d34a7fea904"
+    },
+    "manifest": {
+      "path": "deploy/published_manifest.json",
+      "bytes": 9691,
+      "sha256": "e5aae794a5406857ab61b2759081b1843860c973256d7405341870ad833655b0"
+    }
+  },
+  "deliverables": {
+    "floating_glass_header": "Converted header to floating transparent glassmorphism overlay positioned at top:0 over Dragon Bridge hero, eliminating white horizontal divider strip",
+    "hero_scale_expansion": "Expanded hero radar to 54% width (max-width 640px), headline to 42px (font-weight 750), primary CTA to 50px height with 15px font",
+    "cinema_two_thirds_layout": "Restructured cinema section into 2/3 verified ticket cards (Metiz 55K & Galaxy 45K) + 1/3 quick weekly schedule summary card with smooth scroll",
+    "fnb_four_wide_cards": "Enlarged F&B brand cards to ~298px each (4 cards per 1440px desktop view), formatting addresses to 1-2 clean lines",
+    "lunch_arbitrage_three_columns": "Transformed lunch comparison into 3 horizontal columns for ShopeeFood, GrabFood, and BeFood with top control panel, reducing module height by ~50% from 1109px to ~550px",
+    "alternating_full_bleed_rhythm": "Made Lunch Arbitrage an edge-to-edge full-bleed band (#F3EDE2 in Light mode, #0E1612 in Dark mode) to break the predictable card-after-card monotony",
+    "safety_boundaries": "affiliate_enabled: false strictly preserved on Production; QR camera scanning remains NOT_TESTED"
+  },
+  "pipeline_seal": "24/24 PASS TUYỆT ĐỐI across WS1 and WS2",
+  "runtime_health_gate": "HEALTHY / exit_code 0 across WS1 and WS2"
+}

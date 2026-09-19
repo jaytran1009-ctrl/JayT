@@ -1,0 +1,61 @@
+{
+  "receipt_id": "JAYT_341_R1_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "directive": "JAYT-341 — WORK ORDER R1 DEPLOYMENT (51 CARDS)",
+  "deployed_at_utc": "2026-09-07T11:58:08.799Z",
+  "status": "SUCCESS__LIVE_VERIFIED_51_CARDS",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_url": "https://jayt-production-v3420-p9hifla71-kuntran777-6857s-projects.vercel.app",
+  "deployment_id": "dpl_Ey7N7FGzDmNoJn9FFbnKRp64SL16",
+  "version": "v3.424.0-r1",
+  "runtime_version": "v3.424.0",
+  "cards": {
+    "total": 51,
+    "civic": 24,
+    "commercial": 27,
+    "promoted_batch_15": [
+      "P2O_GALAXY_MEMBER_2026",
+      "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+      "P2O_PHILONG_LENOVO_STUDENT_2026",
+      "P2O_PHILONG_HP_BTS_2026"
+    ],
+    "excluded_fail_closed": [
+      "B14_DMX_M170_DEN",
+      "P2O_CGV_FANC_2026",
+      "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+      "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+    ]
+  },
+  "sealed_candidate": {
+    "root": "08_RELEASE_VAULT/candidates/v3.424.0-r1/",
+    "manifest_sha256": "fa32477934f92af35827f874361c687a830afd0f148f57af927f63f8d187af48",
+    "storefront_sha256": "0c200c4d5e82c746c16286ae459b8f67c4df6154ed7615efe245a397b3d292dc",
+    "html_sha256": "4dd5820320bf2e66dfbd456729beebb346504d5788e6fab45bd8d16eb39bca2f",
+    "css_sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e",
+    "registry_sha256": "bab51db53f5f34934c539968484a2f8055f3fa61786db608b91b9db9349b40c6",
+    "deals_feed_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "hero_svg_sha256": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3",
+    "rollback_manifest_sha256": "e1cf772d21b987bbc1193e74bbd3f484fac6c0e4500013b99567efcf33a0d6d6"
+  },
+  "live_post_deploy_audit": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_341_V3424_R1_LIVE_POST_DEPLOY_AUDIT.json",
+    "sha256": "b98096c0ee514e299d221a6617a43f757da68ccc7e40bd905b7a653666f412b1",
+    "verdict": "PASS_100_PERCENT",
+    "gates": {
+      "http_endpoints_200": true,
+      "deals_feed_http_200_empty_array": true,
+      "total_51_cards_rendered": true,
+      "four_batch_15_present": true,
+      "forbidden_candidates_absent": true,
+      "clean_https_zero_affiliate_zero_tracking": true,
+      "zero_overflow_and_touch_target_44px": true,
+      "sequential_keyboard_complete": true,
+      "zero_console_runtime_errors": true
+    }
+  },
+  "rollback": {
+    "triggered": false,
+    "standby_version": "v3.423.0",
+    "standby_deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "status": "STANDBY_READY"
+  }
+}

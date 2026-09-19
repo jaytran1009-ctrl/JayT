@@ -1,0 +1,51 @@
+{
+  "contract_id": "JAYT_VISUAL_HYBRID_HUB_V2",
+  "version": "2.0.0",
+  "updated_at": "2026-08-25T13:45:00+07:00",
+  "north_star": "Nó có giúp sinh viên hoặc dân văn phòng Đà Nẵng ra quyết định tiết kiệm nhanh hơn, mà vẫn nói đúng sự thật không?",
+  "design_tokens": {
+    "verified_color": "#059669",
+    "verified_bg": "#ECFDF5",
+    "watchlist_color": "#1D4ED8",
+    "watchlist_bg": "#EFF6FF",
+    "community_color": "#B45309",
+    "community_bg": "#FEF3C7",
+    "loyalty_color": "#6D28D9",
+    "loyalty_bg": "#F5F3FF",
+    "neutral_color": "#475569",
+    "neutral_bg": "#F8FAFC",
+    "min_touch_target": "44px"
+  },
+  "layout_hierarchy": [
+    {
+      "order": 0,
+      "component": "DISCOVERY_HEADER_AND_DYNAMIC_CONTEXT",
+      "description": "Thanh lọc 3 tiêu chí [Khu vực] [Persona] [Nhu cầu] và prompt ngữ cảnh thời gian thực (Hôm nay ở Hải Châu · 11:15)"
+    },
+    {
+      "order": 1,
+      "component": "LAYER_1_VERIFIED_OFFERS_TODAY",
+      "description": "Ưu đãi đã xác minh hôm nay hoặc Honest Empty State dẫn sang Watchlist nếu chưa có deal approved"
+    },
+    {
+      "order": 2,
+      "component": "LAYER_2_WATCHLIST_NEARBY",
+      "description": "9 Verified Locations có địa chỉ thật + 2 Brand Signals kèm disclaimer chuẩn"
+    },
+    {
+      "order": 3,
+      "component": "LAYER_3_COMMUNITY_RADAR",
+      "description": "Radar cộng đồng (Mặc định Honest Empty State hoặc live submissions không PII)"
+    },
+    {
+      "order": 4,
+      "component": "LAYER_4_LOYALTY_POLICIES",
+      "description": "Quy tắc tích điểm hội viên có trích dẫn gốc đối soát"
+    },
+    {
+      "order": 5,
+      "component": "LAYER_5_SUPPORTIVE_UTILITIES",
+      "description": "Công cụ chia tiền & tính thực trả (Splitwise style) + Ví voucher cá nhân"
+    }
+  ]
+}

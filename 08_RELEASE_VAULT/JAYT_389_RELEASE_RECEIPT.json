@@ -1,0 +1,73 @@
+{
+  "$schema": "https://jayt.vn/schemas/release-receipt.v1.json",
+  "receipt_id": "JAYT_389_RELEASE_RECEIPT",
+  "cycle": "JAYT-389",
+  "mandate": "WORK_ORDER_J389_PROVENANCE_HARVEST",
+  "authority": "CHAIRMAN_AND_CEO_J389_DISPATCH",
+  "released_at_utc": "2026-09-11T05:00:02.240Z",
+  "release_status": "CANDIDATE_PACKAGED_AWAITING_CEO_RELEASE_GATE",
+  "candidate": {
+    "version": "v3.445.0-j389",
+    "manifest_path": "08_RELEASE_VAULT/candidates/v3.445.0-j389/candidate_manifest.json",
+    "manifest_sha256": "e7253f2bdc2fe160c28e9af727d57b48a1f0f68ec04e5995932805ecf8258e5a",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "active_serving_deployment_id": "dpl_EY8hrscg5f1tRCG9WeKsHGfSJXUM",
+    "rollback_baseline_deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4"
+  },
+  "workstreams_verification": {
+    "SKU_RAW_BYTES_30": {
+      "status": "COMPLIANT__OPEN_TRANSPARENT_REPORTING",
+      "snapshots_on_disk_count": 30,
+      "leaves_on_disk_count": 30,
+      "clean_verified_skus": 0,
+      "challenge_or_blocked_skus": 30,
+      "compliance_note": "Original response bytes saved on disk without wrappers. WAF anti-bot / challenge responses truthfully classified as unverified evidence per J389 rules."
+    },
+    "SKU_MEDIA_30": {
+      "status": "COMPLIANT__HONEST_PLACEHOLDERS",
+      "verified_merchant_photos": 0,
+      "labeled_neutral_placeholders": 30,
+      "vector_schematics_as_photos": 0,
+      "compliance_note": "Zero synthetic photos admitted. All 30 SKUs honestly bound to LABELED_NEUTRAL_PLACEHOLDER."
+    },
+    "DANANG_DEALS_15": {
+      "status": "COMPLIANT__FIRST_PARTY_ARTIFACTS_CONFIRMED",
+      "verified_deals_count": 15,
+      "retained_physical_artifacts_count": 15,
+      "self_referential_jayt_vn_urls": 0,
+      "first_party_partner_urls_count": 15,
+      "danang_branches_verified": true,
+      "semantic_ctas_enforced": true
+    },
+    "COMMERCIAL_ATTRIBUTION": {
+      "status": "COMPLIANT__AFFILIATE_LOCKED",
+      "affiliate_enabled_globally": false,
+      "authorized_providers_count": 0,
+      "unresolved_providers_count": 3,
+      "clicks_are_not_revenue_rule": "STRICTLY_ENFORCED"
+    },
+    "BUILD_AND_RELEASE_GATE": {
+      "status": "COMPLIANT__8_MUTATIONS_REJECTED",
+      "equality_asserted": "100% (0 diffs across Registry, UI, Worker, Leaves)",
+      "mutation_fixtures_tested": 8,
+      "mutation_fixtures_rejected": 8,
+      "security_unit_tests_passed": 21
+    }
+  },
+  "artifact_hashes": {
+    "04_DATA_PIPELINE/dispatch/WORK_ORDER_J389_PROVENANCE_HARVEST.json": "790bfad2042140ba0111ece2a68ab7ea90b0ec73a76f65fc852a7f8f268e9817",
+    "03_SOURCE_OF_TRUTH/j387/sku_registry.json": "f1f7e008e63f2464d25db7e93deadb294f3895c38b1087b27fc630f88dba3a63",
+    "06_TRUST_AND_EVIDENCE/j389/sku_evidence_index.json": "2c0c76b33b37c18341ec43e53ec3c4722281cbfd6da341aecd39be4f327dc1f3",
+    "06_TRUST_AND_EVIDENCE/j389/deal_evidence_index.json": "dd69ad0809f0cb38c06bd55e39c8f7c095d60fe75097a54503b77289b8a2ac89",
+    "06_TRUST_AND_EVIDENCE/j389/provider_attribution_validation.json": "9f49b4f4669246c6bfd69bab8314b780b94a8d1a04ce4e83df2aa486dfeb3458",
+    "07_QUALITY_ASSURANCE/JAYT_389_PHYSICAL_PROVENANCE_RECEIPT.json": "45ddab76a5cdbf9595cea1dc48bf0c2913c4c2eb45a34bff514feb14905c9aec",
+    "07_QUALITY_ASSURANCE/JAYT_389_MEDIA_IDENTITY_RECEIPT.json": "52dbeaa66b49379a1d76b14836545ea2e5ae18601df3a94baf2cf728b7383d6f",
+    "07_QUALITY_ASSURANCE/JAYT_389_DEALS_PROVENANCE_RECEIPT.json": "c97f31fcf2f291ef227dce1adfc4fc61c07af83a5fb40984e6f5a0cc066861c2",
+    "07_QUALITY_ASSURANCE/JAYT_389_ARTIFACT_INTEGRITY_RECEIPT.json": "80d1efe544c15291edfb0201aa83bb1966f75567ec8fdc611cb07761ab50ac9e",
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_389_SECURITY_RECEIPT.json": "3b6a8dfde7d4bc1abaebd534d413335076a0aa31606829241d0121b5491da473",
+    "08_RELEASE_VAULT/candidates/v3.445.0-j389/candidate_manifest.json": "e7253f2bdc2fe160c28e9af727d57b48a1f0f68ec04e5995932805ecf8258e5a",
+    "deploy/api/health-check.js": "7114ecb9a71d877bc36f6dbf63cc8f7baf9b7032f66848aa3f0779d01af84c29",
+    "deploy/jayt_apex_interface.js": "9a146b84b4407c9351bda02a7e62ee296a678cc1ca41061d0a5a2e23b7f400a4",
+    "deploy/published_manifest.json": "7cb2cdb37d9319a4f78ee6d3db305801b48b481c705c89f1d50f2038a48c2927"
+  }
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JayT Đà Nẵng — Staging Review Nội Bộ (054F)</title>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <style>
+    :root {
+      --bg-base: #F8FAF9;
+      --bg-card: #FFFFFF;
+      --pine-dark: #0F3327;
+      --pine-soft: rgba(15, 51, 39, 0.08);
+      --gold: #C59B27;
+      --gold-light: #F9F1D8;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: rgba(15, 51, 39, 0.12);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font);
+      line-height: 1.5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .staging-header-banner {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      color: #92400E;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .staging-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--pine-dark);
+      margin-bottom: 6px;
+    }
+    .staging-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .simulation-bar {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .time-label {
+      font-family: monospace;
+      font-weight: 600;
+      color: var(--pine-dark);
+    }
+    .staging-deal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(15, 51, 39, 0.04);
+    }
+    .watermark-badge {
+      display: inline-block;
+      background: var(--gold-light);
+      color: #854D0E;
+      border: 1px solid #FDE68A;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+    }
+    .deal-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pine-dark);
+      margin-bottom: 8px;
+    }
+    .deal-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .price-value {
+      font-size: 24px;
+      font-weight: 800;
+      color: #059669;
+    }
+    .location-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--pine-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .conditions-header {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 14px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .conditions-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .conditions-list li {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 16px;
+    }
+    .conditions-list li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--gold);
+      font-weight: bold;
+    }
+    .staging-empty-state {
+      background: #FFFFFF;
+      border: 1px dashed #CBD5E1;
+      border-radius: 12px;
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .empty-state-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--pine-dark);
+      margin-bottom: 6px;
+    }
+    .lock-footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: #94A3B8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="staging-header-banner">
+      <span>🔒 CHẾ ĐỘ THỬ NGHIỆM STAGING NỘI BỘ — ZERO OUTBOUND LINKS — PRODUCTION LOCKED (is_approved: false)</span>
+    </div>
+
+    <h1 class="staging-title">JayT Đà Nẵng — Staging Feed Inspector</h1>
+    <p class="staging-subtitle">Kiểm thử giao diện với deal có bằng chứng capture thực tế (Time-Boxed 24/08/2026).</p>
+
+    <div class="simulation-bar">
+      <div>Thời điểm đánh giá (Simulation Time):</div>
+      <div id="sim-time-display" class="time-label">Đang tải...</div>
+    </div>
+
+    <div id="deals-container">
+      <div class="staging-empty-state">Đang tải dữ liệu staging feed...</div>
+    </div>
+
+    <div class="lock-footer">
+      JayT Staging Runtime v054F · SHA-256 Verified · Khóa phát hành: PRODUCTION LOCKED
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+      const params = new URLSearchParams(window.location.search);
+      const simTime = params.get('sim_time') || new Date().toISOString();
+
+      document.getElementById('sim-time-display').textContent = simTime;
+
+      fetch('/api/staging-deals?sim_time=' + encodeURIComponent(simTime))
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('deals-container');
+          container.innerHTML = '';
+
+          if (!data.rendered_items || data.rendered_items.length === 0) {
+            const emptyDiv = document.createElement('div');
+            emptyDiv.className = 'staging-empty-state';
+            emptyDiv.innerHTML = `
+              <div class="empty-state-title">[KHÔNG CÓ DEAL NÀO HIỂN THỊ]</div>
+              <p>Khung thời gian hiện tại không nằm trong cửa sổ hiệu lực duy nhất của ngày 24/08/2026.</p>
+              <p style="margin-top: 6px; font-size: 12px; color: #94A3B8;">(Trước 24/08: Scheduled · Từ 25/08: EXPIRED)</p>
+            `;
+            container.appendChild(emptyDiv);
+            return;
+          }
+
+          data.rendered_items.forEach(deal => {
+            const card = document.createElement('div');
+            card.className = 'staging-deal-card';
+
+            let pricingTiersHtml = '';
+            if (deal.pricing_tiers && deal.pricing_tiers.length > 0) {
+              pricingTiersHtml = `
+                <div class="pricing-tiers-box" style="background: rgba(15, 51, 39, 0.04); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 14px;">
+                  <div style="font-size: 13px; font-weight: 700; color: var(--pine-dark); margin-bottom: 8px;">MỨC GIÁ ÁP DỤNG THEO RẠP TẠI ĐÀ NẴNG:</div>
+                  ${deal.pricing_tiers.map(pt => `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed rgba(15, 51, 39, 0.1);">
+                      <span style="font-weight: 600; color: var(--pine-dark); font-size: 14px;">🎬 ${pt.cinema_name}</span>
+                      <span style="font-weight: 800; color: #059669; font-size: 16px;">${pt.price_display || pt.price_vnd.toLocaleString('vi-VN') + ' ₫'} <small style="font-size: 11px; font-weight: normal; color: var(--text-muted);">/ ${pt.format || 'Vé 2D'}</small></span>
+                    </div>
+                  `).join('')}
+                </div>
+              `;
+            } else {
+              pricingTiersHtml = `
+                <div class="deal-price-row">
+                  <span class="price-value">${deal.price_display}</span>
+                  <span style="font-size: 13px; color: var(--text-muted);">/ Vé tiêu chuẩn 2D</span>
+                </div>
+              `;
+            }
+
+            let metaHtml = `
+              <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; font-size: 13px;">
+                ${deal.schedule ? `<div style="background: #EFF6FF; color: #1D4ED8; padding: 4px 8px; border-radius: 6px; font-weight: 600;">📅 Lịch: ${deal.schedule}</div>` : ''}
+                ${deal.eligibility ? `<div style="background: #F0FDF4; color: #15803D; padding: 4px 8px; border-radius: 6px; font-weight: 600;">👥 Đối tượng: ${deal.eligibility}</div>` : ''}
+                ${deal.recheck_due_at ? `<div style="background: #FEF3C7; color: #B45309; padding: 4px 8px; border-radius: 6px; font-weight: 600;">⏳ Hạn kiểm tra lại (TTL): ${new Date(deal.recheck_due_at).toLocaleDateString('vi-VN')}</div>` : ''}
+              </div>
+            `;
+
+            let conditionsHtml = '';
+            if (deal.conditions && deal.conditions.length > 0) {
+              conditionsHtml = `
+                <div class="conditions-header">Điều khoản & Điều kiện áp dụng:</div>
+                <ul class="conditions-list">
+                  ${deal.conditions.map(c => `<li>${c}</li>`).join('')}
+                </ul>
+              `;
+            }
+
+            card.innerHTML = `
+              <div class="watermark-badge">${deal.watermark_badge}</div>
+              <h2 class="deal-card-title">${deal.title}</h2>
+              ${pricingTiersHtml}
+              ${metaHtml}
+              ${conditionsHtml}
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(err => {
+          document.getElementById('deals-container').innerHTML = `
+            <div class="staging-empty-state" style="color: #DC2626;">
+              Lỗi kết nối Staging API: ${err.message}
+            </div>
+          `;
+        });
+    })();
+  </script>
+</body>
+</html>

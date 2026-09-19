@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JayT Platform — Tra Cứu Tiện Ích & Bảng Tính Thực Trả (v3.422.0)</title>
+  <meta name="description" content="Cổng tra cứu thông tin tiện ích công cộng, học đường và công cụ tính toán chi phí thực tế — phân loại minh bạch, đối soát nguồn gốc." />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-root theme-light" data-ledger-version="v3.422.0" data-ledger-sha256="8286f539eb5f5e1432d516bcad92f3fdf4f8b71c2ac8bb3adcaa3b0050036475" data-count-vouchers="0">
+  <div id="jayt-app-root">
+    <div class="jayt-app-shell theme-light">
+      <header class="jayt-header-sticky" role="banner">
+        <div class="header-inner">
+          <div class="brand-lockup" role="button" tabindex="0" data-nav="HOME" aria-label="Về trang chủ JayT Platform">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M19 6 V19 C19 24.5 15.5 28 10 28 C6.5 28 4.2 26 3.5 24 C5.2 24 7 22.8 7.5 20.8 C8 18.5 6.5 16.5 4.5 16.5 C3.8 16.5 3 16.8 2.5 17.2 C3.5 10.5 11 6 19 6 Z" fill="url(#jflow-logo-grad-ep)"/>
+              <path d="M19 14 C23.5 14 27.5 17 29.5 21 C31 24 32.5 28 33.5 31 C29.5 29 25 27.5 19 27.5 V21.5 C22 21.5 24.5 23 26 24.5 C24.5 20 20.5 17.5 16 17 L19 14 Z" fill="url(#jflow-logo-grad-ep)" opacity="0.9"/>
+              <circle cx="27" cy="8" r="3.5" fill="#f43f5e"/>
+              <defs>
+                <linearGradient id="jflow-logo-grad-ep" x1="4" y1="4" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0284c7"/>
+                  <stop offset="0.6" stop-color="#06b6d4"/>
+                  <stop offset="1" stop-color="#f43f5e"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="brand-text-group">
+              <span class="brand-title">JayT Platform</span>
+              <span class="brand-tagline">Nền Tảng Tiện Ích Minh Bạch &bull; v3.422.0</span>
+            </div>
+          </div>
+
+          <nav class="nav-links-desktop" role="navigation" aria-label="Điều hướng chính">
+            <button class="nav-btn active" data-nav="HOME" aria-label="Mở trang Hôm nay">Hôm nay</button>
+            <button class="nav-btn" data-nav="EXPLORE" aria-label="Khám phá danh mục">Khám phá</button>
+            <button class="nav-btn" data-nav="WALLET" aria-label="Mở tra cứu chương trình">Chương Trình</button>
+            <button class="nav-btn" data-nav="VOUCHER_HUB" aria-label="Trung tâm tra cứu voucher 0 mục">Ví Voucher</button>
+            <button class="nav-btn" data-nav="BUY_DECISION" aria-label="Mở Bảng tính thực trả">Bảng Tính Thực Trả</button>
+            <button class="nav-btn" data-nav="SAVED" aria-label="Xem danh sách đã lưu">
+              Đã lưu <span class="nav-saved-count" id="saved-counter">0</span>
+            </button>
+          </nav>
+
+          <div class="nav-actions-desktop">
+            <button id="btn-toggle-theme" class="btn-icon-theme" aria-label="Đổi giao diện Sáng/Tối" title="Đổi giao diện Sáng/Tối">
+              🌙
+            </button>
+            <button id="btn-open-report" class="btn-report-source" aria-haspopup="dialog" aria-label="Hướng dẫn đóng góp nguồn">+ Báo nguồn</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="jayt-main-canvas" id="jayt-view-canvas" role="main">
+        <div class="cr-experience-container">
+          <section class="t2-pilot-card-section" style="margin: 24px 0; background: var(--bg-card); border: 2px solid #0284c7; border-radius: 14px; padding: 20px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);" aria-label="Thí điểm đối soát: Chương trình chính thức T2">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="background: rgba(2, 132, 199, 0.12); color: #0284c7; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.3px;">🛡️ T2 • TÀI LIỆU CHƯƠNG TRÌNH CHÍNH THỨC</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-card-subtle); padding: 2px 8px; border-radius: 4px;">STAGING PILOT EZ-H</span>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-secondary);">🔄 Đối soát định kỳ: 30 ngày</span>
+            </div>
+
+            <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0 0 10px 0;">GitHub Education — Thông tin đăng ký</h2>
+
+            <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.55; margin-bottom: 14px; font-weight: 500;">
+              Theo tài liệu chính thức của GitHub, người học hoặc giảng viên tại một cơ sở giáo dục được công nhận có thể nộp đơn đăng ký GitHub Education.
+            </p>
+
+            <div style="background: var(--bg-card-subtle); border-left: 4px solid #0284c7; padding: 12px 14px; border-radius: 6px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+              <strong>Phạm vi:</strong> chương trình toàn cầu; điều kiện và quyền lợi áp dụng do GitHub quyết định. JayT không xác nhận voucher, giá hay ưu đãi tại Đà Nẵng.
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+              <a href="https://docs.github.com/en/education" target="_blank" rel="noopener noreferrer nofollow" class="btn-rail-action btn-action-portal" style="background: #0369a1; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; min-height: 44px; display: inline-flex; align-items: center; gap: 6px;" aria-label="Mở tài liệu chính thức GitHub Education trong tab mới">
+                Mở tài liệu chính thức ↗
+              </a>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">
+                Evidence ID: FACT_EZ_G_01_GITHUB_DOCS_ELIGIBILITY (SHA: f21354b988...)
+              </div>
+            </div>
+          </section>
+
+          <section class="zero-state-neutral-provenance" style="background: var(--bg-card); border: 1px dashed var(--border-subtle); border-radius: 14px; padding: 36px 24px; text-align: center; margin: 24px 0;" aria-label="Khu vực Đang Kiểm Định Nguồn">
+            <div style="font-size: 2.2rem; margin-bottom: 12px;">🔍</div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">Khu Vực Đang Kiểm Định Nguồn</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; max-width: 620px; margin: 0 auto 20px auto;">
+              JayT đang kiểm định độc lập từng nguồn tài liệu theo Evidence Contract v3 trước khi công bố. Hiện chưa có nguồn mới đạt chuẩn công bố công khai.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+              <button class="btn-zero-action" data-nav="BUY_DECISION" style="background: #0369a1; color: #ffffff; border: none; padding: 10px 20px; min-height: 44px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" aria-label="Mở Bảng tính thực trả của bạn">
+                🧮 Tự tính thực trả (Savings Lab) &rarr;
+              </button>
+              <button class="btn-zero-action" data-nav="EXPLORE" style="background: var(--bg-card-subtle); color: var(--text-primary); border: 1px solid var(--border-subtle); padding: 10px 20px; min-height: 44px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" aria-label="Xem tài liệu GitHub Education đã đối soát">
+                🛡️ Tài liệu đã đối soát (GitHub Pilot)
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- SAFE READ-ONLY REPORT SOURCE MODAL (MANDATE EZ-P.3) -->
+      <div id="report-modal-overlay" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; padding: 16px;" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+        <div style="background: var(--bg-card); max-width: 540px; width: 100%; border-radius: 14px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h3 id="report-modal-title" style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 0;">
+              ℹ️ Hướng Dẫn Đề Xuất Nguồn Công Khai
+            </h3>
+            <button id="btn-close-report-modal-x" style="background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted);" aria-label="Đóng hộp thoại">&times;</button>
+          </div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+            <p style="margin-bottom: 10px;">
+              <strong>1. Không thu thập thông tin cá nhân:</strong> JayT cam kết tuyệt đối không thu thập họ tên, số điện thoại, email, vị trí hay tài khoản của bạn.
+            </p>
+            <p style="margin-bottom: 10px;">
+              <strong>2. Quy trình kiểm định độc lập:</strong> Mọi nguồn tài liệu do cộng đồng đề xuất đều được kiểm tra độc lập qua quy trình Evidence Contract v3 (thu thập raw bytes và xác minh danh tính).
+            </p>
+            <p style="background: var(--bg-card-subtle); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #0284c7; margin: 0;">
+              🔒 <em>Trạng thái hiện tại: Chưa mở cổng gửi trực tuyến (Chưa có dữ liệu nào được gửi qua mạng).</em>
+            </p>
+          </div>
+          <div style="display: flex; justify-content: flex-end;">
+            <button id="btn-close-report-modal" style="background: #0284c7; color: #ffffff; border: none; padding: 8px 18px; border-radius: 6px; font-weight: 700; cursor: pointer;" aria-label="Đóng hộp thoại hướng dẫn">
+              Đã hiểu & Đóng
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="jayt-footer-bar" role="contentinfo">
+        <div class="footer-inner">
+          <p class="footer-note">JayT Platform &bull; Nền Tảng Đối Soát Tiện Ích &amp; Bảng Tính Local-First &bull; Không lưu trữ PII &bull; v3.422.0</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="jayt_storefront_v3422.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "manifest_name": "JAYT_344_SPRINT_B_RELEASE_CANDIDATE_MANIFEST",
+  "directive": "JAYT-344 M4 Sprint B Release Decree",
+  "sealed_at_utc": "2026-09-07T12:51:21.130Z",
+  "target_domain": "https://jayt-production-v3420.vercel.app",
+  "target_version": "v3.425.0-sprint-b",
+  "registry_baseline_scope": "51_ENTITIES__24_CIVIC_PLUS_27_COMMERCIAL",
+  "fingerprints": {
+    "index.html": "397649d1817bef65ebe3087eb2299ec582155dcb08919ba2f991c8c7fa603484",
+    "jayt_storefront_sprint_b.js": "872967c396b5d44df576c58ad74b8655b1054923a96036956aecd977ce36d5f3",
+    "styles.css": "fddcfbb55f78a89bca5986799e5a6ee2f3328cac6bc779fb56fbc879d79b69b6",
+    "registry.json": "bab51db53f5f34934c539968484a2f8055f3fa61786db608b91b9db9349b40c6",
+    "deals_feed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "board_a_afterglow_hero.svg": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+  },
+  "audit_receipts": {
+    "remediation_audit_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_342_SPRINT_B_REMEDIATION_AUDIT_RECEIPT.json",
+      "sha256": "6de09c2fe377ab6fcca7a1609490ca8efc5cd33cee5d3ce2e00ee7dfd4651217"
+    },
+    "automated_a11y_contrast_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_344_SPRINT_B_AUTOMATED_A11Y_CONTRAST_RECEIPT.json",
+      "sha256": "0b6366aff83d46bc90b38ade902db319aa3577403d3d6e6bdae14989b2c1c3f1"
+    }
+  },
+  "rollback_target": {
+    "version": "v3.423.0",
+    "cards_count": 47,
+    "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "artifact_root": "deploy_personal_v3423/",
+    "status": "STANDBY_READY"
+  }
+}

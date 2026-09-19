@@ -1,0 +1,46 @@
+{
+  "release_candidate_id": "JAYT_RELEASE_CANDIDATE_094",
+  "version": "2.4.0",
+  "created_at": "2026-08-25T07:56:01.552Z",
+  "directive": "JAYT-094-CINEMATIC-BENTO-DISCOVERY-PREMIUM",
+  "bundle_type": "CINEMATIC_BENTO_DISCOVERY_PREMIUM_V4",
+  "status": "EMITTED_PENDING_CEO_REVIEW",
+  "artifacts": {
+    "index.html": {
+      "sha256": "a3d8d0e171521ffeaa0b8d294c6826525a86d055db4725080dbbab3532926c9a",
+      "size_bytes": 14993,
+      "verified_at": "2026-08-25T07:56:01.550Z"
+    },
+    "jayt_apex_interface.js": {
+      "sha256": "936a66dcffe7c90c077afa49afb35acc9c1890142339913f616a01ef4c0aedc8",
+      "size_bytes": 182511,
+      "verified_at": "2026-08-25T07:56:01.551Z"
+    },
+    "four_layer_dataset.json": {
+      "sha256": "d3e41ecabb4db7233766004bf240d7a3054ae941efbfcac0d5145840cc0e5fe2",
+      "size_bytes": 17120,
+      "verified_at": "2026-08-25T07:56:01.551Z"
+    },
+    "visual_hybrid_hub_contract.json": {
+      "sha256": "20734338af09b71e16a50c08247830d0f5839309af1b0715a2b9f491638ea398",
+      "size_bytes": 1894,
+      "verified_at": "2026-08-25T07:56:01.551Z"
+    },
+    "customer_journey_north_star.json": {
+      "sha256": "3d1d8c4e98a6de497b991c686118306f4917fd7b39ef498e7d35e1cc64400241",
+      "size_bytes": 8301,
+      "verified_at": "2026-08-25T07:56:01.552Z"
+    }
+  },
+  "invariants": {
+    "production_feed_empty": true,
+    "production_approval_is_false": true,
+    "client_side_local_storage_only_no_server_transmission": true,
+    "zero_unverified_deals_or_fake_discounts": true,
+    "zero_unverified_pulses": true,
+    "touch_target_min_44px": true,
+    "cinematic_bento_hierarchy_45_30_25": true,
+    "category_dock_scroll_snap": true,
+    "escape_modal_dismissal_supported": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "incident_id": "INCIDENT-JAYT-134C",
+  "directive": "JAYT-134C — P0 ESCAPED-CLAIM CONTAINMENT & FULL-SCOPE SCANNER",
+  "severity": "P0_CRITICAL",
+  "status": "PARTIALLY_CONTAINED_SECOND_ESCAPE_DISCLOSED",
+  "reported_at": "2026-08-26T17:58:08+07:00",
+  "contained_at": "2026-08-26T17:59:30+07:00",
+  "summary": "Full-scope containment of all escaped commercial claims, static KTX items, Shopee buy buttons, #JayTAffiliate partner declarations, Smart Affiliate Router, Klook affiliate IDs, and unverified prices in educational services.",
+  "escaped_claims_remediated": [
+    {
+      "claim_id": "ESC_01_REMNANT_KTX_GRID",
+      "description": "Static cards for Cáp sạc 29k, Quạt KTX 45k, Đèn học 39k with ĐÁY 90N badge and direct Shopee buy links.",
+      "action": "PURGED_100_PERCENT",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "PURGED"
+    },
+    {
+      "claim_id": "ESC_02_SYNTHETIC_AFFILIATE_PARTNER_NOTICE",
+      "description": "Declarations of '#JayTAffiliate', 'Shopee Affiliate Direct, Accesstrade CPA & Klook Official Partner'.",
+      "action": "PURGED_AND_REPLACED_WITH_NEUTRAL_COMMUNITY_VERIFICATION_NOTICE",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "PURGED"
+    },
+    {
+      "claim_id": "ESC_03_SMART_AFFILIATE_ROUTER",
+      "description": "JAYT_AFFILIATE_CONFIG, KLOOK_AFFILIATE_ID: 'jayt_danang_aff', and dispatchSmartAffiliate engine with automatic UTM/sub-id tracking.",
+      "action": "PURGED_100_PERCENT",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "PURGED"
+    },
+    {
+      "claim_id": "ESC_04_UNVERIFIED_EDU_PRICES",
+      "description": "Hardcoded prices/discounts for Spotify (29.500₫), YouTube (49.000₫), GitHub ($1.200 -> 0đ), Notion, Apple (-2.000.000₫), JetBrains ($289 -> 0đ).",
+      "action": "REFACTORED_TO_NEUTRAL_EXTERNAL_DIRECTORY_WITH_ZERO_UNVERIFIED_PRICES",
+      "source_file": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "status": "PURGED"
+    }
+  ],
+  "source_hashes": {
+    "jayt_apex_interface_js": {
+      "before_sha256": "0241a8285811587aa906d400ac637d103af5bbfbe7fe33cc6e08aec55d61c4a0",
+      "after_sha256": "43e2e8d35f492a549d44321946059b0d10b7a8d0526e036e76cf0ba779261a8a"
+    },
+    "index_html": {
+      "before_sha256": "3d3002006491779d47915fe2b7815cf1a951dc8b177e77b819f71c4c1a59c3a3",
+      "after_sha256": "3cb49a4ffccdfc7b0dafa5064f7b49463503aa496bb552ff99dc0bf120d297a7"
+    }
+  },
+  "claim_surface_invariants": {
+    "zero_unverified_ktx_cards": true,
+    "zero_shopee_buy_buttons": true,
+    "zero_affiliate_partner_claims": true,
+    "zero_affiliate_router_engine": true,
+    "zero_unverified_edu_prices": true
+  },
+  "failure_analysis": "Test 134C relied on keyword blacklist and missed voucher TIKTOKVIP0D, handwritten stack formulas (-8.500d, -15.000d), handwritten roulette places array with fake distances, and fallback commercial strings in export pass.",
+  "superseded_by": "INCIDENT-JAYT-134D"
+}

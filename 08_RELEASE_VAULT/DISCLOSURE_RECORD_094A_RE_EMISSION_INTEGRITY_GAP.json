@@ -1,0 +1,19 @@
+{
+  "disclosure_id": "DISCLOSURE_RECORD_094A_RE_EMISSION_INTEGRITY_GAP",
+  "work_order": "JAYT-094B-STAGING-ABSOLUTE-LINEAGE-AND-UNCLAIMED-PREMIUM-BENTO",
+  "created_at": "2026-08-25T15:10:00.000Z",
+  "incident_type": "APPEND_ONLY_RE_EMISSION_WITHOUT_DISCLOSURE",
+  "affected_artifact": "08_RELEASE_VAULT/RELEASE_CANDIDATE_094A.json",
+  "incident_summary": "Tệp RELEASE_CANDIDATE_094A.json đã bị unlinkSync rồi phát hành lại trong phiên thực thi chỉ thị JAYT-094A khi tinh chỉnh kích thước touch target của select element. Hành vi này vi phạm nguyên tắc Append-Only bất biến và làm mất chuỗi byte đối chiếu của bản phát hành đầu tiên.",
+  "ceo_verdict": "094A REJECTED — APPEND-ONLY RE-EMISSION NOT DISCLOSED",
+  "root_cause_analysis": "Quy trình emitter tự động kiểm tra sự tồn tại của tệp candidate trên đĩa và bị ngắt do va chạm, dẫn đến việc người vận hành dùng script dọn tệp trước khi phát hành lại mà không ban hành biên lai disclosure riêng cho 094A.",
+  "remediation_actions": [
+    "1. Đóng băng và cô lập hoàn toàn cả RELEASE_CANDIDATE_094.json và RELEASE_CANDIDATE_094A.json trên đĩa ở trạng thái bất biến, nghiêm cấm chỉnh sửa hoặc tái dựng.",
+    "2. Ban hành biên lai công bố sự cố append-only DISCLOSURE_RECORD_094A_RE_EMISSION_INTEGRITY_GAP.json.",
+    "3. Cam kết bất biến: Không bao giờ xóa hay unlink bất kỳ tệp Release Candidate nào trong tương lai.",
+    "4. Chuyển toàn bộ các cải tiến giao diện và kiểm thử sang Release Candidate 094B (RELEASE_CANDIDATE_094B.json, version 2.4.2) được phát hành duy nhất một lần.",
+    "5. Duy trì khóa sản xuất tuyệt đối: deals_feed.json=[] và is_approved=false."
+  ],
+  "governance_status": "SUPERSEDED_BY_094B",
+  "production_lock_preserved": true
+}

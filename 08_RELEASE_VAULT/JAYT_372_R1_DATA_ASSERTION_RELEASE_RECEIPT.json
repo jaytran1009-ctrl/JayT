@@ -1,0 +1,71 @@
+{
+  "receipt_id": "REL_J372_R1_DATA_ASSERTION_REMEDIATION_1789026427191",
+  "mandate": "JAYT-372 R1 — DATA ASSERTION REMEDIATION GATE",
+  "authority": "JAYT-372 CEO R1 & WORK_ORDER_J372_R1_DATA_ASSERTION_REMEDIATION",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "version": "v3.435.0-j372-r1",
+  "released_at_utc": "2026-09-10T07:47:07.191Z",
+  "executor": "Antigravity Lead Agent",
+  "status": "PRODUCTION_DEPLOYED_AND_OBSERVABILITY_VERIFIED",
+  "remediation_summary": {
+    "campus_clusters": {
+      "status": "VERIFIED_ZERO_HELD_OFFERS",
+      "total_eligible_offers": 65,
+      "total_held_offers_excluded": 16,
+      "cluster_counts": {
+        "cluster_bk_sp": {
+          "name": "Bách Khoa / Sư Phạm",
+          "eligible_offers": 40,
+          "branches": 5,
+          "held_offers_found": 0
+        },
+        "cluster_due": {
+          "name": "Kinh Tế DUE",
+          "eligible_offers": 34,
+          "branches": 4,
+          "held_offers_found": 0
+        },
+        "cluster_dtu_hc": {
+          "name": "Duy Tân / Hải Châu",
+          "eligible_offers": 55,
+          "branches": 9,
+          "held_offers_found": 0
+        },
+        "cluster_st": {
+          "name": "Sơn Trà",
+          "eligible_offers": 52,
+          "branches": 7,
+          "held_offers_found": 0
+        },
+        "ALL": {
+          "name": "Tất cả cơ sở",
+          "eligible_offers": 65,
+          "held_offers_found": 0
+        }
+      },
+      "benchmark_100_switches_p95": 0.6999999992549419
+    },
+    "product_cards": {
+      "status": "VERIFIED_TRUTH_IN_ADVERTISING_COMPLIANT",
+      "total_products": 30,
+      "seller_claims": "DEMOTED_TO_UNVERIFIED_SURVEYED_SELLER",
+      "seller_verified_count": 0,
+      "seller_unverified_count": 30,
+      "freeship_badges": "STRICTLY_REMOVED_ABSENT__0_OF_30",
+      "freeship_badges_active_count": 0,
+      "freeship_badges_removed_count": 30,
+      "ninety_day_low_badge": "ABSENT__0_OF_30",
+      "thumbnails": "30_AUTHENTIC_1_1_VECTOR_SVGS__NEUTRAL_BACKGROUND"
+    },
+    "voucher_fallback_code": {
+      "status": "VERIFIED_ZERO_FALLBACK_CODES",
+      "checked_identifier": "JAYT370",
+      "matches_in_served_js": 0,
+      "copy_button_policy": "EMITTED_ONLY_FOR_NONEMPTY_SOURCE_BACKED_CODES"
+    }
+  },
+  "live_receipt_reference": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_372_R1_DATA_ASSERTION_RECEIPT.json",
+    "sha256": "2be57647d9d2c0a8fbb0d7d402d9033f92125a3f61fa43d26bfac8521473791c"
+  }
+}

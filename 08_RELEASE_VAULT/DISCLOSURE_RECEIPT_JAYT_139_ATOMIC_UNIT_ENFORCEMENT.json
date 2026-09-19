@@ -1,0 +1,16 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_139_ATOMIC_UNIT_ENFORCEMENT",
+  "directive": "JAYT-139 — ATOMIC PROMOTION UNIT EXTRACTION & CANONICAL LEAF VERIFICATION",
+  "severity": "P0_CROSS_ITEM_MERGE_DEFICIT",
+  "status": "COMPILER_138_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-27T00:30:00+07:00",
+  "executive_ruling": "CEO audit identified cross-item merge on multi-deal listing page. Mandated 2-tier architecture (Discovery-Only vs Canonical Leaf) and strict promotion_unit_id enforcement.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_23_CROSS_ITEM_LISTING_MERGE",
+      "description": "Parser evaluated whole-page text on multi-deal listing/RSS pages, stitching fragments from distinct unconnected promotions into a false bundle."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_138_cross_item_merge/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/generic_compiler_139.js (Atomic Promotion Unit & Canonical Leaf Verification)"
+}

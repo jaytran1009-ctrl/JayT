@@ -1,0 +1,59 @@
+{
+  "report_title": "JAYT — FINAL PRE-LAUNCH READINESS & TECHNICAL AUDIT REPORT",
+  "directive": "JAYT-CATALOG-TRUST-002 — STRICT SCHEMA & AFFILIATE TRUTH",
+  "generated_at": "2026-08-20T15:21:03.103570+00:00",
+  "overall_readiness_status": "CATALOG_TRUST_002_COMPLETE_PENDING_CEO_REVIEW_PRODUCTION_LOCKED",
+  "governance_locks": {
+    "production_is_approved": false,
+    "production_status": "LOCKED_PENDING_CEO_DECISION_ON_CATALOG_TRUST_002",
+    "evidence_classification": "TAMPER_EVIDENT_LOCALLY_READ_ONLY",
+    "post_launch_community_validation_mandate": true
+  },
+  "function_first_experience_pillars": {
+    "interactive_decision_flow": "Scenario mở luồng quyết định tương tác đa bước: Nhu cầu -> Ngân sách & Thời lượng -> Khu vực -> Kết quả đủ điều kiện trong <= 3 thao tác",
+    "top_decision_matrix": "Khối Kết quả tốt nhất hiển thị 1 Lựa chọn ưu tiên + 2 Lựa chọn thay thế + Lý do xếp hạng + Điều kiện chưa xác minh độc lập + Thao tác tiếp theo",
+    "strict_product_hub_separation": "Tách biệt hoàn toàn 2 phân hệ: 📍 Địa Phương Đà Nẵng 43 (Ăn uống, cafe, phim) và 📦 Sàn Online & Săn Mã (Shopee, Lazada, TikTok)",
+    "action_planner_tool": "Kế hoạch hôm nay là công cụ thực thụ: chọn khung giờ dự kiến, 4 trạng thái (cần kiểm tra / đã mở / đã dùng / không phù hợp), ghi chú local và tự động reset 00:00",
+    "local_savings_ledger": "Sổ tiết kiệm cá nhân cục bộ tổng hợp số tiền tiết kiệm tham khảo (chỉ tính khi người dùng chủ động bấm 'đã dùng'), nhật ký nguồn đã mở và thống kê nhu cầu",
+    "outcome_driven_validation": "Đã kiểm thử thực tế 4 outcome: Sinh viên <= 50K trong <= 3 click, Văn phòng 45p ghi chú, Phân biệt PROBING, và Tái hiện Brief hữu ích từ dữ liệu local ngày hôm sau"
+  },
+  "technical_gates_summary": {
+    "gate_1_sealed_builds": "PASS (Content-Addressed BUILD-758cc6cd8d10-20260820_222037, Read-Only EPERM Protected)",
+    "gate_2_merkle_tree_readiness": "PASS (10/10 Readiness Tests Passed, Merkle Digest Validated)",
+    "gate_3_policy_domain_catalog": "PASS (8 Approved Policy Domains, True TLS-SNI IP Pinning)",
+    "gate_4_chromium_real_browser_e2e": "PASS (8/8 CDP Strict Tests, 3 Viewports, 4 Core Tasks)",
+    "gate_5_headless_dom_and_rules": "PASS (19/19 DOM E2E Tests bao gồm 4 Outcome Tests & 6-Condition Deterministic Matrix)",
+    "gate_6_deals_api_fail_closed": "PASS (11/11 API Fail-Closed & Numeric Minutes Tests)",
+    "gate_7_pure_pointer_atomic_rollback": "PASS (Sandbox RTO < 3.5s, Exact Rejection Code Matched)",
+    "gate_8_blue_green_draining": "PASS (100% In-Flight Drained, Zero Downtime Proven)"
+  },
+  "tamper_evident_run_manifest": {
+    "run_id": "P007_20260820T151940Z_0b1b38da",
+    "manifest_path": "07_QUALITY_ASSURANCE/prelaunch/evidence/runs/P007_20260820T151940Z_0b1b38da/RUN_MANIFEST.json",
+    "staging_pointer_pre_sha256": "53a874f8a54be97aefbe7fbfcf956e7173c3751a63d7ceff4d923b2be5f12f04",
+    "staging_pointer_post_sha256": "53a874f8a54be97aefbe7fbfcf956e7173c3751a63d7ceff4d923b2be5f12f04",
+    "staging_isolation_byte_for_byte": true
+  },
+  "directive_governance": {
+    "historical_accepted": {
+      "directive": "JAYT-VALUE-LOOP-004",
+      "scope": "FALLBACK_VALUE_AND_SLOT_TRANSPARENCY_PASSED",
+      "accepted_at": "2026-08-20T23:22:00+07:00",
+      "production_status": "LOCKED"
+    },
+    "catalog_trust_002": {
+      "directive": "JAYT-CATALOG-TRUST-002 — STRICT SCHEMA & AFFILIATE TRUTH",
+      "status": "CATALOG_TRUST_002_IMPLEMENTED_PENDING_CEO_REVIEW",
+      "production_status": "LOCKED",
+      "features_delivered": [
+        "Bắt buộc 100% các trường schema tại validator runtime: lifecycle_status, category_scope, affiliate_type, source_url (https://), disclosure, expires_at, zone, persona, need_collection, deal_id. Thiếu bất kỳ trường nào đều fail-closed và bị loại bỏ ngay lập tức, tuyệt đối không tự mặc định.",
+        "Cấm triệt để trạng thái 'VERIFIED' ở giai đoạn hiện tại (chỉ chấp nhận 'PROBING', 'NEEDS_RECHECK', 'ARCHIVED' cho đến khi có cơ chế bằng chứng độc lập được CEO phê chuẩn).",
+        "Chuẩn hóa trung thực Affiliate: Phân loại 'AFFILIATE_LINK' chỉ hợp lệ với 'ONLINE_PLATFORM' (Shopee, Lazada, TikTok). Các trang Local/generic homepage được phân loại chuẩn xác thành 'DIRECT_DEAL'.",
+        "Cách ly nghiêm ngặt 2 Hub: Tab 2 (Sàn Online & Săn Mã) chỉ hiển thị record 'ONLINE_PLATFORM + AFFILIATE_LINK'; Tab 1 (Địa Phương Đà Nẵng) chỉ hiển thị 'LOCAL_EXPERIENCE'.",
+        "Bổ sung bộ test âm toàn diện cho từng trường schema bắt buộc, 'VERIFIED' trái phép, generic homepage fake affiliate và duplicate deal_id.",
+        "Toàn bộ 26/26 E2E DOM Tests và 8/8 CDP Real Browser Tests vượt qua kiểm thử thành công tuyệt đối.",
+        "Duy trì nghiêm ngặt is_approved: false, không thay đổi trạng thái release hay tuyên bố ưu đãi đang hiệu lực."
+      ]
+    }
+  }
+}

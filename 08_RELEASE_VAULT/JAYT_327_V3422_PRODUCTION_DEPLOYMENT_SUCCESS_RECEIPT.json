@@ -1,0 +1,70 @@
+{
+  "receipt_id": "JAYT_327_V3422_PRODUCTION_DEPLOYMENT_SUCCESS_RECEIPT",
+  "governing_directive": "JAYT-327",
+  "deployment_timestamp_utc": "2026-09-05T08:31:39.000Z",
+  "target_version": "v3.422.0",
+  "deployment_status": "DEPLOYMENT_SUCCESSFUL__LIVE_AUDIT_PASS",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_E8GNxXFBYHfBoMuLVD3Dv39DTkSo",
+  "deployed_cards_count": 24,
+  "artifacts_verified_on_live_edge": [
+    {
+      "name": "jayt_storefront_v3422.js",
+      "size_bytes": 108823,
+      "sha256": "9c2e6bfe6d9f7be7ac8e3d80cfb5848857c1462f7a1b908046e0b3c0a71d8b16",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "index.html",
+      "size_bytes": 11516,
+      "sha256": "bbc522387901d516bf37bc9d0c7516df913269a2fae166e2c51ce0778bf53f00",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "styles.css",
+      "size_bytes": 44915,
+      "sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "candidate_manifest.json",
+      "size_bytes": 865,
+      "sha256": "d462f9a2e2b841540bc74f07f520df5fae4727e7a1fc91502fcf53673e7a4ae6",
+      "http_status": 200,
+      "verified": true
+    }
+  ],
+  "live_post_deploy_audit": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_327_V3422_LIVE_POST_DEPLOY_AUDIT.json",
+    "pass": true,
+    "blockers_count": 0,
+    "viewports_audited": [
+      1440,
+      768,
+      390
+    ],
+    "exact_urls_match": true,
+    "exact_urls_count": 24,
+    "exact_evidence_ids_match": true,
+    "exact_evidence_ids_count": 24,
+    "b11_01_disclaimer_rendered": true,
+    "b11_02_disclaimer_rendered": true,
+    "b11_02_schedule_rule_rendered": true,
+    "horizontal_overflow": false,
+    "console_errors_count": 0,
+    "external_requests_count": 0,
+    "commercial_links_count": 0,
+    "deals_feed_empty": true
+  },
+  "rollback_standby": {
+    "target_version": "v3.421.0",
+    "deployment_id": "dpl_5bzFrqKUzAyrzN5pgP8o4f5VFPgQ",
+    "artifact_root": "deploy_personal_v3421/",
+    "artifact_js_sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+    "cards_count": 22,
+    "status": "STANDBY_READY"
+  }
+}

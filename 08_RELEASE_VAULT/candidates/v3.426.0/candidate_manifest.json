@@ -1,0 +1,45 @@
+{
+  "manifest_name": "JAYT_350_R1_V3426_RELEASE_CANDIDATE_MANIFEST",
+  "directive": "JAYT-350-R1 Rollback Realignment and Final Sealing",
+  "sealed_at_utc": "2026-09-07T14:13:33.378Z",
+  "target_domain": "https://jayt-production-v3420.vercel.app",
+  "target_version": "v3.426.0",
+  "production_release_baseline": "v3.425.0-sprint-b-r1",
+  "runtime_ledger_version": "v3.424.0",
+  "registry_baseline_scope": "76_ENTITIES__24_CIVIC_PLUS_52_COMMERCIAL",
+  "counts": {
+    "total_entities": 76,
+    "civic_entities": 24,
+    "commercial_entities": 52,
+    "voucher_vault_items": 37,
+    "smart_value_radar_items": 15
+  },
+  "fingerprints": {
+    "index.html": "727f843a0613d1f9a6bb18ebe0b97f55d6dce3fb7810521d36b7b8ba5557fbd0",
+    "jayt_storefront_sprint_b.js": "e7f61223636125692a25dcd12dba0ab2895801fc45c893860c141d9ac623b73a",
+    "styles.css": "f310ab6ce913bf3ade14b377b32c17de407a963b9f97cc30b33327067da18022",
+    "registry.json": "346c10d82fbf00a4501e3ff8aec1d4340ef07904eddaa6e66a33a77e7eb95104",
+    "deals_feed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "board_a_afterglow_hero.svg": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+  },
+  "audit_receipts": {
+    "harvest_receipt": {
+      "path": "06_TRUST_AND_EVIDENCE/batch_16_voucher_matrix_vault/run_20260907T134242Z_744863e8/BATCH_16_CAPTURE_RECEIPT.json",
+      "sha256": "ba713054058c656c22ccf6dc957bad2621ad939097892c18b214825d3474792d"
+    },
+    "work_order_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_JAYT-350-R1.json"
+    }
+  },
+  "rollback_target": {
+    "version": "v3.425.0-sprint-b-r1",
+    "cards_count": 51,
+    "civic_cards": 24,
+    "commercial_cards": 27,
+    "deployment_id": "dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o",
+    "artifact_root": "08_RELEASE_VAULT/candidates/sprint_b_r1/",
+    "artifact_manifest_sha256": "48fe97c68dc3963c60566b5fb99fe4c36fef96e12b3a3762f58bd2664db15dfe",
+    "verification_command": "npx vercel alias set dpl_CvczfzmWBk4XJvd7RgfNX1Dwe55o jayt-production-v3420.vercel.app",
+    "status": "STANDBY_READY"
+  }
+}

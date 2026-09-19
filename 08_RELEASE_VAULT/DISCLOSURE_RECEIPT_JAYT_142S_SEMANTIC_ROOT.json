@@ -1,0 +1,20 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_142S_SEMANTIC_ROOT",
+  "directive": "JAYT-142S: SEMANTIC-ROOT RECOVERY & RECEIPT-TRUST REBUILD",
+  "severity": "P0_SEMANTIC_ROOT_AND_RECEIPT_TRUST_ENFORCEMENT",
+  "status": "GENUINE_CONTENT_ROOT_AND_ADDRESS_UNIT_ENFORCED",
+  "disclosed_at": "2026-08-26T18:52:36.691Z",
+  "executive_ruling": "Mandating strict content_root boundaries (excluding header/nav/footer/sidebar/booking widgets), physical receipt recalculation (ignoring inherited metadata), and address-unit validation for Da Nang locality.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_36_UNBOUND_GLOBAL_WIDGET_POLLUTION",
+      "description": "Extracted title and price from shared booking widget/navigation container instead of scoping strictly to the leaf article content root."
+    },
+    {
+      "cause_id": "P0_CAUSE_37_INHERITED_RECEIPT_TRUST_VIOLATION",
+      "description": "Receipts contained inherited metadata from revoked batch 142 that was not stripped before re-evaluation."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142r_unbound_semantic_quarantine/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/semantic_root_dom_parser_142s.js, address_unit_locality_verifier_142s.js & fresh_source_registry_142s.json"
+}

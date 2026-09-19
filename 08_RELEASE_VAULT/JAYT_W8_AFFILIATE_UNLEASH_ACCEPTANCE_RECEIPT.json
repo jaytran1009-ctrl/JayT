@@ -1,0 +1,21 @@
+{
+  "receipt_id": "JAYT_W8_AFFILIATE_UNLEASH_ACCEPTANCE_RECEIPT",
+  "recorded_at_utc": "2026-09-14T15:48:08.993Z",
+  "status": "PHASE_2_COMMERCIAL_GATE_HELD_FAIL_CLOSED",
+  "governing_directive": "CHAIRMAN-SUPREME-DIRECTIVE-2026-0914-PHA2-INGRESS-AND-COMMERCIAL-UNLEASH",
+  "audit_verdict": "FAIL_CLOSED__DEFICIENT_PHYSICAL_EVIDENCE_AND_PENDING_PROVIDER_AUTH",
+  "canonical_production_baseline": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "deployment_id": "dpl_Ei6HUkA25vvGKpjCY7g3zW9xSHjZ",
+    "active_version": "v3.496.0-j465-monolithic-surface",
+    "receipt_sha256": "f442231701e8cec1cb1ac32a0937fc0fa025c5e55e3ae752790a9f9a15952169",
+    "affiliate_enabled": false
+  },
+  "audit_findings": {
+    "curated_vault": "Lacks 7 mandatory physical evidence fields (HTML, PNG, timestamp, HTTP 200, 2 physical hashes, price/voucher terms).",
+    "register_state": "Reset to 0/20 ACCEPTED (PORTAL_SHORTLINK_INGRESSED__MARKETPLACE_EVIDENCE_DEFICIENT).",
+    "replay_receipt": "Local network resolution recorded; sensitive tokens redacted; formal provider authorization pending.",
+    "dual_key": "Unsigned; no digital signatures or verifiable credentials present."
+  },
+  "commercial_boundary_verdict": "AFFILIATE_ENABLED_REMAINS_FALSE__FAIL_CLOSED_MAINTAINED"
+}

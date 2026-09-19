@@ -1,0 +1,103 @@
+{
+  "release_candidate": "v3.423.0",
+  "status": "PRODUCTION_RELEASE_ACTIVE__LIVE_VERIFIED_47_CARDS",
+  "generated_at_utc": "2026-09-07T07:52:00.000Z",
+  "base_production": {
+    "version": "v3.422.0",
+    "cards": 24,
+    "mutation_authorized": false
+  },
+  "commercial_pilot": {
+    "catalog": "staging_workspace_j328/JAYT_333_COMMERCIAL_PILOT_CATALOG.json",
+    "catalog_sha256": "89bb412725adf12921b4a36b90e5e7d0aabdfcf36d391a3797b9a1737c945894",
+    "renderable_cards": 24,
+    "locality_qualified_cards": 23,
+    "m4_allowlisted_cards": 23,
+    "m4_candidate_artifact_present": true,
+    "m4_candidate_build_parity_verified": true,
+    "unverified_excluded_from_locality_claim": [
+      "B14_DMX_M170_DEN"
+    ],
+    "affiliate_links_enabled": 0,
+    "voucher_codes_published": 0,
+    "surface": "STAGING_ONLY"
+  },
+  "audit_receipts": {
+    "acceptance": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_COMMERCIAL_PILOT_ACCEPTANCE_RECEIPT.json",
+      "sha256": "244e16a36a430c60566a1aa047a08c7a0aab073d641cdfb91860e56fb319196d"
+    },
+    "locator_guard": {
+      "path": "06_TRUST_AND_EVIDENCE/batch_13_locator_vault/run_20260907_133631_50b5fe/RUN_ACCEPTANCE_RECEIPT.json",
+      "sha256": "577ceb35162ba882e7c6162a94a9f69fb001234a82827a9091be2481a82b3186"
+    },
+    "dom": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_COMMERCIAL_DOM_AUDIT_RECEIPT.json",
+      "sha256": "3e9e1f4659600d48dd7dfd73db1a6dde929dbb4c8dde3611aab50e32356ea227"
+    },
+    "metiz_locality_amendment": {
+      "path": "06_TRUST_AND_EVIDENCE/jayt_333_hot_campaign_vault/J333_LOCALITY_METIZ_DANANG_2026_PUBLIC_APPROVAL_STAGING_ONLY.json",
+      "sha256": "2a109a6b9ddf7b273830b8a61dc0bf7bbc4767b6f1f3cc5a6f7cdc58ce038953"
+    },
+    "m4_preflight": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_M4_PREFLIGHT_AUDIT_RECEIPT.json",
+      "sha256": "de234a8ed1877a13a365fbaf8e650560fd9412b7135f2dc9f703d9a9b537ff81"
+    },
+    "candidate_preflight_audit": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/RC_V3423_CANDIDATE_AUDIT_RECEIPT.json",
+      "sha256": "ccbcb648ab59f31078ae147e5909aa8315c1eff5301cd059754ba4431ba36054"
+    }
+  },
+  "required_before_m4": [],
+  "rollback": {
+    "target_version": "v3.422.0",
+    "strategy": "ATOMIC_VERCEL_ALIAS_REPOINT_TO_LAST_HEALTHY_DEPLOYMENT"
+  },
+  "deployment_authorized": true,
+  "approval": {
+    "is_approved": true,
+    "deployment_permitted": true,
+    "approval_id": "JAYT-333-CHAIRMAN-M4-COMMERCIAL-RELEASE-v3.423.0",
+    "decree_path": "01_EXECUTIVE_COUNCIL/JAYT_333_EXECUTIVE_PRODUCTION_DEPLOYMENT_DECREE_V3423.md",
+    "approved_on": "2026-09-07"
+  },
+  "deployment": {
+    "status": "SUCCESS__LIVE_VERIFIED",
+    "deployment_id": "dpl_9Gug4BDaBDxzpUXXAv1HrGAcLZmA",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "post_deploy_audit": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_333_V3423_LIVE_POST_DEPLOY_AUDIT.json",
+    "rollback_triggered": false
+  },
+  "candidate_bundle": {
+    "bundle_root": "08_RELEASE_VAULT/candidates/v3.423.0/",
+    "bundle_manifest": "08_RELEASE_VAULT/candidates/v3.423.0/candidate_manifest.json",
+    "bundle_manifest_sha256": "29129e135fdbd8d30d3b4f59a0f09e1aa76e190cb5bf7f6b3265047bd9172ae7",
+    "js_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.423.0/jayt_storefront_v3423.js",
+      "sha256": "e696e873b533080d1e551c3bbdbb4c987dad7ee3d51dd75696ba57e4aa0ac48b"
+    },
+    "html_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.423.0/index.html",
+      "sha256": "839c8b86fe69b83bb6329236efa23b472fc2d863a6d2192b146609bb7a4c64bf"
+    },
+    "css_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.423.0/styles.css",
+      "sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e"
+    },
+    "registry_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.423.0/registry.json",
+      "sha256": "b0e3d9eab6ead07a1d6cfd890cf0c44c89709f62495c77519a315e53fd410bfa"
+    },
+    "hero_svg_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.423.0/assets/images/board_a_afterglow_hero.svg",
+      "sha256": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+    }
+  },
+  "candidate_registry": {
+    "registry_path": "08_RELEASE_VAULT/candidates/v3.423.0/registry.json",
+    "registry_file_sha256": "b0e3d9eab6ead07a1d6cfd890cf0c44c89709f62495c77519a315e53fd410bfa",
+    "total_approved_entities_count": 47,
+    "civic_entities_count": 24,
+    "commercial_entities_count": 23
+  }
+}

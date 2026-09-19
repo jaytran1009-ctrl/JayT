@@ -1,0 +1,44 @@
+{
+  "receipt_id": "W8_SERVERLESS_PREVIEW_BUILD_AND_DEPLOY_RECEIPT",
+  "recorded_at": "2026-09-13T13:20:00+07:00",
+  "status": "LOCAL_PREVIEW_BUILD_READY__VERCEL_PREVIEW_DEPLOY_BLOCKED_NOT_AUTHORIZED",
+  "staging_build": {
+    "path": "staging_workspace_w8_serverless",
+    "version": "v3.463.0-w8-serverless-preview",
+    "interface_sha256": "875a1bda0284df511498d7af3093ae8f7396956714951ce8b9e1112cb2aacb3a",
+    "serverless_endpoint_sha256": "2e53d258a47b4ea07b8140730ee9d9ad1950f34272c511a291d9aae626fdabc0",
+    "manifest_sha256": "4d6fc6637c0a48282bfb7c16af9eed63476721d5e66af09f3998a459b3d5cbaf",
+    "client_integration": "SHORT_LINKS_CALL_SAFE_SERVERLESS_RESOLVER__LONG_LINKS_PARSE_LOCALLY",
+    "affiliate_enabled": false,
+    "affiliate_dispatch_performed": false,
+    "partner_credentials_loaded": false
+  },
+  "verification": {
+    "javascript_syntax": "PASS",
+    "serverless_contract_test": "PASS",
+    "workspace_source_static_seal": "24_OF_24_PASS",
+    "ws1_runtime_gate": "DEGRADED_STALE_EVIDENCE_EXIT_2",
+    "ws2_runtime_gate": "HEALTHY_EXIT_0"
+  },
+  "deployment_attempt": {
+    "command": "npx vercel --yes",
+    "authenticated_identity": "kuntran777-6857",
+    "result": "FAILED_NOT_AUTHORIZED",
+    "deployment_id": null,
+    "preview_url": null
+  },
+  "canonical_production": {
+    "url": "https://jayt-production-v3420.vercel.app",
+    "http_status": 200,
+    "observed_version": "v3.462.0-j411",
+    "alias_mutated": false,
+    "affiliate_enabled": false
+  },
+  "held_until_partner_contract": [
+    "voucher_api_queries",
+    "price_history",
+    "affiliate_deep_links",
+    "live_tracking_parameters",
+    "twenty_verified_floor_price_presets"
+  ]
+}

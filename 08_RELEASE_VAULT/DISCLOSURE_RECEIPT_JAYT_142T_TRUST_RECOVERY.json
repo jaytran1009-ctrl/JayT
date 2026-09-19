@@ -1,0 +1,20 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_142T_TRUST_RECOVERY",
+  "directive": "JAYT-142T: CẤM BODY FALLBACK, KHÓA RECEIPT TRUTH VÀ SỬA THỨ TỰ PHÂN LOẠI",
+  "severity": "P0_ZERO_BODY_FALLBACK_AND_STRICT_RECEIPT_PROVENANCE",
+  "status": "STRICT_CONTENT_ROOT_AND_UNBIASED_RECEIPT_TRUTH_ENFORCED",
+  "disclosed_at": "2026-08-26T18:58:13.148Z",
+  "executive_ruling": "Eliminating all document.body fallbacks, enforcing strict receipt truth without fallback defaults, normalizing address units by distinct address string, and enforcing strict 5-step classification order.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_38_BODY_FALLBACK_SEMANTIC_POLLUTION",
+      "description": "Permitted document.body fallback as content_root when no article container existed, capturing unrelated page-level headers like \"Tin liên quan\"."
+    },
+    {
+      "cause_id": "P0_CAUSE_39_RECEIPT_TRUTH_DEFAULT_INFERENCE",
+      "description": "Populated missing receipt fields with default values (http_status 200, final_url) instead of flagging them UNPROVEN."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_142s_body_fallback_quarantine/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/strict_semantic_root_dom_parser_142t.js, strict_receipt_truth_verifier_142t.js & address_unit_locality_verifier_142t.js"
+}

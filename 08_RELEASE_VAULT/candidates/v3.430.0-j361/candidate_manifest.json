@@ -1,0 +1,79 @@
+{
+  "manifest_id": "MANIFEST_CANDIDATE_V3430_J361_R2_DERIVED",
+  "target_version": "v3.430.0",
+  "governing_directive": "JAYT-361 R2 / WORK_ORDER_J361_R2_DERIVED_SUPPLY_ACCOUNTING",
+  "authority": "Codex CEO/Gatekeeper & OPC JayT Executive Council",
+  "sealed_at_utc": "2026-09-09T06:40:33.864Z",
+  "environment": "PRODUCTION_CANDIDATE_SEALED",
+  "production_deployment_authorized": false,
+  "release_v3430_authorized": false,
+  "release_gate": "Gemini audit PASS followed by explicit Chairman Go-Live signature, as required by JAYT-361 Article 3",
+  "deployment_target": {
+    "platform": "Vercel",
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "org_id": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "production_alias": "https://jayt-production-v3420.vercel.app",
+    "current_active_deployment": "dpl_3H3kpJdSN8FiYGDKVqSks2YHDhkJ"
+  },
+  "entity_accounting": {
+    "baseline_entities_count": 76,
+    "civic_entities_count": 24,
+    "commercial_entities_baseline_count": 52,
+    "net_new_commercial_entities_added": 11,
+    "commercial_entities_candidate_total": 63,
+    "removed_entities_count": 0,
+    "total_approved_entities_count": 87,
+    "arithmetic_equation": "76 baseline entities + 11 net-new additions - 0 removals = 87 approved entities (24 civic + 63 commercial)",
+    "batch19_status": "8_VERIFIED_2_HELD__DISCOVERY_RECONCILED",
+    "verified_original_batch19_count": 8,
+    "verified_additional_popeyes_count": 3,
+    "total_new_verified_offers_count": 11,
+    "discovery_records_count": 2,
+    "held_records_reconciled": 15
+  },
+  "public_surface_metrics": {
+    "total_active_vault_cards": 42,
+    "total_verified_offers": 40,
+    "total_discovery_records": 2,
+    "rendered_copy_buttons": 0,
+    "three_cta_types_standard": true,
+    "smart_value_radar_items_on_home": 15,
+    "smart_value_radar_items_total": 15,
+    "split_bill_inline_cards": 34,
+    "split_bill_zero_pii_enforced": true,
+    "split_bill_payer_omitted": true,
+    "split_bill_desc_sanitized": true
+  },
+  "files": {
+    "index.html": {
+      "bytes": 12949,
+      "sha256": "5686180ef75316a3673be8eb6ec82744a9c378ca87ae78ece193c7a6587e6a5f"
+    },
+    "jayt_storefront_sprint_b.js": {
+      "bytes": 220999,
+      "sha256": "dfd58c07320fcfb9716863ca6ab62eeba6b58c24d25be0130db8ff34b37a3718"
+    },
+    "styles.css": {
+      "bytes": 69273,
+      "sha256": "500d04a2cec4e87374d1a7e029f8fd31bb0394a0bdb150b210539ed46c783a49"
+    },
+    "registry.json": {
+      "bytes": 48314,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3"
+    },
+    "deals_feed.json": {
+      "bytes": 58810,
+      "sha256": "facd8a4e9b2ff88d720e457e90023adcf431f2e2b14a0ce6395667e44ce42702"
+    }
+  },
+  "rollback_plan": {
+    "primary_standby_deployment": "dpl_3H3kpJdSN8FiYGDKVqSks2YHDhkJ",
+    "primary_standby_version": "v3.429.0-j360-hotfix",
+    "secondary_standby_deployment": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL",
+    "secondary_standby_version": "v3.428.0",
+    "measured_rollback_rto_ms": 11284,
+    "measured_restore_rto_ms": 8040,
+    "rollback_command_template": "npx vercel alias set <STANDBY_DEPLOYMENT_ID> jayt-production-v3420.vercel.app"
+  }
+}

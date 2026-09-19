@@ -1,0 +1,16 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_141V_BROWSER_DOM_PROVENANCE",
+  "directive": "JAYT-141V — BROWSER-NATIVE DOM PROVENANCE & AUTONOMOUS LOOP READINESS",
+  "severity": "P0_BROWSER_DOM_PROVENANCE_MANDATE",
+  "status": "REGEX_PARSER_DECOMMISSIONED_BROWSER_DOM_ENFORCED",
+  "disclosed_at": "2026-08-27T01:30:00+07:00",
+  "executive_ruling": "All DOM fragments must be extracted natively via browser DOM with concrete CSS selector, outerHTML SHA-256, selector revalidation check, absolute URL resolution, and field provenance.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_31_REGEX_DOM_AND_SYNTHETIC_SELECTOR_DEFICIT",
+      "description": "141U parsed HTML with regex stack and generated nth-of-type selectors without browser re-query hash verification."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141u_regex_dom_parser/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/browser_dom_provenance_141v.js & fresh_source_registry_141v.json"
+}

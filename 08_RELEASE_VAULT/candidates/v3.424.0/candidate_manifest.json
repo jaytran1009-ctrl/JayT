@@ -1,0 +1,66 @@
+{
+  "manifest_id": "JAYT_337_V3424_PREFLIGHT_PACKAGE",
+  "governing_directive": "JAYT-337",
+  "target_version": "v3.424.0",
+  "generated_at_utc": "2026-09-07T11:21:40.750Z",
+  "requested_cards_count": 52,
+  "packaged_cards_count": 51,
+  "civic_cards_count": 24,
+  "commercial_cards_count": 27,
+  "status": "PREFLIGHT_BLOCKED__TARGET_52_UNSATISFIED__SAFE_51_PACKAGED",
+  "deployment_authorized": false,
+  "blocking_reason": "B14_DMX_M170_DEN remains locality-unverified after official source HTTP 500; JAYT-245 forbids synthetic promotion.",
+  "promoted_batch_15_ids": [
+    "P2O_GALAXY_MEMBER_2026",
+    "P2O_GALAXY_SHOPEEPAY_SEP_2026",
+    "P2O_PHILONG_LENOVO_STUDENT_2026",
+    "P2O_PHILONG_HP_BTS_2026"
+  ],
+  "governance_exclusions": [
+    "B14_DMX_M170_DEN",
+    "P2O_CGV_FANC_2026",
+    "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+    "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+  ],
+  "source_receipts": {
+    "batch_15_technical_acceptance": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_336_BATCH_15_P2_FINAL_TECHNICAL_ACCEPTANCE_RECEIPT.json",
+      "sha256": "baa180b05cf10b39cf1cc68d34baed8702de6e0c8e015124d46623f5f52219af"
+    },
+    "project_memory_pre_jayt_337": {
+      "sha256": "3b05ec965cd617fa2c498d2e94305684af8d1e8bbf2fd0cb899c673295b92db6"
+    }
+  },
+  "artifacts": {
+    "js": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/jayt_storefront_v3424.js",
+      "size_bytes": 206135,
+      "sha256": "0c200c4d5e82c746c16286ae459b8f67c4df6154ed7615efe245a397b3d292dc"
+    },
+    "html": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/index.html",
+      "size_bytes": 11535,
+      "sha256": "4dd5820320bf2e66dfbd456729beebb346504d5788e6fab45bd8d16eb39bca2f"
+    },
+    "css": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/styles.css",
+      "size_bytes": 50072,
+      "sha256": "36d51c0963e7576968094548eb10e6bb10366fadd3a5e021528f768879de0f1e"
+    },
+    "registry": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/registry.json",
+      "size_bytes": 20214,
+      "sha256": "bab51db53f5f34934c539968484a2f8055f3fa61786db608b91b9db9349b40c6"
+    },
+    "hero_svg": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/assets/images/board_a_afterglow_hero.svg",
+      "size_bytes": 3343,
+      "sha256": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+    },
+    "rollback_manifest": {
+      "path": "08_RELEASE_VAULT/candidates/v3.424.0/rollback_manifest.json",
+      "size_bytes": 1020,
+      "sha256": "e1cf772d21b987bbc1193e74bbd3f484fac6c0e4500013b99567efcf33a0d6d6"
+    }
+  }
+}

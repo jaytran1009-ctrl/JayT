@@ -1,0 +1,90 @@
+{
+  "ledger_id": "LEDGER_VERCEL_DEPLOYMENT_RECONCILIATION_J372_R3_1789028169688",
+  "mandate": "JAYT-372 R3 — NAVIGATION ACCEPTANCE & DEPLOYMENT ID RECONCILIATION",
+  "authority": "JAYT-372 CEO R3",
+  "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+  "project_name": "jayt-production-v3420",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "version": "v3.436.0-j372-r2",
+  "reconciled_at_utc": "2026-09-10T08:16:09.688Z",
+  "reconciliation_audit": {
+    "discrepancy_addressed": "Work order recorded dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q while executor report recorded dpl_4f26vjY51Ky54cd4xqymrQKvnSVr.",
+    "root_cause": "dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q was generated during initial staging upload prior to public/ subdirectory synchronization; dpl_4f26vjY51Ky54cd4xqymrQKvnSVr was immediately deployed with 100% synchronized public/ assets, aliased to canonical production, and verified by live observability and CEO review.",
+    "resolution": "Formalized immutable chronological deployment chain mapping deployment ID -> alias -> fingerprint -> timestamp."
+  },
+  "deployment_chain": [
+    {
+      "deployment_index": 1,
+      "deployment_id": "dpl_BMcShKMGtRBQrPMqG5aCPBDVnv5q",
+      "deployed_at_utc": "2026-09-10T08:04:05Z",
+      "deployment_url": "https://jayt-production-v3420-xlcugv0y1-kuntran777-6857s-projects.vercel.app",
+      "inspector_url": "https://vercel.com/kuntran777-6857s-projects/jayt-production-v3420/BMcShKMGtRBQrPMqG5aCPBDVnv5q",
+      "target": "production",
+      "ready_state": "READY",
+      "lifecycle_state": "SUPERSEDED_PRE_SYNC_DEPLOYMENT",
+      "superseded_by": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+      "notes": "Initial staging upload before public/ mirror was populated. Superseded within 2 minutes."
+    },
+    {
+      "deployment_index": 2,
+      "deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+      "deployed_at_utc": "2026-09-10T08:06:07Z",
+      "deployment_url": "https://jayt-production-v3420-4cp3rkmv6-kuntran777-6857s-projects.vercel.app",
+      "inspector_url": "https://vercel.com/kuntran777-6857s-projects/jayt-production-v3420/4f26vjY51Ky54cd4xqymrQKvnSVr",
+      "canonical_production_alias": "https://jayt-production-v3420.vercel.app",
+      "target": "production",
+      "ready_state": "READY",
+      "lifecycle_state": "CANONICAL_ACTIVE_PRODUCTION_DEPLOYMENT",
+      "verified_by_ceo_r3": true,
+      "verified_fingerprints": {
+        "root_html": {
+          "path": "/",
+          "sha256": "9a8690db919989af593e9e20d464e7091f9dc9573b650bdb8df18227a5e60667",
+          "ceo_verified": true
+        },
+        "styles_css": {
+          "path": "/styles.css",
+          "sha256": "53107411cb2b5fe50a98895bdfe5fbd964026d5db2c7e1bc237093426a013bb9",
+          "ceo_verified": true
+        },
+        "jayt_apex_interface_js": {
+          "path": "/jayt_apex_interface.js",
+          "sha256": "28f7450561aaede2eeb132810a27b8220c4359080045173013e226de3456bfa4",
+          "ceo_verified": true
+        },
+        "published_manifest_json": {
+          "path": "/published_manifest.json",
+          "sha256": "ad2b3c0f4d8b416dc72974fd4f827fba744f494ecfc5cc72f99a6d06c1f41aaa",
+          "ceo_verified": true
+        },
+        "deals_feed_json": {
+          "path": "/deals_feed.json",
+          "sha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60",
+          "ceo_verified": true
+        },
+        "registry_json": {
+          "path": "/registry.json",
+          "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+          "ceo_verified": true
+        },
+        "dragon_bridge_hero_image": {
+          "path": "/assets/images/dragon_bridge_hero_sunset_fire.jpg",
+          "sha256": "6e2707835bd518ca2ca4d044d69dbddefa6376c759663a12ce16321816851806",
+          "ceo_verified": true
+        },
+        "qrcode_vendor_js": {
+          "path": "/assets/vendor/qrcode.js",
+          "sha256": "79ec86f82856005b1c887905cfccfcfbec3821ca61c7fd5a952faa5f778f791c",
+          "ceo_verified": true
+        }
+      }
+    }
+  ],
+  "commercial_and_affiliate_containment": {
+    "affiliate_enabled": false,
+    "commercial_status": "STRICTLY_NON_COMMERCIAL_STUDENT_REFERENCE_ONLY",
+    "revenue_claims_authorized": false,
+    "attribution_authorized": false,
+    "mandate_compliance": "Zero affiliate conversion claims, zero monetary attribution. All outbound merchant links remain tagged rel=\"noopener noreferrer sponsored\" as informational surveyed catalog."
+  }
+}

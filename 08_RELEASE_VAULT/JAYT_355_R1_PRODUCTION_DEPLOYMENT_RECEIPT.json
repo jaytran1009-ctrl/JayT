@@ -1,0 +1,94 @@
+{
+  "receipt_id": "JAYT_355_R1_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "work_order_id": "J355-R1_RELEASE_METADATA_REMEDIATION",
+  "directive": "JAYT-355-R1 — Production Release v3.428.0 (Remediated Registry Metadata)",
+  "authority": "Chairman decree JAYT-355 & Codex CEO Post-Deploy Gate Decision",
+  "executor": "Antigravity — external software",
+  "status": "SUCCESS__LIVE_VERIFIED__V3428_BASELINE_RATIFIED",
+  "release_version": "v3.428.0",
+  "previous_baseline_version": "v3.427.0",
+  "deployed_at_utc": "2026-09-08T07:03:17.376Z",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "canonical_alias": "jayt-production-v3420.vercel.app",
+  "deployment": {
+    "id": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL",
+    "immutable_url": "https://jayt-production-v3420-p02t3oob6-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "production"
+  },
+  "authorization": {
+    "work_order": "04_DATA_PIPELINE/dispatch/WORK_ORDER_J355-R1_RELEASE_METADATA_REMEDIATION.json",
+    "authority": "Chairman decree JAYT-355 & Codex CEO/Gatekeeper",
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true
+  },
+  "sealed_candidate": {
+    "root": "08_RELEASE_VAULT/candidates/v3.428.0/",
+    "candidate_manifest_sha256": "1fbdf5b71902d4abd6ac1d3ee923491bb0e33965f1ff2cf25f6a0acb466e54ad",
+    "bundle_fingerprints_verified": "6_OF_6_MATCH",
+    "rollback_manifest_sha256": "79b0200eb00ce800710c036b15bcfc0a094799d414020dc5814d0d1009549512"
+  },
+  "live_scope": {
+    "canonical_identities": 76,
+    "civic_cards": 24,
+    "commercial_cards": 52,
+    "visible_total_cards": 68,
+    "visible_civic_cards": 24,
+    "visible_voucher_cards": 29,
+    "visible_radar_cards": 15,
+    "deals_feed_actionable_offers": 17,
+    "held_offers_excluded_from_public_bundle": 9,
+    "registry_id_verified": "JAYT_RELEASE_CANDIDATE_V3428_REGISTRY",
+    "governing_directive_verified": "JAYT-355",
+    "target_version_verified": "v3.428.0",
+    "split_bill_pro_module": true,
+    "savings_calendar_module": true,
+    "smart_value_radar_module": true,
+    "voucher_vault_module": true
+  },
+  "post_deploy_audit": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J355-R1_RELEASE_METADATA_REMEDIATION.json",
+    "sha256": "0689ac68de6611596d33b9d887f84fe0f91ebd5b7cada870defcdd7d6ddea1c9",
+    "verdict": "PASS_100_PERCENT",
+    "http_endpoints": "6_OF_6_HTTP_200_AND_HASH_MATCH",
+    "viewports": [
+      1440,
+      768,
+      390
+    ],
+    "console_errors": 0,
+    "runtime_errors": 0,
+    "horizontal_overflow": 0,
+    "affiliate_or_tracking_violations": 0,
+    "copy_code_buttons": 0,
+    "held_ids_found_in_dom": 0
+  },
+  "excluded_candidates_from_public_routes": [
+    "B13_CGV_PAYDAY_30K",
+    "B16_PHUCLONG_M01",
+    "B16_PHUCLONG_M03",
+    "B16_PHUCLONG_M04",
+    "B16_PHUCLONG_M05",
+    "B16_PHUCLONG_M06",
+    "B16_PHUCLONG_M07",
+    "B16_PHUCLONG_M09",
+    "B16_PHUCLONG_M10",
+    "B16_CGV_01",
+    "B16_LOTTE_01",
+    "B16_HIGHLANDS_01",
+    "B16_JOLLIBEE_2840004_DUP",
+    "B16_JOLLIBEE_4000935_DUP",
+    "B16_JOLLIBEE_1810060_DUP",
+    "B14_DMX_M170_DEN",
+    "P2O_CGV_FANC_2026",
+    "P2O_GALAXY_ZALOPAY_REWARDS_2026Q3",
+    "P2O_GALAXY_JCB_WEEKEND_2026Q3"
+  ],
+  "rollback_standby": {
+    "version": "v3.427.0",
+    "deployment_id": "dpl_F7XM5WPhKCD34MEEMkBwai65Vqfy",
+    "status": "STANDBY_READY"
+  },
+  "production_baseline_promoted": "v3.428.0"
+}

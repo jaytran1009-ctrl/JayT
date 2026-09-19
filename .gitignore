@@ -27,15 +27,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Generated QA evidence & release vaults: retain on disk, but never index as source code.
-07_QUALITY_ASSURANCE/runtime_evidence/
+# Generated QA evidence & caches: retain on disk, but never index as source code.
 07_QUALITY_ASSURANCE/candidate_evidence_lake/
 07_QUALITY_ASSURANCE/private_sandbox/
 07_QUALITY_ASSURANCE/**/__pycache__/
-08_RELEASE_VAULT/
+07_QUALITY_ASSURANCE/runtime_evidence/*
+!07_QUALITY_ASSURANCE/runtime_evidence/W2_STAGING_WIDGET_LOCAL_AUDIT_RECEIPT.json
+!07_QUALITY_ASSURANCE/runtime_evidence/JAYT_394_USER_DRIVEN_STAGING_AUDIT_RECEIPT.json
+!07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log
+
 staging_deploy_*/
 staging_workspace_*/
 _archive/
+
 
 # Dependencies
 node_modules/

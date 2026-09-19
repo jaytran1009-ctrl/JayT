@@ -1,0 +1,20 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_137R",
+  "directive": "JAYT-137R — SEMANTIC FALSE-POSITIVE CORRECTION & CORPUS RECERTIFICATION",
+  "severity": "P0_SEMANTIC_FALSE_POSITIVE_DEFICIT",
+  "status": "COMPILER_137_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T23:25:00+07:00",
+  "executive_ruling": "Independent CEO audit discovered generic heading accepted as offer in CGV and copyright footer parsed as address in Danang Fantasticity. Entire 137 manifest rejected and quarantined for recertification.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_21_GENERIC_HEADING_ACCEPTED_AS_OFFER",
+      "description": "generic_compiler_137.js accepted broad heading / category title without an explicit quantified benefit (price, discount amount, percentage, BOGO)."
+    },
+    {
+      "cause_id": "P0_CAUSE_22_COPYRIGHT_FOOTER_PARSED_AS_ADDRESS",
+      "description": "Address regex parsed year (2024) in copyright footer (2024 UBND TP. Đà Nẵng) as a house number and TP. as an administrative unit inside text."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_137_semantic_false_positive/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/generic_compiler_137r.js (Quantified Benefit Enforcement & Venue Address Semantic Role Classifier)"
+}

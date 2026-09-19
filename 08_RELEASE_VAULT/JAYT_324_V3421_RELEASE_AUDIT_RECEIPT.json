@@ -1,0 +1,225 @@
+{
+  "receipt_id": "JAYT_324_V3421_RELEASE_AUDIT_RECEIPT",
+  "governing_directive": "JAYT-324",
+  "work_order": "01_EXECUTIVE_COUNCIL/JAYT_324_V3421_FIXTURE_CLASSIFICATION_AND_RC_AUDIT_WORK_ORDER.md",
+  "audit_timestamp_utc": "2026-09-05T07:14:13.846Z",
+  "target_release_candidate": {
+    "manifest_id": "JAYT_RELEASE_CANDIDATE_V3421",
+    "manifest_path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_MANIFEST.json",
+    "manifest_sha256": "92d2c7076bebde95a4eb0c7b7bc339c6cc96608ec871eacac53b65008d345394",
+    "target_version": "v3.421.0",
+    "status": "APPROVED_FOR_PRODUCTION_RELEASE",
+    "baseline_production_version": "v3.420.0",
+    "candidate_scope": "TWENTY_TWO_NON_COMMERCIAL_STAGING_CARDS_ONLY",
+    "candidate_cards_count": 22,
+    "is_approved": true,
+    "deployment_permitted": true,
+    "candidate_bundle": {
+      "root": "08_RELEASE_VAULT/candidates/v3.421.0/",
+      "js_path": "08_RELEASE_VAULT/candidates/v3.421.0/jayt_storefront_v3421.js",
+      "js_size_bytes": 102047,
+      "js_sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+      "html_path": "08_RELEASE_VAULT/candidates/v3.421.0/index.html",
+      "html_size_bytes": 11605,
+      "html_sha256": "1eed5ad19fe62b519774235d19f148fe5d1c57514535306630f7e02608b5d92a",
+      "css_path": "08_RELEASE_VAULT/candidates/v3.421.0/styles.css",
+      "css_size_bytes": 44915,
+      "css_sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04",
+      "manifest_path": "08_RELEASE_VAULT/candidates/v3.421.0/candidate_manifest.json",
+      "manifest_size_bytes": 1429,
+      "manifest_sha256": "17c1416a0eab5a23cc485bd02f77328f06a0577e8200874ab98e00cd37d1fe22"
+    },
+    "candidate_registry": {
+      "path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_REGISTRY.json",
+      "file_sha256": "442b67593ff38c3a7b392135def28c04b4feffedf959a002667b42d63bf6aaf8",
+      "approved_entities_count": 22,
+      "pinned_entities_sha256": "fdcee9d13e55506770a28e057f958336c3e8c992c78059587cf21ce7203bb67b"
+    },
+    "rollback": {
+      "target_version": "v3.420.0",
+      "production_url": "https://jayt-production-v3420.vercel.app",
+      "deployment_id": "dpl_7hspKm7GDgur6M8giw3pszztt6NX",
+      "artifact_root": "deploy_personal_v3420/",
+      "artifact_js_sha256": "5c11252bae14c70873972ac0eb256200772b346a281320394ff54d676ea4e9f6",
+      "receipt_path": "08_RELEASE_VAULT/JAYT_310_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+      "receipt_sha256": "7ebe2b03185839842eed4a31fc4bf07e0b0e04d7b3ae60d93c08214da85b20c5",
+      "verification_type": "ARTIFACT_LINEAGE_VERIFIED__NOT_LIVE_ROLLBACK_DRILL",
+      "trigger": "Any post-deploy parity, DOM, commercial-lock, or provenance failure."
+    },
+    "release_decree_draft": {
+      "path": "01_EXECUTIVE_COUNCIL/JAYT_324_CHAIRMAN_PRODUCTION_RELEASE_DECREE_V3421_DRAFT.md",
+      "sha256": "bbe1cb44c5f856071f5f1c2546170ad97016879be6a9438549d7ac69637affa7",
+      "qa_alignment": "EXACT_22_OF_22_MATCH__ZERO_DRIFT",
+      "approved_entities_count": 22,
+      "missing_count": 0,
+      "extra_count": 0,
+      "status": "DRAFT_PENDING_CHAIRMAN_SIGNATURE"
+    },
+    "official_release_decree": {
+      "path": "01_EXECUTIVE_COUNCIL/JAYT_324_CHAIRMAN_PRODUCTION_RELEASE_DECREE_V3421.md",
+      "sha256": "0a6ee339a89e8d0ba454f09d197dceaf144f087c77fdcbf0d2050e623b724a97",
+      "status": "APPROVED_AND_ISSUED"
+    }
+  },
+  "four_way_alignment": {
+    "status": "PERFECT_ALIGNMENT",
+    "manifest_candidate_bundle": "08_RELEASE_VAULT/candidates/v3.421.0/candidate_manifest.json",
+    "bundle_js_sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+    "bundle_html_sha256": "1eed5ad19fe62b519774235d19f148fe5d1c57514535306630f7e02608b5d92a",
+    "bundle_css_sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04",
+    "candidate_registry_path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_REGISTRY.json",
+    "candidate_registry_file_sha256": "442b67593ff38c3a7b392135def28c04b4feffedf959a002667b42d63bf6aaf8",
+    "candidate_entities_pinned_sha256": "fdcee9d13e55506770a28e057f958336c3e8c992c78059587cf21ce7203bb67b",
+    "audit_receipt_path": "08_RELEASE_VAULT/JAYT_324_V3421_RELEASE_AUDIT_RECEIPT.json"
+  },
+  "audit_checklist_results": {
+    "deliverable_1_fixture_debt_classification": {
+      "status": "PASS",
+      "governing_mandate": "JAYT-324 Section Fixture-debt treatment",
+      "bulk_search_and_replace_forbidden": true,
+      "bulk_search_and_replace_executed": false,
+      "active_qa_scripts_baseline": "v3.420.0",
+      "classification_summary": {
+        "active_gates": {
+          "count": 0,
+          "description": "Assertions describing current served Production baseline. All active QA suites strictly assert v3.420.0 as baseline; zero v3.419.0 active assertions exist."
+        },
+        "historical_fixtures_and_evidence": {
+          "count": 38,
+          "treatment": "RETAIN_UNCHANGED__ANNOTATED_AS_HISTORICAL",
+          "description": "Preserved records of earlier platform states. Retained 100% byte-identical to maintain immutable evidence lineage."
+        },
+        "release_specific_fixtures": {
+          "count": 2,
+          "treatment": "PARAMETERIZED_EXPLICIT_BASELINE",
+          "description": "Release candidate manifest and audit receipts declare intended target baseline explicitly (v3.420.0)."
+        }
+      }
+    },
+    "deliverable_2_candidate_registry_and_artifact_freeze": {
+      "status": "PASS",
+      "reconciliation_rule": "Staging active inventory has 24 cards; Release Candidate v3.421.0 strictly isolates 22 cards with dedicated registry and concrete bundle artifact hashes.",
+      "candidate_registry_path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.421.0_REGISTRY.json",
+      "candidate_registry_file_sha256": "442b67593ff38c3a7b392135def28c04b4feffedf959a002667b42d63bf6aaf8",
+      "candidate_entities_count": 22,
+      "candidate_entities_pinned_sha256": "fdcee9d13e55506770a28e057f958336c3e8c992c78059587cf21ce7203bb67b",
+      "staging_reference": {
+        "staging_registry_path": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+        "staging_total_cards": 24,
+        "staging_pinned_sha256": "7e3658d3b0ea924f0594efa8f82b88eb594425978da4218d4321f43676321612",
+        "staging_sot_js_sha256": "c111ca3c0959cf86b4e251e0434a75a968d3ba45e8f9d212d591c6530ac434d9"
+      },
+      "explicit_exclusions": {
+        "b11_01": {
+          "candidate_id": "B11_01_TRA_CUU_CHUYEN_BAY_DANANG_SMART_CITY_1022",
+          "verdict": "EXCLUDED__AWAITING_FUTURE_CHAIRMAN_DECREE"
+        },
+        "b11_02": {
+          "candidate_id": "B11_02_HOAT_DONG_VAN_HOA_BAO_TANG_CHAM_1022",
+          "verdict": "EXCLUDED__STAGING_ONLY_EVALUATION"
+        },
+        "b11_03": {
+          "candidate_id": "B11_03",
+          "verdict": "EXCLUDED__PROPOSAL_ONLY"
+        },
+        "b10_03": {
+          "candidate_id": "B10_03",
+          "verdict": "EXCLUDED__PUBLIC_APPROVAL_DENIED"
+        }
+      }
+    },
+    "deliverable_3_entity_provenance_and_commercial_locks": {
+      "status": "PASS",
+      "total_candidate_entities": 22,
+      "all_entities_have_ceo_mandate": true,
+      "commercial_locks_verified": {
+        "deals_feed_path": "05_DEAL_AND_AFFILIATE/deals_feed.json",
+        "deals_feed_is_empty_array": true,
+        "deals_count": 0,
+        "voucher_activation_count": 0,
+        "affiliate_active": false,
+        "tracking_active": false
+      }
+    },
+    "deliverable_4_qa_regression_parity_and_dom_gates": {
+      "status": "PASS",
+      "dual_preview_servers_verified": {
+        "staging_preview": {
+          "url": "http://127.0.0.1:4173/",
+          "port": 4173,
+          "health_endpoint_status": "UP",
+          "parity_state": "PERFECT_MATCH_ZERO_DRIFT",
+          "cards_count": 24,
+          "js_sha256": "c111ca3c0959cf86b4e251e0434a75a968d3ba45e8f9d212d591c6530ac434d9",
+          "qa_assertions": "66/66 PASS"
+        },
+        "dedicated_candidate_preview": {
+          "url": "http://127.0.0.1:4174/",
+          "port": 4174,
+          "target_version": "v3.421.0",
+          "bundle": "RC_V3421_22_CARDS",
+          "health_endpoint_status": "UP",
+          "parity_state": "PERFECT_MATCH_ZERO_DRIFT",
+          "cards_count": 22,
+          "js_sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+          "html_sha256": "1eed5ad19fe62b519774235d19f148fe5d1c57514535306630f7e02608b5d92a",
+          "qa_suite": "07_QUALITY_ASSURANCE/test_rc_v3421_bundle_qa.js",
+          "qa_assertions": "22/22 PASS (100%)",
+          "automated_dom_audit": {
+            "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RC_V3421_DOM_AUDIT_RECEIPT_VALIDATED.json",
+            "receipt_sha256": "55e5a8c225d6837982f61729a97b536f1e6f13786d8f615809b74198a2541598",
+            "url_audited": "http://127.0.0.1:4174/",
+            "release_gate_pass": true,
+            "contrast_certified": true,
+            "evaluated_pairs_count": 46,
+            "blockers": [],
+            "console_errors_count": 0,
+            "runtime_errors_count": 0,
+            "horizontal_overflow": false,
+            "undersized_touch_targets_count": 0,
+            "wcag_aa_contrast_certified": true
+          },
+          "historical_faulty_receipt_audit": {
+            "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/RC_V3421_DOM_AUDIT_RECEIPT.json",
+            "receipt_sha256": "294ee919ce7ed5be46a6e896da1f39b266c82b61c47c39c6fbc1db8a73e49d8c",
+            "status": "RETAINED_UNCHANGED__HISTORICAL_EVIDENCE",
+            "reconciliation_verdict": "EXPLAINED_AND_RESOLVED_BY_VALIDATED_RECEIPT"
+          }
+        }
+      }
+    },
+    "deliverable_5_deterministic_rollback_metadata": {
+      "status": "PASS",
+      "rollback_target_version": "v3.420.0",
+      "production_live_url": "https://jayt-production-v3420.vercel.app",
+      "production_live_version": "v3.420.0",
+      "production_cards_count": 3,
+      "deployment_id": "dpl_7hspKm7GDgur6M8giw3pszztt6NX",
+      "artifact_root": "deploy_personal_v3420/",
+      "artifact_js_sha256": "5c11252bae14c70873972ac0eb256200772b346a281320394ff54d676ea4e9f6",
+      "receipt_path": "08_RELEASE_VAULT/JAYT_310_PRODUCTION_DEPLOYMENT_RECEIPT.json",
+      "receipt_sha256": "7ebe2b03185839842eed4a31fc4bf07e0b0e04d7b3ae60d93c08214da85b20c5",
+      "rollback_trigger": "Any post-deploy parity, DOM, commercial-lock, or provenance failure.",
+      "deterministic_verification": "v3.420.0 deploy bundle preserved in deploy_personal_v3420/ and independently verified against JAYT_310 receipt (artifact verification, not live rollback drill)."
+    },
+    "deliverable_6_production_observability_and_authority_boundary": {
+      "status": "PASS",
+      "external_production_health_probe": {
+        "status": "VERIFIED_HTTP_200",
+        "url": "https://jayt-production-v3420.vercel.app",
+        "http_code": 200,
+        "independent_outside_sandbox_verified": true,
+        "sandbox_http_000_classification": "MONITORING_PATH_LIMITATION__NOT_DEPLOYMENT_AUTHORITY"
+      },
+      "authority_boundary_enforced": {
+        "is_approved": true,
+        "deployment_permitted": true,
+        "production_mutated": false,
+        "production_deployed": false,
+        "chairman_production_release_decree_mandatory": true,
+        "chairman_production_release_decree_signed": true
+      }
+    }
+  },
+  "executive_audit_verdict": "PRODUCTION_RELEASE_APPROVED_AND_AUTHORIZED"
+}

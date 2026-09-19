@@ -1,0 +1,193 @@
+{
+  "release_id": "JAYT_123_INTENT_TRUTH_AND_MOMENT_FIT",
+  "version": "v3.240.0",
+  "directive": "JAYT-123-INTENT-TRUTH-AND-MOMENT-FIT",
+  "timestamp": "2026-08-25T17:11:59.961Z",
+  "deployment_target": "Vercel Production",
+  "deployment_url": "https://deploy-9zs23gr6w-kuntran777-6857s-projects.vercel.app",
+  "primary_public_beta_url": "https://deploy-ten-xi-48.vercel.app",
+  "byte_parity_status": "ALL_MATCH_100_PERCENT",
+  "intent_contract_verification": {
+    "slot_2000_hero_question": "Tối nay xem gì, ăn ở đâu, về thế nào?",
+    "live_rendered_cards": [
+      {
+        "brand": "CGV Cinemas",
+        "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+        "badge": "",
+        "isComparison": true
+      },
+      {
+        "brand": "GoGi House",
+        "title": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+        "badge": "📋 GIÁ THAM KHẢO",
+        "isComparison": false
+      },
+      {
+        "brand": "DanaBus Đà Nẵng",
+        "title": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+        "badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+        "isComparison": false
+      }
+    ],
+    "intent_match_status": "EXACT_MOMENT_FIT_PASS"
+  },
+  "supply_metrics": {
+    "total_matrix_cells": 25,
+    "actionable_coverage_cells": 15,
+    "actionable_coverage_percent": "40.0%",
+    "breakdown": {
+      "verified_limited_time_deals": 5,
+      "watchlist_recheck_deals": 2,
+      "planning_menu_pricing": 7,
+      "daily_utility_savings": 1
+    }
+  },
+  "audit_files": [
+    {
+      "file": "index.html",
+      "sot_sha256": "793e45ea699c804ad79acb4095ddcf6f13fd1e109a7cb3a62ec0998d022e19d6",
+      "deploy_sha256": "793e45ea699c804ad79acb4095ddcf6f13fd1e109a7cb3a62ec0998d022e19d6",
+      "live_sha256": "793e45ea699c804ad79acb4095ddcf6f13fd1e109a7cb3a62ec0998d022e19d6",
+      "size_bytes": 58255,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "jayt_apex_interface.js",
+      "sot_sha256": "8149b3a360a70d37304bf83930892cf14dc54547818b5bf37138f5b7222460ae",
+      "deploy_sha256": "8149b3a360a70d37304bf83930892cf14dc54547818b5bf37138f5b7222460ae",
+      "live_sha256": "8149b3a360a70d37304bf83930892cf14dc54547818b5bf37138f5b7222460ae",
+      "size_bytes": 271031,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "customer_journey_north_star.json",
+      "sot_sha256": "2ada173f7c97b33fa5412c8c87540e0feb22a96e203d1c675fa0081e6768e2f2",
+      "deploy_sha256": "2ada173f7c97b33fa5412c8c87540e0feb22a96e203d1c675fa0081e6768e2f2",
+      "live_sha256": "2ada173f7c97b33fa5412c8c87540e0feb22a96e203d1c675fa0081e6768e2f2",
+      "size_bytes": 11128,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "four_layer_dataset.json",
+      "sot_sha256": "05bf86e2f4ccbeedd15ca6016e95700fe3dfa8af0b9972d4cf92ed95bf09a29e",
+      "deploy_sha256": "05bf86e2f4ccbeedd15ca6016e95700fe3dfa8af0b9972d4cf92ed95bf09a29e",
+      "live_sha256": "05bf86e2f4ccbeedd15ca6016e95700fe3dfa8af0b9972d4cf92ed95bf09a29e",
+      "size_bytes": 77977,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "radar_dataset_086u.json",
+      "sot_sha256": "7929fb67b6013875d015705ec03cb8fcba5281f09ca595d034af81b8b48c0907",
+      "deploy_sha256": "7929fb67b6013875d015705ec03cb8fcba5281f09ca595d034af81b8b48c0907",
+      "live_sha256": "7929fb67b6013875d015705ec03cb8fcba5281f09ca595d034af81b8b48c0907",
+      "size_bytes": 16132,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "brand_asset_registry.json",
+      "sot_sha256": "7ecf31f56a45665bb5f7e514f8962e44d9b1ec409d4260b0d013b726190520f9",
+      "deploy_sha256": "7ecf31f56a45665bb5f7e514f8962e44d9b1ec409d4260b0d013b726190520f9",
+      "live_sha256": "7ecf31f56a45665bb5f7e514f8962e44d9b1ec409d4260b0d013b726190520f9",
+      "size_bytes": 9391,
+      "live_http_status": 200,
+      "byte_parity": true
+    },
+    {
+      "file": "daily_supply_feed_123.json",
+      "sot_sha256": "05978810fafccae6e465b0cbabddac3d253fbfdd5cf38a6015f46091efeaabfd",
+      "deploy_sha256": "05978810fafccae6e465b0cbabddac3d253fbfdd5cf38a6015f46091efeaabfd",
+      "live_sha256": "05978810fafccae6e465b0cbabddac3d253fbfdd5cf38a6015f46091efeaabfd",
+      "size_bytes": 41111,
+      "live_http_status": 200,
+      "byte_parity": true
+    }
+  ],
+  "viewport_evidence": [
+    {
+      "viewport": "live_123_mobile_390px",
+      "width": 390,
+      "height": 844,
+      "file": "live_123_mobile_390px.png",
+      "hero_question": "Tối nay xem gì, ăn ở đâu, về thế nào?",
+      "rendered_cards": [
+        {
+          "brand": "CGV Cinemas",
+          "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+          "badge": "",
+          "isComparison": true
+        },
+        {
+          "brand": "GoGi House",
+          "title": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+          "badge": "📋 GIÁ THAM KHẢO",
+          "isComparison": false
+        },
+        {
+          "brand": "DanaBus Đà Nẵng",
+          "title": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+          "badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+          "isComparison": false
+        }
+      ]
+    },
+    {
+      "viewport": "live_123_tablet_768px",
+      "width": 768,
+      "height": 1024,
+      "file": "live_123_tablet_768px.png",
+      "hero_question": "Tối nay xem gì, ăn ở đâu, về thế nào?",
+      "rendered_cards": [
+        {
+          "brand": "CGV Cinemas",
+          "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+          "badge": "",
+          "isComparison": true
+        },
+        {
+          "brand": "GoGi House",
+          "title": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+          "badge": "📋 GIÁ THAM KHẢO",
+          "isComparison": false
+        },
+        {
+          "brand": "DanaBus Đà Nẵng",
+          "title": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+          "badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+          "isComparison": false
+        }
+      ]
+    },
+    {
+      "viewport": "live_123_desktop_1440px",
+      "width": 1440,
+      "height": 900,
+      "file": "live_123_desktop_1440px.png",
+      "hero_question": "Tối nay xem gì, ăn ở đâu, về thế nào?",
+      "rendered_cards": [
+        {
+          "brand": "CGV Cinemas",
+          "title": "Ting Ting Ting Payday - Giảm 30.000₫ khi mua từ 2 vé xem phim",
+          "badge": "",
+          "isComparison": true
+        },
+        {
+          "brand": "GoGi House",
+          "title": "Combo Thịt Nướng GoGi Signature (Bò Mỹ & Sườn heo ướp sốt)",
+          "badge": "📋 GIÁ THAM KHẢO",
+          "isComparison": false
+        },
+        {
+          "brand": "DanaBus Đà Nẵng",
+          "title": "Mạng lưới xe buýt trợ giá nội đô DanaBus (16 tuyến)",
+          "badge": "🚌 TIỆN ÍCH TIẾT KIỆM",
+          "isComparison": false
+        }
+      ]
+    }
+  ]
+}

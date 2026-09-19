@@ -1,0 +1,98 @@
+{
+  "$schema": "https://jayt.vn/schemas/release-receipt.v1.json",
+  "receipt_id": "JAYT_387_RELEASE_RECEIPT",
+  "cycle": "JAYT-387",
+  "mandate": "WORK_ORDER_J387_LEVEL_MAX_INTEGRITY",
+  "authority": "CHAIRMAN_AND_CEO_J387_DISPATCH",
+  "released_at_utc": "2026-09-11T03:16:45.843Z",
+  "production_canonical_url": "https://jayt-production-v3420.vercel.app",
+  "serving_deployment": {
+    "deployment_id": "dpl_GAt7MSwLL1ubeojWLNwfYeKGwdyU",
+    "direct_url": "https://jayt-production-v3420-z26y9bpww-kuntran777-6857s-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "version": "v3.443.0-j387"
+  },
+  "rollback_baseline": {
+    "deployment_id": "dpl_5emod95fKr3NuLEEgeYY1tLctGr4",
+    "version": "v3.440.0-j385-m1",
+    "state": "READY_ROLLBACK_SAFEGUARD"
+  },
+  "containment_of_vulnerable_m2": {
+    "deployment_id": "dpl_3hie7Qu5xEzKX3bv1ZWahRfbS6Zg",
+    "vercel_status": "DELETED__RETURNS_404_DEPLOYMENT_NOT_FOUND",
+    "forensic_archive_local_path": "08_RELEASE_VAULT/candidates/v3.441.0-j385-m2/api/health-check.js"
+  },
+  "candidate_manifest": {
+    "path": "08_RELEASE_VAULT/candidates/v3.443.0-j387/candidate_manifest.json",
+    "sha256": "1c6a8edb633964ab9ced97bd58ce3d27cefdbd3965f36536ba0568e341ce0d58"
+  },
+  "deliverables_manifest": {
+    "03_SOURCE_OF_TRUTH/j387/sku_registry.json": {
+      "bytes": 69712,
+      "sha256": "e9c6634f0e85fe48c8534be822862143b36e912fea86e1f59bb55a1b3160c807"
+    },
+    "07_QUALITY_ASSURANCE/JAYT_387_BUILD_EQUALITY_RECEIPT.json": {
+      "bytes": 214,
+      "sha256": "52b08eb029c491f067a865e4f15234ef9727b3266e60f50b83eca871b9ffcf27"
+    },
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_387_SECURITY_RECEIPT.json": {
+      "bytes": 2116,
+      "sha256": "638981104afb3a280122719efdf86dee2e96d7d388743379ad80a0fc42062a69"
+    },
+    "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_387_LIVE_RECEIPT.json": {
+      "bytes": 3237,
+      "sha256": "e4b0bf043a3201c71a0a279d43d8712c0ede7d4ab33c5018fa67e0978a3450cc"
+    },
+    "06_TRUST_AND_EVIDENCE/j387/product_and_offer_evidence.json": {
+      "bytes": 81652,
+      "sha256": "baea2ad5423d903cb22b144b9b2b6ba65ab308e8f9c3f6e136f8f78b7a48392a"
+    },
+    "06_TRUST_AND_EVIDENCE/j387/provider_attribution_receipt.json": {
+      "bytes": 1660,
+      "sha256": "f39155d7b5a274da5f0770df94a51890877faa43821948cd681a53d5cbfe5ec9"
+    }
+  },
+  "verified_features_summary": {
+    "M0_SINGLE_SKU_SOURCE": {
+      "total_skus": 30,
+      "identity_equality_status": "PASSED_100_PERCENT",
+      "mutation_fixtures_result": "5_OF_5_MUTATIONS_REJECTED_PASS",
+      "physical_photographs": 0,
+      "labeled_neutral_placeholders": 30,
+      "affiliate_enabled": false
+    },
+    "M1_SHOCK_DEALS": {
+      "verified_offers_count": 15,
+      "action_cta_transparency": "ENFORCED__NO_MANUFACTURED_SECRET_CODES"
+    },
+    "M2_CAMPUS_COMPARATOR": {
+      "campus_dock_clusters": 4,
+      "food_filter": "<=35000 VND and <=1km straight-line distance",
+      "delivery_columns": [
+        "ShopeeFood",
+        "GrabFood",
+        "Xanh SM"
+      ],
+      "slider_range": "25.000₫ – 150.000₫",
+      "render_latency_sla": "<30ms achieved"
+    },
+    "M3_ZALO_PASS": {
+      "canvas_dimensions": "1080x1440",
+      "integer_vnd_conservation": "O(1)_SUM_CONSERVED_EXACT_ALLOCATION",
+      "pii_gps_leakage_prevented": true
+    },
+    "M4_SECURITY_HARDENING": {
+      "ssrf_controls": "PASSED_12_OF_12",
+      "ip_range_denial": "RFC1918_LOOPBACK_LINKLOCAL_CGNAT_MULTICAST_IPV4MAPPED_BLOCKED",
+      "tls_ip_pinning": "ENFORCED_WITH_SNI",
+      "http_3xx_treated_as": "UNKNOWN"
+    }
+  },
+  "technical_boundaries": {
+    "camera_bank_app_qr_recognition": "NOT_TESTED",
+    "clicks_are_not_revenue": true,
+    "production_deployment_authorized": true,
+    "production_alias_mutation_authorized": true
+  }
+}

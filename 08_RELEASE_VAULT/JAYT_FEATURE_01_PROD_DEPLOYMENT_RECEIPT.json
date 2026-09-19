@@ -1,0 +1,60 @@
+{
+  "receipt_id": "JAYT_FEATURE_01_PROD_DEPLOYMENT_RECEIPT",
+  "schema_version": "1.0.0",
+  "issued_at_utc": "2026-09-16T05:18:00.000Z",
+  "release": {
+    "release_id": "JAYT-FEATURE-01-PROD",
+    "version": "v3.497.0-feature-01-voucher-engine-prod",
+    "scope": "PRODUCTION_CANONICAL_FEATURE_01_UPGRADE",
+    "governing_directive": "CHAIRMAN_DIRECT_ORDER_20260916_FEATURE_01_PROD_DEPLOY"
+  },
+  "deployment": {
+    "provider": "Vercel",
+    "project": "jayt-production-v3420",
+    "deployment_id": "dpl_BvM45PgavsNcoJQGqjhbFt8B7m45",
+    "deployment_url": "https://jayt-production-v3420-68djkt9ct-kuntran777-6857s-projects.vercel.app",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "target": "production",
+    "ready_state": "READY",
+    "canonical_alias_confirmed": true,
+    "affiliate_inspect_region": "sin1"
+  },
+  "artifact_integrity": {
+    "interface_sha256": "9a52b50e3088aa583e4f2d145de9168fb40bced5f40d57f9c49ed029c0a19661",
+    "interface_bytes": 626477,
+    "live_remote_hash_matches_local": true,
+    "ws1_ws2_static_pipeline_seal": "24/24 PASS",
+    "ws1_ws2_feed_toolchain_seal": "5/5 PASS",
+    "ws1_ws2_storefront_regression_22": "22/22 PASS",
+    "ws1_ws2_feature_01_engine_test": "6/6 PASS"
+  },
+  "production_verification": {
+    "canonical_interface_http_status": 200,
+    "total_curated_offers_live": 22,
+    "shopee_offers_count": 20,
+    "accesstrade_offers_count": 2,
+    "visual_voucher_scanner_active": true,
+    "headless_link_resolver_latency_ms": 0.22,
+    "ttl_countdown_active": true,
+    "ktx_group_buy_active": true,
+    "mobile_390x844": {
+      "console_errors": 0,
+      "horizontal_overflow_px": 0,
+      "deal_cards_rendered": 22
+    },
+    "desktop_1440x1000": {
+      "console_errors": 0,
+      "horizontal_overflow_px": 0,
+      "deal_cards_rendered": 22
+    }
+  },
+  "commercial_boundary": {
+    "affiliate_enabled": false,
+    "tracking_parameters_emitted": false,
+    "partner_id_in_bundle": false,
+    "dispatch_tracking": false,
+    "dual_key_commercial_manifest_signed": false,
+    "statement": "Production Canonical operates with clean canonical URLs. Partner deep links are configured for user-driven intent without automated scraping. Commercial affiliate unleash remains gated under Dual-Key ratification upon authentic conversion reports."
+  },
+  "verdict": "FEATURE_01_PRODUCTION_CANONICAL_PASS__ALL_QUALITY_GATES_SATISFIED"
+}

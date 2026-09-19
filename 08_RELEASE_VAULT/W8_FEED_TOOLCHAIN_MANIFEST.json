@@ -1,0 +1,37 @@
+{
+  "manifest_name": "W8_FEED_TOOLCHAIN_MANIFEST",
+  "schema_version": "2.0.0",
+  "sealed_at_utc": "2026-09-15T06:20:34.380Z",
+  "governing_directive": "CHAIRMAN-MANDATE-2026-0914-PRODUCT-FEED-AND-EVIDENCE-EQUIVALENCE",
+  "governance_status": "STAGING_SEALED_READ_ONLY__AWAITING_VALIDATED_CONVERSION_REPORT",
+  "affiliate_enabled": false,
+  "sealed_components_count": 5,
+  "trust_model_notice": "Local manifest verifies intra-workspace drift detection across parser, conversion reconciler, addendum, vault docs, and dual-key release manifest.",
+  "sealed_files": [
+    {
+      "relative_path": "scripts/parse_w8_portal_feed.cjs",
+      "byte_length": 32724,
+      "sha256": "148a3eb4a06cf5ffa0ff18e82213e300beac2c37ebbd7b41e33e7d9f3490e15d"
+    },
+    {
+      "relative_path": "scripts/reconcile_w8_conversion_report.cjs",
+      "byte_length": 15867,
+      "sha256": "b8cafb531c150cce8126ad98691812ad6ece662a80ec6a62fd75db548f4d37c5"
+    },
+    {
+      "relative_path": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/W8_EVIDENCE_EQUIVALENCE_ADDENDUM.json",
+      "byte_length": 7614,
+      "sha256": "6ea5d851fae2e13063b44765db5ecb9327a2fc3fd00379b8dfe9e3e06827a509"
+    },
+    {
+      "relative_path": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/raw_portal_exports/README.md",
+      "byte_length": 1774,
+      "sha256": "1daaae36c634f86542cc432281b6bc74edf3c8ac44f1c8e2e83ffdba6af48c0d"
+    },
+    {
+      "relative_path": "08_RELEASE_VAULT/W8_COMMERCIAL_DUAL_KEY_RELEASE_MANIFEST.json",
+      "byte_length": 2263,
+      "sha256": "8cc19af55dc57a0ad61777b19fb007ad7438ef13d751a56c8ce1babdfe168b54"
+    }
+  ]
+}

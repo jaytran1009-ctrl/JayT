@@ -1,0 +1,17 @@
+{
+  "receipt_id": "JAYT_W3_PRODUCTION_PACKAGING_CORRECTION_RECEIPT",
+  "initial_deployment": {
+    "deployment_id": "dpl_71EgFU7n6mtPXDmrvJUtRR33GWPQ",
+    "result": "REJECTED_BY_POST_DEPLOY_AUDIT",
+    "finding": "The canonical root served public/index.html with data-version v3.448.0-w3-staging while the remaining audited W3 assets matched."
+  },
+  "corrective_action": {
+    "change": "Synchronized the candidate root and public index.html data-version to v3.448.0-w3 and re-verified root/public parity.",
+    "replacement_deployment_id": "dpl_FVrUNSADMUQore2umH5VyywADiXS"
+  },
+  "final_state": {
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "result": "PASS__8_OF_8_SERVED_ASSETS_MATCH__AFFILIATE_DISABLED",
+    "final_root_sha256": "04c45969fe4f890220c397bc6a87a05de207b2e412fa849d139749f8b6752a27"
+  }
+}

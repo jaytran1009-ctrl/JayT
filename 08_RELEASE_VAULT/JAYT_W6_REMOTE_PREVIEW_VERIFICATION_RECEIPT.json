@@ -1,0 +1,37 @@
+{
+  "receipt_id": "JAYT_W6_REMOTE_PREVIEW_VERIFICATION_RECEIPT",
+  "directive_id": "CHAIRMAN-SUPREME-MANDATE-2026-0912-ON-THE-SPOT-OS-UNLEASH",
+  "observed_at": "2026-09-12T07:45:57Z",
+  "scope": "Remote verification of the operator-supplied Vercel Preview URL",
+  "target_url": "https://jayt-production-v3420-imeykffvj-kuntran777-6857s-projects.vercel.app",
+  "status": "BLOCKED_READ_ONLY_REMOTE_VERIFICATION",
+  "remote_checks": {
+    "http_200": "NOT_VERIFIED",
+    "data_version_v3_449_0_j397": "NOT_VERIFIED",
+    "counter_quick_dock": "NOT_VERIFIED",
+    "mobile_console_errors": "NOT_VERIFIED",
+    "mobile_horizontal_overflow": "NOT_VERIFIED",
+    "reason": "Web open was rejected as unsafe and the in-app browser/HTTP escalation was blocked by the environment usage limit. No remote response was treated as evidence."
+  },
+  "local_fallback_evidence": {
+    "interface_targets": 6,
+    "interface_byte_length": 436362,
+    "interface_sha256": "09841bbead211ea9b635011249360548e3fec4ef3951bcb4654ce6a62aed9817",
+    "pipeline_seal": "24/24_PASS",
+    "runtime_scheduler": "HEALTHY__EXIT_CODE_0",
+    "puppeteer_390x844": {
+      "http_status": 200,
+      "console_errors": 0,
+      "horizontal_overflow": false,
+      "modal_latency_ms_range": "0.1-1.1",
+      "source": "07_QUALITY_ASSURANCE/test_j397_counter_hud.cjs"
+    }
+  },
+  "release_boundary": {
+    "production_version": "v3.449.0-j397",
+    "production_alias_mutation": false,
+    "affiliate_enabled": false,
+    "preview_promotion": false
+  },
+  "next_action": "Re-run read-only HTTP/DOM verification when the environment permits access; do not promote or treat this receipt as remote PASS."
+}

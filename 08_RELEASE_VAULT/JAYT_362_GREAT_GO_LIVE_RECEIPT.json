@@ -1,0 +1,88 @@
+{
+  "directive": "JAYT-362 / JAYT-362-A1",
+  "checked_at_utc": "2026-09-09T07:13:32.481Z",
+  "deployment_id": "dpl_72b2G579GhCPSS7A6AoLHrypQa91",
+  "version": "v3.430.0",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "status": "PASS",
+  "endpoints": [
+    {
+      "url": "https://jayt-production-v3420.vercel.app/",
+      "status": 200,
+      "elapsed_ms": 908,
+      "sha256": "5686180ef75316a3673be8eb6ec82744a9c378ca87ae78ece193c7a6587e6a5f",
+      "matches_candidate": true
+    },
+    {
+      "url": "https://jayt-production-v3420.vercel.app/jayt_storefront_sprint_b.js",
+      "status": 200,
+      "elapsed_ms": 666,
+      "sha256": "dfd58c07320fcfb9716863ca6ab62eeba6b58c24d25be0130db8ff34b37a3718",
+      "matches_candidate": true
+    },
+    {
+      "url": "https://jayt-production-v3420.vercel.app/styles.css",
+      "status": 200,
+      "elapsed_ms": 561,
+      "sha256": "500d04a2cec4e87374d1a7e029f8fd31bb0394a0bdb150b210539ed46c783a49",
+      "matches_candidate": true
+    },
+    {
+      "url": "https://jayt-production-v3420.vercel.app/registry.json",
+      "status": 200,
+      "elapsed_ms": 330,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+      "matches_candidate": true
+    },
+    {
+      "url": "https://jayt-production-v3420.vercel.app/deals_feed.json",
+      "status": 200,
+      "elapsed_ms": 318,
+      "sha256": "facd8a4e9b2ff88d720e457e90023adcf431f2e2b14a0ce6395667e44ce42702",
+      "matches_candidate": true
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "home": {
+        "radar": 15,
+        "overflow": false
+      },
+      "vault": {
+        "cards": 42,
+        "split": 34,
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "width": 768,
+      "home": {
+        "radar": 15,
+        "overflow": false
+      },
+      "vault": {
+        "cards": 42,
+        "split": 34,
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "home": {
+        "radar": 15,
+        "overflow": false
+      },
+      "vault": {
+        "cards": 42,
+        "split": 34,
+        "overflow": false
+      },
+      "errors": []
+    }
+  ],
+  "rollback_target": "dpl_BiD7syWRkLVgXFjPNjxesMJ2h4mM",
+  "scope": "Live served bytes and HOME/Vault DOM checks; earlier candidate functional evidence remains separately archived."
+}

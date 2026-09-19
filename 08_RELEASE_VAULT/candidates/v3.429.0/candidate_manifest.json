@@ -1,0 +1,59 @@
+{
+  "manifest_id": "MANIFEST_CANDIDATE_V3429_J356_R1",
+  "target_version": "v3.429.0",
+  "work_order_id": "J356-R1_RELEASE_RECONCILIATION",
+  "governing_directive": "JAYT-356 / JAYT-356-R1",
+  "authority": "Codex CEO/Gatekeeper & OPC JayT Executive Council",
+  "release_scope": "STAGING_AND_CANDIDATE_RECONCILED",
+  "sealed_at_utc": "2026-09-08T07:59:16.334Z",
+  "environment": "STAGING_CANDIDATE_SEALED",
+  "production_deployment_authorized": false,
+  "entity_accounting": {
+    "baseline_entities_count": 76,
+    "civic_entities_count": 24,
+    "commercial_entities_baseline_count": 52,
+    "net_new_commercial_entities_added": 11,
+    "commercial_entities_candidate_total": 63,
+    "removed_entities_count": 0,
+    "total_approved_entities_count": 87,
+    "arithmetic_equation": "76 baseline entities + 11 net-new additions - 0 removals = 87 approved entities (24 civic + 63 commercial)",
+    "lineage_updates_count": 4,
+    "batch18_candidates_total": 17,
+    "batch18_verified_passing": 15,
+    "batch18_quarantined_held": 2,
+    "legacy_quarantined_held": 9,
+    "total_held_records_reconciled": 11
+  },
+  "public_surface_metrics": {
+    "total_active_vault_cards": 29,
+    "held_cards_in_public_dom": 0,
+    "held_filter_tab_in_public_dom": false,
+    "zero_held_exposure_enforced": true,
+    "smart_value_radar_items": 15,
+    "seven_day_timeline_days": 7,
+    "split_bill_inline_cards": 25,
+    "split_bill_zero_dollar_cards": 4
+  },
+  "files": {
+    "index.html": {
+      "bytes": 12949,
+      "sha256": "5686180ef75316a3673be8eb6ec82744a9c378ca87ae78ece193c7a6587e6a5f"
+    },
+    "jayt_storefront_sprint_b.js": {
+      "bytes": 199092,
+      "sha256": "21517971dd37441ed185ae66e3cff672fc9e3efd5bbbd1bfa2a33f25c325933b"
+    },
+    "styles.css": {
+      "bytes": 69273,
+      "sha256": "500d04a2cec4e87374d1a7e029f8fd31bb0394a0bdb150b210539ed46c783a49"
+    },
+    "registry.json": {
+      "bytes": 48336,
+      "sha256": "817cb9d4c66e3afaf84f1c55db97ee6e22cd72f8d82a6083b01d5c99b38f860b"
+    },
+    "deals_feed.json": {
+      "bytes": 37404,
+      "sha256": "df0ccbab9aef23615e445a0bae6f3a16dbe1dab0face24f4fa5fe8bf6110ed94"
+    }
+  }
+}

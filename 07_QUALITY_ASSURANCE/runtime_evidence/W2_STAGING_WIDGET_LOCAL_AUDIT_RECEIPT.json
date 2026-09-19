@@ -1,0 +1,76 @@
+{
+  "receipt_id": "W2_STAGING_WIDGET_LOCAL_AUDIT_RECEIPT",
+  "audited_at_utc": "2026-09-11T10:22:54Z",
+  "scope": "LOCAL_STAGING_ONLY",
+  "staging_url": "http://127.0.0.1:4176/",
+  "production_mutated": false,
+  "source_artifact": {
+    "path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+    "sha256": "86f3c0166f67031fc40068f348e007bb3ac830e31a178ccc3219c374df129c58",
+    "triple_sync": {
+      "deploy": "MATCH",
+      "deploy_public": "MATCH",
+      "workspace_2_source": "MATCH",
+      "workspace_2_deploy": "MATCH",
+      "workspace_2_deploy_public": "MATCH"
+    }
+  },
+  "functional_checks": {
+    "syntax": "PASS",
+    "lunch_comparator": {
+      "providers": ["ShopeeFood", "GrabFood", "BeFood"],
+      "preloaded_provider_fees_or_vouchers": false,
+      "formula": "user_entered_food_price + user_entered_delivery_fee - user_entered_voucher",
+      "interaction_replay": {
+        "food_price_vnd": 80000,
+        "shopeefood_delivery_fee_vnd": 12000,
+        "observed_total_vnd": 92000,
+        "status": "PASS"
+      }
+    },
+    "ktx_stack_simulator": {
+      "present": true,
+      "user_entered_fields": ["basketValue", "shopDiscount", "platformVoucher", "deliveryFee", "freeshipCredit"],
+      "status": "PASS"
+    },
+    "spotify_student_staging_card": {
+      "present": true,
+      "includes_sheerid": true,
+      "includes_maximum_four_year_term": true,
+      "status": "PASS"
+    },
+    "responsive": [
+      {"viewport_width_px": 1440, "scroll_width_px": 1440, "overflow": false, "console_or_runtime_errors": 0},
+      {"viewport_width_px": 768, "scroll_width_px": 768, "overflow": false, "console_or_runtime_errors": 0},
+      {"viewport_width_px": 390, "scroll_width_px": 390, "overflow": false, "console_or_runtime_errors": 0}
+    ]
+  },
+  "external_evidence": {
+    "shopeefood_danang_capture": "PENDING",
+    "reason": "No fresh first-party atomic capture was submitted or audited in this local implementation run."
+  },
+  "affiliate_boundary": {
+    "status": "HOLD_CLEAN_NO_ACTIVATION",
+    "activation": false,
+    "redirect_remediation": {
+      "records_rewritten": 30,
+      "outbound_destination_url_equals_direct_product_url": true,
+      "forbidden_redirect_tokens": {
+        "partner_id": 0,
+        "s_shopee_vn": 0,
+        "tiki_affiliate": 0,
+        "c_lazada_vn": 0
+      }
+    },
+    "post_remediation_browser_recheck": {
+      "viewport_width_px": 390,
+      "legacy_products_exposed": 30,
+      "all_direct_url_parity": true,
+      "horizontal_overflow": false,
+      "console_or_runtime_errors": 0,
+      "status": "PASS"
+    },
+    "finding": "Affiliate routing has not been activated. Any affiliate URL, tracking parameter, attribution or commercial claim still requires separately audited evidence and authorization."
+  },
+  "release_decision": "STAGING_WIDGETS_PASS__WAVE_2_EVIDENCE_AND_AFFILIATE_RELEASE_HELD"
+}

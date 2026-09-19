@@ -1,0 +1,118 @@
+{
+  "receipt_id": "J371_PROD_RELEASE_RECEIPT_20260910_134000",
+  "work_order_id": "JAYT-371-LUXURY-REDESIGN",
+  "status": "COMPLETED_AND_VERIFIED",
+  "timestamp_utc": "2026-09-10T06:40:16.492Z",
+  "timestamp_local": "2026-09-10T13:40:00+07:00",
+  "canonical_production_domain": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_Fi9wyraCAmgMQZzzerQLAgCbHjJf",
+  "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+  "project_name": "jayt-production-v3420",
+  "version": "v3.432.0-j371",
+  "endpoints": {
+    "/": {
+      "statusCode": 200,
+      "contentLength": 769,
+      "remoteSha256": "e605cf040146344c887ed82159a3c5aa799aed9f93b4820e3dc1a9cf5cf87cdb",
+      "localSha256": "e605cf040146344c887ed82159a3c5aa799aed9f93b4820e3dc1a9cf5cf87cdb",
+      "byteMatch": true
+    },
+    "/styles.css": {
+      "statusCode": 200,
+      "contentLength": 19285,
+      "remoteSha256": "ac476e84324cbc416ca6ea0250ebf88e9373712e794a886c2b8a4946fb849600",
+      "localSha256": "ac476e84324cbc416ca6ea0250ebf88e9373712e794a886c2b8a4946fb849600",
+      "byteMatch": true
+    },
+    "/jayt_apex_interface.js": {
+      "statusCode": 200,
+      "contentLength": 175446,
+      "remoteSha256": "134fc0eb55c91e9c4076345f782178661f0b5bb5b25f6b4b933093d02dbabaf4",
+      "localSha256": "134fc0eb55c91e9c4076345f782178661f0b5bb5b25f6b4b933093d02dbabaf4",
+      "byteMatch": true
+    },
+    "/published_manifest.json": {
+      "statusCode": 200,
+      "contentLength": 491,
+      "remoteSha256": "60356a8f567ae7e144428d2c5e5581c8e7aeafed52bded636869dbc776bf9123",
+      "localSha256": "60356a8f567ae7e144428d2c5e5581c8e7aeafed52bded636869dbc776bf9123",
+      "byteMatch": true
+    },
+    "/deals_feed.json": {
+      "statusCode": 200,
+      "contentLength": 114379,
+      "remoteSha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60",
+      "localSha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60",
+      "byteMatch": true
+    },
+    "/registry.json": {
+      "statusCode": 200,
+      "contentLength": 48314,
+      "remoteSha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+      "localSha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3",
+      "byteMatch": true
+    }
+  },
+  "qa_runtime_receipt": {
+    "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_371_LIVE_UI_RUNTIME_RECEIPT.json",
+    "sha256": "05452573b67701fb270bfabe1e0ee2f33fa66968310ca96a94e7606c1eef2c53"
+  },
+  "asset_manifest": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j371/asset_manifest.json",
+    "sha256": "2c0ecd63828ae49c0df323ddd887fc61238aab6e2940c36a4904d10062f65854"
+  },
+  "product_manifest": {
+    "relative_path": "06_TRUST_AND_EVIDENCE/j371/product_link_and_price_manifest.json",
+    "sha256": "ac67ba73d3a7dada41cd70f721ab121539793e4fbd46fd0e3e95543b4da22072"
+  },
+  "verified_modules": {
+    "hero_bento_grid": {
+      "ratio": "16:9",
+      "headline": "Đà Nẵng, mỗi ngày một chút hời.",
+      "cta_count_above_fold": 3,
+      "ctas": [
+        "So giá bữa trưa",
+        "Tìm ưu đãi",
+        "Chia tiền nhóm"
+      ],
+      "mobile_390_order_verified": true
+    },
+    "dual_themes": {
+      "themes_supported": [
+        "Porcelain Light",
+        "Obsidian Titanium"
+      ],
+      "toggle_verified": true
+    },
+    "module_1_lunch_arbitrage": {
+      "apps_compared": [
+        "ShopeeFood",
+        "GrabFood",
+        "BeFood"
+      ],
+      "slider_range": "20.000₫ - 200.000₫",
+      "latency_benchmark_p95_ms": "0.90",
+      "target_latency_met": true,
+      "lowest_badge_verified": true,
+      "estimate_disclaimer_verified": true
+    },
+    "module_2_deals_vault": {
+      "offers_retained": 81,
+      "ticket_punch_holes_styled": true,
+      "filter_tabs_verified": true
+    },
+    "module_3_split_bill": {
+      "exact_integer_conservation": true,
+      "test_case_100k_3p": "1x33.334₫ + 2x33.333₫ = 100.000₫",
+      "canvas_png_export_ready": true,
+      "zalo_message_copy_ready": true
+    },
+    "module_4_dorm_shopping": {
+      "skus_rendered": 30,
+      "categories_count": 6,
+      "forbidden_90d_badge_count": 0,
+      "truth_in_advertising_disclosure_verified": true
+    }
+  },
+  "zero_audit_jargon_verified": true
+}

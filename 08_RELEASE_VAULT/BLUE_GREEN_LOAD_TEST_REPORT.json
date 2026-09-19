@@ -1,0 +1,323 @@
+{
+  "test_metadata": {
+    "test_name": "TRUE_IN_FLIGHT_GRACEFUL_DRAIN_BLUE_GREEN_LOAD_TEST",
+    "generated_at": "2026-08-21T03:28:25.953109+00:00",
+    "proxy_port": 8940,
+    "total_requests": 26,
+    "successful_requests": 26,
+    "failed_requests": 0,
+    "success_rate_percent": 100.0,
+    "in_flight_slow_requests_count": 6,
+    "in_flight_slow_drain_verified": true,
+    "new_traffic_routed_to_standby_verified": true,
+    "zero_downtime_verified": true
+  },
+  "synchronized_timeline_events": {
+    "slow_requests_dispatched_at_utc": "2026-08-21T03:28:23.213112+00:00",
+    "in_flight_verified_active_count": 6,
+    "pointer_updated_on_disk_at_utc": "2026-08-21T03:28:23.415884+00:00",
+    "supervisor_switch_event": {
+      "target_build_id": "BUILD-febfe434450b-20260820_220942",
+      "target_slot": "SLOT_B",
+      "pointer_detected_at_utc": "2026-08-21T03:28:23.508094+00:00",
+      "standby_spawned_at_utc": "2026-08-21T03:28:23.516874+00:00",
+      "standby_healthy_at_utc": "2026-08-21T03:28:24.735129+00:00",
+      "traffic_switched_at_utc": "2026-08-21T03:28:24.735142+00:00",
+      "drain_started_at_utc": "2026-08-21T03:28:24.735397+00:00",
+      "drain_completed_at_utc": "2026-08-21T03:28:24.736646+00:00",
+      "system_status": "HEALTHY",
+      "drain_duration_seconds": 0.001
+    },
+    "fast_requests_dispatched_at_utc": "2026-08-21T03:28:24.735788+00:00"
+  },
+  "slow_in_flight_traces": [
+    {
+      "request_id": "SLOW_REQ_1",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.213404+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.719521+00:00",
+      "duration_ms": 1506.11,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    },
+    {
+      "request_id": "SLOW_REQ_2",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.213928+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.719370+00:00",
+      "duration_ms": 1505.43,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    },
+    {
+      "request_id": "SLOW_REQ_3",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.214174+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.720077+00:00",
+      "duration_ms": 1505.9,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    },
+    {
+      "request_id": "SLOW_REQ_4",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.214451+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.720351+00:00",
+      "duration_ms": 1505.9,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    },
+    {
+      "request_id": "SLOW_REQ_5",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.214871+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.720773+00:00",
+      "duration_ms": 1505.9,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    },
+    {
+      "request_id": "SLOW_REQ_6",
+      "is_slow_in_flight_test": true,
+      "started_at_utc": "2026-08-21T03:28:23.215563+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.720898+00:00",
+      "duration_ms": 1505.33,
+      "http_status": 200,
+      "served_slot": "SLOT_A",
+      "served_build_id": "BUILD-758cc6cd8d10-20260820_222037",
+      "success": true
+    }
+  ],
+  "fast_routed_traces": [
+    {
+      "request_id": "FAST_REQ_1",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.736029+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.738875+00:00",
+      "duration_ms": 2.84,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_10",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.829066+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.831831+00:00",
+      "duration_ms": 2.76,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_11",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.839354+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.841788+00:00",
+      "duration_ms": 2.43,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_12",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.849912+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.852225+00:00",
+      "duration_ms": 2.31,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_13",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.860028+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.862344+00:00",
+      "duration_ms": 2.31,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_14",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.870153+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.872510+00:00",
+      "duration_ms": 2.35,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_15",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.880206+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.882751+00:00",
+      "duration_ms": 2.54,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_16",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.890646+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.893054+00:00",
+      "duration_ms": 2.4,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_17",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.901072+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.903631+00:00",
+      "duration_ms": 2.56,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_18",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.911450+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.914004+00:00",
+      "duration_ms": 2.55,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_19",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.921544+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.924386+00:00",
+      "duration_ms": 2.84,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_2",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.746379+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.749396+00:00",
+      "duration_ms": 3.01,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_20",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.931638+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.934076+00:00",
+      "duration_ms": 2.43,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_3",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.756907+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.759537+00:00",
+      "duration_ms": 2.63,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_4",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.767407+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.769785+00:00",
+      "duration_ms": 2.37,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_5",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.777489+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.780235+00:00",
+      "duration_ms": 2.74,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_6",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.787927+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.790547+00:00",
+      "duration_ms": 2.61,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_7",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.797982+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.800730+00:00",
+      "duration_ms": 2.74,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_8",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.808485+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.810888+00:00",
+      "duration_ms": 2.4,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    },
+    {
+      "request_id": "FAST_REQ_9",
+      "is_slow_in_flight_test": false,
+      "started_at_utc": "2026-08-21T03:28:24.818546+00:00",
+      "completed_at_utc": "2026-08-21T03:28:24.821446+00:00",
+      "duration_ms": 2.9,
+      "http_status": 200,
+      "served_slot": "SLOT_B",
+      "served_build_id": "BUILD-febfe434450b-20260820_220942",
+      "success": true
+    }
+  ]
+}

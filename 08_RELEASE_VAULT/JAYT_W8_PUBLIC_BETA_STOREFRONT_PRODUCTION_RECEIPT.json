@@ -1,0 +1,56 @@
+{
+  "receipt_id": "JAYT_W8_PUBLIC_BETA_STOREFRONT_PRODUCTION_RECEIPT",
+  "schema_version": "1.0.0",
+  "issued_at_utc": "2026-09-16T04:25:00.000Z",
+  "release": {
+    "release_id": "JAYT-W8-PUBLIC-BETA",
+    "version": "v3.496.3-w8-public-beta-storefront",
+    "scope": "PUBLIC_BETA_STOREFRONT_COMMUNITY_ONLY",
+    "governing_directive": "MY_REQUEST_20260916_PUBLIC_BETA_STOREFRONT_PRODUCTION_DEPLOY"
+  },
+  "deployment": {
+    "provider": "Vercel",
+    "project": "jayt-production-v3420",
+    "deployment_id": "dpl_2XnW4NVXUhoykv5am4puy4aidsmA",
+    "deployment_url": "https://jayt-production-v3420-5ascd6aqb-kuntran777-6857s-projects.vercel.app",
+    "canonical_url": "https://jayt-production-v3420.vercel.app",
+    "target": "production",
+    "ready_state": "READY",
+    "canonical_alias_confirmed": true,
+    "affiliate_inspect_region": "sin1"
+  },
+  "artifact_integrity": {
+    "interface_sha256": "ccfba0846ab1d8d5ede48596c4a40cbdc91a8f6c0d0016a1cddb56d480ac38cb",
+    "interface_bytes": 606173,
+    "live_remote_hash_matches_local": true,
+    "ws1_ws2_static_pipeline_seal": "24/24 PASS",
+    "ws1_ws2_feed_toolchain_seal": "5/5 PASS",
+    "ws1_ws2_storefront_regression_22": "22/22 PASS"
+  },
+  "production_verification": {
+    "canonical_interface_http_status": 200,
+    "total_curated_offers_live": 22,
+    "shopee_offers_count": 20,
+    "accesstrade_offers_count": 2,
+    "all_ctas_canonical_clean": true,
+    "mobile_390x844": {
+      "console_errors": 0,
+      "horizontal_overflow_px": 0,
+      "deal_cards_rendered": 22
+    },
+    "desktop_1440x1000": {
+      "console_errors": 0,
+      "horizontal_overflow_px": 0,
+      "deal_cards_rendered": 22
+    }
+  },
+  "commercial_boundary": {
+    "affiliate_enabled": false,
+    "tracking_parameters_emitted": false,
+    "partner_id_in_bundle": false,
+    "dispatch_tracking": false,
+    "dual_key_commercial_manifest_signed": false,
+    "statement": "This deployment authorizes Public Beta Storefront community mode with clean canonical URLs only. No commercial deep-link tracking or partner attribution is authorized until official conversion reports and Dual-Key ratification."
+  },
+  "verdict": "PUBLIC_BETA_STOREFRONT_PRODUCTION_CANONICAL_PASS__COMMUNITY_ONLY"
+}

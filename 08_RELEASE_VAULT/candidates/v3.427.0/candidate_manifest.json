@@ -1,0 +1,48 @@
+{
+  "manifest_name": "JAYT_352_R1_V3427_RELEASE_CANDIDATE_MANIFEST",
+  "directive": "JAYT-352-R1 Evidence Realignment & Final Staging Sealing",
+  "sealed_at_utc": "2026-09-08T05:06:23.184Z",
+  "target_domain": "https://jayt-production-v3420.vercel.app",
+  "target_version": "v3.427.0",
+  "production_release_baseline": "v3.426.0",
+  "runtime_ledger_version": "v3.424.0",
+  "registry_baseline_scope": "76_ENTITIES__24_CIVIC_PLUS_52_COMMERCIAL",
+  "counts": {
+    "total_entities": 76,
+    "civic_entities": 24,
+    "commercial_entities": 52,
+    "voucher_vault_items": 37,
+    "smart_value_radar_items": 15
+  },
+  "fingerprints": {
+    "index.html": "727f843a0613d1f9a6bb18ebe0b97f55d6dce3fb7810521d36b7b8ba5557fbd0",
+    "jayt_storefront_sprint_b.js": "6e8ca727b03f10b2cdaea202d71c9557c4289484dacbb67776ab4c526abeaf41",
+    "styles.css": "500d04a2cec4e87374d1a7e029f8fd31bb0394a0bdb150b210539ed46c783a49",
+    "registry.json": "346c10d82fbf00a4501e3ff8aec1d4340ef07904eddaa6e66a33a77e7eb95104",
+    "deals_feed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "board_a_afterglow_hero.svg": "de9f194bd3c639d75af09f01f4684ad8fc63b2e52b1ebe89514b9b55331500d3"
+  },
+  "audit_receipts": {
+    "work_order_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J352_FEATURE_SPRINT_R1.json",
+      "sha256": "035bc75ca997c3a322e6b49b9da6ba970f5a7a25b6ed98912d9f7ac2fed57366"
+    },
+    "screenshot_manifest": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/SCREENSHOT_MANIFEST_J352_R1.json",
+      "sha256": "2ff0b1ba1228fa4d6196ea61240468f22ac360f80a547657b2fa00ac58ded4e5"
+    }
+  },
+  "rollback_target": {
+    "version": "v3.426.0",
+    "cards_count": 76,
+    "civic_cards": 24,
+    "commercial_cards": 52,
+    "voucher_vault_cards": 37,
+    "smart_value_radar_cards": 15,
+    "deployment_id": "dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3",
+    "artifact_root": "08_RELEASE_VAULT/candidates/v3.426.0/",
+    "artifact_manifest_sha256": "03b946be5166122c81da0f7c26496271e5e8ae02a83c41ad2620385d922b02cb",
+    "verification_command": "npx vercel alias set dpl_Gnt4kfjmqVwF15btt9MY5Acav6X3 jayt-production-v3420.vercel.app",
+    "status": "STANDBY_READY"
+  }
+}

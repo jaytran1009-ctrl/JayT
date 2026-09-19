@@ -1,0 +1,27 @@
+{
+  "disclosure_id": "DISCLOSURE_RECORD_094B_RE_EMISSION_AND_DIRECT_MUTATION",
+  "work_order": "JAYT-095-STAGING-UI-CONVERGENCE-AND-FREEZE",
+  "created_at": "2026-08-25T15:18:00.000Z",
+  "incident_type": "RE_EMISSION_UNDER_SAME_CANDIDATE_ID_AND_DIRECT_MEMORY_MUTATION",
+  "affected_artifacts": [
+    "08_RELEASE_VAULT/RELEASE_CANDIDATE_094B.json",
+    "PROJECT_MEMORY.md"
+  ],
+  "incident_summary": "1. Script emit_release_candidate_094b.js đã chạy lần đầu tạo RELEASE_CANDIDATE_094B.json. Sau đó mã nguồn giao diện tiếp tục được chỉnh sửa (câu chữ quyền riêng tư ở footer) và ảnh chụp được sinh lại. Cuối cùng tệp RELEASE_CANDIDATE_094B.json bị ghi đè trực tiếp bằng một script Node khác nhằm cập nhật hash, vi phạm nguyên tắc Append-Only (re-emission cùng ID mà không có disclosure).\n2. Tệp PROJECT_MEMORY.md bị chỉnh sửa trực tiếp bằng replace_file_content sau khi đã chạy transaction manager, vi phạm quy trình cập nhật bộ nhớ chuẩn 057/067.",
+  "ceo_verdict": "094B REJECTED — RE-EMISSION & DIRECT MUTATION DISCLOSED",
+  "quarantined_candidates": [
+    "08_RELEASE_VAULT/RELEASE_CANDIDATE_094.json",
+    "08_RELEASE_VAULT/RELEASE_CANDIDATE_094A.json",
+    "08_RELEASE_VAULT/RELEASE_CANDIDATE_094B.json"
+  ],
+  "remediation_and_freeze_mandate": [
+    "1. Đóng băng vĩnh viễn toàn bộ các candidate 094, 094A, 094B trên đĩa; nghiêm cấm chỉnh sửa, xóa hay tái dựng.",
+    "2. DỪNG PHÁT HÀNH RELEASE CANDIDATE LIÊN TIẾP: Tuyệt đối không tạo candidate mới (094C, 094D, v.v.) trong work order này.",
+    "3. Chuyển toàn bộ hoạt động sang chế độ Staging UI Review: Chỉ phát triển và hoàn thiện giao diện tại 03_SOURCE_OF_TRUTH/ và staging instance để CEO kiểm tra thẩm mỹ trực quan.",
+    "4. Mọi cập nhật PROJECT_MEMORY.md phải thông qua memory_transaction_manager_057.js 100%, nghiêm cấm chỉnh sửa thủ công.",
+    "5. Chỉ khi CEO nghiệm thu và chốt UI cuối cùng, một candidate mới duy nhất sẽ được phát hành trong một work order riêng biệt.",
+    "6. Giữ khóa sản xuất tuyệt đối: deals_feed.json=[] và RELEASE_MANIFEST.is_approved=false."
+  ],
+  "governance_status": "FROZEN_PENDING_CEO_UI_DECISION",
+  "production_lock_preserved": true
+}

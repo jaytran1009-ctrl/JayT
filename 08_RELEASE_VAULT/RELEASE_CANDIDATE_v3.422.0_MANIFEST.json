@@ -1,0 +1,103 @@
+{
+  "manifest_id": "JAYT_RELEASE_CANDIDATE_V3422",
+  "governing_directive": "JAYT-326_327",
+  "target_version": "v3.422.0",
+  "status": "APPROVED_FOR_PRODUCTION_RELEASE",
+  "baseline_production_version": "v3.421.0",
+  "candidate_scope": "TWENTY_FOUR_NON_COMMERCIAL_ENTITIES__22_PROD_PLUS_B11_01_AND_B11_02",
+  "candidate_selection_mode": "AUDIT_INVENTORY_ONLY__NO_PRODUCTION_PROMOTION",
+  "candidate_bundle": {
+    "bundle_root": "08_RELEASE_VAULT/candidates/v3.422.0/",
+    "bundle_manifest": "08_RELEASE_VAULT/candidates/v3.422.0/candidate_manifest.json",
+    "bundle_manifest_sha256": "d462f9a2e2b841540bc74f07f520df5fae4727e7a1fc91502fcf53673e7a4ae6",
+    "js_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/jayt_storefront_v3422.js",
+      "sha256": "9c2e6bfe6d9f7be7ac8e3d80cfb5848857c1462f7a1b908046e0b3c0a71d8b16"
+    },
+    "html_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/index.html",
+      "sha256": "bbc522387901d516bf37bc9d0c7516df913269a2fae166e2c51ce0778bf53f00"
+    },
+    "css_artifact": {
+      "path": "08_RELEASE_VAULT/candidates/v3.422.0/styles.css",
+      "sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04"
+    }
+  },
+  "candidate_registry": {
+    "registry_path": "08_RELEASE_VAULT/RELEASE_CANDIDATE_v3.422.0_REGISTRY.json",
+    "registry_file_sha256": "2ab9dace451687582d3d2bf2bf858b8a4dfadef8b5456ceb553512342a0fbc0f",
+    "approved_entities_count": 24,
+    "pinned_entities_sha256": "e8703971669ad8b8e4d7e383087926a502dd6991e5eaece37e94ca410b60a501"
+  },
+  "staging_baseline_reference": {
+    "staging_registry_path": "00_PROGRAM_BASELINE/JAYT_CANONICAL_PUBLIC_APPROVED_REGISTRY.json",
+    "staging_active_cards_count": 24,
+    "staging_registry_pinned_sha256": "7e3658d3b0ea924f0594efa8f82b88eb594425978da4218d4321f43676321612"
+  },
+  "governance_exclusions": {
+    "b11_03": {
+      "candidate_id": "B11_03",
+      "status": "EXCLUDED__PROPOSAL_ONLY",
+      "reason": "Discovery proposal only; uncaptured, unrendered."
+    },
+    "b10_03": {
+      "candidate_id": "B10_03",
+      "status": "EXCLUDED__PUBLIC_APPROVAL_DENIED",
+      "reason": "Administrative statistics report; no direct user action; held internally in vault."
+    },
+    "commercial_deals": {
+      "status": "EXCLUDED__ZERO_COMMERCIAL_TOLERANCE",
+      "reason": "Deals feed locked empty ([]), voucher count 0, affiliate 0."
+    }
+  },
+  "required_pre_release_gates": [
+    "DEDICATED_RC_PREVIEW_PORT_4175_VERIFIED",
+    "24_CARD_REGISTRY_AND_DOM_PARITY",
+    "REGRESSION_AND_DOM_AUDIT_PASS",
+    "MANDATORY_B11_DISCLAIMERS_VERIFIED",
+    "COMMERCIAL_LOCKS_EMPTY_DEALS_FEED_VERIFIED",
+    "SEPARATE_SIGNED_CHAIRMAN_PRODUCTION_RELEASE_DECREE"
+  ],
+  "commercial_locks_required": {
+    "deals_feed": "[]",
+    "voucher_count": 0,
+    "affiliate": false,
+    "tracking": false
+  },
+  "qa_evidence": {
+    "qa_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/RC_V3422_QA_RECEIPT.json",
+      "sha256": "f2178ea799ad7e2e63fbd915cdb65a4b663050ad9c75ccca99e3c94d59234fc5",
+      "verdict": "PASS_33_OF_33__EXACT_SLOT_EVIDENCE_ID_AND_NEGATIVE_TEST_VERIFIED"
+    },
+    "dom_receipt": {
+      "path": "07_QUALITY_ASSURANCE/runtime_evidence/RC_V3422_DOM_AUDIT_RECEIPT.json",
+      "sha256": "4fb1e48f82030a825c0e974cd852722f86b8d83010f6ff10a007f04a900813f1",
+      "verdict": "PASS__PRIMARY_ACTIONS_CONTRAST_COMPLIANT_75_PAIRS__NO_FULL_WCAG_CLAIM"
+    }
+  },
+  "rollback_standby": {
+    "target_version": "v3.421.0",
+    "production_url": "https://jayt-production-v3420.vercel.app",
+    "deployment_id": "dpl_5bzFrqKUzAyrzN5pgP8o4f5VFPgQ",
+    "artifact_root": "deploy_personal_v3421/",
+    "artifact_js_sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+    "cards_count": 22,
+    "trigger": "Any post-deploy parity, DOM, commercial-lock, or provenance failure."
+  },
+  "is_approved": true,
+  "deployment_permitted": true,
+  "official_decree": "01_EXECUTIVE_COUNCIL/JAYT_327_CHAIRMAN_PRODUCTION_RELEASE_DECREE_V3422.md",
+  "accessibility_boundary": {
+    "measured_pairs_count": 75,
+    "contrast_ratio_min": 4.5,
+    "claim_scope": "PRIMARY_ACTION_BUTTONS_ONLY",
+    "full_wcag_sitewide_certified": false,
+    "boundary_notice": "Empirical verification confirms WCAG AA contrast compliance for measured primary action buttons across 1440, 768, and 390px viewports; does not constitute sitewide assistive technology certification."
+  },
+  "draft_decree": {
+    "path": "01_EXECUTIVE_COUNCIL/JAYT_327_CHAIRMAN_PRODUCTION_RELEASE_DECREE_V3422_DRAFT.md",
+    "status": "DRAFT_PENDING_CHAIRMAN_SIGNATURE"
+  },
+  "decree_enacted_at": "2026-09-05T08:31:14.501Z"
+}

@@ -1,0 +1,49 @@
+{
+  "deployment_id": "DEP_092_VISUAL_POLISH_TRUTH_SAFETY_20260825",
+  "timestamp": "2026-08-25T14:10:00+07:00",
+  "bundle_version": "2.2.0",
+  "directive": "JAYT-092-VISUAL-POLISH-WITH-TRUTH-SAFETY",
+  "public_url": "https://deploy-ten-xi-48.vercel.app/",
+  "environment": "STAGING_READY_FOR_PUBLIC_DEPLOY",
+  "release_candidate_ref": "08_RELEASE_VAULT/RELEASE_CANDIDATE_092.json",
+  "design_tokens": {
+    "layer_1_emerald": "#059669",
+    "layer_2_sapphire": "#2563EB",
+    "layer_3_amber": "#D97706",
+    "layer_4_purple": "#7C3AED",
+    "wcag_aa_contrast": "VERIFIED_PASS"
+  },
+  "visual_features": {
+    "editorial_location_cards": true,
+    "sticky_compact_header": true,
+    "scroll_snap_pills": true,
+    "accessible_aria_toast": true,
+    "splitwise_bottom_sheet": true,
+    "prefers_reduced_motion_support": true,
+    "unverified_pulse_countdown_banned": true
+  },
+  "bundle_artifacts": {
+    "index.html": {
+      "sha256": "968df1865d40dc5c51897279e2ae8d8d4613d289d5a2e73f6e50626aa418a652"
+    },
+    "jayt_apex_interface.js": {
+      "sha256": "ffcf5a5dc1ba7df1118cac96c994db6051d48140f6552ff785f3835018e5e26d"
+    },
+    "four_layer_dataset.json": {
+      "sha256": "e305e54d7ffab0604b901cbceca4b1c8f495bf41c0e3526ae7eb0567fbf97dd0"
+    },
+    "visual_hybrid_hub_contract.json": {
+      "sha256": "4ad60773d70eb0e28e18dbcf2f84c8a2efda16ff634f18d781b2bb5e69bf8f88"
+    },
+    "customer_journey_north_star.json": {
+      "sha256": "cbf7fe8f075d9e5f5f4b52cbe99c7553b47f4803db129e9253457e9309bcf72c"
+    }
+  },
+  "invariants_confirmed": {
+    "deals_feed_length": 0,
+    "is_approved": false,
+    "pii_leakage": false,
+    "unverified_pulses": 0
+  },
+  "verification_status": "STAGING_RECEIPT_VERIFIED_092"
+}

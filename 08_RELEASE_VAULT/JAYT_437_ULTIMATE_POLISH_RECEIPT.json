@@ -1,0 +1,37 @@
+{
+  "release_id": "JAYT-437",
+  "directive": "JAYT-437-ULTIMATE-EDITORIAL-POLISH",
+  "version": "v3.481.0-j437",
+  "timestamp": "2026-09-13T09:39:04.488Z",
+  "status": "PRODUCTION_ULTIMATE_POLISHED__1240PX_AXIS_SYNC__88PX_GRADIENT_FADE__HERO_48_5PX__TEXTLINK_CINEMA_CTA__TRANSLUCENT_FOREST_HEADER__KTX_DOCK_GAP_66PX__SEAL_24_OF_24_PASS",
+  "canonical_url": "https://jayt-production-v3420.vercel.app/",
+  "deployment_id": "dpl_FLDC13xmJ4wXFCsSDcKxWxrMe5v3",
+  "artifacts": {
+    "interface": {
+      "path": "03_SOURCE_OF_TRUTH/jayt_apex_interface.js",
+      "bytes": 579357,
+      "sha256": "089ea4e674df325ea00c02d263c8f0f99534e1a28a43dc2e8f64c05bb13ad9a3"
+    },
+    "html": {
+      "path": "03_SOURCE_OF_TRUTH/index.html",
+      "bytes": 1726,
+      "sha256": "339ba045a34b55c15a9f86718d8d19e78cde7ca53f6a322e7a563190fe523b57"
+    },
+    "manifest": {
+      "path": "deploy/published_manifest.json",
+      "bytes": 10579,
+      "sha256": "c939cf3e1c1131835ab1520bdc6ac47be8f2a1b2c0a80a4baadd044064d5fdbb"
+    }
+  },
+  "deliverables": {
+    "synchronized_split_bill_width": "Harmonized Split Bill (#split-bill-module > .container) and Lunch Arbitrage (#lunch-arbitrage-module > .container) to exact matching 1240px container width on desktop, eliminating axis displacement at page footer",
+    "ktx_to_campus_dock_gap": "Compressed spacing between KTX Terminal (.j406-terminal) and Campus Dock (#campus-dock-section) from 96px down to 66px via clamp(28px, 3.2vw, 42px), curing visual disconnect",
+    "band_88px_painterly_gradient": "Extended top and bottom gradient fades on Lunch Arbitrage full-width band from 56px to 88px (diffusing over 3.5vw) for a seamless watercolor transition",
+    "hero_headline_scale": "Enlarged Hero headline by +5.4% to 48.5px (with 1.1 line-height) and body copy to 17.5px, creating balanced visual weight against the Dragon Bridge sunset imagery",
+    "cinema_ticket_textlink_cta": "Converted cinema ticket button CTAs to tertiary text-link actions with arrow (Mở câu đọc quầy 3 giây →), removing boxy form-button aesthetics",
+    "softer_translucent_forest_header": "Softened Light Mode floating glass header to rgba(18, 28, 22, 0.52) with 14px backdrop-blur and 120% saturation, maintaining readability while harmonizing with Ivory canvas",
+    "safety_boundaries": "affiliate_enabled: false strictly preserved on Production; QR camera scanning remains NOT_TESTED"
+  },
+  "pipeline_seal": "24/24 PASS TUYỆT ĐỐI across WS1 and WS2",
+  "runtime_health_gate": "HEALTHY / exit_code 0 across WS1 and WS2"
+}

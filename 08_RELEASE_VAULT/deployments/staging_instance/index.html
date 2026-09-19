@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JayT Đà Nẵng — Tuyển Chọn Bản Địa (v3.470.0-staging.ep)</title>
+  <meta name="description" content="Curated Editorial Discovery — Gợi ý điểm đến, tiện ích công cộng và chương trình học đường chính thức tại TP. Đà Nẵng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-root theme-light" data-ledger-version="v3.470.0-staging.ep" data-ledger-sha256="4d558b2e9a7615df99246bdf628d5f7718a47df484b142c6421386497652bcb6" data-count-vouchers="0" data-count-vouchers="0" data-count-an-gi="11" data-count-di-dau="14" data-count-tien-ich="13" data-count-mua-sam="12" data-count-total="50">
+  <div id="jayt-app-root">
+    <div class="jayt-app-shell theme-light">
+      <header class="jayt-header-sticky" role="banner">
+        <div class="header-inner">
+          <div class="brand-lockup" role="button" tabindex="0" data-nav="HOME" aria-label="Về trang chủ JayT Đà Nẵng">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M19 6 V19 C19 24.5 15.5 28 10 28 C6.5 28 4.2 26 3.5 24 C5.2 24 7 22.8 7.5 20.8 C8 18.5 6.5 16.5 4.5 16.5 C3.8 16.5 3 16.8 2.5 17.2 C3.5 10.5 11 6 19 6 Z" fill="url(#jflow-logo-grad-ep)"/>
+              <path d="M19 14 C23.5 14 27.5 17 29.5 21 C31 24 32.5 28 33.5 31 C29.5 29 25 27.5 19 27.5 V21.5 C22 21.5 24.5 23 26 24.5 C24.5 20 20.5 17.5 16 17 L19 14 Z" fill="url(#jflow-logo-grad-ep)" opacity="0.9"/>
+              <circle cx="27" cy="8" r="3.5" fill="#f43f5e"/>
+              <defs>
+                <linearGradient id="jflow-logo-grad-ep" x1="4" y1="4" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0284c7"/>
+                  <stop offset="0.6" stop-color="#06b6d4"/>
+                  <stop offset="1" stop-color="#f43f5e"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="brand-text-group">
+              <span class="brand-title">JayT Đà Nẵng</span>
+              <span class="brand-tagline">Khám Phá Mỗi Ngày &bull; v3.470.0-staging.ep</span>
+            </div>
+          </div>
+
+          <nav class="nav-links-desktop" role="navigation" aria-label="Điều hướng chính">
+              <button class="nav-btn active" data-nav="HOME" aria-label="Mở trang Hôm nay">Hôm nay</button>
+              <button class="nav-btn" data-nav="EXPLORE" aria-label="Khám phá 50 mục">Khám phá (50)</button>
+              <button class="nav-btn" data-nav="WALLET" aria-label="Mở tra cứu chương trình 13 mục">Chương Trình (13)</button>
+              <button class="nav-btn" data-nav="VOUCHER_HUB" aria-label="Trung tâm tra cứu voucher 0 mục">Voucher (0)</button>
+              <button class="nav-btn" data-nav="BUY_DECISION" aria-label="Kiểm tra Có hời không">Có Hời Không?</button>
+              <button class="nav-btn" data-nav="SAVED" aria-label="Xem danh sách đã lưu">
+                Đã lưu <span class="nav-saved-count" id="saved-counter">0</span>
+              </button>
+            </nav>
+
+          <div class="nav-actions-desktop">
+            <button id="btn-toggle-theme" class="btn-icon-theme" aria-label="Đổi giao diện Sáng/Tối" title="Đổi giao diện Sáng/Tối">
+              🌙
+            </button>
+            <button id="btn-open-report" class="btn-report-source" aria-haspopup="dialog" aria-label="Đóng góp nguồn hoặc deal mới">+ Báo nguồn</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="jayt-main-canvas" id="jayt-view-canvas" role="main">
+        <div class="cr-experience-container">
+          <div class="bento-hero-grid" aria-label="Bảng Điều Khiển Khám Phá Hôm Nay">
+            <section class="bento-tile-main-stage hero-landmark-cr vivid-dragon-hero-cf" aria-label="Bìa Khám Phá Đà Nẵng">
+              <img 
+                src="assets/images/board_a_afterglow_hero.svg" 
+                alt="Đồ họa minh họa JayT Đà Nẵng" 
+                class="bento-stage-bg-img hero-landmark-img vivid-hero-image" 
+                id="hero-main-photo"
+                loading="eager"
+              />
+              <div class="bento-stage-gradient hero-landmark-gradient"></div>
+
+              <div class="hero-landmark-attribution" role="note" aria-label="Thông tin bản quyền ảnh Cầu Rồng">
+                🎨 Đồ họa JayT
+              </div>
+
+              <div class="bento-stage-content hero-landmark-content">
+                <span class="hero-moment-pill">✨ BUỔI TỐI &bull; GIẢI TRÍ, VĂN HÓA & DẠO SÔNG HÀN</span>
+                <h1 class="hero-headline-cr vivid-main-title">
+                  Hôm Nay Khám Phá Gì Ở Đà Nẵng?
+                </h1>
+                <p class="hero-subhead-cr vivid-subhead">
+                  Gợi ý điểm đến, tiện ích công cộng và các chương trình học đường chính thức tại Đà Nẵng &mdash; phân loại minh bạch, đối soát nguồn gốc.
+                </p>
+
+                <div class="hero-shopping-actions-grid">
+                  <button class="btn-hero-primary-solid" data-nav="EXPLORE" data-tier-filter="TIER_2_PROGRAMME" aria-label="Khám phá chương trình và cổng chính thức đang kiểm">
+                    🏛️ Khám phá chương trình đang kiểm &rarr;
+                  </button>
+                  <button class="btn-hero-secondary-outline" data-nav="WALLET" aria-label="Tra cứu 10 cổng chính thức và 3 kênh theo dõi">
+                    🏛️ Tra cứu chương trình (10 Cổng, 3 Kênh) &rarr;
+                  </button>
+                  <button class="btn-hero-tertiary-ghost" data-nav="BUY_DECISION" aria-label="Tư vấn minh bạch trước khi mua">
+                    🛡️ Tư vấn trước khi mua &rarr;
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <div class="bento-side-column">
+              <div class="bento-tile-moment">
+                <div>
+                  <div class="bento-moment-header">
+                    <span class="bento-moment-badge">⏱️ Tối nay</span>
+                    <span class="bento-moment-weather">🌤️ 28°C Ven Sông</span>
+                  </div>
+                  <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Nhịp Sống Đà Thành</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+                    Lịch chiếu rạp CGV, Metiz, dạo mát Cầu Rồng và tham quan Bảo tàng Điêu khắc Chăm.
+                  </p>
+                </div>
+                <div class="bento-moment-chips">
+                  <button class="bento-chip-btn active" data-nav="FOOD_JOURNEY" data-meal-moment="ALL" aria-label="Tất cả bữa ăn">Tất cả</button>
+                  <button class="bento-chip-btn" data-nav="FOOD_JOURNEY" data-meal-moment="SANG" aria-label="Buổi sáng">🌅 Sáng</button>
+                  <button class="bento-chip-btn" data-nav="FOOD_JOURNEY" data-meal-moment="TRUA" aria-label="Buổi trưa">🍜 Trưa</button>
+                  <button class="bento-chip-btn" data-nav="FOOD_JOURNEY" data-meal-moment="CHIEU" aria-label="Buổi chiều">☕ Chiều</button>
+                  <button class="bento-chip-btn" data-nav="LEISURE_JOURNEY" data-meal-moment="TOI" aria-label="Buổi tối">✨ Tối</button>
+                </div>
+              </div>
+
+              <div class="bento-tile-dock">
+                <div>
+                  <span class="dock-badge">⚡ TRUY CẬP NHANH</span>
+                  <h3 style="font-size: 1.05rem; font-weight: 700; margin: 4px 0;">Cổng Quyền Lợi & Danh Sách</h3>
+                </div>
+                <div class="bento-dock-row">
+                  <button class="bento-dock-btn" data-nav="WALLET" aria-label="Mở cổng chương trình chính thức 13 mục">
+                    <span class="bento-dock-icon">🏛️</span>
+                    <span>Chương Trình (13)</span>
+                  </button>
+                  <button class="bento-dock-btn" data-nav="SAVED" aria-label="Mở danh sách đã lưu">
+                    <span class="bento-dock-icon">❤️</span>
+                    <span>Đã lưu (<span class="saved-dock-count">0</span>)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SINGLE SOURCE OF COUNT DRIVEN JOURNEY STRIP -->
+          <div class="journey-category-strip" role="region" aria-label="Lối Tắt Khám Phá Theo Nhu Cầu">
+            <a href="#featured-deals-section" class="journey-cat-card" data-nav="FOOD_JOURNEY" aria-label="Khám phá Ẩm thực bản địa">
+              <span class="journey-cat-icon">🍔</span>
+              <div class="journey-cat-title">Ẩm Thực Bản Địa</div>
+              <div class="journey-cat-count">11 Địa điểm ẩm thực dẫn nguồn</div>
+            </a>
+            <a href="#featured-deals-section" class="journey-cat-card" data-nav="LEISURE_JOURNEY" aria-label="Khám phá Đi chơi và Văn hóa">
+              <span class="journey-cat-icon">🎬</span>
+              <div class="journey-cat-title">Đi Chơi & Văn Hóa</div>
+              <div class="journey-cat-count">14 Điểm tham quan & rạp chiếu</div>
+            </a>
+            <a href="#featured-deals-section" class="journey-cat-card" data-nav="EXPLORE" data-tier-filter="TIER_3_UTILITY" aria-label="Khám phá Tiện ích công cộng">
+              <span class="journey-cat-icon">🚌</span>
+              <div class="journey-cat-title">Tiện Ích & Buýt Đô Thị</div>
+              <div class="journey-cat-count">13 Tiện ích công cộng TP. Đà Nẵng</div>
+            </a>
+            <a href="#featured-deals-section" class="journey-cat-card" data-nav="EXPLORE" data-tier-filter="TIER_2_PROGRAMME" aria-label="Khám phá Học tập và Chương trình chính thức">
+              <span class="journey-cat-icon">🎓</span>
+              <div class="journey-cat-title">Chính Sách & Học Đường</div>
+              <div class="journey-cat-count">12 Cổng chính sách & học đường</div>
+            </a>
+          </div>
+
+          <section class="civic-ticker-cr hero-civic-note-cf" role="region" aria-label="Thông Tin Đô Thị Hiện Hành">
+            <span class="civic-ticker-icon">📍</span>
+            <div class="civic-ticker-text">
+              <strong>Cầu Rồng Sông Hàn:</strong> Xem thông tin điểm đến và thông báo hiện hành tại cổng chính thức danang.gov.vn.
+            </div>
+            <a href="https://danang.gov.vn" target="_blank" rel="noopener noreferrer" class="civic-ticker-link" aria-label="Xem cổng thông tin chính quyền Thành phố Đà Nẵng danang.gov.vn">
+              danang.gov.vn &rarr;
+            </a>
+          </section>
+
+          <!-- EDITORIAL CURATED SPOTLIGHT RAIL -->
+          <section id="featured-deals-section" aria-label="Tuyển Chọn Nổi Bật Hôm Nay">
+            <div class="section-flow-header">
+              <div>
+                <span class="discovery-section-kicker">TUYỂN CHỌN HÔM NAY</span>
+                <h2 class="section-flow-title">🌟 Điểm Hẹn & Tiện Ích Bản Địa Nổi Bật</h2>
+                <p class="section-flow-subtitle">4 không gian và tiện ích tiêu biểu của thành phố &mdash; dẫn tới cổng chính thức, điều kiện chưa đối soát.</p>
+              </div>
+              <button class="section-flow-viewall" data-nav="EXPLORE" aria-label="Xem toàn bộ 50 mục tiện ích">
+                Xem toàn bộ 50 mục &rarr;
+              </button>
+            </div>
+
+            <div class="editorial-curated-grid">
+              
+    <article class="editorial-curated-card" data-item-id="PLACE_PHO_AM_THUC_HUYNH_THUC_KHANG">
+      
+        <div class="editorial-media-wrapper" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(2,132,199,0.08), rgba(13,148,136,0.12));">
+          <span style="font-size: 2.5rem;">🍜</span>
+        </div>
+      
+
+      <div class="editorial-card-body">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="editorial-reason-tag">🌟 Tuyến phố điểm tâm bản địa Hải Châu</span>
+          <button class="btn-card-save" data-save-id="PLACE_PHO_AM_THUC_HUYNH_THUC_KHANG" aria-label="Lưu lại Phố Điểm Tâm & Ẩm Thực Huỳnh Thúc Kháng">
+            🤍
+          </button>
+        </div>
+
+        <span class="tier-badge-radar" style="margin: 4px 0; align-self: flex-start;">📡 KHÁM PHÁ BẢN ĐỊA</span>
+        <h3 class="editorial-card-title">Phố Điểm Tâm & Ẩm Thực Huỳnh Thúc Kháng</h3>
+        <p class="editorial-card-desc">Tuyến phố chuyên doanh ăn sáng nức tiếng với mì Quảng, bún bò, bánh canh, xôi gà thơm ngon chuẩn vị xứ Quảng.</p>
+
+        <div class="editorial-card-actions">
+          <a href="https://danang.gov.vn" target="_blank" rel="noopener noreferrer" class="btn-rail-action btn-action-radar" style="flex-grow: 1; text-align: center; justify-content: center;" aria-label="📍 Xem vị trí & chỉ đường → - mở trong tab mới">
+            📍 Xem vị trí & chỉ đường →
+          </a>
+          <button class="btn-rail-details" data-open-drawer="PLACE_PHO_AM_THUC_HUYNH_THUC_KHANG" aria-label="Xem chi tiết Phố Điểm Tâm & Ẩm Thực Huỳnh Thúc Kháng">
+            ℹ️ Chi tiết
+          </button>
+          
+            <a href="https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%91%20%C4%90i%E1%BB%83m%20T%C3%A2m%20%26%20%E1%BA%A8m%20Th%E1%BB%B1c%20Hu%E1%BB%B3nh%20Th%C3%BAc%20Kh%C3%A1ng%20%C4%90%C3%A0%20N%E1%BA%B5ng" target="_blank" rel="noopener noreferrer" class="btn-rail-map" aria-label="Xem vị trí Phố Điểm Tâm & Ẩm Thực Huỳnh Thúc Kháng trên Google Maps" title="Xem vị trí Maps">
+              📍 Maps
+            </a>
+          
+        </div>
+      </div>
+    </article>
+  
+    <article class="editorial-curated-card" data-item-id="FACILITY_DANABUS">
+      
+        <div class="editorial-media-wrapper">
+          <img src="assets/images/danabus_green_transit_003.svg" alt="Đồ họa minh họa DanaBus Đà Nẵng" class="editorial-media-img" loading="eager" />
+          <div class="editorial-media-attribution">🎨 Đồ họa JayT</div>
+        </div>
+      
+
+      <div class="editorial-card-body">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="editorial-reason-tag">🌟 Giao thông công cộng trợ giá đô thị</span>
+          <button class="btn-card-save" data-save-id="FACILITY_DANABUS" aria-label="Lưu lại DanaBus: Mạng Lưới Xe Buýt Trợ Giá Đà Nẵng">
+            🤍
+          </button>
+        </div>
+
+        <span class="tier-badge-programme" style="margin: 4px 0; align-self: flex-start;">🏛️ CỔNG CHÍNH THỨC</span>
+        <h3 class="editorial-card-title">DanaBus: Mạng Lưới Xe Buýt Trợ Giá Đà Nẵng</h3>
+        <p class="editorial-card-desc">Mạng lưới xe buýt nội thành hiện đại kết nối các trường đại học, khu ký túc xá và trung tâm hành chính.</p>
+
+        <div class="editorial-card-actions">
+          <a href="https://danangbus.vn" target="_blank" rel="noopener noreferrer" class="btn-rail-action btn-action-civic" style="flex-grow: 1; text-align: center; justify-content: center;" aria-label="🏛️ Mở cổng danangbus.vn → - mở trong tab mới">
+            🏛️ Mở cổng danangbus.vn →
+          </a>
+          <button class="btn-rail-details" data-open-drawer="FACILITY_DANABUS" aria-label="Xem chi tiết DanaBus: Mạng Lưới Xe Buýt Trợ Giá Đà Nẵng">
+            ℹ️ Chi tiết
+          </button>
+          
+            <a href="https://www.google.com/maps/search/?api=1&query=DanaBus%3A%20M%E1%BA%A1ng%20L%C6%B0%E1%BB%9Bi%20Xe%20Bu%C3%BDt%20Tr%E1%BB%A3%20Gi%C3%A1%20%C4%90%C3%A0%20N%E1%BA%B5ng%20%C4%90%C3%A0%20N%E1%BA%B5ng" target="_blank" rel="noopener noreferrer" class="btn-rail-map" aria-label="Xem vị trí DanaBus: Mạng Lưới Xe Buýt Trợ Giá Đà Nẵng trên Google Maps" title="Xem vị trí Maps">
+              📍 Maps
+            </a>
+          
+        </div>
+      </div>
+    </article>
+  
+    <article class="editorial-curated-card" data-item-id="PLACE_BAO_TANG_CHAM">
+      
+        <div class="editorial-media-wrapper">
+          <img src="assets/images/cham_museum_heritage_005.svg" alt="Đồ họa minh họa Bảo Tàng Chăm Đà Nẵng" class="editorial-media-img" loading="eager" />
+          <div class="editorial-media-attribution">🎨 Đồ họa JayT</div>
+        </div>
+      
+
+      <div class="editorial-card-body">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="editorial-reason-tag">🌟 Di sản văn hóa cạnh Cầu Rồng</span>
+          <button class="btn-card-save" data-save-id="PLACE_BAO_TANG_CHAM" aria-label="Lưu lại Bảo Tàng Điêu Khắc Chăm Đà Nẵng">
+            🤍
+          </button>
+        </div>
+
+        <span class="tier-badge-utility" style="margin: 4px 0; align-self: flex-start;">📍 TIỆN ÍCH CÔNG CỘNG</span>
+        <h3 class="editorial-card-title">Bảo Tàng Điêu Khắc Chăm Đà Nẵng</h3>
+        <p class="editorial-card-desc">Nơi lưu giữ bộ sưu tập hiện vật điêu khắc Chăm Pa quy mô nhất thế giới trong không gian kiến trúc Pháp cổ kính.</p>
+
+        <div class="editorial-card-actions">
+          <a href="http://chammuseum.danang.vn" target="_blank" rel="noopener noreferrer" class="btn-rail-action btn-action-place" style="flex-grow: 1; text-align: center; justify-content: center;" aria-label="📍 Xem thông tin & Maps → - mở trong tab mới">
+            📍 Xem thông tin & Maps →
+          </a>
+          <button class="btn-rail-details" data-open-drawer="PLACE_BAO_TANG_CHAM" aria-label="Xem chi tiết Bảo Tàng Điêu Khắc Chăm Đà Nẵng">
+            ℹ️ Chi tiết
+          </button>
+          
+            <a href="https://www.google.com/maps/search/?api=1&query=B%E1%BA%A3o%20T%C3%A0ng%20%C4%90i%C3%AAu%20Kh%E1%BA%AFc%20Ch%C4%83m%20%C4%90%C3%A0%20N%E1%BA%B5ng%20%C4%90%C3%A0%20N%E1%BA%B5ng" target="_blank" rel="noopener noreferrer" class="btn-rail-map" aria-label="Xem vị trí Bảo Tàng Điêu Khắc Chăm Đà Nẵng trên Google Maps" title="Xem vị trí Maps">
+              📍 Maps
+            </a>
+          
+        </div>
+      </div>
+    </article>
+  
+    <article class="editorial-curated-card" data-item-id="FACILITY_THU_VIEN_TONG_HOP">
+      
+        <div class="editorial-media-wrapper">
+          <img src="assets/images/danang_library_art_004.svg" alt="Đồ họa minh họa Thư Viện Tổng Hợp Đà Nẵng" class="editorial-media-img" loading="eager" />
+          <div class="editorial-media-attribution">🎨 Đồ họa JayT</div>
+        </div>
+      
+
+      <div class="editorial-card-body">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="editorial-reason-tag">🌟 Không gian tự học công cộng ven sông</span>
+          <button class="btn-card-save" data-save-id="FACILITY_THU_VIEN_TONG_HOP" aria-label="Lưu lại Thư Viện Khoa Học Tổng Hợp Đà Nẵng">
+            🤍
+          </button>
+        </div>
+
+        <span class="tier-badge-utility" style="margin: 4px 0; align-self: flex-start;">📍 TIỆN ÍCH CÔNG CỘNG</span>
+        <h3 class="editorial-card-title">Thư Viện Khoa Học Tổng Hợp Đà Nẵng</h3>
+        <p class="editorial-card-desc">Không gian tự học yên tĩnh nhìn thẳng ra sông Hàn, trang bị máy lạnh, wifi tốc độ cao và hàng ngàn đầu sách.</p>
+
+        <div class="editorial-card-actions">
+          <a href="http://thuvien.danang.gov.vn" target="_blank" rel="noopener noreferrer" class="btn-rail-action btn-action-place" style="flex-grow: 1; text-align: center; justify-content: center;" aria-label="📍 Xem thông tin & Maps → - mở trong tab mới">
+            📍 Xem thông tin & Maps →
+          </a>
+          <button class="btn-rail-details" data-open-drawer="FACILITY_THU_VIEN_TONG_HOP" aria-label="Xem chi tiết Thư Viện Khoa Học Tổng Hợp Đà Nẵng">
+            ℹ️ Chi tiết
+          </button>
+          
+        </div>
+      </div>
+    </article>
+  
+            </div>
+          </section>
+
+          <section aria-label="Chương Trình & Quyền Lợi Chính Thống">
+            <div class="section-flow-header">
+              <div>
+                <span class="discovery-section-kicker">QUYỀN LỢI & CHÍNH SÁCH</span>
+                <h2 class="section-flow-title">🏛️ Cổng Chương Trình & Quyền Lợi Chính Thống (13 Mục)</h2>
+                <p class="section-flow-subtitle">10 Cổng thông tin chính thức của đơn vị phát hành và 3 Kênh theo dõi nguồn tin &mdash; đối soát minh bạch.</p>
+              </div>
+              <button class="section-flow-viewall" data-nav="WALLET" aria-label="Xem danh sách 13 cổng">
+                Xem toàn bộ 13 cổng &rarr;
+              </button>
+            </div>
+
+            <div class="cards-layout-grid">
+              
+    <article class="value-layer-card" data-lane="LANE_CONG_CHINH_THUC" data-category="STUDY_TOOLS">
+      <div class="value-card-header">
+        <span class="lane-badge lane-badge-official">🏛️ CỔNG THÔNG TIN CHÍNH THỨC</span>
+        <span class="merchant-tag">GitHub Education</span>
+      </div>
+
+      <h3 class="value-card-title">GitHub Education: Cổng Chương Trình Học Đường</h3>
+
+      <div class="official-value-layer-box">
+        <div class="value-question-row">
+          <span class="q-label">🔹 Đây là gì?</span>
+          <p class="q-answer">Cổng tiếp nhận hồ sơ học đường chính thức của GitHub. JayT chưa đối soát danh mục gói và điều kiện chi tiết.</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">👥 Đối tượng:</span>
+          <p class="q-answer">Học sinh, sinh viên các trường đại học/cao đẳng có email trường học hoặc thẻ sinh viên.</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">🌐 Cổng thông tin:</span>
+          <p class="q-answer">Mở cổng chính thức education.github.com để tự kiểm tra điều kiện áp dụng trước khi đăng ký.</p>
+        </div>
+      </div>
+
+      <div class="value-card-footer">
+        <a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer" class="btn-value-action btn-action-source" aria-label="🏛️ Mở cổng chính thức để kiểm tra điều kiện → - mở trong tab mới">
+          🏛️ Mở cổng chính thức để kiểm tra điều kiện →
+        </a>
+        <button class="btn-save-wallet" data-save-voucher="VAL_GITHUB_STUDENT" aria-label="Lưu GitHub Education: Cổng Chương Trình Học Đường để tra cứu sau">
+          🤍 Lưu
+        </button>
+      </div>
+
+      <div class="value-card-attestation">
+        <span>Chương trình chính thức — kiểm điều kiện tại nguồn: education.github.com</span>
+      </div>
+    </article>
+  
+    <article class="value-layer-card" data-lane="LANE_CONG_CHINH_THUC" data-category="STUDY_TOOLS">
+      <div class="value-card-header">
+        <span class="lane-badge lane-badge-official">🏛️ CỔNG THÔNG TIN CHÍNH THỨC</span>
+        <span class="merchant-tag">Notion</span>
+      </div>
+
+      <h3 class="value-card-title">Notion: Cổng Chương Trình Học Đường</h3>
+
+      <div class="official-value-layer-box">
+        <div class="value-question-row">
+          <span class="q-label">🔹 Đây là gì?</span>
+          <p class="q-answer">Cổng hỗ trợ học đường chính thức từ Notion. JayT chưa đối soát điều kiện nâng cấp tài khoản.</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">👥 Đối tượng:</span>
+          <p class="q-answer">Học sinh, sinh viên và giảng viên có email tên miền giáo dục (.edu hoặc trường học).</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">🌐 Cổng thông tin:</span>
+          <p class="q-answer">Mở cổng chính thức notion.so để tự kiểm tra quy chế học đường trước khi đăng ký.</p>
+        </div>
+      </div>
+
+      <div class="value-card-footer">
+        <a href="https://www.notion.so/product/notion-for-education" target="_blank" rel="noopener noreferrer" class="btn-value-action btn-action-source" aria-label="🏛️ Mở cổng chính thức để kiểm tra điều kiện → - mở trong tab mới">
+          🏛️ Mở cổng chính thức để kiểm tra điều kiện →
+        </a>
+        <button class="btn-save-wallet" data-save-voucher="VAL_NOTION_EDU" aria-label="Lưu Notion: Cổng Chương Trình Học Đường để tra cứu sau">
+          🤍 Lưu
+        </button>
+      </div>
+
+      <div class="value-card-attestation">
+        <span>Chương trình chính thức — kiểm điều kiện tại nguồn: www.notion.so</span>
+      </div>
+    </article>
+  
+    <article class="value-layer-card" data-lane="LANE_CONG_CHINH_THUC" data-category="STUDY_TOOLS">
+      <div class="value-card-header">
+        <span class="lane-badge lane-badge-official">🏛️ CỔNG THÔNG TIN CHÍNH THỨC</span>
+        <span class="merchant-tag">Canva Education</span>
+      </div>
+
+      <h3 class="value-card-title">Canva: Cổng Chương Trình Giáo Dục</h3>
+
+      <div class="official-value-layer-box">
+        <div class="value-question-row">
+          <span class="q-label">🔹 Đây là gì?</span>
+          <p class="q-answer">Cổng thông tin học đường chính thức từ Canva. JayT chưa đối soát phương thức xác thực trường.</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">👥 Đối tượng:</span>
+          <p class="q-answer">Giáo viên và học sinh sinh viên tại các cơ sở giáo dục đã được cấp phép.</p>
+        </div>
+        <div class="value-question-row">
+          <span class="q-label">🌐 Cổng thông tin:</span>
+          <p class="q-answer">Mở cổng chính thức canva.com để tự kiểm tra quy chế áp dụng trước khi đăng ký.</p>
+        </div>
+      </div>
+
+      <div class="value-card-footer">
+        <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" class="btn-value-action btn-action-source" aria-label="🏛️ Mở cổng chính thức để kiểm tra điều kiện → - mở trong tab mới">
+          🏛️ Mở cổng chính thức để kiểm tra điều kiện →
+        </a>
+        <button class="btn-save-wallet" data-save-voucher="VAL_CANVA_EDU" aria-label="Lưu Canva: Cổng Chương Trình Giáo Dục để tra cứu sau">
+          🤍 Lưu
+        </button>
+      </div>
+
+      <div class="value-card-attestation">
+        <span>Chương trình chính thức — kiểm điều kiện tại nguồn: www.canva.com</span>
+      </div>
+    </article>
+  
+            </div>
+          </section>
+
+          <section class="dock-tiles-grid-cr" aria-label="Cổng Tiện Ích">
+            <div class="dock-tile-cr" data-nav="BUY_DECISION" role="button" tabindex="0" aria-label="Tra cứu Mua món này có hời không">
+              <span class="dock-badge">🛡️ TƯ VẤN TIÊU DÙNG MINH BẠCH</span>
+              <h3 class="dock-title">Mua món này có hời không?</h3>
+              <p class="dock-desc">Đối soát giá niêm yết chính hãng, điều kiện phụ phí ẩn và chính sách đổi trả trước khi thanh toán tại Đà Nẵng.</p>
+              <span class="dock-action-link">Tra cứu đối soát giá thực &rarr;</span>
+            </div>
+
+            <div class="dock-tile-cr" data-nav="WALLET" role="button" tabindex="0" aria-label="Mở cổng chương trình chính thức">
+              <span class="dock-badge">🏛️ CỔNG CHƯƠNG TRÌNH CHÍNH THỨC</span>
+              <h3 class="dock-title">Cổng Quyền Lợi & Chính Sách Học Đường</h3>
+              <p class="dock-desc">10 Cổng thông tin chính thức và 3 Kênh theo dõi nguồn tin. Kiểm tra điều kiện áp dụng tại đơn vị chủ quản.</p>
+              <span class="dock-action-link">Mở cổng tra cứu chính thức &rarr;</span>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer style="text-align: center; padding: 32px 16px; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-color);" role="contentinfo">
+        <div>JayT Đà Nẵng &bull; Chuẩn Tuyển Chọn Bản Địa DQ &bull; v3.470.0-staging.ep</div>
+      </footer>
+
+      <nav class="jayt-mobile-bottom-nav" role="navigation" aria-label="Điều hướng di động">
+        <button class="mobile-nav-btn active" data-nav="HOME" aria-label="Trang Hôm nay">
+          <span class="nav-icon">🔥</span>
+          <span class="nav-text">Hôm nay</span>
+        </button>
+        <button class="mobile-nav-btn" data-nav="EXPLORE" aria-label="Trang Khám phá">
+          <span class="nav-icon">📚</span>
+          <span class="nav-text">Khám phá (50)</span>
+        </button>
+        <button class="mobile-nav-btn" data-nav="WALLET" aria-label="Trang Chương trình">
+          <span class="nav-icon">🏛️</span>
+          <span class="nav-text">Chương Trình</span>
+        </button>
+        <button class="mobile-nav-btn" data-nav="BUY_DECISION" aria-label="Trang Có Hời Không">
+          <span class="nav-icon">🛡️</span>
+          <span class="nav-text">Có Hời?</span>
+        </button>
+        <button class="mobile-nav-btn" data-nav="SAVED" aria-label="Trang Đã lưu">
+          <span class="nav-icon">❤️</span>
+          <span class="nav-text">Đã lưu (<span id="saved-counter-mobile">0</span>)</span>
+        </button>
+      </nav>
+
+      <div id="jayt-toast" class="jayt-toast" role="alert" aria-live="polite" hidden>
+        <span id="toast-message"></span>
+      </div>
+      <div id="jayt-modal-root" class="jayt-modal-backdrop" hidden style="display: none;"></div>
+      <div id="jayt-drawer-root" hidden style="display: none;"></div>
+    </div>
+  </div>
+
+  <script src="jayt_storefront_staging_ep.js"></script>
+</body>
+</html>

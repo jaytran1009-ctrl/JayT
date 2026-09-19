@@ -1,0 +1,14 @@
+{
+  "directive": "JAYT-362",
+  "status": "AWAITING_ARTIFACT_FINGERPRINT_CLARIFICATION",
+  "production_authorization_received": true,
+  "deployment_executed_by_this_review": false,
+  "requested_candidate": "v3.430.0-j361",
+  "decree_storefront_sha256": "25f5f21e60228c332338d23050c61b559ad4c701b5436b4f7700aa5f451fe3b6",
+  "decree_hash_actual_local_candidate": "v3.429.0-j360-hotfix",
+  "verified_v3430_storefront_sha256": "dfd58c07320fcfb9716863ca6ab62eeba6b58c24d25be0130db8ff34b37a3718",
+  "finding": "The explicit artifact fingerprint and named release identify different local candidate bundles. Deployment requires clarification of the intended fingerprint.",
+  "decree_rollback_target": "dpl_BiD7syWRkLVgXFjPNjxesMJ2h4mM",
+  "rollback_evidence": "Recorded as v3.429.0 in JAYT_357_PRODUCTION_DEPLOYMENT_RECEIPT.json; live availability not checked in this preflight.",
+  "next_action": "Confirm use of the v3.430.0-j361 storefront fingerprint; then continue deployment preflight and authorized release."
+}

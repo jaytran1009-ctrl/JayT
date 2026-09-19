@@ -1,0 +1,16 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_141R_DELTA_SCHEDULER_CERTIFICATION",
+  "directive": "JAYT-141R — REAL DELTA SCHEDULER EXECUTION & RECOVERY-TEST CERTIFICATION",
+  "severity": "P0_SCHEDULER_EXECUTION_DEFICIT",
+  "status": "STATIC_SCHEDULER_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-27T01:10:00+07:00",
+  "executive_ruling": "Contained static scheduler. Implementing authentic delta execution engine with recovery-test certification suite and atomic state updates.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_27_STATIC_SCHEDULER_INSPECTION_ONLY",
+      "description": "Runner read baseline registry without executing real live delta captures on scheduled sources or computing delta hash differences."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141_static_scheduler/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/run_delta_scheduler_141r.js & test_delta_scheduler_recovery_141r.js"
+}

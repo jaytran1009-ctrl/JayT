@@ -1,0 +1,109 @@
+{
+  "receipt_id": "JAYT_357_PRODUCTION_DEPLOYMENT_RECEIPT",
+  "work_order_id": "J357_PRODUCTION_RELEASE",
+  "directive": "JAYT-357 — Production Release v3.429.0 (87 Canonical Entities, 68 Public Visible Cards, 11 Held Excluded)",
+  "authority": "Chairman Grand Production Release Decree JAYT-357 & Codex CEO Gate Decision",
+  "executor": "Antigravity external software",
+  "status": "SUCCESS__LIVE_VERIFIED__V3429_PROMOTED_TO_PRODUCTION",
+  "release_version": "v3.429.0",
+  "previous_baseline_version": "v3.428.0",
+  "deployed_at_utc": "2026-09-08T08:23:38.643Z",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "canonical_alias": "jayt-production-v3420.vercel.app",
+  "deployment": {
+    "id": "dpl_BiD7syWRkLVgXFjPNjxesMJ2h4mM",
+    "immutable_url": "https://jayt-production-v3420-1slbu5djb-kuntran777-6857s-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "production"
+  },
+  "authorization": {
+    "work_order": "04_DATA_PIPELINE/dispatch/WORK_ORDER_J357_PRODUCTION_RELEASE.json",
+    "authority": "Chairman Grand Production Release Decree JAYT-357 & Codex CEO/Gatekeeper",
+    "is_approved": true,
+    "deployment_permitted": true,
+    "deployment_authorized": true
+  },
+  "sealed_candidate": {
+    "root": "08_RELEASE_VAULT/candidates/v3.429.0/",
+    "candidate_manifest_sha256": "541bfdae77c43f0c2cd974245e276cdf184d0d135a49fab94b0802f89c674b10",
+    "j356_r1_receipt_sha256": "fbf5fc1e75aeef2cda96c0dadec80f471954c8de43329d8ee897ed94493bf220",
+    "registry_sha256": "817cb9d4c66e3afaf84f1c55db97ee6e22cd72f8d82a6083b01d5c99b38f860b",
+    "deals_feed_sha256": "df0ccbab9aef23615e445a0bae6f3a16dbe1dab0face24f4fa5fe8bf6110ed94",
+    "rollback_manifest_sha256": "ac07926cd7068d7765222953d813664e0b8f566939afee28e40b5addb8b75597",
+    "bundle_fingerprints_verified": "5_OF_5_MATCH"
+  },
+  "live_scope": {
+    "canonical_identities_total": 87,
+    "civic_identities_count": 24,
+    "commercial_identities_count": 63,
+    "identity_accounting_equation": "76 baseline entities + 11 net-new additions - 0 removals = 87 approved canonical identities",
+    "public_dom_composition": {
+      "total_visible_cards": 68,
+      "civic_cards": 24,
+      "active_voucher_vault_cards": 29,
+      "smart_value_radar_cards": 15,
+      "composition_reconciliation": "Registry defines 87 canonical identities (24 civic + 63 commercial). Exactly 68 visible cards render on public DOM. The remaining 19 commercial identities are accounted for as non-card menu catalog entries and structured sidecar items."
+    },
+    "held_records_isolation": {
+      "total_held_records": 11,
+      "held_records_in_public_dom": 0,
+      "held_records_in_public_feed": 0,
+      "held_filter_tab_in_dom": false,
+      "isolation_enforced": true
+    },
+    "batch18_integration": {
+      "total_batch18_candidates": 17,
+      "approved_passing_candidates": 15,
+      "quarantined_held_candidates": 2,
+      "all_15_accessible_in_dom": true
+    },
+    "features_verified": {
+      "split_bill_pro_inline_and_standalone": true,
+      "clipboard_2s_feedback_revert": true,
+      "seven_day_savings_calendar": true,
+      "smart_value_radar": true,
+      "accessibility_keyboard_nav": true,
+      "multi_viewport_390_768_1440": true,
+      "zero_horizontal_overflow": true,
+      "zero_console_or_runtime_errors": true,
+      "zero_affiliate_or_tracking_markers": true
+    }
+  },
+  "post_deploy_audit": {
+    "path": "07_QUALITY_ASSURANCE/runtime_evidence/RECEIPT_J357_PRODUCTION_RELEASE.json",
+    "sha256": "cb81bbcbd6b1657ff2dd0f9587250972c53537e7aa0e530102dc0694950f6d3e",
+    "verdict": "PASS_100_PERCENT",
+    "http_endpoints": "5_OF_5_HTTP_200_AND_HASH_MATCH",
+    "viewports": [
+      1440,
+      768,
+      390
+    ],
+    "console_errors": 0,
+    "runtime_errors": 0,
+    "horizontal_overflow": 0,
+    "affiliate_or_tracking_violations": 0,
+    "unauthorized_copy_buttons": 0,
+    "held_ids_found_in_dom": 0
+  },
+  "quarantined_held_items": [
+    "B18_LOTTE_MEMBERDAY",
+    "B18_LOTTE_RIAS_LUNCH",
+    "B13_CGV_PAYDAY_30K",
+    "B16_PHUCLONG_M01",
+    "B16_PHUCLONG_M03",
+    "B16_PHUCLONG_M04",
+    "B16_PHUCLONG_M05",
+    "B16_PHUCLONG_M06",
+    "B16_PHUCLONG_M07",
+    "B16_PHUCLONG_M09",
+    "B16_PHUCLONG_M10"
+  ],
+  "rollback_standby": {
+    "version": "v3.428.0",
+    "deployment_id": "dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL",
+    "status": "STANDBY_READY",
+    "command": "npx vercel alias set dpl_5PUrAGqBthMJjrcHZSc3nCoUf1YL jayt-production-v3420.vercel.app"
+  },
+  "production_baseline_promoted": "v3.429.0"
+}

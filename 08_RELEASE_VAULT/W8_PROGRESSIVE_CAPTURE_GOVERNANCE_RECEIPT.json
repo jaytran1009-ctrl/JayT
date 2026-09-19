@@ -1,0 +1,28 @@
+{
+  "receipt_id": "W8_PROGRESSIVE_CAPTURE_GOVERNANCE_RECEIPT",
+  "recorded_at_utc": "2026-09-14T05:15:22.4733238Z",
+  "source_policy": "01/2026/SL-CT-JAYT-COMMERCIAL-UNLEASH-FINAL",
+  "status": "PROGRESSIVE_RUNNER_ACTIVE__ZERO_ELIGIBLE_URLS",
+  "change": {
+    "previous_behavior": "BLOCK_ENTIRE_BATCH_WHEN_ANY_CANONICAL_URL_IS_MISSING",
+    "current_behavior": "CAPTURE_EACH_ELIGIBLE_SLOT_AND_SKIP_ONLY_MISSING_OR_INVALID_SLOTS",
+    "acceptance_rule": "EACH_SLOT_REQUIRES_PUBLIC_LOGGED_OUT_HTML_PNG_PRICE_VOUCHER_TERMS_AND_SHA256",
+    "commercial_rule": "AFFILIATE_REMAINS_DISABLED_UNTIL_TWENTY_OF_TWENTY_AND_PROVIDER_GATES_PASS"
+  },
+  "execution": {
+    "runner_exit_code": 2,
+    "eligible_urls": 0,
+    "skipped_missing_urls": 20,
+    "accepted": 0,
+    "synthetic_artifacts_created": false
+  },
+  "runner": {
+    "path": "04_DATA_PIPELINE/capture_w8_sku_evidence.cjs",
+    "sha256": "780e6522ca31769358a5852c490df906763eee7e4c1bec747355720c3732137e"
+  },
+  "production": {
+    "deployed": false,
+    "affiliate_enabled": false,
+    "dual_key_signed": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_141X_DOMINOS_LEAF_SERIALIZATION",
+  "directive": "JAYT-141X — DOMINO’S LEAF EVIDENCE SERIALIZATION & DANANG SCOPE RESOLUTION",
+  "severity": "P0_LEAF_METADATA_REGEX_OVER_REACH",
+  "status": "DOM_NATIVE_LEAF_SERIALIZATION_ENFORCED",
+  "disclosed_at": "2026-08-27T01:40:00+07:00",
+  "executive_ruling": "Preserving 6 raw leaf captures from 141W; re-parsing each leaf with DOM-native node selector provenance; capturing Domino’s Store Locator to resolve Da Nang scope with strict zero-assumption policy.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_34_UNTRUSTED_PAGEWIDE_REGEX_LEAF_METADATA",
+      "description": "Pagewide regex extracted ambiguous numbers and truncated validity strings instead of node-specific DOM provenance."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_141w_regex_leaf_metadata/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/dominos_leaf_evidence_serializer_141x.js & fresh_source_registry_141x.json"
+}

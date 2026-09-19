@@ -1,0 +1,131 @@
+{
+  "manifest_id": "MANIFEST_CANDIDATE_V3431_J363_MAXIMUM_EXPERIENCE",
+  "target_version": "v3.431.0",
+  "governing_directive": "WORK_ORDER_J363_MAXIMUM_EXPERIENCE / JAYT-363 MAXIMUM EXPERIENCE ARCHITECTURE",
+  "authority": "Chairman & OPC JayT Executive Council",
+  "sealed_at_utc": "2026-09-09T07:36:26.267Z",
+  "environment": "STAGING_PREVIEW_CANDIDATE_SEALED",
+  "staging_port": 4176,
+  "staging_url": "http://127.0.0.1:4176",
+  "production_deployment_authorized": false,
+  "release_v3431_authorized": false,
+  "release_gate": "Gemini Strategic Experience Review PASS on port :4176 followed by explicit Chairman Go-Live decree",
+  "deployment_target": {
+    "platform": "Vercel",
+    "project_name": "jayt-production-v3420",
+    "project_id": "prj_YzcODtsWLzPWaIVItzd4K6QEWERm",
+    "org_id": "team_rmzYxO79UeiK0VrsTx6xGNOi",
+    "production_alias": "https://jayt-production-v3420.vercel.app",
+    "current_active_deployment": "dpl_72b2G579GhCPSS7A6AoLHrypQa91"
+  },
+  "workstream_specifications": {
+    "workstream_1_bento_hub": {
+      "status": "COMPLETED",
+      "first_viewport_placement": true,
+      "time_windows_count": 5,
+      "time_windows": [
+        "MORNING (07:00-11:00)",
+        "LUNCH (11:00-14:00, <=35k)",
+        "AFTERNOON (14:00-18:00)",
+        "EVENING (18:00-23:00)",
+        "LATE_NIGHT (23:00-07:00)"
+      ],
+      "clock_injection_supported": "window.__JAYT_CLOCK__ / window.setJaytClock / window.dispatchEvent(new Event('jayt-clock-change'))",
+      "campus_clusters_count": 5,
+      "campus_clusters": [
+        "BACH_KHOA",
+        "SU_PHAM",
+        "KINH_TE_DUE",
+        "DUY_TAN",
+        "NGOAI_NGU"
+      ],
+      "filter_target_latency_ms": "<20ms",
+      "filter_latency_logging": "window.__BENTO_LATENCY_LOG__ / window.__LAST_BENTO_LATENCY_MS__"
+    },
+    "workstream_2_actionable_vouchers": {
+      "status": "COMPLETED",
+      "total_actionable_vouchers_count": 34,
+      "held_vouchers_in_actionable_list": 0,
+      "expired_vouchers_in_actionable_list": 0,
+      "real_codes_count": 2,
+      "app_wallet_vouchers_count": 3,
+      "counter_member_deals_count": 29,
+      "three_cta_types_enforced": true
+    },
+    "workstream_3_ktx_radar": {
+      "status": "COMPLETED",
+      "total_products_count": 30,
+      "categories_count": 6,
+      "products_per_category": 5,
+      "categories": [
+        "KETTLE (Ấm đun)",
+        "FAN (Quạt mini)",
+        "DESK_LAMP (Đèn học)",
+        "MOUSE (Chuột máy tính)",
+        "USB (USB lưu trữ)",
+        "TEXTBOOK (Sách giáo trình)"
+      ],
+      "clean_merchant_urls": true,
+      "integer_vnd_prices": true,
+      "disclaimer_label": "Giá khảo sát thực tế — Kiểm tra tồn kho tại sàn",
+      "affiliate_monetization_disclaimer": "Monetization pending publisher configuration"
+    },
+    "workstream_4_zalo_pass": {
+      "status": "COMPLETED",
+      "canvas_dimensions": "600x750",
+      "canvas_boarding_pass": true,
+      "ticket_cutouts": true,
+      "integer_remainder_breakdown": true,
+      "zero_pii_enforced": true,
+      "web_share_api_support": true,
+      "png_download_fallback": true,
+      "companion_message_copy": true
+    },
+    "workstream_5_non_functional": {
+      "zero_console_errors": true,
+      "zero_horizontal_overflow": true,
+      "touch_targets_min_44px": true,
+      "wcag_aa_contrast": true,
+      "viewports_tested": [
+        "1440px Desktop",
+        "768px Tablet",
+        "390px Mobile"
+      ]
+    }
+  },
+  "entity_accounting": {
+    "total_approved_entities_count": 87,
+    "civic_entities_count": 24,
+    "commercial_entities_count": 63
+  },
+  "files": {
+    "index.html": {
+      "bytes": 12949,
+      "sha256": "6b9f88a614ff275dcfc897f01f4295ee7e138f89728cdc98bffa660d582a42b5"
+    },
+    "jayt_storefront_sprint_b.js": {
+      "bytes": 274547,
+      "sha256": "550574c884afa53798e20174d6c977eaa67eea1c3814defb9417865769a2db75"
+    },
+    "styles.css": {
+      "bytes": 75703,
+      "sha256": "de46452be14e138fa6a05c16e11e753ac5f573036604bd854e83e55a26cbe3a2"
+    },
+    "deals_feed.json": {
+      "bytes": 115015,
+      "sha256": "7bc8b005ba210b07fa4dea0e2a3a02dfcbdb2604536bebaf56de0a468e86987c"
+    },
+    "registry.json": {
+      "bytes": 48380,
+      "sha256": "89b51757dc6d0a2df8dba712cbee5e3427f1dd626e3539ba5c38275f5ed69e04"
+    },
+    "rollback_manifest.json": {
+      "bytes": 474,
+      "sha256": "f30195f190e2e096b8e11c4b086c21c161609e910eb9cf0e65a75d5760c7b4c0"
+    },
+    ".vercel/project.json": {
+      "bytes": 139,
+      "sha256": "c2e5ed05cb892dec94d93bcefae6a02ba2576c38f655e196d050fe5aabd4f66e"
+    }
+  }
+}

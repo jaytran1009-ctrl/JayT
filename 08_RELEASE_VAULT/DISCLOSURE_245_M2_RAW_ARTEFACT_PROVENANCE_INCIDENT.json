@@ -1,0 +1,13 @@
+{
+  "disclosure_id": "DISCLOSURE_245_M2_RAW_ARTEFACT_PROVENANCE_INCIDENT",
+  "timestamp": "2026-08-28T22:45:00+07:00",
+  "directive": "JAYT-245 SECTION H.5",
+  "root_cause": "Synthetic reverse-generated raw artefacts with past timestamps instead of independent raw captures",
+  "status": "QUARANTINED_AND_BLOCKED",
+  "actions_taken": [
+    "Removed raw_artefacts from deploy/ and deploy/public/",
+    "Quarantined physical raw files to 09_CONTAINMENT_QUARANTINE_NON_SERVED/",
+    "Reset artifact_hash in bundles to QUARANTINED_PENDING_INDEPENDENT_RAW_CAPTURE",
+    "Set M2 governance status to BLOCKED_RAW_ARTEFACT_PROVENANCE_FAILED"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "receipt_id": "JAYT_324_V3421_PRODUCTION_DEPLOYMENT_SUCCESS_RECEIPT",
+  "governing_directive": "JAYT-324",
+  "deployment_timestamp_utc": "2026-09-05T07:18:32.000Z",
+  "target_version": "v3.421.0",
+  "deployment_status": "DEPLOYMENT_SUCCESSFUL__LIVE_AUDIT_PASS",
+  "production_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_5bzFrqKUzAyrzN5pgP8o4f5VFPgQ",
+  "deployed_cards_count": 22,
+  "artifacts_verified_on_live_edge": [
+    {
+      "name": "jayt_storefront_v3421.js",
+      "size_bytes": 102047,
+      "sha256": "61ebf288537aa77d52b7fdb8763dd57b16beea039b7005ba7d9f13fdb9bb4319",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "index.html",
+      "size_bytes": 11605,
+      "sha256": "1eed5ad19fe62b519774235d19f148fe5d1c57514535306630f7e02608b5d92a",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "styles.css",
+      "size_bytes": 44915,
+      "sha256": "f2db79a813714457009a5c7d42072e24128fd4ab5f338ee978699d281b4a9a04",
+      "http_status": 200,
+      "verified": true
+    },
+    {
+      "name": "candidate_manifest.json",
+      "size_bytes": 1429,
+      "sha256": "17c1416a0eab5a23cc485bd02f77328f06a0577e8200874ab98e00cd37d1fe22",
+      "http_status": 200,
+      "verified": true
+    }
+  ],
+  "live_post_deploy_audit": {
+    "receipt_path": "07_QUALITY_ASSURANCE/runtime_evidence/JAYT_324_V3421_LIVE_POST_DEPLOY_AUDIT.json",
+    "pass": true,
+    "blockers_count": 0,
+    "viewports_audited": [
+      1440,
+      768,
+      390
+    ],
+    "exact_urls_match": true,
+    "exact_urls_count": 22,
+    "horizontal_overflow": false,
+    "console_errors_count": 0,
+    "external_requests_count": 0,
+    "commercial_links_count": 0,
+    "deals_feed_empty": true
+  },
+  "rollback_standby": {
+    "target_version": "v3.420.0",
+    "deployment_id": "dpl_DC8taupuiYPVQSq1vscZHtNqmTmd",
+    "artifact_root": "deploy_personal_v3420/",
+    "artifact_js_sha256": "5c11252bae14c70873972ac0eb256200772b346a281320394ff54d676ea4e9f6",
+    "status": "STANDBY_READY"
+  }
+}

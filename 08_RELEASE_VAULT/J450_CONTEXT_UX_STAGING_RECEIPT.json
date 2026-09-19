@@ -1,0 +1,38 @@
+{
+  "receipt_id": "J450_CONTEXT_UX_STAGING_RECEIPT",
+  "recorded_at_utc": "2026-09-14T04:57:57.2988360Z",
+  "status": "STAGING_UX_PASS__AFFILIATE_RELEASE_BLOCKED",
+  "version": "v3.490.0-j450-context",
+  "production_deployed": false,
+  "affiliate_enabled": false,
+  "ux": {
+    "tabs": ["TRƯA NAY", "CHIỀU TỐI", "TẠI BÀN"],
+    "automatic_context_hours": { "lunch": "10:00-14:59", "evening": "15:00-23:59", "table_fallback": "00:00-09:59" },
+    "campus_local_storage": true,
+    "keyboard_tabs": true,
+    "name_card_asset_removed_from_jayt_pass": true,
+    "sku_shelf_horizontal": true
+  },
+  "qa": {
+    "viewports": [390, 1440],
+    "console_errors": 0,
+    "horizontal_overflow": 0,
+    "hud_ms_max": 0.8,
+    "mobile_scroll_heights": { "lunch": 3038, "evening": 5825, "table": 2128 },
+    "desktop_scroll_heights": { "lunch": 2129, "evening": 4643, "table": 1520 },
+    "result": "PASS"
+  },
+  "artifacts": {
+    "interface_bytes": 609872,
+    "interface_sha256": "f6791d3ba52ccd7415dfa6df6ab4ccc14ad2143165a2df613e09133cd0ab5fbd",
+    "index_bytes": 1742,
+    "index_sha256": "3f4dcbf950addd2cbc0a739e6baa95591580dbb0b605ff93aeac765478f48f86"
+  },
+  "affiliate_gates": {
+    "sku_evidence": "0_OF_20_ACCEPTED",
+    "provider_secrets_present": false,
+    "provider_contract_verified": false,
+    "dual_key_signed": false,
+    "commercial_promotion": "HOLD"
+  }
+}

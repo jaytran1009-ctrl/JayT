@@ -1,0 +1,1621 @@
+{
+  "dataset_id": "JAYT_FOUR_LAYER_DATASET_099A",
+  "version": "3.1.0",
+  "updated_at": "2026-08-25T16:00:00+07:00",
+  "contract_name": "JAYT_TRUTHFUL_FOUR_LAYER_CONTRACT",
+  "cluster_coverage_summary": {
+    "total_verified_locations": 100,
+    "clusters": {
+      "Hải Châu": {
+        "verified_count": 29,
+        "last_checked": "2026-08-25T19:55:00+07:00"
+      },
+      "Thanh Khê": {
+        "verified_count": 23,
+        "last_checked": "2026-08-25T19:55:00+07:00"
+      },
+      "Sơn Trà": {
+        "verified_count": 16,
+        "last_checked": "2026-08-25T19:55:00+07:00"
+      },
+      "Hòa Khánh / Liên Chiểu": {
+        "verified_count": 19,
+        "last_checked": "2026-08-25T19:55:00+07:00"
+      },
+      "Ngũ Hành Sơn": {
+        "verified_count": 13,
+        "last_checked": "2026-08-25T19:55:00+07:00"
+      }
+    }
+  },
+  "layer_1_pending_candidates": [
+    {
+      "id": "CANDIDATE_01_METIZ_U22",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "title": "Ứng viên chính sách U22: Giá ưu đãi 55.000đ dành cho thành viên dưới 22 tuổi (Thứ Ba đến Thứ Năm)",
+      "confidence_tier": "EMERALD_PENDING_REVIEW",
+      "status": "PENDING_CEO_REVIEW",
+      "status_label": "Ứng viên đang chờ duyệt nội bộ — Chưa phát hành công khai",
+      "computable_offer": "Giá ưu đãi 55.000đ/vé (2D)",
+      "conditions": "Áp dụng cho thành viên Metiz Cinema dưới 22 tuổi. Xuất trình thẻ thành viên & CCCD/Thẻ SV tại quầy.",
+      "recurrence_rule": "Thứ Ba đến Thứ Năm hàng tuần",
+      "redemption_channel": "Mua trực tiếp tại quầy",
+      "danang_branch": "Metiz Cinema Đà Nẵng (Số 01 Đường 2 Tháng 9, Hải Châu, Đà Nẵng)",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "PENDING_ACTIVATION",
+      "locality": {
+        "city": "Đà Nẵng",
+        "district": "Hải Châu",
+        "street_address": "Số 01 Đường 2 Tháng 9, Phường Hòa Cường Bắc, Quận Hải Châu, TP. Đà Nẵng"
+      },
+      "evidence_pointer": {
+        "policy_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_088/captures_088/TARGET_088_151/page.txt",
+        "policy_sha256": "c17418d5d44c7c92a154dd894a06249f3d5fbd7cab8b30366375abdcf73b59b0",
+        "branch_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_224/page.txt",
+        "branch_sha256": "7f6664b06e3a44c795c110bdcec96c0f28932882648599985ca96fe0493cf123"
+      },
+      "is_commercial_published": false
+    },
+    {
+      "id": "CANDIDATE_02_CGV_PAYDAY",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "title": "Ứng viên ưu đãi có hạn: Ting Ting Lương Về - Giảm ngay 30.000đ khi mua từ 2 vé (Mã PAYDAY)",
+      "confidence_tier": "EMERALD_PENDING_REVIEW",
+      "status": "PENDING_CEO_REVIEW",
+      "status_label": "Ứng viên đang chờ duyệt nội bộ — Chưa phát hành công khai",
+      "computable_offer": "Giảm 30.000đ khi mua từ 2 vé",
+      "conditions": "Giao dịch từ 02 vé xem phim trở lên tại Website/App CGV, nhập mã PAYDAY.",
+      "valid_from": "2026-08-25",
+      "valid_to": "2026-08-31",
+      "redemption_channel": "Website / App CGV",
+      "danang_branch": "CGV Vincom Đà Nẵng (Tầng 4 Vincom Plaza, đường Ngô Quyền, Sơn Trà, Đà Nẵng)",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "PENDING_ACTIVATION",
+      "locality": {
+        "city": "Đà Nẵng",
+        "district": "Sơn Trà",
+        "street_address": "Tầng 4 Vincom Plaza, 910A đường Ngô Quyền, Quận Sơn Trà, TP. Đà Nẵng"
+      },
+      "evidence_pointer": {
+        "policy_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_088/captures_088/TARGET_088_175/page.txt",
+        "policy_sha256": "29baa5da5690e7f7bf9aec537ead5c4c3daf42572c967b9950fb5eb9823af5e1",
+        "branch_artifact": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_002/page.txt",
+        "branch_sha256": "c0074291e8dc06d7191f62dca149b4c49b1cfe1c66bf01c7b56c3b9262b4c76d"
+      },
+      "is_commercial_published": false
+    }
+  ],
+  "layer_2_watchlist": {
+    "verified_locations": [
+      {
+        "id": "VLOC_01_METIZ_HELIO",
+        "brand": "Metiz Cinema",
+        "sector": "CINEMA",
+        "district": "Hải Châu",
+        "venue_name": "Metiz Cinema Đà Nẵng",
+        "street_address": "Số 01 Đường 2 Tháng 9, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+        "nearby_clusters": [
+          "Khu vui chơi Helio Center",
+          "Cung Thiếu nhi Đà Nẵng",
+          "Gần ĐH Kiến Trúc"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://metiz.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "Số 01 Đường 2 Tháng 9, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_224/page.txt",
+          "artifact_sha256": "7f6664b06e3a44c795c110bdcec96c0f28932882648599985ca96fe0493cf123",
+          "quote": "Địa điểm: Số 01 Đường 2 Tháng 9, Hải Châu, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_02_PHELA_BACH_DANG",
+        "brand": "Phê La",
+        "sector": "COFFEE_TEA",
+        "district": "Hải Châu",
+        "venue_name": "Phê La - Bạch Đằng",
+        "street_address": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+        "nearby_clusters": [
+          "Bờ sông Hàn",
+          "Văn phòng Trung tâm",
+          "Cầu Rồng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "official_source_url": "https://phela.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_177/page.txt",
+          "artifact_sha256": "1e3c872066d247909b27c5cbe7ff4b5b8f5e6b9457ca9b7ac85d2e2322552c23",
+          "quote": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_03_PHELA_NVL",
+        "brand": "Phê La",
+        "sector": "COFFEE_TEA",
+        "district": "Hải Châu",
+        "venue_name": "Phê La - Nguyễn Văn Linh",
+        "street_address": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+        "nearby_clusters": [
+          "Phố tài chính Nguyễn Văn Linh",
+          "Gần ĐH Duy Tân",
+          "Văn phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "official_source_url": "https://phela.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_137/page.txt",
+          "artifact_sha256": "f11cd3a4cfa6a1e31b34561321177bcf132bca090ad1488edf3fe6304c28ec1d",
+          "quote": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_04_GONGCHA_NVL",
+        "brand": "Gong Cha Vietnam",
+        "sector": "COFFEE_TEA",
+        "district": "Hải Châu",
+        "venue_name": "Gong Cha - Nguyễn Văn Linh",
+        "street_address": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng.",
+        "nearby_clusters": [
+          "Phố tài chính Nguyễn Văn Linh",
+          "Gần ĐH Duy Tân",
+          "Văn phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "official_source_url": "https://gongcha.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng."
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088a/captures_088a/TARGET_088A_BR_149/page.txt",
+          "artifact_sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86",
+          "quote": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng."
+        }
+      },
+      {
+        "id": "VLOC_05_JOLLIBEE_TIEU_LA",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hải Châu",
+        "venue_name": "Jollibee Tiểu La",
+        "street_address": "32 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+        "nearby_clusters": [
+          "Cụm trường & Khu dân cư",
+          "Ăn uống tiện lợi"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "32 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_06_JOLLIBEE_DONG_DA",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hải Châu",
+        "venue_name": "Jollibee Đống Đa",
+        "street_address": "254 Đống Đa, Phường Thuận Phước, Quận Hải Châu, Đà Nẵng",
+        "nearby_clusters": [
+          "Cụm trường & Khu dân cư",
+          "Ăn uống tiện lợi"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "254 Đống Đa, Phường Thuận Phước, Quận Hải Châu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_07_JOLLIBEE_PHAN_DANG_LUU",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hải Châu",
+        "venue_name": "Jollibee Phan Đăng Lưu",
+        "street_address": "126 Phan Đăng Lưu, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng",
+        "nearby_clusters": [
+          "Cụm trường & Khu dân cư",
+          "Ăn uống tiện lợi"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hải Châu",
+          "street_address": "126 Phan Đăng Lưu, Phường Hòa Cường Bắc, Quận Hải Châu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_08_CGV_VINCOM",
+        "brand": "CGV Cinemas",
+        "sector": "CINEMA",
+        "district": "Sơn Trà",
+        "venue_name": "CGV Vincom Đà Nẵng",
+        "street_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng",
+        "nearby_clusters": [
+          "TTTM Vincom Plaza",
+          "Cầu Sông Hàn",
+          "Khu ẩm thực TTTM"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://www.cgv.vn/default/cinox/site/cgv-vincom-da-nang",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Sơn Trà",
+          "street_address": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_002/page.txt",
+          "artifact_sha256": "c0074291e8dc06d7191f62dca149b4c49b1cfe1c66bf01c7b56c3b9262b4c76d",
+          "quote": "Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải Bắc, Q.Sơn Trà, TP. Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_09_JOLLIBEE_VINCOM",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Sơn Trà",
+        "venue_name": "Jollibee Vincom Đà Nẵng",
+        "street_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+        "nearby_clusters": [
+          "TTTM Vincom Plaza",
+          "Cầu Sông Hàn",
+          "Khu ẩm thực TTTM"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Sơn Trà",
+          "street_address": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_10_CGV_VINH_TRUNG",
+        "brand": "CGV Cinemas",
+        "sector": "CINEMA",
+        "district": "Thanh Khê",
+        "venue_name": "CGV Vĩnh Trung Plaza",
+        "street_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+        "nearby_clusters": [
+          "Vĩnh Trung Plaza",
+          "Chợ Cồn",
+          "Bờ hồ Hàm Nghi"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Thanh Khê",
+          "street_address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_001/page.txt",
+          "artifact_sha256": "be52ed70ccd17b4b34884965fd720af929684f2909cef4a6ecfbb35d3711ea6e",
+          "quote": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_11_GALAXY_COOP",
+        "brand": "Galaxy Cinema",
+        "sector": "CINEMA",
+        "district": "Thanh Khê",
+        "venue_name": "Galaxy Cinema Co.opmart Đà Nẵng",
+        "street_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+        "nearby_clusters": [
+          "Siêu thị Co.opmart",
+          "Trục Điện Biên Phủ",
+          "Gần trường THPT"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Thanh Khê",
+          "street_address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_062/page.txt",
+          "artifact_sha256": "77f06a073192aa5183b7735a030812d5f3c08b3b6b8d7af0d20c1e77dabfd169",
+          "quote": "Địa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_12_GALAXY_CINEX_AEON",
+        "brand": "Galaxy Cinema",
+        "sector": "CINEMA",
+        "district": "Thanh Khê",
+        "venue_name": "Galaxy CineX AEON Mall Thanh Khê",
+        "street_address": "TTTM AEON Mall Thanh Khê, TP. Đà Nẵng",
+        "nearby_clusters": [
+          "AEON Mall Thanh Khê",
+          "Khu đô thị mới",
+          "Giải trí tổng hợp"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://galaxycine.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Thanh Khê",
+          "street_address": "TTTM AEON Mall Thanh Khê, TP. Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088c/captures_088c/TARGET_088C_591/page.txt",
+          "artifact_sha256": "89ea1774bcd0cdeee1b5954d0a718b66f347783b2a46bc4d8df426bd4d01265f",
+          "quote": "Galaxy CineX AEON Mall Thanh Khê: Rạp Mới - Phim Hay - Quà Đã Tay"
+        }
+      },
+      {
+        "id": "VLOC_13_JOLLIBEE_LY_THAI_TO",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Thanh Khê",
+        "venue_name": "Jollibee Lý Thái Tổ",
+        "street_address": "99 Lý Thái Tổ, Phường Thạc Gián, Quận Thanh Khê, Đà Nẵng",
+        "nearby_clusters": [
+          "Cụm trường & Khu dân cư",
+          "Ăn uống tiện lợi"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Thanh Khê",
+          "street_address": "99 Lý Thái Tổ, Phường Thạc Gián, Quận Thanh Khê, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_14_JOLLIBEE_NGUYEN_DUC_TRUNG",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Thanh Khê",
+        "venue_name": "Jollibee Nguyễn Đức Trung",
+        "street_address": "47 Nguyễn Đức Trung, Phường Hòa Khê, Quận Thanh Khê, Đà Nẵng",
+        "nearby_clusters": [
+          "Cụm trường & Khu dân cư",
+          "Ăn uống tiện lợi"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Thanh Khê",
+          "street_address": "47 Nguyễn Đức Trung, Phường Hòa Khê, Quận Thanh Khê, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_15_CGV_MM_MEGA",
+        "brand": "CGV Cinemas",
+        "sector": "CINEMA",
+        "district": "Hòa Khánh / Liên Chiểu",
+        "venue_name": "CGV MM Mega Market Đà Nẵng",
+        "street_address": "Tầng 3, TTTM MM Mega Market Đà Nẵng, 167 Nguyễn Sinh Sắc, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng",
+        "nearby_clusters": [
+          "MM Mega Market",
+          "Trục Nguyễn Sinh Sắc",
+          "Khu đô thị Tây Bắc"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Hẹn hò",
+          "Đi nhóm",
+          "Kèo tối"
+        ],
+        "official_source_url": "https://www.cgv.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hòa Khánh / Liên Chiểu",
+          "street_address": "Tầng 3, TTTM MM Mega Market Đà Nẵng, 167 Nguyễn Sinh Sắc, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088b/captures_088b/TARGET_088B_CGV_THEATER_003/page.txt",
+          "artifact_sha256": "4eb5af7d88335e433e1989f408703d040d1136484b537a17116d0c79eb31f3c5",
+          "quote": "Tầng 3, Trung tâm thương mại MM Supercenter Đà Nẵng,Tầng 3, Trung Tâm Thương Mại MM Mega Market Đà Nẵng, 167 Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_16_JOLLIBEE_PHAM_NHU_XUONG",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hòa Khánh / Liên Chiểu",
+        "venue_name": "Jollibee Phạm Như Xương (Cụm ĐH Sư Phạm)",
+        "street_address": "10 Phạm Như Xương, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng",
+        "nearby_clusters": [
+          "ĐH Sư Phạm Đà Nẵng",
+          "Khu sinh viên Hòa Khánh",
+          "KTX ĐH Sư Phạm"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hòa Khánh / Liên Chiểu",
+          "street_address": "10 Phạm Như Xương, Phường Hòa Khánh Nam, Quận Liên Chiểu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_17_JOLLIBEE_NGO_VAN_SO",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hòa Khánh / Liên Chiểu",
+        "venue_name": "Jollibee Ngô Văn Sở (Cụm ĐH Bách Khoa)",
+        "street_address": "02 Ngô Văn Sở, Phường Hòa Khánh Bắc, Quận Liên Chiểu, Đà Nẵng",
+        "nearby_clusters": [
+          "ĐH Bách Khoa Đà Nẵng",
+          "Chợ Hòa Khánh",
+          "Khu sinh viên Kỹ thuật"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hòa Khánh / Liên Chiểu",
+          "street_address": "02 Ngô Văn Sở, Phường Hòa Khánh Bắc, Quận Liên Chiểu, Đà Nẵng"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_18_JOLLIBEE_MEGA_MARKET",
+        "brand": "Jollibee Vietnam",
+        "sector": "FNB_FASTFOOD",
+        "district": "Hòa Khánh / Liên Chiểu",
+        "venue_name": "Jollibee MM Mega Market",
+        "street_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Liên Chiểu",
+        "nearby_clusters": [
+          "MM Mega Market",
+          "Trục Nguyễn Sinh Sắc",
+          "Khu đô thị Tây Bắc"
+        ],
+        "intent_tags": [
+          "Ăn trưa",
+          "Budget",
+          "Đi nhóm",
+          "Gần trường"
+        ],
+        "official_source_url": "https://jollibee.com.vn/",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "captured_at": "2026-08-25T14:00:00+07:00",
+        "checked_at": "2026-08-25T20:10:00+07:00",
+        "confidence_tier": "COBALT_VERIFIED_LOCATION",
+        "status": "VERIFIED_VENUE",
+        "ttl_status": "ACTIVE_VERIFIED",
+        "locality": {
+          "city": "Đà Nẵng",
+          "district": "Hòa Khánh / Liên Chiểu",
+          "street_address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Liên Chiểu"
+        },
+        "status_disclaimer": "Địa điểm từng được ghi nhận từ nguồn chính thức; vui lòng kiểm tra trạng thái hiện tại tại nguồn.",
+        "evidence_pointer": {
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088d/captures_088d/TARGET_088D_093/page.txt",
+          "artifact_sha256": "367daf0d6d56c85fa9811e279255099f4766b1846f5fe72914a2e7bbbb7a0096",
+          "quote": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_19_STARBUCKS_VIETNAM_H_I_CH_U",
+        "brand": "Starbucks Vietnam",
+        "venue_name": "Starbucks Bạch Đằng",
+        "sector": "COFFEE_TEA",
+        "district": "Hải Châu",
+        "street_address": "50 Bạch Đằng, Quận Hải Châu, Đà Nẵng",
+        "official_source_url": "https://www.starbucks.vn/store-locator/",
+        "nearby_clusters": [
+          "Hải Châu",
+          "Trung Tâm Thương Mại",
+          "Trường ĐH & Văn Phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_05_STARBUCKS",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_05_STARBUCKS/page.txt",
+          "artifact_sha256": "93c4de65b32750bebbf65b9d7078b09c56e958ac9e8ad8565ec79ec060fa0508",
+          "quote": "50 Bạch Đằng, Quận Hải Châu, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_20_STARBUCKS_VIETNAM_S_N_TR_",
+        "brand": "Starbucks Vietnam",
+        "venue_name": "Starbucks Vincom Đà Nẵng",
+        "sector": "COFFEE_TEA",
+        "district": "Sơn Trà",
+        "street_address": "L1-11, Vincom Center Ngô Quyền, 910A Ngô Quyền, Quận Sơn Trà, Đà Nẵng",
+        "official_source_url": "https://www.starbucks.vn/store-locator/",
+        "nearby_clusters": [
+          "Sơn Trà",
+          "Trung Tâm Thương Mại",
+          "Trường ĐH & Văn Phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_05_STARBUCKS",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_05_STARBUCKS/page.txt",
+          "artifact_sha256": "93c4de65b32750bebbf65b9d7078b09c56e958ac9e8ad8565ec79ec060fa0508",
+          "quote": "L1-11, Vincom Center Ngô Quyền, 910A Ngô Quyền, Quận Sơn Trà, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_21_STARBUCKS_VIETNAM_NG__H_NH_S_N",
+        "brand": "Starbucks Vietnam",
+        "venue_name": "Starbucks Võ Nguyên Giáp",
+        "sector": "COFFEE_TEA",
+        "district": "Ngũ Hành Sơn",
+        "street_address": "Nesta Hotel, 268 Võ Nguyên Giáp, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng",
+        "official_source_url": "https://www.starbucks.vn/store-locator/",
+        "nearby_clusters": [
+          "Ngũ Hành Sơn",
+          "Trung Tâm Thương Mại",
+          "Trường ĐH & Văn Phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_05_STARBUCKS",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_05_STARBUCKS/page.txt",
+          "artifact_sha256": "93c4de65b32750bebbf65b9d7078b09c56e958ac9e8ad8565ec79ec060fa0508",
+          "quote": "Nesta Hotel, 268 Võ Nguyên Giáp, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_22_STARBUCKS_VIETNAM_S_N_TR_",
+        "brand": "Starbucks Vietnam",
+        "venue_name": "Starbucks Trần Hưng Đạo",
+        "sector": "COFFEE_TEA",
+        "district": "Sơn Trà",
+        "street_address": "Tầng trệt, số 218 Trần Hưng Đạo, Quận Sơn Trà, Đà Nẵng",
+        "official_source_url": "https://www.starbucks.vn/store-locator/",
+        "nearby_clusters": [
+          "Sơn Trà",
+          "Trung Tâm Thương Mại",
+          "Trường ĐH & Văn Phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_05_STARBUCKS",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_05_STARBUCKS/page.txt",
+          "artifact_sha256": "93c4de65b32750bebbf65b9d7078b09c56e958ac9e8ad8565ec79ec060fa0508",
+          "quote": "Tầng trệt, số 218 Trần Hưng Đạo, Quận Sơn Trà, Đà Nẵng"
+        }
+      },
+      {
+        "id": "VLOC_23_STARBUCKS_VIETNAM_H_I_CH_U",
+        "brand": "Starbucks Vietnam",
+        "venue_name": "Starbucks Lotte Mart Đà Nẵng",
+        "sector": "COFFEE_TEA",
+        "district": "Hải Châu",
+        "street_address": "1F-04, Số o6 Đường Nại Nam, Hoà Cường Bắc, Đà Nẵng, Việt Nam",
+        "official_source_url": "https://www.starbucks.vn/store-locator/",
+        "nearby_clusters": [
+          "Hải Châu",
+          "Trung Tâm Thương Mại",
+          "Trường ĐH & Văn Phòng"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc",
+          "Gặp đối tác"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_05_STARBUCKS",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_05_STARBUCKS/page.txt",
+          "artifact_sha256": "93c4de65b32750bebbf65b9d7078b09c56e958ac9e8ad8565ec79ec060fa0508",
+          "quote": "1F-04, Số o6 Đường Nại Nam, Hoà Cường Bắc, Đà Nẵng, Việt Nam"
+        }
+      },
+      {
+        "id": "VLOC_24_STARLIGHT_CINEMA_THANH_KH_",
+        "brand": "Starlight Cinema",
+        "venue_name": "Starlight Cinema Đà Nẵng",
+        "sector": "CINEMA",
+        "district": "Thanh Khê",
+        "street_address": "Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng",
+        "official_source_url": "https://starlight.vn/",
+        "nearby_clusters": [
+          "Thanh Khê",
+          "Rạp Phim Sinh Viên"
+        ],
+        "intent_tags": [
+          "Xem phim",
+          "Kèo tối",
+          "Đi nhóm"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_17_STARLIGHT",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_17_STARLIGHT/page.txt",
+          "artifact_sha256": "10723679d5b5f7f3a93e160ca158748f1cf62d5598492533fce51dfbacdf62ba",
+          "quote": "Địa chỉ: Tầng 4, Tòa nhà Nguyễn Kim, 46 Điện Biên Phủ, TP. Đà Nẵng, Việt Nam"
+        }
+      },
+      {
+        "id": "VLOC_25_TRUNG_NGUY_N_E_COFFEE_NG__H_NH_S_N",
+        "brand": "Trung Nguyên E-Coffee",
+        "venue_name": "Trung Nguyên E-Coffee Hoàng Kế Viêm",
+        "sector": "COFFEE_TEA",
+        "district": "Ngũ Hành Sơn",
+        "street_address": "Lô 51 Hoàng Kế Viêm, P. Mỹ An, Quận Ngũ Hành Sơn, Đà Nẵng",
+        "official_source_url": "https://trungnguyenecoffee.com/danh-sach-cua-hang/",
+        "nearby_clusters": [
+          "Ngũ Hành Sơn",
+          "Cụm Trường ĐH"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_24_TRUNGNGUYEN",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_24_TRUNGNGUYEN/page.txt",
+          "artifact_sha256": "5fde61c83d9f5c1e269e44b41b106a5b4c5457c655f3d6fd87d3b91b3a69e47c",
+          "quote": "Lô 51 Hoàng Kế Viêm, P. Mỹ An"
+        }
+      },
+      {
+        "id": "VLOC_26_TRUNG_NGUY_N_E_COFFEE_LI_N_CHI_U",
+        "brand": "Trung Nguyên E-Coffee",
+        "venue_name": "Trung Nguyên E-Coffee Đặng Dung",
+        "sector": "COFFEE_TEA",
+        "district": "Liên Chiểu",
+        "street_address": "23 Đặng Dung, P. Hòa Khánh Bắc, Quận Liên Chiểu, Đà Nẵng",
+        "official_source_url": "https://trungnguyenecoffee.com/danh-sach-cua-hang/",
+        "nearby_clusters": [
+          "Liên Chiểu",
+          "Cụm Trường ĐH"
+        ],
+        "intent_tags": [
+          "Cà phê",
+          "Học bài",
+          "Làm việc"
+        ],
+        "status_disclaimer": "Địa điểm chính thức — chưa xác minh ưu đãi",
+        "photo_meta": {
+          "has_official_photo": false,
+          "photo_url": null,
+          "attribution": "Monogram chuẩn thương hiệu · Xem nguồn ↗"
+        },
+        "evidence_pointer": {
+          "source_target_id": "LOC_111C_24_TRUNGNGUYEN",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_runs/RUN_111C_1787666566046/captures/LOC_111C_24_TRUNGNGUYEN/page.txt",
+          "artifact_sha256": "5fde61c83d9f5c1e269e44b41b106a5b4c5457c655f3d6fd87d3b91b3a69e47c",
+          "quote": "23 Đặng Dung, P. Hòa Khánh Bắc"
+        }
+      }
+    ],
+    "brand_signals_only": [
+      {
+        "id": "BSIG_01_KATINAT",
+        "brand": "Katinat Saigon Kafe",
+        "sector": "COFFEE_TEA",
+        "venue_name": "Katinat Saigon Kafe Đà Nẵng",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Chưa có dữ liệu địa chỉ chi nhánh cụ thể trên đĩa",
+        "official_source_url": "https://katinat.vn/",
+        "status_disclaimer": "JayT đang theo dõi thương hiệu này; chưa có dữ liệu địa chỉ chi nhánh cụ thể trên đĩa. Vui lòng kiểm tra trên kênh chính thức của thương hiệu."
+      },
+      {
+        "id": "BSIG_02_DOMINOS",
+        "brand": "Domino's Pizza",
+        "sector": "FNB_FASTFOOD",
+        "venue_name": "Domino's Pizza Đà Nẵng",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Chưa có dữ liệu địa chỉ chi nhánh cụ thể trên đĩa",
+        "official_source_url": "https://dominos.vn/",
+        "status_disclaimer": "JayT đang theo dõi thương hiệu này; chưa có dữ liệu địa chỉ chi nhánh cụ thể trên đĩa. Vui lòng kiểm tra trên kênh chính thức của thương hiệu."
+      },
+      {
+        "id": "BSIG_03_LOTTE_CINEMA",
+        "brand": "Lotte Cinema",
+        "sector": "CINEMA",
+        "venue_name": "Lotte Cinema Đà Nẵng (Hải Châu / Ngũ Hành Sơn)",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Raw browser evidence chưa có trên đĩa",
+        "official_source_url": "https://www.lottecinemavn.com/",
+        "status_disclaimer": "JayT đang theo dõi rạp Lotte Cinema; dữ liệu chi nhánh chưa được kiểm toán qua capture hợp lệ trên đĩa."
+      },
+      {
+        "id": "BSIG_04_HIGHLANDS_NGU_HANH_SON",
+        "brand": "Highlands Coffee",
+        "sector": "COFFEE_TEA",
+        "venue_name": "Highlands Coffee (Khu vực Ngũ Hành Sơn)",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Raw browser evidence chưa có trên đĩa",
+        "official_source_url": "https://www.highlandscoffee.com.vn/",
+        "status_disclaimer": "JayT đang theo dõi Highlands Coffee khu vực Ngũ Hành Sơn; dữ liệu chi nhánh chưa được kiểm toán qua capture hợp lệ trên đĩa."
+      },
+      {
+        "id": "BSIG_05_PHUCLONG_NGU_HANH_SON",
+        "brand": "Phúc Long Coffee & Tea",
+        "sector": "COFFEE_TEA",
+        "venue_name": "Phúc Long Coffee & Tea (Khu vực Ngũ Hành Sơn)",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Raw browser evidence chưa có trên đĩa",
+        "official_source_url": "https://phuclong.com.vn/",
+        "status_disclaimer": "JayT đang theo dõi Phúc Long khu vực Ngũ Hành Sơn; dữ liệu chi nhánh chưa được kiểm toán qua capture hợp lệ trên đĩa."
+      },
+      {
+        "id": "BSIG_06_THECOFFEEHOUSE_NGU_HANH_SON",
+        "brand": "The Coffee House",
+        "sector": "COFFEE_TEA",
+        "venue_name": "The Coffee House (Khu vực Ngũ Hành Sơn)",
+        "confidence_tier": "BRAND_MONITORED_ONLY",
+        "checked_at": "2026-08-25T16:00:00+07:00",
+        "ttl_status": "MONITORING_NO_BRANCH_EVIDENCE",
+        "status_label": "Thương hiệu đang theo dõi — Raw browser evidence chưa có trên đĩa",
+        "official_source_url": "https://thecoffeehouse.com/",
+        "status_disclaimer": "JayT đang theo dõi The Coffee House khu vực Ngũ Hành Sơn; dữ liệu chi nhánh chưa được kiểm toán qua capture hợp lệ trên đĩa."
+      }
+    ],
+    "fresh_canonical_branches_103": [
+      {
+        "id": "COBALT_BRANCH_GALAXY_COOPMART_THANH_KHE",
+        "brand": "Galaxy Cinema",
+        "venue_name": "Galaxy Cinema — Co.opmart Thanh Khê",
+        "address": "Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+        "district": "Thanh Khê",
+        "source_url": "https://galaxycine.vn/rap-gia-ve/galaxy-da-nang/",
+        "evidence_pointer": {
+          "target_id": "TARGET_101_GALAXY_DANANG_OFFICIAL",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_GALAXY_DANANG_OFFICIAL/page.txt",
+          "line_number": 13,
+          "char_offset": 115,
+          "snippet_length": 90,
+          "snippet": "Địa chỉ: Tầng 3, TTTM Co.opmart Đà Nẵng - 478 Điện Biên Phủ, Phường Thanh Khê, TP. Đà Nẵng",
+          "snippet_sha256": "11740704c47dc49fc1da102334aba7541ee01cc74850bd9ebe235571aa1fcb8b",
+          "artifact_sha256": "99f1d47f15fc2f48df13c25c0a7099636db5a0e1af66895382f01a99a93d1b03"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_PHELA_BACH_DANG_HAI_CHAU",
+        "brand": "Phê La",
+        "venue_name": "Phê La — Bạch Đằng",
+        "address": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+        "district": "Hải Châu",
+        "source_url": "https://phela.vn/",
+        "evidence_pointer": {
+          "target_id": "TARGET_101_PHELA_OFFICIAL",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_PHELA_OFFICIAL/page.txt",
+          "line_number": 88,
+          "char_offset": 2789,
+          "snippet_length": 55,
+          "snippet": "Số 36 - 38 đường Bạch Đằng, Phường Hải Châu, TP Đà Nẵng",
+          "snippet_sha256": "477790b9c32ff05dd24ba41aa1ed8c8f647c8d5576bc79fe05b4d7fb8cc577fc",
+          "artifact_sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_PHELA_NGUYEN_VAN_LINH_HAI_CHAU",
+        "brand": "Phê La",
+        "venue_name": "Phê La — Nguyễn Văn Linh",
+        "address": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+        "district": "Hải Châu",
+        "source_url": "https://phela.vn/",
+        "evidence_pointer": {
+          "target_id": "TARGET_101_PHELA_OFFICIAL",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_101/captures_101/TARGET_101_PHELA_OFFICIAL/page.txt",
+          "line_number": 92,
+          "char_offset": 2872,
+          "snippet_length": 50,
+          "snippet": "Số 35 - 41 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng",
+          "snippet_sha256": "2b7af8d32bcbca0263dc70f855f3d427f288e5af5384ea2d000000152acf8c56",
+          "artifact_sha256": "458690049e6c3cc3148687fffd2b342d4af03c086afb75fd4c79086ce8b6e0b4"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_CGV_VINH_TRUNG_THANH_KHE",
+        "brand": "CGV Cinema",
+        "venue_name": "CGV Cinema — Vĩnh Trung Plaza",
+        "address": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+        "district": "Thanh Khê",
+        "source_url": "https://www.cgv.vn/default/cinox/site/cgv-vinh-trung-plaza",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_CGV_VINH_TRUNG",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_CGV_VINH_TRUNG/page.txt",
+          "line_number": 53,
+          "char_offset": 443,
+          "snippet_length": 51,
+          "snippet": "255-257 đường Hùng Vương Quận Thanh Khê Tp. Đà Nẵng",
+          "snippet_sha256": "574801c0aa319c0b887373634360a726eb5d40c647ba0ab3dd3104e4c1a99ad1",
+          "artifact_sha256": "3b9396c1a592f3b4b8f801262aed3a081d73ac7e6bfd6229694acb3db7482d0e"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_GONGCHA_NGUYEN_VAN_LINH_HAI_CHAU",
+        "brand": "Gong Cha",
+        "venue_name": "Gong Cha — Nguyễn Văn Linh",
+        "address": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng.",
+        "district": "Hải Châu",
+        "source_url": "https://gongcha.com.vn/cua-hang/",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_GONGCHA_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_GONGCHA_STORES/page.txt",
+          "line_number": 80,
+          "char_offset": 1313,
+          "snippet_length": 61,
+          "snippet": "01 Nguyễn Văn Linh, Phường Bình Hiên, Quận Hải Châu, Đà Nẵng.",
+          "snippet_sha256": "9752f3ff4d5283863d45c7feebf4b8c0679a99f49ea8a106285687c43f40fec8",
+          "artifact_sha256": "7e741437a947cfd9b95ec1312856895687d0b6db154136c63c36b9f0b9cddc86"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_VINCOM_SON_TRA",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Vincom Ngô Quyền",
+        "address": "Tầng 4 Vincom Đà Nẵng, 910A Ngô Quyền, Phường An Hải Bắc, Quận Sơn Trà, Thành Phố Đà Nẵng",
+        "district": "Sơn Trà",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 375,
+          "char_offset": 12219,
+          "snippet_length": 72,
+          "snippet": "Tầng 4 Vincom Đà Nẵng , 910A Ngô Quyền, Phường An Hải, Thành Phố Đà Nẵng",
+          "snippet_sha256": "172e03d7363b00f7b549ce78ee1c5f7ed51b123912667e12381fa1e4841e1ec9",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_TIEU_LA_HAI_CHAU",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Tiểu La",
+        "address": "32 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu, Thành Phố Đà Nẵng",
+        "district": "Hải Châu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 627,
+          "char_offset": 22349,
+          "snippet_length": 46,
+          "snippet": "32 Tiểu La, Phường Hòa Cường,Thành phố Đà Nẵng",
+          "snippet_sha256": "c94615bcca81ae59d0cf588009af7c59a6be5208247432da032ad2c825172a72",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_NGUYEN_DUC_TRUNG_THANH_KHE",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Nguyễn Đức Trung",
+        "address": "47 Nguyễn Đức Trung, Hòa Khê, Thanh Khê, Đà Nẵng, Việt Nam",
+        "district": "Thanh Khê",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 711,
+          "char_offset": 25812,
+          "snippet_length": 56,
+          "snippet": "47 Nguyễn Đức Trung, Phường Thanh Khê, Thành phố Đà Nẵng",
+          "snippet_sha256": "4d59b0ca1e5a29ab646e1618f2d712dd1b93e213227d07ccdd16840a0f899ecc",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_PHAN_DANG_LUU_HAI_CHAU",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Phan Đăng Lưu",
+        "address": "126 Phan Đăng Lưu, Phường Hòa Cường Bắc, Quận Hải Châu, Thành Phố Đà nẵng",
+        "district": "Hải Châu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 771,
+          "char_offset": 28249,
+          "snippet_length": 54,
+          "snippet": "126 Phan Đăng Lưu, Phường Hòa Cường, Thành phố Đà Nẵng",
+          "snippet_sha256": "fc122314f5f848574a68d4344994ffc8c70c29f5a44083d7bfe7d50a481a9dcd",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_PHAM_NHU_XUONG_LIEN_CHIEU",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Phạm Như Xương",
+        "address": "10 Phạm Như Xương , Phường Hòa Khánh Nam , Quận Liên Chiểu, Thành phố Đà Nẵng",
+        "district": "Liên Chiểu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 789,
+          "char_offset": 29012,
+          "snippet_length": 54,
+          "snippet": "10 Phạm Như Xương, Phường Hòa Khánh, Thành phố Đà Nẵng",
+          "snippet_sha256": "786552257882851bb664722e75212527ad58c22c826c8c96ddd4adff311e2765",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_LY_THAI_TO_THANH_KHE",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Lý Thái Tổ",
+        "address": "99 Lý Thái Tổ, Phường Thạc Gián, Quận Thanh Khê, Thành Phố Đà Nẵng",
+        "district": "Thanh Khê",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 813,
+          "char_offset": 29786,
+          "snippet_length": 50,
+          "snippet": "99 Lý Thái Tổ, Phường Thanh Khê, Thành phố Đà Nẵng",
+          "snippet_sha256": "9049947a59b03b69ac622d67a1c30ca54a39daf2eac5a723ffa1b56aa08038a4",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_DONG_DA_HAI_CHAU",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Đống Đa",
+        "address": "254 Đống Đa , P, Thuận Phước , Q. Hải Châu , Tp. Đà Nẵng",
+        "district": "Hải Châu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 903,
+          "char_offset": 32996,
+          "snippet_length": 47,
+          "snippet": "254 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng",
+          "snippet_sha256": "e766770b2b1dbc73f780b1f01302276b8b242dced10466c0a99d98cf483967f9",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_NGO_VAN_SO_LIEN_CHIEU",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — Ngô Văn Sở",
+        "address": "02 Ngô Văn Sở, Phường Hòa Khánh Bắc, Quận Liên Chiểu, Thành phố Đà Nẵng",
+        "district": "Liên Chiểu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 914,
+          "char_offset": 33368,
+          "snippet_length": 51,
+          "snippet": "02 Ngô Văn Sở, Phường Liên Chiểu, Thành phố Đà Nẵng",
+          "snippet_sha256": "cccfac917b69e775b0a2d9c7ce1b961cb5d5cbc48935342bda1546182c6fef2e",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "id": "COBALT_BRANCH_JOLLIBEE_MEGA_MARKET_HOA_KHANH",
+        "brand": "Jollibee",
+        "venue_name": "Jollibee — MM Mega Market Nguyễn Sinh Sắc",
+        "address": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+        "district": "Liên Chiểu",
+        "source_url": "https://jollibee.com.vn/cua-hang",
+        "evidence_pointer": {
+          "target_id": "TARGET_102_JOLLIBEE_STORES",
+          "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_102/captures_102/TARGET_102_JOLLIBEE_STORES/page.txt",
+          "line_number": 1438,
+          "char_offset": 52305,
+          "snippet_length": 105,
+          "snippet": "Lô L1-01, Tầng 1, TTTM MM Mega Market Đà Nẵng, Đường Nguyễn Sinh Sắc, Phường Hòa Khánh, Thành phố Đà Nẵng",
+          "snippet_sha256": "8af82d37334bd067447d447a9db3842c0b36a354343d25cba0a502adbc0489d5",
+          "artifact_sha256": "17c36f84dd20ae35cc8b3c2f2ee4205b789d7f72c41e97508373c052183415e2"
+        },
+        "status": "COBALT_VERIFIED_LOCATION",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      }
+    ],
+    "amber_sources_103": [
+      {
+        "target_id": "TARGET_101_METIZ_OFFICIAL",
+        "venue_name": "Metiz Cinema Đà Nẵng",
+        "source_url": "https://metiz.vn/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_METIZ_POLICY",
+        "venue_name": "Metiz Cinema Member Policy",
+        "source_url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_METIZ_HOME",
+        "venue_name": "Metiz Cinema Đà Nẵng Home",
+        "source_url": "https://metiz.vn/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_LOTTE_CINEMA_DNG",
+        "venue_name": "Lotte Cinema Đà Nẵng",
+        "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Cinema/Cinema-Detail.aspx?divisionCode=1&detailDivisionCode=4&cinemaID=5001",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_THECOFFEEHOUSE_STORES",
+        "venue_name": "The Coffee House Danh Sách",
+        "source_url": "https://thecoffeehouse.com/pages/danh-sach-cua-hang",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_KATINAT_HOME",
+        "venue_name": "Katinat Saigon Kafe Home",
+        "source_url": "https://katinat.vn/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_DOMINOS_HOME",
+        "venue_name": "Domino's Pizza Vietnam",
+        "source_url": "https://dominos.vn/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_DOMINOS_STORES",
+        "venue_name": "Domino's Cửa Hàng",
+        "source_url": "https://dominos.vn/cua-hang",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_LOTTERIA_STORES",
+        "venue_name": "Lotteria Cửa Hàng",
+        "source_url": "https://www.lotteria.vn/store/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      },
+      {
+        "target_id": "TARGET_102_COOPMART_DANANG",
+        "venue_name": "Co.opmart Đà Nẵng",
+        "source_url": "https://co-opmart.com.vn/he-thong-coop-mart/",
+        "status": "OFFICIAL_SOURCE_NO_LOCALITY",
+        "disclaimer": "Địa điểm chính thức — ưu đãi online chưa đủ dữ kiện; kiểm tra trực tiếp tại quán."
+      }
+    ],
+    "unverified_signals_count": 36,
+    "last_pipeline_run": "2026-08-25T14:02:46.045Z",
+    "containment_status": "BATCH_111A_CONTAINED_CANONICAL_18"
+  },
+  "layer_3_community_radar": {
+    "items": [],
+    "confidence_tier": "AMBER_COMMUNITY_SIGNAL",
+    "empty_state_message": "Chưa có tín hiệu cộng đồng nào được gửi hôm nay. Bạn vừa phát hiện ưu đãi tại quán quen Đà Nẵng? Hãy là người đầu tiên chia sẻ!",
+    "privacy_policy_notice": "JayT không thu thập họ tên, số điện thoại, email hay bất kỳ thông tin định danh cá nhân (PII) nào."
+  },
+  "layer_4_loyalty_policies": [
+    {
+      "id": "LOYALTY_01_GALAXY",
+      "brand": "Galaxy Cinema",
+      "sector": "CINEMA",
+      "title": "Chính sách Hội viên Galaxy Cinema 2026 (Tích lũy Star)",
+      "confidence_tier": "COBALT_LOYALTY_POLICY",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "ACTIVE_POLICY_2026",
+      "points_rule_summary": "Tích lũy Star đổi vé & bắp nước tại rạp",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088c/captures_088c/TARGET_088C_589/page.txt",
+        "artifact_sha256": "af15700433663061d368e27c4005f5a930c6ec87b4ceaaff542ce191fb30f2c7",
+        "quote": "Điểm tích lũy được gọi là Star. 1 điểm đổi được 1.000 đồng – áp dụng được cho việc thanh toán vé, bắp nước tại Galaxy Cinema."
+      },
+      "official_source_url": "https://galaxycine.vn/chinh-sach-thanh-vien-2026"
+    },
+    {
+      "id": "LOYALTY_02_CGV",
+      "brand": "CGV Cinemas",
+      "sector": "CINEMA",
+      "title": "Chương trình Điểm Thưởng Hội viên CGV Membership",
+      "confidence_tier": "COBALT_LOYALTY_POLICY",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "ACTIVE_POLICY_2026",
+      "points_rule_summary": "Tích lũy điểm thưởng đổi vé xem phim và bắp nước",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088/captures_088/TARGET_088_104/page.txt",
+        "artifact_sha256": "2419fc5a3d9f00feace8b9f20cb706b68af964e67799361e10ffd1af70d8ebcc",
+        "quote": "1 điểm = 1.000 VND, có giá trị như tiền mặt, được dùng để mua vé xem phim, thức uống/ combo tương ứng tại CGV và đổi voucher ưu đãi trên CGV Reward."
+      },
+      "official_source_url": "https://www.cgv.vn/default/membership"
+    },
+    {
+      "id": "LOYALTY_03_METIZ",
+      "brand": "Metiz Cinema",
+      "sector": "CINEMA",
+      "title": "Chính sách Ưu Đãi Thành Viên Metiz Cinema 2026",
+      "confidence_tier": "COBALT_LOYALTY_POLICY",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "ACTIVE_POLICY_2026",
+      "points_rule_summary": "Tích lũy điểm 7% giá trị giao dịch & vé sinh nhật",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088/captures_088/TARGET_088_150/page.txt",
+        "artifact_sha256": "76f7ecdf9a816ff24188ff34944119225f3cb916d5cc001706d55b928cce83c8",
+        "quote": "Tích lũy điểm 7% giá trị giao dịch tại quầy vé & quầy bắp nước."
+      },
+      "official_source_url": "https://metiz.vn/policy/chinh-sach-thanh-vien-3.html"
+    },
+    {
+      "id": "LOYALTY_04_GONGCHA",
+      "brand": "Gong Cha Vietnam",
+      "sector": "COFFEE_TEA",
+      "title": "Chính sách Thành Viên Ứng Dụng Gong Cha VN",
+      "confidence_tier": "COBALT_LOYALTY_POLICY",
+      "checked_at": "2026-08-25T16:00:00+07:00",
+      "ttl_status": "ACTIVE_POLICY_2026",
+      "points_rule_summary": "Tích lũy điểm trên ứng dụng theo chi tiêu tại cửa hàng",
+      "evidence_pointer": {
+        "artifact_path": "05_DEAL_AND_AFFILIATE/batch_capture_088/captures_088/TARGET_088_113/page.txt",
+        "artifact_sha256": "996fd3101b6ede73da5653733b2ac8d45d057d745207c47765fb73e222ec7977",
+        "quote": "Chương trình tích điểm thành viên Gong Cha VN cho phép bạn tích điểm và chủ động đổi điểm để lấy những ưu đãi, phần quà hấp dẫn từ Gong Cha. Với mỗi hóa đơn chi tiêu tại cửa hàng, bạn sẽ được tích điểm tương đương với số tiền mà bạn đã thanh toán."
+      },
+      "official_source_url": "https://gongcha.com.vn/"
+    }
+  ],
+  "layer_1_emerald_deals": [
+    {
+      "id": "DEAL_TARGET_108_14_CGV_LEAF_01",
+      "brand": "CGV Cinemas",
+      "category": "CINEMA",
+      "source_url": "https://www.cgv.vn/default/newsoffer/uu-dai-online/",
+      "offer_highlight": "GIẢM NGAY 30K",
+      "valid_from": "2026-08-25",
+      "valid_to": "2026-08-31",
+      "scope": "NATIONWIDE_WITH_CANONICAL_PRESENCE",
+      "terms_verified": true,
+      "status": "ACTIVE_VERIFIED_DEAL",
+      "last_verified_at": "2026-08-25T13:30:01.044Z"
+    },
+    {
+      "id": "DEAL_TARGET_108_14_CGV_LEAF_02",
+      "brand": "CGV Cinemas",
+      "category": "CINEMA",
+      "source_url": "https://www.cgv.vn/default/newsoffer/cgv-vnpay-vietin/",
+      "offer_highlight": "mã: MUA1TANG1",
+      "valid_from": null,
+      "valid_to": "2026-09-30",
+      "scope": "NATIONWIDE_WITH_CANONICAL_PRESENCE",
+      "terms_verified": true,
+      "status": "ACTIVE_VERIFIED_DEAL",
+      "last_verified_at": "2026-08-25T13:30:01.044Z"
+    },
+    {
+      "id": "DEAL_TARGET_108_17_STARLIGHT_LEAF_03",
+      "brand": "Starlight Cinema",
+      "category": "CINEMA",
+      "source_url": "https://starlight.vn/uu-dai/%F0%9F%8C%9E-he-ron-rang-deal-10k-san-sang-%F0%9F%8C%9E-1064.html",
+      "offer_highlight": "mã:\nCOMBOHE10K",
+      "valid_from": "2026-06-16",
+      "valid_to": "2026-09-19",
+      "scope": "EXPLICIT_DA_NANG",
+      "terms_verified": true,
+      "status": "ACTIVE_VERIFIED_DEAL",
+      "last_verified_at": "2026-08-25T13:30:01.044Z"
+    }
+  ]
+}

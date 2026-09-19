@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+      <defs>
+        <linearGradient id="purple-study-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#faf5ff"/>
+          <stop offset="50%" stop-color="#f3e8ff"/>
+          <stop offset="100%" stop-color="#e9d5ff"/>
+        </linearGradient>
+        <linearGradient id="book-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7e22ce"/>
+          <stop offset="50%" stop-color="#9333ea"/>
+          <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+        <filter id="lib-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#581c87" flood-opacity="0.16"/>
+        </filter>
+      </defs>
+      
+      <!-- Purple Background -->
+      <rect width="960" height="540" fill="url(#purple-study-bg)"/>
+      
+      <circle cx="480" cy="270" r="210" fill="#a855f7" opacity="0.12"/>
+      <circle cx="160" cy="140" r="130" fill="#7e22ce" opacity="0.08"/>
+      
+      <!-- Top Badge -->
+      <g transform="translate(240, 36)" filter="url(#lib-shadow)">
+        <rect width="480" height="48" rx="24" fill="#ffffff" stroke="#d8b4fe" stroke-width="1.5"/>
+        <text x="240" y="30" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="800" fill="#6b21a8" text-anchor="middle" letter-spacing="1">📚 KHÔNG GIAN TỰ HỌC &#8226; THƯ VIỆN KHTH ĐÀ NẴNG</text>
+      </g>
+      
+      <!-- Modern Knowledge & Study Visual -->
+      <g transform="translate(280, 160)" filter="url(#lib-shadow)">
+        <!-- Book Stack -->
+        <rect x="40" y="140" width="100" height="120" rx="8" fill="#7e22ce" transform="rotate(-8 40 140)"/>
+        <rect x="140" y="110" width="100" height="150" rx="8" fill="#9333ea"/>
+        <rect x="250" y="90" width="100" height="170" rx="8" fill="#a855f7"/>
+        <rect x="360" y="120" width="100" height="140" rx="8" fill="#c084fc" transform="rotate(10 360 120)"/>
+        <!-- Modern Study Lamp -->
+        <path d="M 0 260 L 60 40 L 140 40" stroke="#6b21a8" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <ellipse cx="150" cy="40" rx="30" ry="16" fill="#fef08a"/>
+      </g>
+      
+      <!-- Bottom Narrative -->
+      <text x="480" y="495" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#581c87" text-anchor="middle">
+        Không gian đọc sách ven sông Hàn yên tĩnh &#8226; Tự do tiếp cận tài liệu số miễn phí
+      </text>
+    </svg>

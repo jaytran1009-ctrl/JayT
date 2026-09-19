@@ -1,0 +1,57 @@
+{
+  "manifest_id": "MANIFEST_CANDIDATE_V3437_J373_PRODUCTION",
+  "target_version": "v3.437.0",
+  "parent_candidate": "08_RELEASE_VAULT/candidates/j373-r1",
+  "parent_candidate_manifest_sha256": "ed8ad9c80526042f8ce424851e9431c10b98b57ea8558c7e3ed7e028f06ac864",
+  "governing_directive": "WORK_ORDER_J374_VISUAL_FIRST_RETENTION",
+  "milestone": "M1_J373_RELEASE",
+  "authority": "JAYT-374 Chairman Decree",
+  "sealed_at_utc": "2026-09-10T09:42:03.855Z",
+  "production_deployment_authorized": true,
+  "production_alias_mutation_authorized": true,
+  "affiliate_enabled": false,
+  "rollback_baseline_deployment_id": "dpl_4f26vjY51Ky54cd4xqymrQKvnSVr",
+  "files": {
+    "index.html": {
+      "bytes": 1227,
+      "sha256": "c1c0eefde3f96441fcd9ecd076cf972b31c3ef63de678b37a4e70ff3a00b2235"
+    },
+    "styles.css": {
+      "bytes": 64457,
+      "sha256": "a7145e90db0d44aaadfba29efe7957ad500d1d1b80f90f153160b664008e39d2"
+    },
+    "jayt_apex_interface.js": {
+      "bytes": 477835,
+      "sha256": "7aee5ae07b70f4b1c06b27f3497255212f1b35d5e340c1a6e3cd4e78216c9e3b"
+    },
+    "search.css": {
+      "bytes": 767,
+      "sha256": "7ce6d73b800433f88d066cd9af14f71e56beca2ca876b1f34589c4f2ae78f100"
+    },
+    "search.js": {
+      "bytes": 2763,
+      "sha256": "ac226ccb75a147e6d069e3a3cf0dec3a44da414c724e4965134d9e749f532bdc"
+    },
+    "deals_feed.json": {
+      "bytes": 114379,
+      "sha256": "97d29399738c6781671ff4557506974334d31515f209256c383907177074cc60"
+    },
+    "registry.json": {
+      "bytes": 48314,
+      "sha256": "52a8811109df36961edf9714a6e9ff09b3e4e944e3705b458dd189634e1140a3"
+    },
+    "published_manifest.json": {
+      "bytes": 1219,
+      "sha256": "1b540520b2604a853da9a5a75999378f8ba599f7c6dcf2ad2008b89509038ef8"
+    }
+  },
+  "qa_verification": {
+    "test_payment_copy_fallback": "6/6 PASS",
+    "leading_zero_preservation": "VERIFIED",
+    "clipboard_denied_selectable_fallback": "VERIFIED",
+    "qr_immediate_invalidation_on_edit": "VERIFIED",
+    "integer_vnd_conservation": "VERIFIED",
+    "camera_bank_app_recognition": "NOT_TESTED",
+    "evidence_screenshot": "07_QUALITY_ASSURANCE/runtime_evidence/j374_m1_payment_copy_fallback_verified.png"
+  }
+}

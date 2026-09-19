@@ -1,0 +1,45 @@
+{
+  "manifest_id": "W8_COMMERCIAL_DUAL_KEY_RELEASE_MANIFEST",
+  "version": "v3.496.2-w8-awaiting-dual-key-ratification",
+  "target_canonical_url": "https://jayt-production-v3420.vercel.app",
+  "issued_at_utc": "2026-09-14T15:48:08.993Z",
+  "updated_at_utc": "2026-09-15T05:28:00.000Z",
+  "status": "AWAITING_DUAL_KEY_RATIFICATION_BY_KEY_1_AND_KEY_2",
+  "release_verdict": "RELEASE_HELD_FAIL_CLOSED__AWAITING_KEY_1_AND_KEY_2_RATIFICATION",
+  "evidence_provenance_packet": {
+    "source_file": "shopee_product_offer_export_17372870594.csv",
+    "source_sha256": "54b493fd21a3ae2c96128c796a10d08526e7945a4c25cb1179bb6da68af93b98",
+    "feed_evidence_register": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/W8_FEED_EVIDENCE_REGISTER.json",
+    "provenance_ledger_block": 0,
+    "ledger_record_sha256": "9fb08c793d91a666e49019c067c70764dcc8621728affa74622d172a7fa6ba3f",
+    "evidence_equivalence_addendum": "04_DATA_PIPELINE/raw_evidence/w8_sku_vault/W8_EVIDENCE_EQUIVALENCE_ADDENDUM.json",
+    "addendum_status": "RECONCILED_WITH_VIETNAM_EXPORT_SCHEMA__AWAITING_EXECUTIVE_RATIFICATION"
+  },
+  "dual_key_authorization": {
+    "key_1_chairman_supreme_authority": {
+      "signatory": "Chủ tịch Tập đoàn",
+      "authorization_status": "AWAITING_KEY_1_EXECUTIVE_RATIFICATION",
+      "signature_present": false,
+      "signature_timestamp": null
+    },
+    "key_2_safety_and_compliance_gate": {
+      "signatory": "Ban Cố Vấn & Head of Compliance",
+      "authorization_status": "AWAITING_KEY_2_COMPLIANCE_RATIFICATION",
+      "signature_present": false,
+      "signature_timestamp": null
+    }
+  },
+  "commercial_invariants": {
+    "affiliate_enabled": false,
+    "tracking_parameters_emitted": false,
+    "affiliate_dispatch_performed": false,
+    "production_alias_mutation_authorized": false,
+    "zero_synthetic_data": true,
+    "fail_closed_safe_routing": true
+  },
+  "prerequisites_to_unleash": [
+    "1. Executive Ratification of Evidence Equivalence Addendum by Key 1 (Chairman) and Key 2 (Advisory Council)",
+    "2. Receipt and reconciliation of official Shopee Validated Conversion Report (Zero automated replay clicks)",
+    "3. Formal Dual-Key digital signing and authorization to unleash commercial affiliate links on production surface"
+  ]
+}

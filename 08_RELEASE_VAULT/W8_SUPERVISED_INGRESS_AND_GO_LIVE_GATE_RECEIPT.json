@@ -1,0 +1,35 @@
+{
+  "receipt_id": "W8_SUPERVISED_INGRESS_AND_GO_LIVE_GATE_RECEIPT",
+  "recorded_at_utc": "2026-09-14T05:37:42.3327166Z",
+  "status": "CAPTURE_ATTEMPT_COMPLETE__GO_LIVE_BLOCKED",
+  "capture": {
+    "registered_urls": 20,
+    "attempted": 20,
+    "accepted": 0,
+    "rejected_marketplace_challenge_or_login": 20,
+    "synthetic_artifacts_created": 0,
+    "register_sha256": "ce5600fef345b3ae20f06f6ac4c9a4a493e949e8b6cfd96a70cc71cf524d7fdb"
+  },
+  "serverless": {
+    "region": "sin1",
+    "inspection_only": true,
+    "voucher_data": null,
+    "price_history": null,
+    "affiliate_url": null,
+    "partner_identifiers_present": true,
+    "provider_signing_secrets_present": false
+  },
+  "ux": {
+    "version": "v3.491.0-w8-ux-staging",
+    "three_context_tabs": true,
+    "console_errors": 0,
+    "horizontal_overflow": 0
+  },
+  "release": {
+    "dual_key_signed": false,
+    "affiliate_enabled": false,
+    "production_deployed": false,
+    "canonical_alias_mutated": false
+  },
+  "decision": "FAIL_CLOSED__OFFICIAL_PROVIDER_INGRESS_AND_DUAL_KEY_REQUIRED"
+}

@@ -1,0 +1,162 @@
+{
+  "manifest_id": "JAYT_392_PIPELINE_SEAL_MANIFEST",
+  "work_order": "WORK_ORDER_J392_FINAL_EXECUTION",
+  "dispatch_sha256": "af3da365f03da160953a0253ebdb51293a36eae41421a597eeef7f52e1db2bd3",
+  "compiled_at_utc": "2026-09-11T07:21:19.300Z",
+  "executor": "Antigravity",
+  "reviewer": "Codex CEO; Gemini independently reviews the final dual-key seal",
+  "seal_status": "SEALED_DUAL_KEY_VERIFIED",
+  "dual_key_authorization": {
+    "key_1_chairman_written_approval": {
+      "status": "APPROVED",
+      "reference_id": "JAYT-393",
+      "signed_at_utc": "2026-09-11T08:33:21Z",
+      "attestation_text": "Chairman written approval recorded under JAYT-393 authority for approved Wave 1 and Candidate Radar scope."
+    },
+    "key_2_gemini_safety_review": {
+      "status": "APPROVED",
+      "reference_id": "JAYT-393",
+      "reviewed_at_utc": "2026-09-11T08:33:21Z",
+      "attestation_text": "Gemini safety review and Strategic Advisor technical pass recorded under JAYT-393 authority."
+    }
+  },
+  "change_control_policy": {
+    "enforcement_mode": "STRICT_HASH_MATCHING",
+    "prohibited_actions": [
+      "Unsigned runner modifications",
+      "Tampering with raw evidence byte offsets or quotes",
+      "Self-awarded Go-Live or commercial promotion without dual keys",
+      "Unverified SKU promotion into Radar",
+      "Unauthorized production alias swap or destructive deletion"
+    ],
+    "operational_enforcement_note": "The seal cannot technically prevent all local filesystem edits; operational enforcement is via restricted write access, code review, and the two recorded approvals."
+  },
+  "sealed_components": {
+    "runners_and_validators": [
+      {
+        "relative_path": "scripts/verify_j392_final_wave_1.cjs",
+        "file_bytes": 6396,
+        "file_sha256": "473d9a76b0d3321cb3e050989a9321fe14e96fac7e5a028a2033e3d32fd0ab84"
+      },
+      {
+        "relative_path": "scripts/verify_j392_final_ktx_radar.cjs",
+        "file_bytes": 5131,
+        "file_sha256": "e024bf743654033671863975ec0088dbf23cea5640eee8a362427c595a5df933"
+      },
+      {
+        "relative_path": "scripts/j392_scheduler_runner.cjs",
+        "file_bytes": 5898,
+        "file_sha256": "380a94f1b618532c349ec4e587845fd251fd4a4d613b7f58946d241ae6775b19"
+      },
+      {
+        "relative_path": "scripts/run_j392_final_rollback_drill.cjs",
+        "file_bytes": 6657,
+        "file_sha256": "7571638211332346e6d55b27af54899ad5fafce260ff38962edc2b747dab31c7"
+      },
+      {
+        "relative_path": "scripts/verify_pipeline_seal.cjs",
+        "file_bytes": 2972,
+        "file_sha256": "bf5452e0c558ac101941fa155175067d8c0fa82d37605e001c597103f4358f73"
+      }
+    ],
+    "evidence_indices_and_receipts": [
+      {
+        "relative_path": "06_TRUST_AND_EVIDENCE/j392/final_wave_1_evidence_index.json",
+        "file_bytes": 6513,
+        "file_sha256": "3ef953309c6374ca6369df17005ee653413ce6cfa4b1d294f7d62638f8391a6e"
+      },
+      {
+        "relative_path": "06_TRUST_AND_EVIDENCE/j392/final_ktx_radar_evidence_index.json",
+        "file_bytes": 13584,
+        "file_sha256": "2d24fd03c24f4d659edfc9f949046d20036f854befc2db55148fe081432f2657"
+      },
+      {
+        "relative_path": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_WAVE_1_RECEIPT.json",
+        "file_bytes": 4679,
+        "file_sha256": "cae838f2d007f120a408be6e5e380ceb7924d99c45248166248fd99a1aaa5d35"
+      },
+      {
+        "relative_path": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_KTX_RADAR_RECEIPT.json",
+        "file_bytes": 5638,
+        "file_sha256": "5033c9bb728f7b2dae10dc01751a4eef675647e91b377627e77b95cc07141700"
+      },
+      {
+        "relative_path": "07_QUALITY_ASSURANCE/JAYT_392_FINAL_OS_SCHEDULER_RECEIPT.json",
+        "file_bytes": 1656,
+        "file_sha256": "9ea2d5280e759018f8b49a584956b6cbe9631d541f2f27ba8168ae967ff72993"
+      },
+      {
+        "relative_path": "08_RELEASE_VAULT/JAYT_392_FINAL_NONPRODUCTION_DRILL_RECEIPT.json",
+        "file_bytes": 5562,
+        "file_sha256": "f5a7a202d98931abe89500f1edb9b015db9f667604673fb9f5c9d0241bc0886b"
+      },
+      {
+        "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/jayt_scheduler_task_export.xml",
+        "file_bytes": 2902,
+        "file_sha256": "732814e3a2c35c40bdb4e272f1331b82840ec793ca0d4f71f624645196408286"
+      },
+      {
+        "relative_path": "07_QUALITY_ASSURANCE/runtime_evidence/j392_scheduler_run.log",
+        "file_bytes": 3160,
+        "file_sha256": "0744605225f61afb5bdcd2e264adccf8a63dbd566f5e5f5317c142a2d5b4dcd9"
+      },
+      {
+        "relative_path": "08_RELEASE_VAULT/JAYT_392_FINAL_RELEASE_REQUEST.json",
+        "file_bytes": 3158,
+        "file_sha256": "feaeb636aba8d59964dd1e24e93a6a95983152b2da835ab1f1769d9883308f82"
+      }
+    ],
+    "top_10_product_assets": [
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_02_jisulife_life7.png",
+        "file_bytes": 22739,
+        "file_sha256": "f2ddf32671b8ee0a920c55fe1e3351e48a34375a1ce5a88f4108089993f7fda0"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_03_sunhouse_shd1182.jpg",
+        "file_bytes": 21879,
+        "file_sha256": "cbd3b64b488e29c25430859e3782b419875722685800a895ba390fed5ea13980"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_04_bear_drg_d12m5.jpg",
+        "file_bytes": 23959,
+        "file_sha256": "24c61d6e77d37db2298bbd0867082557c8cace7f602cf882da141a76246f5b8d"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_05_rangdong_rd_rl_24.jpg",
+        "file_bytes": 128520,
+        "file_sha256": "97da1cf49b047c50b4b7fcc0737651734136756886c5c39d4d72183622f4b9dc"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_07_everon_lite.jpg",
+        "file_bytes": 81395,
+        "file_sha256": "b3aed3fd8cb9f86f53141eb52d264506fcc1f6836e09365d10b857251d401286"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_10_locknlock_lhc8016s01.jpg",
+        "file_bytes": 33793,
+        "file_sha256": "eff22cee0dc99eff740c036dab1aa03503d659ea6ffd4da8399e51823697fa33"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_15_inochi_hara_177.jpg",
+        "file_bytes": 26957,
+        "file_sha256": "0e5491a203214c3c1e0288e087d299362295657dd34a7af3c349d62088347c0d"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_16_philips_hd1172.jpg",
+        "file_bytes": 38948,
+        "file_sha256": "2b1e052fd95eea509aa8d593be5e8dbe9b9c2747bb74dcb44c0dfd0aeecf2e2c"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_22_logitech_m220.png",
+        "file_bytes": 904632,
+        "file_sha256": "bc61e865c3dc206489f76ae46f5661fe308160075c575963cbf09a3614d6428f"
+      },
+      {
+        "relative_path": "03_SOURCE_OF_TRUTH/assets/products/sku_28_thienlong_tl027.jpg",
+        "file_bytes": 192078,
+        "file_sha256": "7a3429d5acc9f262f8dd42d2ffeca82d02dabae3d1bf14e7a1b570d72d6f850a"
+      }
+    ]
+  }
+}

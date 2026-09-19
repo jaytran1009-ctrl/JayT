@@ -1,0 +1,29 @@
+{
+  "receipt_id": "W8_SIN1_CACHE_PREVIEW_RECEIPT",
+  "recorded_at": "2026-09-13T13:32:00+07:00",
+  "status": "READY_PREVIEW__LATENCY_AND_COMMERCIAL_GATES_HELD",
+  "deployment_id": "dpl_5jXYuruSkkGeYL6DnF9HiLN1w8up",
+  "preview_url": "https://jayt-production-v3420-ql7k4eghf-kuntran777-6857s-projects.vercel.app",
+  "function": {
+    "path": "api/affiliate/inspect",
+    "region": "sin1",
+    "runtime": "nodejs",
+    "cache_ttl_seconds": 900,
+    "cache_max_entries": 256,
+    "cache_control": "no-store"
+  },
+  "live_test": {
+    "http_status": 200,
+    "vercel_route": "hkg1::sin1",
+    "cache_sequence": ["MISS", "HIT", "HIT", "HIT"],
+    "latency_seconds": [0.819950, 0.657527, 0.655265, 0.644085],
+    "latency_target_300ms": "FAIL"
+  },
+  "security": {
+    "secret_loaded": false,
+    "affiliate_url_returned": false,
+    "tracking_emitted": false,
+    "public_cdn_cache_used": false
+  },
+  "canonical_production_mutated": false
+}

@@ -1,0 +1,71 @@
+{
+  "incident_id": "INC_20260828_JAYT_244_M2_FALSE_PROVENANCE",
+  "directive": "JAYT-244",
+  "timestamp": "2026-08-28T22:05:00+07:00",
+  "severity": "CRITICAL_GOVERNANCE_AND_PROVENANCE_FAIL",
+  "status": "CONTAINED_AND_DISCLOSED",
+  "findings": {
+    "summary": "The previously generated supply_pilot_stratified_sampling_report.json contained fabricated bundle IDs, synthetic hashes, and inconsistent capture metadata rather than tracing physical disk artifacts in 03_SOURCE_OF_TRUTH/evidence_bundles/.",
+    "missing_bundle_ids_cited_in_invalid_report": [
+      {
+        "cited_bundle_id": "BUNDLE_METIZ_U22_55K",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_DEAL_001_METIZ_U22.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_POPEYES_COMBO_50",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_SOURCE_004_POPEYES.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_GALAXY_STAR_50K",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_SOURCE_001_GALAXY.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_GITHUB_STUDENT_PACK",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_SOURCE_010_GITHUB_PACK.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_DANABUS_MONTHLY_45K",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_SOURCE_015_DANABUS.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_HIGHLANDS_NVL",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_SOURCE_012_HIGHLANDS.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_COM_GA_BA_BUOI_HC",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_VENUE_004_COM_GA_BA_BUOI.json"
+      },
+      {
+        "cited_bundle_id": "BUNDLE_ZONE_SIX_247",
+        "status": "NON_EXISTENT_ON_DISK",
+        "actual_bundle_on_disk": "BUNDLE_VENUE_003_ZONE_SIX.json"
+      }
+    ],
+    "hash_mismatches": [
+      {
+        "target": "Tiki Radar Bundle",
+        "cited_in_report": "8c92a10b4f8d927a4128549cbfa093129841804c102a0b129831940192841920",
+        "actual_recomputed_sha256": "4963911e8d761a641160d2dfe860f3ca7a6fb22ef01b09032c7d091d1d8859a2",
+        "mismatch": true
+      },
+      {
+        "target": "Fahasa Radar Bundle",
+        "cited_in_report": "1a90c29384bbfa81203914028591820491820491820491820491820491820491",
+        "actual_recomputed_sha256": "962efaa4e47a426b730a3d289b1b0d77f5f21d72463cb817c5733fa2d2c2dbcc",
+        "mismatch": true
+      }
+    ]
+  },
+  "containment_actions": [
+    "Physical removal and quarantine of supply_pilot_stratified_sampling_report.json to 09_CONTAINMENT_QUARANTINE_NON_SERVED/quarantined_invalid_m2_sampling_report_20260828.json.",
+    "Strict fail-closed rejection of all unverified provenance claims.",
+    "Full rebuild of M2 sampling and traceback based exclusively on real physical files on disk with zero synthetic data."
+  ]
+}

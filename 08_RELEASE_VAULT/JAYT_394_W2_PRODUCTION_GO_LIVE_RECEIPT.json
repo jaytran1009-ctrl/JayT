@@ -1,0 +1,36 @@
+{
+  "receipt_id": "JAYT_394_W2_PRODUCTION_GO_LIVE_RECEIPT",
+  "directive": "JAYT-394",
+  "version": "v3.447.0-w2",
+  "canonical_url": "https://jayt-production-v3420.vercel.app",
+  "deployment_id": "dpl_BZ9JwJczaLSY45JTQiSsncKJzhVh",
+  "ready_state": "READY",
+  "target": "production",
+  "promoted_at": "2026-09-11T21:06:32+07:00",
+  "dual_key": {
+    "key_1_chairman": "CERTIFIED_PASS",
+    "key_2_advisor": "CERTIFIED_PASS"
+  },
+  "live_endpoint_checks": {
+    "/": {"vercel_curl": "PASS", "bytes_observed": 1230},
+    "/published_manifest.json": {"vercel_curl": "PASS", "bytes_observed": 1888, "version_observed": "v3.447.0-w2"},
+    "/registry.json": {"vercel_curl": "PASS", "bytes_observed": 48338, "version_observed": "v3.447.0-w2", "total_approved_entities_count": 87},
+    "/deals_feed.json": {"vercel_curl": "PASS", "bytes_observed": 5239, "version_observed": "v3.447.0-w2", "public_offers_count": 2}
+  },
+  "candidate_artifact_hashes": {
+    "index.html": "575e9ac4e710eca94dd5fe5a73791ae897218fea29517b60ec134c95434bee9a",
+    "jayt_apex_interface.js": "2831c37250237e12d8bc306db5a26c80cbfa60ac43b4e10530edc5e6a4e8d696",
+    "styles.css": "7074097116449ae63d188066b522eb4b6f8e0d806d219c1208c05ede466160e0",
+    "registry.json": "54a19a99cdfdcf5faa288a80444117f10d8adfad74a2662fc645888f3adecdad",
+    "deals_feed.json": "df70ae450304362909e449ab44272b737d750f04db1d3e5bd5f31429dd0b70d3",
+    "published_manifest.json": "b6f8a4a0d968ca0bb6e2fca26fa6aaccaf76501ecb8e6fd4910adc90124ff3a6"
+  },
+  "commercial_safety": {
+    "affiliate_enabled": false,
+    "tracking_tokens": 0,
+    "automated_shopeefood_capture": "DISABLED_BY_POLICY",
+    "user_driven_comparator_only": true
+  },
+  "pipeline_seal": "24/24_PASS",
+  "decision": "W2_PRODUCTION_PROMOTED__AFFILIATE_REMAINS_DISABLED"
+}

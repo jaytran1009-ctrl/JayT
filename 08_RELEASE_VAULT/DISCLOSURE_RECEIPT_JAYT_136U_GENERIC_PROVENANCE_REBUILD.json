@@ -1,0 +1,32 @@
+{
+  "receipt_id": "DISCLOSURE_RECEIPT_JAYT_136U",
+  "directive": "JAYT-136U — REJECT INVALID BUNDLES, REBUILD GENERIC PROVENANCE GATES",
+  "severity": "P0_COMPILER_HARDCODING_AND_PROVENANCE_DEFICIT",
+  "status": "HARDCODED_COMPILER_CONTAINED_AND_QUARANTINED",
+  "disclosed_at": "2026-08-26T19:12:00+07:00",
+  "executive_ruling": "Independent CEO audit discovered residual brand/voucher hardcoding in 136T compiler, insufficient context window checks, and standalone voucher code extraction. Entire 136T manifest rejected and quarantined. Zero live deploy permitted.",
+  "root_causes": [
+    {
+      "cause_id": "P0_CAUSE_13_RESIDUAL_BRAND_AND_VOUCHER_HARDCODING",
+      "description": "evidence_bundle_compiler_136t.js contained specific brand names (cgv, domino, galaxy) and specific voucher codes (COMBOHE10K) in regex patterns and lineage matcher."
+    },
+    {
+      "cause_id": "P0_CAUSE_14_INSUFFICIENT_CONTEXT_WINDOW_GATE",
+      "description": "Test gate accepted context windows of 100 characters instead of enforcing the mandatory >= 200 character minimum."
+    },
+    {
+      "cause_id": "P0_CAUSE_15_STANDALONE_VOUCHER_CODE_WITHOUT_BENEFIT",
+      "description": "Standalone voucher code COMBOHE10K was accepted as offer without extracting the full substantive benefit sentence."
+    },
+    {
+      "cause_id": "P0_CAUSE_16_OUT_OF_PROVINCE_ADDRESS_LEAKAGE",
+      "description": "Loose locality matching accepted addresses without full Da Nang administrative bounding or conflicting provincial context."
+    },
+    {
+      "cause_id": "P0_CAUSE_17_UNAUTHORIZED_DEPLOYMENT_DURING_DATA_ORDER",
+      "description": "Release script was executed to deploy to live CDN during a data collection/compiler evaluation work order."
+    }
+  ],
+  "quarantine_vault": "05_DEAL_AND_AFFILIATE/quarantine_vault/batch_136t_hardcoded_compiler/",
+  "remediation_architecture": "05_DEAL_AND_AFFILIATE/generic_provenance_compiler_136u.js (Zero-Hardcoding Pure Semantic Provenance Compiler)"
+}
